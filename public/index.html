@@ -196,15 +196,15 @@
   <div id="game-list"></div>
 
   <!-- Graph -->
-  <div class="graph-panel" id="graph-panel" style="display:none">
+  <div class="graph-panel" id="graph-panel">
     <div class="graph-header">
-      <span class="graph-title">Odds Graph — <span class="graph-fight" id="graph-fight-lbl">—</span></span>
+      <span class="graph-title">Odds Graph — <span class="graph-fight" id="graph-fight-lbl">no game selected</span></span>
       <div style="display:flex;gap:8px;align-items:center">
         <span id="graph-xover-info"></span>
-        <button class="sim-toggle" id="sim-toggle">⏵ Simulate</button>
+        <button class="sim-toggle" id="sim-toggle">⏵ Simulate historical fight</button>
       </div>
     </div>
-    <div id="graph-empty" class="graph-empty">Waiting for odds data...</div>
+    <div id="graph-empty" class="graph-empty">Pick a sport above and click a game — or simulate a historical UFC fight with the button →</div>
     <canvas id="odds-chart" style="display:none"></canvas>
 
     <div id="sim-bar">
@@ -224,7 +224,7 @@
   </div>
 
   <!-- Bet Tracker -->
-  <div class="tracker-panel" id="tracker-panel" style="display:none">
+  <div class="tracker-panel" id="tracker-panel">
     <div class="tracker-header">
       <span class="tracker-title">Theoretical Position</span>
       <button class="clear-btn" id="clear-bets">CLEAR ALL</button>
@@ -580,8 +580,6 @@ function updateFightUI(f1Name,f2Name,o1,o2,live,sport,switchGames){
   const gameList=document.getElementById('game-list');
   nw.style.display='block';
   gameList.style.display='none';
-  document.getElementById('graph-panel').style.display='block';
-  document.getElementById('tracker-panel').style.display='block';
 
   document.getElementById('nw-f1').textContent=f1Name;
   document.getElementById('nw-f2').textContent=f2Name;
@@ -611,8 +609,9 @@ document.getElementById('nw-switch').addEventListener('change',function(){
 document.getElementById('nw-dismiss').addEventListener('click',()=>{
   document.getElementById('now-watching').style.display='none';
   document.getElementById('game-list').style.display='block';
-  document.getElementById('graph-panel').style.display='none';
-  document.getElementById('tracker-panel').style.display='none';
+  document.getElementById('graph-fight-lbl').textContent='no game selected';
+  document.getElementById('graph-empty').style.display='block';
+  canvas.style.display='none';
   selectedGame=null;
   tracker.clear(); renderTracker();
 });
