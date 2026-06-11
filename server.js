@@ -191,10 +191,41 @@ app.get('/api/fights', (req, res) => {
   catch (e) { res.status(500).json({ error: e.message }); }
 });
 
+// Full odds history for a specific fight (for graphing)
+app.get('/api/fight-history/:fightId', (req, res) => {
+  try {
+    const files = fs.readdirSync(HISTORICAL_DIR);
+    const match = files.find(f => f.replace('.json', '') === req.params.fightId);
+    if (!match) return res.status(404).json({ error: 'Fight not found' });
+    res.json(JSON.parse(fs.readFileSync(path.join(HISTORICAL_DIR, match))));
+  } catch (e) { res.status(500).json({ error: e.message }); }
+});
+
 // Fighter history lookup
 app.get('/api/fighter/:name', (req, res) => {
   try { res.json(findFighterHistory(req.params.name, 5)); }
   catch (e) { res.status(500).json({ error: e.message }); }
+});
+
+// Active sports list
+app.get('/api/sports', async (req, res) => {
+  try {
+    const url = `${BASE_URL}/sports/?apiKey=${ODDS_API_KEY}`;
+    const { data, headers } = await fetchJson(url);
+    updateOddsCredits(headers);
+    const active = data.filter(s => s.active).sort((a, b) => a.group.localeCompare(b.group));
+    res.json(active);
+  } catch (e) { res.status(500).json({ error: e.message }); }
+});
+
+// Live odds for any sport key
+app.get('/api/sport/:key', async (req, res) => {
+  try {
+    const url = `${BASE_URL}/sports/${req.params.key}/odds/?apiKey=${ODDS_API_KEY}&regions=us&markets=h2h&bookmakers=draftkings&oddsFormat=american`;
+    const { data, headers } = await fetchJson(url);
+    updateOddsCredits(headers);
+    res.json(Array.isArray(data) ? data : []);
+  } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
 // Fetch historical odds from The Odds API for a specific past date (costs 10 credits each)

@@ -2,319 +2,761 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>UFC Live Odds — DraftKings</title>
+  <title>Live Odds Monitor</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3/dist/chartjs-plugin-annotation.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background: #0d0d0d; color: #eee; font-family: 'Helvetica Neue', sans-serif; padding: 28px; max-width: 900px; margin: 0 auto; }
+    body { background: #0a0a0a; color: #ddd; font-family: 'Helvetica Neue', sans-serif; }
 
-    header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 28px; border-bottom: 1px solid #222; padding-bottom: 16px; }
-    h1 { color: #e8b84b; font-size: 1.5rem; letter-spacing: 1px; text-transform: uppercase; }
-    #status { font-size: 0.75rem; color: #555; }
-
-    /* Usage footer */
-    #usage-footer {
-      margin-top: 48px; padding-top: 12px; border-top: 1px solid #1a1a1a;
-      display: flex; gap: 20px; align-items: center; flex-wrap: wrap;
+    /* ── Nav ── */
+    #topbar {
+      display: flex; align-items: center; gap: 0;
+      background: #111; border-bottom: 1px solid #1e1e1e;
+      padding: 0 28px; position: sticky; top: 0; z-index: 50;
     }
-    .uf-item { font-size: 0.68rem; color: #3a3a3a; }
-    .uf-item span { color: #555; }
+    #topbar h1 { color: #e8b84b; font-size: 1rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 14px 0; margin-right: 32px; white-space: nowrap; }
+    .nav-tab { background: none; border: none; color: #555; font-size: 0.78rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; padding: 18px 16px; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; transition: color 0.15s; }
+    .nav-tab:hover { color: #999; }
+    .nav-tab.active { color: #e8b84b; border-bottom-color: #e8b84b; }
+    #topbar-status { margin-left: auto; font-size: 0.7rem; color: #3a3a3a; white-space: nowrap; }
 
-    .section-label { font-size: 0.65rem; color: #555; text-transform: uppercase; letter-spacing: 2px; margin: 20px 0 10px; }
+    /* ── Layout ── */
+    .tab-page { display: none; padding: 24px 28px; max-width: 960px; margin: 0 auto; }
+    .tab-page.active { display: block; }
 
+    /* ── Fight cards ── */
+    .section-label { font-size: 0.6rem; color: #444; text-transform: uppercase; letter-spacing: 2px; margin: 18px 0 8px; }
     .fight-card {
-      background: #161616;
-      border: 1px solid #222;
-      border-radius: 6px;
-      padding: 14px 18px;
-      margin-bottom: 8px;
-      transition: border-color 0.3s;
+      background: #141414; border: 1px solid #1e1e1e; border-radius: 6px;
+      padding: 12px 16px; margin-bottom: 6px; cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
     }
-    .fight-card.live { border-color: #e8b84b; background: #1a1800; }
-    .fight-card.live .event-label { color: #e8b84b; }
-
-    .event-label { font-size: 0.65rem; color: #444; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
-
-    .matchup { display: grid; grid-template-columns: 1fr auto auto auto 1fr; align-items: center; gap: 12px; }
-
-    .fighter-name { font-size: 0.95rem; font-weight: 600; }
+    .fight-card:hover { border-color: #333; }
+    .fight-card.live { border-color: #e8b84b44; background: #191500; }
+    .fight-card.selected { border-color: #e8b84b; background: #1c1800; }
+    .fight-card .event-label { font-size: 0.6rem; color: #444; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+    .fight-card.live .event-label { color: #e8b84b99; }
+    .matchup { display: grid; grid-template-columns: 1fr auto auto auto 1fr; align-items: center; gap: 10px; }
+    .fighter-name { font-size: 0.9rem; font-weight: 600; }
     .fighter-name.right { text-align: right; }
-
-    .odds-pill {
-      font-size: 1.1rem;
-      font-weight: 700;
-      padding: 5px 12px;
-      border-radius: 4px;
-      min-width: 72px;
-      text-align: center;
-    }
-    .fav  { color: #ff6b6b; background: #1f0f0f; }
-    .dog  { color: #69db7c; background: #0d1f10; }
+    .odds-pill { font-size: 1rem; font-weight: 700; padding: 4px 10px; border-radius: 4px; min-width: 68px; text-align: center; }
+    .fav  { color: #ff6b6b; background: #1f0e0e; }
+    .dog  { color: #69db7c; background: #0c1c0e; }
     .even { color: #74c0fc; background: #0d1525; }
+    .vs { color: #2a2a2a; font-size: 0.7rem; font-weight: 700; }
+    .fight-time { font-size: 0.62rem; color: #333; margin-top: 6px; text-align: right; }
+    #no-odds { color: #333; text-align: center; padding: 48px 0; font-size: 0.85rem; line-height: 2; }
 
-    .vs { color: #333; font-size: 0.75rem; font-weight: 600; }
-    .fight-time { font-size: 0.65rem; color: #444; margin-top: 8px; text-align: right; }
+    /* ── Graph panel ── */
+    #graph-panel, #graph-panel-events {
+      margin-top: 28px; background: #0e0e0e; border: 1px solid #1e1e1e; border-radius: 8px;
+      padding: 16px 20px;
+    }
+    .graph-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+    .graph-title { font-size: 0.72rem; color: #555; text-transform: uppercase; letter-spacing: 1px; }
+    .graph-fight-label { font-size: 0.8rem; color: #e8b84b; font-weight: 600; }
+    .graph-empty { text-align: center; color: #2a2a2a; padding: 60px 0; font-size: 0.8rem; }
+    .graph-crossover-badge {
+      display: inline-block; background: #e8b84b22; color: #e8b84b;
+      border: 1px solid #e8b84b44; border-radius: 4px;
+      font-size: 0.65rem; padding: 2px 8px; letter-spacing: 1px;
+    }
+    canvas { max-height: 240px; }
 
-    #no-odds { color: #444; text-align: center; padding: 60px 0; font-size: 0.9rem; line-height: 1.8; }
+    /* ── Bet tracker ── */
+    #bet-tracker, #bet-tracker-events {
+      margin-top: 20px; background: #0e0e0e; border: 1px solid #1e1e1e; border-radius: 8px; padding: 16px 20px;
+    }
+    .tracker-title { font-size: 0.7rem; color: #555; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+    .tracker-inputs { display: flex; gap: 10px; flex-wrap: wrap; align-items: flex-end; margin-bottom: 14px; }
+    .tracker-field { display: flex; flex-direction: column; gap: 4px; }
+    .tracker-label { font-size: 0.62rem; color: #444; text-transform: uppercase; letter-spacing: 1px; }
+    .tracker-input {
+      background: #111; border: 1px solid #222; border-radius: 5px; color: #ddd;
+      padding: 7px 10px; font-size: 0.82rem; font-family: inherit; outline: none; width: 130px;
+    }
+    .tracker-input:focus { border-color: #e8b84b55; }
+    .tracker-input.wide { width: 200px; }
+    #tracker-lock-btn, #tracker-lock-btn-events {
+      background: #e8b84b22; border: 1px solid #e8b84b55; color: #e8b84b;
+      border-radius: 5px; padding: 7px 16px; font-size: 0.78rem; font-weight: 700;
+      cursor: pointer; letter-spacing: 1px; text-transform: uppercase;
+    }
+    #tracker-lock-btn:hover, #tracker-lock-btn-events:hover { background: #e8b84b33; }
+
+    #tracker-result, #tracker-result-events {
+      border-top: 1px solid #1a1a1a; padding-top: 14px; display: none;
+    }
+    .result-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+    .result-label { font-size: 0.7rem; color: #555; }
+    .result-value { font-size: 0.82rem; font-weight: 600; color: #ddd; }
+    .result-value.green { color: #69db7c; }
+    .result-value.red { color: #ff6b6b; }
+    .result-value.gold { color: #e8b84b; }
+
+    #tracker-status, #tracker-status-events {
+      margin-top: 10px; padding: 10px 14px; border-radius: 6px;
+      font-size: 0.8rem; font-weight: 700; text-align: center; letter-spacing: 1px;
+    }
+    .status-winwin { background: #0d2a0d; border: 1px solid #69db7c44; color: #69db7c; animation: pulse-green 2s infinite; }
+    .status-hedge  { background: #1a1a00; border: 1px solid #e8b84b44; color: #e8b84b; }
+    .status-partial{ background: #1a0f0f; border: 1px solid #ff6b6b33; color: #ff6b6b99; }
+    @keyframes pulse-green { 0%,100% { box-shadow: 0 0 0 0 #69db7c33; } 50% { box-shadow: 0 0 0 8px transparent; } }
+
+    /* ── Events page ── */
+    #sport-bar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+    .sport-btn {
+      background: #141414; border: 1px solid #1e1e1e; border-radius: 20px;
+      color: #555; font-size: 0.72rem; padding: 6px 14px; cursor: pointer;
+      transition: all 0.15s; text-transform: uppercase; letter-spacing: 1px;
+    }
+    .sport-btn:hover { border-color: #333; color: #999; }
+    .sport-btn.active { background: #1c1800; border-color: #e8b84b; color: #e8b84b; }
+    #sport-loading { color: #333; font-size: 0.8rem; padding: 8px 0; }
 
     /* ── Chat widget ── */
     #chat-fab {
       position: fixed; bottom: 28px; right: 28px;
-      width: 52px; height: 52px; border-radius: 50%;
+      width: 50px; height: 50px; border-radius: 50%;
       background: #e8b84b; border: none; cursor: pointer;
-      font-size: 1.4rem; display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.5); z-index: 100;
-      transition: transform 0.15s;
+      font-size: 1.3rem; display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.6); z-index: 200; transition: transform 0.15s;
     }
     #chat-fab:hover { transform: scale(1.08); }
-
     #chat-panel {
-      position: fixed; bottom: 92px; right: 28px;
-      width: 380px; max-height: 540px;
-      background: #161616; border: 1px solid #2a2a2a; border-radius: 12px;
+      position: fixed; bottom: 90px; right: 28px; width: 380px; max-height: 560px;
+      background: #141414; border: 1px solid #222; border-radius: 12px;
       display: none; flex-direction: column;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.6); z-index: 99;
-      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.7); z-index: 199; overflow: hidden;
     }
     #chat-panel.open { display: flex; }
-
-    #chat-header {
-      padding: 12px 16px; background: #1a1a1a; border-bottom: 1px solid #222;
-      display: flex; justify-content: space-between; align-items: center;
-    }
-    #chat-header-title { color: #e8b84b; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
-    #chat-usage { font-size: 0.65rem; color: #555; }
-
-    #chat-messages {
-      flex: 1; overflow-y: auto; padding: 14px;
-      display: flex; flex-direction: column; gap: 10px;
-      min-height: 200px;
-    }
-    .msg { font-size: 0.82rem; line-height: 1.6; padding: 10px 12px; border-radius: 8px; max-width: 94%; }
-    .msg.user { background: #222; color: #ccc; align-self: flex-end; white-space: pre-wrap; }
-    .msg.assistant { background: #1e2a1e; color: #b8e6b8; align-self: flex-start; border: 1px solid #2a3a2a; }
-    .msg.thinking { color: #555; font-style: italic; background: none; border: none; padding: 4px 0; }
-    /* Markdown rendered inside assistant messages */
-    .msg.assistant p { margin-bottom: 0.6em; }
-    .msg.assistant p:last-child { margin-bottom: 0; }
+    #chat-header { padding: 11px 14px; background: #111; border-bottom: 1px solid #1e1e1e; display: flex; justify-content: space-between; align-items: center; }
+    #chat-header-title { color: #e8b84b; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+    #chat-usage { font-size: 0.62rem; color: #444; }
+    #chat-messages { flex: 1; overflow-y: auto; padding: 12px; display: flex; flex-direction: column; gap: 8px; min-height: 180px; }
+    .msg { font-size: 0.8rem; line-height: 1.6; padding: 9px 11px; border-radius: 8px; max-width: 96%; }
+    .msg.user { background: #1e1e1e; color: #bbb; align-self: flex-end; white-space: pre-wrap; }
+    .msg.assistant { background: #111f11; color: #a8d8a8; align-self: flex-start; border: 1px solid #1e2e1e; }
+    .msg.thinking { color: #444; font-style: italic; background: none; border: none; padding: 4px 0; font-size: 0.75rem; }
+    .msg.assistant p { margin-bottom: 0.5em; } .msg.assistant p:last-child { margin-bottom: 0; }
     .msg.assistant strong { color: #e8b84b; }
-    .msg.assistant table { border-collapse: collapse; width: 100%; margin: 8px 0; font-size: 0.78rem; }
-    .msg.assistant th { background: #253325; color: #e8b84b; padding: 4px 8px; border: 1px solid #2a3a2a; text-align: left; }
-    .msg.assistant td { padding: 4px 8px; border: 1px solid #2a3a2a; }
-    .msg.assistant tr:nth-child(even) td { background: #1a2a1a; }
-    .msg.assistant h1,.msg.assistant h2,.msg.assistant h3 { color: #e8b84b; margin: 8px 0 4px; font-size: 0.88rem; }
-    .msg.assistant ul,.msg.assistant ol { padding-left: 1.4em; margin: 4px 0; }
-    .msg.assistant li { margin-bottom: 2px; }
-    .msg.assistant code { background: #0d1a0d; padding: 1px 5px; border-radius: 3px; font-family: monospace; font-size: 0.78rem; color: #a8d8a8; }
-    .msg.assistant pre { background: #0d1a0d; padding: 8px; border-radius: 4px; overflow-x: auto; margin: 6px 0; }
-    .msg.assistant pre code { background: none; padding: 0; }
-
-    #chat-input-row { display: flex; gap: 8px; padding: 10px 12px; border-top: 1px solid #222; }
-    #chat-input {
-      flex: 1; background: #111; border: 1px solid #333; border-radius: 6px;
-      color: #eee; padding: 8px 12px; font-size: 0.82rem; font-family: inherit; outline: none;
-      resize: none; height: 36px;
-    }
-    #chat-input:focus { border-color: #e8b84b; }
-    #chat-send {
-      background: #e8b84b; color: #000; border: none; border-radius: 6px;
-      padding: 0 14px; font-weight: 700; font-size: 0.8rem; cursor: pointer;
-    }
+    .msg.assistant table { border-collapse: collapse; width: 100%; margin: 6px 0; font-size: 0.74rem; }
+    .msg.assistant th { background: #1e2e1e; color: #e8b84b; padding: 3px 7px; border: 1px solid #1e2e1e; text-align: left; }
+    .msg.assistant td { padding: 3px 7px; border: 1px solid #1a2a1a; }
+    .msg.assistant tr:nth-child(even) td { background: #131f13; }
+    .msg.assistant h1,.msg.assistant h2,.msg.assistant h3 { color: #e8b84b; margin: 6px 0 3px; font-size: 0.84rem; }
+    .msg.assistant ul,.msg.assistant ol { padding-left: 1.2em; margin: 3px 0; }
+    .msg.assistant code { background: #0a160a; padding: 1px 4px; border-radius: 3px; font-size: 0.74rem; }
+    #chat-input-row { display: flex; gap: 7px; padding: 9px 11px; border-top: 1px solid #1e1e1e; }
+    #chat-input { flex: 1; background: #0d0d0d; border: 1px solid #222; border-radius: 5px; color: #ddd; padding: 7px 10px; font-size: 0.8rem; font-family: inherit; outline: none; resize: none; }
+    #chat-input:focus { border-color: #e8b84b55; }
+    #chat-send { background: #e8b84b; color: #000; border: none; border-radius: 5px; padding: 0 13px; font-weight: 700; font-size: 0.76rem; cursor: pointer; }
     #chat-send:disabled { opacity: 0.3; cursor: default; }
+
+    /* ── Footer ── */
+    #usage-footer { margin-top: 40px; padding: 12px 0; border-top: 1px solid #161616; display: flex; gap: 20px; flex-wrap: wrap; }
+    .uf-item { font-size: 0.65rem; color: #2e2e2e; }
+    .uf-item span { color: #444; }
   </style>
 </head>
 <body>
-  <header>
-    <h1>UFC Odds — DraftKings</h1>
-    <div id="status">Loading...</div>
-  </header>
 
+<div id="topbar">
+  <h1>⚡ Odds Monitor</h1>
+  <button class="nav-tab active" data-tab="ufc">UFC</button>
+  <button class="nav-tab" data-tab="events">Live Events</button>
+  <div id="topbar-status">Loading...</div>
+</div>
+
+<!-- ═══ UFC TAB ═══════════════════════════════════════════════ -->
+<div id="tab-ufc" class="tab-page active">
   <div id="fights"></div>
 
+  <!-- Live Graph -->
+  <div id="graph-panel">
+    <div class="graph-header">
+      <span class="graph-title">Odds Graph — <span class="graph-fight-label" id="graph-fight-label">click a fight to graph</span></span>
+      <span id="graph-crossover-info"></span>
+    </div>
+    <div id="graph-empty" class="graph-empty">Select a fight above to see live odds movement</div>
+    <canvas id="odds-chart" style="display:none"></canvas>
+  </div>
+
+  <!-- Theoretical Bet Tracker -->
+  <div id="bet-tracker">
+    <div class="tracker-title">Lock In Theoretical Bet</div>
+    <div class="tracker-inputs">
+      <div class="tracker-field">
+        <div class="tracker-label">Fighter</div>
+        <input id="bt-fighter" class="tracker-input wide" placeholder="Fighter name" />
+      </div>
+      <div class="tracker-field">
+        <div class="tracker-label">Stake ($)</div>
+        <input id="bt-stake" class="tracker-input" type="number" placeholder="100" min="1" />
+      </div>
+      <div class="tracker-field">
+        <div class="tracker-label">Odds at bet</div>
+        <input id="bt-odds" class="tracker-input" type="number" placeholder="+200" />
+      </div>
+      <button id="tracker-lock-btn">Lock In</button>
+    </div>
+    <div id="tracker-result">
+      <div class="result-row"><span class="result-label">Other fighter now at</span><span class="result-value" id="tr-current-odds">—</span></div>
+      <div class="result-row"><span class="result-label">Optimal hedge bet</span><span class="result-value gold" id="tr-hedge-size">—</span></div>
+      <div class="result-row"><span class="result-label">Profit if Bet 1 wins</span><span class="result-value" id="tr-profit-a">—</span></div>
+      <div class="result-row"><span class="result-label">Profit if Bet 2 wins</span><span class="result-value" id="tr-profit-b">—</span></div>
+      <div id="tracker-status"></div>
+    </div>
+  </div>
+
   <div id="usage-footer">
-    <div class="uf-item">Odds API — <span id="uf-credits-remaining">—</span> credits remaining · <span id="uf-credits-used">—</span> used</div>
+    <div class="uf-item">Odds API — <span id="uf-credits-remaining">—</span> remaining · <span id="uf-credits-used">—</span> used</div>
     <div class="uf-item">AI — <span id="uf-ai-queries">0</span> queries · <span id="uf-ai-cost">$0.0000</span></div>
   </div>
+</div>
 
-  <!-- Floating chat widget -->
-  <button id="chat-fab" title="Fight Research">💬</button>
+<!-- ═══ LIVE EVENTS TAB ══════════════════════════════════════ -->
+<div id="tab-events" class="tab-page">
+  <div id="sport-bar">
+    <div id="sport-loading">Loading sports...</div>
+  </div>
+  <div id="event-fights"></div>
 
-  <div id="chat-panel">
-    <div id="chat-header">
-      <span id="chat-header-title">Fight Research</span>
-      <span id="chat-usage">0 queries · $0.000</span>
+  <div id="graph-panel-events">
+    <div class="graph-header">
+      <span class="graph-title">Odds Graph — <span class="graph-fight-label" id="graph-fight-label-events">select a sport and click a matchup</span></span>
+      <span id="graph-crossover-info-events"></span>
     </div>
-    <div id="chat-messages">
-      <div class="msg assistant">Ask me anything — fighter history, crossovers, current odds, win-win windows. Try: "Show me Topuria's last 3 fights"</div>
-    </div>
-    <div id="chat-input-row">
-      <input id="chat-input" placeholder="Ask about any fighter or fight..." />
-      <button id="chat-send">Send</button>
-    </div>
+    <div id="graph-empty-events" class="graph-empty">Select a matchup above to see live odds movement</div>
+    <canvas id="odds-chart-events" style="display:none"></canvas>
   </div>
 
-  <script>
-    function oddsClass(price) {
-      if (price < 0) return 'fav';
-      if (price > 0) return 'dog';
-      return 'even';
+  <div id="bet-tracker-events">
+    <div class="tracker-title">Lock In Theoretical Bet</div>
+    <div class="tracker-inputs">
+      <div class="tracker-field">
+        <div class="tracker-label">Team / Fighter</div>
+        <input id="bt-fighter-e" class="tracker-input wide" placeholder="Name" />
+      </div>
+      <div class="tracker-field">
+        <div class="tracker-label">Stake ($)</div>
+        <input id="bt-stake-e" class="tracker-input" type="number" placeholder="100" min="1" />
+      </div>
+      <div class="tracker-field">
+        <div class="tracker-label">Odds at bet</div>
+        <input id="bt-odds-e" class="tracker-input" type="number" placeholder="+200" />
+      </div>
+      <button id="tracker-lock-btn-events">Lock In</button>
+    </div>
+    <div id="tracker-result-events">
+      <div class="result-row"><span class="result-label">Other side now at</span><span class="result-value" id="tr-current-odds-e">—</span></div>
+      <div class="result-row"><span class="result-label">Optimal hedge bet</span><span class="result-value gold" id="tr-hedge-size-e">—</span></div>
+      <div class="result-row"><span class="result-label">Profit if Bet 1 wins</span><span class="result-value" id="tr-profit-a-e">—</span></div>
+      <div class="result-row"><span class="result-label">Profit if Bet 2 wins</span><span class="result-value" id="tr-profit-b-e">—</span></div>
+      <div id="tracker-status-events"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Chat FAB -->
+<button id="chat-fab" title="Research">💬</button>
+<div id="chat-panel">
+  <div id="chat-header">
+    <span id="chat-header-title">Research</span>
+    <span id="chat-usage">0 queries · $0.000</span>
+  </div>
+  <div id="chat-messages">
+    <div class="msg assistant">Ask anything — fighter history, crossovers, current odds, win-win windows across any sport.</div>
+  </div>
+  <div id="chat-input-row">
+    <input id="chat-input" placeholder="Ask about any fighter or matchup..." />
+    <button id="chat-send">Ask</button>
+  </div>
+</div>
+
+<script>
+// ── Shared helpers ───────────────────────────────────────────────────────────
+
+function oddsClass(p) { return p < 0 ? 'fav' : p > 0 ? 'dog' : 'even'; }
+function fmt(p) { return typeof p === 'number' ? (p > 0 ? `+${p}` : `${p}`) : '—'; }
+function isLive(t) { const s = new Date(t).getTime(), n = Date.now(); return s <= n && n - s < 3 * 3600000; }
+function toDecimal(o) { return o > 0 ? o/100 + 1 : 100/Math.abs(o) + 1; }
+
+function makeFightKey(a, b) { return `${a}__${b}`; }
+
+// ── Chart.js graph factory ───────────────────────────────────────────────────
+
+function makeGraph(canvasId, emptyId, infoId) {
+  Chart.register(window['chartjs-plugin-annotation']);
+  const canvas = document.getElementById(canvasId);
+  const emptyEl = document.getElementById(emptyId);
+  const infoEl = document.getElementById(infoId);
+  const history = {};   // fightKey → { labels, f1, f2, f1Name, f2Name, crossovers[] }
+  let selected = null;
+  let chart = null;
+
+  function initChart() {
+    chart = new Chart(canvas, {
+      type: 'line',
+      data: {
+        labels: [],
+        datasets: [
+          { label: '', data: [], borderColor: '#ff6b6b', backgroundColor: '#ff6b6b11', borderWidth: 2, pointRadius: 0, tension: 0.3 },
+          { label: '', data: [], borderColor: '#69db7c', backgroundColor: '#69db7c11', borderWidth: 2, pointRadius: 0, tension: 0.3 },
+        ]
+      },
+      options: {
+        animation: false,
+        responsive: true,
+        maintainAspectRatio: true,
+        interaction: { mode: 'index', intersect: false },
+        plugins: {
+          legend: { labels: { color: '#666', font: { size: 11 }, boxWidth: 12 } },
+          annotation: { annotations: {} },
+          tooltip: {
+            backgroundColor: '#111', borderColor: '#333', borderWidth: 1,
+            titleColor: '#888', bodyColor: '#ddd',
+            callbacks: {
+              label: ctx => ` ${ctx.dataset.label}: ${fmt(ctx.raw)}`
+            }
+          }
+        },
+        scales: {
+          x: {
+            ticks: { color: '#333', maxTicksLimit: 8, font: { size: 10 } },
+            grid: { color: '#111' }
+          },
+          y: {
+            ticks: {
+              color: '#444', font: { size: 10 },
+              callback: v => fmt(v)
+            },
+            grid: { color: '#151515' },
+            title: { display: false }
+          }
+        }
+      }
+    });
+  }
+
+  function addPoint(fightKey, timeLabel, f1Name, f1Odds, f2Name, f2Odds) {
+    if (!history[fightKey]) {
+      history[fightKey] = { labels: [], f1: [], f2: [], f1Name, f2Name, crossovers: [] };
     }
-
-    function fmt(price) {
-      if (typeof price !== 'number') return '—';
-      return price > 0 ? `+${price}` : `${price}`;
-    }
-
-    function isLive(commenceTime) {
-      const start = new Date(commenceTime).getTime();
-      const now = Date.now();
-      return start <= now && now - start < 3 * 60 * 60 * 1000;
-    }
-
-    async function load() {
-      const status = document.getElementById('status');
-      const container = document.getElementById('fights');
-      try {
-        const res = await fetch('/api/ufc');
-        const fights = await res.json();
-
-        // Only show fights with actual DraftKings odds
-        const withOdds = fights.filter(f => {
-          const dk = f.bookmakers?.[0];
-          const market = dk?.markets?.find(m => m.key === 'h2h');
-          return market?.outcomes?.length >= 2;
-        });
-
-        const live = withOdds.filter(f => isLive(f.commence_time));
-        const upcoming = withOdds.filter(f => !isLive(f.commence_time));
-
-        status.textContent = `Updated ${new Date().toLocaleTimeString()} · ${withOdds.length} fights with odds · ${fights.length} total`;
-        container.innerHTML = '';
-
-        if (!withOdds.length) {
-          container.innerHTML = `<div id="no-odds">No DraftKings odds posted right now.<br>Check back closer to fight night.</div>`;
-          return;
-        }
-
-        function renderFight(fight, liveFlag) {
-          const dk = fight.bookmakers[0];
-          const outcomes = dk.markets.find(m => m.key === 'h2h').outcomes;
-          const [a, b] = outcomes;
-
-          const card = document.createElement('div');
-          card.className = `fight-card${liveFlag ? ' live' : ''}`;
-          card.innerHTML = `
-            <div class="event-label">${liveFlag ? '● LIVE — ' : ''}${fight.sport_title}</div>
-            <div class="matchup">
-              <div class="fighter-name">${a.name}</div>
-              <div class="odds-pill ${oddsClass(a.price)}">${fmt(a.price)}</div>
-              <div class="vs">VS</div>
-              <div class="odds-pill ${oddsClass(b.price)}">${fmt(b.price)}</div>
-              <div class="fighter-name right">${b.name}</div>
-            </div>
-            <div class="fight-time">${new Date(fight.commence_time).toLocaleDateString('en-US', { weekday:'short', month:'short', day:'numeric', hour:'numeric', minute:'2-digit' })}</div>
-          `;
-          return card;
-        }
-
-        if (live.length) {
-          const lbl = document.createElement('div');
-          lbl.className = 'section-label';
-          lbl.textContent = 'Live Now';
-          container.appendChild(lbl);
-          live.forEach(f => container.appendChild(renderFight(f, true)));
-        }
-
-        if (upcoming.length) {
-          const lbl = document.createElement('div');
-          lbl.className = 'section-label';
-          lbl.textContent = 'Upcoming';
-          container.appendChild(lbl);
-          upcoming.forEach(f => container.appendChild(renderFight(f, false)));
-        }
-
-      } catch (e) {
-        status.textContent = 'Error — is the server running?';
-        console.error(e);
+    const h = history[fightKey];
+    if (h.f1.length > 0) {
+      const prev1 = h.f1[h.f1.length-1], prev2 = h.f2[h.f2.length-1];
+      if ((prev1 > 0 && f1Odds < 0) || (prev2 > 0 && f2Odds < 0)) {
+        h.crossovers.push(h.labels.length);
       }
     }
+    h.labels.push(timeLabel);
+    h.f1.push(f1Odds);
+    h.f2.push(f2Odds);
+    if (h.labels.length > 300) { h.labels.shift(); h.f1.shift(); h.f2.shift(); }
+    if (selected === fightKey) refresh();
+  }
 
-    load();
-    setInterval(load, 10000);
-
-    // ── Usage footer ─────────────────────────────────────
-    async function loadCredits() {
-      try {
-        const r = await fetch('/api/credits');
-        const d = await r.json();
-        if (d.oddsApi.remaining !== null) {
-          document.getElementById('uf-credits-remaining').textContent = d.oddsApi.remaining.toLocaleString();
-          document.getElementById('uf-credits-used').textContent = d.oddsApi.used.toLocaleString();
-        }
-        document.getElementById('uf-ai-cost').textContent = '$' + d.anthropic.estimatedCostUSD.toFixed(4);
-        document.getElementById('uf-ai-queries').textContent = d.anthropic.sessionQueries;
-      } catch {}
+  function select(fightKey, f1Name, f2Name) {
+    selected = fightKey;
+    if (!history[fightKey]) {
+      history[fightKey] = { labels: [], f1: [], f2: [], f1Name: f1Name||'Fighter 1', f2Name: f2Name||'Fighter 2', crossovers: [] };
     }
-    loadCredits();
-    setInterval(loadCredits, 30000);
+    if (!chart) initChart();
+    emptyEl.style.display = 'none';
+    canvas.style.display = 'block';
+    refresh();
+  }
 
-    // ── Chat widget ──────────────────────────────────────
-    const fab       = document.getElementById('chat-fab');
-    const panel     = document.getElementById('chat-panel');
-    const messages  = document.getElementById('chat-messages');
-    const input     = document.getElementById('chat-input');
-    const sendBtn   = document.getElementById('chat-send');
-    const usageLbl  = document.getElementById('chat-usage');
+  function refresh() {
+    if (!selected || !chart) return;
+    const h = history[selected];
+    if (!h) return;
+    chart.data.labels = [...h.labels];
+    chart.data.datasets[0].label = h.f1Name;
+    chart.data.datasets[0].data = [...h.f1];
+    chart.data.datasets[1].label = h.f2Name;
+    chart.data.datasets[1].data = [...h.f2];
+    const annotations = {};
+    h.crossovers.forEach((idx, i) => {
+      if (idx < h.labels.length) {
+        annotations[`xover${i}`] = {
+          type: 'line', scaleID: 'x', value: h.labels[idx],
+          borderColor: '#e8b84b88', borderWidth: 1.5, borderDash: [4, 4],
+        };
+      }
+    });
+    chart.options.plugins.annotation.annotations = annotations;
+    chart.update('none');
+    if (infoEl) {
+      infoEl.innerHTML = h.crossovers.length
+        ? `<span class="graph-crossover-badge">⚡ ${h.crossovers.length} crossover${h.crossovers.length > 1 ? 's' : ''}</span>`
+        : '';
+    }
+  }
 
-    fab.addEventListener('click', () => {
-      panel.classList.toggle('open');
-      if (panel.classList.contains('open')) input.focus();
+  return { addPoint, select, history: () => history };
+}
+
+// ── Bet tracker factory ──────────────────────────────────────────────────────
+
+function makeBetTracker(ids) {
+  const { fighterId, stakeId, oddsId, lockId, resultId, currentOddsId, hedgeSizeId, profitAId, profitBId, statusId } = ids;
+  let locked = null;  // { fighter, stake, odds }
+  let currentOtherOdds = null;
+
+  document.getElementById(lockId).addEventListener('click', () => {
+    const fighter = document.getElementById(fighterId).value.trim();
+    const stake = parseFloat(document.getElementById(stakeId).value);
+    const odds = parseInt(document.getElementById(oddsId).value);
+    if (!fighter || isNaN(stake) || isNaN(odds)) return;
+    locked = { fighter, stake, odds };
+    document.getElementById(resultId).style.display = 'block';
+    recalc();
+  });
+
+  function setOtherOdds(odds) {
+    currentOtherOdds = odds;
+    if (locked) recalc();
+  }
+
+  function recalc() {
+    if (!locked || currentOtherOdds === null) return;
+    const D1 = toDecimal(locked.odds);
+    const D2 = toDecimal(currentOtherOdds);
+    const S1 = locked.stake;
+    const optS2 = S1 * D1 / D2;
+    const profitA = S1 * (D1 - 1) - optS2;
+    const profitB = optS2 * (D2 - 1) - S1;
+    const ratio = (D1 - 1) * (D2 - 1);
+    const winWin = ratio > 1;
+    const breakEven = Math.abs(ratio - 1) < 0.05;
+
+    const fmtMoney = v => (v >= 0 ? '+' : '') + '$' + Math.abs(v).toFixed(2);
+
+    document.getElementById(currentOddsId).textContent = fmt(currentOtherOdds);
+    document.getElementById(hedgeSizeId).textContent = `$${optS2.toFixed(2)}`;
+    const paEl = document.getElementById(profitAId);
+    const pbEl = document.getElementById(profitBId);
+    paEl.textContent = fmtMoney(profitA);
+    pbEl.textContent = fmtMoney(profitB);
+    paEl.className = 'result-value ' + (profitA >= 0 ? 'green' : 'red');
+    pbEl.className = 'result-value ' + (profitB >= 0 ? 'green' : 'red');
+
+    const statusEl = document.getElementById(statusId);
+    if (winWin) {
+      statusEl.className = 'status-winwin';
+      statusEl.textContent = '🔔 WIN-WIN — HEDGE NOW';
+    } else if (breakEven) {
+      statusEl.className = 'status-hedge';
+      statusEl.textContent = '⚖️ BREAK EVEN HEDGE AVAILABLE';
+    } else {
+      statusEl.className = 'status-partial';
+      statusEl.textContent = `PARTIAL HEDGE ONLY (ratio: ${ratio.toFixed(3)})`;
+    }
+  }
+
+  return { setOtherOdds, getLocked: () => locked };
+}
+
+// ── Render fight cards ───────────────────────────────────────────────────────
+
+function renderFightCards(fights, containerId, onSelect) {
+  const container = document.getElementById(containerId);
+  const live = fights.filter(f => isLive(f.commence_time));
+  const upcoming = fights.filter(f => !isLive(f.commence_time));
+  container.innerHTML = '';
+
+  if (!fights.length) {
+    container.innerHTML = `<div id="no-odds">No DraftKings odds available right now.</div>`;
+    return;
+  }
+
+  function renderFight(fight, isLiveFlag) {
+    const dk = fight.bookmakers[0];
+    const outcomes = dk.markets.find(m => m.key === 'h2h').outcomes;
+    const [a, b] = outcomes;
+    const card = document.createElement('div');
+    card.className = `fight-card${isLiveFlag ? ' live' : ''}`;
+    card.innerHTML = `
+      <div class="event-label">${isLiveFlag ? '● LIVE — ' : ''}${fight.sport_title || fight.sport_key}</div>
+      <div class="matchup">
+        <div class="fighter-name">${a.name}</div>
+        <div class="odds-pill ${oddsClass(a.price)}">${fmt(a.price)}</div>
+        <div class="vs">VS</div>
+        <div class="odds-pill ${oddsClass(b.price)}">${fmt(b.price)}</div>
+        <div class="fighter-name right">${b.name}</div>
+      </div>
+      <div class="fight-time">${new Date(fight.commence_time).toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})}</div>
+    `;
+    card.addEventListener('click', () => {
+      container.querySelectorAll('.fight-card').forEach(c => c.classList.remove('selected'));
+      card.classList.add('selected');
+      onSelect(fight, a, b);
+    });
+    return card;
+  }
+
+  if (live.length) {
+    const lbl = document.createElement('div'); lbl.className = 'section-label'; lbl.textContent = 'Live Now';
+    container.appendChild(lbl);
+    live.forEach(f => container.appendChild(renderFight(f, true)));
+  }
+  if (upcoming.length) {
+    const lbl = document.createElement('div'); lbl.className = 'section-label'; lbl.textContent = 'Upcoming';
+    container.appendChild(lbl);
+    upcoming.forEach(f => container.appendChild(renderFight(f, false)));
+  }
+}
+
+// ═══ UFC PAGE ════════════════════════════════════════════════════════════════
+
+const ufcGraph = makeGraph('odds-chart', 'graph-empty', 'graph-crossover-info');
+const ufcTracker = makeBetTracker({
+  fighterId: 'bt-fighter', stakeId: 'bt-stake', oddsId: 'bt-odds',
+  lockId: 'tracker-lock-btn', resultId: 'tracker-result',
+  currentOddsId: 'tr-current-odds', hedgeSizeId: 'tr-hedge-size',
+  profitAId: 'tr-profit-a', profitBId: 'tr-profit-b', statusId: 'tracker-status'
+});
+
+let ufcFights = [];
+let ufcSelectedFight = null;
+let ufcPollTimer = null;
+
+async function loadUFC() {
+  try {
+    const res = await fetch('/api/ufc');
+    const raw = await res.json();
+    ufcFights = raw.filter(f => f.bookmakers?.[0]?.markets?.find(m => m.key === 'h2h')?.outcomes?.length >= 2);
+
+    document.getElementById('topbar-status').textContent =
+      `Updated ${new Date().toLocaleTimeString()} · ${ufcFights.length} fights`;
+
+    // Push new data points to graph history for all fights
+    const ts = new Date().toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' });
+    ufcFights.forEach(f => {
+      const outcomes = f.bookmakers[0].markets.find(m => m.key === 'h2h').outcomes;
+      const [a, b] = outcomes;
+      const key = makeFightKey(a.name, b.name);
+      ufcGraph.addPoint(key, ts, a.name, a.price, b.name, b.price);
+      // Update tracker if this is the fight being tracked
+      const locked = ufcTracker.getLocked();
+      if (locked) {
+        const qL = locked.fighter.toLowerCase();
+        if (a.name.toLowerCase().includes(qL)) ufcTracker.setOtherOdds(b.price);
+        else if (b.name.toLowerCase().includes(qL)) ufcTracker.setOtherOdds(a.price);
+      }
     });
 
-    function addMsg(text, role) {
-      const d = document.createElement('div');
-      d.className = `msg ${role}`;
-      if (role === 'assistant' && typeof marked !== 'undefined') {
-        d.innerHTML = marked.parse(text);
-      } else {
-        d.textContent = text;
+    renderFightCards(ufcFights, 'fights', (fight, a, b) => {
+      ufcSelectedFight = fight;
+      const key = makeFightKey(a.name, b.name);
+      document.getElementById('graph-fight-label').textContent = `${a.name} vs ${b.name}`;
+      ufcGraph.select(key, a.name, b.name);
+      // Pre-fill tracker fighter name from selection if empty
+      if (!document.getElementById('bt-fighter').value) {
+        document.getElementById('bt-fighter').value = a.name;
+        document.getElementById('bt-odds').value = a.price;
       }
-      messages.appendChild(d);
-      messages.scrollTop = messages.scrollHeight;
-      return d;
-    }
+    });
 
-    async function sendMessage() {
-      const q = input.value.trim();
-      if (!q) return;
-      input.value = '';
-      sendBtn.disabled = true;
-      addMsg(q, 'user');
-      const thinking = addMsg('Researching...', 'thinking');
-      try {
-        const res = await fetch('/api/research', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ question: q }),
-        });
-        const data = await res.json();
-        thinking.remove();
-        addMsg(data.answer || data.error, 'assistant');
-        if (data.usage) {
-          usageLbl.textContent = `${data.usage.sessionQueries} queries · $${data.usage.estimatedCostUSD.toFixed(3)}`;
-        }
-        // Refresh usage bar after a query
-        loadCredits();
-      } catch (e) {
-        thinking.remove();
-        addMsg('Error: ' + e.message, 'assistant');
+    // Auto-select first live fight for graph
+    const live = ufcFights.find(f => isLive(f.commence_time));
+    const autoSelect = live || ufcFights[0];
+    if (autoSelect && !ufcSelectedFight) {
+      const outcomes = autoSelect.bookmakers[0].markets.find(m => m.key === 'h2h').outcomes;
+      const [a, b] = outcomes;
+      const key = makeFightKey(a.name, b.name);
+      document.getElementById('graph-fight-label').textContent = `${a.name} vs ${b.name}`;
+      ufcGraph.select(key, a.name, b.name);
+      ufcSelectedFight = autoSelect;
+    }
+  } catch (e) {
+    document.getElementById('topbar-status').textContent = 'Error loading odds';
+    console.error(e);
+  }
+}
+
+loadUFC();
+// Poll every 2s for live fights, 10s otherwise
+function schedulePoll() {
+  const hasLive = ufcFights.some(f => isLive(f.commence_time));
+  clearTimeout(ufcPollTimer);
+  ufcPollTimer = setTimeout(async () => { await loadUFC(); schedulePoll(); }, hasLive ? 2000 : 10000);
+}
+loadUFC().then(schedulePoll);
+
+// ═══ LIVE EVENTS PAGE ═══════════════════════════════════════════════════════
+
+const eventsGraph = makeGraph('odds-chart-events', 'graph-empty-events', 'graph-crossover-info-events');
+const eventsTracker = makeBetTracker({
+  fighterId: 'bt-fighter-e', stakeId: 'bt-stake-e', oddsId: 'bt-odds-e',
+  lockId: 'tracker-lock-btn-events', resultId: 'tracker-result-events',
+  currentOddsId: 'tr-current-odds-e', hedgeSizeId: 'tr-hedge-size-e',
+  profitAId: 'tr-profit-a-e', profitBId: 'tr-profit-b-e', statusId: 'tracker-status-events'
+});
+
+let activeSportKey = null;
+let eventsPollTimer = null;
+let eventsFights = [];
+
+async function loadSports() {
+  const bar = document.getElementById('sport-bar');
+  try {
+    const res = await fetch('/api/sports');
+    const sports = await res.json();
+    bar.innerHTML = '';
+    // Group by group, show key ones first
+    const priority = ['americanfootball','basketball','icehockey','baseball','soccer','mma','boxing','tennis'];
+    const sorted = sports.sort((a, b) => {
+      const ai = priority.findIndex(p => a.group.toLowerCase().includes(p));
+      const bi = priority.findIndex(p => b.group.toLowerCase().includes(p));
+      return (ai === -1 ? 99 : ai) - (bi === -1 ? 99 : bi);
+    });
+    sorted.forEach(s => {
+      const btn = document.createElement('button');
+      btn.className = 'sport-btn';
+      btn.textContent = s.title;
+      btn.dataset.key = s.key;
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.sport-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeSportKey = s.key;
+        clearTimeout(eventsPollTimer);
+        loadEventFights();
+      });
+      bar.appendChild(btn);
+    });
+  } catch (e) {
+    bar.innerHTML = '<div style="color:#444;font-size:0.75rem;">Could not load sports</div>';
+  }
+}
+
+async function loadEventFights() {
+  if (!activeSportKey) return;
+  try {
+    const res = await fetch(`/api/sport/${activeSportKey}`);
+    const raw = await res.json();
+    eventsFights = raw.filter(f => f.bookmakers?.[0]?.markets?.find(m => m.key === 'h2h')?.outcomes?.length >= 2);
+
+    const ts = new Date().toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' });
+    eventsFights.forEach(f => {
+      const outcomes = f.bookmakers[0].markets.find(m => m.key === 'h2h').outcomes;
+      const [a, b] = outcomes;
+      eventsGraph.addPoint(makeFightKey(a.name, b.name), ts, a.name, a.price, b.name, b.price);
+      const locked = eventsTracker.getLocked();
+      if (locked) {
+        const qL = locked.fighter.toLowerCase();
+        if (a.name.toLowerCase().includes(qL)) eventsTracker.setOtherOdds(b.price);
+        else if (b.name.toLowerCase().includes(qL)) eventsTracker.setOtherOdds(a.price);
       }
-      sendBtn.disabled = false;
-      input.focus();
-    }
+    });
 
-    sendBtn.addEventListener('click', sendMessage);
-    input.addEventListener('keydown', e => { if (e.key === 'Enter') sendMessage(); });
-  </script>
+    renderFightCards(eventsFights, 'event-fights', (fight, a, b) => {
+      const key = makeFightKey(a.name, b.name);
+      document.getElementById('graph-fight-label-events').textContent = `${a.name} vs ${b.name}`;
+      eventsGraph.select(key, a.name, b.name);
+      if (!document.getElementById('bt-fighter-e').value) {
+        document.getElementById('bt-fighter-e').value = a.name;
+        document.getElementById('bt-odds-e').value = a.price;
+      }
+    });
+
+    const hasLive = eventsFights.some(f => isLive(f.commence_time));
+    eventsPollTimer = setTimeout(loadEventFights, hasLive ? 2000 : 15000);
+  } catch (e) {
+    document.getElementById('event-fights').innerHTML = `<div id="no-odds">Error loading events</div>`;
+  }
+}
+
+// ═══ TAB SWITCHING ═══════════════════════════════════════════════════════════
+
+document.querySelectorAll('.nav-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-page').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
+    if (tab.dataset.tab === 'events' && !activeSportKey) loadSports();
+  });
+});
+
+// ═══ USAGE FOOTER ═══════════════════════════════════════════════════════════
+
+async function loadCredits() {
+  try {
+    const r = await fetch('/api/credits');
+    const d = await r.json();
+    if (d.oddsApi.remaining !== null) {
+      document.getElementById('uf-credits-remaining').textContent = d.oddsApi.remaining.toLocaleString();
+      document.getElementById('uf-credits-used').textContent = d.oddsApi.used.toLocaleString();
+    }
+    document.getElementById('uf-ai-cost').textContent = '$' + d.anthropic.estimatedCostUSD.toFixed(4);
+    document.getElementById('uf-ai-queries').textContent = d.anthropic.sessionQueries;
+  } catch {}
+}
+loadCredits();
+setInterval(loadCredits, 30000);
+
+// ═══ CHAT WIDGET ════════════════════════════════════════════════════════════
+
+const fab      = document.getElementById('chat-fab');
+const panel    = document.getElementById('chat-panel');
+const messages = document.getElementById('chat-messages');
+const input    = document.getElementById('chat-input');
+const sendBtn  = document.getElementById('chat-send');
+const usageLbl = document.getElementById('chat-usage');
+
+fab.addEventListener('click', () => {
+  panel.classList.toggle('open');
+  if (panel.classList.contains('open')) input.focus();
+});
+
+function addMsg(text, role) {
+  const d = document.createElement('div');
+  d.className = `msg ${role}`;
+  if (role === 'assistant' && typeof marked !== 'undefined') {
+    d.innerHTML = marked.parse(text);
+  } else {
+    d.textContent = text;
+  }
+  messages.appendChild(d);
+  messages.scrollTop = messages.scrollHeight;
+  return d;
+}
+
+async function sendMessage() {
+  const q = input.value.trim();
+  if (!q) return;
+  input.value = '';
+  sendBtn.disabled = true;
+  addMsg(q, 'user');
+  const thinking = addMsg('Researching...', 'thinking');
+  try {
+    const res = await fetch('/api/research', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ question: q }),
+    });
+    const data = await res.json();
+    thinking.remove();
+    addMsg(data.answer || data.error, 'assistant');
+    if (data.usage) {
+      usageLbl.textContent = `${data.usage.sessionQueries} queries · $${data.usage.estimatedCostUSD.toFixed(3)}`;
+    }
+    loadCredits();
+  } catch (e) {
+    thinking.remove();
+    addMsg('Error: ' + e.message, 'assistant');
+  }
+  sendBtn.disabled = false;
+  input.focus();
+}
+
+sendBtn.addEventListener('click', sendMessage);
+input.addEventListener('keydown', e => { if (e.key === 'Enter') sendMessage(); });
+</script>
 </body>
 </html>
