@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>UFC Live Odds — DraftKings</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { background: #0d0d0d; color: #eee; font-family: 'Helvetica Neue', sans-serif; padding: 28px; max-width: 900px; margin: 0 auto; }
@@ -10,6 +11,14 @@
     header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 28px; border-bottom: 1px solid #222; padding-bottom: 16px; }
     h1 { color: #e8b84b; font-size: 1.5rem; letter-spacing: 1px; text-transform: uppercase; }
     #status { font-size: 0.75rem; color: #555; }
+
+    /* Usage footer */
+    #usage-footer {
+      margin-top: 48px; padding-top: 12px; border-top: 1px solid #1a1a1a;
+      display: flex; gap: 20px; align-items: center; flex-wrap: wrap;
+    }
+    .uf-item { font-size: 0.68rem; color: #3a3a3a; }
+    .uf-item span { color: #555; }
 
     .section-label { font-size: 0.65rem; color: #555; text-transform: uppercase; letter-spacing: 2px; margin: 20px 0 10px; }
 
@@ -81,10 +90,24 @@
       display: flex; flex-direction: column; gap: 10px;
       min-height: 200px;
     }
-    .msg { font-size: 0.82rem; line-height: 1.6; padding: 10px 12px; border-radius: 8px; max-width: 94%; white-space: pre-wrap; }
-    .msg.user { background: #222; color: #ccc; align-self: flex-end; }
+    .msg { font-size: 0.82rem; line-height: 1.6; padding: 10px 12px; border-radius: 8px; max-width: 94%; }
+    .msg.user { background: #222; color: #ccc; align-self: flex-end; white-space: pre-wrap; }
     .msg.assistant { background: #1e2a1e; color: #b8e6b8; align-self: flex-start; border: 1px solid #2a3a2a; }
     .msg.thinking { color: #555; font-style: italic; background: none; border: none; padding: 4px 0; }
+    /* Markdown rendered inside assistant messages */
+    .msg.assistant p { margin-bottom: 0.6em; }
+    .msg.assistant p:last-child { margin-bottom: 0; }
+    .msg.assistant strong { color: #e8b84b; }
+    .msg.assistant table { border-collapse: collapse; width: 100%; margin: 8px 0; font-size: 0.78rem; }
+    .msg.assistant th { background: #253325; color: #e8b84b; padding: 4px 8px; border: 1px solid #2a3a2a; text-align: left; }
+    .msg.assistant td { padding: 4px 8px; border: 1px solid #2a3a2a; }
+    .msg.assistant tr:nth-child(even) td { background: #1a2a1a; }
+    .msg.assistant h1,.msg.assistant h2,.msg.assistant h3 { color: #e8b84b; margin: 8px 0 4px; font-size: 0.88rem; }
+    .msg.assistant ul,.msg.assistant ol { padding-left: 1.4em; margin: 4px 0; }
+    .msg.assistant li { margin-bottom: 2px; }
+    .msg.assistant code { background: #0d1a0d; padding: 1px 5px; border-radius: 3px; font-family: monospace; font-size: 0.78rem; color: #a8d8a8; }
+    .msg.assistant pre { background: #0d1a0d; padding: 8px; border-radius: 4px; overflow-x: auto; margin: 6px 0; }
+    .msg.assistant pre code { background: none; padding: 0; }
 
     #chat-input-row { display: flex; gap: 8px; padding: 10px 12px; border-top: 1px solid #222; }
     #chat-input {
@@ -105,7 +128,13 @@
     <h1>UFC Odds — DraftKings</h1>
     <div id="status">Loading...</div>
   </header>
+
   <div id="fights"></div>
+
+  <div id="usage-footer">
+    <div class="uf-item">Odds API — <span id="uf-credits-remaining">—</span> credits remaining · <span id="uf-credits-used">—</span> used</div>
+    <div class="uf-item">AI — <span id="uf-ai-queries">0</span> queries · <span id="uf-ai-cost">$0.0000</span></div>
+  </div>
 
   <!-- Floating chat widget -->
   <button id="chat-fab" title="Fight Research">💬</button>
@@ -213,6 +242,22 @@
     load();
     setInterval(load, 10000);
 
+    // ── Usage footer ─────────────────────────────────────
+    async function loadCredits() {
+      try {
+        const r = await fetch('/api/credits');
+        const d = await r.json();
+        if (d.oddsApi.remaining !== null) {
+          document.getElementById('uf-credits-remaining').textContent = d.oddsApi.remaining.toLocaleString();
+          document.getElementById('uf-credits-used').textContent = d.oddsApi.used.toLocaleString();
+        }
+        document.getElementById('uf-ai-cost').textContent = '$' + d.anthropic.estimatedCostUSD.toFixed(4);
+        document.getElementById('uf-ai-queries').textContent = d.anthropic.sessionQueries;
+      } catch {}
+    }
+    loadCredits();
+    setInterval(loadCredits, 30000);
+
     // ── Chat widget ──────────────────────────────────────
     const fab       = document.getElementById('chat-fab');
     const panel     = document.getElementById('chat-panel');
@@ -229,7 +274,11 @@
     function addMsg(text, role) {
       const d = document.createElement('div');
       d.className = `msg ${role}`;
-      d.textContent = text;
+      if (role === 'assistant' && typeof marked !== 'undefined') {
+        d.innerHTML = marked.parse(text);
+      } else {
+        d.textContent = text;
+      }
       messages.appendChild(d);
       messages.scrollTop = messages.scrollHeight;
       return d;
@@ -254,6 +303,8 @@
         if (data.usage) {
           usageLbl.textContent = `${data.usage.sessionQueries} queries · $${data.usage.estimatedCostUSD.toFixed(3)}`;
         }
+        // Refresh usage bar after a query
+        loadCredits();
       } catch (e) {
         thinking.remove();
         addMsg('Error: ' + e.message, 'assistant');

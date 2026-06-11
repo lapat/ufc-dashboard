@@ -15,7 +15,9 @@ const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 const TOKEN_WARN = parseInt(process.env.ANTHROPIC_TOKEN_WARN_THRESHOLD || '500000');
 let totalTokensUsed = 0;
 let totalQueries = 0;
-let _cachedSummaryJson = null; // cached once at startup, cleared when new fights added
+let _cachedSummaryJson = null;
+let _oddsApiCreditsUsed = null;
+let _oddsApiCreditsRemaining = null;
 
 app.use(express.static('public'));
 app.use(express.json());
@@ -99,7 +101,8 @@ function getCachedSummary() {
     close: f.closeOdds,
     crossovers: f.crossovers.length,
     winWins: f.winWinCount,
-    bestWinWin: f.crossovers.filter(c => c.winWin).map(c => `${c.fighter} +${c.o1}→+${c.o2}`)[0] || null,
+    // Per-crossover odds so Claude can answer precise questions about odds magnitude
+    crossoverEvents: f.crossovers.map(c => ({ o1: c.o1, o2: c.o2, ww: c.winWin })),
   }));
   _cachedSummaryJson = JSON.stringify(summary, null, 1);
   console.log(`Historical summary cached: ${index.length} fights, ${_cachedSummaryJson.length} chars`);
@@ -120,6 +123,42 @@ function findFighterHistory(name, limit = 3) {
     .slice(0, limit);
 }
 
+const systemPrompt = `You are an expert MMA live betting research assistant. You work with Ish, a professional live MMA bettor who specializes in crossover opportunities during live UFC fights.
+
+## YOUR DATA SOURCES
+1. LOCAL HISTORICAL DATA (Dec 2025–May 2026): Live DraftKings odds captured every ~3 seconds during 262 actual UFC fights. Has opening odds, closing odds, AND full crossover/win-win analysis.
+2. LIVE/UPCOMING ODDS: Current DraftKings moneyline odds for upcoming fights.
+3. ODDS API HISTORICAL (any date): Can fetch pre-fight DraftKings odds for past events outside the local dataset. Costs 10 API credits per date lookup. Use when Ish asks about a fighter whose fights aren't in the local data.
+
+## CORE CONCEPTS
+
+**Crossover**: During a live fight, a fighter's odds flip from underdog (+) to favorite (-). Momentum shifted — book adjusted.
+
+**Win-Win Crossover**: The core opportunity:
+- Bet 1: placed live when Fighter A is at plus money
+- Crossover happens — Fighter A becomes favorite
+- Bet 2: placed on Fighter B now at plus money
+- Guaranteed profit condition: (D1-1)(D2-1) > 1
+- Works even with minus-money Bet 1 if the crossover swing is large enough
+
+**Stake math**:
+- Optimal Bet 2 per $100 Bet 1: sqrt((D1-1)/(D2-1)) × 100
+- Safe range: S1/(D2-1) to S1×(D1-1)
+
+**Dataset stats**: 262 fights. 110/262 (42%) had crossovers. 59 confirmed win-win moments.
+
+## WHEN TO REQUEST HISTORICAL API LOOKUP
+If Ish asks about a fighter who has NO fights in the local dataset, respond with:
+LOOKUP_NEEDED: [fighter name] [approximate fight dates as YYYY-MM-DD]
+
+List up to 3 dates to check (spaced a few months apart around when you estimate their recent fights occurred based on your knowledge of UFC scheduling). The system will fetch those dates and retry your answer with that data included.
+
+## HOW TO ANSWER
+- Be specific with numbers — Ish makes real decisions
+- Format tables for multi-fight comparisons
+- For upcoming fights, assess crossover potential based on odds gap and fighter styles
+- Always note if crossover data is from local dataset (full detail) vs API lookup (pre-fight odds only)`;
+
 // ── Routes ─────────────────────────────────────────────────────────────────
 
 // Live UFC odds
@@ -127,9 +166,23 @@ app.get('/api/ufc', async (req, res) => {
   try {
     const url = `${BASE_URL}/sports/mma_mixed_martial_arts/odds/?apiKey=${ODDS_API_KEY}&regions=us&markets=h2h&bookmakers=draftkings&oddsFormat=american`;
     const { data, headers } = await fetchJson(url);
-    console.log(`Odds API — used: ${headers['x-requests-used']} | remaining: ${headers['x-requests-remaining']}`);
+    updateOddsCredits(headers);
+    console.log(`Odds API — used: ${_oddsApiCreditsUsed} | remaining: ${_oddsApiCreditsRemaining}`);
     res.json(data);
   } catch (e) { res.status(500).json({ error: e.message }); }
+});
+
+// Credits/usage status
+app.get('/api/credits', (req, res) => {
+  res.json({
+    oddsApi: { used: _oddsApiCreditsUsed, remaining: _oddsApiCreditsRemaining, total: 100000 },
+    anthropic: {
+      sessionTokens: totalTokensUsed,
+      sessionQueries: totalQueries,
+      estimatedCostUSD: +(totalTokensUsed / 1_000_000 * 3).toFixed(4),
+      warnThreshold: TOKEN_WARN,
+    },
+  });
 });
 
 // Historical fight index
@@ -144,18 +197,42 @@ app.get('/api/fighter/:name', (req, res) => {
   catch (e) { res.status(500).json({ error: e.message }); }
 });
 
+// Fetch historical odds from The Odds API for a specific past date (costs 10 credits each)
+async function fetchHistoricalOdds(dateISO) {
+  const url = `${BASE_URL}/historical/sports/mma_mixed_martial_arts/odds/?apiKey=${ODDS_API_KEY}&date=${dateISO}&regions=us&markets=h2h&bookmakers=draftkings&oddsFormat=american`;
+  const { data, headers } = await fetchJson(url);
+  updateOddsCredits(headers);
+  console.log(`Historical API (10 credits) — used: ${_oddsApiCreditsUsed} | remaining: ${_oddsApiCreditsRemaining}`);
+  if (!Array.isArray(data?.data)) return [];
+  return data.data.filter(f => f.bookmakers?.length > 0).map(f => {
+    const outcomes = f.bookmakers[0].markets[0]?.outcomes || [];
+    return {
+      fight: `${f.home_team} vs ${f.away_team}`,
+      date: f.commence_time.slice(0, 10),
+      odds: outcomes.reduce((acc, o) => { acc[o.name] = o.price; return acc; }, {}),
+      source: 'historical_api',
+    };
+  });
+}
+
+function updateOddsCredits(headers) {
+  if (headers['x-requests-used']) _oddsApiCreditsUsed = parseInt(headers['x-requests-used']);
+  if (headers['x-requests-remaining']) _oddsApiCreditsRemaining = parseInt(headers['x-requests-remaining']);
+}
+
 // AI research endpoint — Ish can ask anything
 app.post('/api/research', async (req, res) => {
   const { question } = req.body;
   if (!question) return res.status(400).json({ error: 'question required' });
 
   try {
-    // Pull live upcoming odds to give Claude current context
+    // Pull live upcoming odds
     let liveOdds = [];
     try {
       const url = `${BASE_URL}/sports/mma_mixed_martial_arts/odds/?apiKey=${ODDS_API_KEY}&regions=us&markets=h2h&bookmakers=draftkings&oddsFormat=american`;
-      const { data } = await fetchJson(url);
-      liveOdds = data.filter(f => f.bookmakers?.length > 0).map(f => {
+      const { data, headers } = await fetchJson(url);
+      updateOddsCredits(headers);
+      liveOdds = (Array.isArray(data) ? data : []).filter(f => f.bookmakers?.length > 0).map(f => {
         const outcomes = f.bookmakers[0].markets[0]?.outcomes || [];
         return {
           fight: `${f.home_team} vs ${f.away_team}`,
@@ -165,60 +242,67 @@ app.post('/api/research', async (req, res) => {
       });
     } catch {}
 
-    // Use cached historical summary (built once, reused across all queries)
     const historicalSummaryJson = getCachedSummary();
     totalQueries++;
 
-    const systemPrompt = `You are an expert MMA live betting research assistant. You work with Ish, a professional live MMA bettor who specializes in crossover opportunities during live UFC fights.
-
-## YOUR DATA SOURCES
-1. HISTORICAL DATA: Live DraftKings odds captured every ~3 seconds during actual UFC fights (Dec 2025 – May 2026). Contains opening odds, closing odds, and crossover analysis for 262 fights.
-2. LIVE/UPCOMING ODDS: Current DraftKings moneyline odds for upcoming fights.
-
-## CORE CONCEPTS YOU KNOW DEEPLY
-
-**Crossover**: During a live fight, a fighter's odds flip from underdog (+ money) to favorite (- money). This happens when momentum shifts — the underdog starts winning and the book adjusts.
-
-**Win-Win Crossover**: The key opportunity Ish looks for. Two bets placed at different times during the live fight:
-- Bet 1: placed when Fighter A is at plus money (underdog)
-- Crossover happens — Fighter A becomes the new favorite
-- Bet 2: placed on Fighter B who is now the new underdog at plus money
-- Guaranteed profit condition: (D1-1)(D2-1) > 1 where D = decimal odds
-- This works even if Bet 1 was at minus money, IF the crossover swing is large enough
-- The bigger the plus money on both legs, the larger the guaranteed profit window
-
-**Stake sizing for win-win**:
-- Optimal Bet 2 per $100 Bet 1: sqrt((D1-1)/(D2-1)) × 100
-- Profit range: any Bet 2 stake between S1/(D2-1) and S1×(D1-1)
-- Example: Bet 1 at +200, Bet 2 at +150 → guaranteed profit on any Bet 2 between $33 and $200 per $100 Bet 1
-
-**Dataset stats**: 262 fights analyzed. 110/262 (42%) had crossovers. 59 confirmed win-win crossover moments across the dataset.
-
-## HOW TO ANSWER
-- When asked about a fighter, find their fights in historical data and report: opening odds, closing odds, number of crossovers, any win-win windows
-- When asked about upcoming fights, use the live odds data
-- Be specific with numbers — Ish makes real decisions based on your answers
-- If something isn't in the data, say so clearly
-- Format tables when comparing multiple fights
-- Suggest what to watch for in upcoming fights based on historical patterns`;
-
-
-    const userMessage = `HISTORICAL FIGHT DATA:
+    const buildMessages = (extraData) => [{
+      role: 'user',
+      content: `HISTORICAL FIGHT DATA (local, Dec 2025–May 2026):
 ${historicalSummaryJson}
 
 CURRENT DRAFTKINGS ODDS (upcoming fights):
 ${JSON.stringify(liveOdds, null, 1)}
+${extraData ? `\nADDITIONAL HISTORICAL API DATA (pre-fight odds from The Odds API):\n${JSON.stringify(extraData, null, 1)}` : ''}
 
-Question: ${question}`;
+Question: ${question}`,
+    }];
 
-    const response = await anthropic.messages.create({
+    // Pass 1
+    const pass1 = await anthropic.messages.create({
       model: 'claude-sonnet-4-6',
       max_tokens: 1500,
       system: systemPrompt,
-      messages: [{ role: 'user', content: userMessage }],
+      messages: buildMessages(null),
     });
+    const pass1Text = pass1.content[0].text;
+    let used = pass1.usage.input_tokens + pass1.usage.output_tokens;
 
-    const used = response.usage.input_tokens + response.usage.output_tokens;
+    // Check if Claude wants historical API lookups
+    const lookupMatch = pass1Text.match(/LOOKUP_NEEDED:\s*(.+)/i);
+    let finalAnswer = pass1Text;
+
+    if (lookupMatch) {
+      // Parse dates from the LOOKUP_NEEDED line: "Fighter Name YYYY-MM-DD YYYY-MM-DD ..."
+      const parts = lookupMatch[1].trim().split(/\s+/);
+      const dates = parts.filter(p => /^\d{4}-\d{2}-\d{2}$/.test(p)).slice(0, 3);
+      console.log(`Historical lookup requested for dates: ${dates.join(', ')}`);
+
+      const extraData = [];
+      for (const d of dates) {
+        try {
+          const results = await fetchHistoricalOdds(d);
+          extraData.push(...results);
+        } catch (e) {
+          console.error(`Historical API error for ${d}:`, e.message);
+        }
+      }
+
+      if (extraData.length > 0) {
+        // Pass 2 with enriched data
+        const pass2 = await anthropic.messages.create({
+          model: 'claude-sonnet-4-6',
+          max_tokens: 1500,
+          system: systemPrompt,
+          messages: buildMessages(extraData),
+        });
+        finalAnswer = pass2.content[0].text;
+        used += pass2.usage.input_tokens + pass2.usage.output_tokens;
+      } else {
+        finalAnswer = pass1Text.replace(/LOOKUP_NEEDED:.*/i, '').trim() +
+          '\n\n*Note: Historical API lookup returned no results for those dates.*';
+      }
+    }
+
     totalTokensUsed += used;
     console.log(`Research query — tokens: ${used} | session total: ${totalTokensUsed}`);
     if (totalTokensUsed > TOKEN_WARN) {
@@ -226,12 +310,16 @@ Question: ${question}`;
     }
 
     res.json({
-      answer: response.content[0].text,
+      answer: finalAnswer,
       usage: {
         thisQuery: used,
         sessionTotal: totalTokensUsed,
         sessionQueries: totalQueries,
         estimatedCostUSD: +(totalTokensUsed / 1_000_000 * 3).toFixed(3),
+      },
+      oddsApi: {
+        creditsUsed: _oddsApiCreditsUsed,
+        creditsRemaining: _oddsApiCreditsRemaining,
       },
     });
   } catch (e) {
