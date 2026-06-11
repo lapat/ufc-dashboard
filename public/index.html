@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>UFC Live Odds Dashboard</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #111; color: #eee; font-family: monospace; padding: 24px; }
+    h1 { color: #e8b84b; margin-bottom: 8px; font-size: 1.6rem; }
+    #status { font-size: 0.8rem; color: #888; margin-bottom: 24px; }
+    .fight-card {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 12px;
+    }
+    .fight-card.live { border-color: #e8b84b; }
+    .event-name { font-size: 0.7rem; color: #888; text-transform: uppercase; margin-bottom: 6px; }
+    .matchup { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    .fighter { flex: 1; }
+    .fighter-name { font-size: 1rem; font-weight: bold; }
+    .odds {
+      font-size: 1.3rem;
+      font-weight: bold;
+      padding: 6px 14px;
+      border-radius: 4px;
+      text-align: center;
+      min-width: 70px;
+    }
+    .odds.favorite { color: #f66; background: #2a1515; }
+    .odds.underdog { color: #6f6; background: #152215; }
+    .vs { color: #555; font-size: 0.85rem; }
+    .commence { font-size: 0.7rem; color: #666; margin-top: 8px; }
+    #empty { color: #555; text-align: center; margin-top: 60px; font-size: 1rem; }
+  </style>
+</head>
+<body>
+  <h1>UFC Odds — DraftKings</h1>
+  <div id="status">Loading...</div>
+  <div id="fights"></div>
+
+  <script>
+    async function load() {
+      const status = document.getElementById('status');
+      const container = document.getElementById('fights');
+      try {
+        const res = await fetch('/api/ufc');
+        const fights = await res.json();
+        status.textContent = `Last updated: ${new Date().toLocaleTimeString()} — ${fights.length} fight(s) found`;
+        container.innerHTML = '';
+
+        if (!fights.length) {
+          container.innerHTML = '<div id="empty">No upcoming UFC events in the feed right now.</div>';
+          return;
+        }
+
+        fights.forEach(fight => {
+          const dk = fight.bookmakers?.[0];
+          const market = dk?.markets?.find(m => m.key === 'h2h');
+          const outcomes = market?.outcomes ?? [];
+          const [a, b] = fight.home_team === outcomes[0]?.name
+            ? [outcomes[0], outcomes[1]]
+            : [outcomes[0], outcomes[1]];
+
+          const card = document.createElement('div');
+          card.className = 'fight-card';
+
+          const oddsA = a?.price ?? '—';
+          const oddsB = b?.price ?? '—';
+          const aFav = typeof oddsA === 'number' && oddsA < 0;
+
+          card.innerHTML = `
+            <div class="event-name">${fight.sport_title}</div>
+            <div class="matchup">
+              <div class="fighter">
+                <div class="fighter-name">${a?.name ?? fight.home_team}</div>
+              </div>
+              <div class="odds ${aFav ? 'favorite' : 'underdog'}">${oddsA > 0 ? '+' : ''}${oddsA}</div>
+              <div class="vs">VS</div>
+              <div class="odds ${!aFav ? 'favorite' : 'underdog'}">${oddsB > 0 ? '+' : ''}${oddsB}</div>
+              <div class="fighter" style="text-align:right">
+                <div class="fighter-name">${b?.name ?? fight.away_team}</div>
+              </div>
+            </div>
+            <div class="commence">Starts: ${new Date(fight.commence_time).toLocaleString()}</div>
+          `;
+          container.appendChild(card);
+        });
+      } catch (e) {
+        status.textContent = 'Error fetching data — is the server running?';
+        console.error(e);
+      }
+    }
+
+    load();
+    setInterval(load, 30000); // refresh every 30s
+  </script>
+</body>
+</html>
