@@ -2,99 +2,148 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>UFC Live Odds Dashboard</title>
+  <title>UFC Live Odds — DraftKings</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background: #111; color: #eee; font-family: monospace; padding: 24px; }
-    h1 { color: #e8b84b; margin-bottom: 8px; font-size: 1.6rem; }
-    #status { font-size: 0.8rem; color: #888; margin-bottom: 24px; }
+    body { background: #0d0d0d; color: #eee; font-family: 'Helvetica Neue', sans-serif; padding: 28px; max-width: 900px; margin: 0 auto; }
+
+    header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 28px; border-bottom: 1px solid #222; padding-bottom: 16px; }
+    h1 { color: #e8b84b; font-size: 1.5rem; letter-spacing: 1px; text-transform: uppercase; }
+    #status { font-size: 0.75rem; color: #555; }
+
+    .section-label { font-size: 0.65rem; color: #555; text-transform: uppercase; letter-spacing: 2px; margin: 20px 0 10px; }
+
     .fight-card {
-      background: #1a1a1a;
-      border: 1px solid #333;
-      border-radius: 8px;
-      padding: 16px 20px;
-      margin-bottom: 12px;
+      background: #161616;
+      border: 1px solid #222;
+      border-radius: 6px;
+      padding: 14px 18px;
+      margin-bottom: 8px;
+      transition: border-color 0.3s;
     }
-    .fight-card.live { border-color: #e8b84b; }
-    .event-name { font-size: 0.7rem; color: #888; text-transform: uppercase; margin-bottom: 6px; }
-    .matchup { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
-    .fighter { flex: 1; }
-    .fighter-name { font-size: 1rem; font-weight: bold; }
-    .odds {
-      font-size: 1.3rem;
-      font-weight: bold;
-      padding: 6px 14px;
+    .fight-card.live { border-color: #e8b84b; background: #1a1800; }
+    .fight-card.live .event-label { color: #e8b84b; }
+
+    .event-label { font-size: 0.65rem; color: #444; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+
+    .matchup { display: grid; grid-template-columns: 1fr auto auto auto 1fr; align-items: center; gap: 12px; }
+
+    .fighter-name { font-size: 0.95rem; font-weight: 600; }
+    .fighter-name.right { text-align: right; }
+
+    .odds-pill {
+      font-size: 1.1rem;
+      font-weight: 700;
+      padding: 5px 12px;
       border-radius: 4px;
+      min-width: 72px;
       text-align: center;
-      min-width: 70px;
     }
-    .odds.favorite { color: #f66; background: #2a1515; }
-    .odds.underdog { color: #6f6; background: #152215; }
-    .vs { color: #555; font-size: 0.85rem; }
-    .commence { font-size: 0.7rem; color: #666; margin-top: 8px; }
-    #empty { color: #555; text-align: center; margin-top: 60px; font-size: 1rem; }
+    .fav  { color: #ff6b6b; background: #1f0f0f; }
+    .dog  { color: #69db7c; background: #0d1f10; }
+    .even { color: #74c0fc; background: #0d1525; }
+
+    .vs { color: #333; font-size: 0.75rem; font-weight: 600; }
+    .fight-time { font-size: 0.65rem; color: #444; margin-top: 8px; text-align: right; }
+
+    #no-odds { color: #444; text-align: center; padding: 60px 0; font-size: 0.9rem; line-height: 1.8; }
   </style>
 </head>
 <body>
-  <h1>UFC Odds — DraftKings</h1>
-  <div id="status">Loading...</div>
+  <header>
+    <h1>UFC Odds — DraftKings</h1>
+    <div id="status">Loading...</div>
+  </header>
   <div id="fights"></div>
 
   <script>
+    function oddsClass(price) {
+      if (price < 0) return 'fav';
+      if (price > 0) return 'dog';
+      return 'even';
+    }
+
+    function fmt(price) {
+      if (typeof price !== 'number') return '—';
+      return price > 0 ? `+${price}` : `${price}`;
+    }
+
+    function isLive(commenceTime) {
+      const start = new Date(commenceTime).getTime();
+      const now = Date.now();
+      return start <= now && now - start < 3 * 60 * 60 * 1000;
+    }
+
     async function load() {
       const status = document.getElementById('status');
       const container = document.getElementById('fights');
       try {
         const res = await fetch('/api/ufc');
         const fights = await res.json();
-        status.textContent = `Last updated: ${new Date().toLocaleTimeString()} — ${fights.length} fight(s) found`;
+
+        // Only show fights with actual DraftKings odds
+        const withOdds = fights.filter(f => {
+          const dk = f.bookmakers?.[0];
+          const market = dk?.markets?.find(m => m.key === 'h2h');
+          return market?.outcomes?.length >= 2;
+        });
+
+        const live = withOdds.filter(f => isLive(f.commence_time));
+        const upcoming = withOdds.filter(f => !isLive(f.commence_time));
+
+        status.textContent = `Updated ${new Date().toLocaleTimeString()} · ${withOdds.length} fights with odds · ${fights.length} total`;
         container.innerHTML = '';
 
-        if (!fights.length) {
-          container.innerHTML = '<div id="empty">No upcoming UFC events in the feed right now.</div>';
+        if (!withOdds.length) {
+          container.innerHTML = `<div id="no-odds">No DraftKings odds posted right now.<br>Check back closer to fight night.</div>`;
           return;
         }
 
-        fights.forEach(fight => {
-          const dk = fight.bookmakers?.[0];
-          const market = dk?.markets?.find(m => m.key === 'h2h');
-          const outcomes = market?.outcomes ?? [];
-          const [a, b] = fight.home_team === outcomes[0]?.name
-            ? [outcomes[0], outcomes[1]]
-            : [outcomes[0], outcomes[1]];
+        function renderFight(fight, liveFlag) {
+          const dk = fight.bookmakers[0];
+          const outcomes = dk.markets.find(m => m.key === 'h2h').outcomes;
+          const [a, b] = outcomes;
 
           const card = document.createElement('div');
-          card.className = 'fight-card';
-
-          const oddsA = a?.price ?? '—';
-          const oddsB = b?.price ?? '—';
-          const aFav = typeof oddsA === 'number' && oddsA < 0;
-
+          card.className = `fight-card${liveFlag ? ' live' : ''}`;
           card.innerHTML = `
-            <div class="event-name">${fight.sport_title}</div>
+            <div class="event-label">${liveFlag ? '● LIVE — ' : ''}${fight.sport_title}</div>
             <div class="matchup">
-              <div class="fighter">
-                <div class="fighter-name">${a?.name ?? fight.home_team}</div>
-              </div>
-              <div class="odds ${aFav ? 'favorite' : 'underdog'}">${oddsA > 0 ? '+' : ''}${oddsA}</div>
+              <div class="fighter-name">${a.name}</div>
+              <div class="odds-pill ${oddsClass(a.price)}">${fmt(a.price)}</div>
               <div class="vs">VS</div>
-              <div class="odds ${!aFav ? 'favorite' : 'underdog'}">${oddsB > 0 ? '+' : ''}${oddsB}</div>
-              <div class="fighter" style="text-align:right">
-                <div class="fighter-name">${b?.name ?? fight.away_team}</div>
-              </div>
+              <div class="odds-pill ${oddsClass(b.price)}">${fmt(b.price)}</div>
+              <div class="fighter-name right">${b.name}</div>
             </div>
-            <div class="commence">Starts: ${new Date(fight.commence_time).toLocaleString()}</div>
+            <div class="fight-time">${new Date(fight.commence_time).toLocaleDateString('en-US', { weekday:'short', month:'short', day:'numeric', hour:'numeric', minute:'2-digit' })}</div>
           `;
-          container.appendChild(card);
-        });
+          return card;
+        }
+
+        if (live.length) {
+          const lbl = document.createElement('div');
+          lbl.className = 'section-label';
+          lbl.textContent = 'Live Now';
+          container.appendChild(lbl);
+          live.forEach(f => container.appendChild(renderFight(f, true)));
+        }
+
+        if (upcoming.length) {
+          const lbl = document.createElement('div');
+          lbl.className = 'section-label';
+          lbl.textContent = 'Upcoming';
+          container.appendChild(lbl);
+          upcoming.forEach(f => container.appendChild(renderFight(f, false)));
+        }
+
       } catch (e) {
-        status.textContent = 'Error fetching data — is the server running?';
+        status.textContent = 'Error — is the server running?';
         console.error(e);
       }
     }
 
     load();
-    setInterval(load, 30000); // refresh every 30s
+    setInterval(load, 10000); // refresh every 10s
   </script>
 </body>
 </html>
