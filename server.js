@@ -7,117 +7,204 @@ const Anthropic = require('@anthropic-ai/sdk');
 
 const app = express();
 const PORT = 3000;
-const API_KEY = process.env.ODDS_API_KEY;
+const ODDS_API_KEY = process.env.ODDS_API_KEY;
 const BASE_URL = 'https://api.the-odds-api.com/v4';
 const HISTORICAL_DIR = path.join(__dirname, 'historical_data');
 
 const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+const TOKEN_WARN = parseInt(process.env.ANTHROPIC_TOKEN_WARN_THRESHOLD || '500000');
+let totalTokensUsed = 0;
 
 app.use(express.static('public'));
 app.use(express.json());
 
-// Live UFC odds from DraftKings
-app.get('/api/ufc', (req, res) => {
-  const url = `${BASE_URL}/sports/mma_mixed_martial_arts/odds/?apiKey=${API_KEY}&regions=us&markets=h2h&bookmakers=draftkings&oddsFormat=american`;
-  https.get(url, (apiRes) => {
-    let data = '';
-    apiRes.on('data', c => data += c);
-    apiRes.on('end', () => {
-      try {
-        console.log(`Odds API — used: ${apiRes.headers['x-requests-used']} | remaining: ${apiRes.headers['x-requests-remaining']}`);
-        res.json(JSON.parse(data));
-      } catch (e) {
-        res.status(500).json({ error: e.message });
-      }
-    });
-  }).on('error', e => res.status(500).json({ error: e.message }));
-});
+// ── Helpers ────────────────────────────────────────────────────────────────
 
-// List all historical fights
-app.get('/api/fights', (req, res) => {
-  try {
-    const files = fs.readdirSync(HISTORICAL_DIR).filter(f => f.endsWith('.json'));
-    const index = files.map(f => {
-      const d = JSON.parse(fs.readFileSync(path.join(HISTORICAL_DIR, f)));
-      return {
-        fightId: d.fightId,
-        fightTitle: d.fightTitle,
-        date: f.match(/\d{4}-\d{2}-\d{2}/)?.[0],
-        dataPoints: d.dataPoints,
-      };
-    });
-    res.json(index);
-  } catch (e) {
-    res.status(500).json({ error: e.message });
+function fetchJson(url) {
+  return new Promise((resolve, reject) => {
+    https.get(url, res => {
+      let d = '';
+      res.on('data', c => d += c);
+      res.on('end', () => {
+        try { resolve({ data: JSON.parse(d), headers: res.headers }); }
+        catch (e) { reject(e); }
+      });
+    }).on('error', reject);
+  });
+}
+
+function toDecimal(o) {
+  return o > 0 ? (o / 100) + 1 : (100 / Math.abs(o)) + 1;
+}
+
+function analyzeFightFile(filePath) {
+  const d = JSON.parse(fs.readFileSync(filePath));
+  const h = d.oddsHistory || [];
+  if (!h.length) return null;
+
+  const crossovers = [];
+  for (let i = 1; i < h.length; i++) {
+    const pf1 = h[i-1].fighter1.numericOdds, cf1 = h[i].fighter1.numericOdds;
+    const pf2 = h[i-1].fighter2.numericOdds, cf2 = h[i].fighter2.numericOdds;
+    const f1Cross = pf1 > 0 && cf1 < 0;
+    const f2Cross = pf2 > 0 && cf2 < 0;
+    if (f1Cross || f2Cross) {
+      const o1 = f1Cross ? pf2 : pf1;
+      const o2 = f1Cross ? cf2 : cf1;
+      const d1 = toDecimal(o1), d2 = toDecimal(o2);
+      const winWin = (d1 - 1) * (d2 - 1) > 1;
+      crossovers.push({ o1, o2, winWin,
+        fighter: f1Cross ? h[i-1].fighter2.name : h[i-1].fighter1.name,
+        at: h[i].timestamp });
+    }
   }
+
+  const open = h[0], close = h[h.length - 1];
+  return {
+    fightId: d.fightId,
+    date: d.fightId.match(/\d{4}-\d{2}-\d{2}/)?.[0] || path.basename(filePath).match(/\d{4}-\d{2}-\d{2}/)?.[0],
+    fighter1: open.fighter1.name,
+    fighter2: open.fighter2.name,
+    openOdds: { [open.fighter1.name]: open.fighter1.numericOdds, [open.fighter2.name]: open.fighter2.numericOdds },
+    closeOdds: { [close.fighter1.name]: close.fighter1.numericOdds, [close.fighter2.name]: close.fighter2.numericOdds },
+    dataPoints: h.length,
+    crossovers,
+    winWinCount: crossovers.filter(c => c.winWin).length,
+  };
+}
+
+// Build/cache an index of all historical fights
+let _index = null;
+function getIndex() {
+  if (_index) return _index;
+  const files = fs.readdirSync(HISTORICAL_DIR).filter(f => f.endsWith('.json'));
+  _index = files.map(f => {
+    try { return analyzeFightFile(path.join(HISTORICAL_DIR, f)); }
+    catch { return null; }
+  }).filter(Boolean);
+  return _index;
+}
+
+function invalidateIndex() { _index = null; }
+
+// Find fights involving a fighter (fuzzy name match)
+function findFighterHistory(name, limit = 3) {
+  const q = name.toLowerCase().replace(/\s+/g, '');
+  const index = getIndex();
+  const matches = index.filter(f =>
+    f.fighter1.toLowerCase().replace(/\s+/g, '').includes(q) ||
+    f.fighter2.toLowerCase().replace(/\s+/g, '').includes(q)
+  );
+  // Sort by date descending, return most recent N
+  return matches
+    .sort((a, b) => (b.date || '').localeCompare(a.date || ''))
+    .slice(0, limit);
+}
+
+// ── Routes ─────────────────────────────────────────────────────────────────
+
+// Live UFC odds
+app.get('/api/ufc', async (req, res) => {
+  try {
+    const url = `${BASE_URL}/sports/mma_mixed_martial_arts/odds/?apiKey=${ODDS_API_KEY}&regions=us&markets=h2h&bookmakers=draftkings&oddsFormat=american`;
+    const { data, headers } = await fetchJson(url);
+    console.log(`Odds API — used: ${headers['x-requests-used']} | remaining: ${headers['x-requests-remaining']}`);
+    res.json(data);
+  } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
-// Ask Claude a question about the historical data
-app.post('/api/ask', async (req, res) => {
+// Historical fight index
+app.get('/api/fights', (req, res) => {
+  try { res.json(getIndex()); }
+  catch (e) { res.status(500).json({ error: e.message }); }
+});
+
+// Fighter history lookup
+app.get('/api/fighter/:name', (req, res) => {
+  try { res.json(findFighterHistory(req.params.name, 5)); }
+  catch (e) { res.status(500).json({ error: e.message }); }
+});
+
+// AI research endpoint — Ish can ask anything
+app.post('/api/research', async (req, res) => {
   const { question } = req.body;
   if (!question) return res.status(400).json({ error: 'question required' });
 
   try {
-    // Build a summary of all fights for context
-    const files = fs.readdirSync(HISTORICAL_DIR).filter(f => f.endsWith('.json'));
-    const summaries = files.map(f => {
-      const d = JSON.parse(fs.readFileSync(path.join(HISTORICAL_DIR, f)));
-      const h = d.oddsHistory || [];
-      if (!h.length) return null;
+    // Pull live upcoming odds to give Claude current context
+    let liveOdds = [];
+    try {
+      const url = `${BASE_URL}/sports/mma_mixed_martial_arts/odds/?apiKey=${ODDS_API_KEY}&regions=us&markets=h2h&bookmakers=draftkings&oddsFormat=american`;
+      const { data } = await fetchJson(url);
+      liveOdds = data.filter(f => f.bookmakers?.length > 0).map(f => {
+        const outcomes = f.bookmakers[0].markets[0]?.outcomes || [];
+        return {
+          fight: `${f.home_team} vs ${f.away_team}`,
+          date: f.commence_time.slice(0, 10),
+          odds: outcomes.reduce((acc, o) => { acc[o.name] = o.price; return acc; }, {}),
+        };
+      });
+    } catch {}
 
-      // Detect crossovers
-      const crossovers = [];
-      for (let i = 1; i < h.length; i++) {
-        const pf1 = h[i-1].fighter1.numericOdds, cf1 = h[i].fighter1.numericOdds;
-        const pf2 = h[i-1].fighter2.numericOdds, cf2 = h[i].fighter2.numericOdds;
-        if ((pf1 > 0 && cf1 < 0) || (pf2 > 0 && cf2 < 0)) {
-          const o1 = pf1 > 0 ? pf1 : pf2;
-          const o2 = pf1 > 0 ? cf2 : cf1;
-          const d1 = o1 > 0 ? (o1/100)+1 : (100/Math.abs(o1))+1;
-          const d2 = o2 > 0 ? (o2/100)+1 : (100/Math.abs(o2))+1;
-          const winWin = (d1-1)*(d2-1) > 1;
-          crossovers.push({ o1, o2, winWin });
-        }
-      }
+    // Build historical summary (compact)
+    const index = getIndex();
+    const historicalSummary = index.map(f => ({
+      fight: `${f.fighter1} vs ${f.fighter2}`,
+      date: f.date,
+      open: f.openOdds,
+      close: f.closeOdds,
+      crossovers: f.crossovers.length,
+      winWins: f.winWinCount,
+      bestWinWin: f.crossovers.filter(c => c.winWin).map(c => `${c.fighter} +${c.o1}→+${c.o2}`)[0] || null,
+    }));
 
-      const open = h[0];
-      const close = h[h.length - 1];
-      return {
-        fight: d.fightId,
-        date: f.match(/\d{4}-\d{2}-\d{2}/)?.[0],
-        dataPoints: d.dataPoints,
-        openOdds: `${open.fighter1.name} ${open.fighter1.odds} / ${open.fighter2.name} ${open.fighter2.odds}`,
-        closeOdds: `${close.fighter1.name} ${close.fighter1.odds} / ${close.fighter2.name} ${close.fighter2.odds}`,
-        crossovers: crossovers.length,
-        winWinCrossovers: crossovers.filter(c => c.winWin).length,
-        bestWinWin: crossovers.filter(c => c.winWin).map(c => `+${c.o1} → +${c.o2}`)[0] || null,
-      };
-    }).filter(Boolean);
+    const systemPrompt = `You are a fight research assistant for Ish, a professional live MMA bettor. You have two data sources:
 
-    const context = JSON.stringify(summaries, null, 2);
+1. HISTORICAL DATA: Live odds captured every ~3 seconds during actual UFC fights (Dec 2025 – May 2026). This includes opening odds, closing odds, and crossover analysis.
+
+2. LIVE/UPCOMING ODDS: Current DraftKings odds for upcoming fights from The Odds API.
+
+A "crossover" = when a fighter's odds flip from underdog (+) to favorite (-) during a live fight.
+A "win-win crossover" = crossover where both bets placed at plus money satisfy (D1-1)(D2-1) > 1, guaranteeing profit regardless of outcome.
+
+Answer concisely with specific numbers and fighter names. If Ish asks about a specific fighter's last fights, search the historical data for that fighter. If he asks about upcoming fights or current odds, use the live data.`;
+
+    const userMessage = `HISTORICAL FIGHT DATA (${historicalSummary.length} fights):
+${JSON.stringify(historicalSummary, null, 1)}
+
+CURRENT DRAFTKINGS ODDS (upcoming fights):
+${JSON.stringify(liveOdds, null, 1)}
+
+Ish's question: ${question}`;
 
     const response = await anthropic.messages.create({
       model: 'claude-sonnet-4-6',
-      max_tokens: 1024,
-      system: `You are an analyst for Ish, a professional live MMA bettor. You have access to historical UFC fight odds data captured live from DraftKings (Dec 2025 – May 2026).
-
-A "crossover" is when a fighter's odds flip from underdog (plus money) to favorite (minus money) during a live fight. A "win-win" crossover is one where both bets — placed at plus money before and after the crossover — satisfy the condition (D1-1)(D2-1) > 1, guaranteeing profit regardless of outcome.
-
-Answer Ish's questions concisely and specifically using the data provided.`,
-      messages: [
-        {
-          role: 'user',
-          content: `Here is the historical fight data summary:\n\n${context}\n\nQuestion: ${question}`,
-        }
-      ],
+      max_tokens: 1500,
+      system: systemPrompt,
+      messages: [{ role: 'user', content: userMessage }],
     });
 
-    res.json({ answer: response.content[0].text });
+    const used = response.usage.input_tokens + response.usage.output_tokens;
+    totalTokensUsed += used;
+    console.log(`Research query — tokens: ${used} | session total: ${totalTokensUsed}`);
+    if (totalTokensUsed > TOKEN_WARN) {
+      console.warn(`WARNING: Anthropic token usage (${totalTokensUsed}) exceeded threshold (${TOKEN_WARN})`);
+    }
+
+    res.json({
+      answer: response.content[0].text,
+      usage: { thisQuery: used, sessionTotal: totalTokensUsed },
+    });
   } catch (e) {
     res.status(500).json({ error: e.message });
   }
 });
 
+// Token usage check
+app.get('/api/usage', (req, res) => {
+  res.json({ sessionTokensUsed: totalTokensUsed, warnThreshold: TOKEN_WARN });
+});
+
 app.listen(PORT, () => {
-  console.log(`UFC Dashboard running at http://localhost:${PORT}`);
+  console.log(`UFC Research Dashboard running at http://localhost:${PORT}`);
 });

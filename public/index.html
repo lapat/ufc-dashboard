@@ -78,9 +78,9 @@
   <div id="fights"></div>
 
   <div class="ask-section">
-    <h2>Ask About Historical Data</h2>
+    <h2>Fight Research</h2>
     <div class="ask-row">
-      <input id="ask-input" type="text" placeholder="e.g. How many fights had win-win crossovers?" />
+      <input id="ask-input" type="text" placeholder="e.g. Show me Chimaev's last 3 fights — odds and crossovers" />
       <button id="ask-btn">Ask</button>
     </div>
     <div id="ask-answer"></div>
@@ -186,7 +186,7 @@
       answer.style.display = 'block';
       answer.textContent = '...';
       try {
-        const res = await fetch('/api/ask', {
+        const res = await fetch('/api/research', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ question: q }),

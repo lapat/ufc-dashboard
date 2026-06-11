@@ -5,7 +5,7 @@ const path = require('path');
 
 const API_KEY = process.env.ODDS_API_KEY;
 const POLL_INTERVAL_MS = 1000;
-const IDLE_INTERVAL_MS = 60000;
+const IDLE_INTERVAL_MS = 300000; // 5 min idle — saves ~35k API credits/month
 const DATA_DIR = path.join(__dirname, 'historical_data');
 
 if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
