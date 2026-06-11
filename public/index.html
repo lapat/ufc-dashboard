@@ -499,6 +499,9 @@ document.getElementById('sim-play').addEventListener('click',async()=>{
       graphClear(simFk); tracker.clear(); renderTracker();
       tracker.setFight(f1,f2,first.fighter1.numericOdds,first.fighter2.numericOdds);
       updateFightUI(f1,f2,first.fighter1.numericOdds,first.fighter2.numericOdds,true,null,null);
+      // Populate the fighter dropdown so Lock In works
+      document.getElementById('bt-side').innerHTML=`<option value="f1">${f1}</option><option value="f2">${f2}</option>`;
+      document.getElementById('bt-odds').value=first.fighter1.numericOdds;
       graphSelect(simFk,f1,f2);
       document.getElementById('graph-fight-lbl').textContent=`${f1} vs ${f2} [SIM]`;
       document.getElementById('sim-reset').style.display='';
