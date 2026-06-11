@@ -208,6 +208,58 @@ app.get('/api/fighter/:name', (req, res) => {
   catch (e) { res.status(500).json({ error: e.message }); }
 });
 
+// Backfill: load past odds for a game already in progress
+app.get('/api/backfill', async (req, res) => {
+  const { sport, team1, team2 } = req.query;
+  if (!sport || !team1 || !team2) return res.status(400).json({ error: 'missing params' });
+  const norm = s => s.toLowerCase().replace(/[^a-z0-9]/g, '');
+  const n1 = norm(team1), n2 = norm(team2);
+
+  // MMA: check local recorder files first (free, dense)
+  if (sport === 'mma_mixed_martial_arts') {
+    try {
+      const files = fs.readdirSync(HISTORICAL_DIR);
+      const match = files.find(f => {
+        const base = f.replace('.json', '').toLowerCase().replace(/[^a-z0-9_]/g, '');
+        return base.startsWith(`${n1}_vs_${n2}`) || base.startsWith(`${n2}_vs_${n1}`);
+      });
+      if (match) {
+        const data = JSON.parse(fs.readFileSync(path.join(HISTORICAL_DIR, match)));
+        return res.json({ source: 'local', points: data.oddsHistory || [] });
+      }
+    } catch {}
+  }
+
+  // Any sport: fetch historical API snapshots going back up to 60 min (4 calls = 40 credits)
+  const points = [];
+  const now = Date.now();
+  for (const minsBack of [60, 45, 30, 15]) {
+    try {
+      const snapISO = new Date(now - minsBack * 60000).toISOString();
+      const url = `${BASE_URL}/historical/sports/${sport}/odds/?apiKey=${ODDS_API_KEY}&date=${encodeURIComponent(snapISO)}&regions=us&markets=h2h&bookmakers=draftkings&oddsFormat=american`;
+      const { data: snap, headers } = await fetchJson(url);
+      updateOddsCredits(headers);
+      if (!Array.isArray(snap?.data)) continue;
+      const match = snap.data.find(f => {
+        const hn = norm(f.home_team), an = norm(f.away_team);
+        return (hn.includes(n1.slice(0,6)) || n1.includes(hn.slice(0,6))) &&
+               (an.includes(n2.slice(0,6)) || n2.includes(an.slice(0,6)));
+      });
+      if (match?.bookmakers?.length) {
+        const outcomes = match.bookmakers[0].markets[0]?.outcomes || [];
+        if (outcomes.length >= 2) {
+          points.push({
+            timestamp: snapISO,
+            fighter1: { name: outcomes[0].name, odds: String(outcomes[0].price), numericOdds: outcomes[0].price },
+            fighter2: { name: outcomes[1].name, odds: String(outcomes[1].price), numericOdds: outcomes[1].price },
+          });
+        }
+      }
+    } catch {}
+  }
+  res.json({ source: 'historical_api', points, credits: points.length * 10 });
+});
+
 // Active sports list
 app.get('/api/sports', async (req, res) => {
   try {

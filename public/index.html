@@ -10,747 +10,743 @@
     *{box-sizing:border-box;margin:0;padding:0}
     body{background:#0a0a0a;color:#ddd;font-family:'Helvetica Neue',sans-serif}
 
-    /* nav */
-    #topbar{display:flex;align-items:center;background:#111;border-bottom:1px solid #1e1e1e;padding:0 24px;position:sticky;top:0;z-index:50}
-    #topbar h1{color:#e8b84b;font-size:0.95rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:14px 0;margin-right:28px;white-space:nowrap}
-    .nav-tab{background:none;border:none;color:#555;font-size:0.75rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:18px 14px;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:color .15s}
-    .nav-tab:hover{color:#999}
-    .nav-tab.active{color:#e8b84b;border-bottom-color:#e8b84b}
-    #topbar-status{margin-left:auto;font-size:0.68rem;color:#3a3a3a;white-space:nowrap}
+    /* ── topbar ── */
+    #topbar{display:flex;align-items:center;background:#111;border-bottom:1px solid #1e1e1e;padding:0 24px;position:sticky;top:0;z-index:50;gap:16px}
+    #topbar h1{color:#e8b84b;font-size:0.9rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:13px 0;white-space:nowrap}
+    #topbar-status{margin-left:auto;font-size:0.65rem;color:#333;white-space:nowrap}
 
-    /* layout */
-    .tab-page{display:none;padding:20px 24px;max-width:980px;margin:0 auto}
-    .tab-page.active{display:block}
-    .section-label{font-size:0.6rem;color:#444;text-transform:uppercase;letter-spacing:2px;margin:16px 0 7px}
+    /* ── sport pills ── */
+    #sport-strip{padding:12px 24px 0;display:flex;gap:6px;flex-wrap:wrap;max-width:980px;margin:0 auto}
+    .sport-pill{background:#141414;border:1px solid #1e1e1e;border-radius:14px;color:#444;font-size:0.68rem;padding:5px 12px;cursor:pointer;transition:all .15s;text-transform:uppercase;letter-spacing:1px;white-space:nowrap}
+    .sport-pill:hover{border-color:#333;color:#888}
+    .sport-pill.active{background:#1c1800;border-color:#e8b84b;color:#e8b84b}
+    #sport-loading{color:#333;font-size:0.72rem;padding:12px 24px}
 
-    /* fight cards */
-    .fight-card{background:#141414;border:1px solid #1e1e1e;border-radius:6px;padding:11px 15px;margin-bottom:5px;cursor:pointer;transition:border-color .2s,background .2s}
-    .fight-card:hover{border-color:#333}
-    .fight-card.live{border-color:#e8b84b44;background:#191500}
-    .fight-card.selected{border-color:#e8b84b;background:#1c1800}
-    .fight-card .ev{font-size:0.58rem;color:#444;text-transform:uppercase;letter-spacing:1px;margin-bottom:7px}
-    .fight-card.live .ev{color:#e8b84b99}
+    /* ── main content ── */
+    #main{padding:16px 24px;max-width:980px;margin:0 auto}
+
+    /* ── game list (before selection) ── */
+    .section-label{font-size:0.58rem;color:#3a3a3a;text-transform:uppercase;letter-spacing:2px;margin:14px 0 6px}
+    .game-card{background:#141414;border:1px solid #1e1e1e;border-radius:6px;padding:11px 15px;margin-bottom:5px;cursor:pointer;transition:border-color .2s,background .2s}
+    .game-card:hover{border-color:#333;background:#161616}
+    .game-card.live-card{border-color:#e8b84b33;background:#181400}
+    .game-ev{font-size:0.58rem;color:#3a3a3a;text-transform:uppercase;letter-spacing:1px;margin-bottom:7px}
+    .game-card.live-card .game-ev{color:#e8b84b88}
     .matchup{display:grid;grid-template-columns:1fr auto auto auto 1fr;align-items:center;gap:10px}
     .fn{font-size:0.88rem;font-weight:600}
     .fn.r{text-align:right}
-    .op{font-size:0.95rem;font-weight:700;padding:4px 9px;border-radius:4px;min-width:64px;text-align:center}
-    .fav{color:#ff6b6b;background:#1f0e0e}
-    .dog{color:#69db7c;background:#0c1c0e}
-    .even{color:#74c0fc;background:#0d1525}
+    .op{font-size:0.95rem;font-weight:700;padding:4px 10px;border-radius:4px;min-width:64px;text-align:center}
+    .fav{color:#ff6b6b;background:#1f0e0e}.dog{color:#69db7c;background:#0c1c0e}.even{color:#74c0fc;background:#0d1525}
     .vs{color:#2a2a2a;font-size:0.68rem;font-weight:700}
-    .ft{font-size:0.6rem;color:#333;margin-top:5px;text-align:right}
-    #no-odds,#no-odds-e{color:#333;text-align:center;padding:40px 0;font-size:0.82rem;line-height:2}
+    .game-time{font-size:0.6rem;color:#2e2e2e;margin-top:5px;text-align:right}
+    #no-games{color:#2a2a2a;text-align:center;padding:40px 0;font-size:0.82rem;line-height:2}
 
-    /* graph */
-    .graph-panel{margin-top:24px;background:#0e0e0e;border:1px solid #1e1e1e;border-radius:8px;padding:14px 18px}
-    .graph-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;gap:8px;flex-wrap:wrap}
-    .graph-title{font-size:0.68rem;color:#555;text-transform:uppercase;letter-spacing:1px}
-    .graph-fight{font-size:0.78rem;color:#e8b84b;font-weight:600}
-    .graph-empty{text-align:center;color:#252525;padding:50px 0;font-size:0.78rem}
-    .xover-badge{background:#e8b84b18;color:#e8b84b;border:1px solid #e8b84b33;border-radius:3px;font-size:0.62rem;padding:2px 7px;letter-spacing:1px}
+    /* ── NOW WATCHING card ── */
+    #now-watching{display:none;background:#111;border:1px solid #e8b84b33;border-radius:10px;padding:16px 20px;margin-bottom:16px;position:relative}
+    #nw-sport-badge{font-size:0.6rem;color:#e8b84b88;text-transform:uppercase;letter-spacing:2px;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+    #nw-live-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#e8b84b;animation:blink 1.4s infinite}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+    #nw-live-dot.offline{background:#333;animation:none}
+    #nw-matchup{display:grid;grid-template-columns:1fr auto auto auto 1fr;align-items:center;gap:12px;margin-bottom:14px}
+    .nw-name{font-size:1.05rem;font-weight:700;line-height:1.2}
+    .nw-name.r{text-align:right}
+    .nw-odds{font-size:1.3rem;font-weight:700;padding:6px 14px;border-radius:5px;min-width:76px;text-align:center}
+    .nw-vs{color:#333;font-size:0.8rem;font-weight:700}
+    #nw-bottom{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+    #nw-switch-label{font-size:0.62rem;color:#3a3a3a;text-transform:uppercase;letter-spacing:1px;white-space:nowrap}
+    #nw-switch{background:#0d0d0d;border:1px solid #222;border-radius:4px;color:#666;padding:5px 8px;font-size:0.72rem;font-family:inherit;outline:none;flex:1;max-width:320px;cursor:pointer}
+    #nw-switch:focus{border-color:#e8b84b33}
+    #nw-dismiss{position:absolute;top:12px;right:14px;background:none;border:none;color:#333;font-size:1rem;cursor:pointer;line-height:1}
+    #nw-dismiss:hover{color:#888}
+    #nw-backfill-status{font-size:0.62rem;color:#555;margin-left:auto;white-space:nowrap}
+
+    /* ── graph ── */
+    .graph-panel{background:#0e0e0e;border:1px solid #1a1a1a;border-radius:8px;padding:14px 18px;margin-bottom:14px}
+    .graph-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px}
+    .graph-title{font-size:0.65rem;color:#444;text-transform:uppercase;letter-spacing:1px}
+    .graph-fight{font-size:0.75rem;color:#e8b84b;font-weight:600}
+    .graph-empty{text-align:center;color:#222;padding:48px 0;font-size:0.78rem}
+    .xover-badge{background:#e8b84b18;color:#e8b84b;border:1px solid #e8b84b33;border-radius:3px;font-size:0.6rem;padding:2px 7px;letter-spacing:1px}
     canvas{max-height:220px}
+    .sim-toggle{background:none;border:1px solid #2a2a2a;color:#444;border-radius:4px;padding:4px 10px;font-size:0.65rem;cursor:pointer;letter-spacing:1px}
+    .sim-toggle:hover{border-color:#444;color:#777}
 
-    /* sim controls */
-    #sim-bar,#sim-bar-e{
-      margin-top:10px;padding:10px 14px;background:#0b0b0b;border:1px solid #1a1a1a;
-      border-radius:6px;display:none;gap:10px;align-items:center;flex-wrap:wrap
-    }
-    #sim-bar.open,#sim-bar-e.open{display:flex}
-    .sim-btn{background:#1a1a1a;border:1px solid #2a2a2a;color:#888;border-radius:4px;padding:5px 11px;font-size:0.72rem;cursor:pointer;letter-spacing:1px;transition:all .15s}
+    /* ── sim bar ── */
+    #sim-bar{margin-top:10px;padding:10px 14px;background:#0b0b0b;border:1px solid #191919;border-radius:6px;display:none;gap:8px;align-items:center;flex-wrap:wrap}
+    #sim-bar.open{display:flex}
+    .sim-btn{background:#1a1a1a;border:1px solid #2a2a2a;color:#777;border-radius:4px;padding:5px 10px;font-size:0.7rem;cursor:pointer;letter-spacing:1px;transition:all .15s}
     .sim-btn:hover{border-color:#444;color:#ccc}
-    .sim-btn.active-sim{background:#1c1800;border-color:#e8b84b;color:#e8b84b}
-    .sim-btn.play{background:#0d2a0d;border-color:#69db7c55;color:#69db7c}
-    .sim-btn.pause-btn{background:#1a1800;border-color:#e8b84b55;color:#e8b84b}
-    .sim-select{background:#111;border:1px solid #222;border-radius:4px;color:#ddd;padding:5px 8px;font-size:0.72rem;max-width:240px;font-family:inherit}
-    .sim-progress-wrap{flex:1;min-width:100px}
-    .sim-progress-bg{background:#1e1e1e;border-radius:3px;height:3px}
-    .sim-progress-fill{height:3px;border-radius:3px;background:#e8b84b;transition:width .1s;width:0%}
-    .sim-label{font-size:0.62rem;color:#444;white-space:nowrap}
-    .sim-toggle{background:none;border:1px solid #2a2a2a;color:#555;border-radius:4px;padding:4px 10px;font-size:0.68rem;cursor:pointer;letter-spacing:1px}
-    .sim-toggle:hover{border-color:#444;color:#888}
+    .sim-btn.active-spd{background:#1c1800;border-color:#e8b84b55;color:#e8b84b}
+    .sim-btn.play{background:#0d2a0d;border-color:#69db7c44;color:#69db7c}
+    .sim-btn.pause-b{background:#1a1800;border-color:#e8b84b44;color:#e8b84b}
+    .sim-sel{background:#111;border:1px solid #222;border-radius:4px;color:#ddd;padding:5px 8px;font-size:0.7rem;max-width:260px;font-family:inherit}
+    .sim-prog-wrap{flex:1;min-width:80px}
+    .sim-prog-bg{background:#1a1a1a;border-radius:2px;height:3px}
+    .sim-prog-fill{height:3px;border-radius:2px;background:#e8b84b;width:0%;transition:width .1s}
+    .sim-lbl{font-size:0.6rem;color:#3a3a3a;margin-top:3px}
 
-    /* multi-bet tracker */
-    .tracker-panel{margin-top:16px;background:#0e0e0e;border:1px solid #1e1e1e;border-radius:8px;padding:14px 18px}
-    .tracker-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
-    .tracker-title{font-size:0.68rem;color:#555;text-transform:uppercase;letter-spacing:1px}
-    .tracker-fight{font-size:0.72rem;color:#e8b84b99}
-    .bet-add-row{display:flex;gap:8px;align-items:flex-end;flex-wrap:wrap;margin-bottom:12px}
+    /* ── multi-bet tracker ── */
+    .tracker-panel{background:#0e0e0e;border:1px solid #1a1a1a;border-radius:8px;padding:14px 18px;margin-bottom:14px}
+    .tracker-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:11px}
+    .tracker-title{font-size:0.65rem;color:#444;text-transform:uppercase;letter-spacing:1px}
+    .clear-btn{background:none;border:none;color:#2a2a2a;font-size:0.62rem;cursor:pointer;letter-spacing:1px;text-transform:uppercase}
+    .clear-btn:hover{color:#ff6b6b}
+    .bet-add-row{display:flex;gap:8px;align-items:flex-end;flex-wrap:wrap;margin-bottom:11px}
     .bet-field{display:flex;flex-direction:column;gap:3px}
-    .bet-lbl{font-size:0.58rem;color:#3a3a3a;text-transform:uppercase;letter-spacing:1px}
-    .bet-select,.bet-input{background:#111;border:1px solid #1e1e1e;border-radius:4px;color:#ddd;padding:6px 9px;font-size:0.8rem;font-family:inherit;outline:none}
-    .bet-select{min-width:160px}
-    .bet-input{width:90px}
-    .bet-input:focus,.bet-select:focus{border-color:#e8b84b44}
-    .bet-add-btn{background:#e8b84b22;border:1px solid #e8b84b44;color:#e8b84b;border-radius:4px;padding:6px 14px;font-size:0.72rem;font-weight:700;cursor:pointer;letter-spacing:1px;text-transform:uppercase;white-space:nowrap}
-    .bet-add-btn:hover{background:#e8b84b33}
-
-    /* bet list */
-    .bet-list{display:flex;flex-direction:column;gap:4px;margin-bottom:10px;min-height:4px}
-    .bet-row{display:flex;align-items:center;gap:8px;padding:6px 10px;background:#111;border:1px solid #1a1a1a;border-radius:4px;font-size:0.78rem}
-    .bet-num{color:#444;font-size:0.65rem;min-width:16px}
+    .bet-lbl{font-size:0.56rem;color:#333;text-transform:uppercase;letter-spacing:1px}
+    .bet-sel,.bet-inp{background:#111;border:1px solid #1a1a1a;border-radius:4px;color:#ddd;padding:6px 9px;font-size:0.8rem;font-family:inherit;outline:none}
+    .bet-sel{min-width:170px}
+    .bet-inp{width:88px}
+    .bet-sel:focus,.bet-inp:focus{border-color:#e8b84b33}
+    .bet-add-btn{background:#e8b84b1a;border:1px solid #e8b84b44;color:#e8b84b;border-radius:4px;padding:6px 14px;font-size:0.7rem;font-weight:700;cursor:pointer;letter-spacing:1px;text-transform:uppercase;white-space:nowrap}
+    .bet-add-btn:hover{background:#e8b84b2a}
+    .bet-list{display:flex;flex-direction:column;gap:4px;margin-bottom:10px}
+    .bet-row{display:flex;align-items:center;gap:8px;padding:6px 10px;background:#111;border:1px solid #181818;border-radius:4px;font-size:0.76rem}
+    .bet-num{color:#333;font-size:0.62rem;min-width:16px}
     .bet-fighter{flex:1;color:#aaa;font-weight:600}
     .bet-stake{color:#69db7c}
-    .bet-odds{color:#e8b84b}
-    .bet-del{background:none;border:none;color:#333;cursor:pointer;font-size:0.8rem;padding:0 2px}
+    .bet-odds-lbl{color:#e8b84b}
+    .bet-del{background:none;border:none;color:#2a2a2a;cursor:pointer;font-size:0.78rem;padding:0 2px}
     .bet-del:hover{color:#ff6b6b}
-    .bet-empty{color:#2a2a2a;font-size:0.75rem;padding:6px 0}
-
-    /* position */
-    .position-divider{height:1px;background:#1a1a1a;margin:10px 0}
-    .position-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
+    .bet-empty{color:#252525;font-size:0.72rem;padding:6px 0}
+    .pos-divider{height:1px;background:#181818;margin:10px 0}
+    .pos-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
     .pos-card{padding:8px 12px;border-radius:5px;border:1px solid}
-    .pos-card.pos-win{background:#0d2a0d;border-color:#69db7c33}
-    .pos-card.pos-loss{background:#1f0e0e;border-color:#ff6b6b33}
-    .pos-card.pos-zero{background:#111;border-color:#2a2a2a}
-    .pos-label{font-size:0.62rem;color:#555;text-transform:uppercase;letter-spacing:1px;margin-bottom:3px}
-    .pos-value{font-size:1.1rem;font-weight:700}
-    .pos-value.green{color:#69db7c}
-    .pos-value.red{color:#ff6b6b}
-    .pos-value.gray{color:#444}
-
-    /* status */
-    .tracker-status{padding:9px 14px;border-radius:5px;text-align:center;font-size:0.78rem;font-weight:700;letter-spacing:1px;margin-bottom:8px}
-    .s-winwin{background:#0d2a0d;border:1px solid #69db7c55;color:#69db7c;animation:pg 2s infinite}
-    .s-hedge{background:#1a1500;border:1px solid #e8b84b55;color:#e8b84b}
-    .s-partial{background:#141414;border:1px solid #333;color:#555}
-    .s-empty{background:#0d0d0d;border:1px solid #1a1a1a;color:#2a2a2a}
+    .pc-win{background:#0d2a0d;border-color:#69db7c2a}
+    .pc-loss{background:#1f0e0e;border-color:#ff6b6b2a}
+    .pc-zero{background:#0f0f0f;border-color:#1e1e1e}
+    .pos-lbl{font-size:0.6rem;color:#444;text-transform:uppercase;letter-spacing:1px;margin-bottom:3px}
+    .pos-val{font-size:1.05rem;font-weight:700}
+    .pv-green{color:#69db7c}.pv-red{color:#ff6b6b}.pv-gray{color:#333}
+    .tracker-status{padding:8px 14px;border-radius:5px;text-align:center;font-size:0.76rem;font-weight:700;letter-spacing:1px;margin-bottom:7px}
+    .s-winwin{background:#0d2a0d;border:1px solid #69db7c44;color:#69db7c;animation:pg 2s infinite}
+    .s-hedge{background:#1a1500;border:1px solid #e8b84b44;color:#e8b84b}
+    .s-partial{background:#111;border:1px solid #2a2a2a;color:#555}
+    .s-empty{background:#0d0d0d;border:1px solid #181818;color:#252525}
     @keyframes pg{0%,100%{box-shadow:0 0 0 0 #69db7c33}50%{box-shadow:0 0 0 6px transparent}}
-
-    /* suggestion */
-    .suggestion{background:#111;border:1px solid #1e1e1e;border-radius:4px;padding:8px 12px;font-size:0.74rem;color:#666;margin-top:6px}
+    .suggestion{background:#0d0d0d;border:1px solid #1a1a1a;border-radius:4px;padding:7px 11px;font-size:0.72rem;color:#555;margin-top:6px}
     .suggestion strong{color:#e8b84b}
-    .clear-btn{background:none;border:none;color:#333;font-size:0.68rem;cursor:pointer;letter-spacing:1px;text-transform:uppercase}
-    .clear-btn:hover{color:#ff6b6b}
 
-    /* events */
-    #sport-bar{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:18px}
-    .sport-btn{background:#141414;border:1px solid #1e1e1e;border-radius:16px;color:#444;font-size:0.68rem;padding:5px 12px;cursor:pointer;transition:all .15s;text-transform:uppercase;letter-spacing:1px}
-    .sport-btn:hover{border-color:#333;color:#888}
-    .sport-btn.active{background:#1c1800;border-color:#e8b84b;color:#e8b84b}
-
-    /* chat */
-    #chat-fab{position:fixed;bottom:24px;right:24px;width:48px;height:48px;border-radius:50%;background:#e8b84b;border:none;cursor:pointer;font-size:1.2rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,.6);z-index:200;transition:transform .15s}
+    /* ── chat ── */
+    #chat-fab{position:fixed;bottom:22px;right:22px;width:46px;height:46px;border-radius:50%;background:#e8b84b;border:none;cursor:pointer;font-size:1.15rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,.6);z-index:200;transition:transform .15s}
     #chat-fab:hover{transform:scale(1.08)}
-    #chat-panel{position:fixed;bottom:84px;right:24px;width:370px;max-height:540px;background:#141414;border:1px solid #222;border-radius:12px;display:none;flex-direction:column;box-shadow:0 8px 40px rgba(0,0,0,.7);z-index:199;overflow:hidden}
+    #chat-panel{position:fixed;bottom:80px;right:22px;width:365px;max-height:520px;background:#141414;border:1px solid #222;border-radius:12px;display:none;flex-direction:column;box-shadow:0 8px 40px rgba(0,0,0,.7);z-index:199;overflow:hidden}
     #chat-panel.open{display:flex}
-    #chat-header{padding:10px 13px;background:#111;border-bottom:1px solid #1e1e1e;display:flex;justify-content:space-between;align-items:center}
-    #chat-header-title{color:#e8b84b;font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px}
-    #chat-usage{font-size:0.6rem;color:#444}
-    #chat-messages{flex:1;overflow-y:auto;padding:11px;display:flex;flex-direction:column;gap:7px;min-height:160px}
+    #chat-hdr{padding:10px 13px;background:#111;border-bottom:1px solid #1e1e1e;display:flex;justify-content:space-between;align-items:center}
+    #chat-hdr-title{color:#e8b84b;font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:1px}
+    #chat-usage{font-size:0.6rem;color:#3a3a3a}
+    #chat-msgs{flex:1;overflow-y:auto;padding:10px;display:flex;flex-direction:column;gap:7px;min-height:140px}
     .msg{font-size:0.78rem;line-height:1.6;padding:8px 10px;border-radius:7px;max-width:96%}
     .msg.user{background:#1e1e1e;color:#aaa;align-self:flex-end;white-space:pre-wrap}
-    .msg.assistant{background:#111f11;color:#a0d0a0;align-self:flex-start;border:1px solid #1e2e1e}
-    .msg.thinking{color:#3a3a3a;font-style:italic;background:none;border:none;padding:3px 0;font-size:0.72rem}
-    .msg.assistant p{margin-bottom:.5em}.msg.assistant p:last-child{margin-bottom:0}
+    .msg.assistant{background:#111f11;color:#9acc9a;align-self:flex-start;border:1px solid #1e2e1e}
+    .msg.thinking{color:#333;font-style:italic;background:none;border:none;padding:3px 0;font-size:0.7rem}
+    .msg.assistant p{margin-bottom:.45em}.msg.assistant p:last-child{margin-bottom:0}
     .msg.assistant strong{color:#e8b84b}
-    .msg.assistant table{border-collapse:collapse;width:100%;margin:5px 0;font-size:0.72rem}
+    .msg.assistant table{border-collapse:collapse;width:100%;margin:5px 0;font-size:0.7rem}
     .msg.assistant th{background:#1e2e1e;color:#e8b84b;padding:3px 6px;border:1px solid #1e2e1e;text-align:left}
-    .msg.assistant td{padding:3px 6px;border:1px solid #1a2a1a}
-    .msg.assistant tr:nth-child(even) td{background:#121e12}
-    .msg.assistant h1,.msg.assistant h2,.msg.assistant h3{color:#e8b84b;margin:5px 0 3px;font-size:0.82rem}
+    .msg.assistant td{padding:3px 6px;border:1px solid #182818}
+    .msg.assistant tr:nth-child(even) td{background:#111e11}
+    .msg.assistant h1,.msg.assistant h2,.msg.assistant h3{color:#e8b84b;margin:5px 0 3px;font-size:0.8rem}
     .msg.assistant ul,.msg.assistant ol{padding-left:1.2em;margin:3px 0}
-    .msg.assistant code{background:#0a160a;padding:1px 4px;border-radius:3px;font-size:0.72rem}
-    #chat-input-row{display:flex;gap:6px;padding:8px 10px;border-top:1px solid #1e1e1e}
-    #chat-input{flex:1;background:#0d0d0d;border:1px solid #222;border-radius:4px;color:#ddd;padding:6px 9px;font-size:0.78rem;font-family:inherit;outline:none;resize:none}
-    #chat-input:focus{border-color:#e8b84b44}
-    #chat-send{background:#e8b84b;color:#000;border:none;border-radius:4px;padding:0 12px;font-weight:700;font-size:0.72rem;cursor:pointer}
-    #chat-send:disabled{opacity:.3;cursor:default}
+    .msg.assistant code{background:#0a160a;padding:1px 4px;border-radius:3px;font-size:0.7rem}
+    #chat-inp-row{display:flex;gap:6px;padding:8px 10px;border-top:1px solid #1e1e1e}
+    #chat-inp{flex:1;background:#0d0d0d;border:1px solid #1e1e1e;border-radius:4px;color:#ddd;padding:6px 9px;font-size:0.78rem;font-family:inherit;outline:none}
+    #chat-inp:focus{border-color:#e8b84b33}
+    #chat-snd{background:#e8b84b;color:#000;border:none;border-radius:4px;padding:0 12px;font-weight:700;font-size:0.72rem;cursor:pointer}
+    #chat-snd:disabled{opacity:.3;cursor:default}
 
-    /* footer */
-    #usage-footer{margin-top:36px;padding:10px 0;border-top:1px solid #161616;display:flex;gap:18px;flex-wrap:wrap}
-    .uf-item{font-size:0.63rem;color:#282828}
-    .uf-item span{color:#3a3a3a}
+    /* ── footer ── */
+    #footer{margin-top:32px;padding:10px 0;border-top:1px solid #141414;display:flex;gap:16px;flex-wrap:wrap}
+    .fi{font-size:0.62rem;color:#252525}.fi span{color:#333}
   </style>
 </head>
 <body>
 
 <div id="topbar">
   <h1>⚡ Odds Monitor</h1>
-  <button class="nav-tab active" data-tab="ufc">UFC</button>
-  <button class="nav-tab" data-tab="events">Live Events</button>
   <div id="topbar-status">Loading...</div>
 </div>
 
-<!-- UFC TAB -->
-<div id="tab-ufc" class="tab-page active">
-  <div id="fights"></div>
+<div id="sport-strip"><span id="sport-loading" style="color:#333;font-size:.7rem;padding:12px 0">Loading sports...</span></div>
 
-  <div class="graph-panel">
+<div id="main">
+
+  <!-- NOW WATCHING -->
+  <div id="now-watching">
+    <button id="nw-dismiss">×</button>
+    <div id="nw-sport-badge">
+      <span id="nw-live-dot"></span>
+      <span id="nw-badge-text">UFC · MMA</span>
+    </div>
+    <div id="nw-matchup">
+      <div class="nw-name" id="nw-f1">—</div>
+      <div class="nw-odds fav" id="nw-o1">—</div>
+      <div class="nw-vs">VS</div>
+      <div class="nw-odds dog" id="nw-o2">—</div>
+      <div class="nw-name r" id="nw-f2">—</div>
+    </div>
+    <div id="nw-bottom">
+      <span id="nw-switch-label">Switch game:</span>
+      <select id="nw-switch"><option value="">—</option></select>
+      <span id="nw-backfill-status"></span>
+    </div>
+  </div>
+
+  <!-- Game list (shown before selection) -->
+  <div id="game-list"></div>
+
+  <!-- Graph -->
+  <div class="graph-panel" id="graph-panel" style="display:none">
     <div class="graph-header">
-      <span class="graph-title">Odds Graph — <span class="graph-fight" id="gfl">click a fight</span></span>
+      <span class="graph-title">Odds Graph — <span class="graph-fight" id="graph-fight-lbl">—</span></span>
       <div style="display:flex;gap:8px;align-items:center">
-        <span id="gci"></span>
+        <span id="graph-xover-info"></span>
         <button class="sim-toggle" id="sim-toggle">⏵ Simulate</button>
       </div>
     </div>
-    <div id="graph-empty" class="graph-empty">Select a fight above to see live odds movement</div>
+    <div id="graph-empty" class="graph-empty">Waiting for odds data...</div>
     <canvas id="odds-chart" style="display:none"></canvas>
+
     <div id="sim-bar">
-      <span class="sim-label">Fight:</span>
-      <select class="sim-select" id="sim-fight-select"><option value="">Loading...</option></select>
-      <span class="sim-label">Speed:</span>
-      <button class="sim-btn" data-speed="10">10×</button>
-      <button class="sim-btn active-sim" data-speed="50">50×</button>
-      <button class="sim-btn" data-speed="100">100×</button>
+      <span class="sim-lbl">Fight:</span>
+      <select class="sim-sel" id="sim-fight-sel"><option value="">Loading...</option></select>
+      <span class="sim-lbl">Speed:</span>
+      <button class="sim-btn" data-spd="10">10×</button>
+      <button class="sim-btn active-spd" data-spd="50">50×</button>
+      <button class="sim-btn" data-spd="100">100×</button>
       <button class="sim-btn play" id="sim-play">▶ Play</button>
-      <button class="sim-btn pause-btn" id="sim-reset" style="display:none">↺ Reset</button>
-      <div class="sim-progress-wrap">
-        <div class="sim-progress-bg"><div class="sim-progress-fill" id="sim-fill"></div></div>
-        <div class="sim-label" id="sim-prog-lbl" style="margin-top:3px">—</div>
+      <button class="sim-btn" id="sim-reset" style="display:none">↺ Reset</button>
+      <div class="sim-prog-wrap">
+        <div class="sim-prog-bg"><div class="sim-prog-fill" id="sim-fill"></div></div>
+        <div class="sim-lbl" id="sim-prog-lbl">—</div>
       </div>
     </div>
   </div>
 
-  <div class="tracker-panel" id="tracker-ufc">
+  <!-- Bet Tracker -->
+  <div class="tracker-panel" id="tracker-panel" style="display:none">
     <div class="tracker-header">
       <span class="tracker-title">Theoretical Position</span>
-      <div style="display:flex;gap:10px;align-items:center">
-        <span class="tracker-fight" id="tracker-fight-lbl">no fight selected</span>
-        <button class="clear-btn" id="clear-bets">CLEAR ALL</button>
-      </div>
+      <button class="clear-btn" id="clear-bets">CLEAR ALL</button>
     </div>
     <div class="bet-add-row">
       <div class="bet-field">
         <div class="bet-lbl">Bet on</div>
-        <select class="bet-select" id="bt-side"><option value="">— select fight first —</option></select>
+        <select class="bet-sel" id="bt-side"><option value="">— select a game first —</option></select>
       </div>
-      <div class="bet-field">
-        <div class="bet-lbl">Stake $</div>
-        <input class="bet-input" id="bt-stake" type="number" placeholder="100" min="1" />
-      </div>
-      <div class="bet-field">
-        <div class="bet-lbl">At odds</div>
-        <input class="bet-input" id="bt-odds" type="number" placeholder="+200" />
-      </div>
+      <div class="bet-field"><div class="bet-lbl">Stake $</div><input class="bet-inp" id="bt-stake" type="number" placeholder="100" min="1"/></div>
+      <div class="bet-field"><div class="bet-lbl">At odds</div><input class="bet-inp" id="bt-odds" type="number" placeholder="+200"/></div>
       <button class="bet-add-btn" id="add-bet-btn">+ Lock In</button>
     </div>
     <div class="bet-list" id="bet-list"><div class="bet-empty">No bets locked in yet.</div></div>
-    <div class="position-divider"></div>
-    <div class="position-grid" id="pos-grid" style="display:none">
-      <div class="pos-card pos-zero" id="pos-f1">
-        <div class="pos-label" id="pos-f1-lbl">Fighter 1 wins</div>
-        <div class="pos-value gray" id="pos-f1-val">—</div>
-      </div>
-      <div class="pos-card pos-zero" id="pos-f2">
-        <div class="pos-label" id="pos-f2-lbl">Fighter 2 wins</div>
-        <div class="pos-value gray" id="pos-f2-val">—</div>
-      </div>
+    <div class="pos-divider"></div>
+    <div class="pos-grid" id="pos-grid" style="display:none">
+      <div class="pos-card pc-zero" id="pos-f1"><div class="pos-lbl" id="pos-f1-lbl">Side 1 wins</div><div class="pos-val pv-gray" id="pos-f1-val">—</div></div>
+      <div class="pos-card pc-zero" id="pos-f2"><div class="pos-lbl" id="pos-f2-lbl">Side 2 wins</div><div class="pos-val pv-gray" id="pos-f2-val">—</div></div>
     </div>
     <div class="tracker-status s-empty" id="tracker-status">Lock in a bet to track your position</div>
-    <div class="suggestion" id="tracker-suggestion" style="display:none"></div>
+    <div class="suggestion" id="tracker-sugg" style="display:none"></div>
   </div>
 
-  <div id="usage-footer">
-    <div class="uf-item">Odds API — <span id="uf-rem">—</span> remaining · <span id="uf-used">—</span> used</div>
-    <div class="uf-item">AI — <span id="uf-q">0</span> queries · <span id="uf-cost">$0.0000</span></div>
-  </div>
-</div>
-
-<!-- EVENTS TAB -->
-<div id="tab-events" class="tab-page">
-  <div id="sport-bar"><span style="color:#333;font-size:.75rem">Loading sports...</span></div>
-  <div id="event-fights"></div>
-  <div class="graph-panel">
-    <div class="graph-header">
-      <span class="graph-title">Odds Graph — <span class="graph-fight" id="gfl-e">select a sport</span></span>
-      <span id="gci-e"></span>
-    </div>
-    <div id="graph-empty-e" class="graph-empty">Select a matchup above</div>
-    <canvas id="odds-chart-e" style="display:none"></canvas>
-  </div>
-  <div class="tracker-panel" id="tracker-events">
-    <div class="tracker-header">
-      <span class="tracker-title">Theoretical Position</span>
-      <div style="display:flex;gap:10px;align-items:center">
-        <span class="tracker-fight" id="tracker-fight-lbl-e">no matchup selected</span>
-        <button class="clear-btn" id="clear-bets-e">CLEAR ALL</button>
-      </div>
-    </div>
-    <div class="bet-add-row">
-      <div class="bet-field">
-        <div class="bet-lbl">Bet on</div>
-        <select class="bet-select" id="bt-side-e"><option value="">— select matchup first —</option></select>
-      </div>
-      <div class="bet-field"><div class="bet-lbl">Stake $</div><input class="bet-input" id="bt-stake-e" type="number" placeholder="100" min="1"/></div>
-      <div class="bet-field"><div class="bet-lbl">At odds</div><input class="bet-input" id="bt-odds-e" type="number" placeholder="+200"/></div>
-      <button class="bet-add-btn" id="add-bet-btn-e">+ Lock In</button>
-    </div>
-    <div class="bet-list" id="bet-list-e"><div class="bet-empty">No bets locked in yet.</div></div>
-    <div class="position-divider"></div>
-    <div class="position-grid" id="pos-grid-e" style="display:none">
-      <div class="pos-card pos-zero" id="pos-f1-e"><div class="pos-label" id="pos-f1-lbl-e">Side 1 wins</div><div class="pos-value gray" id="pos-f1-val-e">—</div></div>
-      <div class="pos-card pos-zero" id="pos-f2-e"><div class="pos-label" id="pos-f2-lbl-e">Side 2 wins</div><div class="pos-value gray" id="pos-f2-val-e">—</div></div>
-    </div>
-    <div class="tracker-status s-empty" id="tracker-status-e">Lock in a bet to track your position</div>
-    <div class="suggestion" id="tracker-suggestion-e" style="display:none"></div>
+  <div id="footer">
+    <div class="fi">Odds API — <span id="uf-rem">—</span> remaining · <span id="uf-used">—</span> used</div>
+    <div class="fi">AI — <span id="uf-q">0</span> queries · <span id="uf-cost">$0.0000</span></div>
   </div>
 </div>
 
 <!-- Chat -->
 <button id="chat-fab">💬</button>
 <div id="chat-panel">
-  <div id="chat-header"><span id="chat-header-title">Research</span><span id="chat-usage">0 queries</span></div>
-  <div id="chat-messages"><div class="msg assistant">Ask anything — fighter history, crossovers, win-win windows.</div></div>
-  <div id="chat-input-row">
-    <input id="chat-input" placeholder="Ask about any fight or matchup..."/>
-    <button id="chat-send">Ask</button>
-  </div>
+  <div id="chat-hdr"><span id="chat-hdr-title">Research</span><span id="chat-usage">0 queries</span></div>
+  <div id="chat-msgs"><div class="msg assistant">Ask anything — fighter history, crossovers, win-win windows, any sport.</div></div>
+  <div id="chat-inp-row"><input id="chat-inp" placeholder="Ask about any matchup..."/><button id="chat-snd">Ask</button></div>
 </div>
 
 <script>
-// ═══════════════════════════════════════════════════
+// ═══════════════════════════════════════════
 // HELPERS
-// ═══════════════════════════════════════════════════
-
-const odsCls = p => p < 0 ? 'fav' : p > 0 ? 'dog' : 'even';
-const fmtO   = p => typeof p === 'number' ? (p > 0 ? `+${p}` : `${p}`) : '—';
-const fmtM   = v => (v >= 0 ? '+' : '') + '$' + Math.abs(v).toFixed(2);
-const isLive = t => { const s = new Date(t).getTime(), n = Date.now(); return s <= n && n - s < 10800000; };
-const toD    = o => o > 0 ? o/100+1 : 100/Math.abs(o)+1;
+// ═══════════════════════════════════════════
+const odsCls = p => p<0?'fav':p>0?'dog':'even';
+const fmtO   = p => typeof p==='number'?(p>0?`+${p}`:`${p}`):'—';
+const fmtM   = v => (v>=0?'+':'')+'\$'+Math.abs(v).toFixed(2);
+const isLive = t => { const s=new Date(t).getTime(),n=Date.now(); return s<=n&&n-s<10800000; };
+const toD    = o => o>0?o/100+1:100/Math.abs(o)+1;
 const fkey   = (a,b) => `${a}||${b}`;
 
-// ═══════════════════════════════════════════════════
-// BET TRACKER (multi-bet, per fight)
-// ═══════════════════════════════════════════════════
-
+// ═══════════════════════════════════════════
+// BET TRACKER
+// ═══════════════════════════════════════════
 class BetTracker {
-  constructor() {
-    this.bets = [];
-    this.f1Name = '';
-    this.f2Name = '';
-    this.f1Odds = null;
-    this.f2Odds = null;
-    this._id = 0;
-  }
-
-  setFight(f1Name, f2Name, f1Odds, f2Odds) {
-    this.f1Name = f1Name;
-    this.f2Name = f2Name;
-    this.f1Odds = f1Odds;
-    this.f2Odds = f2Odds;
-  }
-
-  updateOdds(f1Odds, f2Odds) {
-    this.f1Odds = f1Odds;
-    this.f2Odds = f2Odds;
-  }
-
-  addBet(side, stake, odds) {
-    this.bets.push({ id: ++this._id, side, stake, odds, decimal: toD(odds) });
-  }
-
-  removeBet(id) {
-    this.bets = this.bets.filter(b => b.id !== id);
-  }
-
-  clear() { this.bets = []; }
-
-  position() {
-    let netF1 = 0, netF2 = 0;
-    for (const b of this.bets) {
-      if (b.side === 'f1') { netF1 += b.stake * (b.decimal - 1); netF2 -= b.stake; }
-      else                 { netF2 += b.stake * (b.decimal - 1); netF1 -= b.stake; }
+  constructor(){ this.bets=[]; this.f1Name=''; this.f2Name=''; this.f1Odds=null; this.f2Odds=null; this._id=0; }
+  setFight(f1,f2,o1,o2){ this.f1Name=f1; this.f2Name=f2; this.f1Odds=o1; this.f2Odds=o2; }
+  updateOdds(o1,o2){ this.f1Odds=o1; this.f2Odds=o2; }
+  addBet(side,stake,odds){ this.bets.push({id:++this._id,side,stake,odds,decimal:toD(odds)}); }
+  removeBet(id){ this.bets=this.bets.filter(b=>b.id!==id); }
+  clear(){ this.bets=[]; }
+  position(){
+    let n1=0,n2=0;
+    for(const b of this.bets){
+      if(b.side==='f1'){n1+=b.stake*(b.decimal-1);n2-=b.stake;}
+      else{n2+=b.stake*(b.decimal-1);n1-=b.stake;}
     }
-    return { netF1, netF2 };
+    return {n1,n2};
   }
-
-  suggestion() {
-    if (!this.bets.length || this.f1Odds === null) return null;
-    const { netF1, netF2 } = this.position();
-    if (netF1 > 0 && netF2 > 0) return null; // already win-win
-
-    // Figure out which side to bet on to improve position
-    let side, odds, name;
-    if (netF1 <= netF2) { side = 'f1'; odds = this.f1Odds; name = this.f1Name; }
-    else               { side = 'f2'; odds = this.f2Odds; name = this.f2Name; }
-
-    const D = toD(odds);
-    // Equal-profit stake: solve (netF1 + S*(D-1)) = (netF2 - S) if side=f1
-    // → S*D = netF2 - netF1 → S = (netF2 - netF1)/D
-    // For side=f2: S = (netF1 - netF2)/D
-    const diff = side === 'f1' ? netF2 - netF1 : netF1 - netF2;
-    const optS = diff / D;
-    if (optS <= 0) return null;
-
-    // Win-win range
-    const { netF1: n1, netF2: n2 } = this.position();
-    let minS, maxS;
-    if (side === 'f1') { minS = n1 < 0 ? -n1/(D-1) : 0; maxS = n2 > 0 ? n2 : null; }
-    else               { minS = n2 < 0 ? -n2/(D-1) : 0; maxS = n1 > 0 ? n1 : null; }
-    const canWinWin = maxS !== null && minS < maxS;
-
-    // Profit after optimal hedge
-    let profitAfter;
-    if (side === 'f1') profitAfter = n1 + optS*(D-1);
-    else               profitAfter = n2 + optS*(D-1);
-
-    return { side, name, odds, optS, minS, maxS, canWinWin, profitAfter };
+  suggestion(){
+    if(!this.bets.length||this.f1Odds===null) return null;
+    const {n1,n2}=this.position();
+    if(n1>0&&n2>0) return null;
+    let side,odds,name;
+    if(n1<=n2){side='f1';odds=this.f1Odds;name=this.f1Name;}
+    else{side='f2';odds=this.f2Odds;name=this.f2Name;}
+    const D=toD(odds);
+    const diff=side==='f1'?n2-n1:n1-n2;
+    const optS=diff/D;
+    if(optS<=0) return null;
+    const minS=side==='f1'?(n1<0?-n1/(D-1):0):(n2<0?-n2/(D-1):0);
+    const maxS=side==='f1'?(n2>0?n2:null):(n1>0?n1:null);
+    const profitAfter=side==='f1'?n1+optS*(D-1):n2+optS*(D-1);
+    return {side,name,odds,optS,minS,maxS,canWinWin:maxS!==null&&minS<maxS,profitAfter};
   }
 }
 
-// ═══════════════════════════════════════════════════
-// GRAPH FACTORY
-// ═══════════════════════════════════════════════════
+// ═══════════════════════════════════════════
+// GRAPH
+// ═══════════════════════════════════════════
+Chart.register(window['chartjs-plugin-annotation']);
+const canvas  = document.getElementById('odds-chart');
+const emptyEl = document.getElementById('graph-empty');
+const infoEl  = document.getElementById('graph-xover-info');
+let chart = null;
+const graphHist = {};  // fk → {labels,f1,f2,f1Name,f2Name,crossovers}
+let selectedFk = null;
 
-function makeGraph(canvasId, emptyId, infoId) {
-  Chart.register(window['chartjs-plugin-annotation']);
-  const canvas = document.getElementById(canvasId);
-  const emptyEl = document.getElementById(emptyId);
-  const infoEl  = infoId ? document.getElementById(infoId) : null;
-  const history = {};
-  let selected = null;
-  let chart = null;
-
-  function init() {
-    chart = new Chart(canvas, {
-      type: 'line',
-      data: {
-        labels: [],
-        datasets: [
-          { label: '', data: [], borderColor: '#ff6b6b', backgroundColor: '#ff6b6b0d', borderWidth: 2, pointRadius: 0, tension: 0.3 },
-          { label: '', data: [], borderColor: '#69db7c', backgroundColor: '#69db7c0d', borderWidth: 2, pointRadius: 0, tension: 0.3 },
-        ]
+function graphInit(){
+  chart = new Chart(canvas,{
+    type:'line',
+    data:{labels:[],datasets:[
+      {label:'',data:[],borderColor:'#ff6b6b',backgroundColor:'#ff6b6b0a',borderWidth:2,pointRadius:0,tension:0.3},
+      {label:'',data:[],borderColor:'#69db7c',backgroundColor:'#69db7c0a',borderWidth:2,pointRadius:0,tension:0.3},
+    ]},
+    options:{
+      animation:false,responsive:true,maintainAspectRatio:true,
+      interaction:{mode:'index',intersect:false},
+      plugins:{
+        legend:{labels:{color:'#444',font:{size:10},boxWidth:10}},
+        annotation:{annotations:{}},
+        tooltip:{backgroundColor:'#111',borderColor:'#2a2a2a',borderWidth:1,titleColor:'#555',bodyColor:'#ccc',
+          callbacks:{label:c=>` ${c.dataset.label}: ${fmtO(c.raw)}`}}
       },
-      options: {
-        animation: false, responsive: true, maintainAspectRatio: true,
-        interaction: { mode: 'index', intersect: false },
-        plugins: {
-          legend: { labels: { color: '#555', font: { size: 10 }, boxWidth: 10 } },
-          annotation: { annotations: {} },
-          tooltip: { backgroundColor: '#111', borderColor: '#2a2a2a', borderWidth: 1, titleColor: '#666', bodyColor: '#ccc',
-            callbacks: { label: c => ` ${c.dataset.label}: ${fmtO(c.raw)}` } }
-        },
-        scales: {
-          x: { ticks: { color: '#2a2a2a', maxTicksLimit: 6, font: { size: 9 } }, grid: { color: '#111' } },
-          y: { ticks: { color: '#3a3a3a', font: { size: 9 }, callback: v => fmtO(v) }, grid: { color: '#141414' } }
-        }
+      scales:{
+        x:{ticks:{color:'#2a2a2a',maxTicksLimit:6,font:{size:9}},grid:{color:'#0f0f0f'}},
+        y:{ticks:{color:'#333',font:{size:9},callback:v=>fmtO(v)},grid:{color:'#141414'}}
       }
-    });
-  }
-
-  function addPoint(fk, label, f1Name, f1Odds, f2Name, f2Odds) {
-    if (!history[fk]) history[fk] = { labels: [], f1: [], f2: [], f1Name, f2Name, crossovers: [] };
-    const h = history[fk];
-    if (h.f1.length > 0) {
-      const p1 = h.f1[h.f1.length-1], p2 = h.f2[h.f2.length-1];
-      if ((p1 > 0 && f1Odds < 0) || (p2 > 0 && f2Odds < 0)) h.crossovers.push(h.labels.length);
     }
-    h.labels.push(label); h.f1.push(f1Odds); h.f2.push(f2Odds);
-    if (h.labels.length > 400) { h.labels.shift(); h.f1.shift(); h.f2.shift(); }
-    if (selected === fk) refresh();
-  }
-
-  function select(fk, f1Name, f2Name) {
-    selected = fk;
-    if (!history[fk]) history[fk] = { labels: [], f1: [], f2: [], f1Name, f2Name, crossovers: [] };
-    if (!chart) init();
-    emptyEl.style.display = 'none';
-    canvas.style.display = 'block';
-    refresh();
-  }
-
-  function refresh() {
-    if (!selected || !chart) return;
-    const h = history[selected];
-    chart.data.labels = [...h.labels];
-    chart.data.datasets[0].label = h.f1Name;
-    chart.data.datasets[0].data = [...h.f1];
-    chart.data.datasets[1].label = h.f2Name;
-    chart.data.datasets[1].data = [...h.f2];
-    const ann = {};
-    h.crossovers.forEach((idx, i) => {
-      if (idx < h.labels.length) ann[`x${i}`] = { type: 'line', scaleID: 'x', value: h.labels[idx], borderColor: '#e8b84b66', borderWidth: 1.5, borderDash: [4,4] };
-    });
-    chart.options.plugins.annotation.annotations = ann;
-    chart.update('none');
-    if (infoEl) infoEl.innerHTML = h.crossovers.length ? `<span class="xover-badge">⚡ ${h.crossovers.length} crossover${h.crossovers.length>1?'s':''}</span>` : '';
-  }
-
-  function clearHistory(fk) { if (history[fk]) history[fk] = { labels: [], f1: [], f2: [], f1Name: history[fk].f1Name, f2Name: history[fk].f2Name, crossovers: [] }; }
-
-  return { addPoint, select, clearHistory, getHistory: fk => history[fk] };
+  });
 }
 
-// ═══════════════════════════════════════════════════
-// TRACKER UI RENDERER
-// ═══════════════════════════════════════════════════
-
-function makeTrackerUI(ids, tracker) {
-  const { sideId, stakeId, oddsId, addId, listId, pgridId, pf1Id, pf1LblId, pf1ValId, pf2Id, pf2LblId, pf2ValId, statusId, suggId, clearId, fightLblId } = ids;
-
-  document.getElementById(clearId).addEventListener('click', () => {
-    tracker.clear();
-    render();
-  });
-
-  document.getElementById(sideId).addEventListener('change', () => {
-    const val = document.getElementById(sideId).value;
-    if (val === 'f1') document.getElementById(oddsId).value = tracker.f1Odds || '';
-    if (val === 'f2') document.getElementById(oddsId).value = tracker.f2Odds || '';
-  });
-
-  document.getElementById(addId).addEventListener('click', () => {
-    const side  = document.getElementById(sideId).value;
-    const stake = parseFloat(document.getElementById(stakeId).value);
-    const odds  = parseInt(document.getElementById(oddsId).value);
-    if (!side || isNaN(stake) || isNaN(odds) || stake <= 0) return;
-    tracker.addBet(side, stake, odds);
-    document.getElementById(stakeId).value = '';
-    render();
-  });
-
-  function updateFight(f1Name, f2Name) {
-    document.getElementById(fightLblId).textContent = `${f1Name} vs ${f2Name}`;
-    const sel = document.getElementById(sideId);
-    sel.innerHTML = `<option value="f1">${f1Name}</option><option value="f2">${f2Name}</option>`;
-    // Auto-fill odds
-    document.getElementById(oddsId).value = tracker.f1Odds || '';
+function graphAddPoint(fk,label,f1Name,f1Odds,f2Name,f2Odds){
+  if(!graphHist[fk]) graphHist[fk]={labels:[],f1:[],f2:[],f1Name,f2Name,crossovers:[]};
+  const h=graphHist[fk];
+  if(h.f1.length>0){
+    const p1=h.f1[h.f1.length-1],p2=h.f2[h.f2.length-1];
+    if((p1>0&&f1Odds<0)||(p2>0&&f2Odds<0)) h.crossovers.push(h.labels.length);
   }
-
-  function render() {
-    const { netF1, netF2 } = tracker.position();
-    const hasAny = tracker.bets.length > 0;
-    const winWin = netF1 > 0 && netF2 > 0;
-    const hedgeMoment = (netF1 > 0) !== (netF2 > 0);
-
-    // Bet list
-    const listEl = document.getElementById(listId);
-    if (!hasAny) {
-      listEl.innerHTML = '<div class="bet-empty">No bets locked in yet.</div>';
-    } else {
-      listEl.innerHTML = tracker.bets.map((b, i) => `
-        <div class="bet-row">
-          <span class="bet-num">#${i+1}</span>
-          <span class="bet-fighter">${b.side === 'f1' ? tracker.f1Name : tracker.f2Name}</span>
-          <span class="bet-stake">$${b.stake.toFixed(2)}</span>
-          <span class="bet-odds">${fmtO(b.odds)}</span>
-          <button class="bet-del" data-id="${b.id}">✕</button>
-        </div>
-      `).join('');
-      listEl.querySelectorAll('.bet-del').forEach(btn => {
-        btn.addEventListener('click', () => { tracker.removeBet(+btn.dataset.id); render(); });
-      });
-    }
-
-    // Position grid
-    const pgrid = document.getElementById(pgridId);
-    if (!hasAny) { pgrid.style.display = 'none'; }
-    else {
-      pgrid.style.display = 'grid';
-      document.getElementById(pf1LblId).textContent = `${tracker.f1Name || 'Side 1'} wins`;
-      document.getElementById(pf2LblId).textContent = `${tracker.f2Name || 'Side 2'} wins`;
-
-      const f1Card = document.getElementById(pf1Id);
-      const f2Card = document.getElementById(pf2Id);
-      const f1Val  = document.getElementById(pf1ValId);
-      const f2Val  = document.getElementById(pf2ValId);
-
-      f1Val.textContent = fmtM(netF1);
-      f2Val.textContent = fmtM(netF2);
-      f1Val.className = 'pos-value ' + (netF1 > 0 ? 'green' : netF1 < 0 ? 'red' : 'gray');
-      f2Val.className = 'pos-value ' + (netF2 > 0 ? 'green' : netF2 < 0 ? 'red' : 'gray');
-      f1Card.className = 'pos-card ' + (netF1 > 0 ? 'pos-win' : netF1 < 0 ? 'pos-loss' : 'pos-zero');
-      f2Card.className = 'pos-card ' + (netF2 > 0 ? 'pos-win' : netF2 < 0 ? 'pos-loss' : 'pos-zero');
-    }
-
-    // Status
-    const statusEl = document.getElementById(statusId);
-    if (!hasAny) {
-      statusEl.className = 'tracker-status s-empty';
-      statusEl.textContent = 'Lock in a bet to track your position';
-    } else if (winWin) {
-      statusEl.className = 'tracker-status s-winwin';
-      statusEl.textContent = `🔔 PROFIT MOMENT — WIN EITHER WAY`;
-    } else if (hedgeMoment) {
-      statusEl.className = 'tracker-status s-hedge';
-      statusEl.textContent = `⚖️ HEDGE MOMENT — add a bet to lock in profit`;
-    } else {
-      statusEl.className = 'tracker-status s-partial';
-      statusEl.textContent = `📈 PARTIAL EXPOSURE — ${netF1 >= netF2 ? tracker.f1Name : tracker.f2Name} side favored`;
-    }
-
-    // Suggestion
-    const sugg = tracker.suggestion();
-    const suggEl = document.getElementById(suggId);
-    if (sugg) {
-      suggEl.style.display = 'block';
-      let txt = `Bet <strong>$${sugg.optS.toFixed(2)}</strong> on <strong>${sugg.name}</strong> at <strong>${fmtO(sugg.odds)}</strong>`;
-      if (sugg.canWinWin) {
-        txt += ` → profit <strong>${fmtM(sugg.profitAfter)}</strong> either way`;
-        txt += ` (win-win range: $${sugg.minS.toFixed(0)}–$${sugg.maxS.toFixed(0)})`;
-      } else {
-        txt += ` → best possible position (win-win not achievable at current odds)`;
-      }
-      suggEl.innerHTML = txt;
-    } else {
-      suggEl.style.display = 'none';
-    }
-  }
-
-  return { render, updateFight };
+  h.labels.push(label); h.f1.push(f1Odds); h.f2.push(f2Odds);
+  if(h.labels.length>400){h.labels.shift();h.f1.shift();h.f2.shift();}
+  if(selectedFk===fk) graphRefresh();
 }
 
-// ═══════════════════════════════════════════════════
-// SIMULATION
-// ═══════════════════════════════════════════════════
-
-function makeSimulator(graph, tracker, trackerUI, fightKey) {
-  let data = null;
-  let idx = 0;
-  let speed = 50;
-  let timer = null;
-  let running = false;
-  let simFightKey = null;
-
-  const playBtn   = document.getElementById('sim-play');
-  const resetBtn  = document.getElementById('sim-reset');
-  const fillEl    = document.getElementById('sim-fill');
-  const progLbl   = document.getElementById('sim-prog-lbl');
-  const fightSel  = document.getElementById('sim-fight-select');
-
-  // Speed buttons
-  document.querySelectorAll('#sim-bar [data-speed]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      speed = +btn.dataset.speed;
-      document.querySelectorAll('#sim-bar [data-speed]').forEach(b => b.classList.remove('active-sim'));
-      btn.classList.add('active-sim');
-      if (running) { clearInterval(timer); startTicking(); }
-    });
-  });
-
-  playBtn.addEventListener('click', async () => {
-    if (!data) {
-      const fid = fightSel.value;
-      if (!fid) return;
-      try {
-        const r = await fetch(`/api/fight-history/${fid}`);
-        data = await r.json();
-        idx = 0;
-        simFightKey = fid;
-        graph.clearHistory(fid);
-        tracker.clear();
-        trackerUI.render();
-        // Set fight names from data
-        if (data.oddsHistory?.length) {
-          const first = data.oddsHistory[0];
-          const f1 = first.fighter1.name, f2 = first.fighter2.name;
-          tracker.setFight(f1, f2, first.fighter1.numericOdds, first.fighter2.numericOdds);
-          trackerUI.updateFight(f1, f2);
-          document.getElementById('gfl').textContent = `${f1} vs ${f2} [SIM]`;
-          graph.select(fid, f1, f2);
-        }
-      } catch (e) { console.error(e); return; }
-    }
-
-    if (running) {
-      clearInterval(timer); running = false;
-      playBtn.textContent = '▶ Play'; playBtn.className = 'sim-btn play';
-    } else {
-      startTicking();
-    }
-  });
-
-  resetBtn.addEventListener('click', () => {
-    clearInterval(timer); running = false; data = null; idx = 0;
-    playBtn.textContent = '▶ Play'; playBtn.className = 'sim-btn play';
-    resetBtn.style.display = 'none';
-    fillEl.style.width = '0%';
-    progLbl.textContent = '—';
-    tracker.clear();
-    trackerUI.render();
-  });
-
-  function startTicking() {
-    running = true;
-    playBtn.textContent = '⏸ Pause'; playBtn.className = 'sim-btn pause-btn';
-    resetBtn.style.display = '';
-    // Interval in ms: real data is ~1 point/sec avg; speed multiplier reduces interval
-    timer = setInterval(tick, Math.max(16, 1000 / speed));
-  }
-
-  function tick() {
-    if (!data || idx >= data.oddsHistory.length) {
-      clearInterval(timer); running = false;
-      playBtn.textContent = '▶ Done'; playBtn.disabled = true;
-      return;
-    }
-    const pt = data.oddsHistory[idx++];
-    const f1O = pt.fighter1.numericOdds, f2O = pt.fighter2.numericOdds;
-    const ts = new Date(pt.timestamp).toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' });
-    graph.addPoint(simFightKey, ts, pt.fighter1.name, f1O, pt.fighter2.name, f2O);
-    tracker.updateOdds(f1O, f2O);
-    // Auto-fill odds input with current sim odds for selected fighter
-    const side = document.getElementById('bt-side').value;
-    if (side === 'f1') document.getElementById('bt-odds').value = f1O;
-    if (side === 'f2') document.getElementById('bt-odds').value = f2O;
-    trackerUI.render();
-    const pct = (idx / data.oddsHistory.length * 100).toFixed(1);
-    fillEl.style.width = pct + '%';
-    progLbl.textContent = `${idx} / ${data.oddsHistory.length} pts`;
-  }
-
-  // Populate fight dropdown
-  async function loadFights() {
-    try {
-      const r = await fetch('/api/fights');
-      const fights = await r.json();
-      const nCross = f => Array.isArray(f.crossovers) ? f.crossovers.length : (f.crossovers || 0);
-      const withCross = fights.filter(f => nCross(f) > 0).sort((a,b) => nCross(b) - nCross(a));
-      const rest = fights.filter(f => nCross(f) === 0);
-      fightSel.innerHTML =
-        '<option value="">— pick a fight —</option>' +
-        '<optgroup label="Has Crossovers ⚡">' +
-          withCross.map(f => `<option value="${f.fightId}">${f.fighter1} vs ${f.fighter2} (${nCross(f)} ⚡, ${f.winWinCount||f.winWins||0} win-win)</option>`).join('') +
-        '</optgroup>' +
-        '<optgroup label="No Crossovers">' +
-          rest.map(f => `<option value="${f.fightId}">${f.fighter1} vs ${f.fighter2}</option>`).join('') +
-        '</optgroup>';
-    } catch (e) {}
-  }
-
-  loadFights();
+function graphSelect(fk,f1Name,f2Name){
+  selectedFk=fk;
+  if(!graphHist[fk]) graphHist[fk]={labels:[],f1:[],f2:[],f1Name,f2Name,crossovers:[]};
+  if(!chart) graphInit();
+  emptyEl.style.display='none'; canvas.style.display='block';
+  graphRefresh();
 }
 
-// ═══════════════════════════════════════════════════
-// UFC PAGE
-// ═══════════════════════════════════════════════════
+function graphLoadPoints(fk, points){
+  // Pre-populate graph with backfilled historical points
+  if(!graphHist[fk]) return;
+  graphHist[fk].labels=[]; graphHist[fk].f1=[]; graphHist[fk].f2=[]; graphHist[fk].crossovers=[];
+  points.forEach(pt => {
+    const ts = new Date(pt.timestamp).toLocaleTimeString('en-US',{hour12:false,hour:'2-digit',minute:'2-digit',second:'2-digit'});
+    graphAddPoint(fk, ts, pt.fighter1.name, pt.fighter1.numericOdds, pt.fighter2.name, pt.fighter2.numericOdds);
+  });
+}
 
-const ufcGraph = makeGraph('odds-chart', 'graph-empty', 'gci');
-const ufcTracker = new BetTracker();
-const ufcTrackerUI = makeTrackerUI({
-  sideId: 'bt-side', stakeId: 'bt-stake', oddsId: 'bt-odds', addId: 'add-bet-btn',
-  listId: 'bet-list', pgridId: 'pos-grid',
-  pf1Id: 'pos-f1', pf1LblId: 'pos-f1-lbl', pf1ValId: 'pos-f1-val',
-  pf2Id: 'pos-f2', pf2LblId: 'pos-f2-lbl', pf2ValId: 'pos-f2-val',
-  statusId: 'tracker-status', suggId: 'tracker-suggestion',
-  clearId: 'clear-bets', fightLblId: 'tracker-fight-lbl'
-}, ufcTracker);
+function graphClear(fk){ if(graphHist[fk]) graphHist[fk]={...graphHist[fk],labels:[],f1:[],f2:[],crossovers:[]}; }
 
-const sim = makeSimulator(ufcGraph, ufcTracker, ufcTrackerUI, null);
+function graphRefresh(){
+  if(!selectedFk||!chart) return;
+  const h=graphHist[selectedFk]; if(!h) return;
+  chart.data.labels=[...h.labels];
+  chart.data.datasets[0].label=h.f1Name; chart.data.datasets[0].data=[...h.f1];
+  chart.data.datasets[1].label=h.f2Name; chart.data.datasets[1].data=[...h.f2];
+  const ann={};
+  h.crossovers.forEach((idx,i)=>{
+    if(idx<h.labels.length) ann[`x${i}`]={type:'line',scaleID:'x',value:h.labels[idx],borderColor:'#e8b84b66',borderWidth:1.5,borderDash:[4,4]};
+  });
+  chart.options.plugins.annotation.annotations=ann;
+  chart.update('none');
+  infoEl.innerHTML=h.crossovers.length?`<span class="xover-badge">⚡ ${h.crossovers.length} crossover${h.crossovers.length>1?'s':''}</span>`:'';
+}
 
-// Sim toggle
-document.getElementById('sim-toggle').addEventListener('click', () => {
-  const bar = document.getElementById('sim-bar');
-  bar.classList.toggle('open');
-  document.getElementById('sim-toggle').textContent = bar.classList.contains('open') ? '✕ Close Sim' : '⏵ Simulate';
+// ═══════════════════════════════════════════
+// TRACKER UI
+// ═══════════════════════════════════════════
+const tracker = new BetTracker();
+
+document.getElementById('bt-side').addEventListener('change',()=>{
+  const v=document.getElementById('bt-side').value;
+  if(v==='f1') document.getElementById('bt-odds').value=tracker.f1Odds||'';
+  if(v==='f2') document.getElementById('bt-odds').value=tracker.f2Odds||'';
 });
 
-let ufcFights = [], ufcSelected = null, ufcPollT = null;
+document.getElementById('add-bet-btn').addEventListener('click',()=>{
+  const side=document.getElementById('bt-side').value;
+  const stake=parseFloat(document.getElementById('bt-stake').value);
+  const odds=parseInt(document.getElementById('bt-odds').value);
+  if(!side||isNaN(stake)||isNaN(odds)||stake<=0) return;
+  tracker.addBet(side,stake,odds);
+  document.getElementById('bt-stake').value='';
+  renderTracker();
+});
 
-function renderFights(fights, containerId, onSelect) {
-  const c = document.getElementById(containerId);
-  const live = fights.filter(f => isLive(f.commence_time));
-  const up   = fights.filter(f => !isLive(f.commence_time));
-  c.innerHTML = '';
-  if (!fights.length) { c.innerHTML = `<div id="no-odds">No DraftKings odds right now.</div>`; return; }
+document.getElementById('clear-bets').addEventListener('click',()=>{ tracker.clear(); renderTracker(); });
 
-  function card(fight, liveFlag) {
-    const out = fight.bookmakers[0].markets.find(m => m.key === 'h2h').outcomes;
-    const [a, b] = out;
-    const el = document.createElement('div');
-    el.className = `fight-card${liveFlag ? ' live' : ''}`;
-    el.innerHTML = `
-      <div class="ev">${liveFlag ? '● LIVE — ' : ''}${fight.sport_title || ''}</div>
+function renderTracker(){
+  const {n1,n2}=tracker.position();
+  const hasAny=tracker.bets.length>0;
+  const winWin=n1>0&&n2>0;
+  const hedge=(n1>0)!==(n2>0);
+
+  // Bet list
+  const listEl=document.getElementById('bet-list');
+  listEl.innerHTML=hasAny?tracker.bets.map((b,i)=>`
+    <div class="bet-row">
+      <span class="bet-num">#${i+1}</span>
+      <span class="bet-fighter">${b.side==='f1'?tracker.f1Name:tracker.f2Name}</span>
+      <span class="bet-stake">$${b.stake.toFixed(2)}</span>
+      <span class="bet-odds-lbl">${fmtO(b.odds)}</span>
+      <button class="bet-del" data-id="${b.id}">✕</button>
+    </div>`).join(''):'<div class="bet-empty">No bets locked in yet.</div>';
+  listEl.querySelectorAll('.bet-del').forEach(btn=>btn.addEventListener('click',()=>{tracker.removeBet(+btn.dataset.id);renderTracker();}));
+
+  // Position grid
+  const pgrid=document.getElementById('pos-grid');
+  if(!hasAny){ pgrid.style.display='none'; }
+  else{
+    pgrid.style.display='grid';
+    document.getElementById('pos-f1-lbl').textContent=`${tracker.f1Name||'Side 1'} wins`;
+    document.getElementById('pos-f2-lbl').textContent=`${tracker.f2Name||'Side 2'} wins`;
+    const setCard=(id,valId,net)=>{
+      document.getElementById(id).className='pos-card '+(net>0?'pc-win':net<0?'pc-loss':'pc-zero');
+      const el=document.getElementById(valId); el.textContent=fmtM(net);
+      el.className='pos-val '+(net>0?'pv-green':net<0?'pv-red':'pv-gray');
+    };
+    setCard('pos-f1','pos-f1-val',n1); setCard('pos-f2','pos-f2-val',n2);
+  }
+
+  // Status
+  const statusEl=document.getElementById('tracker-status');
+  if(!hasAny){ statusEl.className='tracker-status s-empty'; statusEl.textContent='Lock in a bet to track your position'; }
+  else if(winWin){ statusEl.className='tracker-status s-winwin'; statusEl.textContent='🔔 PROFIT MOMENT — WIN EITHER WAY'; }
+  else if(hedge){ statusEl.className='tracker-status s-hedge'; statusEl.textContent='⚖️ HEDGE MOMENT — add a bet to lock in profit'; }
+  else{ statusEl.className='tracker-status s-partial'; statusEl.textContent=`📈 PARTIAL EXPOSURE — ${n1>=n2?tracker.f1Name:tracker.f2Name} side favored`; }
+
+  // Suggestion
+  const sugg=tracker.suggestion();
+  const suggEl=document.getElementById('tracker-sugg');
+  if(sugg){
+    suggEl.style.display='block';
+    let t=`Bet <strong>$${sugg.optS.toFixed(2)}</strong> on <strong>${sugg.name}</strong> at <strong>${fmtO(sugg.odds)}</strong>`;
+    t+=sugg.canWinWin?` → guaranteed <strong>${fmtM(sugg.profitAfter)}</strong> either way (range: $${sugg.minS.toFixed(0)}–$${sugg.maxS.toFixed(0)})`
+      :` → best position (win-win not achievable at current odds)`;
+    suggEl.innerHTML=t;
+  } else { suggEl.style.display='none'; }
+}
+
+// ═══════════════════════════════════════════
+// SIMULATION
+// ═══════════════════════════════════════════
+let simData=null,simIdx=0,simSpeed=50,simTimer=null,simRunning=false,simFk=null;
+
+document.getElementById('sim-toggle').addEventListener('click',()=>{
+  const bar=document.getElementById('sim-bar');
+  bar.classList.toggle('open');
+  document.getElementById('sim-toggle').textContent=bar.classList.contains('open')?'✕ Close':'⏵ Simulate';
+});
+
+document.querySelectorAll('#sim-bar [data-spd]').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    simSpeed=+btn.dataset.spd;
+    document.querySelectorAll('#sim-bar [data-spd]').forEach(b=>b.classList.remove('active-spd'));
+    btn.classList.add('active-spd');
+    if(simRunning){clearInterval(simTimer);startSimTick();}
+  });
+});
+
+document.getElementById('sim-play').addEventListener('click',async()=>{
+  if(!simData){
+    const fid=document.getElementById('sim-fight-sel').value; if(!fid) return;
+    try{
+      const r=await fetch(`/api/fight-history/${fid}`);
+      simData=await r.json(); simIdx=0;
+      if(!simData.oddsHistory?.length) return;
+      const first=simData.oddsHistory[0];
+      const f1=first.fighter1.name,f2=first.fighter2.name;
+      simFk=fkey(f1,f2);
+      graphClear(simFk); tracker.clear(); renderTracker();
+      tracker.setFight(f1,f2,first.fighter1.numericOdds,first.fighter2.numericOdds);
+      updateFightUI(f1,f2,first.fighter1.numericOdds,first.fighter2.numericOdds,true,null,null);
+      graphSelect(simFk,f1,f2);
+      document.getElementById('graph-fight-lbl').textContent=`${f1} vs ${f2} [SIM]`;
+      document.getElementById('sim-reset').style.display='';
+    }catch(e){console.error(e);return;}
+  }
+  if(simRunning){clearInterval(simTimer);simRunning=false;document.getElementById('sim-play').textContent='▶ Play';document.getElementById('sim-play').className='sim-btn play';}
+  else startSimTick();
+});
+
+document.getElementById('sim-reset').addEventListener('click',()=>{
+  clearInterval(simTimer); simRunning=false; simData=null; simIdx=0;
+  document.getElementById('sim-play').textContent='▶ Play'; document.getElementById('sim-play').className='sim-btn play';
+  document.getElementById('sim-play').disabled=false;
+  document.getElementById('sim-reset').style.display='none';
+  document.getElementById('sim-fill').style.width='0%';
+  document.getElementById('sim-prog-lbl').textContent='—';
+  tracker.clear(); renderTracker();
+});
+
+function startSimTick(){
+  simRunning=true;
+  document.getElementById('sim-play').textContent='⏸ Pause'; document.getElementById('sim-play').className='sim-btn pause-b';
+  simTimer=setInterval(simTick,Math.max(16,1000/simSpeed));
+}
+function simTick(){
+  if(!simData||simIdx>=simData.oddsHistory.length){
+    clearInterval(simTimer);simRunning=false;
+    document.getElementById('sim-play').textContent='▶ Done';document.getElementById('sim-play').disabled=true; return;
+  }
+  const pt=simData.oddsHistory[simIdx++];
+  const f1O=pt.fighter1.numericOdds,f2O=pt.fighter2.numericOdds;
+  const ts=new Date(pt.timestamp).toLocaleTimeString('en-US',{hour12:false,hour:'2-digit',minute:'2-digit',second:'2-digit'});
+  graphAddPoint(simFk,ts,pt.fighter1.name,f1O,pt.fighter2.name,f2O);
+  tracker.updateOdds(f1O,f2O);
+  updateNowWatchingOdds(f1O,f2O);
+  const side=document.getElementById('bt-side').value;
+  if(side==='f1') document.getElementById('bt-odds').value=f1O;
+  if(side==='f2') document.getElementById('bt-odds').value=f2O;
+  renderTracker();
+  const pct=(simIdx/simData.oddsHistory.length*100).toFixed(1);
+  document.getElementById('sim-fill').style.width=pct+'%';
+  document.getElementById('sim-prog-lbl').textContent=`${simIdx}/${simData.oddsHistory.length} pts`;
+}
+
+async function loadSimFights(){
+  try{
+    const fights=await(await fetch('/api/fights')).json();
+    const nC=f=>Array.isArray(f.crossovers)?f.crossovers.length:(f.crossovers||0);
+    const wC=fights.filter(f=>nC(f)>0).sort((a,b)=>nC(b)-nC(a));
+    const rest=fights.filter(f=>nC(f)===0);
+    document.getElementById('sim-fight-sel').innerHTML=
+      '<option value="">— pick a fight —</option>'+
+      '<optgroup label="Has Crossovers ⚡">'+wC.map(f=>`<option value="${f.fightId}">${f.fighter1} vs ${f.fighter2} (${nC(f)} ⚡)</option>`).join('')+'</optgroup>'+
+      '<optgroup label="No Crossovers">'+rest.map(f=>`<option value="${f.fightId}">${f.fighter1} vs ${f.fighter2}</option>`).join('')+'</optgroup>';
+  }catch{}
+}
+loadSimFights();
+
+// ═══════════════════════════════════════════
+// NOW WATCHING CARD
+// ═══════════════════════════════════════════
+let currentGames=[];  // all games for active sport
+let selectedGame=null;
+let pollTimer=null;
+let activeSport='mma_mixed_martial_arts';
+let activeSportTitle='UFC';
+
+function updateNowWatchingOdds(o1,o2){
+  const o1el=document.getElementById('nw-o1'),o2el=document.getElementById('nw-o2');
+  o1el.textContent=fmtO(o1); o1el.className='nw-odds '+odsCls(o1);
+  o2el.textContent=fmtO(o2); o2el.className='nw-odds '+odsCls(o2);
+}
+
+function updateFightUI(f1Name,f2Name,o1,o2,live,sport,switchGames){
+  const nw=document.getElementById('now-watching');
+  const gameList=document.getElementById('game-list');
+  nw.style.display='block';
+  gameList.style.display='none';
+  document.getElementById('graph-panel').style.display='block';
+  document.getElementById('tracker-panel').style.display='block';
+
+  document.getElementById('nw-f1').textContent=f1Name;
+  document.getElementById('nw-f2').textContent=f2Name;
+  updateNowWatchingOdds(o1,o2);
+
+  const dot=document.getElementById('nw-live-dot');
+  dot.className=live?'':'offline';
+  document.getElementById('nw-badge-text').textContent=`${live?'LIVE · ':''}${sport||activeSportTitle}`;
+
+  // Populate switch dropdown with other games
+  const sw=document.getElementById('nw-switch');
+  if(switchGames&&switchGames.length>1){
+    sw.innerHTML=switchGames.filter(g=>g.id!==selectedGame?.id).map(g=>{
+      const out=g.bookmakers[0].markets.find(m=>m.key==='h2h').outcomes;
+      return `<option value="${g.id}">${out[0].name} vs ${out[1].name}</option>`;
+    }).join('');
+  } else { sw.innerHTML='<option value="">No other games</option>'; }
+}
+
+document.getElementById('nw-switch').addEventListener('change',function(){
+  const id=this.value; if(!id) return;
+  const game=currentGames.find(g=>g.id===id); if(!game) return;
+  selectGame(game);
+  this.value='';
+});
+
+document.getElementById('nw-dismiss').addEventListener('click',()=>{
+  document.getElementById('now-watching').style.display='none';
+  document.getElementById('game-list').style.display='block';
+  document.getElementById('graph-panel').style.display='none';
+  document.getElementById('tracker-panel').style.display='none';
+  selectedGame=null;
+  tracker.clear(); renderTracker();
+});
+
+async function selectGame(game){
+  selectedGame=game;
+  clearTimeout(pollTimer);
+  const out=game.bookmakers[0].markets.find(m=>m.key==='h2h').outcomes;
+  const [a,b]=out;
+  const fk=fkey(a.name,b.name);
+  const live=isLive(game.commence_time);
+
+  updateFightUI(a.name,b.name,a.price,b.price,live,game.sport_title||activeSportTitle,currentGames);
+  document.getElementById('graph-fight-lbl').textContent=`${a.name} vs ${b.name}`;
+  graphSelect(fk,a.name,b.name);
+
+  // Update tracker fight context
+  tracker.setFight(a.name,b.name,a.price,b.price);
+  document.getElementById('bt-side').innerHTML=`<option value="f1">${a.name}</option><option value="f2">${b.name}</option>`;
+  document.getElementById('bt-odds').value=a.price;
+  renderTracker();
+
+  // Backfill if mid-game
+  if(live){
+    const bfEl=document.getElementById('nw-backfill-status');
+    bfEl.textContent='⌛ loading history...';
+    try{
+      const r=await fetch(`/api/backfill?sport=${activeSport}&team1=${encodeURIComponent(a.name)}&team2=${encodeURIComponent(b.name)}`);
+      const bf=await r.json();
+      if(bf.points?.length){
+        graphLoadPoints(fk,bf.points);
+        const src=bf.source==='local'?`${bf.points.length} pts from recorder`:`${bf.points.length} historical snapshots (~${(bf.points.length*10)} credits)`;
+        bfEl.textContent=`📈 backfilled: ${src}`;
+      } else { bfEl.textContent='no prior data found'; }
+    }catch{ bfEl.textContent=''; }
+    setTimeout(()=>{ document.getElementById('nw-backfill-status').textContent=''; },4000);
+  }
+
+  startPolling();
+}
+
+// ═══════════════════════════════════════════
+// POLLING
+// ═══════════════════════════════════════════
+async function pollOdds(){
+  if(!selectedGame||simRunning) return;
+  try{
+    const endpoint=activeSport==='mma_mixed_martial_arts'?'/api/ufc':`/api/sport/${activeSport}`;
+    const raw=await(await fetch(endpoint)).json();
+    const games=raw.filter(f=>f.bookmakers?.[0]?.markets?.find(m=>m.key==='h2h')?.outcomes?.length>=2);
+    const ts=new Date().toLocaleTimeString('en-US',{hour12:false,hour:'2-digit',minute:'2-digit',second:'2-digit'});
+
+    games.forEach(g=>{
+      const out=g.bookmakers[0].markets.find(m=>m.key==='h2h').outcomes;
+      const [a,b]=out;
+      graphAddPoint(fkey(a.name,b.name),ts,a.name,a.price,b.name,b.price);
+    });
+
+    // Update selected game odds
+    const match=games.find(g=>g.id===selectedGame.id);
+    if(match){
+      const out=match.bookmakers[0].markets.find(m=>m.key==='h2h').outcomes;
+      const [a,b]=out;
+      tracker.updateOdds(a.price,b.price);
+      updateNowWatchingOdds(a.price,b.price);
+      const side=document.getElementById('bt-side').value;
+      if(side==='f1') document.getElementById('bt-odds').value=a.price;
+      if(side==='f2') document.getElementById('bt-odds').value=b.price;
+      renderTracker();
+      // Update live badge
+      const live=isLive(match.commence_time);
+      const dot=document.getElementById('nw-live-dot');
+      dot.className=live?'':'offline';
+    }
+  }catch{}
+}
+
+function startPolling(){
+  clearTimeout(pollTimer);
+  const live=selectedGame&&isLive(selectedGame.commence_time);
+  pollTimer=setTimeout(async()=>{ await pollOdds(); startPolling(); },live?2000:10000);
+}
+
+// ═══════════════════════════════════════════
+// SPORT PILLS + GAME LIST
+// ═══════════════════════════════════════════
+async function loadSports(){
+  const strip=document.getElementById('sport-strip');
+  try{
+    const sports=await(await fetch('/api/sports')).json();
+    strip.innerHTML='';
+    const pri=['mma','americanfootball','basketball','icehockey','baseball','soccer','boxing','tennis'];
+    sports.sort((a,b)=>{
+      const ai=pri.findIndex(p=>a.group.toLowerCase().includes(p)||a.key.toLowerCase().includes(p));
+      const bi=pri.findIndex(p=>b.group.toLowerCase().includes(p)||b.key.toLowerCase().includes(p));
+      return (ai<0?99:ai)-(bi<0?99:bi);
+    });
+    sports.forEach(s=>{
+      const btn=document.createElement('button');
+      btn.className='sport-pill'+(s.key===activeSport?' active':'');
+      btn.textContent=s.title; btn.dataset.key=s.key; btn.dataset.title=s.title;
+      btn.addEventListener('click',()=>{
+        document.querySelectorAll('.sport-pill').forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
+        activeSport=s.key; activeSportTitle=s.title;
+        loadGames();
+      });
+      strip.appendChild(btn);
+    });
+  }catch{ strip.innerHTML='<span style="color:#444;font-size:.7rem;padding:12px 0">Could not load sports</span>'; }
+}
+
+async function loadGames(){
+  if(selectedGame) return; // don't refresh list while watching a game
+  const endpoint=activeSport==='mma_mixed_martial_arts'?'/api/ufc':`/api/sport/${activeSport}`;
+  try{
+    const raw=await(await fetch(endpoint)).json();
+    currentGames=raw.filter(f=>f.bookmakers?.[0]?.markets?.find(m=>m.key==='h2h')?.outcomes?.length>=2);
+    document.getElementById('topbar-status').textContent=`${currentGames.length} ${activeSportTitle} matchups`;
+    renderGameList();
+  }catch(e){ document.getElementById('game-list').innerHTML='<div id="no-games">Error loading games</div>'; }
+}
+
+function renderGameList(){
+  const c=document.getElementById('game-list');
+  const live=currentGames.filter(f=>isLive(f.commence_time));
+  const up=currentGames.filter(f=>!isLive(f.commence_time));
+  c.innerHTML='';
+  if(!currentGames.length){ c.innerHTML='<div id="no-games">No '+activeSportTitle+' odds right now.</div>'; return; }
+
+  function card(game,liveFlag){
+    const out=game.bookmakers[0].markets.find(m=>m.key==='h2h').outcomes;
+    const [a,b]=out;
+    const el=document.createElement('div');
+    el.className='game-card'+(liveFlag?' live-card':'');
+    el.innerHTML=`
+      <div class="game-ev">${liveFlag?'● LIVE — ':''}${game.sport_title||activeSportTitle}</div>
       <div class="matchup">
         <div class="fn">${a.name}</div>
         <div class="op ${odsCls(a.price)}">${fmtO(a.price)}</div>
@@ -758,214 +754,58 @@ function renderFights(fights, containerId, onSelect) {
         <div class="op ${odsCls(b.price)}">${fmtO(b.price)}</div>
         <div class="fn r">${b.name}</div>
       </div>
-      <div class="ft">${new Date(fight.commence_time).toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})}</div>`;
-    el.addEventListener('click', () => {
-      c.querySelectorAll('.fight-card').forEach(x => x.classList.remove('selected'));
-      el.classList.add('selected');
-      onSelect(fight, a, b);
-    });
+      <div class="game-time">${new Date(game.commence_time).toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})}</div>`;
+    el.addEventListener('click',()=>selectGame(game));
     return el;
   }
 
-  if (live.length) { const l = document.createElement('div'); l.className = 'section-label'; l.textContent = 'Live Now'; c.appendChild(l); live.forEach(f => c.appendChild(card(f, true))); }
-  if (up.length)   { const l = document.createElement('div'); l.className = 'section-label'; l.textContent = 'Upcoming'; c.appendChild(l); up.forEach(f => c.appendChild(card(f, false))); }
+  if(live.length){ const l=document.createElement('div');l.className='section-label';l.textContent='Live Now';c.appendChild(l);live.forEach(g=>c.appendChild(card(g,true))); }
+  if(up.length){ const l=document.createElement('div');l.className='section-label';l.textContent='Upcoming';c.appendChild(l);up.forEach(g=>c.appendChild(card(g,false))); }
 }
 
-async function loadUFC() {
-  try {
-    const raw = await (await fetch('/api/ufc')).json();
-    ufcFights = raw.filter(f => f.bookmakers?.[0]?.markets?.find(m => m.key === 'h2h')?.outcomes?.length >= 2);
-    document.getElementById('topbar-status').textContent = `Updated ${new Date().toLocaleTimeString()} · ${ufcFights.length} fights`;
+// ═══════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════
+loadSports();
+loadGames();
+// Refresh game list every 30s when no game selected
+setInterval(()=>{ if(!selectedGame) loadGames(); },30000);
 
-    const ts = new Date().toLocaleTimeString('en-US',{hour12:false,hour:'2-digit',minute:'2-digit',second:'2-digit'});
-    ufcFights.forEach(f => {
-      const out = f.bookmakers[0].markets.find(m => m.key === 'h2h').outcomes;
-      const [a, b] = out;
-      ufcGraph.addPoint(fkey(a.name, b.name), ts, a.name, a.price, b.name, b.price);
-      // Update tracker odds if this fight is selected
-      if (ufcSelected && ufcSelected.id === f.id) {
-        ufcTracker.updateOdds(a.price, b.price);
-        // Update odds auto-fill
-        const side = document.getElementById('bt-side').value;
-        if (side === 'f1') document.getElementById('bt-odds').value = a.price;
-        if (side === 'f2') document.getElementById('bt-odds').value = b.price;
-        ufcTrackerUI.render();
-      }
-    });
-
-    renderFights(ufcFights, 'fights', (fight, a, b) => {
-      ufcSelected = fight;
-      const k = fkey(a.name, b.name);
-      document.getElementById('gfl').textContent = `${a.name} vs ${b.name}`;
-      ufcGraph.select(k, a.name, b.name);
-      ufcTracker.setFight(a.name, b.name, a.price, b.price);
-      ufcTrackerUI.updateFight(a.name, b.name);
-      ufcTrackerUI.render();
-    });
-
-    // Auto-select first live fight
-    const autoF = ufcFights.find(f => isLive(f.commence_time)) || ufcFights[0];
-    if (autoF && !ufcSelected) {
-      const out = autoF.bookmakers[0].markets.find(m => m.key === 'h2h').outcomes;
-      const [a, b] = out;
-      document.getElementById('gfl').textContent = `${a.name} vs ${b.name}`;
-      ufcGraph.select(fkey(a.name, b.name), a.name, b.name);
-      ufcTracker.setFight(a.name, b.name, a.price, b.price);
-      ufcTrackerUI.updateFight(a.name, b.name);
-      ufcTrackerUI.render();
-      ufcSelected = autoF;
-    }
-  } catch(e) { document.getElementById('topbar-status').textContent = 'Error loading'; }
+// ═══════════════════════════════════════════
+// CREDITS
+// ═══════════════════════════════════════════
+async function loadCredits(){
+  try{
+    const d=await(await fetch('/api/credits')).json();
+    if(d.oddsApi.remaining!==null){ document.getElementById('uf-rem').textContent=d.oddsApi.remaining.toLocaleString(); document.getElementById('uf-used').textContent=d.oddsApi.used.toLocaleString(); }
+    document.getElementById('uf-cost').textContent='$'+d.anthropic.estimatedCostUSD.toFixed(4);
+    document.getElementById('uf-q').textContent=d.anthropic.sessionQueries;
+  }catch{}
 }
+loadCredits(); setInterval(loadCredits,30000);
 
-function scheduleUFC() {
-  const hasLive = ufcFights.some(f => isLive(f.commence_time));
-  clearTimeout(ufcPollT);
-  ufcPollT = setTimeout(() => { loadUFC().then(scheduleUFC); }, hasLive ? 2000 : 10000);
-}
-loadUFC().then(scheduleUFC);
-
-// ═══════════════════════════════════════════════════
-// EVENTS PAGE
-// ═══════════════════════════════════════════════════
-
-const evGraph = makeGraph('odds-chart-e', 'graph-empty-e', 'gci-e');
-const evTracker = new BetTracker();
-const evTrackerUI = makeTrackerUI({
-  sideId: 'bt-side-e', stakeId: 'bt-stake-e', oddsId: 'bt-odds-e', addId: 'add-bet-btn-e',
-  listId: 'bet-list-e', pgridId: 'pos-grid-e',
-  pf1Id: 'pos-f1-e', pf1LblId: 'pos-f1-lbl-e', pf1ValId: 'pos-f1-val-e',
-  pf2Id: 'pos-f2-e', pf2LblId: 'pos-f2-lbl-e', pf2ValId: 'pos-f2-val-e',
-  statusId: 'tracker-status-e', suggId: 'tracker-suggestion-e',
-  clearId: 'clear-bets-e', fightLblId: 'tracker-fight-lbl-e'
-}, evTracker);
-
-let evSelected = null, evPollT = null, activeSport = null;
-
-async function loadSports() {
-  const bar = document.getElementById('sport-bar');
-  try {
-    const sports = await (await fetch('/api/sports')).json();
-    bar.innerHTML = '';
-    const pri = ['americanfootball','basketball','icehockey','baseball','soccer','mma','boxing','tennis'];
-    sports.sort((a,b) => { const ai=pri.findIndex(p=>a.group.toLowerCase().includes(p)), bi=pri.findIndex(p=>b.group.toLowerCase().includes(p)); return (ai<0?99:ai)-(bi<0?99:bi); });
-    sports.forEach(s => {
-      const btn = document.createElement('button');
-      btn.className = 'sport-btn'; btn.textContent = s.title; btn.dataset.key = s.key;
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.sport-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active'); activeSport = s.key;
-        clearTimeout(evPollT); loadEventFights();
-      });
-      bar.appendChild(btn);
-    });
-  } catch { bar.innerHTML = '<span style="color:#444;font-size:.75rem">Could not load sports</span>'; }
-}
-
-async function loadEventFights() {
-  if (!activeSport) return;
-  try {
-    const raw = await (await fetch(`/api/sport/${activeSport}`)).json();
-    const fights = raw.filter(f => f.bookmakers?.[0]?.markets?.find(m => m.key === 'h2h')?.outcomes?.length >= 2);
-    const ts = new Date().toLocaleTimeString('en-US',{hour12:false,hour:'2-digit',minute:'2-digit',second:'2-digit'});
-    fights.forEach(f => {
-      const out = f.bookmakers[0].markets.find(m => m.key === 'h2h').outcomes;
-      const [a, b] = out;
-      evGraph.addPoint(fkey(a.name, b.name), ts, a.name, a.price, b.name, b.price);
-      if (evSelected && evSelected.id === f.id) {
-        evTracker.updateOdds(a.price, b.price);
-        const side = document.getElementById('bt-side-e').value;
-        if (side === 'f1') document.getElementById('bt-odds-e').value = a.price;
-        if (side === 'f2') document.getElementById('bt-odds-e').value = b.price;
-        evTrackerUI.render();
-      }
-    });
-    renderFights(fights, 'event-fights', (fight, a, b) => {
-      evSelected = fight;
-      const k = fkey(a.name, b.name);
-      document.getElementById('gfl-e').textContent = `${a.name} vs ${b.name}`;
-      evGraph.select(k, a.name, b.name);
-      evTracker.setFight(a.name, b.name, a.price, b.price);
-      evTrackerUI.updateFight(a.name, b.name);
-      evTrackerUI.render();
-    });
-    const hasLive = fights.some(f => isLive(f.commence_time));
-    evPollT = setTimeout(loadEventFights, hasLive ? 2000 : 15000);
-  } catch { document.getElementById('event-fights').innerHTML = '<div id="no-odds-e">Error loading events</div>'; }
-}
-
-// ═══════════════════════════════════════════════════
-// TABS
-// ═══════════════════════════════════════════════════
-
-document.querySelectorAll('.nav-tab').forEach(t => {
-  t.addEventListener('click', () => {
-    document.querySelectorAll('.nav-tab').forEach(x => x.classList.remove('active'));
-    document.querySelectorAll('.tab-page').forEach(x => x.classList.remove('active'));
-    t.classList.add('active');
-    document.getElementById('tab-'+t.dataset.tab).classList.add('active');
-    if (t.dataset.tab === 'events' && !activeSport) loadSports();
-  });
-});
-
-// ═══════════════════════════════════════════════════
-// CREDITS / USAGE
-// ═══════════════════════════════════════════════════
-
-async function loadCredits() {
-  try {
-    const d = await (await fetch('/api/credits')).json();
-    if (d.oddsApi.remaining !== null) {
-      document.getElementById('uf-rem').textContent = d.oddsApi.remaining.toLocaleString();
-      document.getElementById('uf-used').textContent = d.oddsApi.used.toLocaleString();
-    }
-    document.getElementById('uf-cost').textContent = '$' + d.anthropic.estimatedCostUSD.toFixed(4);
-    document.getElementById('uf-q').textContent = d.anthropic.sessionQueries;
-  } catch {}
-}
-loadCredits();
-setInterval(loadCredits, 30000);
-
-// ═══════════════════════════════════════════════════
+// ═══════════════════════════════════════════
 // CHAT
-// ═══════════════════════════════════════════════════
-
-const fab   = document.getElementById('chat-fab');
-const panel = document.getElementById('chat-panel');
-const msgs  = document.getElementById('chat-messages');
-const inp   = document.getElementById('chat-input');
-const snd   = document.getElementById('chat-send');
-const ulbl  = document.getElementById('chat-usage');
-
-fab.addEventListener('click', () => { panel.classList.toggle('open'); if (panel.classList.contains('open')) inp.focus(); });
-
-function addMsg(text, role) {
-  const d = document.createElement('div');
-  d.className = `msg ${role}`;
-  if (role === 'assistant' && typeof marked !== 'undefined') d.innerHTML = marked.parse(text);
-  else d.textContent = text;
-  msgs.appendChild(d);
-  msgs.scrollTop = msgs.scrollHeight;
-  return d;
-}
-
-async function send() {
-  const q = inp.value.trim(); if (!q) return;
-  inp.value = ''; snd.disabled = true;
-  addMsg(q, 'user');
-  const th = addMsg('Researching...', 'thinking');
-  try {
-    const data = await (await fetch('/api/research', { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify({question:q}) })).json();
-    th.remove();
-    addMsg(data.answer || data.error, 'assistant');
-    if (data.usage) ulbl.textContent = `${data.usage.sessionQueries} queries · $${data.usage.estimatedCostUSD.toFixed(3)}`;
+// ═══════════════════════════════════════════
+const fab=document.getElementById('chat-fab'),cpanel=document.getElementById('chat-panel'),
+      cmsgs=document.getElementById('chat-msgs'),cinp=document.getElementById('chat-inp'),
+      csnd=document.getElementById('chat-snd'),culbl=document.getElementById('chat-usage');
+fab.addEventListener('click',()=>{ cpanel.classList.toggle('open'); if(cpanel.classList.contains('open')) cinp.focus(); });
+function addMsg(t,r){ const d=document.createElement('div'); d.className=`msg ${r}`; if(r==='assistant'&&typeof marked!=='undefined') d.innerHTML=marked.parse(t); else d.textContent=t; cmsgs.appendChild(d); cmsgs.scrollTop=cmsgs.scrollHeight; return d; }
+async function sendMsg(){
+  const q=cinp.value.trim(); if(!q) return;
+  cinp.value=''; csnd.disabled=true; addMsg(q,'user');
+  const th=addMsg('Researching...','thinking');
+  try{
+    const data=await(await fetch('/api/research',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q})})).json();
+    th.remove(); addMsg(data.answer||data.error,'assistant');
+    if(data.usage) culbl.textContent=`${data.usage.sessionQueries} queries · $${data.usage.estimatedCostUSD.toFixed(3)}`;
     loadCredits();
-  } catch(e) { th.remove(); addMsg('Error: '+e.message, 'assistant'); }
-  snd.disabled = false; inp.focus();
+  }catch(e){ th.remove(); addMsg('Error: '+e.message,'assistant'); }
+  csnd.disabled=false; cinp.focus();
 }
-
-snd.addEventListener('click', send);
-inp.addEventListener('keydown', e => { if (e.key === 'Enter') send(); });
+csnd.addEventListener('click',sendMsg);
+cinp.addEventListener('keydown',e=>{ if(e.key==='Enter') sendMsg(); });
 </script>
 </body>
 </html>
