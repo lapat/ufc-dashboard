@@ -195,7 +195,8 @@ app.get('/api/fights', (req, res) => {
 app.get('/api/fight-history/:fightId', (req, res) => {
   try {
     const files = fs.readdirSync(HISTORICAL_DIR);
-    const match = files.find(f => f.replace('.json', '') === req.params.fightId);
+    const id = req.params.fightId;
+    const match = files.find(f => f.replace('.json', '') === id || f.startsWith(id + '_') || f.startsWith(id + '.'));
     if (!match) return res.status(404).json({ error: 'Fight not found' });
     res.json(JSON.parse(fs.readFileSync(path.join(HISTORICAL_DIR, match))));
   } catch (e) { res.status(500).json({ error: e.message }); }
