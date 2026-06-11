@@ -14,6 +14,8 @@ const HISTORICAL_DIR = path.join(__dirname, 'historical_data');
 const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 const TOKEN_WARN = parseInt(process.env.ANTHROPIC_TOKEN_WARN_THRESHOLD || '500000');
 let totalTokensUsed = 0;
+let totalQueries = 0;
+let _cachedSummaryJson = null; // cached once at startup, cleared when new fights added
 
 app.use(express.static('public'));
 app.use(express.json());
@@ -85,7 +87,24 @@ function getIndex() {
   return _index;
 }
 
-function invalidateIndex() { _index = null; }
+function invalidateIndex() { _index = null; _cachedSummaryJson = null; }
+
+function getCachedSummary() {
+  if (_cachedSummaryJson) return _cachedSummaryJson;
+  const index = getIndex();
+  const summary = index.map(f => ({
+    fight: `${f.fighter1} vs ${f.fighter2}`,
+    date: f.date,
+    open: f.openOdds,
+    close: f.closeOdds,
+    crossovers: f.crossovers.length,
+    winWins: f.winWinCount,
+    bestWinWin: f.crossovers.filter(c => c.winWin).map(c => `${c.fighter} +${c.o1}→+${c.o2}`)[0] || null,
+  }));
+  _cachedSummaryJson = JSON.stringify(summary, null, 1);
+  console.log(`Historical summary cached: ${index.length} fights, ${_cachedSummaryJson.length} chars`);
+  return _cachedSummaryJson;
+}
 
 // Find fights involving a fighter (fuzzy name match)
 function findFighterHistory(name, limit = 3) {
@@ -146,36 +165,51 @@ app.post('/api/research', async (req, res) => {
       });
     } catch {}
 
-    // Build historical summary (compact)
-    const index = getIndex();
-    const historicalSummary = index.map(f => ({
-      fight: `${f.fighter1} vs ${f.fighter2}`,
-      date: f.date,
-      open: f.openOdds,
-      close: f.closeOdds,
-      crossovers: f.crossovers.length,
-      winWins: f.winWinCount,
-      bestWinWin: f.crossovers.filter(c => c.winWin).map(c => `${c.fighter} +${c.o1}→+${c.o2}`)[0] || null,
-    }));
+    // Use cached historical summary (built once, reused across all queries)
+    const historicalSummaryJson = getCachedSummary();
+    totalQueries++;
 
-    const systemPrompt = `You are a fight research assistant for Ish, a professional live MMA bettor. You have two data sources:
+    const systemPrompt = `You are an expert MMA live betting research assistant. You work with Ish, a professional live MMA bettor who specializes in crossover opportunities during live UFC fights.
 
-1. HISTORICAL DATA: Live odds captured every ~3 seconds during actual UFC fights (Dec 2025 – May 2026). This includes opening odds, closing odds, and crossover analysis.
+## YOUR DATA SOURCES
+1. HISTORICAL DATA: Live DraftKings odds captured every ~3 seconds during actual UFC fights (Dec 2025 – May 2026). Contains opening odds, closing odds, and crossover analysis for 262 fights.
+2. LIVE/UPCOMING ODDS: Current DraftKings moneyline odds for upcoming fights.
 
-2. LIVE/UPCOMING ODDS: Current DraftKings odds for upcoming fights from The Odds API.
+## CORE CONCEPTS YOU KNOW DEEPLY
 
-A "crossover" = when a fighter's odds flip from underdog (+) to favorite (-) during a live fight.
-A "win-win crossover" = crossover where both bets placed at plus money satisfy (D1-1)(D2-1) > 1, guaranteeing profit regardless of outcome.
+**Crossover**: During a live fight, a fighter's odds flip from underdog (+ money) to favorite (- money). This happens when momentum shifts — the underdog starts winning and the book adjusts.
 
-Answer concisely with specific numbers and fighter names. If Ish asks about a specific fighter's last fights, search the historical data for that fighter. If he asks about upcoming fights or current odds, use the live data.`;
+**Win-Win Crossover**: The key opportunity Ish looks for. Two bets placed at different times during the live fight:
+- Bet 1: placed when Fighter A is at plus money (underdog)
+- Crossover happens — Fighter A becomes the new favorite
+- Bet 2: placed on Fighter B who is now the new underdog at plus money
+- Guaranteed profit condition: (D1-1)(D2-1) > 1 where D = decimal odds
+- This works even if Bet 1 was at minus money, IF the crossover swing is large enough
+- The bigger the plus money on both legs, the larger the guaranteed profit window
 
-    const userMessage = `HISTORICAL FIGHT DATA (${historicalSummary.length} fights):
-${JSON.stringify(historicalSummary, null, 1)}
+**Stake sizing for win-win**:
+- Optimal Bet 2 per $100 Bet 1: sqrt((D1-1)/(D2-1)) × 100
+- Profit range: any Bet 2 stake between S1/(D2-1) and S1×(D1-1)
+- Example: Bet 1 at +200, Bet 2 at +150 → guaranteed profit on any Bet 2 between $33 and $200 per $100 Bet 1
+
+**Dataset stats**: 262 fights analyzed. 110/262 (42%) had crossovers. 59 confirmed win-win crossover moments across the dataset.
+
+## HOW TO ANSWER
+- When asked about a fighter, find their fights in historical data and report: opening odds, closing odds, number of crossovers, any win-win windows
+- When asked about upcoming fights, use the live odds data
+- Be specific with numbers — Ish makes real decisions based on your answers
+- If something isn't in the data, say so clearly
+- Format tables when comparing multiple fights
+- Suggest what to watch for in upcoming fights based on historical patterns`;
+
+
+    const userMessage = `HISTORICAL FIGHT DATA:
+${historicalSummaryJson}
 
 CURRENT DRAFTKINGS ODDS (upcoming fights):
 ${JSON.stringify(liveOdds, null, 1)}
 
-Ish's question: ${question}`;
+Question: ${question}`;
 
     const response = await anthropic.messages.create({
       model: 'claude-sonnet-4-6',
@@ -193,16 +227,25 @@ Ish's question: ${question}`;
 
     res.json({
       answer: response.content[0].text,
-      usage: { thisQuery: used, sessionTotal: totalTokensUsed },
+      usage: {
+        thisQuery: used,
+        sessionTotal: totalTokensUsed,
+        sessionQueries: totalQueries,
+        estimatedCostUSD: +(totalTokensUsed / 1_000_000 * 3).toFixed(3),
+      },
     });
   } catch (e) {
     res.status(500).json({ error: e.message });
   }
 });
 
-// Token usage check
 app.get('/api/usage', (req, res) => {
-  res.json({ sessionTokensUsed: totalTokensUsed, warnThreshold: TOKEN_WARN });
+  res.json({
+    sessionTokensUsed: totalTokensUsed,
+    sessionQueries: totalQueries,
+    estimatedCostUSD: +(totalTokensUsed / 1_000_000 * 3).toFixed(3),
+    warnThreshold: TOKEN_WARN,
+  });
 });
 
 app.listen(PORT, () => {

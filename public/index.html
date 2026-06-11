@@ -48,26 +48,56 @@
 
     #no-odds { color: #444; text-align: center; padding: 60px 0; font-size: 0.9rem; line-height: 1.8; }
 
-    .ask-section { margin-top: 40px; border-top: 1px solid #222; padding-top: 24px; }
-    .ask-section h2 { color: #e8b84b; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 14px; }
-    .ask-row { display: flex; gap: 10px; }
-    #ask-input {
-      flex: 1; background: #161616; border: 1px solid #333; border-radius: 6px;
-      color: #eee; padding: 10px 14px; font-size: 0.9rem; font-family: inherit;
-      outline: none;
+    /* ── Chat widget ── */
+    #chat-fab {
+      position: fixed; bottom: 28px; right: 28px;
+      width: 52px; height: 52px; border-radius: 50%;
+      background: #e8b84b; border: none; cursor: pointer;
+      font-size: 1.4rem; display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.5); z-index: 100;
+      transition: transform 0.15s;
     }
-    #ask-input:focus { border-color: #e8b84b; }
-    #ask-btn {
+    #chat-fab:hover { transform: scale(1.08); }
+
+    #chat-panel {
+      position: fixed; bottom: 92px; right: 28px;
+      width: 380px; max-height: 540px;
+      background: #161616; border: 1px solid #2a2a2a; border-radius: 12px;
+      display: none; flex-direction: column;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.6); z-index: 99;
+      overflow: hidden;
+    }
+    #chat-panel.open { display: flex; }
+
+    #chat-header {
+      padding: 12px 16px; background: #1a1a1a; border-bottom: 1px solid #222;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    #chat-header-title { color: #e8b84b; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+    #chat-usage { font-size: 0.65rem; color: #555; }
+
+    #chat-messages {
+      flex: 1; overflow-y: auto; padding: 14px;
+      display: flex; flex-direction: column; gap: 10px;
+      min-height: 200px;
+    }
+    .msg { font-size: 0.82rem; line-height: 1.6; padding: 10px 12px; border-radius: 8px; max-width: 94%; white-space: pre-wrap; }
+    .msg.user { background: #222; color: #ccc; align-self: flex-end; }
+    .msg.assistant { background: #1e2a1e; color: #b8e6b8; align-self: flex-start; border: 1px solid #2a3a2a; }
+    .msg.thinking { color: #555; font-style: italic; background: none; border: none; padding: 4px 0; }
+
+    #chat-input-row { display: flex; gap: 8px; padding: 10px 12px; border-top: 1px solid #222; }
+    #chat-input {
+      flex: 1; background: #111; border: 1px solid #333; border-radius: 6px;
+      color: #eee; padding: 8px 12px; font-size: 0.82rem; font-family: inherit; outline: none;
+      resize: none; height: 36px;
+    }
+    #chat-input:focus { border-color: #e8b84b; }
+    #chat-send {
       background: #e8b84b; color: #000; border: none; border-radius: 6px;
-      padding: 10px 20px; font-weight: 700; font-size: 0.85rem; cursor: pointer;
-      text-transform: uppercase; letter-spacing: 1px;
+      padding: 0 14px; font-weight: 700; font-size: 0.8rem; cursor: pointer;
     }
-    #ask-btn:disabled { opacity: 0.4; cursor: default; }
-    #ask-answer {
-      margin-top: 14px; background: #161616; border: 1px solid #2a2a2a;
-      border-radius: 6px; padding: 14px 16px; font-size: 0.85rem; line-height: 1.7;
-      color: #ccc; white-space: pre-wrap; display: none;
-    }
+    #chat-send:disabled { opacity: 0.3; cursor: default; }
   </style>
 </head>
 <body>
@@ -77,13 +107,21 @@
   </header>
   <div id="fights"></div>
 
-  <div class="ask-section">
-    <h2>Fight Research</h2>
-    <div class="ask-row">
-      <input id="ask-input" type="text" placeholder="e.g. Show me Chimaev's last 3 fights — odds and crossovers" />
-      <button id="ask-btn">Ask</button>
+  <!-- Floating chat widget -->
+  <button id="chat-fab" title="Fight Research">💬</button>
+
+  <div id="chat-panel">
+    <div id="chat-header">
+      <span id="chat-header-title">Fight Research</span>
+      <span id="chat-usage">0 queries · $0.000</span>
     </div>
-    <div id="ask-answer"></div>
+    <div id="chat-messages">
+      <div class="msg assistant">Ask me anything — fighter history, crossovers, current odds, win-win windows. Try: "Show me Topuria's last 3 fights"</div>
+    </div>
+    <div id="chat-input-row">
+      <input id="chat-input" placeholder="Ask about any fighter or fight..." />
+      <button id="chat-send">Send</button>
+    </div>
   </div>
 
   <script>
@@ -175,16 +213,35 @@
     load();
     setInterval(load, 10000);
 
-    document.getElementById('ask-btn').addEventListener('click', async () => {
-      const input = document.getElementById('ask-input');
-      const answer = document.getElementById('ask-answer');
-      const btn = document.getElementById('ask-btn');
+    // ── Chat widget ──────────────────────────────────────
+    const fab       = document.getElementById('chat-fab');
+    const panel     = document.getElementById('chat-panel');
+    const messages  = document.getElementById('chat-messages');
+    const input     = document.getElementById('chat-input');
+    const sendBtn   = document.getElementById('chat-send');
+    const usageLbl  = document.getElementById('chat-usage');
+
+    fab.addEventListener('click', () => {
+      panel.classList.toggle('open');
+      if (panel.classList.contains('open')) input.focus();
+    });
+
+    function addMsg(text, role) {
+      const d = document.createElement('div');
+      d.className = `msg ${role}`;
+      d.textContent = text;
+      messages.appendChild(d);
+      messages.scrollTop = messages.scrollHeight;
+      return d;
+    }
+
+    async function sendMessage() {
       const q = input.value.trim();
       if (!q) return;
-      btn.disabled = true;
-      btn.textContent = 'Thinking...';
-      answer.style.display = 'block';
-      answer.textContent = '...';
+      input.value = '';
+      sendBtn.disabled = true;
+      addMsg(q, 'user');
+      const thinking = addMsg('Researching...', 'thinking');
       try {
         const res = await fetch('/api/research', {
           method: 'POST',
@@ -192,17 +249,21 @@
           body: JSON.stringify({ question: q }),
         });
         const data = await res.json();
-        answer.textContent = data.answer || data.error;
+        thinking.remove();
+        addMsg(data.answer || data.error, 'assistant');
+        if (data.usage) {
+          usageLbl.textContent = `${data.usage.sessionQueries} queries · $${data.usage.estimatedCostUSD.toFixed(3)}`;
+        }
       } catch (e) {
-        answer.textContent = 'Error: ' + e.message;
+        thinking.remove();
+        addMsg('Error: ' + e.message, 'assistant');
       }
-      btn.disabled = false;
-      btn.textContent = 'Ask';
-    });
+      sendBtn.disabled = false;
+      input.focus();
+    }
 
-    document.getElementById('ask-input').addEventListener('keydown', e => {
-      if (e.key === 'Enter') document.getElementById('ask-btn').click();
-    });
+    sendBtn.addEventListener('click', sendMessage);
+    input.addEventListener('keydown', e => { if (e.key === 'Enter') sendMessage(); });
   </script>
 </body>
 </html>
