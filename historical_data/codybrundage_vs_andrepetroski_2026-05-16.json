@@ -1,0 +1,4181 @@
+{
+  "fightId": "codybrundage_vs_andrepetroski",
+  "fightTitle": "Connected but no betting buttons found",
+  "startTime": "2026-05-16T22:31:30.091Z",
+  "endTime": "2026-05-16T22:38:25.022Z",
+  "duration": 414931,
+  "dataPoints": 278,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-05-16T22:31:30.091Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-154",
+        "numericOdds": -154
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-05-16T22:31:33.102Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-154",
+        "numericOdds": -154
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-05-16T22:31:36.112Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-154",
+        "numericOdds": -154
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-16T22:31:39.119Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-154",
+        "numericOdds": -154
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-16T22:31:42.119Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-154",
+        "numericOdds": -154
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-05-16T22:31:45.128Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-154",
+        "numericOdds": -154
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-05-16T22:31:48.136Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-154",
+        "numericOdds": -154
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-05-16T22:31:51.176Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-154",
+        "numericOdds": -154
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-05-16T22:31:54.183Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+124",
+        "numericOdds": 124
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-158",
+        "numericOdds": -158
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-05-16T22:31:57.189Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+124",
+        "numericOdds": 124
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-158",
+        "numericOdds": -158
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-05-16T22:32:00.191Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+124",
+        "numericOdds": 124
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-158",
+        "numericOdds": -158
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-05-16T22:32:03.194Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+124",
+        "numericOdds": 124
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-158",
+        "numericOdds": -158
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-05-16T22:32:06.198Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+124",
+        "numericOdds": 124
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-158",
+        "numericOdds": -158
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-05-16T22:32:09.198Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+124",
+        "numericOdds": 124
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-158",
+        "numericOdds": -158
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-05-16T22:32:12.199Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+124",
+        "numericOdds": 124
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-158",
+        "numericOdds": -158
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-05-16T22:32:15.200Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+124",
+        "numericOdds": 124
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-158",
+        "numericOdds": -158
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-05-16T22:32:18.201Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-05-16T22:32:21.215Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-05-16T22:32:24.219Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-05-16T22:32:27.218Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-05-16T22:32:30.226Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-05-16T22:32:33.230Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-05-16T22:32:36.231Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-05-16T22:32:39.238Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+142",
+        "numericOdds": 142
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-182",
+        "numericOdds": -182
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-05-16T22:32:42.248Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+142",
+        "numericOdds": 142
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-182",
+        "numericOdds": -182
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-05-16T22:32:45.254Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-05-16T22:32:48.256Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-05-16T22:32:51.265Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-05-16T22:32:54.279Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-05-16T22:32:57.281Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-05-16T22:33:00.286Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-05-16T22:33:03.300Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+170",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-05-16T22:33:06.301Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+170",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-05-16T22:33:09.304Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+170",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-05-16T22:33:12.307Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+170",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-05-16T22:33:15.322Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+170",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-05-16T22:33:18.327Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+170",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2026-05-16T22:33:21.340Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+170",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2026-05-16T22:33:24.343Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+170",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 39
+    },
+    {
+      "timestamp": "2026-05-16T22:33:27.359Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+170",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 40
+    },
+    {
+      "timestamp": "2026-05-16T22:33:30.362Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 41
+    },
+    {
+      "timestamp": "2026-05-16T22:33:33.372Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 42
+    },
+    {
+      "timestamp": "2026-05-16T22:33:36.376Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 43
+    },
+    {
+      "timestamp": "2026-05-16T22:33:39.379Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 44
+    },
+    {
+      "timestamp": "2026-05-16T22:33:42.381Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 45
+    },
+    {
+      "timestamp": "2026-05-16T22:33:45.392Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 46
+    },
+    {
+      "timestamp": "2026-05-16T22:33:48.400Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 47
+    },
+    {
+      "timestamp": "2026-05-16T22:33:51.403Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 48
+    },
+    {
+      "timestamp": "2026-05-16T22:33:54.407Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 49
+    },
+    {
+      "timestamp": "2026-05-16T22:33:57.413Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 50
+    },
+    {
+      "timestamp": "2026-05-16T22:34:00.428Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+170",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 51
+    },
+    {
+      "timestamp": "2026-05-16T22:34:03.440Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+170",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 52
+    },
+    {
+      "timestamp": "2026-05-16T22:34:06.440Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+170",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 53
+    },
+    {
+      "timestamp": "2026-05-16T22:34:09.454Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+170",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 54
+    },
+    {
+      "timestamp": "2026-05-16T22:34:12.460Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+170",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 55
+    },
+    {
+      "timestamp": "2026-05-16T22:34:15.463Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+166",
+        "numericOdds": 166
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 56
+    },
+    {
+      "timestamp": "2026-05-16T22:34:18.470Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+166",
+        "numericOdds": 166
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 57
+    },
+    {
+      "timestamp": "2026-05-16T22:34:21.478Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+166",
+        "numericOdds": 166
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 58
+    },
+    {
+      "timestamp": "2026-05-16T22:34:24.491Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+166",
+        "numericOdds": 166
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 59
+    },
+    {
+      "timestamp": "2026-05-16T22:34:27.503Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+166",
+        "numericOdds": 166
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 60
+    },
+    {
+      "timestamp": "2026-05-16T22:34:30.504Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+166",
+        "numericOdds": 166
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 61
+    },
+    {
+      "timestamp": "2026-05-16T22:34:33.519Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+166",
+        "numericOdds": 166
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 62
+    },
+    {
+      "timestamp": "2026-05-16T22:34:36.526Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+166",
+        "numericOdds": 166
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 63
+    },
+    {
+      "timestamp": "2026-05-16T22:34:39.536Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 64
+    },
+    {
+      "timestamp": "2026-05-16T22:34:42.552Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 65
+    },
+    {
+      "timestamp": "2026-05-16T22:34:45.559Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 66
+    },
+    {
+      "timestamp": "2026-05-16T22:34:48.560Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+160",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 67
+    },
+    {
+      "timestamp": "2026-05-16T22:34:51.565Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+160",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 68
+    },
+    {
+      "timestamp": "2026-05-16T22:34:54.568Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "isLocked": false,
+      "extractionId": 69
+    },
+    {
+      "timestamp": "2026-05-16T22:34:57.574Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "isLocked": false,
+      "extractionId": 70
+    },
+    {
+      "timestamp": "2026-05-16T22:35:00.584Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 71
+    },
+    {
+      "timestamp": "2026-05-16T22:35:03.589Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 72
+    },
+    {
+      "timestamp": "2026-05-16T22:35:06.595Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 73
+    },
+    {
+      "timestamp": "2026-05-16T22:35:09.602Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+200",
+        "numericOdds": 200
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-270",
+        "numericOdds": -270
+      },
+      "isLocked": false,
+      "extractionId": 74
+    },
+    {
+      "timestamp": "2026-05-16T22:35:12.612Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+200",
+        "numericOdds": 200
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-270",
+        "numericOdds": -270
+      },
+      "isLocked": false,
+      "extractionId": 75
+    },
+    {
+      "timestamp": "2026-05-16T22:35:15.614Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 76
+    },
+    {
+      "timestamp": "2026-05-16T22:35:18.617Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 77
+    },
+    {
+      "timestamp": "2026-05-16T22:35:21.625Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 78
+    },
+    {
+      "timestamp": "2026-05-16T22:35:24.630Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+400",
+        "numericOdds": 400
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-650",
+        "numericOdds": -650
+      },
+      "isLocked": false,
+      "extractionId": 79
+    },
+    {
+      "timestamp": "2026-05-16T22:35:27.634Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+400",
+        "numericOdds": 400
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-650",
+        "numericOdds": -650
+      },
+      "isLocked": false,
+      "extractionId": 80
+    },
+    {
+      "timestamp": "2026-05-16T22:35:30.634Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+400",
+        "numericOdds": 400
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-650",
+        "numericOdds": -650
+      },
+      "isLocked": false,
+      "extractionId": 81
+    },
+    {
+      "timestamp": "2026-05-16T22:35:33.642Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+400",
+        "numericOdds": 400
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-650",
+        "numericOdds": -650
+      },
+      "isLocked": false,
+      "extractionId": 82
+    },
+    {
+      "timestamp": "2026-05-16T22:35:36.646Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 83
+    },
+    {
+      "timestamp": "2026-05-16T22:35:39.651Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 84
+    },
+    {
+      "timestamp": "2026-05-16T22:35:42.652Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 85
+    },
+    {
+      "timestamp": "2026-05-16T22:35:45.654Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+330",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-480",
+        "numericOdds": -480
+      },
+      "isLocked": false,
+      "extractionId": 86
+    },
+    {
+      "timestamp": "2026-05-16T22:35:48.658Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+330",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-480",
+        "numericOdds": -480
+      },
+      "isLocked": false,
+      "extractionId": 87
+    },
+    {
+      "timestamp": "2026-05-16T22:35:51.660Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 88
+    },
+    {
+      "timestamp": "2026-05-16T22:35:54.663Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 89
+    },
+    {
+      "timestamp": "2026-05-16T22:35:57.668Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 90
+    },
+    {
+      "timestamp": "2026-05-16T22:36:00.684Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 91
+    },
+    {
+      "timestamp": "2026-05-16T22:36:03.697Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 92
+    },
+    {
+      "timestamp": "2026-05-16T22:36:06.701Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-290",
+        "numericOdds": -290
+      },
+      "isLocked": false,
+      "extractionId": 93
+    },
+    {
+      "timestamp": "2026-05-16T22:36:09.704Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 94
+    },
+    {
+      "timestamp": "2026-05-16T22:36:12.712Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 95
+    },
+    {
+      "timestamp": "2026-05-16T22:36:15.723Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 96
+    },
+    {
+      "timestamp": "2026-05-16T22:36:18.732Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 97
+    },
+    {
+      "timestamp": "2026-05-16T22:36:21.736Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 98
+    },
+    {
+      "timestamp": "2026-05-16T22:36:24.739Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 99
+    },
+    {
+      "timestamp": "2026-05-16T22:36:27.740Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 100
+    },
+    {
+      "timestamp": "2026-05-16T22:36:30.754Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 101
+    },
+    {
+      "timestamp": "2026-05-16T22:36:33.769Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 102
+    },
+    {
+      "timestamp": "2026-05-16T22:36:36.770Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 103
+    },
+    {
+      "timestamp": "2026-05-16T22:36:39.773Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "isLocked": false,
+      "extractionId": 104
+    },
+    {
+      "timestamp": "2026-05-16T22:36:42.786Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "isLocked": false,
+      "extractionId": 105
+    },
+    {
+      "timestamp": "2026-05-16T22:36:45.795Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 106
+    },
+    {
+      "timestamp": "2026-05-16T22:36:48.801Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 107
+    },
+    {
+      "timestamp": "2026-05-16T22:36:51.803Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 108
+    },
+    {
+      "timestamp": "2026-05-16T22:36:54.804Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 109
+    },
+    {
+      "timestamp": "2026-05-16T22:36:57.806Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 110
+    },
+    {
+      "timestamp": "2026-05-16T22:37:00.807Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 111
+    },
+    {
+      "timestamp": "2026-05-16T22:37:03.808Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 112
+    },
+    {
+      "timestamp": "2026-05-16T22:37:06.820Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 113
+    },
+    {
+      "timestamp": "2026-05-16T22:37:09.821Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 114
+    },
+    {
+      "timestamp": "2026-05-16T22:37:12.831Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 115
+    },
+    {
+      "timestamp": "2026-05-16T22:37:15.834Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 116
+    },
+    {
+      "timestamp": "2026-05-16T22:37:18.848Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 117
+    },
+    {
+      "timestamp": "2026-05-16T22:37:21.853Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 118
+    },
+    {
+      "timestamp": "2026-05-16T22:37:24.858Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 119
+    },
+    {
+      "timestamp": "2026-05-16T22:37:27.862Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 120
+    },
+    {
+      "timestamp": "2026-05-16T22:37:30.865Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 121
+    },
+    {
+      "timestamp": "2026-05-16T22:37:33.878Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 122
+    },
+    {
+      "timestamp": "2026-05-16T22:37:36.886Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 123
+    },
+    {
+      "timestamp": "2026-05-16T22:37:39.886Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 124
+    },
+    {
+      "timestamp": "2026-05-16T22:37:42.899Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 125
+    },
+    {
+      "timestamp": "2026-05-16T22:37:45.904Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 126
+    },
+    {
+      "timestamp": "2026-05-16T22:37:48.919Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 127
+    },
+    {
+      "timestamp": "2026-05-16T22:37:51.929Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 128
+    },
+    {
+      "timestamp": "2026-05-16T22:37:54.933Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 129
+    },
+    {
+      "timestamp": "2026-05-16T22:37:57.940Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 130
+    },
+    {
+      "timestamp": "2026-05-16T22:38:00.950Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 131
+    },
+    {
+      "timestamp": "2026-05-16T22:38:03.956Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 132
+    },
+    {
+      "timestamp": "2026-05-16T22:38:06.960Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 133
+    },
+    {
+      "timestamp": "2026-05-16T22:38:09.972Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 134
+    },
+    {
+      "timestamp": "2026-05-16T22:38:12.985Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 135
+    },
+    {
+      "timestamp": "2026-05-16T22:38:15.990Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 136
+    },
+    {
+      "timestamp": "2026-05-16T22:38:19.004Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 137
+    },
+    {
+      "timestamp": "2026-05-16T22:38:22.012Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 138
+    },
+    {
+      "timestamp": "2026-05-16T22:38:25.022Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 139
+    },
+    {
+      "timestamp": "2026-05-16T22:31:30.091Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-154",
+        "numericOdds": -154
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-05-16T22:31:33.102Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-154",
+        "numericOdds": -154
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-05-16T22:31:36.112Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-154",
+        "numericOdds": -154
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-16T22:31:39.119Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-154",
+        "numericOdds": -154
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-16T22:31:42.119Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-154",
+        "numericOdds": -154
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-05-16T22:31:45.128Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-154",
+        "numericOdds": -154
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-05-16T22:31:48.136Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-154",
+        "numericOdds": -154
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-05-16T22:31:51.176Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-154",
+        "numericOdds": -154
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-05-16T22:31:54.183Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+124",
+        "numericOdds": 124
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-158",
+        "numericOdds": -158
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-05-16T22:31:57.189Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+124",
+        "numericOdds": 124
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-158",
+        "numericOdds": -158
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-05-16T22:32:00.191Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+124",
+        "numericOdds": 124
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-158",
+        "numericOdds": -158
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-05-16T22:32:03.194Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+124",
+        "numericOdds": 124
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-158",
+        "numericOdds": -158
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-05-16T22:32:06.198Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+124",
+        "numericOdds": 124
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-158",
+        "numericOdds": -158
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-05-16T22:32:09.198Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+124",
+        "numericOdds": 124
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-158",
+        "numericOdds": -158
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-05-16T22:32:12.199Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+124",
+        "numericOdds": 124
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-158",
+        "numericOdds": -158
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-05-16T22:32:15.200Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+124",
+        "numericOdds": 124
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-158",
+        "numericOdds": -158
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-05-16T22:32:18.201Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-05-16T22:32:21.215Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-05-16T22:32:24.219Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-05-16T22:32:27.218Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-05-16T22:32:30.226Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-05-16T22:32:33.230Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-05-16T22:32:36.231Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-05-16T22:32:39.238Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+142",
+        "numericOdds": 142
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-182",
+        "numericOdds": -182
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-05-16T22:32:42.248Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+142",
+        "numericOdds": 142
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-182",
+        "numericOdds": -182
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-05-16T22:32:45.254Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-05-16T22:32:48.256Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-05-16T22:32:51.265Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-05-16T22:32:54.279Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-05-16T22:32:57.281Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-05-16T22:33:00.286Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-05-16T22:33:03.300Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+170",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-05-16T22:33:06.301Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+170",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-05-16T22:33:09.304Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+170",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-05-16T22:33:12.307Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+170",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-05-16T22:33:15.322Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+170",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-05-16T22:33:18.327Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+170",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2026-05-16T22:33:21.340Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+170",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2026-05-16T22:33:24.343Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+170",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 39
+    },
+    {
+      "timestamp": "2026-05-16T22:33:27.359Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+170",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 40
+    },
+    {
+      "timestamp": "2026-05-16T22:33:30.362Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 41
+    },
+    {
+      "timestamp": "2026-05-16T22:33:33.372Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 42
+    },
+    {
+      "timestamp": "2026-05-16T22:33:36.376Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 43
+    },
+    {
+      "timestamp": "2026-05-16T22:33:39.379Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 44
+    },
+    {
+      "timestamp": "2026-05-16T22:33:42.381Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 45
+    },
+    {
+      "timestamp": "2026-05-16T22:33:45.392Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 46
+    },
+    {
+      "timestamp": "2026-05-16T22:33:48.400Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 47
+    },
+    {
+      "timestamp": "2026-05-16T22:33:51.403Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 48
+    },
+    {
+      "timestamp": "2026-05-16T22:33:54.407Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 49
+    },
+    {
+      "timestamp": "2026-05-16T22:33:57.413Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 50
+    },
+    {
+      "timestamp": "2026-05-16T22:34:00.428Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+170",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 51
+    },
+    {
+      "timestamp": "2026-05-16T22:34:03.440Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+170",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 52
+    },
+    {
+      "timestamp": "2026-05-16T22:34:06.440Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+170",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 53
+    },
+    {
+      "timestamp": "2026-05-16T22:34:09.454Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+170",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 54
+    },
+    {
+      "timestamp": "2026-05-16T22:34:12.460Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+170",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 55
+    },
+    {
+      "timestamp": "2026-05-16T22:34:15.463Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+166",
+        "numericOdds": 166
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 56
+    },
+    {
+      "timestamp": "2026-05-16T22:34:18.470Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+166",
+        "numericOdds": 166
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 57
+    },
+    {
+      "timestamp": "2026-05-16T22:34:21.478Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+166",
+        "numericOdds": 166
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 58
+    },
+    {
+      "timestamp": "2026-05-16T22:34:24.491Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+166",
+        "numericOdds": 166
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 59
+    },
+    {
+      "timestamp": "2026-05-16T22:34:27.503Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+166",
+        "numericOdds": 166
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 60
+    },
+    {
+      "timestamp": "2026-05-16T22:34:30.504Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+166",
+        "numericOdds": 166
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 61
+    },
+    {
+      "timestamp": "2026-05-16T22:34:33.519Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+166",
+        "numericOdds": 166
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 62
+    },
+    {
+      "timestamp": "2026-05-16T22:34:36.526Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+166",
+        "numericOdds": 166
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 63
+    },
+    {
+      "timestamp": "2026-05-16T22:34:39.536Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 64
+    },
+    {
+      "timestamp": "2026-05-16T22:34:42.552Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 65
+    },
+    {
+      "timestamp": "2026-05-16T22:34:45.559Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 66
+    },
+    {
+      "timestamp": "2026-05-16T22:34:48.560Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+160",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 67
+    },
+    {
+      "timestamp": "2026-05-16T22:34:51.565Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+160",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 68
+    },
+    {
+      "timestamp": "2026-05-16T22:34:54.568Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "isLocked": false,
+      "extractionId": 69
+    },
+    {
+      "timestamp": "2026-05-16T22:34:57.574Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "isLocked": false,
+      "extractionId": 70
+    },
+    {
+      "timestamp": "2026-05-16T22:35:00.584Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 71
+    },
+    {
+      "timestamp": "2026-05-16T22:35:03.589Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 72
+    },
+    {
+      "timestamp": "2026-05-16T22:35:06.595Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 73
+    },
+    {
+      "timestamp": "2026-05-16T22:35:09.602Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+200",
+        "numericOdds": 200
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-270",
+        "numericOdds": -270
+      },
+      "isLocked": false,
+      "extractionId": 74
+    },
+    {
+      "timestamp": "2026-05-16T22:35:12.612Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+200",
+        "numericOdds": 200
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-270",
+        "numericOdds": -270
+      },
+      "isLocked": false,
+      "extractionId": 75
+    },
+    {
+      "timestamp": "2026-05-16T22:35:15.614Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 76
+    },
+    {
+      "timestamp": "2026-05-16T22:35:18.617Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 77
+    },
+    {
+      "timestamp": "2026-05-16T22:35:21.625Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 78
+    },
+    {
+      "timestamp": "2026-05-16T22:35:24.630Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+400",
+        "numericOdds": 400
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-650",
+        "numericOdds": -650
+      },
+      "isLocked": false,
+      "extractionId": 79
+    },
+    {
+      "timestamp": "2026-05-16T22:35:27.634Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+400",
+        "numericOdds": 400
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-650",
+        "numericOdds": -650
+      },
+      "isLocked": false,
+      "extractionId": 80
+    },
+    {
+      "timestamp": "2026-05-16T22:35:30.634Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+400",
+        "numericOdds": 400
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-650",
+        "numericOdds": -650
+      },
+      "isLocked": false,
+      "extractionId": 81
+    },
+    {
+      "timestamp": "2026-05-16T22:35:33.642Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+400",
+        "numericOdds": 400
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-650",
+        "numericOdds": -650
+      },
+      "isLocked": false,
+      "extractionId": 82
+    },
+    {
+      "timestamp": "2026-05-16T22:35:36.646Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 83
+    },
+    {
+      "timestamp": "2026-05-16T22:35:39.651Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 84
+    },
+    {
+      "timestamp": "2026-05-16T22:35:42.652Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 85
+    },
+    {
+      "timestamp": "2026-05-16T22:35:45.654Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+330",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-480",
+        "numericOdds": -480
+      },
+      "isLocked": false,
+      "extractionId": 86
+    },
+    {
+      "timestamp": "2026-05-16T22:35:48.658Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+330",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-480",
+        "numericOdds": -480
+      },
+      "isLocked": false,
+      "extractionId": 87
+    },
+    {
+      "timestamp": "2026-05-16T22:35:51.660Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 88
+    },
+    {
+      "timestamp": "2026-05-16T22:35:54.663Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 89
+    },
+    {
+      "timestamp": "2026-05-16T22:35:57.668Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 90
+    },
+    {
+      "timestamp": "2026-05-16T22:36:00.684Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 91
+    },
+    {
+      "timestamp": "2026-05-16T22:36:03.697Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 92
+    },
+    {
+      "timestamp": "2026-05-16T22:36:06.701Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-290",
+        "numericOdds": -290
+      },
+      "isLocked": false,
+      "extractionId": 93
+    },
+    {
+      "timestamp": "2026-05-16T22:36:09.704Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 94
+    },
+    {
+      "timestamp": "2026-05-16T22:36:12.712Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 95
+    },
+    {
+      "timestamp": "2026-05-16T22:36:15.723Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 96
+    },
+    {
+      "timestamp": "2026-05-16T22:36:18.732Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 97
+    },
+    {
+      "timestamp": "2026-05-16T22:36:21.736Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 98
+    },
+    {
+      "timestamp": "2026-05-16T22:36:24.739Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 99
+    },
+    {
+      "timestamp": "2026-05-16T22:36:27.740Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 100
+    },
+    {
+      "timestamp": "2026-05-16T22:36:30.754Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 101
+    },
+    {
+      "timestamp": "2026-05-16T22:36:33.769Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 102
+    },
+    {
+      "timestamp": "2026-05-16T22:36:36.770Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 103
+    },
+    {
+      "timestamp": "2026-05-16T22:36:39.773Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "isLocked": false,
+      "extractionId": 104
+    },
+    {
+      "timestamp": "2026-05-16T22:36:42.786Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "isLocked": false,
+      "extractionId": 105
+    },
+    {
+      "timestamp": "2026-05-16T22:36:45.795Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 106
+    },
+    {
+      "timestamp": "2026-05-16T22:36:48.801Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 107
+    },
+    {
+      "timestamp": "2026-05-16T22:36:51.803Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 108
+    },
+    {
+      "timestamp": "2026-05-16T22:36:54.804Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 109
+    },
+    {
+      "timestamp": "2026-05-16T22:36:57.806Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 110
+    },
+    {
+      "timestamp": "2026-05-16T22:37:00.807Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 111
+    },
+    {
+      "timestamp": "2026-05-16T22:37:03.808Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 112
+    },
+    {
+      "timestamp": "2026-05-16T22:37:06.820Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 113
+    },
+    {
+      "timestamp": "2026-05-16T22:37:09.821Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 114
+    },
+    {
+      "timestamp": "2026-05-16T22:37:12.831Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 115
+    },
+    {
+      "timestamp": "2026-05-16T22:37:15.834Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 116
+    },
+    {
+      "timestamp": "2026-05-16T22:37:18.848Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 117
+    },
+    {
+      "timestamp": "2026-05-16T22:37:21.853Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 118
+    },
+    {
+      "timestamp": "2026-05-16T22:37:24.858Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 119
+    },
+    {
+      "timestamp": "2026-05-16T22:37:27.862Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 120
+    },
+    {
+      "timestamp": "2026-05-16T22:37:30.865Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 121
+    },
+    {
+      "timestamp": "2026-05-16T22:37:33.878Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 122
+    },
+    {
+      "timestamp": "2026-05-16T22:37:36.886Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 123
+    },
+    {
+      "timestamp": "2026-05-16T22:37:39.886Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 124
+    },
+    {
+      "timestamp": "2026-05-16T22:37:42.899Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 125
+    },
+    {
+      "timestamp": "2026-05-16T22:37:45.904Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 126
+    },
+    {
+      "timestamp": "2026-05-16T22:37:48.919Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 127
+    },
+    {
+      "timestamp": "2026-05-16T22:37:51.929Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 128
+    },
+    {
+      "timestamp": "2026-05-16T22:37:54.933Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 129
+    },
+    {
+      "timestamp": "2026-05-16T22:37:57.940Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 130
+    },
+    {
+      "timestamp": "2026-05-16T22:38:00.950Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 131
+    },
+    {
+      "timestamp": "2026-05-16T22:38:03.956Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 132
+    },
+    {
+      "timestamp": "2026-05-16T22:38:06.960Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 133
+    },
+    {
+      "timestamp": "2026-05-16T22:38:09.972Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 134
+    },
+    {
+      "timestamp": "2026-05-16T22:38:12.985Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 135
+    },
+    {
+      "timestamp": "2026-05-16T22:38:15.990Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 136
+    },
+    {
+      "timestamp": "2026-05-16T22:38:19.004Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 137
+    },
+    {
+      "timestamp": "2026-05-16T22:38:22.012Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 138
+    },
+    {
+      "timestamp": "2026-05-16T22:38:25.022Z",
+      "fighter1": {
+        "name": "Cody Brundage",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Andre Petroski",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 139
+    }
+  ],
+  "createdAt": "2026-05-16T22:39:48.557Z"
+}

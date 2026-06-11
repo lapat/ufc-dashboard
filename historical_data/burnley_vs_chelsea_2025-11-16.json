@@ -1,0 +1,71 @@
+{
+  "fightId": "burnley_vs_chelsea",
+  "fightTitle": "Burnley vs Chelsea",
+  "startTime": "2025-11-16T04:30:40.923Z",
+  "endTime": "2025-11-16T04:30:49.937Z",
+  "duration": 9014,
+  "dataPoints": 4,
+  "oddsHistory": [
+    {
+      "timestamp": "2025-11-16T04:30:40.923Z",
+      "fighter1": {
+        "name": "Burnley",
+        "odds": "+500",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Chelsea",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2025-11-16T04:30:43.924Z",
+      "fighter1": {
+        "name": "Burnley",
+        "odds": "+500",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Chelsea",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2025-11-16T04:30:46.922Z",
+      "fighter1": {
+        "name": "Burnley",
+        "odds": "+500",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Chelsea",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2025-11-16T04:30:49.937Z",
+      "fighter1": {
+        "name": "Burnley",
+        "odds": "+500",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Chelsea",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 4
+    }
+  ],
+  "createdAt": "2025-11-16T04:30:52.517Z"
+}

@@ -47,6 +47,27 @@
     .fight-time { font-size: 0.65rem; color: #444; margin-top: 8px; text-align: right; }
 
     #no-odds { color: #444; text-align: center; padding: 60px 0; font-size: 0.9rem; line-height: 1.8; }
+
+    .ask-section { margin-top: 40px; border-top: 1px solid #222; padding-top: 24px; }
+    .ask-section h2 { color: #e8b84b; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 14px; }
+    .ask-row { display: flex; gap: 10px; }
+    #ask-input {
+      flex: 1; background: #161616; border: 1px solid #333; border-radius: 6px;
+      color: #eee; padding: 10px 14px; font-size: 0.9rem; font-family: inherit;
+      outline: none;
+    }
+    #ask-input:focus { border-color: #e8b84b; }
+    #ask-btn {
+      background: #e8b84b; color: #000; border: none; border-radius: 6px;
+      padding: 10px 20px; font-weight: 700; font-size: 0.85rem; cursor: pointer;
+      text-transform: uppercase; letter-spacing: 1px;
+    }
+    #ask-btn:disabled { opacity: 0.4; cursor: default; }
+    #ask-answer {
+      margin-top: 14px; background: #161616; border: 1px solid #2a2a2a;
+      border-radius: 6px; padding: 14px 16px; font-size: 0.85rem; line-height: 1.7;
+      color: #ccc; white-space: pre-wrap; display: none;
+    }
   </style>
 </head>
 <body>
@@ -55,6 +76,15 @@
     <div id="status">Loading...</div>
   </header>
   <div id="fights"></div>
+
+  <div class="ask-section">
+    <h2>Ask About Historical Data</h2>
+    <div class="ask-row">
+      <input id="ask-input" type="text" placeholder="e.g. How many fights had win-win crossovers?" />
+      <button id="ask-btn">Ask</button>
+    </div>
+    <div id="ask-answer"></div>
+  </div>
 
   <script>
     function oddsClass(price) {
@@ -143,7 +173,36 @@
     }
 
     load();
-    setInterval(load, 10000); // refresh every 10s
+    setInterval(load, 10000);
+
+    document.getElementById('ask-btn').addEventListener('click', async () => {
+      const input = document.getElementById('ask-input');
+      const answer = document.getElementById('ask-answer');
+      const btn = document.getElementById('ask-btn');
+      const q = input.value.trim();
+      if (!q) return;
+      btn.disabled = true;
+      btn.textContent = 'Thinking...';
+      answer.style.display = 'block';
+      answer.textContent = '...';
+      try {
+        const res = await fetch('/api/ask', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ question: q }),
+        });
+        const data = await res.json();
+        answer.textContent = data.answer || data.error;
+      } catch (e) {
+        answer.textContent = 'Error: ' + e.message;
+      }
+      btn.disabled = false;
+      btn.textContent = 'Ask';
+    });
+
+    document.getElementById('ask-input').addEventListener('keydown', e => {
+      if (e.key === 'Enter') document.getElementById('ask-btn').click();
+    });
   </script>
 </body>
 </html>

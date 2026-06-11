@@ -1,0 +1,731 @@
+{
+  "fightId": "terrancemckinney_vs_kylenelson",
+  "fightTitle": "Connected but no betting buttons found",
+  "startTime": "2026-03-29T00:16:45.543Z",
+  "endTime": "2026-03-29T00:17:54.782Z",
+  "duration": 69239,
+  "dataPoints": 48,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-03-29T00:16:45.543Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-29T00:16:48.547Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-29T00:16:51.547Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-29T00:16:54.559Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-29T00:16:57.560Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-29T00:17:00.572Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-03-29T00:17:03.579Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-03-29T00:17:06.580Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-03-29T00:17:09.593Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-03-29T00:17:12.594Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-03-29T00:17:15.643Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-03-29T00:17:18.644Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-03-29T00:17:21.657Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-03-29T00:17:24.671Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-03-29T00:17:27.685Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-03-29T00:17:30.697Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-03-29T00:17:33.708Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-03-29T00:17:36.722Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-03-29T00:17:39.732Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-03-29T00:17:42.747Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-03-29T00:17:45.759Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-03-29T00:17:48.770Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-03-29T00:17:51.770Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-03-29T00:17:54.782Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-03-29T00:16:45.543Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-29T00:16:48.547Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-29T00:16:51.547Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-29T00:16:54.559Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-29T00:16:57.560Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-29T00:17:00.572Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-03-29T00:17:03.579Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-03-29T00:17:06.580Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-03-29T00:17:09.593Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-03-29T00:17:12.594Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-03-29T00:17:15.643Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-03-29T00:17:18.644Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-03-29T00:17:21.657Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-03-29T00:17:24.671Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-03-29T00:17:27.685Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-03-29T00:17:30.697Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-03-29T00:17:33.708Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-03-29T00:17:36.722Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-03-29T00:17:39.732Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-03-29T00:17:42.747Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-03-29T00:17:45.759Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-03-29T00:17:48.770Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-03-29T00:17:51.770Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-03-29T00:17:54.782Z",
+      "fighter1": {
+        "name": "Terrance McKinney",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 24
+    }
+  ],
+  "createdAt": "2026-03-29T00:21:26.341Z"
+}

@@ -1,0 +1,26 @@
+{
+  "fightId": "joshhokit_vs_denzelfreeman",
+  "fightTitle": "Monitoring Stopped - Click START to resume",
+  "startTime": "2026-01-24T23:41:26.957Z",
+  "endTime": "2026-01-24T23:41:26.957Z",
+  "duration": 0,
+  "dataPoints": 1,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-01-24T23:41:26.957Z",
+      "fighter1": {
+        "name": "Josh Hokit",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "fighter2": {
+        "name": "Denzel Freeman",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 68
+    }
+  ],
+  "createdAt": "2026-01-25T00:16:36.788Z"
+}

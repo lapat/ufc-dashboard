@@ -1,0 +1,41 @@
+{
+  "fightId": "ignaciobahamondes_vs_tofiqmusayev",
+  "fightTitle": "Monitoring Stopped - Click START to resume",
+  "startTime": "2026-03-28T23:46:03.700Z",
+  "endTime": "2026-03-28T23:46:06.704Z",
+  "duration": 3004,
+  "dataPoints": 2,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-03-28T23:46:03.700Z",
+      "fighter1": {
+        "name": "Ignacio Bahamondes",
+        "odds": "-800",
+        "numericOdds": -800
+      },
+      "fighter2": {
+        "name": "Tofiq Musayev",
+        "odds": "+490",
+        "numericOdds": 490
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-03-28T23:46:06.704Z",
+      "fighter1": {
+        "name": "Ignacio Bahamondes",
+        "odds": "-800",
+        "numericOdds": -800
+      },
+      "fighter2": {
+        "name": "Tofiq Musayev",
+        "odds": "+490",
+        "numericOdds": 490
+      },
+      "isLocked": false,
+      "extractionId": 2
+    }
+  ],
+  "createdAt": "2026-03-29T00:16:45.541Z"
+}

@@ -1,0 +1,566 @@
+{
+  "fightId": "mateuszgamrot_vs_estebanribovics",
+  "fightTitle": "Monitoring Stopped - Click START to resume",
+  "startTime": "2026-04-11T23:46:09.930Z",
+  "endTime": "2026-04-11T23:47:58.162Z",
+  "duration": 108232,
+  "dataPoints": 37,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-04-11T23:46:09.930Z",
+      "fighter1": {
+        "name": "Mateusz Gamrot",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Esteban Ribovics",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 156
+    },
+    {
+      "timestamp": "2026-04-11T23:46:12.929Z",
+      "fighter1": {
+        "name": "Mateusz Gamrot",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Esteban Ribovics",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-04-11T23:46:15.936Z",
+      "fighter1": {
+        "name": "Mateusz Gamrot",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Esteban Ribovics",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-04-11T23:46:18.937Z",
+      "fighter1": {
+        "name": "Mateusz Gamrot",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Esteban Ribovics",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-04-11T23:46:21.943Z",
+      "fighter1": {
+        "name": "Mateusz Gamrot",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Esteban Ribovics",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-04-11T23:46:24.955Z",
+      "fighter1": {
+        "name": "Mateusz Gamrot",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Esteban Ribovics",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-04-11T23:46:27.963Z",
+      "fighter1": {
+        "name": "Mateusz Gamrot",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Esteban Ribovics",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-04-11T23:46:30.974Z",
+      "fighter1": {
+        "name": "Mateusz Gamrot",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Esteban Ribovics",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-04-11T23:46:33.989Z",
+      "fighter1": {
+        "name": "Mateusz Gamrot",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Esteban Ribovics",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-04-11T23:46:36.993Z",
+      "fighter1": {
+        "name": "Mateusz Gamrot",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Esteban Ribovics",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-04-11T23:46:40.002Z",
+      "fighter1": {
+        "name": "Mateusz Gamrot",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Esteban Ribovics",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-04-11T23:46:43.004Z",
+      "fighter1": {
+        "name": "Mateusz Gamrot",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Esteban Ribovics",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-04-11T23:46:46.011Z",
+      "fighter1": {
+        "name": "Mateusz Gamrot",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Esteban Ribovics",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-04-11T23:46:49.023Z",
+      "fighter1": {
+        "name": "Mateusz Gamrot",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Esteban Ribovics",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-04-11T23:46:52.030Z",
+      "fighter1": {
+        "name": "Mateusz Gamrot",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Esteban Ribovics",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-04-11T23:46:55.035Z",
+      "fighter1": {
+        "name": "Mateusz Gamrot",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "fighter2": {
+        "name": "Esteban Ribovics",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-04-11T23:46:58.043Z",
+      "fighter1": {
+        "name": "Mateusz Gamrot",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "fighter2": {
+        "name": "Esteban Ribovics",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-04-11T23:47:01.048Z",
+      "fighter1": {
+        "name": "Mateusz Gamrot",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "fighter2": {
+        "name": "Esteban Ribovics",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-04-11T23:47:04.062Z",
+      "fighter1": {
+        "name": "Mateusz Gamrot",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "fighter2": {
+        "name": "Esteban Ribovics",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-04-11T23:47:07.061Z",
+      "fighter1": {
+        "name": "Mateusz Gamrot",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "fighter2": {
+        "name": "Esteban Ribovics",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-04-11T23:47:10.069Z",
+      "fighter1": {
+        "name": "Mateusz Gamrot",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "fighter2": {
+        "name": "Esteban Ribovics",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-04-11T23:47:13.071Z",
+      "fighter1": {
+        "name": "Mateusz Gamrot",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "fighter2": {
+        "name": "Esteban Ribovics",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-04-11T23:47:16.076Z",
+      "fighter1": {
+        "name": "Mateusz Gamrot",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "fighter2": {
+        "name": "Esteban Ribovics",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-04-11T23:47:19.078Z",
+      "fighter1": {
+        "name": "Mateusz Gamrot",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "fighter2": {
+        "name": "Esteban Ribovics",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-04-11T23:47:22.086Z",
+      "fighter1": {
+        "name": "Mateusz Gamrot",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "fighter2": {
+        "name": "Esteban Ribovics",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-04-11T23:47:25.097Z",
+      "fighter1": {
+        "name": "Mateusz Gamrot",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "fighter2": {
+        "name": "Esteban Ribovics",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-04-11T23:47:28.108Z",
+      "fighter1": {
+        "name": "Mateusz Gamrot",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "fighter2": {
+        "name": "Esteban Ribovics",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-04-11T23:47:31.110Z",
+      "fighter1": {
+        "name": "Mateusz Gamrot",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "fighter2": {
+        "name": "Esteban Ribovics",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-04-11T23:47:34.109Z",
+      "fighter1": {
+        "name": "Mateusz Gamrot",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "fighter2": {
+        "name": "Esteban Ribovics",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-04-11T23:47:37.113Z",
+      "fighter1": {
+        "name": "Mateusz Gamrot",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "fighter2": {
+        "name": "Esteban Ribovics",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-04-11T23:47:40.114Z",
+      "fighter1": {
+        "name": "Mateusz Gamrot",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "fighter2": {
+        "name": "Esteban Ribovics",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-04-11T23:47:43.116Z",
+      "fighter1": {
+        "name": "Mateusz Gamrot",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "fighter2": {
+        "name": "Esteban Ribovics",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-04-11T23:47:46.131Z",
+      "fighter1": {
+        "name": "Mateusz Gamrot",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "fighter2": {
+        "name": "Esteban Ribovics",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-04-11T23:47:49.141Z",
+      "fighter1": {
+        "name": "Mateusz Gamrot",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "fighter2": {
+        "name": "Esteban Ribovics",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-04-11T23:47:52.141Z",
+      "fighter1": {
+        "name": "Mateusz Gamrot",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "fighter2": {
+        "name": "Esteban Ribovics",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-04-11T23:47:55.148Z",
+      "fighter1": {
+        "name": "Mateusz Gamrot",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "fighter2": {
+        "name": "Esteban Ribovics",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-04-11T23:47:58.162Z",
+      "fighter1": {
+        "name": "Mateusz Gamrot",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "fighter2": {
+        "name": "Esteban Ribovics",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "isLocked": false,
+      "extractionId": 37
+    }
+  ],
+  "createdAt": "2026-04-12T00:12:53.060Z"
+}
