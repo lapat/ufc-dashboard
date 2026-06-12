@@ -268,6 +268,7 @@
     <div class="bet-fighters">
       <button class="qf-btn" id="qf-f1">Select a game above →</button>
       <button class="qf-btn" id="qf-f2" style="display:none">—</button>
+      <button class="qf-btn" id="qf-draw" style="display:none;flex:0;min-width:90px;border-style:dashed;font-size:0.72rem">Draw</button>
     </div>
     <div class="bet-add-row">
       <div class="bet-field">
@@ -288,6 +289,7 @@
     <div class="pos-grid" id="pos-grid" style="display:none">
       <div class="pos-card pc-zero" id="pos-f1"><div class="pos-lbl" id="pos-f1-lbl">Side 1 wins</div><div class="pos-val pv-gray" id="pos-f1-val">—</div></div>
       <div class="pos-card pc-zero" id="pos-f2"><div class="pos-lbl" id="pos-f2-lbl">Side 2 wins</div><div class="pos-val pv-gray" id="pos-f2-val">—</div></div>
+      <div class="pos-card pc-zero" id="pos-draw" style="display:none"><div class="pos-lbl" id="pos-draw-lbl">Draw</div><div class="pos-val pv-gray" id="pos-draw-val">—</div></div>
     </div>
     <div class="tracker-status s-empty" id="tracker-status">Lock in a bet to track your position</div>
     <div class="suggestion" id="tracker-sugg" style="display:none"></div>
@@ -322,25 +324,49 @@ const fkey   = (a,b) => `${a}||${b}`;
 // BET TRACKER
 // ═══════════════════════════════════════════
 class BetTracker {
-  constructor(){ this.bets=[]; this.f1Name=''; this.f2Name=''; this.f1Odds=null; this.f2Odds=null; this._id=0; }
-  setFight(f1,f2,o1,o2){ this.f1Name=f1; this.f2Name=f2; this.f1Odds=o1; this.f2Odds=o2; }
-  updateOdds(o1,o2){ this.f1Odds=o1; this.f2Odds=o2; }
+  constructor(){ this.bets=[]; this.f1Name=''; this.f2Name=''; this.drawName=''; this.f1Odds=null; this.f2Odds=null; this.drawOdds=null; this._id=0; }
+  setFight(f1,f2,o1,o2,drawName,drawOdds){ this.f1Name=f1; this.f2Name=f2; this.f1Odds=o1; this.f2Odds=o2; this.drawName=drawName||''; this.drawOdds=drawOdds||null; }
+  updateOdds(o1,o2,drawOdds){ this.f1Odds=o1; this.f2Odds=o2; if(drawOdds!==undefined) this.drawOdds=drawOdds; }
   addBet(side,stake,odds){ this.bets.push({id:++this._id,side,stake,odds,decimal:toD(odds),ts:Date.now()}); this._persist(); }
   removeBet(id){ this.bets=this.bets.filter(b=>b.id!==id); this._persist(); }
   clear(){ this.bets=[]; this._persist(); }
-  _persist(){ lsSave('tracker', {bets:this.bets, _id:this._id, f1Name:this.f1Name, f2Name:this.f2Name, f1Odds:this.f1Odds, f2Odds:this.f2Odds}); }
-  restore(){ const s=lsLoad('tracker'); if(s){ this.bets=s.bets||[]; this._id=s._id||0; if(s.f1Name)this.f1Name=s.f1Name; if(s.f2Name)this.f2Name=s.f2Name; if(s.f1Odds)this.f1Odds=s.f1Odds; if(s.f2Odds)this.f2Odds=s.f2Odds; } }
+  hasThreeWay(){ return this.drawOdds !== null; }
+  _persist(){ lsSave('tracker', {bets:this.bets, _id:this._id, f1Name:this.f1Name, f2Name:this.f2Name, drawName:this.drawName, f1Odds:this.f1Odds, f2Odds:this.f2Odds, drawOdds:this.drawOdds}); }
+  restore(){ const s=lsLoad('tracker'); if(s){ this.bets=s.bets||[]; this._id=s._id||0; if(s.f1Name)this.f1Name=s.f1Name; if(s.f2Name)this.f2Name=s.f2Name; if(s.drawName)this.drawName=s.drawName; if(s.f1Odds)this.f1Odds=s.f1Odds; if(s.f2Odds)this.f2Odds=s.f2Odds; if(s.drawOdds)this.drawOdds=s.drawOdds; } }
   position(){
-    let n1=0,n2=0;
+    let n1=0,n2=0,n3=0;
     for(const b of this.bets){
-      if(b.side==='f1'){n1+=b.stake*(b.decimal-1);n2-=b.stake;}
-      else{n2+=b.stake*(b.decimal-1);n1-=b.stake;}
+      if(b.side==='f1'){      n1+=b.stake*(b.decimal-1); n2-=b.stake; n3-=b.stake; }
+      else if(b.side==='f2'){ n2+=b.stake*(b.decimal-1); n1-=b.stake; n3-=b.stake; }
+      else if(b.side==='draw'){ n3+=b.stake*(b.decimal-1); n1-=b.stake; n2-=b.stake; }
     }
-    return {n1,n2};
+    return {n1,n2,n3};
   }
   suggestion(){
     if(!this.bets.length||this.f1Odds===null) return null;
-    const {n1,n2}=this.position();
+    const {n1,n2,n3}=this.position();
+    const threeWay=this.hasThreeWay();
+
+    if(threeWay){
+      if(n1>0&&n2>0&&n3>0) return null;
+      const outcomes=[
+        {side:'f1', name:this.f1Name, odds:this.f1Odds, n:n1},
+        {side:'f2', name:this.f2Name, odds:this.f2Odds, n:n2},
+        {side:'draw', name:'Draw', odds:this.drawOdds, n:n3},
+      ].sort((a,b)=>a.n-b.n);
+      const worst=outcomes[0], second=outcomes[1], third=outcomes[2];
+      const D=toD(worst.odds);
+      const diff=second.n-worst.n;
+      const optS=diff/D;
+      if(optS<=0) return null;
+      const afterWorst=worst.n+optS*(D-1);
+      const afterOther=second.n-optS;
+      const afterThird=third.n-optS;
+      const canWinWin=afterWorst>0&&afterOther>0&&afterThird>0;
+      return {side:worst.side,name:worst.name,odds:worst.odds,optS,canWinWin,profitAfter:afterWorst,afterOwnSide:afterWorst,afterOtherSide:afterOther,threshOdds:null,isThreeWay:true};
+    }
+
+    // Two-way
     if(n1>0&&n2>0) return null;
     let side,odds,name;
     if(n1<=n2){side='f1';odds=this.f1Odds;name=this.f1Name;}
@@ -353,15 +379,13 @@ class BetTracker {
     const maxS=side==='f1'?(n2>0?n2:null):(n1>0?n1:null);
     const profitAfter=side==='f1'?n1+optS*(D-1):n2+optS*(D-1);
     const canWinWin=maxS!==null&&minS<maxS;
-    // After the optimal hedge, what does each side look like?
-    const afterOwnSide=profitAfter; // the side we're betting on
-    const afterOtherSide=side==='f1'?n2-optS:n1-optS; // the other side loses the stake
-    // Win-win threshold: minimum D needed for win-win to be possible
-    const profit=side==='f2'?n1:n2; // the positive side (or best side)
-    const loss=side==='f2'?-n2:-n1; // absolute value of the negative side
-    const threshD = profit>0 ? 1+loss/profit : null;
-    const threshOdds = threshD ? (threshD>=2?Math.round((threshD-1)*100):-Math.round(100/(threshD-1))) : null;
-    return {side,name,odds,optS,minS,maxS,canWinWin,profitAfter,afterOwnSide,afterOtherSide,threshOdds};
+    const afterOwnSide=profitAfter;
+    const afterOtherSide=side==='f1'?n2-optS:n1-optS;
+    const profit=side==='f2'?n1:n2;
+    const loss=side==='f2'?-n2:-n1;
+    const threshD=profit>0?1+loss/profit:null;
+    const threshOdds=threshD?(threshD>=2?Math.round((threshD-1)*100):-Math.round(100/(threshD-1))):null;
+    return {side,name,odds,optS,minS,maxS,canWinWin,profitAfter,afterOwnSide,afterOtherSide,threshOdds,isThreeWay:false};
   }
 }
 
@@ -386,6 +410,7 @@ function graphInit(){
     data:{labels:[],datasets:[
       {label:'',data:[],borderColor:'#ff6b6b',backgroundColor:'#ff6b6b0a',borderWidth:2,pointRadius:0,tension:0.3},
       {label:'',data:[],borderColor:'#69db7c',backgroundColor:'#69db7c0a',borderWidth:2,pointRadius:0,tension:0.3},
+      {label:'Draw',data:[],borderColor:'#e8b84b',backgroundColor:'#e8b84b0a',borderWidth:1.5,pointRadius:0,tension:0.3,borderDash:[5,3],hidden:true},
     ]},
     options:{
       animation:false,responsive:true,maintainAspectRatio:true,
@@ -405,26 +430,27 @@ function graphInit(){
   });
 }
 
-function graphAddPoint(fk,label,f1Name,f1Odds,f2Name,f2Odds){
-  if(!graphHist[fk]) graphHist[fk]={labels:[],f1:[],f2:[],f1Name,f2Name,crossovers:[]};
+function graphAddPoint(fk,label,f1Name,f1Odds,f2Name,f2Odds,drawOdds){
+  if(!graphHist[fk]) graphHist[fk]={labels:[],f1:[],f2:[],draw:[],f1Name,f2Name,crossovers:[]};
   const h=graphHist[fk];
   if(h.f1.length>0){
     const p1=h.f1[h.f1.length-1],p2=h.f2[h.f2.length-1];
     if((p1>0&&f1Odds<0)||(p2>0&&f2Odds<0)) h.crossovers.push(h.labels.length);
   }
   h.labels.push(label); h.f1.push(f1Odds); h.f2.push(f2Odds);
-  if(h.labels.length>400){h.labels.shift();h.f1.shift();h.f2.shift();}
+  h.draw.push(drawOdds!=null?drawOdds:null);
+  if(h.labels.length>400){h.labels.shift();h.f1.shift();h.f2.shift();h.draw.shift();}
   lsSave('gh:'+fk, h);
   if(selectedFk===fk) graphRefresh();
 }
 
 function graphSelect(fk,f1Name,f2Name){
   selectedFk=fk;
-  // Restore from localStorage if we have saved data for this game
   if(!graphHist[fk]){
     const saved=lsLoad('gh:'+fk);
-    graphHist[fk]=saved||{labels:[],f1:[],f2:[],f1Name,f2Name,crossovers:[]};
+    graphHist[fk]=saved||{labels:[],f1:[],f2:[],draw:[],f1Name,f2Name,crossovers:[]};
   }
+  if(!graphHist[fk].draw) graphHist[fk].draw=[];
   if(!chart) graphInit();
   emptyEl.style.display='none'; canvas.style.display='block';
   graphRefresh();
@@ -439,7 +465,7 @@ function graphLoadPoints(fk, points){
   });
 }
 
-function graphClear(fk){ if(graphHist[fk]) graphHist[fk]={...graphHist[fk],labels:[],f1:[],f2:[],crossovers:[]}; }
+function graphClear(fk){ if(graphHist[fk]) graphHist[fk]={...graphHist[fk],labels:[],f1:[],f2:[],draw:[],crossovers:[]}; }
 
 function graphRefresh(){
   if(!selectedFk||!chart) return;
@@ -447,6 +473,9 @@ function graphRefresh(){
   chart.data.labels=[...h.labels];
   chart.data.datasets[0].label=h.f1Name; chart.data.datasets[0].data=[...h.f1];
   chart.data.datasets[1].label=h.f2Name; chart.data.datasets[1].data=[...h.f2];
+  const hasDrawData=h.draw&&h.draw.some(v=>v!=null);
+  chart.data.datasets[2].data=hasDrawData?[...h.draw]:[];
+  chart.data.datasets[2].hidden=!hasDrawData;
   const ann={};
   h.crossovers.forEach((idx,i)=>{
     if(idx<h.labels.length) ann[`x${i}`]={type:'line',scaleID:'x',value:h.labels[idx],borderColor:'#e8b84b66',borderWidth:1.5,borderDash:[4,4]};
@@ -472,7 +501,8 @@ function setBetSide(side){
   oddsLocked = false;
   document.getElementById('qf-f1').classList.toggle('qf-selected', side==='f1');
   document.getElementById('qf-f2').classList.toggle('qf-selected', side==='f2');
-  const odds = side==='f1' ? tracker.f1Odds : tracker.f2Odds;
+  document.getElementById('qf-draw').classList.toggle('qf-selected', side==='draw');
+  const odds = side==='f1' ? tracker.f1Odds : side==='f2' ? tracker.f2Odds : tracker.drawOdds;
   const oddsEl = document.getElementById('bt-odds');
   if(odds !== null){ oddsEl.value = odds; }
   oddsEl.style.borderColor = '';
@@ -480,15 +510,20 @@ function setBetSide(side){
 }
 
 function updateFighterButtons(){
-  const f1=document.getElementById('qf-f1'), f2=document.getElementById('qf-f2');
-  if(!tracker.f1Name){ f1.innerHTML='Select a game above →'; f2.style.display='none'; return; }
+  const f1=document.getElementById('qf-f1'), f2=document.getElementById('qf-f2'), draw=document.getElementById('qf-draw');
+  if(!tracker.f1Name){ f1.innerHTML='Select a game above →'; f2.style.display='none'; draw.style.display='none'; return; }
   f2.style.display = '';
   f1.innerHTML = `${tracker.f1Name} <span class="qf-odds">${fmtO(tracker.f1Odds)}</span>`;
   f2.innerHTML = `${tracker.f2Name} <span class="qf-odds">${fmtO(tracker.f2Odds)}</span>`;
+  if(tracker.hasThreeWay()){
+    draw.style.display = '';
+    draw.innerHTML = `Draw <span class="qf-odds">${fmtO(tracker.drawOdds)}</span>`;
+  } else { draw.style.display='none'; }
 }
 
 document.getElementById('qf-f1').addEventListener('click', ()=>setBetSide('f1'));
 document.getElementById('qf-f2').addEventListener('click', ()=>setBetSide('f2'));
+document.getElementById('qf-draw').addEventListener('click', ()=>setBetSide('draw'));
 
 // Stake presets
 document.querySelectorAll('.preset-btn').forEach(btn=>{
@@ -514,7 +549,7 @@ document.getElementById('add-bet-btn').addEventListener('click',()=>{
   const stakeEl = document.getElementById('bt-stake');
   const oddsEl = document.getElementById('bt-odds');
   // If odds field empty, fall back to live odds
-  const oddsRaw = oddsEl.value !== '' ? oddsEl.value : (side==='f1' ? tracker.f1Odds : side==='f2' ? tracker.f2Odds : '');
+  const oddsRaw = oddsEl.value !== '' ? oddsEl.value : (side==='f1' ? tracker.f1Odds : side==='f2' ? tracker.f2Odds : side==='draw' ? tracker.drawOdds : '');
   const stake = parseFloat(stakeEl.value);
   const odds = parseInt(oddsRaw);
   let err='';
@@ -540,10 +575,11 @@ document.getElementById('add-bet-btn').addEventListener('click',()=>{
 document.getElementById('clear-bets').addEventListener('click',()=>{ tracker.clear(); renderTracker(); });
 
 function renderTracker(){
-  const {n1,n2}=tracker.position();
+  const {n1,n2,n3}=tracker.position();
   const hasAny=tracker.bets.length>0;
-  const winWin=n1>0&&n2>0;
-  const hedge=(n1>0)!==(n2>0);
+  const threeWay=tracker.hasThreeWay();
+  const winWin=threeWay?(n1>0&&n2>0&&n3>0):(n1>0&&n2>0);
+  const hedge=threeWay?(!winWin&&hasAny):((n1>0)!==(n2>0));
 
   // CLV per bet
   function getBetCLV(b){
@@ -579,11 +615,15 @@ function renderTracker(){
   }).join(''):'<div class="bet-empty">No bets locked in yet.</div>';
   listEl.querySelectorAll('.bet-del').forEach(btn=>btn.addEventListener('click',()=>{tracker.removeBet(+btn.dataset.id);renderTracker();}));
 
-  // Position grid — left = fighter you have more bets on
+  // Position grid
   const pgrid=document.getElementById('pos-grid');
+  const drawCard=document.getElementById('pos-draw');
   if(!hasAny){ pgrid.style.display='none'; }
   else{
     pgrid.style.display='grid';
+    const threeWay=tracker.hasThreeWay();
+    pgrid.style.gridTemplateColumns=threeWay?'1fr 1fr 1fr':'1fr 1fr';
+    drawCard.style.display=threeWay?'':'none';
     const f1count=tracker.bets.filter(b=>b.side==='f1').length;
     const f2count=tracker.bets.filter(b=>b.side==='f2').length;
     const leftIsF1=f1count>=f2count;
@@ -593,15 +633,19 @@ function renderTracker(){
     const rightNet=leftIsF1?n2:n1;
     const leftCount=leftIsF1?f1count:f2count;
     const rightCount=leftIsF1?f2count:f1count;
-    const setCard=(id,valId,lblId,name,net,count)=>{
+    const setCard=(id,valId,lblId,name,net,count,label)=>{
       document.getElementById(id).className='pos-card '+(net>0?'pc-win':net<0?'pc-loss':'pc-zero');
       const badge=count?` <span style="font-size:10px;opacity:0.6">(${count} bet${count>1?'s':''})</span>`:'';
-      document.getElementById(lblId).innerHTML=`${name} wins${badge}`;
+      document.getElementById(lblId).innerHTML=`${name}${label||' wins'}${badge}`;
       const el=document.getElementById(valId); el.textContent=fmtM(net);
       el.className='pos-val '+(net>0?'pv-green':net<0?'pv-red':'pv-gray');
     };
     setCard('pos-f1','pos-f1-val','pos-f1-lbl',leftName,leftNet,leftCount);
     setCard('pos-f2','pos-f2-val','pos-f2-lbl',rightName,rightNet,rightCount);
+    if(threeWay){
+      const drawCount=tracker.bets.filter(b=>b.side==='draw').length;
+      setCard('pos-draw','pos-draw-val','pos-draw-lbl','Draw',n3,drawCount,' result');
+    }
   }
 
   // Status
@@ -844,20 +888,26 @@ document.getElementById('nw-dismiss').addEventListener('click',()=>{
   tracker.clear(); renderTracker();
 });
 
+function extractOutcomes(game){
+  const out=game.bookmakers[0].markets.find(m=>m.key==='h2h').outcomes;
+  const drawOut=out.find(o=>o.name==='Draw');
+  const teams=out.filter(o=>o.name!=='Draw');
+  return {a:teams[0], b:teams[1], draw:drawOut||null};
+}
+
 async function selectGame(game){
   selectedGame=game;
   clearTimeout(pollTimer);
-  const out=game.bookmakers[0].markets.find(m=>m.key==='h2h').outcomes;
-  const [a,b]=out;
+  const {a,b,draw}=extractOutcomes(game);
   const fk=fkey(a.name,b.name);
   const live=isLive(game.commence_time);
 
   updateFightUI(a.name,b.name,a.price,b.price,live,game.sport_title||activeSportTitle,currentGames);
-  document.getElementById('graph-fight-lbl').textContent=`${a.name} vs ${b.name}`;
+  document.getElementById('graph-fight-lbl').textContent=`${a.name} vs ${b.name}${draw?' (draw available)':''}`;
   graphSelect(fk,a.name,b.name);
 
   // Update tracker fight context
-  tracker.setFight(a.name,b.name,a.price,b.price);
+  tracker.setFight(a.name,b.name,a.price,b.price,draw?'Draw':null,draw?draw.price:null);
   currentBetSide=''; oddsLocked=false;
   updateFighterButtons();
   document.getElementById('bt-odds').value='';
@@ -894,23 +944,22 @@ async function pollOdds(){
     const ts=new Date().toLocaleTimeString('en-US',{hour12:false,hour:'2-digit',minute:'2-digit',second:'2-digit'});
 
     games.forEach(g=>{
-      const out=g.bookmakers[0].markets.find(m=>m.key==='h2h').outcomes;
-      const [a,b]=out;
-      graphAddPoint(fkey(a.name,b.name),ts,a.name,a.price,b.name,b.price);
+      const {a,b,draw}=extractOutcomes(g);
+      graphAddPoint(fkey(a.name,b.name),ts,a.name,a.price,b.name,b.price,draw?draw.price:null);
     });
 
     // Update selected game odds
     const match=games.find(g=>g.id===selectedGame.id);
     if(match){
-      const out=match.bookmakers[0].markets.find(m=>m.key==='h2h').outcomes;
-      const [a,b]=out;
-      tracker.updateOdds(a.price,b.price);
+      const {a,b,draw}=extractOutcomes(match);
+      tracker.updateOdds(a.price,b.price,draw?draw.price:null);
       updateNowWatchingOdds(a.price,b.price);
       updateFighterButtons();
       feedOddsBuffer(a.price, b.price);
       if(!oddsLocked){
         if(currentBetSide==='f1') document.getElementById('bt-odds').value=a.price;
         if(currentBetSide==='f2') document.getElementById('bt-odds').value=b.price;
+        if(currentBetSide==='draw'&&draw) document.getElementById('bt-odds').value=draw.price;
       }
       renderTracker();
       // Update live badge
