@@ -461,6 +461,7 @@ app.get('/health', (req, res) => {
 app.get('/api/recorder/status', (req, res) => {
   const active = [...recorderState.activeFights.entries()].map(([id, r]) => ({
     id,
+    sport: r.meta.label,
     fighter1: r.meta.fighter1,
     fighter2: r.meta.fighter2,
     startTime: r.meta.startTime,
@@ -470,33 +471,42 @@ app.get('/api/recorder/status', (req, res) => {
   res.json({
     recording: active.length > 0,
     activeFights: active,
-    idleMode: recorderState.idleMode,
     totalSaved: recorderState.totalSaved,
     lastPoll: recorderState.lastPoll,
+    watching: RECORDER_SPORTS.map(s => s.label),
   });
 });
 
 // ── Recorder ────────────────────────────────────────────────────────────────
 
-const POLL_LIVE_MS = 1000;
-const POLL_IDLE_MS = 300000;
+const POLL_LIVE_MS = 3000;   // 3s when live (saves credits vs 1s, still dense)
+const POLL_IDLE_MS = 300000; // 5min when no live games
+
+// Sports to monitor — MMA always; others only when games are in season/live window
+const RECORDER_SPORTS = [
+  { key: 'mma_mixed_martial_arts', label: 'UFC/MMA', window: 3 * 60 * 60 * 1000 },
+  { key: 'icehockey_nhl',          label: 'NHL',     window: 4 * 60 * 60 * 1000 },
+  { key: 'basketball_nba',         label: 'NBA',     window: 3 * 60 * 60 * 1000 },
+  { key: 'americanfootball_nfl',   label: 'NFL',     window: 4 * 60 * 60 * 1000 },
+  { key: 'baseball_mlb',           label: 'MLB',     window: 4 * 60 * 60 * 1000 },
+];
 
 const recorderState = {
-  activeFights: new Map(),
-  idleMode: true,
+  activeFights: new Map(), // id → { meta, oddsHistory, lastOdds }
   totalSaved: 0,
   lastPoll: null,
 };
 
-function recFightId(fight) {
-  const a = fight.home_team.toLowerCase().replace(/\s+/g, '');
-  const b = fight.away_team.toLowerCase().replace(/\s+/g, '');
-  return `${a}_vs_${b}_${fight.commence_time.slice(0, 10)}`;
+function recFightId(sportKey, fight) {
+  const a = fight.home_team.toLowerCase().replace(/[^a-z0-9]/g, '');
+  const b = fight.away_team.toLowerCase().replace(/[^a-z0-9]/g, '');
+  const date = fight.commence_time.slice(0, 10);
+  return `${sportKey.split('_')[0]}__${a}_vs_${b}_${date}`;
 }
 
-function recIsLive(fight) {
+function recIsLive(fight, windowMs) {
   const now = Date.now(), start = new Date(fight.commence_time).getTime();
-  return start <= now && now - start < 3 * 60 * 60 * 1000;
+  return start <= now && now - start < windowMs;
 }
 
 function recExtractOdds(fight) {
@@ -509,12 +519,16 @@ function recExtractOdds(fight) {
   };
 }
 
-function recSaveFight(id) {
+function recSave(id) {
   const record = recorderState.activeFights.get(id);
   if (!record || record.oddsHistory.length === 0) return;
-  const filePath = path.join(HISTORICAL_DIR, `${id}.json`);
+  // Save into sport-specific subfolder
+  const sportDir = path.join(HISTORICAL_DIR, record.meta.sport);
+  if (!fs.existsSync(sportDir)) fs.mkdirSync(sportDir, { recursive: true });
+  const filePath = path.join(sportDir, `${id}.json`);
   fs.writeFileSync(filePath, JSON.stringify({
     fightId: id,
+    sport: record.meta.sport,
     fightTitle: `${record.meta.fighter1} vs ${record.meta.fighter2}`,
     startTime: record.meta.startTime,
     endTime: new Date().toISOString(),
@@ -522,42 +536,40 @@ function recSaveFight(id) {
     oddsHistory: record.oddsHistory,
   }, null, 2));
   recorderState.totalSaved++;
-  invalidateIndex();
-  console.log(`Recorder saved: ${id} (${record.oddsHistory.length} pts)`);
+  // Only invalidate MMA index (other sports don't affect fight history)
+  if (record.meta.sport === 'mma_mixed_martial_arts') invalidateIndex();
+  console.log(`Saved: ${id} (${record.oddsHistory.length} pts)`);
   sendAlert(
-    `✅ BET BOT: Saved ${record.meta.fighter1} vs ${record.meta.fighter2}`,
-    `Fight recording complete.\n\n${record.meta.fighter1} vs ${record.meta.fighter2}\n${record.oddsHistory.length} data points captured\nFile: ${id}.json\n\nhttps://ufc-dashboard-production-e03d.up.railway.app`
+    `✅ BET BOT: Saved ${record.meta.fighter1} vs ${record.meta.fighter2} [${record.meta.label}]`,
+    `Recording complete.\n\n${record.meta.fighter1} vs ${record.meta.fighter2}\n${record.meta.label} · ${record.oddsHistory.length} data points\n\nhttps://ufc-dashboard-production-e03d.up.railway.app`
   );
 }
 
-async function recPoll() {
-  let liveCount = 0;
+async function recPollSport(sport) {
   try {
-    const url = `${BASE_URL}/sports/mma_mixed_martial_arts/odds/?apiKey=${ODDS_API_KEY}&regions=us&markets=h2h&bookmakers=draftkings&oddsFormat=american`;
+    const url = `${BASE_URL}/sports/${sport.key}/odds/?apiKey=${ODDS_API_KEY}&regions=us&markets=h2h&bookmakers=draftkings&oddsFormat=american`;
     const { data, headers } = await fetchJson(url);
     updateOddsCredits(headers);
-    recorderState.lastPoll = new Date().toISOString();
     const fights = Array.isArray(data) ? data : [];
-    const currentLiveIds = new Set();
+    const currentIds = new Set();
 
     for (const fight of fights) {
-      if (!recIsLive(fight)) continue;
+      if (!recIsLive(fight, sport.window)) continue;
       const odds = recExtractOdds(fight);
       if (!odds) continue;
-      const id = recFightId(fight);
-      currentLiveIds.add(id);
-      liveCount++;
+      const id = recFightId(sport.key, fight);
+      currentIds.add(id);
 
       if (!recorderState.activeFights.has(id)) {
-        console.log(`Recorder: LIVE — ${fight.home_team} vs ${fight.away_team}`);
+        console.log(`REC START [${sport.label}] ${fight.home_team} vs ${fight.away_team}`);
         recorderState.activeFights.set(id, {
-          meta: { fighter1: fight.home_team, fighter2: fight.away_team, startTime: new Date().toISOString() },
+          meta: { sport: sport.key, label: sport.label, fighter1: fight.home_team, fighter2: fight.away_team, startTime: new Date().toISOString() },
           oddsHistory: [],
           lastOdds: null,
         });
         sendAlert(
-          `🔴 BET BOT: Recording ${fight.home_team} vs ${fight.away_team}`,
-          `Live fight detected — recording started.\n\n${fight.home_team} vs ${fight.away_team}\nStarted: ${new Date().toLocaleString()}\n\nhttps://ufc-dashboard-production-e03d.up.railway.app`
+          `🔴 BET BOT: Recording ${fight.home_team} vs ${fight.away_team} [${sport.label}]`,
+          `Live game detected.\n\n${fight.home_team} vs ${fight.away_team}\n${sport.label} · Started: ${new Date().toLocaleString()}\n\nhttps://ufc-dashboard-production-e03d.up.railway.app`
         );
       }
 
@@ -569,23 +581,30 @@ async function recPoll() {
       }
     }
 
-    for (const [id] of recorderState.activeFights) {
-      if (!currentLiveIds.has(id)) {
-        recSaveFight(id);
+    // Save games that dropped out of live feed for this sport
+    for (const [id, record] of recorderState.activeFights) {
+      if (record.meta.sport === sport.key && !currentIds.has(id)) {
+        recSave(id);
         recorderState.activeFights.delete(id);
       }
     }
 
-    recorderState.idleMode = liveCount === 0;
+    return currentIds.size; // number of live games found
   } catch (e) {
-    console.error('Recorder poll error:', e.message);
+    console.error(`Recorder [${sport.label}] error:`, e.message);
+    return 0;
   }
+}
 
-  setTimeout(recPoll, liveCount > 0 ? POLL_LIVE_MS : POLL_IDLE_MS);
+async function recPoll() {
+  recorderState.lastPoll = new Date().toISOString();
+  const counts = await Promise.all(RECORDER_SPORTS.map(s => recPollSport(s)));
+  const totalLive = counts.reduce((a, b) => a + b, 0);
+  setTimeout(recPoll, totalLive > 0 ? POLL_LIVE_MS : POLL_IDLE_MS);
 }
 
 app.listen(PORT, () => {
   console.log(`Bet Bot running at http://localhost:${PORT}`);
   recPoll();
-  console.log('Recorder started — polling for live fights');
+  console.log(`Recorder started — watching ${RECORDER_SPORTS.map(s => s.label).join(', ')}`);
 });

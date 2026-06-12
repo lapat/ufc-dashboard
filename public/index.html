@@ -286,9 +286,11 @@ class BetTracker {
   constructor(){ this.bets=[]; this.f1Name=''; this.f2Name=''; this.f1Odds=null; this.f2Odds=null; this._id=0; }
   setFight(f1,f2,o1,o2){ this.f1Name=f1; this.f2Name=f2; this.f1Odds=o1; this.f2Odds=o2; }
   updateOdds(o1,o2){ this.f1Odds=o1; this.f2Odds=o2; }
-  addBet(side,stake,odds){ this.bets.push({id:++this._id,side,stake,odds,decimal:toD(odds)}); }
-  removeBet(id){ this.bets=this.bets.filter(b=>b.id!==id); }
-  clear(){ this.bets=[]; }
+  addBet(side,stake,odds){ this.bets.push({id:++this._id,side,stake,odds,decimal:toD(odds)}); this._persist(); }
+  removeBet(id){ this.bets=this.bets.filter(b=>b.id!==id); this._persist(); }
+  clear(){ this.bets=[]; this._persist(); }
+  _persist(){ lsSave('tracker', {bets:this.bets, _id:this._id, f1Name:this.f1Name, f2Name:this.f2Name, f1Odds:this.f1Odds, f2Odds:this.f2Odds}); }
+  restore(){ const s=lsLoad('tracker'); if(s){ this.bets=s.bets||[]; this._id=s._id||0; if(s.f1Name)this.f1Name=s.f1Name; if(s.f2Name)this.f2Name=s.f2Name; if(s.f1Odds)this.f1Odds=s.f1Odds; if(s.f2Odds)this.f2Odds=s.f2Odds; } }
   position(){
     let n1=0,n2=0;
     for(const b of this.bets){
@@ -332,6 +334,10 @@ const canvas  = document.getElementById('odds-chart');
 const emptyEl = document.getElementById('graph-empty');
 const infoEl  = document.getElementById('graph-xover-info');
 let chart = null;
+// ── Persistence helpers ──────────────────────────────────────────────────────
+function lsSave(key, val){ try{ localStorage.setItem(key, JSON.stringify(val)); }catch{} }
+function lsLoad(key){ try{ const v=localStorage.getItem(key); return v?JSON.parse(v):null; }catch{ return null; } }
+
 const graphHist = {};  // fk → {labels,f1,f2,f1Name,f2Name,crossovers}
 let selectedFk = null;
 
@@ -368,19 +374,23 @@ function graphAddPoint(fk,label,f1Name,f1Odds,f2Name,f2Odds){
   }
   h.labels.push(label); h.f1.push(f1Odds); h.f2.push(f2Odds);
   if(h.labels.length>400){h.labels.shift();h.f1.shift();h.f2.shift();}
+  lsSave('gh:'+fk, h);
   if(selectedFk===fk) graphRefresh();
 }
 
 function graphSelect(fk,f1Name,f2Name){
   selectedFk=fk;
-  if(!graphHist[fk]) graphHist[fk]={labels:[],f1:[],f2:[],f1Name,f2Name,crossovers:[]};
+  // Restore from localStorage if we have saved data for this game
+  if(!graphHist[fk]){
+    const saved=lsLoad('gh:'+fk);
+    graphHist[fk]=saved||{labels:[],f1:[],f2:[],f1Name,f2Name,crossovers:[]};
+  }
   if(!chart) graphInit();
   emptyEl.style.display='none'; canvas.style.display='block';
   graphRefresh();
 }
 
 function graphLoadPoints(fk, points){
-  // Pre-populate graph with backfilled historical points
   if(!graphHist[fk]) return;
   graphHist[fk].labels=[]; graphHist[fk].f1=[]; graphHist[fk].f2=[]; graphHist[fk].crossovers=[];
   points.forEach(pt => {
@@ -410,6 +420,8 @@ function graphRefresh(){
 // TRACKER UI
 // ═══════════════════════════════════════════
 const tracker = new BetTracker();
+tracker.restore();
+if(tracker.bets.length>0) renderTracker();
 
 document.getElementById('bt-side').addEventListener('change',()=>{
   const v=document.getElementById('bt-side').value;
