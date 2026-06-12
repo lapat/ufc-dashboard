@@ -439,6 +439,24 @@ app.get('/api/sports', async (req, res) => {
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
+// Aggregated soccer — fetches all active soccer leagues and combines
+app.get('/api/soccer', async (req, res) => {
+  try {
+    const { data: sports, headers: sh } = await fetchJson(`${BASE_URL}/sports/?apiKey=${ODDS_API_KEY}`);
+    updateOddsCredits(sh);
+    const soccerKeys = sports.filter(s => s.active && s.key.startsWith('soccer_')).map(s => s.key);
+    const results = await Promise.all(soccerKeys.map(async key => {
+      try {
+        const url = `${BASE_URL}/sports/${key}/odds/?apiKey=${ODDS_API_KEY}&regions=us&markets=h2h&bookmakers=draftkings&oddsFormat=american`;
+        const { data, headers } = await fetchJson(url);
+        updateOddsCredits(headers);
+        return Array.isArray(data) ? data : [];
+      } catch { return []; }
+    }));
+    res.json(results.flat());
+  } catch (e) { res.status(500).json({ error: e.message }); }
+});
+
 // Live odds for any sport key
 app.get('/api/sport/:key', async (req, res) => {
   try {

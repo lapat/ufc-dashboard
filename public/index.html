@@ -190,6 +190,28 @@
     /* ── footer ── */
     #footer{margin-top:32px;padding:10px 0;border-top:1px solid #222;display:flex;gap:16px;flex-wrap:wrap}
     .fi{font-size:0.62rem;color:#555}.fi span{color:#888}
+
+    /* ── mobile ── */
+    @media(max-width:600px){
+      #topbar{padding:0 12px;gap:8px}
+      #topbar h1{font-size:0.75rem;letter-spacing:1px}
+      #rec-test-btn{display:none}
+      #topbar-status{display:none}
+      #sport-strip{padding:8px 12px 0;gap:5px}
+      .sport-pill{font-size:0.75rem;padding:8px 14px}
+      #main{padding:10px 12px}
+      .nw-name{font-size:0.85rem}
+      .nw-odds{font-size:1.15rem;padding:5px 8px;min-width:60px}
+      #nw-o-draw{font-size:1rem!important;min-width:55px!important;padding:4px 8px!important}
+      .bet-fighters{flex-wrap:wrap}
+      .qf-btn{padding:10px 12px;font-size:0.8rem}
+      .bt-row{flex-wrap:wrap;gap:6px}
+      .bet-sel{min-width:120px}
+      #bt-stake,#bt-odds{min-width:70px}
+      .pos-cards{flex-wrap:wrap}
+      .pos-card{min-width:80px}
+      #chat-panel{width:calc(100vw - 16px);right:8px;left:8px}
+    }
   </style>
 </head>
 <body>
@@ -933,7 +955,7 @@ async function selectGame(game){
     const bfEl=document.getElementById('nw-backfill-status');
     bfEl.textContent='⌛ loading history...';
     try{
-      const r=await fetch(`/api/backfill?sport=${activeSport}&team1=${encodeURIComponent(a.name)}&team2=${encodeURIComponent(b.name)}`);
+      const r=await fetch(`/api/backfill?sport=${game.sport_key||activeSport}&team1=${encodeURIComponent(a.name)}&team2=${encodeURIComponent(b.name)}`);
       const bf=await r.json();
       if(bf.points?.length){
         graphLoadPoints(fk,bf.points);
@@ -953,7 +975,7 @@ async function selectGame(game){
 async function pollOdds(){
   if(!selectedGame||simRunning) return;
   try{
-    const endpoint=activeSport==='mma_mixed_martial_arts'?'/api/ufc':`/api/sport/${activeSport}`;
+    const endpoint=activeSport==='mma_mixed_martial_arts'?'/api/ufc':activeSport==='soccer'?'/api/soccer':`/api/sport/${activeSport}`;
     const raw=await(await fetch(endpoint)).json();
     const games=raw.filter(f=>f.bookmakers?.[0]?.markets?.find(m=>m.key==='h2h')?.outcomes?.length>=2);
     const ts=new Date().toLocaleTimeString('en-US',{hour12:false,hour:'2-digit',minute:'2-digit',second:'2-digit'});
@@ -994,37 +1016,38 @@ function startPolling(){
 // ═══════════════════════════════════════════
 // SPORT PILLS + GAME LIST
 // ═══════════════════════════════════════════
-async function loadSports(){
+const SPORT_TABS=[
+  {key:'mma_mixed_martial_arts',label:'Fights'},
+  {key:'icehockey_nhl',label:'NHL'},
+  {key:'americanfootball_nfl',label:'NFL'},
+  {key:'soccer',label:'Soccer'},
+  {key:'basketball_nba',label:'NBA'},
+  {key:'baseball_mlb',label:'MLB'},
+  {key:'basketball_ncaab',label:'NCAA Hoops'},
+];
+
+function loadSports(){
   const strip=document.getElementById('sport-strip');
-  try{
-    const sports=await(await fetch('/api/sports')).json();
-    strip.innerHTML='';
-    const pri=['mma','americanfootball','basketball','icehockey','baseball','soccer','boxing','tennis'];
-    sports.sort((a,b)=>{
-      const ai=pri.findIndex(p=>a.group.toLowerCase().includes(p)||a.key.toLowerCase().includes(p));
-      const bi=pri.findIndex(p=>b.group.toLowerCase().includes(p)||b.key.toLowerCase().includes(p));
-      return (ai<0?99:ai)-(bi<0?99:bi);
+  strip.innerHTML='';
+  SPORT_TABS.forEach(s=>{
+    const btn=document.createElement('button');
+    btn.className='sport-pill'+(s.key===activeSport?' active':'');
+    btn.dataset.key=s.key; btn.dataset.title=s.label;
+    btn.innerHTML=`<span class="pill-live-dot"></span>${s.label}`;
+    btn.addEventListener('click',()=>{
+      document.querySelectorAll('.sport-pill').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      activeSport=s.key; activeSportTitle=s.label;
+      startHeartbeat(s.key);
+      loadGames();
     });
-    sports.forEach(s=>{
-      const btn=document.createElement('button');
-      btn.className='sport-pill'+(s.key===activeSport?' active':'');
-      btn.dataset.key=s.key; btn.dataset.title=s.title;
-      btn.innerHTML=`<span class="pill-live-dot"></span>${s.title}`;
-      btn.addEventListener('click',()=>{
-        document.querySelectorAll('.sport-pill').forEach(b=>b.classList.remove('active'));
-        btn.classList.add('active');
-        activeSport=s.key; activeSportTitle=s.title;
-        startHeartbeat(s.key);
-        loadGames();
-      });
-      strip.appendChild(btn);
-    });
-  }catch{ strip.innerHTML='<span style="color:#444;font-size:.7rem;padding:12px 0">Could not load sports</span>'; }
+    strip.appendChild(btn);
+  });
 }
 
 async function loadGames(){
   if(selectedGame) return; // don't refresh list while watching a game
-  const endpoint=activeSport==='mma_mixed_martial_arts'?'/api/ufc':`/api/sport/${activeSport}`;
+  const endpoint=activeSport==='mma_mixed_martial_arts'?'/api/ufc':activeSport==='soccer'?'/api/soccer':`/api/sport/${activeSport}`;
   try{
     const raw=await(await fetch(endpoint)).json();
     currentGames=raw.filter(f=>f.bookmakers?.[0]?.markets?.find(m=>m.key==='h2h')?.outcomes?.length>=2);
