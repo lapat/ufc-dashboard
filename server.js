@@ -439,6 +439,41 @@ app.get('/api/sports', async (req, res) => {
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
+// ── DraftKings extension sync ─────────────────────────────────────────────
+const dkCaptures = []; // in-memory, last 200 raw API payloads
+
+app.post('/api/dk-sync', (req, res) => {
+  const { url, data, ts } = req.body;
+  if (!url || !data) return res.status(400).json({ error: 'missing fields' });
+
+  // Store raw for inspection
+  dkCaptures.unshift({ url, data, ts });
+  if (dkCaptures.length > 200) dkCaptures.length = 200;
+
+  // Try to parse bets out of whatever endpoint this is
+  const bets = parseDKBets(url, data);
+  if (bets.length) {
+    console.log(`[DK sync] ${bets.length} bets from ${url}`);
+  }
+
+  res.json({ received: true, url, bets });
+});
+
+app.get('/api/dk-captures', (req, res) => {
+  res.json(dkCaptures.slice(0, 50));
+});
+
+function parseDKBets(url, data) {
+  const bets = [];
+  // We'll expand this once we see the actual My Bets endpoint shape
+  // For now just return the raw entries so we can inspect
+  const arr = data?.bets || data?.Bets || data?.entries || data?.wagers || data?.data || [];
+  if (Array.isArray(arr)) {
+    arr.forEach(b => bets.push(b));
+  }
+  return bets;
+}
+
 // Aggregated soccer — fetches all active soccer leagues and combines
 app.get('/api/soccer', async (req, res) => {
   try {
