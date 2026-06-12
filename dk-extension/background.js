@@ -1,0 +1,37 @@
+const DEFAULT_URL = 'https://ufc-dashboard-production-e03d.up.railway.app';
+
+// Load saved server URL, default to Railway app
+let betBotUrl = DEFAULT_URL;
+chrome.storage.local.get(['betBotUrl'], r => { betBotUrl = r.betBotUrl || DEFAULT_URL; });
+chrome.storage.onChanged.addListener(changes => {
+  if (changes.betBotUrl) betBotUrl = changes.betBotUrl.newValue;
+});
+
+chrome.runtime.onMessage.addListener((msg) => {
+  if (msg.type !== 'DK_API') return;
+
+  const url = msg.url;
+  const data = msg.data;
+
+  // Log everything we see for discovery
+  console.log('[BetBot DK] API call:', url);
+
+  // Store raw capture for popup display
+  chrome.storage.local.get(['captures'], r => {
+    const captures = r.captures || [];
+    captures.unshift({ url, ts: Date.now(), preview: JSON.stringify(data).slice(0, 200) });
+    chrome.storage.local.set({ captures: captures.slice(0, 50) });
+  });
+
+  // Send to Bet Bot server
+  if (!betBotUrl) return;
+  fetch(`${betBotUrl}/api/dk-sync`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ url, data, ts: Date.now() })
+  }).then(r => r.json()).then(res => {
+    if (res.bets?.length) {
+      chrome.storage.local.set({ lastSync: Date.now(), lastBetCount: res.bets.length });
+    }
+  }).catch(() => {});
+});
