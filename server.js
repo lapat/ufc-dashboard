@@ -15,6 +15,22 @@ if (!fs.existsSync(API_CACHE_DIR)) fs.mkdirSync(API_CACHE_DIR, { recursive: true
 
 const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 const TOKEN_WARN = parseInt(process.env.ANTHROPIC_TOKEN_WARN_THRESHOLD || '500000');
+const nodemailer = require('nodemailer');
+
+const ALERT_EMAIL = process.env.ALERT_EMAIL || 'louislapat@gmail.com';
+const mailer = (process.env.GMAIL_USER && process.env.GMAIL_APP_PASSWORD)
+  ? nodemailer.createTransport({ service: 'gmail', auth: { user: process.env.GMAIL_USER, pass: process.env.GMAIL_APP_PASSWORD } })
+  : null;
+
+async function sendAlert(subject, text) {
+  if (!mailer) return;
+  try {
+    await mailer.sendMail({ from: process.env.GMAIL_USER, to: ALERT_EMAIL, subject, text });
+    console.log(`Alert sent: ${subject}`);
+  } catch (e) {
+    console.error('Alert email failed:', e.message);
+  }
+}
 let totalTokensUsed = 0;
 let totalQueries = 0;
 let _cachedSummaryJson = null;
@@ -433,6 +449,15 @@ app.get('/api/usage', (req, res) => {
   });
 });
 
+// Health check — Railway restarts service if this returns non-200
+app.get('/health', (req, res) => {
+  const lastPoll = recorderState.lastPoll ? new Date(recorderState.lastPoll) : null;
+  const staleSec = lastPoll ? Math.floor((Date.now() - lastPoll) / 1000) : null;
+  const stale = staleSec === null || staleSec > 600; // >10 min = unhealthy
+  if (stale) return res.status(503).json({ status: 'unhealthy', staleSec, lastPoll: recorderState.lastPoll });
+  res.json({ status: 'ok', staleSec, recording: recorderState.activeFights.size > 0, lastPoll: recorderState.lastPoll });
+});
+
 app.get('/api/recorder/status', (req, res) => {
   const active = [...recorderState.activeFights.entries()].map(([id, r]) => ({
     id,
@@ -499,6 +524,10 @@ function recSaveFight(id) {
   recorderState.totalSaved++;
   invalidateIndex();
   console.log(`Recorder saved: ${id} (${record.oddsHistory.length} pts)`);
+  sendAlert(
+    `✅ BET BOT: Saved ${record.meta.fighter1} vs ${record.meta.fighter2}`,
+    `Fight recording complete.\n\n${record.meta.fighter1} vs ${record.meta.fighter2}\n${record.oddsHistory.length} data points captured\nFile: ${id}.json\n\nhttps://ufc-dashboard-production-e03d.up.railway.app`
+  );
 }
 
 async function recPoll() {
@@ -526,6 +555,10 @@ async function recPoll() {
           oddsHistory: [],
           lastOdds: null,
         });
+        sendAlert(
+          `🔴 BET BOT: Recording ${fight.home_team} vs ${fight.away_team}`,
+          `Live fight detected — recording started.\n\n${fight.home_team} vs ${fight.away_team}\nStarted: ${new Date().toLocaleString()}\n\nhttps://ufc-dashboard-production-e03d.up.railway.app`
+        );
       }
 
       const record = recorderState.activeFights.get(id);
