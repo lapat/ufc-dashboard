@@ -619,7 +619,7 @@ document.getElementById('add-bet-btn').addEventListener('click',()=>{
   tracker.addBet(side,stake,odds);
   // Reset odds to current after locking in — stay on same fighter
   oddsLocked = false;
-  const currentOdds = side==='f1' ? tracker.f1Odds : tracker.f2Odds;
+  const currentOdds = side==='f1' ? tracker.f1Odds : side==='draw' ? tracker.drawOdds : tracker.f2Odds;
   if(currentOdds !== null) oddsEl.value = currentOdds;
   renderTracker();
 });
@@ -658,7 +658,7 @@ function renderTracker(){
     const clvHtml=clv!==null?`<span class="bet-clv ${clv>0.1?'clv-pos':clv<-0.1?'clv-neg':'clv-zero'}">${clv>=0?'+':''}${clv.toFixed(1)}%</span>`:'';
     return `<div class="bet-row">
       <span class="bet-num">#${i+1}</span>
-      <span class="bet-fighter">${b.side==='f1'?tracker.f1Name:tracker.f2Name}</span>
+      <span class="bet-fighter">${b.side==='f1'?tracker.f1Name:b.side==='draw'?'Draw':tracker.f2Name}</span>
       <span class="bet-stake">$${b.stake.toFixed(2)}</span>
       <span class="bet-odds-lbl">${fmtO(b.odds)}</span>
       ${clvHtml}
