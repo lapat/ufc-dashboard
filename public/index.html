@@ -22,9 +22,13 @@
 
     /* ── sport pills ── */
     #sport-strip{padding:12px 24px 0;display:flex;gap:6px;flex-wrap:wrap;max-width:980px;margin:0 auto}
-    .sport-pill{background:#141414;border:1px solid #1e1e1e;border-radius:14px;color:#444;font-size:0.68rem;padding:5px 12px;cursor:pointer;transition:all .15s;text-transform:uppercase;letter-spacing:1px;white-space:nowrap}
+    .sport-pill{background:#141414;border:1px solid #1e1e1e;border-radius:14px;color:#444;font-size:0.68rem;padding:5px 12px;cursor:pointer;transition:all .15s;text-transform:uppercase;letter-spacing:1px;white-space:nowrap;display:inline-flex;align-items:center;gap:5px}
     .sport-pill:hover{border-color:#333;color:#888}
     .sport-pill.active{background:#1c1800;border-color:#e8b84b;color:#e8b84b}
+    .sport-pill.has-live{border-color:#3a1a1a;color:#c0392b}
+    .sport-pill.has-live.active{border-color:#e74c3c;color:#e74c3c;background:#1a0808}
+    .pill-live-dot{width:5px;height:5px;border-radius:50%;background:#e74c3c;animation:pulse 1.2s infinite;display:none}
+    .sport-pill.has-live .pill-live-dot{display:inline-block}
     #sport-loading{color:#333;font-size:0.72rem;padding:12px 24px}
 
     /* ── main content ── */
@@ -171,6 +175,7 @@
   <h1>⚡ Bet Bot</h1>
   <div id="rec-status"><div id="rec-dot" class="idle"></div><span id="rec-label">—</span></div>
   <button id="rec-test-btn" title="Test the recording pipeline" style="font-size:0.55rem;padding:3px 8px;background:#1a1a1a;border:1px solid #2a2a2a;color:#444;border-radius:3px;cursor:pointer;white-space:nowrap">test rec</button>
+  <a href="/library" style="font-size:0.6rem;padding:4px 10px;border:1px solid #222;border-radius:3px;color:#555;white-space:nowrap;text-decoration:none">📼 Library</a>
   <div id="topbar-status">Loading...</div>
 </div>
 
@@ -783,7 +788,8 @@ async function loadSports(){
     sports.forEach(s=>{
       const btn=document.createElement('button');
       btn.className='sport-pill'+(s.key===activeSport?' active':'');
-      btn.textContent=s.title; btn.dataset.key=s.key; btn.dataset.title=s.title;
+      btn.dataset.key=s.key; btn.dataset.title=s.title;
+      btn.innerHTML=`<span class="pill-live-dot"></span>${s.title}`;
       btn.addEventListener('click',()=>{
         document.querySelectorAll('.sport-pill').forEach(b=>b.classList.remove('active'));
         btn.classList.add('active');
@@ -842,8 +848,32 @@ function renderGameList(){
 // ═══════════════════════════════════════════
 loadSports();
 loadGames();
-// Refresh game list every 30s when no game selected
 setInterval(()=>{ if(!selectedGame) loadGames(); },30000);
+
+// Auto-start simulation if ?sim=fightId in URL (from library page)
+(async()=>{
+  const simId=new URLSearchParams(location.search).get('sim');
+  if(!simId) return;
+  history.replaceState(null,'','/'); // clean URL
+  try{
+    const d=await fetch(`/api/fight-history/${encodeURIComponent(simId)}`).then(r=>r.json());
+    if(!d.oddsHistory?.length) return;
+    simData=d; simIdx=0;
+    const first=d.oddsHistory[0];
+    const f1=first.fighter1.name, f2=first.fighter2.name;
+    simFk=fkey(f1,f2);
+    graphHist[simFk]={labels:[],f1:[],f2:[],f1Name:f1,f2Name:f2,crossovers:[]};
+    tracker.setFight(f1,f2,first.fighter1.numericOdds,first.fighter2.numericOdds);
+    updateFightUI(f1,f2,first.fighter1.numericOdds,first.fighter2.numericOdds,true,null,null);
+    document.getElementById('bt-side').innerHTML=`<option value="f1">${f1}</option><option value="f2">${f2}</option>`;
+    document.getElementById('bt-odds').value=first.fighter1.numericOdds;
+    graphSelect(simFk,f1,f2);
+    document.getElementById('sim-bar').classList.add('open');
+    document.getElementById('sim-toggle').textContent='✕ Close';
+    document.getElementById('sim-fight-name').textContent=`${f1} vs ${f2}`;
+    loadSimFights();
+  }catch(e){ console.error('Auto-sim error:', e); }
+})();
 
 // ═══════════════════════════════════════════
 // CREDITS
@@ -869,9 +899,16 @@ async function pollRecorder(){
       lbl.style.color='#e74c3c';
     } else {
       dot.className='idle';
-      lbl.textContent=d.idleMode?'recorder idle — watching for fights':'recorder standby';
+      lbl.textContent='recorder idle — watching for fights';
       lbl.style.color='#333';
     }
+    // Mark sport pills that have live games recording
+    const liveSports=new Set(d.activeFights.map(f=>(f.sport||'').toLowerCase()));
+    document.querySelectorAll('.sport-pill').forEach(btn=>{
+      const key=(btn.dataset.key||'').toLowerCase();
+      const hasLive=liveSports.has('ufc/mma')&&key.includes('mma') || [...liveSports].some(s=>key.includes(s.split('/')[0].toLowerCase()));
+      btn.classList.toggle('has-live', hasLive);
+    });
   }catch{}
 }
 pollRecorder(); setInterval(pollRecorder,5000);

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Bet Bot — Recordings</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:#0a0a0a;color:#ccc;font-family:'SF Mono',monospace;font-size:13px}
+    a{color:inherit;text-decoration:none}
+
+    #topbar{display:flex;align-items:center;background:#111;border-bottom:1px solid #1e1e1e;padding:0 24px;gap:16px;position:sticky;top:0;z-index:50}
+    #topbar h1{color:#e8b84b;font-size:0.9rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:13px 0;white-space:nowrap}
+    .nav-link{font-size:0.65rem;color:#555;padding:4px 8px;border-radius:3px;border:1px solid #222}
+    .nav-link:hover{color:#888;border-color:#333}
+
+    #main{max-width:980px;margin:0 auto;padding:24px}
+
+    /* Live section */
+    #live-section{margin-bottom:32px}
+    .section-title{font-size:0.6rem;color:#444;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px}
+    .live-card{background:#1a0a0a;border:1px solid #3a1a1a;border-radius:6px;padding:14px 18px;display:flex;align-items:center;gap:12px;margin-bottom:8px}
+    .live-dot{width:8px;height:8px;border-radius:50%;background:#e74c3c;animation:pulse 1.2s infinite;flex-shrink:0}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
+    .live-fighters{font-weight:700;font-size:0.85rem;color:#fff;flex:1}
+    .live-sport{font-size:0.6rem;color:#e74c3c;text-transform:uppercase;letter-spacing:1px}
+    .live-pts{font-size:0.65rem;color:#666;white-space:nowrap}
+    .live-started{font-size:0.6rem;color:#444}
+    .no-live{color:#2a2a2a;font-size:0.75rem;padding:12px 0}
+
+    /* Filters */
+    #filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;align-items:center}
+    .filter-pill{font-size:0.6rem;padding:4px 10px;border-radius:12px;border:1px solid #222;color:#444;cursor:pointer;background:none}
+    .filter-pill:hover,.filter-pill.active{border-color:#e8b84b;color:#e8b84b}
+    #search-box{font-size:0.65rem;padding:4px 10px;background:#111;border:1px solid #222;border-radius:4px;color:#888;outline:none;width:180px}
+    #search-box:focus{border-color:#333}
+    #rec-count{font-size:0.6rem;color:#333;margin-left:auto}
+
+    /* Table */
+    #rec-table{width:100%;border-collapse:collapse}
+    .rec-row{border-bottom:1px solid #111;cursor:pointer;transition:background 0.1s}
+    .rec-row:hover{background:#111}
+    .rec-row td{padding:10px 12px;vertical-align:middle}
+    .sport-badge{font-size:0.55rem;padding:2px 6px;border-radius:3px;text-transform:uppercase;letter-spacing:1px;font-weight:700;white-space:nowrap}
+    .badge-ufc{background:#2a1a0a;color:#e8b84b;border:1px solid #3a2a0a}
+    .badge-nhl{background:#0a1a2a;color:#69b3e7;border:1px solid #0a2a3a}
+    .badge-nba{background:#1a0a1a;color:#c084fc;border:1px solid #2a0a2a}
+    .badge-nfl{background:#0a1a0a;color:#69db7c;border:1px solid #0a2a0a}
+    .badge-mlb{background:#1a1a0a;color:#fbbf24;border:1px solid #2a2a0a}
+    .badge-other{background:#1a1a1a;color:#888;border:1px solid #222}
+    .fighters-cell{font-weight:600;color:#ddd;font-size:0.75rem}
+    .date-cell{color:#444;font-size:0.65rem;white-space:nowrap}
+    .pts-cell{color:#555;font-size:0.65rem;text-align:right}
+    .xover-cell{text-align:right}
+    .xover-badge{font-size:0.6rem;color:#e8b84b}
+    .xover-zero{font-size:0.6rem;color:#2a2a2a}
+    .open-btn{font-size:0.55rem;padding:3px 8px;background:#111;border:1px solid #222;color:#444;border-radius:3px;cursor:pointer;white-space:nowrap}
+    .open-btn:hover{border-color:#e8b84b;color:#e8b84b}
+    th{font-size:0.55rem;color:#333;text-transform:uppercase;letter-spacing:1px;padding:6px 12px;text-align:left;border-bottom:1px solid #1a1a1a;font-weight:400}
+    th.right{text-align:right}
+  </style>
+</head>
+<body>
+
+<div id="topbar">
+  <h1>⚡ Bet Bot</h1>
+  <a href="/" class="nav-link">← Live</a>
+  <span style="font-size:0.65rem;color:#e8b84b;padding:4px 8px;border:1px solid #3a2a0a;border-radius:3px">Recordings</span>
+</div>
+
+<div id="main">
+  <div id="live-section">
+    <div class="section-title">Recording now</div>
+    <div id="live-list"><div class="no-live">No live recordings active</div></div>
+  </div>
+
+  <div class="section-title">All recorded fights</div>
+  <div id="filters">
+    <button class="filter-pill active" data-sport="all">All</button>
+    <button class="filter-pill" data-sport="UFC/MMA">UFC/MMA</button>
+    <button class="filter-pill" data-sport="NHL">NHL</button>
+    <button class="filter-pill" data-sport="NBA">NBA</button>
+    <button class="filter-pill" data-sport="NFL">NFL</button>
+    <button class="filter-pill" data-sport="MLB">MLB</button>
+    <input id="search-box" placeholder="search fighters..."/>
+    <span id="rec-count"></span>
+  </div>
+
+  <table id="rec-table">
+    <thead><tr>
+      <th>Sport</th>
+      <th>Matchup</th>
+      <th>Date</th>
+      <th class="right">Points</th>
+      <th class="right">Crossovers</th>
+      <th></th>
+    </tr></thead>
+    <tbody id="rec-body"><tr><td colspan="6" style="color:#2a2a2a;padding:20px 12px">Loading...</td></tr></tbody>
+  </table>
+</div>
+
+<script>
+let allRecs=[], activeSportFilter='all', searchQuery='';
+
+function sportBadgeClass(sport){
+  const s=(sport||'').toUpperCase();
+  if(s.includes('MMA')||s.includes('UFC')) return 'badge-ufc';
+  if(s.includes('NHL')) return 'badge-nhl';
+  if(s.includes('NBA')) return 'badge-nba';
+  if(s.includes('NFL')) return 'badge-nfl';
+  if(s.includes('MLB')) return 'badge-mlb';
+  return 'badge-other';
+}
+
+function fmtDate(d){ if(!d) return '—'; const [y,m,day]=d.split('-'); return `${m}/${day}/${y.slice(2)}`; }
+
+function renderTable(){
+  const q=searchQuery.toLowerCase();
+  const rows=allRecs.filter(r=>{
+    if(activeSportFilter!=='all' && !r.sport.toUpperCase().includes(activeSportFilter.toUpperCase())) return false;
+    if(q && !r.fighter1.toLowerCase().includes(q) && !r.fighter2.toLowerCase().includes(q)) return false;
+    return true;
+  });
+  document.getElementById('rec-count').textContent=`${rows.length} fight${rows.length!==1?'s':''}`;
+  const tbody=document.getElementById('rec-body');
+  if(!rows.length){ tbody.innerHTML='<tr><td colspan="6" style="color:#2a2a2a;padding:20px 12px">No results</td></tr>'; return; }
+  tbody.innerHTML=rows.map(r=>`
+    <tr class="rec-row" data-id="${r.id}">
+      <td><span class="sport-badge ${sportBadgeClass(r.sport)}">${r.sport}</span></td>
+      <td class="fighters-cell">${r.fighter1} <span style="color:#333">vs</span> ${r.fighter2}</td>
+      <td class="date-cell">${fmtDate(r.date)}</td>
+      <td class="pts-cell">${r.dataPoints.toLocaleString()}</td>
+      <td class="xover-cell">${r.crossovers>0?`<span class="xover-badge">⚡ ${r.crossovers}</span>`:'<span class="xover-zero">—</span>'}</td>
+      <td><button class="open-btn" data-id="${r.id}">Simulate →</button></td>
+    </tr>`).join('');
+  tbody.querySelectorAll('.open-btn').forEach(btn=>{
+    btn.addEventListener('click', e=>{
+      e.stopPropagation();
+      window.location.href=`/?sim=${encodeURIComponent(btn.dataset.id)}`;
+    });
+  });
+}
+
+async function loadLive(){
+  const d=await fetch('/api/recorder/status').then(r=>r.json());
+  const el=document.getElementById('live-list');
+  if(!d.recording||!d.activeFights.length){ el.innerHTML='<div class="no-live">No live recordings active — recorder is watching for fights</div>'; return; }
+  el.innerHTML=d.activeFights.map(f=>`
+    <div class="live-card">
+      <div class="live-dot"></div>
+      <div style="flex:1">
+        <div class="live-fighters">${f.fighter1} vs ${f.fighter2}</div>
+        <div class="live-started">${f.sport} · started ${new Date(f.startTime).toLocaleTimeString()}</div>
+      </div>
+      <div class="live-pts">${f.dataPoints} pts recorded</div>
+    </div>`).join('');
+}
+
+async function load(){
+  allRecs=await fetch('/api/recordings').then(r=>r.json());
+  renderTable();
+  loadLive();
+}
+
+document.querySelectorAll('.filter-pill').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.filter-pill').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    activeSportFilter=btn.dataset.sport;
+    renderTable();
+  });
+});
+document.getElementById('search-box').addEventListener('input', e=>{ searchQuery=e.target.value; renderTable(); });
+
+load();
+setInterval(loadLive,5000);
+</script>
+</body>
+</html>

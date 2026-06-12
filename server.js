@@ -205,6 +205,9 @@ app.get('/api/ufc', async (req, res) => {
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
+// Library page
+app.get('/library', (req, res) => { res.sendFile(path.join(__dirname, 'public', 'library.html')); });
+
 // Credits/usage status
 app.get('/api/credits', (req, res) => {
   res.json({
@@ -222,6 +225,57 @@ app.get('/api/credits', (req, res) => {
 app.get('/api/fights', (req, res) => {
   try { res.json(getIndex()); }
   catch (e) { res.status(500).json({ error: e.message }); }
+});
+
+// All recordings across all sports (MMA index + sport subfolders)
+app.get('/api/recordings', (req, res) => {
+  try {
+    const all = [];
+    // MMA fights (root of historical_data)
+    const mmaFiles = fs.readdirSync(HISTORICAL_DIR).filter(f => f.endsWith('.json'));
+    for (const f of mmaFiles) {
+      try {
+        const d = JSON.parse(fs.readFileSync(path.join(HISTORICAL_DIR, f)));
+        const h = d.oddsHistory || [];
+        all.push({
+          id: d.fightId || f.replace('.json',''),
+          sport: 'UFC/MMA',
+          fighter1: h[0]?.fighter1?.name || d.fightTitle?.split(' vs ')[0] || '?',
+          fighter2: h[0]?.fighter2?.name || d.fightTitle?.split(' vs ')[1] || '?',
+          date: (d.fightId||f).match(/\d{4}-\d{2}-\d{2}/)?.[0] || '',
+          dataPoints: d.dataPoints || h.length,
+          crossovers: (() => { let c=0; for(let i=1;i<h.length;i++){ const p=h[i-1],n=h[i]; if((p.fighter1.numericOdds>0&&n.fighter1.numericOdds<0)||(p.fighter2.numericOdds>0&&n.fighter2.numericOdds<0)) c++; } return c; })(),
+          startTime: d.startTime || '',
+        });
+      } catch {}
+    }
+    // Other sport subfolders
+    const subdirs = fs.readdirSync(HISTORICAL_DIR, { withFileTypes: true })
+      .filter(e => e.isDirectory() && e.name !== 'api_cache')
+      .map(e => e.name);
+    for (const sport of subdirs) {
+      const sportDir = path.join(HISTORICAL_DIR, sport);
+      const files = fs.readdirSync(sportDir).filter(f => f.endsWith('.json'));
+      for (const f of files) {
+        try {
+          const d = JSON.parse(fs.readFileSync(path.join(sportDir, f)));
+          const h = d.oddsHistory || [];
+          all.push({
+            id: d.fightId || f.replace('.json',''),
+            sport: d.sport || sport,
+            fighter1: h[0]?.fighter1?.name || '?',
+            fighter2: h[0]?.fighter2?.name || '?',
+            date: (d.fightId||f).match(/\d{4}-\d{2}-\d{2}/)?.[0] || '',
+            dataPoints: d.dataPoints || h.length,
+            crossovers: (() => { let c=0; for(let i=1;i<h.length;i++){ const p=h[i-1],n=h[i]; if((p.fighter1.numericOdds>0&&n.fighter1.numericOdds<0)||(p.fighter2.numericOdds>0&&n.fighter2.numericOdds<0)) c++; } return c; })(),
+            startTime: d.startTime || '',
+          });
+        } catch {}
+      }
+    }
+    all.sort((a,b) => (b.date||'').localeCompare(a.date||'') || (b.startTime||'').localeCompare(a.startTime||''));
+    res.json(all);
+  } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
 // Full odds history for a specific fight (for graphing)
