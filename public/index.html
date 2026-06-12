@@ -14,6 +14,11 @@
     #topbar{display:flex;align-items:center;background:#111;border-bottom:1px solid #1e1e1e;padding:0 24px;position:sticky;top:0;z-index:50;gap:16px}
     #topbar h1{color:#e8b84b;font-size:0.9rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:13px 0;white-space:nowrap}
     #topbar-status{margin-left:auto;font-size:0.65rem;color:#333;white-space:nowrap}
+    #rec-status{font-size:0.62rem;display:flex;align-items:center;gap:6px;white-space:nowrap}
+    #rec-dot{width:7px;height:7px;border-radius:50%;background:#333;flex-shrink:0}
+    #rec-dot.live{background:#e74c3c;animation:pulse 1.2s infinite}
+    #rec-dot.idle{background:#2a2a2a}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
 
     /* ── sport pills ── */
     #sport-strip{padding:12px 24px 0;display:flex;gap:6px;flex-wrap:wrap;max-width:980px;margin:0 auto}
@@ -164,6 +169,7 @@
 
 <div id="topbar">
   <h1>⚡ Bet Bot</h1>
+  <div id="rec-status"><div id="rec-dot" class="idle"></div><span id="rec-label">—</span></div>
   <div id="topbar-status">Loading...</div>
 </div>
 
@@ -837,6 +843,24 @@ async function loadCredits(){
   }catch{}
 }
 loadCredits(); setInterval(loadCredits,30000);
+
+async function pollRecorder(){
+  try{
+    const d=await fetch('/api/recorder/status').then(r=>r.json());
+    const dot=document.getElementById('rec-dot');
+    const lbl=document.getElementById('rec-label');
+    if(d.recording && d.activeFights.length>0){
+      dot.className='live';
+      lbl.textContent=d.activeFights.map(f=>`● REC ${f.fighter1} vs ${f.fighter2} (${f.dataPoints} pts)`).join(' · ');
+      lbl.style.color='#e74c3c';
+    } else {
+      dot.className='idle';
+      lbl.textContent=d.idleMode?'recorder idle — watching for fights':'recorder standby';
+      lbl.style.color='#333';
+    }
+  }catch{}
+}
+pollRecorder(); setInterval(pollRecorder,5000);
 
 // ═══════════════════════════════════════════
 // CHAT

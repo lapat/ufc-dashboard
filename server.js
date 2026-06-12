@@ -433,6 +433,126 @@ app.get('/api/usage', (req, res) => {
   });
 });
 
+app.get('/api/recorder/status', (req, res) => {
+  const active = [...recorderState.activeFights.entries()].map(([id, r]) => ({
+    id,
+    fighter1: r.meta.fighter1,
+    fighter2: r.meta.fighter2,
+    startTime: r.meta.startTime,
+    dataPoints: r.oddsHistory.length,
+    lastOdds: r.lastOdds,
+  }));
+  res.json({
+    recording: active.length > 0,
+    activeFights: active,
+    idleMode: recorderState.idleMode,
+    totalSaved: recorderState.totalSaved,
+    lastPoll: recorderState.lastPoll,
+  });
+});
+
+// ── Recorder ────────────────────────────────────────────────────────────────
+
+const POLL_LIVE_MS = 1000;
+const POLL_IDLE_MS = 300000;
+
+const recorderState = {
+  activeFights: new Map(),
+  idleMode: true,
+  totalSaved: 0,
+  lastPoll: null,
+};
+
+function recFightId(fight) {
+  const a = fight.home_team.toLowerCase().replace(/\s+/g, '');
+  const b = fight.away_team.toLowerCase().replace(/\s+/g, '');
+  return `${a}_vs_${b}_${fight.commence_time.slice(0, 10)}`;
+}
+
+function recIsLive(fight) {
+  const now = Date.now(), start = new Date(fight.commence_time).getTime();
+  return start <= now && now - start < 3 * 60 * 60 * 1000;
+}
+
+function recExtractOdds(fight) {
+  const outcomes = fight.bookmakers?.[0]?.markets?.find(m => m.key === 'h2h')?.outcomes ?? [];
+  if (outcomes.length < 2) return null;
+  return {
+    timestamp: new Date().toISOString(),
+    fighter1: { name: outcomes[0].name, numericOdds: outcomes[0].price },
+    fighter2: { name: outcomes[1].name, numericOdds: outcomes[1].price },
+  };
+}
+
+function recSaveFight(id) {
+  const record = recorderState.activeFights.get(id);
+  if (!record || record.oddsHistory.length === 0) return;
+  const filePath = path.join(HISTORICAL_DIR, `${id}.json`);
+  fs.writeFileSync(filePath, JSON.stringify({
+    fightId: id,
+    fightTitle: `${record.meta.fighter1} vs ${record.meta.fighter2}`,
+    startTime: record.meta.startTime,
+    endTime: new Date().toISOString(),
+    dataPoints: record.oddsHistory.length,
+    oddsHistory: record.oddsHistory,
+  }, null, 2));
+  recorderState.totalSaved++;
+  invalidateIndex();
+  console.log(`Recorder saved: ${id} (${record.oddsHistory.length} pts)`);
+}
+
+async function recPoll() {
+  let liveCount = 0;
+  try {
+    const url = `${BASE_URL}/sports/mma_mixed_martial_arts/odds/?apiKey=${ODDS_API_KEY}&regions=us&markets=h2h&bookmakers=draftkings&oddsFormat=american`;
+    const { data, headers } = await fetchJson(url);
+    updateOddsCredits(headers);
+    recorderState.lastPoll = new Date().toISOString();
+    const fights = Array.isArray(data) ? data : [];
+    const currentLiveIds = new Set();
+
+    for (const fight of fights) {
+      if (!recIsLive(fight)) continue;
+      const odds = recExtractOdds(fight);
+      if (!odds) continue;
+      const id = recFightId(fight);
+      currentLiveIds.add(id);
+      liveCount++;
+
+      if (!recorderState.activeFights.has(id)) {
+        console.log(`Recorder: LIVE — ${fight.home_team} vs ${fight.away_team}`);
+        recorderState.activeFights.set(id, {
+          meta: { fighter1: fight.home_team, fighter2: fight.away_team, startTime: new Date().toISOString() },
+          oddsHistory: [],
+          lastOdds: null,
+        });
+      }
+
+      const record = recorderState.activeFights.get(id);
+      const last = record.lastOdds;
+      if (!last || last.fighter1.numericOdds !== odds.fighter1.numericOdds || last.fighter2.numericOdds !== odds.fighter2.numericOdds) {
+        record.oddsHistory.push(odds);
+        record.lastOdds = odds;
+      }
+    }
+
+    for (const [id] of recorderState.activeFights) {
+      if (!currentLiveIds.has(id)) {
+        recSaveFight(id);
+        recorderState.activeFights.delete(id);
+      }
+    }
+
+    recorderState.idleMode = liveCount === 0;
+  } catch (e) {
+    console.error('Recorder poll error:', e.message);
+  }
+
+  setTimeout(recPoll, liveCount > 0 ? POLL_LIVE_MS : POLL_IDLE_MS);
+}
+
 app.listen(PORT, () => {
-  console.log(`UFC Research Dashboard running at http://localhost:${PORT}`);
+  console.log(`Bet Bot running at http://localhost:${PORT}`);
+  recPoll();
+  console.log('Recorder started — polling for live fights');
 });
