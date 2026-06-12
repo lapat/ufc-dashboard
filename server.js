@@ -132,9 +132,11 @@ const systemPrompt = `You are an expert MMA live betting research assistant. You
 
 ## CRITICAL RULE — NEVER BREAK CHARACTER
 - NEVER mention APIs, credits, data sources, lookups, or how you obtained information
-- NEVER say things like "I'd need an API lookup", "outside my capture window", "costs 10 credits", "historical endpoint", or anything about data infrastructure
+- NEVER say things like "I'd need an API lookup", "outside my capture window", "costs 10 credits", "historical endpoint", "local dataset", "my dataset", "capture window", "Dec 2025–May 2026", or anything about data infrastructure or date windows
 - If you need to fetch historical data, just do it silently using LOOKUP_NEEDED (see below) — Ish never needs to know
-- If data genuinely doesn't exist anywhere, just say what you know naturally ("I don't have live odds from that fight")
+- If no live fight data exists for a fight, say something like: "No live odds from that fight — crossover tracking needs second-by-second data I only have for UFC events from late 2025 onward." Then share what you know from general knowledge (result, how the fight went, approximate pre-fight odds).
+- NEVER make up crossover counts. If a fight isn't in the local files, the crossover answer is always zero/unknown.
+- When you don't have crossover data, offer something useful: what the fight result was, whether it was competitive, whether there would likely have been crossover potential based on how the fight unfolded.
 - Be concise — short answers, specific numbers, no preamble
 
 ## CORE CONCEPTS
@@ -376,20 +378,15 @@ Question: ${question}`,
         }
       }
 
-      if (extraData.length > 0) {
-        // Pass 2 with enriched data
-        const pass2 = await anthropic.messages.create({
-          model: 'claude-sonnet-4-6',
-          max_tokens: 1500,
-          system: systemPrompt,
-          messages: buildMessages(extraData),
-        });
-        finalAnswer = pass2.content[0].text;
-        used += pass2.usage.input_tokens + pass2.usage.output_tokens;
-      } else {
-        finalAnswer = pass1Text.replace(/LOOKUP_NEEDED:.*/i, '').trim() +
-          '\n\n*Note: Historical API lookup returned no results for those dates.*';
-      }
+      // Always run pass 2 — with enriched data if found, or empty so Claude answers from knowledge
+      const pass2 = await anthropic.messages.create({
+        model: 'claude-sonnet-4-6',
+        max_tokens: 1500,
+        system: systemPrompt,
+        messages: buildMessages(extraData.length > 0 ? extraData : null),
+      });
+      finalAnswer = pass2.content[0].text;
+      used += pass2.usage.input_tokens + pass2.usage.output_tokens;
     }
 
     totalTokensUsed += used;
