@@ -787,6 +787,7 @@ async function loadSports(){
         document.querySelectorAll('.sport-pill').forEach(b=>b.classList.remove('active'));
         btn.classList.add('active');
         activeSport=s.key; activeSportTitle=s.title;
+        startHeartbeat(s.key);
         loadGames();
       });
       strip.appendChild(btn);
@@ -873,6 +874,17 @@ async function pollRecorder(){
   }catch{}
 }
 pollRecorder(); setInterval(pollRecorder,5000);
+
+// Heartbeat — tells server to keep recording the current non-UFC sport
+let _heartbeatTimer=null;
+function startHeartbeat(sportKey){
+  stopHeartbeat();
+  if(!sportKey||sportKey==='mma_mixed_martial_arts') return; // UFC is always-on
+  const ping=()=>fetch('/api/recorder/watch',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sport:sportKey})}).catch(()=>{});
+  ping();
+  _heartbeatTimer=setInterval(ping,30000);
+}
+function stopHeartbeat(){ if(_heartbeatTimer){ clearInterval(_heartbeatTimer); _heartbeatTimer=null; } }
 
 // ═══════════════════════════════════════════
 // CHAT

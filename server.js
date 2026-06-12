@@ -473,23 +473,36 @@ app.get('/api/recorder/status', (req, res) => {
     activeFights: active,
     totalSaved: recorderState.totalSaved,
     lastPoll: recorderState.lastPoll,
-    watching: RECORDER_SPORTS.map(s => s.label),
+    watching: ['UFC/MMA (always)', ...([...clientWatching.entries()].filter(([,ts])=>Date.now()-ts<120000).map(([k])=>SPORT_META[k]?.label||k))],
   });
 });
 
 // ── Recorder ────────────────────────────────────────────────────────────────
+// UFC: always-on at 3s — events are rare (~20 hrs/mo) so very cheap
+// Other sports: client-driven — browser sends heartbeat while watching, stops when tab closes
 
-const POLL_LIVE_MS = 3000;   // 3s when live (saves credits vs 1s, still dense)
-const POLL_IDLE_MS = 300000; // 5min when no live games
+const UFC_POLL_MS   = 3000;
+const OTHER_POLL_MS = 5000;  // 5s while browser is open watching
+const IDLE_POLL_MS  = 300000;
 
-// Sports to monitor — MMA always; others only when games are in season/live window
-const RECORDER_SPORTS = [
-  { key: 'mma_mixed_martial_arts', label: 'UFC/MMA', window: 3 * 60 * 60 * 1000 },
-  { key: 'icehockey_nhl',          label: 'NHL',     window: 4 * 60 * 60 * 1000 },
-  { key: 'basketball_nba',         label: 'NBA',     window: 3 * 60 * 60 * 1000 },
-  { key: 'americanfootball_nfl',   label: 'NFL',     window: 4 * 60 * 60 * 1000 },
-  { key: 'baseball_mlb',           label: 'MLB',     window: 4 * 60 * 60 * 1000 },
-];
+const SPORT_META = {
+  'mma_mixed_martial_arts': { label: 'UFC/MMA', window: 3 * 60 * 60 * 1000 },
+  'icehockey_nhl':          { label: 'NHL',     window: 4 * 60 * 60 * 1000 },
+  'basketball_nba':         { label: 'NBA',     window: 3 * 60 * 60 * 1000 },
+  'americanfootball_nfl':   { label: 'NFL',     window: 4 * 60 * 60 * 1000 },
+  'baseball_mlb':           { label: 'MLB',     window: 4 * 60 * 60 * 1000 },
+};
+
+// Client heartbeat — browser pings this while watching a non-UFC sport
+// If no ping for 2 min, sport is dropped from active recording
+const clientWatching = new Map(); // sportKey → lastHeartbeatMs
+app.post('/api/recorder/watch', (req, res) => {
+  const { sport } = req.body;
+  if (sport && sport !== 'mma_mixed_martial_arts') {
+    clientWatching.set(sport, Date.now());
+  }
+  res.json({ ok: true });
+});
 
 const recorderState = {
   activeFights: new Map(), // id → { meta, oddsHistory, lastOdds }
@@ -545,31 +558,31 @@ function recSave(id) {
   );
 }
 
-async function recPollSport(sport) {
+async function recPollSport(sportKey, meta) {
   try {
-    const url = `${BASE_URL}/sports/${sport.key}/odds/?apiKey=${ODDS_API_KEY}&regions=us&markets=h2h&bookmakers=draftkings&oddsFormat=american`;
+    const url = `${BASE_URL}/sports/${sportKey}/odds/?apiKey=${ODDS_API_KEY}&regions=us&markets=h2h&bookmakers=draftkings&oddsFormat=american`;
     const { data, headers } = await fetchJson(url);
     updateOddsCredits(headers);
     const fights = Array.isArray(data) ? data : [];
     const currentIds = new Set();
 
     for (const fight of fights) {
-      if (!recIsLive(fight, sport.window)) continue;
+      if (!recIsLive(fight, meta.window)) continue;
       const odds = recExtractOdds(fight);
       if (!odds) continue;
-      const id = recFightId(sport.key, fight);
+      const id = recFightId(sportKey, fight);
       currentIds.add(id);
 
       if (!recorderState.activeFights.has(id)) {
-        console.log(`REC START [${sport.label}] ${fight.home_team} vs ${fight.away_team}`);
+        console.log(`REC START [${meta.label}] ${fight.home_team} vs ${fight.away_team}`);
         recorderState.activeFights.set(id, {
-          meta: { sport: sport.key, label: sport.label, fighter1: fight.home_team, fighter2: fight.away_team, startTime: new Date().toISOString() },
+          meta: { sport: sportKey, label: meta.label, fighter1: fight.home_team, fighter2: fight.away_team, startTime: new Date().toISOString() },
           oddsHistory: [],
           lastOdds: null,
         });
         sendAlert(
-          `🔴 BET BOT: Recording ${fight.home_team} vs ${fight.away_team} [${sport.label}]`,
-          `Live game detected.\n\n${fight.home_team} vs ${fight.away_team}\n${sport.label} · Started: ${new Date().toLocaleString()}\n\nhttps://ufc-dashboard-production-e03d.up.railway.app`
+          `🔴 BET BOT: Recording ${fight.home_team} vs ${fight.away_team} [${meta.label}]`,
+          `Live game detected.\n\n${fight.home_team} vs ${fight.away_team}\n${meta.label} · Started: ${new Date().toLocaleString()}\n\nhttps://ufc-dashboard-production-e03d.up.railway.app`
         );
       }
 
@@ -581,30 +594,45 @@ async function recPollSport(sport) {
       }
     }
 
-    // Save games that dropped out of live feed for this sport
     for (const [id, record] of recorderState.activeFights) {
-      if (record.meta.sport === sport.key && !currentIds.has(id)) {
+      if (record.meta.sport === sportKey && !currentIds.has(id)) {
         recSave(id);
         recorderState.activeFights.delete(id);
       }
     }
 
-    return currentIds.size; // number of live games found
+    return currentIds.size;
   } catch (e) {
-    console.error(`Recorder [${sport.label}] error:`, e.message);
+    console.error(`Recorder [${meta.label}] error:`, e.message);
     return 0;
   }
 }
 
 async function recPoll() {
   recorderState.lastPoll = new Date().toISOString();
-  const counts = await Promise.all(RECORDER_SPORTS.map(s => recPollSport(s)));
-  const totalLive = counts.reduce((a, b) => a + b, 0);
-  setTimeout(recPoll, totalLive > 0 ? POLL_LIVE_MS : POLL_IDLE_MS);
+
+  // Always poll UFC
+  const ufcMeta = SPORT_META['mma_mixed_martial_arts'];
+  const ufcLive = await recPollSport('mma_mixed_martial_arts', ufcMeta);
+
+  // Poll other sports only if browser has sent a heartbeat within last 2 min
+  const now = Date.now();
+  const activeClientSports = [...clientWatching.entries()]
+    .filter(([, ts]) => now - ts < 120000)
+    .map(([key]) => key);
+
+  const otherCounts = await Promise.all(
+    activeClientSports.map(key => recPollSport(key, SPORT_META[key] || { label: key, window: 4*60*60*1000 }))
+  );
+  const totalLive = ufcLive + otherCounts.reduce((a, b) => a + b, 0);
+
+  // Next poll: UFC drives the cadence
+  const delay = ufcLive > 0 ? UFC_POLL_MS : activeClientSports.length > 0 ? OTHER_POLL_MS : IDLE_POLL_MS;
+  setTimeout(recPoll, delay);
 }
 
 app.listen(PORT, () => {
   console.log(`Bet Bot running at http://localhost:${PORT}`);
   recPoll();
-  console.log(`Recorder started — watching ${RECORDER_SPORTS.map(s => s.label).join(', ')}`);
+  console.log('Recorder started — UFC always-on, other sports when browser is watching');
 });
