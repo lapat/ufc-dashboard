@@ -6,7 +6,7 @@ const path = require('path');
 const Anthropic = require('@anthropic-ai/sdk');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const ODDS_API_KEY = process.env.ODDS_API_KEY;
 const BASE_URL = 'https://api.the-odds-api.com/v4';
 const HISTORICAL_DIR = path.join(__dirname, 'historical_data');
