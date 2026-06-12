@@ -485,6 +485,42 @@ app.get('/api/recorder/status', (req, res) => {
   });
 });
 
+// Test endpoint — simulates a full UFC fight recording cycle to verify pipeline
+app.post('/api/recorder/test', async (req, res) => {
+  const testId = `mma__testfighter_vs_testopponent_${new Date().toISOString().slice(0,10)}`;
+  const f1 = 'Test Fighter A', f2 = 'Test Fighter B';
+
+  // 1. Inject a fake fight into the recorder
+  recorderState.activeFights.set(testId, {
+    meta: { sport: 'mma_mixed_martial_arts', label: 'UFC/MMA (TEST)', fighter1: f1, fighter2: f2, startTime: new Date().toISOString() },
+    oddsHistory: [
+      { timestamp: new Date().toISOString(), fighter1: { name: f1, numericOdds: 200 }, fighter2: { name: f2, numericOdds: -250 } },
+      { timestamp: new Date().toISOString(), fighter1: { name: f1, numericOdds: 150 }, fighter2: { name: f2, numericOdds: -180 } },
+      { timestamp: new Date().toISOString(), fighter1: { name: f1, numericOdds: -110 }, fighter2: { name: f2, numericOdds: -110 } },
+    ],
+    lastOdds: { timestamp: new Date().toISOString(), fighter1: { name: f1, numericOdds: -110 }, fighter2: { name: f2, numericOdds: -110 } },
+  });
+
+  // 2. Fire the "fight started" email
+  await sendAlert(
+    `🔴 BET BOT TEST: Recording ${f1} vs ${f2} [UFC/MMA]`,
+    `TEST — this is what a real fight-start alert looks like.\n\n${f1} vs ${f2}\nStarted: ${new Date().toLocaleString()}\n3 data points captured (test)\n\nhttps://ufc-dashboard-production-e03d.up.railway.app\n\nIf you got this email, fight-start alerts are working.`
+  );
+
+  // 3. After 10s, "end" the fight — fires the save + completion email
+  setTimeout(() => {
+    recSave(testId);
+    recorderState.activeFights.delete(testId);
+  }, 10000);
+
+  res.json({
+    ok: true,
+    message: 'Test fight injected. Dashboard recording indicator should be active now. Fight will "end" in 10 seconds and save to disk. Check email for alerts.',
+    testId,
+    emailConfigured: !!mailer,
+  });
+});
+
 // ── Recorder ────────────────────────────────────────────────────────────────
 // UFC: always-on at 3s — events are rare (~20 hrs/mo) so very cheap
 // Other sports: client-driven — browser sends heartbeat while watching, stops when tab closes

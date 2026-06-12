@@ -170,6 +170,7 @@
 <div id="topbar">
   <h1>⚡ Bet Bot</h1>
   <div id="rec-status"><div id="rec-dot" class="idle"></div><span id="rec-label">—</span></div>
+  <button id="rec-test-btn" title="Test the recording pipeline" style="font-size:0.55rem;padding:3px 8px;background:#1a1a1a;border:1px solid #2a2a2a;color:#444;border-radius:3px;cursor:pointer;white-space:nowrap">test rec</button>
   <div id="topbar-status">Loading...</div>
 </div>
 
@@ -874,6 +875,22 @@ async function pollRecorder(){
   }catch{}
 }
 pollRecorder(); setInterval(pollRecorder,5000);
+
+document.getElementById('rec-test-btn').addEventListener('click', async ()=>{
+  const btn=document.getElementById('rec-test-btn');
+  btn.textContent='testing...'; btn.disabled=true;
+  try{
+    const d=await fetch('/api/recorder/test',{method:'POST'}).then(r=>r.json());
+    btn.textContent='✓ test fired';
+    btn.style.color='#69db7c';
+    const emailNote = d.emailConfigured ? ' + email sent' : ' (no email — set GMAIL_USER + GMAIL_APP_PASSWORD)';
+    console.log('Recorder test:', d.message + emailNote);
+    setTimeout(()=>{ btn.textContent='test rec'; btn.style.color=''; btn.disabled=false; },12000);
+  }catch(e){
+    btn.textContent='failed'; btn.style.color='#e74c3c';
+    setTimeout(()=>{ btn.textContent='test rec'; btn.style.color=''; btn.disabled=false; },3000);
+  }
+});
 
 // Heartbeat — tells server to keep recording the current non-UFC sport
 let _heartbeatTimer=null;
