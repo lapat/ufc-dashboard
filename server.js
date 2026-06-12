@@ -10,6 +10,8 @@ const PORT = process.env.PORT || 3000;
 const ODDS_API_KEY = process.env.ODDS_API_KEY;
 const BASE_URL = 'https://api.the-odds-api.com/v4';
 const HISTORICAL_DIR = path.join(__dirname, 'historical_data');
+const API_CACHE_DIR = path.join(__dirname, 'historical_data', 'api_cache');
+if (!fs.existsSync(API_CACHE_DIR)) fs.mkdirSync(API_CACHE_DIR, { recursive: true });
 
 const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 const TOKEN_WARN = parseInt(process.env.ANTHROPIC_TOKEN_WARN_THRESHOLD || '500000');
@@ -290,12 +292,18 @@ app.get('/api/sport/:key', async (req, res) => {
 
 // Fetch historical odds from The Odds API for a specific past date (costs 10 credits each)
 async function fetchHistoricalOdds(dateISO) {
+  // Check disk cache first — free, no API credits
+  const cacheFile = path.join(API_CACHE_DIR, `${dateISO}.json`);
+  if (fs.existsSync(cacheFile)) {
+    console.log(`Historical cache hit: ${dateISO}`);
+    return JSON.parse(fs.readFileSync(cacheFile, 'utf8'));
+  }
   const url = `${BASE_URL}/historical/sports/mma_mixed_martial_arts/odds/?apiKey=${ODDS_API_KEY}&date=${dateISO}&regions=us&markets=h2h&bookmakers=draftkings&oddsFormat=american`;
   const { data, headers } = await fetchJson(url);
   updateOddsCredits(headers);
   console.log(`Historical API (10 credits) — used: ${_oddsApiCreditsUsed} | remaining: ${_oddsApiCreditsRemaining}`);
   if (!Array.isArray(data?.data)) return [];
-  return data.data.filter(f => f.bookmakers?.length > 0).map(f => {
+  const results = data.data.filter(f => f.bookmakers?.length > 0).map(f => {
     const outcomes = f.bookmakers[0].markets[0]?.outcomes || [];
     return {
       fight: `${f.home_team} vs ${f.away_team}`,
@@ -304,6 +312,9 @@ async function fetchHistoricalOdds(dateISO) {
       source: 'historical_api',
     };
   });
+  // Save to disk so we never pay for this date again
+  if (results.length > 0) fs.writeFileSync(cacheFile, JSON.stringify(results, null, 2));
+  return results;
 }
 
 function updateOddsCredits(headers) {
