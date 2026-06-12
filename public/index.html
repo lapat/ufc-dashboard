@@ -59,6 +59,7 @@
     @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
     #nw-live-dot.offline{background:#333;animation:none}
     #nw-matchup{display:grid;grid-template-columns:1fr auto auto auto 1fr;align-items:center;gap:12px;margin-bottom:14px}
+    #nw-mid{display:flex;align-items:center;justify-content:center}
     .nw-name{font-size:1.15rem;font-weight:700;line-height:1.2}
     .nw-name.r{text-align:right}
     .nw-odds{font-size:1.5rem;font-weight:700;padding:6px 14px;border-radius:5px;min-width:82px;text-align:center}
@@ -215,7 +216,13 @@
     <div id="nw-matchup">
       <div class="nw-name" id="nw-f1">—</div>
       <div class="nw-odds fav" id="nw-o1">—</div>
-      <div class="nw-vs">VS</div>
+      <div id="nw-mid">
+        <span class="nw-vs" id="nw-vs-text">VS</span>
+        <div id="nw-draw-display" style="display:none;flex-direction:column;align-items:center;gap:3px">
+          <span class="nw-odds even" id="nw-o-draw" style="font-size:1.2rem;padding:4px 10px;min-width:70px">—</span>
+          <span style="font-size:0.55rem;color:#666;letter-spacing:1.5px">DRAW</span>
+        </div>
+      </div>
       <div class="nw-odds dog" id="nw-o2">—</div>
       <div class="nw-name r" id="nw-f2">—</div>
     </div>
@@ -410,7 +417,7 @@ function graphInit(){
     data:{labels:[],datasets:[
       {label:'',data:[],borderColor:'#ff6b6b',backgroundColor:'#ff6b6b0a',borderWidth:2,pointRadius:0,tension:0.3},
       {label:'',data:[],borderColor:'#69db7c',backgroundColor:'#69db7c0a',borderWidth:2,pointRadius:0,tension:0.3},
-      {label:'Draw',data:[],borderColor:'#e8b84b',backgroundColor:'#e8b84b0a',borderWidth:1.5,pointRadius:0,tension:0.3,borderDash:[5,3],hidden:true},
+      {label:'Draw',data:[],borderColor:'#74c0fc',backgroundColor:'#74c0fc0a',borderWidth:1.5,pointRadius:0,tension:0.3,borderDash:[5,3],spanGaps:true,hidden:true},
     ]},
     options:{
       animation:false,responsive:true,maintainAspectRatio:true,
@@ -458,7 +465,7 @@ function graphSelect(fk,f1Name,f2Name){
 
 function graphLoadPoints(fk, points){
   if(!graphHist[fk]) return;
-  graphHist[fk].labels=[]; graphHist[fk].f1=[]; graphHist[fk].f2=[]; graphHist[fk].crossovers=[];
+  graphHist[fk].labels=[]; graphHist[fk].f1=[]; graphHist[fk].f2=[]; graphHist[fk].draw=[]; graphHist[fk].crossovers=[];
   points.forEach(pt => {
     const ts = new Date(pt.timestamp).toLocaleTimeString('en-US',{hour12:false,hour:'2-digit',minute:'2-digit',second:'2-digit'});
     graphAddPoint(fk, ts, pt.fighter1.name, pt.fighter1.numericOdds, pt.fighter2.name, pt.fighter2.numericOdds);
@@ -841,10 +848,17 @@ let pollTimer=null;
 let activeSport='mma_mixed_martial_arts';
 let activeSportTitle='UFC';
 
-function updateNowWatchingOdds(o1,o2){
+function updateNowWatchingOdds(o1,o2,drawOdds){
   const o1el=document.getElementById('nw-o1'),o2el=document.getElementById('nw-o2');
   o1el.textContent=fmtO(o1); o1el.className='nw-odds '+odsCls(o1);
   o2el.textContent=fmtO(o2); o2el.className='nw-odds '+odsCls(o2);
+  const vsEl=document.getElementById('nw-vs-text'),drawEl=document.getElementById('nw-draw-display'),drawOEl=document.getElementById('nw-o-draw');
+  if(drawOdds!=null){
+    vsEl.style.display='none'; drawEl.style.display='flex';
+    drawOEl.textContent=fmtO(drawOdds);
+  } else {
+    vsEl.style.display=''; drawEl.style.display='none';
+  }
 }
 
 function updateFightUI(f1Name,f2Name,o1,o2,live,sport,switchGames){
@@ -903,6 +917,7 @@ async function selectGame(game){
   const live=isLive(game.commence_time);
 
   updateFightUI(a.name,b.name,a.price,b.price,live,game.sport_title||activeSportTitle,currentGames);
+  updateNowWatchingOdds(a.price,b.price,draw?draw.price:null);
   document.getElementById('graph-fight-lbl').textContent=`${a.name} vs ${b.name}${draw?' (draw available)':''}`;
   graphSelect(fk,a.name,b.name);
 
@@ -953,7 +968,7 @@ async function pollOdds(){
     if(match){
       const {a,b,draw}=extractOutcomes(match);
       tracker.updateOdds(a.price,b.price,draw?draw.price:null);
-      updateNowWatchingOdds(a.price,b.price);
+      updateNowWatchingOdds(a.price,b.price,draw?draw.price:null);
       updateFighterButtons();
       feedOddsBuffer(a.price, b.price);
       if(!oddsLocked){
