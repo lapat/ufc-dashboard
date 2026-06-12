@@ -10,206 +10,205 @@
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
-    body{background:#0a0a0a;color:#ddd;font-family:'Helvetica Neue',sans-serif;font-size:15px}
+    body{background:#0a0a0a;color:#ddd;font-family:'Helvetica Neue',sans-serif;font-size:16px}
 
     /* ── topbar ── */
     #topbar{display:flex;align-items:center;background:#111;border-bottom:1px solid #1e1e1e;padding:0 24px;position:sticky;top:0;z-index:50;gap:16px}
-    #topbar h1{color:#e8b84b;font-size:0.9rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:13px 0;white-space:nowrap}
-    #topbar-status{margin-left:auto;font-size:0.65rem;color:#333;white-space:nowrap}
-    #rec-status{font-size:0.62rem;display:flex;align-items:center;gap:6px;white-space:nowrap}
-    #rec-dot{width:7px;height:7px;border-radius:50%;background:#333;flex-shrink:0}
+    #topbar h1{color:#e8b84b;font-size:1.1rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:13px 0;white-space:nowrap}
+    #topbar-status{margin-left:auto;font-size:0.82rem;color:#444;white-space:nowrap}
+    #rec-status{font-size:0.82rem;display:flex;align-items:center;gap:6px;white-space:nowrap}
+    #rec-dot{width:8px;height:8px;border-radius:50%;background:#333;flex-shrink:0}
     #rec-dot.live{background:#e74c3c;animation:pulse 1.2s infinite}
     #rec-dot.idle{background:#2a2a2a}
     @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
 
     /* ── sport pills ── */
-    #sport-strip{padding:12px 24px 0;display:flex;gap:6px;flex-wrap:wrap;max-width:980px;margin:0 auto}
-    .sport-pill{background:#141414;border:1px solid #1e1e1e;border-radius:14px;color:#444;font-size:0.68rem;padding:5px 12px;cursor:pointer;transition:all .15s;text-transform:uppercase;letter-spacing:1px;white-space:nowrap;display:inline-flex;align-items:center;gap:5px}
-    .sport-pill:hover{border-color:#333;color:#888}
+    #sport-strip{padding:12px 24px 0;display:flex;gap:7px;flex-wrap:wrap;max-width:980px;margin:0 auto}
+    .sport-pill{background:#141414;border:1px solid #1e1e1e;border-radius:14px;color:#555;font-size:0.88rem;padding:7px 16px;cursor:pointer;transition:all .15s;text-transform:uppercase;letter-spacing:1px;white-space:nowrap;display:inline-flex;align-items:center;gap:6px}
+    .sport-pill:hover{border-color:#333;color:#999}
     .sport-pill.active{background:#1c1800;border-color:#e8b84b;color:#e8b84b}
     .sport-pill.has-live{border-color:#3a1a1a;color:#c0392b}
     .sport-pill.has-live.active{border-color:#e74c3c;color:#e74c3c;background:#1a0808}
-    .pill-live-dot{width:5px;height:5px;border-radius:50%;background:#e74c3c;animation:pulse 1.2s infinite;display:none}
+    .pill-live-dot{width:6px;height:6px;border-radius:50%;background:#e74c3c;animation:pulse 1.2s infinite;display:none}
     .sport-pill.has-live .pill-live-dot{display:inline-block}
-    #sport-loading{color:#333;font-size:0.72rem;padding:12px 24px}
+    #sport-loading{color:#444;font-size:0.88rem;padding:12px 24px}
 
     /* ── main content ── */
     #main{padding:16px 24px;max-width:980px;margin:0 auto}
 
     /* ── game list (before selection) ── */
-    .section-label{font-size:0.58rem;color:#3a3a3a;text-transform:uppercase;letter-spacing:2px;margin:14px 0 6px}
+    .section-label{font-size:0.75rem;color:#3a3a3a;text-transform:uppercase;letter-spacing:2px;margin:14px 0 6px}
     .game-card{background:#141414;border:1px solid #1e1e1e;border-radius:6px;padding:11px 15px;margin-bottom:5px;cursor:pointer;transition:border-color .2s,background .2s}
     .game-card:hover{border-color:#333;background:#161616}
     .game-card.live-card{border-color:#e8b84b33;background:#181400}
-    .game-ev{font-size:0.58rem;color:#3a3a3a;text-transform:uppercase;letter-spacing:1px;margin-bottom:7px}
+    .game-ev{font-size:0.75rem;color:#3a3a3a;text-transform:uppercase;letter-spacing:1px;margin-bottom:7px}
     .game-card.live-card .game-ev{color:#e8b84b88}
     .matchup{display:grid;grid-template-columns:1fr auto auto auto 1fr;align-items:center;gap:10px}
     .fn{font-size:1rem;font-weight:600}
     .fn.r{text-align:right}
     .op{font-size:1.05rem;font-weight:700;padding:4px 10px;border-radius:4px;min-width:68px;text-align:center}
     .fav{color:#ff6b6b;background:#1f0e0e}.dog{color:#69db7c;background:#0c1c0e}.even{color:#74c0fc;background:#0d1525}
-    .vs{color:#2a2a2a;font-size:0.68rem;font-weight:700}
-    .game-time{font-size:0.6rem;color:#2e2e2e;margin-top:5px;text-align:right}
-    #no-games{color:#2a2a2a;text-align:center;padding:40px 0;font-size:0.82rem;line-height:2}
+    .vs{color:#2a2a2a;font-size:0.8rem;font-weight:700}
+    .game-time{font-size:0.75rem;color:#2e2e2e;margin-top:5px;text-align:right}
+    #no-games{color:#2a2a2a;text-align:center;padding:40px 0;font-size:0.9rem;line-height:2}
 
     /* ── NOW WATCHING card ── */
     #now-watching{display:none;background:#111;border:1px solid #e8b84b33;border-radius:10px;padding:16px 20px;margin-bottom:16px;position:relative}
-    #nw-sport-badge{font-size:0.6rem;color:#e8b84b88;text-transform:uppercase;letter-spacing:2px;margin-bottom:10px;display:flex;align-items:center;gap:8px}
-    #nw-live-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#e8b84b;animation:blink 1.4s infinite}
+    #nw-sport-badge{font-size:0.78rem;color:#e8b84b88;text-transform:uppercase;letter-spacing:2px;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+    #nw-live-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#e8b84b;animation:blink 1.4s infinite}
     @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
     #nw-live-dot.offline{background:#333;animation:none}
     #nw-matchup{display:grid;grid-template-columns:1fr auto auto auto 1fr;align-items:center;gap:12px;margin-bottom:14px}
     #nw-mid{display:flex;align-items:center;justify-content:center}
-    .nw-name{font-size:1.15rem;font-weight:700;line-height:1.2}
+    .nw-name{font-size:1.2rem;font-weight:700;line-height:1.2}
     .nw-name.r{text-align:right}
-    .nw-odds{font-size:1.5rem;font-weight:700;padding:6px 14px;border-radius:5px;min-width:82px;text-align:center}
-    .nw-vs{color:#333;font-size:0.8rem;font-weight:700}
+    .nw-odds{font-size:1.6rem;font-weight:700;padding:6px 14px;border-radius:5px;min-width:88px;text-align:center}
+    .nw-vs{color:#444;font-size:0.95rem;font-weight:700}
     #nw-bottom{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-    #nw-switch-label{font-size:0.62rem;color:#3a3a3a;text-transform:uppercase;letter-spacing:1px;white-space:nowrap}
-    #nw-switch{background:#0d0d0d;border:1px solid #222;border-radius:4px;color:#666;padding:5px 8px;font-size:0.72rem;font-family:inherit;outline:none;flex:1;max-width:320px;cursor:pointer}
+    #nw-switch-label{font-size:0.8rem;color:#3a3a3a;text-transform:uppercase;letter-spacing:1px;white-space:nowrap}
+    #nw-switch{background:#0d0d0d;border:1px solid #222;border-radius:4px;color:#777;padding:6px 10px;font-size:0.88rem;font-family:inherit;outline:none;flex:1;max-width:320px;cursor:pointer}
     #nw-switch:focus{border-color:#e8b84b33}
-    #nw-dismiss{position:absolute;top:12px;right:14px;background:none;border:none;color:#333;font-size:1rem;cursor:pointer;line-height:1}
+    #nw-dismiss{position:absolute;top:12px;right:14px;background:none;border:none;color:#444;font-size:1.1rem;cursor:pointer;line-height:1}
     #nw-dismiss:hover{color:#888}
-    #nw-backfill-status{font-size:0.62rem;color:#555;margin-left:auto;white-space:nowrap}
+    #nw-backfill-status{font-size:0.8rem;color:#555;margin-left:auto;white-space:nowrap}
 
     /* ── graph ── */
     .graph-panel{background:#0e0e0e;border:1px solid #1a1a1a;border-radius:8px;padding:14px 18px;margin-bottom:14px}
     .graph-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px}
-    .graph-title{font-size:0.65rem;color:#444;text-transform:uppercase;letter-spacing:1px}
-    .graph-fight{font-size:0.75rem;color:#e8b84b;font-weight:600}
-    .graph-empty{text-align:center;color:#222;padding:48px 0;font-size:0.78rem}
-    .xover-badge{background:#e8b84b18;color:#e8b84b;border:1px solid #e8b84b33;border-radius:3px;font-size:0.6rem;padding:2px 7px;letter-spacing:1px}
+    .graph-title{font-size:0.82rem;color:#444;text-transform:uppercase;letter-spacing:1px}
+    .graph-fight{font-size:0.9rem;color:#e8b84b;font-weight:600}
+    .graph-empty{text-align:center;color:#222;padding:48px 0;font-size:0.9rem}
+    .xover-badge{background:#e8b84b18;color:#e8b84b;border:1px solid #e8b84b33;border-radius:3px;font-size:0.76rem;padding:2px 7px;letter-spacing:1px}
     canvas{max-height:220px;cursor:grab}
     canvas:active{cursor:grabbing}
-    .sim-toggle{background:none;border:1px solid #2a2a2a;color:#444;border-radius:4px;padding:4px 10px;font-size:0.65rem;cursor:pointer;letter-spacing:1px}
+    .sim-toggle{background:none;border:1px solid #2a2a2a;color:#444;border-radius:4px;padding:5px 12px;font-size:0.82rem;cursor:pointer;letter-spacing:1px}
     .sim-toggle:hover{border-color:#444;color:#777}
 
     /* ── sim bar ── */
     #sim-bar{margin-top:10px;padding:10px 14px;background:#0b0b0b;border:1px solid #191919;border-radius:6px;display:none;gap:8px;align-items:center;flex-wrap:wrap}
     #sim-bar.open{display:flex}
-    .sim-btn{background:#1a1a1a;border:1px solid #2a2a2a;color:#777;border-radius:4px;padding:5px 10px;font-size:0.7rem;cursor:pointer;letter-spacing:1px;transition:all .15s}
+    .sim-btn{background:#1a1a1a;border:1px solid #2a2a2a;color:#777;border-radius:4px;padding:6px 12px;font-size:0.84rem;cursor:pointer;letter-spacing:1px;transition:all .15s}
     .sim-btn:hover{border-color:#444;color:#ccc}
     .sim-btn.active-spd{background:#1c1800;border-color:#e8b84b55;color:#e8b84b}
     .sim-btn.play{background:#0d2a0d;border-color:#69db7c44;color:#69db7c}
     .sim-btn.pause-b{background:#1a1800;border-color:#e8b84b44;color:#e8b84b}
-    .sim-sel{background:#111;border:1px solid #222;border-radius:4px;color:#ddd;padding:5px 8px;font-size:0.7rem;max-width:260px;font-family:inherit}
+    .sim-sel{background:#111;border:1px solid #222;border-radius:4px;color:#ddd;padding:6px 10px;font-size:0.84rem;max-width:260px;font-family:inherit}
     .sim-prog-wrap{flex:1;min-width:80px}
     .sim-prog-bg{background:#1a1a1a;border-radius:2px;height:3px}
     .sim-prog-fill{height:3px;border-radius:2px;background:#e8b84b;width:0%;transition:width .1s}
-    .sim-lbl{font-size:0.6rem;color:#3a3a3a;margin-top:3px}
+    .sim-lbl{font-size:0.76rem;color:#3a3a3a;margin-top:3px}
 
     /* ── multi-bet tracker ── */
     .tracker-panel{background:#0e0e0e;border:1px solid #1a1a1a;border-radius:8px;padding:14px 18px;margin-bottom:14px}
     .tracker-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:11px}
-    .tracker-title{font-size:0.65rem;color:#444;text-transform:uppercase;letter-spacing:1px}
-    .clear-btn{background:none;border:none;color:#2a2a2a;font-size:0.62rem;cursor:pointer;letter-spacing:1px;text-transform:uppercase}
+    .tracker-title{font-size:0.82rem;color:#444;text-transform:uppercase;letter-spacing:1px}
+    .clear-btn{background:none;border:none;color:#2a2a2a;font-size:0.8rem;cursor:pointer;letter-spacing:1px;text-transform:uppercase}
     .clear-btn:hover{color:#ff6b6b}
     .bet-add-row{display:flex;gap:8px;align-items:flex-end;flex-wrap:wrap;margin-bottom:11px}
     .bet-field{display:flex;flex-direction:column;gap:3px}
-    .bet-lbl{font-size:0.56rem;color:#333;text-transform:uppercase;letter-spacing:1px}
-    .bet-sel,.bet-inp{background:#111;border:1px solid #1a1a1a;border-radius:4px;color:#ddd;padding:7px 10px;font-size:0.88rem;font-family:inherit;outline:none}
+    .bet-lbl{font-size:0.72rem;color:#444;text-transform:uppercase;letter-spacing:1px}
+    .bet-sel,.bet-inp{background:#111;border:1px solid #1a1a1a;border-radius:4px;color:#ddd;padding:7px 10px;font-size:0.92rem;font-family:inherit;outline:none}
     .bet-sel{min-width:170px}
     .bet-inp{width:96px}
     .bet-sel:focus,.bet-inp:focus{border-color:#e8b84b33}
-    .bet-add-btn{background:#e8b84b1a;border:1px solid #e8b84b44;color:#e8b84b;border-radius:4px;padding:8px 18px;font-size:0.8rem;font-weight:700;cursor:pointer;letter-spacing:1px;text-transform:uppercase;white-space:nowrap}
+    .bet-add-btn{background:#e8b84b1a;border:1px solid #e8b84b44;color:#e8b84b;border-radius:4px;padding:8px 18px;font-size:0.88rem;font-weight:700;cursor:pointer;letter-spacing:1px;text-transform:uppercase;white-space:nowrap}
     .bet-add-btn:hover{background:#e8b84b2a}
     .bet-fighters{display:flex;gap:6px;margin-bottom:10px}
-    .qf-btn{flex:1;padding:9px 12px;background:#111;border:1px solid #1e1e1e;border-radius:5px;color:#444;font-size:0.78rem;font-weight:600;cursor:pointer;transition:all .15s;text-align:left;font-family:inherit;line-height:1.3}
+    .qf-btn{flex:1;padding:10px 12px;background:#111;border:1px solid #1e1e1e;border-radius:5px;color:#555;font-size:0.88rem;font-weight:600;cursor:pointer;transition:all .15s;text-align:left;font-family:inherit;line-height:1.3}
     .qf-btn:hover{border-color:#333;color:#888}
     .qf-btn.qf-selected{background:#1c1800;border-color:#e8b84b;color:#e8b84b}
-    .qf-odds{float:right;font-size:0.72rem;font-weight:400;opacity:0.6}
+    .qf-odds{float:right;font-size:0.82rem;font-weight:400;opacity:0.6}
     .qf-btn.qf-selected .qf-odds{opacity:0.9}
     .stake-presets{display:flex;gap:4px;margin-bottom:5px;flex-wrap:wrap}
-    .preset-btn{background:#111;border:1px solid #1e1e1e;border-radius:4px;color:#444;font-size:0.7rem;padding:4px 9px;cursor:pointer;transition:all .15s;font-family:inherit}
+    .preset-btn{background:#111;border:1px solid #1e1e1e;border-radius:4px;color:#555;font-size:0.82rem;padding:5px 11px;cursor:pointer;transition:all .15s;font-family:inherit}
     .preset-btn:hover{border-color:#333;color:#888}
     .preset-btn.active-preset{background:#1c1800;border-color:#e8b84b44;color:#e8b84b}
     .bet-list{display:flex;flex-direction:column;gap:4px;margin-bottom:10px}
-    .bet-row{display:flex;align-items:center;gap:8px;padding:7px 11px;background:#111;border:1px solid #181818;border-radius:4px;font-size:0.82rem}
-    .bet-num{color:#333;font-size:0.62rem;min-width:16px}
+    .bet-row{display:flex;align-items:center;gap:8px;padding:7px 11px;background:#111;border:1px solid #181818;border-radius:4px;font-size:0.88rem}
+    .bet-num{color:#444;font-size:0.78rem;min-width:16px}
     .bet-fighter{flex:1;color:#aaa;font-weight:600}
     .bet-stake{color:#69db7c}
     .bet-odds-lbl{color:#e8b84b}
-    .bet-del{background:none;border:none;color:#2a2a2a;cursor:pointer;font-size:0.78rem;padding:0 2px}
+    .bet-del{background:none;border:none;color:#333;cursor:pointer;font-size:0.88rem;padding:0 2px}
     .bet-del:hover{color:#ff6b6b}
-    .bet-empty{color:#252525;font-size:0.72rem;padding:6px 0}
+    .bet-empty{color:#333;font-size:0.84rem;padding:6px 0}
     .pos-divider{height:1px;background:#181818;margin:10px 0}
     .pos-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
     .pos-card{padding:8px 12px;border-radius:5px;border:1px solid}
     .pc-win{background:#0d2a0d;border-color:#69db7c2a}
     .pc-loss{background:#1f0e0e;border-color:#ff6b6b2a}
     .pc-zero{background:#0f0f0f;border-color:#1e1e1e}
-    .pos-lbl{font-size:0.6rem;color:#444;text-transform:uppercase;letter-spacing:1px;margin-bottom:3px}
-    .pos-val{font-size:1.2rem;font-weight:700}
+    .pos-lbl{font-size:0.75rem;color:#444;text-transform:uppercase;letter-spacing:1px;margin-bottom:3px}
+    .pos-val{font-size:1.25rem;font-weight:700}
     .pv-green{color:#69db7c}.pv-red{color:#ff6b6b}.pv-gray{color:#333}
-    .tracker-status{padding:10px 14px;border-radius:5px;text-align:center;font-size:0.84rem;font-weight:700;letter-spacing:1px;margin-bottom:7px}
+    .tracker-status{padding:10px 14px;border-radius:5px;text-align:center;font-size:0.9rem;font-weight:700;letter-spacing:1px;margin-bottom:7px}
     .s-winwin{background:#0d2a0d;border:1px solid #69db7c44;color:#69db7c;animation:pg 2s infinite}
     .s-hedge{background:#1a1500;border:1px solid #e8b84b44;color:#e8b84b}
     .s-partial{background:#111;border:1px solid #2a2a2a;color:#555}
     .s-empty{background:#0d0d0d;border:1px solid #181818;color:#252525}
     @keyframes pg{0%,100%{box-shadow:0 0 0 0 #69db7c33}50%{box-shadow:0 0 0 6px transparent}}
-    .suggestion{background:#0d0d0d;border:1px solid #1a1a1a;border-radius:4px;padding:8px 12px;font-size:0.8rem;color:#555;margin-top:6px}
-    .quick-hedge-btn{background:#e8b84b18;border:1px solid #e8b84b44;color:#e8b84b;border-radius:4px;padding:5px 12px;font-size:0.72rem;font-weight:700;cursor:pointer;letter-spacing:1px;font-family:inherit;margin-top:7px;display:block;width:100%;transition:background .15s}
+    .suggestion{background:#0d0d0d;border:1px solid #1a1a1a;border-radius:4px;padding:8px 12px;font-size:0.88rem;color:#555;margin-top:6px}
+    .quick-hedge-btn{background:#e8b84b18;border:1px solid #e8b84b44;color:#e8b84b;border-radius:4px;padding:6px 14px;font-size:0.84rem;font-weight:700;cursor:pointer;letter-spacing:1px;font-family:inherit;margin-top:7px;display:block;width:100%;transition:background .15s}
     .quick-hedge-btn:hover{background:#e8b84b2a}
-    .bet-clv{font-size:0.68rem;padding:1px 5px;border-radius:3px;font-weight:600}
+    .bet-clv{font-size:0.8rem;padding:1px 5px;border-radius:3px;font-weight:600}
     .clv-pos{color:#69db7c;background:#0d2a0d55}
     .clv-neg{color:#ff6b6b;background:#1f0e0e55}
     .clv-zero{color:#444}
-    .clv-avg{font-size:0.65rem;padding:2px 8px;border-radius:3px;font-weight:600;margin-left:6px}
-    #sharp-alert{display:none;font-size:0.72rem;padding:5px 10px;border-radius:4px;background:#1a1a0a;border:1px solid #e8b84b55;color:#e8b84b;letter-spacing:0.5px;margin-top:8px;animation:pg 2s infinite}
+    .clv-avg{font-size:0.8rem;padding:2px 8px;border-radius:3px;font-weight:600;margin-left:6px}
+    #sharp-alert{display:none;font-size:0.86rem;padding:6px 12px;border-radius:4px;background:#1a1a0a;border:1px solid #e8b84b55;color:#e8b84b;letter-spacing:0.5px;margin-top:8px;animation:pg 2s infinite}
     #sharp-alert.active{display:block}
     .suggestion strong{color:#e8b84b}
 
     /* ── chat ── */
-    #chat-fab{position:fixed;bottom:22px;right:22px;width:46px;height:46px;border-radius:50%;background:#e8b84b;border:none;cursor:pointer;font-size:1.15rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,.6);z-index:200;transition:transform .15s}
+    #chat-fab{position:fixed;bottom:22px;right:22px;width:48px;height:48px;border-radius:50%;background:#e8b84b;border:none;cursor:pointer;font-size:1.2rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,.6);z-index:200;transition:transform .15s}
     #chat-fab:hover{transform:scale(1.08)}
     #chat-panel{position:fixed;bottom:80px;right:22px;width:365px;max-height:520px;background:#141414;border:1px solid #222;border-radius:12px;display:none;flex-direction:column;box-shadow:0 8px 40px rgba(0,0,0,.7);z-index:199;overflow:hidden}
     #chat-panel.open{display:flex}
     #chat-hdr{padding:10px 13px;background:#111;border-bottom:1px solid #1e1e1e;display:flex;justify-content:space-between;align-items:center}
-    #chat-hdr-title{color:#e8b84b;font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:1px}
-    #chat-usage{font-size:0.6rem;color:#3a3a3a}
+    #chat-hdr-title{color:#e8b84b;font-size:0.86rem;font-weight:700;text-transform:uppercase;letter-spacing:1px}
+    #chat-usage{font-size:0.76rem;color:#3a3a3a}
     #chat-msgs{flex:1;overflow-y:auto;padding:10px;display:flex;flex-direction:column;gap:7px;min-height:140px}
-    .msg{font-size:0.78rem;line-height:1.6;padding:8px 10px;border-radius:7px;max-width:96%}
+    .msg{font-size:0.9rem;line-height:1.6;padding:8px 10px;border-radius:7px;max-width:96%}
     .msg.user{background:#1e1e1e;color:#aaa;align-self:flex-end;white-space:pre-wrap}
     .msg.assistant{background:#111f11;color:#9acc9a;align-self:flex-start;border:1px solid #1e2e1e}
-    .msg.thinking{color:#333;font-style:italic;background:none;border:none;padding:3px 0;font-size:0.7rem}
+    .msg.thinking{color:#333;font-style:italic;background:none;border:none;padding:3px 0;font-size:0.82rem}
     .msg.assistant p{margin-bottom:.45em}.msg.assistant p:last-child{margin-bottom:0}
     .msg.assistant strong{color:#e8b84b}
-    .msg.assistant table{border-collapse:collapse;width:100%;margin:5px 0;font-size:0.7rem}
+    .msg.assistant table{border-collapse:collapse;width:100%;margin:5px 0;font-size:0.82rem}
     .msg.assistant th{background:#1e2e1e;color:#e8b84b;padding:3px 6px;border:1px solid #1e2e1e;text-align:left}
     .msg.assistant td{padding:3px 6px;border:1px solid #182818}
     .msg.assistant tr:nth-child(even) td{background:#111e11}
-    .msg.assistant h1,.msg.assistant h2,.msg.assistant h3{color:#e8b84b;margin:5px 0 3px;font-size:0.8rem}
+    .msg.assistant h1,.msg.assistant h2,.msg.assistant h3{color:#e8b84b;margin:5px 0 3px;font-size:0.88rem}
     .msg.assistant ul,.msg.assistant ol{padding-left:1.2em;margin:3px 0}
-    .msg.assistant code{background:#0a160a;padding:1px 4px;border-radius:3px;font-size:0.7rem}
+    .msg.assistant code{background:#0a160a;padding:1px 4px;border-radius:3px;font-size:0.82rem}
     #chat-inp-row{display:flex;gap:6px;padding:8px 10px;border-top:1px solid #1e1e1e}
-    #chat-inp{flex:1;background:#0d0d0d;border:1px solid #1e1e1e;border-radius:4px;color:#ddd;padding:6px 9px;font-size:0.78rem;font-family:inherit;outline:none}
+    #chat-inp{flex:1;background:#0d0d0d;border:1px solid #1e1e1e;border-radius:4px;color:#ddd;padding:7px 10px;font-size:0.9rem;font-family:inherit;outline:none}
     #chat-inp:focus{border-color:#e8b84b33}
-    #chat-snd{background:#e8b84b;color:#000;border:none;border-radius:4px;padding:0 12px;font-weight:700;font-size:0.72rem;cursor:pointer}
+    #chat-snd{background:#e8b84b;color:#000;border:none;border-radius:4px;padding:0 14px;font-weight:700;font-size:0.86rem;cursor:pointer}
     #chat-snd:disabled{opacity:.3;cursor:default}
 
     /* ── footer ── */
     #footer{margin-top:32px;padding:10px 0;border-top:1px solid #222;display:flex;gap:16px;flex-wrap:wrap}
-    .fi{font-size:0.62rem;color:#555}.fi span{color:#888}
+    .fi{font-size:0.78rem;color:#555}.fi span{color:#888}
 
     /* ── mobile ── */
     @media(max-width:600px){
       #topbar{padding:0 12px;gap:8px}
-      #topbar h1{font-size:0.75rem;letter-spacing:1px}
+      #topbar h1{font-size:0.9rem;letter-spacing:1px}
       #rec-test-btn{display:none}
       #topbar-status{display:none}
-      #sport-strip{padding:8px 12px 0;gap:5px}
-      .sport-pill{font-size:0.75rem;padding:8px 14px}
+      #sport-strip{padding:8px 12px 0;gap:6px}
+      .sport-pill{font-size:0.9rem;padding:10px 18px}
       #main{padding:10px 12px}
-      .nw-name{font-size:0.85rem}
-      .nw-odds{font-size:1.15rem;padding:5px 8px;min-width:60px}
-      #nw-o-draw{font-size:1rem!important;min-width:55px!important;padding:4px 8px!important}
+      .nw-name{font-size:1rem}
+      .nw-odds{font-size:1.3rem;padding:5px 10px;min-width:68px}
+      #nw-o-draw{font-size:1.1rem!important;min-width:62px!important;padding:4px 8px!important}
       .bet-fighters{flex-wrap:wrap}
-      .qf-btn{padding:10px 12px;font-size:0.8rem}
-      .bt-row{flex-wrap:wrap;gap:6px}
-      .bet-sel{min-width:120px}
-      #bt-stake,#bt-odds{min-width:70px}
-      .pos-cards{flex-wrap:wrap}
-      .pos-card{min-width:80px}
+      .qf-btn{padding:12px 14px;font-size:0.9rem}
+      .bet-add-row{flex-wrap:wrap;gap:8px}
+      .bet-sel{min-width:140px}
+      #bt-stake,#bt-odds{min-width:80px}
+      .pos-grid{grid-template-columns:1fr 1fr}
       #chat-panel{width:calc(100vw - 16px);right:8px;left:8px}
     }
   </style>
@@ -219,8 +218,8 @@
 <div id="topbar">
   <h1>⚡ Bet Bot</h1>
   <div id="rec-status"><div id="rec-dot" class="idle"></div><span id="rec-label">—</span></div>
-  <button id="rec-test-btn" title="Test the recording pipeline" style="font-size:0.55rem;padding:3px 8px;background:#1a1a1a;border:1px solid #2a2a2a;color:#444;border-radius:3px;cursor:pointer;white-space:nowrap">test rec</button>
-  <a href="/library" style="font-size:0.6rem;padding:4px 10px;border:1px solid #222;border-radius:3px;color:#555;white-space:nowrap;text-decoration:none">📼 Library</a>
+  <button id="rec-test-btn" title="Test the recording pipeline" style="font-size:0.78rem;padding:5px 10px;background:#1a1a1a;border:1px solid #2a2a2a;color:#555;border-radius:3px;cursor:pointer;white-space:nowrap">test rec</button>
+  <a href="/library" style="font-size:0.82rem;padding:5px 12px;border:1px solid #222;border-radius:3px;color:#666;white-space:nowrap;text-decoration:none">📼 Library</a>
   <div id="topbar-status">Loading...</div>
 </div>
 
