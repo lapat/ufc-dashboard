@@ -234,9 +234,9 @@
         <div class="bet-lbl">Bet on</div>
         <select class="bet-sel" id="bt-side"><option value="">— select a game first —</option></select>
       </div>
-      <div class="bet-field"><div class="bet-lbl">Stake $</div><input class="bet-inp" id="bt-stake" type="number" placeholder="100" min="1"/></div>
-      <div class="bet-field"><div class="bet-lbl">At odds</div><input class="bet-inp" id="bt-odds" type="number" placeholder="+200"/></div>
-      <button class="bet-add-btn" id="add-bet-btn">+ Lock In</button>
+      <div class="bet-field"><div class="bet-lbl">Stake $</div><input class="bet-inp" id="bt-stake" type="number" value="100" min="1"/></div>
+      <div class="bet-field"><div class="bet-lbl">At odds</div><input class="bet-inp" id="bt-odds" type="number" placeholder="auto"/></div>
+      <button class="bet-add-btn" id="add-bet-btn">+ Lock In Bet</button>
     </div>
     <div class="bet-list" id="bet-list"><div class="bet-empty">No bets locked in yet.</div></div>
     <div class="pos-divider"></div>
@@ -305,7 +305,16 @@ class BetTracker {
     const minS=side==='f1'?(n1<0?-n1/(D-1):0):(n2<0?-n2/(D-1):0);
     const maxS=side==='f1'?(n2>0?n2:null):(n1>0?n1:null);
     const profitAfter=side==='f1'?n1+optS*(D-1):n2+optS*(D-1);
-    return {side,name,odds,optS,minS,maxS,canWinWin:maxS!==null&&minS<maxS,profitAfter};
+    const canWinWin=maxS!==null&&minS<maxS;
+    // After the optimal hedge, what does each side look like?
+    const afterOwnSide=profitAfter; // the side we're betting on
+    const afterOtherSide=side==='f1'?n2-optS:n1-optS; // the other side loses the stake
+    // Win-win threshold: minimum D needed for win-win to be possible
+    const profit=side==='f2'?n1:n2; // the positive side (or best side)
+    const loss=side==='f2'?-n2:-n1; // absolute value of the negative side
+    const threshD = profit>0 ? 1+loss/profit : null;
+    const threshOdds = threshD ? (threshD>=2?Math.round((threshD-1)*100):-Math.round(100/(threshD-1))) : null;
+    return {side,name,odds,optS,minS,maxS,canWinWin,profitAfter,afterOwnSide,afterOtherSide,threshOdds};
   }
 }
 
@@ -401,14 +410,29 @@ document.getElementById('bt-side').addEventListener('change',()=>{
   if(v==='f1') document.getElementById('bt-odds').value=tracker.f1Odds||'';
   if(v==='f2') document.getElementById('bt-odds').value=tracker.f2Odds||'';
 });
+document.getElementById('bt-stake').addEventListener('input',()=>{ document.getElementById('bt-stake').style.borderColor=''; });
+document.getElementById('bt-odds').addEventListener('input',()=>{ document.getElementById('bt-odds').style.borderColor=''; });
 
 document.getElementById('add-bet-btn').addEventListener('click',()=>{
   const side=document.getElementById('bt-side').value;
-  const stake=parseFloat(document.getElementById('bt-stake').value);
-  const odds=parseInt(document.getElementById('bt-odds').value);
-  if(!side||isNaN(stake)||isNaN(odds)||stake<=0) return;
+  const stakeEl=document.getElementById('bt-stake');
+  const oddsEl=document.getElementById('bt-odds');
+  const stake=parseFloat(stakeEl.value);
+  const odds=parseInt(oddsEl.value);
+  let err='';
+  if(!side) err='Select a fighter first.';
+  else if(isNaN(odds)||oddsEl.value===''){ oddsEl.style.borderColor='#e74c3c'; oddsEl.focus(); err='Enter the odds (e.g. +200 or -150).'; }
+  else if(isNaN(stake)||stake<=0){ stakeEl.style.borderColor='#e74c3c'; stakeEl.focus(); err='Enter a stake amount.'; }
+  if(err){
+    const btn=document.getElementById('add-bet-btn');
+    const orig=btn.textContent;
+    btn.textContent=err; btn.style.background='#c0392b';
+    setTimeout(()=>{ btn.textContent=orig; btn.style.background=''; },2000);
+    return;
+  }
+  stakeEl.style.borderColor=''; oddsEl.style.borderColor='';
   tracker.addBet(side,stake,odds);
-  document.getElementById('bt-stake').value='';
+  stakeEl.value='100';
   renderTracker();
 });
 
@@ -432,26 +456,43 @@ function renderTracker(){
     </div>`).join(''):'<div class="bet-empty">No bets locked in yet.</div>';
   listEl.querySelectorAll('.bet-del').forEach(btn=>btn.addEventListener('click',()=>{tracker.removeBet(+btn.dataset.id);renderTracker();}));
 
-  // Position grid
+  // Position grid — left = fighter you have more bets on
   const pgrid=document.getElementById('pos-grid');
   if(!hasAny){ pgrid.style.display='none'; }
   else{
     pgrid.style.display='grid';
-    document.getElementById('pos-f1-lbl').textContent=`${tracker.f1Name||'Side 1'} wins`;
-    document.getElementById('pos-f2-lbl').textContent=`${tracker.f2Name||'Side 2'} wins`;
-    const setCard=(id,valId,net)=>{
+    const f1count=tracker.bets.filter(b=>b.side==='f1').length;
+    const f2count=tracker.bets.filter(b=>b.side==='f2').length;
+    const leftIsF1=f1count>=f2count;
+    const leftName=leftIsF1?tracker.f1Name:tracker.f2Name;
+    const rightName=leftIsF1?tracker.f2Name:tracker.f1Name;
+    const leftNet=leftIsF1?n1:n2;
+    const rightNet=leftIsF1?n2:n1;
+    const leftCount=leftIsF1?f1count:f2count;
+    const rightCount=leftIsF1?f2count:f1count;
+    const setCard=(id,valId,lblId,name,net,count)=>{
       document.getElementById(id).className='pos-card '+(net>0?'pc-win':net<0?'pc-loss':'pc-zero');
+      const badge=count?` <span style="font-size:10px;opacity:0.6">(${count} bet${count>1?'s':''})</span>`:'';
+      document.getElementById(lblId).innerHTML=`${name} wins${badge}`;
       const el=document.getElementById(valId); el.textContent=fmtM(net);
       el.className='pos-val '+(net>0?'pv-green':net<0?'pv-red':'pv-gray');
     };
-    setCard('pos-f1','pos-f1-val',n1); setCard('pos-f2','pos-f2-val',n2);
+    setCard('pos-f1','pos-f1-val','pos-f1-lbl',leftName,leftNet,leftCount);
+    setCard('pos-f2','pos-f2-val','pos-f2-lbl',rightName,rightNet,rightCount);
   }
 
   // Status
   const statusEl=document.getElementById('tracker-status');
   if(!hasAny){ statusEl.className='tracker-status s-empty'; statusEl.textContent='Lock in a bet to track your position'; }
   else if(winWin){ statusEl.className='tracker-status s-winwin'; statusEl.textContent='🔔 PROFIT MOMENT — WIN EITHER WAY'; }
-  else if(hedge){ statusEl.className='tracker-status s-hedge'; statusEl.textContent='⚖️ HEDGE MOMENT — add a bet to lock in profit'; }
+  else if(hedge){
+    const s2=tracker.suggestion();
+    if(s2&&s2.canWinWin){ statusEl.className='tracker-status s-winwin'; statusEl.textContent='⚖️ HEDGE NOW — guaranteed profit available at current odds'; }
+    else if(s2&&s2.threshOdds!==null){
+      const thresh=s2.threshOdds>0?`+${s2.threshOdds}`:s2.threshOdds;
+      statusEl.className='tracker-status s-hedge'; statusEl.innerHTML=`👁 WATCHING — win-win opens when <strong>${s2.name}</strong> hits <strong>${thresh}</strong>`;
+    } else { statusEl.className='tracker-status s-hedge'; statusEl.textContent='⚖️ HEDGE MOMENT — add a bet to lock in profit'; }
+  }
   else{ statusEl.className='tracker-status s-partial'; statusEl.textContent=`📈 PARTIAL EXPOSURE — ${n1>=n2?tracker.f1Name:tracker.f2Name} side favored`; }
 
   // Suggestion
@@ -459,9 +500,20 @@ function renderTracker(){
   const suggEl=document.getElementById('tracker-sugg');
   if(sugg){
     suggEl.style.display='block';
-    let t=`Bet <strong>$${sugg.optS.toFixed(2)}</strong> on <strong>${sugg.name}</strong> at <strong>${fmtO(sugg.odds)}</strong>`;
-    t+=sugg.canWinWin?` → guaranteed <strong>${fmtM(sugg.profitAfter)}</strong> either way (range: $${sugg.minS.toFixed(0)}–$${sugg.maxS.toFixed(0)})`
-      :` → best position (win-win not achievable at current odds)`;
+    let t=`Hedge: bet <strong>$${sugg.optS.toFixed(2)}</strong> on <strong>${sugg.name}</strong> at <strong>${fmtO(sugg.odds)}</strong>`;
+    if(sugg.canWinWin){
+      t+=` → <strong style="color:#69db7c">+${fmtM(sugg.profitAfter)} guaranteed profit either way</strong>`;
+      if(sugg.minS<sugg.maxS) t+=` (any bet $${sugg.minS.toFixed(0)}–$${sugg.maxS.toFixed(0)} locks profit)`;
+    } else {
+      const aOwn=sugg.afterOwnSide, aOther=sugg.afterOtherSide;
+      const better=Math.max(aOwn,aOther), worse=Math.min(aOwn,aOther);
+      if(Math.abs(better-worse)<0.02) t+=` → both sides: <strong>${fmtM(worse)}</strong>`;
+      else t+=` → outcomes: <strong>${fmtM(worse)}</strong> / <strong>${fmtM(better)}</strong>`;
+      if(sugg.threshOdds!==null){
+        const thresh=sugg.threshOdds>0?`+${sugg.threshOdds}`:sugg.threshOdds;
+        t+=`. <span style="color:#e8b84b">Win-win opens when <strong>${sugg.name}</strong> hits <strong>${thresh}</strong> or better</span>`;
+      }
+    }
     suggEl.innerHTML=t;
   } else { suggEl.style.display='none'; }
 }
