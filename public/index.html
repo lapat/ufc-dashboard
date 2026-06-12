@@ -8,7 +8,7 @@
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
-    body{background:#0a0a0a;color:#ddd;font-family:'Helvetica Neue',sans-serif}
+    body{background:#0a0a0a;color:#ddd;font-family:'Helvetica Neue',sans-serif;font-size:15px}
 
     /* ── topbar ── */
     #topbar{display:flex;align-items:center;background:#111;border-bottom:1px solid #1e1e1e;padding:0 24px;position:sticky;top:0;z-index:50;gap:16px}
@@ -42,9 +42,9 @@
     .game-ev{font-size:0.58rem;color:#3a3a3a;text-transform:uppercase;letter-spacing:1px;margin-bottom:7px}
     .game-card.live-card .game-ev{color:#e8b84b88}
     .matchup{display:grid;grid-template-columns:1fr auto auto auto 1fr;align-items:center;gap:10px}
-    .fn{font-size:0.88rem;font-weight:600}
+    .fn{font-size:1rem;font-weight:600}
     .fn.r{text-align:right}
-    .op{font-size:0.95rem;font-weight:700;padding:4px 10px;border-radius:4px;min-width:64px;text-align:center}
+    .op{font-size:1.05rem;font-weight:700;padding:4px 10px;border-radius:4px;min-width:68px;text-align:center}
     .fav{color:#ff6b6b;background:#1f0e0e}.dog{color:#69db7c;background:#0c1c0e}.even{color:#74c0fc;background:#0d1525}
     .vs{color:#2a2a2a;font-size:0.68rem;font-weight:700}
     .game-time{font-size:0.6rem;color:#2e2e2e;margin-top:5px;text-align:right}
@@ -57,9 +57,9 @@
     @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
     #nw-live-dot.offline{background:#333;animation:none}
     #nw-matchup{display:grid;grid-template-columns:1fr auto auto auto 1fr;align-items:center;gap:12px;margin-bottom:14px}
-    .nw-name{font-size:1.05rem;font-weight:700;line-height:1.2}
+    .nw-name{font-size:1.15rem;font-weight:700;line-height:1.2}
     .nw-name.r{text-align:right}
-    .nw-odds{font-size:1.3rem;font-weight:700;padding:6px 14px;border-radius:5px;min-width:76px;text-align:center}
+    .nw-odds{font-size:1.5rem;font-weight:700;padding:6px 14px;border-radius:5px;min-width:82px;text-align:center}
     .nw-vs{color:#333;font-size:0.8rem;font-weight:700}
     #nw-bottom{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
     #nw-switch-label{font-size:0.62rem;color:#3a3a3a;text-transform:uppercase;letter-spacing:1px;white-space:nowrap}
@@ -103,14 +103,24 @@
     .bet-add-row{display:flex;gap:8px;align-items:flex-end;flex-wrap:wrap;margin-bottom:11px}
     .bet-field{display:flex;flex-direction:column;gap:3px}
     .bet-lbl{font-size:0.56rem;color:#333;text-transform:uppercase;letter-spacing:1px}
-    .bet-sel,.bet-inp{background:#111;border:1px solid #1a1a1a;border-radius:4px;color:#ddd;padding:6px 9px;font-size:0.8rem;font-family:inherit;outline:none}
+    .bet-sel,.bet-inp{background:#111;border:1px solid #1a1a1a;border-radius:4px;color:#ddd;padding:7px 10px;font-size:0.88rem;font-family:inherit;outline:none}
     .bet-sel{min-width:170px}
-    .bet-inp{width:88px}
+    .bet-inp{width:96px}
     .bet-sel:focus,.bet-inp:focus{border-color:#e8b84b33}
-    .bet-add-btn{background:#e8b84b1a;border:1px solid #e8b84b44;color:#e8b84b;border-radius:4px;padding:6px 14px;font-size:0.7rem;font-weight:700;cursor:pointer;letter-spacing:1px;text-transform:uppercase;white-space:nowrap}
+    .bet-add-btn{background:#e8b84b1a;border:1px solid #e8b84b44;color:#e8b84b;border-radius:4px;padding:8px 18px;font-size:0.8rem;font-weight:700;cursor:pointer;letter-spacing:1px;text-transform:uppercase;white-space:nowrap}
     .bet-add-btn:hover{background:#e8b84b2a}
+    .bet-fighters{display:flex;gap:6px;margin-bottom:10px}
+    .qf-btn{flex:1;padding:9px 12px;background:#111;border:1px solid #1e1e1e;border-radius:5px;color:#444;font-size:0.78rem;font-weight:600;cursor:pointer;transition:all .15s;text-align:left;font-family:inherit;line-height:1.3}
+    .qf-btn:hover{border-color:#333;color:#888}
+    .qf-btn.qf-selected{background:#1c1800;border-color:#e8b84b;color:#e8b84b}
+    .qf-odds{float:right;font-size:0.72rem;font-weight:400;opacity:0.6}
+    .qf-btn.qf-selected .qf-odds{opacity:0.9}
+    .stake-presets{display:flex;gap:4px;margin-bottom:5px;flex-wrap:wrap}
+    .preset-btn{background:#111;border:1px solid #1e1e1e;border-radius:4px;color:#444;font-size:0.7rem;padding:4px 9px;cursor:pointer;transition:all .15s;font-family:inherit}
+    .preset-btn:hover{border-color:#333;color:#888}
+    .preset-btn.active-preset{background:#1c1800;border-color:#e8b84b44;color:#e8b84b}
     .bet-list{display:flex;flex-direction:column;gap:4px;margin-bottom:10px}
-    .bet-row{display:flex;align-items:center;gap:8px;padding:6px 10px;background:#111;border:1px solid #181818;border-radius:4px;font-size:0.76rem}
+    .bet-row{display:flex;align-items:center;gap:8px;padding:7px 11px;background:#111;border:1px solid #181818;border-radius:4px;font-size:0.82rem}
     .bet-num{color:#333;font-size:0.62rem;min-width:16px}
     .bet-fighter{flex:1;color:#aaa;font-weight:600}
     .bet-stake{color:#69db7c}
@@ -125,15 +135,15 @@
     .pc-loss{background:#1f0e0e;border-color:#ff6b6b2a}
     .pc-zero{background:#0f0f0f;border-color:#1e1e1e}
     .pos-lbl{font-size:0.6rem;color:#444;text-transform:uppercase;letter-spacing:1px;margin-bottom:3px}
-    .pos-val{font-size:1.05rem;font-weight:700}
+    .pos-val{font-size:1.2rem;font-weight:700}
     .pv-green{color:#69db7c}.pv-red{color:#ff6b6b}.pv-gray{color:#333}
-    .tracker-status{padding:8px 14px;border-radius:5px;text-align:center;font-size:0.76rem;font-weight:700;letter-spacing:1px;margin-bottom:7px}
+    .tracker-status{padding:10px 14px;border-radius:5px;text-align:center;font-size:0.84rem;font-weight:700;letter-spacing:1px;margin-bottom:7px}
     .s-winwin{background:#0d2a0d;border:1px solid #69db7c44;color:#69db7c;animation:pg 2s infinite}
     .s-hedge{background:#1a1500;border:1px solid #e8b84b44;color:#e8b84b}
     .s-partial{background:#111;border:1px solid #2a2a2a;color:#555}
     .s-empty{background:#0d0d0d;border:1px solid #181818;color:#252525}
     @keyframes pg{0%,100%{box-shadow:0 0 0 0 #69db7c33}50%{box-shadow:0 0 0 6px transparent}}
-    .suggestion{background:#0d0d0d;border:1px solid #1a1a1a;border-radius:4px;padding:7px 11px;font-size:0.72rem;color:#555;margin-top:6px}
+    .suggestion{background:#0d0d0d;border:1px solid #1a1a1a;border-radius:4px;padding:8px 12px;font-size:0.8rem;color:#555;margin-top:6px}
     .suggestion strong{color:#e8b84b}
 
     /* ── chat ── */
@@ -241,14 +251,23 @@
       <span class="tracker-title">Theoretical Position</span>
       <button class="clear-btn" id="clear-bets">CLEAR ALL</button>
     </div>
+    <div class="bet-fighters">
+      <button class="qf-btn" id="qf-f1">Select a game above →</button>
+      <button class="qf-btn" id="qf-f2" style="display:none">—</button>
+    </div>
     <div class="bet-add-row">
       <div class="bet-field">
-        <div class="bet-lbl">Bet on</div>
-        <select class="bet-sel" id="bt-side"><option value="">— select a game first —</option></select>
+        <div class="bet-lbl">Stake $</div>
+        <div class="stake-presets">
+          <button class="preset-btn" data-amt="50">$50</button>
+          <button class="preset-btn active-preset" data-amt="100">$100</button>
+          <button class="preset-btn" data-amt="250">$250</button>
+          <button class="preset-btn" data-amt="500">$500</button>
+        </div>
+        <input class="bet-inp" id="bt-stake" type="number" value="100" min="1"/>
       </div>
-      <div class="bet-field"><div class="bet-lbl">Stake $</div><input class="bet-inp" id="bt-stake" type="number" value="100" min="1"/></div>
-      <div class="bet-field"><div class="bet-lbl">At odds</div><input class="bet-inp" id="bt-odds" type="number" placeholder="auto"/></div>
-      <button class="bet-add-btn" id="add-bet-btn">+ Lock In Bet</button>
+      <div class="bet-field"><div class="bet-lbl">At odds</div><input class="bet-inp" id="bt-odds" type="number" placeholder="current"/></div>
+      <button class="bet-add-btn" id="add-bet-btn">🔒 Lock In</button>
     </div>
     <div class="bet-list" id="bet-list"><div class="bet-empty">No bets locked in yet.</div></div>
     <div class="pos-divider"></div>
@@ -429,34 +448,77 @@ const tracker = new BetTracker();
 tracker.restore();
 if(tracker.bets.length>0) renderTracker();
 
-document.getElementById('bt-side').addEventListener('change',()=>{
-  const v=document.getElementById('bt-side').value;
-  if(v==='f1') document.getElementById('bt-odds').value=tracker.f1Odds||'';
-  if(v==='f2') document.getElementById('bt-odds').value=tracker.f2Odds||'';
+// ── Fighter quick-select ──────────────────────────────────────────────────────
+let currentBetSide = '';
+let oddsLocked = false;
+
+function setBetSide(side){
+  currentBetSide = side;
+  oddsLocked = false;
+  document.getElementById('qf-f1').classList.toggle('qf-selected', side==='f1');
+  document.getElementById('qf-f2').classList.toggle('qf-selected', side==='f2');
+  const odds = side==='f1' ? tracker.f1Odds : tracker.f2Odds;
+  const oddsEl = document.getElementById('bt-odds');
+  if(odds !== null){ oddsEl.value = odds; }
+  oddsEl.style.borderColor = '';
+  document.getElementById('bt-stake').style.borderColor = '';
+}
+
+function updateFighterButtons(){
+  const f1=document.getElementById('qf-f1'), f2=document.getElementById('qf-f2');
+  if(!tracker.f1Name){ f1.innerHTML='Select a game above →'; f2.style.display='none'; return; }
+  f2.style.display = '';
+  f1.innerHTML = `${tracker.f1Name} <span class="qf-odds">${fmtO(tracker.f1Odds)}</span>`;
+  f2.innerHTML = `${tracker.f2Name} <span class="qf-odds">${fmtO(tracker.f2Odds)}</span>`;
+}
+
+document.getElementById('qf-f1').addEventListener('click', ()=>setBetSide('f1'));
+document.getElementById('qf-f2').addEventListener('click', ()=>setBetSide('f2'));
+
+// Stake presets
+document.querySelectorAll('.preset-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.getElementById('bt-stake').value = btn.dataset.amt;
+    document.querySelectorAll('.preset-btn').forEach(b=>b.classList.toggle('active-preset', b===btn));
+    document.getElementById('bt-stake').style.borderColor='';
+  });
 });
-document.getElementById('bt-stake').addEventListener('input',()=>{ document.getElementById('bt-stake').style.borderColor=''; });
-document.getElementById('bt-odds').addEventListener('input',()=>{ document.getElementById('bt-odds').style.borderColor=''; });
+document.getElementById('bt-stake').addEventListener('input',()=>{
+  document.querySelectorAll('.preset-btn').forEach(b=>b.classList.remove('active-preset'));
+  document.getElementById('bt-stake').style.borderColor='';
+});
+
+// Odds field — lock when user touches it, Enter submits
+document.getElementById('bt-odds').addEventListener('focus', ()=>{ oddsLocked=true; });
+document.getElementById('bt-odds').addEventListener('input', ()=>{ oddsLocked=true; document.getElementById('bt-odds').style.borderColor=''; });
+document.getElementById('bt-odds').addEventListener('keydown', e=>{ if(e.key==='Enter') document.getElementById('add-bet-btn').click(); });
+document.getElementById('bt-stake').addEventListener('keydown', e=>{ if(e.key==='Enter') document.getElementById('bt-odds').focus(); });
 
 document.getElementById('add-bet-btn').addEventListener('click',()=>{
-  const side=document.getElementById('bt-side').value;
-  const stakeEl=document.getElementById('bt-stake');
-  const oddsEl=document.getElementById('bt-odds');
-  const stake=parseFloat(stakeEl.value);
-  const odds=parseInt(oddsEl.value);
+  const side = currentBetSide;
+  const stakeEl = document.getElementById('bt-stake');
+  const oddsEl = document.getElementById('bt-odds');
+  // If odds field empty, fall back to live odds
+  const oddsRaw = oddsEl.value !== '' ? oddsEl.value : (side==='f1' ? tracker.f1Odds : side==='f2' ? tracker.f2Odds : '');
+  const stake = parseFloat(stakeEl.value);
+  const odds = parseInt(oddsRaw);
   let err='';
-  if(!side) err='Select a fighter first.';
-  else if(isNaN(odds)||oddsEl.value===''){ oddsEl.style.borderColor='#e74c3c'; oddsEl.focus(); err='Enter the odds (e.g. +200 or -150).'; }
+  if(!side) err='Pick a fighter above.';
+  else if(isNaN(odds)){ oddsEl.style.borderColor='#e74c3c'; oddsEl.focus(); err='Enter the odds (e.g. -150).'; }
   else if(isNaN(stake)||stake<=0){ stakeEl.style.borderColor='#e74c3c'; stakeEl.focus(); err='Enter a stake amount.'; }
   if(err){
     const btn=document.getElementById('add-bet-btn');
-    const orig=btn.textContent;
-    btn.textContent=err; btn.style.background='#c0392b';
-    setTimeout(()=>{ btn.textContent=orig; btn.style.background=''; },2000);
+    const orig=btn.innerHTML;
+    btn.innerHTML=err; btn.style.background='#c0392b';
+    setTimeout(()=>{ btn.innerHTML=orig; btn.style.background=''; },2000);
     return;
   }
   stakeEl.style.borderColor=''; oddsEl.style.borderColor='';
   tracker.addBet(side,stake,odds);
-  stakeEl.value='100';
+  // Reset odds to current after locking in — stay on same fighter
+  oddsLocked = false;
+  const currentOdds = side==='f1' ? tracker.f1Odds : tracker.f2Odds;
+  if(currentOdds !== null) oddsEl.value = currentOdds;
   renderTracker();
 });
 
@@ -575,8 +637,8 @@ document.getElementById('sim-play').addEventListener('click',async()=>{
       graphClear(simFk); tracker.clear(); renderTracker();
       tracker.setFight(f1,f2,first.fighter1.numericOdds,first.fighter2.numericOdds);
       updateFightUI(f1,f2,first.fighter1.numericOdds,first.fighter2.numericOdds,true,null,null);
-      // Populate the fighter dropdown so Lock In works
-      document.getElementById('bt-side').innerHTML=`<option value="f1">${f1}</option><option value="f2">${f2}</option>`;
+      currentBetSide='f1'; oddsLocked=false;
+      updateFighterButtons();
       document.getElementById('bt-odds').value=first.fighter1.numericOdds;
       graphSelect(simFk,f1,f2);
       document.getElementById('graph-fight-lbl').textContent=`${f1} vs ${f2} [SIM]`;
@@ -613,9 +675,11 @@ function simTick(){
   graphAddPoint(simFk,ts,pt.fighter1.name,f1O,pt.fighter2.name,f2O);
   tracker.updateOdds(f1O,f2O);
   updateNowWatchingOdds(f1O,f2O);
-  const side=document.getElementById('bt-side').value;
-  if(side==='f1') document.getElementById('bt-odds').value=f1O;
-  if(side==='f2') document.getElementById('bt-odds').value=f2O;
+  updateFighterButtons();
+  if(!oddsLocked){
+    if(currentBetSide==='f1') document.getElementById('bt-odds').value=f1O;
+    if(currentBetSide==='f2') document.getElementById('bt-odds').value=f2O;
+  }
   renderTracker();
   const pct=(simIdx/simData.oddsHistory.length*100).toFixed(1);
   document.getElementById('sim-fill').style.width=pct+'%';
@@ -706,8 +770,9 @@ async function selectGame(game){
 
   // Update tracker fight context
   tracker.setFight(a.name,b.name,a.price,b.price);
-  document.getElementById('bt-side').innerHTML=`<option value="f1">${a.name}</option><option value="f2">${b.name}</option>`;
-  document.getElementById('bt-odds').value=a.price;
+  currentBetSide=''; oddsLocked=false;
+  updateFighterButtons();
+  document.getElementById('bt-odds').value='';
   renderTracker();
 
   // Backfill if mid-game
@@ -753,9 +818,11 @@ async function pollOdds(){
       const [a,b]=out;
       tracker.updateOdds(a.price,b.price);
       updateNowWatchingOdds(a.price,b.price);
-      const side=document.getElementById('bt-side').value;
-      if(side==='f1') document.getElementById('bt-odds').value=a.price;
-      if(side==='f2') document.getElementById('bt-odds').value=b.price;
+      updateFighterButtons();
+      if(!oddsLocked){
+        if(currentBetSide==='f1') document.getElementById('bt-odds').value=a.price;
+        if(currentBetSide==='f2') document.getElementById('bt-odds').value=b.price;
+      }
       renderTracker();
       // Update live badge
       const live=isLive(match.commence_time);
@@ -865,7 +932,8 @@ setInterval(()=>{ if(!selectedGame) loadGames(); },30000);
     graphHist[simFk]={labels:[],f1:[],f2:[],f1Name:f1,f2Name:f2,crossovers:[]};
     tracker.setFight(f1,f2,first.fighter1.numericOdds,first.fighter2.numericOdds);
     updateFightUI(f1,f2,first.fighter1.numericOdds,first.fighter2.numericOdds,true,null,null);
-    document.getElementById('bt-side').innerHTML=`<option value="f1">${f1}</option><option value="f2">${f2}</option>`;
+    currentBetSide='f1'; oddsLocked=false;
+    updateFighterButtons();
     document.getElementById('bt-odds').value=first.fighter1.numericOdds;
     graphSelect(simFk,f1,f2);
     document.getElementById('sim-bar').classList.add('open');
