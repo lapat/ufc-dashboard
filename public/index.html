@@ -5,6 +5,8 @@
   <title>Bet Bot</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3/dist/chartjs-plugin-annotation.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8/hammer.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2/dist/chartjs-plugin-zoom.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
@@ -76,7 +78,8 @@
     .graph-fight{font-size:0.75rem;color:#e8b84b;font-weight:600}
     .graph-empty{text-align:center;color:#222;padding:48px 0;font-size:0.78rem}
     .xover-badge{background:#e8b84b18;color:#e8b84b;border:1px solid #e8b84b33;border-radius:3px;font-size:0.6rem;padding:2px 7px;letter-spacing:1px}
-    canvas{max-height:220px}
+    canvas{max-height:220px;cursor:grab}
+    canvas:active{cursor:grabbing}
     .sim-toggle{background:none;border:1px solid #2a2a2a;color:#444;border-radius:4px;padding:4px 10px;font-size:0.65rem;cursor:pointer;letter-spacing:1px}
     .sim-toggle:hover{border-color:#444;color:#777}
 
@@ -144,6 +147,15 @@
     .s-empty{background:#0d0d0d;border:1px solid #181818;color:#252525}
     @keyframes pg{0%,100%{box-shadow:0 0 0 0 #69db7c33}50%{box-shadow:0 0 0 6px transparent}}
     .suggestion{background:#0d0d0d;border:1px solid #1a1a1a;border-radius:4px;padding:8px 12px;font-size:0.8rem;color:#555;margin-top:6px}
+    .quick-hedge-btn{background:#e8b84b18;border:1px solid #e8b84b44;color:#e8b84b;border-radius:4px;padding:5px 12px;font-size:0.72rem;font-weight:700;cursor:pointer;letter-spacing:1px;font-family:inherit;margin-top:7px;display:block;width:100%;transition:background .15s}
+    .quick-hedge-btn:hover{background:#e8b84b2a}
+    .bet-clv{font-size:0.68rem;padding:1px 5px;border-radius:3px;font-weight:600}
+    .clv-pos{color:#69db7c;background:#0d2a0d55}
+    .clv-neg{color:#ff6b6b;background:#1f0e0e55}
+    .clv-zero{color:#444}
+    .clv-avg{font-size:0.65rem;padding:2px 8px;border-radius:3px;font-weight:600;margin-left:6px}
+    #sharp-alert{display:none;font-size:0.72rem;padding:5px 10px;border-radius:4px;background:#1a1a0a;border:1px solid #e8b84b55;color:#e8b84b;letter-spacing:0.5px;margin-top:8px;animation:pg 2s infinite}
+    #sharp-alert.active{display:block}
     .suggestion strong{color:#e8b84b}
 
     /* ── chat ── */
@@ -212,6 +224,7 @@
       <select id="nw-switch"><option value="">—</option></select>
       <span id="nw-backfill-status"></span>
     </div>
+    <div id="sharp-alert"></div>
   </div>
 
   <!-- Game list (shown before selection) -->
@@ -223,6 +236,7 @@
       <span class="graph-title">Odds Graph — <span class="graph-fight" id="graph-fight-lbl">no game selected</span></span>
       <div style="display:flex;gap:8px;align-items:center">
         <span id="graph-xover-info"></span>
+        <button class="sim-toggle" id="zoom-reset" style="display:none">⟲ Reset zoom</button>
         <button class="sim-toggle" id="sim-toggle">⏵ Simulate historical fight</button>
       </div>
     </div>
@@ -311,7 +325,7 @@ class BetTracker {
   constructor(){ this.bets=[]; this.f1Name=''; this.f2Name=''; this.f1Odds=null; this.f2Odds=null; this._id=0; }
   setFight(f1,f2,o1,o2){ this.f1Name=f1; this.f2Name=f2; this.f1Odds=o1; this.f2Odds=o2; }
   updateOdds(o1,o2){ this.f1Odds=o1; this.f2Odds=o2; }
-  addBet(side,stake,odds){ this.bets.push({id:++this._id,side,stake,odds,decimal:toD(odds)}); this._persist(); }
+  addBet(side,stake,odds){ this.bets.push({id:++this._id,side,stake,odds,decimal:toD(odds),ts:Date.now()}); this._persist(); }
   removeBet(id){ this.bets=this.bets.filter(b=>b.id!==id); this._persist(); }
   clear(){ this.bets=[]; this._persist(); }
   _persist(){ lsSave('tracker', {bets:this.bets, _id:this._id, f1Name:this.f1Name, f2Name:this.f2Name, f1Odds:this.f1Odds, f2Odds:this.f2Odds}); }
@@ -380,7 +394,8 @@ function graphInit(){
         legend:{labels:{color:'#444',font:{size:10},boxWidth:10}},
         annotation:{annotations:{}},
         tooltip:{backgroundColor:'#111',borderColor:'#2a2a2a',borderWidth:1,titleColor:'#555',bodyColor:'#ccc',
-          callbacks:{label:c=>` ${c.dataset.label}: ${fmtO(c.raw)}`}}
+          callbacks:{label:c=>` ${c.dataset.label}: ${fmtO(c.raw)}`}},
+        zoom:{pan:{enabled:true,mode:'x'},zoom:{wheel:{enabled:true},pinch:{enabled:true},mode:'x'}},
       },
       scales:{
         x:{ticks:{color:'#2a2a2a',maxTicksLimit:6,font:{size:9}},grid:{color:'#0f0f0f'}},
@@ -530,16 +545,38 @@ function renderTracker(){
   const winWin=n1>0&&n2>0;
   const hedge=(n1>0)!==(n2>0);
 
+  // CLV per bet
+  function getBetCLV(b){
+    const cur = b.side==='f1' ? tracker.f1Odds : tracker.f2Odds;
+    if(cur===null) return null;
+    return (toD(b.odds)/toD(cur)-1)*100;
+  }
+  const clvs = tracker.bets.map(getBetCLV);
+  const validClvs = clvs.filter(v=>v!==null);
+  const avgClv = validClvs.length ? validClvs.reduce((a,b)=>a+b,0)/validClvs.length : null;
+
+  // Tracker header with avg CLV
+  const hdr = document.querySelector('.tracker-title');
+  if(hdr){
+    hdr.innerHTML = avgClv !== null
+      ? `Position Tracker <span class="clv-avg ${avgClv>=0?'clv-pos':'clv-neg'}">${avgClv>=0?'+':''}${avgClv.toFixed(1)}% CLV</span>`
+      : 'Position Tracker';
+  }
+
   // Bet list
   const listEl=document.getElementById('bet-list');
-  listEl.innerHTML=hasAny?tracker.bets.map((b,i)=>`
-    <div class="bet-row">
+  listEl.innerHTML=hasAny?tracker.bets.map((b,i)=>{
+    const clv=clvs[i];
+    const clvHtml=clv!==null?`<span class="bet-clv ${clv>0.1?'clv-pos':clv<-0.1?'clv-neg':'clv-zero'}">${clv>=0?'+':''}${clv.toFixed(1)}%</span>`:'';
+    return `<div class="bet-row">
       <span class="bet-num">#${i+1}</span>
       <span class="bet-fighter">${b.side==='f1'?tracker.f1Name:tracker.f2Name}</span>
       <span class="bet-stake">$${b.stake.toFixed(2)}</span>
       <span class="bet-odds-lbl">${fmtO(b.odds)}</span>
+      ${clvHtml}
       <button class="bet-del" data-id="${b.id}">✕</button>
-    </div>`).join(''):'<div class="bet-empty">No bets locked in yet.</div>';
+    </div>`;
+  }).join(''):'<div class="bet-empty">No bets locked in yet.</div>';
   listEl.querySelectorAll('.bet-del').forEach(btn=>btn.addEventListener('click',()=>{tracker.removeBet(+btn.dataset.id);renderTracker();}));
 
   // Position grid — left = fighter you have more bets on
@@ -600,14 +637,65 @@ function renderTracker(){
         t+=`. <span style="color:#e8b84b">Win-win opens when <strong>${sugg.name}</strong> hits <strong>${thresh}</strong> or better</span>`;
       }
     }
+    t+=`<button class="quick-hedge-btn">⚡ Quick Hedge — pre-fill form</button>`;
     suggEl.innerHTML=t;
   } else { suggEl.style.display='none'; }
+}
+
+function quickHedge(){
+  const s=tracker.suggestion(); if(!s) return;
+  setBetSide(s.side);
+  document.getElementById('bt-stake').value=Math.round(s.optS);
+  document.getElementById('bt-odds').value=s.odds;
+  oddsLocked=true;
+  document.querySelectorAll('.preset-btn').forEach(b=>b.classList.remove('active-preset'));
+  document.getElementById('add-bet-btn').focus();
+}
+document.getElementById('tracker-sugg').addEventListener('click',e=>{
+  if(e.target.classList.contains('quick-hedge-btn')) quickHedge();
+});
+
+// ── Sharp Move Detector ──────────────────────────────────────────────────────
+const oddsBuffer = []; // {ts, f1, f2}
+let sharpAlertTimer = null;
+
+function feedOddsBuffer(f1O, f2O){
+  const now = Date.now();
+  oddsBuffer.push({ts: now, f1: f1O, f2: f2O});
+  // Keep last 60s
+  while(oddsBuffer.length > 1 && now - oddsBuffer[0].ts > 60000) oddsBuffer.shift();
+  checkSharpMove(f1O, f2O);
+}
+
+function checkSharpMove(f1O, f2O){
+  if(oddsBuffer.length < 5) return;
+  const ago30 = oddsBuffer.find(p => Date.now() - p.ts >= 27000);
+  if(!ago30) return;
+  const d1 = Math.abs(f1O - ago30.f1);
+  const d2 = Math.abs(f2O - ago30.f2);
+  const big = Math.max(d1, d2);
+  if(big < 20) return;
+  const mover = d1 >= d2 ? (tracker.f1Name || 'F1') : (tracker.f2Name || 'F2');
+  const dir = (d1>=d2 ? f1O : f2O) > (d1>=d2 ? ago30.f1 : ago30.f2) ? 'drifting ↑' : 'shortening ↓';
+  const el = document.getElementById('sharp-alert');
+  el.textContent = `⚡ SHARP MOVE — ${mover} ${dir} (${big.toFixed(0)} pts / 30s)`;
+  el.classList.add('active');
+  clearTimeout(sharpAlertTimer);
+  sharpAlertTimer = setTimeout(() => el.classList.remove('active'), 15000);
 }
 
 // ═══════════════════════════════════════════
 // SIMULATION
 // ═══════════════════════════════════════════
 let simData=null,simIdx=0,simSpeed=50,simTimer=null,simRunning=false,simFk=null;
+
+document.getElementById('zoom-reset').addEventListener('click',()=>{
+  if(chart){ chart.resetZoom(); document.getElementById('zoom-reset').style.display='none'; }
+});
+// Show zoom-reset button after any pan/zoom interaction
+['wheel','mousedown','touchstart'].forEach(evt=>{
+  canvas.addEventListener(evt, ()=>{ document.getElementById('zoom-reset').style.display=''; }, {once:false, passive:true});
+});
 
 document.getElementById('sim-toggle').addEventListener('click',()=>{
   const bar=document.getElementById('sim-bar');
@@ -819,6 +907,7 @@ async function pollOdds(){
       tracker.updateOdds(a.price,b.price);
       updateNowWatchingOdds(a.price,b.price);
       updateFighterButtons();
+      feedOddsBuffer(a.price, b.price);
       if(!oddsLocked){
         if(currentBetSide==='f1') document.getElementById('bt-odds').value=a.price;
         if(currentBetSide==='f2') document.getElementById('bt-odds').value=b.price;

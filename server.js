@@ -208,6 +208,87 @@ app.get('/api/ufc', async (req, res) => {
 // Library page
 app.get('/library', (req, res) => { res.sendFile(path.join(__dirname, 'public', 'library.html')); });
 
+// Patterns page
+app.get('/patterns', (req, res) => { res.sendFile(path.join(__dirname, 'public', 'patterns.html')); });
+
+// Round-by-round pattern analysis across all recorded fights
+app.get('/api/patterns', (req, res) => {
+  try {
+    const files = fs.readdirSync(HISTORICAL_DIR).filter(f => f.endsWith('.json'));
+    const rows = [];
+
+    for (const file of files) {
+      try {
+        const d = JSON.parse(fs.readFileSync(path.join(HISTORICAL_DIR, file)));
+        const h = d.oddsHistory || [];
+        if (h.length < 20) continue;
+
+        const open = h[0], close = h[h.length - 1], mid = h[Math.floor(h.length / 2)];
+        const q1 = h[Math.floor(h.length * 0.25)], q3 = h[Math.floor(h.length * 0.75)];
+
+        const d1o = toDecimal(open.fighter1.numericOdds), d2o = toDecimal(open.fighter2.numericOdds);
+        const favIsF1 = d1o <= d2o;
+
+        const getFav = pt => favIsF1 ? pt.fighter1.numericOdds : pt.fighter2.numericOdds;
+        const getDog = pt => favIsF1 ? pt.fighter2.numericOdds : pt.fighter1.numericOdds;
+
+        let crossovers = 0;
+        for (let i = 1; i < h.length; i++) {
+          const p = h[i-1], c = h[i];
+          if ((p.fighter1.numericOdds > 0 && c.fighter1.numericOdds < 0) ||
+              (p.fighter2.numericOdds > 0 && c.fighter2.numericOdds < 0)) crossovers++;
+        }
+
+        const openFavD = d1o <= d2o ? d1o : d2o;
+        let bucket;
+        if (openFavD <= 1.333)      bucket = 'huge';   // -300+ favorite
+        else if (openFavD <= 1.5)   bucket = 'heavy';  // -200 to -300
+        else if (openFavD <= 1.833) bucket = 'slight'; // -120 to -200
+        else                         bucket = 'even';   // near-even
+
+        rows.push({
+          bucket, crossovers,
+          openFav: getFav(open), openDog: getDog(open),
+          q1Fav: getFav(q1), q1Dog: getDog(q1),
+          midFav: getFav(mid), midDog: getDog(mid),
+          q3Fav: getFav(q3), q3Dog: getDog(q3),
+          closeFav: getFav(close), closeDog: getDog(close),
+          duration: h.length,
+        });
+      } catch {}
+    }
+
+    const LABELS = {
+      even:   'Near-Even (within -120)',
+      slight: 'Slight Fav (-120 to -200)',
+      heavy:  'Heavy Fav (-200 to -300)',
+      huge:   'Dominant (-300+)',
+    };
+    const avg = arr => arr.length ? Math.round(arr.reduce((a,b)=>a+b,0)/arr.length) : null;
+
+    const result = {};
+    for (const key of ['even','slight','heavy','huge']) {
+      const g = rows.filter(r => r.bucket === key);
+      if (!g.length) continue;
+      result[key] = {
+        label: LABELS[key],
+        count: g.length,
+        crossoverPct: Math.round(g.filter(r=>r.crossovers>0).length / g.length * 100),
+        favDriftedByMid: Math.round(g.filter(r=>toDecimal(r.midFav)>toDecimal(r.openFav)).length/g.length*100),
+        dogImprovedByMid: Math.round(g.filter(r=>toDecimal(r.midDog)<toDecimal(r.openDog)).length/g.length*100),
+        avgOdds: {
+          open:  { fav: avg(g.map(r=>r.openFav)),  dog: avg(g.map(r=>r.openDog))  },
+          q1:    { fav: avg(g.map(r=>r.q1Fav)),    dog: avg(g.map(r=>r.q1Dog))    },
+          mid:   { fav: avg(g.map(r=>r.midFav)),   dog: avg(g.map(r=>r.midDog))   },
+          q3:    { fav: avg(g.map(r=>r.q3Fav)),    dog: avg(g.map(r=>r.q3Dog))    },
+          close: { fav: avg(g.map(r=>r.closeFav)), dog: avg(g.map(r=>r.closeDog)) },
+        },
+      };
+    }
+    res.json({ totalFights: rows.length, buckets: result });
+  } catch (e) { res.status(500).json({ error: e.message }); }
+});
+
 // Credits/usage status
 app.get('/api/credits', (req, res) => {
   res.json({

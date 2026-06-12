@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Bet Bot — Patterns</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:#0a0a0a;color:#ccc;font-family:'SF Mono',monospace;font-size:13px}
+    a{color:inherit;text-decoration:none}
+    #topbar{display:flex;align-items:center;background:#111;border-bottom:1px solid #1e1e1e;padding:0 24px;gap:16px;position:sticky;top:0;z-index:50}
+    #topbar h1{color:#e8b84b;font-size:0.9rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:13px 0;white-space:nowrap}
+    .nav-link{font-size:0.65rem;color:#555;padding:4px 8px;border-radius:3px;border:1px solid #222}
+    .nav-link:hover{color:#888;border-color:#333}
+    #main{max-width:1000px;margin:0 auto;padding:24px}
+    .section-title{font-size:0.6rem;color:#444;text-transform:uppercase;letter-spacing:2px;margin-bottom:14px}
+    .stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:24px}
+    .stat-card{background:#111;border:1px solid #1e1e1e;border-radius:6px;padding:12px 16px}
+    .stat-label{font-size:0.6rem;color:#444;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+    .stat-val{font-size:1.3rem;font-weight:700;color:#e8b84b}
+    .stat-sub{font-size:0.6rem;color:#333;margin-top:2px}
+
+    .bucket-section{margin-bottom:32px}
+    .bucket-header{display:flex;align-items:baseline;gap:12px;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid #181818}
+    .bucket-title{font-size:0.8rem;font-weight:700;color:#ddd}
+    .bucket-count{font-size:0.62rem;color:#444}
+    .bucket-stats{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:12px}
+    .bstat{font-size:0.72rem}
+    .bstat-label{color:#444;font-size:0.6rem}
+    .bstat-val{color:#ccc;font-weight:600}
+    .xover-pct{color:#e8b84b}
+    .odds-table{width:100%;border-collapse:collapse;font-size:0.72rem}
+    .odds-table th{font-size:0.55rem;color:#333;text-transform:uppercase;letter-spacing:1px;padding:5px 10px;border-bottom:1px solid #1a1a1a;text-align:center;font-weight:400}
+    .odds-table th.left{text-align:left}
+    .odds-table td{padding:6px 10px;border-bottom:1px solid #111;text-align:center}
+    .odds-table td.left{text-align:left;color:#555}
+    .fav-odds{color:#ff6b6b}
+    .dog-odds{color:#69db7c}
+    .arrow{color:#2a2a2a;font-size:0.7rem}
+
+    #loading{color:#2a2a2a;padding:40px 0;text-align:center}
+  </style>
+</head>
+<body>
+<div id="topbar">
+  <h1>⚡ Bet Bot</h1>
+  <a href="/" class="nav-link">← Live</a>
+  <a href="/library" class="nav-link">Library</a>
+  <span style="font-size:0.65rem;color:#e8b84b;padding:4px 8px;border:1px solid #3a2a0a;border-radius:3px">Patterns</span>
+</div>
+
+<div id="main">
+  <div id="loading">Loading pattern analysis...</div>
+  <div id="content" style="display:none">
+    <div class="section-title">Summary</div>
+    <div class="stat-row" id="summary-row"></div>
+
+    <div class="section-title">Odds movement by favorite strength</div>
+    <div id="buckets"></div>
+  </div>
+</div>
+
+<script>
+function fmtO(v){ return typeof v==='number'?(v>0?`+${v}`:`${v}`):'—'; }
+
+async function load(){
+  const d = await fetch('/api/patterns').then(r=>r.json());
+  document.getElementById('loading').style.display='none';
+  document.getElementById('content').style.display='';
+
+  // Summary stats
+  const buckets = d.buckets;
+  const total = d.totalFights;
+  const allXover = Object.values(buckets).reduce((acc,b)=>acc+Math.round(b.crossoverPct/100*b.count),0);
+  const xoverRate = total ? Math.round(allXover/total*100) : 0;
+  const maxXover = Object.values(buckets).sort((a,b)=>b.crossoverPct-a.crossoverPct)[0];
+
+  document.getElementById('summary-row').innerHTML = `
+    <div class="stat-card"><div class="stat-label">Fights Analyzed</div><div class="stat-val">${total}</div><div class="stat-sub">all recorded UFC fights</div></div>
+    <div class="stat-card"><div class="stat-label">Crossover Rate</div><div class="stat-val">${xoverRate}%</div><div class="stat-sub">had at least 1 crossover</div></div>
+    <div class="stat-card"><div class="stat-label">Most Volatile</div><div class="stat-val">${maxXover?.crossoverPct||0}%</div><div class="stat-sub">${maxXover?.label||'—'}</div></div>
+    <div class="stat-card"><div class="stat-label">Data Resolution</div><div class="stat-val">3s</div><div class="stat-sub">odds captured every 3 seconds</div></div>
+  `;
+
+  const bucketsEl = document.getElementById('buckets');
+  const ORDER = ['even','slight','heavy','huge'];
+  for(const key of ORDER){
+    const b = buckets[key]; if(!b) continue;
+    const sec = document.createElement('div');
+    sec.className = 'bucket-section';
+    const ao = b.avgOdds;
+    sec.innerHTML = `
+      <div class="bucket-header">
+        <span class="bucket-title">${b.label}</span>
+        <span class="bucket-count">${b.count} fights</span>
+      </div>
+      <div class="bucket-stats">
+        <div class="bstat"><div class="bstat-label">Crossover Rate</div><div class="bstat-val xover-pct">${b.crossoverPct}%</div></div>
+        <div class="bstat"><div class="bstat-label">Fav Drifted by Midpoint</div><div class="bstat-val">${b.favDriftedByMid}%</div></div>
+        <div class="bstat"><div class="bstat-label">Dog Improved by Midpoint</div><div class="bstat-val">${b.dogImprovedByMid}%</div></div>
+      </div>
+      <table class="odds-table">
+        <thead><tr>
+          <th class="left">Side</th>
+          <th>Fight Open</th>
+          <th class="arrow">→</th>
+          <th>25%</th>
+          <th class="arrow">→</th>
+          <th>Midpoint</th>
+          <th class="arrow">→</th>
+          <th>75%</th>
+          <th class="arrow">→</th>
+          <th>Fight Close</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td class="left fav-odds">Favorite</td>
+            <td class="fav-odds">${fmtO(ao.open.fav)}</td><td class="arrow">→</td>
+            <td class="fav-odds">${fmtO(ao.q1.fav)}</td><td class="arrow">→</td>
+            <td class="fav-odds">${fmtO(ao.mid.fav)}</td><td class="arrow">→</td>
+            <td class="fav-odds">${fmtO(ao.q3.fav)}</td><td class="arrow">→</td>
+            <td class="fav-odds">${fmtO(ao.close.fav)}</td>
+          </tr>
+          <tr>
+            <td class="left dog-odds">Underdog</td>
+            <td class="dog-odds">${fmtO(ao.open.dog)}</td><td class="arrow">→</td>
+            <td class="dog-odds">${fmtO(ao.q1.dog)}</td><td class="arrow">→</td>
+            <td class="dog-odds">${fmtO(ao.mid.dog)}</td><td class="arrow">→</td>
+            <td class="dog-odds">${fmtO(ao.q3.dog)}</td><td class="arrow">→</td>
+            <td class="dog-odds">${fmtO(ao.close.dog)}</td>
+          </tr>
+        </tbody>
+      </table>
+    `;
+    bucketsEl.appendChild(sec);
+  }
+}
+load();
+</script>
+</body>
+</html>
