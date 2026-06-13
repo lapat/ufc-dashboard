@@ -463,7 +463,7 @@ app.post('/api/dk-sync', (req, res) => {
 });
 
 app.get('/api/dk-captures', (req, res) => {
-  res.json(dkCaptures.slice(0, 50));
+  res.json(dkCaptures);
 });
 
 app.delete('/api/dk-captures', (req, res) => {
