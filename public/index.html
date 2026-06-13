@@ -856,7 +856,7 @@ function checkSharpMove(f1O, f2O){
   const d1 = Math.abs(f1O - ago30.f1);
   const d2 = Math.abs(f2O - ago30.f2);
   const big = Math.max(d1, d2);
-  if(big < 20) return;
+  if(big < 35) return;
   const mover = d1 >= d2 ? (tracker.f1Name || 'F1') : (tracker.f2Name || 'F2');
   const dir = (d1>=d2 ? f1O : f2O) > (d1>=d2 ? ago30.f1 : ago30.f2) ? 'drifting ↑' : 'shortening ↓';
   const el = document.getElementById('sharp-alert');
@@ -1054,6 +1054,8 @@ async function selectGame(game){
 
   // Update tracker fight context
   tracker.setFight(a.name,b.name,a.price,b.price,draw?'Draw':null,draw?draw.price:null);
+  oddsBuffer.length = 0; // clear stale odds so sharp move alert doesn't false-fire on game switch
+  document.getElementById('sharp-alert').classList.remove('active');
   currentBetSide=''; oddsLocked=false;
   updateFighterButtons();
   document.getElementById('bt-odds').value='';
