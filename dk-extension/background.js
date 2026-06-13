@@ -16,25 +16,30 @@ function postToServer(path, body) {
   }).catch(() => {});
 }
 
-// Heartbeat every 2 minutes so the dashboard knows the extension is alive
-setInterval(() => postToServer('/api/dk-heartbeat', { ts: Date.now() }), 120000);
-postToServer('/api/dk-heartbeat', { ts: Date.now() }); // immediate on load
+// Use Chrome Alarms for reliable periodic tasks (setInterval dies with MV3 service worker)
+chrome.alarms.create('heartbeat', { periodInMinutes: 1 });
+chrome.alarms.create('keepAlive', { periodInMinutes: 1 });
 
-// Keep DK session alive — every 3 minutes, ping the mybets API from inside the DK tab
-async function keepDKAlive() {
-  const tabs = await chrome.tabs.query({ url: 'https://*.draftkings.com/*' });
-  if (!tabs.length) return;
-  const tab = tabs.find(t => t.url?.includes('/mybets')) || tabs[0];
-  if (!tab?.id) return;
-  try {
-    await chrome.scripting.executeScript({
-      target: { tabId: tab.id },
-      func: () => fetch('https://sportsbook-nash.draftkings.com/sites/US-IL-SB/api/v5/users/me?format=json', { credentials: 'include' }).catch(() => {})
-    });
-  } catch (_) {}
-}
-setInterval(keepDKAlive, 180000);
-keepDKAlive();
+chrome.alarms.onAlarm.addListener(async (alarm) => {
+  if (alarm.name === 'heartbeat') {
+    postToServer('/api/dk-heartbeat', { ts: Date.now() });
+  }
+  if (alarm.name === 'keepAlive') {
+    const tabs = await chrome.tabs.query({ url: 'https://*.draftkings.com/*' });
+    if (!tabs.length) return;
+    const tab = tabs.find(t => t.url?.includes('/mybets')) || tabs[0];
+    if (!tab?.id) return;
+    try {
+      await chrome.scripting.executeScript({
+        target: { tabId: tab.id },
+        func: () => fetch('https://sportsbook-nash.draftkings.com/sites/US-IL-SB/api/v5/users/me?format=json', { credentials: 'include' }).catch(() => {})
+      });
+    } catch (_) {}
+  }
+});
+
+// Fire immediately on load too
+postToServer('/api/dk-heartbeat', { ts: Date.now() });
 
 // Detect logout: DK navigates to /login or /sportsbook-auth
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
