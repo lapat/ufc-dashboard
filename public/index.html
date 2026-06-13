@@ -1470,7 +1470,7 @@ document.getElementById('dash-user-save').addEventListener('click', e => {
 
 function startDKSync() {
   if (_dkSyncTimer) return;
-  _dkSyncTimer = setInterval(syncDKBets, 15000);
+  _dkSyncTimer = setInterval(syncDKBets, 3000);
   syncDKBets();
 }
 
