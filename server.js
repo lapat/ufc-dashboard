@@ -582,6 +582,7 @@ app.post('/api/dk-heartbeat', (req, res) => {
   const userId = req.body.userId;
   dkHeartbeat.ts = Date.now();
   dkHeartbeat.loggedOut = false;
+  dkHeartbeat.lastBetSync = dkHeartbeat.lastBetSync || Date.now(); // treat first heartbeat as alive signal
   if (userId) dkHeartbeat.users = { ...(dkHeartbeat.users || {}), [userId]: Date.now() };
   res.json({ ok: true });
 });

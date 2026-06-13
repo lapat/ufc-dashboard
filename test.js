@@ -559,9 +559,8 @@ async function runServerTests() {
 
   // lastBetSync updated on any dk-sync call, not just when bets are parsed
   await check('POST /api/dk-sync updates lastBetSync even when 0 bets parsed', async () => {
-    // Send a sync with a URL that produces 0 bets (non-bet WS message)
     const before = await get('/api/dk-status');
-    await new Promise(r => setTimeout(r, 10)); // ensure timestamp advances
+    await new Promise(r => setTimeout(r, 10));
     await post('/api/dk-sync', {
       url: 'wss://test',
       userId: 'testuser-sync-timestamp',
@@ -574,6 +573,16 @@ async function runServerTests() {
       before.lastBetSync === null || after.lastBetSync >= before.lastBetSync,
       `lastBetSync should advance: before=${before.lastBetSync} after=${after.lastBetSync}`
     );
+  });
+
+  // Heartbeat alone must clear the banner — lastBetSync set on first heartbeat
+  await check('POST /api/dk-heartbeat sets lastBetSync so banner clears automatically', async () => {
+    // Reset state to simulate fresh server (no lastBetSync yet)
+    // We can't reset server state, but we can verify that after heartbeat, lastBetSync is not null
+    await post('/api/dk-heartbeat', { ts: Date.now(), userId: 'testuser-heartbeat-banner' });
+    const d = await get('/api/dk-status');
+    assert(d.lastBetSync !== null, 'lastBetSync must be set after heartbeat so banner auto-clears');
+    assert(!d.loggedOut, 'loggedOut should be false after heartbeat');
   });
 
   // Recorder stop specific
