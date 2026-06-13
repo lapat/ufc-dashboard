@@ -1116,7 +1116,10 @@ function selectSport(key, label) {
   document.querySelectorAll('.sport-pill').forEach(b=>{ if(b.dataset.key===key) b.classList.add('active'); });
   document.querySelectorAll('.more-item').forEach(b=>{ if(b.dataset.key===key) b.classList.add('active'); });
   activeSport=key; activeSportTitle=label;
-  // Exit watching mode when switching sports — Ish needs this
+  // Clear DK bets whenever switching sports — they belong to the previous game
+  tracker.clearDkBets();
+  _lastDKBetIds = new Set(tracker.bets.filter(b => b.betId).map(b => b.betId));
+  renderTracker();
   if(selectedGame){
     document.getElementById('now-watching').style.display='none';
     document.getElementById('game-list').style.display='block';
