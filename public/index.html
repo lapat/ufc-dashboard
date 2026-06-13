@@ -1364,6 +1364,8 @@ async function pollDKExtStatus() {
       const betSyncAge = d.lastBetSync ? Date.now() - d.lastBetSync : Infinity;
       _dkLogoutToastShown = false;
 
+      const status = heartbeatAge > 300000 ? 'red' : betSyncAge > 300000 ? 'yellow' : 'green';
+      console.log(`[DK ext] heartbeatAge=${Math.round(heartbeatAge/1000)}s betSyncAge=${betSyncAge===Infinity?'never':Math.round(betSyncAge/1000)+'s'} → ${status}`);
       if (heartbeatAge > 300000) {
         setScItem('sc-dkext', 'red');
       } else if (betSyncAge > 300000) {
@@ -1515,24 +1517,23 @@ async function syncDKBets() {
   try {
     const url = `/api/dk-bets?user=${encodeURIComponent(_dkMeParam)}`;
     const bets = await (await fetch(url)).json();
+    console.log(`[DK sync] fetched ${bets.length} open bet(s) for "${_dkMeParam}"`, bets.map(b => `${b.selection} ${b.odds} $${b.stake}`));
 
     // ── RECONCILE: tracker must exactly mirror DK open bets ──────────────────
-    // Remove any DK-sourced tracker bet whose betId is no longer in DK's open list.
-    // This handles: settled bets, test-injected bets, cancelled bets, cross-user leaks.
     const openDKIds = new Set(bets.map(b => b.betId).filter(Boolean));
     const stale = tracker.bets.filter(b => b.source === 'dk' && b.betId && !openDKIds.has(b.betId));
     if (stale.length) {
+      console.log(`[DK sync] removing ${stale.length} stale bet(s):`, stale.map(b => b.betId));
       tracker.bets = tracker.bets.filter(b => !(b.source === 'dk' && b.betId && !openDKIds.has(b.betId)));
       tracker._persist();
       renderTracker();
     }
-    // Rebuild seen set from current tracker state (not a running accumulator)
     _lastDKBetIds = new Set(tracker.bets.filter(b => b.source === 'dk' && b.betId).map(b => b.betId));
 
     const diag = document.getElementById('dk-diag');
 
-    // Show diagnostic even when server has 0 bets for this user
     if (!bets.length) {
+      console.log(`[DK sync] 0 bets — username may not match extension`);
       if (diag) { diag.textContent = `No open DK bets found for "${_dkMeParam}" — check extension username matches`; diag.style.display = 'block'; }
       return;
     }
@@ -1540,17 +1541,17 @@ async function syncDKBets() {
     const f1 = (tracker.f1Name || '').toLowerCase();
     const f2 = (tracker.f2Name || '').toLowerCase();
     const drawLabel = (tracker.drawLabel || '').toLowerCase();
+    console.log(`[DK sync] matching against fight: "${tracker.f1Name}" vs "${tracker.f2Name}"`);
 
     let added = 0;
     const unmatched = [];
     for (const b of bets) {
-      if (b.isParlay) continue;
+      if (b.isParlay) { console.log(`[DK sync] skip parlay: ${b.selection}`); continue; }
       if (b.userId === 'default') continue;
-      if (b.userId && b.userId !== _dkMeParam) continue;
+      if (b.userId && b.userId !== _dkMeParam) { console.log(`[DK sync] skip wrong user: "${b.userId}" !== "${_dkMeParam}"`); continue; }
       if (_lastDKBetIds.has(b.betId)) continue;
 
       const sel = (b.selection || '').toLowerCase();
-
       const matchScore = (teamName) => {
         const words = teamName.split(' ').filter(w => w.length > 2);
         return words.filter(w => sel.includes(w)).length;
@@ -1563,18 +1564,21 @@ async function syncDKBets() {
       else if (f2Score > 0) side = 'f2';
       else if (drawLabel && (sel.includes('draw') || sel.includes('tie'))) side = 'draw';
 
+      console.log(`[DK sync] "${b.selection}": f1Score=${f1Score} f2Score=${f2Score} → ${side || 'NO MATCH'}`);
       if (!side) { unmatched.push(b); continue; }
 
       const odds = parseInt((b.odds || '').replace('−', '-').replace('−', '-'));
       const stake = parseFloat(b.stake);
-      if (isNaN(odds) || isNaN(stake) || stake <= 0) continue;
+      if (isNaN(odds) || isNaN(stake) || stake <= 0) { console.warn(`[DK sync] bad odds/stake: "${b.odds}" / "${b.stake}"`); continue; }
 
       tracker.addBet(side, stake, odds, b.betId, 'dk');
       _lastDKBetIds.add(b.betId);
       added++;
+      console.log(`[DK sync] ✓ added ${side}: ${b.selection} ${b.odds} $${stake}`);
       showDKToast(`🔄 DK bet synced: ${b.selection} ${b.odds} $${stake}`);
     }
     if (added > 0) renderTracker();
+    if (unmatched.length) console.log(`[DK sync] unmatched (not this fight):`, unmatched.map(b => `${b.selection} ${b.odds}`));
     if (diag) {
       const alreadyMatched = tracker.bets.filter(b => b.source === 'dk').length;
       if (unmatched.length > 0 && alreadyMatched === 0) {
@@ -1584,7 +1588,7 @@ async function syncDKBets() {
         diag.style.display = 'none';
       }
     }
-  } catch (_) {}
+  } catch (e) { console.error('[DK sync] error:', e); }
 }
 
 function showDKToast(msg) {

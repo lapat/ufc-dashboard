@@ -354,8 +354,22 @@ app.get('/api/recordings', (req, res) => {
         } catch {}
       }
     }
-    all.sort((a,b) => (b.date||'').localeCompare(a.date||'') || (b.startTime||'').localeCompare(a.startTime||''));
-    res.json(all);
+    // Normalize sport labels and strip bad entries before returning
+    const normSport = s => {
+      const u = (s||'').toUpperCase();
+      if (u.includes('MMA') || u.includes('MARTIAL')) return 'UFC/MMA';
+      if (u.includes('NHL')) return 'NHL';
+      if (u.includes('NBA')) return 'NBA';
+      if (u.includes('NFL')) return 'NFL';
+      if (u.includes('MLB')) return 'MLB';
+      return s;
+    };
+    const clean = all
+      .filter(r => r.fighter1 !== '?' && r.fighter2 !== '?')          // drop unknown fighters
+      .filter(r => !r.fighter1.startsWith('Test ') && !r.fighter2.startsWith('Test ')) // drop test data
+      .map(r => ({ ...r, sport: normSport(r.sport) }));
+    clean.sort((a,b) => (b.date||'').localeCompare(a.date||'') || (b.startTime||'').localeCompare(a.startTime||''));
+    res.json(clean);
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
@@ -457,9 +471,9 @@ app.post('/api/dk-sync', (req, res) => {
   saveDKCaptures();
 
   const bets = parseDKBets(url, data, userId);
+  dkHeartbeat.lastBetSync = Date.now(); // any WS activity = extension is alive on mybets
   if (bets.length) {
     console.log(`[DK sync] ${bets.length} bets from ${userId || 'unknown'} via ${url}`);
-    dkHeartbeat.lastBetSync = Date.now();
   }
 
   res.json({ received: true, url, bets });
@@ -906,10 +920,13 @@ app.post('/api/recorder/test', async (req, res) => {
     `TEST — this is what a real fight-start alert looks like.\n\n${f1} vs ${f2}\nStarted: ${new Date().toLocaleString()}\n3 data points captured (test)\n\nhttps://ufc-dashboard-production-e03d.up.railway.app\n\nIf you got this email, fight-start alerts are working.`
   );
 
-  // 3. After 10s, "end" the fight — fires the save + completion email
+  // 3. After 10s, "end" the fight — fires the save + completion email, then delete the test file
   setTimeout(() => {
     recSave(testId);
     recorderState.activeFights.delete(testId);
+    // Delete the saved file so test data doesn't pollute the recordings library
+    const testFile = path.join(HISTORICAL_DIR, 'mma_mixed_martial_arts', `${testId}.json`);
+    try { fs.unlinkSync(testFile); } catch (_) {}
   }, 10000);
 
   res.json({
