@@ -20,6 +20,22 @@ function postToServer(path, body) {
 setInterval(() => postToServer('/api/dk-heartbeat', { ts: Date.now() }), 120000);
 postToServer('/api/dk-heartbeat', { ts: Date.now() }); // immediate on load
 
+// Keep DK session alive — every 3 minutes, ping the mybets API from inside the DK tab
+async function keepDKAlive() {
+  const tabs = await chrome.tabs.query({ url: 'https://*.draftkings.com/*' });
+  if (!tabs.length) return;
+  const tab = tabs.find(t => t.url?.includes('/mybets')) || tabs[0];
+  if (!tab?.id) return;
+  try {
+    await chrome.scripting.executeScript({
+      target: { tabId: tab.id },
+      func: () => fetch('https://sportsbook-nash.draftkings.com/sites/US-IL-SB/api/v5/users/me?format=json', { credentials: 'include' }).catch(() => {})
+    });
+  } catch (_) {}
+}
+setInterval(keepDKAlive, 180000);
+keepDKAlive();
+
 // Detect logout: DK navigates to /login or /sportsbook-auth
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   if (changeInfo.status !== 'complete') return;
