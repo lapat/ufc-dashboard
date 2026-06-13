@@ -315,7 +315,10 @@
   <div class="tracker-panel" id="tracker-panel">
     <div class="tracker-header">
       <span class="tracker-title">Theoretical Position</span>
-      <button class="clear-btn" id="clear-bets">CLEAR ALL</button>
+      <div style="display:flex;gap:8px;align-items:center">
+        <button class="clear-btn" onclick="injectMockDKBet()" style="color:#74c0fc;border-color:#74c0fc">TEST DK</button>
+        <button class="clear-btn" id="clear-bets">CLEAR ALL</button>
+      </div>
     </div>
     <div class="bet-fighters">
       <button class="qf-btn" id="qf-f1">Select a game above →</button>
@@ -1273,6 +1276,20 @@ tracker.setFight = function(...args) {
   _origSetFight(...args);
   startDKSync();
 };
+
+async function injectMockDKBet() {
+  if (!tracker.f1Name) { showDKToast('Select a game first'); return; }
+  const fighter = tracker.f1Name;
+  const odds = selectedGame?.bookmakers?.[0]?.markets?.[0]?.outcomes?.find(o => o.name === fighter)?.price;
+  const oddsStr = odds ? (odds > 0 ? '+' + odds : String(odds)) : '+100';
+  await fetch('/api/dk-mock', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ fighter, odds: oddsStr, stake: 100 })
+  });
+  _lastDKBetIds.clear();
+  await syncDKBets();
+}
 
 // ═══════════════════════════════════════════
 // CHAT

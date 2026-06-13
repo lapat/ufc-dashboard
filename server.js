@@ -511,6 +511,25 @@ app.get('/api/dk-bets', (req, res) => {
   res.json(bets);
 });
 
+app.post('/api/dk-mock', (req, res) => {
+  const { fighter, odds, stake } = req.body;
+  if (!fighter) return res.status(400).json({ error: 'fighter required' });
+  const mock = {
+    betId: 'mock-' + Date.now(),
+    status: 'Open',
+    settlementStatus: 'Pending',
+    selection: fighter,
+    market: 'Live Moneyline',
+    odds: odds || '+100',
+    stake: stake || 100,
+    potentialReturns: null,
+    returns: null,
+    placementDate: new Date().toISOString(),
+  };
+  dkParsedBets = [mock];
+  res.json({ ok: true, bet: mock });
+});
+
 // Aggregated soccer — fetches all active soccer leagues and combines
 app.get('/api/soccer', async (req, res) => {
   try {
