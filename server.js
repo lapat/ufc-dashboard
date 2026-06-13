@@ -440,27 +440,36 @@ app.get('/api/sports', async (req, res) => {
 });
 
 // ── DraftKings extension sync ─────────────────────────────────────────────
-const dkCaptures = []; // in-memory, last 200 raw API payloads
+const DK_CAPTURES_FILE = path.join(__dirname, 'historical_data', 'dk_captures.json');
+let dkCaptures = [];
+try { dkCaptures = JSON.parse(fs.readFileSync(DK_CAPTURES_FILE, 'utf8')); } catch (_) {}
+
+function saveDKCaptures() {
+  try { fs.writeFileSync(DK_CAPTURES_FILE, JSON.stringify(dkCaptures.slice(0, 200))); } catch (_) {}
+}
 
 app.post('/api/dk-sync', (req, res) => {
   const { url, data, ts } = req.body;
   if (!url || !data) return res.status(400).json({ error: 'missing fields' });
 
-  // Store raw for inspection
   dkCaptures.unshift({ url, data, ts });
   if (dkCaptures.length > 200) dkCaptures.length = 200;
+  saveDKCaptures();
 
-  // Try to parse bets out of whatever endpoint this is
   const bets = parseDKBets(url, data);
-  if (bets.length) {
-    console.log(`[DK sync] ${bets.length} bets from ${url}`);
-  }
+  if (bets.length) console.log(`[DK sync] ${bets.length} bets from ${url}`);
 
   res.json({ received: true, url, bets });
 });
 
 app.get('/api/dk-captures', (req, res) => {
   res.json(dkCaptures.slice(0, 50));
+});
+
+app.delete('/api/dk-captures', (req, res) => {
+  dkCaptures = [];
+  saveDKCaptures();
+  res.json({ ok: true });
 });
 
 function parseDKBets(url, data) {
@@ -669,7 +678,7 @@ app.get('/api/recorder/status', (req, res) => {
     activeFights: active,
     totalSaved: recorderState.totalSaved,
     lastPoll: recorderState.lastPoll,
-    watching: ['UFC/MMA (always)', ...([...clientWatching.entries()].filter(([,info])=>Date.now()-info.ts<120000).map(([k,info])=>info.team1?`${info.team1} vs ${info.team2}`:SPORT_META[k]?.label||k))],
+    watching: ['UFC/MMA (always)', ...(() => { const w=clientWatching; if(!w||Date.now()-w.ts>=120000) return []; return [w.team1?`${w.team1} vs ${w.team2}`:SPORT_META[w.sport]?.label||w.sport]; })()],
   });
 });
 
@@ -725,13 +734,13 @@ const SPORT_META = {
   'baseball_mlb':           { label: 'MLB',     window: 4 * 60 * 60 * 1000 },
 };
 
-// Client heartbeat — browser pings this while watching a non-UFC sport
-// If no ping for 2 min, sport is dropped from active recording
-const clientWatching = new Map(); // sportKey → { ts, team1, team2 }
+// Client heartbeat — single slot, last watched game wins
+// If no ping for 2 min, recording stops
+let clientWatching = null; // { ts, sport, team1, team2 }
 app.post('/api/recorder/watch', (req, res) => {
   const { sport, team1, team2 } = req.body;
-  if (sport && sport !== 'mma_mixed_martial_arts') {
-    clientWatching.set(sport, { ts: Date.now(), team1, team2 });
+  if (sport && sport !== 'mma_mixed_martial_arts' && sport !== 'soccer') {
+    clientWatching = { ts: Date.now(), sport, team1, team2 };
   }
   res.json({ ok: true });
 });
@@ -853,18 +862,16 @@ async function recPoll() {
   const ufcMeta = SPORT_META['mma_mixed_martial_arts'];
   const ufcLive = await recPollSport('mma_mixed_martial_arts', ufcMeta);
 
-  // Poll other sports only if browser has sent a heartbeat within last 2 min
+  // Poll the one sport the browser is watching (if heartbeat < 2 min old)
   const now = Date.now();
-  const activeClientSports = [...clientWatching.entries()]
-    .filter(([, info]) => now - info.ts < 120000);
-
-  const otherCounts = await Promise.all(
-    activeClientSports.map(([key, info]) => recPollSport(key, SPORT_META[key] || { label: key, window: 4*60*60*1000 }, info))
-  );
-  const totalLive = ufcLive + otherCounts.reduce((a, b) => a + b, 0);
+  const watching = clientWatching && (now - clientWatching.ts < 120000) ? clientWatching : null;
+  const otherLive = watching
+    ? await recPollSport(watching.sport, SPORT_META[watching.sport] || { label: watching.sport, window: 4*60*60*1000 }, watching)
+    : 0;
+  const totalLive = ufcLive + otherLive;
 
   // Next poll: UFC drives the cadence
-  const delay = ufcLive > 0 ? UFC_POLL_MS : activeClientSports.length > 0 ? OTHER_POLL_MS : IDLE_POLL_MS;
+  const delay = ufcLive > 0 ? UFC_POLL_MS : watching ? OTHER_POLL_MS : IDLE_POLL_MS;
   setTimeout(recPoll, delay);
 }
 
