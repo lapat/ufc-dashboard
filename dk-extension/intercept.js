@@ -5,6 +5,15 @@
   function PatchedWS(url, protocols) {
     const ws = protocols !== undefined ? new OrigWS(url, protocols) : new OrigWS(url);
     if (typeof url === 'string' && (url.includes('dkapis.com') || url.includes('draftkings.com'))) {
+      ws.addEventListener('open', function () {
+        window.postMessage({ type: 'DK_WS_STATUS', connected: true, url, ts: Date.now() }, '*');
+      });
+      ws.addEventListener('close', function (e) {
+        window.postMessage({ type: 'DK_WS_STATUS', connected: false, url, code: e.code, ts: Date.now() }, '*');
+      });
+      ws.addEventListener('error', function () {
+        window.postMessage({ type: 'DK_WS_STATUS', connected: false, url, error: true, ts: Date.now() }, '*');
+      });
       ws.addEventListener('message', function (evt) {
         try {
           const data = JSON.parse(evt.data);

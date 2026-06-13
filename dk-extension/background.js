@@ -1,7 +1,7 @@
 const DEFAULT_URL = 'https://ufc-dashboard-production-e03d.up.railway.app';
 
 let betBotUrl = DEFAULT_URL;
-let dkUserId = null; // auto-detected from DK API responses
+let dkUserId = null;
 
 chrome.storage.local.get(['betBotUrl', 'dkUserId'], r => {
   betBotUrl = r.betBotUrl || DEFAULT_URL;
@@ -21,7 +21,15 @@ function postToServer(path, body) {
   }).catch(() => {});
 }
 
-// Use Chrome Alarms for reliable periodic tasks
+function addLog(msg) {
+  chrome.storage.local.get(['debugLog'], r => {
+    const log = r.debugLog || [];
+    log.unshift({ ts: Date.now(), msg });
+    chrome.storage.local.set({ debugLog: log.slice(0, 30) });
+  });
+}
+
+// Use Chrome Alarms for reliable periodic tasks (MV3 service workers get killed otherwise)
 chrome.alarms.create('heartbeat', { periodInMinutes: 1 });
 chrome.alarms.create('keepAlive', { periodInMinutes: 1 });
 
@@ -29,17 +37,37 @@ chrome.alarms.onAlarm.addListener(async (alarm) => {
   if (alarm.name === 'heartbeat') {
     postToServer('/api/dk-heartbeat', { ts: Date.now() });
   }
+
   if (alarm.name === 'keepAlive') {
     const tabs = await chrome.tabs.query({ url: 'https://*.draftkings.com/*' });
     if (!tabs.length) return;
-    const tab = tabs.find(t => t.url?.includes('/mybets')) || tabs[0];
-    if (!tab?.id) return;
-    try {
-      await chrome.scripting.executeScript({
-        target: { tabId: tab.id },
-        func: () => fetch('https://sportsbook-nash.draftkings.com/sites/US-IL-SB/api/v5/users/me?format=json', { credentials: 'include' }).catch(() => {})
-      });
-    } catch (_) {}
+    const myBetsTab = tabs.find(t => t.url?.includes('/mybets'));
+    if (!myBetsTab?.id) return;
+
+    const r = await chrome.storage.local.get(['wsConnected', 'lastSync']);
+    const wsDown = r.wsConnected === false;
+    const syncAge = r.lastSync ? Date.now() - r.lastSync : Infinity;
+    const stale = syncAge > 300000; // no data for 5+ min while ws should be live
+
+    if (wsDown) {
+      // WS explicitly closed — reload the tab to reconnect
+      addLog(`⚠ WS closed — reloading mybets tab`);
+      chrome.tabs.reload(myBetsTab.id);
+      chrome.storage.local.set({ wsConnected: null });
+    } else if (stale && r.wsConnected === true) {
+      // WS shows open but no bets data in 5+ min — something stalled
+      addLog(`⚠ WS stale (${Math.round(syncAge / 60000)}m) — reloading mybets tab`);
+      chrome.tabs.reload(myBetsTab.id);
+      chrome.storage.local.set({ wsConnected: null });
+    } else {
+      // All good — just ping to keep DK session alive
+      try {
+        await chrome.scripting.executeScript({
+          target: { tabId: myBetsTab.id },
+          func: () => fetch('https://sportsbook-nash.draftkings.com/sites/US-IL-SB/api/v5/users/me?format=json', { credentials: 'include' }).catch(() => {})
+        });
+      } catch (_) {}
+    }
   }
 });
 
@@ -56,45 +84,38 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   }
 });
 
-function addLog(msg) {
-  chrome.storage.local.get(['debugLog'], r => {
-    const log = r.debugLog || [];
-    log.unshift({ ts: Date.now(), msg });
-    chrome.storage.local.set({ debugLog: log.slice(0, 30) });
-  });
-}
-
-// Try to extract userId from various DK API responses
 function tryExtractUserId(url, data) {
-  // From /social/user/me.json — has username
-  if (url.includes('/social/user/') && data?.username) {
-    return data.username;
-  }
-  // From /users/me — has displayName or userId
+  if (url.includes('/social/user/') && data?.username) return data.username;
   if (url.includes('/users/me') && (data?.username || data?.displayName || data?.userId)) {
     return data.username || data.displayName || String(data.userId);
-  }
-  // From bets payload — receiptId prefix often encodes user
-  if (data?.result?.initial?.bets?.[0]?.betId) {
-    // betId format: 639169660797770899 — first part after receipts is consistent per user
-    // Not reliable enough, skip
   }
   return null;
 }
 
 chrome.runtime.onMessage.addListener((msg) => {
+  if (msg.type === 'DK_WS_STATUS') {
+    if (msg.connected) {
+      chrome.storage.local.set({ wsConnected: true, wsLastOpen: msg.ts });
+      addLog(`WS: connected`);
+    } else {
+      chrome.storage.local.set({ wsConnected: false, wsLastClose: msg.ts });
+      addLog(`WS: disconnected (code ${msg.code || '?'})`);
+    }
+    return;
+  }
+
   if (msg.type === 'DK_LOGOUT') {
     postToServer('/api/dk-logout', { ts: Date.now() });
     chrome.storage.local.set({ dkLoggedOut: true });
     addLog('LOGOUT detected');
     return;
   }
+
   if (msg.type !== 'DK_API') return;
 
   const url = msg.url;
   const data = msg.data;
 
-  // Auto-detect userId from API responses
   const extractedId = tryExtractUserId(url, data);
   if (extractedId && extractedId !== dkUserId) {
     dkUserId = extractedId;
@@ -102,7 +123,6 @@ chrome.runtime.onMessage.addListener((msg) => {
     addLog(`User identified: ${extractedId}`);
   }
 
-  // Store raw capture for popup display
   chrome.storage.local.get(['captures'], r => {
     const captures = r.captures || [];
     const isBets = !!(data?.result?.initial?.bets || data?.result?.update?.bets);

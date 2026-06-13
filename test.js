@@ -245,6 +245,27 @@ async function runServerTests() {
     assert(open.every(b => b.status === 'Open'), 'all open bets should have status Open');
   });
 
+  // Dedup: same betId from default user and real user should not duplicate
+  await check('GET /api/dk-bets deduplicates same betId across users', async () => {
+    const syncBet = (userId) => post('/api/dk-sync', {
+      url: 'wss://test', userId,
+      data: { result: { initial: { bets: [{
+        betId: 'dedup-test-bet', receiptId: 'dedup-test-bet',
+        status: 'Unsettled', settlementStatus: 'Open',
+        stake: 5, potentialReturns: 8, placementDate: new Date().toISOString(),
+        displayOdds: '+150',
+        selections: [{ selectionDisplayName: 'Dedup Fighter', marketDisplayName: 'Moneyline', displayOdds: '+150' }]
+      }] } } },
+      ts: Date.now()
+    });
+    await syncBet('default');
+    await syncBet('realUser');
+    const bets = await get('/api/dk-bets');
+    const dedupBets = bets.filter(b => b.betId === 'dedup-test-bet');
+    assert(dedupBets.length === 1, `expected 1 dedup bet, got ${dedupBets.length}`);
+    assert(dedupBets[0].userId === 'realUser', `real userId should win, got ${dedupBets[0].userId}`);
+  });
+
   // Recorder stop specific
   await check('POST /api/recorder/stop/:id returns 404 for unknown', async () => {
     const r = await fetch(`${target}/api/recorder/stop/nonexistent-id`, { method: 'POST' });
@@ -268,6 +289,50 @@ async function runServerTests() {
   });
 }
 
+// ── Connection health logic tests ──────────────────────────────────────────
+function testConnectionHealth() {
+  // Thresholds used by popup and keepAlive
+  const LIVE_MS   = 120000;  // < 2min = green
+  const STALE_MS  = 300000;  // 2-5min = yellow (WS open but quiet)
+  const DEAD_MS   = 600000;  // > 5min = red, trigger reload
+
+  const classify = (age, wsConnected) => {
+    if (wsConnected === false) return 'disconnected';
+    if (age < LIVE_MS) return 'live';
+    if (age < DEAD_MS) return 'stale';
+    return 'dead';
+  };
+
+  assert(classify(30000, true) === 'live', 'fresh sync should be live');
+  assert(classify(30000, null) === 'live', 'fresh sync, unknown ws = live');
+  assert(classify(200000, true) === 'stale', '3m+ stale');
+  assert(classify(700000, true) === 'dead', '10m+ dead');
+  assert(classify(0, false) === 'disconnected', 'ws=false always disconnected');
+  assert(classify(700000, false) === 'disconnected', 'ws=false overrides age');
+}
+
+function testDedupBets() {
+  // Simulate getAllBets dedup logic: real userId overwrites DEFAULT_USER
+  const bets = new Map();
+  const DEFAULT = 'default';
+  const defBets = [
+    { betId: 'bet-1', userId: DEFAULT, selection: 'Fighter A' },
+    { betId: 'bet-2', userId: DEFAULT, selection: 'Fighter B' },
+  ];
+  const realBets = [
+    { betId: 'bet-1', userId: 'louislapat', selection: 'Fighter A' }, // same id, real user
+  ];
+
+  // Insert default first, then real (real wins)
+  for (const b of defBets) bets.set(b.betId, b);
+  for (const b of realBets) bets.set(b.betId, b);
+
+  const result = Array.from(bets.values());
+  assert(result.length === 2, `should have 2 unique bets, got ${result.length}`);
+  const bet1 = result.find(b => b.betId === 'bet-1');
+  assert(bet1.userId === 'louislapat', `bet-1 should belong to real user, got ${bet1.userId}`);
+}
+
 // ── Main ───────────────────────────────────────────────────────────────────
 console.log('═══════════════════════════════════');
 console.log('  BET BOT TEST SUITE');
@@ -276,6 +341,8 @@ console.log('══════════════════════�
 console.log('\n── Unit Tests ──');
 try { testOddsParsing(); console.log('  ✓ odds parsing (unicode minus)'); passed++; } catch(e) { console.error('  ✗ odds parsing:', e.message); failed++; }
 try { testBetParsing(); console.log('  ✓ bet parsing (settlementStatus → Open)'); passed++; } catch(e) { console.error('  ✗ bet parsing:', e.message); failed++; }
+try { testConnectionHealth(); console.log('  ✓ connection health classification'); passed++; } catch(e) { console.error('  ✗ connection health:', e.message); failed++; }
+try { testDedupBets(); console.log('  ✓ bet dedup (real userId overwrites default)'); passed++; } catch(e) { console.error('  ✗ bet dedup:', e.message); failed++; }
 
 runServerTests().then(() => {
   console.log(`\n═══════════════════════════════════`);

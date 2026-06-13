@@ -21,6 +21,7 @@
     .log-ts{color:#333;flex-shrink:0;font-size:0.58rem}
     .log-msg.bets{color:#69db7c}
     .log-msg.err{color:#ff6b6b}
+    .log-msg.ws{color:#74c0fc}
     .capture{background:#111;border:1px solid #1a1a1a;border-radius:4px;padding:6px 8px;margin-bottom:4px;font-size:0.62rem;color:#555;word-break:break-all}
     .capture.bets{border-color:#69db7c33}
     .capture .url{color:#e8b84b88;margin-bottom:2px}
@@ -29,7 +30,7 @@
   </style>
 </head>
 <body>
-  <h1>⚡ Bet Bot DK Sync <span style="color:#333;font-size:0.65rem;font-weight:400;letter-spacing:0">v1.3</span></h1>
+  <h1>⚡ Bet Bot DK Sync <span style="color:#333;font-size:0.65rem;font-weight:400;letter-spacing:0">v1.5</span></h1>
 
   <div class="status-grid">
     <div class="stat">
@@ -37,11 +38,11 @@
       <div class="stat-val"><span class="dot" id="tabDot"></span><span id="tabText">checking…</span></div>
     </div>
     <div class="stat">
-      <div class="stat-label">Last Capture</div>
-      <div class="stat-val" id="captureAge">—</div>
+      <div class="stat-label">WS Connection</div>
+      <div class="stat-val"><span class="dot" id="wsDot"></span><span id="wsText">checking…</span></div>
     </div>
     <div class="stat">
-      <div class="stat-label">Server Sync</div>
+      <div class="stat-label">Last Bets Sync</div>
       <div class="stat-val" id="syncAge">—</div>
     </div>
     <div class="stat">

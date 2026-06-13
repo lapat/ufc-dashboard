@@ -25,17 +25,41 @@ async function refresh() {
     ? (onMyBets ? 'My Bets ✓' : 'Open (go to mybets)')
     : 'Not found';
 
-  chrome.storage.local.get(['captures', 'lastSync', 'lastBetCount', 'debugLog', 'dkUserId'], r => {
+  chrome.storage.local.get(['captures', 'lastSync', 'lastBetCount', 'debugLog', 'dkUserId', 'wsConnected', 'wsLastOpen', 'wsLastClose'], r => {
+    // Show detected username
     if (r.dkUserId) {
-      document.getElementById('tabText').textContent = hasDK
-        ? (onMyBets ? `My Bets ✓ · ${r.dkUserId}` : `Open · ${r.dkUserId}`)
-        : `Not found · ${r.dkUserId}`;
+      const current = document.getElementById('tabText').textContent;
+      if (!current.includes('·')) {
+        document.getElementById('tabText').textContent = current + ` · ${r.dkUserId}`;
+      }
     }
-    const captures = r.captures || [];
-    document.getElementById('captureAge').textContent = ago(captures[0]?.ts);
-    document.getElementById('syncAge').textContent = ago(r.lastSync);
+
+    // WS connection status
+    const wsConnected = r.wsConnected;
+    let wsDotCls, wsLabel;
+    if (wsConnected === true) {
+      wsDotCls = 'green';
+      wsLabel = 'Connected';
+    } else if (wsConnected === false) {
+      wsDotCls = 'red';
+      wsLabel = r.wsLastClose ? `Dropped — reconnecting` : 'Disconnected';
+    } else {
+      wsDotCls = 'yellow';
+      wsLabel = hasDK && onMyBets ? 'Waiting for DK…' : 'No DK tab';
+    }
+    setDot('wsDot', wsDotCls);
+    document.getElementById('wsText').textContent = wsLabel;
+
+    // Last sync with age-based coloring
+    const syncAge = r.lastSync ? Date.now() - r.lastSync : Infinity;
+    const syncEl = document.getElementById('syncAge');
+    syncEl.textContent = ago(r.lastSync);
+    syncEl.style.color = syncAge < 120000 ? '#69db7c' : syncAge < 600000 ? '#e8b84b' : '#ff6b6b';
+
     document.getElementById('betCount').textContent = r.lastBetCount != null ? r.lastBetCount : '—';
+
     renderLog(r.debugLog || []);
+    const captures = r.captures || [];
     renderCaptures(captures);
   });
 }
@@ -49,9 +73,10 @@ function renderLog(log) {
   el.innerHTML = log.slice(0, 15).map(e => {
     const isBets = e.msg.includes('bets') || e.msg.includes('BETS');
     const isErr = e.msg.includes('✗') || e.msg.includes('error');
+    const isWs = e.msg.startsWith('WS:');
     return `<div class="log-entry">
       <span class="log-ts">${timeStr(e.ts)}</span>
-      <span class="log-msg${isBets ? ' bets' : isErr ? ' err' : ''}">${e.msg}</span>
+      <span class="log-msg${isBets ? ' bets' : isErr ? ' err' : isWs ? ' ws' : ''}">${e.msg}</span>
     </div>`;
   }).join('');
 }
@@ -73,7 +98,7 @@ function renderCaptures(captures) {
 }
 
 document.getElementById('clrLog').addEventListener('click', () => {
-  chrome.storage.local.set({ debugLog: [], captures: [] });
+  chrome.storage.local.set({ debugLog: [], captures: [], wsConnected: null, wsLastOpen: null, wsLastClose: null });
 });
 
 refresh();
