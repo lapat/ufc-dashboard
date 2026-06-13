@@ -624,6 +624,9 @@ function graphRefresh(){
 // ═══════════════════════════════════════════
 const tracker = new BetTracker();
 tracker.restore();
+// DK bets are always live-synced from server — never persist across refreshes.
+// Wipe them immediately so the page always starts clean, then server re-populates.
+tracker.clearDkBets();
 if(tracker.bets.length>0) renderTracker();
 
 // ── Fighter quick-select ──────────────────────────────────────────────────────
@@ -1437,7 +1440,7 @@ function stopHeartbeat(){ if(_heartbeatTimer){ clearInterval(_heartbeatTimer); _
 // ═══════════════════════════════════════════
 let _dkSyncTimer = null;
 // Initialize from persisted DK-sourced bets so page reload never re-adds them
-let _lastDKBetIds = new Set(tracker.bets.filter(b => b.betId && b.source === 'dk').map(b => b.betId));
+let _lastDKBetIds = new Set(); // always empty on load — DK bets are wiped on refresh
 
 // Dashboard userId — localStorage takes priority, URL ?me= as fallback
 let _dkMeParam = localStorage.getItem('dashUserId') || new URLSearchParams(window.location.search).get('me') || '';

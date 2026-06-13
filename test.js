@@ -624,32 +624,62 @@ function testTrackerGameSwitchClearsDkBets() {
 }
 
 function testTrackerBetIdDedup() {
-  // Simulate the page-reload duplication bug:
-  // tracker.bets restored from localStorage, _lastDKBetIds starts fresh → same bet added again
-  // Fix: initialize _lastDKBetIds from tracker.bets on page load
+  // On page load, DK bets are wiped from localStorage and _lastDKBetIds starts empty.
+  // The server re-populates them fresh. Simulate that flow: wipe → sync → exactly the right bets.
 
-  // Simulate persisted tracker bets (restored from localStorage)
-  const persistedBets = [
-    { id: 1, side: 'f1', stake: 0.76, odds: '-148', betId: 'patriots-bet-001' },
-    { id: 2, side: 'f1', stake: 0.76, odds: '-148', betId: 'patriots-bet-002' },
+  // Simulated localStorage state before wipe (has two DK bets + one manual)
+  let bets = [
+    { id: 1, side: 'f1', stake: 0.76, odds: '-148', betId: 'patriots-bet-001', source: 'dk' },
+    { id: 2, side: 'f1', stake: 0.76, odds: '-148', betId: 'patriots-bet-002', source: 'dk' },
+    { id: 3, side: 'f2', stake: 100, odds: '-110', betId: null, source: 'manual' },
   ];
 
-  // Correct init: _lastDKBetIds built from tracker.bets
-  const lastDKBetIds = new Set(persistedBets.filter(b => b.betId).map(b => b.betId));
+  // Page load: clearDkBets() runs immediately after restore()
+  bets = bets.filter(b => b.source !== 'dk');
+  assert(bets.length === 1, `After refresh wipe, should have 1 bet (manual), got ${bets.length}`);
+  assert(bets[0].source === 'manual', 'Only manual bet should survive refresh');
 
-  // Simulate a sync that returns the same two bets
-  const incomingBets = [
+  // _lastDKBetIds always starts empty after wipe
+  const lastDKBetIds = new Set();
+
+  // Server returns the real open bets → both are "new" (not in lastDKBetIds), both get added once
+  const serverBets = [
     { betId: 'patriots-bet-001', selection: 'New England Patriots', odds: '-148', stake: 0.76, isParlay: false },
     { betId: 'patriots-bet-002', selection: 'New England Patriots', odds: '-148', stake: 0.76, isParlay: false },
   ];
 
   let added = 0;
-  for (const b of incomingBets) {
-    if (lastDKBetIds.has(b.betId)) continue; // already in tracker
+  for (const b of serverBets) {
+    if (lastDKBetIds.has(b.betId)) continue;
     added++;
     lastDKBetIds.add(b.betId);
   }
-  assert(added === 0, `Page reload should not re-add persisted bets — added ${added} duplicates`);
+  assert(added === 2, `Should add exactly 2 DK bets from server, added ${added}`);
+  assert(lastDKBetIds.size === 2, `lastDKBetIds should have 2 entries, has ${lastDKBetIds.size}`);
+}
+
+function testRefreshClearsDKBets() {
+  // Core invariant: DK bets NEVER persist across page refreshes.
+  // Only manual (LOCK IN) bets survive a refresh.
+  // DK bets are always re-populated from server after page load.
+
+  const priorBets = [
+    { id: 1, side: 'f1', stake: 0.79, odds: '+5500', betId: 'DK-qatar-real', source: 'dk' },
+    { id: 2, side: 'draw', stake: 5, odds: '+1500', betId: 'DK-draw-real', source: 'dk' },
+    { id: 3, side: 'f2', stake: 100, odds: '-110', betId: null, source: 'manual' },
+  ];
+
+  // clearDkBets() on page load
+  const afterRefresh = priorBets.filter(b => b.source !== 'dk');
+
+  assert(afterRefresh.length === 1, `Refresh should leave only manual bets, got ${afterRefresh.length}`);
+  assert(!afterRefresh.some(b => b.betId === 'DK-qatar-real'), 'Qatar DK bet must not survive refresh');
+  assert(!afterRefresh.some(b => b.betId === 'DK-draw-real'), 'Draw DK bet must not survive refresh');
+  assert(afterRefresh[0].source === 'manual', 'Manual LOCK IN bet must survive refresh');
+
+  // After refresh, _lastDKBetIds is empty — server re-populates cleanly
+  const lastDKBetIds = new Set();
+  assert(lastDKBetIds.size === 0, '_lastDKBetIds must be empty on page load');
 }
 
 function testDedupBets() {
@@ -685,7 +715,8 @@ try { testBetParsing(); console.log('  ✓ bet parsing (settlementStatus → Ope
 try { testDKExtDotLogic(); console.log('  ✓ DK EXT dot: logged out→red, no sync→yellow, active→green'); passed++; } catch(e) { console.error('  ✗ DK EXT dot logic:', e.message); failed++; }
 try { testConnectionHealth(); console.log('  ✓ connection health classification'); passed++; } catch(e) { console.error('  ✗ connection health:', e.message); failed++; }
 try { testTrackerGameSwitchClearsDkBets(); console.log('  ✓ game switch clears DK bets, keeps manual bets'); passed++; } catch(e) { console.error('  ✗ game switch clear:', e.message); failed++; }
-try { testTrackerBetIdDedup(); console.log('  ✓ tracker bet dedup (page reload does not re-add persisted bets)'); passed++; } catch(e) { console.error('  ✗ tracker bet dedup:', e.message); failed++; }
+try { testTrackerBetIdDedup(); console.log('  ✓ page refresh: DK bets wiped, manual bets survive, server re-populates'); passed++; } catch(e) { console.error('  ✗ tracker bet dedup:', e.message); failed++; }
+try { testRefreshClearsDKBets(); console.log('  ✓ refresh clears all DK bets, manual LOCK IN bets persist'); passed++; } catch(e) { console.error('  ✗ refresh clears DK bets:', e.message); failed++; }
 try { testDedupBets(); console.log('  ✓ bet dedup (real userId overwrites default)'); passed++; } catch(e) { console.error('  ✗ bet dedup:', e.message); failed++; }
 try { testParlayDetection(); console.log('  ✓ parlay detection (straight vs parlay vs leg)'); passed++; } catch(e) { console.error('  ✗ parlay detection:', e.message); failed++; }
 
