@@ -26,6 +26,21 @@
     .sc-dot.yellow{background:#f39c12;animation:pulse 1.2s infinite}
     .sc-dot.red{background:#e74c3c;animation:pulse 1.2s infinite}
     .sc-dot.grey{background:#2a2a2a}
+    /* legend popup */
+    #legend-btn{background:none;border:1px solid #222;border-radius:50%;width:18px;height:18px;font-size:0.6rem;color:#333;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;padding:0;position:relative}
+    #legend-btn:hover{border-color:#444;color:#888}
+    #legend-popup{position:absolute;top:28px;right:0;background:#111;border:1px solid #222;border-radius:10px;padding:18px 22px;z-index:999;width:340px;display:none;box-shadow:0 8px 32px #000a}
+    #legend-popup.open{display:block}
+    #legend-popup h4{margin:0 0 12px;color:#555;font-size:0.7rem;letter-spacing:1px;text-transform:uppercase}
+    .legend-row{display:flex;align-items:flex-start;gap:10px;margin-bottom:10px;font-size:0.75rem;line-height:1.4}
+    .legend-row:last-child{margin-bottom:0}
+    .legend-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:3px}
+    .legend-dot.green{background:#2ecc71}
+    .legend-dot.yellow{background:#f39c12}
+    .legend-dot.red{background:#e74c3c}
+    .legend-dot.grey{background:#2a2a2a;border:1px solid #333}
+    .legend-section{font-size:0.68rem;color:#444;text-transform:uppercase;letter-spacing:.5px;margin:12px 0 6px;padding-top:10px;border-top:1px solid #1a1a1a}
+    .legend-desc{color:#666}
     /* hide old individual status */
     #rec-status{display:none}
     #dk-ext-status{display:none}
@@ -277,6 +292,23 @@
       <span class="sc-name" id="sc-api-label">API</span>
       <div class="sc-dot green" id="sc-api-dot"></div>
     </div>
+  </div>
+  <button id="legend-btn" title="Indicator legend">?</button>
+  <div id="legend-popup">
+    <h4>Indicator Legend</h4>
+    <div class="legend-section">Recorder — UFC background recording</div>
+    <div class="legend-row"><div class="legend-dot green"></div><div class="legend-desc"><strong style="color:#aaa">Green</strong> — UFC fight actively recording right now</div></div>
+    <div class="legend-row"><div class="legend-dot yellow"></div><div class="legend-desc"><strong style="color:#aaa">Yellow</strong> — On a game, but no UFC bout live to record</div></div>
+    <div class="legend-row"><div class="legend-dot grey"></div><div class="legend-desc"><strong style="color:#aaa">Off</strong> — No game selected</div></div>
+    <div class="legend-section">DK Ext — DraftKings extension sync</div>
+    <div class="legend-row"><div class="legend-dot green"></div><div class="legend-desc"><strong style="color:#aaa">Green</strong> — Extension connected and bets syncing</div></div>
+    <div class="legend-row"><div class="legend-dot yellow"></div><div class="legend-desc"><strong style="color:#aaa">Yellow</strong> — Extension alive but not on My Bets page</div></div>
+    <div class="legend-row"><div class="legend-dot red"></div><div class="legend-desc"><strong style="color:#aaa">Red</strong> — Logged out of DraftKings or extension disconnected</div></div>
+    <div class="legend-row"><div class="legend-dot grey"></div><div class="legend-desc"><strong style="color:#aaa">Off</strong> — Extension not running</div></div>
+    <div class="legend-section">API — The Odds API credits</div>
+    <div class="legend-row"><div class="legend-dot green"></div><div class="legend-desc"><strong style="color:#aaa">Green</strong> — Credits available</div></div>
+    <div class="legend-row"><div class="legend-dot yellow"></div><div class="legend-desc"><strong style="color:#aaa">Yellow</strong> — Low credits (&lt;500 remaining)</div></div>
+    <div class="legend-row"><div class="legend-dot red"></div><div class="legend-desc"><strong style="color:#aaa">Red</strong> — Out of credits or API error</div></div>
   </div>
   <!-- hidden legacy elements kept for JS compat -->
   <div id="rec-status" style="display:none"><div id="rec-dot" class="idle"></div><span id="rec-label">—</span></div>
@@ -1333,14 +1365,15 @@ async function pollRecorder(){
     const dot=document.getElementById('rec-dot');
     const lbl=document.getElementById('rec-label');
     // watching = array that includes non-UFC entries when clientWatching is set
-    const isWatchingGame = d.watching && d.watching.some(w => !w.includes('UFC/MMA'));
     if(d.recording && d.activeFights.length>0){
+      // UFC fight actively being recorded in background
       if(dot) dot.className='live';
       if(lbl){ lbl.textContent=d.activeFights.map(f=>`● REC ${f.fighter1} vs ${f.fighter2} (${f.dataPoints} pts)`).join(' · '); lbl.style.color='#e74c3c'; }
       setScItem('sc-recorder', 'green');
-    } else if(isWatchingGame || selectedGame){
+    } else if(selectedGame){
+      // On a game but no UFC live recording happening
       if(dot) dot.className='idle';
-      if(lbl){ lbl.textContent='tracking game'; lbl.style.color='#e8b84b'; }
+      if(lbl){ lbl.textContent='watching — no UFC live'; lbl.style.color='#f39c12'; }
       setScItem('sc-recorder', 'yellow');
     } else {
       if(dot) dot.className='idle';
@@ -1357,6 +1390,12 @@ async function pollRecorder(){
   }catch{ setScItem('sc-recorder','grey'); }
 }
 pollRecorder(); setInterval(pollRecorder,5000);
+
+// Legend popup toggle
+const legendBtn = document.getElementById('legend-btn');
+const legendPopup = document.getElementById('legend-popup');
+legendBtn.addEventListener('click', e => { e.stopPropagation(); legendPopup.classList.toggle('open'); });
+document.addEventListener('click', () => legendPopup.classList.remove('open'));
 
 document.getElementById('rec-test-btn').addEventListener('click', async ()=>{
   const btn=document.getElementById('rec-test-btn');
