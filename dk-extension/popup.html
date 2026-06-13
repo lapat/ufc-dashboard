@@ -27,10 +27,22 @@
     .capture .url{color:#e8b84b88;margin-bottom:2px}
     .capture .preview.bets{color:#69db7c}
     #empty{color:#252525;font-size:0.7rem;padding:8px 0}
+    .user-row{display:flex;gap:6px;align-items:center;margin-bottom:10px}
+    .user-row input{flex:1;background:#111;border:1px solid #333;border-radius:4px;color:#ddd;font-size:0.7rem;padding:5px 8px;outline:none}
+    .user-row input:focus{border-color:#e8b84b}
+    .user-row button{background:#1a1a00;border:1px solid #e8b84b44;border-radius:4px;color:#e8b84b;font-size:0.65rem;padding:5px 10px;cursor:pointer;white-space:nowrap}
+    .user-row button:hover{background:#2a2a00}
+    .user-row button.saved{background:#0a1a0a;border-color:#69db7c44;color:#69db7c}
   </style>
 </head>
 <body>
-  <h1>⚡ Bet Bot DK Sync <span style="color:#333;font-size:0.65rem;font-weight:400;letter-spacing:0">v1.5</span></h1>
+  <h1>⚡ Bet Bot DK Sync <span style="color:#333;font-size:0.65rem;font-weight:400;letter-spacing:0">v1.6</span></h1>
+
+  <!-- Manual username — set once so bets are isolated per person -->
+  <div class="user-row">
+    <input id="userInput" placeholder="Your username (e.g. louis, ish)" spellcheck="false"/>
+    <button id="saveUser">Set</button>
+  </div>
 
   <div class="status-grid">
     <div class="stat">

@@ -97,6 +97,21 @@ function renderCaptures(captures) {
   }).join('');
 }
 
+// Username setup
+chrome.storage.local.get(['dkUserId'], r => {
+  if (r.dkUserId) document.getElementById('userInput').value = r.dkUserId;
+});
+
+document.getElementById('saveUser').addEventListener('click', () => {
+  const val = document.getElementById('userInput').value.trim();
+  if (!val) return;
+  chrome.storage.local.set({ dkUserId: val });
+  const btn = document.getElementById('saveUser');
+  btn.textContent = 'Saved ✓';
+  btn.className = 'saved';
+  setTimeout(() => { btn.textContent = 'Set'; btn.className = ''; }, 2000);
+});
+
 document.getElementById('clrLog').addEventListener('click', () => {
   chrome.storage.local.set({ debugLog: [], captures: [], wsConnected: null, wsLastOpen: null, wsLastClose: null });
 });

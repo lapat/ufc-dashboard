@@ -345,6 +345,28 @@ async function runServerTests() {
     assert(!yBets.some(b => b.betId === 'iso-x-1'), 'isolationUserY should not see X bets');
   });
 
+  // Re-sync same bet should not duplicate it (root cause of "4x Detroit Lions" bug)
+  await check('Re-syncing same bet multiple times produces exactly 1 entry', async () => {
+    const userId = 'dedup-resync-user';
+    const syncSameBet = () => post('/api/dk-sync', {
+      url: 'wss://test', userId,
+      data: { result: { initial: { bets: [{
+        betId: 'resync-bet-001', receiptId: 'resync-bet-001',
+        status: 'Unsettled', settlementStatus: 'Open',
+        stake: 5, potentialReturns: 8, placementDate: new Date().toISOString(),
+        displayOdds: '+150',
+        selections: [{ selectionDisplayName: 'Detroit Lions', marketDisplayName: 'Moneyline', displayOdds: '+150' }]
+      }] } } },
+      ts: Date.now()
+    });
+    await syncSameBet();
+    await syncSameBet();
+    await syncSameBet();
+    const bets = await get(`/api/dk-bets?user=${userId}`);
+    const matching = bets.filter(b => b.betId === 'resync-bet-001');
+    assert(matching.length === 1, `Expected 1 entry after 3 syncs of same bet, got ${matching.length}`);
+  });
+
   // Recorder stop specific
   await check('POST /api/recorder/stop/:id returns 404 for unknown', async () => {
     const r = await fetch(`${target}/api/recorder/stop/nonexistent-id`, { method: 'POST' });
