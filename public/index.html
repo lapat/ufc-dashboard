@@ -1378,9 +1378,12 @@ async function pollDKExtStatus() {
       if (heartbeatAge > 300000) {
         setScItem('sc-dkext', 'red');
         setDKBanner('DK extension connection lost — open your DraftKings mybets tab to reconnect');
+      } else if (betSyncAge > 300000) {
+        setScItem('sc-dkext', 'yellow');
+        setDKBanner('DK extension not receiving bet data — make sure draftkings.com/mybets is open');
       } else {
-        setScItem('sc-dkext', betSyncAge > 300000 ? 'yellow' : 'green');
-        setDKBanner(null); // clear banner when healthy
+        setScItem('sc-dkext', 'green');
+        setDKBanner(null);
       }
 
       // Username mismatch: extension is live but dashboard username isn't seen in any active extension
