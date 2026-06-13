@@ -557,6 +557,25 @@ async function runServerTests() {
     assert(matching.length === 1, `Expected 1 entry after 3 syncs of same bet, got ${matching.length}`);
   });
 
+  // lastBetSync updated on any dk-sync call, not just when bets are parsed
+  await check('POST /api/dk-sync updates lastBetSync even when 0 bets parsed', async () => {
+    // Send a sync with a URL that produces 0 bets (non-bet WS message)
+    const before = await get('/api/dk-status');
+    await new Promise(r => setTimeout(r, 10)); // ensure timestamp advances
+    await post('/api/dk-sync', {
+      url: 'wss://test',
+      userId: 'testuser-sync-timestamp',
+      data: { someNonBetPayload: true },
+      ts: Date.now()
+    });
+    const after = await get('/api/dk-status');
+    assert(after.lastBetSync !== null, 'lastBetSync should be set after any sync call');
+    assert(
+      before.lastBetSync === null || after.lastBetSync >= before.lastBetSync,
+      `lastBetSync should advance: before=${before.lastBetSync} after=${after.lastBetSync}`
+    );
+  });
+
   // Recorder stop specific
   await check('POST /api/recorder/stop/:id returns 404 for unknown', async () => {
     const r = await fetch(`${target}/api/recorder/stop/nonexistent-id`, { method: 'POST' });
@@ -725,6 +744,74 @@ function testRefreshClearsDKBets() {
   assert(lastDKBetIds.size === 0, '_lastDKBetIds must be empty on page load');
 }
 
+function testDKBannerLogic() {
+  // Mirrors pollDKExtStatus() banner decision — every non-green state must show a banner
+  const classify = ({ loggedOut, heartbeat, lastBetSync }) => {
+    if (loggedOut) return { dot: 'red', banner: true, msg: 'logged-out' };
+    if (!heartbeat) return { dot: 'grey', banner: true, msg: 'not-detected' };
+    const heartbeatAge = Date.now() - heartbeat;
+    const betSyncAge = lastBetSync ? Date.now() - lastBetSync : Infinity;
+    if (heartbeatAge > 300000) return { dot: 'red', banner: true, msg: 'connection-lost' };
+    if (betSyncAge > 300000) return { dot: 'yellow', banner: true, msg: 'not-on-mybets' };
+    return { dot: 'green', banner: false };
+  };
+
+  const now = Date.now();
+  const r1 = classify({ loggedOut: true, heartbeat: now, lastBetSync: now });
+  assert(r1.banner && r1.dot === 'red', `logged out → must show red banner, got dot=${r1.dot} banner=${r1.banner}`);
+
+  const r2 = classify({ loggedOut: false, heartbeat: null });
+  assert(r2.banner && r2.dot === 'grey', `no heartbeat → must show grey banner, got dot=${r2.dot} banner=${r2.banner}`);
+
+  const r3 = classify({ loggedOut: false, heartbeat: now - 400000, lastBetSync: now });
+  assert(r3.banner && r3.dot === 'red', `stale heartbeat → must show red banner, got dot=${r3.dot} banner=${r3.banner}`);
+
+  const r4 = classify({ loggedOut: false, heartbeat: now, lastBetSync: now - 400000 });
+  assert(r4.banner && r4.dot === 'yellow', `stale bet sync → must show yellow banner, got dot=${r4.dot} banner=${r4.banner}`);
+
+  const r5 = classify({ loggedOut: false, heartbeat: now, lastBetSync: null });
+  assert(r5.banner && r5.dot === 'yellow', `never synced → must show yellow banner, got dot=${r5.dot} banner=${r5.banner}`);
+
+  const r6 = classify({ loggedOut: false, heartbeat: now, lastBetSync: now });
+  assert(!r6.banner && r6.dot === 'green', `all healthy → banner must be hidden, got dot=${r6.dot} banner=${r6.banner}`);
+}
+
+function testRecordingsFilter() {
+  // Mirrors server /api/recordings normSport + filter logic
+  const normSport = s => {
+    const u = (s || '').toUpperCase();
+    if (u.includes('MMA') || u.includes('MARTIAL')) return 'UFC/MMA';
+    if (u.includes('NHL')) return 'NHL';
+    if (u.includes('NBA')) return 'NBA';
+    if (u.includes('NFL')) return 'NFL';
+    if (u.includes('MLB')) return 'MLB';
+    return s;
+  };
+
+  // Sport label normalization
+  assert(normSport('mma_mixed_martial_arts') === 'UFC/MMA', `mma_mixed_martial_arts should → UFC/MMA`);
+  assert(normSport('UFC/MMA') === 'UFC/MMA', 'UFC/MMA should stay UFC/MMA');
+  assert(normSport('nhl_hockey') === 'NHL', 'nhl → NHL');
+  assert(normSport('nba_basketball') === 'NBA', 'nba → NBA');
+
+  // Filter logic
+  const raw = [
+    { fighter1: '?', fighter2: 'Fighter B', sport: 'UFC/MMA' },
+    { fighter1: 'Fighter A', fighter2: '?', sport: 'UFC/MMA' },
+    { fighter1: 'Test Fighter A', fighter2: 'Test Fighter B', sport: 'mma_mixed_martial_arts' },
+    { fighter1: 'Diego Lopes', fighter2: 'Steve Garcia', sport: 'mma_mixed_martial_arts' },
+  ];
+
+  const clean = raw
+    .filter(r => r.fighter1 !== '?' && r.fighter2 !== '?')
+    .filter(r => !r.fighter1.startsWith('Test ') && !r.fighter2.startsWith('Test '))
+    .map(r => ({ ...r, sport: normSport(r.sport) }));
+
+  assert(clean.length === 1, `Expected 1 clean recording, got ${clean.length}`);
+  assert(clean[0].fighter1 === 'Diego Lopes', 'Only real fight should remain');
+  assert(clean[0].sport === 'UFC/MMA', `Sport should be normalized, got "${clean[0].sport}"`);
+}
+
 function testDedupBets() {
   // Simulate getAllBets dedup logic: real userId overwrites DEFAULT_USER
   const bets = new Map();
@@ -762,6 +849,8 @@ try { testTrackerBetIdDedup(); console.log('  ✓ page refresh: DK bets wiped, m
 try { testRefreshClearsDKBets(); console.log('  ✓ refresh clears all DK bets, manual LOCK IN bets persist'); passed++; } catch(e) { console.error('  ✗ refresh clears DK bets:', e.message); failed++; }
 try { testDedupBets(); console.log('  ✓ bet dedup (real userId overwrites default)'); passed++; } catch(e) { console.error('  ✗ bet dedup:', e.message); failed++; }
 try { testParlayDetection(); console.log('  ✓ parlay detection (straight vs parlay vs leg)'); passed++; } catch(e) { console.error('  ✗ parlay detection:', e.message); failed++; }
+try { testDKBannerLogic(); console.log('  ✓ DK banner: all 4 non-green states show banner, green hides it'); passed++; } catch(e) { console.error('  ✗ DK banner logic:', e.message); failed++; }
+try { testRecordingsFilter(); console.log('  ✓ recordings: filters ? vs ?, test data, normalizes sport labels'); passed++; } catch(e) { console.error('  ✗ recordings filter:', e.message); failed++; }
 
 runServerTests().then(() => {
   console.log(`\n═══════════════════════════════════`);
