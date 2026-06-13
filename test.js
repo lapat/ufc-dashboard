@@ -345,6 +345,42 @@ async function runServerTests() {
     assert(!yBets.some(b => b.betId === 'iso-x-1'), 'isolationUserY should not see X bets');
   });
 
+  // Default-bucket bets must NOT leak when real users exist (root cause of Ish's bets showing on Louis's dashboard)
+  await check('Default user bets hidden when real users exist', async () => {
+    // Post a unique bet as 'default' (simulates Ish's extension before username was set)
+    const ishBetId = `ish-leak-test-${Date.now()}`;
+    await post('/api/dk-sync', {
+      url: 'wss://test', userId: 'default',
+      data: { result: { initial: { bets: [{
+        betId: ishBetId, receiptId: ishBetId,
+        status: 'Unsettled', settlementStatus: 'Open',
+        stake: 800, potentialReturns: 1400, placementDate: new Date().toISOString(),
+        displayOdds: '-120',
+        selections: [{ selectionDisplayName: 'Carolina Hurricanes', marketDisplayName: 'Moneyline', displayOdds: '-120' }]
+      }] } } },
+      ts: Date.now()
+    });
+    // Post a real-user bet (simulates Louis's extension with username detected)
+    await post('/api/dk-sync', {
+      url: 'wss://test', userId: 'louislapat',
+      data: { result: { initial: { bets: [{
+        betId: 'louis-real-bet', receiptId: 'louis-real-bet',
+        status: 'Unsettled', settlementStatus: 'Open',
+        stake: 50, potentialReturns: 80, placementDate: new Date().toISOString(),
+        displayOdds: '+150',
+        selections: [{ selectionDisplayName: 'Diego Lopes', marketDisplayName: 'Moneyline', displayOdds: '+150' }]
+      }] } } },
+      ts: Date.now()
+    });
+    // Unfiltered /api/dk-bets should NOT contain the default-user bet
+    const bets = await get('/api/dk-bets');
+    const ishBet = bets.find(b => b.betId === ishBetId);
+    assert(!ishBet, `Default user bet (Ish's Carolina Hurricanes) should not appear when real users exist — got ${JSON.stringify(ishBet)}`);
+    // Louis's bet should still be there
+    const louisBet = bets.find(b => b.betId === 'louis-real-bet');
+    assert(louisBet, 'Real user bet (Louis) should still appear');
+  });
+
   // Re-sync same bet should not duplicate it (root cause of "4x Detroit Lions" bug)
   await check('Re-syncing same bet multiple times produces exactly 1 entry', async () => {
     const userId = 'dedup-resync-user';

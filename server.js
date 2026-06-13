@@ -520,12 +520,15 @@ function parseDKBets(url, data, userId) {
 // Merge all users' bets, dedup by betId (real userId wins over 'default')
 function getAllBets(openOnly = true) {
   const byId = new Map();
-  // Insert 'default' first so real userId entries overwrite them
-  const defaultBets = dkBetsByUser.get(DEFAULT_USER) || [];
-  for (const b of defaultBets) byId.set(b.betId, b);
-  for (const [uid, bets] of dkBetsByUser.entries()) {
-    if (uid === DEFAULT_USER) continue;
-    for (const b of bets) byId.set(b.betId, b);
+  const realUsers = [...dkBetsByUser.keys()].filter(u => u !== DEFAULT_USER);
+  // Only include default bucket if no real users have synced yet (solo fallback)
+  if (realUsers.length === 0) {
+    const defaultBets = dkBetsByUser.get(DEFAULT_USER) || [];
+    for (const b of defaultBets) byId.set(b.betId, b);
+  } else {
+    for (const uid of realUsers) {
+      for (const b of dkBetsByUser.get(uid)) byId.set(b.betId, b);
+    }
   }
   const all = Array.from(byId.values());
   return openOnly ? all.filter(b => b.status === 'Open') : all;
