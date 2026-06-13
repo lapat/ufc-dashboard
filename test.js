@@ -753,6 +753,37 @@ function testRefreshClearsDKBets() {
   assert(lastDKBetIds.size === 0, '_lastDKBetIds must be empty on page load');
 }
 
+function testDrawBetMatching() {
+  // Mirrors syncDKBets() side-matching logic — draw bets must resolve to side='draw'
+  // Bug history: tracker.drawLabel was used (undefined) instead of tracker.drawName → draws never matched
+  const matchBet = (sel, f1, f2, drawName) => {
+    const s = sel.toLowerCase();
+    const matchScore = name => name.split(' ').filter(w => w.length > 2).filter(w => s.includes(w)).length;
+    const f1Score = matchScore(f1.toLowerCase());
+    const f2Score = matchScore(f2.toLowerCase());
+    const dl = (drawName || '').toLowerCase();
+    if (f1Score > 0 && f1Score >= f2Score) return 'f1';
+    if (f2Score > 0) return 'f2';
+    if (dl && (s.includes('draw') || s.includes('tie'))) return 'draw';
+    return null;
+  };
+
+  // Draw bet must match when drawName is set
+  assert(matchBet('Draw', 'Brazil', 'Morocco', 'Draw') === 'draw', 'Draw selection → side=draw');
+  assert(matchBet('Tie', 'Brazil', 'Morocco', 'Draw') === 'draw', 'Tie selection → side=draw');
+
+  // Draw must NOT match when drawName is empty/null (no draw market on this game)
+  assert(matchBet('Draw', 'Diego Lopes', 'Steve Garcia', '') === null, 'Draw should not match when no draw market');
+  assert(matchBet('Draw', 'Diego Lopes', 'Steve Garcia', null) === null, 'Draw should not match when drawName is null');
+
+  // Normal f1/f2 still work
+  assert(matchBet('Brazil', 'Brazil', 'Morocco', 'Draw') === 'f1', 'f1 name → side=f1');
+  assert(matchBet('Morocco', 'Brazil', 'Morocco', 'Draw') === 'f2', 'f2 name → side=f2');
+
+  // Unrelated selection → null
+  assert(matchBet('Qatar', 'Brazil', 'Morocco', 'Draw') === null, 'unrelated selection → null');
+}
+
 function testDKBannerLogic() {
   // Mirrors pollDKExtStatus() banner decision — every non-green state must show a banner
   const classify = ({ loggedOut, heartbeat, lastBetSync }) => {
@@ -858,6 +889,7 @@ try { testTrackerBetIdDedup(); console.log('  ✓ page refresh: DK bets wiped, m
 try { testRefreshClearsDKBets(); console.log('  ✓ refresh clears all DK bets, manual LOCK IN bets persist'); passed++; } catch(e) { console.error('  ✗ refresh clears DK bets:', e.message); failed++; }
 try { testDedupBets(); console.log('  ✓ bet dedup (real userId overwrites default)'); passed++; } catch(e) { console.error('  ✗ bet dedup:', e.message); failed++; }
 try { testParlayDetection(); console.log('  ✓ parlay detection (straight vs parlay vs leg)'); passed++; } catch(e) { console.error('  ✗ parlay detection:', e.message); failed++; }
+try { testDrawBetMatching(); console.log('  ✓ draw bet matching: Draw/Tie → side=draw, null when no draw market'); passed++; } catch(e) { console.error('  ✗ draw bet matching:', e.message); failed++; }
 try { testDKBannerLogic(); console.log('  ✓ DK banner: all 4 non-green states show banner, green hides it'); passed++; } catch(e) { console.error('  ✗ DK banner logic:', e.message); failed++; }
 try { testRecordingsFilter(); console.log('  ✓ recordings: filters ? vs ?, test data, normalizes sport labels'); passed++; } catch(e) { console.error('  ✗ recordings filter:', e.message); failed++; }
 
