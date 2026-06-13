@@ -1,24 +1,12 @@
-const input = document.getElementById('url-input');
-const saveBtn = document.getElementById('save-btn');
 const statusEl = document.getElementById('status');
 const capturesEl = document.getElementById('captures');
 
 const DEFAULT_URL = 'https://ufc-dashboard-production-e03d.up.railway.app';
 
 chrome.storage.local.get(['betBotUrl', 'captures', 'lastSync', 'lastBetCount'], r => {
-  const url = r.betBotUrl || DEFAULT_URL;
-  input.value = url;
-  statusEl.textContent = `Connected to ${url}`;
+  statusEl.textContent = `Connected to Bet Bot`;
   statusEl.className = 'ok';
   renderCaptures(r.captures || []);
-});
-
-saveBtn.addEventListener('click', () => {
-  const url = input.value.trim().replace(/\/$/, '');
-  if (!url) return;
-  chrome.storage.local.set({ betBotUrl: url });
-  statusEl.textContent = `Saved — go to DraftKings My Bets`;
-  statusEl.className = 'ok';
 });
 
 function renderCaptures(captures) {
