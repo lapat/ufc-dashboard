@@ -53,10 +53,19 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   }
 });
 
+function addLog(msg) {
+  chrome.storage.local.get(['debugLog'], r => {
+    const log = r.debugLog || [];
+    log.unshift({ ts: Date.now(), msg });
+    chrome.storage.local.set({ debugLog: log.slice(0, 30) });
+  });
+}
+
 chrome.runtime.onMessage.addListener((msg) => {
   if (msg.type === 'DK_LOGOUT') {
     postToServer('/api/dk-logout', { ts: Date.now() });
     chrome.storage.local.set({ dkLoggedOut: true });
+    addLog('LOGOUT detected');
     return;
   }
   if (msg.type !== 'DK_API') return;
@@ -64,18 +73,22 @@ chrome.runtime.onMessage.addListener((msg) => {
   const url = msg.url;
   const data = msg.data;
 
-  // Log everything we see for discovery
-  console.log('[BetBot DK] API call:', url);
-
   // Store raw capture for popup display
   chrome.storage.local.get(['captures'], r => {
     const captures = r.captures || [];
-    captures.unshift({ url, ts: Date.now(), preview: JSON.stringify(data).slice(0, 200) });
+    const isBets = !!(data?.result?.initial?.bets || data?.result?.update?.bets);
+    const betCount = (data?.result?.initial?.bets || data?.result?.update?.bets || []).length;
+    const preview = isBets
+      ? `[WS BETS] ${betCount} bets found`
+      : JSON.stringify(data).slice(0, 120);
+    captures.unshift({ url, ts: Date.now(), preview, isBets });
     chrome.storage.local.set({ captures: captures.slice(0, 50) });
+    if (isBets) addLog(`WS: captured ${betCount} bets`);
   });
 
   // Send to Bet Bot server
   if (!betBotUrl) return;
+  addLog(`→ sending to server: ${url.replace(/https?:\/\/[^/]+/,'').slice(0,60)}`);
   fetch(`${betBotUrl}/api/dk-sync`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -83,6 +96,9 @@ chrome.runtime.onMessage.addListener((msg) => {
   }).then(r => r.json()).then(res => {
     if (res.bets?.length) {
       chrome.storage.local.set({ lastSync: Date.now(), lastBetCount: res.bets.length });
+      addLog(`✓ server parsed ${res.bets.length} bets`);
+    } else {
+      addLog(`server: no bets parsed from this call`);
     }
-  }).catch(() => {});
+  }).catch(e => addLog(`✗ server error: ${e.message}`));
 });

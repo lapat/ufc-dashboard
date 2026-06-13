@@ -4,7 +4,7 @@
   <meta charset="UTF-8"/>
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
-    body{background:#0a0a0a;color:#ddd;font-family:'Helvetica Neue',sans-serif;font-size:13px;width:320px;padding:14px}
+    body{background:#0a0a0a;color:#ddd;font-family:'Helvetica Neue',sans-serif;font-size:13px;width:340px;padding:14px}
     h1{color:#e8b84b;font-size:0.85rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
     .status-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:12px}
     .stat{background:#111;border:1px solid #1a1a1a;border-radius:6px;padding:8px 10px}
@@ -14,26 +14,34 @@
     .dot.green{background:#69db7c}
     .dot.red{background:#ff6b6b}
     .dot.yellow{background:#e8b84b}
-    .section{font-size:0.6rem;color:#333;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;margin-top:8px}
+    .section{font-size:0.6rem;color:#444;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px;margin-top:10px;display:flex;justify-content:space-between;align-items:center}
+    .clr{font-size:0.6rem;color:#333;cursor:pointer;text-decoration:underline}
+    .clr:hover{color:#e8b84b}
+    .log-entry{font-size:0.62rem;color:#555;padding:3px 0;border-bottom:1px solid #111;display:flex;gap:6px}
+    .log-ts{color:#333;flex-shrink:0;font-size:0.58rem}
+    .log-msg.bets{color:#69db7c}
+    .log-msg.err{color:#ff6b6b}
     .capture{background:#111;border:1px solid #1a1a1a;border-radius:4px;padding:6px 8px;margin-bottom:4px;font-size:0.62rem;color:#555;word-break:break-all}
+    .capture.bets{border-color:#69db7c33}
     .capture .url{color:#e8b84b88;margin-bottom:2px}
+    .capture .preview.bets{color:#69db7c}
     #empty{color:#252525;font-size:0.7rem;padding:8px 0}
   </style>
 </head>
 <body>
-  <h1>⚡ Bet Bot DK Sync</h1>
+  <h1>⚡ Bet Bot DK Sync <span style="color:#333;font-size:0.65rem;font-weight:400;letter-spacing:0">v1.3</span></h1>
 
   <div class="status-grid">
     <div class="stat">
       <div class="stat-label">DK Tab</div>
-      <div class="stat-val" id="tabStatus"><span class="dot" id="tabDot"></span><span id="tabText">checking…</span></div>
+      <div class="stat-val"><span class="dot" id="tabDot"></span><span id="tabText">checking…</span></div>
     </div>
     <div class="stat">
       <div class="stat-label">Last Capture</div>
       <div class="stat-val" id="captureAge">—</div>
     </div>
     <div class="stat">
-      <div class="stat-label">Last Sync</div>
+      <div class="stat-label">Server Sync</div>
       <div class="stat-val" id="syncAge">—</div>
     </div>
     <div class="stat">
@@ -42,8 +50,14 @@
     </div>
   </div>
 
-  <div class="section">Recent API calls captured</div>
-  <div id="captures"><div id="empty">Go to DraftKings — API calls will appear here</div></div>
+  <div class="section">
+    Debug Log
+    <span class="clr" id="clrLog">clear</span>
+  </div>
+  <div id="debugLog"></div>
+
+  <div class="section">Recent Captures</div>
+  <div id="captures"><div id="empty">Go to DraftKings mybets — data will appear here</div></div>
 
   <script src="popup.js"></script>
 </body>
