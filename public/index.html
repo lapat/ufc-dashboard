@@ -1108,10 +1108,22 @@ const MORE_SPORTS=[
 function selectSport(key, label) {
   document.querySelectorAll('.sport-pill').forEach(b=>b.classList.remove('active'));
   document.querySelectorAll('.more-item').forEach(b=>b.classList.remove('active'));
+  // Update active pill immediately so feedback is instant
+  document.querySelectorAll('.sport-pill').forEach(b=>{ if(b.dataset.key===key) b.classList.add('active'); });
+  document.querySelectorAll('.more-item').forEach(b=>{ if(b.dataset.key===key) b.classList.add('active'); });
   activeSport=key; activeSportTitle=label;
+  // Exit watching mode when switching sports — Ish needs this
+  if(selectedGame){
+    document.getElementById('now-watching').style.display='none';
+    document.getElementById('game-list').style.display='block';
+    document.getElementById('graph-fight-lbl').textContent='no game selected';
+    document.getElementById('graph-empty').style.display='block';
+    canvas.style.display='none';
+    selectedGame=null;
+    stopHeartbeat();
+  }
   startHeartbeat(key);
   loadGames();
-  // close more menu
   document.getElementById('more-menu')?.classList.remove('open');
 }
 
@@ -1175,7 +1187,7 @@ async function pollMoreLive(){
 setTimeout(()=>{pollMoreLive();setInterval(pollMoreLive,600000);},3000);
 
 async function loadGames(){
-  if(selectedGame) return; // don't refresh list while watching a game
+  if(selectedGame) return;
   const endpoint=activeSport==='mma_mixed_martial_arts'?'/api/ufc':activeSport==='soccer'?'/api/soccer':activeSport==='tennis'?'/api/tennis':`/api/sport/${activeSport}`;
   try{
     const raw=await(await fetch(endpoint)).json();
