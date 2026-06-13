@@ -989,6 +989,8 @@ async function selectGame(game){
     setTimeout(()=>{ document.getElementById('nw-backfill-status').textContent=''; },4000);
   }
 
+  // Heartbeat with specific game so recorder only captures this match
+  startHeartbeat(game.sport_key||activeSport, a.name, b.name);
   startPolling();
 }
 
@@ -1198,10 +1200,10 @@ document.getElementById('rec-test-btn').addEventListener('click', async ()=>{
 
 // Heartbeat — tells server to keep recording the current non-UFC sport
 let _heartbeatTimer=null;
-function startHeartbeat(sportKey){
+function startHeartbeat(sportKey,team1,team2){
   stopHeartbeat();
   if(!sportKey||sportKey==='mma_mixed_martial_arts') return; // UFC is always-on
-  const ping=()=>fetch('/api/recorder/watch',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sport:sportKey})}).catch(()=>{});
+  const ping=()=>fetch('/api/recorder/watch',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sport:sportKey,team1,team2})}).catch(()=>{});
   ping();
   _heartbeatTimer=setInterval(ping,30000);
 }

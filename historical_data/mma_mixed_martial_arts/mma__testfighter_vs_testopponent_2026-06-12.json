@@ -1,0 +1,43 @@
+{
+  "fightId": "mma__testfighter_vs_testopponent_2026-06-12",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "Test Fighter A vs Test Fighter B",
+  "startTime": "2026-06-12T01:22:06.429Z",
+  "endTime": "2026-06-12T01:22:16.467Z",
+  "dataPoints": 3,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-06-12T01:22:06.429Z",
+      "fighter1": {
+        "name": "Test Fighter A",
+        "numericOdds": 200
+      },
+      "fighter2": {
+        "name": "Test Fighter B",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2026-06-12T01:22:06.429Z",
+      "fighter1": {
+        "name": "Test Fighter A",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Test Fighter B",
+        "numericOdds": -180
+      }
+    },
+    {
+      "timestamp": "2026-06-12T01:22:06.429Z",
+      "fighter1": {
+        "name": "Test Fighter A",
+        "numericOdds": -110
+      },
+      "fighter2": {
+        "name": "Test Fighter B",
+        "numericOdds": -110
+      }
+    }
+  ]
+}

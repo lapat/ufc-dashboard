@@ -669,7 +669,7 @@ app.get('/api/recorder/status', (req, res) => {
     activeFights: active,
     totalSaved: recorderState.totalSaved,
     lastPoll: recorderState.lastPoll,
-    watching: ['UFC/MMA (always)', ...([...clientWatching.entries()].filter(([,ts])=>Date.now()-ts<120000).map(([k])=>SPORT_META[k]?.label||k))],
+    watching: ['UFC/MMA (always)', ...([...clientWatching.entries()].filter(([,info])=>Date.now()-info.ts<120000).map(([k,info])=>info.team1?`${info.team1} vs ${info.team2}`:SPORT_META[k]?.label||k))],
   });
 });
 
@@ -727,11 +727,11 @@ const SPORT_META = {
 
 // Client heartbeat — browser pings this while watching a non-UFC sport
 // If no ping for 2 min, sport is dropped from active recording
-const clientWatching = new Map(); // sportKey → lastHeartbeatMs
+const clientWatching = new Map(); // sportKey → { ts, team1, team2 }
 app.post('/api/recorder/watch', (req, res) => {
-  const { sport } = req.body;
+  const { sport, team1, team2 } = req.body;
   if (sport && sport !== 'mma_mixed_martial_arts') {
-    clientWatching.set(sport, Date.now());
+    clientWatching.set(sport, { ts: Date.now(), team1, team2 });
   }
   res.json({ ok: true });
 });
@@ -790,7 +790,7 @@ function recSave(id) {
   );
 }
 
-async function recPollSport(sportKey, meta) {
+async function recPollSport(sportKey, meta, watchedGame) {
   try {
     const url = `${BASE_URL}/sports/${sportKey}/odds/?apiKey=${ODDS_API_KEY}&regions=us&markets=h2h&bookmakers=draftkings&oddsFormat=american`;
     const { data, headers } = await fetchJson(url);
@@ -800,6 +800,12 @@ async function recPollSport(sportKey, meta) {
 
     for (const fight of fights) {
       if (!recIsLive(fight, meta.window)) continue;
+      // Only record the specific game the user is watching
+      if (watchedGame?.team1 && watchedGame?.team2) {
+        const { team1, team2 } = watchedGame;
+        const teams = [fight.home_team, fight.away_team];
+        if (!teams.includes(team1) || !teams.includes(team2)) continue;
+      }
       const odds = recExtractOdds(fight);
       if (!odds) continue;
       const id = recFightId(sportKey, fight);
@@ -850,11 +856,10 @@ async function recPoll() {
   // Poll other sports only if browser has sent a heartbeat within last 2 min
   const now = Date.now();
   const activeClientSports = [...clientWatching.entries()]
-    .filter(([, ts]) => now - ts < 120000)
-    .map(([key]) => key);
+    .filter(([, info]) => now - info.ts < 120000);
 
   const otherCounts = await Promise.all(
-    activeClientSports.map(key => recPollSport(key, SPORT_META[key] || { label: key, window: 4*60*60*1000 }))
+    activeClientSports.map(([key, info]) => recPollSport(key, SPORT_META[key] || { label: key, window: 4*60*60*1000 }, info))
   );
   const totalLive = ufcLive + otherCounts.reduce((a, b) => a + b, 0);
 

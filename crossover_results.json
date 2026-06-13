@@ -1,0 +1,6346 @@
+{
+  "generated": "2026-06-11T18:15:16.381Z",
+  "total": 262,
+  "withCrossover": 110,
+  "withMultiple": 74,
+  "allMoments": 317,
+  "secondLegPlus": 59,
+  "winWinMoments": 59,
+  "within200": 286,
+  "fights": [
+    {
+      "fightId": "abdulrakhmanyakhyaev_vs_brendsonribeiro",
+      "dataPoints": 76,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "abdulrakhmanyakhyaev_vs_rafaelcerqueira",
+      "dataPoints": 11,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "ailinperez_vs_macychiasson",
+      "dataPoints": 283,
+      "crossoverCount": 2,
+      "crossovers": [
+        {
+          "timestamp": "2026-03-01T00:17:12.421Z",
+          "underdogBet": {
+            "name": "Macy Chiasson",
+            "odds": 240
+          },
+          "newUnderdog": {
+            "name": "Ailin Perez",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-03-01T00:20:46.052Z",
+          "underdogBet": {
+            "name": "Ailin Perez",
+            "odds": 100
+          },
+          "newUnderdog": {
+            "name": "Macy Chiasson",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "albertomontes_vs_rickyturcios",
+      "dataPoints": 179,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "aldencoria_vs_luisgurule",
+      "dataPoints": 348,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "alessandrocosta_vs_stewartnicoll",
+      "dataPoints": 219,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "alexagrasso_vs_mayceebarber",
+      "dataPoints": 150,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "alexandervolkanovski_vs_diegolopes",
+      "dataPoints": 595,
+      "crossoverCount": 1,
+      "crossovers": [
+        {
+          "timestamp": "2026-02-01T04:28:42.932Z",
+          "underdogBet": {
+            "name": "Diego Lopes",
+            "odds": 108
+          },
+          "newUnderdog": {
+            "name": "Alexander Volkanovski",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "alexandervolkov_vs_waldocortesacosta",
+      "dataPoints": 332,
+      "crossoverCount": 3,
+      "crossovers": [
+        {
+          "timestamp": "2026-05-10T02:38:17.535Z",
+          "underdogBet": {
+            "name": "Waldo Cortes-Acosta",
+            "odds": 100
+          },
+          "newUnderdog": {
+            "name": "Alexander Volkov",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-05-10T02:40:20.914Z",
+          "underdogBet": {
+            "name": "Alexander Volkov",
+            "odds": 102
+          },
+          "newUnderdog": {
+            "name": "Waldo Cortes-Acosta",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-05-10T02:43:42.365Z",
+          "underdogBet": {
+            "name": "Alexander Volkov",
+            "odds": 112
+          },
+          "newUnderdog": {
+            "name": "Waldo Cortes-Acosta",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "alexiathainara_vs_brunabrasil",
+      "dataPoints": 64,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "alexmorono_vs_daniildonchenko",
+      "dataPoints": 289,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "alexperez_vs_asualmabayev",
+      "dataPoints": 366,
+      "crossoverCount": 2,
+      "crossovers": [
+        {
+          "timestamp": "2025-11-22T16:59:59.574Z",
+          "underdogBet": {
+            "name": "Alex Perez",
+            "odds": 112
+          },
+          "newUnderdog": {
+            "name": "Asu Almabayev",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2025-11-22T17:01:08.770Z",
+          "underdogBet": {
+            "name": "Asu Almabayev",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Alex Perez",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "alexperez_vs_charlesjohnson",
+      "dataPoints": 75,
+      "crossoverCount": 1,
+      "crossovers": [
+        {
+          "timestamp": "2026-01-25T00:20:28.484Z",
+          "underdogBet": {
+            "name": "Alex Perez",
+            "odds": 225
+          },
+          "newUnderdog": {
+            "name": "Charles Johnson",
+            "odds": 300
+          },
+          "winWin": {
+            "o1Product": 67500,
+            "guaranteedProfitPer100": 138.4,
+            "roi": 74.17,
+            "optimalS2Per100": 86.6,
+            "s2Range": [
+              33.33,
+              225
+            ]
+          },
+          "secondBetPlusMoney": true
+        }
+      ]
+    },
+    {
+      "fightId": "alexperez_vs_sumudaerji",
+      "dataPoints": 197,
+      "crossoverCount": 3,
+      "crossovers": [
+        {
+          "timestamp": "2026-05-30T11:20:29.346Z",
+          "underdogBet": {
+            "name": "Sumudaerji",
+            "odds": 108
+          },
+          "newUnderdog": {
+            "name": "Alex Perez",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-05-30T11:21:29.468Z",
+          "underdogBet": {
+            "name": "Alex Perez",
+            "odds": 180
+          },
+          "newUnderdog": {
+            "name": "Sumudaerji",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-05-30T11:21:50.504Z",
+          "underdogBet": {
+            "name": "Sumudaerji",
+            "odds": 128
+          },
+          "newUnderdog": {
+            "name": "Alex Perez",
+            "odds": 128
+          },
+          "winWin": {
+            "o1Product": 16384,
+            "guaranteedProfitPer100": 28,
+            "roi": 14,
+            "optimalS2Per100": 100,
+            "s2Range": [
+              78.13,
+              128
+            ]
+          },
+          "secondBetPlusMoney": true
+        }
+      ]
+    },
+    {
+      "fightId": "aliceardelean_vs_polyanaviana",
+      "dataPoints": 265,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "alicepereira_vs_haileycowan",
+      "dataPoints": 203,
+      "crossoverCount": 1,
+      "crossovers": [
+        {
+          "timestamp": "2026-04-04T22:51:40.197Z",
+          "underdogBet": {
+            "name": "Hailey Cowan",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Alice Pereira",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "aljamainsterling_vs_youssefzalal",
+      "dataPoints": 409,
+      "crossoverCount": 2,
+      "crossovers": [
+        {
+          "timestamp": "2026-04-26T02:58:36.238Z",
+          "underdogBet": {
+            "name": "Aljamain Sterling",
+            "odds": 100
+          },
+          "newUnderdog": {
+            "name": "Youssef Zalal",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-04-26T03:00:27.450Z",
+          "underdogBet": {
+            "name": "Aljamain Sterling",
+            "odds": 108
+          },
+          "newUnderdog": {
+            "name": "Youssef Zalal",
+            "odds": 150
+          },
+          "winWin": {
+            "o1Product": 16200,
+            "guaranteedProfitPer100": 23.15,
+            "roi": 12.52,
+            "optimalS2Per100": 84.85,
+            "s2Range": [
+              66.67,
+              108
+            ]
+          },
+          "secondBetPlusMoney": true
+        }
+      ]
+    },
+    {
+      "fightId": "amandalemos_vs_gillianrobertson",
+      "dataPoints": 339,
+      "crossoverCount": 5,
+      "crossovers": [
+        {
+          "timestamp": "2026-03-15T02:22:26.182Z",
+          "underdogBet": {
+            "name": "Amanda Lemos",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Gillian Robertson",
+            "odds": 102
+          },
+          "winWin": {
+            "o1Product": 10608,
+            "guaranteedProfitPer100": 3,
+            "roi": 1.49,
+            "optimalS2Per100": 100.98,
+            "s2Range": [
+              98.04,
+              104
+            ]
+          },
+          "secondBetPlusMoney": true
+        },
+        {
+          "timestamp": "2026-03-15T02:22:53.228Z",
+          "underdogBet": {
+            "name": "Gillian Robertson",
+            "odds": 102
+          },
+          "newUnderdog": {
+            "name": "Amanda Lemos",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-03-15T02:26:35.640Z",
+          "underdogBet": {
+            "name": "Gillian Robertson",
+            "odds": 112
+          },
+          "newUnderdog": {
+            "name": "Amanda Lemos",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-03-15T02:27:08.691Z",
+          "underdogBet": {
+            "name": "Gillian Robertson",
+            "odds": 102
+          },
+          "newUnderdog": {
+            "name": "Amanda Lemos",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-03-15T02:32:12.293Z",
+          "underdogBet": {
+            "name": "Amanda Lemos",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Gillian Robertson",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "amiralbazi_vs_kyojihoriguchi",
+      "dataPoints": 327,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "andrefili_vs_josedelgado",
+      "dataPoints": 340,
+      "crossoverCount": 3,
+      "crossovers": [
+        {
+          "timestamp": "2026-03-15T01:50:40.281Z",
+          "underdogBet": {
+            "name": "Andre Fili",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Jose Delgado",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-03-15T01:53:22.606Z",
+          "underdogBet": {
+            "name": "Andre Fili",
+            "odds": 100
+          },
+          "newUnderdog": {
+            "name": "Jose Delgado",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-03-15T01:56:04.912Z",
+          "underdogBet": {
+            "name": "Jose Delgado",
+            "odds": 116
+          },
+          "newUnderdog": {
+            "name": "Andre Fili",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "angelahill_vs_fatimakline",
+      "dataPoints": 21,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "angelahill_vs_fatimakline",
+      "dataPoints": 281,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "angelahill_vs_jingnanxiong",
+      "dataPoints": 581,
+      "crossoverCount": 1,
+      "crossovers": [
+        {
+          "timestamp": "2026-05-30T08:51:18.546Z",
+          "underdogBet": {
+            "name": "Angela Hill",
+            "odds": 116
+          },
+          "newUnderdog": {
+            "name": "Jingnan Xiong",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "aoriqileng_vs_codyhaddon",
+      "dataPoints": 199,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "arnoldallen_vs_jeansilva",
+      "dataPoints": 513,
+      "crossoverCount": 1,
+      "crossovers": [
+        {
+          "timestamp": "2026-01-25T02:35:47.650Z",
+          "underdogBet": {
+            "name": "Arnold Allen",
+            "odds": 102
+          },
+          "newUnderdog": {
+            "name": "Jean Silva",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "arnoldallen_vs_melquizaelcosta",
+      "dataPoints": 609,
+      "crossoverCount": 5,
+      "crossovers": [
+        {
+          "timestamp": "2026-05-17T02:38:53.312Z",
+          "underdogBet": {
+            "name": "Melquizael Costa",
+            "odds": 100
+          },
+          "newUnderdog": {
+            "name": "Arnold Allen",
+            "odds": -122
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-05-17T02:39:23.370Z",
+          "underdogBet": {
+            "name": "Melquizael Costa",
+            "odds": 100
+          },
+          "newUnderdog": {
+            "name": "Arnold Allen",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-05-17T02:39:44.403Z",
+          "underdogBet": {
+            "name": "Melquizael Costa",
+            "odds": 100
+          },
+          "newUnderdog": {
+            "name": "Arnold Allen",
+            "odds": -122
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-05-17T02:42:44.808Z",
+          "underdogBet": {
+            "name": "Melquizael Costa",
+            "odds": 102
+          },
+          "newUnderdog": {
+            "name": "Arnold Allen",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-05-17T02:43:44.942Z",
+          "underdogBet": {
+            "name": "Melquizael Costa",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Arnold Allen",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "atebagautier_vs_andreypulyaev",
+      "dataPoints": 315,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "atebagautier_vs_ozzydiaz",
+      "dataPoints": 244,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "azamatbekoev_vs_treseangore",
+      "dataPoints": 276,
+      "crossoverCount": 1,
+      "crossovers": [
+        {
+          "timestamp": "2026-04-04T22:25:55.330Z",
+          "underdogBet": {
+            "name": "Tresean Gore",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Azamat Bekoev",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "azamatmurzakanov_vs_paulocosta",
+      "dataPoints": 259,
+      "crossoverCount": 5,
+      "crossovers": [
+        {
+          "timestamp": "2026-04-12T03:12:17.634Z",
+          "underdogBet": {
+            "name": "Paulo Costa",
+            "odds": 112
+          },
+          "newUnderdog": {
+            "name": "Azamat Murzakanov",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-04-12T03:17:57.417Z",
+          "underdogBet": {
+            "name": "Azamat Murzakanov",
+            "odds": 164
+          },
+          "newUnderdog": {
+            "name": "Paulo Costa",
+            "odds": 128
+          },
+          "winWin": {
+            "o1Product": 20992,
+            "guaranteedProfitPer100": 44.89,
+            "roi": 21.05,
+            "optimalS2Per100": 113.19,
+            "s2Range": [
+              78.13,
+              164
+            ]
+          },
+          "secondBetPlusMoney": true
+        },
+        {
+          "timestamp": "2026-04-12T03:22:01.031Z",
+          "underdogBet": {
+            "name": "Paulo Costa",
+            "odds": 112
+          },
+          "newUnderdog": {
+            "name": "Azamat Murzakanov",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-04-12T03:21:55.011Z",
+          "underdogBet": {
+            "name": "Azamat Murzakanov",
+            "odds": 225
+          },
+          "newUnderdog": {
+            "name": "Paulo Costa",
+            "odds": 112
+          },
+          "winWin": {
+            "o1Product": 25200,
+            "guaranteedProfitPer100": 58.75,
+            "roi": 24.3,
+            "optimalS2Per100": 141.74,
+            "s2Range": [
+              89.29,
+              225
+            ]
+          },
+          "secondBetPlusMoney": true
+        },
+        {
+          "timestamp": "2026-04-12T03:22:01.031Z",
+          "underdogBet": {
+            "name": "Paulo Costa",
+            "odds": 112
+          },
+          "newUnderdog": {
+            "name": "Azamat Murzakanov",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "baisangursusurkaev_vs_djordensantos",
+      "dataPoints": 473,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "baisangursusurkaev_vs_ericmcconico",
+      "dataPoints": 296,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "bekzatalmakhan_vs_aleksandretopuria",
+      "dataPoints": 316,
+      "crossoverCount": 2,
+      "crossovers": [
+        {
+          "timestamp": "2025-11-22T16:16:00.346Z",
+          "underdogBet": {
+            "name": "Bekzat Almakhan",
+            "odds": 112
+          },
+          "newUnderdog": {
+            "name": "Aleksandre Topuria",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2025-11-22T16:19:33.967Z",
+          "underdogBet": {
+            "name": "Aleksandre Topuria",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Bekzat Almakhan",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "belalmuhammad_vs_gabrielbonfim",
+      "dataPoints": 579,
+      "crossoverCount": 1,
+      "crossovers": [
+        {
+          "timestamp": "2026-06-07T02:29:17.262Z",
+          "underdogBet": {
+            "name": "Gabriel Bonfim",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Belal Muhammad",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "belalmuhammad_vs_ianmachadogarry",
+      "dataPoints": 326,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "benardosopaj_vs_timmycuamba",
+      "dataPoints": 175,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "beneildariush_vs_benoitsaintdenis",
+      "dataPoints": 90,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "beneildariush_vs_quillansalkilld",
+      "dataPoints": 138,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "benjohnston_vs_wesschultz",
+      "dataPoints": 283,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "bogdangrad_vs_lukeriley",
+      "dataPoints": 123,
+      "crossoverCount": 3,
+      "crossovers": [
+        {
+          "timestamp": "2025-11-22T17:49:35.101Z",
+          "underdogBet": {
+            "name": "Bogdan Grad",
+            "odds": 112
+          },
+          "newUnderdog": {
+            "name": "Luke Riley",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2025-11-22T17:50:56.359Z",
+          "underdogBet": {
+            "name": "Luke Riley",
+            "odds": 112
+          },
+          "newUnderdog": {
+            "name": "Bogdan Grad",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2025-11-22T17:51:35.444Z",
+          "underdogBet": {
+            "name": "Luke Riley",
+            "odds": 128
+          },
+          "newUnderdog": {
+            "name": "Bogdan Grad",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "bolajioki_vs_manoelsousa",
+      "dataPoints": 179,
+      "crossoverCount": 2,
+      "crossovers": [
+        {
+          "timestamp": "2026-03-14T22:50:03.975Z",
+          "underdogBet": {
+            "name": "Bolaji Oki",
+            "odds": 112
+          },
+          "newUnderdog": {
+            "name": "Manoel Sousa",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-03-14T22:56:43.855Z",
+          "underdogBet": {
+            "name": "Manoel Sousa",
+            "odds": 108
+          },
+          "newUnderdog": {
+            "name": "Bolaji Oki",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "bonickal_vs_rodolfovieira",
+      "dataPoints": 187,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "bradtavares_vs_erykanders",
+      "dataPoints": 223,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "brandonmoreno_vs_loneerkavanagh",
+      "dataPoints": 613,
+      "crossoverCount": 3,
+      "crossovers": [
+        {
+          "timestamp": "2026-03-01T04:13:53.332Z",
+          "underdogBet": {
+            "name": "Lone'er Kavanagh",
+            "odds": 102
+          },
+          "newUnderdog": {
+            "name": "Brandon Moreno",
+            "odds": -122
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-03-01T04:26:55.571Z",
+          "underdogBet": {
+            "name": "Brandon Moreno",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Lone'er Kavanagh",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-03-01T04:30:02.086Z",
+          "underdogBet": {
+            "name": "Lone'er Kavanagh",
+            "odds": 150
+          },
+          "newUnderdog": {
+            "name": "Brandon Moreno",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "brandonroyval_vs_manelkape",
+      "dataPoints": 96,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "brendanallen_vs_edmenshahbazyan",
+      "dataPoints": 700,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "brunosilva_vs_edgarchairez",
+      "dataPoints": 109,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "brycemitchell_vs_santiagoluna",
+      "dataPoints": 310,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "burnley_vs_chelsea",
+      "dataPoints": 4,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "caioborralho_vs_reinierderidder",
+      "dataPoints": 310,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "camrowston_vs_codybrundage",
+      "dataPoints": 336,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "camrowston_vs_robertbryczek",
+      "dataPoints": 284,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "caseyoneill_vs_gabriellafernandes",
+      "dataPoints": 101,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "cesaralmeida_vs_cezaryoleksiejczuk",
+      "dataPoints": 206,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "charlesjohnson_vs_brunosilva",
+      "dataPoints": 379,
+      "crossoverCount": 2,
+      "crossovers": [
+        {
+          "timestamp": "2026-03-15T00:28:20.940Z",
+          "underdogBet": {
+            "name": "Bruno Silva",
+            "odds": 102
+          },
+          "newUnderdog": {
+            "name": "Charles Johnson",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-03-15T00:32:15.480Z",
+          "underdogBet": {
+            "name": "Bruno Silva",
+            "odds": 102
+          },
+          "newUnderdog": {
+            "name": "Charles Johnson",
+            "odds": -120
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "charlesjourdain_vs_kylerphillips",
+      "dataPoints": 416,
+      "crossoverCount": 3,
+      "crossovers": [
+        {
+          "timestamp": "2026-04-19T01:47:58.058Z",
+          "underdogBet": {
+            "name": "Kyler Phillips",
+            "odds": 106
+          },
+          "newUnderdog": {
+            "name": "Charles Jourdain",
+            "odds": -110
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-04-19T01:51:58.674Z",
+          "underdogBet": {
+            "name": "Charles Jourdain",
+            "odds": 118
+          },
+          "newUnderdog": {
+            "name": "Kyler Phillips",
+            "odds": 100
+          },
+          "winWin": {
+            "o1Product": 11800,
+            "guaranteedProfitPer100": 8.63,
+            "roi": 4.14,
+            "optimalS2Per100": 108.63,
+            "s2Range": [
+              100,
+              118
+            ]
+          },
+          "secondBetPlusMoney": true
+        },
+        {
+          "timestamp": "2026-04-19T01:53:49.934Z",
+          "underdogBet": {
+            "name": "Kyler Phillips",
+            "odds": 108
+          },
+          "newUnderdog": {
+            "name": "Charles Jourdain",
+            "odds": -122
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "charlesradtke_vs_franciscoprado",
+      "dataPoints": 318,
+      "crossoverCount": 2,
+      "crossovers": [
+        {
+          "timestamp": "2026-04-11T21:44:48.386Z",
+          "underdogBet": {
+            "name": "Francisco Prado",
+            "odds": 108
+          },
+          "newUnderdog": {
+            "name": "Charles Radtke",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-04-11T21:45:09.431Z",
+          "underdogBet": {
+            "name": "Charles Radtke",
+            "odds": 112
+          },
+          "newUnderdog": {
+            "name": "Francisco Prado",
+            "odds": 112
+          },
+          "winWin": {
+            "o1Product": 12544,
+            "guaranteedProfitPer100": 12,
+            "roi": 6,
+            "optimalS2Per100": 100,
+            "s2Range": [
+              89.29,
+              112
+            ]
+          },
+          "secondBetPlusMoney": true
+        }
+      ]
+    },
+    {
+      "fightId": "chidinjokuani_vs_carlosleal",
+      "dataPoints": 232,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "chriscurtis_vs_myktybekorolbai",
+      "dataPoints": 63,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "chriscurtis_vs_myktybekorolbai",
+      "dataPoints": 279,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "claytoncarpenter_vs_joseochoa",
+      "dataPoints": 271,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "codybrundage_vs_andrepetroski",
+      "dataPoints": 278,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "codydurden_vs_nyamjargaltumendemberel",
+      "dataPoints": 282,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "codygarbrandt_vs_xiaolong",
+      "dataPoints": 255,
+      "crossoverCount": 2,
+      "crossovers": [
+        {
+          "timestamp": "2026-03-08T02:01:44.521Z",
+          "underdogBet": {
+            "name": "Cody Garbrandt",
+            "odds": 225
+          },
+          "newUnderdog": {
+            "name": "Xiao Long",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-03-08T02:02:38.680Z",
+          "underdogBet": {
+            "name": "Xiao Long",
+            "odds": 270
+          },
+          "newUnderdog": {
+            "name": "Cody Garbrandt",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "colbythicknesse_vs_vincemorales",
+      "dataPoints": 380,
+      "crossoverCount": 8,
+      "crossovers": [
+        {
+          "timestamp": "2026-05-02T09:33:46.764Z",
+          "underdogBet": {
+            "name": "Vince Morales",
+            "odds": 114
+          },
+          "newUnderdog": {
+            "name": "Colby Thicknesse",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-05-02T09:34:28.972Z",
+          "underdogBet": {
+            "name": "Colby Thicknesse",
+            "odds": 106
+          },
+          "newUnderdog": {
+            "name": "Vince Morales",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-05-02T09:40:14.899Z",
+          "underdogBet": {
+            "name": "Vince Morales",
+            "odds": 114
+          },
+          "newUnderdog": {
+            "name": "Colby Thicknesse",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-05-02T09:41:48.142Z",
+          "underdogBet": {
+            "name": "Colby Thicknesse",
+            "odds": 100
+          },
+          "newUnderdog": {
+            "name": "Vince Morales",
+            "odds": -102
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-05-02T09:42:12.195Z",
+          "underdogBet": {
+            "name": "Vince Morales",
+            "odds": 112
+          },
+          "newUnderdog": {
+            "name": "Colby Thicknesse",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-05-02T09:42:21.228Z",
+          "underdogBet": {
+            "name": "Colby Thicknesse",
+            "odds": 102
+          },
+          "newUnderdog": {
+            "name": "Vince Morales",
+            "odds": -102
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-05-02T09:42:42.272Z",
+          "underdogBet": {
+            "name": "Vince Morales",
+            "odds": 112
+          },
+          "newUnderdog": {
+            "name": "Colby Thicknesse",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-05-02T09:48:10.136Z",
+          "underdogBet": {
+            "name": "Vince Morales",
+            "odds": 200
+          },
+          "newUnderdog": {
+            "name": "Colby Thicknesse",
+            "odds": 128
+          },
+          "winWin": {
+            "o1Product": 25600,
+            "guaranteedProfitPer100": 60,
+            "roi": 26.67,
+            "optimalS2Per100": 125,
+            "s2Range": [
+              78.13,
+              200
+            ]
+          },
+          "secondBetPlusMoney": true
+        }
+      ]
+    },
+    {
+      "fightId": "cristianquinonez_vs_krismoutinho",
+      "dataPoints": 389,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "cristianquinonez_vs_krismoutinho",
+      "dataPoints": 174,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "cubswanson_vs_natelandwehr",
+      "dataPoints": 108,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "curtisblaydes_vs_joshhokit",
+      "dataPoints": 492,
+      "crossoverCount": 6,
+      "crossovers": [
+        {
+          "timestamp": "2026-04-12T02:29:59.786Z",
+          "underdogBet": {
+            "name": "Curtis Blaydes",
+            "odds": 100
+          },
+          "newUnderdog": {
+            "name": "Josh Hokit",
+            "odds": -122
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-04-12T02:33:15.268Z",
+          "underdogBet": {
+            "name": "Curtis Blaydes",
+            "odds": 128
+          },
+          "newUnderdog": {
+            "name": "Josh Hokit",
+            "odds": 108
+          },
+          "winWin": {
+            "o1Product": 13824,
+            "guaranteedProfitPer100": 17.58,
+            "roi": 8.41,
+            "optimalS2Per100": 108.87,
+            "s2Range": [
+              92.59,
+              128
+            ]
+          },
+          "secondBetPlusMoney": true
+        },
+        {
+          "timestamp": "2026-04-12T02:37:48.984Z",
+          "underdogBet": {
+            "name": "Josh Hokit",
+            "odds": 150
+          },
+          "newUnderdog": {
+            "name": "Curtis Blaydes",
+            "odds": 112
+          },
+          "winWin": {
+            "o1Product": 16800,
+            "guaranteedProfitPer100": 29.61,
+            "roi": 13.73,
+            "optimalS2Per100": 115.73,
+            "s2Range": [
+              89.29,
+              150
+            ]
+          },
+          "secondBetPlusMoney": true
+        },
+        {
+          "timestamp": "2026-04-12T02:38:34.098Z",
+          "underdogBet": {
+            "name": "Curtis Blaydes",
+            "odds": 128
+          },
+          "newUnderdog": {
+            "name": "Josh Hokit",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-04-12T02:39:55.269Z",
+          "underdogBet": {
+            "name": "Curtis Blaydes",
+            "odds": 180
+          },
+          "newUnderdog": {
+            "name": "Josh Hokit",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-04-12T02:39:55.269Z",
+          "underdogBet": {
+            "name": "Curtis Blaydes",
+            "odds": 180
+          },
+          "newUnderdog": {
+            "name": "Josh Hokit",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "damianpinas_vs_wesschultz",
+      "dataPoints": 54,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "danhooker_vs_benoitsaintdenis",
+      "dataPoints": 199,
+      "crossoverCount": 1,
+      "crossovers": [
+        {
+          "timestamp": "2026-02-01T03:52:50.320Z",
+          "underdogBet": {
+            "name": "Dan Hooker",
+            "odds": 128
+          },
+          "newUnderdog": {
+            "name": "Benoit Saint Denis",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "danielbarez_vs_luisgurule",
+      "dataPoints": 267,
+      "crossoverCount": 1,
+      "crossovers": [
+        {
+          "timestamp": "2026-05-16T21:40:00.301Z",
+          "underdogBet": {
+            "name": "Daniel Barez",
+            "odds": 108
+          },
+          "newUnderdog": {
+            "name": "Luis Gurule",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "danielzellhuber_vs_kinggreen",
+      "dataPoints": 213,
+      "crossoverCount": 1,
+      "crossovers": [
+        {
+          "timestamp": "2026-03-01T03:03:31.769Z",
+          "underdogBet": {
+            "name": "King Green",
+            "odds": 130
+          },
+          "newUnderdog": {
+            "name": "Daniel Zellhuber",
+            "odds": 128
+          },
+          "winWin": {
+            "o1Product": 16640,
+            "guaranteedProfitPer100": 29,
+            "roi": 14.44,
+            "optimalS2Per100": 100.78,
+            "s2Range": [
+              78.13,
+              130
+            ]
+          },
+          "secondBetPlusMoney": true
+        }
+      ]
+    },
+    {
+      "fightId": "dannysilva_vs_kurtiscampbell",
+      "dataPoints": 286,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "daveygrant_vs_juanmartinetti",
+      "dataPoints": 263,
+      "crossoverCount": 2,
+      "crossovers": [
+        {
+          "timestamp": "2026-04-26T01:14:06.244Z",
+          "underdogBet": {
+            "name": "Juan Martinetti",
+            "odds": 100
+          },
+          "newUnderdog": {
+            "name": "Davey Grant",
+            "odds": -122
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-04-26T01:16:06.495Z",
+          "underdogBet": {
+            "name": "Davey Grant",
+            "odds": 108
+          },
+          "newUnderdog": {
+            "name": "Juan Martinetti",
+            "odds": -118
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "dennisbuzukja_vs_marciobarbosa",
+      "dataPoints": 57,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "dennisbuzukja_vs_marciobarbosa",
+      "dataPoints": 53,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "dingmeng_vs_josehenrique",
+      "dataPoints": 394,
+      "crossoverCount": 6,
+      "crossovers": [
+        {
+          "timestamp": "2026-05-30T10:10:54.124Z",
+          "underdogBet": {
+            "name": "Jose Henrique",
+            "odds": 100
+          },
+          "newUnderdog": {
+            "name": "Ding Meng",
+            "odds": -122
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-05-30T10:14:48.603Z",
+          "underdogBet": {
+            "name": "Ding Meng",
+            "odds": 162
+          },
+          "newUnderdog": {
+            "name": "Jose Henrique",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-05-30T10:15:21.662Z",
+          "underdogBet": {
+            "name": "Ding Meng",
+            "odds": 126
+          },
+          "newUnderdog": {
+            "name": "Jose Henrique",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-05-30T10:21:46.601Z",
+          "underdogBet": {
+            "name": "Jose Henrique",
+            "odds": 108
+          },
+          "newUnderdog": {
+            "name": "Ding Meng",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-05-30T10:25:20.121Z",
+          "underdogBet": {
+            "name": "Jose Henrique",
+            "odds": 116
+          },
+          "newUnderdog": {
+            "name": "Ding Meng",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-05-30T10:26:35.317Z",
+          "underdogBet": {
+            "name": "Ding Meng",
+            "odds": 126
+          },
+          "newUnderdog": {
+            "name": "Jose Henrique",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "dionebarbosa_vs_melissagatto",
+      "dataPoints": 165,
+      "crossoverCount": 1,
+      "crossovers": [
+        {
+          "timestamp": "2026-04-04T21:43:44.940Z",
+          "underdogBet": {
+            "name": "Melissa Gatto",
+            "odds": 102
+          },
+          "newUnderdog": {
+            "name": "Dione Barbosa",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "dominickreyes_vs_johnnywalker",
+      "dataPoints": 738,
+      "crossoverCount": 6,
+      "crossovers": [
+        {
+          "timestamp": "2026-04-12T01:59:15.871Z",
+          "underdogBet": {
+            "name": "Johnny Walker",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Dominick Reyes",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-04-12T02:01:31.155Z",
+          "underdogBet": {
+            "name": "Dominick Reyes",
+            "odds": 100
+          },
+          "newUnderdog": {
+            "name": "Johnny Walker",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-04-12T02:07:29.028Z",
+          "underdogBet": {
+            "name": "Dominick Reyes",
+            "odds": 126
+          },
+          "newUnderdog": {
+            "name": "Johnny Walker",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-04-12T01:59:15.871Z",
+          "underdogBet": {
+            "name": "Johnny Walker",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Dominick Reyes",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-04-12T02:01:31.155Z",
+          "underdogBet": {
+            "name": "Dominick Reyes",
+            "odds": 100
+          },
+          "newUnderdog": {
+            "name": "Johnny Walker",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-04-12T02:07:29.028Z",
+          "underdogBet": {
+            "name": "Dominick Reyes",
+            "odds": 126
+          },
+          "newUnderdog": {
+            "name": "Johnny Walker",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "dommarfan_vs_kodysteele",
+      "dataPoints": 30,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "dommarfan_vs_sangwookkim",
+      "dataPoints": 309,
+      "crossoverCount": 1,
+      "crossovers": [
+        {
+          "timestamp": "2026-01-31T23:17:34.946Z",
+          "underdogBet": {
+            "name": "SangWook Kim",
+            "odds": 112
+          },
+          "newUnderdog": {
+            "name": "Dom Mar Fan",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "dontejohnson_vs_codybrundage",
+      "dataPoints": 464,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "doohochoi_vs_danielsantos",
+      "dataPoints": 217,
+      "crossoverCount": 1,
+      "crossovers": [
+        {
+          "timestamp": "2026-05-17T02:14:04.865Z",
+          "underdogBet": {
+            "name": "Dooho Choi",
+            "odds": 110
+          },
+          "newUnderdog": {
+            "name": "Daniel Santos",
+            "odds": -110
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "douglassilvadeandrade_vs_javierreyes",
+      "dataPoints": 67,
+      "crossoverCount": 2,
+      "crossovers": [
+        {
+          "timestamp": "2026-02-28T23:26:00.501Z",
+          "underdogBet": {
+            "name": "Douglas Silva de Andrade",
+            "odds": 126
+          },
+          "newUnderdog": {
+            "name": "Javier Reyes",
+            "odds": 350
+          },
+          "winWin": {
+            "o1Product": 44100,
+            "guaranteedProfitPer100": 66,
+            "roi": 41.25,
+            "optimalS2Per100": 60,
+            "s2Range": [
+              28.57,
+              126
+            ]
+          },
+          "secondBetPlusMoney": true
+        },
+        {
+          "timestamp": "2026-02-28T23:28:30.903Z",
+          "underdogBet": {
+            "name": "Javier Reyes",
+            "odds": 162
+          },
+          "newUnderdog": {
+            "name": "Douglas Silva de Andrade",
+            "odds": 580
+          },
+          "winWin": {
+            "o1Product": 93960,
+            "guaranteedProfitPer100": 109.15,
+            "roi": 71.41,
+            "optimalS2Per100": 52.85,
+            "s2Range": [
+              17.24,
+              162
+            ]
+          },
+          "secondBetPlusMoney": true
+        }
+      ]
+    },
+    {
+      "fightId": "drewdober_vs_michaeljohnson",
+      "dataPoints": 82,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "edgarchairez_vs_felipebunes",
+      "dataPoints": 399,
+      "crossoverCount": 4,
+      "crossovers": [
+        {
+          "timestamp": "2026-03-01T02:24:57.768Z",
+          "underdogBet": {
+            "name": "Felipe Bunes",
+            "odds": 172
+          },
+          "newUnderdog": {
+            "name": "Edgar Chairez",
+            "odds": -116
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-03-01T02:26:03.960Z",
+          "underdogBet": {
+            "name": "Felipe Bunes",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Edgar Chairez",
+            "odds": -110
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-03-01T02:35:38.663Z",
+          "underdogBet": {
+            "name": "Felipe Bunes",
+            "odds": 180
+          },
+          "newUnderdog": {
+            "name": "Edgar Chairez",
+            "odds": 126
+          },
+          "winWin": {
+            "o1Product": 22680,
+            "guaranteedProfitPer100": 50.6,
+            "roi": 23.05,
+            "optimalS2Per100": 119.52,
+            "s2Range": [
+              79.37,
+              180
+            ]
+          },
+          "secondBetPlusMoney": true
+        },
+        {
+          "timestamp": "2026-03-01T02:35:59.723Z",
+          "underdogBet": {
+            "name": "Edgar Chairez",
+            "odds": 126
+          },
+          "newUnderdog": {
+            "name": "Felipe Bunes",
+            "odds": 150
+          },
+          "winWin": {
+            "o1Product": 18900,
+            "guaranteedProfitPer100": 34.35,
+            "roi": 17.92,
+            "optimalS2Per100": 91.65,
+            "s2Range": [
+              66.67,
+              126
+            ]
+          },
+          "secondBetPlusMoney": true
+        }
+      ]
+    },
+    {
+      "fightId": "elijahsmith_vs_yousuyoung",
+      "dataPoints": 202,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "eriksilva_vs_francismarshall",
+      "dataPoints": 98,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "erinblanchfield_vs_tracycortez",
+      "dataPoints": 219,
+      "crossoverCount": 4,
+      "crossovers": [
+        {
+          "timestamp": "2025-11-16T01:48:31.536Z",
+          "underdogBet": {
+            "name": "Tracy Cortez",
+            "odds": 120
+          },
+          "newUnderdog": {
+            "name": "Erin Blanchfield",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2025-11-16T01:51:32.141Z",
+          "underdogBet": {
+            "name": "Erin Blanchfield",
+            "odds": 102
+          },
+          "newUnderdog": {
+            "name": "Tracy Cortez",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2025-11-16T01:52:23.285Z",
+          "underdogBet": {
+            "name": "Erin Blanchfield",
+            "odds": 116
+          },
+          "newUnderdog": {
+            "name": "Tracy Cortez",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2025-11-16T01:54:14.638Z",
+          "underdogBet": {
+            "name": "Tracy Cortez",
+            "odds": 118
+          },
+          "newUnderdog": {
+            "name": "Erin Blanchfield",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "ethynewing_vs_rafaelestevam",
+      "dataPoints": 237,
+      "crossoverCount": 1,
+      "crossovers": [
+        {
+          "timestamp": "2026-04-05T01:16:53.748Z",
+          "underdogBet": {
+            "name": "Rafael Estevam",
+            "odds": 100
+          },
+          "newUnderdog": {
+            "name": "Ethyn Ewing",
+            "odds": -122
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "faresziam_vs_tomnolan",
+      "dataPoints": 381,
+      "crossoverCount": 3,
+      "crossovers": [
+        {
+          "timestamp": "2026-06-07T01:13:11.215Z",
+          "underdogBet": {
+            "name": "Tom Nolan",
+            "odds": 126
+          },
+          "newUnderdog": {
+            "name": "Fares Ziam",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-06-07T01:13:53.318Z",
+          "underdogBet": {
+            "name": "Fares Ziam",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Tom Nolan",
+            "odds": 180
+          },
+          "winWin": {
+            "o1Product": 18720,
+            "guaranteedProfitPer100": 27.99,
+            "roi": 15.9,
+            "optimalS2Per100": 76.01,
+            "s2Range": [
+              55.56,
+              104
+            ]
+          },
+          "secondBetPlusMoney": true
+        },
+        {
+          "timestamp": "2026-06-07T01:19:12.062Z",
+          "underdogBet": {
+            "name": "Tom Nolan",
+            "odds": 215
+          },
+          "newUnderdog": {
+            "name": "Fares Ziam",
+            "odds": 128
+          },
+          "winWin": {
+            "o1Product": 27520,
+            "guaranteedProfitPer100": 65.89,
+            "roi": 28.7,
+            "optimalS2Per100": 129.6,
+            "s2Range": [
+              78.13,
+              215
+            ]
+          },
+          "secondBetPlusMoney": true
+        }
+      ]
+    },
+    {
+      "fightId": "francismarshall_vs_lucasbrennan",
+      "dataPoints": 62,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "gaugeyoung_vs_thiagomoises",
+      "dataPoints": 510,
+      "crossoverCount": 4,
+      "crossovers": [
+        {
+          "timestamp": "2026-04-19T00:18:48.359Z",
+          "underdogBet": {
+            "name": "Thiago Moises",
+            "odds": 102
+          },
+          "newUnderdog": {
+            "name": "Gauge Young",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-04-19T00:21:00.672Z",
+          "underdogBet": {
+            "name": "Gauge Young",
+            "odds": 102
+          },
+          "newUnderdog": {
+            "name": "Thiago Moises",
+            "odds": -122
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-04-19T00:20:30.592Z",
+          "underdogBet": {
+            "name": "Thiago Moises",
+            "odds": 1040
+          },
+          "newUnderdog": {
+            "name": "Gauge Young",
+            "odds": 102
+          },
+          "winWin": {
+            "o1Product": 106080,
+            "guaranteedProfitPer100": 225.7,
+            "roi": 53.83,
+            "optimalS2Per100": 319.31,
+            "s2Range": [
+              98.04,
+              1040
+            ]
+          },
+          "secondBetPlusMoney": true
+        },
+        {
+          "timestamp": "2026-04-19T00:21:00.672Z",
+          "underdogBet": {
+            "name": "Gauge Young",
+            "odds": 102
+          },
+          "newUnderdog": {
+            "name": "Thiago Moises",
+            "odds": -122
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "gilbertburns_vs_mikemalott",
+      "dataPoints": 309,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "grantdawson_vs_mateuszrebecki",
+      "dataPoints": 226,
+      "crossoverCount": 3,
+      "crossovers": [
+        {
+          "timestamp": "2026-05-09T23:49:05.200Z",
+          "underdogBet": {
+            "name": "Mateusz Rebecki",
+            "odds": 150
+          },
+          "newUnderdog": {
+            "name": "Grant Dawson",
+            "odds": 134
+          },
+          "winWin": {
+            "o1Product": 20100,
+            "guaranteedProfitPer100": 41.77,
+            "roi": 20.3,
+            "optimalS2Per100": 105.8,
+            "s2Range": [
+              74.63,
+              150
+            ]
+          },
+          "secondBetPlusMoney": true
+        },
+        {
+          "timestamp": "2026-05-09T23:51:47.570Z",
+          "underdogBet": {
+            "name": "Grant Dawson",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Mateusz Rebecki",
+            "odds": -106
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-05-09T23:55:30.256Z",
+          "underdogBet": {
+            "name": "Grant Dawson",
+            "odds": 116
+          },
+          "newUnderdog": {
+            "name": "Mateusz Rebecki",
+            "odds": 340
+          },
+          "winWin": {
+            "o1Product": 39440,
+            "guaranteedProfitPer100": 57.59,
+            "roi": 36.35,
+            "optimalS2Per100": 58.41,
+            "s2Range": [
+              29.41,
+              116
+            ]
+          },
+          "secondBetPlusMoney": true
+        }
+      ]
+    },
+    {
+      "fightId": "grantdawson_vs_mateuszrebecki",
+      "dataPoints": 58,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "gregoryrodrigues_vs_brunnoferreira",
+      "dataPoints": 108,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "guilhermepat_vs_thomaspetersen",
+      "dataPoints": 300,
+      "crossoverCount": 1,
+      "crossovers": [
+        {
+          "timestamp": "2026-04-04T23:57:00.193Z",
+          "underdogBet": {
+            "name": "Thomas Petersen",
+            "odds": 350
+          },
+          "newUnderdog": {
+            "name": "Guilherme Pat",
+            "odds": 580
+          },
+          "winWin": {
+            "o1Product": 203000,
+            "guaranteedProfitPer100": 272.32,
+            "roi": 153.26,
+            "optimalS2Per100": 77.68,
+            "s2Range": [
+              17.24,
+              350
+            ]
+          },
+          "secondBetPlusMoney": true
+        }
+      ]
+    },
+    {
+      "fightId": "guilhermepat_vs_thomaspetersen",
+      "dataPoints": 28,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "ignaciobahamondes_vs_tofiqmusayev",
+      "dataPoints": 128,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "ignaciobahamondes_vs_tofiqmusayev",
+      "dataPoints": 2,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "imanolrodriguez_vs_kevinborjas",
+      "dataPoints": 268,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "ismailnaurdiev_vs_ryanloder",
+      "dataPoints": 112,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "israeladesanya_vs_joepyfer",
+      "dataPoints": 172,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "iwobaraniewski_vs_austenlane",
+      "dataPoints": 66,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "iwobaraniewski_vs_iboaslan",
+      "dataPoints": 14,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "iwobaraniewski_vs_juniortafa",
+      "dataPoints": 72,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "jackdellamaddalena_vs_carlosprates",
+      "dataPoints": 325,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "jackdellamaddalena_vs_islammakhachev",
+      "dataPoints": 306,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "jackhermansson_vs_myktybekorolbai",
+      "dataPoints": 71,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "jacksonmcvey_vs_sedriquesdumas",
+      "dataPoints": 48,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "jacobmalkoun_vs_geraldmeerschaert",
+      "dataPoints": 652,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "jacobmalkoun_vs_torrezfinney",
+      "dataPoints": 691,
+      "crossoverCount": 2,
+      "crossovers": [
+        {
+          "timestamp": "2026-02-01T00:44:44.892Z",
+          "underdogBet": {
+            "name": "Torrez Finney",
+            "odds": 108
+          },
+          "newUnderdog": {
+            "name": "Jacob Malkoun",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-02-01T00:45:57.028Z",
+          "underdogBet": {
+            "name": "Jacob Malkoun",
+            "odds": 108
+          },
+          "newUnderdog": {
+            "name": "Torrez Finney",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "jafelfilho_vs_codydurden",
+      "dataPoints": 236,
+      "crossoverCount": 3,
+      "crossovers": [
+        {
+          "timestamp": "2026-04-25T22:43:08.702Z",
+          "underdogBet": {
+            "name": "Cody Durden",
+            "odds": 138
+          },
+          "newUnderdog": {
+            "name": "Jafel Filho",
+            "odds": 112
+          },
+          "winWin": {
+            "o1Product": 15456,
+            "guaranteedProfitPer100": 24.32,
+            "roi": 11.53,
+            "optimalS2Per100": 111,
+            "s2Range": [
+              89.29,
+              138
+            ]
+          },
+          "secondBetPlusMoney": true
+        },
+        {
+          "timestamp": "2026-04-25T22:45:14.910Z",
+          "underdogBet": {
+            "name": "Jafel Filho",
+            "odds": 112
+          },
+          "newUnderdog": {
+            "name": "Cody Durden",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-04-25T22:51:09.673Z",
+          "underdogBet": {
+            "name": "Cody Durden",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Jafel Filho",
+            "odds": 225
+          },
+          "winWin": {
+            "o1Product": 23400,
+            "guaranteedProfitPer100": 36.01,
+            "roi": 21.44,
+            "optimalS2Per100": 67.99,
+            "s2Range": [
+              44.44,
+              104
+            ]
+          },
+          "secondBetPlusMoney": true
+        }
+      ]
+    },
+    {
+      "fightId": "jailtonalmeida_vs_rizvankuniev",
+      "dataPoints": 635,
+      "crossoverCount": 3,
+      "crossovers": [
+        {
+          "timestamp": "2026-02-08T02:44:54.208Z",
+          "underdogBet": {
+            "name": "Rizvan Kuniev",
+            "odds": 118
+          },
+          "newUnderdog": {
+            "name": "Jailton Almeida",
+            "odds": 112
+          },
+          "winWin": {
+            "o1Product": 13216,
+            "guaranteedProfitPer100": 14.96,
+            "roi": 7.38,
+            "optimalS2Per100": 102.64,
+            "s2Range": [
+              89.29,
+              118
+            ]
+          },
+          "secondBetPlusMoney": true
+        },
+        {
+          "timestamp": "2026-02-08T02:44:48.193Z",
+          "underdogBet": {
+            "name": "Jailton Almeida",
+            "odds": 2300
+          },
+          "newUnderdog": {
+            "name": "Rizvan Kuniev",
+            "odds": 118
+          },
+          "winWin": {
+            "o1Product": 271400,
+            "guaranteedProfitPer100": 420.96,
+            "roi": 77.74,
+            "optimalS2Per100": 441.49,
+            "s2Range": [
+              84.75,
+              2300
+            ]
+          },
+          "secondBetPlusMoney": true
+        },
+        {
+          "timestamp": "2026-02-08T02:44:54.208Z",
+          "underdogBet": {
+            "name": "Rizvan Kuniev",
+            "odds": 118
+          },
+          "newUnderdog": {
+            "name": "Jailton Almeida",
+            "odds": 112
+          },
+          "winWin": {
+            "o1Product": 13216,
+            "guaranteedProfitPer100": 14.96,
+            "roi": 7.38,
+            "optimalS2Per100": 102.64,
+            "s2Range": [
+              89.29,
+              118
+            ]
+          },
+          "secondBetPlusMoney": true
+        }
+      ]
+    },
+    {
+      "fightId": "jakematthews_vs_carlstonharris",
+      "dataPoints": 276,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "jamiesiraj_vs_johnyannis",
+      "dataPoints": 75,
+      "crossoverCount": 1,
+      "crossovers": [
+        {
+          "timestamp": "2026-04-18T21:15:17.492Z",
+          "underdogBet": {
+            "name": "John Yannis",
+            "odds": 142
+          },
+          "newUnderdog": {
+            "name": "Jamie Siraj",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "jasminejasudavicius_vs_karinesilva",
+      "dataPoints": 471,
+      "crossoverCount": 1,
+      "crossovers": [
+        {
+          "timestamp": "2026-04-19T00:57:44.590Z",
+          "underdogBet": {
+            "name": "Karine Silva",
+            "odds": 120
+          },
+          "newUnderdog": {
+            "name": "Jasmine Jasudavicius",
+            "odds": -102
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "javidbasharat_vs_giannivazquez",
+      "dataPoints": 309,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "javidbasharat_vs_giannivazquez",
+      "dataPoints": 127,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "jeislachaves_vs_yuneisyduben",
+      "dataPoints": 343,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "jimmiller_vs_jaredgordon",
+      "dataPoints": 120,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "jiriprochazka_vs_carlosulberg",
+      "dataPoints": 282,
+      "crossoverCount": 5,
+      "crossovers": [
+        {
+          "timestamp": "2026-04-12T03:49:47.570Z",
+          "underdogBet": {
+            "name": "Jiri Prochazka",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Carlos Ulberg",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-04-12T03:50:17.649Z",
+          "underdogBet": {
+            "name": "Jiri Prochazka",
+            "odds": 112
+          },
+          "newUnderdog": {
+            "name": "Carlos Ulberg",
+            "odds": 112
+          },
+          "winWin": {
+            "o1Product": 12544,
+            "guaranteedProfitPer100": 12,
+            "roi": 6,
+            "optimalS2Per100": 100,
+            "s2Range": [
+              89.29,
+              112
+            ]
+          },
+          "secondBetPlusMoney": true
+        },
+        {
+          "timestamp": "2026-04-12T03:44:51.706Z",
+          "underdogBet": {
+            "name": "Carlos Ulberg",
+            "odds": 1040
+          },
+          "newUnderdog": {
+            "name": "Jiri Prochazka",
+            "odds": -102
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-04-12T03:49:47.570Z",
+          "underdogBet": {
+            "name": "Jiri Prochazka",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Carlos Ulberg",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-04-12T03:50:17.649Z",
+          "underdogBet": {
+            "name": "Jiri Prochazka",
+            "odds": 112
+          },
+          "newUnderdog": {
+            "name": "Carlos Ulberg",
+            "odds": 112
+          },
+          "winWin": {
+            "o1Product": 12544,
+            "guaranteedProfitPer100": 12,
+            "roi": 6,
+            "optimalS2Per100": 100,
+            "s2Range": [
+              89.29,
+              112
+            ]
+          },
+          "secondBetPlusMoney": true
+        }
+      ]
+    },
+    {
+      "fightId": "jjaldrich_vs_jameylynhorth",
+      "dataPoints": 378,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "johncastaneda_vs_markvologdin",
+      "dataPoints": 286,
+      "crossoverCount": 2,
+      "crossovers": [
+        {
+          "timestamp": "2026-04-18T21:38:24.725Z",
+          "underdogBet": {
+            "name": "Mark Vologdin",
+            "odds": 114
+          },
+          "newUnderdog": {
+            "name": "John Castaneda",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-04-18T21:45:07.823Z",
+          "underdogBet": {
+            "name": "John Castaneda",
+            "odds": 102
+          },
+          "newUnderdog": {
+            "name": "Mark Vologdin",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "jonathanmicallef_vs_obanelliott",
+      "dataPoints": 159,
+      "crossoverCount": 3,
+      "crossovers": [
+        {
+          "timestamp": "2026-02-01T00:17:47.076Z",
+          "underdogBet": {
+            "name": "Oban Elliott",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Jonathan Micallef",
+            "odds": -122
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-02-01T00:21:35.547Z",
+          "underdogBet": {
+            "name": "Jonathan Micallef",
+            "odds": 116
+          },
+          "newUnderdog": {
+            "name": "Oban Elliott",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-02-01T00:22:29.661Z",
+          "underdogBet": {
+            "name": "Oban Elliott",
+            "odds": 112
+          },
+          "newUnderdog": {
+            "name": "Jonathan Micallef",
+            "odds": -120
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "jonathanmicallef_vs_thembagorimbo",
+      "dataPoints": 370,
+      "crossoverCount": 5,
+      "crossovers": [
+        {
+          "timestamp": "2026-05-02T08:43:20.893Z",
+          "underdogBet": {
+            "name": "Themba Gorimbo",
+            "odds": 122
+          },
+          "newUnderdog": {
+            "name": "Jonathan Micallef",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-05-02T08:44:15.067Z",
+          "underdogBet": {
+            "name": "Jonathan Micallef",
+            "odds": 152
+          },
+          "newUnderdog": {
+            "name": "Themba Gorimbo",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-05-02T08:47:06.529Z",
+          "underdogBet": {
+            "name": "Themba Gorimbo",
+            "odds": 140
+          },
+          "newUnderdog": {
+            "name": "Jonathan Micallef",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-05-02T08:47:51.639Z",
+          "underdogBet": {
+            "name": "Jonathan Micallef",
+            "odds": 106
+          },
+          "newUnderdog": {
+            "name": "Themba Gorimbo",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-05-02T08:48:39.768Z",
+          "underdogBet": {
+            "name": "Themba Gorimbo",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Jonathan Micallef",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "jordanleavitt_vs_joandersonbrito",
+      "dataPoints": 150,
+      "crossoverCount": 2,
+      "crossovers": [
+        {
+          "timestamp": "2026-06-06T22:00:00.596Z",
+          "underdogBet": {
+            "name": "Jordan Leavitt",
+            "odds": 112
+          },
+          "newUnderdog": {
+            "name": "Joanderson Brito",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-06-06T22:00:00.596Z",
+          "underdogBet": {
+            "name": "Jordan Leavitt",
+            "odds": 112
+          },
+          "newUnderdog": {
+            "name": "Joanderson Brito",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "jordanleavitt_vs_yadierdelvalle",
+      "dataPoints": 231,
+      "crossoverCount": 3,
+      "crossovers": [
+        {
+          "timestamp": "2026-02-21T22:35:19.446Z",
+          "underdogBet": {
+            "name": "Jordan Leavitt",
+            "odds": 134
+          },
+          "newUnderdog": {
+            "name": "Yadier DelValle",
+            "odds": -122
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-02-21T22:36:25.635Z",
+          "underdogBet": {
+            "name": "Jordan Leavitt",
+            "odds": 108
+          },
+          "newUnderdog": {
+            "name": "Yadier DelValle",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-02-21T22:40:59.434Z",
+          "underdogBet": {
+            "name": "Jordan Leavitt",
+            "odds": 112
+          },
+          "newUnderdog": {
+            "name": "Yadier DelValle",
+            "odds": 144
+          },
+          "winWin": {
+            "o1Product": 16128,
+            "guaranteedProfitPer100": 23.81,
+            "roi": 12.65,
+            "optimalS2Per100": 88.19,
+            "s2Range": [
+              69.44,
+              112
+            ]
+          },
+          "secondBetPlusMoney": true
+        }
+      ]
+    },
+    {
+      "fightId": "josedelano_vs_robertruchala",
+      "dataPoints": 379,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "joshemmett_vs_kevinvallejos",
+      "dataPoints": 106,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "joshhokit_vs_denzelfreeman",
+      "dataPoints": 68,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "joshuavan_vs_tatsurotaira",
+      "dataPoints": 584,
+      "crossoverCount": 2,
+      "crossovers": [
+        {
+          "timestamp": "2026-05-10T03:30:45.174Z",
+          "underdogBet": {
+            "name": "Joshua Van",
+            "odds": 142
+          },
+          "newUnderdog": {
+            "name": "Tatsuro Taira",
+            "odds": 215
+          },
+          "winWin": {
+            "o1Product": 30530,
+            "guaranteedProfitPer100": 60.73,
+            "roi": 33.5,
+            "optimalS2Per100": 81.27,
+            "s2Range": [
+              46.51,
+              142
+            ]
+          },
+          "secondBetPlusMoney": true
+        },
+        {
+          "timestamp": "2026-05-10T03:40:22.437Z",
+          "underdogBet": {
+            "name": "Tatsuro Taira",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Joshua Van",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "julianamiller_vs_carlijudice",
+      "dataPoints": 54,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "julianerosa_vs_lerryandouglas",
+      "dataPoints": 68,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "julienleblanc_vs_robertvalentin",
+      "dataPoints": 51,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "juniortafa_vs_billyelekana",
+      "dataPoints": 184,
+      "crossoverCount": 6,
+      "crossovers": [
+        {
+          "timestamp": "2026-02-01T01:41:30.362Z",
+          "underdogBet": {
+            "name": "Junior Tafa",
+            "odds": 128
+          },
+          "newUnderdog": {
+            "name": "Billy Elekana",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-02-01T01:42:54.580Z",
+          "underdogBet": {
+            "name": "Junior Tafa",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Billy Elekana",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-02-01T01:43:54.727Z",
+          "underdogBet": {
+            "name": "Junior Tafa",
+            "odds": 112
+          },
+          "newUnderdog": {
+            "name": "Billy Elekana",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-02-01T01:47:16.163Z",
+          "underdogBet": {
+            "name": "Billy Elekana",
+            "odds": 112
+          },
+          "newUnderdog": {
+            "name": "Junior Tafa",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-02-01T01:47:16.163Z",
+          "underdogBet": {
+            "name": "Junior Tafa",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Billy Elekana",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-02-01T01:47:16.163Z",
+          "underdogBet": {
+            "name": "Junior Tafa",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Billy Elekana",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "juniortafa_vs_kevinchristian",
+      "dataPoints": 22,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "justingaethje_vs_paddypimblett",
+      "dataPoints": 442,
+      "crossoverCount": 5,
+      "crossovers": [
+        {
+          "timestamp": "2026-01-25T05:00:55.817Z",
+          "underdogBet": {
+            "name": "Justin Gaethje",
+            "odds": 180
+          },
+          "newUnderdog": {
+            "name": "Paddy Pimblett",
+            "odds": 128
+          },
+          "winWin": {
+            "o1Product": 23040,
+            "guaranteedProfitPer100": 51.79,
+            "roi": 23.69,
+            "optimalS2Per100": 118.59,
+            "s2Range": [
+              78.13,
+              180
+            ]
+          },
+          "secondBetPlusMoney": true
+        },
+        {
+          "timestamp": "2026-01-25T05:01:55.995Z",
+          "underdogBet": {
+            "name": "Paddy Pimblett",
+            "odds": 126
+          },
+          "newUnderdog": {
+            "name": "Justin Gaethje",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-01-25T05:07:18.800Z",
+          "underdogBet": {
+            "name": "Justin Gaethje",
+            "odds": 128
+          },
+          "newUnderdog": {
+            "name": "Paddy Pimblett",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-01-25T05:08:49.058Z",
+          "underdogBet": {
+            "name": "Paddy Pimblett",
+            "odds": 108
+          },
+          "newUnderdog": {
+            "name": "Justin Gaethje",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-01-25T05:16:44.492Z",
+          "underdogBet": {
+            "name": "Paddy Pimblett",
+            "odds": 116
+          },
+          "newUnderdog": {
+            "name": "Justin Gaethje",
+            "odds": 126
+          },
+          "winWin": {
+            "o1Product": 14616,
+            "guaranteedProfitPer100": 20.05,
+            "roi": 10.23,
+            "optimalS2Per100": 95.95,
+            "s2Range": [
+              79.37,
+              116
+            ]
+          },
+          "secondBetPlusMoney": true
+        }
+      ]
+    },
+    {
+      "fightId": "kaanofli_vs_yizha",
+      "dataPoints": 239,
+      "crossoverCount": 2,
+      "crossovers": [
+        {
+          "timestamp": "2026-01-31T23:46:59.977Z",
+          "underdogBet": {
+            "name": "Kaan Ofli",
+            "odds": 176
+          },
+          "newUnderdog": {
+            "name": "Yizha",
+            "odds": 150
+          },
+          "winWin": {
+            "o1Product": 26400,
+            "guaranteedProfitPer100": 62.48,
+            "roi": 29.99,
+            "optimalS2Per100": 108.32,
+            "s2Range": [
+              66.67,
+              176
+            ]
+          },
+          "secondBetPlusMoney": true
+        },
+        {
+          "timestamp": "2026-01-31T23:48:48.201Z",
+          "underdogBet": {
+            "name": "Yizha",
+            "odds": 112
+          },
+          "newUnderdog": {
+            "name": "Kaan Ofli",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "kaanofli_vs_yizha",
+      "dataPoints": 10,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "kaiasakura_vs_cameronsmotherman",
+      "dataPoints": 124,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "kaikamaka_vs_dakotahope",
+      "dataPoints": 306,
+      "crossoverCount": 8,
+      "crossovers": [
+        {
+          "timestamp": "2026-04-04T21:15:00.199Z",
+          "underdogBet": {
+            "name": "Dakota Hope",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Kai Kamaka",
+            "odds": -116
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-04-04T21:15:18.246Z",
+          "underdogBet": {
+            "name": "Dakota Hope",
+            "odds": 100
+          },
+          "newUnderdog": {
+            "name": "Kai Kamaka",
+            "odds": -122
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-04-04T21:17:00.467Z",
+          "underdogBet": {
+            "name": "Dakota Hope",
+            "odds": 112
+          },
+          "newUnderdog": {
+            "name": "Kai Kamaka",
+            "odds": 134
+          },
+          "winWin": {
+            "o1Product": 15008,
+            "guaranteedProfitPer100": 20.58,
+            "roi": 10.75,
+            "optimalS2Per100": 91.42,
+            "s2Range": [
+              74.63,
+              112
+            ]
+          },
+          "secondBetPlusMoney": true
+        },
+        {
+          "timestamp": "2026-04-04T21:17:54.562Z",
+          "underdogBet": {
+            "name": "Kai Kamaka",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Dakota Hope",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-04-04T21:20:30.880Z",
+          "underdogBet": {
+            "name": "Dakota Hope",
+            "odds": 112
+          },
+          "newUnderdog": {
+            "name": "Kai Kamaka",
+            "odds": 100
+          },
+          "winWin": {
+            "o1Product": 11200,
+            "guaranteedProfitPer100": 5.83,
+            "roi": 2.83,
+            "optimalS2Per100": 105.83,
+            "s2Range": [
+              100,
+              112
+            ]
+          },
+          "secondBetPlusMoney": true
+        },
+        {
+          "timestamp": "2026-04-04T21:22:19.100Z",
+          "underdogBet": {
+            "name": "Kai Kamaka",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Dakota Hope",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-04-04T21:24:40.315Z",
+          "underdogBet": {
+            "name": "Kai Kamaka",
+            "odds": 102
+          },
+          "newUnderdog": {
+            "name": "Dakota Hope",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-04-04T21:25:10.354Z",
+          "underdogBet": {
+            "name": "Kai Kamaka",
+            "odds": 102
+          },
+          "newUnderdog": {
+            "name": "Dakota Hope",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "kelvingastelum_vs_vicenteluque",
+      "dataPoints": 164,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "kennedynzechukwu_vs_marcusbuchecha",
+      "dataPoints": 260,
+      "crossoverCount": 3,
+      "crossovers": [
+        {
+          "timestamp": "2025-12-14T03:55:18.795Z",
+          "underdogBet": {
+            "name": "Marcus Buchecha",
+            "odds": 128
+          },
+          "newUnderdog": {
+            "name": "Kennedy Nzechukwu",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2025-12-14T03:56:03.885Z",
+          "underdogBet": {
+            "name": "Kennedy Nzechukwu",
+            "odds": 128
+          },
+          "newUnderdog": {
+            "name": "Marcus Buchecha",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2025-12-14T04:08:41.795Z",
+          "underdogBet": {
+            "name": "Marcus Buchecha",
+            "odds": 108
+          },
+          "newUnderdog": {
+            "name": "Kennedy Nzechukwu",
+            "odds": 112
+          },
+          "winWin": {
+            "o1Product": 12096,
+            "guaranteedProfitPer100": 9.8,
+            "roi": 4.95,
+            "optimalS2Per100": 98.2,
+            "s2Range": [
+              89.29,
+              108
+            ]
+          },
+          "secondBetPlusMoney": true
+        }
+      ]
+    },
+    {
+      "fightId": "ketlensouza_vs_arianecarnelossi",
+      "dataPoints": 81,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "ketlenvieira_vs_jacquelinecavalcanti",
+      "dataPoints": 333,
+      "crossoverCount": 3,
+      "crossovers": [
+        {
+          "timestamp": "2026-05-16T22:52:39.569Z",
+          "underdogBet": {
+            "name": "Ketlen Vieira",
+            "odds": 128
+          },
+          "newUnderdog": {
+            "name": "Jacqueline Cavalcanti",
+            "odds": -118
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-05-16T22:57:10.086Z",
+          "underdogBet": {
+            "name": "Jacqueline Cavalcanti",
+            "odds": 108
+          },
+          "newUnderdog": {
+            "name": "Ketlen Vieira",
+            "odds": -118
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-05-16T22:57:52.166Z",
+          "underdogBet": {
+            "name": "Ketlen Vieira",
+            "odds": 100
+          },
+          "newUnderdog": {
+            "name": "Jacqueline Cavalcanti",
+            "odds": -120
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "kevinholland_vs_randybrown",
+      "dataPoints": 461,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "khamzatchimaev_vs_seanstrickland",
+      "dataPoints": 589,
+      "crossoverCount": 3,
+      "crossovers": [
+        {
+          "timestamp": "2026-05-10T04:22:01.174Z",
+          "underdogBet": {
+            "name": "Sean Strickland",
+            "odds": 140
+          },
+          "newUnderdog": {
+            "name": "Khamzat Chimaev",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-05-10T04:25:37.564Z",
+          "underdogBet": {
+            "name": "Khamzat Chimaev",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Sean Strickland",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-05-10T04:30:35.150Z",
+          "underdogBet": {
+            "name": "Khamzat Chimaev",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Sean Strickland",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "kinggreen_vs_jeremystephens",
+      "dataPoints": 113,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "kinggreen_vs_lancegibson",
+      "dataPoints": 522,
+      "crossoverCount": 3,
+      "crossovers": [
+        {
+          "timestamp": "2025-12-14T03:20:21.142Z",
+          "underdogBet": {
+            "name": "Lance Gibson",
+            "odds": 108
+          },
+          "newUnderdog": {
+            "name": "King Green",
+            "odds": -118
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2025-12-14T03:29:52.644Z",
+          "underdogBet": {
+            "name": "Lance Gibson",
+            "odds": 180
+          },
+          "newUnderdog": {
+            "name": "King Green",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2025-12-14T03:29:52.644Z",
+          "underdogBet": {
+            "name": "Lance Gibson",
+            "odds": 1340
+          },
+          "newUnderdog": {
+            "name": "King Green",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "klaudiasygula_vs_priscilacachoeira",
+      "dataPoints": 508,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "kyledaukaus_vs_geraldmeerschaert",
+      "dataPoints": 28,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "landovannata_vs_darriusflowers",
+      "dataPoints": 254,
+      "crossoverCount": 1,
+      "crossovers": [
+        {
+          "timestamp": "2026-04-04T23:08:18.942Z",
+          "underdogBet": {
+            "name": "Darrius Flowers",
+            "odds": 230
+          },
+          "newUnderdog": {
+            "name": "Lando Vannata",
+            "odds": 310
+          },
+          "winWin": {
+            "o1Product": 71300,
+            "guaranteedProfitPer100": 143.86,
+            "roi": 77.29,
+            "optimalS2Per100": 86.14,
+            "s2Range": [
+              32.26,
+              230
+            ]
+          },
+          "secondBetPlusMoney": true
+        }
+      ]
+    },
+    {
+      "fightId": "lomalookboonmee_vs_jaquelineamorim",
+      "dataPoints": 412,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "louiesutherland_vs_brandopericic",
+      "dataPoints": 69,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "luanlacerda_vs_hechersosa",
+      "dataPoints": 413,
+      "crossoverCount": 5,
+      "crossovers": [
+        {
+          "timestamp": "2026-03-14T21:33:12.577Z",
+          "underdogBet": {
+            "name": "Luan Lacerda",
+            "odds": 144
+          },
+          "newUnderdog": {
+            "name": "Hecher Sosa",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-03-14T21:33:45.660Z",
+          "underdogBet": {
+            "name": "Hecher Sosa",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Luan Lacerda",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-03-14T21:35:30.876Z",
+          "underdogBet": {
+            "name": "Luan Lacerda",
+            "odds": 192
+          },
+          "newUnderdog": {
+            "name": "Hecher Sosa",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-03-14T21:38:16.217Z",
+          "underdogBet": {
+            "name": "Hecher Sosa",
+            "odds": 138
+          },
+          "newUnderdog": {
+            "name": "Luan Lacerda",
+            "odds": 120
+          },
+          "winWin": {
+            "o1Product": 16560,
+            "guaranteedProfitPer100": 28.69,
+            "roi": 13.84,
+            "optimalS2Per100": 107.24,
+            "s2Range": [
+              83.33,
+              138
+            ]
+          },
+          "secondBetPlusMoney": true
+        },
+        {
+          "timestamp": "2026-03-14T21:40:34.550Z",
+          "underdogBet": {
+            "name": "Luan Lacerda",
+            "odds": 128
+          },
+          "newUnderdog": {
+            "name": "Hecher Sosa",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "lukefernandez_vs_rodolfobellato",
+      "dataPoints": 65,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "lukeriley_vs_michaelaswell",
+      "dataPoints": 378,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "malcolmwellmaker_vs_ethynewing",
+      "dataPoints": 180,
+      "crossoverCount": 5,
+      "crossovers": [
+        {
+          "timestamp": "2025-11-16T01:23:43.041Z",
+          "underdogBet": {
+            "name": "Ethyn Ewing",
+            "odds": 112
+          },
+          "newUnderdog": {
+            "name": "Malcolm Wellmaker",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2025-11-16T01:24:49.264Z",
+          "underdogBet": {
+            "name": "Malcolm Wellmaker",
+            "odds": 128
+          },
+          "newUnderdog": {
+            "name": "Ethyn Ewing",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2025-11-16T01:26:25.616Z",
+          "underdogBet": {
+            "name": "Ethyn Ewing",
+            "odds": 108
+          },
+          "newUnderdog": {
+            "name": "Malcolm Wellmaker",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2025-11-16T01:26:55.714Z",
+          "underdogBet": {
+            "name": "Malcolm Wellmaker",
+            "odds": 128
+          },
+          "newUnderdog": {
+            "name": "Ethyn Ewing",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2025-11-16T01:29:44.304Z",
+          "underdogBet": {
+            "name": "Ethyn Ewing",
+            "odds": 112
+          },
+          "newUnderdog": {
+            "name": "Malcolm Wellmaker",
+            "odds": 112
+          },
+          "winWin": {
+            "o1Product": 12544,
+            "guaranteedProfitPer100": 12,
+            "roi": 6,
+            "optimalS2Per100": 100,
+            "s2Range": [
+              89.29,
+              112
+            ]
+          },
+          "secondBetPlusMoney": true
+        }
+      ]
+    },
+    {
+      "fightId": "malcolmwellmaker_vs_juandiaz",
+      "dataPoints": 213,
+      "crossoverCount": 1,
+      "crossovers": [
+        {
+          "timestamp": "2026-05-17T01:40:01.941Z",
+          "underdogBet": {
+            "name": "Juan Diaz",
+            "odds": 102
+          },
+          "newUnderdog": {
+            "name": "Malcolm Wellmaker",
+            "odds": -118
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "mandelnallo_vs_jaiherbert",
+      "dataPoints": 58,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "mansurabdulmalik_vs_antoniotrocoli",
+      "dataPoints": 38,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "mansurabdulmalik_vs_yousribelgaroui",
+      "dataPoints": 233,
+      "crossoverCount": 1,
+      "crossovers": [
+        {
+          "timestamp": "2026-03-29T00:39:53.359Z",
+          "underdogBet": {
+            "name": "Yousri Belgaroui",
+            "odds": 124
+          },
+          "newUnderdog": {
+            "name": "Mansur Abdul Malik",
+            "odds": 108
+          },
+          "winWin": {
+            "o1Product": 13392,
+            "guaranteedProfitPer100": 15.72,
+            "roi": 7.59,
+            "optimalS2Per100": 107.15,
+            "s2Range": [
+              92.59,
+              124
+            ]
+          },
+          "secondBetPlusMoney": true
+        }
+      ]
+    },
+    {
+      "fightId": "mantaskondratavicius_vs_antoniotrocoli",
+      "dataPoints": 201,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "marcintybura_vs_tyrellfortune",
+      "dataPoints": 272,
+      "crossoverCount": 1,
+      "crossovers": [
+        {
+          "timestamp": "2026-03-28T22:50:38.419Z",
+          "underdogBet": {
+            "name": "Marcin Tybura",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Tyrell Fortune",
+            "odds": -122
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "marcusbuchecha_vs_ryanspann",
+      "dataPoints": 142,
+      "crossoverCount": 1,
+      "crossovers": [
+        {
+          "timestamp": "2026-04-26T00:19:03.752Z",
+          "underdogBet": {
+            "name": "Ryan Spann",
+            "odds": 225
+          },
+          "newUnderdog": {
+            "name": "Marcus Buchecha",
+            "odds": -108
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "marcusmcghee_vs_johnyannis",
+      "dataPoints": 486,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "marekbuljo_vs_denzelfreeman",
+      "dataPoints": 410,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "mariopinto_vs_felipefranco",
+      "dataPoints": 678,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "marlonvera_vs_davidmartinez",
+      "dataPoints": 440,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "marquelmederos_vs_chrispadilla",
+      "dataPoints": 344,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "marwanrahiki_vs_harryhardwick",
+      "dataPoints": 262,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "marwanrahiki_vs_ollieschmid",
+      "dataPoints": 140,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "masonjones_vs_axelsola",
+      "dataPoints": 561,
+      "crossoverCount": 4,
+      "crossovers": [
+        {
+          "timestamp": "2026-03-21T19:43:00.778Z",
+          "underdogBet": {
+            "name": "Axel Sola",
+            "odds": 100
+          },
+          "newUnderdog": {
+            "name": "Mason Jones",
+            "odds": -118
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-03-21T19:43:57.909Z",
+          "underdogBet": {
+            "name": "Mason Jones",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Axel Sola",
+            "odds": 118
+          },
+          "winWin": {
+            "o1Product": 12272,
+            "guaranteedProfitPer100": 10.12,
+            "roi": 5.22,
+            "optimalS2Per100": 93.88,
+            "s2Range": [
+              84.75,
+              104
+            ]
+          },
+          "secondBetPlusMoney": true
+        },
+        {
+          "timestamp": "2026-03-21T19:44:12.952Z",
+          "underdogBet": {
+            "name": "Axel Sola",
+            "odds": 118
+          },
+          "newUnderdog": {
+            "name": "Mason Jones",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-03-21T19:44:37.018Z",
+          "underdogBet": {
+            "name": "Axel Sola",
+            "odds": 1800
+          },
+          "newUnderdog": {
+            "name": "Mason Jones",
+            "odds": -118
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "mateuszgamrot_vs_estebanribovics",
+      "dataPoints": 197,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "mateuszgamrot_vs_estebanribovics",
+      "dataPoints": 37,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "mattschnell_vs_alessandrocosta",
+      "dataPoints": 67,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "mattschnell_vs_alessandrocosta",
+      "dataPoints": 67,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "maxholloway_vs_charlesoliveira",
+      "dataPoints": 289,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "mayrabuenosilva_vs_michellemontague",
+      "dataPoints": 197,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "melissacroden_vs_dariazhelezniakova",
+      "dataPoints": 472,
+      "crossoverCount": 4,
+      "crossovers": [
+        {
+          "timestamp": "2026-04-18T22:31:35.894Z",
+          "underdogBet": {
+            "name": "Daria Zhelezniakova",
+            "odds": 154
+          },
+          "newUnderdog": {
+            "name": "Melissa Croden",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-04-18T22:35:39.422Z",
+          "underdogBet": {
+            "name": "Melissa Croden",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Daria Zhelezniakova",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-04-18T22:35:03.350Z",
+          "underdogBet": {
+            "name": "Daria Zhelezniakova",
+            "odds": 920
+          },
+          "newUnderdog": {
+            "name": "Melissa Croden",
+            "odds": 128
+          },
+          "winWin": {
+            "o1Product": 117760,
+            "guaranteedProfitPer100": 243.16,
+            "roi": 66.06,
+            "optimalS2Per100": 268.1,
+            "s2Range": [
+              78.13,
+              920
+            ]
+          },
+          "secondBetPlusMoney": true
+        },
+        {
+          "timestamp": "2026-04-18T22:35:39.422Z",
+          "underdogBet": {
+            "name": "Melissa Croden",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Daria Zhelezniakova",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "michaelchiesa_vs_nikoprice",
+      "dataPoints": 47,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "michaelpage_vs_sampatterson",
+      "dataPoints": 525,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "michaloleksiejczuk_vs_marcandrebarriault",
+      "dataPoints": 704,
+      "crossoverCount": 2,
+      "crossovers": [
+        {
+          "timestamp": "2026-02-08T02:25:40.247Z",
+          "underdogBet": {
+            "name": "Marc-Andre Barriault",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Michal Oleksiejczuk",
+            "odds": -120
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-02-08T02:25:40.247Z",
+          "underdogBet": {
+            "name": "Marc-Andre Barriault",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Michal Oleksiejczuk",
+            "odds": -120
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "modestasbukauskas_vs_christianedwards",
+      "dataPoints": 427,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "monteljackson_vs_raonibarcelos",
+      "dataPoints": 251,
+      "crossoverCount": 3,
+      "crossovers": [
+        {
+          "timestamp": "2026-04-26T00:47:30.648Z",
+          "underdogBet": {
+            "name": "Raoni Barcelos",
+            "odds": 128
+          },
+          "newUnderdog": {
+            "name": "Montel Jackson",
+            "odds": -118
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-04-26T00:53:58.477Z",
+          "underdogBet": {
+            "name": "Raoni Barcelos",
+            "odds": 180
+          },
+          "newUnderdog": {
+            "name": "Montel Jackson",
+            "odds": 112
+          },
+          "winWin": {
+            "o1Product": 20160,
+            "guaranteedProfitPer100": 41.99,
+            "roi": 18.51,
+            "optimalS2Per100": 126.77,
+            "s2Range": [
+              89.29,
+              180
+            ]
+          },
+          "secondBetPlusMoney": true
+        },
+        {
+          "timestamp": "2026-04-26T00:55:40.696Z",
+          "underdogBet": {
+            "name": "Montel Jackson",
+            "odds": 108
+          },
+          "newUnderdog": {
+            "name": "Raoni Barcelos",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "movsarevloev_vs_leronemurphy",
+      "dataPoints": 595,
+      "crossoverCount": 6,
+      "crossovers": [
+        {
+          "timestamp": "2026-03-21T23:01:43.467Z",
+          "underdogBet": {
+            "name": "Lerone Murphy",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Movsar Evloev",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-03-21T23:05:26.096Z",
+          "underdogBet": {
+            "name": "Movsar Evloev",
+            "odds": 110
+          },
+          "newUnderdog": {
+            "name": "Lerone Murphy",
+            "odds": 128
+          },
+          "winWin": {
+            "o1Product": 14080,
+            "guaranteedProfitPer100": 17.3,
+            "roi": 8.98,
+            "optimalS2Per100": 92.7,
+            "s2Range": [
+              78.13,
+              110
+            ]
+          },
+          "secondBetPlusMoney": true
+        },
+        {
+          "timestamp": "2026-03-21T23:05:41.160Z",
+          "underdogBet": {
+            "name": "Lerone Murphy",
+            "odds": 122
+          },
+          "newUnderdog": {
+            "name": "Movsar Evloev",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-03-21T23:06:05.208Z",
+          "underdogBet": {
+            "name": "Movsar Evloev",
+            "odds": 102
+          },
+          "newUnderdog": {
+            "name": "Lerone Murphy",
+            "odds": -118
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-03-21T23:20:04.785Z",
+          "underdogBet": {
+            "name": "Movsar Evloev",
+            "odds": 132
+          },
+          "newUnderdog": {
+            "name": "Lerone Murphy",
+            "odds": 102
+          },
+          "winWin": {
+            "o1Product": 13464,
+            "guaranteedProfitPer100": 16.03,
+            "roi": 7.5,
+            "optimalS2Per100": 113.76,
+            "s2Range": [
+              98.04,
+              132
+            ]
+          },
+          "secondBetPlusMoney": true
+        },
+        {
+          "timestamp": "2026-03-21T23:22:20.158Z",
+          "underdogBet": {
+            "name": "Lerone Murphy",
+            "odds": 120
+          },
+          "newUnderdog": {
+            "name": "Movsar Evloev",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "muhammadnaimov_vs_maironsantos",
+      "dataPoints": 246,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "muingafurov_vs_jakubwiklacz",
+      "dataPoints": 359,
+      "crossoverCount": 6,
+      "crossovers": [
+        {
+          "timestamp": "2026-02-07T22:42:00.029Z",
+          "underdogBet": {
+            "name": "Jakub Wiklacz",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Muin Gafurov",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-02-07T22:43:48.277Z",
+          "underdogBet": {
+            "name": "Muin Gafurov",
+            "odds": 108
+          },
+          "newUnderdog": {
+            "name": "Jakub Wiklacz",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-02-07T22:45:57.624Z",
+          "underdogBet": {
+            "name": "Muin Gafurov",
+            "odds": 102
+          },
+          "newUnderdog": {
+            "name": "Jakub Wiklacz",
+            "odds": -118
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-02-07T22:48:31.028Z",
+          "underdogBet": {
+            "name": "Jakub Wiklacz",
+            "odds": 158
+          },
+          "newUnderdog": {
+            "name": "Muin Gafurov",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-02-07T22:56:29.072Z",
+          "underdogBet": {
+            "name": "Muin Gafurov",
+            "odds": 116
+          },
+          "newUnderdog": {
+            "name": "Jakub Wiklacz",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-02-07T22:56:56.140Z",
+          "underdogBet": {
+            "name": "Jakub Wiklacz",
+            "odds": 580
+          },
+          "newUnderdog": {
+            "name": "Muin Gafurov",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "nathanielwood_vs_losenekeita",
+      "dataPoints": 710,
+      "crossoverCount": 10,
+      "crossovers": [
+        {
+          "timestamp": "2026-03-21T19:23:11.298Z",
+          "underdogBet": {
+            "name": "Nathaniel Wood",
+            "odds": 102
+          },
+          "newUnderdog": {
+            "name": "Losene Keita",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-03-21T19:24:11.428Z",
+          "underdogBet": {
+            "name": "Losene Keita",
+            "odds": 102
+          },
+          "newUnderdog": {
+            "name": "Nathaniel Wood",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-03-21T19:24:47.508Z",
+          "underdogBet": {
+            "name": "Losene Keita",
+            "odds": 100
+          },
+          "newUnderdog": {
+            "name": "Nathaniel Wood",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-03-21T19:25:56.630Z",
+          "underdogBet": {
+            "name": "Nathaniel Wood",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Losene Keita",
+            "odds": -122
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-03-21T19:26:11.664Z",
+          "underdogBet": {
+            "name": "Nathaniel Wood",
+            "odds": 110
+          },
+          "newUnderdog": {
+            "name": "Losene Keita",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-03-21T19:23:11.298Z",
+          "underdogBet": {
+            "name": "Nathaniel Wood",
+            "odds": 102
+          },
+          "newUnderdog": {
+            "name": "Losene Keita",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-03-21T19:24:11.428Z",
+          "underdogBet": {
+            "name": "Losene Keita",
+            "odds": 102
+          },
+          "newUnderdog": {
+            "name": "Nathaniel Wood",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-03-21T19:24:47.508Z",
+          "underdogBet": {
+            "name": "Losene Keita",
+            "odds": 100
+          },
+          "newUnderdog": {
+            "name": "Nathaniel Wood",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-03-21T19:25:56.630Z",
+          "underdogBet": {
+            "name": "Nathaniel Wood",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Losene Keita",
+            "odds": -122
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-03-21T19:26:11.664Z",
+          "underdogBet": {
+            "name": "Nathaniel Wood",
+            "odds": 110
+          },
+          "newUnderdog": {
+            "name": "Losene Keita",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "navajostirling_vs_brunolopes",
+      "dataPoints": 360,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "nicolasdalby_vs_saygidizagakhmaev",
+      "dataPoints": 300,
+      "crossoverCount": 2,
+      "crossovers": [
+        {
+          "timestamp": "2025-11-22T17:36:03.833Z",
+          "underdogBet": {
+            "name": "Nicolas Dalby",
+            "odds": 108
+          },
+          "newUnderdog": {
+            "name": "Saygid Izagakhmaev",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2025-11-22T17:38:07.090Z",
+          "underdogBet": {
+            "name": "Saygid Izagakhmaev",
+            "odds": 180
+          },
+          "newUnderdog": {
+            "name": "Nicolas Dalby",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "nikitakrylov_vs_modestasbukauskas",
+      "dataPoints": 519,
+      "crossoverCount": 7,
+      "crossovers": [
+        {
+          "timestamp": "2026-01-25T00:41:55.032Z",
+          "underdogBet": {
+            "name": "Nikita Krylov",
+            "odds": 126
+          },
+          "newUnderdog": {
+            "name": "Modestas Bukauskas",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-01-25T00:42:34.145Z",
+          "underdogBet": {
+            "name": "Modestas Bukauskas",
+            "odds": 108
+          },
+          "newUnderdog": {
+            "name": "Nikita Krylov",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-01-25T00:43:46.393Z",
+          "underdogBet": {
+            "name": "Nikita Krylov",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Modestas Bukauskas",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-01-25T00:44:55.616Z",
+          "underdogBet": {
+            "name": "Nikita Krylov",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Modestas Bukauskas",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-01-25T00:46:01.826Z",
+          "underdogBet": {
+            "name": "Nikita Krylov",
+            "odds": 108
+          },
+          "newUnderdog": {
+            "name": "Modestas Bukauskas",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-01-25T00:44:55.616Z",
+          "underdogBet": {
+            "name": "Modestas Bukauskas",
+            "odds": 620
+          },
+          "newUnderdog": {
+            "name": "Nikita Krylov",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-01-25T00:46:01.826Z",
+          "underdogBet": {
+            "name": "Nikita Krylov",
+            "odds": 108
+          },
+          "newUnderdog": {
+            "name": "Modestas Bukauskas",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "nikolayveretennikov_vs_khaoswilliams",
+      "dataPoints": 190,
+      "crossoverCount": 6,
+      "crossovers": [
+        {
+          "timestamp": "2026-05-17T00:15:11.813Z",
+          "underdogBet": {
+            "name": "Nikolay Veretennikov",
+            "odds": 102
+          },
+          "newUnderdog": {
+            "name": "Khaos Williams",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-05-17T00:15:56.909Z",
+          "underdogBet": {
+            "name": "Nikolay Veretennikov",
+            "odds": 100
+          },
+          "newUnderdog": {
+            "name": "Khaos Williams",
+            "odds": -122
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-05-17T00:17:33.279Z",
+          "underdogBet": {
+            "name": "Khaos Williams",
+            "odds": 108
+          },
+          "newUnderdog": {
+            "name": "Nikolay Veretennikov",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-05-17T00:15:11.813Z",
+          "underdogBet": {
+            "name": "Nikolay Veretennikov",
+            "odds": 102
+          },
+          "newUnderdog": {
+            "name": "Khaos Williams",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-05-17T00:15:56.909Z",
+          "underdogBet": {
+            "name": "Nikolay Veretennikov",
+            "odds": 100
+          },
+          "newUnderdog": {
+            "name": "Khaos Williams",
+            "odds": -122
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-05-17T00:17:33.279Z",
+          "underdogBet": {
+            "name": "Khaos Williams",
+            "odds": 108
+          },
+          "newUnderdog": {
+            "name": "Nikolay Veretennikov",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "nikolayveretennikov_vs_nikoprice",
+      "dataPoints": 70,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "noracornolle_vs_joselyneedwards",
+      "dataPoints": 107,
+      "crossoverCount": 1,
+      "crossovers": [
+        {
+          "timestamp": "2026-02-21T23:56:20.490Z",
+          "underdogBet": {
+            "name": "Nora Cornolle",
+            "odds": 128
+          },
+          "newUnderdog": {
+            "name": "Joselyne Edwards",
+            "odds": -118
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "noracornolle_vs_joselyneedwards",
+      "dataPoints": 52,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "normadumont_vs_joselyneedwards",
+      "dataPoints": 321,
+      "crossoverCount": 1,
+      "crossovers": [
+        {
+          "timestamp": "2026-04-26T02:34:32.453Z",
+          "underdogBet": {
+            "name": "Joselyne Edwards",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Norma Dumont",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "nurulloaliev_vs_shemrock",
+      "dataPoints": 292,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "odeosbourne_vs_alibiidiris",
+      "dataPoints": 255,
+      "crossoverCount": 1,
+      "crossovers": [
+        {
+          "timestamp": "2026-02-22T00:41:21.094Z",
+          "underdogBet": {
+            "name": "Ode Osbourne",
+            "odds": 108
+          },
+          "newUnderdog": {
+            "name": "Alibi Idiris",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "patriciopitbull_vs_aaronpico",
+      "dataPoints": 453,
+      "crossoverCount": 1,
+      "crossovers": [
+        {
+          "timestamp": "2026-04-12T00:44:51.754Z",
+          "underdogBet": {
+            "name": "Patricio Pitbull",
+            "odds": 116
+          },
+          "newUnderdog": {
+            "name": "Aaron Pico",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "patsabatini_vs_chepemariscal",
+      "dataPoints": 362,
+      "crossoverCount": 6,
+      "crossovers": [
+        {
+          "timestamp": "2025-11-16T00:32:59.725Z",
+          "underdogBet": {
+            "name": "Chepe Mariscal",
+            "odds": 136
+          },
+          "newUnderdog": {
+            "name": "Pat Sabatini",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2025-11-16T00:34:48.096Z",
+          "underdogBet": {
+            "name": "Pat Sabatini",
+            "odds": 116
+          },
+          "newUnderdog": {
+            "name": "Chepe Mariscal",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2025-11-16T00:35:27.240Z",
+          "underdogBet": {
+            "name": "Chepe Mariscal",
+            "odds": 108
+          },
+          "newUnderdog": {
+            "name": "Pat Sabatini",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2025-11-16T00:36:42.514Z",
+          "underdogBet": {
+            "name": "Chepe Mariscal",
+            "odds": 112
+          },
+          "newUnderdog": {
+            "name": "Pat Sabatini",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2025-11-16T00:37:48.762Z",
+          "underdogBet": {
+            "name": "Chepe Mariscal",
+            "odds": 112
+          },
+          "newUnderdog": {
+            "name": "Pat Sabatini",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2025-11-16T00:38:24.910Z",
+          "underdogBet": {
+            "name": "Pat Sabatini",
+            "odds": 108
+          },
+          "newUnderdog": {
+            "name": "Chepe Mariscal",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "patsabatini_vs_williamgomis",
+      "dataPoints": 430,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "philrowe_vs_jeanpaullebosnoyani",
+      "dataPoints": 339,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "pierarodriguez_vs_samhughes",
+      "dataPoints": 14,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "priscilacachoeira_vs_chelseachandler",
+      "dataPoints": 136,
+      "crossoverCount": 2,
+      "crossovers": [
+        {
+          "timestamp": "2026-06-06T22:16:40.682Z",
+          "underdogBet": {
+            "name": "Priscila Cachoeira",
+            "odds": 108
+          },
+          "newUnderdog": {
+            "name": "Chelsea Chandler",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-06-06T22:18:19.938Z",
+          "underdogBet": {
+            "name": "Chelsea Chandler",
+            "odds": 144
+          },
+          "newUnderdog": {
+            "name": "Priscila Cachoeira",
+            "odds": 300
+          },
+          "winWin": {
+            "o1Product": 43200,
+            "guaranteedProfitPer100": 74.72,
+            "roi": 44.14,
+            "optimalS2Per100": 69.28,
+            "s2Range": [
+              33.33,
+              144
+            ]
+          },
+          "secondBetPlusMoney": true
+        }
+      ]
+    },
+    {
+      "fightId": "quillansalkilld_vs_jamiemullarkey",
+      "dataPoints": 51,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "rafaelfiziev_vs_mauricioruffy",
+      "dataPoints": 406,
+      "crossoverCount": 8,
+      "crossovers": [
+        {
+          "timestamp": "2026-02-01T03:20:03.024Z",
+          "underdogBet": {
+            "name": "Mauricio Ruffy",
+            "odds": 102
+          },
+          "newUnderdog": {
+            "name": "Rafael Fiziev",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-02-01T03:26:12.863Z",
+          "underdogBet": {
+            "name": "Mauricio Ruffy",
+            "odds": 108
+          },
+          "newUnderdog": {
+            "name": "Rafael Fiziev",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-02-01T03:27:13.007Z",
+          "underdogBet": {
+            "name": "Rafael Fiziev",
+            "odds": 108
+          },
+          "newUnderdog": {
+            "name": "Mauricio Ruffy",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-02-01T03:29:34.279Z",
+          "underdogBet": {
+            "name": "Mauricio Ruffy",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Rafael Fiziev",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-02-01T03:20:03.024Z",
+          "underdogBet": {
+            "name": "Mauricio Ruffy",
+            "odds": 102
+          },
+          "newUnderdog": {
+            "name": "Rafael Fiziev",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-02-01T03:26:12.863Z",
+          "underdogBet": {
+            "name": "Mauricio Ruffy",
+            "odds": 108
+          },
+          "newUnderdog": {
+            "name": "Rafael Fiziev",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-02-01T03:27:13.007Z",
+          "underdogBet": {
+            "name": "Rafael Fiziev",
+            "odds": 108
+          },
+          "newUnderdog": {
+            "name": "Mauricio Ruffy",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-02-01T03:29:34.279Z",
+          "underdogBet": {
+            "name": "Mauricio Ruffy",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Rafael Fiziev",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "rafaeltobias_vs_diyarnurgozhay",
+      "dataPoints": 344,
+      "crossoverCount": 1,
+      "crossovers": [
+        {
+          "timestamp": "2026-03-07T23:17:05.210Z",
+          "underdogBet": {
+            "name": "Diyar Nurgozhay",
+            "odds": 134
+          },
+          "newUnderdog": {
+            "name": "Rafael Tobias",
+            "odds": 108
+          },
+          "winWin": {
+            "o1Product": 14472,
+            "guaranteedProfitPer100": 20.3,
+            "roi": 9.6,
+            "optimalS2Per100": 111.39,
+            "s2Range": [
+              92.59,
+              134
+            ]
+          },
+          "secondBetPlusMoney": true
+        }
+      ]
+    },
+    {
+      "fightId": "rafagarcia_vs_alexanderhernandez",
+      "dataPoints": 255,
+      "crossoverCount": 3,
+      "crossovers": [
+        {
+          "timestamp": "2026-04-26T01:46:54.284Z",
+          "underdogBet": {
+            "name": "Rafa Garcia",
+            "odds": 100
+          },
+          "newUnderdog": {
+            "name": "Alexander Hernandez",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-04-26T01:49:00.517Z",
+          "underdogBet": {
+            "name": "Alexander Hernandez",
+            "odds": 120
+          },
+          "newUnderdog": {
+            "name": "Rafa Garcia",
+            "odds": -108
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-04-26T01:50:21.708Z",
+          "underdogBet": {
+            "name": "Alexander Hernandez",
+            "odds": 112
+          },
+          "newUnderdog": {
+            "name": "Rafa Garcia",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "ramizbrahimaj_vs_punahelesoriano",
+      "dataPoints": 256,
+      "crossoverCount": 3,
+      "crossovers": [
+        {
+          "timestamp": "2026-02-21T23:29:24.082Z",
+          "underdogBet": {
+            "name": "Ramiz Brahimaj",
+            "odds": 100
+          },
+          "newUnderdog": {
+            "name": "Punahele Soriano",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-02-21T23:37:34.420Z",
+          "underdogBet": {
+            "name": "Punahele Soriano",
+            "odds": 126
+          },
+          "newUnderdog": {
+            "name": "Ramiz Brahimaj",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-02-21T23:41:35.090Z",
+          "underdogBet": {
+            "name": "Punahele Soriano",
+            "odds": 152
+          },
+          "newUnderdog": {
+            "name": "Ramiz Brahimaj",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "reginatarin_vs_ernestakareckaite",
+      "dataPoints": 539,
+      "crossoverCount": 7,
+      "crossovers": [
+        {
+          "timestamp": "2026-02-28T22:54:54.693Z",
+          "underdogBet": {
+            "name": "Regina Tarin",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Ernesta Kareckaite",
+            "odds": -122
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-02-28T22:57:12.988Z",
+          "underdogBet": {
+            "name": "Ernesta Kareckaite",
+            "odds": 108
+          },
+          "newUnderdog": {
+            "name": "Regina Tarin",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-02-28T22:58:52.181Z",
+          "underdogBet": {
+            "name": "Regina Tarin",
+            "odds": 102
+          },
+          "newUnderdog": {
+            "name": "Ernesta Kareckaite",
+            "odds": -118
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-02-28T23:00:49.467Z",
+          "underdogBet": {
+            "name": "Regina Tarin",
+            "odds": 102
+          },
+          "newUnderdog": {
+            "name": "Ernesta Kareckaite",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-02-28T23:02:40.690Z",
+          "underdogBet": {
+            "name": "Regina Tarin",
+            "odds": 106
+          },
+          "newUnderdog": {
+            "name": "Ernesta Kareckaite",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-02-28T23:01:49.580Z",
+          "underdogBet": {
+            "name": "Ernesta Kareckaite",
+            "odds": 1480
+          },
+          "newUnderdog": {
+            "name": "Regina Tarin",
+            "odds": 126
+          },
+          "winWin": {
+            "o1Product": 186480,
+            "guaranteedProfitPer100": 331.83,
+            "roi": 74.95,
+            "optimalS2Per100": 342.72,
+            "s2Range": [
+              79.37,
+              1480
+            ]
+          },
+          "secondBetPlusMoney": true
+        },
+        {
+          "timestamp": "2026-02-28T23:02:40.690Z",
+          "underdogBet": {
+            "name": "Regina Tarin",
+            "odds": 106
+          },
+          "newUnderdog": {
+            "name": "Ernesta Kareckaite",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "reitsuruya_vs_luisgurule",
+      "dataPoints": 126,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "renatomoicano_vs_chrisduncan",
+      "dataPoints": 162,
+      "crossoverCount": 2,
+      "crossovers": [
+        {
+          "timestamp": "2026-04-05T02:38:33.494Z",
+          "underdogBet": {
+            "name": "Renato Moicano",
+            "odds": 102
+          },
+          "newUnderdog": {
+            "name": "Chris Duncan",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-04-05T02:39:06.547Z",
+          "underdogBet": {
+            "name": "Renato Moicano",
+            "odds": 102
+          },
+          "newUnderdog": {
+            "name": "Chris Duncan",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "rickysimon_vs_adrianyanez",
+      "dataPoints": 330,
+      "crossoverCount": 1,
+      "crossovers": [
+        {
+          "timestamp": "2026-03-28T21:51:30.928Z",
+          "underdogBet": {
+            "name": "Adrian Yanez",
+            "odds": 112
+          },
+          "newUnderdog": {
+            "name": "Ricky Simon",
+            "odds": -120
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "robfont_vs_raulrosasjr",
+      "dataPoints": 563,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "rodolfovieira_vs_ericmcconico",
+      "dataPoints": 184,
+      "crossoverCount": 1,
+      "crossovers": [
+        {
+          "timestamp": "2026-04-25T23:49:35.360Z",
+          "underdogBet": {
+            "name": "Eric McConico",
+            "odds": 112
+          },
+          "newUnderdog": {
+            "name": "Rodolfo Vieira",
+            "odds": -118
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "rodolfovieira_vs_ericmcconico",
+      "dataPoints": 51,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "romandolidze_vs_christianleroyduncan",
+      "dataPoints": 339,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "romankopylov_vs_gregoryrodrigues",
+      "dataPoints": 343,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "romankopylov_vs_marcotulio",
+      "dataPoints": 230,
+      "crossoverCount": 4,
+      "crossovers": [
+        {
+          "timestamp": "2026-05-09T22:42:12.054Z",
+          "underdogBet": {
+            "name": "Roman Kopylov",
+            "odds": 108
+          },
+          "newUnderdog": {
+            "name": "Marco Tulio",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-05-09T22:44:18.294Z",
+          "underdogBet": {
+            "name": "Marco Tulio",
+            "odds": 102
+          },
+          "newUnderdog": {
+            "name": "Roman Kopylov",
+            "odds": -122
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-05-09T22:52:37.320Z",
+          "underdogBet": {
+            "name": "Roman Kopylov",
+            "odds": 440
+          },
+          "newUnderdog": {
+            "name": "Marco Tulio",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-05-09T22:55:46.668Z",
+          "underdogBet": {
+            "name": "Roman Kopylov",
+            "odds": 112
+          },
+          "newUnderdog": {
+            "name": "Marco Tulio",
+            "odds": 440
+          },
+          "winWin": {
+            "o1Product": 49280,
+            "guaranteedProfitPer100": 61.55,
+            "roi": 40.91,
+            "optimalS2Per100": 50.45,
+            "s2Range": [
+              22.73,
+              112
+            ]
+          },
+          "secondBetPlusMoney": true
+        }
+      ]
+    },
+    {
+      "fightId": "ryangandra_vs_josedanielmedina",
+      "dataPoints": 12,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "santiagoluna_vs_angelpacheco",
+      "dataPoints": 743,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "seanbrady_vs_joaquinbuckley",
+      "dataPoints": 284,
+      "crossoverCount": 1,
+      "crossovers": [
+        {
+          "timestamp": "2026-05-10T01:59:45.972Z",
+          "underdogBet": {
+            "name": "Sean Brady",
+            "odds": 108
+          },
+          "newUnderdog": {
+            "name": "Joaquin Buckley",
+            "odds": -102
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "seanbrady_vs_michaelmorales",
+      "dataPoints": 19,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "seanomalley_vs_songyadong",
+      "dataPoints": 466,
+      "crossoverCount": 1,
+      "crossovers": [
+        {
+          "timestamp": "2026-01-25T04:22:44.290Z",
+          "underdogBet": {
+            "name": "Song Yadong",
+            "odds": 108
+          },
+          "newUnderdog": {
+            "name": "Sean O'Malley",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "sebastianszalay_vs_keiichironakamura",
+      "dataPoints": 505,
+      "crossoverCount": 1,
+      "crossovers": [
+        {
+          "timestamp": "2026-01-31T22:49:01.820Z",
+          "underdogBet": {
+            "name": "Keiichiro Nakamura",
+            "odds": 102
+          },
+          "newUnderdog": {
+            "name": "Sebastian Szalay",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "sergeipavlovich_vs_tallisonteixeira",
+      "dataPoints": 52,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "shamilgaziev_vs_brandopericic",
+      "dataPoints": 234,
+      "crossoverCount": 4,
+      "crossovers": [
+        {
+          "timestamp": "2026-05-02T11:52:35.514Z",
+          "underdogBet": {
+            "name": "Shamil Gaziev",
+            "odds": 110
+          },
+          "newUnderdog": {
+            "name": "Brando Pericic",
+            "odds": 102
+          },
+          "winWin": {
+            "o1Product": 11220,
+            "guaranteedProfitPer100": 5.92,
+            "roi": 2.91,
+            "optimalS2Per100": 103.85,
+            "s2Range": [
+              98.04,
+              110
+            ]
+          },
+          "secondBetPlusMoney": true
+        },
+        {
+          "timestamp": "2026-05-02T11:52:44.541Z",
+          "underdogBet": {
+            "name": "Brando Pericic",
+            "odds": 102
+          },
+          "newUnderdog": {
+            "name": "Shamil Gaziev",
+            "odds": -118
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-05-02T11:53:59.723Z",
+          "underdogBet": {
+            "name": "Shamil Gaziev",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Brando Pericic",
+            "odds": -108
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-05-02T11:56:42.141Z",
+          "underdogBet": {
+            "name": "Shamil Gaziev",
+            "odds": 160
+          },
+          "newUnderdog": {
+            "name": "Brando Pericic",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "shanelledyer_vs_ravenaoliveira",
+      "dataPoints": 174,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "shaunabannon_vs_nicollecaliari",
+      "dataPoints": 316,
+      "crossoverCount": 2,
+      "crossovers": [
+        {
+          "timestamp": "2026-05-16T21:24:07.381Z",
+          "underdogBet": {
+            "name": "Shauna Bannon",
+            "odds": 215
+          },
+          "newUnderdog": {
+            "name": "Nicolle Caliari",
+            "odds": -106
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-05-16T21:26:46.684Z",
+          "underdogBet": {
+            "name": "Nicolle Caliari",
+            "odds": 112
+          },
+          "newUnderdog": {
+            "name": "Shauna Bannon",
+            "odds": 620
+          },
+          "winWin": {
+            "o1Product": 69440,
+            "guaranteedProfitPer100": 69.5,
+            "roi": 48.77,
+            "optimalS2Per100": 42.5,
+            "s2Range": [
+              16.13,
+              112
+            ]
+          },
+          "secondBetPlusMoney": true
+        }
+      ]
+    },
+    {
+      "fightId": "shemrock_vs_abdulkareemalselwady",
+      "dataPoints": 348,
+      "crossoverCount": 2,
+      "crossovers": [
+        {
+          "timestamp": "2026-03-21T17:35:40.085Z",
+          "underdogBet": {
+            "name": "Abdul-Kareem Al-Selwady",
+            "odds": 112
+          },
+          "newUnderdog": {
+            "name": "Shem Rock",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-03-21T17:36:40.201Z",
+          "underdogBet": {
+            "name": "Abdul-Kareem Al-Selwady",
+            "odds": 150
+          },
+          "newUnderdog": {
+            "name": "Shem Rock",
+            "odds": 138
+          },
+          "winWin": {
+            "o1Product": 20700,
+            "guaranteedProfitPer100": 43.87,
+            "roi": 21.48,
+            "optimalS2Per100": 104.26,
+            "s2Range": [
+              72.46,
+              150
+            ]
+          },
+          "secondBetPlusMoney": true
+        }
+      ]
+    },
+    {
+      "fightId": "songyadong_vs_deivesonfigueiredo",
+      "dataPoints": 250,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "sumudaerji_vs_jesusaguilar",
+      "dataPoints": 272,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "sumudaerji_vs_jesusaguilar",
+      "dataPoints": 124,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "tagirulanbekov_vs_kyojihoriguchi",
+      "dataPoints": 163,
+      "crossoverCount": 1,
+      "crossovers": [
+        {
+          "timestamp": "2025-11-22T18:23:03.158Z",
+          "underdogBet": {
+            "name": "Kyoji Horiguchi",
+            "odds": 148
+          },
+          "newUnderdog": {
+            "name": "Tagir Ulanbekov",
+            "odds": 112
+          },
+          "winWin": {
+            "o1Product": 16576,
+            "guaranteedProfitPer100": 28.75,
+            "roi": 13.37,
+            "optimalS2Per100": 114.95,
+            "s2Range": [
+              89.29,
+              148
+            ]
+          },
+          "secondBetPlusMoney": true
+        }
+      ]
+    },
+    {
+      "fightId": "taituivasa_vs_louiesutherland",
+      "dataPoints": 560,
+      "crossoverCount": 5,
+      "crossovers": [
+        {
+          "timestamp": "2026-05-02T11:22:52.523Z",
+          "underdogBet": {
+            "name": "Louie Sutherland",
+            "odds": 106
+          },
+          "newUnderdog": {
+            "name": "Tai Tuivasa",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-05-02T11:26:38.133Z",
+          "underdogBet": {
+            "name": "Tai Tuivasa",
+            "odds": 102
+          },
+          "newUnderdog": {
+            "name": "Louie Sutherland",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-05-02T11:22:07.414Z",
+          "underdogBet": {
+            "name": "Tai Tuivasa",
+            "odds": 2300
+          },
+          "newUnderdog": {
+            "name": "Louie Sutherland",
+            "odds": 150
+          },
+          "winWin": {
+            "o1Product": 345000,
+            "guaranteedProfitPer100": 487.37,
+            "roi": 99.14,
+            "optimalS2Per100": 391.58,
+            "s2Range": [
+              66.67,
+              2300
+            ]
+          },
+          "secondBetPlusMoney": true
+        },
+        {
+          "timestamp": "2026-05-02T11:22:52.523Z",
+          "underdogBet": {
+            "name": "Louie Sutherland",
+            "odds": 106
+          },
+          "newUnderdog": {
+            "name": "Tai Tuivasa",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-05-02T11:26:38.133Z",
+          "underdogBet": {
+            "name": "Tai Tuivasa",
+            "odds": 102
+          },
+          "newUnderdog": {
+            "name": "Louie Sutherland",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "taituivasa_vs_tallisonteixeira",
+      "dataPoints": 297,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "talitaalencar_vs_juliapolastri",
+      "dataPoints": 273,
+      "crossoverCount": 3,
+      "crossovers": [
+        {
+          "timestamp": "2026-04-25T21:19:35.576Z",
+          "underdogBet": {
+            "name": "Talita Alencar",
+            "odds": 116
+          },
+          "newUnderdog": {
+            "name": "Julia Polastri",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-04-25T21:21:23.793Z",
+          "underdogBet": {
+            "name": "Talita Alencar",
+            "odds": 102
+          },
+          "newUnderdog": {
+            "name": "Julia Polastri",
+            "odds": -118
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-04-25T21:25:36.263Z",
+          "underdogBet": {
+            "name": "Talita Alencar",
+            "odds": 260
+          },
+          "newUnderdog": {
+            "name": "Julia Polastri",
+            "odds": 134
+          },
+          "winWin": {
+            "o1Product": 34840,
+            "guaranteedProfitPer100": 86.65,
+            "roi": 36.21,
+            "optimalS2Per100": 139.29,
+            "s2Range": [
+              74.63,
+              260
+            ]
+          },
+          "secondBetPlusMoney": true
+        }
+      ]
+    },
+    {
+      "fightId": "tannerboser_vs_gokhansaricam",
+      "dataPoints": 249,
+      "crossoverCount": 1,
+      "crossovers": [
+        {
+          "timestamp": "2026-04-18T22:55:54.632Z",
+          "underdogBet": {
+            "name": "Tanner Boser",
+            "odds": 112
+          },
+          "newUnderdog": {
+            "name": "Gokhan Saricam",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "tatianasuarez_vs_loopygodinez",
+      "dataPoints": 285,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "terrancemckinney_vs_kylenelson",
+      "dataPoints": 48,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "thomasgantt_vs_arturminev",
+      "dataPoints": 209,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "timelliott_vs_steveerceg",
+      "dataPoints": 583,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "tommymcmillen_vs_manolozecchini",
+      "dataPoints": 119,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "tucotokkos_vs_ivanerslan",
+      "dataPoints": 282,
+      "crossoverCount": 2,
+      "crossovers": [
+        {
+          "timestamp": "2026-05-16T23:45:12.207Z",
+          "underdogBet": {
+            "name": "Tuco Tokkos",
+            "odds": 280
+          },
+          "newUnderdog": {
+            "name": "Ivan Erslan",
+            "odds": 100
+          },
+          "winWin": {
+            "o1Product": 28000,
+            "guaranteedProfitPer100": 67.33,
+            "roi": 25.19,
+            "optimalS2Per100": 167.33,
+            "s2Range": [
+              100,
+              280
+            ]
+          },
+          "secondBetPlusMoney": true
+        },
+        {
+          "timestamp": "2026-05-16T23:46:57.459Z",
+          "underdogBet": {
+            "name": "Ivan Erslan",
+            "odds": 114
+          },
+          "newUnderdog": {
+            "name": "Tuco Tokkos",
+            "odds": 128
+          },
+          "winWin": {
+            "o1Product": 14592,
+            "guaranteedProfitPer100": 19.63,
+            "roi": 10.1,
+            "optimalS2Per100": 94.37,
+            "s2Range": [
+              78.13,
+              114
+            ]
+          },
+          "secondBetPlusMoney": true
+        }
+      ]
+    },
+    {
+      "fightId": "tucotokkos_vs_ivanerslan",
+      "dataPoints": 15,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "tymiller_vs_adamfugitt",
+      "dataPoints": 134,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "umarnurmagomedov_vs_deivesonfigueiredo",
+      "dataPoints": 556,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "valentinashevchenko_vs_zhangweili",
+      "dataPoints": 692,
+      "crossoverCount": 1,
+      "crossovers": [
+        {
+          "timestamp": "2025-11-16T04:31:01.557Z",
+          "underdogBet": {
+            "name": "Zhang Weili",
+            "odds": 102
+          },
+          "newUnderdog": {
+            "name": "Valentina Shevchenko",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "victorvalenzuela_vs_maxgriffin",
+      "dataPoints": 244,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "virnajandiroba_vs_tabatharicci",
+      "dataPoints": 353,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "vitorpetrino_vs_stevenasplund",
+      "dataPoints": 304,
+      "crossoverCount": 6,
+      "crossovers": [
+        {
+          "timestamp": "2026-03-14T23:29:46.721Z",
+          "underdogBet": {
+            "name": "Steven Asplund",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Vitor Petrino",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-03-14T23:31:16.904Z",
+          "underdogBet": {
+            "name": "Steven Asplund",
+            "odds": 118
+          },
+          "newUnderdog": {
+            "name": "Vitor Petrino",
+            "odds": 150
+          },
+          "winWin": {
+            "o1Product": 17700,
+            "guaranteedProfitPer100": 29.31,
+            "roi": 15.53,
+            "optimalS2Per100": 88.69,
+            "s2Range": [
+              66.67,
+              118
+            ]
+          },
+          "secondBetPlusMoney": true
+        },
+        {
+          "timestamp": "2026-03-14T23:34:50.283Z",
+          "underdogBet": {
+            "name": "Vitor Petrino",
+            "odds": 192
+          },
+          "newUnderdog": {
+            "name": "Steven Asplund",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-03-14T23:35:41.391Z",
+          "underdogBet": {
+            "name": "Steven Asplund",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Vitor Petrino",
+            "odds": -126
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-03-14T23:36:41.508Z",
+          "underdogBet": {
+            "name": "Vitor Petrino",
+            "odds": 112
+          },
+          "newUnderdog": {
+            "name": "Steven Asplund",
+            "odds": -102
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-03-14T23:37:50.660Z",
+          "underdogBet": {
+            "name": "Steven Asplund",
+            "odds": 128
+          },
+          "newUnderdog": {
+            "name": "Vitor Petrino",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "volkanoezdemir_vs_alonzomenifield",
+      "dataPoints": 41,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "waldocortesacosta_vs_derricklewis",
+      "dataPoints": 221,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "waldocortesacosta_vs_shamilgaziev",
+      "dataPoints": 50,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "wangcong_vs_eduardamoura",
+      "dataPoints": 312,
+      "crossoverCount": 2,
+      "crossovers": [
+        {
+          "timestamp": "2026-02-07T23:20:08.961Z",
+          "underdogBet": {
+            "name": "Eduarda Moura",
+            "odds": 116
+          },
+          "newUnderdog": {
+            "name": "Wang Cong",
+            "odds": -112
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        },
+        {
+          "timestamp": "2026-02-07T23:20:45.046Z",
+          "underdogBet": {
+            "name": "Eduarda Moura",
+            "odds": 104
+          },
+          "newUnderdog": {
+            "name": "Wang Cong",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    },
+    {
+      "fightId": "yaroslavamosov_vs_joelalvarez",
+      "dataPoints": 155,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "yisaklee_vs_luisdiasdeassis",
+      "dataPoints": 95,
+      "crossoverCount": 0,
+      "crossovers": []
+    },
+    {
+      "fightId": "zhangmingyang_vs_alonzomenifield",
+      "dataPoints": 77,
+      "crossoverCount": 1,
+      "crossovers": [
+        {
+          "timestamp": "2026-05-30T13:05:01.700Z",
+          "underdogBet": {
+            "name": "Alonzo Menifield",
+            "odds": 108
+          },
+          "newUnderdog": {
+            "name": "Zhang Mingyang",
+            "odds": -124
+          },
+          "winWin": null,
+          "secondBetPlusMoney": false
+        }
+      ]
+    }
+  ]
+}
