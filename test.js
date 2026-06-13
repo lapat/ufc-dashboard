@@ -263,17 +263,17 @@ async function runServerTests() {
 
   // DK bets open filter
   await check('/api/dk-bets only returns Open bets', async () => {
-    // Inject a mock settled bet via dk-sync
+    // Must use a real userId (not default) since default bucket is now hidden when real users exist
     await post('/api/dk-sync', {
-      url: 'wss://test',
+      url: 'wss://test', userId: 'open-filter-testuser',
       data: { result: { initial: { bets: [
-        { betId: 'open-1', receiptId: 'open-1', status: 'Unsettled', settlementStatus: 'Open', stake: 10, potentialReturns: 15, placementDate: new Date().toISOString(), displayOdds: '+150', selections: [{ selectionDisplayName: 'Fighter A', marketDisplayName: 'Moneyline', displayOdds: '+150' }] },
-        { betId: 'won-1', receiptId: 'won-1', status: 'Settled', settlementStatus: 'Won', stake: 10, potentialReturns: 15, returns: 15, placementDate: new Date().toISOString(), displayOdds: '+150', selections: [{ selectionDisplayName: 'Fighter B', marketDisplayName: 'Moneyline', displayOdds: '+150' }] },
+        { betId: 'open-filter-1', receiptId: 'open-filter-1', status: 'Unsettled', settlementStatus: 'Open', stake: 10, potentialReturns: 15, placementDate: new Date().toISOString(), displayOdds: '+150', selections: [{ selectionDisplayName: 'Fighter Open', marketDisplayName: 'Moneyline', displayOdds: '+150' }] },
+        { betId: 'won-filter-1', receiptId: 'won-filter-1', status: 'Settled', settlementStatus: 'Won', stake: 10, potentialReturns: 15, returns: 15, placementDate: new Date().toISOString(), displayOdds: '+150', selections: [{ selectionDisplayName: 'Fighter Won', marketDisplayName: 'Moneyline', displayOdds: '+150' }] },
       ] } } },
       ts: Date.now()
     });
-    const open = await get('/api/dk-bets');
-    const all = await get('/api/dk-bets?all=1');
+    const open = await get('/api/dk-bets?user=open-filter-testuser');
+    const all = await get('/api/dk-bets?user=open-filter-testuser&all=1');
     assert(open.length < all.length, `open (${open.length}) should be fewer than all (${all.length})`);
     assert(open.every(b => b.status === 'Open'), 'all open bets should have status Open');
   });
