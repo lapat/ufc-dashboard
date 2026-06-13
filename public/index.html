@@ -461,7 +461,7 @@ class BetTracker {
   constructor(){ this.bets=[]; this.f1Name=''; this.f2Name=''; this.drawName=''; this.f1Odds=null; this.f2Odds=null; this.drawOdds=null; this._id=0; }
   setFight(f1,f2,o1,o2,drawName,drawOdds){ this.f1Name=f1; this.f2Name=f2; this.f1Odds=o1; this.f2Odds=o2; this.drawName=drawName||''; this.drawOdds=drawOdds||null; }
   updateOdds(o1,o2,drawOdds){ this.f1Odds=o1; this.f2Odds=o2; if(drawOdds!==undefined) this.drawOdds=drawOdds; }
-  addBet(side,stake,odds,betId,source){ this.bets.push({id:++this._id,side,stake,odds,decimal:toD(odds),ts:Date.now(),betId:betId||null,source:source||'manual'}); this._persist(); }
+  addBet(side,stake,odds,betId,source){ this.bets.push({id:++this._id,side,stake,odds,decimal:toD(odds),ts:Date.now(),betId:betId||null,source:source||'manual',fk:fkey(this.f1Name,this.f2Name)}); this._persist(); }
   clearDkBets(){ this.bets=this.bets.filter(b=>b.source!=='dk'); this._persist(); }
   removeBet(id){ this.bets=this.bets.filter(b=>b.id!==id); this._persist(); }
   clear(){ this.bets=[]; this._persist(); }
@@ -713,6 +713,13 @@ document.getElementById('add-bet-btn').addEventListener('click',()=>{
 document.getElementById('clear-bets').addEventListener('click',()=>{ tracker.clear(); renderTracker(); });
 
 function renderTracker(){
+  // Only show bets for the currently selected fight — never show bets from a different game
+  const currentFk = fkey(tracker.f1Name, tracker.f2Name);
+  const wrongFight = tracker.bets.filter(b => b.fk && b.fk !== currentFk);
+  if (wrongFight.length) {
+    tracker.bets = tracker.bets.filter(b => !b.fk || b.fk === currentFk);
+    tracker._persist();
+  }
   const {n1,n2,n3}=tracker.position();
   const hasAny=tracker.bets.length>0;
   const threeWay=tracker.hasThreeWay();
