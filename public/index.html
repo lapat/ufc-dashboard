@@ -1381,7 +1381,7 @@ async function syncDKBets() {
                  : null;
       if (!side) continue;
 
-      const odds = parseInt(b.odds);
+      const odds = parseInt((b.odds || '').replace('−', '-').replace('−', '-'));
       const stake = parseFloat(b.stake);
       if (isNaN(odds) || isNaN(stake) || stake <= 0) continue;
 

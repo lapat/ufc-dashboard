@@ -491,7 +491,7 @@ function parseDKBets(url, data) {
       rawStatus: b.status,                       // 'Unsettled' | 'Settled'
       selection: sel.selectionDisplayName || '',  // 'Jack Della Maddalena'
       market: sel.marketDisplayName || '',        // 'Live Moneyline'
-      odds: sel.displayOdds || b.displayOdds,    // '+170'
+      odds: (sel.displayOdds || b.displayOdds || '').replace('−', '-'),  // normalize unicode minus
       stake: b.stake,
       potentialReturns: b.potentialReturns,
       returns: b.returns,
