@@ -266,6 +266,52 @@ async function runServerTests() {
     assert(dedupBets[0].userId === 'realUser', `real userId should win, got ${dedupBets[0].userId}`);
   });
 
+  // Recorder watching state
+  await check('POST /api/recorder/watch sets clientWatching in status', async () => {
+    await post('/api/recorder/watch', { sport: 'soccer_test_league', team1: 'Team X', team2: 'Team Y' });
+    const d = await get('/api/recorder/status');
+    assert(Array.isArray(d.watching), 'watching should be array');
+    const watchStr = d.watching.join(' ');
+    assert(watchStr.includes('Team X') || watchStr.includes('Team Y') || watchStr.includes('soccer_test'),
+      `watching should mention the game, got: ${watchStr}`);
+  });
+  await check('GET /api/recorder/status includes watching field', async () => {
+    const d = await get('/api/recorder/status');
+    assert('watching' in d, 'missing watching field');
+    assert('recording' in d, 'missing recording field');
+    assert('lastPoll' in d, 'missing lastPoll field');
+  });
+
+  // User isolation: /api/dk-bets?user= only returns that user's bets
+  await check('/api/dk-bets?user=X does not return user Y bets', async () => {
+    await post('/api/dk-sync', {
+      url: 'wss://test', userId: 'isolationUserX',
+      data: { result: { initial: { bets: [{
+        betId: 'iso-x-1', receiptId: 'iso-x-1',
+        status: 'Unsettled', settlementStatus: 'Open', stake: 5,
+        potentialReturns: 8, placementDate: new Date().toISOString(),
+        displayOdds: '+150',
+        selections: [{ selectionDisplayName: 'Team X', marketDisplayName: 'Moneyline', displayOdds: '+150' }]
+      }] } } }, ts: Date.now()
+    });
+    await post('/api/dk-sync', {
+      url: 'wss://test', userId: 'isolationUserY',
+      data: { result: { initial: { bets: [{
+        betId: 'iso-y-1', receiptId: 'iso-y-1',
+        status: 'Unsettled', settlementStatus: 'Open', stake: 5,
+        potentialReturns: 8, placementDate: new Date().toISOString(),
+        displayOdds: '+200',
+        selections: [{ selectionDisplayName: 'Team Y', marketDisplayName: 'Moneyline', displayOdds: '+200' }]
+      }] } } }, ts: Date.now()
+    });
+    const xBets = await get('/api/dk-bets?user=isolationUserX');
+    const yBets = await get('/api/dk-bets?user=isolationUserY');
+    assert(xBets.every(b => b.userId === 'isolationUserX'), 'isolationUserX got wrong bets');
+    assert(yBets.every(b => b.userId === 'isolationUserY'), 'isolationUserY got wrong bets');
+    assert(!xBets.some(b => b.betId === 'iso-y-1'), 'isolationUserX should not see Y bets');
+    assert(!yBets.some(b => b.betId === 'iso-x-1'), 'isolationUserY should not see X bets');
+  });
+
   // Recorder stop specific
   await check('POST /api/recorder/stop/:id returns 404 for unknown', async () => {
     const r = await fetch(`${target}/api/recorder/stop/nonexistent-id`, { method: 'POST' });

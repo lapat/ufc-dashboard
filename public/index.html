@@ -353,7 +353,7 @@
   <!-- Bet Tracker -->
   <div class="tracker-panel" id="tracker-panel">
     <div class="tracker-header">
-      <span class="tracker-title">Theoretical Position</span>
+      <span class="tracker-title">POSITION TRACKER <span id="dk-user-badge" style="font-size:0.6rem;color:#e8b84b;font-weight:400;margin-left:6px"></span></span>
       <div style="display:flex;gap:8px;align-items:center">
         <button class="clear-btn" onclick="injectMockDKBet()" style="color:#74c0fc;border-color:#74c0fc">TEST DK</button>
         <button class="clear-btn" id="clear-bets">CLEAR ALL</button>
@@ -1034,6 +1034,8 @@ async function selectGame(game){
   // Heartbeat with specific game so recorder only captures this match
   startHeartbeat(game.sport_key||activeSport, a.name, b.name);
   startPolling();
+  // Immediately refresh recorder dot — don't wait for next 5s poll
+  setTimeout(pollRecorder, 1500);
 }
 
 // ═══════════════════════════════════════════
@@ -1369,6 +1371,13 @@ function stopHeartbeat(){ if(_heartbeatTimer){ clearInterval(_heartbeatTimer); _
 let _dkSyncTimer = null;
 let _lastDKBetIds = new Set();
 
+// ?me=USERNAME in URL filters bets to just that user
+const _dkMeParam = new URLSearchParams(window.location.search).get('me') || '';
+if (_dkMeParam) {
+  const badge = document.getElementById('dk-user-badge');
+  if (badge) badge.textContent = `· ${_dkMeParam} only`;
+}
+
 function startDKSync() {
   if (_dkSyncTimer) return;
   _dkSyncTimer = setInterval(syncDKBets, 15000);
@@ -1376,21 +1385,26 @@ function startDKSync() {
 }
 
 async function syncDKBets() {
-  if (!tracker.f1Name) return; // no game selected
+  if (!tracker.f1Name) return;
   try {
-    const bets = await (await fetch('/api/dk-bets')).json();
+    const url = _dkMeParam ? `/api/dk-bets?user=${encodeURIComponent(_dkMeParam)}` : '/api/dk-bets';
+    const bets = await (await fetch(url)).json();
     if (!bets.length) return;
 
     const f1 = (tracker.f1Name || '').toLowerCase();
     const f2 = (tracker.f2Name || '').toLowerCase();
+    const drawLabel = (tracker.drawLabel || '').toLowerCase();
 
     for (const b of bets) {
-      if (_lastDKBetIds.has(b.betId)) continue; // already added
+      if (_lastDKBetIds.has(b.betId)) continue;
       const sel = (b.selection || '').toLowerCase();
-      // Match selection to current game's fighters
-      const side = f1.split(' ').some(w => w.length > 2 && sel.includes(w)) ? 'f1'
-                 : f2.split(' ').some(w => w.length > 2 && sel.includes(w)) ? 'f2'
-                 : null;
+
+      // Match selection to f1, f2, or Draw column
+      let side = null;
+      if (f1.split(' ').some(w => w.length > 2 && sel.includes(w))) side = 'f1';
+      else if (f2.split(' ').some(w => w.length > 2 && sel.includes(w))) side = 'f2';
+      else if (drawLabel && (sel.includes('draw') || sel.includes('tie') || drawLabel.split(' ').some(w => w.length > 2 && sel.includes(w)))) side = 'draw';
+
       if (!side) continue;
 
       const odds = parseInt((b.odds || '').replace('−', '-').replace('−', '-'));
@@ -1400,7 +1414,7 @@ async function syncDKBets() {
       tracker.addBet(side, stake, odds);
       _lastDKBetIds.add(b.betId);
       renderTracker();
-      showDKToast(`🔄 DK bet synced: ${b.selection} ${b.odds} $${stake}`);
+      showDKToast(`🔄 DK bet synced: ${b.selection} ${b.odds} $${stake}${_dkMeParam ? ` (${_dkMeParam})` : ''}`);
     }
   } catch (_) {}
 }
