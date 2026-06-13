@@ -7,6 +7,31 @@ chrome.storage.onChanged.addListener(changes => {
   if (changes.betBotUrl) betBotUrl = changes.betBotUrl.newValue;
 });
 
+function postToServer(path, body) {
+  if (!betBotUrl) return;
+  fetch(`${betBotUrl}${path}`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body)
+  }).catch(() => {});
+}
+
+// Heartbeat every 2 minutes so the dashboard knows the extension is alive
+setInterval(() => postToServer('/api/dk-heartbeat', { ts: Date.now() }), 120000);
+postToServer('/api/dk-heartbeat', { ts: Date.now() }); // immediate on load
+
+// Detect logout: DK navigates to /login or /sportsbook-auth
+chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+  if (changeInfo.status !== 'complete') return;
+  const url = tab.url || '';
+  if (url.includes('draftkings.com') && (url.includes('/login') || url.includes('/sportsbook-auth') || url.includes('sign-in'))) {
+    postToServer('/api/dk-logout', { ts: Date.now() });
+    chrome.storage.local.set({ dkLoggedOut: true });
+  } else if (url.includes('draftkings.com/mybets')) {
+    chrome.storage.local.set({ dkLoggedOut: false });
+  }
+});
+
 chrome.runtime.onMessage.addListener((msg) => {
   if (msg.type !== 'DK_API') return;
 

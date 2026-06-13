@@ -511,6 +511,24 @@ app.get('/api/dk-bets', (req, res) => {
   res.json(bets);
 });
 
+// Extension health tracking
+let dkHeartbeat = { ts: null, loggedOut: false };
+
+app.post('/api/dk-heartbeat', (req, res) => {
+  dkHeartbeat.ts = Date.now();
+  dkHeartbeat.loggedOut = false;
+  res.json({ ok: true });
+});
+
+app.post('/api/dk-logout', (req, res) => {
+  dkHeartbeat.loggedOut = true;
+  res.json({ ok: true });
+});
+
+app.get('/api/dk-status', (req, res) => {
+  res.json({ heartbeat: dkHeartbeat.ts, loggedOut: dkHeartbeat.loggedOut });
+});
+
 app.post('/api/dk-mock', (req, res) => {
   const { fighter, odds, stake } = req.body;
   if (!fighter) return res.status(400).json({ error: 'fighter required' });

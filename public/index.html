@@ -244,6 +244,10 @@
   <div id="rec-status"><div id="rec-dot" class="idle"></div><span id="rec-label">—</span></div>
   <button id="rec-test-btn" title="Test the recording pipeline" style="font-size:0.78rem;padding:5px 10px;background:#1a1a1a;border:1px solid #2a2a2a;color:#555;border-radius:3px;cursor:pointer;white-space:nowrap">test rec</button>
   <a href="/library" style="font-size:0.82rem;padding:5px 12px;border:1px solid #222;border-radius:3px;color:#666;white-space:nowrap;text-decoration:none">📼 Library</a>
+  <div id="dk-ext-status" title="DK extension status" style="display:flex;align-items:center;gap:5px;font-size:0.75rem;color:#555">
+    <div id="dk-ext-dot" style="width:7px;height:7px;border-radius:50%;background:#333"></div>
+    <span id="dk-ext-label">ext</span>
+  </div>
   <div id="topbar-status">Loading...</div>
 </div>
 
@@ -1159,6 +1163,45 @@ async function loadCredits(){
   }catch{}
 }
 loadCredits(); setInterval(loadCredits,30000);
+
+// ═══════════════════════════════════════════
+// DK EXTENSION STATUS
+// ═══════════════════════════════════════════
+let _dkLogoutToastShown = false;
+async function pollDKExtStatus() {
+  try {
+    const d = await fetch('/api/dk-status').then(r => r.json());
+    const dot = document.getElementById('dk-ext-dot');
+    const lbl = document.getElementById('dk-ext-label');
+    if (d.loggedOut) {
+      dot.style.background = '#e74c3c';
+      lbl.textContent = 'DK logged out';
+      lbl.style.color = '#e74c3c';
+      if (!_dkLogoutToastShown) { showDKToast('DK session expired — re-login at DraftKings'); _dkLogoutToastShown = true; }
+    } else if (!d.heartbeat) {
+      dot.style.background = '#555';
+      lbl.textContent = 'ext offline';
+      lbl.style.color = '#555';
+    } else {
+      const age = Date.now() - d.heartbeat;
+      _dkLogoutToastShown = false;
+      if (age < 180000) {
+        dot.style.background = '#2ecc71';
+        lbl.textContent = 'ext live';
+        lbl.style.color = '#2ecc71';
+      } else if (age < 600000) {
+        dot.style.background = '#f39c12';
+        lbl.textContent = 'ext idle';
+        lbl.style.color = '#f39c12';
+      } else {
+        dot.style.background = '#e74c3c';
+        lbl.textContent = 'ext stale';
+        lbl.style.color = '#e74c3c';
+      }
+    }
+  } catch {}
+}
+pollDKExtStatus(); setInterval(pollDKExtStatus, 30000);
 
 async function pollRecorder(){
   try{
