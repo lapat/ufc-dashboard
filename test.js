@@ -316,6 +316,22 @@ async function runServerTests() {
     assert('lastPoll' in d, 'missing lastPoll field');
   });
 
+  // activeUsers reflects who the extension is sending as — used for mismatch detection
+  await check('GET /api/dk-status activeUsers includes userId after heartbeat', async () => {
+    const testId = 'testuser-heartbeat-check';
+    await post('/api/dk-heartbeat', { ts: Date.now(), userId: testId });
+    const d = await get('/api/dk-status');
+    assert(Array.isArray(d.activeUsers), 'activeUsers should be array');
+    assert(d.activeUsers.includes(testId), `activeUsers should include ${testId}, got: ${JSON.stringify(d.activeUsers)}`);
+  });
+
+  // Zero bets for unknown username = empty array (not an error, not someone else's bets)
+  await check('/api/dk-bets?user=unknown-user returns empty array', async () => {
+    const bets = await get('/api/dk-bets?user=testuser-nobody-set-this');
+    assert(Array.isArray(bets), 'should return array');
+    assert(bets.length === 0, `unknown user should have 0 bets, got ${bets.length}`);
+  });
+
   // User isolation: /api/dk-bets?user= only returns that user's bets
   await check('/api/dk-bets?user=X does not return user Y bets', async () => {
     await post('/api/dk-sync', {

@@ -323,7 +323,7 @@
   <button id="rec-test-btn" title="Test the recording pipeline" style="font-size:0.75rem;padding:4px 9px;background:#141414;border:1px solid #1e1e1e;color:#444;border-radius:5px;cursor:pointer;white-space:nowrap">test rec</button>
   <a href="/library" style="font-size:0.75rem;padding:4px 9px;border:1px solid #1e1e1e;border-radius:5px;color:#444;white-space:nowrap;text-decoration:none">Library</a>
   <div id="topbar-status" style="margin-left:auto;font-size:0.78rem;color:#444;white-space:nowrap">Loading...</div>
-  <span style="font-size:0.6rem;color:#333;white-space:nowrap;letter-spacing:.5px" title="Dashboard build">v2026-06-13.4</span>
+  <span style="font-size:0.6rem;color:#333;white-space:nowrap;letter-spacing:.5px" title="Dashboard build">v2026-06-13.5</span>
 </div>
 
 <div id="sport-strip"><span id="sport-loading" style="color:#333;font-size:.7rem;padding:12px 0">Loading sports...</span></div>
@@ -1357,13 +1357,26 @@ async function pollDKExtStatus() {
       _dkLogoutToastShown = false;
 
       if (heartbeatAge > 300000) {
-        // Extension hasn't checked in for 5+ min
         setScItem('sc-dkext', 'red');
       } else if (betSyncAge > 300000) {
-        // Extension alive but no bets synced in 5+ min — logged out or not on mybets
         setScItem('sc-dkext', 'yellow');
       } else {
         setScItem('sc-dkext', 'green');
+      }
+
+      // Username mismatch: extension is live but dashboard username isn't seen in any active extension
+      const pill = document.getElementById('user-pill');
+      if (pill && _dkMeParam) {
+        const activeUsers = d.activeUsers || [];
+        const mismatch = activeUsers.length > 0 && !activeUsers.includes(_dkMeParam);
+        if (mismatch) {
+          pill.textContent = `⚠ "${_dkMeParam}" not seen — ext sending as: ${activeUsers.join(', ')}`;
+          pill.style.color = '#e74c3c';
+          pill.style.borderColor = '#e74c3c';
+        } else {
+          // Re-apply normal state (don't override if already correct)
+          applyDashUser(_dkMeParam);
+        }
       }
     }
   } catch { setScItem('sc-dkext', 'grey'); }
@@ -1520,7 +1533,12 @@ async function syncDKBets() {
     // Rebuild seen set from current tracker state (not a running accumulator)
     _lastDKBetIds = new Set(tracker.bets.filter(b => b.source === 'dk' && b.betId).map(b => b.betId));
 
-    if (!bets.length) return;
+    // Show diagnostic even when server has 0 bets for this user
+    const diag = document.getElementById('dk-diag');
+    if (!bets.length) {
+      if (diag) { diag.textContent = `No open DK bets found for "${_dkMeParam}" — check extension username matches`; diag.style.display = 'block'; }
+      return;
+    }
 
     const f1 = (tracker.f1Name || '').toLowerCase();
     const f2 = (tracker.f2Name || '').toLowerCase();
