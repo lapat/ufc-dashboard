@@ -27,9 +27,11 @@
     .sc-dot.red{background:#e74c3c;animation:pulse 1.2s infinite}
     .sc-dot.grey{background:#2a2a2a}
     /* legend popup */
-    #legend-btn{background:none;border:1px solid #222;border-radius:50%;width:18px;height:18px;font-size:0.6rem;color:#333;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;padding:0;position:relative}
+    #legend-btn{background:none;border:1px solid #222;border-radius:50%;width:18px;height:18px;font-size:0.6rem;color:#333;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;padding:0}
     #legend-btn:hover{border-color:#444;color:#888}
-    #legend-popup{position:absolute;top:28px;right:0;background:#111;border:1px solid #222;border-radius:10px;padding:18px 22px;z-index:999;width:340px;display:none;box-shadow:0 8px 32px #000a}
+    /* Legend popup anchored to topbar bottom-right, never covers buttons */
+    #legend-anchor{position:relative;display:flex;align-items:center}
+    #legend-popup{position:absolute;top:calc(100% + 8px);right:0;background:#111;border:1px solid #222;border-radius:10px;padding:18px 22px;z-index:999;width:320px;display:none;box-shadow:0 8px 32px #000a}
     #legend-popup.open{display:block}
     #legend-popup h4{margin:0 0 12px;color:#555;font-size:0.7rem;letter-spacing:1px;text-transform:uppercase}
     .legend-row{display:flex;align-items:flex-start;gap:10px;margin-bottom:10px;font-size:0.75rem;line-height:1.4}
@@ -294,16 +296,12 @@
     </div>
   </div>
   <button id="user-pill" title="Your DK username — click to change" style="background:#0d0d0d;border:1px solid #e74c3c;border-radius:6px;padding:4px 10px;font-size:0.72rem;color:#e74c3c;cursor:pointer;white-space:nowrap;letter-spacing:.3px">⚠ set username</button>
+  <div id="legend-anchor">
   <button id="legend-btn" title="Indicator legend">?</button>
   <div id="legend-popup">
     <h4>Indicator Legend</h4>
-    <div class="legend-section" style="margin-top:0;padding-top:0;border-top:none">Your DK Username</div>
-    <div style="display:flex;gap:8px;margin-bottom:4px">
-      <input id="dash-user-input" type="text" placeholder="e.g. louis or ish" style="flex:1;background:#0a0a0a;border:1px solid #222;color:#ccc;padding:6px 10px;border-radius:6px;font-size:0.8rem;outline:none"/>
-      <button id="dash-user-save" style="background:#1a1a1a;border:1px solid #2ecc71;color:#2ecc71;padding:6px 12px;border-radius:6px;font-size:0.75rem;cursor:pointer;white-space:nowrap">Set</button>
-    </div>
-    <div id="dash-user-note" style="font-size:0.68rem;color:#555;margin-bottom:2px">Must match your DK extension username — keeps bets separate between users.</div>
-    <div class="legend-section">Recorder — UFC background recording</div>
+    <div style="font-size:0.7rem;color:#555;margin-bottom:12px">Click the username pill to set your DK username.</div>
+    <div class="legend-section" style="margin-top:0;padding-top:0;border-top:none">Recorder — UFC background recording</div>
     <div class="legend-row"><div class="legend-dot green"></div><div class="legend-desc"><strong style="color:#aaa">Green</strong> — UFC fight actively recording right now</div></div>
     <div class="legend-row"><div class="legend-dot yellow"></div><div class="legend-desc"><strong style="color:#aaa">Yellow</strong> — On a game, but no UFC bout live to record</div></div>
     <div class="legend-row"><div class="legend-dot grey"></div><div class="legend-desc"><strong style="color:#aaa">Off</strong> — No game selected</div></div>
@@ -317,13 +315,14 @@
     <div class="legend-row"><div class="legend-dot yellow"></div><div class="legend-desc"><strong style="color:#aaa">Yellow</strong> — Low credits (&lt;500 remaining)</div></div>
     <div class="legend-row"><div class="legend-dot red"></div><div class="legend-desc"><strong style="color:#aaa">Red</strong> — Out of credits or API error</div></div>
   </div>
+  </div><!-- end legend-anchor -->
   <!-- hidden legacy elements kept for JS compat -->
   <div id="rec-status" style="display:none"><div id="rec-dot" class="idle"></div><span id="rec-label">—</span></div>
   <div id="dk-ext-status" style="display:none"><div id="dk-ext-dot"></div><span id="dk-ext-label"></span></div>
   <button id="rec-test-btn" title="Test the recording pipeline" style="font-size:0.75rem;padding:4px 9px;background:#141414;border:1px solid #1e1e1e;color:#444;border-radius:5px;cursor:pointer;white-space:nowrap">test rec</button>
   <a href="/library" style="font-size:0.75rem;padding:4px 9px;border:1px solid #1e1e1e;border-radius:5px;color:#444;white-space:nowrap;text-decoration:none">Library</a>
   <div id="topbar-status" style="margin-left:auto;font-size:0.78rem;color:#444;white-space:nowrap">Loading...</div>
-  <span style="font-size:0.6rem;color:#333;white-space:nowrap;letter-spacing:.5px" title="Dashboard build">v2026-06-13.6</span>
+  <span style="font-size:0.6rem;color:#333;white-space:nowrap;letter-spacing:.5px" title="Dashboard build">v2026-06-13.7</span>
 </div>
 
 <div id="sport-strip"><span id="sport-loading" style="color:#333;font-size:.7rem;padding:12px 0">Loading sports...</span></div>
@@ -1462,11 +1461,6 @@ let _lastDKBetIds = new Set(); // always empty on load — DK bets are wiped on 
 let _dkMeParam = localStorage.getItem('dashUserId') || '';
 function applyDashUser(uid) {
   _dkMeParam = uid;
-  const input = document.getElementById('dash-user-input');
-  if (input) input.value = uid;
-  const note = document.getElementById('dash-user-note');
-  if (note) note.style.color = uid ? '#555' : '#e74c3c';
-  // Topbar pill — always visible so you know who you're logged in as
   const pill = document.getElementById('user-pill');
   if (pill) {
     if (uid) {
@@ -1481,28 +1475,21 @@ function applyDashUser(uid) {
   }
 }
 applyDashUser(_dkMeParam);
-// Clicking the pill opens the legend popup to the username field
+// Clicking the pill uses a simple prompt — no popup overlap issues
 document.getElementById('user-pill').addEventListener('click', e => {
   e.stopPropagation();
-  legendPopup.classList.add('open');
-  setTimeout(() => document.getElementById('dash-user-input')?.focus(), 50);
-});
-
-// Wire up legend save button
-document.getElementById('dash-user-save').addEventListener('click', e => {
-  e.stopPropagation();
-  const val = document.getElementById('dash-user-input').value.trim().toLowerCase();
-  if (!val) return;
-  localStorage.setItem('dashUserId', val);
-  applyDashUser(val);
-  const btn = document.getElementById('dash-user-save');
-  btn.textContent = 'Saved ✓'; btn.style.borderColor = '#2ecc71';
-  setTimeout(() => { btn.textContent = 'Set'; }, 2000);
-  // Re-sync immediately with new userId
+  const current = _dkMeParam || '';
+  const val = prompt(`Enter your DK username (must match your extension popup):\n\nCurrent: "${current || 'not set'}"`, current);
+  if (val === null) return; // cancelled
+  const clean = val.trim().toLowerCase();
+  if (!clean) return;
+  localStorage.setItem('dashUserId', clean);
+  applyDashUser(clean);
   tracker.clearDkBets();
   _lastDKBetIds = new Set();
   syncDKBets();
 });
+
 
 function startDKSync() {
   if (_dkSyncTimer) return;
