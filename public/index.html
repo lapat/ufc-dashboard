@@ -422,7 +422,8 @@ class BetTracker {
   constructor(){ this.bets=[]; this.f1Name=''; this.f2Name=''; this.drawName=''; this.f1Odds=null; this.f2Odds=null; this.drawOdds=null; this._id=0; }
   setFight(f1,f2,o1,o2,drawName,drawOdds){ this.f1Name=f1; this.f2Name=f2; this.f1Odds=o1; this.f2Odds=o2; this.drawName=drawName||''; this.drawOdds=drawOdds||null; }
   updateOdds(o1,o2,drawOdds){ this.f1Odds=o1; this.f2Odds=o2; if(drawOdds!==undefined) this.drawOdds=drawOdds; }
-  addBet(side,stake,odds,betId){ this.bets.push({id:++this._id,side,stake,odds,decimal:toD(odds),ts:Date.now(),betId:betId||null}); this._persist(); }
+  addBet(side,stake,odds,betId,source){ this.bets.push({id:++this._id,side,stake,odds,decimal:toD(odds),ts:Date.now(),betId:betId||null,source:source||'manual'}); this._persist(); }
+  clearDkBets(){ this.bets=this.bets.filter(b=>b.source!=='dk'); this._persist(); }
   removeBet(id){ this.bets=this.bets.filter(b=>b.id!==id); this._persist(); }
   clear(){ this.bets=[]; this._persist(); }
   hasThreeWay(){ return this.drawOdds !== null; }
@@ -1370,8 +1371,8 @@ function stopHeartbeat(){ if(_heartbeatTimer){ clearInterval(_heartbeatTimer); _
 // DK BET SYNC
 // ═══════════════════════════════════════════
 let _dkSyncTimer = null;
-// Initialize from persisted tracker bets so page reload never re-adds existing bets
-let _lastDKBetIds = new Set(tracker.bets.filter(b => b.betId).map(b => b.betId));
+// Initialize from persisted DK-sourced bets so page reload never re-adds them
+let _lastDKBetIds = new Set(tracker.bets.filter(b => b.betId && b.source === 'dk').map(b => b.betId));
 
 // ?me=USERNAME in URL filters bets to just that user
 const _dkMeParam = new URLSearchParams(window.location.search).get('me') || '';
@@ -1399,7 +1400,8 @@ async function syncDKBets() {
 
     for (const b of bets) {
       if (_lastDKBetIds.has(b.betId)) continue;
-      if (b.isParlay) continue; // skip parlay legs — they bleed across sports
+      if (b.isParlay) continue;
+      if (b.userId === 'default') continue; // never show unattributed bets
 
       const sel = (b.selection || '').toLowerCase();
 
@@ -1423,7 +1425,7 @@ async function syncDKBets() {
       const stake = parseFloat(b.stake);
       if (isNaN(odds) || isNaN(stake) || stake <= 0) continue;
 
-      tracker.addBet(side, stake, odds, b.betId);
+      tracker.addBet(side, stake, odds, b.betId, 'dk');
       _lastDKBetIds.add(b.betId);
       renderTracker();
       showDKToast(`🔄 DK bet synced: ${b.selection} ${b.odds} $${stake}${_dkMeParam ? ` (${_dkMeParam})` : ''}`);
@@ -1448,7 +1450,8 @@ function showDKToast(msg) {
 // Start DK sync when a game is selected
 const _origSetFight = tracker.setFight.bind(tracker);
 tracker.setFight = function(...args) {
-  // Rebuild from current tracker bets so switching games never re-adds existing bets
+  // Clear DK-sourced bets on game switch — they belong to the previous game
+  tracker.clearDkBets();
   _lastDKBetIds = new Set(tracker.bets.filter(b => b.betId).map(b => b.betId));
   _origSetFight(...args);
   startDKSync();

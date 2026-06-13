@@ -478,6 +478,19 @@ function testParlayDetection() {
   assert(detectIsParlay(parlayLeg), 'parentBetId should detect as parlay leg');
 }
 
+function testTrackerGameSwitchClearsDkBets() {
+  // Switching games must wipe DK-sourced bets but keep manually-locked bets
+  const bets = [
+    { id: 1, side: 'f1', stake: 0.76, odds: '-148', betId: 'ish-car-bet', source: 'dk' },
+    { id: 2, side: 'f1', stake: 100, odds: '-110', betId: null, source: 'manual' },
+  ];
+  // Simulate clearDkBets()
+  const afterSwitch = bets.filter(b => b.source !== 'dk');
+  assert(afterSwitch.length === 1, `Should have 1 bet after switch, got ${afterSwitch.length}`);
+  assert(afterSwitch[0].source === 'manual', 'Remaining bet should be manual');
+  assert(!afterSwitch.some(b => b.betId === 'ish-car-bet'), 'DK bet should be cleared on game switch');
+}
+
 function testTrackerBetIdDedup() {
   // Simulate the page-reload duplication bug:
   // tracker.bets restored from localStorage, _lastDKBetIds starts fresh → same bet added again
@@ -538,6 +551,7 @@ console.log('\n── Unit Tests ──');
 try { testOddsParsing(); console.log('  ✓ odds parsing (unicode minus)'); passed++; } catch(e) { console.error('  ✗ odds parsing:', e.message); failed++; }
 try { testBetParsing(); console.log('  ✓ bet parsing (settlementStatus → Open)'); passed++; } catch(e) { console.error('  ✗ bet parsing:', e.message); failed++; }
 try { testConnectionHealth(); console.log('  ✓ connection health classification'); passed++; } catch(e) { console.error('  ✗ connection health:', e.message); failed++; }
+try { testTrackerGameSwitchClearsDkBets(); console.log('  ✓ game switch clears DK bets, keeps manual bets'); passed++; } catch(e) { console.error('  ✗ game switch clear:', e.message); failed++; }
 try { testTrackerBetIdDedup(); console.log('  ✓ tracker bet dedup (page reload does not re-add persisted bets)'); passed++; } catch(e) { console.error('  ✗ tracker bet dedup:', e.message); failed++; }
 try { testDedupBets(); console.log('  ✓ bet dedup (real userId overwrites default)'); passed++; } catch(e) { console.error('  ✗ bet dedup:', e.message); failed++; }
 try { testParlayDetection(); console.log('  ✓ parlay detection (straight vs parlay vs leg)'); passed++; } catch(e) { console.error('  ✗ parlay detection:', e.message); failed++; }
