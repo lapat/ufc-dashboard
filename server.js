@@ -487,8 +487,8 @@ function parseDKBets(url, data) {
     const sel = b.selections?.[0] || {};
     return {
       betId: b.receiptId || b.betId,
-      status: b.status,                          // 'Open' | 'Settled'
-      settlementStatus: b.settlementStatus,      // 'Won' | 'Lost' | 'Pending'
+      status: b.settlementStatus || b.status,    // 'Open' | 'Won' | 'Lost' (settlementStatus is the useful one)
+      rawStatus: b.status,                       // 'Unsettled' | 'Settled'
       selection: sel.selectionDisplayName || '',  // 'Jack Della Maddalena'
       market: sel.marketDisplayName || '',        // 'Live Moneyline'
       odds: sel.displayOdds || b.displayOdds,    // '+170'

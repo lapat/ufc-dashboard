@@ -1,5 +1,25 @@
-// Runs in MAIN world at document_start — intercepts fetch before DK's code runs
+// Runs in MAIN world at document_start — intercepts fetch/XHR/WebSocket before DK's code runs
 (function () {
+  // WebSocket interception — mybets data comes over WS, not fetch
+  const OrigWS = window.WebSocket;
+  function PatchedWS(url, protocols) {
+    const ws = protocols !== undefined ? new OrigWS(url, protocols) : new OrigWS(url);
+    if (typeof url === 'string' && (url.includes('dkapis.com') || url.includes('draftkings.com'))) {
+      ws.addEventListener('message', function (evt) {
+        try {
+          const data = JSON.parse(evt.data);
+          if (data?.result?.initial?.bets || data?.result?.update?.bets) {
+            window.postMessage({ type: 'DK_API', url: url, data: data }, '*');
+          }
+        } catch (_) {}
+      });
+    }
+    return ws;
+  }
+  PatchedWS.prototype = OrigWS.prototype;
+  PatchedWS.CONNECTING = 0; PatchedWS.OPEN = 1; PatchedWS.CLOSING = 2; PatchedWS.CLOSED = 3;
+  window.WebSocket = PatchedWS;
+
   const orig = window.fetch;
   window.fetch = async function (...args) {
     const res = await orig.apply(this, args);
