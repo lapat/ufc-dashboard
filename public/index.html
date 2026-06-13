@@ -1211,6 +1211,70 @@ function startHeartbeat(sportKey,team1,team2){
 function stopHeartbeat(){ if(_heartbeatTimer){ clearInterval(_heartbeatTimer); _heartbeatTimer=null; } }
 
 // ═══════════════════════════════════════════
+// DK BET SYNC
+// ═══════════════════════════════════════════
+let _dkSyncTimer = null;
+let _lastDKBetIds = new Set();
+
+function startDKSync() {
+  if (_dkSyncTimer) return;
+  _dkSyncTimer = setInterval(syncDKBets, 15000);
+  syncDKBets();
+}
+
+async function syncDKBets() {
+  if (!tracker.f1Name) return; // no game selected
+  try {
+    const bets = await (await fetch('/api/dk-bets')).json();
+    if (!bets.length) return;
+
+    const f1 = (tracker.f1Name || '').toLowerCase();
+    const f2 = (tracker.f2Name || '').toLowerCase();
+
+    for (const b of bets) {
+      if (_lastDKBetIds.has(b.betId)) continue; // already added
+      const sel = (b.selection || '').toLowerCase();
+      // Match selection to current game's fighters
+      const side = f1.split(' ').some(w => w.length > 2 && sel.includes(w)) ? 'f1'
+                 : f2.split(' ').some(w => w.length > 2 && sel.includes(w)) ? 'f2'
+                 : null;
+      if (!side) continue;
+
+      const odds = parseInt(b.odds);
+      const stake = parseFloat(b.stake);
+      if (isNaN(odds) || isNaN(stake) || stake <= 0) continue;
+
+      tracker.addBet(side, stake, odds);
+      _lastDKBetIds.add(b.betId);
+      renderTracker();
+      showDKToast(`🔄 DK bet synced: ${b.selection} ${b.odds} $${stake}`);
+    }
+  } catch (_) {}
+}
+
+function showDKToast(msg) {
+  let t = document.getElementById('dk-toast');
+  if (!t) {
+    t = document.createElement('div');
+    t.id = 'dk-toast';
+    t.style.cssText = 'position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#1a1a2e;border:1px solid #74c0fc;color:#74c0fc;padding:10px 18px;border-radius:8px;font-size:0.85rem;z-index:9999;transition:opacity 0.4s';
+    document.body.appendChild(t);
+  }
+  t.textContent = msg;
+  t.style.opacity = '1';
+  clearTimeout(t._timer);
+  t._timer = setTimeout(() => { t.style.opacity = '0'; }, 3000);
+}
+
+// Start DK sync when a game is selected
+const _origSetFight = tracker.setFight.bind(tracker);
+tracker.setFight = function(...args) {
+  _lastDKBetIds.clear(); // new game — reset seen bet IDs
+  _origSetFight(...args);
+  startDKSync();
+};
+
+// ═══════════════════════════════════════════
 // CHAT
 // ═══════════════════════════════════════════
 const fab=document.getElementById('chat-fab'),cpanel=document.getElementById('chat-panel'),

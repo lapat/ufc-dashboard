@@ -472,16 +472,44 @@ app.delete('/api/dk-captures', (req, res) => {
   res.json({ ok: true });
 });
 
+let dkParsedBets = []; // last received set of parsed bets
+
 function parseDKBets(url, data) {
-  const bets = [];
-  // We'll expand this once we see the actual My Bets endpoint shape
-  // For now just return the raw entries so we can inspect
-  const arr = data?.bets || data?.Bets || data?.entries || data?.wagers || data?.data || [];
-  if (Array.isArray(arr)) {
-    arr.forEach(b => bets.push(b));
-  }
+  const rawBets =
+    data?.result?.initial?.bets ||
+    data?.result?.update?.bets ||
+    data?.bets || data?.Bets || data?.entries || data?.wagers ||
+    (Array.isArray(data?.data) ? data.data : []);
+
+  if (!Array.isArray(rawBets) || !rawBets.length) return [];
+
+  const bets = rawBets.map(b => {
+    const sel = b.selections?.[0] || {};
+    return {
+      betId: b.receiptId || b.betId,
+      status: b.status,                          // 'Open' | 'Settled'
+      settlementStatus: b.settlementStatus,      // 'Won' | 'Lost' | 'Pending'
+      selection: sel.selectionDisplayName || '',  // 'Jack Della Maddalena'
+      market: sel.marketDisplayName || '',        // 'Live Moneyline'
+      odds: sel.displayOdds || b.displayOdds,    // '+170'
+      stake: b.stake,
+      potentialReturns: b.potentialReturns,
+      returns: b.returns,
+      placementDate: b.placementDate,
+    };
+  });
+
+  // Keep latest full snapshot (replace, don't append)
+  dkParsedBets = bets;
   return bets;
 }
+
+app.get('/api/dk-bets', (req, res) => {
+  // Return only open/unsettled bets by default, or all if ?all=1
+  const all = req.query.all === '1';
+  const bets = all ? dkParsedBets : dkParsedBets.filter(b => b.status === 'Open');
+  res.json(bets);
+});
 
 // Aggregated soccer — fetches all active soccer leagues and combines
 app.get('/api/soccer', async (req, res) => {
