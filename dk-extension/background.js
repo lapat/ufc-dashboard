@@ -2,14 +2,34 @@ const DEFAULT_URL = 'https://ufc-dashboard-production-e03d.up.railway.app';
 
 let betBotUrl = DEFAULT_URL;
 let dkUserId = null;
+let manualUserId = null;
 
-chrome.storage.local.get(['betBotUrl', 'dkUserId'], r => {
+function genDeviceId() {
+  return 'dev-' + Array.from(crypto.getRandomValues(new Uint8Array(8)))
+    .map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+// Load storage first — dkUserId must NEVER be null when we post
+chrome.storage.local.get(['betBotUrl', 'dkUserId', 'manualUserId', 'deviceId'], r => {
   betBotUrl = r.betBotUrl || DEFAULT_URL;
-  dkUserId = r.dkUserId || null;
+  manualUserId = r.manualUserId || null;
+  let deviceId = r.deviceId;
+  if (!deviceId) {
+    deviceId = genDeviceId();
+    chrome.storage.local.set({ deviceId });
+    addLog(`Device ID generated: ${deviceId}`);
+  }
+  // Priority: manual > DK auto-detected > stable device UUID (never null)
+  dkUserId = manualUserId || r.dkUserId || deviceId;
+  addLog(`userId ready: ${dkUserId}`);
+  // Send heartbeat only AFTER userId is known — fixes startup race condition
+  postToServer('/api/dk-heartbeat', { ts: Date.now() });
 });
+
 chrome.storage.onChanged.addListener(changes => {
   if (changes.betBotUrl) betBotUrl = changes.betBotUrl.newValue;
-  if (changes.dkUserId) dkUserId = changes.dkUserId.newValue;
+  if (changes.manualUserId) { manualUserId = changes.manualUserId.newValue; dkUserId = manualUserId; }
+  else if (changes.dkUserId && !manualUserId) dkUserId = changes.dkUserId.newValue;
 });
 
 function postToServer(path, body) {
@@ -70,8 +90,6 @@ chrome.alarms.onAlarm.addListener(async (alarm) => {
     }
   }
 });
-
-postToServer('/api/dk-heartbeat', { ts: Date.now() });
 
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   if (changeInfo.status !== 'complete') return;

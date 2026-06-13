@@ -474,6 +474,22 @@ app.delete('/api/dk-captures', (req, res) => {
 
 const dkBetsByUser = new Map(); // userId → bets[]
 const DEFAULT_USER = 'default';
+const DK_BETS_FILE = path.join(__dirname, 'historical_data', 'dk_bets_by_user.json');
+
+// Load persisted bets so server restarts don't lose all state
+try {
+  const saved = JSON.parse(fs.readFileSync(DK_BETS_FILE, 'utf8'));
+  for (const [uid, bets] of Object.entries(saved)) dkBetsByUser.set(uid, bets);
+  console.log(`Loaded dk bets for ${dkBetsByUser.size} users from disk`);
+} catch (_) {}
+
+function saveDKBets() {
+  try {
+    const obj = {};
+    for (const [uid, bets] of dkBetsByUser) obj[uid] = bets;
+    fs.writeFileSync(DK_BETS_FILE, JSON.stringify(obj));
+  } catch (_) {}
+}
 
 function parseDKBets(url, data, userId) {
   const rawBets =
@@ -514,20 +530,17 @@ function parseDKBets(url, data, userId) {
   });
 
   dkBetsByUser.set(userId || DEFAULT_USER, bets);
+  saveDKBets();
   return bets;
 }
 
-// Merge all users' bets, dedup by betId (real userId wins over 'default')
+// Merge all real users' bets — default bucket is NEVER served globally
 function getAllBets(openOnly = true) {
   const byId = new Map();
-  const realUsers = [...dkBetsByUser.keys()].filter(u => u !== DEFAULT_USER);
-  // Only include default bucket if no real users have synced yet (solo fallback)
-  if (realUsers.length === 0) {
-    const defaultBets = dkBetsByUser.get(DEFAULT_USER) || [];
-    for (const b of defaultBets) byId.set(b.betId, b);
-  } else {
-    for (const uid of realUsers) {
-      for (const b of dkBetsByUser.get(uid)) byId.set(b.betId, b);
+  for (const [uid, bets] of dkBetsByUser) {
+    if (uid === DEFAULT_USER) continue;
+    for (const b of bets) {
+      if (!byId.has(b.betId)) byId.set(b.betId, b);
     }
   }
   const all = Array.from(byId.values());
