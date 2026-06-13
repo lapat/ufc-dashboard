@@ -1401,6 +1401,7 @@ pollRecorder(); setInterval(pollRecorder,5000);
 const legendBtn = document.getElementById('legend-btn');
 const legendPopup = document.getElementById('legend-popup');
 legendBtn.addEventListener('click', e => { e.stopPropagation(); legendPopup.classList.toggle('open'); });
+legendPopup.addEventListener('click', e => e.stopPropagation());
 document.addEventListener('click', () => legendPopup.classList.remove('open'));
 
 document.getElementById('rec-test-btn').addEventListener('click', async ()=>{
