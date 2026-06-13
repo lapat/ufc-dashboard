@@ -1477,30 +1477,41 @@ function startDKSync() {
 async function syncDKBets() {
   if (!tracker.f1Name) return;
   if (!_dkMeParam) {
-    // No user set — refuse to show anyone's bets to prevent cross-user leaks
     showDKToast('⚠ Set your username in the ? menu to see your DK bets');
     return;
   }
   try {
     const url = `/api/dk-bets?user=${encodeURIComponent(_dkMeParam)}`;
     const bets = await (await fetch(url)).json();
+
+    // ── RECONCILE: tracker must exactly mirror DK open bets ──────────────────
+    // Remove any DK-sourced tracker bet whose betId is no longer in DK's open list.
+    // This handles: settled bets, test-injected bets, cancelled bets, cross-user leaks.
+    const openDKIds = new Set(bets.map(b => b.betId).filter(Boolean));
+    const stale = tracker.bets.filter(b => b.source === 'dk' && b.betId && !openDKIds.has(b.betId));
+    if (stale.length) {
+      tracker.bets = tracker.bets.filter(b => !(b.source === 'dk' && b.betId && !openDKIds.has(b.betId)));
+      tracker._persist();
+      renderTracker();
+    }
+    // Rebuild seen set from current tracker state (not a running accumulator)
+    _lastDKBetIds = new Set(tracker.bets.filter(b => b.source === 'dk' && b.betId).map(b => b.betId));
+
     if (!bets.length) return;
 
     const f1 = (tracker.f1Name || '').toLowerCase();
     const f2 = (tracker.f2Name || '').toLowerCase();
     const drawLabel = (tracker.drawLabel || '').toLowerCase();
 
+    let added = 0;
     for (const b of bets) {
       if (_lastDKBetIds.has(b.betId)) continue;
       if (b.isParlay) continue;
       if (b.userId === 'default') continue;
-      // Hard client-side guard: never show another user's bets
       if (b.userId && b.userId !== _dkMeParam) continue;
 
       const sel = (b.selection || '').toLowerCase();
 
-      // Require at least 2 meaningful words from the team name to appear in the selection
-      // This prevents "lopes" matching "antelope" etc.
       const matchScore = (teamName) => {
         const words = teamName.split(' ').filter(w => w.length > 2);
         return words.filter(w => sel.includes(w)).length;
@@ -1512,7 +1523,6 @@ async function syncDKBets() {
       if (f1Score > 0 && f1Score >= f2Score) side = 'f1';
       else if (f2Score > 0) side = 'f2';
       else if (drawLabel && (sel.includes('draw') || sel.includes('tie'))) side = 'draw';
-
       if (!side) continue;
 
       const odds = parseInt((b.odds || '').replace('−', '-').replace('−', '-'));
@@ -1521,9 +1531,10 @@ async function syncDKBets() {
 
       tracker.addBet(side, stake, odds, b.betId, 'dk');
       _lastDKBetIds.add(b.betId);
-      renderTracker();
-      showDKToast(`🔄 DK bet synced: ${b.selection} ${b.odds} $${stake}${_dkMeParam ? ` (${_dkMeParam})` : ''}`);
+      added++;
+      showDKToast(`🔄 DK bet synced: ${b.selection} ${b.odds} $${stake}`);
     }
+    if (added > 0) renderTracker();
   } catch (_) {}
 }
 

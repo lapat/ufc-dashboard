@@ -382,24 +382,27 @@ async function runServerTests() {
     assert(louisBet, 'Real user bet (Louis) should still appear');
   });
 
-  // Louis and Ish are different users — each sees ONLY their own bets
-  await check('louis and ish bets are fully isolated (Qatar Draw scenario)', async () => {
-    // Louis bets Qatar +5500
+  // Two users are fully isolated — each sees ONLY their own bets
+  // Uses synthetic test usernames (never real usernames like 'louis' or 'ish')
+  await check('user-A and user-B bets are fully isolated (Qatar Draw scenario)', async () => {
+    const userA = 'testuser-player-a';
+    const userB = 'testuser-player-b';
+    // userA bets Qatar +5500
     await post('/api/dk-sync', {
-      url: 'wss://test', userId: 'louis',
+      url: 'wss://test', userId: userA,
       data: { result: { initial: { bets: [{
-        betId: 'louis-qatar-1', receiptId: 'louis-qatar-1',
+        betId: 'testbet-qatar-userA', receiptId: 'testbet-qatar-userA',
         status: 'Unsettled', settlementStatus: 'Open',
         stake: 0.79, potentialReturns: 44, placementDate: new Date().toISOString(),
         displayOdds: '+5500',
         selections: [{ selectionDisplayName: 'Qatar', marketDisplayName: 'Moneyline', displayOdds: '+5500' }]
       }] } } }, ts: Date.now()
     });
-    // Ish bets Draw +1500 on same game
+    // userB bets Draw +1500 on same game
     await post('/api/dk-sync', {
-      url: 'wss://test', userId: 'ish',
+      url: 'wss://test', userId: userB,
       data: { result: { initial: { bets: [{
-        betId: 'ish-draw-1', receiptId: 'ish-draw-1',
+        betId: 'testbet-draw-userB', receiptId: 'testbet-draw-userB',
         status: 'Unsettled', settlementStatus: 'Open',
         stake: 5, potentialReturns: 80, placementDate: new Date().toISOString(),
         displayOdds: '+1500',
@@ -407,23 +410,86 @@ async function runServerTests() {
       }] } } }, ts: Date.now()
     });
 
-    const louisBets = await get('/api/dk-bets?user=louis');
-    const ishBets = await get('/api/dk-bets?user=ish');
+    const aBets = await get(`/api/dk-bets?user=${userA}`);
+    const bBets = await get(`/api/dk-bets?user=${userB}`);
 
-    // Louis should see only his Qatar bet
-    assert(louisBets.some(b => b.betId === 'louis-qatar-1'), 'Louis missing his own Qatar bet');
-    assert(!louisBets.some(b => b.betId === 'ish-draw-1'), 'Louis should NOT see Ish\'s Draw bet');
+    // userA should see only their Qatar bet, not userB's Draw bet
+    assert(aBets.some(b => b.betId === 'testbet-qatar-userA'), 'userA missing their own Qatar bet');
+    assert(!aBets.some(b => b.betId === 'testbet-draw-userB'), 'userA should NOT see userB Draw bet');
 
-    // Ish should see only his Draw bet
-    assert(ishBets.some(b => b.betId === 'ish-draw-1'), 'Ish missing his own Draw bet');
-    assert(!ishBets.some(b => b.betId === 'louis-qatar-1'), 'Ish should NOT see Louis\'s Qatar bet');
+    // userB should see only their Draw bet, not userA's Qatar bet
+    assert(bBets.some(b => b.betId === 'testbet-draw-userB'), 'userB missing their own Draw bet');
+    assert(!bBets.some(b => b.betId === 'testbet-qatar-userA'), 'userB should NOT see userA Qatar bet');
 
-    // Unfiltered /api/dk-bets (used when no ?user= set) merges all — ensure dedup by betId
+    // Unfiltered /api/dk-bets merges all — verify userId is preserved correctly
     const allBets = await get('/api/dk-bets');
-    const louisInAll = allBets.find(b => b.betId === 'louis-qatar-1');
-    const ishInAll = allBets.find(b => b.betId === 'ish-draw-1');
-    assert(louisInAll && louisInAll.userId === 'louis', 'Louis Qatar bet in merged view has wrong userId');
-    assert(ishInAll && ishInAll.userId === 'ish', 'Ish Draw bet in merged view has wrong userId');
+    const aInAll = allBets.find(b => b.betId === 'testbet-qatar-userA');
+    const bInAll = allBets.find(b => b.betId === 'testbet-draw-userB');
+    assert(aInAll && aInAll.userId === userA, `userA Qatar bet in merged view has wrong userId: ${aInAll?.userId}`);
+    assert(bInAll && bInAll.userId === userB, `userB Draw bet in merged view has wrong userId: ${bInAll?.userId}`);
+  });
+
+  // When DK extension re-syncs with fewer bets, settled bets disappear from server
+  await check('Settled bet disappears from /api/dk-bets after re-sync without it', async () => {
+    const userId = 'testuser-settle-check';
+    // Sync two open bets
+    await post('/api/dk-sync', {
+      url: 'wss://test', userId,
+      data: { result: { initial: { bets: [
+        { betId: 'settle-open-1', receiptId: 'settle-open-1', status: 'Unsettled', settlementStatus: 'Open',
+          stake: 10, potentialReturns: 20, placementDate: new Date().toISOString(), displayOdds: '+100',
+          selections: [{ selectionDisplayName: 'Fighter A', marketDisplayName: 'Moneyline', displayOdds: '+100' }] },
+        { betId: 'settle-open-2', receiptId: 'settle-open-2', status: 'Unsettled', settlementStatus: 'Open',
+          stake: 20, potentialReturns: 40, placementDate: new Date().toISOString(), displayOdds: '+100',
+          selections: [{ selectionDisplayName: 'Fighter B', marketDisplayName: 'Moneyline', displayOdds: '+100' }] }
+      ] } } }, ts: Date.now()
+    });
+    const before = await get(`/api/dk-bets?user=${userId}`);
+    assert(before.length === 2, `expected 2 open bets, got ${before.length}`);
+
+    // Extension re-syncs — bet 2 is now gone (settled on DK side)
+    await post('/api/dk-sync', {
+      url: 'wss://test', userId,
+      data: { result: { initial: { bets: [
+        { betId: 'settle-open-1', receiptId: 'settle-open-1', status: 'Unsettled', settlementStatus: 'Open',
+          stake: 10, potentialReturns: 20, placementDate: new Date().toISOString(), displayOdds: '+100',
+          selections: [{ selectionDisplayName: 'Fighter A', marketDisplayName: 'Moneyline', displayOdds: '+100' }] }
+      ] } } }, ts: Date.now()
+    });
+    const after = await get(`/api/dk-bets?user=${userId}`);
+    assert(after.length === 1, `expected 1 open bet after settle, got ${after.length}`);
+    assert(after[0].betId === 'settle-open-1', 'wrong bet remained after settle');
+    assert(!after.some(b => b.betId === 'settle-open-2'), 'settled bet still showing');
+  });
+
+  // Fake/test bets injected into a user bucket are wiped on next real sync
+  await check('Test-injected bets wiped when real extension syncs with correct bets', async () => {
+    const userId = 'testuser-wipe-check';
+    // Simulate test pollution: inject a fake bet
+    await post('/api/dk-sync', {
+      url: 'wss://test', userId,
+      data: { result: { initial: { bets: [
+        { betId: 'fake-test-bet-999', receiptId: 'fake-test-bet-999', status: 'Unsettled', settlementStatus: 'Open',
+          stake: 0.79, potentialReturns: 44, placementDate: new Date().toISOString(), displayOdds: '+5500',
+          selections: [{ selectionDisplayName: 'Qatar', marketDisplayName: 'Moneyline', displayOdds: '+5500' }] }
+      ] } } }, ts: Date.now()
+    });
+    const polluted = await get(`/api/dk-bets?user=${userId}`);
+    assert(polluted.some(b => b.betId === 'fake-test-bet-999'), 'fake bet should exist before wipe');
+
+    // Real extension syncs with only the real bet — fake one disappears
+    await post('/api/dk-sync', {
+      url: 'wss://test', userId,
+      data: { result: { initial: { bets: [
+        { betId: 'real-dk-bet-abc', receiptId: 'real-dk-bet-abc', status: 'Unsettled', settlementStatus: 'Open',
+          stake: 5, potentialReturns: 10, placementDate: new Date().toISOString(), displayOdds: '+100',
+          selections: [{ selectionDisplayName: 'Real Fighter', marketDisplayName: 'Moneyline', displayOdds: '+100' }] }
+      ] } } }, ts: Date.now()
+    });
+    const clean = await get(`/api/dk-bets?user=${userId}`);
+    assert(!clean.some(b => b.betId === 'fake-test-bet-999'), 'fake bet should be gone after real sync');
+    assert(clean.some(b => b.betId === 'real-dk-bet-abc'), 'real bet should be present');
+    assert(clean.length === 1, `expected exactly 1 bet, got ${clean.length}`);
   });
 
   // Re-sync same bet should not duplicate it (root cause of "4x Detroit Lions" bug)
