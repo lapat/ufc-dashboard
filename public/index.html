@@ -296,6 +296,12 @@
   <button id="legend-btn" title="Indicator legend">?</button>
   <div id="legend-popup">
     <h4>Indicator Legend</h4>
+    <div class="legend-section" style="margin-top:0;padding-top:0;border-top:none">Your DK Username</div>
+    <div style="display:flex;gap:8px;margin-bottom:4px">
+      <input id="dash-user-input" type="text" placeholder="e.g. louis or ish" style="flex:1;background:#0a0a0a;border:1px solid #222;color:#ccc;padding:6px 10px;border-radius:6px;font-size:0.8rem;outline:none"/>
+      <button id="dash-user-save" style="background:#1a1a1a;border:1px solid #2ecc71;color:#2ecc71;padding:6px 12px;border-radius:6px;font-size:0.75rem;cursor:pointer;white-space:nowrap">Set</button>
+    </div>
+    <div id="dash-user-note" style="font-size:0.68rem;color:#555;margin-bottom:2px">Must match your DK extension username — keeps bets separate between users.</div>
     <div class="legend-section">Recorder — UFC background recording</div>
     <div class="legend-row"><div class="legend-dot green"></div><div class="legend-desc"><strong style="color:#aaa">Green</strong> — UFC fight actively recording right now</div></div>
     <div class="legend-row"><div class="legend-dot yellow"></div><div class="legend-desc"><strong style="color:#aaa">Yellow</strong> — On a game, but no UFC bout live to record</div></div>
@@ -1432,12 +1438,34 @@ let _dkSyncTimer = null;
 // Initialize from persisted DK-sourced bets so page reload never re-adds them
 let _lastDKBetIds = new Set(tracker.bets.filter(b => b.betId && b.source === 'dk').map(b => b.betId));
 
-// ?me=USERNAME in URL filters bets to just that user
-const _dkMeParam = new URLSearchParams(window.location.search).get('me') || '';
-if (_dkMeParam) {
+// Dashboard userId — localStorage takes priority, URL ?me= as fallback
+let _dkMeParam = localStorage.getItem('dashUserId') || new URLSearchParams(window.location.search).get('me') || '';
+function applyDashUser(uid) {
+  _dkMeParam = uid;
   const badge = document.getElementById('dk-user-badge');
-  if (badge) badge.textContent = `· ${_dkMeParam} only`;
+  if (badge) badge.textContent = uid ? `· ${uid}` : '';
+  const input = document.getElementById('dash-user-input');
+  if (input) input.value = uid;
+  const note = document.getElementById('dash-user-note');
+  if (note) note.style.color = uid ? '#555' : '#e74c3c';
 }
+applyDashUser(_dkMeParam);
+
+// Wire up legend save button
+document.getElementById('dash-user-save').addEventListener('click', e => {
+  e.stopPropagation();
+  const val = document.getElementById('dash-user-input').value.trim().toLowerCase();
+  if (!val) return;
+  localStorage.setItem('dashUserId', val);
+  applyDashUser(val);
+  const btn = document.getElementById('dash-user-save');
+  btn.textContent = 'Saved ✓'; btn.style.borderColor = '#2ecc71';
+  setTimeout(() => { btn.textContent = 'Set'; }, 2000);
+  // Re-sync immediately with new userId
+  tracker.clearDkBets();
+  _lastDKBetIds = new Set();
+  syncDKBets();
+});
 
 function startDKSync() {
   if (_dkSyncTimer) return;
@@ -1447,8 +1475,13 @@ function startDKSync() {
 
 async function syncDKBets() {
   if (!tracker.f1Name) return;
+  if (!_dkMeParam) {
+    // No user set — refuse to show anyone's bets to prevent cross-user leaks
+    showDKToast('⚠ Set your username in the ? menu to see your DK bets');
+    return;
+  }
   try {
-    const url = _dkMeParam ? `/api/dk-bets?user=${encodeURIComponent(_dkMeParam)}` : '/api/dk-bets';
+    const url = `/api/dk-bets?user=${encodeURIComponent(_dkMeParam)}`;
     const bets = await (await fetch(url)).json();
     if (!bets.length) return;
 
@@ -1459,7 +1492,9 @@ async function syncDKBets() {
     for (const b of bets) {
       if (_lastDKBetIds.has(b.betId)) continue;
       if (b.isParlay) continue;
-      if (b.userId === 'default') continue; // never show unattributed bets
+      if (b.userId === 'default') continue;
+      // Hard client-side guard: never show another user's bets
+      if (b.userId && b.userId !== _dkMeParam) continue;
 
       const sel = (b.selection || '').toLowerCase();
 

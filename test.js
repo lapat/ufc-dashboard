@@ -382,6 +382,50 @@ async function runServerTests() {
     assert(louisBet, 'Real user bet (Louis) should still appear');
   });
 
+  // Louis and Ish are different users — each sees ONLY their own bets
+  await check('louis and ish bets are fully isolated (Qatar Draw scenario)', async () => {
+    // Louis bets Qatar +5500
+    await post('/api/dk-sync', {
+      url: 'wss://test', userId: 'louis',
+      data: { result: { initial: { bets: [{
+        betId: 'louis-qatar-1', receiptId: 'louis-qatar-1',
+        status: 'Unsettled', settlementStatus: 'Open',
+        stake: 0.79, potentialReturns: 44, placementDate: new Date().toISOString(),
+        displayOdds: '+5500',
+        selections: [{ selectionDisplayName: 'Qatar', marketDisplayName: 'Moneyline', displayOdds: '+5500' }]
+      }] } } }, ts: Date.now()
+    });
+    // Ish bets Draw +1500 on same game
+    await post('/api/dk-sync', {
+      url: 'wss://test', userId: 'ish',
+      data: { result: { initial: { bets: [{
+        betId: 'ish-draw-1', receiptId: 'ish-draw-1',
+        status: 'Unsettled', settlementStatus: 'Open',
+        stake: 5, potentialReturns: 80, placementDate: new Date().toISOString(),
+        displayOdds: '+1500',
+        selections: [{ selectionDisplayName: 'Draw', marketDisplayName: 'Moneyline', displayOdds: '+1500' }]
+      }] } } }, ts: Date.now()
+    });
+
+    const louisBets = await get('/api/dk-bets?user=louis');
+    const ishBets = await get('/api/dk-bets?user=ish');
+
+    // Louis should see only his Qatar bet
+    assert(louisBets.some(b => b.betId === 'louis-qatar-1'), 'Louis missing his own Qatar bet');
+    assert(!louisBets.some(b => b.betId === 'ish-draw-1'), 'Louis should NOT see Ish\'s Draw bet');
+
+    // Ish should see only his Draw bet
+    assert(ishBets.some(b => b.betId === 'ish-draw-1'), 'Ish missing his own Draw bet');
+    assert(!ishBets.some(b => b.betId === 'louis-qatar-1'), 'Ish should NOT see Louis\'s Qatar bet');
+
+    // Unfiltered /api/dk-bets (used when no ?user= set) merges all — ensure dedup by betId
+    const allBets = await get('/api/dk-bets');
+    const louisInAll = allBets.find(b => b.betId === 'louis-qatar-1');
+    const ishInAll = allBets.find(b => b.betId === 'ish-draw-1');
+    assert(louisInAll && louisInAll.userId === 'louis', 'Louis Qatar bet in merged view has wrong userId');
+    assert(ishInAll && ishInAll.userId === 'ish', 'Ish Draw bet in merged view has wrong userId');
+  });
+
   // Re-sync same bet should not duplicate it (root cause of "4x Detroit Lions" bug)
   await check('Re-syncing same bet multiple times produces exactly 1 entry', async () => {
     const userId = 'dedup-resync-user';
