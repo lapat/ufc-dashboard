@@ -1560,7 +1560,7 @@ async function syncDKBets() {
 
     const f1 = (tracker.f1Name || '').toLowerCase();
     const f2 = (tracker.f2Name || '').toLowerCase();
-    const drawLabel = (tracker.drawLabel || '').toLowerCase();
+    const drawLabel = (tracker.drawName || '').toLowerCase();
     console.log(`[DK sync] matching against fight: "${tracker.f1Name}" vs "${tracker.f2Name}"`);
 
     let added = 0;
