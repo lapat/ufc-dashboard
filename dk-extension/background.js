@@ -1,10 +1,15 @@
 const DEFAULT_URL = 'https://ufc-dashboard-production-e03d.up.railway.app';
 
-// Load saved server URL, default to Railway app
 let betBotUrl = DEFAULT_URL;
-chrome.storage.local.get(['betBotUrl'], r => { betBotUrl = r.betBotUrl || DEFAULT_URL; });
+let dkUserId = null; // auto-detected from DK API responses
+
+chrome.storage.local.get(['betBotUrl', 'dkUserId'], r => {
+  betBotUrl = r.betBotUrl || DEFAULT_URL;
+  dkUserId = r.dkUserId || null;
+});
 chrome.storage.onChanged.addListener(changes => {
   if (changes.betBotUrl) betBotUrl = changes.betBotUrl.newValue;
+  if (changes.dkUserId) dkUserId = changes.dkUserId.newValue;
 });
 
 function postToServer(path, body) {
@@ -12,11 +17,11 @@ function postToServer(path, body) {
   fetch(`${betBotUrl}${path}`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(body)
+    body: JSON.stringify({ ...body, userId: dkUserId })
   }).catch(() => {});
 }
 
-// Use Chrome Alarms for reliable periodic tasks (setInterval dies with MV3 service worker)
+// Use Chrome Alarms for reliable periodic tasks
 chrome.alarms.create('heartbeat', { periodInMinutes: 1 });
 chrome.alarms.create('keepAlive', { periodInMinutes: 1 });
 
@@ -38,10 +43,8 @@ chrome.alarms.onAlarm.addListener(async (alarm) => {
   }
 });
 
-// Fire immediately on load too
 postToServer('/api/dk-heartbeat', { ts: Date.now() });
 
-// Detect logout: DK navigates to /login or /sportsbook-auth
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   if (changeInfo.status !== 'complete') return;
   const url = tab.url || '';
@@ -61,6 +64,24 @@ function addLog(msg) {
   });
 }
 
+// Try to extract userId from various DK API responses
+function tryExtractUserId(url, data) {
+  // From /social/user/me.json — has username
+  if (url.includes('/social/user/') && data?.username) {
+    return data.username;
+  }
+  // From /users/me — has displayName or userId
+  if (url.includes('/users/me') && (data?.username || data?.displayName || data?.userId)) {
+    return data.username || data.displayName || String(data.userId);
+  }
+  // From bets payload — receiptId prefix often encodes user
+  if (data?.result?.initial?.bets?.[0]?.betId) {
+    // betId format: 639169660797770899 — first part after receipts is consistent per user
+    // Not reliable enough, skip
+  }
+  return null;
+}
+
 chrome.runtime.onMessage.addListener((msg) => {
   if (msg.type === 'DK_LOGOUT') {
     postToServer('/api/dk-logout', { ts: Date.now() });
@@ -73,32 +94,37 @@ chrome.runtime.onMessage.addListener((msg) => {
   const url = msg.url;
   const data = msg.data;
 
+  // Auto-detect userId from API responses
+  const extractedId = tryExtractUserId(url, data);
+  if (extractedId && extractedId !== dkUserId) {
+    dkUserId = extractedId;
+    chrome.storage.local.set({ dkUserId: extractedId });
+    addLog(`User identified: ${extractedId}`);
+  }
+
   // Store raw capture for popup display
   chrome.storage.local.get(['captures'], r => {
     const captures = r.captures || [];
     const isBets = !!(data?.result?.initial?.bets || data?.result?.update?.bets);
     const betCount = (data?.result?.initial?.bets || data?.result?.update?.bets || []).length;
-    const preview = isBets
-      ? `[WS BETS] ${betCount} bets found`
-      : JSON.stringify(data).slice(0, 120);
+    const preview = isBets ? `[WS BETS] ${betCount} bets found` : JSON.stringify(data).slice(0, 120);
     captures.unshift({ url, ts: Date.now(), preview, isBets });
     chrome.storage.local.set({ captures: captures.slice(0, 50) });
     if (isBets) addLog(`WS: captured ${betCount} bets`);
   });
 
-  // Send to Bet Bot server
   if (!betBotUrl) return;
-  addLog(`→ sending to server: ${url.replace(/https?:\/\/[^/]+/,'').slice(0,60)}`);
+  addLog(`→ syncing: ${url.replace(/https?:\/\/[^/]+/, '').slice(0, 60)}`);
   fetch(`${betBotUrl}/api/dk-sync`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ url, data, ts: Date.now() })
+    body: JSON.stringify({ url, data, ts: Date.now(), userId: dkUserId })
   }).then(r => r.json()).then(res => {
     if (res.bets?.length) {
       chrome.storage.local.set({ lastSync: Date.now(), lastBetCount: res.bets.length });
       addLog(`✓ server parsed ${res.bets.length} bets`);
     } else {
-      addLog(`server: no bets parsed from this call`);
+      addLog(`server: no bets parsed`);
     }
   }).catch(e => addLog(`✗ server error: ${e.message}`));
 });

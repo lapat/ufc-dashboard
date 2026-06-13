@@ -112,10 +112,35 @@ async function runServerTests() {
     const d = await get('/api/dk-bets?all=1');
     assert(Array.isArray(d), 'not array');
   });
-  await check('GET /api/dk-status (has heartbeat field)', async () => {
+  await check('GET /api/dk-status (has heartbeat + activeUsers)', async () => {
     const d = await get('/api/dk-status');
     assert('heartbeat' in d, 'missing heartbeat');
     assert('loggedOut' in d, 'missing loggedOut');
+    assert(Array.isArray(d.activeUsers), 'missing activeUsers array');
+  });
+  await check('Multi-user: /api/dk-bets?user= filters by userId', async () => {
+    // Send bets as two different users
+    const syncBet = (userId, fighter) => post('/api/dk-sync', {
+      url: 'wss://test',
+      userId,
+      data: { result: { initial: { bets: [{
+        betId: `${userId}-bet`, receiptId: `${userId}-bet`,
+        status: 'Unsettled', settlementStatus: 'Open',
+        stake: 5, potentialReturns: 8, placementDate: new Date().toISOString(),
+        displayOdds: '+150',
+        selections: [{ selectionDisplayName: fighter, marketDisplayName: 'Moneyline', displayOdds: '+150' }]
+      }] } } },
+      ts: Date.now()
+    });
+    await syncBet('userA', 'Fighter A');
+    await syncBet('userB', 'Fighter B');
+    const a = await get('/api/dk-bets?user=userA');
+    const b = await get('/api/dk-bets?user=userB');
+    assert(Array.isArray(a) && a.length > 0, 'userA bets missing');
+    assert(Array.isArray(b) && b.length > 0, 'userB bets missing');
+    assert(a.every(x => x.userId === 'userA'), 'userA bets contain wrong userId');
+    assert(b.every(x => x.userId === 'userB'), 'userB bets contain wrong userId');
+    assert(!a.some(x => x.userId === 'userB'), 'userA results leaked userB data');
   });
   await check('POST /api/dk-heartbeat', async () => {
     const d = await post('/api/dk-heartbeat', { ts: Date.now() });

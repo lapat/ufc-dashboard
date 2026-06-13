@@ -449,15 +449,15 @@ function saveDKCaptures() {
 }
 
 app.post('/api/dk-sync', (req, res) => {
-  const { url, data, ts } = req.body;
+  const { url, data, ts, userId } = req.body;
   if (!url || !data) return res.status(400).json({ error: 'missing fields' });
 
-  dkCaptures.unshift({ url, data, ts });
+  dkCaptures.unshift({ url, data, ts, userId });
   if (dkCaptures.length > 200) dkCaptures.length = 200;
   saveDKCaptures();
 
-  const bets = parseDKBets(url, data);
-  if (bets.length) console.log(`[DK sync] ${bets.length} bets from ${url}`);
+  const bets = parseDKBets(url, data, userId);
+  if (bets.length) console.log(`[DK sync] ${bets.length} bets from ${userId || 'unknown'} via ${url}`);
 
   res.json({ received: true, url, bets });
 });
@@ -472,9 +472,10 @@ app.delete('/api/dk-captures', (req, res) => {
   res.json({ ok: true });
 });
 
-let dkParsedBets = []; // last received set of parsed bets
+const dkBetsByUser = new Map(); // userId → bets[]
+const DEFAULT_USER = 'default';
 
-function parseDKBets(url, data) {
+function parseDKBets(url, data, userId) {
   const rawBets =
     data?.result?.initial?.bets ||
     data?.result?.update?.bets ||
@@ -487,11 +488,12 @@ function parseDKBets(url, data) {
     const sel = b.selections?.[0] || {};
     return {
       betId: b.receiptId || b.betId,
-      status: b.settlementStatus || b.status,    // 'Open' | 'Won' | 'Lost' (settlementStatus is the useful one)
-      rawStatus: b.status,                       // 'Unsettled' | 'Settled'
-      selection: sel.selectionDisplayName || '',  // 'Jack Della Maddalena'
-      market: sel.marketDisplayName || '',        // 'Live Moneyline'
-      odds: (sel.displayOdds || b.displayOdds || '').replace('−', '-'),  // normalize unicode minus
+      userId: userId || DEFAULT_USER,
+      status: b.settlementStatus || b.status,
+      rawStatus: b.status,
+      selection: sel.selectionDisplayName || '',
+      market: sel.marketDisplayName || '',
+      odds: (sel.displayOdds || b.displayOdds || '').replace('−', '-').replace('−', '-'),
       stake: b.stake,
       potentialReturns: b.potentialReturns,
       returns: b.returns,
@@ -499,34 +501,52 @@ function parseDKBets(url, data) {
     };
   });
 
-  // Keep latest full snapshot (replace, don't append)
-  dkParsedBets = bets;
+  dkBetsByUser.set(userId || DEFAULT_USER, bets);
   return bets;
 }
 
+// Merge all users' bets (open only by default)
+function getAllBets(openOnly = true) {
+  const all = [];
+  for (const bets of dkBetsByUser.values()) all.push(...bets);
+  return openOnly ? all.filter(b => b.status === 'Open') : all;
+}
+
 app.get('/api/dk-bets', (req, res) => {
-  // Return only open/unsettled bets by default, or all if ?all=1
   const all = req.query.all === '1';
-  const bets = all ? dkParsedBets : dkParsedBets.filter(b => b.status === 'Open');
-  res.json(bets);
+  const userId = req.query.user; // optional filter by user
+  if (userId) {
+    const bets = dkBetsByUser.get(userId) || [];
+    res.json(all ? bets : bets.filter(b => b.status === 'Open'));
+  } else {
+    res.json(getAllBets(!all));
+  }
 });
 
 // Extension health tracking
 let dkHeartbeat = { ts: null, loggedOut: false };
 
 app.post('/api/dk-heartbeat', (req, res) => {
+  const userId = req.body.userId;
   dkHeartbeat.ts = Date.now();
   dkHeartbeat.loggedOut = false;
+  if (userId) dkHeartbeat.users = { ...(dkHeartbeat.users || {}), [userId]: Date.now() };
   res.json({ ok: true });
 });
 
 app.post('/api/dk-logout', (req, res) => {
+  const userId = req.body.userId;
   dkHeartbeat.loggedOut = true;
+  if (userId && dkHeartbeat.users) delete dkHeartbeat.users[userId];
   res.json({ ok: true });
 });
 
 app.get('/api/dk-status', (req, res) => {
-  res.json({ heartbeat: dkHeartbeat.ts, loggedOut: dkHeartbeat.loggedOut });
+  const now = Date.now();
+  const activeUsers = Object.entries(dkHeartbeat.users || {})
+    .filter(([, ts]) => now - ts < 90000)
+    .map(([u]) => u);
+  res.json({ heartbeat: dkHeartbeat.ts, loggedOut: dkHeartbeat.loggedOut, activeUsers });
 });
 
 app.post('/api/dk-mock', (req, res) => {
@@ -544,7 +564,7 @@ app.post('/api/dk-mock', (req, res) => {
     returns: null,
     placementDate: new Date().toISOString(),
   };
-  dkParsedBets = [mock];
+  dkBetsByUser.set(DEFAULT_USER, [mock]);
   res.json({ ok: true, bet: mock });
 });
 

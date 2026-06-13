@@ -25,7 +25,12 @@ async function refresh() {
     ? (onMyBets ? 'My Bets ✓' : 'Open (go to mybets)')
     : 'Not found';
 
-  chrome.storage.local.get(['captures', 'lastSync', 'lastBetCount', 'debugLog'], r => {
+  chrome.storage.local.get(['captures', 'lastSync', 'lastBetCount', 'debugLog', 'dkUserId'], r => {
+    if (r.dkUserId) {
+      document.getElementById('tabText').textContent = hasDK
+        ? (onMyBets ? `My Bets ✓ · ${r.dkUserId}` : `Open · ${r.dkUserId}`)
+        : `Not found · ${r.dkUserId}`;
+    }
     const captures = r.captures || [];
     document.getElementById('captureAge').textContent = ago(captures[0]?.ts);
     document.getElementById('syncAge').textContent = ago(r.lastSync);
