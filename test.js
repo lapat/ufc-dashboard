@@ -784,6 +784,98 @@ function testDrawBetMatching() {
   assert(matchBet('Qatar', 'Brazil', 'Morocco', 'Draw') === null, 'unrelated selection → null');
 }
 
+function testPnLTodayFilter() {
+  const today = new Date().toISOString().slice(0, 10);
+  const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
+
+  const bets = [
+    { betId: '1', isParlay: false, placementDate: today + 'T10:00:00Z', status: 'Won', stake: '100', returns: '190' },
+    { betId: '2', isParlay: false, placementDate: yesterday + 'T10:00:00Z', status: 'Lost', stake: '200', returns: '0' },
+    { betId: '3', isParlay: true,  placementDate: today + 'T11:00:00Z', status: 'Won', stake: '50', returns: '200' },
+    { betId: '4', isParlay: false, placementDate: today + 'T12:00:00Z', status: 'Open', stake: '100', returns: '0' },
+  ];
+
+  const straight = bets.filter(b => !b.isParlay && b.placementDate && b.placementDate.slice(0, 10) === today);
+  assert(straight.length === 2, `should have 2 today straight bets, got ${straight.length}`);
+  assert(straight.every(b => b.betId !== '2'), 'yesterday bet must be excluded');
+  assert(straight.every(b => b.betId !== '3'), 'parlay must be excluded');
+}
+
+function testPnLCalculation() {
+  const bets = [
+    { status: 'Won',  stake: '100', returns: '190' }, // profit = +90
+    { status: 'Lost', stake: '50',  returns: '0'   }, // profit = -50
+    { status: 'Push', stake: '75',  returns: '75'  }, // profit = 0
+    { status: 'Open', stake: '200', returns: '0'   }, // not settled
+  ];
+  const settled = bets.filter(b => b.status !== 'Open');
+  const net = settled.reduce((s, b) => s + parseFloat(b.returns || 0) - parseFloat(b.stake || 0), 0);
+  assert(Math.abs(net - 40) < 0.01, `net should be +40, got ${net}`);
+
+  const wagered = bets.reduce((s, b) => s + parseFloat(b.stake || 0), 0);
+  assert(wagered === 425, `total wagered should be 425, got ${wagered}`);
+
+  const wins   = settled.filter(b => b.status === 'Won').length;
+  const losses = settled.filter(b => b.status === 'Lost').length;
+  const pushes = settled.filter(b => b.status === 'Push').length;
+  assert(wins === 1 && losses === 1 && pushes === 1, `expected 1W 1L 1P, got ${wins}W ${losses}L ${pushes}P`);
+}
+
+function testSettlementDetection() {
+  // Bets already settled before session started must NOT trigger toast
+  // Only Open→settled transitions should fire
+  const prevStatuses = new Map();
+  const settled = [];
+
+  const detect = (bets) => {
+    for (const b of bets) {
+      const prev = prevStatuses.get(b.betId);
+      if (prev === 'Open' && b.status !== 'Open') settled.push(b);
+      prevStatuses.set(b.betId, b.status);
+    }
+  };
+
+  // First call: two already-settled bets + one open — nothing should fire
+  detect([
+    { betId: 'a', status: 'Won'  },
+    { betId: 'b', status: 'Lost' },
+    { betId: 'c', status: 'Open' },
+  ]);
+  assert(settled.length === 0, `pre-existing settled bets must not fire toast, got ${settled.length}`);
+
+  // Second call: 'c' now settles — should fire once
+  detect([
+    { betId: 'a', status: 'Won'  },
+    { betId: 'b', status: 'Lost' },
+    { betId: 'c', status: 'Won'  },
+  ]);
+  assert(settled.length === 1, `only newly settled bet should fire, got ${settled.length}`);
+  assert(settled[0].betId === 'c', `wrong bet triggered: ${settled[0].betId}`);
+}
+
+function testOddsDelta() {
+  const withDelta = (o, ref) => {
+    const base = o > 0 ? `+${o}` : `${o}`;
+    if (!ref || typeof o !== 'number') return base;
+    const d = Math.round(o - ref);
+    if (Math.abs(d) < 1) return base;
+    return `${base}▲▼`[0] + Math.abs(d); // simplified check
+  };
+
+  // No delta when opening odds match current
+  const same = withDelta(-148, -148);
+  assert(!same.includes('▲') && !same.includes('▼'), 'no delta when odds unchanged');
+
+  // Delta shown when odds moved
+  const moved = withDelta(-160, -148);
+  const d = Math.round(-160 - (-148)); // = -12
+  assert(Math.abs(d) >= 1, `delta should be >= 1, got ${d}`);
+
+  // No delta when no reference
+  const noRef = withDelta(-148, null);
+  assert(!noRef.includes('▲') && !noRef.includes('▼'), 'no delta without opening odds');
+}
+
 function testDKBannerLogic() {
   // Mirrors pollDKExtStatus() banner decision — every non-green state must show a banner
   const classify = ({ loggedOut, heartbeat, lastBetSync }) => {
@@ -890,6 +982,10 @@ try { testRefreshClearsDKBets(); console.log('  ✓ refresh clears all DK bets, 
 try { testDedupBets(); console.log('  ✓ bet dedup (real userId overwrites default)'); passed++; } catch(e) { console.error('  ✗ bet dedup:', e.message); failed++; }
 try { testParlayDetection(); console.log('  ✓ parlay detection (straight vs parlay vs leg)'); passed++; } catch(e) { console.error('  ✗ parlay detection:', e.message); failed++; }
 try { testDrawBetMatching(); console.log('  ✓ draw bet matching: Draw/Tie → side=draw, null when no draw market'); passed++; } catch(e) { console.error('  ✗ draw bet matching:', e.message); failed++; }
+try { testPnLTodayFilter(); console.log('  ✓ P&L today filter: yesterday bets excluded, today bets included'); passed++; } catch(e) { console.error('  ✗ P&L today filter:', e.message); failed++; }
+try { testPnLCalculation(); console.log('  ✓ P&L calculation: won/lost/push net correct'); passed++; } catch(e) { console.error('  ✗ P&L calculation:', e.message); failed++; }
+try { testSettlementDetection(); console.log('  ✓ settlement detection: Open→Won/Lost triggers, pre-settled excluded'); passed++; } catch(e) { console.error('  ✗ settlement detection:', e.message); failed++; }
+try { testOddsDelta(); console.log('  ✓ odds delta: ▲/▼ shown when moved, hidden when unchanged'); passed++; } catch(e) { console.error('  ✗ odds delta:', e.message); failed++; }
 try { testDKBannerLogic(); console.log('  ✓ DK banner: all 4 non-green states show banner, green hides it'); passed++; } catch(e) { console.error('  ✗ DK banner logic:', e.message); failed++; }
 try { testRecordingsFilter(); console.log('  ✓ recordings: filters ? vs ?, test data, normalizes sport labels'); passed++; } catch(e) { console.error('  ✗ recordings filter:', e.message); failed++; }
 

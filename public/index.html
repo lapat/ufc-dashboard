@@ -231,6 +231,21 @@
     #footer{margin-top:32px;padding:10px 0;border-top:1px solid #222;display:flex;gap:16px;flex-wrap:wrap}
     .fi{font-size:0.78rem;color:#555}.fi span{color:#888}
 
+    /* ── P&L strip ── */
+    #pnl-strip{background:#0b0b0b;border-bottom:1px solid #181818;padding:7px 24px;align-items:center;gap:12px;font-size:0.78rem;display:none;flex-wrap:wrap}
+    .pnl-lbl{color:#2a2a2a;text-transform:uppercase;letter-spacing:.5px;font-size:0.65rem}
+    .pnl-val{font-weight:700}
+    .pnl-pos{color:#69db7c}
+    .pnl-neg{color:#ff6b6b}
+    .pnl-zero{color:#333}
+    .pnl-sep{color:#1e1e1e}
+    /* ── settle toast ── */
+    #settle-toast{position:fixed;top:70px;left:50%;transform:translateX(-50%);padding:14px 26px;border-radius:10px;font-size:0.95rem;font-weight:700;z-index:9999;display:none;text-align:center;letter-spacing:.2px;box-shadow:0 6px 28px rgba(0,0,0,.9);min-width:280px}
+    #settle-toast.win{background:#0d2a0d;border:2px solid #69db7c;color:#69db7c}
+    #settle-toast.loss{background:#1f0e0e;border:2px solid #ff6b6b;color:#ff6b6b}
+    #settle-toast.push{background:#111;border:2px solid #555;color:#888}
+    /* ── odds delta ── */
+    .odds-delta{font-size:0.58rem;margin-left:3px;opacity:0.5;font-weight:400;vertical-align:middle}
     /* ── mobile ── */
     @media(max-width:600px){
       body{font-size:21px}
@@ -280,6 +295,17 @@
 <body>
 
 <div id="dk-alert-banner" style="display:none;background:#5c0a0a;border-bottom:2px solid #e74c3c;color:#fff;text-align:center;padding:10px 16px;font-size:0.9rem;font-weight:600;letter-spacing:.4px;z-index:999;position:relative"></div>
+<div id="pnl-strip">
+  <span class="pnl-lbl">Session P&amp;L</span>
+  <span class="pnl-val pnl-zero" id="pnl-net">$0.00</span>
+  <span class="pnl-sep">·</span>
+  <span id="pnl-record" style="color:#333">—</span>
+  <span class="pnl-sep">·</span>
+  <span id="pnl-wagered" style="color:#2a2a2a">$0 wagered</span>
+  <span class="pnl-sep">·</span>
+  <span id="pnl-open" style="color:#2a2a2a">0 open</span>
+</div>
+<div id="settle-toast"></div>
 
 <div id="topbar">
   <h1>⚡ Bet Bot</h1>
@@ -324,7 +350,7 @@
   <button id="rec-test-btn" title="Test the recording pipeline" style="font-size:0.75rem;padding:4px 9px;background:#141414;border:1px solid #1e1e1e;color:#444;border-radius:5px;cursor:pointer;white-space:nowrap">test rec</button>
   <a href="/library" style="font-size:0.75rem;padding:4px 9px;border:1px solid #1e1e1e;border-radius:5px;color:#444;white-space:nowrap;text-decoration:none">Library</a>
   <div id="topbar-status" style="margin-left:auto;font-size:0.78rem;color:#444;white-space:nowrap">Loading...</div>
-  <span style="font-size:0.6rem;color:#333;white-space:nowrap;letter-spacing:.5px" title="Dashboard build">v2026-06-13.12</span>
+  <span style="font-size:0.6rem;color:#333;white-space:nowrap;letter-spacing:.5px" title="Dashboard build">v2026-06-13.13</span>
 </div>
 
 <div id="sport-strip"><span id="sport-loading" style="color:#333;font-size:.7rem;padding:12px 0">Loading sports...</span></div>
@@ -397,6 +423,7 @@
       <span class="tracker-title">POSITION TRACKER <span id="dk-user-badge" style="font-size:0.6rem;color:#e8b84b;font-weight:400;margin-left:6px"></span></span>
       <div style="display:flex;gap:8px;align-items:center">
         <button class="clear-btn" onclick="injectMockDKBet()" style="color:#74c0fc;border-color:#74c0fc">TEST DK</button>
+        <button class="clear-btn" onclick="testSettleFlow()" style="color:#69db7c;border-color:#69db7c">TEST SETTLE</button>
         <button class="clear-btn" id="clear-bets">CLEAR ALL</button>
       </div>
     </div>
@@ -985,13 +1012,21 @@ loadSimFights();
 let currentGames=[];  // all games for active sport
 let selectedGame=null;
 let pollTimer=null;
+let _openingOdds={f1:null,f2:null};
 let activeSport='mma_mixed_martial_arts';
 let activeSportTitle='UFC';
 
 function updateNowWatchingOdds(o1,o2,drawOdds){
   const o1el=document.getElementById('nw-o1'),o2el=document.getElementById('nw-o2');
-  o1el.textContent=fmtO(o1); o1el.className='nw-odds '+odsCls(o1);
-  o2el.textContent=fmtO(o2); o2el.className='nw-odds '+odsCls(o2);
+  const withDelta=(o,ref)=>{
+    const base=fmtO(o);
+    if(!ref||typeof o!=='number') return base;
+    const d=Math.round(o-ref);
+    if(Math.abs(d)<1) return base;
+    return `${base}<span class="odds-delta">${d>0?'▲':'▼'}${Math.abs(d)}</span>`;
+  };
+  o1el.innerHTML=withDelta(o1,_openingOdds.f1); o1el.className='nw-odds '+odsCls(o1);
+  o2el.innerHTML=withDelta(o2,_openingOdds.f2); o2el.className='nw-odds '+odsCls(o2);
   const vsEl=document.getElementById('nw-vs-text'),drawEl=document.getElementById('nw-draw-display'),drawOEl=document.getElementById('nw-o-draw');
   if(drawOdds!=null){
     vsEl.style.display='none'; drawEl.style.display='flex';
@@ -1053,6 +1088,7 @@ async function selectGame(game){
   selectedGame=game;
   clearTimeout(pollTimer);
   const {a,b,draw}=extractOutcomes(game);
+  _openingOdds={f1:a.price,f2:b.price};
   const fk=fkey(a.name,b.name);
   const live=isLive(game.commence_time);
 
@@ -1506,6 +1542,8 @@ function applyDashUser(uid) {
   }
 }
 applyDashUser(_dkMeParam);
+setInterval(syncPnL, 8000);
+setTimeout(syncPnL, 2000);
 // Clicking the pill uses a simple prompt — no popup overlap issues
 document.getElementById('user-pill').addEventListener('click', e => {
   e.stopPropagation();
@@ -1599,6 +1637,7 @@ async function syncDKBets() {
     }
     if (added > 0) renderTracker();
     if (unmatched.length) console.log(`[DK sync] unmatched (not this fight):`, unmatched.map(b => `${b.selection} ${b.odds}`));
+    syncPnL();
     if (diag) {
       const alreadyMatched = tracker.bets.filter(b => b.source === 'dk').length;
       if (unmatched.length > 0 && alreadyMatched === 0) {
@@ -1609,6 +1648,70 @@ async function syncDKBets() {
       }
     }
   } catch (e) { console.error('[DK sync] error:', e); }
+}
+
+// ═══════════════════════════════════════════
+// SESSION P&L + SETTLEMENT TRACKING
+// ═══════════════════════════════════════════
+let _prevBetStatuses = new Map(); // betId → status string
+let _sessionPnL = { net:0, wagered:0, wins:0, losses:0, pushes:0, open:0 };
+
+function updatePnLStrip() {
+  const strip = document.getElementById('pnl-strip');
+  const p = _sessionPnL;
+  if (p.wagered < 0.01 && p.open === 0) { strip.style.display = 'none'; return; }
+  strip.style.display = 'flex';
+  const netEl = document.getElementById('pnl-net');
+  if (p.net > 0.01)       { netEl.textContent = '+$'+p.net.toFixed(2);            netEl.className='pnl-val pnl-pos'; }
+  else if (p.net < -0.01) { netEl.textContent = '-$'+Math.abs(p.net).toFixed(2);  netEl.className='pnl-val pnl-neg'; }
+  else                    { netEl.textContent = '$0.00';                            netEl.className='pnl-val pnl-zero'; }
+  const rec=[];
+  if(p.wins)   rec.push(p.wins+'W');
+  if(p.losses) rec.push(p.losses+'L');
+  if(p.pushes) rec.push(p.pushes+'P');
+  document.getElementById('pnl-record').textContent  = rec.length ? rec.join(' ') : '—';
+  document.getElementById('pnl-wagered').textContent = '$'+p.wagered.toFixed(0)+' wagered';
+  document.getElementById('pnl-open').textContent    = p.open+' open';
+}
+
+function showSettleToast(selection, status, profit) {
+  const el = document.getElementById('settle-toast');
+  const isWin = status === 'Won', isPush = status === 'Push';
+  el.className = isWin ? 'win' : isPush ? 'push' : 'loss';
+  const icon = isWin ? '✅' : isPush ? '↩' : '❌';
+  const pStr = profit > 0 ? '+$'+profit.toFixed(2) : '-$'+Math.abs(profit).toFixed(2);
+  el.textContent = `${icon} ${status.toUpperCase()}: ${selection} — ${pStr}`;
+  el.style.display = 'block';
+  clearTimeout(el._timer);
+  el._timer = setTimeout(() => { el.style.display = 'none'; }, 6000);
+}
+
+async function syncPnL() {
+  if (!_dkMeParam) return;
+  try {
+    const all = await (await fetch(`/api/dk-bets?user=${encodeURIComponent(_dkMeParam)}&all=1`)).json();
+    const today = new Date().toISOString().slice(0, 10); // "2026-06-13"
+    const straight = all.filter(b => !b.isParlay && b.placementDate && b.placementDate.slice(0, 10) === today);
+    for (const b of straight) {
+      if (!b.betId) continue;
+      const prev = _prevBetStatuses.get(b.betId);
+      if (prev === 'Open' && b.status && b.status !== 'Open') {
+        const profit = parseFloat(b.returns || 0) - parseFloat(b.stake || 0);
+        showSettleToast(b.selection || '?', b.status, profit);
+        console.log(`[P&L] settled: ${b.selection} → ${b.status} | profit: $${profit.toFixed(2)}`);
+      }
+      _prevBetStatuses.set(b.betId, b.status);
+    }
+    const open     = straight.filter(b => b.status === 'Open');
+    const settled  = straight.filter(b => b.status && b.status !== 'Open');
+    const wagered  = straight.reduce((s,b) => s + parseFloat(b.stake || 0), 0);
+    const net      = settled.reduce((s,b) => s + parseFloat(b.returns || 0) - parseFloat(b.stake || 0), 0);
+    const wins     = settled.filter(b => b.status === 'Won').length;
+    const losses   = settled.filter(b => b.status === 'Lost').length;
+    const pushes   = settled.filter(b => b.status === 'Push').length;
+    _sessionPnL    = { net, wagered, wins, losses, pushes, open: open.length };
+    updatePnLStrip();
+  } catch(_) {}
 }
 
 function showDKToast(msg) {
@@ -1634,6 +1737,17 @@ tracker.setFight = function(...args) {
   _origSetFight(...args);
   startDKSync();
 };
+
+function testSettleFlow() {
+  // Simulate a bet settling — fires the toast and updates P&L strip
+  const side = tracker.f1Name || 'Test Fighter';
+  const stake = 100;
+  const returns = 190;
+  const profit = returns - stake;
+  showSettleToast(side, 'Won', profit);
+  _sessionPnL = { net: profit, wagered: stake, wins: 1, losses: 0, pushes: 0, open: 0 };
+  updatePnLStrip();
+}
 
 async function injectMockDKBet() {
   if (!tracker.f1Name) { showDKToast('Select a game first'); return; }
