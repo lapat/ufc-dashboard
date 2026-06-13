@@ -142,11 +142,23 @@ function renderTable(){
   });
 }
 
+async function stopRec(id){
+  await fetch(`/api/recorder/stop/${encodeURIComponent(id)}`,{method:'POST'});
+  loadLive(); load();
+}
+async function stopAll(){
+  await fetch('/api/recorder/stop-all',{method:'POST'});
+  loadLive(); load();
+}
 async function loadLive(){
   const d=await fetch('/api/recorder/status').then(r=>r.json());
   const el=document.getElementById('live-list');
   if(!d.recording||!d.activeFights.length){ el.innerHTML='<div class="no-live">No live recordings active — recorder is watching for fights</div>'; return; }
-  el.innerHTML=d.activeFights.map(f=>`
+  el.innerHTML=`
+    <div style="text-align:right;margin-bottom:6px">
+      <button onclick="stopAll()" style="font-size:0.62rem;padding:4px 10px;background:#1a0a0a;border:1px solid #8b0000;border-radius:4px;color:#e74c3c;cursor:pointer">⏹ Stop All</button>
+    </div>`+
+  d.activeFights.map(f=>`
     <div class="live-card">
       <div class="live-dot"></div>
       <div style="flex:1">
@@ -154,6 +166,7 @@ async function loadLive(){
         <div class="live-started">${f.sport} · started ${new Date(f.startTime).toLocaleTimeString()}</div>
       </div>
       <div class="live-pts">${f.dataPoints} pts recorded</div>
+      <button onclick="stopRec('${f.id}')" style="font-size:0.6rem;padding:3px 8px;background:#1a0a0a;border:1px solid #8b0000;border-radius:3px;color:#e74c3c;cursor:pointer;margin-left:8px">⏹ Stop</button>
     </div>`).join('');
 }
 

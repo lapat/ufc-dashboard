@@ -804,6 +804,28 @@ app.get('/api/recorder/status', (req, res) => {
   });
 });
 
+// Stop a specific active recording (save what we have and remove it)
+app.post('/api/recorder/stop/:id', (req, res) => {
+  const id = req.params.id;
+  if (!recorderState.activeFights.has(id)) return res.status(404).json({ error: 'not found' });
+  recSave(id);
+  recorderState.activeFights.delete(id);
+  res.json({ ok: true, stopped: id });
+});
+
+// Stop ALL active non-UFC recordings
+app.post('/api/recorder/stop-all', (req, res) => {
+  const stopped = [];
+  for (const [id, record] of recorderState.activeFights) {
+    if (record.meta.sport !== 'mma_mixed_martial_arts') {
+      recSave(id);
+      recorderState.activeFights.delete(id);
+      stopped.push(id);
+    }
+  }
+  res.json({ ok: true, stopped });
+});
+
 // Test endpoint — simulates a full UFC fight recording cycle to verify pipeline
 app.post('/api/recorder/test', async (req, res) => {
   const testId = `mma__testfighter_vs_testopponent_${new Date().toISOString().slice(0,10)}`;
@@ -862,7 +884,17 @@ let clientWatching = null; // { ts, sport, team1, team2 }
 app.post('/api/recorder/watch', (req, res) => {
   const { sport, team1, team2 } = req.body;
   if (sport && sport !== 'mma_mixed_martial_arts' && sport !== 'soccer') {
+    const changed = clientWatching && (clientWatching.team1 !== team1 || clientWatching.team2 !== team2);
     clientWatching = { ts: Date.now(), sport, team1, team2 };
+    // If user switched to a different game, drop recordings from the old game
+    if (changed) {
+      for (const [id, record] of recorderState.activeFights) {
+        if (record.meta.sport !== 'mma_mixed_martial_arts') {
+          recorderState.activeFights.delete(id);
+          console.log(`[Recorder] cleared stale recording: ${id} (user switched games)`);
+        }
+      }
+    }
   }
   res.json({ ok: true });
 });
