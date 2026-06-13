@@ -457,7 +457,10 @@ app.post('/api/dk-sync', (req, res) => {
   saveDKCaptures();
 
   const bets = parseDKBets(url, data, userId);
-  if (bets.length) console.log(`[DK sync] ${bets.length} bets from ${userId || 'unknown'} via ${url}`);
+  if (bets.length) {
+    console.log(`[DK sync] ${bets.length} bets from ${userId || 'unknown'} via ${url}`);
+    dkHeartbeat.lastBetSync = Date.now();
+  }
 
   res.json({ received: true, url, bets });
 });
@@ -559,7 +562,7 @@ app.get('/api/dk-bets', (req, res) => {
 });
 
 // Extension health tracking
-let dkHeartbeat = { ts: null, loggedOut: false };
+let dkHeartbeat = { ts: null, loggedOut: false, lastBetSync: null };
 
 app.post('/api/dk-heartbeat', (req, res) => {
   const userId = req.body.userId;
@@ -581,7 +584,7 @@ app.get('/api/dk-status', (req, res) => {
   const activeUsers = Object.entries(dkHeartbeat.users || {})
     .filter(([, ts]) => now - ts < 90000)
     .map(([u]) => u);
-  res.json({ heartbeat: dkHeartbeat.ts, loggedOut: dkHeartbeat.loggedOut, activeUsers });
+  res.json({ heartbeat: dkHeartbeat.ts, loggedOut: dkHeartbeat.loggedOut, lastBetSync: dkHeartbeat.lastBetSync, activeUsers });
 });
 
 app.post('/api/dk-mock', (req, res) => {

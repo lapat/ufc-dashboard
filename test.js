@@ -112,10 +112,11 @@ async function runServerTests() {
     const d = await get('/api/dk-bets?all=1');
     assert(Array.isArray(d), 'not array');
   });
-  await check('GET /api/dk-status (has heartbeat + activeUsers)', async () => {
+  await check('GET /api/dk-status (has heartbeat + activeUsers + lastBetSync)', async () => {
     const d = await get('/api/dk-status');
     assert('heartbeat' in d, 'missing heartbeat');
     assert('loggedOut' in d, 'missing loggedOut');
+    assert('lastBetSync' in d, 'missing lastBetSync — needed for DK EXT dot yellow state');
     assert(Array.isArray(d.activeUsers), 'missing activeUsers array');
   });
   await check('Multi-user: /api/dk-bets?user= filters by userId', async () => {
@@ -427,6 +428,27 @@ async function runServerTests() {
 }
 
 // ── Connection health logic tests ──────────────────────────────────────────
+function testDKExtDotLogic() {
+  // Mirrors pollDKExtStatus() dot classification
+  const classify = ({ loggedOut, heartbeat, lastBetSync }) => {
+    if (loggedOut) return 'red-logout';
+    if (!heartbeat) return 'grey';
+    const heartbeatAge = Date.now() - heartbeat;
+    const betSyncAge = lastBetSync ? Date.now() - lastBetSync : Infinity;
+    if (heartbeatAge > 300000) return 'red-stale';
+    if (betSyncAge > 300000) return 'yellow-no-sync';
+    return 'green';
+  };
+
+  const now = Date.now();
+  assert(classify({ loggedOut: true, heartbeat: now, lastBetSync: now }) === 'red-logout', 'logged out → red');
+  assert(classify({ loggedOut: false, heartbeat: null }) === 'grey', 'no heartbeat → grey');
+  assert(classify({ loggedOut: false, heartbeat: now - 400000, lastBetSync: now }) === 'red-stale', 'stale heartbeat → red');
+  assert(classify({ loggedOut: false, heartbeat: now, lastBetSync: null }) === 'yellow-no-sync', 'no bet sync (logged out of DK or not on mybets) → yellow');
+  assert(classify({ loggedOut: false, heartbeat: now, lastBetSync: now - 400000 }) === 'yellow-no-sync', 'bet sync stale → yellow');
+  assert(classify({ loggedOut: false, heartbeat: now, lastBetSync: now }) === 'green', 'all good → green');
+}
+
 function testConnectionHealth() {
   // Thresholds used by popup and keepAlive
   const LIVE_MS   = 120000;  // < 2min = green
@@ -550,6 +572,7 @@ console.log('══════════════════════�
 console.log('\n── Unit Tests ──');
 try { testOddsParsing(); console.log('  ✓ odds parsing (unicode minus)'); passed++; } catch(e) { console.error('  ✗ odds parsing:', e.message); failed++; }
 try { testBetParsing(); console.log('  ✓ bet parsing (settlementStatus → Open)'); passed++; } catch(e) { console.error('  ✗ bet parsing:', e.message); failed++; }
+try { testDKExtDotLogic(); console.log('  ✓ DK EXT dot: logged out→red, no sync→yellow, active→green'); passed++; } catch(e) { console.error('  ✗ DK EXT dot logic:', e.message); failed++; }
 try { testConnectionHealth(); console.log('  ✓ connection health classification'); passed++; } catch(e) { console.error('  ✗ connection health:', e.message); failed++; }
 try { testTrackerGameSwitchClearsDkBets(); console.log('  ✓ game switch clears DK bets, keeps manual bets'); passed++; } catch(e) { console.error('  ✗ game switch clear:', e.message); failed++; }
 try { testTrackerBetIdDedup(); console.log('  ✓ tracker bet dedup (page reload does not re-add persisted bets)'); passed++; } catch(e) { console.error('  ✗ tracker bet dedup:', e.message); failed++; }

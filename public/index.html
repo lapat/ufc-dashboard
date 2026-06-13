@@ -1299,20 +1299,30 @@ async function pollDKExtStatus() {
   try {
     const d = await fetch('/api/dk-status').then(r => r.json());
     if (d.loggedOut) {
+      // Explicit logout detected
       setScItem('sc-dkext', 'red');
       if (!_dkLogoutToastShown) { showDKToast('DK session expired — re-login at DraftKings'); _dkLogoutToastShown = true; }
     } else if (!d.heartbeat) {
+      // Extension not running at all
       setScItem('sc-dkext', 'grey');
     } else {
-      const age = Date.now() - d.heartbeat;
+      const heartbeatAge = Date.now() - d.heartbeat;
+      const betSyncAge = d.lastBetSync ? Date.now() - d.lastBetSync : Infinity;
       _dkLogoutToastShown = false;
-      if (age < 180000) setScItem('sc-dkext', 'green');
-      else if (age < 600000) setScItem('sc-dkext', 'yellow');
-      else setScItem('sc-dkext', 'red');
+
+      if (heartbeatAge > 300000) {
+        // Extension hasn't checked in for 5+ min
+        setScItem('sc-dkext', 'red');
+      } else if (betSyncAge > 300000) {
+        // Extension alive but no bets synced in 5+ min — logged out or not on mybets
+        setScItem('sc-dkext', 'yellow');
+      } else {
+        setScItem('sc-dkext', 'green');
+      }
     }
   } catch { setScItem('sc-dkext', 'grey'); }
 }
-pollDKExtStatus(); setInterval(pollDKExtStatus, 30000);
+pollDKExtStatus(); setInterval(pollDKExtStatus, 10000);
 
 async function pollRecorder(){
   try{
