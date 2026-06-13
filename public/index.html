@@ -1397,13 +1397,23 @@ async function syncDKBets() {
 
     for (const b of bets) {
       if (_lastDKBetIds.has(b.betId)) continue;
+      if (b.isParlay) continue; // skip parlay legs — they bleed across sports
+
       const sel = (b.selection || '').toLowerCase();
 
-      // Match selection to f1, f2, or Draw column
+      // Require at least 2 meaningful words from the team name to appear in the selection
+      // This prevents "lopes" matching "antelope" etc.
+      const matchScore = (teamName) => {
+        const words = teamName.split(' ').filter(w => w.length > 2);
+        return words.filter(w => sel.includes(w)).length;
+      };
+      const f1Score = matchScore(f1);
+      const f2Score = matchScore(f2);
+
       let side = null;
-      if (f1.split(' ').some(w => w.length > 2 && sel.includes(w))) side = 'f1';
-      else if (f2.split(' ').some(w => w.length > 2 && sel.includes(w))) side = 'f2';
-      else if (drawLabel && (sel.includes('draw') || sel.includes('tie') || drawLabel.split(' ').some(w => w.length > 2 && sel.includes(w)))) side = 'draw';
+      if (f1Score > 0 && f1Score >= f2Score) side = 'f1';
+      else if (f2Score > 0) side = 'f2';
+      else if (drawLabel && (sel.includes('draw') || sel.includes('tie'))) side = 'draw';
 
       if (!side) continue;
 

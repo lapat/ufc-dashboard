@@ -486,6 +486,16 @@ function parseDKBets(url, data, userId) {
 
   const bets = rawBets.map(b => {
     const sel = b.selections?.[0] || {};
+    const numLegs = b.selections?.length || 1;
+    // Detect parlays: DK sends type/wagerType fields, or multiple selections, or explicit parlay flags
+    const rawType = (b.betType || b.wagerType || b.type || '').toLowerCase();
+    const isParlay = numLegs > 1
+      || rawType.includes('parlay')
+      || rawType.includes('round_robin')
+      || rawType.includes('teaser')
+      || !!b.parlayId
+      || !!b.legId  // individual parlay leg sent separately
+      || !!b.parentBetId;
     return {
       betId: b.receiptId || b.betId,
       userId: userId || DEFAULT_USER,
@@ -498,6 +508,8 @@ function parseDKBets(url, data, userId) {
       potentialReturns: b.potentialReturns,
       returns: b.returns,
       placementDate: b.placementDate,
+      isParlay,
+      numLegs,
     };
   });
 

@@ -146,6 +146,39 @@ async function runServerTests() {
     const d = await post('/api/dk-heartbeat', { ts: Date.now() });
     assert(d.ok, 'not ok');
   });
+  await check('POST /api/dk-sync detects parlay bets (isParlay field)', async () => {
+    const d = await post('/api/dk-sync', {
+      url: 'wss://test',
+      data: { result: { initial: { bets: [
+        // Straight bet
+        { betId: 'str-1', receiptId: 'str-1', status: 'Unsettled', settlementStatus: 'Open',
+          stake: 10, potentialReturns: 15, placementDate: new Date().toISOString(),
+          displayOdds: '+150', betType: 'SINGLE',
+          selections: [{ selectionDisplayName: 'Fighter A', marketDisplayName: 'Moneyline', displayOdds: '+150' }] },
+        // Parlay by betType
+        { betId: 'par-1', receiptId: 'par-1', status: 'Unsettled', settlementStatus: 'Open',
+          stake: 0.10, potentialReturns: 907, placementDate: new Date().toISOString(),
+          displayOdds: '+9070', betType: 'PARLAY',
+          selections: [
+            { selectionDisplayName: 'Team X', marketDisplayName: 'Moneyline', displayOdds: '-148' },
+            { selectionDisplayName: 'Team Y', marketDisplayName: 'Moneyline', displayOdds: '+170' },
+          ] },
+        // Parlay leg by parentBetId
+        { betId: 'leg-1', receiptId: 'leg-1', status: 'Unsettled', settlementStatus: 'Open',
+          stake: 5, potentialReturns: 8, placementDate: new Date().toISOString(),
+          displayOdds: '-148', parentBetId: 'par-1',
+          selections: [{ selectionDisplayName: 'New York Knicks', marketDisplayName: 'Moneyline', displayOdds: '-148' }] },
+      ] } } },
+      ts: Date.now()
+    });
+    assert(Array.isArray(d.bets), 'bets not array');
+    const straight = d.bets.find(b => b.betId === 'str-1');
+    const parlay = d.bets.find(b => b.betId === 'par-1');
+    const leg = d.bets.find(b => b.betId === 'leg-1');
+    assert(straight && !straight.isParlay, 'straight bet should have isParlay=false');
+    assert(parlay && parlay.isParlay, 'parlay should have isParlay=true');
+    assert(leg && leg.isParlay, 'parlay leg (parentBetId) should have isParlay=true');
+  });
   await check('POST /api/dk-sync with WebSocket bet data', async () => {
     const mockData = {
       url: 'wss://gateway.northamerica-northeast2.prod.dkapis.com/test',
@@ -357,6 +390,36 @@ function testConnectionHealth() {
   assert(classify(700000, false) === 'disconnected', 'ws=false overrides age');
 }
 
+function testParlayDetection() {
+  // Simulate parseDKBets parlay detection logic
+  const detectIsParlay = (b) => {
+    const numLegs = b.selections?.length || 1;
+    const rawType = (b.betType || b.wagerType || b.type || '').toLowerCase();
+    return numLegs > 1
+      || rawType.includes('parlay')
+      || rawType.includes('round_robin')
+      || !!b.parlayId
+      || !!b.legId
+      || !!b.parentBetId;
+  };
+
+  // Single bet
+  const straight = { betId: 'a', selections: [{ selectionDisplayName: 'Diego Lopes' }], betType: 'SINGLE' };
+  assert(!detectIsParlay(straight), 'straight bet should not be parlay');
+
+  // Parlay by betType
+  const parlayByType = { betId: 'b', selections: [{ selectionDisplayName: 'Team A' }], betType: 'PARLAY' };
+  assert(detectIsParlay(parlayByType), 'betType=PARLAY should detect as parlay');
+
+  // Parlay by multiple selections
+  const parlayByLegs = { betId: 'c', selections: [{ selectionDisplayName: 'A' }, { selectionDisplayName: 'B' }] };
+  assert(detectIsParlay(parlayByLegs), 'multiple selections should detect as parlay');
+
+  // Parlay leg by parentBetId
+  const parlayLeg = { betId: 'd', selections: [{ selectionDisplayName: 'Team C' }], parentBetId: 'parent123' };
+  assert(detectIsParlay(parlayLeg), 'parentBetId should detect as parlay leg');
+}
+
 function testDedupBets() {
   // Simulate getAllBets dedup logic: real userId overwrites DEFAULT_USER
   const bets = new Map();
@@ -389,6 +452,7 @@ try { testOddsParsing(); console.log('  ✓ odds parsing (unicode minus)'); pass
 try { testBetParsing(); console.log('  ✓ bet parsing (settlementStatus → Open)'); passed++; } catch(e) { console.error('  ✗ bet parsing:', e.message); failed++; }
 try { testConnectionHealth(); console.log('  ✓ connection health classification'); passed++; } catch(e) { console.error('  ✗ connection health:', e.message); failed++; }
 try { testDedupBets(); console.log('  ✓ bet dedup (real userId overwrites default)'); passed++; } catch(e) { console.error('  ✗ bet dedup:', e.message); failed++; }
+try { testParlayDetection(); console.log('  ✓ parlay detection (straight vs parlay vs leg)'); passed++; } catch(e) { console.error('  ✗ parlay detection:', e.message); failed++; }
 
 runServerTests().then(() => {
   console.log(`\n═══════════════════════════════════`);
