@@ -323,7 +323,7 @@
   <button id="rec-test-btn" title="Test the recording pipeline" style="font-size:0.75rem;padding:4px 9px;background:#141414;border:1px solid #1e1e1e;color:#444;border-radius:5px;cursor:pointer;white-space:nowrap">test rec</button>
   <a href="/library" style="font-size:0.75rem;padding:4px 9px;border:1px solid #1e1e1e;border-radius:5px;color:#444;white-space:nowrap;text-decoration:none">Library</a>
   <div id="topbar-status" style="margin-left:auto;font-size:0.78rem;color:#444;white-space:nowrap">Loading...</div>
-  <span style="font-size:0.6rem;color:#333;white-space:nowrap;letter-spacing:.5px" title="Dashboard build">v2026-06-13.3</span>
+  <span style="font-size:0.6rem;color:#333;white-space:nowrap;letter-spacing:.5px" title="Dashboard build">v2026-06-13.4</span>
 </div>
 
 <div id="sport-strip"><span id="sport-loading" style="color:#333;font-size:.7rem;padding:12px 0">Loading sports...</span></div>
@@ -426,6 +426,7 @@
       <div class="pos-card pc-zero" id="pos-draw" style="display:none"><div class="pos-lbl" id="pos-draw-lbl">Draw</div><div class="pos-val pv-gray" id="pos-draw-val">—</div></div>
     </div>
     <div class="tracker-status s-empty" id="tracker-status">Lock in a bet to track your position</div>
+    <div id="dk-diag" style="display:none;font-size:0.68rem;color:#555;text-align:center;padding:6px 0;letter-spacing:.3px"></div>
     <div class="suggestion" id="tracker-sugg" style="display:none"></div>
   </div>
 
@@ -1526,11 +1527,12 @@ async function syncDKBets() {
     const drawLabel = (tracker.drawLabel || '').toLowerCase();
 
     let added = 0;
+    const unmatched = [];
     for (const b of bets) {
-      if (_lastDKBetIds.has(b.betId)) continue;
       if (b.isParlay) continue;
       if (b.userId === 'default') continue;
       if (b.userId && b.userId !== _dkMeParam) continue;
+      if (_lastDKBetIds.has(b.betId)) continue;
 
       const sel = (b.selection || '').toLowerCase();
 
@@ -1545,7 +1547,8 @@ async function syncDKBets() {
       if (f1Score > 0 && f1Score >= f2Score) side = 'f1';
       else if (f2Score > 0) side = 'f2';
       else if (drawLabel && (sel.includes('draw') || sel.includes('tie'))) side = 'draw';
-      if (!side) continue;
+
+      if (!side) { unmatched.push(b); continue; }
 
       const odds = parseInt((b.odds || '').replace('−', '-').replace('−', '-'));
       const stake = parseFloat(b.stake);
@@ -1557,6 +1560,18 @@ async function syncDKBets() {
       showDKToast(`🔄 DK bet synced: ${b.selection} ${b.odds} $${stake}`);
     }
     if (added > 0) renderTracker();
+
+    // Diagnostic: show open DK bets that exist but don't match this game
+    const diag = document.getElementById('dk-diag');
+    if (diag) {
+      const alreadyMatched = tracker.bets.filter(b => b.source === 'dk').length;
+      if (unmatched.length > 0 && alreadyMatched === 0) {
+        diag.textContent = `${unmatched.length} open DK bet${unmatched.length > 1 ? 's' : ''} for "${_dkMeParam}" — not on this game: ${unmatched.map(b => b.selection + ' ' + b.odds).join(', ')}`;
+        diag.style.display = 'block';
+      } else {
+        diag.style.display = 'none';
+      }
+    }
   } catch (_) {}
 }
 
