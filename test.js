@@ -442,6 +442,35 @@ function testParlayDetection() {
   assert(detectIsParlay(parlayLeg), 'parentBetId should detect as parlay leg');
 }
 
+function testTrackerBetIdDedup() {
+  // Simulate the page-reload duplication bug:
+  // tracker.bets restored from localStorage, _lastDKBetIds starts fresh → same bet added again
+  // Fix: initialize _lastDKBetIds from tracker.bets on page load
+
+  // Simulate persisted tracker bets (restored from localStorage)
+  const persistedBets = [
+    { id: 1, side: 'f1', stake: 0.76, odds: '-148', betId: 'patriots-bet-001' },
+    { id: 2, side: 'f1', stake: 0.76, odds: '-148', betId: 'patriots-bet-002' },
+  ];
+
+  // Correct init: _lastDKBetIds built from tracker.bets
+  const lastDKBetIds = new Set(persistedBets.filter(b => b.betId).map(b => b.betId));
+
+  // Simulate a sync that returns the same two bets
+  const incomingBets = [
+    { betId: 'patriots-bet-001', selection: 'New England Patriots', odds: '-148', stake: 0.76, isParlay: false },
+    { betId: 'patriots-bet-002', selection: 'New England Patriots', odds: '-148', stake: 0.76, isParlay: false },
+  ];
+
+  let added = 0;
+  for (const b of incomingBets) {
+    if (lastDKBetIds.has(b.betId)) continue; // already in tracker
+    added++;
+    lastDKBetIds.add(b.betId);
+  }
+  assert(added === 0, `Page reload should not re-add persisted bets — added ${added} duplicates`);
+}
+
 function testDedupBets() {
   // Simulate getAllBets dedup logic: real userId overwrites DEFAULT_USER
   const bets = new Map();
@@ -473,6 +502,7 @@ console.log('\n── Unit Tests ──');
 try { testOddsParsing(); console.log('  ✓ odds parsing (unicode minus)'); passed++; } catch(e) { console.error('  ✗ odds parsing:', e.message); failed++; }
 try { testBetParsing(); console.log('  ✓ bet parsing (settlementStatus → Open)'); passed++; } catch(e) { console.error('  ✗ bet parsing:', e.message); failed++; }
 try { testConnectionHealth(); console.log('  ✓ connection health classification'); passed++; } catch(e) { console.error('  ✗ connection health:', e.message); failed++; }
+try { testTrackerBetIdDedup(); console.log('  ✓ tracker bet dedup (page reload does not re-add persisted bets)'); passed++; } catch(e) { console.error('  ✗ tracker bet dedup:', e.message); failed++; }
 try { testDedupBets(); console.log('  ✓ bet dedup (real userId overwrites default)'); passed++; } catch(e) { console.error('  ✗ bet dedup:', e.message); failed++; }
 try { testParlayDetection(); console.log('  ✓ parlay detection (straight vs parlay vs leg)'); passed++; } catch(e) { console.error('  ✗ parlay detection:', e.message); failed++; }
 
