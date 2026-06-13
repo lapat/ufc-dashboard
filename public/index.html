@@ -1351,6 +1351,8 @@ function setScItem(id, dotClass) {
   if (dot) dot.className = 'sc-dot ' + dotClass;
 }
 
+let _mismatchCount = 0; // debounce: only warn after 3 consecutive polls (~30s)
+
 function setDKBanner(msg) {
   const b = document.getElementById('dk-alert-banner');
   if (!b) return;
@@ -1386,16 +1388,23 @@ async function pollDKExtStatus() {
         setDKBanner(null);
       }
 
-      // Username mismatch: extension is live but dashboard username isn't seen in any active extension
+      // Username mismatch: extension is live but dashboard username isn't in activeUsers
+      // Debounced: only warn after 3 consecutive polls (~30s) to avoid false positives
+      // from heartbeat timing gaps between two users' extensions
       const pill = document.getElementById('user-pill');
       if (pill && _dkMeParam) {
         const activeUsers = d.activeUsers || [];
         const mismatch = activeUsers.length > 0 && !activeUsers.includes(_dkMeParam);
         if (mismatch) {
-          pill.textContent = `⚠ "${_dkMeParam}" not seen — ext sending as: ${activeUsers.join(', ')}`;
-          pill.style.color = '#e74c3c';
-          pill.style.borderColor = '#e74c3c';
+          _mismatchCount++;
+          console.log(`[DK ext] mismatch poll ${_mismatchCount}/3 — "${_dkMeParam}" not in activeUsers: ${activeUsers.join(', ')}`);
+          if (_mismatchCount >= 3) {
+            pill.textContent = `⚠ "${_dkMeParam}" not seen — ext sending as: ${activeUsers.join(', ')}`;
+            pill.style.color = '#e74c3c';
+            pill.style.borderColor = '#e74c3c';
+          }
         } else {
+          _mismatchCount = 0;
           applyDashUser(_dkMeParam);
         }
       }

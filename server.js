@@ -597,7 +597,7 @@ app.post('/api/dk-logout', (req, res) => {
 app.get('/api/dk-status', (req, res) => {
   const now = Date.now();
   const activeUsers = Object.entries(dkHeartbeat.users || {})
-    .filter(([, ts]) => now - ts < 90000)
+    .filter(([, ts]) => now - ts < 300000)
     .map(([u]) => u);
   res.json({ heartbeat: dkHeartbeat.ts, loggedOut: dkHeartbeat.loggedOut, lastBetSync: dkHeartbeat.lastBetSync, activeUsers });
 });
