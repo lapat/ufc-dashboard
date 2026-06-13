@@ -1332,10 +1332,16 @@ async function pollRecorder(){
     const d=await fetch('/api/recorder/status').then(r=>r.json());
     const dot=document.getElementById('rec-dot');
     const lbl=document.getElementById('rec-label');
+    // watching = array that includes non-UFC entries when clientWatching is set
+    const isWatchingGame = d.watching && d.watching.some(w => !w.includes('UFC/MMA'));
     if(d.recording && d.activeFights.length>0){
       if(dot) dot.className='live';
       if(lbl){ lbl.textContent=d.activeFights.map(f=>`● REC ${f.fighter1} vs ${f.fighter2} (${f.dataPoints} pts)`).join(' · '); lbl.style.color='#e74c3c'; }
       setScItem('sc-recorder', 'green');
+    } else if(isWatchingGame || selectedGame){
+      if(dot) dot.className='idle';
+      if(lbl){ lbl.textContent='tracking game'; lbl.style.color='#e8b84b'; }
+      setScItem('sc-recorder', 'yellow');
     } else {
       if(dot) dot.className='idle';
       if(lbl){ lbl.textContent='recorder idle'; lbl.style.color='#333'; }
