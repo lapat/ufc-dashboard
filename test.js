@@ -429,6 +429,33 @@ async function runServerTests() {
     assert(bInAll && bInAll.userId === userB, `userB Draw bet in merged view has wrong userId: ${bInAll?.userId}`);
   });
 
+  // Extension userId MUST match dashboard dashUserId — mismatch = no bets shown
+  await check('Extension userId ↔ dashboard username mismatch = empty result (no cross-leak)', async () => {
+    const extUserId = 'testuser-ext-abc';   // what Ish's extension sends
+    const wrongDash  = 'testuser-dash-xyz'; // what Ish set in dashboard (wrong)
+    const rightDash  = extUserId;           // what Ish should have set
+
+    await post('/api/dk-sync', {
+      url: 'wss://test', userId: extUserId,
+      data: { result: { initial: { bets: [{
+        betId: 'mismatch-test-bet-1', receiptId: 'mismatch-test-bet-1',
+        status: 'Unsettled', settlementStatus: 'Open',
+        stake: 5, potentialReturns: 80, placementDate: new Date().toISOString(),
+        displayOdds: '+1500',
+        selections: [{ selectionDisplayName: 'Draw', marketDisplayName: 'Moneyline', displayOdds: '+1500' }]
+      }] } } }, ts: Date.now()
+    });
+
+    // Wrong dashboard username → empty (bets stay hidden, no leak to other user)
+    const wrongResult = await get(`/api/dk-bets?user=${wrongDash}`);
+    assert(wrongResult.length === 0, `Wrong username should return 0 bets, got ${wrongResult.length}`);
+
+    // Correct dashboard username → bet appears
+    const rightResult = await get(`/api/dk-bets?user=${rightDash}`);
+    assert(rightResult.length === 1, `Correct username should return 1 bet, got ${rightResult.length}`);
+    assert(rightResult[0].betId === 'mismatch-test-bet-1', 'Wrong bet returned for correct username');
+  });
+
   // When DK extension re-syncs with fewer bets, settled bets disappear from server
   await check('Settled bet disappears from /api/dk-bets after re-sync without it', async () => {
     const userId = 'testuser-settle-check';
