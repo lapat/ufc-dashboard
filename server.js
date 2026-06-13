@@ -566,6 +566,63 @@ app.get('/api/soccer', async (req, res) => {
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
+// Aggregated tennis — same pattern as soccer
+app.get('/api/tennis', async (req, res) => {
+  try {
+    const { data: sports, headers: sh } = await fetchJson(`${BASE_URL}/sports/?apiKey=${ODDS_API_KEY}`);
+    updateOddsCredits(sh);
+    const keys = sports.filter(s => s.active && s.key.startsWith('tennis_')).map(s => s.key);
+    const results = await Promise.all(keys.map(async key => {
+      try {
+        const url = `${BASE_URL}/sports/${key}/odds/?apiKey=${ODDS_API_KEY}&regions=us&markets=h2h&bookmakers=draftkings&oddsFormat=american`;
+        const { data, headers } = await fetchJson(url);
+        updateOddsCredits(headers);
+        return Array.isArray(data) ? data : [];
+      } catch { return []; }
+    }));
+    res.json(results.flat());
+  } catch (e) { res.status(500).json({ error: e.message }); }
+});
+
+// Live check — returns which sport keys have at least one live event (commenced but odds still listed)
+// Cached 8 min to avoid burning API credits on every poll
+const _liveCheckCache = { ts: 0, data: {} };
+app.get('/api/live-check', async (req, res) => {
+  const age = Date.now() - _liveCheckCache.ts;
+  if (age < 480000) return res.json(_liveCheckCache.data);
+  const keys = (req.query.keys || '').split(',').filter(Boolean);
+  if (!keys.length) return res.json({});
+  const now = Date.now();
+  const result = {};
+  await Promise.all(keys.map(async key => {
+    try {
+      const endpoint = key === 'tennis' ? `${BASE_URL}/sports/?apiKey=${ODDS_API_KEY}` : null;
+      if (key === 'tennis' || key === 'soccer') {
+        // aggregated — just check if any game started
+        const prefix = key === 'soccer' ? 'soccer_' : 'tennis_';
+        const { data: sports } = await fetchJson(`${BASE_URL}/sports/?apiKey=${ODDS_API_KEY}`);
+        const subKeys = sports.filter(s => s.active && s.key.startsWith(prefix)).map(s => s.key);
+        for (const sk of subKeys) {
+          const url = `${BASE_URL}/sports/${sk}/odds/?apiKey=${ODDS_API_KEY}&regions=us&markets=h2h&bookmakers=draftkings&oddsFormat=american`;
+          const { data } = await fetchJson(url);
+          if (Array.isArray(data) && data.some(e => new Date(e.commence_time).getTime() < now && e.bookmakers?.length)) {
+            result[key] = true; return;
+          }
+        }
+        result[key] = false;
+      } else {
+        const url = `${BASE_URL}/sports/${key}/odds/?apiKey=${ODDS_API_KEY}&regions=us&markets=h2h&bookmakers=draftkings&oddsFormat=american`;
+        const { data, headers } = await fetchJson(url);
+        updateOddsCredits(headers);
+        result[key] = Array.isArray(data) && data.some(e => new Date(e.commence_time).getTime() < now && e.bookmakers?.length);
+      }
+    } catch { result[key] = false; }
+  }));
+  _liveCheckCache.ts = Date.now();
+  _liveCheckCache.data = result;
+  res.json(result);
+});
+
 // Live odds for any sport key
 app.get('/api/sport/:key', async (req, res) => {
   try {

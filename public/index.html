@@ -32,6 +32,18 @@
     .pill-live-dot{width:6px;height:6px;border-radius:50%;background:#e74c3c;animation:pulse 1.2s infinite;display:none}
     .sport-pill.has-live .pill-live-dot{display:inline-block}
     #sport-loading{color:#444;font-size:0.88rem;padding:12px 24px}
+    /* ── more sports dropdown ── */
+    #more-wrap{position:relative;display:inline-flex}
+    #more-btn{background:#141414;border:1px solid #1e1e1e;border-radius:14px;color:#555;font-size:0.88rem;padding:7px 16px;cursor:pointer;transition:all .15s;text-transform:uppercase;letter-spacing:1px;white-space:nowrap;display:inline-flex;align-items:center;gap:6px}
+    #more-btn:hover{border-color:#333;color:#999}
+    #more-btn.has-live{border-color:#3a1a1a;color:#c0392b}
+    #more-menu{display:none;position:absolute;top:calc(100% + 6px);left:0;background:#111;border:1px solid #222;border-radius:10px;padding:6px;z-index:200;min-width:180px;box-shadow:0 8px 24px rgba(0,0,0,.6)}
+    #more-menu.open{display:block}
+    .more-item{display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:7px;cursor:pointer;color:#555;font-size:0.85rem;text-transform:uppercase;letter-spacing:1px;white-space:nowrap;transition:all .12s}
+    .more-item:hover{background:#1a1a1a;color:#999}
+    .more-item.active{color:#e8b84b}
+    .more-item .pill-live-dot{width:6px;height:6px;border-radius:50%;background:#e74c3c;animation:pulse 1.2s infinite;display:none;flex-shrink:0}
+    .more-item.has-live .pill-live-dot{display:inline-block}
 
     /* ── main content ── */
     #main{padding:16px 24px;max-width:980px;margin:0 auto}
@@ -1007,7 +1019,7 @@ async function selectGame(game){
 async function pollOdds(){
   if(!selectedGame||simRunning) return;
   try{
-    const endpoint=activeSport==='mma_mixed_martial_arts'?'/api/ufc':activeSport==='soccer'?'/api/soccer':`/api/sport/${activeSport}`;
+    const endpoint=activeSport==='mma_mixed_martial_arts'?'/api/ufc':activeSport==='soccer'?'/api/soccer':activeSport==='tennis'?'/api/tennis':`/api/sport/${activeSport}`;
     const raw=await(await fetch(endpoint)).json();
     const games=raw.filter(f=>f.bookmakers?.[0]?.markets?.find(m=>m.key==='h2h')?.outcomes?.length>=2);
     const ts=new Date().toLocaleTimeString('en-US',{hour12:false,hour:'2-digit',minute:'2-digit',second:'2-digit'});
@@ -1058,6 +1070,28 @@ const SPORT_TABS=[
   {key:'basketball_ncaab',label:'NCAA Hoops'},
 ];
 
+const MORE_SPORTS=[
+  {key:'basketball_wnba',label:'WNBA'},
+  {key:'tennis',label:'Tennis'},
+  {key:'boxing_boxing',label:'Boxing'},
+  {key:'americanfootball_ncaaf',label:'NCAA Football'},
+  {key:'americanfootball_cfl',label:'CFL'},
+  {key:'aussierules_afl',label:'AFL'},
+  {key:'rugbyleague_nrl',label:'NRL'},
+  {key:'cricket_test_match',label:'Cricket'},
+  {key:'golf_masters_tournament_winner',label:'Golf'},
+];
+
+function selectSport(key, label) {
+  document.querySelectorAll('.sport-pill').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.more-item').forEach(b=>b.classList.remove('active'));
+  activeSport=key; activeSportTitle=label;
+  startHeartbeat(key);
+  loadGames();
+  // close more menu
+  document.getElementById('more-menu')?.classList.remove('open');
+}
+
 function loadSports(){
   const strip=document.getElementById('sport-strip');
   strip.innerHTML='';
@@ -1066,20 +1100,60 @@ function loadSports(){
     btn.className='sport-pill'+(s.key===activeSport?' active':'');
     btn.dataset.key=s.key; btn.dataset.title=s.label;
     btn.innerHTML=`<span class="pill-live-dot"></span>${s.label}`;
-    btn.addEventListener('click',()=>{
-      document.querySelectorAll('.sport-pill').forEach(b=>b.classList.remove('active'));
-      btn.classList.add('active');
-      activeSport=s.key; activeSportTitle=s.label;
-      startHeartbeat(s.key);
-      loadGames();
-    });
+    btn.addEventListener('click',()=>selectSport(s.key,s.label));
     strip.appendChild(btn);
   });
+
+  // "More" dropdown
+  const wrap=document.createElement('div'); wrap.id='more-wrap';
+  const moreBtn=document.createElement('button'); moreBtn.id='more-btn';
+  moreBtn.innerHTML=`<span id="more-live-dot" class="pill-live-dot"></span>More ▾`;
+  const menu=document.createElement('div'); menu.id='more-menu';
+  MORE_SPORTS.forEach(s=>{
+    const item=document.createElement('div');
+    item.className='more-item'+(s.key===activeSport?' active':'');
+    item.dataset.key=s.key;
+    item.innerHTML=`<span class="pill-live-dot"></span>${s.label}`;
+    item.addEventListener('click',()=>{
+      document.querySelectorAll('.sport-pill').forEach(b=>b.classList.remove('active'));
+      document.querySelectorAll('.more-item').forEach(b=>b.classList.remove('active'));
+      item.classList.add('active');
+      // also highlight the More button as active
+      moreBtn.style.borderColor='#e8b84b'; moreBtn.style.color='#e8b84b';
+      selectSport(s.key,s.label);
+    });
+    menu.appendChild(item);
+  });
+  moreBtn.addEventListener('click',e=>{e.stopPropagation();menu.classList.toggle('open');});
+  document.addEventListener('click',()=>menu.classList.remove('open'));
+  wrap.appendChild(moreBtn); wrap.appendChild(menu);
+  strip.appendChild(wrap);
 }
+
+async function pollMoreLive(){
+  const keys=MORE_SPORTS.map(s=>s.key).join(',');
+  try{
+    const d=await fetch(`/api/live-check?keys=${keys}`).then(r=>r.json());
+    let anyLive=false;
+    MORE_SPORTS.forEach(s=>{
+      const item=document.querySelector(`.more-item[data-key="${s.key}"]`);
+      if(!item)return;
+      if(d[s.key]){item.classList.add('has-live');anyLive=true;}
+      else item.classList.remove('has-live');
+    });
+    const moreBtn=document.getElementById('more-btn');
+    if(moreBtn){
+      if(anyLive){moreBtn.classList.add('has-live');document.getElementById('more-live-dot').style.display='inline-block';}
+      else{moreBtn.classList.remove('has-live');document.getElementById('more-live-dot').style.display='none';}
+    }
+  }catch{}
+}
+// Poll every 10 min (server caches 8 min anyway)
+setTimeout(()=>{pollMoreLive();setInterval(pollMoreLive,600000);},3000);
 
 async function loadGames(){
   if(selectedGame) return; // don't refresh list while watching a game
-  const endpoint=activeSport==='mma_mixed_martial_arts'?'/api/ufc':activeSport==='soccer'?'/api/soccer':`/api/sport/${activeSport}`;
+  const endpoint=activeSport==='mma_mixed_martial_arts'?'/api/ufc':activeSport==='soccer'?'/api/soccer':activeSport==='tennis'?'/api/tennis':`/api/sport/${activeSport}`;
   try{
     const raw=await(await fetch(endpoint)).json();
     currentGames=raw.filter(f=>f.bookmakers?.[0]?.markets?.find(m=>m.key==='h2h')?.outcomes?.length>=2);
