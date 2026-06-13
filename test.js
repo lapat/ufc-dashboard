@@ -821,6 +821,64 @@ function testPnLCalculation() {
   assert(wins === 1 && losses === 1 && pushes === 1, `expected 1W 1L 1P, got ${wins}W ${losses}L ${pushes}P`);
 }
 
+function testPnLNullReturns() {
+  // Mirrors new betProfit() logic in syncPnL() — the Ish draw bet bug fix
+  // DK sometimes sends returns=null for won bets; we fall back to potentialReturns
+  const betProfit = b => {
+    const status = (b.status || '').toLowerCase();
+    const stake  = parseFloat(b.stake || 0);
+    if (status === 'won') {
+      const rawRet = parseFloat(b.returns);
+      const payout = (rawRet > 0) ? rawRet : parseFloat(b.potentialReturns || 0);
+      return payout > stake ? payout - stake : payout; // if payout < stake, DK sent profit-only
+    }
+    if (status === 'lost')  return -stake;
+    if (status === 'push')  return 0;
+    return 0; // unknown status
+  };
+
+  // Won bet with null returns → falls back to potentialReturns → positive profit
+  const wonNullReturns = { status: 'Won', stake: '50', returns: null, potentialReturns: '175.50' };
+  const profit1 = betProfit(wonNullReturns);
+  assert(profit1 > 0, `Won bet with null returns must be POSITIVE profit, got ${profit1}`);
+  assert(Math.abs(profit1 - 125.50) < 0.01, `Profit should be +125.50 (175.50-50), got ${profit1}`);
+
+  // Won bet with returns=0 (DK bug) → falls back to potentialReturns (Ish's case)
+  const wonZeroReturns = { status: 'Won', stake: '50', returns: '0', potentialReturns: '125' };
+  const profit2 = betProfit(wonZeroReturns);
+  assert(profit2 > 0, `Won bet with returns=0 must NOT show as loss (-stake), got ${profit2}`);
+  assert(Math.abs(profit2 - 75) < 0.01, `Profit should be +75 (125-50), got ${profit2}`);
+
+  // Normal won bet with real returns → still works
+  const wonNormal = { status: 'Won', stake: '100', returns: '190', potentialReturns: '190' };
+  assert(Math.abs(betProfit(wonNormal) - 90) < 0.01, 'Normal won bet profit should be +90');
+
+  // Lost bet is always -stake regardless of returns field
+  const lostBet = { status: 'Lost', stake: '75', returns: '0', potentialReturns: '150' };
+  assert(Math.abs(betProfit(lostBet) - (-75)) < 0.01, 'Lost bet should always be -stake');
+
+  // Case-insensitive: DK might send 'won' or 'WON'
+  assert(betProfit({ status: 'WON', stake: '50', returns: null, potentialReturns: '100' }) > 0, 'status=WON must still compute positive profit');
+  assert(betProfit({ status: 'LOST', stake: '50', returns: '0' }) < 0, 'status=LOST must compute -stake');
+
+  // Push: always 0 regardless of returns
+  const pushBet = { status: 'Push', stake: '100', returns: '100', potentialReturns: '100' };
+  assert(betProfit(pushBet) === 0, 'Push bet profit should be 0');
+
+  // Net P&L for Ish's scenario: 2 draw bets won with null returns + potentialReturns set
+  const ishBets = [
+    { status: 'Won', stake: '25', returns: null, potentialReturns: '400' }, // +375
+    { status: 'Won', stake: '25', returns: null, potentialReturns: '400' }, // +375
+  ];
+  const ishNet = ishBets.reduce((s, b) => s + betProfit(b), 0);
+  assert(ishNet > 0, `Ish's 2 won draw bets should have POSITIVE net P&L, got ${ishNet}`);
+  assert(Math.abs(ishNet - 750) < 0.01, `Ish's net should be +750 (375+375), got ${ishNet}`);
+
+  const ishWins   = ishBets.filter(b => b.status.toLowerCase() === 'won').length;
+  const ishLosses = ishBets.filter(b => b.status.toLowerCase() === 'lost').length;
+  assert(ishWins === 2 && ishLosses === 0, `Ish should show 2W 0L, got ${ishWins}W ${ishLosses}L`);
+}
+
 function testSettlementDetection() {
   // Bets already settled before session started must NOT trigger toast
   // Only Open→settled transitions should fire
@@ -984,6 +1042,7 @@ try { testParlayDetection(); console.log('  ✓ parlay detection (straight vs pa
 try { testDrawBetMatching(); console.log('  ✓ draw bet matching: Draw/Tie → side=draw, null when no draw market'); passed++; } catch(e) { console.error('  ✗ draw bet matching:', e.message); failed++; }
 try { testPnLTodayFilter(); console.log('  ✓ P&L today filter: yesterday bets excluded, today bets included'); passed++; } catch(e) { console.error('  ✗ P&L today filter:', e.message); failed++; }
 try { testPnLCalculation(); console.log('  ✓ P&L calculation: won/lost/push net correct'); passed++; } catch(e) { console.error('  ✗ P&L calculation:', e.message); failed++; }
+try { testPnLNullReturns(); console.log('  ✓ P&L null returns: won bet with null returns uses potentialReturns (Ish draw bet fix)'); passed++; } catch(e) { console.error('  ✗ P&L null returns:', e.message); failed++; }
 try { testSettlementDetection(); console.log('  ✓ settlement detection: Open→Won/Lost triggers, pre-settled excluded'); passed++; } catch(e) { console.error('  ✗ settlement detection:', e.message); failed++; }
 try { testOddsDelta(); console.log('  ✓ odds delta: ▲/▼ shown when moved, hidden when unchanged'); passed++; } catch(e) { console.error('  ✗ odds delta:', e.message); failed++; }
 try { testDKBannerLogic(); console.log('  ✓ DK banner: all 4 non-green states show banner, green hides it'); passed++; } catch(e) { console.error('  ✗ DK banner logic:', e.message); failed++; }

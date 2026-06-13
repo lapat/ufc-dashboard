@@ -1704,11 +1704,35 @@ async function syncPnL() {
     }
     const open     = straight.filter(b => b.status === 'Open');
     const settled  = straight.filter(b => b.status && b.status !== 'Open');
-    const wagered  = straight.reduce((s,b) => s + parseFloat(b.stake || 0), 0);
-    const net      = settled.reduce((s,b) => s + parseFloat(b.returns || 0) - parseFloat(b.stake || 0), 0);
-    const wins     = settled.filter(b => b.status === 'Won').length;
-    const losses   = settled.filter(b => b.status === 'Lost').length;
-    const pushes   = settled.filter(b => b.status === 'Push').length;
+
+    console.log(`[P&L] ${straight.length} today bets: ${open.length} open, ${settled.length} settled`);
+    settled.forEach(b => console.log(`[P&L]  ${b.status} | sel="${b.selection}" stake=${b.stake} returns=${b.returns} potRet=${b.potentialReturns}`));
+
+    const wagered = straight.reduce((s,b) => s + parseFloat(b.stake || 0), 0);
+
+    // Profit per settled bet:
+    // DK `returns` = total payout (stake+profit) for won bets, 0 for lost.
+    // Fall back to potentialReturns if returns is null/0 for a Won bet.
+    const betProfit = b => {
+      const status = (b.status || '').toLowerCase();
+      const stake  = parseFloat(b.stake || 0);
+      if (status === 'won') {
+        const rawRet = parseFloat(b.returns);
+        const payout = (rawRet > 0) ? rawRet : parseFloat(b.potentialReturns || 0);
+        return payout > stake ? payout - stake : payout; // if payout < stake, DK sent profit-only
+      }
+      if (status === 'lost')  return -stake;
+      if (status === 'push')  return 0;
+      // unknown status — log and skip
+      console.warn(`[P&L] unknown status "${b.status}" for "${b.selection}" — skipping`);
+      return 0;
+    };
+
+    const net    = settled.reduce((s,b) => s + betProfit(b), 0);
+    const wins   = settled.filter(b => (b.status||'').toLowerCase() === 'won').length;
+    const losses = settled.filter(b => (b.status||'').toLowerCase() === 'lost').length;
+    const pushes = settled.filter(b => (b.status||'').toLowerCase() === 'push').length;
+    console.log(`[P&L] net=$${net.toFixed(2)} wagered=$${wagered.toFixed(2)} ${wins}W ${losses}L ${pushes}P`);
     _sessionPnL    = { net, wagered, wins, losses, pushes, open: open.length };
     updatePnLStrip();
   } catch(_) {}
