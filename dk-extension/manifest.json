@@ -3,7 +3,7 @@
   "name": "Bet Bot — DK Sync",
   "version": "1.0",
   "description": "Syncs your DraftKings bets to Bet Bot in real time",
-  "permissions": ["storage", "scripting"],
+  "permissions": ["storage", "scripting", "tabs"],
   "host_permissions": [
     "https://*.draftkings.com/*",
     "https://*.up.railway.app/*",

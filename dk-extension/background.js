@@ -33,6 +33,11 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 });
 
 chrome.runtime.onMessage.addListener((msg) => {
+  if (msg.type === 'DK_LOGOUT') {
+    postToServer('/api/dk-logout', { ts: Date.now() });
+    chrome.storage.local.set({ dkLoggedOut: true });
+    return;
+  }
   if (msg.type !== 'DK_API') return;
 
   const url = msg.url;
