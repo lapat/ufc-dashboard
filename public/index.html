@@ -17,23 +17,19 @@
     #topbar h1{color:#e8b84b;font-size:1.1rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:12px 0;white-space:nowrap;margin-right:4px}
     #topbar-status{margin-left:auto;font-size:0.78rem;color:#444;white-space:nowrap}
     /* status cluster */
-    #status-cluster{display:flex;align-items:center;gap:4px;background:#0d0d0d;border:1px solid #1a1a1a;border-radius:8px;padding:5px 10px}
-    .sc-item{display:flex;align-items:center;gap:5px;font-size:0.72rem;color:#444;white-space:nowrap;padding:0 8px;border-right:1px solid #1a1a1a}
+    #status-cluster{display:flex;align-items:center;gap:0;background:#0d0d0d;border:1px solid #1a1a1a;border-radius:8px;padding:0}
+    .sc-item{display:flex;align-items:center;gap:7px;font-size:0.72rem;white-space:nowrap;padding:6px 14px;border-right:1px solid #1a1a1a}
     .sc-item:last-child{border-right:none}
-    .sc-dot{width:7px;height:7px;border-radius:50%;background:#222;flex-shrink:0;transition:background .3s}
+    .sc-name{color:#333;letter-spacing:.5px;text-transform:uppercase;font-size:0.68rem}
+    .sc-dot{width:8px;height:8px;border-radius:50%;background:#222;flex-shrink:0;transition:background .3s}
     .sc-dot.green{background:#2ecc71}
-    .sc-dot.yellow{background:#f39c12}
+    .sc-dot.yellow{background:#f39c12;animation:pulse 1.2s infinite}
     .sc-dot.red{background:#e74c3c;animation:pulse 1.2s infinite}
     .sc-dot.grey{background:#2a2a2a}
-    .sc-label{color:#555}
-    .sc-item.ok .sc-label{color:#2ecc71}
-    .sc-item.warn .sc-label{color:#f39c12}
-    .sc-item.err .sc-label{color:#e74c3c}
     /* hide old individual status */
     #rec-status{display:none}
     #dk-ext-status{display:none}
     @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
-    /* rec dot kept for recorder logic compat */
     #rec-dot{display:none}
 
     /* ── sport pills ── */
@@ -270,16 +266,16 @@
   <h1>⚡ Bet Bot</h1>
   <div id="status-cluster">
     <div class="sc-item" id="sc-recorder">
+      <span class="sc-name">Recorder</span>
       <div class="sc-dot grey" id="sc-rec-dot"></div>
-      <span class="sc-label" id="sc-rec-label">Recorder</span>
     </div>
     <div class="sc-item" id="sc-dkext">
+      <span class="sc-name">DK Ext</span>
       <div class="sc-dot grey" id="sc-dk-dot"></div>
-      <span class="sc-label" id="sc-dk-label">DK Sync</span>
     </div>
     <div class="sc-item" id="sc-api">
+      <span class="sc-name" id="sc-api-label">API</span>
       <div class="sc-dot green" id="sc-api-dot"></div>
-      <span class="sc-label" id="sc-api-label">API</span>
     </div>
   </div>
   <!-- hidden legacy elements kept for JS compat -->
@@ -1263,7 +1259,7 @@ async function loadCredits(){
       document.getElementById('uf-used').textContent=d.oddsApi.used.toLocaleString();
       const rem=d.oddsApi.remaining;
       const apiDotClass = rem>500000?'green':rem>100000?'yellow':'red';
-      setScItem('sc-api', apiDotClass, `API ${(rem/1000).toFixed(0)}k`);
+      setScItem('sc-api', apiDotClass);
     }
     document.getElementById('uf-cost').textContent='$'+d.anthropic.estimatedCostUSD.toFixed(4);
     document.getElementById('uf-q').textContent=d.anthropic.sessionQueries;
@@ -1275,49 +1271,46 @@ loadCredits(); setInterval(loadCredits,30000);
 // DK EXTENSION STATUS
 // ═══════════════════════════════════════════
 let _dkLogoutToastShown = false;
-function setScItem(id, dotClass, labelText) {
+function setScItem(id, dotClass) {
   const el = document.getElementById(id);
-  const dot = document.getElementById(id.replace('sc-','sc-') + '-dot') || el?.querySelector('.sc-dot');
-  const lbl = el?.querySelector('.sc-label');
   if (!el) return;
-  el.className = 'sc-item ' + (dotClass === 'green' ? 'ok' : dotClass === 'yellow' ? 'warn' : dotClass === 'red' ? 'err' : '');
-  if (dot) { dot.className = 'sc-dot ' + dotClass; }
-  if (lbl) lbl.textContent = labelText;
+  el.className = 'sc-item';
+  const dot = el.querySelector('.sc-dot');
+  if (dot) dot.className = 'sc-dot ' + dotClass;
 }
 
 async function pollDKExtStatus() {
   try {
     const d = await fetch('/api/dk-status').then(r => r.json());
     if (d.loggedOut) {
-      setScItem('sc-dkext', 'red', 'DK logged out');
+      setScItem('sc-dkext', 'red');
       if (!_dkLogoutToastShown) { showDKToast('DK session expired — re-login at DraftKings'); _dkLogoutToastShown = true; }
     } else if (!d.heartbeat) {
-      setScItem('sc-dkext', 'grey', 'DK offline');
+      setScItem('sc-dkext', 'grey');
     } else {
       const age = Date.now() - d.heartbeat;
       _dkLogoutToastShown = false;
-      if (age < 180000) setScItem('sc-dkext', 'green', 'DK live');
-      else if (age < 600000) setScItem('sc-dkext', 'yellow', 'DK idle');
-      else setScItem('sc-dkext', 'red', 'DK stale');
+      if (age < 180000) setScItem('sc-dkext', 'green');
+      else if (age < 600000) setScItem('sc-dkext', 'yellow');
+      else setScItem('sc-dkext', 'red');
     }
-  } catch { setScItem('sc-dkext', 'grey', 'DK —'); }
+  } catch { setScItem('sc-dkext', 'grey'); }
 }
 pollDKExtStatus(); setInterval(pollDKExtStatus, 30000);
 
 async function pollRecorder(){
   try{
     const d=await fetch('/api/recorder/status').then(r=>r.json());
-    // update legacy hidden elements (used by other code)
     const dot=document.getElementById('rec-dot');
     const lbl=document.getElementById('rec-label');
     if(d.recording && d.activeFights.length>0){
       if(dot) dot.className='live';
       if(lbl){ lbl.textContent=d.activeFights.map(f=>`● REC ${f.fighter1} vs ${f.fighter2} (${f.dataPoints} pts)`).join(' · '); lbl.style.color='#e74c3c'; }
-      setScItem('sc-recorder', 'green', `REC — ${d.activeFights.length} fight${d.activeFights.length>1?'s':''}`);
+      setScItem('sc-recorder', 'green');
     } else {
       if(dot) dot.className='idle';
       if(lbl){ lbl.textContent='recorder idle'; lbl.style.color='#333'; }
-      setScItem('sc-recorder', 'grey', 'Recorder idle');
+      setScItem('sc-recorder', 'grey');
     }
     // Mark sport pills that have live games recording
     const liveSports=new Set(d.activeFights.map(f=>(f.sport||'').toLowerCase()));
@@ -1326,7 +1319,7 @@ async function pollRecorder(){
       const hasLive=liveSports.has('ufc/mma')&&key.includes('mma') || [...liveSports].some(s=>key.includes(s.split('/')[0].toLowerCase()));
       btn.classList.toggle('has-live', hasLive);
     });
-  }catch{ setScItem('sc-recorder','grey','Recorder —'); }
+  }catch{ setScItem('sc-recorder','grey'); }
 }
 pollRecorder(); setInterval(pollRecorder,5000);
 
