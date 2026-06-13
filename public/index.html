@@ -428,7 +428,7 @@ class BetTracker {
   clear(){ this.bets=[]; this._persist(); }
   hasThreeWay(){ return this.drawOdds !== null; }
   _persist(){ lsSave('tracker', {bets:this.bets, _id:this._id, f1Name:this.f1Name, f2Name:this.f2Name, drawName:this.drawName, f1Odds:this.f1Odds, f2Odds:this.f2Odds, drawOdds:this.drawOdds}); }
-  restore(){ const s=lsLoad('tracker'); if(s){ this.bets=s.bets||[]; this._id=s._id||0; if(s.f1Name)this.f1Name=s.f1Name; if(s.f2Name)this.f2Name=s.f2Name; if(s.drawName)this.drawName=s.drawName; if(s.f1Odds)this.f1Odds=s.f1Odds; if(s.f2Odds)this.f2Odds=s.f2Odds; if(s.drawOdds)this.drawOdds=s.drawOdds; } }
+  restore(){ const s=lsLoad('tracker'); if(s){ this.bets=(s.bets||[]).map(b=>({...b,source:b.source||(b.betId?'dk':'manual')})); this._id=s._id||0; if(s.f1Name)this.f1Name=s.f1Name; if(s.f2Name)this.f2Name=s.f2Name; if(s.drawName)this.drawName=s.drawName; if(s.f1Odds)this.f1Odds=s.f1Odds; if(s.f2Odds)this.f2Odds=s.f2Odds; if(s.drawOdds)this.drawOdds=s.drawOdds; } }
   position(){
     let n1=0,n2=0,n3=0;
     for(const b of this.bets){
