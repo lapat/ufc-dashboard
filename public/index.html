@@ -343,6 +343,11 @@
     .trail-mov-neg{color:#e74c3c}
     .trail-mov-flat{color:#555}
     .trail-xover{background:#1a0800;color:#ff9a3c;border:1px solid #3a1500;border-radius:2px;padding:0 4px;font-size:0.58rem}
+    .reason-trail-row.has-xover{background:#110600;border-left:2px solid #ff7700}
+    .trail-summary{display:flex;gap:14px;padding:5px 0 7px;border-bottom:1px solid #1e1e1e;margin-bottom:3px;font-size:0.68rem;flex-wrap:wrap}
+    .trail-sum-stat .n{font-weight:700;color:#ddd}
+    .trail-header-row{display:flex;gap:6px;padding:2px 0 4px;font-size:0.6rem;color:#444;letter-spacing:.5px;text-transform:uppercase;border-bottom:1px solid #111}
+    .trail-source-note{font-size:0.62rem;color:#444;margin-top:5px;padding-top:5px;border-top:1px solid #111}
     .nw-score-dash{color:#555;font-size:1.1rem}
     #nw-score-period{font-size:0.62rem;color:#888;text-transform:uppercase;letter-spacing:.5px}
     /* ── sparkline ── */
@@ -565,7 +570,7 @@
               </div>
               <div class="xover-stat">
                 <div class="xover-stat-num" id="xover-empirical">—</div>
-                <div class="xover-stat-lbl">CROSSED IN<br>SIMILAR</div>
+                <div class="xover-stat-lbl">CROSSED IN<br>SIMILAR <span style="font-size:0.55rem;color:#444;display:block;margin-top:1px">↓ fight trail</span></div>
               </div>
             </div>
           </div>
@@ -573,6 +578,7 @@
         <div class="xover-advice" id="xover-advice"></div>
         <div class="xover-timing" id="xover-timing"></div>
         <div id="xover-alert" style="display:none" class="xover-alert"></div>
+        <div style="font-size:0.6rem;color:#333;margin-top:6px;letter-spacing:.2px">Crossover % = style/odds pattern model · "Crossed in similar" = fight trail below</div>
       </div>
 
       <!-- Row 1: header + sample size -->
@@ -1622,8 +1628,11 @@ function renderReasoning(r) {
   // Fight trail — store for lazy render on toggle
   _trailData = r.fightTrail || [];
   const trailBtn = document.getElementById('reason-trail-btn');
-  const dateRangeStr = r.dateRange ? r.dateRange.oldest + ' – ' + r.dateRange.newest : 'no date range';
-  trailBtn.textContent = '▶ show fight trail (' + _trailData.length + ' fights · ' + dateRangeStr + ')';
+  const xoverCount = _trailData.filter(function(f){ return f.crossover; }).length;
+  const dogWinCount = _trailData.filter(function(f){ return f.dogWon; }).length;
+  const dateRangeStr = r.dateRange ? r.dateRange.oldest + ' – ' + r.dateRange.newest : '';
+  const trailMeta = [_trailData.length + ' fights', xoverCount + ' xovers', dogWinCount + ' dog wins', dateRangeStr].filter(Boolean).join(' · ');
+  trailBtn.textContent = '▶ fight trail — ' + trailMeta;
   document.getElementById('reason-trail').style.display = 'none';
   document.getElementById('reason-trail').innerHTML = '';
 }
@@ -1638,7 +1647,16 @@ function toggleReasonTrail() {
       if (!_trailData.length) {
         trail.innerHTML = '<div style="color:#444;font-size:0.68rem;padding:4px 0">No comparable fights to show</div>';
       } else {
-        trail.innerHTML = _trailData.map(function(f) {
+        const xoverCount = _trailData.filter(function(f){ return f.crossover; }).length;
+        const dogWinCount = _trailData.filter(function(f){ return f.dogWon; }).length;
+        const favWinCount = _trailData.length - dogWinCount;
+        const summary = '<div class="trail-summary">'
+          + _trailData.length + ' comparable fights · '
+          + xoverCount + ' crossovers · '
+          + dogWinCount + ' dog wins · '
+          + favWinCount + ' fav wins'
+          + '</div>';
+        const rows = _trailData.map(function(f) {
           const mv = f.dogMovementPpts;
           const mvCls = mv == null ? 'trail-mov-flat' : mv > 5 ? 'trail-mov-pos' : mv < -5 ? 'trail-mov-neg' : 'trail-mov-flat';
           const mvStr = mv != null ? (mv > 0 ? '+' : '') + mv + 'ppts' : '—';
@@ -1647,14 +1665,22 @@ function toggleReasonTrail() {
             ? '<span style="color:#7ccd32">Dog won</span>'
             : '<span style="color:#e74c3c">Fav won</span>';
           const odds = (f.openDogOdds || '?') + (f.closeDogOdds && f.closeDogOdds !== f.openDogOdds ? ' → ' + f.closeDogOdds : '');
-          return '<div class="reason-trail-row">'
+          const method = f.method ? '<span style="color:#444;font-size:0.6rem">' + f.method + '</span>' : '';
+          const rowCls = 'reason-trail-row' + (f.crossover ? ' has-xover' : '');
+          return '<div class="' + rowCls + '">'
             + '<span style="color:#555;flex:0 0 58px">' + (f.date || '?') + '</span>'
-            + '<span style="color:#888;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="' + f.dogName + ' vs ' + f.favName + '">' + (f.dogName || '?') + ' ' + odds + '</span>'
+            + '<span style="color:#888;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="' + (f.dogName || '') + ' vs ' + (f.favName || '') + '">' + (f.dogName || '?') + ' ' + odds + '</span>'
             + '<span class="' + mvCls + '" style="flex:0 0 52px;text-align:right">' + mvStr + '</span>'
             + '<span style="flex:0 0 58px;text-align:right">' + outcome + '</span>'
-            + '<span style="flex:0 0 44px;text-align:right">' + xBadge + '</span>'
+            + '<span style="flex:0 0 38px;text-align:right">' + xBadge + '</span>'
+            + '<span style="flex:0 0 52px;text-align:right">' + method + '</span>'
             + '</div>';
         }).join('');
+        const sourceNote = '<div class="trail-source-note">'
+          + 'Win rate, edge, early line, &amp; "Crossed in similar" all come from these ' + _trailData.length + ' fights. '
+          + 'Crossover % (top of panel) uses pattern matching across all recorded fights.'
+          + '</div>';
+        trail.innerHTML = summary + rows + sourceNote;
       }
     }
   } else {
