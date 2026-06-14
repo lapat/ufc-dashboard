@@ -6,7 +6,10 @@
   "scripts": {
     "start": "node server.js",
     "record": "node recorder.js",
-    "analyze": "node analyze_crossovers.js"
+    "analyze": "node analyze_crossovers.js",
+    "check-deploy": "node check_deploy.js",
+    "test:ui": "node test_ui.js",
+    "test:all": "node test.js --local && node test_analyzer.js && node test_crossover_detector.js && node test_crossover_predictor.js && node test_deriver.js && node test_fighter_stats.js && node test_ui.js"
   },
   "keywords": [],
   "author": "",
