@@ -130,9 +130,9 @@ async function uiSmoke() {
     assert(await page.$('#pnl-strip'), 'missing #pnl-strip');
   });
 
-  await check('game pills strip renders', async () => {
-    const strip = await page.$('#game-strip');
-    assert(strip, 'missing #game-strip');
+  await check('sport strip renders', async () => {
+    const strip = await page.$('#sport-strip');
+    assert(strip, 'missing #sport-strip');
   });
 
   await check('legend button is clickable', async () => {
@@ -151,9 +151,9 @@ async function uiSmoke() {
     assert(sel, 'missing #sim-fight-sel');
   });
 
-  await check('analyze button exists and is clickable', async () => {
-    const btn = await page.$('#analyze-btn') || await page.$('[id*="analyze"]');
-    assert(btn, 'no analyze button found');
+  await check('brain panel exists in DOM', async () => {
+    const panel = await page.$('#brain-panel');
+    assert(panel, 'missing #brain-panel');
   });
 
   await check('screenshot: after interaction', async () => {

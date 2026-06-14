@@ -43,7 +43,7 @@ async function run() {
     process.exit(1);
   }
 
-  const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox', '--disable-setuid-sandbox'] });
+  const browser = await puppeteer.launch({ headless: true, channel: 'chrome', args: ['--no-sandbox', '--disable-setuid-sandbox'] });
   const jsErrors = [];
   const page = await browser.newPage();
   page.on('pageerror', e => jsErrors.push(e.message));
