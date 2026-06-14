@@ -1313,29 +1313,58 @@ app.get('/api/live-sequence', (req, res) => {
   }
 });
 
-// ── Dead-man's-switch heartbeat (healthchecks.io) ────────────────────────────
-// If this process dies, pings stop → healthchecks.io emails louislapat + iskanderb.
-// Set HEALTHCHECK_URL in Railway env vars to your healthchecks.io ping URL.
-// Free at https://healthchecks.io — create a check, set period=5min, grace=5min.
+// ── Daily heartbeat email ─────────────────────────────────────────────────────
+// Sends a "still alive" email every morning at 8am ET.
+// If you don't get it, the server is down.
+function scheduleHeartbeat() {
+  function msUntilNext8amET() {
+    const now = new Date();
+    // ET = UTC-4 (EDT) or UTC-5 (EST) — use UTC-4 as conservative choice
+    const ET_OFFSET_MS = 4 * 60 * 60 * 1000;
+    const nowET = new Date(now.getTime() - ET_OFFSET_MS);
+    const next8am = new Date(nowET);
+    next8am.setHours(8, 0, 0, 0);
+    if (next8am <= nowET) next8am.setDate(next8am.getDate() + 1);
+    return next8am.getTime() - nowET.getTime();
+  }
+
+  function sendHeartbeat() {
+    const active  = recorderState.activeFights.size;
+    const saved   = recorderState.totalSaved;
+    const lastPoll = recorderState.lastPoll
+      ? new Date(recorderState.lastPoll).toLocaleString('en-US', { timeZone: 'America/New_York' })
+      : 'never';
+    sendAlert(
+      `✅ BET BOT: Running — ${new Date().toLocaleDateString('en-US', { timeZone: 'America/New_York', weekday: 'short', month: 'short', day: 'numeric' })}`,
+      `Daily check-in: server is alive and recording.\n\n` +
+      `Active recordings: ${active}\n` +
+      `Fights saved this session: ${saved}\n` +
+      `Last API poll: ${lastPoll}\n\n` +
+      `If you stop receiving these emails, the server is down.\n\n` +
+      `https://ufc-dashboard-production-e03d.up.railway.app`
+    );
+    setTimeout(sendHeartbeat, 24 * 60 * 60 * 1000); // repeat every 24h
+  }
+
+  const delay = msUntilNext8amET();
+  console.log(`[heartbeat] First email in ${Math.round(delay / 60000)} minutes (8am ET)`);
+  setTimeout(sendHeartbeat, delay);
+}
+
+// Optional external dead-man's-switch (healthchecks.io) — set HEALTHCHECK_URL in Railway if desired
 const HEALTHCHECK_URL = process.env.HEALTHCHECK_URL || null;
 function pingHealthcheck() {
   if (!HEALTHCHECK_URL) return;
-  https.get(HEALTHCHECK_URL, res => {
-    console.log(`[healthcheck] ping → ${res.statusCode}`);
-  }).on('error', e => {
-    console.error('[healthcheck] ping failed:', e.message);
-  });
+  https.get(HEALTHCHECK_URL, () => {}).on('error', e => console.error('[healthcheck] ping failed:', e.message));
 }
 
 app.listen(PORT, () => {
   console.log(`Bet Bot running at http://localhost:${PORT}`);
   recPoll();
   console.log('Recorder started — UFC always-on, other sports when browser is watching');
+  scheduleHeartbeat();
   if (HEALTHCHECK_URL) {
     pingHealthcheck();
-    setInterval(pingHealthcheck, 5 * 60 * 1000); // ping every 5 minutes
-    console.log('Healthcheck pinging:', HEALTHCHECK_URL);
-  } else {
-    console.log('HEALTHCHECK_URL not set — set it in Railway to enable dead-man\'s-switch alerting');
+    setInterval(pingHealthcheck, 5 * 60 * 1000);
   }
 });
