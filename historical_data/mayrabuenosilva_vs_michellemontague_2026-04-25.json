@@ -2962,5 +2962,21 @@
       "extractionId": 55
     }
   ],
-  "createdAt": "2026-04-25T23:03:28.718Z"
+  "createdAt": "2026-04-25T23:03:28.718Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Michelle Montague",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:14:01.022Z",
+    "openingF1Odds": 340,
+    "openingF2Odds": -430,
+    "closingF1Odds": 1480,
+    "closingF2Odds": -3500,
+    "lineMovementF1": 1140,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

@@ -5497,5 +5497,21 @@
       "extractionId": 27
     }
   ],
-  "createdAt": "2025-11-22T16:57:11.039Z"
+  "createdAt": "2025-11-22T16:57:11.039Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Asu Almabayev",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:12:37.660Z",
+    "openingF1Odds": 172,
+    "openingF2Odds": -205,
+    "closingF1Odds": -290,
+    "closingF2Odds": 215,
+    "lineMovementF1": -462,
+    "crossoverOccurred": true,
+    "crossoverMinute": 10
+  }
 }

@@ -10507,5 +10507,21 @@
       "extractionId": 350
     }
   ],
-  "createdAt": "2026-06-07T02:06:36.856Z"
+  "createdAt": "2026-06-07T02:06:36.856Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Brendan Allen",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:12:56.144Z",
+    "openingF1Odds": -205,
+    "openingF2Odds": 172,
+    "closingF1Odds": -2000,
+    "closingF2Odds": 1040,
+    "lineMovementF1": -1795,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

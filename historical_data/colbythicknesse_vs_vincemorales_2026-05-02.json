@@ -5707,5 +5707,21 @@
       "extractionId": 35
     }
   ],
-  "createdAt": "2026-05-02T09:34:01.811Z"
+  "createdAt": "2026-05-02T09:34:01.811Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Colby Thicknesse",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:05.143Z",
+    "openingF1Odds": -152,
+    "openingF2Odds": 128,
+    "closingF1Odds": 128,
+    "closingF2Odds": -164,
+    "lineMovementF1": 280,
+    "crossoverOccurred": true,
+    "crossoverMinute": 3
+  }
 }

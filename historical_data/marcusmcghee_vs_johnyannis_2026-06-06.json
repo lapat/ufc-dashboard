@@ -7297,5 +7297,21 @@
       "extractionId": 136
     }
   ],
-  "createdAt": "2026-06-06T23:16:51.952Z"
+  "createdAt": "2026-06-06T23:16:51.952Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Marcus McGhee",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:55.034Z",
+    "openingF1Odds": -430,
+    "openingF2Odds": 340,
+    "closingF1Odds": -6000,
+    "closingF2Odds": 2300,
+    "lineMovementF1": -5570,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

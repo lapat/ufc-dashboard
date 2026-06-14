@@ -4987,5 +4987,21 @@
       "extractionId": 9
     }
   ],
-  "createdAt": "2026-05-10T02:37:14.411Z"
+  "createdAt": "2026-05-10T02:37:14.411Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Alexander Volkov",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:12:36.263Z",
+    "openingF1Odds": -126,
+    "openingF2Odds": 108,
+    "closingF1Odds": -160,
+    "closingF2Odds": 126,
+    "lineMovementF1": -34,
+    "crossoverOccurred": true,
+    "crossoverMinute": 7
+  }
 }

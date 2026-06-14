@@ -2107,5 +2107,21 @@
       "extractionId": 70
     }
   ],
-  "createdAt": "2026-05-02T12:25:17.173Z"
+  "createdAt": "2026-05-02T12:25:17.173Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Marwan Rahiki",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:57.872Z",
+    "openingF1Odds": -700,
+    "openingF2Odds": 500,
+    "closingF1Odds": -850,
+    "closingF2Odds": 520,
+    "lineMovementF1": -150,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

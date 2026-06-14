@@ -1612,5 +1612,21 @@
       "extractionId": 19
     }
   ],
-  "createdAt": "2026-02-21T23:55:14.320Z"
+  "createdAt": "2026-02-21T23:55:14.320Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Joselyne Edwards",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:14:08.205Z",
+    "openingF1Odds": 245,
+    "openingF2Odds": -300,
+    "closingF1Odds": 124,
+    "closingF2Odds": -158,
+    "lineMovementF1": -121,
+    "crossoverOccurred": true,
+    "crossoverMinute": 4
+  }
 }

@@ -3817,5 +3817,21 @@
       "extractionId": 11
     }
   ],
-  "createdAt": "2026-04-04T23:00:59.514Z"
+  "createdAt": "2026-04-04T23:00:59.514Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Darrius Flowers",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:48.615Z",
+    "openingF1Odds": -225,
+    "openingF2Odds": 188,
+    "closingF1Odds": 440,
+    "closingF2Odds": -700,
+    "lineMovementF1": 665,
+    "crossoverOccurred": true,
+    "crossoverMinute": 15
+  }
 }

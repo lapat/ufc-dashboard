@@ -4882,5 +4882,21 @@
       "extractionId": 15
     }
   ],
-  "createdAt": "2026-05-02T13:51:57.682Z"
+  "createdAt": "2026-05-02T13:51:57.682Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Carlos Prates",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:25.636Z",
+    "openingF1Odds": -112,
+    "openingF2Odds": -104,
+    "closingF1Odds": 2300,
+    "closingF2Odds": -6000,
+    "lineMovementF1": 2412,
+    "crossoverOccurred": true,
+    "crossoverMinute": 6
+  }
 }

@@ -3457,5 +3457,21 @@
       "extractionId": 19
     }
   ],
-  "createdAt": "2026-05-09T22:42:03.038Z"
+  "createdAt": "2026-05-09T22:42:03.038Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Roman Kopylov",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:14:20.241Z",
+    "openingF1Odds": 154,
+    "openingF2Odds": -184,
+    "closingF1Odds": -2000,
+    "closingF2Odds": 1040,
+    "lineMovementF1": -2154,
+    "crossoverOccurred": true,
+    "crossoverMinute": 2
+  }
 }

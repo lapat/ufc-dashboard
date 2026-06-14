@@ -5227,5 +5227,21 @@
       "extractionId": 65
     }
   ],
-  "createdAt": "2026-02-22T00:20:28.210Z"
+  "createdAt": "2026-02-22T00:20:28.210Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Alden Coria",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:12:34.123Z",
+    "openingF1Odds": -390,
+    "openingF2Odds": 310,
+    "closingF1Odds": -4500,
+    "closingF2Odds": 1800,
+    "lineMovementF1": -4110,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

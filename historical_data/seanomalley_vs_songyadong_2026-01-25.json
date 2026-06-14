@@ -6997,5 +6997,21 @@
       "extractionId": 130
     }
   ],
-  "createdAt": "2026-01-25T04:25:17.772Z"
+  "createdAt": "2026-01-25T04:25:17.772Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Sean O'Malley",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:14:22.470Z",
+    "openingF1Odds": -235,
+    "openingF2Odds": 180,
+    "closingF1Odds": 108,
+    "closingF2Odds": -136,
+    "lineMovementF1": 343,
+    "crossoverOccurred": true,
+    "crossoverMinute": 9
+  }
 }

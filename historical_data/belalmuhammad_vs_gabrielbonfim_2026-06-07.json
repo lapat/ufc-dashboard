@@ -8692,5 +8692,21 @@
       "extractionId": 266
     }
   ],
-  "createdAt": "2026-06-07T02:40:03.672Z"
+  "createdAt": "2026-06-07T02:40:03.672Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Gabriel Bonfim",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:12:49.954Z",
+    "openingF1Odds": -116,
+    "openingF2Odds": -102,
+    "closingF1Odds": 2300,
+    "closingF2Odds": -6000,
+    "lineMovementF1": 2416,
+    "crossoverOccurred": true,
+    "crossoverMinute": 6
+  }
 }

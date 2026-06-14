@@ -8452,5 +8452,21 @@
       "extractionId": 244
     }
   ],
-  "createdAt": "2026-03-08T03:27:47.319Z"
+  "createdAt": "2026-03-08T03:27:47.319Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Raul Rosas Jr.",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:14:18.060Z",
+    "openingF1Odds": 250,
+    "openingF2Odds": -310,
+    "closingF1Odds": 2300,
+    "closingF2Odds": -6000,
+    "lineMovementF1": 2050,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

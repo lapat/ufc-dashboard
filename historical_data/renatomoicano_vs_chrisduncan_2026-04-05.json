@@ -2437,5 +2437,21 @@
       "extractionId": 14
     }
   ],
-  "createdAt": "2026-04-05T02:43:04.017Z"
+  "createdAt": "2026-04-05T02:43:04.017Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Renato Moicano",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:14:17.032Z",
+    "openingF1Odds": 110,
+    "openingF2Odds": -140,
+    "closingF1Odds": -3000,
+    "closingF2Odds": 1340,
+    "lineMovementF1": -3110,
+    "crossoverOccurred": true,
+    "crossoverMinute": 3
+  }
 }

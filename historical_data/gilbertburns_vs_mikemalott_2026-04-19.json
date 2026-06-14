@@ -4642,5 +4642,21 @@
       "extractionId": 309
     }
   ],
-  "createdAt": "2026-04-19T03:02:17.783Z"
+  "createdAt": "2026-04-19T03:02:17.783Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Mike Malott",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:19.343Z",
+    "openingF1Odds": 210,
+    "openingF2Odds": -255,
+    "closingF1Odds": 400,
+    "closingF2Odds": -650,
+    "lineMovementF1": 190,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

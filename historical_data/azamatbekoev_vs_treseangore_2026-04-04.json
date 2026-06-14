@@ -4147,5 +4147,21 @@
       "extractionId": 9
     }
   ],
-  "createdAt": "2026-04-04T22:14:24.001Z"
+  "createdAt": "2026-04-04T22:14:24.001Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Tresean Gore",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:12:47.581Z",
+    "openingF1Odds": -650,
+    "openingF2Odds": 430,
+    "closingF1Odds": 840,
+    "closingF2Odds": -1600,
+    "lineMovementF1": 1490,
+    "crossoverOccurred": true,
+    "crossoverMinute": 15
+  }
 }

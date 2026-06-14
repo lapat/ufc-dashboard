@@ -5407,5 +5407,21 @@
       "extractionId": 180
     }
   ],
-  "createdAt": "2026-03-28T22:15:11.940Z"
+  "createdAt": "2026-03-28T22:15:11.940Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Navajo Stirling",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:14:05.985Z",
+    "openingF1Odds": -800,
+    "openingF2Odds": 490,
+    "closingF1Odds": -1000,
+    "closingF2Odds": 580,
+    "lineMovementF1": -200,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

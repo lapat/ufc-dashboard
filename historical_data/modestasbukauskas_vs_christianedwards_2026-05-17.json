@@ -6412,5 +6412,21 @@
       "extractionId": 77
     }
   ],
-  "createdAt": "2026-05-17T01:04:15.995Z"
+  "createdAt": "2026-05-17T01:04:15.995Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Modestas Bukauskas",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:14:03.344Z",
+    "openingF1Odds": -320,
+    "openingF2Odds": 260,
+    "closingF1Odds": -2000,
+    "closingF2Odds": 1040,
+    "lineMovementF1": -1680,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

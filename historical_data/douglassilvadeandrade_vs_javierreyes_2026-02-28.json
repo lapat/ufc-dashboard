@@ -1012,5 +1012,21 @@
       "extractionId": 4
     }
   ],
-  "createdAt": "2026-02-28T23:25:33.419Z"
+  "createdAt": "2026-02-28T23:25:33.419Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Javier Reyes",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:14.242Z",
+    "openingF1Odds": 194,
+    "openingF2Odds": -230,
+    "closingF1Odds": 580,
+    "closingF2Odds": -1000,
+    "lineMovementF1": 386,
+    "crossoverOccurred": true,
+    "crossoverMinute": 3
+  }
 }

@@ -2257,5 +2257,21 @@
       "extractionId": 60
     }
   ],
-  "createdAt": "2026-06-06T21:58:06.328Z"
+  "createdAt": "2026-06-06T21:58:06.328Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Joanderson Brito",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:35.667Z",
+    "openingF1Odds": 140,
+    "openingF2Odds": -166,
+    "closingF1Odds": 180,
+    "closingF2Odds": -235,
+    "lineMovementF1": 40,
+    "crossoverOccurred": true,
+    "crossoverMinute": 4
+  }
 }

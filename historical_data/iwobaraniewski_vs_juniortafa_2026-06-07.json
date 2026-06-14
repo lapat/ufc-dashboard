@@ -1087,5 +1087,21 @@
       "extractionId": 36
     }
   ],
-  "createdAt": "2026-06-07T00:18:39.415Z"
+  "createdAt": "2026-06-07T00:18:39.415Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Iwo Baraniewski",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:25.212Z",
+    "openingF1Odds": -460,
+    "openingF2Odds": 360,
+    "closingF1Odds": -700,
+    "closingF2Odds": 440,
+    "lineMovementF1": -240,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

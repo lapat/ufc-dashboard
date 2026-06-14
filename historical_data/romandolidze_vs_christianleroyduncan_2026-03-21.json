@@ -5092,5 +5092,21 @@
       "extractionId": 52
     }
   ],
-  "createdAt": "2026-03-21T20:47:43.092Z"
+  "createdAt": "2026-03-21T20:47:43.092Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Christian Leroy Duncan",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:14:19.339Z",
+    "openingF1Odds": 295,
+    "openingF2Odds": -370,
+    "closingF1Odds": 1480,
+    "closingF2Odds": -3500,
+    "lineMovementF1": 1185,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

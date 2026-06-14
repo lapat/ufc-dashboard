@@ -2857,5 +2857,21 @@
       "extractionId": 95
     }
   ],
-  "createdAt": "2026-05-17T00:19:37.926Z"
+  "createdAt": "2026-05-17T00:19:37.926Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Khaos Williams",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:14:07.358Z",
+    "openingF1Odds": 102,
+    "openingF2Odds": -120,
+    "closingF1Odds": -106,
+    "closingF2Odds": -122,
+    "lineMovementF1": -208,
+    "crossoverOccurred": true,
+    "crossoverMinute": 1
+  }
 }

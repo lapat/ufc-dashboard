@@ -5092,5 +5092,21 @@
       "extractionId": 67
     }
   ],
-  "createdAt": "2026-02-21T23:02:12.450Z"
+  "createdAt": "2026-02-21T23:02:12.450Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Jean-Paul Lebosnoyani",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:14:11.777Z",
+    "openingF1Odds": 172,
+    "openingF2Odds": -205,
+    "closingF1Odds": 1040,
+    "closingF2Odds": -2000,
+    "lineMovementF1": 868,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

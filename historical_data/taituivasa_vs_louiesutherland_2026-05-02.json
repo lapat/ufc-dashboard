@@ -8407,5 +8407,21 @@
       "extractionId": 258
     }
   ],
-  "createdAt": "2026-05-02T11:19:40.270Z"
+  "createdAt": "2026-05-02T11:19:40.270Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Louie Sutherland",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:14:27.477Z",
+    "openingF1Odds": -235,
+    "openingF2Odds": 180,
+    "closingF1Odds": 2300,
+    "closingF2Odds": -6000,
+    "lineMovementF1": 2535,
+    "crossoverOccurred": true,
+    "crossoverMinute": 5
+  }
 }

@@ -1807,5 +1807,21 @@
       "extractionId": 13
     }
   ],
-  "createdAt": "2026-05-09T23:15:19.993Z"
+  "createdAt": "2026-05-09T23:15:19.993Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Jim Miller",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:32.881Z",
+    "openingF1Odds": 230,
+    "openingF2Odds": -280,
+    "closingF1Odds": 340,
+    "closingF2Odds": -550,
+    "lineMovementF1": 110,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

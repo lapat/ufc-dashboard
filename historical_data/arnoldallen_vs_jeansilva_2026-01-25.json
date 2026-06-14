@@ -7702,5 +7702,21 @@
       "extractionId": 144
     }
   ],
-  "createdAt": "2026-01-25T02:35:02.533Z"
+  "createdAt": "2026-01-25T02:35:02.533Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Jean Silva",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:12:45.759Z",
+    "openingF1Odds": 184,
+    "openingF2Odds": -220,
+    "closingF1Odds": 920,
+    "closingF2Odds": -1800,
+    "lineMovementF1": 736,
+    "crossoverOccurred": true,
+    "crossoverMinute": 6
+  }
 }

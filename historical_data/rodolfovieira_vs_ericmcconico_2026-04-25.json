@@ -2767,5 +2767,21 @@
       "extractionId": 42
     }
   ],
-  "createdAt": "2026-04-25T23:46:43.934Z"
+  "createdAt": "2026-04-25T23:46:43.934Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Eric McConico",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:14:18.438Z",
+    "openingF1Odds": -550,
+    "openingF2Odds": 340,
+    "closingF1Odds": 240,
+    "closingF2Odds": -340,
+    "lineMovementF1": 790,
+    "crossoverOccurred": true,
+    "crossoverMinute": 5
+  }
 }

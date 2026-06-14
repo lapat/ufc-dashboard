@@ -10372,5 +10372,21 @@
       "extractionId": 74
     }
   ],
-  "createdAt": "2026-02-01T00:38:38.789Z"
+  "createdAt": "2026-02-01T00:38:38.789Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Jacob Malkoun",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:28.645Z",
+    "openingF1Odds": -142,
+    "openingF2Odds": 120,
+    "closingF1Odds": -6000,
+    "closingF2Odds": 2300,
+    "lineMovementF1": -5858,
+    "crossoverOccurred": true,
+    "crossoverMinute": 18
+  }
 }

@@ -1792,5 +1792,21 @@
       "extractionId": 29
     }
   ],
-  "createdAt": "2026-04-05T00:55:24.887Z"
+  "createdAt": "2026-04-05T00:55:24.887Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Tommy McMillen",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:14:31.336Z",
+    "openingF1Odds": -850,
+    "openingF2Odds": 590,
+    "closingF1Odds": -450,
+    "closingF2Odds": 310,
+    "lineMovementF1": 400,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

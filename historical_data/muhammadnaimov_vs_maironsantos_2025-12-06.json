@@ -3697,5 +3697,21 @@
       "extractionId": 35
     }
   ],
-  "createdAt": "2025-12-06T23:06:54.350Z"
+  "createdAt": "2025-12-06T23:06:54.350Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Mairon Santos",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:14:04.591Z",
+    "openingF1Odds": 172,
+    "openingF2Odds": -225,
+    "closingF1Odds": 840,
+    "closingF2Odds": -1600,
+    "lineMovementF1": 668,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

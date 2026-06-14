@@ -787,5 +787,21 @@
       "extractionId": 26
     }
   ],
-  "createdAt": "2026-05-30T12:38:44.440Z"
+  "createdAt": "2026-05-30T12:38:44.440Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Sergei Pavlovich",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:14:23.324Z",
+    "openingF1Odds": -650,
+    "openingF2Odds": 480,
+    "closingF1Odds": -700,
+    "closingF2Odds": 450,
+    "lineMovementF1": -50,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

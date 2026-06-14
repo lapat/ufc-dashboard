@@ -4267,5 +4267,21 @@
       "extractionId": 12
     }
   ],
-  "createdAt": "2026-05-10T01:58:30.799Z"
+  "createdAt": "2026-05-10T01:58:30.799Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Sean Brady",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:14:21.575Z",
+    "openingF1Odds": 138,
+    "openingF2Odds": -164,
+    "closingF1Odds": -6000,
+    "closingF2Odds": 2300,
+    "lineMovementF1": -6138,
+    "crossoverOccurred": true,
+    "crossoverMinute": 4
+  }
 }

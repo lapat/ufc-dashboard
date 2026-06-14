@@ -8842,5 +8842,21 @@
       "extractionId": 15
     }
   ],
-  "createdAt": "2026-05-10T04:13:51.122Z"
+  "createdAt": "2026-05-10T04:13:51.122Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Sean Strickland",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:46.291Z",
+    "openingF1Odds": -430,
+    "openingF2Odds": 340,
+    "closingF1Odds": -400,
+    "closingF2Odds": 280,
+    "lineMovementF1": 30,
+    "crossoverOccurred": true,
+    "crossoverMinute": 14
+  }
 }

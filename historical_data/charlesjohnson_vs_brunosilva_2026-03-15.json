@@ -5692,5 +5692,21 @@
       "extractionId": 20
     }
   ],
-  "createdAt": "2026-03-15T00:36:31.050Z"
+  "createdAt": "2026-03-15T00:36:31.050Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Charles Johnson",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:00.586Z",
+    "openingF1Odds": -178,
+    "openingF2Odds": 150,
+    "closingF1Odds": 2300,
+    "closingF2Odds": -6000,
+    "lineMovementF1": 2478,
+    "crossoverOccurred": true,
+    "crossoverMinute": 12
+  }
 }

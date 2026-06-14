@@ -2467,5 +2467,21 @@
       "extractionId": 82
     }
   ],
-  "createdAt": "2026-04-11T22:22:30.121Z"
+  "createdAt": "2026-04-11T22:22:30.121Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Vicente Luque",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:43.711Z",
+    "openingF1Odds": -270,
+    "openingF2Odds": 220,
+    "closingF1Odds": -1000,
+    "closingF2Odds": 580,
+    "lineMovementF1": -730,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

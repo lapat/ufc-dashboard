@@ -1182,6 +1182,30 @@ async function recPoll() {
   setTimeout(recPoll, delay);
 }
 
+// ── Brain: edge detection endpoint (isolated — see analyzer.js) ──────────────
+const { findEdge } = require('./analyzer');
+
+app.get('/api/edge', async (req, res) => {
+  try {
+    const { fighter1, fighter2, f1Odds, f2Odds, f1Open, f2Open, crossover, crossoverMin } = req.query;
+    if (!fighter1 || !fighter2) return res.status(400).json({ error: 'fighter1 and fighter2 required' });
+    const result = await findEdge({
+      fighter1,
+      fighter2,
+      f1CurrentOdds:   f1Odds  || null,
+      f2CurrentOdds:   f2Odds  || null,
+      f1OpeningOdds:   f1Open  || null,
+      f2OpeningOdds:   f2Open  || null,
+      crossoverOccurred: crossover === 'true',
+      crossoverMinute: crossoverMin ? parseInt(crossoverMin) : null
+    });
+    res.json(result);
+  } catch (e) {
+    console.error('[edge]', e.message);
+    res.status(500).json({ error: e.message });
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`Bet Bot running at http://localhost:${PORT}`);
   recPoll();

@@ -3592,5 +3592,21 @@
       "extractionId": 57
     }
   ],
-  "createdAt": "2026-01-31T23:44:29.687Z"
+  "createdAt": "2026-01-31T23:44:29.687Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Kaan Ofli",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:42.048Z",
+    "openingF1Odds": 205,
+    "openingF2Odds": -245,
+    "closingF1Odds": 420,
+    "closingF2Odds": -650,
+    "lineMovementF1": 215,
+    "crossoverOccurred": true,
+    "crossoverMinute": 5
+  }
 }

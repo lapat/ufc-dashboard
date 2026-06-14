@@ -2617,5 +2617,21 @@
       "extractionId": 8
     }
   ],
-  "createdAt": "2026-03-21T17:15:20.453Z"
+  "createdAt": "2026-03-21T17:15:20.453Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Shanelle Dyer",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:14:24.448Z",
+    "openingF1Odds": -500,
+    "openingF2Odds": 385,
+    "closingF1Odds": -1000,
+    "closingF2Odds": 580,
+    "lineMovementF1": -500,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

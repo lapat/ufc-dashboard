@@ -9142,5 +9142,21 @@
       "extractionId": 15
     }
   ],
-  "createdAt": "2026-05-17T02:40:23.472Z"
+  "createdAt": "2026-05-17T02:40:23.472Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Arnold Allen",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:12:46.252Z",
+    "openingF1Odds": -118,
+    "openingF2Odds": 100,
+    "closingF1Odds": -6000,
+    "closingF2Odds": 2300,
+    "lineMovementF1": -5882,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

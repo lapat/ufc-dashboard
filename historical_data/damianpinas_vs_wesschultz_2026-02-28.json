@@ -817,5 +817,21 @@
       "extractionId": 4
     }
   ],
-  "createdAt": "2026-02-28T22:16:46.838Z"
+  "createdAt": "2026-02-28T22:16:46.838Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Damian Pinas",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:07.464Z",
+    "openingF1Odds": -240,
+    "openingF2Odds": 198,
+    "closingF1Odds": -3500,
+    "closingF2Odds": 1480,
+    "lineMovementF1": -3260,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

@@ -1057,5 +1057,21 @@
       "extractionId": 35
     }
   ],
-  "createdAt": "2026-02-08T00:28:18.516Z"
+  "createdAt": "2026-02-08T00:28:18.516Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Nikolay Veretennikov",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:14:07.772Z",
+    "openingF1Odds": -280,
+    "openingF2Odds": 210,
+    "closingF1Odds": -650,
+    "closingF2Odds": 420,
+    "lineMovementF1": -370,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

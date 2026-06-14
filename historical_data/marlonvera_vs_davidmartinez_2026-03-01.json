@@ -6607,5 +6607,21 @@
       "extractionId": 151
     }
   ],
-  "createdAt": "2026-03-01T03:32:45.509Z"
+  "createdAt": "2026-03-01T03:32:45.509Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "David Martinez",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:56.479Z",
+    "openingF1Odds": 265,
+    "openingF2Odds": -330,
+    "closingF1Odds": 1180,
+    "closingF2Odds": -2400,
+    "lineMovementF1": 915,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

@@ -2257,5 +2257,21 @@
       "extractionId": 75
     }
   ],
-  "createdAt": "2026-03-29T02:09:18.815Z"
+  "createdAt": "2026-03-29T02:09:18.815Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Alexa Grasso",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:12:35.056Z",
+    "openingF1Odds": 154,
+    "openingF2Odds": -184,
+    "closingF1Odds": 122,
+    "closingF2Odds": -156,
+    "lineMovementF1": -32,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

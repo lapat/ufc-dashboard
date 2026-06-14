@@ -3292,5 +3292,21 @@
       "extractionId": 17
     }
   ],
-  "createdAt": "2025-11-16T01:55:26.859Z"
+  "createdAt": "2025-11-16T01:55:26.859Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Erin Blanchfield",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:16.743Z",
+    "openingF1Odds": -430,
+    "openingF2Odds": 300,
+    "closingF1Odds": -330,
+    "closingF2Odds": 235,
+    "lineMovementF1": 100,
+    "crossoverOccurred": true,
+    "crossoverMinute": 4
+  }
 }

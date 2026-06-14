@@ -4657,5 +4657,21 @@
       "extractionId": 18
     }
   ],
-  "createdAt": "2026-06-07T00:41:36.936Z"
+  "createdAt": "2026-06-07T00:41:36.936Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Bryce Mitchell",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:12:57.091Z",
+    "openingF1Odds": -126,
+    "openingF2Odds": 108,
+    "closingF1Odds": -6000,
+    "closingF2Odds": 2300,
+    "lineMovementF1": -5874,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

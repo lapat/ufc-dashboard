@@ -2137,5 +2137,21 @@
       "extractionId": 15
     }
   ],
-  "createdAt": "2026-04-26T00:17:54.586Z"
+  "createdAt": "2026-04-26T00:17:54.586Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Ryan Spann",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:54.598Z",
+    "openingF1Odds": -162,
+    "openingF2Odds": 136,
+    "closingF1Odds": 188,
+    "closingF2Odds": -250,
+    "lineMovementF1": 350,
+    "crossoverOccurred": true,
+    "crossoverMinute": 5
+  }
 }

@@ -4102,5 +4102,21 @@
       "extractionId": 7
     }
   ],
-  "createdAt": "2026-04-25T21:15:07.917Z"
+  "createdAt": "2026-04-25T21:15:07.917Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Talita Alencar",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:14:28.589Z",
+    "openingF1Odds": 190,
+    "openingF2Odds": -230,
+    "closingF1Odds": -235,
+    "closingF2Odds": 180,
+    "lineMovementF1": -425,
+    "crossoverOccurred": true,
+    "crossoverMinute": 7
+  }
 }

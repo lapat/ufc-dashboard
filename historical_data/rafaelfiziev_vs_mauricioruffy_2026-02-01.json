@@ -6097,5 +6097,21 @@
       "extractionId": 203
     }
   ],
-  "createdAt": "2026-02-01T03:40:09.709Z"
+  "createdAt": "2026-02-01T03:40:09.709Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Mauricio Ruffy",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:14:13.514Z",
+    "openingF1Odds": -128,
+    "openingF2Odds": 102,
+    "closingF1Odds": -112,
+    "closingF2Odds": -112,
+    "lineMovementF1": 16,
+    "crossoverOccurred": true,
+    "crossoverMinute": 7
+  }
 }

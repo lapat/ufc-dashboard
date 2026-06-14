@@ -11152,5 +11152,21 @@
       "extractionId": 29
     }
   ],
-  "createdAt": "2026-03-01T01:18:59.315Z"
+  "createdAt": "2026-03-01T01:18:59.315Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Santiago Luna",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:14:21.161Z",
+    "openingF1Odds": -770,
+    "openingF2Odds": 540,
+    "closingF1Odds": -6000,
+    "closingF2Odds": 2300,
+    "lineMovementF1": -5230,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

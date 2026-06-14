@@ -8767,5 +8767,21 @@
       "extractionId": 84
     }
   ],
-  "createdAt": "2026-05-10T03:19:31.564Z"
+  "createdAt": "2026-05-10T03:19:31.564Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Joshua Van",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:38.891Z",
+    "openingF1Odds": 132,
+    "openingF2Odds": -156,
+    "closingF1Odds": -700,
+    "closingF2Odds": 440,
+    "lineMovementF1": -832,
+    "crossoverOccurred": true,
+    "crossoverMinute": 15
+  }
 }

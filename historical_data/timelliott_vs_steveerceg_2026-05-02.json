@@ -8752,5 +8752,21 @@
       "extractionId": 237
     }
   ],
-  "createdAt": "2026-05-02T12:46:55.449Z"
+  "createdAt": "2026-05-02T12:46:55.449Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Steve Erceg",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:14:30.872Z",
+    "openingF1Odds": 158,
+    "openingF2Odds": -188,
+    "closingF1Odds": 2300,
+    "closingF2Odds": -6000,
+    "lineMovementF1": 2142,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

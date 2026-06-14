@@ -817,5 +817,21 @@
       "extractionId": 27
     }
   ],
-  "createdAt": "2026-02-21T22:27:26.487Z"
+  "createdAt": "2026-02-21T22:27:26.487Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Carli Judice",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:39.301Z",
+    "openingF1Odds": 590,
+    "openingF2Odds": -850,
+    "closingF1Odds": 590,
+    "closingF2Odds": -850,
+    "lineMovementF1": 0,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

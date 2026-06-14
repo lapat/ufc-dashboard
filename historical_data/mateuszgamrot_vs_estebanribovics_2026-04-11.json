@@ -2962,5 +2962,21 @@
       "extractionId": 37
     }
   ],
-  "createdAt": "2026-04-11T23:38:14.835Z"
+  "createdAt": "2026-04-11T23:38:14.835Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Mateusz Gamrot",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:58.648Z",
+    "openingF1Odds": -235,
+    "openingF2Odds": 180,
+    "closingF1Odds": -3500,
+    "closingF2Odds": 1480,
+    "lineMovementF1": -3265,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

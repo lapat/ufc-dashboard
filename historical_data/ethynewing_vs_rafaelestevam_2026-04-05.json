@@ -3562,5 +3562,21 @@
       "extractionId": 3
     }
   ],
-  "createdAt": "2026-04-05T01:17:17.798Z"
+  "createdAt": "2026-04-05T01:17:17.798Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Ethyn Ewing",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:17.292Z",
+    "openingF1Odds": -126,
+    "openingF2Odds": 108,
+    "closingF1Odds": -6000,
+    "closingF2Odds": 2300,
+    "lineMovementF1": -5874,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

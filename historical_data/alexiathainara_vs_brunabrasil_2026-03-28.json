@@ -967,5 +967,21 @@
       "extractionId": 32
     }
   ],
-  "createdAt": "2026-03-28T21:24:59.613Z"
+  "createdAt": "2026-03-28T21:24:59.613Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Alexia Thainara",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:12:36.670Z",
+    "openingF1Odds": -820,
+    "openingF2Odds": 570,
+    "closingF1Odds": -820,
+    "closingF2Odds": 570,
+    "lineMovementF1": 0,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

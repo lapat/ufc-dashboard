@@ -1852,5 +1852,21 @@
       "extractionId": 21
     }
   ],
-  "createdAt": "2025-11-22T17:48:43.922Z"
+  "createdAt": "2025-11-22T17:48:43.922Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Luke Riley",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:12:53.059Z",
+    "openingF1Odds": 200,
+    "openingF2Odds": -270,
+    "closingF1Odds": -158,
+    "closingF2Odds": 124,
+    "lineMovementF1": -358,
+    "crossoverOccurred": true,
+    "crossoverMinute": 2
+  }
 }

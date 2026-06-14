@@ -5677,5 +5677,21 @@
       "extractionId": 36
     }
   ],
-  "createdAt": "2026-03-21T22:16:13.796Z"
+  "createdAt": "2026-03-21T22:16:13.796Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Luke Riley",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:50.879Z",
+    "openingF1Odds": -225,
+    "openingF2Odds": 188,
+    "closingF1Odds": -1800,
+    "closingF2Odds": 920,
+    "lineMovementF1": -1575,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

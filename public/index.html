@@ -76,6 +76,25 @@
     /* ── main content ── */
     #main{padding:16px 24px;max-width:980px;margin:0 auto}
 
+    /* ── brain analysis panel ── */
+    #brain-panel{margin:6px 0 4px;background:#0c0c0c;border:1px solid #222;border-radius:6px;padding:13px 15px}
+    .brain-section-lbl{font-size:0.58rem;color:#666;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:5px}
+    .brain-bars{display:flex;flex-direction:column;gap:5px;margin-bottom:8px}
+    .brain-bar-row{display:flex;align-items:center;gap:8px}
+    .brain-bar-lbl{font-size:0.63rem;color:#777;width:68px;text-align:right;flex-shrink:0}
+    .brain-bar-track{flex:1;height:13px;background:#141414;border-radius:3px;overflow:hidden;border:1px solid #252525}
+    .brain-bar-fill{height:100%;border-radius:2px;transition:width .5s ease}
+    .brain-bar-fill.book{background:#555}
+    .brain-bar-fill.hist{background:#e8b84b}
+    .brain-bar-pct{font-size:0.72rem;color:#aaa;width:32px;flex-shrink:0}
+    .brain-edge-tag{font-size:0.6rem;padding:2px 7px;border-radius:3px;font-weight:600;letter-spacing:.3px}
+    .brain-method-pill{font-size:0.6rem;color:#888;background:#141414;border:1px solid #2a2a2a;border-radius:3px;padding:2px 6px}
+    .brain-summary{font-size:0.67rem;color:#777;line-height:1.55;margin-bottom:9px;font-style:italic}
+    .brain-verdict{font-size:0.78rem;font-weight:700;letter-spacing:.4px;padding:7px 12px;border-radius:4px;text-align:center}
+    .brain-verdict.bet{background:#0d1a00;color:#7ccd32;border:1px solid #1e3500}
+    .brain-verdict.lean{background:#1a1500;color:#e8b84b;border:1px solid #2e2500}
+    .brain-verdict.pass{background:#111;color:#666;border:1px solid #222}
+
     /* ── game list (before selection) ── */
     .section-label{font-size:0.75rem;color:#3a3a3a;text-transform:uppercase;letter-spacing:2px;margin:14px 0 6px}
     .game-card{background:#141414;border:1px solid #1e1e1e;border-radius:6px;padding:11px 15px;margin-bottom:5px;cursor:pointer;transition:border-color .2s,background .2s}
@@ -469,6 +488,42 @@
       <span id="nw-backfill-status"></span>
     </div>
     <div id="sharp-alert"></div>
+  </div>
+
+  <!-- Brain Analysis Panel (MMA/UFC only) -->
+  <div id="brain-panel" style="display:none">
+    <div id="brain-loading" style="font-size:0.64rem;color:#666;text-align:center;padding:6px">🧠 Analyzing fight patterns...</div>
+    <div id="brain-result" style="display:none">
+      <div style="display:flex;gap:16px;align-items:flex-start">
+        <div style="flex:1;min-width:0">
+          <div class="brain-section-lbl" id="brain-dog-lbl">UNDERDOG</div>
+          <div class="brain-bars">
+            <div class="brain-bar-row">
+              <span class="brain-bar-lbl">Book says</span>
+              <div class="brain-bar-track"><div class="brain-bar-fill book" id="brain-book-bar" style="width:0%"></div></div>
+              <span class="brain-bar-pct" id="brain-book-pct">—</span>
+            </div>
+            <div class="brain-bar-row">
+              <span class="brain-bar-lbl">History says</span>
+              <div class="brain-bar-track"><div class="brain-bar-fill hist" id="brain-hist-bar" style="width:0%"></div></div>
+              <span class="brain-bar-pct" id="brain-hist-pct">—</span>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+            <span class="brain-edge-tag" id="brain-edge-tag"></span>
+            <span style="font-size:0.6rem;color:#666" id="brain-sample"></span>
+          </div>
+        </div>
+        <div style="flex:0 0 auto;min-width:96px">
+          <div class="brain-section-lbl">FINISH METHOD</div>
+          <div style="display:flex;flex-direction:column;gap:3px;margin-bottom:8px" id="brain-methods"></div>
+          <div class="brain-section-lbl" style="margin-top:6px">DOG ROI</div>
+          <span style="font-size:0.76rem;font-weight:600" id="brain-roi">—</span>
+        </div>
+      </div>
+      <div class="brain-summary" id="brain-summary"></div>
+      <div class="brain-verdict pass" id="brain-verdict">—</div>
+    </div>
   </div>
 
   <!-- Game list (shown before selection) -->
@@ -1156,6 +1211,7 @@ document.getElementById('nw-switch').addEventListener('change',function(){
 
 document.getElementById('nw-dismiss').addEventListener('click',()=>{
   document.getElementById('now-watching').style.display='none';
+  document.getElementById('brain-panel').style.display='none';
   document.getElementById('game-list').style.display='block';
   document.getElementById('graph-fight-lbl').textContent='no game selected';
   document.getElementById('graph-empty').style.display='block';
@@ -1164,6 +1220,105 @@ document.getElementById('nw-dismiss').addEventListener('click',()=>{
   selectedGame=null;
   tracker.clear(); renderTracker();
 });
+
+// ── Brain analysis ────────────────────────────────────────────────────────────
+
+let _brainAbort = null;
+
+async function runBrainAnalysis(f1Name, f2Name, f1Odds, f2Odds) {
+  if (!activeSport || !activeSport.includes('mma')) return;
+  const panel = document.getElementById('brain-panel');
+  const loading = document.getElementById('brain-loading');
+  const result = document.getElementById('brain-result');
+  panel.style.display = 'block';
+  loading.style.display = 'block';
+  result.style.display = 'none';
+  if (_brainAbort) _brainAbort.abort();
+  _brainAbort = new AbortController();
+  try {
+    const p = new URLSearchParams({
+      fighter1: f1Name, fighter2: f2Name,
+      f1Odds: f1Odds, f2Odds: f2Odds,
+      f1Open: (_openingOdds && _openingOdds.f1) || f1Odds,
+      f2Open: (_openingOdds && _openingOdds.f2) || f2Odds
+    });
+    const r = await fetch('/api/edge?' + p, { signal: _brainAbort.signal });
+    const d = await r.json();
+    loading.style.display = 'none';
+    result.style.display = 'block';
+    renderBrainResult(d, f1Name, f2Name);
+  } catch(e) {
+    if (e.name === 'AbortError') return;
+    loading.textContent = 'analysis unavailable';
+  }
+}
+
+function renderBrainResult(d, f1Name, f2Name) {
+  const stats = d.stats;
+  const f1Odds = parseFloat(d.meta && d.meta.f1Odds);
+  const f1IsDog = f1Odds > 0;
+  const dogName = f1IsDog ? f1Name : f2Name;
+  const rawDogOdds = f1IsDog ? (d.meta && d.meta.f1Odds) : (d.meta && d.meta.f2Odds);
+  const dogOddsNum = parseFloat(rawDogOdds);
+  const dogOddsDisp = !isNaN(dogOddsNum) ? (dogOddsNum > 0 ? '+' + dogOddsNum : String(dogOddsNum)) : '—';
+
+  document.getElementById('brain-dog-lbl').textContent = 'UNDERDOG — ' + dogName;
+
+  const bookPct = stats && stats.impliedDogProb;
+  const histPct = stats && stats.historicalDogProb;
+  document.getElementById('brain-book-bar').style.width = (bookPct || 0) + '%';
+  document.getElementById('brain-book-pct').textContent = bookPct != null ? bookPct + '%' : '—';
+  document.getElementById('brain-hist-bar').style.width = (histPct || 0) + '%';
+  document.getElementById('brain-hist-pct').textContent = histPct != null ? histPct + '%' : '—';
+
+  const edge = stats && stats.edge;
+  const edgeTag = document.getElementById('brain-edge-tag');
+  if (edge != null) {
+    edgeTag.textContent = (edge > 0 ? '+' : '') + edge + ' ppts edge';
+    edgeTag.style.cssText = edge > 10
+      ? 'background:#0d1a00;color:#7ccd32;border:1px solid #1e3500'
+      : edge > 0
+        ? 'background:#1a1500;color:#e8b84b;border:1px solid #2e2500'
+        : 'background:#1a0000;color:#c0392b;border:1px solid #3a0000';
+  } else {
+    edgeTag.textContent = 'insufficient data';
+    edgeTag.style.cssText = 'background:#111;color:#444;border:1px solid #1e1e1e';
+  }
+  document.getElementById('brain-sample').textContent = (stats && stats.sampleSize) ? 'n=' + stats.sampleSize + ' similar fights' : '';
+
+  const methodsEl = document.getElementById('brain-methods');
+  if (stats && stats.methods) {
+    const tot = Object.values(stats.methods).reduce(function(a,b){return a+b;}, 0);
+    methodsEl.innerHTML = Object.entries(stats.methods)
+      .sort(function(a,b){return b[1]-a[1];})
+      .map(function(e){return '<span class="brain-method-pill">' + e[0] + ' ' + Math.round(e[1]/tot*100) + '%</span>';})
+      .join('');
+  } else { methodsEl.innerHTML = ''; }
+
+  const roiEl = document.getElementById('brain-roi');
+  if (stats && stats.dogROI != null) {
+    roiEl.textContent = (stats.dogROI > 0 ? '+' : '') + stats.dogROI + 'u';
+    roiEl.style.color = stats.dogROI > 0 ? '#7ccd32' : '#e74c3c';
+  } else { roiEl.textContent = '—'; roiEl.style.color = '#555'; }
+
+  document.getElementById('brain-summary').textContent = d.summary || d.reason || '';
+
+  const v = document.getElementById('brain-verdict');
+  v.className = 'brain-verdict';
+  if (d.confidence === 'high' && d.alert) {
+    v.classList.add('bet');
+    v.textContent = 'BET IT: ' + dogName + ' ' + dogOddsDisp + ' — ' + (stats && stats.dogWinRate) + '% historical win rate';
+  } else if (d.confidence === 'medium' && d.alert) {
+    v.classList.add('lean');
+    v.textContent = 'LEAN: ' + dogName + ' ' + dogOddsDisp + ' — slight edge, size down';
+  } else if (!stats || stats.sampleSize < 5) {
+    v.classList.add('pass');
+    v.textContent = 'NOT ENOUGH DATA — only ' + (stats ? stats.sampleSize : 0) + ' similar fights found';
+  } else {
+    v.classList.add('pass');
+    v.textContent = 'NOTHING HERE — pass this one';
+  }
+}
 
 function extractOutcomes(game){
   const out=game.bookmakers[0].markets.find(m=>m.key==='h2h').outcomes;
@@ -1184,6 +1339,9 @@ async function selectGame(game){
   updateNowWatchingOdds(a.price,b.price,draw?draw.price:null);
   document.getElementById('graph-fight-lbl').textContent=`${a.name} vs ${b.name}${draw?' (draw available)':''}`;
   graphSelect(fk,a.name,b.name);
+
+  // Brain analysis (MMA only — fire async, don't block)
+  runBrainAnalysis(a.name, b.name, a.price, b.price);
 
   // Update tracker fight context
   tracker.setFight(a.name,b.name,a.price,b.price,draw?'Draw':null,draw?draw.price:null);
@@ -1298,6 +1456,7 @@ function selectSport(key, label) {
   tracker.clearDkBets();
   _lastDKBetIds = new Set(tracker.bets.filter(b => b.betId).map(b => b.betId));
   renderTracker();
+  document.getElementById('brain-panel').style.display='none';
   if(selectedGame){
     document.getElementById('now-watching').style.display='none';
     document.getElementById('game-list').style.display='block';
@@ -1792,7 +1951,8 @@ function renderBetLog(bets, tbodyId) {
     const stCls = isWon ? 'bl-st-won' : isLost ? 'bl-st-lost' : isOpen ? 'bl-st-open' : 'bl-st-push';
     const pCls  = pnl === null ? 'bl-pnl-open' : pnl > 0 ? 'bl-pnl-pos' : pnl < 0 ? 'bl-pnl-neg' : '';
     const time  = b.placementDate ? new Date(b.placementDate).toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'}) : '—';
-    const oddsDisp = b.odds ? (parseFloat(b.odds) > 0 ? '+'+b.odds : b.odds) : '—';
+    const rawOddsNum = parseFloat(b.odds);
+    const oddsDisp = !isNaN(rawOddsNum) ? (rawOddsNum > 0 ? '+' + rawOddsNum : String(rawOddsNum)) : (b.odds || '—');
     const parlayTag = b.isParlay ? ' <span style="font-size:0.55rem;color:#888;border:1px solid #333;padding:1px 4px;border-radius:3px;vertical-align:middle">PARLAY</span>' : '';
     return `<tr>
       <td class="bl-td bl-time">${time}</td>
@@ -1986,7 +2146,8 @@ async function syncPnL() {
   try {
     const all = await (await fetch(`/api/dk-bets?user=${encodeURIComponent(_dkMeParam)}&all=1`)).json();
     const today = new Date().toISOString().slice(0, 10);
-    const todayAll = all.filter(b => b.placementDate && b.placementDate.slice(0, 10) === today);
+    // Include bets from today OR bets with no date (parlays often lack placementDate — treat as current session)
+    const todayAll = all.filter(b => !b.placementDate || b.placementDate.slice(0, 10) === today);
     const straight = todayAll.filter(b => !b.isParlay); // P&L uses straight bets only
 
     // Settlement detection — only fire toast for Open→settled transitions

@@ -2017,5 +2017,21 @@
       "extractionId": 50
     }
   ],
-  "createdAt": "2026-01-24T23:14:07.393Z"
+  "createdAt": "2026-01-24T23:14:07.393Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Ty Miller",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:14:32.656Z",
+    "openingF1Odds": -460,
+    "openingF2Odds": 320,
+    "closingF1Odds": -3000,
+    "closingF2Odds": 1340,
+    "lineMovementF1": -2540,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

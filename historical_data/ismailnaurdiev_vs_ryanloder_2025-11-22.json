@@ -1687,5 +1687,21 @@
       "extractionId": 56
     }
   ],
-  "createdAt": "2025-11-22T16:02:51.965Z"
+  "createdAt": "2025-11-22T16:02:51.965Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Ismail Naurdiev",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:23.412Z",
+    "openingF1Odds": -124,
+    "openingF2Odds": 106,
+    "closingF1Odds": -142,
+    "closingF2Odds": 112,
+    "lineMovementF1": -18,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

@@ -187,5 +187,21 @@
       "extractionId": 12
     }
   ],
-  "createdAt": "2026-03-01T00:45:17.538Z"
+  "createdAt": "2026-03-01T00:45:17.538Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Ryan Gandra",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:14:20.703Z",
+    "openingF1Odds": -720,
+    "openingF2Odds": 520,
+    "closingF1Odds": -800,
+    "closingF2Odds": 490,
+    "lineMovementF1": -80,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

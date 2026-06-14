@@ -172,5 +172,21 @@
       "extractionId": 11
     }
   ],
-  "createdAt": "2025-11-22T16:50:18.884Z"
+  "createdAt": "2025-11-22T16:50:18.884Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Abdul-Rakhman Yakhyaev",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:12:32.419Z",
+    "openingF1Odds": -1600,
+    "openingF2Odds": 900,
+    "closingF1Odds": -1600,
+    "closingF2Odds": 860,
+    "lineMovementF1": 0,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

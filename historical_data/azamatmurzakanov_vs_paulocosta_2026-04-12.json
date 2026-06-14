@@ -3892,5 +3892,21 @@
       "extractionId": 15
     }
   ],
-  "createdAt": "2026-04-12T03:09:53.297Z"
+  "createdAt": "2026-04-12T03:09:53.297Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Paulo Costa",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:12:48.066Z",
+    "openingF1Odds": -280,
+    "openingF2Odds": 205,
+    "closingF1Odds": 225,
+    "closingF2Odds": -310,
+    "lineMovementF1": 505,
+    "crossoverOccurred": true,
+    "crossoverMinute": 5
+  }
 }

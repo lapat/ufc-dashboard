@@ -4657,5 +4657,21 @@
       "extractionId": 13
     }
   ],
-  "createdAt": "2026-03-08T04:04:50.690Z"
+  "createdAt": "2026-03-08T04:04:50.690Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Caio Borralho",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:12:58.144Z",
+    "openingF1Odds": -230,
+    "openingF2Odds": 190,
+    "closingF1Odds": -6000,
+    "closingF2Odds": 290,
+    "lineMovementF1": -5770,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

@@ -7837,5 +7837,21 @@
       "extractionId": 165
     }
   ],
-  "createdAt": "2025-12-14T03:28:55.509Z"
+  "createdAt": "2025-12-14T03:28:55.509Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "King Green",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:47.196Z",
+    "openingF1Odds": -178,
+    "openingF2Odds": 150,
+    "closingF1Odds": -3000,
+    "closingF2Odds": 1340,
+    "lineMovementF1": -2822,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

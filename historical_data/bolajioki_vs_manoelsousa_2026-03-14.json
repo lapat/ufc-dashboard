@@ -2692,5 +2692,21 @@
       "extractionId": 4
     }
   ],
-  "createdAt": "2026-03-14T22:54:28.538Z"
+  "createdAt": "2026-03-14T22:54:28.538Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Manoel Sousa",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:12:53.475Z",
+    "openingF1Odds": 220,
+    "openingF2Odds": -300,
+    "closingF1Odds": 1040,
+    "closingF2Odds": -2000,
+    "lineMovementF1": 820,
+    "crossoverOccurred": true,
+    "crossoverMinute": 3
+  }
 }

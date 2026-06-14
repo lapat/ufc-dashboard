@@ -9202,5 +9202,21 @@
       "extractionId": 52
     }
   ],
-  "createdAt": "2026-03-01T04:17:29.981Z"
+  "createdAt": "2026-03-01T04:17:29.981Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Lone'er Kavanagh",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:12:54.785Z",
+    "openingF1Odds": -198,
+    "openingF2Odds": 166,
+    "closingF1Odds": 660,
+    "closingF2Odds": -1200,
+    "lineMovementF1": 858,
+    "crossoverOccurred": true,
+    "crossoverMinute": 9
+  }
 }

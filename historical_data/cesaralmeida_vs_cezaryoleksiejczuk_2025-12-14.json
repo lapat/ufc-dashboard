@@ -3097,5 +3097,21 @@
       "extractionId": 32
     }
   ],
-  "createdAt": "2025-12-14T05:00:04.873Z"
+  "createdAt": "2025-12-14T05:00:04.873Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Cezary Oleksiejczuk",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:00.165Z",
+    "openingF1Odds": 440,
+    "openingF2Odds": -700,
+    "closingF1Odds": 2300,
+    "closingF2Odds": -6000,
+    "lineMovementF1": 1860,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

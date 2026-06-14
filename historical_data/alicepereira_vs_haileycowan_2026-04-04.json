@@ -3052,5 +3052,21 @@
       "extractionId": 10
     }
   ],
-  "createdAt": "2026-04-04T22:42:00.144Z"
+  "createdAt": "2026-04-04T22:42:00.144Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Alice Pereira",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:12:40.162Z",
+    "openingF1Odds": -146,
+    "openingF2Odds": 124,
+    "closingF1Odds": -126,
+    "closingF2Odds": -102,
+    "lineMovementF1": 20,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

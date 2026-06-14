@@ -5047,5 +5047,21 @@
       "extractionId": 120
     }
   ],
-  "createdAt": "2026-02-01T01:02:59.415Z"
+  "createdAt": "2026-02-01T01:02:59.415Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Cam Rowston",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:12:58.807Z",
+    "openingF1Odds": -360,
+    "openingF2Odds": 290,
+    "closingF1Odds": -1000,
+    "closingF2Odds": 580,
+    "lineMovementF1": -640,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

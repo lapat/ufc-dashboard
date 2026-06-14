@@ -1597,5 +1597,21 @@
       "extractionId": 22
     }
   ],
-  "createdAt": "2026-03-15T02:56:33.054Z"
+  "createdAt": "2026-03-15T02:56:33.054Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Kevin Vallejos",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:37.166Z",
+    "openingF1Odds": 400,
+    "openingF2Odds": -520,
+    "closingF1Odds": 620,
+    "closingF2Odds": -1100,
+    "lineMovementF1": 220,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

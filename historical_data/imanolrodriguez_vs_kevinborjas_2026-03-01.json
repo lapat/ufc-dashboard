@@ -4027,5 +4027,21 @@
       "extractionId": 5
     }
   ],
-  "createdAt": "2026-03-01T01:42:47.753Z"
+  "createdAt": "2026-03-01T01:42:47.753Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Imanol Rodriguez",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:22.968Z",
+    "openingF1Odds": -450,
+    "openingF2Odds": 350,
+    "closingF1Odds": -600,
+    "closingF2Odds": 370,
+    "lineMovementF1": -150,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

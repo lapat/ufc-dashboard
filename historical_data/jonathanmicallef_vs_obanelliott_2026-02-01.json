@@ -2392,5 +2392,21 @@
       "extractionId": 8
     }
   ],
-  "createdAt": "2026-02-01T00:17:29.054Z"
+  "createdAt": "2026-02-01T00:17:29.054Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Jonathan Micallef",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:34.863Z",
+    "openingF1Odds": -126,
+    "openingF2Odds": 108,
+    "closingF1Odds": 250,
+    "closingF2Odds": -360,
+    "lineMovementF1": 376,
+    "crossoverOccurred": true,
+    "crossoverMinute": 2
+  }
 }

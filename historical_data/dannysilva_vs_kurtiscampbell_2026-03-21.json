@@ -4297,5 +4297,21 @@
       "extractionId": 143
     }
   ],
-  "createdAt": "2026-03-21T20:29:22.934Z"
+  "createdAt": "2026-03-21T20:29:22.934Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Danny Silva",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:09.236Z",
+    "openingF1Odds": 225,
+    "openingF2Odds": -275,
+    "closingF1Odds": 164,
+    "closingF2Odds": -215,
+    "lineMovementF1": -61,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

@@ -8932,5 +8932,21 @@
       "extractionId": 52
     }
   ],
-  "createdAt": "2026-02-01T04:37:19.944Z"
+  "createdAt": "2026-02-01T04:37:19.944Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Alexander Volkanovski",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:12:35.559Z",
+    "openingF1Odds": -162,
+    "openingF2Odds": 136,
+    "closingF1Odds": -1600,
+    "closingF2Odds": 840,
+    "lineMovementF1": -1438,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

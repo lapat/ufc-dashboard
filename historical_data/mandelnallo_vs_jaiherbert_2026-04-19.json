@@ -877,5 +877,21 @@
       "extractionId": 29
     }
   ],
-  "createdAt": "2026-04-19T01:27:06.763Z"
+  "createdAt": "2026-04-19T01:27:06.763Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Jai Herbert",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:52.214Z",
+    "openingF1Odds": -168,
+    "openingF2Odds": 142,
+    "closingF1Odds": -176,
+    "closingF2Odds": 138,
+    "lineMovementF1": -8,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

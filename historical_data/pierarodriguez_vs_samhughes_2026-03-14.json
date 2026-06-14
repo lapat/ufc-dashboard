@@ -217,5 +217,21 @@
       "extractionId": 14
     }
   ],
-  "createdAt": "2026-03-14T21:29:40.337Z"
+  "createdAt": "2026-03-14T21:29:40.337Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Piera Rodriguez",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:14:12.199Z",
+    "openingF1Odds": -152,
+    "openingF2Odds": 128,
+    "closingF1Odds": -152,
+    "closingF2Odds": 128,
+    "lineMovementF1": 0,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

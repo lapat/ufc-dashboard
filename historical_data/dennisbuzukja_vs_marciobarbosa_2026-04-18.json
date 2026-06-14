@@ -862,5 +862,21 @@
       "extractionId": 53
     }
   ],
-  "createdAt": "2026-04-18T23:17:09.721Z"
+  "createdAt": "2026-04-18T23:17:09.721Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Marcio Barbosa",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:10.283Z",
+    "openingF1Odds": 315,
+    "openingF2Odds": -400,
+    "closingF1Odds": 310,
+    "closingF2Odds": -450,
+    "lineMovementF1": -5,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

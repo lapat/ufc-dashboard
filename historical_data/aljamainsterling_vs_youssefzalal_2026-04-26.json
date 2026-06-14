@@ -6142,5 +6142,21 @@
       "extractionId": 20
     }
   ],
-  "createdAt": "2026-04-26T02:59:24.335Z"
+  "createdAt": "2026-04-26T02:59:24.335Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Aljamain Sterling",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:12:41.679Z",
+    "openingF1Odds": 108,
+    "openingF2Odds": -130,
+    "closingF1Odds": -3000,
+    "closingF2Odds": 1340,
+    "lineMovementF1": -3108,
+    "crossoverOccurred": true,
+    "crossoverMinute": 5
+  }
 }

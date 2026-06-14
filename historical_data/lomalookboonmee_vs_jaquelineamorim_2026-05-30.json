@@ -6187,5 +6187,21 @@
       "extractionId": 103
     }
   ],
-  "createdAt": "2026-05-30T08:17:23.786Z"
+  "createdAt": "2026-05-30T08:17:23.786Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Jaqueline Amorim",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:49.037Z",
+    "openingF1Odds": 120,
+    "openingF2Odds": -142,
+    "closingF1Odds": 280,
+    "closingF2Odds": -410,
+    "lineMovementF1": 160,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

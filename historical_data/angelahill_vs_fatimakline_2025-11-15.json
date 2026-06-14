@@ -322,5 +322,21 @@
       "extractionId": 21
     }
   ],
-  "createdAt": "2025-11-15T23:58:40.951Z"
+  "createdAt": "2025-11-15T23:58:40.951Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Fatima Kline",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:12:43.891Z",
+    "openingF1Odds": 440,
+    "openingF2Odds": -590,
+    "closingF1Odds": 420,
+    "closingF2Odds": -650,
+    "lineMovementF1": -20,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

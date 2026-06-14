@@ -3982,5 +3982,21 @@
       "extractionId": 32
     }
   ],
-  "createdAt": "2026-05-16T22:07:31.109Z"
+  "createdAt": "2026-05-16T22:07:31.109Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Alice Ardelean",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:12:39.734Z",
+    "openingF1Odds": -168,
+    "openingF2Odds": 142,
+    "closingF1Odds": -1000,
+    "closingF2Odds": 580,
+    "lineMovementF1": -832,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

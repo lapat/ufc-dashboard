@@ -4897,5 +4897,21 @@
       "extractionId": 12
     }
   ],
-  "createdAt": "2025-11-22T19:55:30.611Z"
+  "createdAt": "2025-11-22T19:55:30.611Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Ian Machado Garry",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:12:50.406Z",
+    "openingF1Odds": 235,
+    "openingF2Odds": -290,
+    "closingF1Odds": 690,
+    "closingF2Odds": -1300,
+    "lineMovementF1": 455,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

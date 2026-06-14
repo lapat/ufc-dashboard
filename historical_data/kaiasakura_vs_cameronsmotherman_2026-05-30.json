@@ -1867,5 +1867,21 @@
       "extractionId": 62
     }
   ],
-  "createdAt": "2026-05-30T12:17:27.840Z"
+  "createdAt": "2026-05-30T12:17:27.840Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Kai Asakura",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:42.895Z",
+    "openingF1Odds": -280,
+    "openingF2Odds": 225,
+    "closingF1Odds": -550,
+    "closingF2Odds": 350,
+    "lineMovementF1": -270,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

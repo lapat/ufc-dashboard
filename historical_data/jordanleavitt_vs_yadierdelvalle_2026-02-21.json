@@ -3472,5 +3472,21 @@
       "extractionId": 44
     }
   ],
-  "createdAt": "2026-02-21T22:31:57.924Z"
+  "createdAt": "2026-02-21T22:31:57.924Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Jordan Leavitt",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:36.090Z",
+    "openingF1Odds": 320,
+    "openingF2Odds": -405,
+    "closingF1Odds": -1300,
+    "closingF2Odds": 690,
+    "lineMovementF1": -1620,
+    "crossoverOccurred": true,
+    "crossoverMinute": 5
+  }
 }

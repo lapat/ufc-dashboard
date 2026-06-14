@@ -772,5 +772,21 @@
       "extractionId": 11
     }
   ],
-  "createdAt": "2026-04-18T23:14:56.258Z"
+  "createdAt": "2026-04-18T23:14:56.258Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Robert Valentin",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:40.189Z",
+    "openingF1Odds": 150,
+    "openingF2Odds": -178,
+    "closingF1Odds": 420,
+    "closingF2Odds": -650,
+    "lineMovementF1": 270,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

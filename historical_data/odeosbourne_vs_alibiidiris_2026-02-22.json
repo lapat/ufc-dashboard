@@ -3832,5 +3832,21 @@
       "extractionId": 5
     }
   ],
-  "createdAt": "2026-02-22T00:35:32.223Z"
+  "createdAt": "2026-02-22T00:35:32.223Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Alibi Idiris",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:14:10.103Z",
+    "openingF1Odds": 120,
+    "openingF2Odds": -142,
+    "closingF1Odds": 1800,
+    "closingF2Odds": -4500,
+    "lineMovementF1": 1680,
+    "crossoverOccurred": true,
+    "crossoverMinute": 8
+  }
 }

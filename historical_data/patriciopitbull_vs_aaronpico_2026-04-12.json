@@ -6802,5 +6802,21 @@
       "extractionId": 133
     }
   ],
-  "createdAt": "2026-04-12T00:50:34.506Z"
+  "createdAt": "2026-04-12T00:50:34.506Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Aaron Pico",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:14:10.542Z",
+    "openingF1Odds": 205,
+    "openingF2Odds": -250,
+    "closingF1Odds": 2300,
+    "closingF2Odds": -6000,
+    "lineMovementF1": 2095,
+    "crossoverOccurred": true,
+    "crossoverMinute": 3
+  }
 }

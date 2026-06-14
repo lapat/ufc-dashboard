@@ -1072,5 +1072,21 @@
       "extractionId": 6
     }
   ],
-  "createdAt": "2025-11-22T19:12:49.268Z"
+  "createdAt": "2025-11-22T19:12:49.268Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Myktybek Orolbai",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:26.486Z",
+    "openingF1Odds": 166,
+    "openingF2Odds": -198,
+    "closingF1Odds": 180,
+    "closingF2Odds": -235,
+    "lineMovementF1": 14,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

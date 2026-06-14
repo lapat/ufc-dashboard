@@ -3487,5 +3487,21 @@
       "extractionId": 19
     }
   ],
-  "createdAt": "2026-02-22T00:57:07.942Z"
+  "createdAt": "2026-02-22T00:57:07.942Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Carlos Leal",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:02.020Z",
+    "openingF1Odds": 114,
+    "openingF2Odds": -146,
+    "closingF1Odds": 550,
+    "closingF2Odds": -950,
+    "lineMovementF1": 436,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

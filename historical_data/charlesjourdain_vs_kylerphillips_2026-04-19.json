@@ -6247,5 +6247,21 @@
       "extractionId": 67
     }
   ],
-  "createdAt": "2026-04-19T01:51:58.672Z"
+  "createdAt": "2026-04-19T01:51:58.672Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Charles Jourdain",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:01.081Z",
+    "openingF1Odds": -148,
+    "openingF2Odds": 126,
+    "closingF1Odds": -186,
+    "closingF2Odds": 144,
+    "lineMovementF1": -38,
+    "crossoverOccurred": true,
+    "crossoverMinute": 3
+  }
 }

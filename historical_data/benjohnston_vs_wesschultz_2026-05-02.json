@@ -4252,5 +4252,21 @@
       "extractionId": 20
     }
   ],
-  "createdAt": "2026-05-02T09:04:37.468Z"
+  "createdAt": "2026-05-02T09:04:37.468Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Wes Schultz",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:12:52.629Z",
+    "openingF1Odds": -152,
+    "openingF2Odds": 128,
+    "closingF1Odds": -460,
+    "closingF2Odds": 320,
+    "lineMovementF1": -308,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

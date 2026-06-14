@@ -1867,5 +1867,21 @@
       "extractionId": 62
     }
   ],
-  "createdAt": "2026-03-08T00:00:08.701Z"
+  "createdAt": "2026-03-08T00:00:08.701Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Sumudaerji",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:14:26.636Z",
+    "openingF1Odds": -6000,
+    "openingF2Odds": 2300,
+    "closingF1Odds": -6000,
+    "closingF2Odds": 2300,
+    "lineMovementF1": 0,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

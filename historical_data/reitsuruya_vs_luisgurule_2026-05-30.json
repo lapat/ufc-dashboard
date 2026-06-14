@@ -1897,5 +1897,21 @@
       "extractionId": 63
     }
   ],
-  "createdAt": "2026-05-30T09:21:31.487Z"
+  "createdAt": "2026-05-30T09:21:31.487Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Rei Tsuruya",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:14:16.579Z",
+    "openingF1Odds": -390,
+    "openingF2Odds": 310,
+    "closingF1Odds": -1600,
+    "closingF2Odds": 840,
+    "lineMovementF1": -1210,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

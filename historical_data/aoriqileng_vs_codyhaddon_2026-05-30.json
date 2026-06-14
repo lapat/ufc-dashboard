@@ -2992,5 +2992,21 @@
       "extractionId": 30
     }
   ],
-  "createdAt": "2026-05-30T09:42:32.782Z"
+  "createdAt": "2026-05-30T09:42:32.782Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Cody Haddon",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:12:45.202Z",
+    "openingF1Odds": 360,
+    "openingF2Odds": -460,
+    "closingF1Odds": 690,
+    "closingF2Odds": -1300,
+    "lineMovementF1": 330,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

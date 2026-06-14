@@ -4072,5 +4072,21 @@
       "extractionId": 2
     }
   ],
-  "createdAt": "2026-05-09T21:15:31.212Z"
+  "createdAt": "2026-05-09T21:15:31.212Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Jose Ochoa",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:03.400Z",
+    "openingF1Odds": 152,
+    "openingF2Odds": -180,
+    "closingF1Odds": 2300,
+    "closingF2Odds": -6000,
+    "lineMovementF1": 2148,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

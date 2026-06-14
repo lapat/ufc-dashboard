@@ -4777,5 +4777,21 @@
       "extractionId": 9
     }
   ],
-  "createdAt": "2026-04-11T22:00:38.788Z"
+  "createdAt": "2026-04-11T22:00:38.788Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Charles Radtke",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:01.485Z",
+    "openingF1Odds": -156,
+    "openingF2Odds": 132,
+    "closingF1Odds": -6000,
+    "closingF2Odds": 2300,
+    "lineMovementF1": -5844,
+    "crossoverOccurred": true,
+    "crossoverMinute": 2
+  }
 }

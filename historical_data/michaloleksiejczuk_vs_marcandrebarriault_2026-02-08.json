@@ -10567,5 +10567,21 @@
       "extractionId": 352
     }
   ],
-  "createdAt": "2026-02-08T02:29:29.045Z"
+  "createdAt": "2026-02-08T02:29:29.045Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Michal Oleksiejczuk",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:14:02.870Z",
+    "openingF1Odds": -490,
+    "openingF2Odds": 380,
+    "closingF1Odds": -650,
+    "closingF2Odds": 400,
+    "lineMovementF1": -160,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

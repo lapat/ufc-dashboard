@@ -5437,5 +5437,21 @@
       "extractionId": 47
     }
   ],
-  "createdAt": "2025-11-16T00:29:07.923Z"
+  "createdAt": "2025-11-16T00:29:07.923Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Pat Sabatini",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:14:10.994Z",
+    "openingF1Odds": -112,
+    "openingF2Odds": -104,
+    "closingF1Odds": -6000,
+    "closingF2Odds": 2300,
+    "lineMovementF1": -5888,
+    "crossoverOccurred": true,
+    "crossoverMinute": 7
+  }
 }

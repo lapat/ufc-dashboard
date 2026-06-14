@@ -3352,5 +3352,21 @@
       "extractionId": 32
     }
   ],
-  "createdAt": "2026-03-14T22:20:42.880Z"
+  "createdAt": "2026-03-14T22:20:42.880Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Eryk Anders",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:12:54.306Z",
+    "openingF1Odds": 250,
+    "openingF2Odds": -350,
+    "closingF1Odds": 840,
+    "closingF2Odds": -1600,
+    "lineMovementF1": 590,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

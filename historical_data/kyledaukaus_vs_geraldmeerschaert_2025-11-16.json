@@ -427,5 +427,21 @@
       "extractionId": 14
     }
   ],
-  "createdAt": "2025-11-16T00:58:33.861Z"
+  "createdAt": "2025-11-16T00:58:33.861Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Kyle Daukaus",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:48.210Z",
+    "openingF1Odds": -550,
+    "openingF2Odds": 350,
+    "closingF1Odds": -550,
+    "closingF2Odds": 350,
+    "lineMovementF1": 0,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

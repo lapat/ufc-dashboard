@@ -9532,5 +9532,21 @@
       "extractionId": 297
     }
   ],
-  "createdAt": "2026-02-08T02:44:48.191Z"
+  "createdAt": "2026-02-08T02:44:48.191Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Rizvan Kuniev",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:29.623Z",
+    "openingF1Odds": -174,
+    "openingF2Odds": 136,
+    "closingF1Odds": 2300,
+    "closingF2Odds": -6000,
+    "lineMovementF1": 2474,
+    "crossoverOccurred": true,
+    "crossoverMinute": 2
+  }
 }

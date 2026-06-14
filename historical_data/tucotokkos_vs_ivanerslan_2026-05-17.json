@@ -232,5 +232,21 @@
       "extractionId": 15
     }
   ],
-  "createdAt": "2026-05-17T00:13:47.611Z"
+  "createdAt": "2026-05-17T00:13:47.611Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Ivan Erslan",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:14:32.161Z",
+    "openingF1Odds": 2300,
+    "openingF2Odds": -6000,
+    "closingF1Odds": 2300,
+    "closingF2Odds": -6000,
+    "lineMovementF1": 0,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

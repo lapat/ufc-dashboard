@@ -4387,5 +4387,21 @@
       "extractionId": 15
     }
   ],
-  "createdAt": "2025-11-22T15:30:39.779Z"
+  "createdAt": "2025-11-22T15:30:39.779Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Nurullo Aliev",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:14:09.660Z",
+    "openingF1Odds": -350,
+    "openingF2Odds": 250,
+    "closingF1Odds": -6000,
+    "closingF2Odds": 2300,
+    "lineMovementF1": -5650,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

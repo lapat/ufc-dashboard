@@ -6202,5 +6202,21 @@
       "extractionId": 54
     }
   ],
-  "createdAt": "2026-03-14T21:29:45.657Z"
+  "createdAt": "2026-03-14T21:29:45.657Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Hecher Sosa",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:50.056Z",
+    "openingF1Odds": 164,
+    "openingF2Odds": -196,
+    "closingF1Odds": 1340,
+    "closingF2Odds": -3000,
+    "lineMovementF1": 1176,
+    "crossoverOccurred": true,
+    "crossoverMinute": 4
+  }
 }

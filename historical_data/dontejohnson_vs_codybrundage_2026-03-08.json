@@ -6967,5 +6967,21 @@
       "extractionId": 121
     }
   ],
-  "createdAt": "2026-03-08T01:14:48.306Z"
+  "createdAt": "2026-03-08T01:14:48.306Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Donte Johnson",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:13.390Z",
+    "openingF1Odds": -900,
+    "openingF2Odds": 610,
+    "closingF1Odds": -310,
+    "closingF2Odds": 225,
+    "lineMovementF1": 590,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

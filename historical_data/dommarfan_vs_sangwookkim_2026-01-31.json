@@ -4642,5 +4642,21 @@
       "extractionId": 76
     }
   ],
-  "createdAt": "2026-01-31T23:19:50.244Z"
+  "createdAt": "2026-01-31T23:19:50.244Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Dom Mar Fan",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:12.956Z",
+    "openingF1Odds": -158,
+    "openingF2Odds": 136,
+    "closingF1Odds": -650,
+    "closingF2Odds": 400,
+    "lineMovementF1": -492,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

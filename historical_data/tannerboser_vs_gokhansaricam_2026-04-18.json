@@ -3742,5 +3742,21 @@
       "extractionId": 44
     }
   ],
-  "createdAt": "2026-04-18T22:53:51.348Z"
+  "createdAt": "2026-04-18T22:53:51.348Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Gokhan Saricam",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:14:29.000Z",
+    "openingF1Odds": 128,
+    "openingF2Odds": -152,
+    "closingF1Odds": 116,
+    "closingF2Odds": -148,
+    "lineMovementF1": -12,
+    "crossoverOccurred": true,
+    "crossoverMinute": 5
+  }
 }

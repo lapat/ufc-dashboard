@@ -4342,5 +4342,21 @@
       "extractionId": 2
     }
   ],
-  "createdAt": "2026-02-08T00:40:11.957Z"
+  "createdAt": "2026-02-08T00:40:11.957Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Daniil Donchenko",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:12:37.206Z",
+    "openingF1Odds": 610,
+    "openingF2Odds": -900,
+    "closingF1Odds": 2300,
+    "closingF2Odds": -6000,
+    "lineMovementF1": 1690,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

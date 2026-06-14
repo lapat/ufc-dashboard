@@ -7102,5 +7102,21 @@
       "extractionId": 144
     }
   ],
-  "createdAt": "2026-05-09T21:50:34.501Z"
+  "createdAt": "2026-05-09T21:50:34.501Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Baisangur Susurkaev",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:12:48.524Z",
+    "openingF1Odds": -800,
+    "openingF2Odds": 560,
+    "closingF1Odds": -1300,
+    "closingF2Odds": 720,
+    "lineMovementF1": -500,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

@@ -4447,5 +4447,21 @@
       "extractionId": 5
     }
   ],
-  "createdAt": "2025-11-15T23:36:57.860Z"
+  "createdAt": "2025-11-15T23:36:57.860Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Baisangur Susurkaev",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:12:48.913Z",
+    "openingF1Odds": -1000,
+    "openingF2Odds": 660,
+    "closingF1Odds": -460,
+    "closingF2Odds": 320,
+    "lineMovementF1": 540,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

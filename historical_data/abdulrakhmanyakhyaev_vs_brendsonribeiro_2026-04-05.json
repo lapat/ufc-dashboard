@@ -1147,5 +1147,21 @@
       "extractionId": 4
     }
   ],
-  "createdAt": "2026-04-05T01:44:18.330Z"
+  "createdAt": "2026-04-05T01:44:18.330Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Abdul-Rakhman Yakhyaev",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:12:31.968Z",
+    "openingF1Odds": -1400,
+    "openingF2Odds": 830,
+    "closingF1Odds": -750,
+    "closingF2Odds": 460,
+    "lineMovementF1": 650,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

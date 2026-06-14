@@ -1627,5 +1627,21 @@
       "extractionId": 12
     }
   ],
-  "createdAt": "2026-04-12T01:29:29.926Z"
+  "createdAt": "2026-04-12T01:29:29.926Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Cub Swanson",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:06.675Z",
+    "openingF1Odds": -130,
+    "openingF2Odds": 108,
+    "closingF1Odds": -1600,
+    "closingF2Odds": 840,
+    "lineMovementF1": -1470,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

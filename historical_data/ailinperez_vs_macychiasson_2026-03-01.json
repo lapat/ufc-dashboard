@@ -4252,5 +4252,21 @@
       "extractionId": 11
     }
   ],
-  "createdAt": "2026-03-01T00:15:27.095Z"
+  "createdAt": "2026-03-01T00:15:27.095Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Ailin Perez",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:12:33.059Z",
+    "openingF1Odds": -180,
+    "openingF2Odds": 152,
+    "closingF1Odds": -6000,
+    "closingF2Odds": 2300,
+    "lineMovementF1": -5820,
+    "crossoverOccurred": true,
+    "crossoverMinute": 5
+  }
 }

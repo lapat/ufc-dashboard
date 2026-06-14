@@ -4342,5 +4342,21 @@
       "extractionId": 46
     }
   ],
-  "createdAt": "2026-03-08T04:57:37.860Z"
+  "createdAt": "2026-03-08T04:57:37.860Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Charles Oliveira",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:14:00.395Z",
+    "openingF1Odds": 196,
+    "openingF2Odds": -260,
+    "closingF1Odds": 2300,
+    "closingF2Odds": -6000,
+    "lineMovementF1": 2104,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

@@ -4012,5 +4012,21 @@
       "extractionId": 8
     }
   ],
-  "createdAt": "2026-05-16T21:41:00.454Z"
+  "createdAt": "2026-05-16T21:41:00.454Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Luis Gurule",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:08.397Z",
+    "openingF1Odds": 136,
+    "openingF2Odds": -162,
+    "closingF1Odds": 2300,
+    "closingF2Odds": -6000,
+    "lineMovementF1": 2164,
+    "crossoverOccurred": true,
+    "crossoverMinute": 2
+  }
 }

@@ -5152,5 +5152,21 @@
       "extractionId": 15
     }
   ],
-  "createdAt": "2025-11-16T02:16:08.582Z"
+  "createdAt": "2025-11-16T02:16:08.582Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Gregory Rodrigues",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:14:19.810Z",
+    "openingF1Odds": 164,
+    "openingF2Odds": -196,
+    "closingF1Odds": 2300,
+    "closingF2Odds": -6000,
+    "lineMovementF1": 2136,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

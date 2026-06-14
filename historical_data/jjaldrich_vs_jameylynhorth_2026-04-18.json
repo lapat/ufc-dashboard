@@ -5677,5 +5677,21 @@
       "extractionId": 112
     }
   ],
-  "createdAt": "2026-04-18T22:02:45.816Z"
+  "createdAt": "2026-04-18T22:02:45.816Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "JJ Aldrich",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:33.827Z",
+    "openingF1Odds": 164,
+    "openingF2Odds": -196,
+    "closingF1Odds": 1800,
+    "closingF2Odds": -4500,
+    "lineMovementF1": 1636,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

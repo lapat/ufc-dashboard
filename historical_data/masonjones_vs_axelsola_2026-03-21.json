@@ -8422,5 +8422,21 @@
       "extractionId": 239
     }
   ],
-  "createdAt": "2026-03-21T19:41:54.649Z"
+  "createdAt": "2026-03-21T19:41:54.649Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Mason Jones",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:58.248Z",
+    "openingF1Odds": -152,
+    "openingF2Odds": 128,
+    "closingF1Odds": -4500,
+    "closingF2Odds": 1800,
+    "lineMovementF1": -4348,
+    "crossoverOccurred": true,
+    "crossoverMinute": 4
+  }
 }

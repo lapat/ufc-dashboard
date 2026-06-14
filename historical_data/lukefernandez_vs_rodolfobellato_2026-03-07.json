@@ -982,5 +982,21 @@
       "extractionId": 2
     }
   ],
-  "createdAt": "2026-03-07T22:46:36.661Z"
+  "createdAt": "2026-03-07T22:46:36.661Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Rodolfo Bellato",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:50.469Z",
+    "openingF1Odds": -220,
+    "openingF2Odds": 184,
+    "closingF1Odds": -850,
+    "closingF2Odds": 520,
+    "lineMovementF1": -630,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

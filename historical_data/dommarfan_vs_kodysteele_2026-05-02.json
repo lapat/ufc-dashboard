@@ -457,5 +457,21 @@
       "extractionId": 15
     }
   ],
-  "createdAt": "2026-05-02T08:19:56.994Z"
+  "createdAt": "2026-05-02T08:19:56.994Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Kody Steele",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:12.534Z",
+    "openingF1Odds": 158,
+    "openingF2Odds": -205,
+    "closingF1Odds": 192,
+    "closingF2Odds": -260,
+    "lineMovementF1": 34,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

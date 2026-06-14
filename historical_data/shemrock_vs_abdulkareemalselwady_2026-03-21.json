@@ -5227,5 +5227,21 @@
       "extractionId": 14
     }
   ],
-  "createdAt": "2026-03-21T17:35:07.024Z"
+  "createdAt": "2026-03-21T17:35:07.024Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Abdul-Kareem Al-Selwady",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:14:25.301Z",
+    "openingF1Odds": -138,
+    "openingF2Odds": 118,
+    "closingF1Odds": 2300,
+    "closingF2Odds": -6000,
+    "lineMovementF1": 2438,
+    "crossoverOccurred": true,
+    "crossoverMinute": 5
+  }
 }

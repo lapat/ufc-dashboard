@@ -4597,5 +4597,21 @@
       "extractionId": 2
     }
   ],
-  "createdAt": "2026-04-04T21:17:00.464Z"
+  "createdAt": "2026-04-04T21:17:00.464Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Kai Kamaka III",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:13:43.309Z",
+    "openingF1Odds": -158,
+    "openingF2Odds": 134,
+    "closingF1Odds": -280,
+    "closingF2Odds": 205,
+    "lineMovementF1": -122,
+    "crossoverOccurred": true,
+    "crossoverMinute": 5
+  }
 }

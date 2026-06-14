@@ -7792,5 +7792,21 @@
       "extractionId": 183
     }
   ],
-  "createdAt": "2026-01-25T00:44:55.615Z"
+  "createdAt": "2026-01-25T00:44:55.615Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Nikita Krylov",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:14:06.923Z",
+    "openingF1Odds": 108,
+    "openingF2Odds": -136,
+    "closingF1Odds": -1100,
+    "closingF2Odds": 620,
+    "lineMovementF1": -1208,
+    "crossoverOccurred": true,
+    "crossoverMinute": 5
+  }
 }

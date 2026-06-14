@@ -6457,5 +6457,21 @@
       "extractionId": 84
     }
   ],
-  "createdAt": "2026-05-09T22:15:25.136Z"
+  "createdAt": "2026-05-09T22:15:25.136Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Pat Sabatini",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:14:11.392Z",
+    "openingF1Odds": -176,
+    "openingF2Odds": 148,
+    "closingF1Odds": -2400,
+    "closingF2Odds": 1180,
+    "lineMovementF1": -2224,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }

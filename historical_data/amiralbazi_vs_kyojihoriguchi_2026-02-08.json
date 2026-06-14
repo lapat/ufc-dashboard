@@ -4912,5 +4912,21 @@
       "extractionId": 327
     }
   ],
-  "createdAt": "2026-02-08T03:42:04.526Z"
+  "createdAt": "2026-02-08T03:42:04.526Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Kyoji Horiguchi",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T02:12:42.761Z",
+    "openingF1Odds": 290,
+    "openingF2Odds": -410,
+    "closingF1Odds": 2300,
+    "closingF2Odds": -6000,
+    "lineMovementF1": 2010,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
 }
