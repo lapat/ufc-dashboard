@@ -77,23 +77,23 @@
     #main{padding:16px 24px;max-width:980px;margin:0 auto}
 
     /* ── brain analysis panel ── */
-    #brain-panel{margin:6px 0 4px;background:#0c0c0c;border:1px solid #222;border-radius:6px;padding:13px 15px}
-    .brain-section-lbl{font-size:0.58rem;color:#666;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:5px}
-    .brain-bars{display:flex;flex-direction:column;gap:5px;margin-bottom:8px}
-    .brain-bar-row{display:flex;align-items:center;gap:8px}
-    .brain-bar-lbl{font-size:0.63rem;color:#777;width:68px;text-align:right;flex-shrink:0}
-    .brain-bar-track{flex:1;height:13px;background:#141414;border-radius:3px;overflow:hidden;border:1px solid #252525}
+    #brain-panel{margin:6px 0 4px;background:#0e0e0e;border:1px solid #262626;border-radius:6px;padding:18px 20px}
+    .brain-big-num{font-size:2.2rem;font-weight:700;line-height:1}
+    .brain-num-lbl{font-size:0.68rem;color:#666;letter-spacing:1.5px;text-transform:uppercase;margin-top:4px}
+    .brain-bar-row{display:flex;align-items:center;gap:10px;margin-bottom:5px}
+    .brain-bar-lbl{font-size:0.72rem;color:#888;width:52px;text-align:right;flex-shrink:0}
+    .brain-bar-track{flex:1;height:10px;background:#141414;border-radius:3px;overflow:hidden;border:1px solid #1e1e1e}
     .brain-bar-fill{height:100%;border-radius:2px;transition:width .5s ease}
     .brain-bar-fill.book{background:#555}
     .brain-bar-fill.hist{background:#e8b84b}
-    .brain-bar-pct{font-size:0.72rem;color:#aaa;width:32px;flex-shrink:0}
-    .brain-edge-tag{font-size:0.6rem;padding:2px 7px;border-radius:3px;font-weight:600;letter-spacing:.3px}
-    .brain-method-pill{font-size:0.6rem;color:#888;background:#141414;border:1px solid #2a2a2a;border-radius:3px;padding:2px 6px}
-    .brain-summary{font-size:0.67rem;color:#777;line-height:1.55;margin-bottom:9px;font-style:italic}
-    .brain-verdict{font-size:0.78rem;font-weight:700;letter-spacing:.4px;padding:7px 12px;border-radius:4px;text-align:center}
+    .brain-edge-tag{font-size:0.72rem;padding:4px 10px;border-radius:3px;font-weight:700;letter-spacing:.3px}
+    .brain-section-lbl{font-size:0.65rem;color:#666;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px}
+    .brain-method-pill{font-size:0.72rem;color:#aaa;background:#141414;border:1px solid #2a2a2a;border-radius:3px;padding:3px 9px}
+    .brain-summary{font-size:0.8rem;color:#999;line-height:1.6;margin-bottom:12px;font-style:italic}
+    .brain-verdict{font-size:1rem;font-weight:700;letter-spacing:.5px;padding:11px 16px;border-radius:4px;text-align:center}
     .brain-verdict.bet{background:#0d1a00;color:#7ccd32;border:1px solid #1e3500}
     .brain-verdict.lean{background:#1a1500;color:#e8b84b;border:1px solid #2e2500}
-    .brain-verdict.pass{background:#111;color:#666;border:1px solid #222}
+    .brain-verdict.pass{background:#111;color:#888;border:1px solid #222}
 
     /* ── game list (before selection) ── */
     .section-label{font-size:0.75rem;color:#3a3a3a;text-transform:uppercase;letter-spacing:2px;margin:14px 0 6px}
@@ -492,36 +492,56 @@
 
   <!-- Brain Analysis Panel (MMA/UFC only) -->
   <div id="brain-panel" style="display:none">
-    <div id="brain-loading" style="font-size:0.64rem;color:#666;text-align:center;padding:6px">🧠 Analyzing fight patterns...</div>
+    <div id="brain-loading" style="font-size:0.75rem;color:#666;text-align:center;padding:10px">🧠 Analyzing fight patterns...</div>
     <div id="brain-result" style="display:none">
-      <div style="display:flex;gap:16px;align-items:flex-start">
-        <div style="flex:1;min-width:0">
-          <div class="brain-section-lbl" id="brain-dog-lbl">UNDERDOG</div>
-          <div class="brain-bars">
-            <div class="brain-bar-row">
-              <span class="brain-bar-lbl">Book says</span>
-              <div class="brain-bar-track"><div class="brain-bar-fill book" id="brain-book-bar" style="width:0%"></div></div>
-              <span class="brain-bar-pct" id="brain-book-pct">—</span>
-            </div>
-            <div class="brain-bar-row">
-              <span class="brain-bar-lbl">History says</span>
-              <div class="brain-bar-track"><div class="brain-bar-fill hist" id="brain-hist-bar" style="width:0%"></div></div>
-              <span class="brain-bar-pct" id="brain-hist-pct">—</span>
-            </div>
+
+      <!-- Row 1: header + sample size -->
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+        <div id="brain-dog-lbl" style="font-size:0.85rem;color:#aaa;letter-spacing:1px;text-transform:uppercase;font-weight:600">UNDERDOG</div>
+        <span style="font-size:0.7rem;color:#666" id="brain-sample"></span>
+      </div>
+
+      <!-- Row 2: big numbers + bars -->
+      <div style="display:flex;gap:28px;align-items:flex-start;margin-bottom:14px">
+        <div style="text-align:center;flex:0 0 auto">
+          <div class="brain-big-num" style="color:#888" id="brain-book-pct">—</div>
+          <div class="brain-num-lbl">BOOK IMPLIES</div>
+        </div>
+        <div style="flex:1;padding-top:6px">
+          <div class="brain-bar-row">
+            <span class="brain-bar-lbl">Book</span>
+            <div class="brain-bar-track"><div class="brain-bar-fill book" id="brain-book-bar" style="width:0%"></div></div>
           </div>
-          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+          <div class="brain-bar-row">
+            <span class="brain-bar-lbl">History</span>
+            <div class="brain-bar-track"><div class="brain-bar-fill hist" id="brain-hist-bar" style="width:0%"></div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;margin-top:8px">
             <span class="brain-edge-tag" id="brain-edge-tag"></span>
-            <span style="font-size:0.6rem;color:#666" id="brain-sample"></span>
           </div>
         </div>
-        <div style="flex:0 0 auto;min-width:96px">
-          <div class="brain-section-lbl">FINISH METHOD</div>
-          <div style="display:flex;flex-direction:column;gap:3px;margin-bottom:8px" id="brain-methods"></div>
-          <div class="brain-section-lbl" style="margin-top:6px">DOG ROI</div>
-          <span style="font-size:0.76rem;font-weight:600" id="brain-roi">—</span>
+        <div style="text-align:center;flex:0 0 auto">
+          <div class="brain-big-num" style="color:#e8b84b" id="brain-hist-pct">—</div>
+          <div class="brain-num-lbl">HISTORY SAYS</div>
         </div>
       </div>
+
+      <!-- Row 3: method + ROI -->
+      <div style="display:flex;gap:28px;margin-bottom:14px">
+        <div>
+          <div class="brain-section-lbl">FINISH METHOD</div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap" id="brain-methods"></div>
+        </div>
+        <div>
+          <div class="brain-section-lbl">DOG ROI</div>
+          <span style="font-size:1.3rem;font-weight:700" id="brain-roi">—</span>
+        </div>
+      </div>
+
+      <!-- Row 4: Claude summary -->
       <div class="brain-summary" id="brain-summary"></div>
+
+      <!-- Row 5: verdict -->
       <div class="brain-verdict pass" id="brain-verdict">—</div>
     </div>
   </div>
