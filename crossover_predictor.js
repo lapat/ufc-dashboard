@@ -12,16 +12,19 @@
 
 'use strict';
 
-// ── Empirical crossover rates from 231-fight leave-one-out backtest ──────────
-// Key: rough tightness = min(|f1 opening|, |f2 opening|) in American odds
+// ── Empirical crossover rates from 231-fight dataset ─────────────────────────
+// Tier based on the fav's absolute odds (Math.abs of the most-negative opening line).
+// Calibrated 2026-06-14. dogWin rates are from live-bet R1 data (not pre-fight):
+//   pre-fight dog bet is negative ROI at all tiers (-4% to -42%).
+//   R1 live bet in crossover fights: +11.7% ROI — that's where the edge lives.
 
 const CROSSOVER_TABLE = [
-  // [maxAbsOdds (of the TIGHTER side), crossoverRate, dogWinIfCross, dogWinIfNoCross]
-  { maxTight: 129,  rate: 0.61, dogWinCross: 0.50, dogWinNoCross: 0.12, label: 'pick_em' },
-  { maxTight: 199,  rate: 0.47, dogWinCross: 0.50, dogWinNoCross: 0.12, label: 'slight_fav' },
-  { maxTight: 299,  rate: 0.33, dogWinCross: 0.50, dogWinNoCross: 0.12, label: 'moderate_fav' },
-  { maxTight: 499,  rate: 0.15, dogWinCross: 0.50, dogWinNoCross: 0.12, label: 'heavy_fav' },
-  { maxTight: 9999, rate: 0.00, dogWinCross: 0.00, dogWinNoCross: 0.00, label: 'extreme_fav' },
+  // [maxFavOdds (absolute), crossoverRate, dogWinIfCross, dogWinIfNoCross, label]
+  { maxTight: 129,  rate: 0.67, dogWinCross: 0.50, dogWinNoCross: 0.12, label: 'pick_em' },
+  { maxTight: 199,  rate: 0.52, dogWinCross: 0.50, dogWinNoCross: 0.12, label: 'slight_fav' },
+  { maxTight: 299,  rate: 0.43, dogWinCross: 0.50, dogWinNoCross: 0.12, label: 'moderate_fav' },
+  { maxTight: 499,  rate: 0.12, dogWinCross: 0.50, dogWinNoCross: 0.12, label: 'heavy_fav' },
+  { maxTight: 9999, rate: 0.05, dogWinCross: 0.50, dogWinNoCross: 0.12, label: 'extreme_fav' },
 ];
 
 // ── Core predictor ────────────────────────────────────────────────────────────
@@ -75,17 +78,18 @@ function predictCrossover({ f1OpeningOdds, f2OpeningOdds }) {
   else if (crossoverProb >= 0.20) signal = 'low';
   else signal = 'none';
 
-  // Plain-English advice
+  // Plain-English advice — crossover = LIVE BET WATCH signal, not pre-fight dog bet
+  // Pre-fight dog ROI is negative at all tiers. Edge is in the R1 live bet (+11.7% ROI).
   let advice;
   const dogOddsStr = dogOdds > 0 ? '+' + dogOdds : String(dogOdds);
   if (signal === 'strong') {
-    advice = `${Math.round(crossoverProb * 100)}% crossover probability — bet the dog (${dogOddsStr}) NOW before the line moves. Dogs win 50% when this crosses.`;
+    advice = `${Math.round(crossoverProb * 100)}% chance this fight crosses over. WATCH ROUND 1 — when the line moves, that's the live bet. Dog wins 50% in fights that flip.`;
   } else if (signal === 'moderate') {
-    advice = `${Math.round(crossoverProb * 100)}% crossover probability — worth considering the dog (${dogOddsStr}) pre-fight. If it crosses, dog wins coin-flip.`;
+    advice = `${Math.round(crossoverProb * 100)}% crossover probability. Keep this fight on your screen — ${Math.round(crossoverProb * 100 * 0.57)}% chance it flips in round 1. Live bet the momentum.`;
   } else if (signal === 'low') {
-    advice = `${Math.round(crossoverProb * 100)}% crossover probability — lean on the favourite. Underdogs in these fights rarely win without a line cross.`;
+    advice = `${Math.round(crossoverProb * 100)}% crossover probability — unlikely to flip. Favourite has control; monitor for late-fight live bet if underdog shows something.`;
   } else {
-    advice = `Near-zero crossover probability — this fight almost never flips. Trust the favourite.`;
+    advice = `Crossover extremely unlikely — favourite dominates these fights. No live bet trigger expected.`;
   }
 
   return {

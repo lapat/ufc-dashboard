@@ -23,38 +23,38 @@ check('returns null when both missing', () => {
 
 console.log('\n── predictCrossover: tier mapping ──');
 
-check('pick_em (<130 fav) → strong signal, 61%', () => {
+check('pick_em (<130 fav) → strong signal, 67%', () => {
   const r = predictCrossover({ f1OpeningOdds: -116, f2OpeningOdds: -102 });
   assert(r.tier === 'pick_em', 'tier: ' + r.tier);
-  assert(r.crossoverProbPct === 61, 'prob: ' + r.crossoverProbPct);
+  assert(r.crossoverProbPct === 67, 'prob: ' + r.crossoverProbPct);
   assert(r.signal === 'strong', 'signal: ' + r.signal);
 });
 
-check('slight_fav (-165/+138) → moderate signal, 47%', () => {
+check('slight_fav (-165/+138) → moderate signal, 52%', () => {
   const r = predictCrossover({ f1OpeningOdds: -165, f2OpeningOdds: 138 });
   assert(r.tier === 'slight_fav', r.tier);
-  assert(r.crossoverProbPct === 47, r.crossoverProbPct);
+  assert(r.crossoverProbPct === 52, r.crossoverProbPct);
   assert(r.signal === 'moderate', r.signal);
 });
 
-check('moderate_fav (-250/+200) → low signal, 33%', () => {
+check('moderate_fav (-250/+200) → moderate signal, 43%', () => {
   const r = predictCrossover({ f1OpeningOdds: -250, f2OpeningOdds: 200 });
   assert(r.tier === 'moderate_fav', r.tier);
-  assert(r.crossoverProbPct === 33, r.crossoverProbPct);
-  assert(r.signal === 'low', r.signal);
+  assert(r.crossoverProbPct === 43, r.crossoverProbPct);
+  assert(r.signal === 'moderate', r.signal); // 43% >= 40% threshold
 });
 
-check('heavy_fav (-400) → none signal, 15%', () => {
+check('heavy_fav (-400) → none signal, 12%', () => {
   const r = predictCrossover({ f1OpeningOdds: -400, f2OpeningOdds: 300 });
   assert(r.tier === 'heavy_fav', r.tier);
-  assert(r.crossoverProbPct === 15, r.crossoverProbPct);
+  assert(r.crossoverProbPct === 12, r.crossoverProbPct);
   assert(r.signal === 'none', r.signal);
 });
 
-check('extreme_fav (-700) → 0% crossover', () => {
+check('extreme_fav (-700) → 5% crossover, none signal', () => {
   const r = predictCrossover({ f1OpeningOdds: -700, f2OpeningOdds: 480 });
   assert(r.tier === 'extreme_fav', r.tier);
-  assert(r.crossoverProbPct === 0, r.crossoverProbPct);
+  assert(r.crossoverProbPct === 5, r.crossoverProbPct);
   assert(r.signal === 'none', r.signal);
 });
 
@@ -76,9 +76,9 @@ check('symmetric: swapping f1/f2 gives same crossover prob', () => {
 console.log('\n── predictCrossover: edge calculation ──');
 
 check('expected dog win rate is a blend of crossover and non-crossover rates', () => {
-  // pick_em: 61% × 50% + 39% × 12% = 30.5% + 4.68% = 35.18% ≈ 35%
+  // pick_em: 67% × 50% + 33% × 12% = 33.5% + 3.96% = 37.46% ≈ 37%
   const r = predictCrossover({ f1OpeningOdds: -120, f2OpeningOdds: 100 });
-  assert(r.expectedDogWinRate >= 33 && r.expectedDogWinRate <= 38,
+  assert(r.expectedDogWinRate >= 35 && r.expectedDogWinRate <= 40,
     'expected: ' + r.expectedDogWinRate);
 });
 

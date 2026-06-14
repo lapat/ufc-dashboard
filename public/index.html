@@ -1450,8 +1450,8 @@ function renderBrainResult(d, f1Name, f2Name) {
       alertEl.style.display = 'block';
       alertEl.className = 'xover-alert' + (xo.signal === 'moderate' ? ' moderate' : '');
       alertEl.textContent = xo.signal === 'strong'
-        ? '⚡ BET THE DOG NOW — ' + xo.crossoverProbPct + '% chance this flips. Dog wins 50% when it does.'
-        : '→ CONSIDER DOG — ' + xo.crossoverProbPct + '% crossover probability. Get in before round 1.';
+        ? '⚡ WATCH R1 — ' + xo.crossoverProbPct + '% crossover chance. Live bet the moment the line moves.'
+        : '→ MONITOR R1 — ' + xo.crossoverProbPct + '% crossover probability. Be ready to move on momentum.';
     } else {
       alertEl.style.display = 'none';
     }
