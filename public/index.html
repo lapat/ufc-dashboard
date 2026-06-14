@@ -91,7 +91,8 @@
     .brain-method-pill{font-size:0.72rem;color:#aaa;background:#141414;border:1px solid #2a2a2a;border-radius:3px;padding:3px 9px}
     .brain-summary{font-size:0.8rem;color:#999;line-height:1.6;margin-bottom:12px;font-style:italic}
     .brain-verdict{font-size:1rem;font-weight:700;letter-spacing:.5px;padding:11px 16px;border-radius:4px;text-align:center}
-    .brain-verdict.bet{background:#0d1a00;color:#7ccd32;border:1px solid #1e3500}
+    .brain-verdict.bet{background:#0d2200;color:#7ccd32;border:2px solid #3a7a00;font-size:1.08rem;box-shadow:0 0 12px #2a5a0066}
+    .brain-verdict.bet::before{content:'⭐ HIGH CONFIDENCE · ';font-size:0.72rem;letter-spacing:1.5px;color:#5aad20;vertical-align:middle}
     .brain-verdict.lean{background:#1a1500;color:#e8b84b;border:1px solid #2e2500}
     .brain-verdict.pass{background:#111;color:#888;border:1px solid #222}
     /* crossover section */
@@ -1523,7 +1524,7 @@ function renderBrainResult(d, f1Name, f2Name) {
   } else if (verdictEdge != null && verdictEdge < -12) {
     // Strong favorite edge — reliable from backtest (76%+ win rate)
     v.classList.add('bet');
-    v.textContent = 'BET FAVORITE: ' + favName + ' ' + favOddsDisp + ' — dog wins only ' + (stats && stats.dogWinRate) + '% historically';
+    v.textContent = 'BET FAVORITE: ' + favName + ' ' + favOddsDisp + ' — 76% win rate historically, most reliable call';
   } else if (verdictEdge != null && verdictEdge < -5) {
     // Moderate favorite edge
     v.classList.add('lean');
