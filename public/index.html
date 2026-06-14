@@ -233,12 +233,12 @@
 
     /* ── P&L strip ── */
     #pnl-strip{background:#0b0b0b;border-bottom:1px solid #181818;padding:7px 24px;align-items:center;gap:12px;font-size:0.78rem;display:none;flex-wrap:wrap}
-    .pnl-lbl{color:#2a2a2a;text-transform:uppercase;letter-spacing:.5px;font-size:0.65rem}
+    .pnl-lbl{color:#666;text-transform:uppercase;letter-spacing:.5px;font-size:0.65rem}
     .pnl-val{font-weight:700}
     .pnl-pos{color:#69db7c}
     .pnl-neg{color:#ff6b6b}
-    .pnl-zero{color:#333}
-    .pnl-sep{color:#1e1e1e}
+    .pnl-zero{color:#888}
+    .pnl-sep{color:#444}
     /* ── settle toast ── */
     #settle-toast{position:fixed;top:70px;left:50%;transform:translateX(-50%);padding:14px 26px;border-radius:10px;font-size:0.95rem;font-weight:700;z-index:9999;display:none;text-align:center;letter-spacing:.2px;box-shadow:0 6px 28px rgba(0,0,0,.9);min-width:280px}
     #settle-toast.win{background:#0d2a0d;border:2px solid #69db7c;color:#69db7c}
@@ -333,14 +333,14 @@
   <span class="pnl-val pnl-zero" id="pnl-net">$0.00</span>
   <svg id="pnl-spark" width="80" height="20" viewBox="0 0 80 20" xmlns="http://www.w3.org/2000/svg"></svg>
   <span class="pnl-sep">·</span>
-  <span id="pnl-record" style="color:#333">—</span>
+  <span id="pnl-record" style="color:#888">—</span>
   <span class="pnl-sep">·</span>
-  <span id="pnl-wagered" style="color:#2a2a2a">$0 wagered</span>
+  <span id="pnl-wagered" style="color:#888">$0 wagered</span>
   <span class="pnl-sep">·</span>
-  <span id="pnl-open" style="color:#2a2a2a">0 open</span>
+  <span id="pnl-open" style="color:#888">0 open</span>
   <span style="margin-left:auto;display:flex;gap:10px;align-items:center">
-    <button onclick="toggleBetLog()" style="background:none;border:none;color:#252525;cursor:pointer;font-size:0.65rem;padding:0;letter-spacing:.3px" id="bet-log-btn">▾ bets</button>
-    <button onclick="toggleSpyInput()" style="background:none;border:none;color:#1a1a3a;cursor:pointer;font-size:0.65rem;padding:0;letter-spacing:.3px">spy</button>
+    <button onclick="toggleBetLog()" style="background:none;border:none;color:#666;cursor:pointer;font-size:0.65rem;padding:0;letter-spacing:.3px" id="bet-log-btn">▾ bets</button>
+    <button onclick="toggleSpyInput()" style="background:none;border:none;color:#556;cursor:pointer;font-size:0.65rem;padding:0;letter-spacing:.3px">spy</button>
   </span>
 </div>
 <div id="settle-toast"></div>
@@ -349,7 +349,7 @@
 <div id="bet-log">
   <div id="bet-log-hdr" onclick="toggleBetLog()">
     <span>Today's bets</span>
-    <span id="bet-log-count" style="color:#252525">—</span>
+    <span id="bet-log-count" style="color:#666">—</span>
   </div>
   <table id="bet-log-table">
     <thead><tr>
@@ -430,7 +430,7 @@
   <button id="rec-test-btn" title="Test the recording pipeline" style="font-size:0.75rem;padding:4px 9px;background:#141414;border:1px solid #1e1e1e;color:#444;border-radius:5px;cursor:pointer;white-space:nowrap">test rec</button>
   <a href="/library" style="font-size:0.75rem;padding:4px 9px;border:1px solid #1e1e1e;border-radius:5px;color:#444;white-space:nowrap;text-decoration:none">Library</a>
   <div id="topbar-status" style="margin-left:auto;font-size:0.78rem;color:#444;white-space:nowrap">Loading...</div>
-  <span style="font-size:0.6rem;color:#333;white-space:nowrap;letter-spacing:.5px" title="Dashboard build">v2026-06-13.14</span>
+  <span style="font-size:0.6rem;color:#333;white-space:nowrap;letter-spacing:.5px" title="Dashboard build">v2026-06-13.15</span>
 </div>
 
 <div id="sport-strip"><span id="sport-loading" style="color:#333;font-size:.7rem;padding:12px 0">Loading sports...</span></div>
