@@ -884,7 +884,7 @@ function graphAddPoint(fk,label,f1Name,f1Odds,f2Name,f2Odds,drawOdds){
   const h=graphHist[fk];
   if(h.f1.length>0){
     const p1=h.f1[h.f1.length-1],p2=h.f2[h.f2.length-1];
-    if((p1>0&&f1Odds<0)||(p2>0&&f2Odds<0)) h.crossovers.push(h.labels.length);
+    if((p1>0&&f1Odds<0)||(p2>0&&f2Odds<0)) h.crossovers.push(label); // store timestamp, not index
   }
   h.labels.push(label); h.f1.push(f1Odds); h.f2.push(f2Odds);
   h.draw.push(drawOdds!=null?drawOdds:null);
@@ -926,9 +926,9 @@ function graphRefresh(){
   chart.data.datasets[2].data=hasDrawData?[...h.draw]:[];
   chart.data.datasets[2].hidden=!hasDrawData;
   const ann={};
-  h.crossovers.forEach((idx,i)=>{
-    if(idx<h.labels.length) ann[`x${i}`]={
-      type:'line',scaleID:'x',value:h.labels[idx],
+  h.crossovers.forEach((ts,i)=>{
+    if(h.labels.includes(ts)) ann[`x${i}`]={
+      type:'line',scaleID:'x',value:ts,
       borderColor:'#ff9a3c',borderWidth:2,borderDash:[6,3],
       label:{content:'⚡ XOVER',display:true,position:'start',
              backgroundColor:'#ff9a3c22',color:'#ff9a3c',
@@ -2463,10 +2463,27 @@ function checkCLVAlert(o1, o2) {
 if (_spyUser) { updateSpyBanner(); syncSpyBets(); }
 
 function toggleSpyInput() {
-  const row = document.getElementById('spy-input-row');
-  const isOpen = row.style.display !== 'none' && row.style.display !== '';
-  row.style.display = isOpen ? 'none' : 'flex';
-  if (!isOpen) {
+  const row    = document.getElementById('spy-input-row');
+  const banner = document.getElementById('spy-banner');
+  const log    = document.getElementById('spy-log');
+  const rowOpen = row.style.display === 'flex';
+
+  // If spy is active and banner is visible, first click collapses everything
+  if (_spyUser && banner.style.display === 'flex') {
+    row.style.display    = 'none';
+    banner.style.display = 'none';
+    log.style.display    = 'none';
+    return;
+  }
+  // If spy is active but collapsed, restore banner
+  if (_spyUser && banner.style.display !== 'flex') {
+    banner.style.display = 'flex';
+    log.style.display    = 'block';
+    return;
+  }
+  // No spy user — toggle the input row
+  row.style.display = rowOpen ? 'none' : 'flex';
+  if (!rowOpen) {
     const inp = document.getElementById('spy-input');
     if (inp) { inp.value = _spyUser; inp.focus(); }
   }
