@@ -9,6 +9,7 @@ const path      = require('path');
 const Anthropic = require('@anthropic-ai/sdk');
 const { predictCrossover, assessCrossoverRisk } = require('./crossover_predictor');
 const { loadFighterProfiles } = require('./fighter_stats');
+const { buildReasoning } = require('./reasoning');
 
 // Load fighter profiles once at startup (empty object if not yet scraped)
 let _fighterProfiles = null;
@@ -430,6 +431,7 @@ async function findEdge(params) {
     ...result,
     crossover: crossoverPred,
     crossoverRisk,
+    reasoning: buildReasoning(similar, params, stats),
     meta: {
       totalEnrichedFights: enriched.length,
       similarFightsFound:  similar.length,

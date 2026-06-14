@@ -276,6 +276,108 @@ async function run() {
     assert(resp.body && typeof resp.body === 'object', 'no JSON body');
   });
 
+  // ── Reasoning panel ───────────────────────────────────────────────────────
+  console.log('\nReasoning panel');
+
+  await check('#brain-reasoning exists in DOM', async () => {
+    const el = await page.$('#brain-reasoning');
+    assert(el, 'missing #brain-reasoning');
+  });
+
+  await check('reasoning panel hidden by default', async () => {
+    const display = await page.$eval('#brain-reasoning', el => el.style.display);
+    assert(display === 'none', `expected hidden, got "${display}"`);
+  });
+
+  await check('renderReasoning function exists', async () => {
+    const exists = await page.evaluate(() => typeof renderReasoning === 'function');
+    assert(exists, 'renderReasoning not defined');
+  });
+
+  await check('toggleReasonTrail function exists', async () => {
+    const exists = await page.evaluate(() => typeof toggleReasonTrail === 'function');
+    assert(exists, 'toggleReasonTrail not defined');
+  });
+
+  await check('renderReasoning shows high confidence badge', async () => {
+    await page.evaluate(() => {
+      renderReasoning({
+        confidence: 'high', sampleSize: 10,
+        dateRange: { oldest: 'Jan 2024', newest: 'Apr 2026' },
+        warnings: [],
+        verdictBasis: 'Favorite won 74% of 10 similar fights',
+        earlyLine: { signal: 'bet_dog_early', action: 'Dog tightens 18ppts by close', timing: 'Get in within 60s', expectedMovementPpts: 18, crossoverRatePct: 20, positiveMovementRatePct: 75, basedOn: 10, confidence: 'high' },
+        fightTrail: [
+          { date: 'Apr 2026', dogName: 'Fighter B', favName: 'Fighter A', openDogOdds: '+280', closeDogOdds: '+165', openDogPct: 26, closeDogPct: 38, dogMovementPpts: 12, dogWon: false, crossover: false, winnerName: 'Fighter A', method: 'KO/TKO' }
+        ]
+      });
+    });
+    const badge = await page.$eval('#reason-conf-badge', el => el.textContent);
+    assert(badge.includes('HIGH'), `badge text: "${badge}"`);
+  });
+
+  await check('reasoning panel visible after renderReasoning', async () => {
+    const display = await page.$eval('#brain-reasoning', el => el.style.display);
+    assert(display !== 'none', `expected visible, got "${display}"`);
+  });
+
+  await check('early line section visible when signal is not no_signal', async () => {
+    const display = await page.$eval('#reason-early-line', el => el.style.display);
+    assert(display !== 'none', `expected visible, got "${display}"`);
+  });
+
+  await check('early line body contains signal label', async () => {
+    const text = await page.$eval('#reason-el-body', el => el.textContent);
+    assert(text.includes('BET DOG EARLY') || text.includes('bet dog early'), `text: "${text}"`);
+  });
+
+  await check('warnings section empty when no warnings', async () => {
+    const html = await page.$eval('#reason-warnings', el => el.innerHTML);
+    assert(html === '' || !html.includes('reason-warning'), `unexpected warnings: "${html}"`);
+  });
+
+  await check('renderReasoning shows warning when provided', async () => {
+    await page.evaluate(() => {
+      renderReasoning({
+        confidence: 'low', sampleSize: 2,
+        dateRange: null, warnings: ['Small sample (2 fights) — treat as directional only'],
+        verdictBasis: 'Only 2 comparable fights found', earlyLine: { signal: 'no_signal', action: '', timing: '', basedOn: 0, confidence: 'low' }, fightTrail: []
+      });
+    });
+    const html = await page.$eval('#reason-warnings', el => el.innerHTML);
+    assert(html.includes('Small sample'), `expected warning, got: "${html}"`);
+  });
+
+  await check('fight trail toggle shows trail on click', async () => {
+    // First render with a trail
+    await page.evaluate(() => {
+      renderReasoning({
+        confidence: 'medium', sampleSize: 5, dateRange: { oldest: 'Jan 2024', newest: 'Dec 2025' },
+        warnings: [], verdictBasis: 'Test',
+        earlyLine: { signal: 'no_signal', action: '', timing: '', basedOn: 5, confidence: 'medium' },
+        fightTrail: [
+          { date: 'Jan 2025', dogName: 'Dog Fighter', favName: 'Fav Fighter', openDogOdds: '+300', closeDogOdds: '+200', openDogPct: 25, closeDogPct: 33, dogMovementPpts: 8, dogWon: false, crossover: false, winnerName: 'Fav Fighter', method: 'Decision' }
+        ]
+      });
+    });
+    await page.evaluate(() => document.getElementById('reason-trail-btn').click());
+    const display = await page.$eval('#reason-trail', el => el.style.display);
+    assert(display !== 'none', 'trail should show after click');
+    const html = await page.$eval('#reason-trail', el => el.innerHTML);
+    assert(html.includes('Dog Fighter'), `trail missing fight data: "${html.slice(0,200)}"`);
+  });
+
+  await check('/api/edge returns reasoning field', async () => {
+    const data = await page.evaluate(async () => {
+      const r = await fetch('/api/edge?fighter1=Alex+Pereira&fighter2=Ciryl+Gane&f1Odds=-108&f2Odds=-112&f1Open=-108&f2Open=-112');
+      return r.json();
+    });
+    assert(data.reasoning, 'missing reasoning field in /api/edge response');
+    assert(typeof data.reasoning.confidence === 'string', 'missing reasoning.confidence');
+    assert(Array.isArray(data.reasoning.fightTrail), 'missing reasoning.fightTrail');
+    assert(data.reasoning.earlyLine && typeof data.reasoning.earlyLine.signal === 'string', 'missing reasoning.earlyLine.signal');
+  });
+
   // ── Edge: XSS safety in fight names ───────────────────────────────────────
   console.log('\nEdge cases');
 

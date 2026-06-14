@@ -322,6 +322,27 @@
     /* ── live score ── */
     #nw-score{display:none;align-items:center;justify-content:center;gap:10px;padding:6px 0 2px}
     .nw-score-num{font-size:1.5rem;font-weight:700;color:#e8b84b;min-width:28px;text-align:center}
+    /* ── reasoning trail ── */
+    #brain-reasoning{margin-top:12px;padding-top:12px;border-top:1px solid #1e1e1e}
+    .reason-conf{font-size:0.6rem;letter-spacing:1.5px;text-transform:uppercase;padding:2px 8px;border-radius:3px;font-weight:700;flex-shrink:0}
+    .reason-conf.high{background:#0d1a00;color:#7ccd32;border:1px solid #1e3500}
+    .reason-conf.medium{background:#1a1500;color:#e8b84b;border:1px solid #2e2500}
+    .reason-conf.low{background:#1a0000;color:#c0392b;border:1px solid #3a0000}
+    .reason-warning{font-size:0.7rem;color:#e8b84b;background:#1a1500;border:1px solid #2e2500;border-radius:3px;padding:3px 8px;margin-bottom:3px}
+    .reason-early-line{background:#080d08;border:1px solid #1a2a1a;border-radius:5px;padding:8px 10px;margin:8px 0}
+    .reason-el-signal{display:inline-block;padding:1px 7px;border-radius:3px;font-size:0.6rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+    .reason-el-signal.bet_dog_early{background:#0d1a00;color:#7ccd32;border:1px solid #1e3500}
+    .reason-el-signal.watch_for_crossover{background:#1a0800;color:#ff9a3c;border:1px solid #3a1500}
+    .reason-el-signal.wait_for_fav{background:#0d0d1a;color:#6b8cff;border:1px solid #1a2040}
+    .reason-el-signal.no_signal{background:#111;color:#555;border:1px solid #1e1e1e}
+    .reason-trail-toggle{background:none;border:none;color:#555;cursor:pointer;font-size:0.65rem;letter-spacing:.5px;text-transform:uppercase;padding:0;text-align:left;width:100%}
+    .reason-trail-toggle:hover{color:#888}
+    .reason-trail-row{display:flex;align-items:center;gap:6px;padding:4px 0;border-bottom:1px solid #0f0f0f;font-size:0.67rem}
+    .reason-trail-row:last-child{border-bottom:none}
+    .trail-mov-pos{color:#7ccd32}
+    .trail-mov-neg{color:#e74c3c}
+    .trail-mov-flat{color:#555}
+    .trail-xover{background:#1a0800;color:#ff9a3c;border:1px solid #3a1500;border-radius:2px;padding:0 4px;font-size:0.58rem}
     .nw-score-dash{color:#555;font-size:1.1rem}
     #nw-score-period{font-size:0.62rem;color:#888;text-transform:uppercase;letter-spacing:.5px}
     /* ── sparkline ── */
@@ -603,7 +624,24 @@
       <!-- Row 5: verdict -->
       <div class="brain-verdict pass" id="brain-verdict">—</div>
 
-      <!-- Row 6: live sequence (only appears when odds have moved significantly) -->
+      <!-- Row 6: reasoning trail (confidence + early line + fight history) -->
+      <div id="brain-reasoning" style="display:none">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+          <span class="reason-conf" id="reason-conf-badge">—</span>
+          <span id="reason-verdict-basis" style="font-size:0.68rem;color:#666;flex:1"></span>
+        </div>
+        <div id="reason-warnings"></div>
+        <div class="reason-early-line" id="reason-early-line" style="display:none">
+          <div style="font-size:0.62rem;color:#555;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px">⏱ Early Line</div>
+          <div id="reason-el-body" style="font-size:0.78rem;color:#ccc;line-height:1.4"></div>
+          <div id="reason-el-timing" style="font-size:0.7rem;color:#888;margin-top:3px"></div>
+          <div id="reason-el-meta" style="font-size:0.62rem;color:#444;margin-top:3px"></div>
+        </div>
+        <button class="reason-trail-toggle" id="reason-trail-btn" onclick="toggleReasonTrail()">▶ show fight trail</button>
+        <div id="reason-trail" style="display:none;margin-top:6px"></div>
+      </div>
+
+      <!-- Row 7: live sequence (only appears when odds have moved significantly) -->
       <div id="brain-sequence" style="display:none;margin-top:12px;padding-top:12px;border-top:1px solid #1e1e1e">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
           <span style="font-size:0.65rem;color:#666;letter-spacing:1.5px;text-transform:uppercase">BET 2 — LIVE SEQUENCE</span>
@@ -1539,6 +1577,89 @@ function renderBrainResult(d, f1Name, f2Name) {
   } else {
     v.classList.add('pass');
     v.textContent = 'NO CLEAR EDGE — too close to call';
+  }
+
+  // Render reasoning trail
+  if (d.reasoning) renderReasoning(d.reasoning);
+}
+
+let _trailData = [];
+
+function renderReasoning(r) {
+  const el = document.getElementById('brain-reasoning');
+  el.style.display = 'block';
+
+  // Confidence badge + basis
+  const badge = document.getElementById('reason-conf-badge');
+  badge.textContent = (r.confidence || 'low').toUpperCase() + ' CONFIDENCE';
+  badge.className = 'reason-conf ' + (r.confidence || 'low');
+  document.getElementById('reason-verdict-basis').textContent = r.verdictBasis || '';
+
+  // Warnings
+  const warnEl = document.getElementById('reason-warnings');
+  warnEl.innerHTML = (r.warnings || []).map(function(w) {
+    return '<div class="reason-warning">⚠ ' + w + '</div>';
+  }).join('');
+
+  // Early line signal
+  const elEl = document.getElementById('reason-early-line');
+  const sig = r.earlyLine;
+  if (sig && sig.signal !== 'no_signal') {
+    elEl.style.display = 'block';
+    const signalLabel = sig.signal.replace(/_/g, ' ').toUpperCase();
+    document.getElementById('reason-el-body').innerHTML =
+      '<span class="reason-el-signal ' + sig.signal + '">' + signalLabel + '</span> ' + (sig.action || '');
+    document.getElementById('reason-el-timing').textContent = sig.timing || '';
+    const meta = [];
+    if (sig.expectedMovementPpts != null) meta.push('~' + sig.expectedMovementPpts + 'ppts avg movement');
+    if (sig.crossoverRatePct != null) meta.push(sig.crossoverRatePct + '% crossover rate in similar');
+    meta.push('based on ' + sig.basedOn + ' fights · ' + (sig.confidence || 'low') + ' confidence');
+    document.getElementById('reason-el-meta').textContent = meta.join(' · ');
+  } else {
+    elEl.style.display = 'none';
+  }
+
+  // Fight trail — store for lazy render on toggle
+  _trailData = r.fightTrail || [];
+  const trailBtn = document.getElementById('reason-trail-btn');
+  const dateRangeStr = r.dateRange ? r.dateRange.oldest + ' – ' + r.dateRange.newest : 'no date range';
+  trailBtn.textContent = '▶ show fight trail (' + _trailData.length + ' fights · ' + dateRangeStr + ')';
+  document.getElementById('reason-trail').style.display = 'none';
+  document.getElementById('reason-trail').innerHTML = '';
+}
+
+function toggleReasonTrail() {
+  const trail = document.getElementById('reason-trail');
+  const btn = document.getElementById('reason-trail-btn');
+  if (trail.style.display === 'none') {
+    trail.style.display = 'block';
+    btn.textContent = btn.textContent.replace('▶', '▼');
+    if (!trail.innerHTML) {
+      if (!_trailData.length) {
+        trail.innerHTML = '<div style="color:#444;font-size:0.68rem;padding:4px 0">No comparable fights to show</div>';
+      } else {
+        trail.innerHTML = _trailData.map(function(f) {
+          const mv = f.dogMovementPpts;
+          const mvCls = mv == null ? 'trail-mov-flat' : mv > 5 ? 'trail-mov-pos' : mv < -5 ? 'trail-mov-neg' : 'trail-mov-flat';
+          const mvStr = mv != null ? (mv > 0 ? '+' : '') + mv + 'ppts' : '—';
+          const xBadge = f.crossover ? '<span class="trail-xover">XOVER</span>' : '';
+          const outcome = f.dogWon
+            ? '<span style="color:#7ccd32">Dog won</span>'
+            : '<span style="color:#e74c3c">Fav won</span>';
+          const odds = (f.openDogOdds || '?') + (f.closeDogOdds && f.closeDogOdds !== f.openDogOdds ? ' → ' + f.closeDogOdds : '');
+          return '<div class="reason-trail-row">'
+            + '<span style="color:#555;flex:0 0 58px">' + (f.date || '?') + '</span>'
+            + '<span style="color:#888;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="' + f.dogName + ' vs ' + f.favName + '">' + (f.dogName || '?') + ' ' + odds + '</span>'
+            + '<span class="' + mvCls + '" style="flex:0 0 52px;text-align:right">' + mvStr + '</span>'
+            + '<span style="flex:0 0 58px;text-align:right">' + outcome + '</span>'
+            + '<span style="flex:0 0 44px;text-align:right">' + xBadge + '</span>'
+            + '</div>';
+        }).join('');
+      }
+    }
+  } else {
+    trail.style.display = 'none';
+    btn.textContent = btn.textContent.replace('▼', '▶');
   }
 }
 
