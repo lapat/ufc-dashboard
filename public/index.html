@@ -709,8 +709,6 @@
     <div class="tracker-header">
       <span class="tracker-title">POSITION TRACKER <span id="dk-user-badge" style="font-size:0.6rem;color:#e8b84b;font-weight:400;margin-left:6px"></span></span>
       <div style="display:flex;gap:8px;align-items:center">
-        <button class="clear-btn" onclick="injectMockDKBet()" style="color:#74c0fc;border-color:#74c0fc">TEST DK</button>
-        <button class="clear-btn" onclick="testSettleFlow()" style="color:#69db7c;border-color:#69db7c">TEST SETTLE</button>
         <button class="clear-btn" id="clear-bets">CLEAR ALL</button>
       </div>
     </div>
@@ -2642,30 +2640,6 @@ tracker.setFight = function(...args) {
   startDKSync();
 };
 
-function testSettleFlow() {
-  // Simulate a bet settling — fires the toast and updates P&L strip
-  const side = tracker.f1Name || 'Test Fighter';
-  const stake = 100;
-  const returns = 190;
-  const profit = returns - stake;
-  showSettleToast(side, 'Won', profit);
-  _sessionPnL = { net: profit, wagered: stake, wins: 1, losses: 0, pushes: 0, open: 0 };
-  updatePnLStrip();
-}
-
-async function injectMockDKBet() {
-  if (!tracker.f1Name) { showDKToast('Select a game first'); return; }
-  const fighter = tracker.f1Name;
-  const odds = selectedGame?.bookmakers?.[0]?.markets?.[0]?.outcomes?.find(o => o.name === fighter)?.price;
-  const oddsStr = odds ? (odds > 0 ? '+' + odds : String(odds)) : '+100';
-  await fetch('/api/dk-mock', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ fighter, odds: oddsStr, stake: 100 })
-  });
-  _lastDKBetIds.clear();
-  await syncDKBets();
-}
 
 // ═══════════════════════════════════════════
 // CHAT
