@@ -62,12 +62,13 @@ function lineMovementMagnitude(openOdds, currentOdds) {
 
 // Score how similar a historical fight is to the current situation (higher = more similar)
 function similarityScore(hist, params) {
-  const { f1CurrentOdds, f2CurrentOdds, f1OpeningOdds, crossoverOccurred } = params;
+  const { f1CurrentOdds, f2CurrentOdds, f1OpeningOdds, crossoverOccurred, dominanceHint } = params;
   let score = 0;
 
-  const histOpenF1 = hist.outcome.openingF1Odds;
-  const histOpenF2 = hist.outcome.openingF2Odds;
+  const histOpenF1  = hist.outcome.openingF1Odds;
+  const histOpenF2  = hist.outcome.openingF2Odds;
   const histCloseF1 = hist.outcome.closingF1Odds;
+  const derived     = hist.derived || {};
 
   if (histOpenF1 == null || histOpenF2 == null) return 0;
 
@@ -80,22 +81,32 @@ function similarityScore(hist, params) {
   // Current odds tier match
   const curLabel  = oddsLabel(f1CurrentOdds);
   const histLabel = oddsLabel(histCloseF1);
+  const TIERS = ['extreme_fav','heavy_fav','fav','slight_fav','pick_em','slight_dog','dog','heavy_dog'];
   if (curLabel === histLabel) score += 30;
-  else if (Math.abs(['extreme_fav','heavy_fav','fav','slight_fav','pick_em','slight_dog','dog','heavy_dog']
-                    .indexOf(curLabel) -
-                    ['extreme_fav','heavy_fav','fav','slight_fav','pick_em','slight_dog','dog','heavy_dog']
-                    .indexOf(histLabel)) <= 1) score += 15;
+  else if (Math.abs(TIERS.indexOf(curLabel) - TIERS.indexOf(histLabel)) <= 1) score += 15;
 
   // Crossover pattern match
   if (crossoverOccurred != null && hist.outcome.crossoverOccurred === crossoverOccurred) score += 20;
 
   // Line movement direction match
-  const paramMovement  = f1OpeningOdds != null ? lineMovementMagnitude(f1OpeningOdds, f1CurrentOdds) : null;
-  const histMovement   = hist.outcome.lineMovementF1;
+  const paramMovement = f1OpeningOdds != null ? lineMovementMagnitude(f1OpeningOdds, f1CurrentOdds) : null;
+  const histMovement  = hist.outcome.lineMovementF1;
   if (paramMovement != null && histMovement != null) {
-    const sameDirection = (paramMovement > 0) === (histMovement > 0);
-    if (sameDirection) score += 15;
+    if ((paramMovement > 0) === (histMovement > 0)) score += 15;
   }
+
+  // Derived field bonuses — reward fights with similar live action patterns
+  if (derived.dominanceScore != null && dominanceHint != null) {
+    // dominanceHint: 'dominant' (>60), 'contested' (<40), 'neutral'
+    const histDom = derived.dominanceScore;
+    const dominant = histDom >= 60, contested = histDom < 40;
+    if ((dominanceHint === 'dominant' && dominant) ||
+        (dominanceHint === 'contested' && contested) ||
+        (dominanceHint === 'neutral'   && !dominant && !contested)) score += 10;
+  }
+
+  // Reward high-data fights (more points = more signal)
+  if (derived.peakOddsSwing != null && derived.peakOddsSwing > 200) score += 5;
 
   return score;
 }
@@ -146,19 +157,47 @@ function computeStats(similar, params) {
   const historicalDogProb = dogWinRate;
   const edge = impliedDogProb != null ? historicalDogProb - impliedDogProb : null;
 
+  // Derived field aggregates
+  const withDerived   = similar.filter(f => f.derived);
+  const avgDominance  = withDerived.length
+    ? Math.round(withDerived.reduce((s, f) => s + (f.derived.dominanceScore || 0), 0) / withDerived.length)
+    : null;
+  const avgPeakSwing  = withDerived.length
+    ? Math.round(withDerived.reduce((s, f) => s + (f.derived.peakOddsSwing || 0), 0) / withDerived.length)
+    : null;
+  const finishSpeeds  = {};
+  for (const f of withDerived) {
+    const sp = f.derived.finishSpeed || 'unknown';
+    finishSpeeds[sp] = (finishSpeeds[sp] || 0) + 1;
+  }
+  const finishSpeedPct = {};
+  for (const [sp, cnt] of Object.entries(finishSpeeds)) {
+    finishSpeedPct[sp] = Math.round(cnt / (withDerived.length || 1) * 100);
+  }
+  const avgCrossovers = withDerived.length
+    ? Math.round(withDerived.reduce((s, f) => s + (f.derived.crossoverCount || 0), 0) / withDerived.length * 10) / 10
+    : null;
+
   return {
     sampleSize: total,
     dogWinRate:  Math.round(dogWinRate  * 100),
     favWinRate:  Math.round(favWinRate  * 100),
     dogROI:      Math.round(dogROI * 100) / 100,
-    edge:        edge != null ? Math.round(edge * 1000) / 10 : null, // edge in percentage points
+    edge:        edge != null ? Math.round(edge * 1000) / 10 : null,
     methods,
     crossovers: {
       total:   crossovers.length,
       f1WinPct: crossovers.length ? Math.round(crossoverF1Win / crossovers.length * 100) : null
     },
-    impliedDogProb: impliedDogProb != null ? Math.round(impliedDogProb * 100) : null,
-    historicalDogProb: Math.round(historicalDogProb * 100)
+    impliedDogProb:    impliedDogProb != null ? Math.round(impliedDogProb * 100) : null,
+    historicalDogProb: Math.round(historicalDogProb * 100),
+    derived: {
+      avgDominanceScore: avgDominance,
+      avgPeakOddsSwing:  avgPeakSwing,
+      finishSpeedPct,
+      avgCrossoverCount: avgCrossovers,
+      sampleWithDerived: withDerived.length
+    }
   };
 }
 
@@ -244,6 +283,11 @@ Your job is to surface high-value insights for live bettors in 2-3 sentences max
 Be direct, specific, and quantitative. No hedging, no disclaimers.
 Edge can go EITHER direction: if the underdog is overpriced, say to bet the favorite. If the favorite is overpriced, say to bet the dog. Say which side has value and why.`;
 
+  const d = stats.derived || {};
+  const finishSummary = d.finishSpeedPct
+    ? Object.entries(d.finishSpeedPct).sort((a,b) => b[1]-a[1]).map(([sp,pct]) => `${sp} ${pct}%`).join(', ')
+    : 'unknown';
+
   const userPrompt = `Current fight: ${params.fighter1} (${params.f1CurrentOdds}) vs ${params.fighter2} (${params.f2CurrentOdds})
 Opening odds: ${params.f1OpeningOdds ?? 'unknown'} / ${params.f2OpeningOdds ?? 'unknown'}
 Crossover occurred: ${params.crossoverOccurred ? `Yes (${params.crossoverMinute ?? '?'} min in)` : 'No'}
@@ -254,6 +298,12 @@ Historical pattern (${stats.sampleSize} similar live fights):
 - ROI on dog: ${stats.dogROI > 0 ? '+' : ''}${stats.dogROI} units per 1 wagered
 - Method breakdown: ${Object.entries(stats.methods).map(([m,c]) => `${m} ${Math.round(c/stats.sampleSize*100)}%`).join(', ')}
 ${stats.crossovers.total > 0 ? `- Post-crossover: f1 wins ${stats.crossovers.f1WinPct}% of ${stats.crossovers.total} crossover fights` : ''}
+${d.sampleWithDerived > 0 ? `
+Live action patterns (${d.sampleWithDerived} fights with derived data):
+- Avg odds swing: ${d.avgPeakOddsSwing ?? 'N/A'} pts — how volatile similar fights are
+- Avg dominance score: ${d.avgDominanceScore ?? 'N/A'}/100 — how one-sided the action tends to be
+- Finish speed: ${finishSummary}
+- Avg line crossovers: ${d.avgCrossoverCount ?? 'N/A'}` : ''}
 
 ${userBetStats ? `Personal betting record at similar odds (${userBetStats.wins}W-${userBetStats.losses}L, ${userBetStats.winRate}% win, ROI: ${userBetStats.roi > 0 ? '+' : ''}$${userBetStats.roi}):
 ${Object.entries(userBetStats.byUser).map(([u,r]) => `  ${u}: ${r.wins}W-${r.losses}L`).join('\n')}` : 'No personal bet history at these odds.'}

@@ -200,11 +200,14 @@ async function enrichFight(info) {
   const filePath = path.join(DATA_DIR, info.filename);
   const data     = JSON.parse(fs.readFileSync(filePath, 'utf8'));
 
-  if (data.outcome) return { status: 'already_enriched', file: info.filename };
+  // Re-enrich if existing outcome has no real method (ESPN gives "Final")
+  const existingMethod = (data.outcome && data.outcome.method || '').toLowerCase();
+  const needsReenrich  = !data.outcome || existingMethod === 'final' || existingMethod === '';
+  if (!needsReenrich) return { status: 'already_enriched', file: info.filename };
 
-  // Try ESPN then UFC Stats
-  let outcome = await fetchESPNResult(info.fighter1, info.fighter2, info.date);
-  if (!outcome) outcome = await fetchUFCStatsResult(info.fighter1, info.fighter2, info.date);
+  // Try UFC Stats first (has real method/round/time), ESPN as fallback
+  let outcome = await fetchUFCStatsResult(info.fighter1, info.fighter2, info.date);
+  if (!outcome) outcome = await fetchESPNResult(info.fighter1, info.fighter2, info.date);
   if (!outcome) return { status: 'not_found', file: info.filename };
 
   // Compute derived fields from the recorded odds history
@@ -261,8 +264,10 @@ async function main() {
 
   const parsed = files.map(parseFightFile).filter(Boolean);
   const todo   = parsed.filter(p => {
-    const data = JSON.parse(fs.readFileSync(path.join(DATA_DIR, p.filename), 'utf8'));
-    return !data.outcome;
+    const data   = JSON.parse(fs.readFileSync(path.join(DATA_DIR, p.filename), 'utf8'));
+    const method = (data.outcome && data.outcome.method || '').toLowerCase();
+    // Include fights with no outcome OR with useless ESPN "Final" method
+    return !data.outcome || method === 'final' || method === '';
   });
 
   console.log(`Total fight files : ${parsed.length}`);

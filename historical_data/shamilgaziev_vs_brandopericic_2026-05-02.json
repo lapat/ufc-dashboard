@@ -3517,5 +3517,15 @@
       "extractionId": 36
     }
   ],
-  "createdAt": "2026-05-02T11:54:56.835Z"
+  "createdAt": "2026-05-02T11:54:56.835Z",
+  "derived": {
+    "inferredFinishMin": null,
+    "inferredFinishRound": null,
+    "peakOddsSwing": 336,
+    "finishSpeed": "decision",
+    "preFightSteam": 146,
+    "dominanceScore": 56,
+    "crossoverCount": 6,
+    "derivedAt": "2026-06-14T11:47:28.493Z"
+  }
 }

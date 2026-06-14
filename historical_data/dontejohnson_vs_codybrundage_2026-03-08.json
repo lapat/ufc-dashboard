@@ -6975,7 +6975,7 @@
     "round": null,
     "time": null,
     "source": "espn",
-    "enrichedAt": "2026-06-14T02:13:13.390Z",
+    "enrichedAt": "2026-06-14T11:51:16.220Z",
     "openingF1Odds": -900,
     "openingF2Odds": 610,
     "closingF1Odds": -310,
@@ -6983,5 +6983,15 @@
     "lineMovementF1": 590,
     "crossoverOccurred": false,
     "crossoverMinute": null
+  },
+  "derived": {
+    "inferredFinishMin": 0,
+    "inferredFinishRound": 1,
+    "peakOddsSwing": 700,
+    "finishSpeed": "fast",
+    "preFightSteam": 590,
+    "dominanceScore": 100,
+    "crossoverCount": 0,
+    "derivedAt": "2026-06-14T11:47:28.413Z"
   }
 }
