@@ -195,12 +195,19 @@ List up to 3 dates. The system fetches and retries automatically. Never tell Ish
 // ── Routes ─────────────────────────────────────────────────────────────────
 
 // Live UFC odds
+// 5-second in-memory cache for /api/ufc — prevents burning API credits when
+// multiple browser tabs poll simultaneously (client polls every 2s per tab).
+const _ufcOddsCache = { ts: 0, data: null };
 app.get('/api/ufc', async (req, res) => {
   try {
+    const age = Date.now() - _ufcOddsCache.ts;
+    if (_ufcOddsCache.data && age < 5000) return res.json(_ufcOddsCache.data);
     const url = `${BASE_URL}/sports/mma_mixed_martial_arts/odds/?apiKey=${ODDS_API_KEY}&regions=us&markets=h2h&bookmakers=draftkings&oddsFormat=american`;
     const { data, headers } = await fetchJson(url);
     updateOddsCredits(headers);
     console.log(`Odds API — used: ${_oddsApiCreditsUsed} | remaining: ${_oddsApiCreditsRemaining}`);
+    _ufcOddsCache.ts   = Date.now();
+    _ufcOddsCache.data = data;
     res.json(data);
   } catch (e) { res.status(500).json({ error: e.message }); }
 });

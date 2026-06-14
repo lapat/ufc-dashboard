@@ -67,6 +67,22 @@ function lineMovementMagnitude(openOdds, currentOdds) {
   return cur - open; // positive = more negative (line moving toward f1 being bigger fav)
 }
 
+// Recency weight — MMA fighters evolve significantly over time.
+// Justin Gaethje from 2019 is a different fighter than 2026 Gaethje.
+// Recent fights get full weight; older fights are down-weighted so they
+// compete less against recency-matched fights with similar odds profiles.
+function recencyWeight(fightTimestamp) {
+  if (!fightTimestamp) return 0.5;
+  const ageDays = (Date.now() - new Date(fightTimestamp).getTime()) / 86400000;
+  if (isNaN(ageDays) || ageDays < 0) return 0.5;
+  if (ageDays <=  90) return 1.00; // last 3 months: full weight
+  if (ageDays <= 180) return 0.85; // 3-6 months
+  if (ageDays <= 365) return 0.70; // 6-12 months
+  if (ageDays <= 730) return 0.50; // 1-2 years
+  if (ageDays <= 1095) return 0.30; // 2-3 years
+  return 0.15;                      // 3+ years (stale fighter data)
+}
+
 // ── Similarity matching ───────────────────────────────────────────────────────
 
 // Score how similar a historical fight is to the current situation (higher = more similar)
@@ -116,6 +132,11 @@ function similarityScore(hist, params) {
 
   // Reward high-data fights (more points = more signal)
   if (derived.peakOddsSwing != null && derived.peakOddsSwing > 200) score += 5;
+
+  // Recency multiplier — down-weight old fights so stale fighter data
+  // competes less against fresh matches with similar odds profiles
+  const fightTs = hist.oddsHistory?.[0]?.timestamp;
+  score = Math.round(score * recencyWeight(fightTs));
 
   return score;
 }
@@ -421,4 +442,4 @@ async function findEdge(params) {
   };
 }
 
-module.exports = { findEdge, loadEnrichedFights, findSimilarFights, computeStats, impliedProb, oddsLabel, computeUserStats, loadUserBetHistory };
+module.exports = { findEdge, loadEnrichedFights, findSimilarFights, computeStats, impliedProb, oddsLabel, computeUserStats, loadUserBetHistory, recencyWeight };

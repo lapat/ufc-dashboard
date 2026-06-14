@@ -9,16 +9,21 @@
 //   5. Report accuracy + ROI per signal tier
 //
 // Run: node backtest.js
-//      node backtest.js --verbose   (show each fight's prediction)
-//      node backtest.js --min-edge 8  (only count signals >= 8 ppts)
+//      node backtest.js --verbose        (show each fight's prediction)
+//      node backtest.js --min-edge=8     (only count signals >= 8 ppts)
+//      node backtest.js --save-baseline  (save current score as the benchmark)
+//      node backtest.js --check          (fail if accuracy dropped vs baseline)
 
 'use strict';
 const fs   = require('fs');
 const path = require('path');
 
-const DATA_DIR = path.join(__dirname, 'historical_data');
-const VERBOSE  = process.argv.includes('--verbose');
-const MIN_EDGE = parseFloat(process.argv.find(a => a.startsWith('--min-edge='))?.split('=')[1] || '5');
+const DATA_DIR      = path.join(__dirname, 'historical_data');
+const BASELINE_FILE = path.join(DATA_DIR, 'benchmark_baseline.json');
+const VERBOSE       = process.argv.includes('--verbose');
+const SAVE_BASELINE = process.argv.includes('--save-baseline');
+const CHECK_MODE    = process.argv.includes('--check');
+const MIN_EDGE      = parseFloat(process.argv.find(a => a.startsWith('--min-edge='))?.split('=')[1] || '5');
 
 // ── Inline copies of analyzer helpers (no Claude, no HTTP) ───────────────────
 
@@ -42,6 +47,18 @@ function oddsLabel(o) {
 }
 
 const TIERS = ['extreme_fav','heavy_fav','fav','slight_fav','pick_em','slight_dog','dog','heavy_dog'];
+
+function recencyWeight(fightTimestamp) {
+  if (!fightTimestamp) return 0.5;
+  const ageDays = (Date.now() - new Date(fightTimestamp).getTime()) / 86400000;
+  if (isNaN(ageDays) || ageDays < 0) return 0.5;
+  if (ageDays <=  90) return 1.00;
+  if (ageDays <= 180) return 0.85;
+  if (ageDays <= 365) return 0.70;
+  if (ageDays <= 730) return 0.50;
+  if (ageDays <= 1095) return 0.30;
+  return 0.15;
+}
 
 function similarityScore(hist, params) {
   const { f1CurrentOdds, f1OpeningOdds, crossoverOccurred } = params;
@@ -69,6 +86,9 @@ function similarityScore(hist, params) {
   if (paramMov != null && histMov != null && (paramMov > 0) === (histMov > 0)) score += 15;
 
   if (hist.derived && hist.derived.peakOddsSwing > 200) score += 5;
+
+  const fightTs = hist.oddsHistory?.[0]?.timestamp;
+  score = Math.round(score * recencyWeight(fightTs));
 
   return score;
 }
@@ -308,6 +328,52 @@ function main() {
   }
 
   console.log('\n═══════════════════════════════════════════════════════\n');
+
+  // ── Baseline save / check ─────────────────────────────────────────────────
+  const score = {
+    savedAt:       new Date().toISOString(),
+    totalFights:   allFights.length,
+    minEdge:       MIN_EDGE,
+    BET_DOG:       { bets: results.BET_DOG.total, winRate: results.BET_DOG.winRate, roi: results.BET_DOG.roi },
+    BET_FAV:       { bets: results.BET_FAV.total, winRate: results.BET_FAV.winRate, roi: results.BET_FAV.roi },
+    combined:      { totalSignals, winRate: overallWin, roiPerBet },
+  };
+
+  if (SAVE_BASELINE) {
+    fs.writeFileSync(BASELINE_FILE, JSON.stringify(score, null, 2));
+    console.log(`✅ Baseline saved → ${BASELINE_FILE}`);
+    console.log(`   Win rate: ${overallWin}%  ROI: ${roiPerBet > 0 ? '+' : ''}${roiPerBet} units/bet\n`);
+  }
+
+  if (CHECK_MODE) {
+    if (!fs.existsSync(BASELINE_FILE)) {
+      console.error('❌ No baseline found. Run --save-baseline first.\n');
+      process.exit(1);
+    }
+    const baseline = JSON.parse(fs.readFileSync(BASELINE_FILE, 'utf8'));
+    const winDelta = overallWin     - baseline.combined.winRate;
+    const roiDelta = roiPerBet      - baseline.combined.roiPerBet;
+    const THRESHOLD_WIN = -3; // allow up to 3 ppts regression
+    const THRESHOLD_ROI = -3; // allow up to 3 units/bet regression
+
+    console.log('── Benchmark vs Baseline ────────────────────────────');
+    console.log(`   Baseline (${baseline.savedAt.slice(0,10)}): win=${baseline.combined.winRate}%  roi=${baseline.combined.roiPerBet}`);
+    console.log(`   Current:  win=${overallWin}%  roi=${roiPerBet}`);
+    console.log(`   Delta:    win=${winDelta >= 0 ? '+' : ''}${winDelta} ppts  roi=${roiDelta >= 0 ? '+' : ''}${roiDelta}`);
+
+    const failed = winDelta < THRESHOLD_WIN || roiDelta < THRESHOLD_ROI;
+    if (failed) {
+      console.error(`\n❌ REGRESSION DETECTED — predictions got worse.`);
+      if (winDelta < THRESHOLD_WIN) console.error(`   Win rate dropped ${Math.abs(winDelta)} ppts (threshold: ${Math.abs(THRESHOLD_WIN)} ppts)`);
+      if (roiDelta < THRESHOLD_ROI) console.error(`   ROI dropped ${Math.abs(roiDelta)} units (threshold: ${Math.abs(THRESHOLD_ROI)} units)`);
+      console.error('   Run without --check to investigate.\n');
+      process.exit(1);
+    } else {
+      console.log(`\n✅ Benchmark passed — no regression detected.\n`);
+    }
+  }
+
+  return score;
 }
 
 main();

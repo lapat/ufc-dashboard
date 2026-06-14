@@ -3,7 +3,7 @@
 // Tests impliedProb, oddsLabel, findSimilarFights, computeStats, computeUserStats.
 'use strict';
 const {
-  impliedProb, oddsLabel,
+  impliedProb, oddsLabel, recencyWeight,
   loadEnrichedFights, findSimilarFights, computeStats,
   computeUserStats, loadUserBetHistory,
 } = require('./analyzer');
@@ -15,6 +15,67 @@ function check(name, fn) {
 }
 function assert(cond, msg) { if (!cond) throw new Error(msg || 'assertion failed'); }
 function near(a, b, tol = 0.005) { return Math.abs(a - b) <= tol; }
+
+// ── recencyWeight ─────────────────────────────────────────────────────────────
+
+console.log('\n── recencyWeight ──');
+
+function daysAgo(n) {
+  return new Date(Date.now() - n * 86400000).toISOString();
+}
+
+check('fight from yesterday → weight 1.0', () => {
+  assert(recencyWeight(daysAgo(1)) === 1.00, recencyWeight(daysAgo(1)));
+});
+check('fight 90 days ago → weight 1.0 (still in fresh window)', () => {
+  assert(recencyWeight(daysAgo(90)) === 1.00, recencyWeight(daysAgo(90)));
+});
+check('fight 91 days ago → weight 0.85', () => {
+  assert(recencyWeight(daysAgo(91)) === 0.85, recencyWeight(daysAgo(91)));
+});
+check('fight 180 days ago → weight 0.85', () => {
+  assert(recencyWeight(daysAgo(180)) === 0.85, recencyWeight(daysAgo(180)));
+});
+check('fight 181 days ago → weight 0.70', () => {
+  assert(recencyWeight(daysAgo(181)) === 0.70, recencyWeight(daysAgo(181)));
+});
+check('fight 365 days ago → weight 0.70', () => {
+  assert(recencyWeight(daysAgo(365)) === 0.70, recencyWeight(daysAgo(365)));
+});
+check('fight 366 days ago → weight 0.50', () => {
+  assert(recencyWeight(daysAgo(366)) === 0.50, recencyWeight(daysAgo(366)));
+});
+check('fight 730 days ago → weight 0.50', () => {
+  assert(recencyWeight(daysAgo(730)) === 0.50, recencyWeight(daysAgo(730)));
+});
+check('fight 731 days ago → weight 0.30 (stale: 2-3 years)', () => {
+  assert(recencyWeight(daysAgo(731)) === 0.30, recencyWeight(daysAgo(731)));
+});
+check('fight 1095 days ago → weight 0.30', () => {
+  assert(recencyWeight(daysAgo(1095)) === 0.30, recencyWeight(daysAgo(1095)));
+});
+check('fight 1096 days ago → weight 0.15 (Gaethje 2018 territory)', () => {
+  assert(recencyWeight(daysAgo(1096)) === 0.15, recencyWeight(daysAgo(1096)));
+});
+check('fight from 5 years ago → weight 0.15', () => {
+  assert(recencyWeight(daysAgo(1825)) === 0.15, recencyWeight(daysAgo(1825)));
+});
+check('null timestamp → 0.5 (neutral fallback)', () => {
+  assert(recencyWeight(null) === 0.5);
+});
+check('undefined timestamp → 0.5', () => {
+  assert(recencyWeight(undefined) === 0.5);
+});
+check('invalid date string → 0.5', () => {
+  assert(recencyWeight('not-a-date') === 0.5);
+});
+check('weight is monotonically non-increasing over time', () => {
+  const checkpoints = [0, 89, 90, 91, 179, 180, 181, 364, 365, 366, 729, 730, 731, 1094, 1095, 1096, 1500];
+  const weights = checkpoints.map(d => recencyWeight(daysAgo(d)));
+  for (let i = 1; i < weights.length; i++) {
+    assert(weights[i] <= weights[i-1], `weight increased at day ${checkpoints[i]}: ${weights[i-1]} → ${weights[i]}`);
+  }
+});
 
 // ── impliedProb ───────────────────────────────────────────────────────────────
 
