@@ -245,7 +245,7 @@ function loadUserBetHistory() {
 }
 
 function computeUserStats(bets, currentOddsRange) {
-  if (!bets.length) return null;
+  if (!bets || !bets.length) return null;
   const [low, high] = currentOddsRange;
   const relevant = bets.filter(b => b.odds >= low && b.odds <= high);
   if (!relevant.length) return null;

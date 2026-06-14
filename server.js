@@ -1145,6 +1145,26 @@ async function recPollSport(sportKey, meta, watchedGame) {
       if (!last || last.fighter1.numericOdds !== odds.fighter1.numericOdds || last.fighter2.numericOdds !== odds.fighter2.numericOdds) {
         record.oddsHistory.push(odds);
         record.lastOdds = odds;
+
+        // Live crossover detection — update state after every new odds point
+        if (record.oddsHistory.length >= 2) {
+          const prevState = record.crossoverState;
+          record.crossoverState = analyzeCrossoverTrajectory(record.oddsHistory);
+
+          // Send email alert on first CROSSED event (only once per fight)
+          const state = record.crossoverState;
+          if (state && state.status === 'crossed' && !record.crossoverAlerted) {
+            record.crossoverAlerted = true;
+            const { fighter1, fighter2 } = record.meta;
+            sendAlert(
+              `🔴 LINE CROSSED: ${fighter1} vs ${fighter2}`,
+              crossoverAlertText(state, fighter1, fighter2) +
+              `\n\nDog: ${state.dogSide === 'f1' ? fighter1 : fighter2}` +
+              `\nOpened: ${state.openDogProb}% implied → Now: ${state.curDogProb}% implied` +
+              `\nMoved: +${state.movementPct} ppts over ${state.fightElapsedMin} min\n\nhttps://ufc-dashboard-production-e03d.up.railway.app`
+            );
+          }
+        }
       }
     }
 
@@ -1181,6 +1201,26 @@ async function recPoll() {
   const delay = ufcLive > 0 ? UFC_POLL_MS : watching ? OTHER_POLL_MS : IDLE_POLL_MS;
   setTimeout(recPoll, delay);
 }
+
+// ── Live crossover detection ──────────────────────────────────────────────────
+const { analyzeCrossoverTrajectory, crossoverAlertText } = require('./crossover_detector');
+
+app.get('/api/live-crossovers', (req, res) => {
+  const results = [];
+  for (const [id, record] of recorderState.activeFights) {
+    if (!record.crossoverState) continue;
+    const { fighter1, fighter2 } = record.meta;
+    results.push({
+      id,
+      fighter1,
+      fighter2,
+      sport: record.meta.sport,
+      crossoverState: record.crossoverState,
+      alertText: crossoverAlertText(record.crossoverState, fighter1, fighter2),
+    });
+  }
+  res.json(results);
+});
 
 // ── Brain: edge detection endpoint (isolated — see analyzer.js) ──────────────
 const { findEdge } = require('./analyzer');
