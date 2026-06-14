@@ -1631,8 +1631,7 @@ function applyDashUser(uid) {
   }
 }
 applyDashUser(_dkMeParam);
-// Init spy mode from URL or localStorage
-if (_spyUser) { updateSpyBanner(); syncSpyBets(); }
+updatePnLStrip(); // show immediately if user is set, don't wait for first sync
 setInterval(syncPnL, 8000);
 setTimeout(syncPnL, 2000);
 // Clicking the pill uses a simple prompt — no popup overlap issues
@@ -1847,6 +1846,8 @@ function checkCLVAlert(o1, o2) {
 
 // ── Spy Mode ─────────────────────────────────────────────────────────────────
 let _spyUser = new URLSearchParams(location.search).get('spy') || localStorage.getItem('spyUser') || '';
+// Init spy mode after _spyUser is declared (must be here, not earlier — TDZ)
+if (_spyUser) { updateSpyBanner(); syncSpyBets(); }
 
 function toggleSpyInput() {
   const row = document.getElementById('spy-input-row');
@@ -1943,7 +1944,8 @@ let _sessionPnL = { net:0, wagered:0, wins:0, losses:0, pushes:0, open:0 };
 function updatePnLStrip() {
   const strip = document.getElementById('pnl-strip');
   const p = _sessionPnL;
-  if (p.wagered < 0.01 && p.open === 0) { strip.style.display = 'none'; return; }
+  // Always show the strip when a user is logged in — hide only when no user set
+  if (!_dkMeParam) { strip.style.display = 'none'; return; }
   strip.style.display = 'flex';
   const netEl = document.getElementById('pnl-net');
   if (p.net > 0.01)       { netEl.textContent = '+$'+p.net.toFixed(2);            netEl.className='pnl-val pnl-pos'; }
