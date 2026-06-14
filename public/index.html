@@ -927,7 +927,14 @@ function graphRefresh(){
   chart.data.datasets[2].hidden=!hasDrawData;
   const ann={};
   h.crossovers.forEach((idx,i)=>{
-    if(idx<h.labels.length) ann[`x${i}`]={type:'line',scaleID:'x',value:h.labels[idx],borderColor:'#e8b84b66',borderWidth:1.5,borderDash:[4,4]};
+    if(idx<h.labels.length) ann[`x${i}`]={
+      type:'line',scaleID:'x',value:h.labels[idx],
+      borderColor:'#ff9a3c',borderWidth:2,borderDash:[6,3],
+      label:{content:'⚡ XOVER',display:true,position:'start',
+             backgroundColor:'#ff9a3c22',color:'#ff9a3c',
+             font:{size:11,weight:'bold'},padding:{x:5,y:3},
+             borderRadius:3}
+    };
   });
   chart.options.plugins.annotation.annotations=ann;
   chart.update('none');
