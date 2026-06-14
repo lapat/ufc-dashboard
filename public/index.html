@@ -543,6 +543,29 @@
 
       <!-- Row 5: verdict -->
       <div class="brain-verdict pass" id="brain-verdict">—</div>
+
+      <!-- Row 6: live sequence (only appears when odds have moved significantly) -->
+      <div id="brain-sequence" style="display:none;margin-top:12px;padding-top:12px;border-top:1px solid #1e1e1e">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+          <span style="font-size:0.65rem;color:#666;letter-spacing:1.5px;text-transform:uppercase">BET 2 — LIVE SEQUENCE</span>
+          <span style="font-size:0.6rem;color:#444" id="brain-seq-sample"></span>
+        </div>
+        <div style="display:flex;gap:20px;margin-bottom:8px">
+          <div style="text-align:center">
+            <div style="font-size:1.5rem;font-weight:700;color:#7ccd32" id="brain-seq-hold">—</div>
+            <div style="font-size:0.62rem;color:#666;letter-spacing:1px;text-transform:uppercase">HOLDS</div>
+          </div>
+          <div style="text-align:center">
+            <div style="font-size:1.5rem;font-weight:700;color:#e74c3c" id="brain-seq-reversal">—</div>
+            <div style="font-size:0.62rem;color:#666;letter-spacing:1px;text-transform:uppercase">REVERSAL</div>
+          </div>
+          <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:3px">
+            <div style="font-size:0.68rem;color:#888">Press ROI: <span style="font-weight:700" id="brain-seq-press-roi">—</span></div>
+            <div style="font-size:0.68rem;color:#888">Comeback ROI: <span style="font-weight:700" id="brain-seq-comeback-roi">—</span></div>
+          </div>
+        </div>
+        <div class="brain-verdict pass" id="brain-seq-verdict">—</div>
+      </div>
     </div>
   </div>
 
@@ -1244,6 +1267,70 @@ document.getElementById('nw-dismiss').addEventListener('click',()=>{
 // ── Brain analysis ────────────────────────────────────────────────────────────
 
 let _brainAbort = null;
+let _seqAbort   = null;
+let _lastSeqOdds = null; // {f1, f2} odds at last sequence check
+
+async function runSequenceCheck(f1Name, f2Name, f1Odds, f2Odds) {
+  if (!activeSport || !activeSport.includes('mma')) return;
+  if (!_openingOdds || !_openingOdds.f1) return;
+
+  // Only fire if odds have moved 50+ points from opening
+  const movement = Math.abs(parseFloat(f1Odds) - parseFloat(_openingOdds.f1));
+  if (movement < 50) {
+    document.getElementById('brain-sequence').style.display = 'none';
+    return;
+  }
+
+  // Don't re-fetch if odds haven't changed since last check
+  if (_lastSeqOdds && _lastSeqOdds.f1 === f1Odds && _lastSeqOdds.f2 === f2Odds) return;
+  _lastSeqOdds = { f1: f1Odds, f2: f2Odds };
+
+  if (_seqAbort) _seqAbort.abort();
+  _seqAbort = new AbortController();
+
+  try {
+    const p = new URLSearchParams({
+      fighter1: f1Name, fighter2: f2Name,
+      f1Odds, f2Odds,
+      f1Open: _openingOdds.f1,
+      f2Open: _openingOdds.f2,
+    });
+    const r = await fetch('/api/live-sequence?' + p, { signal: _seqAbort.signal });
+    const d = await r.json();
+    renderSequence(d, f1Name, f2Name, f1Odds, f2Odds);
+  } catch(e) {
+    if (e.name === 'AbortError') return;
+  }
+}
+
+function renderSequence(d, f1Name, f2Name, f1Odds, f2Odds) {
+  const seq = document.getElementById('brain-sequence');
+  if (!d || d.verdict === 'no_signal' || !d.sampleSize) { seq.style.display = 'none'; return; }
+  seq.style.display = 'block';
+
+  document.getElementById('brain-seq-sample').textContent = 'n=' + d.sampleSize + ' similar live spots';
+  document.getElementById('brain-seq-hold').textContent = d.holdRate + '%';
+  document.getElementById('brain-seq-reversal').textContent = d.reversalRate + '%';
+
+  const pressEl = document.getElementById('brain-seq-press-roi');
+  pressEl.textContent = (d.pressROI > 0 ? '+' : '') + d.pressROI + 'u';
+  pressEl.style.color = d.pressROI > 0 ? '#7ccd32' : '#e74c3c';
+
+  const cbEl = document.getElementById('brain-seq-comeback-roi');
+  cbEl.textContent = (d.comebackROI > 0 ? '+' : '') + d.comebackROI + 'u';
+  cbEl.style.color = d.comebackROI > 0 ? '#7ccd32' : '#e74c3c';
+
+  const v = document.getElementById('brain-seq-verdict');
+  v.className = 'brain-verdict';
+  if (d.verdict === 'press') {
+    v.classList.add('bet');
+  } else if (d.verdict === 'comeback') {
+    v.classList.add('lean');
+  } else {
+    v.classList.add('pass');
+  }
+  v.textContent = d.advice || 'No clear live bet.';
+}
 
 async function runBrainAnalysis(f1Name, f2Name, f1Odds, f2Odds) {
   if (!activeSport || !activeSport.includes('mma')) return;
@@ -1382,6 +1469,8 @@ async function selectGame(game){
   graphSelect(fk,a.name,b.name);
 
   // Brain analysis (MMA only — fire async, don't block)
+  _lastSeqOdds = null;
+  document.getElementById('brain-sequence').style.display = 'none';
   runBrainAnalysis(a.name, b.name, a.price, b.price);
 
   // Update tracker fight context
@@ -1441,6 +1530,7 @@ async function pollOdds(){
       updateNowWatchingOdds(a.price,b.price,draw?draw.price:null);
       updateFighterButtons();
       feedOddsBuffer(a.price, b.price);
+      runSequenceCheck(a.name, b.name, a.price, b.price);
       if(!oddsLocked){
         if(currentBetSide==='f1') document.getElementById('bt-odds').value=a.price;
         if(currentBetSide==='f2') document.getElementById('bt-odds').value=b.price;

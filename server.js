@@ -1184,6 +1184,7 @@ async function recPoll() {
 
 // ── Brain: edge detection endpoint (isolated — see analyzer.js) ──────────────
 const { findEdge } = require('./analyzer');
+const { findLiveSequence, loadFightsWithHistory } = require('./live_sequence');
 
 app.get('/api/edge', async (req, res) => {
   try {
@@ -1202,6 +1203,26 @@ app.get('/api/edge', async (req, res) => {
     res.json(result);
   } catch (e) {
     console.error('[edge]', e.message);
+    res.status(500).json({ error: e.message });
+  }
+});
+
+app.get('/api/live-sequence', (req, res) => {
+  try {
+    const { fighter1, fighter2, f1Odds, f2Odds, f1Open, f2Open } = req.query;
+    if (!f1Open || !f1Odds) return res.json({ verdict: 'no_signal', advice: 'Opening odds not yet established.' });
+    const fights = loadFightsWithHistory();
+    const result = findLiveSequence({
+      fighter1: fighter1 || '',
+      fighter2: fighter2 || '',
+      f1CurrentOdds: parseFloat(f1Odds),
+      f2CurrentOdds: parseFloat(f2Odds),
+      f1OpeningOdds: parseFloat(f1Open),
+      f2OpeningOdds: parseFloat(f2Open),
+    }, fights);
+    res.json(result || { verdict: 'no_signal', advice: 'Not enough movement yet for a sequence signal.' });
+  } catch (e) {
+    console.error('[live-sequence]', e.message);
     res.status(500).json({ error: e.message });
   }
 });
