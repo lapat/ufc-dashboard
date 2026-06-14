@@ -1486,7 +1486,7 @@ function renderBrainResult(d, f1Name, f2Name) {
     probEl.className = 'xover-prob ' + xo.signal;
     const badge = document.getElementById('xover-badge');
     badge.className = 'xover-badge ' + xo.signal;
-    const labels = { strong:'⚡ HIGH CROSSOVER RISK', moderate:'MODERATE CROSSOVER', low:'LOW CROSSOVER', none:'NO CROSSOVER' };
+    const labels = { strong:'⚡ HIGH CROSSOVER OPPORTUNITY', moderate:'MODERATE CROSSOVER', low:'LOW CROSSOVER', none:'NO CROSSOVER' };
     badge.textContent = labels[xo.signal] || xo.signal;
     document.getElementById('xover-dog-cross').textContent = '50%';
     document.getElementById('xover-dog-nocross').textContent = '12%';
