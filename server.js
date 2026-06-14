@@ -17,8 +17,8 @@ const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 const TOKEN_WARN = parseInt(process.env.ANTHROPIC_TOKEN_WARN_THRESHOLD || '500000');
 const nodemailer = require('nodemailer');
 
-const ALERT_EMAIL = process.env.ALERT_EMAIL || 'louislapat@gmail.com';
-const CC_EMAIL    = process.env.CC_EMAIL    || 'iskanderb@gmail.com';
+const ALERT_EMAIL = 'louislapat@gmail.com';
+const CC_EMAIL    = 'iskanderb@gmail.com';
 const mailer = (process.env.GMAIL_USER && process.env.GMAIL_APP_PASSWORD)
   ? nodemailer.createTransport({ service: 'gmail', auth: { user: process.env.GMAIL_USER, pass: process.env.GMAIL_APP_PASSWORD } })
   : null;
