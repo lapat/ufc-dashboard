@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// fighter_stats.js — Scrapes UFC Stats career profiles for fighters in our DB.
+// fighter_stats.js — Scrapes ufc.com athlete pages for fighter career stats.
 // Outputs: historical_data/fighter_profiles.json
 //
 // Run once to populate:  node fighter_stats.js
@@ -8,7 +8,7 @@
 // Dry run (names only):  node fighter_stats.js --dry-run
 //
 // Used by crossover_predictor.js at runtime to adjust crossover probability
-// based on fighter volatility (SAPM, sub avg, KO defense).
+// based on fighter volatility (SAPM, sub avg, str/TD defense).
 
 'use strict';
 const fs   = require('fs');
@@ -20,6 +20,8 @@ const DRY_RUN     = process.argv.includes('--dry-run');
 const NEW_ONLY    = process.argv.includes('--new-only');
 const SINGLE      = process.argv.find(a => a.startsWith('--fighter='))?.split('=').slice(1).join('=')
                  || (process.argv.indexOf('--fighter') !== -1 ? process.argv[process.argv.indexOf('--fighter')+1] : null);
+
+const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
 
 // ── Extract fighter names from fight files ────────────────────────────────────
 
@@ -40,41 +42,79 @@ function extractAllFighters() {
   return [...nameSet].sort();
 }
 
-// ── UFC Stats scraping ────────────────────────────────────────────────────────
+// ── UFC.com scraping ──────────────────────────────────────────────────────────
 
 function norm(s) { return (s||'').toLowerCase().replace(/[^a-z]/g,''); }
 
-async function searchUFCStats(name) {
-  const parts = name.trim().split(/\s+/);
-  const last  = parts[parts.length - 1];
-  const url   = `http://www.ufcstats.com/statistics/fighters?action=search&SearchTerm=${encodeURIComponent(last)}`;
-  try {
-    const r = await fetch(url, {
-      headers: { 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)' },
-      signal: AbortSignal.timeout(10000)
-    });
-    if (!r.ok) return null;
-    const html = await r.text();
+// Convert a fighter's display name to the ufc.com URL slug.
+// e.g. "Sean O'Malley" → "sean-omalley", "Jan Błachowicz" → "jan-blachowicz"
+// "Marc-Andre Barriault" → "marc-andre-barriault"
+function nameToSlug(name) {
+  return name
+    .normalize('NFD').replace(/[̀-ͯ]/g, '') // strip accents
+    .replace(/-/g, ' ')            // hyphens in name (Marc-Andre) → spaces, then re-joined
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, '')  // remove apostrophes, dots, etc.
+    .trim()
+    .replace(/\s+/g, '-');
+}
 
-    // Each row: <a href=".../fighter-details/HASH">FirstName</a> ... LastName
-    const rowRe = /href="https?:\/\/(?:www\.)?ufcstats\.com\/fighter-details\/([a-f0-9]+)"[^>]*>([^<]+)<\/a>[\s\S]{0,300}?<td[^>]*>([^<]+)<\/td>/g;
-    let m;
-    while ((m = rowRe.exec(html)) !== null) {
-      const hash  = m[1];
-      const first = m[2].trim();
-      const last2 = m[3].trim();
-      const full  = (first + ' ' + last2).trim();
-      if (norm(full) === norm(name) || norm(last2) === norm(parts[parts.length-1])) {
-        return { hash, name: full };
+// Try several slug variants for names that don't match the primary form.
+function slugVariants(name) {
+  const base = nameToSlug(name);
+  const parts = base.split('-');
+  const variants = [base];
+  // Without middle name: "Ian Machado Garry" → "ian-garry"
+  if (parts.length === 3) variants.push(parts[0] + '-' + parts[2]);
+  // Without "Jr" suffix: "Raul Rosas Jr" → "raul-rosas"
+  if (parts[parts.length - 1] === 'jr') variants.push(parts.slice(0, -1).join('-'));
+  // Last name only variations handled by caller
+  return variants;
+}
+
+async function scrapeUFCProfile(name) {
+  const variants = slugVariants(name);
+  for (const slug of variants) {
+    const url = `https://www.ufc.com/athlete/${slug}`;
+    try {
+      const r = await fetch(url, {
+        headers: { 'User-Agent': UA },
+        signal: AbortSignal.timeout(12000),
+        redirect: 'follow',
+      });
+      if (!r.ok) continue;
+      const html = await r.text();
+      // ufc.com stat blocks: value comes before its label in the DOM
+      // Pattern: c-stat-compare__number">VALUE ... c-stat-compare__label">LABEL
+      const pairs = [];
+      const re = /c-stat-compare__(?:number|label)"[^>]*>([^<]+)/g;
+      let m;
+      while ((m = re.exec(html)) !== null) pairs.push(m[1].trim());
+      // pairs alternates: value, label, value, label, ...
+      const stats = {};
+      for (let i = 0; i + 1 < pairs.length; i += 2) {
+        stats[pairs[i + 1].toLowerCase()] = pairs[i];
       }
-    }
-    // Fallback: try first match that shares last name
-    const fallback = /href="https?:\/\/(?:www\.)?ufcstats\.com\/fighter-details\/([a-f0-9]+)"/;
-    const fm = html.match(fallback);
-    if (fm && html.toLowerCase().includes(norm(last))) {
-      return { hash: fm[1], name };
-    }
-  } catch (_) {}
+      const sf = v => { const n = parseFloat(v); return isNaN(n) ? null : n; };
+      const slpm   = sf(stats['sig. str. landed']);
+      const sapm   = sf(stats['sig. str. absorbed']);
+      const tdAvg  = sf(stats['takedown avg']);
+      const subAvg = sf(stats['submission avg']);
+      const strDef = sf(stats['sig. str. defense']);
+      const tdDef  = sf(stats['takedown defense']);
+      const kdAvg  = sf(stats['knockdown avg']);
+      if (slpm == null && sapm == null) continue; // page didn't have stats
+      // Record W-L from page
+      const recordM = html.match(/(\d+)-(\d+)-(\d+)/);
+      return {
+        slpm, sapm, tdAvg, subAvg,
+        strDef, tdDef, kdAvg,
+        wins:   recordM ? parseInt(recordM[1]) : null,
+        losses: recordM ? parseInt(recordM[2]) : null,
+        url,
+      };
+    } catch (_) {}
+  }
   return null;
 }
 
@@ -218,23 +258,19 @@ async function main() {
     process.stdout.write(prefix + ' … ');
 
     try {
-      const match = await searchUFCStats(name);
-      if (!match) { console.log('✗ not found'); notFound++; continue; }
-
-      await new Promise(r => setTimeout(r, 300));
-      const stats = await scrapeProfile(match.hash);
-      if (!stats) { console.log('✗ profile failed'); notFound++; continue; }
+      const stats = await scrapeUFCProfile(name);
+      if (!stats) { console.log('✗ not found'); notFound++; continue; }
 
       const volatility = computeVolatility(stats);
-      profiles[name] = { name, ufcName: match.name, stats, volatility, cachedAt: new Date().toISOString() };
+      profiles[name] = { name, stats, volatility, cachedAt: new Date().toISOString() };
       fs.writeFileSync(CACHE_FILE, JSON.stringify(profiles, null, 2));
-      console.log(`✓ vol=${volatility} SAPM=${stats.sapm} sub=${stats.subAvg}`);
+      console.log(`✓ vol=${volatility} SAPM=${stats.sapm} sub=${stats.subAvg} strDef=${stats.strDef}`);
       scraped++;
     } catch (e) {
       console.log(`✗ ERROR: ${e.message}`);
       errors++;
     }
-    await new Promise(r => setTimeout(r, 400)); // polite rate limit
+    await new Promise(r => setTimeout(r, 250)); // polite rate limit
   }
 
   console.log('\n═══════════════════════════════════');
