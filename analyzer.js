@@ -8,6 +8,14 @@ const fs        = require('fs');
 const path      = require('path');
 const Anthropic = require('@anthropic-ai/sdk');
 const { predictCrossover, assessCrossoverRisk } = require('./crossover_predictor');
+const { loadFighterProfiles } = require('./fighter_stats');
+
+// Load fighter profiles once at startup (empty object if not yet scraped)
+let _fighterProfiles = null;
+function getFighterProfiles() {
+  if (!_fighterProfiles) _fighterProfiles = loadFighterProfiles();
+  return _fighterProfiles;
+}
 
 const DATA_DIR  = path.join(__dirname, 'historical_data');
 const client    = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
@@ -366,10 +374,13 @@ async function findEdge(params) {
     return { error: 'No enriched fight data yet — run node enricher.js first', enrichedCount: 0 };
   }
 
-  // Crossover prediction — uses opening odds (or current if opening unknown)
+  // Crossover prediction — uses opening odds + fighter profiles for volatility adjustment
   const crossoverPred = predictCrossover({
     f1OpeningOdds: params.f1OpeningOdds ?? params.f1CurrentOdds,
     f2OpeningOdds: params.f2OpeningOdds ?? params.f2CurrentOdds,
+    f1Name:   params.fighter1,
+    f2Name:   params.fighter2,
+    profiles: getFighterProfiles(),
   });
 
   const similar    = findSimilarFights(params, enriched);

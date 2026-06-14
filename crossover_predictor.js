@@ -11,6 +11,7 @@
 // Used by analyzer.js to enrich similarity scoring and Claude prompt.
 
 'use strict';
+const { fightVolatilityScore, loadFighterProfiles } = require('./fighter_stats');
 
 // ── Empirical crossover rates from 231-fight dataset ─────────────────────────
 // Tier based on the fav's absolute odds (Math.abs of the most-negative opening line).
@@ -30,7 +31,7 @@ const CROSSOVER_TABLE = [
 // ── Core predictor ────────────────────────────────────────────────────────────
 
 /**
- * predictCrossover({ f1OpeningOdds, f2OpeningOdds })
+ * predictCrossover({ f1OpeningOdds, f2OpeningOdds, f1Name?, f2Name?, profiles? })
  *
  * Returns:
  *   crossoverProb     — 0-1 probability of a live crossover
@@ -39,11 +40,11 @@ const CROSSOVER_TABLE = [
  *   impliedDogWinRate  — what the book implies for the dog
  *   signal            — 'strong' | 'moderate' | 'low' | 'none'
  *   advice            — one-sentence plain-English guidance
+ *   fighterVolatility — 0-100 score if fighter profiles available, else null
  *
- * Called with opening odds. Can also be called with live odds during a fight
- * (the prediction weakens if the fight is past the crossover window).
+ * Called with opening odds. Pass f1Name/f2Name + profiles for fighter adjustment.
  */
-function predictCrossover({ f1OpeningOdds, f2OpeningOdds }) {
+function predictCrossover({ f1OpeningOdds, f2OpeningOdds, f1Name, f2Name, profiles }) {
   const o1 = parseFloat(f1OpeningOdds);
   const o2 = parseFloat(f2OpeningOdds);
   if (isNaN(o1) || isNaN(o2)) return null;
@@ -55,7 +56,7 @@ function predictCrossover({ f1OpeningOdds, f2OpeningOdds }) {
 
   // Look up crossover rate from empirical table
   const row = CROSSOVER_TABLE.find(r => tightness <= r.maxTight) || CROSSOVER_TABLE[CROSSOVER_TABLE.length - 1];
-  const crossoverProb = row.rate;
+  let crossoverProb = row.rate;
 
   // Dog odds and implied probability
   const dogOdds    = Math.max(o1, o2); // least negative or most positive = dog
@@ -70,6 +71,19 @@ function predictCrossover({ f1OpeningOdds, f2OpeningOdds }) {
 
   // Edge vs implied
   const crossoverEdge = Math.round((expectedDogWinRate - impliedDog) * 1000) / 10;
+
+  // Fighter volatility adjustment — if we have UFC Stats profiles for both fighters,
+  // adjust the tier-based probability by their career volatility score.
+  let fighterVolatility = null;
+  const _profiles = profiles || (f1Name || f2Name ? loadFighterProfiles() : null);
+  if (f1Name && f2Name && _profiles) {
+    fighterVolatility = fightVolatilityScore(f1Name, f2Name, _profiles);
+    if (fighterVolatility != null) {
+      // Volatility score 0-100, baseline 50. Each 10 pts above/below baseline = ±3% crossover prob
+      const volAdjust = (fighterVolatility - 50) * 0.003;
+      crossoverProb = Math.max(0, Math.min(1, crossoverProb + volAdjust));
+    }
+  }
 
   // Signal strength
   let signal;
@@ -104,6 +118,7 @@ function predictCrossover({ f1OpeningOdds, f2OpeningOdds }) {
     crossoverEdge,
     signal,
     advice,
+    fighterVolatility,
     // Timing context (57% of crossovers happen in round 1)
     earlyWindowPct:       57,
     medWindowPct:         39,
