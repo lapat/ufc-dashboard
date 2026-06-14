@@ -246,6 +246,39 @@
     #settle-toast.push{background:#111;border:2px solid #555;color:#888}
     /* ── odds delta ── */
     .odds-delta{font-size:0.58rem;margin-left:3px;opacity:0.5;font-weight:400;vertical-align:middle}
+    /* ── bet log ── */
+    #bet-log{background:#090909;border-bottom:1px solid #131313;display:none}
+    #bet-log-hdr{padding:5px 24px;cursor:pointer;font-size:0.62rem;color:#252525;text-transform:uppercase;letter-spacing:.5px;display:flex;justify-content:space-between;align-items:center;user-select:none}
+    #bet-log-hdr:hover{color:#444}
+    #bet-log-table{width:100%;border-collapse:collapse;font-size:0.7rem}
+    .bl-th{color:#1e1e1e;text-transform:uppercase;font-size:0.57rem;letter-spacing:.5px;padding:3px 24px 3px;font-weight:400;text-align:left}
+    .bl-td{padding:5px 24px;border-top:1px solid #0f0f0f}
+    .bl-sel{color:#888}
+    .bl-time,.bl-odds,.bl-stake{color:#333}
+    .bl-st-won{color:#69db7c;font-weight:700}
+    .bl-st-lost{color:#ff6b6b;font-weight:700}
+    .bl-st-open{color:#252525}
+    .bl-st-push{color:#555;font-weight:700}
+    .bl-pnl{text-align:right}
+    .bl-pnl-pos{color:#69db7c;font-weight:700}
+    .bl-pnl-neg{color:#ff6b6b;font-weight:700}
+    .bl-pnl-open{color:#1a1a1a}
+    /* ── spy mode ── */
+    #spy-input-row{display:none;background:#06060f;border-bottom:1px solid #131326;padding:6px 24px;align-items:center;gap:8px}
+    #spy-banner{display:none;background:#06060f;border-bottom:1px solid #131326;padding:5px 24px;font-size:0.7rem;color:#3a6a9a;align-items:center;gap:8px}
+    #spy-log{display:none;background:#050509;border-bottom:1px solid #0f0f1f}
+    #spy-log .bl-sel{color:#2a4a6a}
+    #spy-log .bl-time,#spy-log .bl-odds,#spy-log .bl-stake{color:#1a2a3a}
+    #spy-log .bl-th{color:#111a2a}
+    /* ── CLV alert ── */
+    #clv-alert{display:none;background:#0e0900;border-bottom:1px solid #2a1e00;padding:6px 24px;font-size:0.72rem;color:#c9a02a;letter-spacing:.15px}
+    /* ── live score ── */
+    #nw-score{display:none;align-items:center;justify-content:center;gap:10px;padding:6px 0 2px}
+    .nw-score-num{font-size:1.5rem;font-weight:700;color:#e8b84b;min-width:28px;text-align:center}
+    .nw-score-dash{color:#252525;font-size:1.1rem}
+    #nw-score-period{font-size:0.62rem;color:#333;text-transform:uppercase;letter-spacing:.5px}
+    /* ── sparkline ── */
+    #pnl-spark{display:none;vertical-align:middle;overflow:visible}
     /* ── mobile ── */
     @media(max-width:600px){
       body{font-size:21px}
@@ -298,14 +331,61 @@
 <div id="pnl-strip">
   <span class="pnl-lbl">Session P&amp;L</span>
   <span class="pnl-val pnl-zero" id="pnl-net">$0.00</span>
+  <svg id="pnl-spark" width="80" height="20" viewBox="0 0 80 20" xmlns="http://www.w3.org/2000/svg"></svg>
   <span class="pnl-sep">·</span>
   <span id="pnl-record" style="color:#333">—</span>
   <span class="pnl-sep">·</span>
   <span id="pnl-wagered" style="color:#2a2a2a">$0 wagered</span>
   <span class="pnl-sep">·</span>
   <span id="pnl-open" style="color:#2a2a2a">0 open</span>
+  <span style="margin-left:auto;display:flex;gap:10px;align-items:center">
+    <button onclick="toggleBetLog()" style="background:none;border:none;color:#252525;cursor:pointer;font-size:0.65rem;padding:0;letter-spacing:.3px" id="bet-log-btn">▾ bets</button>
+    <button onclick="toggleSpyInput()" style="background:none;border:none;color:#1a1a3a;cursor:pointer;font-size:0.65rem;padding:0;letter-spacing:.3px">spy</button>
+  </span>
 </div>
 <div id="settle-toast"></div>
+
+<!-- Bet log (own bets today) -->
+<div id="bet-log">
+  <div id="bet-log-hdr" onclick="toggleBetLog()">
+    <span>Today's bets</span>
+    <span id="bet-log-count" style="color:#252525">—</span>
+  </div>
+  <table id="bet-log-table">
+    <thead><tr>
+      <th class="bl-th">Time</th><th class="bl-th">Selection</th><th class="bl-th">Odds</th>
+      <th class="bl-th">Stake</th><th class="bl-th">Status</th><th class="bl-th" style="text-align:right;padding-right:24px">P&amp;L</th>
+    </tr></thead>
+    <tbody id="bet-log-tbody"></tbody>
+  </table>
+</div>
+
+<!-- Spy mode input row -->
+<div id="spy-input-row">
+  <span style="font-size:0.62rem;color:#1a1a3a;text-transform:uppercase;letter-spacing:.5px">Watch user:</span>
+  <input id="spy-input" placeholder="username (e.g. ish)" style="background:#0a0a1a;border:1px solid #1a1a3a;border-radius:4px;color:#74c0fc;font-size:0.7rem;padding:4px 8px;outline:none;width:150px"/>
+  <button onclick="applySpyUser()" style="background:#0a0a1a;border:1px solid #74c0fc44;border-radius:4px;color:#74c0fc;font-size:0.65rem;padding:4px 10px;cursor:pointer">Watch</button>
+  <button onclick="clearSpy()" style="background:none;border:none;color:#252525;font-size:0.65rem;cursor:pointer;padding:0">clear</button>
+</div>
+
+<!-- Spy banner + log -->
+<div id="spy-banner">
+  <span style="color:#2a5a8a">Watching</span>
+  <strong id="spy-name" style="color:#74c0fc"></strong>
+  <span id="spy-summary" style="color:#1a2a3a;margin-left:4px"></span>
+</div>
+<div id="spy-log">
+  <table style="width:100%;border-collapse:collapse;font-size:0.7rem">
+    <thead><tr>
+      <th class="bl-th">Time</th><th class="bl-th">Selection</th><th class="bl-th">Odds</th>
+      <th class="bl-th">Stake</th><th class="bl-th">Status</th><th class="bl-th" style="text-align:right;padding-right:24px">P&amp;L</th>
+    </tr></thead>
+    <tbody id="spy-log-tbody"></tbody>
+  </table>
+</div>
+
+<!-- CLV / line move alert -->
+<div id="clv-alert"></div>
 
 <div id="topbar">
   <h1>⚡ Bet Bot</h1>
@@ -376,6 +456,12 @@
       </div>
       <div class="nw-odds dog" id="nw-o2">—</div>
       <div class="nw-name r" id="nw-f2">—</div>
+    </div>
+    <div id="nw-score">
+      <span class="nw-score-num" id="nw-score-1">0</span>
+      <span class="nw-score-dash">—</span>
+      <span class="nw-score-num" id="nw-score-2">0</span>
+      <span id="nw-score-period"></span>
     </div>
     <div id="nw-bottom">
       <span id="nw-switch-label">Switch game:</span>
@@ -1027,6 +1113,7 @@ function updateNowWatchingOdds(o1,o2,drawOdds){
   };
   o1el.innerHTML=withDelta(o1,_openingOdds.f1); o1el.className='nw-odds '+odsCls(o1);
   o2el.innerHTML=withDelta(o2,_openingOdds.f2); o2el.className='nw-odds '+odsCls(o2);
+  checkCLVAlert(o1, o2);
   const vsEl=document.getElementById('nw-vs-text'),drawEl=document.getElementById('nw-draw-display'),drawOEl=document.getElementById('nw-o-draw');
   if(drawOdds!=null){
     vsEl.style.display='none'; drawEl.style.display='flex';
@@ -1072,6 +1159,7 @@ document.getElementById('nw-dismiss').addEventListener('click',()=>{
   document.getElementById('game-list').style.display='block';
   document.getElementById('graph-fight-lbl').textContent='no game selected';
   document.getElementById('graph-empty').style.display='block';
+  stopLiveScore();
   canvas.style.display='none';
   selectedGame=null;
   tracker.clear(); renderTracker();
@@ -1125,6 +1213,7 @@ async function selectGame(game){
   // Heartbeat with specific game so recorder only captures this match
   startHeartbeat(game.sport_key||activeSport, a.name, b.name);
   startPolling();
+  startLiveScorePoll();
   // Immediately refresh recorder dot — don't wait for next 5s poll
   setTimeout(pollRecorder, 1500);
 }
@@ -1542,6 +1631,8 @@ function applyDashUser(uid) {
   }
 }
 applyDashUser(_dkMeParam);
+// Init spy mode from URL or localStorage
+if (_spyUser) { updateSpyBanner(); syncSpyBets(); }
 setInterval(syncPnL, 8000);
 setTimeout(syncPnL, 2000);
 // Clicking the pill uses a simple prompt — no popup overlap issues
@@ -1653,6 +1744,199 @@ async function syncDKBets() {
 // ═══════════════════════════════════════════
 // SESSION P&L + SETTLEMENT TRACKING
 // ═══════════════════════════════════════════
+// SHARED BET PROFIT CALCULATOR
+// ═══════════════════════════════════════════
+function betProfit(b) {
+  const status = (b.status || '').toLowerCase();
+  const stake  = parseFloat(b.stake || 0);
+  if (status === 'won') {
+    const rawRet = parseFloat(b.returns);
+    const payout = (rawRet > 0) ? rawRet : parseFloat(b.potentialReturns || 0);
+    return payout > stake ? payout - stake : payout; // if payout<stake DK sent profit-only
+  }
+  if (status === 'lost')  return -stake;
+  if (status === 'push')  return 0;
+  return 0; // unknown — skip
+}
+
+// ── Bet Log ──────────────────────────────────────────────────────────────────
+let _betLogOpen = false;
+function toggleBetLog() {
+  _betLogOpen = !_betLogOpen;
+  const el = document.getElementById('bet-log');
+  const btn = document.getElementById('bet-log-btn');
+  el.style.display = _betLogOpen ? 'block' : 'none';
+  if (btn) btn.textContent = (_betLogOpen ? '▴' : '▾') + ' bets';
+}
+
+function renderBetLog(bets, tbodyId) {
+  const tbody = document.getElementById(tbodyId);
+  if (!tbody) return;
+  if (!bets.length) {
+    tbody.innerHTML = `<tr><td colspan="6" class="bl-td" style="color:#1a1a1a;text-align:center">No bets today</td></tr>`;
+    return;
+  }
+  const sorted = [...bets].sort((a,b) => (a.placementDate||'') < (b.placementDate||'') ? 1 : -1);
+  tbody.innerHTML = sorted.map(b => {
+    const st   = (b.status||'').toLowerCase();
+    const isWon = st === 'won', isLost = st === 'lost', isOpen = st === 'open';
+    const pnl  = isOpen ? null : betProfit(b);
+    const pStr = pnl === null ? 'open' : (pnl >= 0 ? '+$' : '-$') + Math.abs(pnl).toFixed(2);
+    const stCls = isWon ? 'bl-st-won' : isLost ? 'bl-st-lost' : isOpen ? 'bl-st-open' : 'bl-st-push';
+    const pCls  = pnl === null ? 'bl-pnl-open' : pnl > 0 ? 'bl-pnl-pos' : pnl < 0 ? 'bl-pnl-neg' : '';
+    const time  = b.placementDate ? new Date(b.placementDate).toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'}) : '—';
+    const oddsDisp = b.odds ? (parseFloat(b.odds) > 0 ? '+'+b.odds : b.odds) : '—';
+    return `<tr>
+      <td class="bl-td bl-time">${time}</td>
+      <td class="bl-td bl-sel">${b.selection||'?'}</td>
+      <td class="bl-td bl-odds">${oddsDisp}</td>
+      <td class="bl-td bl-stake">$${parseFloat(b.stake||0).toFixed(0)}</td>
+      <td class="bl-td ${stCls}">${(b.status||'—').toUpperCase()}</td>
+      <td class="bl-td bl-pnl ${pCls}">${pStr}</td>
+    </tr>`;
+  }).join('');
+}
+
+// ── Sparkline ────────────────────────────────────────────────────────────────
+let _pnlHistory = [];
+function updateSparkline() {
+  if (_sessionPnL.wagered < 0.01 && _sessionPnL.open === 0) return;
+  _pnlHistory.push(_sessionPnL.net);
+  if (_pnlHistory.length > 40) _pnlHistory.shift();
+  const svg = document.getElementById('pnl-spark');
+  if (!svg || _pnlHistory.length < 2) return;
+  const nets = _pnlHistory;
+  const min = Math.min(0, ...nets);
+  const max = Math.max(0, ...nets);
+  const range = max - min || 1;
+  const W = 80, H = 20;
+  const pts = nets.map((v, i) => {
+    const x = (i / (nets.length - 1)) * W;
+    const y = H - ((v - min) / range) * H;
+    return `${x.toFixed(1)},${y.toFixed(1)}`;
+  }).join(' ');
+  const latest = nets[nets.length - 1];
+  const stroke = latest > 0.01 ? '#69db7c' : latest < -0.01 ? '#ff6b6b' : '#333';
+  svg.innerHTML = `<polyline points="${pts}" fill="none" stroke="${stroke}" stroke-width="1.5" stroke-linejoin="round"/>`;
+  svg.style.display = 'inline';
+}
+
+// ── CLV / Line-move Alert ────────────────────────────────────────────────────
+const CLV_THRESHOLD = 15; // pts
+function checkCLVAlert(o1, o2) {
+  const el = document.getElementById('clv-alert');
+  if (!el || !_openingOdds.f1) { if (el) el.style.display='none'; return; }
+  const dkBets = tracker.bets.filter(b => b.source === 'dk');
+  if (!dkBets.length) { el.style.display = 'none'; return; }
+  const alerts = [];
+  if (dkBets.some(b => b.side === 'f1') && typeof o1 === 'number') {
+    const d = Math.round(o1 - _openingOdds.f1);
+    if (d > CLV_THRESHOLD) alerts.push(`${tracker.f1Name || 'Side 1'} +${d} pts (line moved against)`);
+  }
+  if (dkBets.some(b => b.side === 'f2') && typeof o2 === 'number') {
+    const d = Math.round(o2 - _openingOdds.f2);
+    if (d > CLV_THRESHOLD) alerts.push(`${tracker.f2Name || 'Side 2'} +${d} pts (line moved against)`);
+  }
+  if (alerts.length) {
+    el.innerHTML = '⚠ Line move alert: ' + alerts.join(' · ') + ' <span style="color:#555;font-size:0.65rem;margin-left:6px">opening: ' + fmtO(_openingOdds.f1) + ' / ' + fmtO(_openingOdds.f2) + '</span>';
+    el.style.display = 'block';
+  } else {
+    el.style.display = 'none';
+  }
+}
+
+// ── Spy Mode ─────────────────────────────────────────────────────────────────
+let _spyUser = new URLSearchParams(location.search).get('spy') || localStorage.getItem('spyUser') || '';
+
+function toggleSpyInput() {
+  const row = document.getElementById('spy-input-row');
+  const isOpen = row.style.display !== 'none' && row.style.display !== '';
+  row.style.display = isOpen ? 'none' : 'flex';
+  if (!isOpen) {
+    const inp = document.getElementById('spy-input');
+    if (inp) { inp.value = _spyUser; inp.focus(); }
+  }
+}
+
+function applySpyUser() {
+  const val = (document.getElementById('spy-input')?.value || '').trim().toLowerCase();
+  _spyUser = val;
+  if (_spyUser) localStorage.setItem('spyUser', _spyUser);
+  else localStorage.removeItem('spyUser');
+  document.getElementById('spy-input-row').style.display = 'none';
+  updateSpyBanner();
+  syncSpyBets();
+}
+
+function clearSpy() {
+  _spyUser = '';
+  localStorage.removeItem('spyUser');
+  if (document.getElementById('spy-input')) document.getElementById('spy-input').value = '';
+  document.getElementById('spy-input-row').style.display = 'none';
+  updateSpyBanner();
+}
+
+function updateSpyBanner() {
+  const banner = document.getElementById('spy-banner');
+  const log    = document.getElementById('spy-log');
+  if (_spyUser) {
+    document.getElementById('spy-name').textContent = _spyUser;
+    banner.style.display = 'flex';
+    log.style.display    = 'block';
+  } else {
+    banner.style.display = 'none';
+    log.style.display    = 'none';
+    const tbody = document.getElementById('spy-log-tbody');
+    if (tbody) tbody.innerHTML = '';
+  }
+}
+
+async function syncSpyBets() {
+  if (!_spyUser) return;
+  try {
+    const today = new Date().toISOString().slice(0, 10);
+    const all = await (await fetch(`/api/dk-bets?user=${encodeURIComponent(_spyUser)}&all=1`)).json();
+    const straight = all.filter(b => !b.isParlay && b.placementDate && b.placementDate.slice(0,10) === today);
+    renderBetLog(straight, 'spy-log-tbody');
+    const open    = straight.filter(b => (b.status||'').toLowerCase() === 'open').length;
+    const settled = straight.filter(b => (b.status||'').toLowerCase() !== 'open');
+    const wins    = settled.filter(b => (b.status||'').toLowerCase() === 'won').length;
+    const losses  = settled.filter(b => (b.status||'').toLowerCase() === 'lost').length;
+    const net     = settled.reduce((s,b) => s + betProfit(b), 0);
+    const netStr  = net > 0.01 ? `+$${net.toFixed(2)}` : net < -0.01 ? `-$${Math.abs(net).toFixed(2)}` : '$0';
+    const rec     = [wins?wins+'W':'', losses?losses+'L':''].filter(Boolean).join(' ') || '—';
+    document.getElementById('spy-summary').textContent = `${rec} · ${netStr} · ${open} open`;
+  } catch(e) { console.warn('[spy]', e.message); }
+}
+
+// ── Live Score ───────────────────────────────────────────────────────────────
+let _liveScoreTimer = null;
+async function fetchLiveScore() {
+  if (!selectedGame) return;
+  const {a, b} = extractOutcomes(selectedGame);
+  try {
+    const url = `/api/live-score?sport=${encodeURIComponent(activeSport)}&team1=${encodeURIComponent(a.name)}&team2=${encodeURIComponent(b.name)}`;
+    const score = await (await fetch(url)).json();
+    const el = document.getElementById('nw-score');
+    if (!score) { if(el) el.style.display='none'; return; }
+    document.getElementById('nw-score-1').textContent = score.score1 ?? '0';
+    document.getElementById('nw-score-2').textContent = score.score2 ?? '0';
+    document.getElementById('nw-score-period').textContent = score.period || score.clock || '';
+    el.style.display = 'flex';
+  } catch(_) { const el=document.getElementById('nw-score'); if(el) el.style.display='none'; }
+}
+function startLiveScorePoll() {
+  clearInterval(_liveScoreTimer);
+  fetchLiveScore();
+  _liveScoreTimer = setInterval(fetchLiveScore, 30000);
+}
+function stopLiveScore() {
+  clearInterval(_liveScoreTimer);
+  const el = document.getElementById('nw-score');
+  if (el) el.style.display = 'none';
+}
+
+// ═══════════════════════════════════════════
 let _prevBetStatuses = new Map(); // betId → status string
 let _sessionPnL = { net:0, wagered:0, wins:0, losses:0, pushes:0, open:0 };
 
@@ -1690,51 +1974,39 @@ async function syncPnL() {
   if (!_dkMeParam) return;
   try {
     const all = await (await fetch(`/api/dk-bets?user=${encodeURIComponent(_dkMeParam)}&all=1`)).json();
-    const today = new Date().toISOString().slice(0, 10); // "2026-06-13"
+    const today = new Date().toISOString().slice(0, 10);
     const straight = all.filter(b => !b.isParlay && b.placementDate && b.placementDate.slice(0, 10) === today);
+
+    // Settlement detection — only fire toast for Open→settled transitions
     for (const b of straight) {
       if (!b.betId) continue;
       const prev = _prevBetStatuses.get(b.betId);
       if (prev === 'Open' && b.status && b.status !== 'Open') {
-        const profit = parseFloat(b.returns || 0) - parseFloat(b.stake || 0);
+        const profit = betProfit(b); // uses module-level betProfit
         showSettleToast(b.selection || '?', b.status, profit);
-        console.log(`[P&L] settled: ${b.selection} → ${b.status} | profit: $${profit.toFixed(2)}`);
+        console.log(`[P&L] settled: ${b.selection} → ${b.status} profit=$${profit.toFixed(2)}`);
       }
       _prevBetStatuses.set(b.betId, b.status);
     }
-    const open     = straight.filter(b => b.status === 'Open');
-    const settled  = straight.filter(b => b.status && b.status !== 'Open');
 
-    console.log(`[P&L] ${straight.length} today bets: ${open.length} open, ${settled.length} settled`);
-    settled.forEach(b => console.log(`[P&L]  ${b.status} | sel="${b.selection}" stake=${b.stake} returns=${b.returns} potRet=${b.potentialReturns}`));
+    const open    = straight.filter(b => (b.status||'').toLowerCase() === 'open');
+    const settled = straight.filter(b => b.status && (b.status||'').toLowerCase() !== 'open');
+    console.log(`[P&L] ${straight.length} bets today: ${open.length} open ${settled.length} settled`);
+    settled.forEach(b => console.log(`[P&L]  ${b.status} sel="${b.selection}" stake=${b.stake} returns=${b.returns} potRet=${b.potentialReturns}`));
 
     const wagered = straight.reduce((s,b) => s + parseFloat(b.stake || 0), 0);
-
-    // Profit per settled bet:
-    // DK `returns` = total payout (stake+profit) for won bets, 0 for lost.
-    // Fall back to potentialReturns if returns is null/0 for a Won bet.
-    const betProfit = b => {
-      const status = (b.status || '').toLowerCase();
-      const stake  = parseFloat(b.stake || 0);
-      if (status === 'won') {
-        const rawRet = parseFloat(b.returns);
-        const payout = (rawRet > 0) ? rawRet : parseFloat(b.potentialReturns || 0);
-        return payout > stake ? payout - stake : payout; // if payout < stake, DK sent profit-only
-      }
-      if (status === 'lost')  return -stake;
-      if (status === 'push')  return 0;
-      // unknown status — log and skip
-      console.warn(`[P&L] unknown status "${b.status}" for "${b.selection}" — skipping`);
-      return 0;
-    };
-
-    const net    = settled.reduce((s,b) => s + betProfit(b), 0);
-    const wins   = settled.filter(b => (b.status||'').toLowerCase() === 'won').length;
-    const losses = settled.filter(b => (b.status||'').toLowerCase() === 'lost').length;
-    const pushes = settled.filter(b => (b.status||'').toLowerCase() === 'push').length;
+    const net     = settled.reduce((s,b) => s + betProfit(b), 0);
+    const wins    = settled.filter(b => (b.status||'').toLowerCase() === 'won').length;
+    const losses  = settled.filter(b => (b.status||'').toLowerCase() === 'lost').length;
+    const pushes  = settled.filter(b => (b.status||'').toLowerCase() === 'push').length;
     console.log(`[P&L] net=$${net.toFixed(2)} wagered=$${wagered.toFixed(2)} ${wins}W ${losses}L ${pushes}P`);
-    _sessionPnL    = { net, wagered, wins, losses, pushes, open: open.length };
+
+    _sessionPnL = { net, wagered, wins, losses, pushes, open: open.length };
     updatePnLStrip();
+    updateSparkline();
+    renderBetLog(straight, 'bet-log-tbody');
+    document.getElementById('bet-log-count').textContent = `${straight.length} bet${straight.length!==1?'s':''}`;
+    syncSpyBets(); // refresh spy panel on same cadence
   } catch(_) {}
 }
 

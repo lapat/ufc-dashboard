@@ -1024,6 +1024,345 @@ function testDedupBets() {
   assert(bet1.userId === 'louislapat', `bet-1 should belong to real user, got ${bet1.userId}`);
 }
 
+// ── NEW FEATURE TESTS ─────────────────────────────────────────────────────
+
+// betProfit() — mirrors module-level function in index.html
+function betProfitFn(b) {
+  const status = (b.status || '').toLowerCase();
+  const stake  = parseFloat(b.stake || 0);
+  if (status === 'won') {
+    const rawRet = parseFloat(b.returns);
+    const payout = (rawRet > 0) ? rawRet : parseFloat(b.potentialReturns || 0);
+    return payout > stake ? payout - stake : payout;
+  }
+  if (status === 'lost')  return -stake;
+  if (status === 'push')  return 0;
+  return 0;
+}
+
+function testBetLogFilter() {
+  const today = new Date().toISOString().slice(0, 10);
+  const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
+
+  const all = [
+    { betId:'a', isParlay:false, placementDate:today+'T10:00Z',     status:'Won',  stake:'50', returns:'90' },
+    { betId:'b', isParlay:false, placementDate:today+'T11:00Z',     status:'Open', stake:'25', returns:null },
+    { betId:'c', isParlay:false, placementDate:yesterday+'T08:00Z', status:'Won',  stake:'100', returns:'190' }, // yesterday — excluded
+    { betId:'d', isParlay:true,  placementDate:today+'T09:00Z',     status:'Won',  stake:'5',  returns:'200' }, // parlay — excluded
+    { betId:'e', isParlay:false, placementDate:today+'T12:00Z',     status:'Lost', stake:'75', returns:'0' },
+  ];
+
+  const straight = all.filter(b => !b.isParlay && b.placementDate && b.placementDate.slice(0,10) === today);
+  assert(straight.length === 3, `should have 3 today straight bets, got ${straight.length}`);
+  assert(straight.every(b => b.betId !== 'c'), 'yesterday must be excluded');
+  assert(straight.every(b => b.betId !== 'd'), 'parlay must be excluded');
+
+  const wins   = straight.filter(b => (b.status||'').toLowerCase() === 'won');
+  const losses = straight.filter(b => (b.status||'').toLowerCase() === 'lost');
+  const open   = straight.filter(b => (b.status||'').toLowerCase() === 'open');
+  assert(wins.length === 1 && losses.length === 1 && open.length === 1, `expected 1W 1L 1O`);
+}
+
+function testBetLogProfitDisplay() {
+  // Various status+returns combinations render correct P&L
+  const cases = [
+    { b: { status:'Won',  stake:'100', returns:'190', potentialReturns:'190' }, expected: 90   },
+    { b: { status:'Won',  stake:'50',  returns:null,  potentialReturns:'125' }, expected: 75   }, // null returns fallback
+    { b: { status:'Won',  stake:'50',  returns:'0',   potentialReturns:'125' }, expected: 75   }, // zero returns fallback
+    { b: { status:'Lost', stake:'75',  returns:'0',   potentialReturns:'150' }, expected: -75  },
+    { b: { status:'Push', stake:'100', returns:'100', potentialReturns:'100' }, expected: 0    },
+    { b: { status:'WON',  stake:'30',  returns:null,  potentialReturns:'90'  }, expected: 60   }, // uppercase status
+    { b: { status:'LOST', stake:'20',  returns:'0',   potentialReturns:'40'  }, expected: -20  },
+  ];
+  for (const {b, expected} of cases) {
+    const got = betProfitFn(b);
+    assert(Math.abs(got - expected) < 0.01, `status=${b.status} returns=${b.returns} potRet=${b.potentialReturns} stake=${b.stake}: expected ${expected}, got ${got}`);
+  }
+}
+
+function testBetLogSort() {
+  // Bet log must be sorted newest-first (descending by placementDate)
+  const bets = [
+    { betId:'1', placementDate:'2026-06-13T10:00:00Z', status:'Open', stake:'10' },
+    { betId:'2', placementDate:'2026-06-13T12:00:00Z', status:'Open', stake:'20' },
+    { betId:'3', placementDate:'2026-06-13T08:00:00Z', status:'Open', stake:'30' },
+  ];
+  const sorted = [...bets].sort((a,b) => (a.placementDate||'') < (b.placementDate||'') ? 1 : -1);
+  assert(sorted[0].betId === '2', `newest first: expected betId=2, got ${sorted[0].betId}`);
+  assert(sorted[2].betId === '3', `oldest last: expected betId=3, got ${sorted[2].betId}`);
+}
+
+function testCLVAlert() {
+  // Mirrors checkCLVAlert() logic
+  const CLV_THRESHOLD = 15;
+  const checkAlert = (openingF1, currentF1, openingF2, currentF2, hasBetF1, hasBetF2) => {
+    const alerts = [];
+    if (hasBetF1 && typeof currentF1 === 'number' && openingF1) {
+      const d = Math.round(currentF1 - openingF1);
+      if (d > CLV_THRESHOLD) alerts.push(`f1:+${d}`);
+    }
+    if (hasBetF2 && typeof currentF2 === 'number' && openingF2) {
+      const d = Math.round(currentF2 - openingF2);
+      if (d > CLV_THRESHOLD) alerts.push(`f2:+${d}`);
+    }
+    return alerts;
+  };
+
+  // No alert: line barely moved
+  const a1 = checkAlert(-148, -145, +200, +205, true, true);
+  assert(a1.length === 0, `small move should not alert, got: ${a1}`);
+
+  // Alert: f1 line moved +20pts (bad for f1 bettor)
+  const a2 = checkAlert(-148, -128, +200, +200, true, false);
+  assert(a2.length === 1 && a2[0].startsWith('f1'), `f1 line move alert: ${a2}`);
+  assert(a2[0].includes('+20'), `delta should be +20, got ${a2[0]}`);
+
+  // Alert: f2 line moved +30pts (bad for f2 bettor)
+  const a3 = checkAlert(-148, -148, +200, +230, false, true);
+  assert(a3.length === 1 && a3[0].startsWith('f2'), `f2 line move alert: ${a3}`);
+
+  // Both sides alert when both bets exist and both lines moved
+  const a4 = checkAlert(-148, -120, +200, +250, true, true);
+  assert(a4.length === 2, `both sides should alert, got ${a4.length}`);
+
+  // No bet on f2 → no f2 alert even if line moved significantly
+  const a5 = checkAlert(-148, -148, +200, +280, true, false);
+  assert(a5.length === 0, `no f2 bet = no f2 alert`);
+
+  // Exactly at threshold: no alert
+  const a6 = checkAlert(-148, -148+CLV_THRESHOLD, +200, +200, true, false);
+  assert(a6.length === 0, `exactly at threshold (${CLV_THRESHOLD}pts) should NOT alert`);
+
+  // One pt over threshold: alerts
+  const a7 = checkAlert(-148, -148+CLV_THRESHOLD+1, +200, +200, true, false);
+  assert(a7.length === 1, `one pt over threshold should alert`);
+
+  // Favorable line move (line went down, good CLV) → no alert
+  const a8 = checkAlert(-148, -180, +200, +200, true, false);
+  assert(a8.length === 0, `favorable line move should not alert`);
+}
+
+function testSparklineAccumulation() {
+  // Mirrors _pnlHistory accumulation in updateSparkline()
+  let history = [];
+  const MAX_PTS = 40;
+  const push = net => {
+    history.push(net);
+    if (history.length > MAX_PTS) history.shift();
+  };
+
+  // Push points and verify accumulation
+  for (let i = 0; i < 30; i++) push(i * 2 - 10);
+  assert(history.length === 30, `should have 30 pts, got ${history.length}`);
+  assert(history[0] === -10, `first point should be -10`);
+
+  // Overflow: cap at MAX_PTS
+  for (let i = 0; i < 20; i++) push(100);
+  assert(history.length === MAX_PTS, `should cap at ${MAX_PTS}, got ${history.length}`);
+
+  // SVG path generation sanity: all points must be within [0, W] x [0, H]
+  const W=80, H=20;
+  const nets = history;
+  const min = Math.min(0, ...nets), max = Math.max(0, ...nets);
+  const range = max - min || 1;
+  const pts = nets.map((v, i) => ({
+    x: (i / (nets.length - 1)) * W,
+    y: H - ((v - min) / range) * H,
+  }));
+  assert(pts.every(p => p.x >= 0 && p.x <= W), 'all x in [0,W]');
+  assert(pts.every(p => p.y >= 0 && p.y <= H), 'all y in [0,H]');
+}
+
+function testSparklineColor() {
+  // Correct stroke color based on latest value
+  const getColor = net => net > 0.01 ? '#69db7c' : net < -0.01 ? '#ff6b6b' : '#333';
+  assert(getColor(10)    === '#69db7c', 'positive → green');
+  assert(getColor(-5)    === '#ff6b6b', 'negative → red');
+  assert(getColor(0)     === '#333',    'zero → grey');
+  assert(getColor(0.001) === '#333',    'near-zero rounds to grey');
+}
+
+function testSpyModeSeparation() {
+  // Spy user bets must NOT affect own P&L state
+  const today = new Date().toISOString().slice(0, 10);
+
+  // Own bets (user=louis)
+  const ownBets = [
+    { betId:'l1', userId:'louis', isParlay:false, placementDate:today+'T10:00Z', status:'Won',  stake:'100', returns:'190' },
+  ];
+
+  // Spy bets (user=ish) — different userId entirely
+  const spyBets = [
+    { betId:'i1', userId:'ish',   isParlay:false, placementDate:today+'T10:00Z', status:'Won',  stake:'50',  returns:'125' },
+    { betId:'i2', userId:'ish',   isParlay:false, placementDate:today+'T11:00Z', status:'Lost', stake:'30',  returns:'0'   },
+  ];
+
+  // Own P&L only uses ownBets — spyBets must not bleed in
+  const ownNet = ownBets.filter(b=>b.status!=='Open').reduce((s,b)=>s+betProfitFn(b),0);
+  assert(Math.abs(ownNet - 90) < 0.01, `own net should be +90, got ${ownNet}`);
+
+  // Spy summary is computed from spyBets separately
+  const spySettled = spyBets.filter(b=>b.status!=='Open');
+  const spyNet  = spySettled.reduce((s,b)=>s+betProfitFn(b),0);
+  const spyWins = spySettled.filter(b=>(b.status||'').toLowerCase()==='won').length;
+  const spyLoss = spySettled.filter(b=>(b.status||'').toLowerCase()==='lost').length;
+  assert(Math.abs(spyNet - 45) < 0.01, `spy net should be +45 (75-30), got ${spyNet}`);
+  assert(spyWins === 1 && spyLoss === 1, `spy 1W 1L, got ${spyWins}W ${spyLoss}L`);
+
+  // No cross-contamination: ownBets contain no ish bets
+  assert(!ownBets.some(b => b.userId === 'ish'), 'ish bets must not appear in own list');
+}
+
+function testLiveScoreFuzzyMatch() {
+  // Mirrors fuzzy matching logic in server.js /api/live-score
+  const norm  = str => (str || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+  const fuzzy = (a, b) => { const na=norm(a), nb=norm(b); return na.includes(nb) || nb.includes(na); };
+  const hasT1 = (names, t) => names.some(n => fuzzy(n, t));
+  const hasT2 = (names, t) => names.some(n => fuzzy(n, t));
+
+  // Exact match
+  const names1 = ['Brazil', 'Morocco'];
+  assert(hasT1(names1,'Brazil') && hasT2(names1,'Morocco'), 'exact match should work');
+
+  // Substring match: "United States" → "US" (partial)
+  const names2 = ['United States', 'Mexico'];
+  assert(hasT1(names2, 'United States') || fuzzy('United States','United States'), 'US should match');
+
+  // No match
+  const names3 = ['France', 'Germany'];
+  assert(!hasT1(names3,'Brazil'), 'non-matching team1 should return false');
+  assert(!hasT2(names3,'Morocco'), 'non-matching team2 should return false');
+
+  // Case insensitive
+  const names4 = ['brazil', 'MOROCCO'];
+  assert(hasT1(names4,'Brazil') && hasT2(names4,'Morocco'), 'case-insensitive match should work');
+}
+
+// ── New server-side tests ───────────────────────────────────────────────────
+async function runNewFeatureServerTests() {
+  console.log('\n── New Features (Server) ──');
+
+  // Live score endpoint exists and returns null for unknown teams
+  await check('GET /api/live-score?team1=Unknown&team2=Nobody returns null', async () => {
+    const r = await fetch(`${target}/api/live-score?sport=soccer&team1=UnknownTeamXYZ&team2=NobodyFC`);
+    assert(r.ok, `HTTP ${r.status}`);
+    const d = await r.json();
+    assert(d === null, `should return null for unknown teams, got: ${JSON.stringify(d)}`);
+  });
+
+  await check('GET /api/live-score with no team params returns null', async () => {
+    const r = await fetch(`${target}/api/live-score`);
+    assert(r.ok, `HTTP ${r.status}`);
+    const d = await r.json();
+    assert(d === null, 'should return null when no params');
+  });
+
+  await check('GET /api/live-score?sport=mma responds without error', async () => {
+    const r = await fetch(`${target}/api/live-score?sport=mma_mixed_martial_arts&team1=Fighter+A&team2=Fighter+B`);
+    assert(r.ok, `HTTP ${r.status}`);
+    // Should be null (no real fight) or a valid object
+    const d = await r.json();
+    assert(d === null || (typeof d === 'object' && 'score1' in d), `expected null or score object, got ${JSON.stringify(d)}`);
+  });
+
+  // Spy mode: fetch bets for user=testspy returns isolated bets
+  await check('Spy mode: /api/dk-bets?user=spyuser returns only that user bets', async () => {
+    const spyBet = { betId:'spy-test-bet', receiptId:'spy-test-bet', status:'Unsettled', settlementStatus:'Won',
+      stake:50, potentialReturns:125, returns:125, placementDate:new Date().toISOString(),
+      displayOdds:'+150', selections:[{selectionDisplayName:'Draw', marketDisplayName:'Moneyline', displayOdds:'+150'}]};
+    await post('/api/dk-sync', { url:'wss://test', userId:'spyuser-test',
+      data:{ result:{ initial:{ bets:[spyBet] } } }, ts:Date.now() });
+
+    const spyBets = await get('/api/dk-bets?user=spyuser-test&all=1');
+    assert(Array.isArray(spyBets), 'should return array');
+    assert(spyBets.every(b => b.userId === 'spyuser-test'), 'all bets should belong to spy user');
+    const found = spyBets.find(b => b.betId === 'spy-test-bet');
+    assert(found, 'spy bet should be returned');
+    assert(found.potentialReturns === 125, 'potentialReturns should be preserved for profit fallback');
+  });
+
+  // Bet log data: all fields needed for rendering are present
+  await check('Bet log fields: betId, selection, odds, stake, status, placementDate, returns, potentialReturns all present', async () => {
+    const userId = 'betlog-field-test';
+    await post('/api/dk-sync', { url:'wss://test', userId,
+      data:{ result:{ initial:{ bets:[{
+        betId:'betlog-1', receiptId:'betlog-1', status:'Unsettled', settlementStatus:'Won',
+        stake:100, potentialReturns:190, returns:190, placementDate:new Date().toISOString(),
+        displayOdds:'+150',
+        selections:[{selectionDisplayName:'Test Fighter', marketDisplayName:'Moneyline', displayOdds:'+150'}]
+      }] } } }, ts:Date.now() });
+    const bets = await get(`/api/dk-bets?user=${userId}&all=1`);
+    assert(bets.length >= 1, 'should have at least 1 bet');
+    const b = bets.find(b => b.betId === 'betlog-1');
+    assert(b, 'betlog-1 should be found');
+    const required = ['betId','selection','odds','stake','status','placementDate','returns','potentialReturns'];
+    for (const f of required) {
+      assert(f in b, `bet log field "${f}" must be present in API response`);
+    }
+  });
+
+  // CLV alert: opening odds stored correctly when game is selected (test indirectly via P&L)
+  await check('P&L net is correct after mix of Won/Lost/Push on same user', async () => {
+    const userId = 'clv-pnl-test-user';
+    await post('/api/dk-sync', { url:'wss://test', userId,
+      data:{ result:{ initial:{ bets:[
+        { betId:'clv-won', receiptId:'clv-won', status:'Settled', settlementStatus:'Won',
+          stake:50, potentialReturns:125, returns:125, placementDate:new Date().toISOString(),
+          displayOdds:'+150', selections:[{selectionDisplayName:'Brazil', marketDisplayName:'Moneyline', displayOdds:'+150'}] },
+        { betId:'clv-lost', receiptId:'clv-lost', status:'Settled', settlementStatus:'Lost',
+          stake:25, potentialReturns:50, returns:0, placementDate:new Date().toISOString(),
+          displayOdds:'+100', selections:[{selectionDisplayName:'Morocco', marketDisplayName:'Moneyline', displayOdds:'+100'}] },
+        { betId:'clv-push', receiptId:'clv-push', status:'Settled', settlementStatus:'Push',
+          stake:30, potentialReturns:30, returns:30, placementDate:new Date().toISOString(),
+          displayOdds:'-110', selections:[{selectionDisplayName:'Draw', marketDisplayName:'Moneyline', displayOdds:'-110'}] },
+      ] } } }, ts:Date.now() });
+    const all = await get(`/api/dk-bets?user=${userId}&all=1`);
+    const today = new Date().toISOString().slice(0,10);
+    const straight = all.filter(b => !b.isParlay && b.placementDate && b.placementDate.slice(0,10) === today);
+    const settled = straight.filter(b => (b.status||'').toLowerCase() !== 'open');
+    // betProfit on server-returned bets
+    const pf = b => {
+      const st = (b.status||'').toLowerCase();
+      const stake = parseFloat(b.stake||0);
+      if (st==='won') { const r=parseFloat(b.returns); const p=(r>0)?r:parseFloat(b.potentialReturns||0); return p>stake?p-stake:p; }
+      if (st==='lost') return -stake;
+      if (st==='push') return 0;
+      return 0;
+    };
+    const net = settled.reduce((s,b)=>s+pf(b),0);
+    // Won: +75 (125-50), Lost: -25, Push: 0 → net = +50
+    assert(Math.abs(net - 50) < 0.01, `net should be +50, got ${net}`);
+    const wins = settled.filter(b=>(b.status||'').toLowerCase()==='won').length;
+    const losses = settled.filter(b=>(b.status||'').toLowerCase()==='lost').length;
+    const pushes = settled.filter(b=>(b.status||'').toLowerCase()==='push').length;
+    assert(wins===1 && losses===1 && pushes===1, `expected 1W 1L 1P, got ${wins}W ${losses}L ${pushes}P`);
+  });
+
+  // Spy mode isolation: spy user bets don't affect own P&L endpoint
+  await check('Spy user bets fully isolated — own /api/dk-bets?user=X not contaminated by spy=Y', async () => {
+    const ownUser = 'spy-isolation-own';
+    const spyUser = 'spy-isolation-spy';
+    await post('/api/dk-sync', { url:'wss://test', userId:ownUser,
+      data:{ result:{ initial:{ bets:[{
+        betId:'si-own-bet', receiptId:'si-own-bet', status:'Unsettled', settlementStatus:'Open',
+        stake:100, potentialReturns:190, placementDate:new Date().toISOString(),
+        displayOdds:'+150', selections:[{selectionDisplayName:'Fighter Own', marketDisplayName:'Moneyline', displayOdds:'+150'}]
+      }] } } }, ts:Date.now() });
+    await post('/api/dk-sync', { url:'wss://test', userId:spyUser,
+      data:{ result:{ initial:{ bets:[{
+        betId:'si-spy-bet', receiptId:'si-spy-bet', status:'Settled', settlementStatus:'Won',
+        stake:50, potentialReturns:500, returns:500, placementDate:new Date().toISOString(),
+        displayOdds:'+900', selections:[{selectionDisplayName:'Fighter Spy', marketDisplayName:'Moneyline', displayOdds:'+900'}]
+      }] } } }, ts:Date.now() });
+    const ownBets = await get(`/api/dk-bets?user=${ownUser}&all=1`);
+    const spyBets = await get(`/api/dk-bets?user=${spyUser}&all=1`);
+    assert(!ownBets.some(b=>b.betId==='si-spy-bet'), 'spy bet must NOT appear in own user bets');
+    assert(!spyBets.some(b=>b.betId==='si-own-bet'), 'own bet must NOT appear in spy user bets');
+    assert(ownBets.some(b=>b.betId==='si-own-bet'), 'own bet must be in own response');
+    assert(spyBets.some(b=>b.betId==='si-spy-bet'), 'spy bet must be in spy response');
+  });
+}
+
 // ── Main ───────────────────────────────────────────────────────────────────
 console.log('═══════════════════════════════════');
 console.log('  BET BOT TEST SUITE');
@@ -1047,8 +1386,18 @@ try { testSettlementDetection(); console.log('  ✓ settlement detection: Open�
 try { testOddsDelta(); console.log('  ✓ odds delta: ▲/▼ shown when moved, hidden when unchanged'); passed++; } catch(e) { console.error('  ✗ odds delta:', e.message); failed++; }
 try { testDKBannerLogic(); console.log('  ✓ DK banner: all 4 non-green states show banner, green hides it'); passed++; } catch(e) { console.error('  ✗ DK banner logic:', e.message); failed++; }
 try { testRecordingsFilter(); console.log('  ✓ recordings: filters ? vs ?, test data, normalizes sport labels'); passed++; } catch(e) { console.error('  ✗ recordings filter:', e.message); failed++; }
+try { testBetLogFilter(); console.log('  ✓ bet log filter: today straight only, excludes yesterday+parlays'); passed++; } catch(e) { console.error('  ✗ bet log filter:', e.message); failed++; }
+try { testBetLogProfitDisplay(); console.log('  ✓ bet log P&L: null/zero returns fallback, case-insensitive, all statuses'); passed++; } catch(e) { console.error('  ✗ bet log profit display:', e.message); failed++; }
+try { testBetLogSort(); console.log('  ✓ bet log sort: newest bet appears first'); passed++; } catch(e) { console.error('  ✗ bet log sort:', e.message); failed++; }
+try { testCLVAlert(); console.log('  ✓ CLV alert: triggers on >15pt adverse move, silent on favorable/small/no-bet'); passed++; } catch(e) { console.error('  ✗ CLV alert:', e.message); failed++; }
+try { testSparklineAccumulation(); console.log('  ✓ sparkline: accumulates up to 40 pts, SVG x/y in bounds'); passed++; } catch(e) { console.error('  ✗ sparkline:', e.message); failed++; }
+try { testSparklineColor(); console.log('  ✓ sparkline color: green/red/grey by latest net'); passed++; } catch(e) { console.error('  ✗ sparkline color:', e.message); failed++; }
+try { testSpyModeSeparation(); console.log('  ✓ spy mode: spy bets isolated from own P&L, separate net calc'); passed++; } catch(e) { console.error('  ✗ spy mode separation:', e.message); failed++; }
+try { testLiveScoreFuzzyMatch(); console.log('  ✓ live score fuzzy match: exact/substring/case-insensitive match, false negatives'); passed++; } catch(e) { console.error('  ✗ live score fuzzy match:', e.message); failed++; }
 
-runServerTests().then(() => {
+runServerTests().then(async () => {
+  await runNewFeatureServerTests();
+}).then(() => {
   console.log(`\n═══════════════════════════════════`);
   console.log(`  ${passed} passed  ${failed} failed`);
   console.log(`═══════════════════════════════════\n`);

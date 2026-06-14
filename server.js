@@ -697,6 +697,69 @@ app.get('/api/live-check', async (req, res) => {
 });
 
 // Live odds for any sport key
+// ── Live Score via ESPN public API ────────────────────────────────────────
+app.get('/api/live-score', async (req, res) => {
+  const { sport, team1, team2 } = req.query;
+  if (!team1 || !team2) return res.json(null);
+
+  const s = (sport || '').toLowerCase();
+  const endpoints = [];
+  if (s.includes('soccer') || s.includes('football') && !s.includes('nfl')) {
+    endpoints.push(
+      'https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/scoreboard',
+      'https://site.api.espn.com/apis/site/v2/sports/soccer/concacaf.nations.league/scoreboard',
+      'https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard',
+      'https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.euro/scoreboard',
+      'https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard',
+      'https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard',
+    );
+  } else if (s.includes('mma') || s.includes('ufc') || s.includes('fight')) {
+    endpoints.push('https://site.api.espn.com/apis/site/v2/sports/mma/ufc/scoreboard');
+  } else if (s.includes('nfl') || (s.includes('football') && s.includes('nfl'))) {
+    endpoints.push('https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard');
+  } else if (s.includes('nba') || s.includes('basketball')) {
+    endpoints.push('https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard');
+  } else if (s.includes('nhl') || s.includes('hockey')) {
+    endpoints.push('https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard');
+  } else {
+    endpoints.push(
+      'https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/scoreboard',
+      'https://site.api.espn.com/apis/site/v2/sports/mma/ufc/scoreboard',
+    );
+  }
+
+  const norm = str => (str || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+  const fuzzy = (a, b) => { const na = norm(a), nb = norm(b); return na.includes(nb) || nb.includes(na); };
+
+  for (const url of endpoints) {
+    try {
+      const { data } = await fetchJson(url);
+      for (const event of (data.events || [])) {
+        const comp = event.competitions?.[0];
+        if (!comp) continue;
+        const comps = comp.competitors || [];
+        if (comps.length < 2) continue;
+        const names = comps.map(c => c.team?.displayName || c.team?.name || '');
+        const hasT1 = names.some(n => fuzzy(n, team1));
+        const hasT2 = names.some(n => fuzzy(n, team2));
+        if (!hasT1 || !hasT2) continue;
+        // Align to team1/team2 order
+        const c1 = fuzzy(comps[0].team?.displayName || '', team1) ? comps[0] : comps[1];
+        const c2 = c1 === comps[0] ? comps[1] : comps[0];
+        const st = comp.status;
+        return res.json({
+          score1: c1.score ?? '0',
+          score2: c2.score ?? '0',
+          period: st?.type?.shortDetail || st?.type?.description || '',
+          clock: st?.displayClock || '',
+          completed: st?.type?.completed || false,
+        });
+      }
+    } catch (_) { /* try next */ }
+  }
+  res.json(null);
+});
+
 app.get('/api/sport/:key', async (req, res) => {
   try {
     const url = `${BASE_URL}/sports/${req.params.key}/odds/?apiKey=${ODDS_API_KEY}&regions=us&markets=h2h&bookmakers=draftkings&oddsFormat=american`;
