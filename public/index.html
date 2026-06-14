@@ -430,7 +430,7 @@
   <button id="rec-test-btn" title="Test the recording pipeline" style="font-size:0.75rem;padding:4px 9px;background:#141414;border:1px solid #1e1e1e;color:#444;border-radius:5px;cursor:pointer;white-space:nowrap">test rec</button>
   <a href="/library" style="font-size:0.75rem;padding:4px 9px;border:1px solid #1e1e1e;border-radius:5px;color:#444;white-space:nowrap;text-decoration:none">Library</a>
   <div id="topbar-status" style="margin-left:auto;font-size:0.78rem;color:#444;white-space:nowrap">Loading...</div>
-  <span style="font-size:0.6rem;color:#333;white-space:nowrap;letter-spacing:.5px" title="Dashboard build">v2026-06-13.13</span>
+  <span style="font-size:0.6rem;color:#333;white-space:nowrap;letter-spacing:.5px" title="Dashboard build">v2026-06-13.14</span>
 </div>
 
 <div id="sport-strip"><span id="sport-loading" style="color:#333;font-size:.7rem;padding:12px 0">Loading sports...</span></div>
@@ -1615,6 +1615,12 @@ let _lastDKBetIds = new Set(); // always empty on load — DK bets are wiped on 
 // Dashboard userId — localStorage takes priority, URL ?me= as fallback
 // Username comes ONLY from localStorage — never from URL params (prevents sharing ?me=wrong-user)
 let _dkMeParam = localStorage.getItem('dashUserId') || '';
+// Declare all lets that are referenced by functions called at startup — avoids TDZ crashes
+let _sessionPnL = { net:0, wagered:0, wins:0, losses:0, pushes:0, open:0 };
+let _prevBetStatuses = new Map();
+let _pnlHistory = [];
+let _liveScoreTimer = null;
+let _spyUser = new URLSearchParams(location.search).get('spy') || localStorage.getItem('spyUser') || '';
 function applyDashUser(uid) {
   _dkMeParam = uid;
   const pill = document.getElementById('user-pill');
@@ -1797,7 +1803,6 @@ function renderBetLog(bets, tbodyId) {
 }
 
 // ── Sparkline ────────────────────────────────────────────────────────────────
-let _pnlHistory = [];
 function updateSparkline() {
   if (_sessionPnL.wagered < 0.01 && _sessionPnL.open === 0) return;
   _pnlHistory.push(_sessionPnL.net);
@@ -1845,8 +1850,7 @@ function checkCLVAlert(o1, o2) {
 }
 
 // ── Spy Mode ─────────────────────────────────────────────────────────────────
-let _spyUser = new URLSearchParams(location.search).get('spy') || localStorage.getItem('spyUser') || '';
-// Init spy mode after _spyUser is declared (must be here, not earlier — TDZ)
+// Init spy mode (_spyUser declared early to avoid TDZ)
 if (_spyUser) { updateSpyBanner(); syncSpyBets(); }
 
 function toggleSpyInput() {
@@ -1911,7 +1915,6 @@ async function syncSpyBets() {
 }
 
 // ── Live Score ───────────────────────────────────────────────────────────────
-let _liveScoreTimer = null;
 async function fetchLiveScore() {
   if (!selectedGame) return;
   const {a, b} = extractOutcomes(selectedGame);
@@ -1938,8 +1941,6 @@ function stopLiveScore() {
 }
 
 // ═══════════════════════════════════════════
-let _prevBetStatuses = new Map(); // betId → status string
-let _sessionPnL = { net:0, wagered:0, wins:0, losses:0, pushes:0, open:0 };
 
 function updatePnLStrip() {
   const strip = document.getElementById('pnl-strip');
