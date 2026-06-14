@@ -1052,57 +1052,60 @@ app.post('/api/recorder/watch', (req, res) => {
   res.json({ ok: true });
 });
 
+const {
+  recFightId, recFilePath, recIsLive, recExtractOdds,
+  recSaveRecord, autoEnrich, loadPersistedState, persistState,
+} = require('./record_engine');
+
 const recorderState = {
-  activeFights: new Map(), // id → { meta, oddsHistory, lastOdds }
-  totalSaved: 0,
-  lastPoll: null,
+  activeFights: loadPersistedState(), // reloads in-flight fights after crash/restart
+  totalSaved:   0,
+  lastPoll:     null,
+  failCounts:   {},  // sportKey → consecutive API failure count
 };
 
-function recFightId(sportKey, fight) {
-  const a = fight.home_team.toLowerCase().replace(/[^a-z0-9]/g, '');
-  const b = fight.away_team.toLowerCase().replace(/[^a-z0-9]/g, '');
-  const date = fight.commence_time.slice(0, 10);
-  return `${sportKey.split('_')[0]}__${a}_vs_${b}_${date}`;
-}
-
-function recIsLive(fight, windowMs) {
-  const now = Date.now(), start = new Date(fight.commence_time).getTime();
-  return start <= now && now - start < windowMs;
-}
-
-function recExtractOdds(fight) {
-  const outcomes = fight.bookmakers?.[0]?.markets?.find(m => m.key === 'h2h')?.outcomes ?? [];
-  if (outcomes.length < 2) return null;
-  return {
-    timestamp: new Date().toISOString(),
-    fighter1: { name: outcomes[0].name, numericOdds: outcomes[0].price },
-    fighter2: { name: outcomes[1].name, numericOdds: outcomes[1].price },
-  };
-}
+// Threshold before emailing about repeated API failures
+const FAIL_ALERT_THRESHOLD = 5;
 
 function recSave(id) {
   const record = recorderState.activeFights.get(id);
-  if (!record || record.oddsHistory.length === 0) return;
-  // Save into sport-specific subfolder
-  const sportDir = path.join(HISTORICAL_DIR, record.meta.sport);
-  if (!fs.existsSync(sportDir)) fs.mkdirSync(sportDir, { recursive: true });
-  const filePath = path.join(sportDir, `${id}.json`);
-  fs.writeFileSync(filePath, JSON.stringify({
-    fightId: id,
-    sport: record.meta.sport,
-    fightTitle: `${record.meta.fighter1} vs ${record.meta.fighter2}`,
-    startTime: record.meta.startTime,
-    endTime: new Date().toISOString(),
-    dataPoints: record.oddsHistory.length,
-    oddsHistory: record.oddsHistory,
-  }, null, 2));
+  const result = recSaveRecord(id, record);
+
+  if (!result.saved) {
+    const label = record?.meta?.label || id;
+    console.error(`[recorder] SAVE FAILED for ${id}: ${result.reason}`);
+    sendAlert(
+      `🚨 BET BOT: SAVE FAILED — ${record?.meta?.fighter1 || id} vs ${record?.meta?.fighter2 || '?'}`,
+      `Recording could NOT be saved to disk.\n\nFight: ${id}\nReason: ${result.reason}\n\nData is still in memory — restart may lose it.\n\nhttps://ufc-dashboard-production-e03d.up.railway.app`
+    );
+    return;
+  }
+
   recorderState.totalSaved++;
-  // Only invalidate MMA index (other sports don't affect fight history)
-  if (record.meta.sport === 'mma_mixed_martial_arts') invalidateIndex();
-  console.log(`Saved: ${id} (${record.oddsHistory.length} pts)`);
+  console.log(`[recorder] Saved: ${id} (${result.dataPoints} pts) → ${result.filePath}`);
+
+  // Only invalidate MMA index (other sports don't feed the analyzer)
+  if (record.meta.sport === 'mma_mixed_martial_arts') {
+    invalidateIndex();
+    // Auto-enrich: fetch winner/method from ESPN/UFC Stats immediately after save
+    const filename = path.basename(result.filePath);
+    autoEnrich(filename, (err, out) => {
+      if (err) {
+        console.error(`[enricher] Failed for ${filename}:`, err.message);
+        sendAlert(
+          `⚠ BET BOT: Enrichment failed — ${filename}`,
+          `Fight was saved (${result.dataPoints} pts) but auto-enrichment failed.\nRun manually: node enricher.js --file ${filename}\n\nError: ${err.message}`
+        );
+      } else {
+        console.log(`[enricher] ${filename}: ${out.stdout || 'done'}`);
+        invalidateIndex(); // reload now that outcome is written
+      }
+    });
+  }
+
   sendAlert(
     `✅ BET BOT: Saved ${record.meta.fighter1} vs ${record.meta.fighter2} [${record.meta.label}]`,
-    `Recording complete.\n\n${record.meta.fighter1} vs ${record.meta.fighter2}\n${record.meta.label} · ${record.oddsHistory.length} data points\n\nhttps://ufc-dashboard-production-e03d.up.railway.app`
+    `Recording complete.\n\n${record.meta.fighter1} vs ${record.meta.fighter2}\n${record.meta.label} · ${result.dataPoints} data points\nFile: ${result.filePath}\n\nAuto-enrichment running — winner/method will be added shortly.\n\nhttps://ufc-dashboard-production-e03d.up.railway.app`
   );
 }
 
@@ -1134,6 +1137,7 @@ async function recPollSport(sportKey, meta, watchedGame) {
           oddsHistory: [],
           lastOdds: null,
         });
+        persistState(recorderState.activeFights);
         sendAlert(
           `🔴 BET BOT: Recording ${fight.home_team} vs ${fight.away_team} [${meta.label}]`,
           `Live game detected.\n\n${fight.home_team} vs ${fight.away_team}\n${meta.label} · Started: ${new Date().toLocaleString()}\n\nhttps://ufc-dashboard-production-e03d.up.railway.app`
@@ -1145,6 +1149,7 @@ async function recPollSport(sportKey, meta, watchedGame) {
       if (!last || last.fighter1.numericOdds !== odds.fighter1.numericOdds || last.fighter2.numericOdds !== odds.fighter2.numericOdds) {
         record.oddsHistory.push(odds);
         record.lastOdds = odds;
+        persistState(recorderState.activeFights); // persist every new odds point
 
         // Live crossover detection — update state after every new odds point
         if (record.oddsHistory.length >= 2) {
@@ -1172,12 +1177,22 @@ async function recPollSport(sportKey, meta, watchedGame) {
       if (record.meta.sport === sportKey && !currentIds.has(id)) {
         recSave(id);
         recorderState.activeFights.delete(id);
+        persistState(recorderState.activeFights);
       }
     }
 
+    recorderState.failCounts[sportKey] = 0; // reset on success
     return currentIds.size;
   } catch (e) {
-    console.error(`Recorder [${meta.label}] error:`, e.message);
+    const fails = (recorderState.failCounts[sportKey] || 0) + 1;
+    recorderState.failCounts[sportKey] = fails;
+    console.error(`[recorder] [${meta.label}] error #${fails}:`, e.message);
+    if (fails === FAIL_ALERT_THRESHOLD) {
+      sendAlert(
+        `🚨 BET BOT: Recorder failing — ${meta.label}`,
+        `Odds API has failed ${fails} times in a row for ${meta.label}.\n\nLast error: ${e.message}\n\nRecording may be missing fight data. Check Railway logs.\n\nhttps://ufc-dashboard-production-e03d.up.railway.app`
+      );
+    }
     return 0;
   }
 }
