@@ -1276,11 +1276,16 @@ async function runBrainAnalysis(f1Name, f2Name, f1Odds, f2Odds) {
 function renderBrainResult(d, f1Name, f2Name) {
   const stats = d.stats;
   const f1Odds = parseFloat(d.meta && d.meta.f1Odds);
+  const f2Odds = parseFloat(d.meta && d.meta.f2Odds);
   const f1IsDog = f1Odds > 0;
   const dogName = f1IsDog ? f1Name : f2Name;
+  const favName = f1IsDog ? f2Name : f1Name;
   const rawDogOdds = f1IsDog ? (d.meta && d.meta.f1Odds) : (d.meta && d.meta.f2Odds);
+  const rawFavOdds = f1IsDog ? (d.meta && d.meta.f2Odds) : (d.meta && d.meta.f1Odds);
   const dogOddsNum = parseFloat(rawDogOdds);
+  const favOddsNum = parseFloat(rawFavOdds);
   const dogOddsDisp = !isNaN(dogOddsNum) ? (dogOddsNum > 0 ? '+' + dogOddsNum : String(dogOddsNum)) : '—';
+  const favOddsDisp = !isNaN(favOddsNum) ? (favOddsNum > 0 ? '+' + favOddsNum : String(favOddsNum)) : '—';
 
   document.getElementById('brain-dog-lbl').textContent = 'UNDERDOG — ' + dogName;
 
@@ -1308,11 +1313,16 @@ function renderBrainResult(d, f1Name, f2Name) {
 
   const methodsEl = document.getElementById('brain-methods');
   if (stats && stats.methods) {
-    const tot = Object.values(stats.methods).reduce(function(a,b){return a+b;}, 0);
-    methodsEl.innerHTML = Object.entries(stats.methods)
-      .sort(function(a,b){return b[1]-a[1];})
-      .map(function(e){return '<span class="brain-method-pill">' + e[0] + ' ' + Math.round(e[1]/tot*100) + '%</span>';})
-      .join('');
+    const meaningful = Object.entries(stats.methods).filter(function(e){
+      return !['Final','final','—'].includes(e[0]) && e[0].length > 2;
+    });
+    if (meaningful.length) {
+      const tot = meaningful.reduce(function(s,e){return s+e[1];}, 0);
+      methodsEl.innerHTML = meaningful
+        .sort(function(a,b){return b[1]-a[1];})
+        .map(function(e){return '<span class="brain-method-pill">' + e[0] + ' ' + Math.round(e[1]/tot*100) + '%</span>';})
+        .join('');
+    } else { methodsEl.innerHTML = '<span style="font-size:0.7rem;color:#555">no detailed data</span>'; }
   } else { methodsEl.innerHTML = ''; }
 
   const roiEl = document.getElementById('brain-roi');
@@ -1325,18 +1335,29 @@ function renderBrainResult(d, f1Name, f2Name) {
 
   const v = document.getElementById('brain-verdict');
   v.className = 'brain-verdict';
-  if (d.confidence === 'high' && d.alert) {
+  const verdictEdge = stats && stats.edge;
+  if (!stats || stats.sampleSize < 5) {
+    v.classList.add('pass');
+    v.textContent = 'NOT ENOUGH DATA — only ' + (stats ? stats.sampleSize : 0) + ' similar fights found';
+  } else if (d.confidence === 'high' && d.alert) {
+    // Strong dog edge
     v.classList.add('bet');
     v.textContent = 'BET IT: ' + dogName + ' ' + dogOddsDisp + ' — ' + (stats && stats.dogWinRate) + '% historical win rate';
   } else if (d.confidence === 'medium' && d.alert) {
+    // Moderate dog edge
     v.classList.add('lean');
-    v.textContent = 'LEAN: ' + dogName + ' ' + dogOddsDisp + ' — slight edge, size down';
-  } else if (!stats || stats.sampleSize < 5) {
-    v.classList.add('pass');
-    v.textContent = 'NOT ENOUGH DATA — only ' + (stats ? stats.sampleSize : 0) + ' similar fights found';
+    v.textContent = 'LEAN DOG: ' + dogName + ' ' + dogOddsDisp + ' — slight edge, size down';
+  } else if (verdictEdge != null && verdictEdge < -12) {
+    // Strong favorite edge — dog is massively overpriced
+    v.classList.add('bet');
+    v.textContent = 'BET FAVORITE: ' + favName + ' ' + favOddsDisp + ' — dog wins only ' + (stats && stats.dogWinRate) + '% historically';
+  } else if (verdictEdge != null && verdictEdge < -5) {
+    // Moderate favorite edge
+    v.classList.add('lean');
+    v.textContent = 'LEAN FAVORITE: ' + favName + ' ' + favOddsDisp + ' — dog overpriced by ' + Math.abs(verdictEdge) + ' ppts';
   } else {
     v.classList.add('pass');
-    v.textContent = 'NOTHING HERE — pass this one';
+    v.textContent = 'NO CLEAR EDGE — too close to call';
   }
 }
 

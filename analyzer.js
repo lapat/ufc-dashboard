@@ -242,7 +242,7 @@ async function synthesizeEdge(params, stats, userBetStats, similar) {
   const systemPrompt = `You are a sharp sports betting analyst for a live MMA/combat sports dashboard.
 Your job is to surface high-value insights for live bettors in 2-3 sentences max.
 Be direct, specific, and quantitative. No hedging, no disclaimers.
-If there's a real edge, say so clearly. If there isn't, say that too.`;
+Edge can go EITHER direction: if the underdog is overpriced, say to bet the favorite. If the favorite is overpriced, say to bet the dog. Say which side has value and why.`;
 
   const userPrompt = `Current fight: ${params.fighter1} (${params.f1CurrentOdds}) vs ${params.fighter2} (${params.f2CurrentOdds})
 Opening odds: ${params.f1OpeningOdds ?? 'unknown'} / ${params.f2OpeningOdds ?? 'unknown'}
