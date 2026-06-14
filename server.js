@@ -575,31 +575,45 @@ app.get('/api/dk-bets', (req, res) => {
   }
 });
 
-// Extension health tracking
-let dkHeartbeat = { ts: null, loggedOut: false, lastBetSync: null };
+// Extension health tracking — logout tracked per-user so one user's heartbeat won't mask another's logout
+let dkHeartbeat = { ts: null, lastBetSync: null, users: {}, loggedOutUsers: {} };
 
 app.post('/api/dk-heartbeat', (req, res) => {
   const userId = req.body.userId;
   dkHeartbeat.ts = Date.now();
-  dkHeartbeat.loggedOut = false;
-  dkHeartbeat.lastBetSync = dkHeartbeat.lastBetSync || Date.now(); // treat first heartbeat as alive signal
-  if (userId) dkHeartbeat.users = { ...(dkHeartbeat.users || {}), [userId]: Date.now() };
+  dkHeartbeat.lastBetSync = dkHeartbeat.lastBetSync || Date.now();
+  if (userId) {
+    dkHeartbeat.users[userId] = Date.now();
+    delete dkHeartbeat.loggedOutUsers[userId]; // this user is alive again
+  }
   res.json({ ok: true });
 });
 
 app.post('/api/dk-logout', (req, res) => {
   const userId = req.body.userId;
-  dkHeartbeat.loggedOut = true;
-  if (userId && dkHeartbeat.users) delete dkHeartbeat.users[userId];
+  if (userId) {
+    delete dkHeartbeat.users[userId];
+    dkHeartbeat.loggedOutUsers[userId] = Date.now();
+  }
   res.json({ ok: true });
 });
 
 app.get('/api/dk-status', (req, res) => {
   const now = Date.now();
-  const activeUsers = Object.entries(dkHeartbeat.users || {})
+  const activeUsers = Object.entries(dkHeartbeat.users)
     .filter(([, ts]) => now - ts < 300000)
     .map(([u]) => u);
-  res.json({ heartbeat: dkHeartbeat.ts, loggedOut: dkHeartbeat.loggedOut, lastBetSync: dkHeartbeat.lastBetSync, activeUsers });
+  // Expose per-user logout state — clears after 10 min so stale flags don't linger
+  const loggedOutUsers = Object.entries(dkHeartbeat.loggedOutUsers)
+    .filter(([, ts]) => now - ts < 600000)
+    .map(([u]) => u);
+  res.json({
+    heartbeat: dkHeartbeat.ts,
+    loggedOut: loggedOutUsers.length > 0,
+    loggedOutUsers,
+    lastBetSync: dkHeartbeat.lastBetSync,
+    activeUsers
+  });
 });
 
 app.post('/api/dk-mock', (req, res) => {

@@ -430,7 +430,7 @@
   <button id="rec-test-btn" title="Test the recording pipeline" style="font-size:0.75rem;padding:4px 9px;background:#141414;border:1px solid #1e1e1e;color:#444;border-radius:5px;cursor:pointer;white-space:nowrap">test rec</button>
   <a href="/library" style="font-size:0.75rem;padding:4px 9px;border:1px solid #1e1e1e;border-radius:5px;color:#444;white-space:nowrap;text-decoration:none">Library</a>
   <div id="topbar-status" style="margin-left:auto;font-size:0.78rem;color:#444;white-space:nowrap">Loading...</div>
-  <span style="font-size:0.6rem;color:#333;white-space:nowrap;letter-spacing:.5px" title="Dashboard build">v2026-06-13.17</span>
+  <span style="font-size:0.6rem;color:#333;white-space:nowrap;letter-spacing:.5px" title="Dashboard build">v2026-06-13.18</span>
 </div>
 
 <div id="sport-strip"><span id="sport-loading" style="color:#333;font-size:.7rem;padding:12px 0">Loading sports...</span></div>
@@ -1488,9 +1488,10 @@ function setDKBanner(msg) {
 async function pollDKExtStatus() {
   try {
     const d = await fetch('/api/dk-status').then(r => r.json());
-    if (d.loggedOut) {
+    const myLoggedOut = _dkMeParam && d.loggedOutUsers && d.loggedOutUsers.includes(_dkMeParam);
+    if (myLoggedOut) {
       setScItem('sc-dkext', 'red');
-      setDKBanner('Logged out of DraftKings — bets will not sync. Re-login at draftkings.com/mybets');
+      setDKBanner('DraftKings logged you out (another device signed in). Go to draftkings.com/mybets to log back in — bets are not syncing');
       _dkLogoutToastShown = true;
     } else if (!d.heartbeat) {
       setScItem('sc-dkext', 'grey');
@@ -1522,11 +1523,12 @@ async function pollDKExtStatus() {
         const mismatch = activeUsers.length > 0 && !activeUsers.includes(_dkMeParam);
         if (mismatch) {
           _mismatchCount++;
-          console.log(`[DK ext] mismatch poll ${_mismatchCount}/3 — "${_dkMeParam}" not in activeUsers: ${activeUsers.join(', ')}`);
-          if (_mismatchCount >= 3) {
-            pill.textContent = `⚠ "${_dkMeParam}" not seen — ext sending as: ${activeUsers.join(', ')}`;
-            pill.style.color = '#e74c3c';
-            pill.style.borderColor = '#e74c3c';
+          // Show mismatch immediately on first poll — don't wait 30s
+          pill.textContent = `⚠ "${_dkMeParam}" not seen — ext sending as: ${activeUsers.join(', ')}`;
+          pill.style.color = '#e74c3c';
+          pill.style.borderColor = '#e74c3c';
+          if (_mismatchCount === 1) {
+            setDKBanner(`DraftKings session mismatch — dashboard set to "${_dkMeParam}" but extension is sending as "${activeUsers.join(', ')}". You may have been logged out.`);
           }
         } else {
           _mismatchCount = 0;
@@ -1791,9 +1793,10 @@ function renderBetLog(bets, tbodyId) {
     const pCls  = pnl === null ? 'bl-pnl-open' : pnl > 0 ? 'bl-pnl-pos' : pnl < 0 ? 'bl-pnl-neg' : '';
     const time  = b.placementDate ? new Date(b.placementDate).toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'}) : '—';
     const oddsDisp = b.odds ? (parseFloat(b.odds) > 0 ? '+'+b.odds : b.odds) : '—';
+    const parlayTag = b.isParlay ? ' <span style="font-size:0.55rem;color:#888;border:1px solid #333;padding:1px 4px;border-radius:3px;vertical-align:middle">PARLAY</span>' : '';
     return `<tr>
       <td class="bl-td bl-time">${time}</td>
-      <td class="bl-td bl-sel">${b.selection||'?'}</td>
+      <td class="bl-td bl-sel">${b.selection||'?'}${parlayTag}</td>
       <td class="bl-td bl-odds">${oddsDisp}</td>
       <td class="bl-td bl-stake">$${parseFloat(b.stake||0).toFixed(0)}</td>
       <td class="bl-td ${stCls}">${(b.status||'—').toUpperCase()}</td>
@@ -1983,10 +1986,11 @@ async function syncPnL() {
   try {
     const all = await (await fetch(`/api/dk-bets?user=${encodeURIComponent(_dkMeParam)}&all=1`)).json();
     const today = new Date().toISOString().slice(0, 10);
-    const straight = all.filter(b => !b.isParlay && b.placementDate && b.placementDate.slice(0, 10) === today);
+    const todayAll = all.filter(b => b.placementDate && b.placementDate.slice(0, 10) === today);
+    const straight = todayAll.filter(b => !b.isParlay); // P&L uses straight bets only
 
     // Settlement detection — only fire toast for Open→settled transitions
-    for (const b of straight) {
+    for (const b of todayAll) {
       if (!b.betId) continue;
       const prev = _prevBetStatuses.get(b.betId);
       if (prev === 'Open' && b.status && b.status !== 'Open') {
@@ -2012,8 +2016,8 @@ async function syncPnL() {
     _sessionPnL = { net, wagered, wins, losses, pushes, open: open.length };
     updatePnLStrip();
     updateSparkline();
-    renderBetLog(straight, 'bet-log-tbody');
-    document.getElementById('bet-log-count').textContent = `${straight.length} bet${straight.length!==1?'s':''}`;
+    renderBetLog(todayAll, 'bet-log-tbody');
+    document.getElementById('bet-log-count').textContent = `${todayAll.length} bet${todayAll.length!==1?'s':''}`;
     syncSpyBets(); // refresh spy panel on same cadence
   } catch(_) {}
 }

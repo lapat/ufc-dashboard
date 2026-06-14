@@ -252,14 +252,17 @@ async function runServerTests() {
 
   // DK logout
   console.log('\n── DK Auth ──');
-  await check('POST /api/dk-logout sets loggedOut', async () => {
-    await post('/api/dk-logout', { ts: Date.now() });
+  await check('POST /api/dk-logout sets per-user loggedOut; heartbeat clears it', async () => {
+    const uid = 'logout-test-sentinel';
+    await post('/api/dk-heartbeat', { userId: uid });
+    await post('/api/dk-logout', { userId: uid });
     const d = await get('/api/dk-status');
-    assert(d.loggedOut === true, 'loggedOut should be true after logout');
-    // Reset it
-    await post('/api/dk-heartbeat', { ts: Date.now() });
+    assert(d.loggedOutUsers && d.loggedOutUsers.includes(uid), 'user should be in loggedOutUsers after logout');
+    assert(d.loggedOut === true, 'global loggedOut should be true');
+    // Reset via heartbeat from same user
+    await post('/api/dk-heartbeat', { userId: uid });
     const d2 = await get('/api/dk-status');
-    assert(d2.loggedOut === false, 'loggedOut should be false after heartbeat');
+    assert(!d2.loggedOutUsers.includes(uid), 'user should be cleared from loggedOutUsers after heartbeat');
   });
 
   // DK bets open filter
@@ -577,12 +580,12 @@ async function runServerTests() {
 
   // Heartbeat alone must clear the banner — lastBetSync set on first heartbeat
   await check('POST /api/dk-heartbeat sets lastBetSync so banner clears automatically', async () => {
-    // Reset state to simulate fresh server (no lastBetSync yet)
-    // We can't reset server state, but we can verify that after heartbeat, lastBetSync is not null
-    await post('/api/dk-heartbeat', { ts: Date.now(), userId: 'testuser-heartbeat-banner' });
+    const uid = 'testuser-heartbeat-banner';
+    await post('/api/dk-heartbeat', { ts: Date.now(), userId: uid });
     const d = await get('/api/dk-status');
     assert(d.lastBetSync !== null, 'lastBetSync must be set after heartbeat so banner auto-clears');
-    assert(!d.loggedOut, 'loggedOut should be false after heartbeat');
+    // Only check this user is not logged out — global flag may be true from other test users
+    assert(!d.loggedOutUsers || !d.loggedOutUsers.includes(uid), 'this user should not be in loggedOutUsers after heartbeat');
   });
 
   // Recorder stop specific
@@ -1360,6 +1363,51 @@ async function runNewFeatureServerTests() {
     assert(!spyBets.some(b=>b.betId==='si-own-bet'), 'own bet must NOT appear in spy user bets');
     assert(ownBets.some(b=>b.betId==='si-own-bet'), 'own bet must be in own response');
     assert(spyBets.some(b=>b.betId==='si-spy-bet'), 'spy bet must be in spy response');
+  });
+
+  // ── Session loss detection ──────────────────────────────────────────────────
+  await check('dk-logout sets per-user loggedOutUsers, dk-status exposes it', async () => {
+    const user = 'session-loss-test-user';
+    // Bring user alive first
+    await post('/api/dk-heartbeat', { userId: user });
+    let status = await get('/api/dk-status');
+    assert(status.activeUsers.includes(user), 'user should be active after heartbeat');
+    assert(!status.loggedOutUsers.includes(user), 'user should NOT be in loggedOutUsers yet');
+
+    // Simulate logout
+    await post('/api/dk-logout', { userId: user });
+    status = await get('/api/dk-status');
+    assert(status.loggedOutUsers.includes(user), 'user should be in loggedOutUsers after logout');
+    assert(!status.activeUsers.includes(user), 'user should NOT be in activeUsers after logout');
+    assert(status.loggedOut === true, 'global loggedOut flag should be true');
+  });
+
+  await check("another user's heartbeat does NOT clear logged-out user's flag", async () => {
+    const loggedOutUser = 'lo-user-a';
+    const otherUser     = 'lo-user-b';
+
+    // Log out user A
+    await post('/api/dk-logout', { userId: loggedOutUser });
+    // User B sends heartbeat
+    await post('/api/dk-heartbeat', { userId: otherUser });
+
+    const status = await get('/api/dk-status');
+    assert(status.loggedOutUsers.includes(loggedOutUser), "user A must still be in loggedOutUsers — user B's heartbeat must not clear it");
+    assert(status.activeUsers.includes(otherUser), 'user B should be active');
+    assert(!status.activeUsers.includes(loggedOutUser), 'user A must not be active');
+  });
+
+  await check('heartbeat from logged-out user clears their loggedOut flag', async () => {
+    const user = 'lo-relogin-test';
+    await post('/api/dk-logout', { userId: user });
+    let status = await get('/api/dk-status');
+    assert(status.loggedOutUsers.includes(user), 'should be logged out first');
+
+    // User re-logs in → extension sends heartbeat
+    await post('/api/dk-heartbeat', { userId: user });
+    status = await get('/api/dk-status');
+    assert(!status.loggedOutUsers.includes(user), 'heartbeat should clear logout flag for that user');
+    assert(status.activeUsers.includes(user), 'user should be active again');
   });
 }
 
