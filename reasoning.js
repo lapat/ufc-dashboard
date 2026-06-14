@@ -207,6 +207,103 @@ function earlyLineSignal(similarFights, params) {
   };
 }
 
+// ── Match criteria explanation ────────────────────────────────────────────────
+
+function oddsLabel(o) {
+  const n = parseFloat(o);
+  if (isNaN(n)) return null;
+  if (n <= -400) return 'extreme favorite';
+  if (n <= -250) return 'heavy favorite';
+  if (n <= -150) return 'favorite';
+  if (n <    0)  return 'slight favorite';
+  if (n ===  0)  return 'pick-em';
+  if (n <=  150) return 'slight underdog';
+  if (n <=  250) return 'underdog';
+  if (n <=  350) return 'big underdog';
+  return 'heavy underdog';
+}
+
+function buildMatchCriteria(params, n) {
+  const criteria = [];
+
+  const f1Open = parseFloat(params && params.f1OpeningOdds);
+  const f1Cur  = parseFloat(params && params.f1CurrentOdds);
+  const f2Cur  = parseFloat(params && params.f2CurrentOdds);
+
+  if (!isNaN(f1Open)) {
+    const lo = Math.round(f1Open - 50);
+    const hi = Math.round(f1Open + 50);
+    criteria.push(`Opening odds near ${f1Open > 0 ? '+' : ''}${f1Open} (±50 pts, so ${lo > 0 ? '+' : ''}${lo} to ${hi > 0 ? '+' : ''}${hi})`);
+  }
+
+  const tier = oddsLabel(f1Cur);
+  if (tier) criteria.push(`Closing odds tier: ${tier}`);
+
+  if (params && params.crossoverOccurred != null) {
+    criteria.push(params.crossoverOccurred ? 'Crossover occurred during the fight' : 'No crossover occurred');
+  }
+
+  if (!isNaN(f1Open) && !isNaN(f1Cur)) {
+    const dir = f1Cur < f1Open ? 'Fighter 1 line moved toward favorite' : 'Fighter 1 line moved toward underdog';
+    criteria.push('Same line movement direction: ' + dir);
+  }
+
+  criteria.push('Recent fights weighted higher (older fights down-weighted)');
+
+  return {
+    criteria,
+    summary: `Top ${n} scored fights from ${criteria.length} matching signals`
+  };
+}
+
+// ── Verdict narrative — explicit chain from trail → conclusion ────────────────
+
+function buildVerdictNarrative(similarFights, params, stats, trail) {
+  const n = trail.length;
+  if (n === 0) return null;
+
+  const favWins   = trail.filter(f => !f.dogWon).length;
+  const dogWins   = trail.filter(f =>  f.dogWon).length;
+  const xovers    = trail.filter(f =>  f.crossover).length;
+  const withMov   = trail.filter(f =>  f.dogMovementPpts !== null);
+  const avgMov    = withMov.length
+    ? Math.round(withMov.reduce((s, f) => s + f.dogMovementPpts, 0) / withMov.length)
+    : null;
+
+  const favWR  = Math.round((favWins / n) * 100);
+  const dogWR  = Math.round((dogWins / n) * 100);
+  const edge   = stats?.edge;
+  const impl   = stats?.impliedDogProb;
+
+  const parts = [];
+
+  // Outcome pattern
+  parts.push(`In ${n} matching fights: fav won ${favWins} (${favWR}%), dog won ${dogWins} (${dogWR}%)`);
+
+  // Line movement pattern
+  if (avgMov !== null) {
+    if (avgMov < -5) parts.push(`Dog line averaged ${avgMov}ppts (got worse — crowd backed the fav)`);
+    else if (avgMov > 5) parts.push(`Dog line averaged +${avgMov}ppts (tightened — dog got live)`);
+    else parts.push(`Dog line barely moved (avg ${avgMov > 0 ? '+' : ''}${avgMov}ppts)`);
+  }
+
+  // Crossover pattern
+  parts.push(xovers === 0 ? 'Zero crossovers in similar fights' : `${xovers} of ${n} fights had a crossover (${Math.round(xovers/n*100)}%)`);
+
+  // Edge gap
+  if (edge != null && impl != null) {
+    if (edge < -5) {
+      parts.push(`Book prices dog at ${impl}% implied win probability — history says ${dogWR}%, a ${Math.abs(edge)}ppt overlay against the dog → BET FAVORITE`);
+    } else if (edge > 5) {
+      parts.push(`Book prices dog at ${impl}% implied win probability — history says ${dogWR}%, a +${edge}ppt edge for the dog → BET DOG`);
+    } else {
+      parts.push(`Book prices dog at ${impl}% implied, history says ${dogWR}% — no significant edge either way`);
+    }
+  }
+
+  return parts;
+}
+
 // ── Full reasoning object ─────────────────────────────────────────────────────
 
 function buildReasoning(similarFights, params, stats) {
@@ -242,15 +339,19 @@ function buildReasoning(similarFights, params, stats) {
     }
   }
 
+  const trail = buildFightTrail(similarFights);
+
   return {
-    confidence:   confidenceLevel(n),
-    sampleSize:   n,
+    confidence:       confidenceLevel(n),
+    sampleSize:       n,
     dateRange,
-    warnings:     dataQualityWarnings(similarFights),
-    fightTrail:   buildFightTrail(similarFights),
-    earlyLine:    earlyLineSignal(similarFights, params),
-    verdictBasis
+    warnings:         dataQualityWarnings(similarFights),
+    fightTrail:       trail,
+    earlyLine:        earlyLineSignal(similarFights, params),
+    verdictBasis,
+    matchCriteria:    buildMatchCriteria(params, n),
+    verdictNarrative: buildVerdictNarrative(similarFights, params, stats, trail)
   };
 }
 
-module.exports = { confidenceLevel, dataQualityWarnings, buildFightTrail, earlyLineSignal, buildReasoning };
+module.exports = { confidenceLevel, dataQualityWarnings, buildFightTrail, earlyLineSignal, buildReasoning, buildMatchCriteria, buildVerdictNarrative };

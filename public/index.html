@@ -1590,6 +1590,8 @@ function renderBrainResult(d, f1Name, f2Name) {
 }
 
 let _trailData = [];
+let _matchCriteria = null;
+let _verdictNarrative = null;
 
 function renderReasoning(r) {
   const el = document.getElementById('brain-reasoning');
@@ -1627,6 +1629,8 @@ function renderReasoning(r) {
 
   // Fight trail — store for lazy render on toggle
   _trailData = r.fightTrail || [];
+  _matchCriteria = r.matchCriteria || null;
+  _verdictNarrative = r.verdictNarrative || null;
   const trailBtn = document.getElementById('reason-trail-btn');
   const xoverCount = _trailData.filter(function(f){ return f.crossover; }).length;
   const dogWinCount = _trailData.filter(function(f){ return f.dogWon; }).length;
@@ -1650,6 +1654,32 @@ function toggleReasonTrail() {
         const xoverCount = _trailData.filter(function(f){ return f.crossover; }).length;
         const dogWinCount = _trailData.filter(function(f){ return f.dogWon; }).length;
         const favWinCount = _trailData.length - dogWinCount;
+
+        // WHY THESE FIGHTS section
+        let whyHtml = '';
+        if (_matchCriteria && _matchCriteria.criteria && _matchCriteria.criteria.length) {
+          whyHtml = '<div style="margin-bottom:10px;padding:8px;background:#0a0a0a;border:1px solid #1a1a1a;border-radius:3px">'
+            + '<div style="font-size:0.6rem;letter-spacing:1.5px;color:#555;text-transform:uppercase;margin-bottom:5px">Why these fights were chosen</div>'
+            + _matchCriteria.criteria.map(function(c) {
+                return '<div style="font-size:0.67rem;color:#888;padding:2px 0">· ' + c + '</div>';
+              }).join('')
+            + '</div>';
+        }
+
+        // WHAT HAPPENED → VERDICT chain
+        let narrativeHtml = '';
+        if (_verdictNarrative && _verdictNarrative.length) {
+          narrativeHtml = '<div style="margin-bottom:10px;padding:8px;background:#060d00;border:1px solid #1a2e00;border-radius:3px">'
+            + '<div style="font-size:0.6rem;letter-spacing:1.5px;color:#555;text-transform:uppercase;margin-bottom:5px">What happened in those fights → verdict</div>'
+            + _verdictNarrative.map(function(line, i) {
+                const isLast = i === _verdictNarrative.length - 1;
+                return '<div style="font-size:0.7rem;color:' + (isLast ? '#b8e08a' : '#999') + ';padding:2px 0' + (isLast ? ';font-weight:600' : '') + '">'
+                  + (isLast ? '→ ' : '· ') + line
+                  + '</div>';
+              }).join('')
+            + '</div>';
+        }
+
         const summary = '<div class="trail-summary">'
           + _trailData.length + ' comparable fights · '
           + xoverCount + ' crossovers · '
@@ -1680,7 +1710,7 @@ function toggleReasonTrail() {
           + 'Win rate, edge, early line, &amp; "Crossed in similar" all come from these ' + _trailData.length + ' fights. '
           + 'Crossover % (top of panel) uses pattern matching across all recorded fights.'
           + '</div>';
-        trail.innerHTML = summary + rows + sourceNote;
+        trail.innerHTML = whyHtml + narrativeHtml + summary + rows + sourceNote;
       }
     }
   } else {
