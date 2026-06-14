@@ -7,6 +7,7 @@ require('dotenv').config();
 const fs        = require('fs');
 const path      = require('path');
 const Anthropic = require('@anthropic-ai/sdk');
+const { predictCrossover, assessCrossoverRisk } = require('./crossover_predictor');
 
 const DATA_DIR  = path.join(__dirname, 'historical_data');
 const client    = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
@@ -264,7 +265,7 @@ function computeUserStats(bets, currentOddsRange) {
 
 // ── Claude synthesis ──────────────────────────────────────────────────────────
 
-async function synthesizeEdge(params, stats, userBetStats, similar) {
+async function synthesizeEdge(params, stats, userBetStats, similar, crossoverPred, crossoverRisk) {
   if (!stats || stats.sampleSize < 5) {
     return {
       confidence: 'low',
@@ -281,7 +282,8 @@ async function synthesizeEdge(params, stats, userBetStats, similar) {
   const systemPrompt = `You are a sharp sports betting analyst for a live MMA/combat sports dashboard.
 Your job is to surface high-value insights for live bettors in 2-3 sentences max.
 Be direct, specific, and quantitative. No hedging, no disclaimers.
-Edge can go EITHER direction: if the underdog is overpriced, say to bet the favorite. If the favorite is overpriced, say to bet the dog. Say which side has value and why.`;
+Edge can go EITHER direction: if the underdog is overpriced, say to bet the favorite. If the favorite is overpriced, say to bet the dog. Say which side has value and why.
+If crossover probability is high (>45%), lead with that — crossovers make dogs coin-flip winners (50% historically). This is the most actionable pre-fight signal.`;
 
   const d = stats.derived || {};
   const finishSummary = d.finishSpeedPct
@@ -291,24 +293,28 @@ Edge can go EITHER direction: if the underdog is overpriced, say to bet the favo
   const userPrompt = `Current fight: ${params.fighter1} (${params.f1CurrentOdds}) vs ${params.fighter2} (${params.f2CurrentOdds})
 Opening odds: ${params.f1OpeningOdds ?? 'unknown'} / ${params.f2OpeningOdds ?? 'unknown'}
 Crossover occurred: ${params.crossoverOccurred ? `Yes (${params.crossoverMinute ?? '?'} min in)` : 'No'}
+${crossoverPred ? `
+⚡ CROSSOVER PREDICTION (pre-fight):
+- Probability: ${crossoverPred.crossoverProbPct}% (${crossoverPred.tier})
+- Signal: ${crossoverPred.signal.toUpperCase()}
+- If crossover: dog wins ~50% | If no crossover: dog wins ~12%
+- Expected dog win blended: ${crossoverPred.expectedDogWinRate}% vs implied ${crossoverPred.impliedDogWinRate}%
+- 57% of similar crossovers happen in round 1 — window closes fast` : ''}
+${crossoverRisk ? `
+Historical crossover data (${stats.sampleSize} similar fights):
+- ${crossoverRisk.crossoverFightCount} of ${stats.sampleSize} crossed over (${crossoverRisk.empiricalCrossoverRate}%)
+- Dog win rate when crossed: ${crossoverRisk.dogWinRateOnCross ?? 'N/A'}%
+- Dog win rate no crossover: ${crossoverRisk.dogWinRateNoCross ?? 'N/A'}%` : ''}
 
 Historical pattern (${stats.sampleSize} similar live fights):
 - Underdog (${dogSide} at ${dogOdds}) wins ${stats.dogWinRate}% (book implies ${stats.impliedDogProb}%)
 - Edge vs implied probability: ${stats.edge != null ? (stats.edge > 0 ? '+' : '') + stats.edge + ' ppts' : 'unknown'}
-- ROI on dog: ${stats.dogROI > 0 ? '+' : ''}${stats.dogROI} units per 1 wagered
 - Method breakdown: ${Object.entries(stats.methods).map(([m,c]) => `${m} ${Math.round(c/stats.sampleSize*100)}%`).join(', ')}
-${stats.crossovers.total > 0 ? `- Post-crossover: f1 wins ${stats.crossovers.f1WinPct}% of ${stats.crossovers.total} crossover fights` : ''}
-${d.sampleWithDerived > 0 ? `
-Live action patterns (${d.sampleWithDerived} fights with derived data):
-- Avg odds swing: ${d.avgPeakOddsSwing ?? 'N/A'} pts — how volatile similar fights are
-- Avg dominance score: ${d.avgDominanceScore ?? 'N/A'}/100 — how one-sided the action tends to be
-- Finish speed: ${finishSummary}
-- Avg line crossovers: ${d.avgCrossoverCount ?? 'N/A'}` : ''}
+${d.sampleWithDerived > 0 ? `- Avg dominance: ${d.avgDominanceScore}/100 | Finish: ${finishSummary}` : ''}
 
-${userBetStats ? `Personal betting record at similar odds (${userBetStats.wins}W-${userBetStats.losses}L, ${userBetStats.winRate}% win, ROI: ${userBetStats.roi > 0 ? '+' : ''}$${userBetStats.roi}):
-${Object.entries(userBetStats.byUser).map(([u,r]) => `  ${u}: ${r.wins}W-${r.losses}L`).join('\n')}` : 'No personal bet history at these odds.'}
+${userBetStats ? `Personal record at similar odds: ${userBetStats.wins}W-${userBetStats.losses}L (${userBetStats.winRate}%)` : ''}
 
-Give me: (1) whether there's a real edge here, (2) which side and why, (3) what the key risk is. Max 3 sentences.`;
+Give me 2-3 sentences: lead with crossover probability if strong, then which side has edge and why, then key risk.`;
 
   try {
     const msg = await client.messages.create({
@@ -360,8 +366,15 @@ async function findEdge(params) {
     return { error: 'No enriched fight data yet — run node enricher.js first', enrichedCount: 0 };
   }
 
+  // Crossover prediction — uses opening odds (or current if opening unknown)
+  const crossoverPred = predictCrossover({
+    f1OpeningOdds: params.f1OpeningOdds ?? params.f1CurrentOdds,
+    f2OpeningOdds: params.f2OpeningOdds ?? params.f2CurrentOdds,
+  });
+
   const similar    = findSimilarFights(params, enriched);
   const stats      = computeStats(similar, params);
+  const crossoverRisk = assessCrossoverRisk(similar, params);
 
   // User bet history at current odds range
   const f1IsDog    = parseFloat(params.f1CurrentOdds) > 0;
@@ -370,10 +383,21 @@ async function findEdge(params) {
   const userBets   = loadUserBetHistory();
   const userStats  = computeUserStats(userBets, oddsRange);
 
-  const result     = await synthesizeEdge(params, stats, userStats, similar);
+  const result     = await synthesizeEdge(params, stats, userStats, similar, crossoverPred, crossoverRisk);
+
+  // Apply backtest finding: strong dog signals (edge > 12) historically underperform.
+  // Cap BET_DOG at 12 ppts — beyond that, call it LEAN (the book knows something).
+  // BET_FAV remains reliable at any edge level.
+  const dogEdge = stats?.edge ?? 0;
+  const isBetDog = dogEdge > 12;
+  if (isBetDog && result.alert) {
+    result._strongDogCapped = true; // flag for UI: show as LEAN not BET
+  }
 
   return {
     ...result,
+    crossover: crossoverPred,
+    crossoverRisk,
     meta: {
       totalEnrichedFights: enriched.length,
       similarFightsFound:  similar.length,
@@ -381,7 +405,7 @@ async function findEdge(params) {
       fighter2:    params.fighter2,
       f1Odds:      params.f1CurrentOdds,
       f2Odds:      params.f2CurrentOdds,
-      crossover:   params.crossoverOccurred
+      crossoverOccurred: params.crossoverOccurred
     }
   };
 }

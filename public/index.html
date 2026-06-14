@@ -94,6 +94,27 @@
     .brain-verdict.bet{background:#0d1a00;color:#7ccd32;border:1px solid #1e3500}
     .brain-verdict.lean{background:#1a1500;color:#e8b84b;border:1px solid #2e2500}
     .brain-verdict.pass{background:#111;color:#888;border:1px solid #222}
+    /* crossover section */
+    #brain-crossover{margin-bottom:14px;padding:12px 14px;border-radius:5px;border:1px solid #1e1e1e;background:#0c0c0c;display:none}
+    .xover-header{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+    .xover-prob{font-size:2.4rem;font-weight:700;line-height:1}
+    .xover-prob.strong{color:#ff9a3c}
+    .xover-prob.moderate{color:#e8b84b}
+    .xover-prob.low{color:#666}
+    .xover-prob.none{color:#444}
+    .xover-badge{font-size:0.7rem;font-weight:700;letter-spacing:1px;padding:3px 8px;border-radius:3px;text-transform:uppercase}
+    .xover-badge.strong{background:#2a1200;color:#ff9a3c;border:1px solid #3a1e00}
+    .xover-badge.moderate{background:#1a1500;color:#e8b84b;border:1px solid #2e2500}
+    .xover-badge.low{background:#111;color:#666;border:1px solid #222}
+    .xover-badge.none{background:#0c0c0c;color:#444;border:1px solid #1a1a1a}
+    .xover-stats{display:flex;gap:18px;margin-bottom:8px}
+    .xover-stat{text-align:center}
+    .xover-stat-num{font-size:1.3rem;font-weight:700;color:#ccc}
+    .xover-stat-lbl{font-size:0.62rem;color:#555;letter-spacing:1px;text-transform:uppercase;margin-top:2px}
+    .xover-advice{font-size:0.8rem;line-height:1.5;color:#999}
+    .xover-timing{font-size:0.7rem;color:#666;margin-top:6px}
+    .xover-alert{font-size:0.95rem;font-weight:700;padding:9px 14px;border-radius:4px;text-align:center;margin-top:8px;background:#150a00;color:#ff9a3c;border:1px solid #3a1e00}
+    .xover-alert.moderate{background:#1a1500;color:#e8b84b;border:1px solid #2e2500}
 
     /* ── game list (before selection) ── */
     .section-label{font-size:0.75rem;color:#3a3a3a;text-transform:uppercase;letter-spacing:2px;margin:14px 0 6px}
@@ -494,6 +515,36 @@
   <div id="brain-panel" style="display:none">
     <div id="brain-loading" style="font-size:0.75rem;color:#666;text-align:center;padding:10px">🧠 Analyzing fight patterns...</div>
     <div id="brain-result" style="display:none">
+
+      <!-- CROSSOVER SECTION — shown prominently at top -->
+      <div id="brain-crossover">
+        <div class="xover-header">
+          <div>
+            <div class="xover-prob none" id="xover-prob-num">—%</div>
+            <div style="font-size:0.62rem;color:#555;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px">CROSSOVER PROB</div>
+          </div>
+          <div style="flex:1">
+            <div class="xover-badge none" id="xover-badge">—</div>
+            <div class="xover-stats" style="margin-top:10px">
+              <div class="xover-stat">
+                <div class="xover-stat-num" id="xover-dog-cross">—</div>
+                <div class="xover-stat-lbl">DOG WIN<br>IF CROSS</div>
+              </div>
+              <div class="xover-stat">
+                <div class="xover-stat-num" id="xover-dog-nocross">—</div>
+                <div class="xover-stat-lbl">DOG WIN<br>NO CROSS</div>
+              </div>
+              <div class="xover-stat">
+                <div class="xover-stat-num" id="xover-empirical">—</div>
+                <div class="xover-stat-lbl">CROSSED IN<br>SIMILAR</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="xover-advice" id="xover-advice"></div>
+        <div class="xover-timing" id="xover-timing"></div>
+        <div id="xover-alert" style="display:none" class="xover-alert"></div>
+      </div>
 
       <!-- Row 1: header + sample size -->
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
@@ -1374,6 +1425,40 @@ function renderBrainResult(d, f1Name, f2Name) {
   const dogOddsDisp = !isNaN(dogOddsNum) ? (dogOddsNum > 0 ? '+' + dogOddsNum : String(dogOddsNum)) : '—';
   const favOddsDisp = !isNaN(favOddsNum) ? (favOddsNum > 0 ? '+' + favOddsNum : String(favOddsNum)) : '—';
 
+  // ── Crossover section ────────────────────────────────────────────────────
+  const xo = d.crossover;
+  const xr = d.crossoverRisk;
+  const xoverEl = document.getElementById('brain-crossover');
+  if (xo) {
+    xoverEl.style.display = 'block';
+    const probEl = document.getElementById('xover-prob-num');
+    probEl.textContent = xo.crossoverProbPct + '%';
+    probEl.className = 'xover-prob ' + xo.signal;
+    const badge = document.getElementById('xover-badge');
+    badge.className = 'xover-badge ' + xo.signal;
+    const labels = { strong:'⚡ HIGH CROSSOVER RISK', moderate:'MODERATE CROSSOVER', low:'LOW CROSSOVER', none:'NO CROSSOVER' };
+    badge.textContent = labels[xo.signal] || xo.signal;
+    document.getElementById('xover-dog-cross').textContent = '50%';
+    document.getElementById('xover-dog-nocross').textContent = '12%';
+    document.getElementById('xover-empirical').textContent =
+      xr ? xr.empiricalCrossoverRate + '%' : xo.crossoverProbPct + '%';
+    document.getElementById('xover-advice').textContent = xo.advice;
+    document.getElementById('xover-timing').textContent =
+      '57% of crossovers happen in round 1 — window closes fast.';
+    const alertEl = document.getElementById('xover-alert');
+    if (xo.signal === 'strong' || xo.signal === 'moderate') {
+      alertEl.style.display = 'block';
+      alertEl.className = 'xover-alert' + (xo.signal === 'moderate' ? ' moderate' : '');
+      alertEl.textContent = xo.signal === 'strong'
+        ? '⚡ BET THE DOG NOW — ' + xo.crossoverProbPct + '% chance this flips. Dog wins 50% when it does.'
+        : '→ CONSIDER DOG — ' + xo.crossoverProbPct + '% crossover probability. Get in before round 1.';
+    } else {
+      alertEl.style.display = 'none';
+    }
+  } else {
+    xoverEl.style.display = 'none';
+  }
+
   document.getElementById('brain-dog-lbl').textContent = 'UNDERDOG — ' + dogName;
 
   const bookPct = stats && stats.impliedDogProb;
@@ -1426,16 +1511,17 @@ function renderBrainResult(d, f1Name, f2Name) {
   if (!stats || stats.sampleSize < 5) {
     v.classList.add('pass');
     v.textContent = 'NOT ENOUGH DATA — only ' + (stats ? stats.sampleSize : 0) + ' similar fights found';
-  } else if (d.confidence === 'high' && d.alert) {
-    // Strong dog edge
-    v.classList.add('bet');
-    v.textContent = 'BET IT: ' + dogName + ' ' + dogOddsDisp + ' — ' + (stats && stats.dogWinRate) + '% historical win rate';
-  } else if (d.confidence === 'medium' && d.alert) {
-    // Moderate dog edge
+  } else if (verdictEdge != null && verdictEdge > 5 && verdictEdge <= 12 && d.alert) {
+    // Moderate dog edge (5-12 ppts) — sweet spot from backtest (56% actual win rate)
     v.classList.add('lean');
-    v.textContent = 'LEAN DOG: ' + dogName + ' ' + dogOddsDisp + ' — slight edge, size down';
+    v.textContent = 'LEAN DOG: ' + dogName + ' ' + dogOddsDisp + ' — ' + (stats && stats.dogWinRate) + '% historical win rate';
+  } else if (verdictEdge != null && verdictEdge > 12) {
+    // Strong dog signal (>12 ppts) — backtest shows these UNDERPERFORM (33% win rate, barely break-even)
+    // Show as LEAN not BET, flag the caution
+    v.classList.add('lean');
+    v.textContent = 'LEAN DOG (caution): ' + dogName + ' ' + dogOddsDisp + ' — high edge signals have historically underperformed';
   } else if (verdictEdge != null && verdictEdge < -12) {
-    // Strong favorite edge — dog is massively overpriced
+    // Strong favorite edge — reliable from backtest (76%+ win rate)
     v.classList.add('bet');
     v.textContent = 'BET FAVORITE: ' + favName + ' ' + favOddsDisp + ' — dog wins only ' + (stats && stats.dogWinRate) + '% historically';
   } else if (verdictEdge != null && verdictEdge < -5) {
