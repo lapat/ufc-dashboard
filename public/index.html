@@ -2286,9 +2286,10 @@ async function syncDKBets() {
       return;
     }
 
-    const f1 = (tracker.f1Name || '').toLowerCase();
-    const f2 = (tracker.f2Name || '').toLowerCase();
-    const drawLabel = (tracker.drawName || '').toLowerCase();
+    const norm = s => (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+    const f1 = norm(tracker.f1Name);
+    const f2 = norm(tracker.f2Name);
+    const drawLabel = norm(tracker.drawName);
     console.log(`[DK sync] matching against fight: "${tracker.f1Name}" vs "${tracker.f2Name}"`);
 
     let added = 0;
@@ -2299,7 +2300,7 @@ async function syncDKBets() {
       if (b.userId && b.userId !== _dkMeParam) { console.log(`[DK sync] skip wrong user: "${b.userId}" !== "${_dkMeParam}"`); continue; }
       if (_lastDKBetIds.has(b.betId)) continue;
 
-      const sel = (b.selection || '').toLowerCase();
+      const sel = norm(b.selection);
       const matchScore = (teamName) => {
         const words = teamName.split(' ').filter(w => w.length > 2);
         return words.filter(w => sel.includes(w)).length;
