@@ -18,6 +18,7 @@ const TOKEN_WARN = parseInt(process.env.ANTHROPIC_TOKEN_WARN_THRESHOLD || '50000
 const nodemailer = require('nodemailer');
 
 const ALERT_EMAIL = process.env.ALERT_EMAIL || 'louislapat@gmail.com';
+const CC_EMAIL    = process.env.CC_EMAIL    || 'iskanderb@gmail.com';
 const mailer = (process.env.GMAIL_USER && process.env.GMAIL_APP_PASSWORD)
   ? nodemailer.createTransport({ service: 'gmail', auth: { user: process.env.GMAIL_USER, pass: process.env.GMAIL_APP_PASSWORD } })
   : null;
@@ -25,7 +26,7 @@ const mailer = (process.env.GMAIL_USER && process.env.GMAIL_APP_PASSWORD)
 async function sendAlert(subject, text) {
   if (!mailer) return;
   try {
-    await mailer.sendMail({ from: process.env.GMAIL_USER, to: ALERT_EMAIL, subject, text });
+    await mailer.sendMail({ from: process.env.GMAIL_USER, to: ALERT_EMAIL, cc: CC_EMAIL, subject, text });
     console.log(`Alert sent: ${subject}`);
   } catch (e) {
     console.error('Alert email failed:', e.message);
@@ -1003,7 +1004,7 @@ app.post('/api/recorder/test', async (req, res) => {
     recSave(testId);
     recorderState.activeFights.delete(testId);
     // Delete the saved file so test data doesn't pollute the recordings library
-    const testFile = path.join(HISTORICAL_DIR, 'mma_mixed_martial_arts', `${testId}.json`);
+    const testFile = path.join(HISTORICAL_DIR, `${testId}.json`);
     try { fs.unlinkSync(testFile); } catch (_) {}
   }, 10000);
 
@@ -1058,14 +1059,40 @@ const {
 } = require('./record_engine');
 
 const recorderState = {
-  activeFights: loadPersistedState(), // reloads in-flight fights after crash/restart
-  totalSaved:   0,
-  lastPoll:     null,
-  failCounts:   {},  // sportKey → consecutive API failure count
+  activeFights:    loadPersistedState(), // reloads in-flight fights after crash/restart
+  totalSaved:      0,
+  lastPoll:        null,
+  failCounts:      {},   // sportKey → consecutive API failure count
+  sessionFights:   [],   // fights saved this event night (for summary email)
+  summaryTimer:    null, // fires end-of-event summary email after quiet period
 };
 
 // Threshold before emailing about repeated API failures
 const FAIL_ALERT_THRESHOLD = 5;
+// How long after last fight disappears before we send the summary (15 min)
+const SUMMARY_DELAY_MS = 15 * 60 * 1000;
+
+function scheduleSummaryEmail() {
+  if (recorderState.summaryTimer) clearTimeout(recorderState.summaryTimer);
+  recorderState.summaryTimer = setTimeout(() => {
+    const fights = recorderState.sessionFights;
+    if (!fights.length) return;
+    const mmaFights = fights.filter(f => f.sport === 'mma_mixed_martial_arts');
+    const lines = fights.map(f =>
+      `  • ${f.fighter1} vs ${f.fighter2} — ${f.dataPoints} data points · ${f.durationMin} min recorded`
+    ).join('\n');
+    sendAlert(
+      `📋 BET BOT: Event complete — ${mmaFights.length} MMA fight${mmaFights.length !== 1 ? 's' : ''} recorded`,
+      `Tonight's recording session is complete.\n\n` +
+      `${fights.length} fight${fights.length !== 1 ? 's' : ''} captured:\n${lines}\n\n` +
+      `MMA fights enriched automatically (winner/method added).\n` +
+      `Library now has the new data — brain is updated.\n\n` +
+      `https://ufc-dashboard-production-e03d.up.railway.app`
+    );
+    recorderState.sessionFights = [];
+    recorderState.summaryTimer  = null;
+  }, SUMMARY_DELAY_MS);
+}
 
 function recSave(id) {
   const record = recorderState.activeFights.get(id);
@@ -1082,7 +1109,19 @@ function recSave(id) {
   }
 
   recorderState.totalSaved++;
-  console.log(`[recorder] Saved: ${id} (${result.dataPoints} pts) → ${result.filePath}`);
+  const startTs  = record.meta.startTime ? new Date(record.meta.startTime).getTime() : null;
+  const durationMin = startTs ? Math.round((Date.now() - startTs) / 60000) : null;
+  console.log(`[recorder] Saved: ${id} (${result.dataPoints} pts, ${durationMin}min) → ${result.filePath}`);
+
+  // Track for end-of-event summary
+  recorderState.sessionFights.push({
+    sport:      record.meta.sport,
+    fighter1:   record.meta.fighter1,
+    fighter2:   record.meta.fighter2,
+    dataPoints: result.dataPoints,
+    durationMin: durationMin ?? '?',
+    filePath:   result.filePath,
+  });
 
   // Only invalidate MMA index (other sports don't feed the analyzer)
   if (record.meta.sport === 'mma_mixed_martial_arts') {
@@ -1093,20 +1132,18 @@ function recSave(id) {
       if (err) {
         console.error(`[enricher] Failed for ${filename}:`, err.message);
         sendAlert(
-          `⚠ BET BOT: Enrichment failed — ${filename}`,
-          `Fight was saved (${result.dataPoints} pts) but auto-enrichment failed.\nRun manually: node enricher.js --file ${filename}\n\nError: ${err.message}`
+          `🚨 BET BOT: Enrichment failed — ${filename}`,
+          `Fight was saved (${result.dataPoints} pts) but auto-enrichment failed.\nRun manually: node enricher.js --file ${filename}\n\nError: ${err.message}\n\nhttps://ufc-dashboard-production-e03d.up.railway.app`
         );
       } else {
         console.log(`[enricher] ${filename}: ${out.stdout || 'done'}`);
-        invalidateIndex(); // reload now that outcome is written
+        invalidateIndex();
       }
     });
   }
 
-  sendAlert(
-    `✅ BET BOT: Saved ${record.meta.fighter1} vs ${record.meta.fighter2} [${record.meta.label}]`,
-    `Recording complete.\n\n${record.meta.fighter1} vs ${record.meta.fighter2}\n${record.meta.label} · ${result.dataPoints} data points\nFile: ${result.filePath}\n\nAuto-enrichment running — winner/method will be added shortly.\n\nhttps://ufc-dashboard-production-e03d.up.railway.app`
-  );
+  // Schedule end-of-event summary (resets timer if more fights are still coming)
+  scheduleSummaryEmail();
 }
 
 async function recPollSport(sportKey, meta, watchedGame) {
@@ -1138,6 +1175,8 @@ async function recPollSport(sportKey, meta, watchedGame) {
           lastOdds: null,
         });
         persistState(recorderState.activeFights);
+        // Cancel any pending summary — more fights are still happening
+        if (recorderState.summaryTimer) { clearTimeout(recorderState.summaryTimer); recorderState.summaryTimer = null; }
         sendAlert(
           `🔴 BET BOT: Recording ${fight.home_team} vs ${fight.away_team} [${meta.label}]`,
           `Live game detected.\n\n${fight.home_team} vs ${fight.away_team}\n${meta.label} · Started: ${new Date().toLocaleString()}\n\nhttps://ufc-dashboard-production-e03d.up.railway.app`
@@ -1156,18 +1195,10 @@ async function recPollSport(sportKey, meta, watchedGame) {
           const prevState = record.crossoverState;
           record.crossoverState = analyzeCrossoverTrajectory(record.oddsHistory);
 
-          // Send email alert on first CROSSED event (only once per fight)
+          // Track first crossover per fight (used in summary, no email — UI shows it live)
           const state = record.crossoverState;
           if (state && state.status === 'crossed' && !record.crossoverAlerted) {
             record.crossoverAlerted = true;
-            const { fighter1, fighter2 } = record.meta;
-            sendAlert(
-              `🔴 LINE CROSSED: ${fighter1} vs ${fighter2}`,
-              crossoverAlertText(state, fighter1, fighter2) +
-              `\n\nDog: ${state.dogSide === 'f1' ? fighter1 : fighter2}` +
-              `\nOpened: ${state.openDogProb}% implied → Now: ${state.curDogProb}% implied` +
-              `\nMoved: +${state.movementPct} ppts over ${state.fightElapsedMin} min\n\nhttps://ufc-dashboard-production-e03d.up.railway.app`
-            );
           }
         }
       }
@@ -1282,8 +1313,29 @@ app.get('/api/live-sequence', (req, res) => {
   }
 });
 
+// ── Dead-man's-switch heartbeat (healthchecks.io) ────────────────────────────
+// If this process dies, pings stop → healthchecks.io emails louislapat + iskanderb.
+// Set HEALTHCHECK_URL in Railway env vars to your healthchecks.io ping URL.
+// Free at https://healthchecks.io — create a check, set period=5min, grace=5min.
+const HEALTHCHECK_URL = process.env.HEALTHCHECK_URL || null;
+function pingHealthcheck() {
+  if (!HEALTHCHECK_URL) return;
+  https.get(HEALTHCHECK_URL, res => {
+    console.log(`[healthcheck] ping → ${res.statusCode}`);
+  }).on('error', e => {
+    console.error('[healthcheck] ping failed:', e.message);
+  });
+}
+
 app.listen(PORT, () => {
   console.log(`Bet Bot running at http://localhost:${PORT}`);
   recPoll();
   console.log('Recorder started — UFC always-on, other sports when browser is watching');
+  if (HEALTHCHECK_URL) {
+    pingHealthcheck();
+    setInterval(pingHealthcheck, 5 * 60 * 1000); // ping every 5 minutes
+    console.log('Healthcheck pinging:', HEALTHCHECK_URL);
+  } else {
+    console.log('HEALTHCHECK_URL not set — set it in Railway to enable dead-man\'s-switch alerting');
+  }
 });
