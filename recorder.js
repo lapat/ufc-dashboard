@@ -132,7 +132,7 @@ function saveFight(id) {
   const record = activeFights.get(id);
   if (!record || record.oddsHistory.length === 0) return;
   const filePath = path.join(DATA_DIR, `${id}.json`);
-  fs.writeFileSync(filePath, JSON.stringify({
+  const content = JSON.stringify({
     fightId: id,
     fightTitle: record.meta.title,
     startTime: record.meta.startTime,
@@ -140,8 +140,59 @@ function saveFight(id) {
     duration: Date.now() - new Date(record.meta.startTime).getTime(),
     dataPoints: record.oddsHistory.length,
     oddsHistory: record.oddsHistory,
-  }, null, 2));
+  }, null, 2);
+  fs.writeFileSync(filePath, content);
   console.log(`\nSaved: ${id} (${record.oddsHistory.length} data points)`);
+  pushFightToGitHub(id, content).catch(e => console.error(`\nGitHub push failed for ${id}: ${e.message}`));
+}
+
+async function pushFightToGitHub(id, content) {
+  const token = process.env.GITHUB_TOKEN;
+  if (!token) return;
+  const repoPath = `historical_data/${id}.json`;
+  const encoded = Buffer.from(content).toString('base64');
+
+  // Try to get existing SHA (needed if file already exists in git)
+  let sha;
+  try {
+    const existing = await githubRequest('GET', `/repos/lapat/ufc-dashboard/contents/${repoPath}`, null, token);
+    sha = existing.sha;
+  } catch (_) { /* new file, no sha needed */ }
+
+  const body = {
+    message: `Auto-save fight: ${id} (${JSON.parse(content).dataPoints} pts)`,
+    content: encoded,
+    ...(sha ? { sha } : {}),
+  };
+  await githubRequest('PUT', `/repos/lapat/ufc-dashboard/contents/${repoPath}`, body, token);
+  console.log(`\nPushed to GitHub: ${repoPath}`);
+}
+
+function githubRequest(method, path, body, token) {
+  return new Promise((resolve, reject) => {
+    const data = body ? JSON.stringify(body) : null;
+    const req = https.request({
+      hostname: 'api.github.com',
+      path,
+      method,
+      headers: {
+        'Authorization': `token ${token}`,
+        'User-Agent': 'ufc-dashboard-recorder',
+        'Content-Type': 'application/json',
+        ...(data ? { 'Content-Length': Buffer.byteLength(data) } : {}),
+      },
+    }, res => {
+      let out = '';
+      res.on('data', c => out += c);
+      res.on('end', () => {
+        if (res.statusCode >= 400) return reject(new Error(`GitHub API ${res.statusCode}: ${out.slice(0,200)}`));
+        try { resolve(JSON.parse(out)); } catch { resolve({}); }
+      });
+    });
+    req.on('error', reject);
+    if (data) req.write(data);
+    req.end();
+  });
 }
 
 async function poll() {
