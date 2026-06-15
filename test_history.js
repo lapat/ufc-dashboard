@@ -294,23 +294,40 @@ async function run() {
     await new Promise(r => setTimeout(r, 200));
   });
 
-  await check('clicking a fight row opens the simulation panel', async () => {
-    // Click the first row
+  // Helper: check expansion row is in the DOM (panel is open)
+  const simRowInDom = () => page.evaluate(() => !!document.getElementById('sim-expansion-row')?.parentNode);
+
+  await check('clicking a fight row inserts the expansion panel below that row', async () => {
     await page.click('.rec-row');
-    await new Promise(r => setTimeout(r, 400));
-    const panelVisible = await page.$eval('#sim-panel', el => el.classList.contains('open'));
-    assert(panelVisible, 'sim-panel did not open after clicking a row');
+    await new Promise(r => setTimeout(r, 500));
+    const inDom = await simRowInDom();
+    assert(inDom, 'sim-expansion-row not inserted into table after clicking a row');
+  });
+
+  await check('expansion panel is directly after the selected row in the DOM', async () => {
+    const isNextSibling = await page.evaluate(() => {
+      const sel = document.querySelector('.rec-row.selected');
+      const exp = document.getElementById('sim-expansion-row');
+      return sel && exp && sel.nextElementSibling === exp;
+    });
+    assert(isNextSibling, 'expansion row is not directly after the selected row');
   });
 
   await check('sim panel shows fight name after row click', async () => {
-    const name = await page.$eval('#sim-fight-name', el => el.textContent.trim());
-    assert(name && name !== '—', `sim-fight-name is empty: "${name}"`);
+    const name = await page.$eval('#sp-name', el => el.textContent.trim());
+    assert(name && name !== '—', `sp-name is empty: "${name}"`);
     assert(name.includes(' vs '), `expected "A vs B" format, got "${name}"`);
   });
 
   await check('legend shows fighter names', async () => {
-    const f1 = await page.$eval('#leg-f1-name', el => el.textContent.trim());
-    const f2 = await page.$eval('#leg-f2-name', el => el.textContent.trim());
+    // Legend is inside sim-expansion-row — may need a moment for data to load
+    for (let i = 0; i < 20; i++) {
+      const display = await page.$eval('#sp-legend', el => el.style.display).catch(()=>'none');
+      if (display !== 'none') break;
+      await new Promise(r => setTimeout(r, 200));
+    }
+    const f1 = await page.$eval('#sp-f1-name', el => el.textContent.trim());
+    const f2 = await page.$eval('#sp-f2-name', el => el.textContent.trim());
     assert(f1 && f1 !== 'Fighter 1', `f1 legend not updated: "${f1}"`);
     assert(f2 && f2 !== 'Fighter 2', `f2 legend not updated: "${f2}"`);
   });
@@ -320,79 +337,102 @@ async function run() {
     assert(hasSelected, 'no .selected class on any row after click');
   });
 
-  await check('Simulate → button opens sim panel', async () => {
+  await check('Simulate → button inserts expansion panel', async () => {
     // Close first
-    await page.click('#sc-close');
-    await new Promise(r => setTimeout(r, 200));
-    let panelVisible = await page.$eval('#sim-panel', el => el.classList.contains('open'));
-    assert(!panelVisible, 'panel should be closed after sc-close click');
-    // Click a Simulate → button
+    await page.click('#sp-close');
+    await new Promise(r => setTimeout(r, 300));
+    const gone = !(await simRowInDom());
+    assert(gone, 'expansion row should be removed after sp-close click');
+    // Click a Simulate → button on the first row
     await page.click('.open-btn');
-    await new Promise(r => setTimeout(r, 400));
-    panelVisible = await page.$eval('#sim-panel', el => el.classList.contains('open'));
-    assert(panelVisible, 'panel did not open after Simulate → click');
+    await new Promise(r => setTimeout(r, 500));
+    const back = await simRowInDom();
+    assert(back, 'expansion row did not appear after Simulate → click');
   });
 
-  await check('Play button becomes enabled after fight data loads', async () => {
-    // Wait up to 5s for the play button to be enabled (data fetch)
-    let enabled = false;
+  // For graph/replay tests we need a fight with > 1 data point.
+  // Search for "belal" — Belal Muhammad vs Gabriel Bonfim has 579 pts.
+  await check('selecting a fight with data renders the full graph immediately', async () => {
+    // Close any open panel
+    if (await simRowInDom()) await page.click('#sp-close').catch(()=>{});
+    await new Promise(r => setTimeout(r, 200));
+    // Search for a known rich fight
+    await page.evaluate(() => { document.getElementById('search-box').value=''; document.getElementById('search-box').dispatchEvent(new Event('input')); });
+    await page.type('#search-box', 'belal');
+    await new Promise(r => setTimeout(r, 300));
+    await page.click('.open-btn');
+    // Wait for chart to appear (data loads async)
+    let visible = false;
     for (let i = 0; i < 25; i++) {
-      const disabled = await page.$eval('#sc-play', el => el.disabled);
-      if (!disabled) { enabled = true; break; }
+      const display = await page.$eval('#sp-chart-wrap', el => el.style.display).catch(()=>'none');
+      if (display !== 'none') { visible = true; break; }
       await new Promise(r => setTimeout(r, 200));
     }
-    assert(enabled, 'play button never became enabled — data may not have loaded');
+    assert(visible, 'chart-wrap never became visible — graph did not render for a fight with data');
   });
 
-  await check('pressing Play starts the simulation (button changes to Pause)', async () => {
-    // Check button is in play state
-    const text = await page.$eval('#sc-play', el => el.textContent.trim());
-    if (text === '▶ Play') {
-      await page.click('#sc-play');
-      await new Promise(r => setTimeout(r, 400));
-    }
-    const newText = await page.$eval('#sc-play', el => el.textContent.trim());
-    assert(newText === '⏸ Pause' || newText === '▶ Done' || newText === '▶ Play', `unexpected button text: "${newText}"`);
+  await check('progress bar shows 100% after full graph renders', async () => {
+    const width = await page.$eval('#sp-fill', el => el.style.width);
+    assert(width === '100%', `expected 100%, got "${width}"`);
   });
 
-  await check('progress bar moves during simulation', async () => {
-    // Let it play for a bit
+  await check('progress label shows total points', async () => {
+    const label = await page.$eval('#sp-prog', el => el.textContent.trim());
+    assert(label && label.includes('pts'), `expected "N pts", got: "${label}"`);
+  });
+
+  await check('Replay button is visible after graph loads', async () => {
+    const display = await page.$eval('#sp-replay', el => el.style.display).catch(()=>'');
+    assert(display !== 'none', `replay button is hidden: "${display}"`);
+  });
+
+  await check('clicking Replay animates from scratch (button changes to Pause)', async () => {
+    await page.evaluate(() => document.getElementById('sp-replay').click());
+    await new Promise(r => setTimeout(r, 400));
+    const text = await page.$eval('#sp-replay', el => el.textContent.trim());
+    assert(text === '⏸ Pause', `expected "⏸ Pause" during replay, got "${text}"`);
+  });
+
+  await check('Stop button appears during replay', async () => {
+    const display = await page.$eval('#sp-stop', el => el.style.display);
+    assert(display !== 'none', `stop button hidden during replay: "${display}"`);
+  });
+
+  await check('progress bar updates during replay', async () => {
     await new Promise(r => setTimeout(r, 600));
-    const width = await page.$eval('#sc-fill', el => el.style.width);
-    // width could be "0%" if fight has 1 point, but it should be set
-    assert(width !== undefined, 'progress fill width not set');
+    const width = await page.$eval('#sp-fill', el => el.style.width);
+    assert(width !== undefined, 'progress fill not set during replay');
   });
 
-  await check('progress label shows current / total points', async () => {
-    const label = await page.$eval('#sc-prog', el => el.textContent.trim());
-    // Could be "—" if fight has 1 point, or "X/Y pts"
-    assert(label !== undefined, 'progress label not set');
-  });
-
-  await check('reset button appears after playback starts', async () => {
-    const display = await page.$eval('#sc-reset', el => el.style.display);
-    // Should be '' (visible) after playback started
-    assert(display !== 'none', `reset button still hidden: "${display}"`);
-  });
-
-  await check('close button hides sim panel and clears selection', async () => {
-    await page.click('#sc-close');
+  await check('close button removes expansion row and clears selection', async () => {
+    await page.evaluate(() => document.getElementById('sp-close').click());
     await new Promise(r => setTimeout(r, 300));
-    const panelOpen = await page.$eval('#sim-panel', el => el.classList.contains('open'));
-    assert(!panelOpen, 'sim panel should be closed after close button');
+    const gone = !(await simRowInDom());
+    assert(gone, 'expansion row still in DOM after close');
     const hasSelected = await page.$$eval('.rec-row.selected', rows => rows.length);
-    assert(hasSelected === 0, 'selected row should be cleared after close');
+    assert(hasSelected === 0, 'selected row not cleared after close');
   });
 
-  await check('speed buttons change the speed class', async () => {
-    // Open sim again
+  await check('speed buttons change the active class', async () => {
+    // Clear search to restore full list then click a row
+    await page.evaluate(() => { document.getElementById('search-box').value=''; document.getElementById('search-box').dispatchEvent(new Event('input')); });
+    await new Promise(r => setTimeout(r, 200));
     await page.click('.rec-row');
     await new Promise(r => setTimeout(r, 300));
-    await page.click('[data-spd="10"]');
-    const active10 = await page.$eval('[data-spd="10"]', el => el.classList.contains('active-spd'));
-    const active50 = await page.$eval('[data-spd="50"]', el => el.classList.contains('active-spd'));
-    assert(active10, '10x button should be active-spd after click');
-    assert(!active50, '50x button should not be active-spd after switching to 10x');
+    // Use page.evaluate to click inside simTr (avoids stale element refs after table re-render)
+    await page.evaluate(() => {
+      const btn = document.querySelector('#sim-expansion-row [data-spd="50"]');
+      if (btn) btn.click();
+    });
+    await new Promise(r => setTimeout(r, 100));
+    const active = await page.evaluate(() =>
+      Array.from(document.querySelectorAll('#sim-expansion-row [data-spd]'))
+        .map(b=>({spd:b.dataset.spd, active:b.classList.contains('spd-active')}))
+    );
+    const a50 = active.find(b=>b.spd==='50');
+    assert(a50?.active, `50x should be spd-active, got: ${JSON.stringify(active)}`);
+    const a10 = active.find(b=>b.spd==='10');
+    assert(!a10?.active, `10x should not be spd-active after switching to 50x`);
   });
 
   await check('no critical JS errors after all interactions', () => {
@@ -406,25 +446,21 @@ async function run() {
   // ── Extra: crossover fight simulation ─────────────────────────────────────
   console.log('\nCrossover simulation');
 
-  await check('a fight with crossovers shows ⚡ count in sim panel', async () => {
-    // Find a fight with crossovers and click it
+  await check('a fight with crossovers shows ⚡ count in expansion panel', async () => {
     const xoverRows = await page.$$('.rec-row');
     let found = false;
     for (const row of xoverRows) {
       const xoverText = await row.$eval('.xover-cell', el => el.textContent).catch(()=>'');
       if (xoverText.includes('⚡')) {
         await row.click();
-        await new Promise(r => setTimeout(r, 400));
-        const xoverCount = await page.$eval('#sim-xover-count', el => el.textContent.trim());
-        assert(xoverCount.includes('⚡'), `expected ⚡ in sim panel, got: "${xoverCount}"`);
+        await new Promise(r => setTimeout(r, 500));
+        const xoverCount = await page.$eval('#sp-xovers', el => el.textContent.trim());
+        assert(xoverCount.includes('⚡'), `expected ⚡ in panel, got: "${xoverCount}"`);
         found = true;
         break;
       }
     }
-    if (!found) {
-      // No crossover fights visible with current filter — that's OK
-      console.log('    (no crossover fights visible, skipping xover panel check)');
-    }
+    if (!found) console.log('    (no crossover fights visible, skipping)');
   });
 
   await browser.close();
