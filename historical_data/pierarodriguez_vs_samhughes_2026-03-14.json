@@ -1,247 +1,1307 @@
 {
-  "fightId": "pierarodriguez_vs_samhughes",
-  "fightTitle": "Connected but no betting buttons found",
-  "startTime": "2026-03-14T21:03:48.976Z",
-  "endTime": "2026-03-14T21:04:28.067Z",
-  "duration": 39091,
-  "dataPoints": 14,
+  "fightId": "pierarodriguez_vs_samhughes_2026-03-14",
+  "fightTitle": "Piera Rodriguez vs Sam Hughes",
+  "startTime": "2026-03-13T11:55:38Z",
+  "endTime": "2026-03-13T21:40:38Z",
+  "dataPoints": 118,
   "oddsHistory": [
     {
-      "timestamp": "2026-03-14T21:03:48.976Z",
+      "timestamp": "2026-03-13T11:55:38Z",
       "fighter1": {
         "name": "Piera Rodriguez",
-        "odds": "-152",
-        "numericOdds": -152
+        "numericOdds": -155
       },
       "fighter2": {
         "name": "Sam Hughes",
-        "odds": "+128",
-        "numericOdds": 128
-      },
-      "isLocked": false,
-      "extractionId": 1
+        "numericOdds": 130
+      }
     },
     {
-      "timestamp": "2026-03-14T21:03:51.993Z",
+      "timestamp": "2026-03-13T12:00:38Z",
       "fighter1": {
         "name": "Piera Rodriguez",
-        "odds": "-152",
-        "numericOdds": -152
+        "numericOdds": -155
       },
       "fighter2": {
         "name": "Sam Hughes",
-        "odds": "+128",
-        "numericOdds": 128
-      },
-      "isLocked": false,
-      "extractionId": 2
+        "numericOdds": 130
+      }
     },
     {
-      "timestamp": "2026-03-14T21:03:54.996Z",
+      "timestamp": "2026-03-13T12:05:38Z",
       "fighter1": {
         "name": "Piera Rodriguez",
-        "odds": "-152",
-        "numericOdds": -152
+        "numericOdds": -155
       },
       "fighter2": {
         "name": "Sam Hughes",
-        "odds": "+128",
-        "numericOdds": 128
-      },
-      "isLocked": false,
-      "extractionId": 3
+        "numericOdds": 130
+      }
     },
     {
-      "timestamp": "2026-03-14T21:03:58.008Z",
+      "timestamp": "2026-03-13T12:10:38Z",
       "fighter1": {
         "name": "Piera Rodriguez",
-        "odds": "-152",
-        "numericOdds": -152
+        "numericOdds": -155
       },
       "fighter2": {
         "name": "Sam Hughes",
-        "odds": "+128",
-        "numericOdds": 128
-      },
-      "isLocked": false,
-      "extractionId": 4
+        "numericOdds": 130
+      }
     },
     {
-      "timestamp": "2026-03-14T21:04:01.014Z",
+      "timestamp": "2026-03-13T12:15:38Z",
       "fighter1": {
         "name": "Piera Rodriguez",
-        "odds": "-152",
-        "numericOdds": -152
+        "numericOdds": -155
       },
       "fighter2": {
         "name": "Sam Hughes",
-        "odds": "+128",
-        "numericOdds": 128
-      },
-      "isLocked": false,
-      "extractionId": 5
+        "numericOdds": 130
+      }
     },
     {
-      "timestamp": "2026-03-14T21:04:04.016Z",
+      "timestamp": "2026-03-13T12:20:38Z",
       "fighter1": {
         "name": "Piera Rodriguez",
-        "odds": "-152",
-        "numericOdds": -152
+        "numericOdds": -155
       },
       "fighter2": {
         "name": "Sam Hughes",
-        "odds": "+128",
-        "numericOdds": 128
-      },
-      "isLocked": false,
-      "extractionId": 6
+        "numericOdds": 130
+      }
     },
     {
-      "timestamp": "2026-03-14T21:04:07.015Z",
+      "timestamp": "2026-03-13T12:25:38Z",
       "fighter1": {
         "name": "Piera Rodriguez",
-        "odds": "-152",
-        "numericOdds": -152
+        "numericOdds": -155
       },
       "fighter2": {
         "name": "Sam Hughes",
-        "odds": "+128",
-        "numericOdds": 128
-      },
-      "isLocked": false,
-      "extractionId": 7
+        "numericOdds": 130
+      }
     },
     {
-      "timestamp": "2026-03-14T21:04:10.028Z",
+      "timestamp": "2026-03-13T12:30:38Z",
       "fighter1": {
         "name": "Piera Rodriguez",
-        "odds": "-152",
-        "numericOdds": -152
+        "numericOdds": -155
       },
       "fighter2": {
         "name": "Sam Hughes",
-        "odds": "+128",
-        "numericOdds": 128
-      },
-      "isLocked": false,
-      "extractionId": 8
+        "numericOdds": 130
+      }
     },
     {
-      "timestamp": "2026-03-14T21:04:13.032Z",
+      "timestamp": "2026-03-13T12:35:38Z",
       "fighter1": {
         "name": "Piera Rodriguez",
-        "odds": "-152",
-        "numericOdds": -152
+        "numericOdds": -155
       },
       "fighter2": {
         "name": "Sam Hughes",
-        "odds": "+128",
-        "numericOdds": 128
-      },
-      "isLocked": false,
-      "extractionId": 9
+        "numericOdds": 130
+      }
     },
     {
-      "timestamp": "2026-03-14T21:04:16.040Z",
+      "timestamp": "2026-03-13T12:40:38Z",
       "fighter1": {
         "name": "Piera Rodriguez",
-        "odds": "-152",
-        "numericOdds": -152
+        "numericOdds": -155
       },
       "fighter2": {
         "name": "Sam Hughes",
-        "odds": "+128",
-        "numericOdds": 128
-      },
-      "isLocked": false,
-      "extractionId": 10
+        "numericOdds": 130
+      }
     },
     {
-      "timestamp": "2026-03-14T21:04:19.043Z",
+      "timestamp": "2026-03-13T12:45:39Z",
       "fighter1": {
         "name": "Piera Rodriguez",
-        "odds": "-152",
-        "numericOdds": -152
+        "numericOdds": -155
       },
       "fighter2": {
         "name": "Sam Hughes",
-        "odds": "+128",
-        "numericOdds": 128
-      },
-      "isLocked": false,
-      "extractionId": 11
+        "numericOdds": 130
+      }
     },
     {
-      "timestamp": "2026-03-14T21:04:22.054Z",
+      "timestamp": "2026-03-13T12:50:38Z",
       "fighter1": {
         "name": "Piera Rodriguez",
-        "odds": "-152",
-        "numericOdds": -152
+        "numericOdds": -155
       },
       "fighter2": {
         "name": "Sam Hughes",
-        "odds": "+128",
-        "numericOdds": 128
-      },
-      "isLocked": false,
-      "extractionId": 12
+        "numericOdds": 130
+      }
     },
     {
-      "timestamp": "2026-03-14T21:04:25.062Z",
+      "timestamp": "2026-03-13T12:55:38Z",
       "fighter1": {
         "name": "Piera Rodriguez",
-        "odds": "-152",
-        "numericOdds": -152
+        "numericOdds": -155
       },
       "fighter2": {
         "name": "Sam Hughes",
-        "odds": "+128",
-        "numericOdds": 128
-      },
-      "isLocked": false,
-      "extractionId": 13
+        "numericOdds": 130
+      }
     },
     {
-      "timestamp": "2026-03-14T21:04:28.067Z",
+      "timestamp": "2026-03-13T13:00:38Z",
       "fighter1": {
         "name": "Piera Rodriguez",
-        "odds": "-152",
-        "numericOdds": -152
+        "numericOdds": -155
       },
       "fighter2": {
         "name": "Sam Hughes",
-        "odds": "+128",
-        "numericOdds": 128
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T13:05:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
       },
-      "isLocked": false,
-      "extractionId": 14
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T13:10:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T13:15:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T13:20:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T13:25:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T13:30:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T13:35:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T13:40:37Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T13:45:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T13:50:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T13:55:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T14:00:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T14:05:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T14:10:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T14:15:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T14:20:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T14:25:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T14:30:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T14:35:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T14:40:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T14:45:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T14:50:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T14:55:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T15:00:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T15:05:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T15:10:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T15:15:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T15:20:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T15:25:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T15:30:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T15:35:37Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T15:40:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T15:45:39Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T15:50:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T15:55:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T16:00:39Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T16:05:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T16:10:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T16:15:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T16:20:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T16:25:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T16:30:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T16:35:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T16:40:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T16:45:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T16:50:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T16:55:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T17:00:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T17:05:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T17:10:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T17:15:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T17:20:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T17:25:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T17:30:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T17:35:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T17:40:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T17:45:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T17:50:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T17:55:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T18:00:42Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T18:05:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T18:10:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T18:15:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T18:20:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T18:25:40Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T18:30:39Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T18:35:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T18:40:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T18:45:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T18:50:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-03-13T18:55:39Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 124
+      }
+    },
+    {
+      "timestamp": "2026-03-13T19:00:40Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 124
+      }
+    },
+    {
+      "timestamp": "2026-03-13T19:05:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 124
+      }
+    },
+    {
+      "timestamp": "2026-03-13T19:10:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 124
+      }
+    },
+    {
+      "timestamp": "2026-03-13T19:15:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 124
+      }
+    },
+    {
+      "timestamp": "2026-03-13T19:20:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 124
+      }
+    },
+    {
+      "timestamp": "2026-03-13T19:25:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 124
+      }
+    },
+    {
+      "timestamp": "2026-03-13T19:30:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 124
+      }
+    },
+    {
+      "timestamp": "2026-03-13T19:35:39Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 124
+      }
+    },
+    {
+      "timestamp": "2026-03-13T19:40:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 124
+      }
+    },
+    {
+      "timestamp": "2026-03-13T19:45:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 124
+      }
+    },
+    {
+      "timestamp": "2026-03-13T19:50:39Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 124
+      }
+    },
+    {
+      "timestamp": "2026-03-13T19:55:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 124
+      }
+    },
+    {
+      "timestamp": "2026-03-13T20:00:41Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 124
+      }
+    },
+    {
+      "timestamp": "2026-03-13T20:05:39Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 124
+      }
+    },
+    {
+      "timestamp": "2026-03-13T20:10:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 124
+      }
+    },
+    {
+      "timestamp": "2026-03-13T20:15:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 124
+      }
+    },
+    {
+      "timestamp": "2026-03-13T20:20:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 124
+      }
+    },
+    {
+      "timestamp": "2026-03-13T20:25:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 124
+      }
+    },
+    {
+      "timestamp": "2026-03-13T20:30:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 124
+      }
+    },
+    {
+      "timestamp": "2026-03-13T20:35:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 124
+      }
+    },
+    {
+      "timestamp": "2026-03-13T20:40:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 124
+      }
+    },
+    {
+      "timestamp": "2026-03-13T20:45:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 124
+      }
+    },
+    {
+      "timestamp": "2026-03-13T20:50:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 124
+      }
+    },
+    {
+      "timestamp": "2026-03-13T20:55:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 124
+      }
+    },
+    {
+      "timestamp": "2026-03-13T21:00:42Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 124
+      }
+    },
+    {
+      "timestamp": "2026-03-13T21:05:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 124
+      }
+    },
+    {
+      "timestamp": "2026-03-13T21:10:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 124
+      }
+    },
+    {
+      "timestamp": "2026-03-13T21:15:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 124
+      }
+    },
+    {
+      "timestamp": "2026-03-13T21:20:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 124
+      }
+    },
+    {
+      "timestamp": "2026-03-13T21:25:37Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 124
+      }
+    },
+    {
+      "timestamp": "2026-03-13T21:30:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 124
+      }
+    },
+    {
+      "timestamp": "2026-03-13T21:35:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 124
+      }
+    },
+    {
+      "timestamp": "2026-03-13T21:40:38Z",
+      "fighter1": {
+        "name": "Piera Rodriguez",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Sam Hughes",
+        "numericOdds": 124
+      }
     }
-  ],
-  "createdAt": "2026-03-14T21:29:40.337Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Piera Rodriguez",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:52:10.784Z",
-    "openingF1Odds": -152,
-    "openingF2Odds": 128,
-    "closingF1Odds": -152,
-    "closingF2Odds": 128,
-    "lineMovementF1": 0,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": null,
-    "inferredFinishRound": null,
-    "peakOddsSwing": 0,
-    "finishSpeed": "decision",
-    "preFightSteam": 0,
-    "dominanceScore": 0,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.478Z"
-  }
+  ]
 }

@@ -1,967 +1,4607 @@
 {
-  "fightId": "francismarshall_vs_lucasbrennan",
-  "fightTitle": "Connected but no betting buttons found",
-  "startTime": "2026-04-25T22:07:23.681Z",
-  "endTime": "2026-04-25T22:11:18.175Z",
-  "duration": 234494,
-  "dataPoints": 62,
+  "fightId": "francismarshall_vs_lucasbrennan_2026-04-25",
+  "fightTitle": "Francis Marshall vs Lucas Brennan",
+  "startTime": "2026-04-24T11:55:38Z",
+  "endTime": "2026-04-25T22:40:37Z",
+  "dataPoints": 418,
   "oddsHistory": [
     {
-      "timestamp": "2026-04-25T22:07:23.681Z",
+      "timestamp": "2026-04-24T11:55:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-520",
-        "numericOdds": -520
+        "numericOdds": -535
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+390",
-        "numericOdds": 390
-      },
-      "isLocked": false,
-      "extractionId": 9
+        "numericOdds": 400
+      }
     },
     {
-      "timestamp": "2026-04-25T22:07:26.684Z",
+      "timestamp": "2026-04-24T12:00:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-520",
-        "numericOdds": -520
+        "numericOdds": -535
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+390",
-        "numericOdds": 390
-      },
-      "isLocked": false,
-      "extractionId": 2
+        "numericOdds": 400
+      }
     },
     {
-      "timestamp": "2026-04-25T22:07:29.699Z",
+      "timestamp": "2026-04-24T12:05:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-520",
-        "numericOdds": -520
+        "numericOdds": -535
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+390",
-        "numericOdds": 390
-      },
-      "isLocked": false,
-      "extractionId": 3
+        "numericOdds": 400
+      }
     },
     {
-      "timestamp": "2026-04-25T22:07:32.699Z",
+      "timestamp": "2026-04-24T12:10:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-520",
-        "numericOdds": -520
+        "numericOdds": -535
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+390",
-        "numericOdds": 390
-      },
-      "isLocked": false,
-      "extractionId": 4
+        "numericOdds": 400
+      }
     },
     {
-      "timestamp": "2026-04-25T22:07:35.705Z",
+      "timestamp": "2026-04-24T12:15:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-520",
-        "numericOdds": -520
+        "numericOdds": -535
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+390",
-        "numericOdds": 390
-      },
-      "isLocked": false,
-      "extractionId": 5
+        "numericOdds": 400
+      }
     },
     {
-      "timestamp": "2026-04-25T22:07:38.713Z",
+      "timestamp": "2026-04-24T12:20:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-520",
-        "numericOdds": -520
+        "numericOdds": -535
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+390",
-        "numericOdds": 390
-      },
-      "isLocked": false,
-      "extractionId": 6
+        "numericOdds": 400
+      }
     },
     {
-      "timestamp": "2026-04-25T22:07:41.716Z",
+      "timestamp": "2026-04-24T12:25:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-520",
-        "numericOdds": -520
+        "numericOdds": -535
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+390",
-        "numericOdds": 390
-      },
-      "isLocked": false,
-      "extractionId": 7
+        "numericOdds": 400
+      }
     },
     {
-      "timestamp": "2026-04-25T22:07:44.719Z",
+      "timestamp": "2026-04-24T12:30:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-520",
-        "numericOdds": -520
+        "numericOdds": -535
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+390",
-        "numericOdds": 390
-      },
-      "isLocked": false,
-      "extractionId": 8
+        "numericOdds": 400
+      }
     },
     {
-      "timestamp": "2026-04-25T22:07:47.721Z",
+      "timestamp": "2026-04-24T12:35:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-520",
-        "numericOdds": -520
+        "numericOdds": -535
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+390",
-        "numericOdds": 390
-      },
-      "isLocked": false,
-      "extractionId": 9
+        "numericOdds": 400
+      }
     },
     {
-      "timestamp": "2026-04-25T22:07:50.725Z",
+      "timestamp": "2026-04-24T12:40:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-520",
-        "numericOdds": -520
+        "numericOdds": -535
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+390",
-        "numericOdds": 390
-      },
-      "isLocked": false,
-      "extractionId": 10
+        "numericOdds": 400
+      }
     },
     {
-      "timestamp": "2026-04-25T22:07:53.731Z",
+      "timestamp": "2026-04-24T12:45:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-520",
-        "numericOdds": -520
+        "numericOdds": -535
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+390",
-        "numericOdds": 390
-      },
-      "isLocked": false,
-      "extractionId": 11
+        "numericOdds": 400
+      }
     },
     {
-      "timestamp": "2026-04-25T22:07:56.746Z",
+      "timestamp": "2026-04-24T12:50:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-520",
-        "numericOdds": -520
+        "numericOdds": -535
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+390",
-        "numericOdds": 390
-      },
-      "isLocked": false,
-      "extractionId": 12
+        "numericOdds": 400
+      }
     },
     {
-      "timestamp": "2026-04-25T22:07:59.760Z",
+      "timestamp": "2026-04-24T12:55:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-520",
-        "numericOdds": -520
+        "numericOdds": -535
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+390",
-        "numericOdds": 390
-      },
-      "isLocked": false,
-      "extractionId": 13
+        "numericOdds": 400
+      }
     },
     {
-      "timestamp": "2026-04-25T22:08:02.764Z",
+      "timestamp": "2026-04-24T13:00:40Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-520",
-        "numericOdds": -520
+        "numericOdds": -535
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+390",
-        "numericOdds": 390
-      },
-      "isLocked": false,
-      "extractionId": 14
+        "numericOdds": 400
+      }
     },
     {
-      "timestamp": "2026-04-25T22:08:05.768Z",
+      "timestamp": "2026-04-24T13:05:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-520",
-        "numericOdds": -520
+        "numericOdds": -535
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+390",
-        "numericOdds": 390
-      },
-      "isLocked": false,
-      "extractionId": 15
+        "numericOdds": 400
+      }
     },
     {
-      "timestamp": "2026-04-25T22:08:08.775Z",
+      "timestamp": "2026-04-24T13:10:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-520",
-        "numericOdds": -520
+        "numericOdds": -535
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+390",
-        "numericOdds": 390
-      },
-      "isLocked": false,
-      "extractionId": 16
+        "numericOdds": 400
+      }
     },
     {
-      "timestamp": "2026-04-25T22:08:11.780Z",
+      "timestamp": "2026-04-24T13:15:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-520",
-        "numericOdds": -520
+        "numericOdds": -535
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+390",
-        "numericOdds": 390
-      },
-      "isLocked": false,
-      "extractionId": 17
+        "numericOdds": 400
+      }
     },
     {
-      "timestamp": "2026-04-25T22:08:14.791Z",
+      "timestamp": "2026-04-24T13:20:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-520",
-        "numericOdds": -520
+        "numericOdds": -535
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+390",
-        "numericOdds": 390
-      },
-      "isLocked": false,
-      "extractionId": 18
+        "numericOdds": 400
+      }
     },
     {
-      "timestamp": "2026-04-25T22:08:17.793Z",
+      "timestamp": "2026-04-24T13:25:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-520",
-        "numericOdds": -520
+        "numericOdds": -535
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+390",
-        "numericOdds": 390
-      },
-      "isLocked": false,
-      "extractionId": 19
+        "numericOdds": 400
+      }
     },
     {
-      "timestamp": "2026-04-25T22:08:20.797Z",
+      "timestamp": "2026-04-24T13:30:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-600",
-        "numericOdds": -600
+        "numericOdds": -535
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+380",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T13:35:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T13:40:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T13:45:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T13:50:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T13:55:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T14:00:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T14:05:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T14:10:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T14:15:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T14:20:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T14:25:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T14:30:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T14:35:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T14:40:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T14:45:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T14:50:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T14:55:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T15:00:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T15:05:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T15:10:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T15:15:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T15:20:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T15:25:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T15:30:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T15:35:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T15:40:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T15:45:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T15:50:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T15:55:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T16:00:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T16:05:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T16:10:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T16:15:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T16:20:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T16:25:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T16:30:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T16:35:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T16:40:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T16:45:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T16:50:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T16:55:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T17:00:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T17:05:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T17:10:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T17:15:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T17:20:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T17:25:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T17:30:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T17:35:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T17:40:39Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T17:45:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T17:50:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T17:55:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T18:00:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T18:05:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T18:10:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T18:15:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T18:20:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T18:25:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T18:30:39Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T18:35:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T18:40:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T18:45:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T18:50:39Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T18:55:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T19:00:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T19:05:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T19:10:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T19:15:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T19:20:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T19:25:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T19:30:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T19:35:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T19:40:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T19:45:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T19:50:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T19:55:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T20:00:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T20:05:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T20:10:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T20:15:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T20:20:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T20:25:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T20:30:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T20:35:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T20:40:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T20:45:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T20:50:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T20:55:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T21:00:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T21:05:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T21:10:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T21:15:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T21:20:40Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T21:25:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T21:30:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T21:35:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T21:40:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T21:45:39Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T21:50:39Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T21:55:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T22:00:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T22:05:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T22:10:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T22:15:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T22:20:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T22:25:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T22:30:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T22:35:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T22:40:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T22:45:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T22:50:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T22:55:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T23:00:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T23:05:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T23:10:39Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T23:15:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T23:20:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T23:25:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T23:30:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T23:35:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T23:40:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T23:45:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -535
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-04-24T23:50:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
         "numericOdds": 380
-      },
-      "isLocked": false,
-      "extractionId": 20
+      }
     },
     {
-      "timestamp": "2026-04-25T22:08:23.805Z",
+      "timestamp": "2026-04-24T23:55:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-600",
-        "numericOdds": -600
+        "numericOdds": -500
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+380",
         "numericOdds": 380
-      },
-      "isLocked": false,
-      "extractionId": 21
+      }
     },
     {
-      "timestamp": "2026-04-25T22:08:41.846Z",
+      "timestamp": "2026-04-25T00:00:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-600",
-        "numericOdds": -600
+        "numericOdds": -500
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+380",
         "numericOdds": 380
-      },
-      "isLocked": false,
-      "extractionId": 22
+      }
     },
     {
-      "timestamp": "2026-04-25T22:08:44.845Z",
+      "timestamp": "2026-04-25T00:05:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-600",
-        "numericOdds": -600
+        "numericOdds": -500
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+380",
         "numericOdds": 380
-      },
-      "isLocked": false,
-      "extractionId": 2
+      }
     },
     {
-      "timestamp": "2026-04-25T22:08:47.845Z",
+      "timestamp": "2026-04-25T00:10:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-600",
-        "numericOdds": -600
+        "numericOdds": -500
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+380",
         "numericOdds": 380
-      },
-      "isLocked": false,
-      "extractionId": 3
+      }
     },
     {
-      "timestamp": "2026-04-25T22:08:50.851Z",
+      "timestamp": "2026-04-25T00:15:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-600",
-        "numericOdds": -600
+        "numericOdds": -500
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+380",
         "numericOdds": 380
-      },
-      "isLocked": false,
-      "extractionId": 4
+      }
     },
     {
-      "timestamp": "2026-04-25T22:08:53.863Z",
+      "timestamp": "2026-04-25T00:20:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-600",
-        "numericOdds": -600
+        "numericOdds": -500
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+380",
         "numericOdds": 380
-      },
-      "isLocked": false,
-      "extractionId": 5
+      }
     },
     {
-      "timestamp": "2026-04-25T22:08:56.864Z",
+      "timestamp": "2026-04-25T00:25:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-600",
-        "numericOdds": -600
+        "numericOdds": -500
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+380",
         "numericOdds": 380
-      },
-      "isLocked": false,
-      "extractionId": 6
+      }
     },
     {
-      "timestamp": "2026-04-25T22:08:59.871Z",
+      "timestamp": "2026-04-25T00:30:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-600",
-        "numericOdds": -600
+        "numericOdds": -500
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+380",
         "numericOdds": 380
-      },
-      "isLocked": false,
-      "extractionId": 7
+      }
     },
     {
-      "timestamp": "2026-04-25T22:09:02.881Z",
+      "timestamp": "2026-04-25T00:35:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-600",
-        "numericOdds": -600
+        "numericOdds": -500
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+380",
         "numericOdds": 380
-      },
-      "isLocked": false,
-      "extractionId": 8
+      }
     },
     {
-      "timestamp": "2026-04-25T22:09:05.886Z",
+      "timestamp": "2026-04-25T00:40:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-600",
-        "numericOdds": -600
+        "numericOdds": -500
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+380",
         "numericOdds": 380
-      },
-      "isLocked": false,
-      "extractionId": 9
+      }
     },
     {
-      "timestamp": "2026-04-25T22:09:08.888Z",
+      "timestamp": "2026-04-25T00:45:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-600",
-        "numericOdds": -600
+        "numericOdds": -500
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+380",
         "numericOdds": 380
-      },
-      "isLocked": false,
-      "extractionId": 10
+      }
     },
     {
-      "timestamp": "2026-04-25T22:09:11.889Z",
+      "timestamp": "2026-04-25T00:50:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-600",
-        "numericOdds": -600
+        "numericOdds": -500
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+380",
         "numericOdds": 380
-      },
-      "isLocked": false,
-      "extractionId": 11
+      }
     },
     {
-      "timestamp": "2026-04-25T22:09:14.899Z",
+      "timestamp": "2026-04-25T00:55:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-600",
-        "numericOdds": -600
+        "numericOdds": -500
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+380",
         "numericOdds": 380
-      },
-      "isLocked": false,
-      "extractionId": 12
+      }
     },
     {
-      "timestamp": "2026-04-25T22:09:17.900Z",
+      "timestamp": "2026-04-25T01:00:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-600",
-        "numericOdds": -600
+        "numericOdds": -500
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+380",
         "numericOdds": 380
-      },
-      "isLocked": false,
-      "extractionId": 13
+      }
     },
     {
-      "timestamp": "2026-04-25T22:09:20.908Z",
+      "timestamp": "2026-04-25T01:05:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-600",
-        "numericOdds": -600
+        "numericOdds": -500
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+380",
         "numericOdds": 380
-      },
-      "isLocked": false,
-      "extractionId": 14
+      }
     },
     {
-      "timestamp": "2026-04-25T22:09:23.914Z",
+      "timestamp": "2026-04-25T01:10:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-600",
-        "numericOdds": -600
+        "numericOdds": -500
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+380",
         "numericOdds": 380
-      },
-      "isLocked": false,
-      "extractionId": 15
+      }
     },
     {
-      "timestamp": "2026-04-25T22:09:26.915Z",
+      "timestamp": "2026-04-25T01:15:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-600",
-        "numericOdds": -600
+        "numericOdds": -500
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+390",
-        "numericOdds": 390
-      },
-      "isLocked": false,
-      "extractionId": 16
+        "numericOdds": 380
+      }
     },
     {
-      "timestamp": "2026-04-25T22:09:29.920Z",
+      "timestamp": "2026-04-25T01:20:39Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-600",
-        "numericOdds": -600
+        "numericOdds": -500
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+390",
-        "numericOdds": 390
-      },
-      "isLocked": false,
-      "extractionId": 17
+        "numericOdds": 380
+      }
     },
     {
-      "timestamp": "2026-04-25T22:09:32.933Z",
+      "timestamp": "2026-04-25T01:25:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-600",
-        "numericOdds": -600
+        "numericOdds": -500
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+390",
-        "numericOdds": 390
-      },
-      "isLocked": false,
-      "extractionId": 18
+        "numericOdds": 380
+      }
     },
     {
-      "timestamp": "2026-04-25T22:09:35.934Z",
+      "timestamp": "2026-04-25T01:30:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-600",
-        "numericOdds": -600
+        "numericOdds": -500
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+390",
-        "numericOdds": 390
-      },
-      "isLocked": false,
-      "extractionId": 19
+        "numericOdds": 380
+      }
     },
     {
-      "timestamp": "2026-04-25T22:09:38.941Z",
+      "timestamp": "2026-04-25T01:35:37Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-600",
-        "numericOdds": -600
+        "numericOdds": -500
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+390",
-        "numericOdds": 390
-      },
-      "isLocked": false,
-      "extractionId": 20
+        "numericOdds": 380
+      }
     },
     {
-      "timestamp": "2026-04-25T22:09:41.950Z",
+      "timestamp": "2026-04-25T01:40:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-600",
-        "numericOdds": -600
+        "numericOdds": -500
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+390",
-        "numericOdds": 390
-      },
-      "isLocked": false,
-      "extractionId": 21
+        "numericOdds": 380
+      }
     },
     {
-      "timestamp": "2026-04-25T22:09:44.954Z",
+      "timestamp": "2026-04-25T01:45:37Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-600",
-        "numericOdds": -600
+        "numericOdds": -500
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+390",
-        "numericOdds": 390
-      },
-      "isLocked": false,
-      "extractionId": 22
+        "numericOdds": 380
+      }
     },
     {
-      "timestamp": "2026-04-25T22:09:47.956Z",
+      "timestamp": "2026-04-25T01:50:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-600",
-        "numericOdds": -600
+        "numericOdds": -500
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+390",
-        "numericOdds": 390
-      },
-      "isLocked": false,
-      "extractionId": 23
+        "numericOdds": 380
+      }
     },
     {
-      "timestamp": "2026-04-25T22:09:50.959Z",
+      "timestamp": "2026-04-25T01:55:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-700",
-        "numericOdds": -700
+        "numericOdds": -500
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+440",
-        "numericOdds": 440
-      },
-      "isLocked": false,
-      "extractionId": 24
+        "numericOdds": 380
+      }
     },
     {
-      "timestamp": "2026-04-25T22:09:53.963Z",
+      "timestamp": "2026-04-25T02:00:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-700",
-        "numericOdds": -700
+        "numericOdds": -500
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+440",
-        "numericOdds": 440
-      },
-      "isLocked": false,
-      "extractionId": 25
+        "numericOdds": 380
+      }
     },
     {
-      "timestamp": "2026-04-25T22:09:56.967Z",
+      "timestamp": "2026-04-25T02:05:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-700",
-        "numericOdds": -700
+        "numericOdds": -500
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+440",
-        "numericOdds": 440
-      },
-      "isLocked": false,
-      "extractionId": 26
+        "numericOdds": 380
+      }
     },
     {
-      "timestamp": "2026-04-25T22:09:59.976Z",
+      "timestamp": "2026-04-25T02:10:37Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-700",
-        "numericOdds": -700
+        "numericOdds": -500
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+440",
-        "numericOdds": 440
-      },
-      "isLocked": false,
-      "extractionId": 27
+        "numericOdds": 380
+      }
     },
     {
-      "timestamp": "2026-04-25T22:10:02.980Z",
+      "timestamp": "2026-04-25T02:15:37Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-700",
-        "numericOdds": -700
+        "numericOdds": -500
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+440",
-        "numericOdds": 440
-      },
-      "isLocked": false,
-      "extractionId": 28
+        "numericOdds": 380
+      }
     },
     {
-      "timestamp": "2026-04-25T22:10:05.990Z",
+      "timestamp": "2026-04-25T02:20:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-800",
-        "numericOdds": -800
+        "numericOdds": -500
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 29
+        "numericOdds": 380
+      }
     },
     {
-      "timestamp": "2026-04-25T22:10:08.995Z",
+      "timestamp": "2026-04-25T02:25:37Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-800",
-        "numericOdds": -800
+        "numericOdds": -500
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 30
+        "numericOdds": 380
+      }
     },
     {
-      "timestamp": "2026-04-25T22:10:36.051Z",
+      "timestamp": "2026-04-25T02:30:37Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-1300",
-        "numericOdds": -1300
+        "numericOdds": -500
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+720",
-        "numericOdds": 720
-      },
-      "isLocked": false,
-      "extractionId": 31
+        "numericOdds": 380
+      }
     },
     {
-      "timestamp": "2026-04-25T22:10:39.054Z",
+      "timestamp": "2026-04-25T02:35:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-1300",
-        "numericOdds": -1300
+        "numericOdds": -500
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+720",
-        "numericOdds": 720
-      },
-      "isLocked": false,
-      "extractionId": 2
+        "numericOdds": 380
+      }
     },
     {
-      "timestamp": "2026-04-25T22:10:42.054Z",
+      "timestamp": "2026-04-25T02:40:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-1300",
-        "numericOdds": -1300
+        "numericOdds": -500
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+720",
-        "numericOdds": 720
-      },
-      "isLocked": false,
-      "extractionId": 3
+        "numericOdds": 380
+      }
     },
     {
-      "timestamp": "2026-04-25T22:10:45.064Z",
+      "timestamp": "2026-04-25T02:45:37Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-1300",
-        "numericOdds": -1300
+        "numericOdds": -500
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+720",
-        "numericOdds": 720
-      },
-      "isLocked": false,
-      "extractionId": 4
+        "numericOdds": 380
+      }
     },
     {
-      "timestamp": "2026-04-25T22:10:48.079Z",
+      "timestamp": "2026-04-25T02:50:37Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-1600",
-        "numericOdds": -1600
+        "numericOdds": -500
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+840",
-        "numericOdds": 840
-      },
-      "isLocked": false,
-      "extractionId": 5
+        "numericOdds": 380
+      }
     },
     {
-      "timestamp": "2026-04-25T22:11:12.154Z",
+      "timestamp": "2026-04-25T02:55:37Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-2400",
-        "numericOdds": -2400
+        "numericOdds": -500
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+1180",
-        "numericOdds": 1180
-      },
-      "isLocked": false,
-      "extractionId": 6
+        "numericOdds": 380
+      }
     },
     {
-      "timestamp": "2026-04-25T22:11:15.166Z",
+      "timestamp": "2026-04-25T03:00:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-2400",
-        "numericOdds": -2400
+        "numericOdds": -500
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+1180",
-        "numericOdds": 1180
-      },
-      "isLocked": false,
-      "extractionId": 2
+        "numericOdds": 380
+      }
     },
     {
-      "timestamp": "2026-04-25T22:11:18.175Z",
+      "timestamp": "2026-04-25T03:05:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-2400",
-        "numericOdds": -2400
+        "numericOdds": -500
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+1180",
-        "numericOdds": 1180
-      },
-      "isLocked": false,
-      "extractionId": 3
+        "numericOdds": 380
+      }
     },
     {
-      "timestamp": "2026-04-25T22:11:12.154Z",
+      "timestamp": "2026-04-25T03:10:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-2400",
-        "numericOdds": -2400
+        "numericOdds": -500
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+1180",
-        "numericOdds": 1180
-      },
-      "isLocked": false,
-      "extractionId": 6
+        "numericOdds": 380
+      }
     },
     {
-      "timestamp": "2026-04-25T22:11:15.166Z",
+      "timestamp": "2026-04-25T03:15:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-2400",
-        "numericOdds": -2400
+        "numericOdds": -500
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+1180",
-        "numericOdds": 1180
-      },
-      "isLocked": false,
-      "extractionId": 2
+        "numericOdds": 380
+      }
     },
     {
-      "timestamp": "2026-04-25T22:11:18.175Z",
+      "timestamp": "2026-04-25T03:20:38Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "odds": "-2400",
-        "numericOdds": -2400
+        "numericOdds": -500
       },
       "fighter2": {
         "name": "Lucas Brennan",
-        "odds": "+1180",
-        "numericOdds": 1180
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T03:25:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
       },
-      "isLocked": false,
-      "extractionId": 3
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T03:30:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T03:35:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T03:40:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T03:45:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T03:50:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T03:55:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T04:00:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T04:05:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T04:10:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T04:15:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T04:20:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T04:25:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T04:30:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T04:35:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T04:40:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T04:45:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T04:50:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T04:55:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T05:00:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T05:05:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T05:10:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T05:15:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T05:20:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T05:25:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T05:30:40Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T05:35:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T05:40:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T05:45:39Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T05:50:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T05:55:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:00:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:05:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:10:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:15:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:20:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:25:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:30:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:35:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:40:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:45:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:50:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:55:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:00:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:05:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:10:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:15:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:20:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:25:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:30:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:35:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:40:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:45:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:50:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:55:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:00:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:05:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:10:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:15:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:20:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:25:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:30:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:35:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:40:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:45:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:50:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:55:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:00:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:05:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:10:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:15:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:20:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:25:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:30:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:35:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:40:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:45:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:50:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:55:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:00:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:05:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:10:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:15:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:20:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:25:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:30:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:35:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:40:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:45:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:50:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:55:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:00:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:05:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:10:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:15:39Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:20:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -470
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 360
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:25:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -470
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 360
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:30:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -470
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 360
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:35:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -470
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 360
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:40:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -470
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 360
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:45:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -470
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 360
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:50:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -470
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 360
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:55:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -470
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 360
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:00:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -470
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 360
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:05:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -470
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 360
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:10:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -470
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 360
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:15:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -470
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 360
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:20:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -470
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 360
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:25:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -470
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 360
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:30:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -470
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 360
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:35:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -470
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 360
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:40:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:45:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:50:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:55:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T13:00:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T13:05:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T13:10:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T13:15:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T13:20:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T13:25:39Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T13:30:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T13:35:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T13:40:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T13:45:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T13:50:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T13:55:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T14:00:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T14:05:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T14:10:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T14:15:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T14:20:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T14:25:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T14:30:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T14:35:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T14:40:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T14:45:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T14:50:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T14:55:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T15:00:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T15:05:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T15:10:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T15:15:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T15:20:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T15:25:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T15:30:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T15:35:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T15:40:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T15:45:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T15:50:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T15:55:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T16:00:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T16:05:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T16:10:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T16:15:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T16:20:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T16:25:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T16:30:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T16:35:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T16:40:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T16:45:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T16:50:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T16:55:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:00:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:05:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:10:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:15:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:20:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:25:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:30:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:35:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:40:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:45:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:50:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:55:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:00:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:05:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:10:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:15:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:20:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:25:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:30:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:35:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:40:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:45:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:50:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:55:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:00:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:05:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:10:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:15:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:20:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:25:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:30:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:35:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:40:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:45:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:50:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:55:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:00:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:05:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:10:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:15:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:20:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:25:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:30:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:35:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:40:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:45:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:50:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:55:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:00:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:05:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:10:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:15:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:20:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:25:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:30:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:35:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:40:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:45:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:50:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:55:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:00:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:05:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -485
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:10:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -720
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 450
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:15:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -1150
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 650
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:20:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -2800
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 1200
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:25:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -100000
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 4000
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:30:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -100000
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 4000
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:35:38Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -100000
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 4000
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:40:37Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -100000
+      },
+      "fighter2": {
+        "name": "Lucas Brennan",
+        "numericOdds": 4000
+      }
     }
-  ],
-  "createdAt": "2026-04-25T22:08:41.845Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Francis Marshall",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:51:20.660Z",
-    "openingF1Odds": -520,
-    "openingF2Odds": 390,
-    "closingF1Odds": -2400,
-    "closingF2Odds": 1180,
-    "lineMovementF1": -1880,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": 3,
-    "inferredFinishRound": 1,
-    "peakOddsSwing": 1880,
-    "finishSpeed": "fast",
-    "preFightSteam": -1880,
-    "dominanceScore": 100,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.418Z"
-  }
+  ]
 }

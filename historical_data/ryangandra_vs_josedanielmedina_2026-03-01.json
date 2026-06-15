@@ -1,217 +1,1736 @@
 {
-  "fightId": "ryangandra_vs_josedanielmedina",
-  "fightTitle": "Connected but no betting buttons found",
-  "startTime": "2026-03-01T00:41:37.845Z",
-  "endTime": "2026-03-01T00:42:10.978Z",
-  "duration": 33133,
-  "dataPoints": 12,
+  "fightId": "ryangandra_vs_josedanielmedina_2026-03-01",
+  "fightTitle": "Ryan Gandra vs Jose Daniel Medina",
+  "startTime": "2026-02-28T11:55:38Z",
+  "endTime": "2026-03-01T00:55:37Z",
+  "dataPoints": 157,
   "oddsHistory": [
     {
-      "timestamp": "2026-03-01T00:41:37.845Z",
+      "timestamp": "2026-02-28T11:55:38Z",
       "fighter1": {
-        "name": "Ryan Gandra",
-        "odds": "-720",
-        "numericOdds": -720
-      },
-      "fighter2": {
         "name": "Jose Daniel Medina",
-        "odds": "+520",
-        "numericOdds": 520
-      },
-      "isLocked": false,
-      "extractionId": 12
-    },
-    {
-      "timestamp": "2026-03-01T00:41:40.862Z",
-      "fighter1": {
-        "name": "Ryan Gandra",
-        "odds": "-720",
-        "numericOdds": -720
-      },
-      "fighter2": {
-        "name": "Jose Daniel Medina",
-        "odds": "+520",
-        "numericOdds": 520
-      },
-      "isLocked": false,
-      "extractionId": 2
-    },
-    {
-      "timestamp": "2026-03-01T00:41:43.875Z",
-      "fighter1": {
-        "name": "Ryan Gandra",
-        "odds": "-720",
-        "numericOdds": -720
-      },
-      "fighter2": {
-        "name": "Jose Daniel Medina",
-        "odds": "+520",
-        "numericOdds": 520
-      },
-      "isLocked": false,
-      "extractionId": 3
-    },
-    {
-      "timestamp": "2026-03-01T00:41:46.888Z",
-      "fighter1": {
-        "name": "Ryan Gandra",
-        "odds": "-720",
-        "numericOdds": -720
-      },
-      "fighter2": {
-        "name": "Jose Daniel Medina",
-        "odds": "+520",
-        "numericOdds": 520
-      },
-      "isLocked": false,
-      "extractionId": 4
-    },
-    {
-      "timestamp": "2026-03-01T00:41:49.901Z",
-      "fighter1": {
-        "name": "Ryan Gandra",
-        "odds": "-720",
-        "numericOdds": -720
-      },
-      "fighter2": {
-        "name": "Jose Daniel Medina",
-        "odds": "+520",
-        "numericOdds": 520
-      },
-      "isLocked": false,
-      "extractionId": 5
-    },
-    {
-      "timestamp": "2026-03-01T00:41:52.903Z",
-      "fighter1": {
-        "name": "Ryan Gandra",
-        "odds": "-720",
-        "numericOdds": -720
-      },
-      "fighter2": {
-        "name": "Jose Daniel Medina",
-        "odds": "+520",
-        "numericOdds": 520
-      },
-      "isLocked": false,
-      "extractionId": 6
-    },
-    {
-      "timestamp": "2026-03-01T00:41:55.917Z",
-      "fighter1": {
-        "name": "Ryan Gandra",
-        "odds": "-720",
-        "numericOdds": -720
-      },
-      "fighter2": {
-        "name": "Jose Daniel Medina",
-        "odds": "+520",
-        "numericOdds": 520
-      },
-      "isLocked": false,
-      "extractionId": 7
-    },
-    {
-      "timestamp": "2026-03-01T00:41:58.932Z",
-      "fighter1": {
-        "name": "Ryan Gandra",
-        "odds": "-800",
-        "numericOdds": -800
-      },
-      "fighter2": {
-        "name": "Jose Daniel Medina",
-        "odds": "+490",
         "numericOdds": 490
       },
-      "isLocked": false,
-      "extractionId": 8
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
     },
     {
-      "timestamp": "2026-03-01T00:42:01.942Z",
+      "timestamp": "2026-02-28T12:00:38Z",
       "fighter1": {
-        "name": "Ryan Gandra",
-        "odds": "-800",
-        "numericOdds": -800
-      },
-      "fighter2": {
         "name": "Jose Daniel Medina",
-        "odds": "+490",
         "numericOdds": 490
       },
-      "isLocked": false,
-      "extractionId": 9
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
     },
     {
-      "timestamp": "2026-03-01T00:42:04.956Z",
+      "timestamp": "2026-02-28T12:05:38Z",
       "fighter1": {
-        "name": "Ryan Gandra",
-        "odds": "-800",
-        "numericOdds": -800
-      },
-      "fighter2": {
         "name": "Jose Daniel Medina",
-        "odds": "+490",
         "numericOdds": 490
       },
-      "isLocked": false,
-      "extractionId": 10
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
     },
     {
-      "timestamp": "2026-03-01T00:42:07.965Z",
+      "timestamp": "2026-02-28T12:10:38Z",
       "fighter1": {
-        "name": "Ryan Gandra",
-        "odds": "-800",
-        "numericOdds": -800
-      },
-      "fighter2": {
         "name": "Jose Daniel Medina",
-        "odds": "+490",
         "numericOdds": 490
       },
-      "isLocked": false,
-      "extractionId": 11
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
     },
     {
-      "timestamp": "2026-03-01T00:42:10.978Z",
+      "timestamp": "2026-02-28T12:15:38Z",
       "fighter1": {
-        "name": "Ryan Gandra",
-        "odds": "-800",
-        "numericOdds": -800
-      },
-      "fighter2": {
         "name": "Jose Daniel Medina",
-        "odds": "+490",
         "numericOdds": 490
       },
-      "isLocked": false,
-      "extractionId": 12
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-02-28T12:20:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-02-28T12:25:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-02-28T12:30:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-02-28T12:35:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-02-28T12:40:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-02-28T12:45:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-02-28T12:50:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-02-28T12:55:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-02-28T13:00:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-02-28T13:05:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-02-28T13:10:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-02-28T13:15:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-02-28T13:20:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-02-28T13:25:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-02-28T13:30:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-02-28T13:35:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-02-28T13:40:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-02-28T13:45:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-02-28T13:50:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-02-28T13:55:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-02-28T14:00:41Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-02-28T14:05:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-02-28T14:10:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-02-28T14:15:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-02-28T14:20:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-02-28T14:25:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-02-28T14:30:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-02-28T14:35:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-02-28T14:40:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-02-28T14:45:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-02-28T14:50:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-02-28T14:55:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-02-28T15:00:42Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-02-28T15:05:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-02-28T15:10:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-02-28T15:15:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-02-28T15:20:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-02-28T15:25:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-02-28T15:30:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-02-28T15:35:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-02-28T15:40:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T15:45:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T15:50:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T15:55:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T16:00:44Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T16:05:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T16:10:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T16:15:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T16:20:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T16:25:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T16:30:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T16:35:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T16:40:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T16:45:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T16:50:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T16:55:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T17:00:42Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T17:05:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T17:10:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T17:15:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T17:20:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T17:25:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T17:30:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T17:35:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T17:40:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T17:45:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T17:50:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T17:55:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T18:00:45Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T18:05:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T18:10:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T18:15:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T18:20:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T18:25:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T18:30:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T18:35:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T18:40:39Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T18:45:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T18:50:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T18:55:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T19:00:44Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T19:05:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T19:10:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T19:15:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T19:20:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T19:25:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T19:30:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T19:35:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T19:40:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T19:45:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T19:50:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-02-28T19:55:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T20:00:42Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T20:05:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T20:10:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T20:15:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T20:20:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T20:25:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T20:30:39Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T20:35:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T20:40:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T20:45:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T20:50:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T20:55:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T21:00:42Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T21:05:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T21:10:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T21:15:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T21:20:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T21:25:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T21:30:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T21:35:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T21:40:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T21:45:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T21:50:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T21:55:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T22:00:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T22:05:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T22:10:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T22:15:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T22:20:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T22:25:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T22:30:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T22:35:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T22:40:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T22:45:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T22:50:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T22:55:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T23:00:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T23:05:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T23:10:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T23:15:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T23:20:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T23:25:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T23:30:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T23:35:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T23:40:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T23:45:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T23:50:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-02-28T23:55:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-03-01T00:00:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-03-01T00:05:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-03-01T00:10:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-03-01T00:15:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 525
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-03-01T00:20:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 550
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -800
+      }
+    },
+    {
+      "timestamp": "2026-03-01T00:25:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 550
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -800
+      }
+    },
+    {
+      "timestamp": "2026-03-01T00:30:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 550
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -800
+      }
+    },
+    {
+      "timestamp": "2026-03-01T00:35:38Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 550
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -800
+      }
+    },
+    {
+      "timestamp": "2026-03-01T00:40:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 575
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -850
+      }
+    },
+    {
+      "timestamp": "2026-03-01T00:45:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 520
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -850
+      }
+    },
+    {
+      "timestamp": "2026-03-01T00:50:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 520
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -850
+      }
+    },
+    {
+      "timestamp": "2026-03-01T00:55:37Z",
+      "fighter1": {
+        "name": "Jose Daniel Medina",
+        "numericOdds": 520
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -850
+      }
     }
-  ],
-  "createdAt": "2026-03-01T00:45:17.538Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Ryan Gandra",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:52:18.354Z",
-    "openingF1Odds": -720,
-    "openingF2Odds": 520,
-    "closingF1Odds": -800,
-    "closingF2Odds": 490,
-    "lineMovementF1": -80,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": null,
-    "inferredFinishRound": null,
-    "peakOddsSwing": 80,
-    "finishSpeed": "decision",
-    "preFightSteam": -80,
-    "dominanceScore": 100,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.489Z"
-  }
+  ]
 }

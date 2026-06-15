@@ -1,3577 +1,4662 @@
 {
-  "fightId": "jafelfilho_vs_codydurden",
-  "fightTitle": "Connected but no betting buttons found",
-  "startTime": "2026-04-25T22:33:16.364Z",
-  "endTime": "2026-04-25T22:51:45.712Z",
-  "duration": 1109348,
-  "dataPoints": 236,
+  "fightId": "jafelfilho_vs_codydurden_2026-04-25",
+  "fightTitle": "Jafel Filho vs Cody Durden",
+  "startTime": "2026-04-24T11:55:38Z",
+  "endTime": "2026-04-25T23:05:37Z",
+  "dataPoints": 423,
   "oddsHistory": [
     {
-      "timestamp": "2026-04-25T22:33:16.364Z",
+      "timestamp": "2026-04-24T11:55:38Z",
       "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "fighter2": {
         "name": "Cody Durden",
-        "odds": "+480",
-        "numericOdds": 480
-      },
-      "isLocked": false,
-      "extractionId": 4
-    },
-    {
-      "timestamp": "2026-04-25T22:33:19.374Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+480",
-        "numericOdds": 480
-      },
-      "isLocked": false,
-      "extractionId": 2
-    },
-    {
-      "timestamp": "2026-04-25T22:33:22.382Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+480",
-        "numericOdds": 480
-      },
-      "isLocked": false,
-      "extractionId": 3
-    },
-    {
-      "timestamp": "2026-04-25T22:33:25.391Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+480",
-        "numericOdds": 480
-      },
-      "isLocked": false,
-      "extractionId": 4
-    },
-    {
-      "timestamp": "2026-04-25T22:33:28.397Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+480",
-        "numericOdds": 480
-      },
-      "isLocked": false,
-      "extractionId": 5
-    },
-    {
-      "timestamp": "2026-04-25T22:33:31.410Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+480",
-        "numericOdds": 480
-      },
-      "isLocked": false,
-      "extractionId": 6
-    },
-    {
-      "timestamp": "2026-04-25T22:33:34.422Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+480",
-        "numericOdds": 480
-      },
-      "isLocked": false,
-      "extractionId": 7
-    },
-    {
-      "timestamp": "2026-04-25T22:33:37.431Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+480",
-        "numericOdds": 480
-      },
-      "isLocked": false,
-      "extractionId": 8
-    },
-    {
-      "timestamp": "2026-04-25T22:33:40.446Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+480",
-        "numericOdds": 480
-      },
-      "isLocked": false,
-      "extractionId": 9
-    },
-    {
-      "timestamp": "2026-04-25T22:33:43.445Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+480",
-        "numericOdds": 480
-      },
-      "isLocked": false,
-      "extractionId": 10
-    },
-    {
-      "timestamp": "2026-04-25T22:33:46.450Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+480",
-        "numericOdds": 480
-      },
-      "isLocked": false,
-      "extractionId": 11
-    },
-    {
-      "timestamp": "2026-04-25T22:33:49.463Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+480",
-        "numericOdds": 480
-      },
-      "isLocked": false,
-      "extractionId": 12
-    },
-    {
-      "timestamp": "2026-04-25T22:33:52.465Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+480",
-        "numericOdds": 480
-      },
-      "isLocked": false,
-      "extractionId": 13
-    },
-    {
-      "timestamp": "2026-04-25T22:33:55.479Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+480",
-        "numericOdds": 480
-      },
-      "isLocked": false,
-      "extractionId": 14
-    },
-    {
-      "timestamp": "2026-04-25T22:33:58.493Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+480",
-        "numericOdds": 480
-      },
-      "isLocked": false,
-      "extractionId": 15
-    },
-    {
-      "timestamp": "2026-04-25T22:34:01.498Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+480",
-        "numericOdds": 480
-      },
-      "isLocked": false,
-      "extractionId": 16
-    },
-    {
-      "timestamp": "2026-04-25T22:34:04.514Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+480",
-        "numericOdds": 480
-      },
-      "isLocked": false,
-      "extractionId": 17
-    },
-    {
-      "timestamp": "2026-04-25T22:34:07.520Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+480",
-        "numericOdds": 480
-      },
-      "isLocked": false,
-      "extractionId": 18
-    },
-    {
-      "timestamp": "2026-04-25T22:34:10.534Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+480",
-        "numericOdds": 480
-      },
-      "isLocked": false,
-      "extractionId": 19
-    },
-    {
-      "timestamp": "2026-04-25T22:34:13.535Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+480",
-        "numericOdds": 480
-      },
-      "isLocked": false,
-      "extractionId": 20
-    },
-    {
-      "timestamp": "2026-04-25T22:34:16.540Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+480",
-        "numericOdds": 480
-      },
-      "isLocked": false,
-      "extractionId": 21
-    },
-    {
-      "timestamp": "2026-04-25T22:34:19.547Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+480",
-        "numericOdds": 480
-      },
-      "isLocked": false,
-      "extractionId": 22
-    },
-    {
-      "timestamp": "2026-04-25T22:34:22.547Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+480",
-        "numericOdds": 480
-      },
-      "isLocked": false,
-      "extractionId": 23
-    },
-    {
-      "timestamp": "2026-04-25T22:34:25.548Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+450",
-        "numericOdds": 450
-      },
-      "isLocked": false,
-      "extractionId": 24
-    },
-    {
-      "timestamp": "2026-04-25T22:34:28.551Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+450",
-        "numericOdds": 450
-      },
-      "isLocked": false,
-      "extractionId": 25
-    },
-    {
-      "timestamp": "2026-04-25T22:34:31.559Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+450",
-        "numericOdds": 450
-      },
-      "isLocked": false,
-      "extractionId": 26
-    },
-    {
-      "timestamp": "2026-04-25T22:34:34.562Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+450",
-        "numericOdds": 450
-      },
-      "isLocked": false,
-      "extractionId": 27
-    },
-    {
-      "timestamp": "2026-04-25T22:34:37.569Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+450",
-        "numericOdds": 450
-      },
-      "isLocked": false,
-      "extractionId": 28
-    },
-    {
-      "timestamp": "2026-04-25T22:34:40.576Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+450",
-        "numericOdds": 450
-      },
-      "isLocked": false,
-      "extractionId": 29
-    },
-    {
-      "timestamp": "2026-04-25T22:34:43.580Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+450",
-        "numericOdds": 450
-      },
-      "isLocked": false,
-      "extractionId": 30
-    },
-    {
-      "timestamp": "2026-04-25T22:34:46.586Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+450",
-        "numericOdds": 450
-      },
-      "isLocked": false,
-      "extractionId": 31
-    },
-    {
-      "timestamp": "2026-04-25T22:34:49.591Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+450",
-        "numericOdds": 450
-      },
-      "isLocked": false,
-      "extractionId": 32
-    },
-    {
-      "timestamp": "2026-04-25T22:34:52.593Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+450",
-        "numericOdds": 450
-      },
-      "isLocked": false,
-      "extractionId": 33
-    },
-    {
-      "timestamp": "2026-04-25T22:34:55.594Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+450",
-        "numericOdds": 450
-      },
-      "isLocked": false,
-      "extractionId": 34
-    },
-    {
-      "timestamp": "2026-04-25T22:34:58.605Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+450",
-        "numericOdds": 450
-      },
-      "isLocked": false,
-      "extractionId": 35
-    },
-    {
-      "timestamp": "2026-04-25T22:35:01.610Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+450",
-        "numericOdds": 450
-      },
-      "isLocked": false,
-      "extractionId": 36
-    },
-    {
-      "timestamp": "2026-04-25T22:35:04.616Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+450",
-        "numericOdds": 450
-      },
-      "isLocked": false,
-      "extractionId": 37
-    },
-    {
-      "timestamp": "2026-04-25T22:35:07.620Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+450",
-        "numericOdds": 450
-      },
-      "isLocked": false,
-      "extractionId": 38
-    },
-    {
-      "timestamp": "2026-04-25T22:35:10.635Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+450",
-        "numericOdds": 450
-      },
-      "isLocked": false,
-      "extractionId": 39
-    },
-    {
-      "timestamp": "2026-04-25T22:35:13.649Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+450",
-        "numericOdds": 450
-      },
-      "isLocked": false,
-      "extractionId": 40
-    },
-    {
-      "timestamp": "2026-04-25T22:35:16.653Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+450",
-        "numericOdds": 450
-      },
-      "isLocked": false,
-      "extractionId": 41
-    },
-    {
-      "timestamp": "2026-04-25T22:35:19.667Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+450",
-        "numericOdds": 450
-      },
-      "isLocked": false,
-      "extractionId": 42
-    },
-    {
-      "timestamp": "2026-04-25T22:35:22.671Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+450",
-        "numericOdds": 450
-      },
-      "isLocked": false,
-      "extractionId": 43
-    },
-    {
-      "timestamp": "2026-04-25T22:35:25.673Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+450",
-        "numericOdds": 450
-      },
-      "isLocked": false,
-      "extractionId": 44
-    },
-    {
-      "timestamp": "2026-04-25T22:35:28.677Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+450",
-        "numericOdds": 450
-      },
-      "isLocked": false,
-      "extractionId": 45
-    },
-    {
-      "timestamp": "2026-04-25T22:35:31.682Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+450",
-        "numericOdds": 450
-      },
-      "isLocked": false,
-      "extractionId": 46
-    },
-    {
-      "timestamp": "2026-04-25T22:35:34.684Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+450",
-        "numericOdds": 450
-      },
-      "isLocked": false,
-      "extractionId": 47
-    },
-    {
-      "timestamp": "2026-04-25T22:35:37.698Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+450",
-        "numericOdds": 450
-      },
-      "isLocked": false,
-      "extractionId": 48
-    },
-    {
-      "timestamp": "2026-04-25T22:35:40.710Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+440",
-        "numericOdds": 440
-      },
-      "isLocked": false,
-      "extractionId": 49
-    },
-    {
-      "timestamp": "2026-04-25T22:36:13.770Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-600",
-        "numericOdds": -600
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+370",
-        "numericOdds": 370
-      },
-      "isLocked": false,
-      "extractionId": 50
-    },
-    {
-      "timestamp": "2026-04-25T22:36:16.772Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-600",
-        "numericOdds": -600
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+370",
-        "numericOdds": 370
-      },
-      "isLocked": false,
-      "extractionId": 2
-    },
-    {
-      "timestamp": "2026-04-25T22:36:19.776Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-600",
-        "numericOdds": -600
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+370",
-        "numericOdds": 370
-      },
-      "isLocked": false,
-      "extractionId": 3
-    },
-    {
-      "timestamp": "2026-04-25T22:36:22.791Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-600",
-        "numericOdds": -600
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+370",
-        "numericOdds": 370
-      },
-      "isLocked": false,
-      "extractionId": 4
-    },
-    {
-      "timestamp": "2026-04-25T22:36:25.795Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-600",
-        "numericOdds": -600
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+370",
-        "numericOdds": 370
-      },
-      "isLocked": false,
-      "extractionId": 5
-    },
-    {
-      "timestamp": "2026-04-25T22:36:28.800Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-600",
-        "numericOdds": -600
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+370",
-        "numericOdds": 370
-      },
-      "isLocked": false,
-      "extractionId": 6
-    },
-    {
-      "timestamp": "2026-04-25T22:36:31.813Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-600",
-        "numericOdds": -600
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+370",
-        "numericOdds": 370
-      },
-      "isLocked": false,
-      "extractionId": 7
-    },
-    {
-      "timestamp": "2026-04-25T22:36:34.821Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-600",
-        "numericOdds": -600
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+370",
-        "numericOdds": 370
-      },
-      "isLocked": false,
-      "extractionId": 8
-    },
-    {
-      "timestamp": "2026-04-25T22:36:37.826Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-600",
-        "numericOdds": -600
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+370",
-        "numericOdds": 370
-      },
-      "isLocked": false,
-      "extractionId": 9
-    },
-    {
-      "timestamp": "2026-04-25T22:36:46.841Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-410",
-        "numericOdds": -410
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+290",
-        "numericOdds": 290
-      },
-      "isLocked": false,
-      "extractionId": 10
-    },
-    {
-      "timestamp": "2026-04-25T22:36:55.858Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-450",
-        "numericOdds": -450
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+310",
-        "numericOdds": 310
-      },
-      "isLocked": false,
-      "extractionId": 2
-    },
-    {
-      "timestamp": "2026-04-25T22:36:58.858Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-450",
-        "numericOdds": -450
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+310",
-        "numericOdds": 310
-      },
-      "isLocked": false,
-      "extractionId": 2
-    },
-    {
-      "timestamp": "2026-04-25T22:37:01.860Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-450",
-        "numericOdds": -450
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+310",
-        "numericOdds": 310
-      },
-      "isLocked": false,
-      "extractionId": 3
-    },
-    {
-      "timestamp": "2026-04-25T22:37:04.861Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-450",
-        "numericOdds": -450
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+310",
-        "numericOdds": 310
-      },
-      "isLocked": false,
-      "extractionId": 4
-    },
-    {
-      "timestamp": "2026-04-25T22:37:07.865Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-450",
-        "numericOdds": -450
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+310",
-        "numericOdds": 310
-      },
-      "isLocked": false,
-      "extractionId": 5
-    },
-    {
-      "timestamp": "2026-04-25T22:37:16.891Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-480",
-        "numericOdds": -480
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+330",
-        "numericOdds": 330
-      },
-      "isLocked": false,
-      "extractionId": 6
-    },
-    {
-      "timestamp": "2026-04-25T22:37:19.895Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-550",
-        "numericOdds": -550
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+350",
-        "numericOdds": 350
-      },
-      "isLocked": false,
-      "extractionId": 2
-    },
-    {
-      "timestamp": "2026-04-25T22:37:22.909Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-550",
-        "numericOdds": -550
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+350",
-        "numericOdds": 350
-      },
-      "isLocked": false,
-      "extractionId": 3
-    },
-    {
-      "timestamp": "2026-04-25T22:37:25.918Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+400",
-        "numericOdds": 400
-      },
-      "isLocked": false,
-      "extractionId": 4
-    },
-    {
-      "timestamp": "2026-04-25T22:37:28.929Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+400",
-        "numericOdds": 400
-      },
-      "isLocked": false,
-      "extractionId": 5
-    },
-    {
-      "timestamp": "2026-04-25T22:37:56.101Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+420",
-        "numericOdds": 420
-      },
-      "isLocked": false,
-      "extractionId": 6
-    },
-    {
-      "timestamp": "2026-04-25T22:37:59.103Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+420",
-        "numericOdds": 420
-      },
-      "isLocked": false,
-      "extractionId": 2
-    },
-    {
-      "timestamp": "2026-04-25T22:38:02.107Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+420",
-        "numericOdds": 420
-      },
-      "isLocked": false,
-      "extractionId": 3
-    },
-    {
-      "timestamp": "2026-04-25T22:38:05.112Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+420",
-        "numericOdds": 420
-      },
-      "isLocked": false,
-      "extractionId": 4
-    },
-    {
-      "timestamp": "2026-04-25T22:38:08.115Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+420",
-        "numericOdds": 420
-      },
-      "isLocked": false,
-      "extractionId": 5
-    },
-    {
-      "timestamp": "2026-04-25T22:38:26.137Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+420",
-        "numericOdds": 420
-      },
-      "isLocked": false,
-      "extractionId": 6
-    },
-    {
-      "timestamp": "2026-04-25T22:38:29.149Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+420",
-        "numericOdds": 420
-      },
-      "isLocked": false,
-      "extractionId": 2
-    },
-    {
-      "timestamp": "2026-04-25T22:38:32.159Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+420",
-        "numericOdds": 420
-      },
-      "isLocked": false,
-      "extractionId": 3
-    },
-    {
-      "timestamp": "2026-04-25T22:38:35.164Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+420",
-        "numericOdds": 420
-      },
-      "isLocked": false,
-      "extractionId": 4
-    },
-    {
-      "timestamp": "2026-04-25T22:38:38.170Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+420",
-        "numericOdds": 420
-      },
-      "isLocked": false,
-      "extractionId": 5
-    },
-    {
-      "timestamp": "2026-04-25T22:38:41.172Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+400",
-        "numericOdds": 400
-      },
-      "isLocked": false,
-      "extractionId": 6
-    },
-    {
-      "timestamp": "2026-04-25T22:38:44.185Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+400",
-        "numericOdds": 400
-      },
-      "isLocked": false,
-      "extractionId": 7
-    },
-    {
-      "timestamp": "2026-04-25T22:38:47.198Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+400",
-        "numericOdds": 400
-      },
-      "isLocked": false,
-      "extractionId": 8
-    },
-    {
-      "timestamp": "2026-04-25T22:38:50.199Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+400",
-        "numericOdds": 400
-      },
-      "isLocked": false,
-      "extractionId": 9
-    },
-    {
-      "timestamp": "2026-04-25T22:38:53.202Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-600",
-        "numericOdds": -600
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+370",
-        "numericOdds": 370
-      },
-      "isLocked": false,
-      "extractionId": 10
-    },
-    {
-      "timestamp": "2026-04-25T22:39:08.227Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-205",
-        "numericOdds": -205
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+158",
-        "numericOdds": 158
-      },
-      "isLocked": false,
-      "extractionId": 11
-    },
-    {
-      "timestamp": "2026-04-25T22:39:23.246Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-172",
-        "numericOdds": -172
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+134",
-        "numericOdds": 134
-      },
-      "isLocked": false,
-      "extractionId": 2
-    },
-    {
-      "timestamp": "2026-04-25T22:39:26.258Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-172",
-        "numericOdds": -172
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+134",
-        "numericOdds": 134
-      },
-      "isLocked": false,
-      "extractionId": 2
-    },
-    {
-      "timestamp": "2026-04-25T22:39:29.262Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-172",
-        "numericOdds": -172
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+134",
-        "numericOdds": 134
-      },
-      "isLocked": false,
-      "extractionId": 3
-    },
-    {
-      "timestamp": "2026-04-25T22:39:32.278Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-172",
-        "numericOdds": -172
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+134",
-        "numericOdds": 134
-      },
-      "isLocked": false,
-      "extractionId": 4
-    },
-    {
-      "timestamp": "2026-04-25T22:39:35.286Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-172",
-        "numericOdds": -172
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+134",
-        "numericOdds": 134
-      },
-      "isLocked": false,
-      "extractionId": 5
-    },
-    {
-      "timestamp": "2026-04-25T22:39:38.293Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-172",
-        "numericOdds": -172
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+134",
-        "numericOdds": 134
-      },
-      "isLocked": false,
-      "extractionId": 6
-    },
-    {
-      "timestamp": "2026-04-25T22:40:08.356Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-360",
-        "numericOdds": -360
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+250",
-        "numericOdds": 250
-      },
-      "isLocked": false,
-      "extractionId": 7
-    },
-    {
-      "timestamp": "2026-04-25T22:40:11.362Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-360",
-        "numericOdds": -360
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+250",
-        "numericOdds": 250
-      },
-      "isLocked": false,
-      "extractionId": 2
-    },
-    {
-      "timestamp": "2026-04-25T22:40:14.368Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-360",
-        "numericOdds": -360
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+250",
-        "numericOdds": 250
-      },
-      "isLocked": false,
-      "extractionId": 3
-    },
-    {
-      "timestamp": "2026-04-25T22:40:17.383Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-360",
-        "numericOdds": -360
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+250",
-        "numericOdds": 250
-      },
-      "isLocked": false,
-      "extractionId": 4
-    },
-    {
-      "timestamp": "2026-04-25T22:40:20.386Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-360",
-        "numericOdds": -360
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+250",
-        "numericOdds": 250
-      },
-      "isLocked": false,
-      "extractionId": 5
-    },
-    {
-      "timestamp": "2026-04-25T22:40:23.394Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-360",
-        "numericOdds": -360
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+250",
-        "numericOdds": 250
-      },
-      "isLocked": false,
-      "extractionId": 6
-    },
-    {
-      "timestamp": "2026-04-25T22:40:26.406Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-360",
-        "numericOdds": -360
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+250",
-        "numericOdds": 250
-      },
-      "isLocked": false,
-      "extractionId": 7
-    },
-    {
-      "timestamp": "2026-04-25T22:40:29.408Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-360",
-        "numericOdds": -360
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+250",
-        "numericOdds": 250
-      },
-      "isLocked": false,
-      "extractionId": 8
-    },
-    {
-      "timestamp": "2026-04-25T22:40:32.411Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-550",
-        "numericOdds": -550
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+350",
-        "numericOdds": 350
-      },
-      "isLocked": false,
-      "extractionId": 9
-    },
-    {
-      "timestamp": "2026-04-25T22:40:35.416Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-550",
-        "numericOdds": -550
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+350",
-        "numericOdds": 350
-      },
-      "isLocked": false,
-      "extractionId": 10
-    },
-    {
-      "timestamp": "2026-04-25T22:40:38.422Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-550",
-        "numericOdds": -550
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+350",
-        "numericOdds": 350
-      },
-      "isLocked": false,
-      "extractionId": 11
-    },
-    {
-      "timestamp": "2026-04-25T22:40:41.432Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-550",
-        "numericOdds": -550
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+350",
-        "numericOdds": 350
-      },
-      "isLocked": false,
-      "extractionId": 12
-    },
-    {
-      "timestamp": "2026-04-25T22:40:44.433Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-460",
-        "numericOdds": -460
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+320",
-        "numericOdds": 320
-      },
-      "isLocked": false,
-      "extractionId": 13
-    },
-    {
-      "timestamp": "2026-04-25T22:40:47.444Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-460",
-        "numericOdds": -460
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+320",
-        "numericOdds": 320
-      },
-      "isLocked": false,
-      "extractionId": 14
-    },
-    {
-      "timestamp": "2026-04-25T22:40:50.446Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-460",
-        "numericOdds": -460
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+320",
-        "numericOdds": 320
-      },
-      "isLocked": false,
-      "extractionId": 15
-    },
-    {
-      "timestamp": "2026-04-25T22:41:47.532Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-235",
-        "numericOdds": -235
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+180",
-        "numericOdds": 180
-      },
-      "isLocked": false,
-      "extractionId": 16
-    },
-    {
-      "timestamp": "2026-04-25T22:41:50.545Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-235",
-        "numericOdds": -235
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+180",
-        "numericOdds": 180
-      },
-      "isLocked": false,
-      "extractionId": 2
-    },
-    {
-      "timestamp": "2026-04-25T22:41:53.549Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-235",
-        "numericOdds": -235
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+180",
-        "numericOdds": 180
-      },
-      "isLocked": false,
-      "extractionId": 3
-    },
-    {
-      "timestamp": "2026-04-25T22:41:56.564Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-235",
-        "numericOdds": -235
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+180",
-        "numericOdds": 180
-      },
-      "isLocked": false,
-      "extractionId": 4
-    },
-    {
-      "timestamp": "2026-04-25T22:41:59.566Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-215",
-        "numericOdds": -215
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+164",
-        "numericOdds": 164
-      },
-      "isLocked": false,
-      "extractionId": 5
-    },
-    {
-      "timestamp": "2026-04-25T22:42:02.572Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-215",
-        "numericOdds": -215
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+164",
-        "numericOdds": 164
-      },
-      "isLocked": false,
-      "extractionId": 6
-    },
-    {
-      "timestamp": "2026-04-25T22:42:05.575Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-215",
-        "numericOdds": -215
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+164",
-        "numericOdds": 164
-      },
-      "isLocked": false,
-      "extractionId": 7
-    },
-    {
-      "timestamp": "2026-04-25T22:42:08.578Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-215",
-        "numericOdds": -215
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+164",
-        "numericOdds": 164
-      },
-      "isLocked": false,
-      "extractionId": 8
-    },
-    {
-      "timestamp": "2026-04-25T22:42:11.580Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-215",
-        "numericOdds": -215
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+164",
-        "numericOdds": 164
-      },
-      "isLocked": false,
-      "extractionId": 9
-    },
-    {
-      "timestamp": "2026-04-25T22:42:14.588Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-215",
-        "numericOdds": -215
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+164",
-        "numericOdds": 164
-      },
-      "isLocked": false,
-      "extractionId": 10
-    },
-    {
-      "timestamp": "2026-04-25T22:42:17.594Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-176",
-        "numericOdds": -176
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "isLocked": false,
-      "extractionId": 11
-    },
-    {
-      "timestamp": "2026-04-25T22:42:20.599Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-176",
-        "numericOdds": -176
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "isLocked": false,
-      "extractionId": 12
-    },
-    {
-      "timestamp": "2026-04-25T22:43:08.702Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+112",
-        "numericOdds": 112
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-142",
-        "numericOdds": -142
-      },
-      "isLocked": false,
-      "extractionId": 13
-    },
-    {
-      "timestamp": "2026-04-25T22:43:11.704Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+112",
-        "numericOdds": 112
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-142",
-        "numericOdds": -142
-      },
-      "isLocked": false,
-      "extractionId": 2
-    },
-    {
-      "timestamp": "2026-04-25T22:43:14.706Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+112",
-        "numericOdds": 112
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-142",
-        "numericOdds": -142
-      },
-      "isLocked": false,
-      "extractionId": 3
-    },
-    {
-      "timestamp": "2026-04-25T22:43:17.708Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+112",
-        "numericOdds": 112
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-142",
-        "numericOdds": -142
-      },
-      "isLocked": false,
-      "extractionId": 4
-    },
-    {
-      "timestamp": "2026-04-25T22:43:20.720Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+128",
-        "numericOdds": 128
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-164",
-        "numericOdds": -164
-      },
-      "isLocked": false,
-      "extractionId": 5
-    },
-    {
-      "timestamp": "2026-04-25T22:43:23.723Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+128",
-        "numericOdds": 128
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-164",
-        "numericOdds": -164
-      },
-      "isLocked": false,
-      "extractionId": 6
-    },
-    {
-      "timestamp": "2026-04-25T22:43:26.733Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+128",
-        "numericOdds": 128
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-164",
-        "numericOdds": -164
-      },
-      "isLocked": false,
-      "extractionId": 7
-    },
-    {
-      "timestamp": "2026-04-25T22:43:53.794Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+128",
-        "numericOdds": 128
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-164",
-        "numericOdds": -164
-      },
-      "isLocked": false,
-      "extractionId": 8
-    },
-    {
-      "timestamp": "2026-04-25T22:43:56.795Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+128",
-        "numericOdds": 128
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-164",
-        "numericOdds": -164
-      },
-      "isLocked": false,
-      "extractionId": 2
-    },
-    {
-      "timestamp": "2026-04-25T22:43:59.798Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+128",
-        "numericOdds": 128
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-164",
-        "numericOdds": -164
-      },
-      "isLocked": false,
-      "extractionId": 3
-    },
-    {
-      "timestamp": "2026-04-25T22:44:02.800Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+128",
-        "numericOdds": 128
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-164",
-        "numericOdds": -164
-      },
-      "isLocked": false,
-      "extractionId": 4
-    },
-    {
-      "timestamp": "2026-04-25T22:44:05.806Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+148",
-        "numericOdds": 148
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-190",
-        "numericOdds": -190
-      },
-      "isLocked": false,
-      "extractionId": 5
-    },
-    {
-      "timestamp": "2026-04-25T22:44:08.820Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+148",
-        "numericOdds": 148
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-190",
-        "numericOdds": -190
-      },
-      "isLocked": false,
-      "extractionId": 6
-    },
-    {
-      "timestamp": "2026-04-25T22:44:11.821Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+148",
-        "numericOdds": 148
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-190",
-        "numericOdds": -190
-      },
-      "isLocked": false,
-      "extractionId": 7
-    },
-    {
-      "timestamp": "2026-04-25T22:44:23.842Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+180",
-        "numericOdds": 180
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-235",
-        "numericOdds": -235
-      },
-      "isLocked": false,
-      "extractionId": 8
-    },
-    {
-      "timestamp": "2026-04-25T22:44:26.841Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+180",
-        "numericOdds": 180
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-235",
-        "numericOdds": -235
-      },
-      "isLocked": false,
-      "extractionId": 2
-    },
-    {
-      "timestamp": "2026-04-25T22:44:29.853Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+180",
-        "numericOdds": 180
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-235",
-        "numericOdds": -235
-      },
-      "isLocked": false,
-      "extractionId": 3
-    },
-    {
-      "timestamp": "2026-04-25T22:44:32.855Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+180",
-        "numericOdds": 180
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-235",
-        "numericOdds": -235
-      },
-      "isLocked": false,
-      "extractionId": 4
-    },
-    {
-      "timestamp": "2026-04-25T22:44:35.857Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+180",
-        "numericOdds": 180
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-235",
-        "numericOdds": -235
-      },
-      "isLocked": false,
-      "extractionId": 5
-    },
-    {
-      "timestamp": "2026-04-25T22:44:44.867Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+112",
-        "numericOdds": 112
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-142",
-        "numericOdds": -142
-      },
-      "isLocked": false,
-      "extractionId": 6
-    },
-    {
-      "timestamp": "2026-04-25T22:44:47.873Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+112",
-        "numericOdds": 112
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-142",
-        "numericOdds": -142
-      },
-      "isLocked": false,
-      "extractionId": 2
-    },
-    {
-      "timestamp": "2026-04-25T22:44:50.877Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+112",
-        "numericOdds": 112
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-142",
-        "numericOdds": -142
-      },
-      "isLocked": false,
-      "extractionId": 3
-    },
-    {
-      "timestamp": "2026-04-25T22:44:53.885Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+112",
-        "numericOdds": 112
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-142",
-        "numericOdds": -142
-      },
-      "isLocked": false,
-      "extractionId": 4
-    },
-    {
-      "timestamp": "2026-04-25T22:44:56.892Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+112",
-        "numericOdds": 112
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-142",
-        "numericOdds": -142
-      },
-      "isLocked": false,
-      "extractionId": 5
-    },
-    {
-      "timestamp": "2026-04-25T22:44:59.896Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+112",
-        "numericOdds": 112
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-142",
-        "numericOdds": -142
-      },
-      "isLocked": false,
-      "extractionId": 6
-    },
-    {
-      "timestamp": "2026-04-25T22:45:02.899Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+112",
-        "numericOdds": 112
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-142",
-        "numericOdds": -142
-      },
-      "isLocked": false,
-      "extractionId": 7
-    },
-    {
-      "timestamp": "2026-04-25T22:45:14.910Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-102",
-        "numericOdds": -102
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-124",
-        "numericOdds": -124
-      },
-      "isLocked": false,
-      "extractionId": 8
-    },
-    {
-      "timestamp": "2026-04-25T22:45:17.917Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-102",
-        "numericOdds": -102
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-124",
-        "numericOdds": -124
-      },
-      "isLocked": false,
-      "extractionId": 2
-    },
-    {
-      "timestamp": "2026-04-25T22:45:20.917Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-102",
-        "numericOdds": -102
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-124",
-        "numericOdds": -124
-      },
-      "isLocked": false,
-      "extractionId": 3
-    },
-    {
-      "timestamp": "2026-04-25T22:45:23.930Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-102",
-        "numericOdds": -102
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-124",
-        "numericOdds": -124
-      },
-      "isLocked": false,
-      "extractionId": 4
-    },
-    {
-      "timestamp": "2026-04-25T22:45:26.935Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-102",
-        "numericOdds": -102
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-124",
-        "numericOdds": -124
-      },
-      "isLocked": false,
-      "extractionId": 5
-    },
-    {
-      "timestamp": "2026-04-25T22:45:29.948Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-102",
-        "numericOdds": -102
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-124",
-        "numericOdds": -124
-      },
-      "isLocked": false,
-      "extractionId": 6
-    },
-    {
-      "timestamp": "2026-04-25T22:45:32.963Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-102",
-        "numericOdds": -102
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-124",
-        "numericOdds": -124
-      },
-      "isLocked": false,
-      "extractionId": 7
-    },
-    {
-      "timestamp": "2026-04-25T22:45:50.995Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-235",
-        "numericOdds": -235
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+180",
-        "numericOdds": 180
-      },
-      "isLocked": false,
-      "extractionId": 8
-    },
-    {
-      "timestamp": "2026-04-25T22:45:53.996Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-235",
-        "numericOdds": -235
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+180",
-        "numericOdds": 180
-      },
-      "isLocked": false,
-      "extractionId": 2
-    },
-    {
-      "timestamp": "2026-04-25T22:45:57.005Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-250",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+188",
-        "numericOdds": 188
-      },
-      "isLocked": false,
-      "extractionId": 3
-    },
-    {
-      "timestamp": "2026-04-25T22:46:00.007Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-250",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+188",
-        "numericOdds": 188
-      },
-      "isLocked": false,
-      "extractionId": 4
-    },
-    {
-      "timestamp": "2026-04-25T22:46:03.012Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-250",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+188",
-        "numericOdds": 188
-      },
-      "isLocked": false,
-      "extractionId": 5
-    },
-    {
-      "timestamp": "2026-04-25T22:46:06.013Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-250",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+188",
-        "numericOdds": 188
-      },
-      "isLocked": false,
-      "extractionId": 6
-    },
-    {
-      "timestamp": "2026-04-25T22:46:09.015Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-250",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+188",
-        "numericOdds": 188
-      },
-      "isLocked": false,
-      "extractionId": 7
-    },
-    {
-      "timestamp": "2026-04-25T22:46:42.063Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-215",
-        "numericOdds": -215
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+166",
-        "numericOdds": 166
-      },
-      "isLocked": false,
-      "extractionId": 8
-    },
-    {
-      "timestamp": "2026-04-25T22:46:45.077Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-215",
-        "numericOdds": -215
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+166",
-        "numericOdds": 166
-      },
-      "isLocked": false,
-      "extractionId": 2
-    },
-    {
-      "timestamp": "2026-04-25T22:46:48.078Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-215",
-        "numericOdds": -215
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+166",
-        "numericOdds": 166
-      },
-      "isLocked": false,
-      "extractionId": 3
-    },
-    {
-      "timestamp": "2026-04-25T22:46:51.082Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-210",
-        "numericOdds": -210
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+162",
-        "numericOdds": 162
-      },
-      "isLocked": false,
-      "extractionId": 4
-    },
-    {
-      "timestamp": "2026-04-25T22:46:54.087Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-210",
-        "numericOdds": -210
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+162",
-        "numericOdds": 162
-      },
-      "isLocked": false,
-      "extractionId": 5
-    },
-    {
-      "timestamp": "2026-04-25T22:46:57.093Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-210",
-        "numericOdds": -210
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+162",
-        "numericOdds": 162
-      },
-      "isLocked": false,
-      "extractionId": 6
-    },
-    {
-      "timestamp": "2026-04-25T22:47:00.107Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-210",
-        "numericOdds": -210
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+162",
-        "numericOdds": 162
-      },
-      "isLocked": false,
-      "extractionId": 7
-    },
-    {
-      "timestamp": "2026-04-25T22:47:03.112Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-210",
-        "numericOdds": -210
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+162",
-        "numericOdds": 162
-      },
-      "isLocked": false,
-      "extractionId": 8
-    },
-    {
-      "timestamp": "2026-04-25T22:47:12.121Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-182",
-        "numericOdds": -182
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+144",
-        "numericOdds": 144
-      },
-      "isLocked": false,
-      "extractionId": 9
-    },
-    {
-      "timestamp": "2026-04-25T22:47:15.124Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-182",
-        "numericOdds": -182
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+144",
-        "numericOdds": 144
-      },
-      "isLocked": false,
-      "extractionId": 2
-    },
-    {
-      "timestamp": "2026-04-25T22:47:18.136Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-182",
-        "numericOdds": -182
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+144",
-        "numericOdds": 144
-      },
-      "isLocked": false,
-      "extractionId": 3
-    },
-    {
-      "timestamp": "2026-04-25T22:47:21.151Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-182",
-        "numericOdds": -182
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+144",
-        "numericOdds": 144
-      },
-      "isLocked": false,
-      "extractionId": 4
-    },
-    {
-      "timestamp": "2026-04-25T22:47:24.156Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-182",
-        "numericOdds": -182
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+144",
-        "numericOdds": 144
-      },
-      "isLocked": false,
-      "extractionId": 5
-    },
-    {
-      "timestamp": "2026-04-25T22:47:27.161Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-182",
-        "numericOdds": -182
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+144",
-        "numericOdds": 144
-      },
-      "isLocked": false,
-      "extractionId": 6
-    },
-    {
-      "timestamp": "2026-04-25T22:47:30.172Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-182",
-        "numericOdds": -182
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+144",
-        "numericOdds": 144
-      },
-      "isLocked": false,
-      "extractionId": 7
-    },
-    {
-      "timestamp": "2026-04-25T22:47:42.194Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-160",
-        "numericOdds": -160
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+126",
-        "numericOdds": 126
-      },
-      "isLocked": false,
-      "extractionId": 8
-    },
-    {
-      "timestamp": "2026-04-25T22:47:45.196Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-160",
-        "numericOdds": -160
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+126",
-        "numericOdds": 126
-      },
-      "isLocked": false,
-      "extractionId": 2
-    },
-    {
-      "timestamp": "2026-04-25T22:47:48.198Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-160",
-        "numericOdds": -160
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+126",
-        "numericOdds": 126
-      },
-      "isLocked": false,
-      "extractionId": 3
-    },
-    {
-      "timestamp": "2026-04-25T22:47:51.213Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-160",
-        "numericOdds": -160
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+126",
-        "numericOdds": 126
-      },
-      "isLocked": false,
-      "extractionId": 4
-    },
-    {
-      "timestamp": "2026-04-25T22:47:54.216Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-160",
-        "numericOdds": -160
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+126",
-        "numericOdds": 126
-      },
-      "isLocked": false,
-      "extractionId": 5
-    },
-    {
-      "timestamp": "2026-04-25T22:48:03.234Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-235",
-        "numericOdds": -235
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+180",
-        "numericOdds": 180
-      },
-      "isLocked": false,
-      "extractionId": 6
-    },
-    {
-      "timestamp": "2026-04-25T22:48:06.233Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-270",
-        "numericOdds": -270
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+200",
-        "numericOdds": 200
-      },
-      "isLocked": false,
-      "extractionId": 2
-    },
-    {
-      "timestamp": "2026-04-25T22:48:09.247Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-270",
-        "numericOdds": -270
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+200",
-        "numericOdds": 200
-      },
-      "isLocked": false,
-      "extractionId": 3
-    },
-    {
-      "timestamp": "2026-04-25T22:48:21.274Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-280",
-        "numericOdds": -280
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+210",
-        "numericOdds": 210
-      },
-      "isLocked": false,
-      "extractionId": 4
-    },
-    {
-      "timestamp": "2026-04-25T22:48:24.274Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-280",
-        "numericOdds": -280
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+210",
-        "numericOdds": 210
-      },
-      "isLocked": false,
-      "extractionId": 2
-    },
-    {
-      "timestamp": "2026-04-25T22:48:27.288Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-280",
-        "numericOdds": -280
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+210",
-        "numericOdds": 210
-      },
-      "isLocked": false,
-      "extractionId": 3
-    },
-    {
-      "timestamp": "2026-04-25T22:48:30.303Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-280",
-        "numericOdds": -280
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+210",
-        "numericOdds": 210
-      },
-      "isLocked": false,
-      "extractionId": 4
-    },
-    {
-      "timestamp": "2026-04-25T22:48:33.303Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-280",
-        "numericOdds": -280
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+210",
-        "numericOdds": 210
-      },
-      "isLocked": false,
-      "extractionId": 5
-    },
-    {
-      "timestamp": "2026-04-25T22:48:36.318Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-280",
-        "numericOdds": -280
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+210",
-        "numericOdds": 210
-      },
-      "isLocked": false,
-      "extractionId": 6
-    },
-    {
-      "timestamp": "2026-04-25T22:48:39.328Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-280",
-        "numericOdds": -280
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+210",
-        "numericOdds": 210
-      },
-      "isLocked": false,
-      "extractionId": 7
-    },
-    {
-      "timestamp": "2026-04-25T22:48:42.334Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-280",
-        "numericOdds": -280
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+210",
-        "numericOdds": 210
-      },
-      "isLocked": false,
-      "extractionId": 8
-    },
-    {
-      "timestamp": "2026-04-25T22:48:45.339Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-280",
-        "numericOdds": -280
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+210",
-        "numericOdds": 210
-      },
-      "isLocked": false,
-      "extractionId": 9
-    },
-    {
-      "timestamp": "2026-04-25T22:48:48.353Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-280",
-        "numericOdds": -280
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+210",
-        "numericOdds": 210
-      },
-      "isLocked": false,
-      "extractionId": 10
-    },
-    {
-      "timestamp": "2026-04-25T22:48:51.361Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-280",
-        "numericOdds": -280
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+210",
-        "numericOdds": 210
-      },
-      "isLocked": false,
-      "extractionId": 11
-    },
-    {
-      "timestamp": "2026-04-25T22:48:54.365Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-280",
-        "numericOdds": -280
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+210",
-        "numericOdds": 210
-      },
-      "isLocked": false,
-      "extractionId": 12
-    },
-    {
-      "timestamp": "2026-04-25T22:49:12.406Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-280",
-        "numericOdds": -280
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+210",
-        "numericOdds": 210
-      },
-      "isLocked": false,
-      "extractionId": 13
-    },
-    {
-      "timestamp": "2026-04-25T22:49:15.408Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-280",
-        "numericOdds": -280
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+210",
-        "numericOdds": 210
-      },
-      "isLocked": false,
-      "extractionId": 2
-    },
-    {
-      "timestamp": "2026-04-25T22:49:18.420Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-280",
-        "numericOdds": -280
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+210",
-        "numericOdds": 210
-      },
-      "isLocked": false,
-      "extractionId": 3
-    },
-    {
-      "timestamp": "2026-04-25T22:49:27.446Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-270",
-        "numericOdds": -270
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+200",
-        "numericOdds": 200
-      },
-      "isLocked": false,
-      "extractionId": 4
-    },
-    {
-      "timestamp": "2026-04-25T22:49:30.450Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-270",
-        "numericOdds": -270
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+200",
-        "numericOdds": 200
-      },
-      "isLocked": false,
-      "extractionId": 2
-    },
-    {
-      "timestamp": "2026-04-25T22:49:57.498Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-176",
-        "numericOdds": -176
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "isLocked": false,
-      "extractionId": 3
-    },
-    {
-      "timestamp": "2026-04-25T22:50:00.510Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-176",
-        "numericOdds": -176
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "isLocked": false,
-      "extractionId": 2
-    },
-    {
-      "timestamp": "2026-04-25T22:50:03.515Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-176",
-        "numericOdds": -176
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "isLocked": false,
-      "extractionId": 3
-    },
-    {
-      "timestamp": "2026-04-25T22:50:06.520Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-176",
-        "numericOdds": -176
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "isLocked": false,
-      "extractionId": 4
-    },
-    {
-      "timestamp": "2026-04-25T22:50:09.530Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-176",
-        "numericOdds": -176
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "isLocked": false,
-      "extractionId": 5
-    },
-    {
-      "timestamp": "2026-04-25T22:50:12.532Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-152",
-        "numericOdds": -152
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+120",
-        "numericOdds": 120
-      },
-      "isLocked": false,
-      "extractionId": 6
-    },
-    {
-      "timestamp": "2026-04-25T22:50:15.542Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-152",
-        "numericOdds": -152
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+120",
-        "numericOdds": 120
-      },
-      "isLocked": false,
-      "extractionId": 7
-    },
-    {
-      "timestamp": "2026-04-25T22:50:18.555Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-152",
-        "numericOdds": -152
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+120",
-        "numericOdds": 120
-      },
-      "isLocked": false,
-      "extractionId": 8
-    },
-    {
-      "timestamp": "2026-04-25T22:50:21.557Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-152",
-        "numericOdds": -152
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+120",
-        "numericOdds": 120
-      },
-      "isLocked": false,
-      "extractionId": 9
-    },
-    {
-      "timestamp": "2026-04-25T22:50:24.559Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-152",
-        "numericOdds": -152
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+120",
-        "numericOdds": 120
-      },
-      "isLocked": false,
-      "extractionId": 10
-    },
-    {
-      "timestamp": "2026-04-25T22:50:27.562Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-134",
-        "numericOdds": -134
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+104",
-        "numericOdds": 104
-      },
-      "isLocked": false,
-      "extractionId": 11
-    },
-    {
-      "timestamp": "2026-04-25T22:50:30.570Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "-134",
-        "numericOdds": -134
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "+104",
-        "numericOdds": 104
-      },
-      "isLocked": false,
-      "extractionId": 12
-    },
-    {
-      "timestamp": "2026-04-25T22:51:09.673Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+225",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-310",
-        "numericOdds": -310
-      },
-      "isLocked": false,
-      "extractionId": 13
-    },
-    {
-      "timestamp": "2026-04-25T22:51:12.676Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+225",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-310",
-        "numericOdds": -310
-      },
-      "isLocked": false,
-      "extractionId": 2
-    },
-    {
-      "timestamp": "2026-04-25T22:51:15.679Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+350",
-        "numericOdds": 350
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-550",
-        "numericOdds": -550
-      },
-      "isLocked": false,
-      "extractionId": 3
-    },
-    {
-      "timestamp": "2026-04-25T22:51:18.681Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+440",
-        "numericOdds": 440
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "isLocked": false,
-      "extractionId": 4
-    },
-    {
-      "timestamp": "2026-04-25T22:51:21.686Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+440",
-        "numericOdds": 440
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "isLocked": false,
-      "extractionId": 5
-    },
-    {
-      "timestamp": "2026-04-25T22:51:24.686Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+440",
-        "numericOdds": 440
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "isLocked": false,
-      "extractionId": 6
-    },
-    {
-      "timestamp": "2026-04-25T22:51:27.686Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+440",
-        "numericOdds": 440
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "isLocked": false,
-      "extractionId": 7
-    },
-    {
-      "timestamp": "2026-04-25T22:51:30.689Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+490",
         "numericOdds": 490
       },
       "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-800",
-        "numericOdds": -800
-      },
-      "isLocked": false,
-      "extractionId": 8
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
     },
     {
-      "timestamp": "2026-04-25T22:51:33.691Z",
+      "timestamp": "2026-04-24T12:00:38Z",
       "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+840",
-        "numericOdds": 840
-      },
-      "fighter2": {
         "name": "Cody Durden",
-        "odds": "-1600",
-        "numericOdds": -1600
-      },
-      "isLocked": false,
-      "extractionId": 9
-    },
-    {
-      "timestamp": "2026-04-25T22:51:36.696Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+840",
-        "numericOdds": 840
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-1600",
-        "numericOdds": -1600
-      },
-      "isLocked": false,
-      "extractionId": 10
-    },
-    {
-      "timestamp": "2026-04-25T22:51:39.708Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+840",
-        "numericOdds": 840
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-1600",
-        "numericOdds": -1600
-      },
-      "isLocked": false,
-      "extractionId": 11
-    },
-    {
-      "timestamp": "2026-04-25T22:51:42.709Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+840",
-        "numericOdds": 840
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-1600",
-        "numericOdds": -1600
-      },
-      "isLocked": false,
-      "extractionId": 12
-    },
-    {
-      "timestamp": "2026-04-25T22:51:45.712Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+840",
-        "numericOdds": 840
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-1600",
-        "numericOdds": -1600
-      },
-      "isLocked": false,
-      "extractionId": 13
-    },
-    {
-      "timestamp": "2026-04-25T22:51:09.673Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+225",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-310",
-        "numericOdds": -310
-      },
-      "isLocked": false,
-      "extractionId": 13
-    },
-    {
-      "timestamp": "2026-04-25T22:51:12.676Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+225",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-310",
-        "numericOdds": -310
-      },
-      "isLocked": false,
-      "extractionId": 2
-    },
-    {
-      "timestamp": "2026-04-25T22:51:15.679Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+350",
-        "numericOdds": 350
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-550",
-        "numericOdds": -550
-      },
-      "isLocked": false,
-      "extractionId": 3
-    },
-    {
-      "timestamp": "2026-04-25T22:51:18.681Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+440",
-        "numericOdds": 440
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "isLocked": false,
-      "extractionId": 4
-    },
-    {
-      "timestamp": "2026-04-25T22:51:21.686Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+440",
-        "numericOdds": 440
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "isLocked": false,
-      "extractionId": 5
-    },
-    {
-      "timestamp": "2026-04-25T22:51:24.686Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+440",
-        "numericOdds": 440
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "isLocked": false,
-      "extractionId": 6
-    },
-    {
-      "timestamp": "2026-04-25T22:51:27.686Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+440",
-        "numericOdds": 440
-      },
-      "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "isLocked": false,
-      "extractionId": 7
-    },
-    {
-      "timestamp": "2026-04-25T22:51:30.689Z",
-      "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+490",
         "numericOdds": 490
       },
       "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-800",
-        "numericOdds": -800
-      },
-      "isLocked": false,
-      "extractionId": 8
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
     },
     {
-      "timestamp": "2026-04-25T22:51:33.691Z",
+      "timestamp": "2026-04-24T12:05:38Z",
       "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+840",
-        "numericOdds": 840
+        "name": "Cody Durden",
+        "numericOdds": 490
       },
       "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-1600",
-        "numericOdds": -1600
-      },
-      "isLocked": false,
-      "extractionId": 9
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
     },
     {
-      "timestamp": "2026-04-25T22:51:36.696Z",
+      "timestamp": "2026-04-24T12:10:38Z",
       "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+840",
-        "numericOdds": 840
+        "name": "Cody Durden",
+        "numericOdds": 490
       },
       "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-1600",
-        "numericOdds": -1600
-      },
-      "isLocked": false,
-      "extractionId": 10
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
     },
     {
-      "timestamp": "2026-04-25T22:51:39.708Z",
+      "timestamp": "2026-04-24T12:15:38Z",
       "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+840",
-        "numericOdds": 840
+        "name": "Cody Durden",
+        "numericOdds": 490
       },
       "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-1600",
-        "numericOdds": -1600
-      },
-      "isLocked": false,
-      "extractionId": 11
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
     },
     {
-      "timestamp": "2026-04-25T22:51:42.709Z",
+      "timestamp": "2026-04-24T12:20:38Z",
       "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+840",
-        "numericOdds": 840
+        "name": "Cody Durden",
+        "numericOdds": 490
       },
       "fighter2": {
-        "name": "Cody Durden",
-        "odds": "-1600",
-        "numericOdds": -1600
-      },
-      "isLocked": false,
-      "extractionId": 12
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
     },
     {
-      "timestamp": "2026-04-25T22:51:45.712Z",
+      "timestamp": "2026-04-24T12:25:38Z",
       "fighter1": {
-        "name": "Jafel Filho",
-        "odds": "+840",
-        "numericOdds": 840
+        "name": "Cody Durden",
+        "numericOdds": 490
       },
       "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T12:30:38Z",
+      "fighter1": {
         "name": "Cody Durden",
-        "odds": "-1600",
-        "numericOdds": -1600
+        "numericOdds": 490
       },
-      "isLocked": false,
-      "extractionId": 13
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T12:35:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T12:40:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T12:45:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T12:50:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T12:55:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T13:00:40Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T13:05:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T13:10:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T13:15:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T13:20:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T13:25:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T13:30:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T13:35:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T13:40:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T13:45:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T13:50:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T13:55:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T14:00:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T14:05:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T14:10:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T14:15:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T14:20:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T14:25:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T14:30:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T14:35:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T14:40:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T14:45:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T14:50:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T14:55:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T15:00:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T15:05:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T15:10:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T15:15:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T15:20:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T15:25:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T15:30:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T15:35:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T15:40:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T15:45:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T15:50:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T15:55:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T16:00:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T16:05:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T16:10:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T16:15:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T16:20:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T16:25:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T16:30:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T16:35:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T16:40:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T16:45:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T16:50:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T16:55:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T17:00:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T17:05:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T17:10:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T17:15:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T17:20:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T17:25:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T17:30:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T17:35:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T17:40:39Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T17:45:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T17:50:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T17:55:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T18:00:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T18:05:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T18:10:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T18:15:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T18:20:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T18:25:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T18:30:39Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T18:35:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T18:40:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T18:45:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T18:50:39Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T18:55:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T19:00:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T19:05:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T19:10:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T19:15:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T19:20:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T19:25:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T19:30:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T19:35:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T19:40:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T19:45:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T19:50:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T19:55:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T20:00:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T20:05:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T20:10:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T20:15:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T20:20:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T20:25:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T20:30:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T20:35:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T20:40:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T20:45:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T20:50:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T20:55:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T21:00:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T21:05:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T21:10:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T21:15:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T21:20:40Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T21:25:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T21:30:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T21:35:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T21:40:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T21:45:39Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T21:50:39Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T21:55:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T22:00:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T22:05:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T22:10:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T22:15:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T22:20:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T22:25:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T22:30:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T22:35:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T22:40:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T22:45:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T22:50:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T22:55:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T23:00:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T23:05:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T23:10:39Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T23:15:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T23:20:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T23:25:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T23:30:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T23:35:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T23:40:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T23:45:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-04-24T23:50:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-24T23:55:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T00:00:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T00:05:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T00:10:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T00:15:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T00:20:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T00:25:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T00:30:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T00:35:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T00:40:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T00:45:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T00:50:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T00:55:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T01:00:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T01:05:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T01:10:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T01:15:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T01:20:39Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T01:25:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T01:30:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T01:35:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T01:40:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T01:45:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T01:50:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T01:55:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T02:00:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T02:05:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T02:10:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T02:15:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T02:20:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T02:25:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T02:30:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T02:35:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T02:40:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T02:45:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T02:50:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T02:55:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T03:00:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T03:05:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T03:10:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T03:15:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T03:20:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T03:25:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T03:30:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T03:35:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T03:40:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T03:45:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T03:50:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T03:55:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T04:00:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T04:05:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T04:10:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T04:15:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T04:20:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T04:25:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T04:30:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T04:35:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T04:40:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T04:45:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T04:50:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T04:55:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T05:00:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T05:05:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T05:10:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T05:15:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T05:20:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T05:25:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T05:30:40Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T05:35:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T05:40:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T05:45:39Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T05:50:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T05:55:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:00:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:05:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:10:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:15:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:20:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:25:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:30:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:35:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:40:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:45:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:50:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:55:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:00:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:05:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:10:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:15:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:20:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:25:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:30:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:35:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:40:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:45:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:50:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:55:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:00:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:05:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:10:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:15:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:20:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:25:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:30:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:35:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:40:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:45:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:50:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:55:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:00:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:05:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:10:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:15:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:20:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:25:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:30:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:35:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:40:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:45:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:50:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:55:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:00:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:05:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:10:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:15:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:20:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:25:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:30:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:35:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:40:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:45:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:50:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:55:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:00:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:05:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:10:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:15:39Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -675
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:20:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 455
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -625
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:25:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 455
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -625
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:30:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 455
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -625
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:35:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 455
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -625
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:40:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 455
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -625
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:45:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 455
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -625
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:50:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 455
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -625
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:55:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 455
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -625
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:00:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 455
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -625
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:05:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 455
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -625
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:10:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 455
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -625
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:15:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 455
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -625
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:20:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 455
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -625
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:25:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 455
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -625
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:30:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 455
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -625
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:35:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 455
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -625
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:40:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 455
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -625
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:45:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 455
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -625
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:50:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 455
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -625
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:55:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 455
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -625
+      }
+    },
+    {
+      "timestamp": "2026-04-25T13:00:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 455
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -625
+      }
+    },
+    {
+      "timestamp": "2026-04-25T13:05:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 455
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -625
+      }
+    },
+    {
+      "timestamp": "2026-04-25T13:10:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 455
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -625
+      }
+    },
+    {
+      "timestamp": "2026-04-25T13:15:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 455
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -625
+      }
+    },
+    {
+      "timestamp": "2026-04-25T13:20:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 455
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -625
+      }
+    },
+    {
+      "timestamp": "2026-04-25T13:25:39Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 455
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -625
+      }
+    },
+    {
+      "timestamp": "2026-04-25T13:30:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 455
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -625
+      }
+    },
+    {
+      "timestamp": "2026-04-25T13:35:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 455
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -625
+      }
+    },
+    {
+      "timestamp": "2026-04-25T13:40:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 455
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -625
+      }
+    },
+    {
+      "timestamp": "2026-04-25T13:45:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 455
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -625
+      }
+    },
+    {
+      "timestamp": "2026-04-25T13:50:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 455
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -625
+      }
+    },
+    {
+      "timestamp": "2026-04-25T13:55:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 455
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -625
+      }
+    },
+    {
+      "timestamp": "2026-04-25T14:00:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 455
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -625
+      }
+    },
+    {
+      "timestamp": "2026-04-25T14:05:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 455
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -625
+      }
+    },
+    {
+      "timestamp": "2026-04-25T14:10:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 455
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -625
+      }
+    },
+    {
+      "timestamp": "2026-04-25T14:15:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 455
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -625
+      }
+    },
+    {
+      "timestamp": "2026-04-25T14:20:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 455
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -625
+      }
+    },
+    {
+      "timestamp": "2026-04-25T14:25:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 455
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -625
+      }
+    },
+    {
+      "timestamp": "2026-04-25T14:30:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 455
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -625
+      }
+    },
+    {
+      "timestamp": "2026-04-25T14:35:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 455
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -625
+      }
+    },
+    {
+      "timestamp": "2026-04-25T14:40:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T14:45:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T14:50:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T14:55:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T15:00:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T15:05:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T15:10:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T15:15:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T15:20:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T15:25:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T15:30:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T15:35:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T15:40:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T15:45:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T15:50:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T15:55:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T16:00:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T16:05:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T16:10:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T16:15:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T16:20:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T16:25:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T16:30:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T16:35:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T16:40:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T16:45:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T16:50:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T16:55:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:00:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:05:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:10:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:15:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:20:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:25:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:30:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:35:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:40:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:45:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:50:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:55:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:00:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:05:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:10:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:15:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:20:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:25:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:30:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:35:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:40:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:45:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:50:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:55:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:00:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:05:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:10:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:15:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:20:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:25:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:30:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:35:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:40:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:45:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:50:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:55:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:00:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:05:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:10:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:15:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:20:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:25:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:30:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:35:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:40:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:45:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:50:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:55:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:00:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:05:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:10:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:15:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:20:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:25:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:30:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:35:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:40:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:45:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:50:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:55:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:00:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:05:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:10:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:15:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:20:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:25:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:30:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:35:38Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 420
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -660
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:40:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -330
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:45:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": -145
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": 114
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:50:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": -110
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": -120
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:55:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": -580
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T23:00:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": -580
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-04-25T23:05:37Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "numericOdds": -580
+      },
+      "fighter2": {
+        "name": "Jafel Filho",
+        "numericOdds": 380
+      }
     }
-  ],
-  "createdAt": "2026-04-25T22:36:13.769Z",
-  "outcome": {
-    "winner": "fighter2",
-    "winnerName": "Cody Durden",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:51:30.305Z",
-    "openingF1Odds": -650,
-    "openingF2Odds": 480,
-    "closingF1Odds": 840,
-    "closingF2Odds": -1600,
-    "lineMovementF1": 1490,
-    "crossoverOccurred": true,
-    "crossoverMinute": 10
-  },
-  "derived": {
-    "inferredFinishMin": 18,
-    "inferredFinishRound": 4,
-    "peakOddsSwing": 1490,
-    "finishSpeed": "slow",
-    "preFightSteam": 1490,
-    "dominanceScore": 75,
-    "crossoverCount": 3,
-    "derivedAt": "2026-06-14T11:47:28.427Z"
-  }
+  ]
 }

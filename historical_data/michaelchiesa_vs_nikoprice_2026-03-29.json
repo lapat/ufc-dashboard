@@ -1,742 +1,1637 @@
 {
-  "fightId": "michaelchiesa_vs_nikoprice",
-  "fightTitle": "Connected but no betting buttons found",
-  "startTime": "2026-03-29T01:36:47.208Z",
-  "endTime": "2026-03-29T01:39:02.594Z",
-  "duration": 135386,
-  "dataPoints": 47,
+  "fightId": "michaelchiesa_vs_nikoprice_2026-03-29",
+  "fightTitle": "Michael Chiesa vs Niko Price",
+  "startTime": "2026-03-28T11:55:37Z",
+  "endTime": "2026-03-29T00:10:37Z",
+  "dataPoints": 148,
   "oddsHistory": [
     {
-      "timestamp": "2026-03-29T01:36:47.208Z",
+      "timestamp": "2026-03-28T11:55:37Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-1000",
-        "numericOdds": -1000
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+660",
-        "numericOdds": 660
-      },
-      "isLocked": false,
-      "extractionId": 9
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:36:50.223Z",
+      "timestamp": "2026-03-28T12:00:38Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-1000",
-        "numericOdds": -1000
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+660",
-        "numericOdds": 660
-      },
-      "isLocked": false,
-      "extractionId": 2
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:36:53.235Z",
+      "timestamp": "2026-03-28T12:05:38Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-1000",
-        "numericOdds": -1000
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+660",
-        "numericOdds": 660
-      },
-      "isLocked": false,
-      "extractionId": 3
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:36:56.249Z",
+      "timestamp": "2026-03-28T12:10:37Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-1000",
-        "numericOdds": -1000
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+660",
-        "numericOdds": 660
-      },
-      "isLocked": false,
-      "extractionId": 4
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:36:59.250Z",
+      "timestamp": "2026-03-28T12:15:38Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-1000",
-        "numericOdds": -1000
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+660",
-        "numericOdds": 660
-      },
-      "isLocked": false,
-      "extractionId": 5
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:37:02.261Z",
+      "timestamp": "2026-03-28T12:20:37Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-1000",
-        "numericOdds": -1000
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+660",
-        "numericOdds": 660
-      },
-      "isLocked": false,
-      "extractionId": 6
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:37:05.274Z",
+      "timestamp": "2026-03-28T12:25:37Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-1000",
-        "numericOdds": -1000
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+660",
-        "numericOdds": 660
-      },
-      "isLocked": false,
-      "extractionId": 7
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:37:08.279Z",
+      "timestamp": "2026-03-28T12:30:37Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-1000",
-        "numericOdds": -1000
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+660",
-        "numericOdds": 660
-      },
-      "isLocked": false,
-      "extractionId": 8
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:37:11.290Z",
+      "timestamp": "2026-03-28T12:35:38Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-1000",
-        "numericOdds": -1000
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+660",
-        "numericOdds": 660
-      },
-      "isLocked": false,
-      "extractionId": 9
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:37:14.293Z",
+      "timestamp": "2026-03-28T12:40:38Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-1000",
-        "numericOdds": -1000
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+660",
-        "numericOdds": 660
-      },
-      "isLocked": false,
-      "extractionId": 10
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:37:17.294Z",
+      "timestamp": "2026-03-28T12:45:37Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-1000",
-        "numericOdds": -1000
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+660",
-        "numericOdds": 660
-      },
-      "isLocked": false,
-      "extractionId": 11
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:37:20.305Z",
+      "timestamp": "2026-03-28T12:50:37Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-1000",
-        "numericOdds": -1000
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+660",
-        "numericOdds": 660
-      },
-      "isLocked": false,
-      "extractionId": 12
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:37:23.309Z",
+      "timestamp": "2026-03-28T12:55:37Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-1000",
-        "numericOdds": -1000
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+660",
-        "numericOdds": 660
-      },
-      "isLocked": false,
-      "extractionId": 13
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:37:26.324Z",
+      "timestamp": "2026-03-28T13:00:39Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-1000",
-        "numericOdds": -1000
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+660",
-        "numericOdds": 660
-      },
-      "isLocked": false,
-      "extractionId": 14
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:37:29.324Z",
+      "timestamp": "2026-03-28T13:05:37Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-1000",
-        "numericOdds": -1000
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+660",
-        "numericOdds": 660
-      },
-      "isLocked": false,
-      "extractionId": 15
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:37:32.334Z",
+      "timestamp": "2026-03-28T13:10:37Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-1000",
-        "numericOdds": -1000
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+660",
-        "numericOdds": 660
-      },
-      "isLocked": false,
-      "extractionId": 16
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:37:35.347Z",
+      "timestamp": "2026-03-28T13:15:38Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-1000",
-        "numericOdds": -1000
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+660",
-        "numericOdds": 660
-      },
-      "isLocked": false,
-      "extractionId": 17
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:37:38.360Z",
+      "timestamp": "2026-03-28T13:20:37Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-1000",
-        "numericOdds": -1000
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+660",
-        "numericOdds": 660
-      },
-      "isLocked": false,
-      "extractionId": 18
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:37:41.370Z",
+      "timestamp": "2026-03-28T13:25:37Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-1000",
-        "numericOdds": -1000
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+660",
-        "numericOdds": 660
-      },
-      "isLocked": false,
-      "extractionId": 19
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:37:44.369Z",
+      "timestamp": "2026-03-28T13:30:37Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-1250",
-        "numericOdds": -1250
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+630",
-        "numericOdds": 630
-      },
-      "isLocked": false,
-      "extractionId": 20
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:37:47.372Z",
+      "timestamp": "2026-03-28T13:35:37Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-1250",
-        "numericOdds": -1250
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+630",
-        "numericOdds": 630
-      },
-      "isLocked": false,
-      "extractionId": 21
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:37:50.383Z",
+      "timestamp": "2026-03-28T13:40:38Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-1250",
-        "numericOdds": -1250
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+630",
-        "numericOdds": 630
-      },
-      "isLocked": false,
-      "extractionId": 22
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:37:53.395Z",
+      "timestamp": "2026-03-28T13:45:37Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-1250",
-        "numericOdds": -1250
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+630",
-        "numericOdds": 630
-      },
-      "isLocked": false,
-      "extractionId": 23
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:37:56.404Z",
+      "timestamp": "2026-03-28T13:50:37Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-1250",
-        "numericOdds": -1250
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+630",
-        "numericOdds": 630
-      },
-      "isLocked": false,
-      "extractionId": 24
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:37:59.411Z",
+      "timestamp": "2026-03-28T13:55:37Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-1250",
-        "numericOdds": -1250
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+630",
-        "numericOdds": 630
-      },
-      "isLocked": false,
-      "extractionId": 25
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:38:02.418Z",
+      "timestamp": "2026-03-28T14:00:41Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-1250",
-        "numericOdds": -1250
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+630",
-        "numericOdds": 630
-      },
-      "isLocked": false,
-      "extractionId": 26
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:38:05.424Z",
+      "timestamp": "2026-03-28T14:05:37Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-1200",
-        "numericOdds": -1200
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+660",
-        "numericOdds": 660
-      },
-      "isLocked": false,
-      "extractionId": 27
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:38:08.434Z",
+      "timestamp": "2026-03-28T14:10:37Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-1200",
-        "numericOdds": -1200
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+660",
-        "numericOdds": 660
-      },
-      "isLocked": false,
-      "extractionId": 28
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:38:11.441Z",
+      "timestamp": "2026-03-28T14:15:37Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-1300",
-        "numericOdds": -1300
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+720",
-        "numericOdds": 720
-      },
-      "isLocked": false,
-      "extractionId": 29
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:38:14.451Z",
+      "timestamp": "2026-03-28T14:20:37Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-1300",
-        "numericOdds": -1300
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+720",
-        "numericOdds": 720
-      },
-      "isLocked": false,
-      "extractionId": 30
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:38:17.465Z",
+      "timestamp": "2026-03-28T14:25:37Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-1300",
-        "numericOdds": -1300
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+720",
-        "numericOdds": 720
-      },
-      "isLocked": false,
-      "extractionId": 31
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:38:20.475Z",
+      "timestamp": "2026-03-28T14:30:37Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-1300",
-        "numericOdds": -1300
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+720",
-        "numericOdds": 720
-      },
-      "isLocked": false,
-      "extractionId": 32
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:38:23.477Z",
+      "timestamp": "2026-03-28T14:35:37Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-1300",
-        "numericOdds": -1300
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+720",
-        "numericOdds": 720
-      },
-      "isLocked": false,
-      "extractionId": 33
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:38:26.490Z",
+      "timestamp": "2026-03-28T14:40:37Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-1300",
-        "numericOdds": -1300
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+720",
-        "numericOdds": 720
-      },
-      "isLocked": false,
-      "extractionId": 34
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:38:29.505Z",
+      "timestamp": "2026-03-28T14:45:37Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-1200",
-        "numericOdds": -1200
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+660",
-        "numericOdds": 660
-      },
-      "isLocked": false,
-      "extractionId": 35
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:38:32.514Z",
+      "timestamp": "2026-03-28T14:50:37Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-1200",
-        "numericOdds": -1200
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+660",
-        "numericOdds": 660
-      },
-      "isLocked": false,
-      "extractionId": 36
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:38:35.525Z",
+      "timestamp": "2026-03-28T14:55:37Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-1200",
-        "numericOdds": -1200
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+660",
-        "numericOdds": 660
-      },
-      "isLocked": false,
-      "extractionId": 37
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:38:38.535Z",
+      "timestamp": "2026-03-28T15:00:44Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-1200",
-        "numericOdds": -1200
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+660",
-        "numericOdds": 660
-      },
-      "isLocked": false,
-      "extractionId": 38
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:38:41.547Z",
+      "timestamp": "2026-03-28T15:05:38Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-1200",
-        "numericOdds": -1200
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+660",
-        "numericOdds": 660
-      },
-      "isLocked": false,
-      "extractionId": 39
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:38:44.555Z",
+      "timestamp": "2026-03-28T15:10:37Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-1200",
-        "numericOdds": -1200
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+660",
-        "numericOdds": 660
-      },
-      "isLocked": false,
-      "extractionId": 40
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:38:47.557Z",
+      "timestamp": "2026-03-28T15:15:38Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-1200",
-        "numericOdds": -1200
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+660",
-        "numericOdds": 660
-      },
-      "isLocked": false,
-      "extractionId": 41
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:38:50.559Z",
+      "timestamp": "2026-03-28T15:20:37Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-1600",
-        "numericOdds": -1600
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+840",
-        "numericOdds": 840
-      },
-      "isLocked": false,
-      "extractionId": 42
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:38:53.559Z",
+      "timestamp": "2026-03-28T15:25:39Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-1600",
-        "numericOdds": -1600
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+840",
-        "numericOdds": 840
-      },
-      "isLocked": false,
-      "extractionId": 43
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:38:59.583Z",
+      "timestamp": "2026-03-28T15:30:37Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-2000",
-        "numericOdds": -2000
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+1040",
-        "numericOdds": 1040
-      },
-      "isLocked": false,
-      "extractionId": 44
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:39:02.594Z",
+      "timestamp": "2026-03-28T15:35:37Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-2000",
-        "numericOdds": -2000
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+1040",
-        "numericOdds": 1040
-      },
-      "isLocked": false,
-      "extractionId": 2
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:38:59.583Z",
+      "timestamp": "2026-03-28T15:40:37Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-2000",
-        "numericOdds": -2000
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+1040",
-        "numericOdds": 1040
-      },
-      "isLocked": false,
-      "extractionId": 44
+        "numericOdds": 600
+      }
     },
     {
-      "timestamp": "2026-03-29T01:39:02.594Z",
+      "timestamp": "2026-03-28T15:45:37Z",
       "fighter1": {
         "name": "Michael Chiesa",
-        "odds": "-2000",
-        "numericOdds": -2000
+        "numericOdds": -900
       },
       "fighter2": {
         "name": "Niko Price",
-        "odds": "+1040",
-        "numericOdds": 1040
+        "numericOdds": 600
+      }
+    },
+    {
+      "timestamp": "2026-03-28T15:50:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -900
       },
-      "isLocked": false,
-      "extractionId": 2
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 600
+      }
+    },
+    {
+      "timestamp": "2026-03-28T15:55:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 600
+      }
+    },
+    {
+      "timestamp": "2026-03-28T16:00:42Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 600
+      }
+    },
+    {
+      "timestamp": "2026-03-28T16:05:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 600
+      }
+    },
+    {
+      "timestamp": "2026-03-28T16:10:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 600
+      }
+    },
+    {
+      "timestamp": "2026-03-28T16:15:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 600
+      }
+    },
+    {
+      "timestamp": "2026-03-28T16:20:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 600
+      }
+    },
+    {
+      "timestamp": "2026-03-28T16:25:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 600
+      }
+    },
+    {
+      "timestamp": "2026-03-28T16:30:38Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 600
+      }
+    },
+    {
+      "timestamp": "2026-03-28T16:35:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 600
+      }
+    },
+    {
+      "timestamp": "2026-03-28T16:40:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 600
+      }
+    },
+    {
+      "timestamp": "2026-03-28T16:45:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 600
+      }
+    },
+    {
+      "timestamp": "2026-03-28T16:50:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 600
+      }
+    },
+    {
+      "timestamp": "2026-03-28T16:55:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 600
+      }
+    },
+    {
+      "timestamp": "2026-03-28T17:00:42Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 600
+      }
+    },
+    {
+      "timestamp": "2026-03-28T17:05:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 600
+      }
+    },
+    {
+      "timestamp": "2026-03-28T17:10:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 600
+      }
+    },
+    {
+      "timestamp": "2026-03-28T17:15:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 600
+      }
+    },
+    {
+      "timestamp": "2026-03-28T17:20:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 600
+      }
+    },
+    {
+      "timestamp": "2026-03-28T17:25:38Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 600
+      }
+    },
+    {
+      "timestamp": "2026-03-28T17:30:38Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 600
+      }
+    },
+    {
+      "timestamp": "2026-03-28T17:35:38Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 600
+      }
+    },
+    {
+      "timestamp": "2026-03-28T17:40:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 600
+      }
+    },
+    {
+      "timestamp": "2026-03-28T17:45:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 600
+      }
+    },
+    {
+      "timestamp": "2026-03-28T17:50:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 600
+      }
+    },
+    {
+      "timestamp": "2026-03-28T17:55:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 600
+      }
+    },
+    {
+      "timestamp": "2026-03-28T18:00:49Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 600
+      }
+    },
+    {
+      "timestamp": "2026-03-28T18:05:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T18:10:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T18:15:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T18:20:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T18:25:38Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T18:30:38Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T18:35:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T18:40:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T18:45:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T18:50:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T18:55:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T19:00:46Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T19:05:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T19:10:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T19:15:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T19:20:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T19:25:39Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T19:30:38Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T19:35:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T19:40:38Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T19:45:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T19:50:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T19:55:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:00:47Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:05:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:10:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:15:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:20:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:25:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:30:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:35:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:40:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:45:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:50:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T20:55:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T21:00:45Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T21:05:39Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T21:10:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T21:15:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T21:20:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T21:25:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T21:30:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T21:35:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T21:40:38Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T21:45:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T21:50:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T21:55:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T22:00:46Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T22:05:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T22:10:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T22:15:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T22:20:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T22:25:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T22:30:38Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T22:35:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T22:40:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T22:45:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T22:50:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T22:55:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T23:00:41Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T23:05:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T23:10:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T23:15:39Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T23:20:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T23:25:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-03-28T23:30:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 600
+      }
+    },
+    {
+      "timestamp": "2026-03-28T23:35:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 600
+      }
+    },
+    {
+      "timestamp": "2026-03-28T23:40:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 600
+      }
+    },
+    {
+      "timestamp": "2026-03-28T23:45:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 600
+      }
+    },
+    {
+      "timestamp": "2026-03-28T23:50:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 600
+      }
+    },
+    {
+      "timestamp": "2026-03-28T23:55:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 600
+      }
+    },
+    {
+      "timestamp": "2026-03-29T00:00:45Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 600
+      }
+    },
+    {
+      "timestamp": "2026-03-29T00:05:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 600
+      }
+    },
+    {
+      "timestamp": "2026-03-29T00:10:37Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Niko Price",
+        "numericOdds": 600
+      }
     }
-  ],
-  "createdAt": "2026-03-29T01:38:59.582Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Michael Chiesa",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:52:00.865Z",
-    "openingF1Odds": -1000,
-    "openingF2Odds": 660,
-    "closingF1Odds": -2000,
-    "closingF2Odds": 1040,
-    "lineMovementF1": -1000,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": 0,
-    "inferredFinishRound": 1,
-    "peakOddsSwing": 1000,
-    "finishSpeed": "fast",
-    "preFightSteam": -1000,
-    "dominanceScore": 100,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.462Z"
-  }
+  ]
 }

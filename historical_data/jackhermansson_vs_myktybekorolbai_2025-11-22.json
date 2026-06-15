@@ -1,1102 +1,3056 @@
 {
-  "fightId": "jackhermansson_vs_myktybekorolbai",
-  "fightTitle": "Connected but no betting buttons found",
-  "startTime": "2025-11-22T19:10:00.862Z",
-  "endTime": "2025-11-22T19:13:40.368Z",
-  "duration": 219506,
-  "dataPoints": 71,
+  "fightId": "jackhermansson_vs_myktybekorolbai_2025-11-22",
+  "fightTitle": "Jack Hermansson vs Myktybek Orolbai",
+  "startTime": "2025-11-21T11:55:38Z",
+  "endTime": "2025-11-22T10:55:37Z",
+  "dataPoints": 277,
   "oddsHistory": [
     {
-      "timestamp": "2025-11-22T19:10:00.862Z",
+      "timestamp": "2025-11-21T11:55:38Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+166",
-        "numericOdds": 166
+        "numericOdds": 200
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-198",
-        "numericOdds": -198
+        "numericOdds": -245
+      }
+    },
+    {
+      "timestamp": "2025-11-21T12:00:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 200
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -245
+      }
+    },
+    {
+      "timestamp": "2025-11-21T12:05:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 200
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -245
+      }
+    },
+    {
+      "timestamp": "2025-11-21T12:10:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 200
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -245
+      }
+    },
+    {
+      "timestamp": "2025-11-21T12:15:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 200
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -245
+      }
+    },
+    {
+      "timestamp": "2025-11-21T12:20:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T12:25:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T12:30:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T12:35:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T12:40:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T12:45:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T12:50:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T12:55:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T13:00:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T13:05:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T13:10:39Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T13:15:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T13:20:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T13:25:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T13:30:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T13:35:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T13:40:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T13:45:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T13:50:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T13:55:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T14:00:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T14:05:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T14:10:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T14:15:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T14:20:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T14:25:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T14:30:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T14:35:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T14:40:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T14:45:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T14:50:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T14:55:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T15:00:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T15:05:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T15:10:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T15:15:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T15:20:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T15:25:39Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T15:30:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T15:35:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T15:40:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T15:45:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T15:50:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T15:55:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T16:00:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T16:05:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T16:10:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T16:15:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T16:20:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T16:25:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T16:30:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T16:35:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T16:40:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T16:45:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T16:50:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T16:55:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T17:00:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T17:05:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T17:10:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T17:15:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T17:20:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T17:25:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T17:30:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T17:35:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T17:40:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T17:45:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T17:50:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T17:55:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T18:00:43Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T18:05:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T18:10:37Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T18:15:39Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T18:20:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T18:25:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T18:30:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T18:35:40Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T18:40:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T18:45:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T18:50:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T18:55:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T19:00:39Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T19:05:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T19:10:37Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T19:15:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T19:20:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T19:25:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T19:30:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2025-11-21T19:35:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T19:40:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T19:45:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T19:50:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T19:55:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T20:00:39Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T20:05:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T20:10:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T20:15:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T20:20:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T20:25:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T20:30:39Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T20:35:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T20:40:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T20:45:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T20:50:39Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T20:55:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T21:00:40Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T21:05:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T21:10:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T21:15:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T21:20:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T21:25:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T21:30:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T21:35:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T21:40:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T21:45:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T21:50:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T21:55:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T22:00:39Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T22:05:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T22:10:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T22:15:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T22:20:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T22:25:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T22:30:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T22:35:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T22:40:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T22:45:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T22:50:40Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T22:55:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T23:00:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T23:05:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T23:10:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T23:15:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T23:20:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T23:25:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T23:30:39Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T23:35:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T23:40:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T23:45:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T23:50:39Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-21T23:55:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T00:00:44Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T00:05:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T00:10:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T00:15:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T00:20:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T00:25:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T00:30:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T00:35:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T00:40:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T00:45:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T00:50:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T00:55:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T01:00:39Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T01:05:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T01:10:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T01:15:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T01:20:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T01:25:39Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T01:30:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T01:35:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T01:40:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T01:45:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T01:50:37Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T01:55:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T02:00:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
       },
-      "isLocked": false,
-      "extractionId": 3
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:10:03.869Z",
+      "timestamp": "2025-11-22T02:05:38Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+166",
-        "numericOdds": 166
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-198",
-        "numericOdds": -198
-      },
-      "isLocked": false,
-      "extractionId": 2
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:10:06.877Z",
+      "timestamp": "2025-11-22T02:10:38Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+166",
-        "numericOdds": 166
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-198",
-        "numericOdds": -198
-      },
-      "isLocked": false,
-      "extractionId": 3
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:10:09.882Z",
+      "timestamp": "2025-11-22T02:15:37Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+166",
-        "numericOdds": 166
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-198",
-        "numericOdds": -198
-      },
-      "isLocked": false,
-      "extractionId": 4
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:10:12.893Z",
+      "timestamp": "2025-11-22T02:20:38Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+166",
-        "numericOdds": 166
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-198",
-        "numericOdds": -198
-      },
-      "isLocked": false,
-      "extractionId": 5
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:10:15.908Z",
+      "timestamp": "2025-11-22T02:25:38Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+166",
-        "numericOdds": 166
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-198",
-        "numericOdds": -198
-      },
-      "isLocked": false,
-      "extractionId": 6
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:10:18.912Z",
+      "timestamp": "2025-11-22T02:30:37Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+166",
-        "numericOdds": 166
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-198",
-        "numericOdds": -198
-      },
-      "isLocked": false,
-      "extractionId": 7
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:10:21.914Z",
+      "timestamp": "2025-11-22T02:35:39Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+166",
-        "numericOdds": 166
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-198",
-        "numericOdds": -198
-      },
-      "isLocked": false,
-      "extractionId": 8
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:10:24.917Z",
+      "timestamp": "2025-11-22T02:40:38Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+166",
-        "numericOdds": 166
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-198",
-        "numericOdds": -198
-      },
-      "isLocked": false,
-      "extractionId": 9
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:10:27.921Z",
+      "timestamp": "2025-11-22T02:45:37Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+166",
-        "numericOdds": 166
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-198",
-        "numericOdds": -198
-      },
-      "isLocked": false,
-      "extractionId": 10
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:10:30.922Z",
+      "timestamp": "2025-11-22T02:50:37Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+166",
-        "numericOdds": 166
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-198",
-        "numericOdds": -198
-      },
-      "isLocked": false,
-      "extractionId": 11
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:10:33.926Z",
+      "timestamp": "2025-11-22T02:55:38Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+166",
-        "numericOdds": 166
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-198",
-        "numericOdds": -198
-      },
-      "isLocked": false,
-      "extractionId": 12
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:10:36.936Z",
+      "timestamp": "2025-11-22T03:00:39Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+166",
-        "numericOdds": 166
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-198",
-        "numericOdds": -198
-      },
-      "isLocked": false,
-      "extractionId": 13
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:10:39.939Z",
+      "timestamp": "2025-11-22T03:05:38Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+166",
-        "numericOdds": 166
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-198",
-        "numericOdds": -198
-      },
-      "isLocked": false,
-      "extractionId": 14
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:10:42.941Z",
+      "timestamp": "2025-11-22T03:10:38Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+166",
-        "numericOdds": 166
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-198",
-        "numericOdds": -198
-      },
-      "isLocked": false,
-      "extractionId": 15
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:10:45.955Z",
+      "timestamp": "2025-11-22T03:15:38Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+166",
-        "numericOdds": 166
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-198",
-        "numericOdds": -198
-      },
-      "isLocked": false,
-      "extractionId": 16
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:10:48.970Z",
+      "timestamp": "2025-11-22T03:20:38Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+166",
-        "numericOdds": 166
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-198",
-        "numericOdds": -198
-      },
-      "isLocked": false,
-      "extractionId": 17
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:10:51.982Z",
+      "timestamp": "2025-11-22T03:25:37Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+166",
-        "numericOdds": 166
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-198",
-        "numericOdds": -198
-      },
-      "isLocked": false,
-      "extractionId": 18
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:10:54.982Z",
+      "timestamp": "2025-11-22T03:30:38Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+166",
-        "numericOdds": 166
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-198",
-        "numericOdds": -198
-      },
-      "isLocked": false,
-      "extractionId": 19
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:10:57.988Z",
+      "timestamp": "2025-11-22T03:35:37Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+166",
-        "numericOdds": 166
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-198",
-        "numericOdds": -198
-      },
-      "isLocked": false,
-      "extractionId": 20
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:11:00.988Z",
+      "timestamp": "2025-11-22T03:40:37Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+166",
-        "numericOdds": 166
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-198",
-        "numericOdds": -198
-      },
-      "isLocked": false,
-      "extractionId": 21
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:11:03.995Z",
+      "timestamp": "2025-11-22T03:45:37Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+166",
-        "numericOdds": 166
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-198",
-        "numericOdds": -198
-      },
-      "isLocked": false,
-      "extractionId": 22
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:11:07.005Z",
+      "timestamp": "2025-11-22T03:50:37Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+166",
-        "numericOdds": 166
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-198",
-        "numericOdds": -198
-      },
-      "isLocked": false,
-      "extractionId": 23
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:11:10.007Z",
+      "timestamp": "2025-11-22T03:55:38Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+166",
-        "numericOdds": 166
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-198",
-        "numericOdds": -198
-      },
-      "isLocked": false,
-      "extractionId": 24
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:11:13.018Z",
+      "timestamp": "2025-11-22T04:00:40Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+160",
-        "numericOdds": 160
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-210",
-        "numericOdds": -210
-      },
-      "isLocked": false,
-      "extractionId": 25
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:11:16.033Z",
+      "timestamp": "2025-11-22T04:05:37Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+160",
-        "numericOdds": 160
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-210",
-        "numericOdds": -210
-      },
-      "isLocked": false,
-      "extractionId": 26
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:11:19.041Z",
+      "timestamp": "2025-11-22T04:10:38Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+160",
-        "numericOdds": 160
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-210",
-        "numericOdds": -210
-      },
-      "isLocked": false,
-      "extractionId": 27
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:11:22.044Z",
+      "timestamp": "2025-11-22T04:15:37Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+160",
-        "numericOdds": 160
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-210",
-        "numericOdds": -210
-      },
-      "isLocked": false,
-      "extractionId": 28
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:11:25.056Z",
+      "timestamp": "2025-11-22T04:20:37Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+160",
-        "numericOdds": 160
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-210",
-        "numericOdds": -210
-      },
-      "isLocked": false,
-      "extractionId": 29
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:11:28.066Z",
+      "timestamp": "2025-11-22T04:25:37Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+160",
-        "numericOdds": 160
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-210",
-        "numericOdds": -210
-      },
-      "isLocked": false,
-      "extractionId": 30
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:11:31.080Z",
+      "timestamp": "2025-11-22T04:30:37Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+160",
-        "numericOdds": 160
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-210",
-        "numericOdds": -210
-      },
-      "isLocked": false,
-      "extractionId": 31
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:11:34.084Z",
+      "timestamp": "2025-11-22T04:35:37Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+160",
-        "numericOdds": 160
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-210",
-        "numericOdds": -210
-      },
-      "isLocked": false,
-      "extractionId": 32
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:11:37.094Z",
+      "timestamp": "2025-11-22T04:40:37Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+160",
-        "numericOdds": 160
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-210",
-        "numericOdds": -210
-      },
-      "isLocked": false,
-      "extractionId": 33
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:11:40.097Z",
+      "timestamp": "2025-11-22T04:45:38Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+160",
-        "numericOdds": 160
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-210",
-        "numericOdds": -210
-      },
-      "isLocked": false,
-      "extractionId": 34
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:11:43.111Z",
+      "timestamp": "2025-11-22T04:50:37Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+160",
-        "numericOdds": 160
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-210",
-        "numericOdds": -210
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T04:55:37Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
       },
-      "isLocked": false,
-      "extractionId": 35
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:11:46.115Z",
+      "timestamp": "2025-11-22T05:00:38Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+160",
-        "numericOdds": 160
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-210",
-        "numericOdds": -210
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T05:05:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
       },
-      "isLocked": false,
-      "extractionId": 36
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:11:49.127Z",
+      "timestamp": "2025-11-22T05:10:38Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+160",
-        "numericOdds": 160
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-210",
-        "numericOdds": -210
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T05:15:37Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
       },
-      "isLocked": false,
-      "extractionId": 37
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:11:52.142Z",
+      "timestamp": "2025-11-22T05:20:37Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+160",
-        "numericOdds": 160
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-210",
-        "numericOdds": -210
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T05:25:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
       },
-      "isLocked": false,
-      "extractionId": 38
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:11:55.157Z",
+      "timestamp": "2025-11-22T05:30:37Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+160",
-        "numericOdds": 160
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-210",
-        "numericOdds": -210
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T05:35:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
       },
-      "isLocked": false,
-      "extractionId": 39
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:11:58.161Z",
+      "timestamp": "2025-11-22T05:40:37Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+160",
-        "numericOdds": 160
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-210",
-        "numericOdds": -210
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T05:45:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
       },
-      "isLocked": false,
-      "extractionId": 40
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:12:01.167Z",
+      "timestamp": "2025-11-22T05:50:37Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+160",
-        "numericOdds": 160
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-210",
-        "numericOdds": -210
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T05:55:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
       },
-      "isLocked": false,
-      "extractionId": 41
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:12:04.169Z",
+      "timestamp": "2025-11-22T06:00:38Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+160",
-        "numericOdds": 160
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-210",
-        "numericOdds": -210
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T06:05:37Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
       },
-      "isLocked": false,
-      "extractionId": 42
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:12:07.171Z",
+      "timestamp": "2025-11-22T06:10:37Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+180",
-        "numericOdds": 180
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T06:15:37Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
       },
-      "isLocked": false,
-      "extractionId": 43
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:12:10.174Z",
+      "timestamp": "2025-11-22T06:20:37Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+180",
-        "numericOdds": 180
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T06:25:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
       },
-      "isLocked": false,
-      "extractionId": 44
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:12:13.176Z",
+      "timestamp": "2025-11-22T06:30:37Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+180",
-        "numericOdds": 180
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T06:35:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
       },
-      "isLocked": false,
-      "extractionId": 45
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:12:16.176Z",
+      "timestamp": "2025-11-22T06:40:38Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+180",
-        "numericOdds": 180
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T06:45:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
       },
-      "isLocked": false,
-      "extractionId": 46
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:12:19.178Z",
+      "timestamp": "2025-11-22T06:50:39Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+180",
-        "numericOdds": 180
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T06:55:37Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
       },
-      "isLocked": false,
-      "extractionId": 47
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:12:22.192Z",
+      "timestamp": "2025-11-22T07:00:37Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+180",
-        "numericOdds": 180
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T07:05:37Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
       },
-      "isLocked": false,
-      "extractionId": 48
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:12:25.206Z",
+      "timestamp": "2025-11-22T07:10:37Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+180",
-        "numericOdds": 180
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T07:15:37Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
       },
-      "isLocked": false,
-      "extractionId": 49
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:12:28.221Z",
+      "timestamp": "2025-11-22T07:20:38Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+180",
-        "numericOdds": 180
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T07:25:37Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
       },
-      "isLocked": false,
-      "extractionId": 50
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:12:31.221Z",
+      "timestamp": "2025-11-22T07:30:37Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+180",
-        "numericOdds": 180
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T07:35:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
       },
-      "isLocked": false,
-      "extractionId": 51
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:12:34.235Z",
+      "timestamp": "2025-11-22T07:40:38Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+180",
-        "numericOdds": 180
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T07:45:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
       },
-      "isLocked": false,
-      "extractionId": 52
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:12:37.240Z",
+      "timestamp": "2025-11-22T07:50:38Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+180",
-        "numericOdds": 180
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T07:55:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
       },
-      "isLocked": false,
-      "extractionId": 53
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:12:49.269Z",
+      "timestamp": "2025-11-22T08:00:38Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+180",
-        "numericOdds": 180
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T08:05:39Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
       },
-      "isLocked": false,
-      "extractionId": 54
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:12:52.268Z",
+      "timestamp": "2025-11-22T08:10:38Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+180",
-        "numericOdds": 180
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T08:15:37Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
       },
-      "isLocked": false,
-      "extractionId": 2
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:12:55.269Z",
+      "timestamp": "2025-11-22T08:20:38Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+180",
-        "numericOdds": 180
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T08:25:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
       },
-      "isLocked": false,
-      "extractionId": 3
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:13:10.304Z",
+      "timestamp": "2025-11-22T08:30:38Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+180",
-        "numericOdds": 180
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T08:35:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
       },
-      "isLocked": false,
-      "extractionId": 4
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:13:13.304Z",
+      "timestamp": "2025-11-22T08:40:38Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+180",
-        "numericOdds": 180
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T08:45:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
       },
-      "isLocked": false,
-      "extractionId": 2
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:13:16.317Z",
+      "timestamp": "2025-11-22T08:50:38Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+180",
-        "numericOdds": 180
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T08:55:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
       },
-      "isLocked": false,
-      "extractionId": 3
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:13:25.337Z",
+      "timestamp": "2025-11-22T09:00:38Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+180",
-        "numericOdds": 180
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T09:05:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
       },
-      "isLocked": false,
-      "extractionId": 4
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:13:28.339Z",
+      "timestamp": "2025-11-22T09:10:38Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+180",
-        "numericOdds": 180
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T09:15:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
       },
-      "isLocked": false,
-      "extractionId": 2
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:13:31.342Z",
+      "timestamp": "2025-11-22T09:20:38Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+180",
-        "numericOdds": 180
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T09:25:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
       },
-      "isLocked": false,
-      "extractionId": 3
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:13:34.356Z",
+      "timestamp": "2025-11-22T09:30:38Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+180",
-        "numericOdds": 180
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T09:35:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
       },
-      "isLocked": false,
-      "extractionId": 4
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:13:37.368Z",
+      "timestamp": "2025-11-22T09:40:38Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+180",
-        "numericOdds": 180
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T09:45:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
       },
-      "isLocked": false,
-      "extractionId": 5
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:13:40.368Z",
+      "timestamp": "2025-11-22T09:50:37Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+180",
-        "numericOdds": 180
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T09:55:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
       },
-      "isLocked": false,
-      "extractionId": 6
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:13:25.337Z",
+      "timestamp": "2025-11-22T10:00:38Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+180",
-        "numericOdds": 180
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T10:05:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
       },
-      "isLocked": false,
-      "extractionId": 4
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:13:28.339Z",
+      "timestamp": "2025-11-22T10:10:38Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+180",
-        "numericOdds": 180
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T10:15:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
       },
-      "isLocked": false,
-      "extractionId": 2
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:13:31.342Z",
+      "timestamp": "2025-11-22T10:20:38Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+180",
-        "numericOdds": 180
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T10:25:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
       },
-      "isLocked": false,
-      "extractionId": 3
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:13:34.356Z",
+      "timestamp": "2025-11-22T10:30:37Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+180",
-        "numericOdds": 180
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T10:35:38Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
       },
-      "isLocked": false,
-      "extractionId": 4
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:13:37.368Z",
+      "timestamp": "2025-11-22T10:40:37Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+180",
-        "numericOdds": 180
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T10:45:37Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
       },
-      "isLocked": false,
-      "extractionId": 5
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
     },
     {
-      "timestamp": "2025-11-22T19:13:40.368Z",
+      "timestamp": "2025-11-22T10:50:38Z",
       "fighter1": {
         "name": "Jack Hermansson",
-        "odds": "+180",
-        "numericOdds": 180
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2025-11-22T10:55:37Z",
+      "fighter1": {
+        "name": "Jack Hermansson",
+        "numericOdds": 170
       },
-      "isLocked": false,
-      "extractionId": 6
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -205
+      }
     }
-  ],
-  "createdAt": "2025-11-22T19:12:49.268Z",
-  "outcome": {
-    "winner": "fighter2",
-    "winnerName": "Myktybek Orolbai",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:51:28.610Z",
-    "openingF1Odds": 166,
-    "openingF2Odds": -198,
-    "closingF1Odds": 180,
-    "closingF2Odds": -235,
-    "lineMovementF1": 14,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": null,
-    "inferredFinishRound": null,
-    "peakOddsSwing": 14,
-    "finishSpeed": "decision",
-    "preFightSteam": 14,
-    "dominanceScore": 66,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.425Z"
-  }
+  ]
 }

@@ -1,982 +1,1307 @@
 {
-  "fightId": "chriscurtis_vs_myktybekorolbai",
-  "fightTitle": "Connected but no betting buttons found",
-  "startTime": "2026-03-14T23:53:00.939Z",
-  "endTime": "2026-03-14T23:56:07.367Z",
-  "duration": 186428,
-  "dataPoints": 63,
+  "fightId": "chriscurtis_vs_myktybekorolbai_2026-03-14",
+  "fightTitle": "Chris Curtis vs Myktybek Orolbai",
+  "startTime": "2026-03-13T11:55:38Z",
+  "endTime": "2026-03-13T21:40:38Z",
+  "dataPoints": 118,
   "oddsHistory": [
     {
-      "timestamp": "2026-03-14T23:53:00.939Z",
+      "timestamp": "2026-03-13T11:55:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+350",
-        "numericOdds": 350
+        "numericOdds": 285
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-550",
-        "numericOdds": -550
-      },
-      "isLocked": false,
-      "extractionId": 20
+        "numericOdds": -360
+      }
     },
     {
-      "timestamp": "2026-03-14T23:53:03.958Z",
+      "timestamp": "2026-03-13T12:00:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+350",
-        "numericOdds": 350
+        "numericOdds": 285
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-550",
-        "numericOdds": -550
-      },
-      "isLocked": false,
-      "extractionId": 2
+        "numericOdds": -360
+      }
     },
     {
-      "timestamp": "2026-03-14T23:53:06.959Z",
+      "timestamp": "2026-03-13T12:05:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+350",
-        "numericOdds": 350
+        "numericOdds": 285
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-550",
-        "numericOdds": -550
-      },
-      "isLocked": false,
-      "extractionId": 3
+        "numericOdds": -360
+      }
     },
     {
-      "timestamp": "2026-03-14T23:53:09.960Z",
+      "timestamp": "2026-03-13T12:10:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+350",
-        "numericOdds": 350
+        "numericOdds": 275
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-550",
-        "numericOdds": -550
-      },
-      "isLocked": false,
-      "extractionId": 4
+        "numericOdds": -345
+      }
     },
     {
-      "timestamp": "2026-03-14T23:53:12.963Z",
+      "timestamp": "2026-03-13T12:15:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+350",
-        "numericOdds": 350
+        "numericOdds": 275
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-550",
-        "numericOdds": -550
-      },
-      "isLocked": false,
-      "extractionId": 5
+        "numericOdds": -345
+      }
     },
     {
-      "timestamp": "2026-03-14T23:53:15.972Z",
+      "timestamp": "2026-03-13T12:20:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+350",
-        "numericOdds": 350
+        "numericOdds": 275
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-550",
-        "numericOdds": -550
-      },
-      "isLocked": false,
-      "extractionId": 6
+        "numericOdds": -345
+      }
     },
     {
-      "timestamp": "2026-03-14T23:53:18.985Z",
+      "timestamp": "2026-03-13T12:25:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+350",
-        "numericOdds": 350
+        "numericOdds": 275
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-550",
-        "numericOdds": -550
-      },
-      "isLocked": false,
-      "extractionId": 7
+        "numericOdds": -345
+      }
     },
     {
-      "timestamp": "2026-03-14T23:53:21.989Z",
+      "timestamp": "2026-03-13T12:30:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+350",
-        "numericOdds": 350
+        "numericOdds": 275
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-550",
-        "numericOdds": -550
-      },
-      "isLocked": false,
-      "extractionId": 8
+        "numericOdds": -345
+      }
     },
     {
-      "timestamp": "2026-03-14T23:53:25.006Z",
+      "timestamp": "2026-03-13T12:35:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+350",
-        "numericOdds": 350
+        "numericOdds": 275
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-550",
-        "numericOdds": -550
-      },
-      "isLocked": false,
-      "extractionId": 9
+        "numericOdds": -345
+      }
     },
     {
-      "timestamp": "2026-03-14T23:53:28.011Z",
+      "timestamp": "2026-03-13T12:40:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+350",
-        "numericOdds": 350
+        "numericOdds": 275
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-550",
-        "numericOdds": -550
-      },
-      "isLocked": false,
-      "extractionId": 10
+        "numericOdds": -345
+      }
     },
     {
-      "timestamp": "2026-03-14T23:53:31.013Z",
+      "timestamp": "2026-03-13T12:45:39Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+350",
-        "numericOdds": 350
+        "numericOdds": 275
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-550",
-        "numericOdds": -550
-      },
-      "isLocked": false,
-      "extractionId": 11
+        "numericOdds": -345
+      }
     },
     {
-      "timestamp": "2026-03-14T23:53:34.016Z",
+      "timestamp": "2026-03-13T12:50:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+350",
-        "numericOdds": 350
+        "numericOdds": 275
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-550",
-        "numericOdds": -550
-      },
-      "isLocked": false,
-      "extractionId": 12
+        "numericOdds": -345
+      }
     },
     {
-      "timestamp": "2026-03-14T23:53:37.025Z",
+      "timestamp": "2026-03-13T12:55:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+330",
-        "numericOdds": 330
+        "numericOdds": 275
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-480",
-        "numericOdds": -480
-      },
-      "isLocked": false,
-      "extractionId": 13
+        "numericOdds": -345
+      }
     },
     {
-      "timestamp": "2026-03-14T23:53:40.028Z",
+      "timestamp": "2026-03-13T13:00:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+330",
-        "numericOdds": 330
+        "numericOdds": 275
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-480",
-        "numericOdds": -480
-      },
-      "isLocked": false,
-      "extractionId": 14
+        "numericOdds": -345
+      }
     },
     {
-      "timestamp": "2026-03-14T23:53:43.039Z",
+      "timestamp": "2026-03-13T13:05:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+330",
-        "numericOdds": 330
+        "numericOdds": 285
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-480",
-        "numericOdds": -480
-      },
-      "isLocked": false,
-      "extractionId": 15
+        "numericOdds": -360
+      }
     },
     {
-      "timestamp": "2026-03-14T23:53:46.053Z",
+      "timestamp": "2026-03-13T13:10:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+330",
-        "numericOdds": 330
+        "numericOdds": 285
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-480",
-        "numericOdds": -480
-      },
-      "isLocked": false,
-      "extractionId": 16
+        "numericOdds": -360
+      }
     },
     {
-      "timestamp": "2026-03-14T23:53:49.055Z",
+      "timestamp": "2026-03-13T13:15:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+330",
-        "numericOdds": 330
+        "numericOdds": 285
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-480",
-        "numericOdds": -480
-      },
-      "isLocked": false,
-      "extractionId": 17
+        "numericOdds": -360
+      }
     },
     {
-      "timestamp": "2026-03-14T23:53:52.070Z",
+      "timestamp": "2026-03-13T13:20:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+330",
-        "numericOdds": 330
+        "numericOdds": 285
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-480",
-        "numericOdds": -480
-      },
-      "isLocked": false,
-      "extractionId": 18
+        "numericOdds": -360
+      }
     },
     {
-      "timestamp": "2026-03-14T23:53:55.078Z",
+      "timestamp": "2026-03-13T13:25:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+330",
-        "numericOdds": 330
+        "numericOdds": 285
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-480",
-        "numericOdds": -480
-      },
-      "isLocked": false,
-      "extractionId": 19
+        "numericOdds": -360
+      }
     },
     {
-      "timestamp": "2026-03-14T23:53:58.092Z",
+      "timestamp": "2026-03-13T13:30:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+330",
-        "numericOdds": 330
+        "numericOdds": 285
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-480",
-        "numericOdds": -480
-      },
-      "isLocked": false,
-      "extractionId": 20
+        "numericOdds": -360
+      }
     },
     {
-      "timestamp": "2026-03-14T23:54:01.098Z",
+      "timestamp": "2026-03-13T13:35:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+330",
-        "numericOdds": 330
+        "numericOdds": 285
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-480",
-        "numericOdds": -480
-      },
-      "isLocked": false,
-      "extractionId": 21
+        "numericOdds": -360
+      }
     },
     {
-      "timestamp": "2026-03-14T23:54:04.100Z",
+      "timestamp": "2026-03-13T13:40:37Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+330",
-        "numericOdds": 330
+        "numericOdds": 285
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-480",
-        "numericOdds": -480
-      },
-      "isLocked": false,
-      "extractionId": 22
+        "numericOdds": -360
+      }
     },
     {
-      "timestamp": "2026-03-14T23:54:07.106Z",
+      "timestamp": "2026-03-13T13:45:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+330",
-        "numericOdds": 330
+        "numericOdds": 285
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-480",
-        "numericOdds": -480
-      },
-      "isLocked": false,
-      "extractionId": 23
+        "numericOdds": -360
+      }
     },
     {
-      "timestamp": "2026-03-14T23:54:10.122Z",
+      "timestamp": "2026-03-13T13:50:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+330",
-        "numericOdds": 330
+        "numericOdds": 285
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-480",
-        "numericOdds": -480
-      },
-      "isLocked": false,
-      "extractionId": 24
+        "numericOdds": -360
+      }
     },
     {
-      "timestamp": "2026-03-14T23:54:13.115Z",
+      "timestamp": "2026-03-13T13:55:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+400",
-        "numericOdds": 400
+        "numericOdds": 285
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "isLocked": false,
-      "extractionId": 25
+        "numericOdds": -360
+      }
     },
     {
-      "timestamp": "2026-03-14T23:54:16.120Z",
+      "timestamp": "2026-03-13T14:00:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+400",
-        "numericOdds": 400
+        "numericOdds": 285
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "isLocked": false,
-      "extractionId": 26
+        "numericOdds": -360
+      }
     },
     {
-      "timestamp": "2026-03-14T23:54:19.130Z",
+      "timestamp": "2026-03-13T14:05:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+400",
-        "numericOdds": 400
+        "numericOdds": 285
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "isLocked": false,
-      "extractionId": 27
+        "numericOdds": -360
+      }
     },
     {
-      "timestamp": "2026-03-14T23:54:22.134Z",
+      "timestamp": "2026-03-13T14:10:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+400",
-        "numericOdds": 400
+        "numericOdds": 285
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "isLocked": false,
-      "extractionId": 28
+        "numericOdds": -360
+      }
     },
     {
-      "timestamp": "2026-03-14T23:54:25.148Z",
+      "timestamp": "2026-03-13T14:15:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+440",
-        "numericOdds": 440
+        "numericOdds": 285
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "isLocked": false,
-      "extractionId": 29
+        "numericOdds": -360
+      }
     },
     {
-      "timestamp": "2026-03-14T23:54:28.163Z",
+      "timestamp": "2026-03-13T14:20:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+440",
-        "numericOdds": 440
+        "numericOdds": 280
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "isLocked": false,
-      "extractionId": 30
+        "numericOdds": -355
+      }
     },
     {
-      "timestamp": "2026-03-14T23:54:31.168Z",
+      "timestamp": "2026-03-13T14:25:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+440",
-        "numericOdds": 440
+        "numericOdds": 280
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "isLocked": false,
-      "extractionId": 31
+        "numericOdds": -355
+      }
     },
     {
-      "timestamp": "2026-03-14T23:54:34.170Z",
+      "timestamp": "2026-03-13T14:30:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+490",
-        "numericOdds": 490
+        "numericOdds": 280
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-800",
-        "numericOdds": -800
-      },
-      "isLocked": false,
-      "extractionId": 32
+        "numericOdds": -355
+      }
     },
     {
-      "timestamp": "2026-03-14T23:54:37.176Z",
+      "timestamp": "2026-03-13T14:35:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+490",
-        "numericOdds": 490
+        "numericOdds": 280
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-800",
-        "numericOdds": -800
-      },
-      "isLocked": false,
-      "extractionId": 33
+        "numericOdds": -355
+      }
     },
     {
-      "timestamp": "2026-03-14T23:54:40.182Z",
+      "timestamp": "2026-03-13T14:40:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+520",
-        "numericOdds": 520
+        "numericOdds": 280
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-850",
-        "numericOdds": -850
-      },
-      "isLocked": false,
-      "extractionId": 34
+        "numericOdds": -355
+      }
     },
     {
-      "timestamp": "2026-03-14T23:54:43.186Z",
+      "timestamp": "2026-03-13T14:45:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+440",
-        "numericOdds": 440
+        "numericOdds": 280
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "isLocked": false,
-      "extractionId": 35
+        "numericOdds": -355
+      }
     },
     {
-      "timestamp": "2026-03-14T23:54:46.186Z",
+      "timestamp": "2026-03-13T14:50:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+440",
-        "numericOdds": 440
+        "numericOdds": 280
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "isLocked": false,
-      "extractionId": 36
+        "numericOdds": -355
+      }
     },
     {
-      "timestamp": "2026-03-14T23:54:49.200Z",
+      "timestamp": "2026-03-13T14:55:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+440",
-        "numericOdds": 440
+        "numericOdds": 280
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "isLocked": false,
-      "extractionId": 37
+        "numericOdds": -355
+      }
     },
     {
-      "timestamp": "2026-03-14T23:54:52.201Z",
+      "timestamp": "2026-03-13T15:00:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+440",
-        "numericOdds": 440
+        "numericOdds": 280
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "isLocked": false,
-      "extractionId": 38
+        "numericOdds": -355
+      }
     },
     {
-      "timestamp": "2026-03-14T23:54:55.214Z",
+      "timestamp": "2026-03-13T15:05:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+440",
-        "numericOdds": 440
+        "numericOdds": 280
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "isLocked": false,
-      "extractionId": 39
+        "numericOdds": -355
+      }
     },
     {
-      "timestamp": "2026-03-14T23:54:58.219Z",
+      "timestamp": "2026-03-13T15:10:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+440",
-        "numericOdds": 440
+        "numericOdds": 280
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "isLocked": false,
-      "extractionId": 40
+        "numericOdds": -355
+      }
     },
     {
-      "timestamp": "2026-03-14T23:55:01.228Z",
+      "timestamp": "2026-03-13T15:15:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+440",
-        "numericOdds": 440
+        "numericOdds": 280
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "isLocked": false,
-      "extractionId": 41
+        "numericOdds": -355
+      }
     },
     {
-      "timestamp": "2026-03-14T23:55:04.236Z",
+      "timestamp": "2026-03-13T15:20:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+440",
-        "numericOdds": 440
+        "numericOdds": 280
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "isLocked": false,
-      "extractionId": 42
+        "numericOdds": -355
+      }
     },
     {
-      "timestamp": "2026-03-14T23:55:07.244Z",
+      "timestamp": "2026-03-13T15:25:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+440",
-        "numericOdds": 440
+        "numericOdds": 280
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "isLocked": false,
-      "extractionId": 43
+        "numericOdds": -355
+      }
     },
     {
-      "timestamp": "2026-03-14T23:55:10.250Z",
+      "timestamp": "2026-03-13T15:30:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+400",
-        "numericOdds": 400
+        "numericOdds": 280
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "isLocked": false,
-      "extractionId": 44
+        "numericOdds": -355
+      }
     },
     {
-      "timestamp": "2026-03-14T23:55:13.251Z",
+      "timestamp": "2026-03-13T15:35:37Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+400",
-        "numericOdds": 400
+        "numericOdds": 280
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "isLocked": false,
-      "extractionId": 45
+        "numericOdds": -355
+      }
     },
     {
-      "timestamp": "2026-03-14T23:55:16.265Z",
+      "timestamp": "2026-03-13T15:40:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+400",
-        "numericOdds": 400
+        "numericOdds": 280
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "isLocked": false,
-      "extractionId": 46
+        "numericOdds": -355
+      }
     },
     {
-      "timestamp": "2026-03-14T23:55:19.269Z",
+      "timestamp": "2026-03-13T15:45:39Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+400",
-        "numericOdds": 400
+        "numericOdds": 280
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "isLocked": false,
-      "extractionId": 47
+        "numericOdds": -355
+      }
     },
     {
-      "timestamp": "2026-03-14T23:55:22.273Z",
+      "timestamp": "2026-03-13T15:50:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+400",
-        "numericOdds": 400
+        "numericOdds": 280
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "isLocked": false,
-      "extractionId": 48
+        "numericOdds": -355
+      }
     },
     {
-      "timestamp": "2026-03-14T23:55:25.275Z",
+      "timestamp": "2026-03-13T15:55:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+400",
-        "numericOdds": 400
+        "numericOdds": 280
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "isLocked": false,
-      "extractionId": 49
+        "numericOdds": -355
+      }
     },
     {
-      "timestamp": "2026-03-14T23:55:28.285Z",
+      "timestamp": "2026-03-13T16:00:39Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+400",
-        "numericOdds": 400
+        "numericOdds": 280
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "isLocked": false,
-      "extractionId": 50
+        "numericOdds": -355
+      }
     },
     {
-      "timestamp": "2026-03-14T23:55:31.298Z",
+      "timestamp": "2026-03-13T16:05:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+400",
-        "numericOdds": 400
+        "numericOdds": 280
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "isLocked": false,
-      "extractionId": 51
+        "numericOdds": -355
+      }
     },
     {
-      "timestamp": "2026-03-14T23:55:34.298Z",
+      "timestamp": "2026-03-13T16:10:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+400",
-        "numericOdds": 400
+        "numericOdds": 280
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "isLocked": false,
-      "extractionId": 52
+        "numericOdds": -355
+      }
     },
     {
-      "timestamp": "2026-03-14T23:55:37.303Z",
+      "timestamp": "2026-03-13T16:15:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+400",
-        "numericOdds": 400
+        "numericOdds": 280
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "isLocked": false,
-      "extractionId": 53
+        "numericOdds": -355
+      }
     },
     {
-      "timestamp": "2026-03-14T23:55:40.302Z",
+      "timestamp": "2026-03-13T16:20:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+490",
-        "numericOdds": 490
+        "numericOdds": 280
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-800",
-        "numericOdds": -800
-      },
-      "isLocked": false,
-      "extractionId": 54
+        "numericOdds": -355
+      }
     },
     {
-      "timestamp": "2026-03-14T23:55:43.310Z",
+      "timestamp": "2026-03-13T16:25:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+520",
-        "numericOdds": 520
+        "numericOdds": 280
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-850",
-        "numericOdds": -850
-      },
-      "isLocked": false,
-      "extractionId": 55
+        "numericOdds": -355
+      }
     },
     {
-      "timestamp": "2026-03-14T23:55:46.312Z",
+      "timestamp": "2026-03-13T16:30:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+520",
-        "numericOdds": 520
+        "numericOdds": 280
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-850",
-        "numericOdds": -850
-      },
-      "isLocked": false,
-      "extractionId": 56
+        "numericOdds": -355
+      }
     },
     {
-      "timestamp": "2026-03-14T23:55:49.322Z",
+      "timestamp": "2026-03-13T16:35:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+550",
-        "numericOdds": 550
+        "numericOdds": 280
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-950",
-        "numericOdds": -950
-      },
-      "isLocked": false,
-      "extractionId": 57
+        "numericOdds": -355
+      }
     },
     {
-      "timestamp": "2026-03-14T23:55:52.335Z",
+      "timestamp": "2026-03-13T16:40:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+550",
-        "numericOdds": 550
+        "numericOdds": 280
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-950",
-        "numericOdds": -950
-      },
-      "isLocked": false,
-      "extractionId": 58
+        "numericOdds": -355
+      }
     },
     {
-      "timestamp": "2026-03-14T23:55:55.338Z",
+      "timestamp": "2026-03-13T16:45:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+550",
-        "numericOdds": 550
+        "numericOdds": 280
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-950",
-        "numericOdds": -950
-      },
-      "isLocked": false,
-      "extractionId": 59
+        "numericOdds": -355
+      }
     },
     {
-      "timestamp": "2026-03-14T23:55:58.338Z",
+      "timestamp": "2026-03-13T16:50:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+550",
-        "numericOdds": 550
+        "numericOdds": 280
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-950",
-        "numericOdds": -950
-      },
-      "isLocked": false,
-      "extractionId": 60
+        "numericOdds": -355
+      }
     },
     {
-      "timestamp": "2026-03-14T23:56:01.341Z",
+      "timestamp": "2026-03-13T16:55:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+550",
-        "numericOdds": 550
+        "numericOdds": 280
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-950",
-        "numericOdds": -950
-      },
-      "isLocked": false,
-      "extractionId": 61
+        "numericOdds": -355
+      }
     },
     {
-      "timestamp": "2026-03-14T23:56:04.354Z",
+      "timestamp": "2026-03-13T17:00:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+550",
-        "numericOdds": 550
+        "numericOdds": 280
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-950",
-        "numericOdds": -950
-      },
-      "isLocked": false,
-      "extractionId": 62
+        "numericOdds": -355
+      }
     },
     {
-      "timestamp": "2026-03-14T23:56:07.367Z",
+      "timestamp": "2026-03-13T17:05:38Z",
       "fighter1": {
         "name": "Chris Curtis",
-        "odds": "+550",
-        "numericOdds": 550
+        "numericOdds": 280
       },
       "fighter2": {
         "name": "Myktybek Orolbai",
-        "odds": "-950",
-        "numericOdds": -950
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T17:10:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
       },
-      "isLocked": false,
-      "extractionId": 63
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T17:15:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T17:20:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T17:25:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T17:30:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T17:35:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T17:40:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T17:45:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T17:50:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T17:55:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T18:00:42Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T18:05:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T18:10:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T18:15:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T18:20:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T18:25:40Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T18:30:39Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T18:35:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T18:40:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T18:45:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T18:50:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T18:55:39Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T19:00:40Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T19:05:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T19:10:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T19:15:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T19:20:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T19:25:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T19:30:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T19:35:39Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T19:40:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T19:45:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T19:50:39Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T19:55:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T20:00:41Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T20:05:39Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T20:10:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T20:15:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T20:20:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T20:25:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T20:30:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T20:35:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T20:40:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T20:45:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T20:50:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T20:55:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T21:00:42Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T21:05:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T21:10:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T21:15:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T21:20:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T21:25:37Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T21:30:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T21:35:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
+    },
+    {
+      "timestamp": "2026-03-13T21:40:38Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Myktybek Orolbai",
+        "numericOdds": -355
+      }
     }
-  ],
-  "createdAt": "2026-03-14T23:57:10.486Z",
-  "outcome": {
-    "winner": "fighter2",
-    "winnerName": "Myktybek Orolbai",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:51:05.658Z",
-    "openingF1Odds": 350,
-    "openingF2Odds": -550,
-    "closingF1Odds": 550,
-    "closingF2Odds": -950,
-    "lineMovementF1": 200,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": 2,
-    "inferredFinishRound": 1,
-    "peakOddsSwing": 200,
-    "finishSpeed": "slow",
-    "preFightSteam": 200,
-    "dominanceScore": 100,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.398Z"
-  }
+  ]
 }

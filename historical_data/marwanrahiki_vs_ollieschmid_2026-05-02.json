@@ -1,2137 +1,3276 @@
 {
-  "fightId": "marwanrahiki_vs_ollieschmid",
-  "fightTitle": "Connected but no betting buttons found",
-  "startTime": "2026-05-02T12:19:14.348Z",
-  "endTime": "2026-05-02T12:22:41.835Z",
-  "duration": 207487,
-  "dataPoints": 140,
+  "fightId": "marwanrahiki_vs_ollieschmid_2026-05-02",
+  "fightTitle": "Marwan Rahiki vs Ollie Schmid",
+  "startTime": "2026-05-01T11:55:38Z",
+  "endTime": "2026-05-02T12:35:38Z",
+  "dataPoints": 297,
   "oddsHistory": [
     {
-      "timestamp": "2026-05-02T12:19:14.348Z",
+      "timestamp": "2026-05-01T11:55:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+500",
-        "numericOdds": 500
-      },
-      "isLocked": false,
-      "extractionId": 37
-    },
-    {
-      "timestamp": "2026-05-02T12:19:17.363Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+500",
-        "numericOdds": 500
-      },
-      "isLocked": false,
-      "extractionId": 2
-    },
-    {
-      "timestamp": "2026-05-02T12:19:20.365Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+500",
-        "numericOdds": 500
-      },
-      "isLocked": false,
-      "extractionId": 3
-    },
-    {
-      "timestamp": "2026-05-02T12:19:23.374Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+500",
-        "numericOdds": 500
-      },
-      "isLocked": false,
-      "extractionId": 4
-    },
-    {
-      "timestamp": "2026-05-02T12:19:26.389Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+500",
-        "numericOdds": 500
-      },
-      "isLocked": false,
-      "extractionId": 5
-    },
-    {
-      "timestamp": "2026-05-02T12:19:29.392Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+500",
-        "numericOdds": 500
-      },
-      "isLocked": false,
-      "extractionId": 6
-    },
-    {
-      "timestamp": "2026-05-02T12:19:32.398Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+500",
-        "numericOdds": 500
-      },
-      "isLocked": false,
-      "extractionId": 7
-    },
-    {
-      "timestamp": "2026-05-02T12:19:35.403Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+500",
-        "numericOdds": 500
-      },
-      "isLocked": false,
-      "extractionId": 8
-    },
-    {
-      "timestamp": "2026-05-02T12:19:38.413Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+500",
-        "numericOdds": 500
-      },
-      "isLocked": false,
-      "extractionId": 9
-    },
-    {
-      "timestamp": "2026-05-02T12:19:41.417Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+500",
-        "numericOdds": 500
-      },
-      "isLocked": false,
-      "extractionId": 10
-    },
-    {
-      "timestamp": "2026-05-02T12:19:44.417Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+500",
-        "numericOdds": 500
-      },
-      "isLocked": false,
-      "extractionId": 11
-    },
-    {
-      "timestamp": "2026-05-02T12:19:47.424Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+500",
-        "numericOdds": 500
-      },
-      "isLocked": false,
-      "extractionId": 12
-    },
-    {
-      "timestamp": "2026-05-02T12:19:50.435Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+500",
-        "numericOdds": 500
-      },
-      "isLocked": false,
-      "extractionId": 13
-    },
-    {
-      "timestamp": "2026-05-02T12:19:53.436Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+500",
-        "numericOdds": 500
-      },
-      "isLocked": false,
-      "extractionId": 14
-    },
-    {
-      "timestamp": "2026-05-02T12:19:56.442Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+500",
-        "numericOdds": 500
-      },
-      "isLocked": false,
-      "extractionId": 15
-    },
-    {
-      "timestamp": "2026-05-02T12:19:59.456Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+500",
-        "numericOdds": 500
-      },
-      "isLocked": false,
-      "extractionId": 16
-    },
-    {
-      "timestamp": "2026-05-02T12:20:02.471Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+500",
-        "numericOdds": 500
-      },
-      "isLocked": false,
-      "extractionId": 17
-    },
-    {
-      "timestamp": "2026-05-02T12:20:05.478Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+500",
-        "numericOdds": 500
-      },
-      "isLocked": false,
-      "extractionId": 18
-    },
-    {
-      "timestamp": "2026-05-02T12:20:08.491Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+500",
-        "numericOdds": 500
-      },
-      "isLocked": false,
-      "extractionId": 19
-    },
-    {
-      "timestamp": "2026-05-02T12:20:11.494Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+500",
-        "numericOdds": 500
-      },
-      "isLocked": false,
-      "extractionId": 20
-    },
-    {
-      "timestamp": "2026-05-02T12:20:14.503Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-750",
         "numericOdds": -750
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+470",
-        "numericOdds": 470
-      },
-      "isLocked": false,
-      "extractionId": 21
+        "numericOdds": 525
+      }
     },
     {
-      "timestamp": "2026-05-02T12:20:17.509Z",
+      "timestamp": "2026-05-01T12:00:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-750",
         "numericOdds": -750
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+470",
-        "numericOdds": 470
-      },
-      "isLocked": false,
-      "extractionId": 22
+        "numericOdds": 525
+      }
     },
     {
-      "timestamp": "2026-05-02T12:20:20.520Z",
+      "timestamp": "2026-05-01T12:05:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-750",
         "numericOdds": -750
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+470",
-        "numericOdds": 470
-      },
-      "isLocked": false,
-      "extractionId": 23
+        "numericOdds": 525
+      }
     },
     {
-      "timestamp": "2026-05-02T12:20:23.525Z",
+      "timestamp": "2026-05-01T12:10:37Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-750",
         "numericOdds": -750
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+470",
-        "numericOdds": 470
-      },
-      "isLocked": false,
-      "extractionId": 24
+        "numericOdds": 525
+      }
     },
     {
-      "timestamp": "2026-05-02T12:20:26.538Z",
+      "timestamp": "2026-05-01T12:15:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-750",
         "numericOdds": -750
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+470",
-        "numericOdds": 470
-      },
-      "isLocked": false,
-      "extractionId": 25
+        "numericOdds": 525
+      }
     },
     {
-      "timestamp": "2026-05-02T12:20:29.545Z",
+      "timestamp": "2026-05-01T12:20:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-750",
         "numericOdds": -750
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+470",
-        "numericOdds": 470
-      },
-      "isLocked": false,
-      "extractionId": 26
+        "numericOdds": 525
+      }
     },
     {
-      "timestamp": "2026-05-02T12:20:32.557Z",
+      "timestamp": "2026-05-01T12:25:37Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-750",
         "numericOdds": -750
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+470",
-        "numericOdds": 470
-      },
-      "isLocked": false,
-      "extractionId": 27
+        "numericOdds": 525
+      }
     },
     {
-      "timestamp": "2026-05-02T12:20:35.564Z",
+      "timestamp": "2026-05-01T12:30:39Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-750",
         "numericOdds": -750
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+470",
-        "numericOdds": 470
-      },
-      "isLocked": false,
-      "extractionId": 28
+        "numericOdds": 525
+      }
     },
     {
-      "timestamp": "2026-05-02T12:20:38.567Z",
+      "timestamp": "2026-05-01T12:35:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-750",
         "numericOdds": -750
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+470",
-        "numericOdds": 470
-      },
-      "isLocked": false,
-      "extractionId": 29
+        "numericOdds": 525
+      }
     },
     {
-      "timestamp": "2026-05-02T12:20:41.570Z",
+      "timestamp": "2026-05-01T12:40:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-950",
-        "numericOdds": -950
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+550",
-        "numericOdds": 550
-      },
-      "isLocked": false,
-      "extractionId": 30
-    },
-    {
-      "timestamp": "2026-05-02T12:20:44.579Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-950",
-        "numericOdds": -950
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+550",
-        "numericOdds": 550
-      },
-      "isLocked": false,
-      "extractionId": 31
-    },
-    {
-      "timestamp": "2026-05-02T12:20:47.580Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-950",
-        "numericOdds": -950
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+550",
-        "numericOdds": 550
-      },
-      "isLocked": false,
-      "extractionId": 32
-    },
-    {
-      "timestamp": "2026-05-02T12:20:50.586Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-950",
-        "numericOdds": -950
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+550",
-        "numericOdds": 550
-      },
-      "isLocked": false,
-      "extractionId": 33
-    },
-    {
-      "timestamp": "2026-05-02T12:20:53.588Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-950",
-        "numericOdds": -950
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+550",
-        "numericOdds": 550
-      },
-      "isLocked": false,
-      "extractionId": 34
-    },
-    {
-      "timestamp": "2026-05-02T12:20:56.596Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-950",
-        "numericOdds": -950
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+550",
-        "numericOdds": 550
-      },
-      "isLocked": false,
-      "extractionId": 35
-    },
-    {
-      "timestamp": "2026-05-02T12:20:59.601Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-800",
-        "numericOdds": -800
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 36
-    },
-    {
-      "timestamp": "2026-05-02T12:21:02.614Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-800",
-        "numericOdds": -800
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 37
-    },
-    {
-      "timestamp": "2026-05-02T12:21:05.626Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-800",
-        "numericOdds": -800
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 38
-    },
-    {
-      "timestamp": "2026-05-02T12:21:08.634Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-800",
-        "numericOdds": -800
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 39
-    },
-    {
-      "timestamp": "2026-05-02T12:21:11.639Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-950",
-        "numericOdds": -950
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+550",
-        "numericOdds": 550
-      },
-      "isLocked": false,
-      "extractionId": 40
-    },
-    {
-      "timestamp": "2026-05-02T12:21:14.647Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-950",
-        "numericOdds": -950
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+550",
-        "numericOdds": 550
-      },
-      "isLocked": false,
-      "extractionId": 41
-    },
-    {
-      "timestamp": "2026-05-02T12:21:17.656Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-950",
-        "numericOdds": -950
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+550",
-        "numericOdds": 550
-      },
-      "isLocked": false,
-      "extractionId": 42
-    },
-    {
-      "timestamp": "2026-05-02T12:21:20.662Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-800",
-        "numericOdds": -800
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 43
-    },
-    {
-      "timestamp": "2026-05-02T12:21:23.670Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-800",
-        "numericOdds": -800
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 44
-    },
-    {
-      "timestamp": "2026-05-02T12:21:26.685Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-800",
-        "numericOdds": -800
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 45
-    },
-    {
-      "timestamp": "2026-05-02T12:21:29.691Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-800",
-        "numericOdds": -800
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 46
-    },
-    {
-      "timestamp": "2026-05-02T12:21:32.701Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-800",
-        "numericOdds": -800
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 47
-    },
-    {
-      "timestamp": "2026-05-02T12:21:35.705Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-800",
-        "numericOdds": -800
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 48
-    },
-    {
-      "timestamp": "2026-05-02T12:21:38.715Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-800",
-        "numericOdds": -800
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 49
-    },
-    {
-      "timestamp": "2026-05-02T12:21:41.725Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-800",
-        "numericOdds": -800
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 50
-    },
-    {
-      "timestamp": "2026-05-02T12:21:44.725Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-800",
-        "numericOdds": -800
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 51
-    },
-    {
-      "timestamp": "2026-05-02T12:21:47.729Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-800",
-        "numericOdds": -800
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 52
-    },
-    {
-      "timestamp": "2026-05-02T12:21:50.739Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-850",
-        "numericOdds": -850
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+520",
-        "numericOdds": 520
-      },
-      "isLocked": false,
-      "extractionId": 53
-    },
-    {
-      "timestamp": "2026-05-02T12:21:53.751Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-850",
-        "numericOdds": -850
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+520",
-        "numericOdds": 520
-      },
-      "isLocked": false,
-      "extractionId": 54
-    },
-    {
-      "timestamp": "2026-05-02T12:21:56.759Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+440",
-        "numericOdds": 440
-      },
-      "isLocked": false,
-      "extractionId": 55
-    },
-    {
-      "timestamp": "2026-05-02T12:21:59.761Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+440",
-        "numericOdds": 440
-      },
-      "isLocked": false,
-      "extractionId": 56
-    },
-    {
-      "timestamp": "2026-05-02T12:22:02.773Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+440",
-        "numericOdds": 440
-      },
-      "isLocked": false,
-      "extractionId": 57
-    },
-    {
-      "timestamp": "2026-05-02T12:22:05.773Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+440",
-        "numericOdds": 440
-      },
-      "isLocked": false,
-      "extractionId": 58
-    },
-    {
-      "timestamp": "2026-05-02T12:22:08.780Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+440",
-        "numericOdds": 440
-      },
-      "isLocked": false,
-      "extractionId": 59
-    },
-    {
-      "timestamp": "2026-05-02T12:22:11.785Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-800",
-        "numericOdds": -800
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 60
-    },
-    {
-      "timestamp": "2026-05-02T12:22:14.787Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-800",
-        "numericOdds": -800
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 61
-    },
-    {
-      "timestamp": "2026-05-02T12:22:17.787Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-800",
-        "numericOdds": -800
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 62
-    },
-    {
-      "timestamp": "2026-05-02T12:22:20.791Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-800",
-        "numericOdds": -800
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 63
-    },
-    {
-      "timestamp": "2026-05-02T12:22:23.794Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-800",
-        "numericOdds": -800
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 64
-    },
-    {
-      "timestamp": "2026-05-02T12:22:26.797Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-800",
-        "numericOdds": -800
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 65
-    },
-    {
-      "timestamp": "2026-05-02T12:22:29.809Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-800",
-        "numericOdds": -800
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 66
-    },
-    {
-      "timestamp": "2026-05-02T12:22:32.819Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-850",
-        "numericOdds": -850
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+520",
-        "numericOdds": 520
-      },
-      "isLocked": false,
-      "extractionId": 67
-    },
-    {
-      "timestamp": "2026-05-02T12:22:35.819Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-850",
-        "numericOdds": -850
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+520",
-        "numericOdds": 520
-      },
-      "isLocked": false,
-      "extractionId": 68
-    },
-    {
-      "timestamp": "2026-05-02T12:22:38.826Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-850",
-        "numericOdds": -850
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+520",
-        "numericOdds": 520
-      },
-      "isLocked": false,
-      "extractionId": 69
-    },
-    {
-      "timestamp": "2026-05-02T12:22:41.835Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-850",
-        "numericOdds": -850
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+520",
-        "numericOdds": 520
-      },
-      "isLocked": false,
-      "extractionId": 70
-    },
-    {
-      "timestamp": "2026-05-02T12:19:14.348Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+500",
-        "numericOdds": 500
-      },
-      "isLocked": false,
-      "extractionId": 37
-    },
-    {
-      "timestamp": "2026-05-02T12:19:17.363Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+500",
-        "numericOdds": 500
-      },
-      "isLocked": false,
-      "extractionId": 2
-    },
-    {
-      "timestamp": "2026-05-02T12:19:20.365Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+500",
-        "numericOdds": 500
-      },
-      "isLocked": false,
-      "extractionId": 3
-    },
-    {
-      "timestamp": "2026-05-02T12:19:23.374Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+500",
-        "numericOdds": 500
-      },
-      "isLocked": false,
-      "extractionId": 4
-    },
-    {
-      "timestamp": "2026-05-02T12:19:26.389Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+500",
-        "numericOdds": 500
-      },
-      "isLocked": false,
-      "extractionId": 5
-    },
-    {
-      "timestamp": "2026-05-02T12:19:29.392Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+500",
-        "numericOdds": 500
-      },
-      "isLocked": false,
-      "extractionId": 6
-    },
-    {
-      "timestamp": "2026-05-02T12:19:32.398Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+500",
-        "numericOdds": 500
-      },
-      "isLocked": false,
-      "extractionId": 7
-    },
-    {
-      "timestamp": "2026-05-02T12:19:35.403Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+500",
-        "numericOdds": 500
-      },
-      "isLocked": false,
-      "extractionId": 8
-    },
-    {
-      "timestamp": "2026-05-02T12:19:38.413Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+500",
-        "numericOdds": 500
-      },
-      "isLocked": false,
-      "extractionId": 9
-    },
-    {
-      "timestamp": "2026-05-02T12:19:41.417Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+500",
-        "numericOdds": 500
-      },
-      "isLocked": false,
-      "extractionId": 10
-    },
-    {
-      "timestamp": "2026-05-02T12:19:44.417Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+500",
-        "numericOdds": 500
-      },
-      "isLocked": false,
-      "extractionId": 11
-    },
-    {
-      "timestamp": "2026-05-02T12:19:47.424Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+500",
-        "numericOdds": 500
-      },
-      "isLocked": false,
-      "extractionId": 12
-    },
-    {
-      "timestamp": "2026-05-02T12:19:50.435Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+500",
-        "numericOdds": 500
-      },
-      "isLocked": false,
-      "extractionId": 13
-    },
-    {
-      "timestamp": "2026-05-02T12:19:53.436Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+500",
-        "numericOdds": 500
-      },
-      "isLocked": false,
-      "extractionId": 14
-    },
-    {
-      "timestamp": "2026-05-02T12:19:56.442Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+500",
-        "numericOdds": 500
-      },
-      "isLocked": false,
-      "extractionId": 15
-    },
-    {
-      "timestamp": "2026-05-02T12:19:59.456Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+500",
-        "numericOdds": 500
-      },
-      "isLocked": false,
-      "extractionId": 16
-    },
-    {
-      "timestamp": "2026-05-02T12:20:02.471Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+500",
-        "numericOdds": 500
-      },
-      "isLocked": false,
-      "extractionId": 17
-    },
-    {
-      "timestamp": "2026-05-02T12:20:05.478Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+500",
-        "numericOdds": 500
-      },
-      "isLocked": false,
-      "extractionId": 18
-    },
-    {
-      "timestamp": "2026-05-02T12:20:08.491Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+500",
-        "numericOdds": 500
-      },
-      "isLocked": false,
-      "extractionId": 19
-    },
-    {
-      "timestamp": "2026-05-02T12:20:11.494Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
-        "name": "Ollie Schmid",
-        "odds": "+500",
-        "numericOdds": 500
-      },
-      "isLocked": false,
-      "extractionId": 20
-    },
-    {
-      "timestamp": "2026-05-02T12:20:14.503Z",
-      "fighter1": {
-        "name": "Marwan Rahiki",
-        "odds": "-750",
         "numericOdds": -750
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+470",
-        "numericOdds": 470
-      },
-      "isLocked": false,
-      "extractionId": 21
+        "numericOdds": 525
+      }
     },
     {
-      "timestamp": "2026-05-02T12:20:17.509Z",
+      "timestamp": "2026-05-01T12:45:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-750",
         "numericOdds": -750
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+470",
-        "numericOdds": 470
-      },
-      "isLocked": false,
-      "extractionId": 22
+        "numericOdds": 525
+      }
     },
     {
-      "timestamp": "2026-05-02T12:20:20.520Z",
+      "timestamp": "2026-05-01T12:50:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-750",
         "numericOdds": -750
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+470",
-        "numericOdds": 470
-      },
-      "isLocked": false,
-      "extractionId": 23
+        "numericOdds": 525
+      }
     },
     {
-      "timestamp": "2026-05-02T12:20:23.525Z",
+      "timestamp": "2026-05-01T12:55:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-750",
         "numericOdds": -750
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+470",
-        "numericOdds": 470
-      },
-      "isLocked": false,
-      "extractionId": 24
+        "numericOdds": 525
+      }
     },
     {
-      "timestamp": "2026-05-02T12:20:26.538Z",
+      "timestamp": "2026-05-01T13:00:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-750",
         "numericOdds": -750
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+470",
-        "numericOdds": 470
-      },
-      "isLocked": false,
-      "extractionId": 25
+        "numericOdds": 525
+      }
     },
     {
-      "timestamp": "2026-05-02T12:20:29.545Z",
+      "timestamp": "2026-05-01T13:05:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-750",
         "numericOdds": -750
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+470",
-        "numericOdds": 470
-      },
-      "isLocked": false,
-      "extractionId": 26
+        "numericOdds": 525
+      }
     },
     {
-      "timestamp": "2026-05-02T12:20:32.557Z",
+      "timestamp": "2026-05-01T13:10:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-750",
         "numericOdds": -750
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+470",
-        "numericOdds": 470
-      },
-      "isLocked": false,
-      "extractionId": 27
+        "numericOdds": 525
+      }
     },
     {
-      "timestamp": "2026-05-02T12:20:35.564Z",
+      "timestamp": "2026-05-01T13:15:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-750",
         "numericOdds": -750
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+470",
-        "numericOdds": 470
-      },
-      "isLocked": false,
-      "extractionId": 28
+        "numericOdds": 525
+      }
     },
     {
-      "timestamp": "2026-05-02T12:20:38.567Z",
+      "timestamp": "2026-05-01T13:20:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-750",
         "numericOdds": -750
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+470",
-        "numericOdds": 470
-      },
-      "isLocked": false,
-      "extractionId": 29
+        "numericOdds": 525
+      }
     },
     {
-      "timestamp": "2026-05-02T12:20:41.570Z",
+      "timestamp": "2026-05-01T13:25:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-950",
-        "numericOdds": -950
+        "numericOdds": -750
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+550",
-        "numericOdds": 550
-      },
-      "isLocked": false,
-      "extractionId": 30
+        "numericOdds": 525
+      }
     },
     {
-      "timestamp": "2026-05-02T12:20:44.579Z",
+      "timestamp": "2026-05-01T13:30:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-950",
-        "numericOdds": -950
+        "numericOdds": -750
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+550",
-        "numericOdds": 550
-      },
-      "isLocked": false,
-      "extractionId": 31
+        "numericOdds": 525
+      }
     },
     {
-      "timestamp": "2026-05-02T12:20:47.580Z",
+      "timestamp": "2026-05-01T13:35:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-950",
-        "numericOdds": -950
+        "numericOdds": -750
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+550",
-        "numericOdds": 550
-      },
-      "isLocked": false,
-      "extractionId": 32
+        "numericOdds": 525
+      }
     },
     {
-      "timestamp": "2026-05-02T12:20:50.586Z",
+      "timestamp": "2026-05-01T13:40:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-950",
-        "numericOdds": -950
+        "numericOdds": -750
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+550",
-        "numericOdds": 550
-      },
-      "isLocked": false,
-      "extractionId": 33
+        "numericOdds": 525
+      }
     },
     {
-      "timestamp": "2026-05-02T12:20:53.588Z",
+      "timestamp": "2026-05-01T13:45:39Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-950",
-        "numericOdds": -950
+        "numericOdds": -750
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+550",
-        "numericOdds": 550
-      },
-      "isLocked": false,
-      "extractionId": 34
+        "numericOdds": 525
+      }
     },
     {
-      "timestamp": "2026-05-02T12:20:56.596Z",
+      "timestamp": "2026-05-01T13:50:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-950",
-        "numericOdds": -950
+        "numericOdds": -750
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+550",
-        "numericOdds": 550
-      },
-      "isLocked": false,
-      "extractionId": 35
+        "numericOdds": 525
+      }
     },
     {
-      "timestamp": "2026-05-02T12:20:59.601Z",
+      "timestamp": "2026-05-01T13:55:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-800",
-        "numericOdds": -800
+        "numericOdds": -750
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 36
+        "numericOdds": 525
+      }
     },
     {
-      "timestamp": "2026-05-02T12:21:02.614Z",
+      "timestamp": "2026-05-01T14:00:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-800",
-        "numericOdds": -800
+        "numericOdds": -750
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 37
+        "numericOdds": 525
+      }
     },
     {
-      "timestamp": "2026-05-02T12:21:05.626Z",
+      "timestamp": "2026-05-01T14:05:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-800",
-        "numericOdds": -800
+        "numericOdds": -750
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 38
+        "numericOdds": 525
+      }
     },
     {
-      "timestamp": "2026-05-02T12:21:08.634Z",
+      "timestamp": "2026-05-01T14:10:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-800",
-        "numericOdds": -800
+        "numericOdds": -750
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 39
+        "numericOdds": 525
+      }
     },
     {
-      "timestamp": "2026-05-02T12:21:11.639Z",
+      "timestamp": "2026-05-01T14:15:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-950",
-        "numericOdds": -950
+        "numericOdds": -750
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+550",
-        "numericOdds": 550
-      },
-      "isLocked": false,
-      "extractionId": 40
+        "numericOdds": 525
+      }
     },
     {
-      "timestamp": "2026-05-02T12:21:14.647Z",
+      "timestamp": "2026-05-01T14:20:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-950",
-        "numericOdds": -950
+        "numericOdds": -750
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+550",
-        "numericOdds": 550
-      },
-      "isLocked": false,
-      "extractionId": 41
+        "numericOdds": 525
+      }
     },
     {
-      "timestamp": "2026-05-02T12:21:17.656Z",
+      "timestamp": "2026-05-01T14:25:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-950",
-        "numericOdds": -950
+        "numericOdds": -750
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+550",
-        "numericOdds": 550
-      },
-      "isLocked": false,
-      "extractionId": 42
+        "numericOdds": 525
+      }
     },
     {
-      "timestamp": "2026-05-02T12:21:20.662Z",
+      "timestamp": "2026-05-01T14:30:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-800",
-        "numericOdds": -800
+        "numericOdds": -750
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 43
+        "numericOdds": 525
+      }
     },
     {
-      "timestamp": "2026-05-02T12:21:23.670Z",
+      "timestamp": "2026-05-01T14:35:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-800",
-        "numericOdds": -800
+        "numericOdds": -750
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 44
+        "numericOdds": 525
+      }
     },
     {
-      "timestamp": "2026-05-02T12:21:26.685Z",
+      "timestamp": "2026-05-01T14:40:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-800",
-        "numericOdds": -800
+        "numericOdds": -750
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 45
+        "numericOdds": 525
+      }
     },
     {
-      "timestamp": "2026-05-02T12:21:29.691Z",
+      "timestamp": "2026-05-01T14:45:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-800",
-        "numericOdds": -800
+        "numericOdds": -750
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 46
+        "numericOdds": 525
+      }
     },
     {
-      "timestamp": "2026-05-02T12:21:32.701Z",
+      "timestamp": "2026-05-01T14:50:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-800",
-        "numericOdds": -800
+        "numericOdds": -750
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 47
+        "numericOdds": 525
+      }
     },
     {
-      "timestamp": "2026-05-02T12:21:35.705Z",
+      "timestamp": "2026-05-01T14:55:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-800",
-        "numericOdds": -800
+        "numericOdds": -750
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 48
+        "numericOdds": 525
+      }
     },
     {
-      "timestamp": "2026-05-02T12:21:38.715Z",
+      "timestamp": "2026-05-01T15:00:37Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-800",
-        "numericOdds": -800
+        "numericOdds": -750
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 49
+        "numericOdds": 525
+      }
     },
     {
-      "timestamp": "2026-05-02T12:21:41.725Z",
+      "timestamp": "2026-05-01T15:05:39Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-800",
-        "numericOdds": -800
+        "numericOdds": -750
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 50
+        "numericOdds": 525
+      }
     },
     {
-      "timestamp": "2026-05-02T12:21:44.725Z",
+      "timestamp": "2026-05-01T15:10:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-800",
-        "numericOdds": -800
+        "numericOdds": -750
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 51
+        "numericOdds": 525
+      }
     },
     {
-      "timestamp": "2026-05-02T12:21:47.729Z",
+      "timestamp": "2026-05-01T15:15:39Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-800",
-        "numericOdds": -800
+        "numericOdds": -750
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 52
+        "numericOdds": 525
+      }
     },
     {
-      "timestamp": "2026-05-02T12:21:50.739Z",
+      "timestamp": "2026-05-01T15:20:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-850",
-        "numericOdds": -850
+        "numericOdds": -750
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+520",
-        "numericOdds": 520
-      },
-      "isLocked": false,
-      "extractionId": 53
+        "numericOdds": 525
+      }
     },
     {
-      "timestamp": "2026-05-02T12:21:53.751Z",
+      "timestamp": "2026-05-01T15:25:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-850",
-        "numericOdds": -850
+        "numericOdds": -750
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+520",
-        "numericOdds": 520
-      },
-      "isLocked": false,
-      "extractionId": 54
+        "numericOdds": 525
+      }
     },
     {
-      "timestamp": "2026-05-02T12:21:56.759Z",
+      "timestamp": "2026-05-01T15:30:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-700",
+        "numericOdds": -750
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 525
+      }
+    },
+    {
+      "timestamp": "2026-05-01T15:35:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -750
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 525
+      }
+    },
+    {
+      "timestamp": "2026-05-01T15:40:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -750
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 525
+      }
+    },
+    {
+      "timestamp": "2026-05-01T15:45:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -750
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 525
+      }
+    },
+    {
+      "timestamp": "2026-05-01T15:50:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -750
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 525
+      }
+    },
+    {
+      "timestamp": "2026-05-01T15:55:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -750
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 525
+      }
+    },
+    {
+      "timestamp": "2026-05-01T16:00:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -750
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 525
+      }
+    },
+    {
+      "timestamp": "2026-05-01T16:05:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -750
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 525
+      }
+    },
+    {
+      "timestamp": "2026-05-01T16:10:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -750
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 525
+      }
+    },
+    {
+      "timestamp": "2026-05-01T16:15:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -750
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 525
+      }
+    },
+    {
+      "timestamp": "2026-05-01T16:20:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
         "numericOdds": -700
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+440",
-        "numericOdds": 440
-      },
-      "isLocked": false,
-      "extractionId": 55
+        "numericOdds": 500
+      }
     },
     {
-      "timestamp": "2026-05-02T12:21:59.761Z",
+      "timestamp": "2026-05-01T16:25:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-700",
         "numericOdds": -700
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+440",
-        "numericOdds": 440
-      },
-      "isLocked": false,
-      "extractionId": 56
+        "numericOdds": 500
+      }
     },
     {
-      "timestamp": "2026-05-02T12:22:02.773Z",
+      "timestamp": "2026-05-01T16:30:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-700",
         "numericOdds": -700
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+440",
-        "numericOdds": 440
-      },
-      "isLocked": false,
-      "extractionId": 57
+        "numericOdds": 500
+      }
     },
     {
-      "timestamp": "2026-05-02T12:22:05.773Z",
+      "timestamp": "2026-05-01T16:35:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-700",
+        "numericOdds": -650
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 470
+      }
+    },
+    {
+      "timestamp": "2026-05-01T16:40:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -650
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 470
+      }
+    },
+    {
+      "timestamp": "2026-05-01T16:45:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -650
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 470
+      }
+    },
+    {
+      "timestamp": "2026-05-01T16:50:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -650
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 470
+      }
+    },
+    {
+      "timestamp": "2026-05-01T16:55:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -650
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 470
+      }
+    },
+    {
+      "timestamp": "2026-05-01T17:00:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -650
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 470
+      }
+    },
+    {
+      "timestamp": "2026-05-01T17:05:40Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -650
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 470
+      }
+    },
+    {
+      "timestamp": "2026-05-01T17:10:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -650
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 470
+      }
+    },
+    {
+      "timestamp": "2026-05-01T17:15:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -650
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 470
+      }
+    },
+    {
+      "timestamp": "2026-05-01T17:20:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -650
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 470
+      }
+    },
+    {
+      "timestamp": "2026-05-01T17:25:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -650
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 470
+      }
+    },
+    {
+      "timestamp": "2026-05-01T17:30:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -650
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 470
+      }
+    },
+    {
+      "timestamp": "2026-05-01T17:35:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -650
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 470
+      }
+    },
+    {
+      "timestamp": "2026-05-01T17:40:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -650
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 470
+      }
+    },
+    {
+      "timestamp": "2026-05-01T17:45:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -650
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 470
+      }
+    },
+    {
+      "timestamp": "2026-05-01T17:50:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -650
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 470
+      }
+    },
+    {
+      "timestamp": "2026-05-01T17:55:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -650
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 470
+      }
+    },
+    {
+      "timestamp": "2026-05-01T18:00:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -650
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 470
+      }
+    },
+    {
+      "timestamp": "2026-05-01T18:05:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -650
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 470
+      }
+    },
+    {
+      "timestamp": "2026-05-01T18:10:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -650
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 470
+      }
+    },
+    {
+      "timestamp": "2026-05-01T18:15:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -650
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 470
+      }
+    },
+    {
+      "timestamp": "2026-05-01T18:20:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -650
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 470
+      }
+    },
+    {
+      "timestamp": "2026-05-01T18:25:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -650
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 470
+      }
+    },
+    {
+      "timestamp": "2026-05-01T18:30:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -650
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 470
+      }
+    },
+    {
+      "timestamp": "2026-05-01T18:35:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -650
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 470
+      }
+    },
+    {
+      "timestamp": "2026-05-01T18:40:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -650
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 470
+      }
+    },
+    {
+      "timestamp": "2026-05-01T18:45:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -650
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 470
+      }
+    },
+    {
+      "timestamp": "2026-05-01T18:50:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -650
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 470
+      }
+    },
+    {
+      "timestamp": "2026-05-01T18:55:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -650
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 470
+      }
+    },
+    {
+      "timestamp": "2026-05-01T19:00:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -650
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 470
+      }
+    },
+    {
+      "timestamp": "2026-05-01T19:05:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -650
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 470
+      }
+    },
+    {
+      "timestamp": "2026-05-01T19:10:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -650
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 470
+      }
+    },
+    {
+      "timestamp": "2026-05-01T19:15:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -650
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 470
+      }
+    },
+    {
+      "timestamp": "2026-05-01T19:20:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -650
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 470
+      }
+    },
+    {
+      "timestamp": "2026-05-01T19:25:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -650
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 470
+      }
+    },
+    {
+      "timestamp": "2026-05-01T19:30:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -650
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 470
+      }
+    },
+    {
+      "timestamp": "2026-05-01T19:35:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -650
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 470
+      }
+    },
+    {
+      "timestamp": "2026-05-01T19:40:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -650
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 470
+      }
+    },
+    {
+      "timestamp": "2026-05-01T19:45:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -650
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 470
+      }
+    },
+    {
+      "timestamp": "2026-05-01T19:50:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -750
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 525
+      }
+    },
+    {
+      "timestamp": "2026-05-01T19:55:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -750
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 525
+      }
+    },
+    {
+      "timestamp": "2026-05-01T20:00:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -750
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 525
+      }
+    },
+    {
+      "timestamp": "2026-05-01T20:05:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
         "numericOdds": -700
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+440",
-        "numericOdds": 440
-      },
-      "isLocked": false,
-      "extractionId": 58
+        "numericOdds": 500
+      }
     },
     {
-      "timestamp": "2026-05-02T12:22:08.780Z",
+      "timestamp": "2026-05-01T20:10:39Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-700",
         "numericOdds": -700
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+440",
-        "numericOdds": 440
-      },
-      "isLocked": false,
-      "extractionId": 59
+        "numericOdds": 500
+      }
     },
     {
-      "timestamp": "2026-05-02T12:22:11.785Z",
+      "timestamp": "2026-05-01T20:15:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-800",
-        "numericOdds": -800
+        "numericOdds": -700
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 60
+        "numericOdds": 500
+      }
     },
     {
-      "timestamp": "2026-05-02T12:22:14.787Z",
+      "timestamp": "2026-05-01T20:20:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-800",
-        "numericOdds": -800
+        "numericOdds": -700
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 61
+        "numericOdds": 500
+      }
     },
     {
-      "timestamp": "2026-05-02T12:22:17.787Z",
+      "timestamp": "2026-05-01T20:25:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-800",
-        "numericOdds": -800
+        "numericOdds": -700
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 62
+        "numericOdds": 500
+      }
     },
     {
-      "timestamp": "2026-05-02T12:22:20.791Z",
+      "timestamp": "2026-05-01T20:30:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-800",
-        "numericOdds": -800
+        "numericOdds": -700
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 63
+        "numericOdds": 500
+      }
     },
     {
-      "timestamp": "2026-05-02T12:22:23.794Z",
+      "timestamp": "2026-05-01T20:35:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-800",
-        "numericOdds": -800
+        "numericOdds": -700
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 64
+        "numericOdds": 500
+      }
     },
     {
-      "timestamp": "2026-05-02T12:22:26.797Z",
+      "timestamp": "2026-05-01T20:40:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-800",
-        "numericOdds": -800
+        "numericOdds": -700
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 65
+        "numericOdds": 500
+      }
     },
     {
-      "timestamp": "2026-05-02T12:22:29.809Z",
+      "timestamp": "2026-05-01T20:45:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-800",
-        "numericOdds": -800
+        "numericOdds": -700
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+490",
-        "numericOdds": 490
-      },
-      "isLocked": false,
-      "extractionId": 66
+        "numericOdds": 500
+      }
     },
     {
-      "timestamp": "2026-05-02T12:22:32.819Z",
+      "timestamp": "2026-05-01T20:50:39Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-850",
-        "numericOdds": -850
+        "numericOdds": -700
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+520",
-        "numericOdds": 520
-      },
-      "isLocked": false,
-      "extractionId": 67
+        "numericOdds": 500
+      }
     },
     {
-      "timestamp": "2026-05-02T12:22:35.819Z",
+      "timestamp": "2026-05-01T20:55:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-850",
-        "numericOdds": -850
+        "numericOdds": -700
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+520",
-        "numericOdds": 520
-      },
-      "isLocked": false,
-      "extractionId": 68
+        "numericOdds": 500
+      }
     },
     {
-      "timestamp": "2026-05-02T12:22:38.826Z",
+      "timestamp": "2026-05-01T21:00:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-850",
-        "numericOdds": -850
+        "numericOdds": -700
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+520",
-        "numericOdds": 520
-      },
-      "isLocked": false,
-      "extractionId": 69
+        "numericOdds": 500
+      }
     },
     {
-      "timestamp": "2026-05-02T12:22:41.835Z",
+      "timestamp": "2026-05-01T21:05:38Z",
       "fighter1": {
         "name": "Marwan Rahiki",
-        "odds": "-850",
-        "numericOdds": -850
+        "numericOdds": -700
       },
       "fighter2": {
         "name": "Ollie Schmid",
-        "odds": "+520",
-        "numericOdds": 520
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-01T21:10:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
       },
-      "isLocked": false,
-      "extractionId": 70
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-01T21:15:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-01T21:20:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-01T21:25:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-01T21:30:39Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-01T21:35:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-01T21:40:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-01T21:45:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-01T21:50:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-01T21:55:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-01T22:00:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-01T22:05:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-01T22:10:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-01T22:15:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-01T22:20:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-01T22:25:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-01T22:30:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-01T22:35:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-01T22:40:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-01T22:45:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-01T22:50:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-01T22:55:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-01T23:00:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-01T23:05:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-01T23:10:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-01T23:15:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-01T23:20:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-01T23:25:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-01T23:30:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-01T23:35:40Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-01T23:40:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-01T23:45:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-01T23:50:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-01T23:55:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T00:00:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T00:05:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T00:10:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T00:15:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T00:20:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T00:25:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T00:30:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T00:35:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T00:40:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T00:45:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T00:50:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T00:55:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T01:00:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T01:05:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T01:10:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T01:15:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T01:20:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T01:25:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T01:30:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T01:35:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T01:40:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T01:45:39Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T01:50:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T01:55:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T02:00:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T02:05:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T02:10:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T02:15:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T02:20:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T02:25:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T02:30:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T02:35:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T02:40:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T02:45:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T02:50:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T02:55:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T03:00:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T03:05:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T03:10:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T03:15:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T03:20:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T03:25:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T03:30:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T03:35:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T03:40:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T03:45:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T03:50:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T03:55:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T04:00:40Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T04:05:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T04:10:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T04:15:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T04:20:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T04:25:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T04:30:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T04:35:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T04:40:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T04:45:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T04:50:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T04:55:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T05:00:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T05:05:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T05:10:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T05:15:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T05:20:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T05:25:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T05:30:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T05:35:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T05:40:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T05:45:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T05:50:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T05:55:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T06:00:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T06:05:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T06:10:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T06:15:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T06:20:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T06:25:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T06:30:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T06:35:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T06:40:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T06:45:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T06:50:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T06:55:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T07:00:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T07:05:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T07:10:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T07:15:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T07:20:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T07:25:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T07:30:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T07:35:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T07:40:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T07:45:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T07:50:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T07:55:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T08:00:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T08:05:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T08:10:39Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T08:15:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T08:20:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T08:25:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T08:30:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T08:35:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T08:40:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T08:45:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T08:50:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T08:55:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T09:00:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T09:05:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T09:10:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T09:15:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T09:20:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T09:25:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T09:30:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T09:35:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T09:40:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T09:45:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T09:50:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T09:55:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T10:00:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T10:05:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T10:10:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T10:15:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T10:20:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T10:25:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T10:30:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T10:35:39Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T10:40:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T10:45:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T10:50:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T10:55:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T11:00:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T11:05:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T11:10:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T11:15:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T11:20:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T11:25:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T11:30:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T11:35:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T11:40:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T11:45:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T11:50:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T11:55:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T12:00:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T12:05:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T12:10:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-05-02T12:15:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -625
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 455
+      }
+    },
+    {
+      "timestamp": "2026-05-02T12:20:37Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -720
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 450
+      }
+    },
+    {
+      "timestamp": "2026-05-02T12:25:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -920
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 550
+      }
+    },
+    {
+      "timestamp": "2026-05-02T12:30:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -920
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 550
+      }
+    },
+    {
+      "timestamp": "2026-05-02T12:35:38Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "numericOdds": -920
+      },
+      "fighter2": {
+        "name": "Ollie Schmid",
+        "numericOdds": 550
+      }
     }
-  ],
-  "createdAt": "2026-05-02T12:25:17.173Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Marwan Rahiki",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:51:57.119Z",
-    "openingF1Odds": -700,
-    "openingF2Odds": 500,
-    "closingF1Odds": -850,
-    "closingF2Odds": 520,
-    "lineMovementF1": -150,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": 1,
-    "inferredFinishRound": 1,
-    "peakOddsSwing": 250,
-    "finishSpeed": "medium",
-    "preFightSteam": -150,
-    "dominanceScore": 100,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.458Z"
-  }
+  ]
 }

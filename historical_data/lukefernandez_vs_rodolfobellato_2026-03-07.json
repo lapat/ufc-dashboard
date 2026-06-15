@@ -1,1012 +1,4651 @@
 {
-  "fightId": "lukefernandez_vs_rodolfobellato",
-  "fightTitle": "Connected but no betting buttons found",
-  "startTime": "2026-03-07T22:45:03.440Z",
-  "endTime": "2026-03-07T22:48:15.909Z",
-  "duration": 192469,
-  "dataPoints": 65,
+  "fightId": "lukefernandez_vs_rodolfobellato_2026-03-07",
+  "fightTitle": "Luke Fernandez vs Rodolfo Bellato",
+  "startTime": "2026-03-06T11:55:38Z",
+  "endTime": "2026-03-07T23:00:41Z",
+  "dataPoints": 422,
   "oddsHistory": [
     {
-      "timestamp": "2026-03-07T22:45:03.440Z",
+      "timestamp": "2026-03-06T11:55:38Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-220",
-        "numericOdds": -220
+        "numericOdds": -230
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+184",
-        "numericOdds": 184
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T12:00:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T12:05:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T12:10:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T12:15:39Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T12:20:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T12:25:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T12:30:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T12:35:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T12:40:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T12:45:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T12:50:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T12:55:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T13:00:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T13:05:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T13:10:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T13:15:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T13:20:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T13:25:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T13:30:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T13:35:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T13:40:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T13:45:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T13:50:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T13:55:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T14:00:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T14:05:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T14:10:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T14:15:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T14:20:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T14:25:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T14:30:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T14:35:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T14:40:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T14:45:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T14:50:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 185
+      }
+    },
+    {
+      "timestamp": "2026-03-06T14:55:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 185
+      }
+    },
+    {
+      "timestamp": "2026-03-06T15:00:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 185
+      }
+    },
+    {
+      "timestamp": "2026-03-06T15:05:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 185
+      }
+    },
+    {
+      "timestamp": "2026-03-06T15:10:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 185
+      }
+    },
+    {
+      "timestamp": "2026-03-06T15:15:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 185
+      }
+    },
+    {
+      "timestamp": "2026-03-06T15:20:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 185
+      }
+    },
+    {
+      "timestamp": "2026-03-06T15:25:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 185
+      }
+    },
+    {
+      "timestamp": "2026-03-06T15:30:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 185
+      }
+    },
+    {
+      "timestamp": "2026-03-06T15:35:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 185
+      }
+    },
+    {
+      "timestamp": "2026-03-06T15:40:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 185
+      }
+    },
+    {
+      "timestamp": "2026-03-06T15:45:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 185
+      }
+    },
+    {
+      "timestamp": "2026-03-06T15:50:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 185
+      }
+    },
+    {
+      "timestamp": "2026-03-06T15:55:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 185
+      }
+    },
+    {
+      "timestamp": "2026-03-06T16:00:39Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 185
+      }
+    },
+    {
+      "timestamp": "2026-03-06T16:05:39Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 185
+      }
+    },
+    {
+      "timestamp": "2026-03-06T16:10:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 185
+      }
+    },
+    {
+      "timestamp": "2026-03-06T16:15:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 185
+      }
+    },
+    {
+      "timestamp": "2026-03-06T16:20:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 185
+      }
+    },
+    {
+      "timestamp": "2026-03-06T16:25:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 185
+      }
+    },
+    {
+      "timestamp": "2026-03-06T16:30:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T16:35:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T16:40:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T16:45:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T16:50:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T16:55:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T17:00:39Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T17:05:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T17:10:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T17:15:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T17:20:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T17:25:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T17:30:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T17:35:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T17:40:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T17:45:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T17:50:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T17:55:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T18:00:42Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T18:05:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T18:10:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-03-06T18:15:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T18:20:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T18:25:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T18:30:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T18:35:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T18:40:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T18:45:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T18:50:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T18:55:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T19:00:41Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T19:05:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T19:10:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T19:15:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T19:20:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T19:25:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T19:30:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T19:35:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T19:40:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T19:45:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T19:50:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T19:55:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T20:00:44Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T20:05:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T20:10:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T20:15:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T20:20:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T20:25:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T20:30:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T20:35:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T20:40:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T20:45:39Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T20:50:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T20:55:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T21:00:40Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T21:05:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T21:10:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T21:15:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T21:20:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T21:25:39Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T21:30:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T21:35:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T21:40:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T21:45:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T21:50:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T21:55:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T22:00:42Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T22:05:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T22:10:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T22:15:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T22:20:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T22:25:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T22:30:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T22:35:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T22:40:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T22:45:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T22:50:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T22:55:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T23:00:44Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T23:05:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T23:10:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T23:15:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T23:20:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T23:25:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T23:30:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T23:35:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T23:40:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T23:45:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T23:50:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-06T23:55:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T00:00:50Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T00:05:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T00:10:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T00:15:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T00:20:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T00:25:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T00:30:39Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T00:35:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T00:40:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T00:45:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T00:50:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T00:55:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T01:00:46Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T01:05:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T01:10:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T01:15:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T01:20:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T01:25:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T01:30:41Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T01:35:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T01:40:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T01:45:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T01:50:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T01:55:39Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T02:00:43Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T02:05:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T02:10:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T02:15:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T02:20:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T02:25:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T02:30:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T02:35:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T02:40:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T02:45:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T02:50:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T02:55:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T03:00:40Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T03:05:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T03:10:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T03:15:39Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T03:20:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T03:25:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T03:30:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T03:35:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T03:40:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T03:45:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T03:50:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T03:55:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T04:00:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T04:05:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T04:10:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T04:15:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T04:20:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T04:25:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T04:30:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T04:35:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T04:40:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T04:45:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T04:50:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T04:55:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T05:00:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T05:05:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T05:10:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T05:15:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T05:20:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T05:25:39Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T05:30:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T05:35:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T05:40:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T05:45:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T05:50:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T05:55:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T06:00:39Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T06:05:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T06:10:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T06:15:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T06:20:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T06:25:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T06:30:39Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T06:35:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T06:40:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T06:45:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T06:50:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T06:55:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T07:00:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T07:05:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T07:10:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T07:15:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T07:20:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T07:25:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T07:30:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T07:35:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T07:40:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T07:45:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T07:50:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T07:55:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T08:00:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T08:05:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T08:10:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T08:15:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T08:20:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T08:25:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T08:30:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T08:35:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T08:40:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T08:45:39Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T08:50:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T08:55:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T09:00:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T09:05:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T09:10:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T09:15:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T09:20:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T09:25:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T09:30:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T09:35:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T09:40:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T09:45:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T09:50:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T09:55:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T10:00:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T10:05:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T10:10:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T10:15:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T10:20:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T10:25:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T10:30:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T10:35:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T10:40:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T10:45:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T10:50:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T10:55:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T11:00:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T11:05:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T11:10:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T11:15:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T11:20:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T11:25:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T11:30:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T11:35:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T11:40:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T11:45:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T11:50:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T11:55:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T12:00:39Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T12:05:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T12:10:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T12:15:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T12:20:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T12:25:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T12:30:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T12:35:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T12:40:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T12:45:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T12:50:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T12:55:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T13:00:40Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T13:05:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T13:10:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T13:15:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T13:20:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T13:25:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T13:30:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T13:35:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T13:40:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T13:45:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T13:50:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T13:55:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T14:00:44Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T14:05:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T14:10:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T14:15:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T14:20:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T14:25:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T14:30:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
       },
-      "isLocked": false,
-      "extractionId": 1
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:45:06.452Z",
+      "timestamp": "2026-03-07T14:35:38Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-220",
-        "numericOdds": -220
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+184",
-        "numericOdds": 184
-      },
-      "isLocked": false,
-      "extractionId": 2
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:45:09.458Z",
+      "timestamp": "2026-03-07T14:40:38Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-220",
-        "numericOdds": -220
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+184",
-        "numericOdds": 184
-      },
-      "isLocked": false,
-      "extractionId": 3
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:45:12.466Z",
+      "timestamp": "2026-03-07T14:45:38Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-220",
-        "numericOdds": -220
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+184",
-        "numericOdds": 184
-      },
-      "isLocked": false,
-      "extractionId": 4
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:45:15.469Z",
+      "timestamp": "2026-03-07T14:50:37Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-220",
-        "numericOdds": -220
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+184",
-        "numericOdds": 184
-      },
-      "isLocked": false,
-      "extractionId": 5
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:45:18.476Z",
+      "timestamp": "2026-03-07T14:55:37Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-220",
-        "numericOdds": -220
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+184",
-        "numericOdds": 184
-      },
-      "isLocked": false,
-      "extractionId": 6
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:45:21.485Z",
+      "timestamp": "2026-03-07T15:00:42Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-220",
-        "numericOdds": -220
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+184",
-        "numericOdds": 184
-      },
-      "isLocked": false,
-      "extractionId": 7
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:45:24.488Z",
+      "timestamp": "2026-03-07T15:05:37Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-220",
-        "numericOdds": -220
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+184",
-        "numericOdds": 184
-      },
-      "isLocked": false,
-      "extractionId": 8
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:45:27.491Z",
+      "timestamp": "2026-03-07T15:10:38Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-220",
-        "numericOdds": -220
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+184",
-        "numericOdds": 184
-      },
-      "isLocked": false,
-      "extractionId": 9
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:45:30.500Z",
+      "timestamp": "2026-03-07T15:15:38Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-220",
-        "numericOdds": -220
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+184",
-        "numericOdds": 184
-      },
-      "isLocked": false,
-      "extractionId": 10
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:45:33.500Z",
+      "timestamp": "2026-03-07T15:20:37Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-220",
-        "numericOdds": -220
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+184",
-        "numericOdds": 184
-      },
-      "isLocked": false,
-      "extractionId": 11
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:45:36.515Z",
+      "timestamp": "2026-03-07T15:25:38Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-220",
-        "numericOdds": -220
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+184",
-        "numericOdds": 184
-      },
-      "isLocked": false,
-      "extractionId": 12
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:45:39.526Z",
+      "timestamp": "2026-03-07T15:30:39Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-220",
-        "numericOdds": -220
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+184",
-        "numericOdds": 184
-      },
-      "isLocked": false,
-      "extractionId": 13
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:45:42.538Z",
+      "timestamp": "2026-03-07T15:35:37Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-220",
-        "numericOdds": -220
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+184",
-        "numericOdds": 184
-      },
-      "isLocked": false,
-      "extractionId": 14
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:45:45.551Z",
+      "timestamp": "2026-03-07T15:40:38Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-220",
-        "numericOdds": -220
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+184",
-        "numericOdds": 184
-      },
-      "isLocked": false,
-      "extractionId": 15
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:45:48.563Z",
+      "timestamp": "2026-03-07T15:45:38Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-220",
-        "numericOdds": -220
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+184",
-        "numericOdds": 184
-      },
-      "isLocked": false,
-      "extractionId": 16
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:45:51.565Z",
+      "timestamp": "2026-03-07T15:50:38Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-220",
-        "numericOdds": -220
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+184",
-        "numericOdds": 184
-      },
-      "isLocked": false,
-      "extractionId": 17
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:45:54.566Z",
+      "timestamp": "2026-03-07T15:55:37Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-220",
-        "numericOdds": -220
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+184",
-        "numericOdds": 184
-      },
-      "isLocked": false,
-      "extractionId": 18
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:45:57.582Z",
+      "timestamp": "2026-03-07T16:00:48Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-220",
-        "numericOdds": -220
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+184",
-        "numericOdds": 184
-      },
-      "isLocked": false,
-      "extractionId": 19
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:46:00.597Z",
+      "timestamp": "2026-03-07T16:05:37Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-220",
-        "numericOdds": -220
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+184",
-        "numericOdds": 184
-      },
-      "isLocked": false,
-      "extractionId": 20
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:46:03.602Z",
+      "timestamp": "2026-03-07T16:10:37Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+178",
-        "numericOdds": 178
-      },
-      "isLocked": false,
-      "extractionId": 21
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:46:06.604Z",
+      "timestamp": "2026-03-07T16:15:37Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+178",
-        "numericOdds": 178
-      },
-      "isLocked": false,
-      "extractionId": 22
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:46:09.612Z",
+      "timestamp": "2026-03-07T16:20:37Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+178",
-        "numericOdds": 178
-      },
-      "isLocked": false,
-      "extractionId": 23
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:46:12.616Z",
+      "timestamp": "2026-03-07T16:25:38Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+178",
-        "numericOdds": 178
-      },
-      "isLocked": false,
-      "extractionId": 24
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:46:15.627Z",
+      "timestamp": "2026-03-07T16:30:38Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+178",
-        "numericOdds": 178
-      },
-      "isLocked": false,
-      "extractionId": 25
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:46:18.629Z",
+      "timestamp": "2026-03-07T16:35:37Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-250",
-        "numericOdds": -250
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+188",
-        "numericOdds": 188
-      },
-      "isLocked": false,
-      "extractionId": 26
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:46:21.641Z",
+      "timestamp": "2026-03-07T16:40:37Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-250",
-        "numericOdds": -250
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+188",
-        "numericOdds": 188
-      },
-      "isLocked": false,
-      "extractionId": 27
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:46:24.646Z",
+      "timestamp": "2026-03-07T16:45:37Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-250",
-        "numericOdds": -250
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+188",
-        "numericOdds": 188
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T16:50:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
       },
-      "isLocked": false,
-      "extractionId": 28
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:46:27.649Z",
+      "timestamp": "2026-03-07T16:55:37Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-250",
-        "numericOdds": -250
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+188",
-        "numericOdds": 188
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T17:00:46Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
       },
-      "isLocked": false,
-      "extractionId": 29
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:46:30.655Z",
+      "timestamp": "2026-03-07T17:05:37Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-250",
-        "numericOdds": -250
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+188",
-        "numericOdds": 188
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T17:10:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
       },
-      "isLocked": false,
-      "extractionId": 30
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:46:36.662Z",
+      "timestamp": "2026-03-07T17:15:38Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-310",
-        "numericOdds": -310
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+225",
-        "numericOdds": 225
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T17:20:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
       },
-      "isLocked": false,
-      "extractionId": 31
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:46:39.668Z",
+      "timestamp": "2026-03-07T17:25:37Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-310",
-        "numericOdds": -310
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+225",
-        "numericOdds": 225
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T17:30:40Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
       },
-      "isLocked": false,
-      "extractionId": 2
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:46:42.673Z",
+      "timestamp": "2026-03-07T17:35:39Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-310",
-        "numericOdds": -310
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+225",
-        "numericOdds": 225
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T17:40:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
       },
-      "isLocked": false,
-      "extractionId": 3
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:46:45.681Z",
+      "timestamp": "2026-03-07T17:45:38Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-310",
-        "numericOdds": -310
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+225",
-        "numericOdds": 225
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T17:50:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
       },
-      "isLocked": false,
-      "extractionId": 4
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:46:48.693Z",
+      "timestamp": "2026-03-07T17:55:38Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-430",
-        "numericOdds": -430
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+300",
-        "numericOdds": 300
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T18:00:52Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
       },
-      "isLocked": false,
-      "extractionId": 5
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:46:51.703Z",
+      "timestamp": "2026-03-07T18:05:38Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-430",
-        "numericOdds": -430
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+300",
-        "numericOdds": 300
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T18:10:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
       },
-      "isLocked": false,
-      "extractionId": 6
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:46:54.708Z",
+      "timestamp": "2026-03-07T18:15:38Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-430",
-        "numericOdds": -430
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+300",
-        "numericOdds": 300
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T18:20:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
       },
-      "isLocked": false,
-      "extractionId": 7
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:46:57.720Z",
+      "timestamp": "2026-03-07T18:25:37Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-600",
-        "numericOdds": -600
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+370",
-        "numericOdds": 370
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T18:30:41Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
       },
-      "isLocked": false,
-      "extractionId": 8
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:47:00.734Z",
+      "timestamp": "2026-03-07T18:35:37Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-600",
-        "numericOdds": -600
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+370",
-        "numericOdds": 370
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T18:40:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
       },
-      "isLocked": false,
-      "extractionId": 9
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:47:03.736Z",
+      "timestamp": "2026-03-07T18:45:38Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-600",
-        "numericOdds": -600
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+370",
-        "numericOdds": 370
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T18:50:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
       },
-      "isLocked": false,
-      "extractionId": 10
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:47:06.738Z",
+      "timestamp": "2026-03-07T18:55:38Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-600",
-        "numericOdds": -600
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+370",
-        "numericOdds": 370
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T19:00:46Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
       },
-      "isLocked": false,
-      "extractionId": 11
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:47:09.748Z",
+      "timestamp": "2026-03-07T19:05:37Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-650",
-        "numericOdds": -650
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+420",
-        "numericOdds": 420
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T19:10:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
       },
-      "isLocked": false,
-      "extractionId": 12
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:47:12.757Z",
+      "timestamp": "2026-03-07T19:15:38Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-700",
-        "numericOdds": -700
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+440",
-        "numericOdds": 440
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T19:20:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
       },
-      "isLocked": false,
-      "extractionId": 13
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:47:15.768Z",
+      "timestamp": "2026-03-07T19:25:37Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-700",
-        "numericOdds": -700
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+440",
-        "numericOdds": 440
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T19:30:40Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
       },
-      "isLocked": false,
-      "extractionId": 14
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:47:18.782Z",
+      "timestamp": "2026-03-07T19:35:38Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-700",
-        "numericOdds": -700
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+440",
-        "numericOdds": 440
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T19:40:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
       },
-      "isLocked": false,
-      "extractionId": 15
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:47:21.791Z",
+      "timestamp": "2026-03-07T19:45:37Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-700",
-        "numericOdds": -700
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+440",
-        "numericOdds": 440
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T19:50:39Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
       },
-      "isLocked": false,
-      "extractionId": 16
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:47:24.796Z",
+      "timestamp": "2026-03-07T19:55:37Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-700",
-        "numericOdds": -700
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+440",
-        "numericOdds": 440
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T20:00:51Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
       },
-      "isLocked": false,
-      "extractionId": 17
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:47:27.807Z",
+      "timestamp": "2026-03-07T20:05:37Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-700",
-        "numericOdds": -700
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+440",
-        "numericOdds": 440
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T20:10:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
       },
-      "isLocked": false,
-      "extractionId": 18
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:47:30.815Z",
+      "timestamp": "2026-03-07T20:15:38Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-700",
-        "numericOdds": -700
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+440",
-        "numericOdds": 440
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T20:20:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
       },
-      "isLocked": false,
-      "extractionId": 19
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:47:33.818Z",
+      "timestamp": "2026-03-07T20:25:38Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-600",
-        "numericOdds": -600
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+390",
-        "numericOdds": 390
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T20:30:39Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
       },
-      "isLocked": false,
-      "extractionId": 20
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:47:36.829Z",
+      "timestamp": "2026-03-07T20:35:38Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-600",
-        "numericOdds": -600
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+390",
-        "numericOdds": 390
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T20:40:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
       },
-      "isLocked": false,
-      "extractionId": 21
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:47:39.837Z",
+      "timestamp": "2026-03-07T20:45:38Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-600",
-        "numericOdds": -600
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+390",
-        "numericOdds": 390
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T20:50:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
       },
-      "isLocked": false,
-      "extractionId": 22
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:47:42.848Z",
+      "timestamp": "2026-03-07T20:55:37Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-550",
-        "numericOdds": -550
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+350",
-        "numericOdds": 350
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T21:00:44Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
       },
-      "isLocked": false,
-      "extractionId": 23
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:47:45.857Z",
+      "timestamp": "2026-03-07T21:05:37Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-550",
-        "numericOdds": -550
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+350",
-        "numericOdds": 350
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T21:10:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
       },
-      "isLocked": false,
-      "extractionId": 24
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:47:48.859Z",
+      "timestamp": "2026-03-07T21:15:38Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-550",
-        "numericOdds": -550
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+350",
-        "numericOdds": 350
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T21:20:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
       },
-      "isLocked": false,
-      "extractionId": 25
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:47:51.864Z",
+      "timestamp": "2026-03-07T21:25:37Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-550",
-        "numericOdds": -550
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+350",
-        "numericOdds": 350
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T21:30:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -225
       },
-      "isLocked": false,
-      "extractionId": 26
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 185
+      }
     },
     {
-      "timestamp": "2026-03-07T22:47:54.875Z",
+      "timestamp": "2026-03-07T21:35:38Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-550",
-        "numericOdds": -550
+        "numericOdds": -225
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+350",
-        "numericOdds": 350
+        "numericOdds": 185
+      }
+    },
+    {
+      "timestamp": "2026-03-07T21:40:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -225
       },
-      "isLocked": false,
-      "extractionId": 27
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 185
+      }
     },
     {
-      "timestamp": "2026-03-07T22:47:57.878Z",
+      "timestamp": "2026-03-07T21:45:38Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-700",
-        "numericOdds": -700
+        "numericOdds": -225
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+440",
-        "numericOdds": 440
+        "numericOdds": 185
+      }
+    },
+    {
+      "timestamp": "2026-03-07T21:50:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -225
       },
-      "isLocked": false,
-      "extractionId": 28
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 185
+      }
     },
     {
-      "timestamp": "2026-03-07T22:48:00.894Z",
+      "timestamp": "2026-03-07T21:55:38Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-700",
-        "numericOdds": -700
+        "numericOdds": -225
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+440",
-        "numericOdds": 440
+        "numericOdds": 185
+      }
+    },
+    {
+      "timestamp": "2026-03-07T22:00:43Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -218
       },
-      "isLocked": false,
-      "extractionId": 29
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 180
+      }
     },
     {
-      "timestamp": "2026-03-07T22:48:03.895Z",
+      "timestamp": "2026-03-07T22:05:37Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-700",
-        "numericOdds": -700
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+440",
-        "numericOdds": 440
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-03-07T22:10:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -225
       },
-      "isLocked": false,
-      "extractionId": 30
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 185
+      }
     },
     {
-      "timestamp": "2026-03-07T22:48:06.899Z",
+      "timestamp": "2026-03-07T22:15:38Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-700",
-        "numericOdds": -700
+        "numericOdds": -225
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+440",
-        "numericOdds": 440
+        "numericOdds": 185
+      }
+    },
+    {
+      "timestamp": "2026-03-07T22:20:38Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -225
       },
-      "isLocked": false,
-      "extractionId": 31
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 185
+      }
     },
     {
-      "timestamp": "2026-03-07T22:48:12.902Z",
+      "timestamp": "2026-03-07T22:25:38Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-850",
-        "numericOdds": -850
+        "numericOdds": -225
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+520",
-        "numericOdds": 520
+        "numericOdds": 185
+      }
+    },
+    {
+      "timestamp": "2026-03-07T22:30:39Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -225
       },
-      "isLocked": false,
-      "extractionId": 32
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 185
+      }
     },
     {
-      "timestamp": "2026-03-07T22:48:15.909Z",
+      "timestamp": "2026-03-07T22:35:37Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-850",
-        "numericOdds": -850
+        "numericOdds": -225
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+520",
-        "numericOdds": 520
+        "numericOdds": 185
+      }
+    },
+    {
+      "timestamp": "2026-03-07T22:40:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -225
       },
-      "isLocked": false,
-      "extractionId": 2
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 185
+      }
     },
     {
-      "timestamp": "2026-03-07T22:48:12.902Z",
+      "timestamp": "2026-03-07T22:45:38Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-850",
-        "numericOdds": -850
+        "numericOdds": -225
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+520",
-        "numericOdds": 520
+        "numericOdds": 185
+      }
+    },
+    {
+      "timestamp": "2026-03-07T22:50:37Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -345
       },
-      "isLocked": false,
-      "extractionId": 32
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 250
+      }
     },
     {
-      "timestamp": "2026-03-07T22:48:15.909Z",
+      "timestamp": "2026-03-07T22:55:37Z",
       "fighter1": {
         "name": "Luke Fernandez",
-        "odds": "-850",
-        "numericOdds": -850
+        "numericOdds": -345
       },
       "fighter2": {
         "name": "Rodolfo Bellato",
-        "odds": "+520",
-        "numericOdds": 520
+        "numericOdds": 250
+      }
+    },
+    {
+      "timestamp": "2026-03-07T23:00:41Z",
+      "fighter1": {
+        "name": "Luke Fernandez",
+        "numericOdds": -345
       },
-      "isLocked": false,
-      "extractionId": 2
+      "fighter2": {
+        "name": "Rodolfo Bellato",
+        "numericOdds": 250
+      }
     }
-  ],
-  "createdAt": "2026-03-07T22:46:36.661Z",
-  "outcome": {
-    "winner": "fighter2",
-    "winnerName": "Rodolfo Bellato",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:51:50.018Z",
-    "openingF1Odds": -220,
-    "openingF2Odds": 184,
-    "closingF1Odds": -850,
-    "closingF2Odds": 520,
-    "lineMovementF1": -630,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": 3,
-    "inferredFinishRound": 1,
-    "peakOddsSwing": 630,
-    "finishSpeed": "medium",
-    "preFightSteam": -630,
-    "dominanceScore": 100,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.450Z"
-  }
+  ]
 }

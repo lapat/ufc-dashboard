@@ -1,2797 +1,4805 @@
 {
-  "fightId": "rodolfovieira_vs_ericmcconico",
-  "fightTitle": "Connected but no betting buttons found",
-  "startTime": "2026-04-25T23:45:25.790Z",
-  "endTime": "2026-04-25T23:57:06.373Z",
-  "duration": 700583,
-  "dataPoints": 184,
+  "fightId": "rodolfovieira_vs_ericmcconico_2026-04-25",
+  "fightTitle": "Rodolfo Vieira vs Eric McConico",
+  "startTime": "2026-04-24T11:55:38Z",
+  "endTime": "2026-04-26T00:10:37Z",
+  "dataPoints": 436,
   "oddsHistory": [
     {
-      "timestamp": "2026-04-25T23:45:25.790Z",
+      "timestamp": "2026-04-24T11:55:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-550",
-        "numericOdds": -550
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "+340",
-        "numericOdds": 340
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 6
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:45:28.806Z",
+      "timestamp": "2026-04-24T12:00:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-550",
-        "numericOdds": -550
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "+340",
-        "numericOdds": 340
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 2
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:45:31.808Z",
+      "timestamp": "2026-04-24T12:05:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-550",
-        "numericOdds": -550
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "+340",
-        "numericOdds": 340
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 3
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:45:34.822Z",
+      "timestamp": "2026-04-24T12:10:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-550",
-        "numericOdds": -550
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "+340",
-        "numericOdds": 340
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 4
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:45:37.825Z",
+      "timestamp": "2026-04-24T12:15:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-550",
-        "numericOdds": -550
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "+350",
-        "numericOdds": 350
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 5
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:45:40.833Z",
+      "timestamp": "2026-04-24T12:20:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-550",
-        "numericOdds": -550
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "+350",
-        "numericOdds": 350
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 6
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:45:43.834Z",
+      "timestamp": "2026-04-24T12:25:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-550",
-        "numericOdds": -550
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "+350",
-        "numericOdds": 350
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 7
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:45:46.846Z",
+      "timestamp": "2026-04-24T12:30:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-550",
-        "numericOdds": -550
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "+350",
-        "numericOdds": 350
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 8
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:45:49.848Z",
+      "timestamp": "2026-04-24T12:35:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-550",
-        "numericOdds": -550
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "+350",
-        "numericOdds": 350
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 9
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:45:52.849Z",
+      "timestamp": "2026-04-24T12:40:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-550",
-        "numericOdds": -550
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "+350",
-        "numericOdds": 350
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 10
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:45:55.850Z",
+      "timestamp": "2026-04-24T12:45:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-550",
-        "numericOdds": -550
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "+350",
-        "numericOdds": 350
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 11
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:45:58.855Z",
+      "timestamp": "2026-04-24T12:50:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "+440",
-        "numericOdds": 440
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 12
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:46:01.856Z",
+      "timestamp": "2026-04-24T12:55:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "+440",
-        "numericOdds": 440
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 13
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:46:04.860Z",
+      "timestamp": "2026-04-24T13:00:40Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "+440",
-        "numericOdds": 440
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 14
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:46:07.860Z",
+      "timestamp": "2026-04-24T13:05:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-850",
-        "numericOdds": -850
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "+520",
-        "numericOdds": 520
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 15
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:46:10.865Z",
+      "timestamp": "2026-04-24T13:10:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-850",
-        "numericOdds": -850
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "+520",
-        "numericOdds": 520
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 16
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:46:13.879Z",
+      "timestamp": "2026-04-24T13:15:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-800",
-        "numericOdds": -800
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "+490",
-        "numericOdds": 490
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 17
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:46:16.879Z",
+      "timestamp": "2026-04-24T13:20:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-800",
-        "numericOdds": -800
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "+490",
-        "numericOdds": 490
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 18
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:46:19.889Z",
+      "timestamp": "2026-04-24T13:25:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-800",
-        "numericOdds": -800
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "+490",
-        "numericOdds": 490
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 19
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:46:22.893Z",
+      "timestamp": "2026-04-24T13:30:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-800",
-        "numericOdds": -800
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "+490",
-        "numericOdds": 490
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 20
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:46:25.904Z",
+      "timestamp": "2026-04-24T13:35:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-800",
-        "numericOdds": -800
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "+490",
-        "numericOdds": 490
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 21
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:46:43.935Z",
+      "timestamp": "2026-04-24T13:40:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-400",
-        "numericOdds": -400
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "+280",
-        "numericOdds": 280
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 22
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:46:46.937Z",
+      "timestamp": "2026-04-24T13:45:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-400",
-        "numericOdds": -400
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "+280",
-        "numericOdds": 280
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 2
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:46:49.947Z",
+      "timestamp": "2026-04-24T13:50:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-400",
-        "numericOdds": -400
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "+280",
-        "numericOdds": 280
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 3
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:46:52.955Z",
+      "timestamp": "2026-04-24T13:55:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-400",
-        "numericOdds": -400
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "+280",
-        "numericOdds": 280
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 4
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:46:55.961Z",
+      "timestamp": "2026-04-24T14:00:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-400",
-        "numericOdds": -400
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "+280",
-        "numericOdds": 280
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 5
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:46:58.972Z",
+      "timestamp": "2026-04-24T14:05:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-400",
-        "numericOdds": -400
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "+280",
-        "numericOdds": 280
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 6
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:47:01.972Z",
+      "timestamp": "2026-04-24T14:10:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-400",
-        "numericOdds": -400
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "+280",
-        "numericOdds": 280
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 7
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:47:04.977Z",
+      "timestamp": "2026-04-24T14:15:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-400",
-        "numericOdds": -400
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "+280",
-        "numericOdds": 280
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 8
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:47:07.979Z",
+      "timestamp": "2026-04-24T14:20:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-400",
-        "numericOdds": -400
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "+280",
-        "numericOdds": 280
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 9
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:47:10.991Z",
+      "timestamp": "2026-04-24T14:25:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-400",
-        "numericOdds": -400
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "+280",
-        "numericOdds": 280
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 10
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:47:14.001Z",
+      "timestamp": "2026-04-24T14:30:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-310",
-        "numericOdds": -310
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "+225",
-        "numericOdds": 225
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 11
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:47:17.004Z",
+      "timestamp": "2026-04-24T14:35:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-310",
-        "numericOdds": -310
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "+225",
-        "numericOdds": 225
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 12
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:47:20.091Z",
+      "timestamp": "2026-04-24T14:40:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-310",
-        "numericOdds": -310
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "+225",
-        "numericOdds": 225
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 13
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:47:23.104Z",
+      "timestamp": "2026-04-24T14:45:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-310",
-        "numericOdds": -310
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "+225",
-        "numericOdds": 225
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 14
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:47:26.118Z",
+      "timestamp": "2026-04-24T14:50:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-310",
-        "numericOdds": -310
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "+225",
-        "numericOdds": 225
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 15
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:47:29.121Z",
+      "timestamp": "2026-04-24T14:55:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-310",
-        "numericOdds": -310
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "+225",
-        "numericOdds": 225
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 16
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:47:32.123Z",
+      "timestamp": "2026-04-24T15:00:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-310",
-        "numericOdds": -310
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "+225",
-        "numericOdds": 225
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 17
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:47:35.131Z",
+      "timestamp": "2026-04-24T15:05:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-310",
-        "numericOdds": -310
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "+225",
-        "numericOdds": 225
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 18
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:47:38.133Z",
+      "timestamp": "2026-04-24T15:10:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-400",
-        "numericOdds": -400
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "+280",
-        "numericOdds": 280
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 19
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:47:41.135Z",
+      "timestamp": "2026-04-24T15:15:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Eric McConico",
+        "numericOdds": 235
       },
       "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
+    },
+    {
+      "timestamp": "2026-04-24T15:20:38Z",
+      "fighter1": {
         "name": "Eric McConico",
-        "odds": "+280",
-        "numericOdds": 280
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 20
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:47:44.136Z",
+      "timestamp": "2026-04-24T15:25:37Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Eric McConico",
+        "numericOdds": 235
       },
       "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
+    },
+    {
+      "timestamp": "2026-04-24T15:30:38Z",
+      "fighter1": {
         "name": "Eric McConico",
-        "odds": "+280",
-        "numericOdds": 280
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 21
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:47:47.144Z",
+      "timestamp": "2026-04-24T15:35:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Eric McConico",
+        "numericOdds": 235
       },
       "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
+    },
+    {
+      "timestamp": "2026-04-24T15:40:38Z",
+      "fighter1": {
         "name": "Eric McConico",
-        "odds": "+280",
-        "numericOdds": 280
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 22
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:47:50.145Z",
+      "timestamp": "2026-04-24T15:45:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Eric McConico",
+        "numericOdds": 235
       },
       "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
+    },
+    {
+      "timestamp": "2026-04-24T15:50:38Z",
+      "fighter1": {
         "name": "Eric McConico",
-        "odds": "+280",
-        "numericOdds": 280
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 23
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:47:53.153Z",
+      "timestamp": "2026-04-24T15:55:37Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Eric McConico",
+        "numericOdds": 235
       },
       "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
+    },
+    {
+      "timestamp": "2026-04-24T16:00:38Z",
+      "fighter1": {
         "name": "Eric McConico",
-        "odds": "+280",
-        "numericOdds": 280
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 24
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:47:56.156Z",
+      "timestamp": "2026-04-24T16:05:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Eric McConico",
+        "numericOdds": 235
       },
       "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
+    },
+    {
+      "timestamp": "2026-04-24T16:10:38Z",
+      "fighter1": {
         "name": "Eric McConico",
-        "odds": "+280",
-        "numericOdds": 280
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 25
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:47:59.158Z",
+      "timestamp": "2026-04-24T16:15:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Eric McConico",
+        "numericOdds": 235
       },
       "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
+    },
+    {
+      "timestamp": "2026-04-24T16:20:38Z",
+      "fighter1": {
         "name": "Eric McConico",
-        "odds": "+280",
-        "numericOdds": 280
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 26
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:48:02.160Z",
+      "timestamp": "2026-04-24T16:25:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Eric McConico",
+        "numericOdds": 235
       },
       "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
+    },
+    {
+      "timestamp": "2026-04-24T16:30:38Z",
+      "fighter1": {
         "name": "Eric McConico",
-        "odds": "+280",
-        "numericOdds": 280
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 27
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:48:05.165Z",
+      "timestamp": "2026-04-24T16:35:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-350",
-        "numericOdds": -350
+        "name": "Eric McConico",
+        "numericOdds": 235
       },
       "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
+    },
+    {
+      "timestamp": "2026-04-24T16:40:38Z",
+      "fighter1": {
         "name": "Eric McConico",
-        "odds": "+245",
-        "numericOdds": 245
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 28
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:48:08.179Z",
+      "timestamp": "2026-04-24T16:45:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-350",
-        "numericOdds": -350
+        "name": "Eric McConico",
+        "numericOdds": 235
       },
       "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
+    },
+    {
+      "timestamp": "2026-04-24T16:50:38Z",
+      "fighter1": {
         "name": "Eric McConico",
-        "odds": "+245",
-        "numericOdds": 245
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 29
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:48:11.184Z",
+      "timestamp": "2026-04-24T16:55:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-350",
-        "numericOdds": -350
+        "name": "Eric McConico",
+        "numericOdds": 235
       },
       "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
+    },
+    {
+      "timestamp": "2026-04-24T17:00:38Z",
+      "fighter1": {
         "name": "Eric McConico",
-        "odds": "+245",
-        "numericOdds": 245
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 30
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:48:14.190Z",
+      "timestamp": "2026-04-24T17:05:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-350",
-        "numericOdds": -350
+        "name": "Eric McConico",
+        "numericOdds": 235
       },
       "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
+    },
+    {
+      "timestamp": "2026-04-24T17:10:38Z",
+      "fighter1": {
         "name": "Eric McConico",
-        "odds": "+245",
-        "numericOdds": 245
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 31
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:48:17.205Z",
+      "timestamp": "2026-04-24T17:15:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-350",
-        "numericOdds": -350
+        "name": "Eric McConico",
+        "numericOdds": 235
       },
       "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
+    },
+    {
+      "timestamp": "2026-04-24T17:20:38Z",
+      "fighter1": {
         "name": "Eric McConico",
-        "odds": "+245",
-        "numericOdds": 245
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 32
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:48:20.210Z",
+      "timestamp": "2026-04-24T17:25:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-350",
-        "numericOdds": -350
+        "name": "Eric McConico",
+        "numericOdds": 235
       },
       "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
+    },
+    {
+      "timestamp": "2026-04-24T17:30:38Z",
+      "fighter1": {
         "name": "Eric McConico",
-        "odds": "+245",
-        "numericOdds": 245
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 33
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:48:23.210Z",
+      "timestamp": "2026-04-24T17:35:37Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-350",
-        "numericOdds": -350
+        "name": "Eric McConico",
+        "numericOdds": 235
       },
       "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
+    },
+    {
+      "timestamp": "2026-04-24T17:40:39Z",
+      "fighter1": {
         "name": "Eric McConico",
-        "odds": "+245",
-        "numericOdds": 245
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 34
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:48:26.214Z",
+      "timestamp": "2026-04-24T17:45:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-350",
-        "numericOdds": -350
+        "name": "Eric McConico",
+        "numericOdds": 235
       },
       "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
+    },
+    {
+      "timestamp": "2026-04-24T17:50:38Z",
+      "fighter1": {
         "name": "Eric McConico",
-        "odds": "+245",
-        "numericOdds": 245
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 35
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:48:29.218Z",
+      "timestamp": "2026-04-24T17:55:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-350",
-        "numericOdds": -350
+        "name": "Eric McConico",
+        "numericOdds": 235
       },
       "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
+    },
+    {
+      "timestamp": "2026-04-24T18:00:38Z",
+      "fighter1": {
         "name": "Eric McConico",
-        "odds": "+245",
-        "numericOdds": 245
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 36
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:48:32.220Z",
+      "timestamp": "2026-04-24T18:05:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-350",
-        "numericOdds": -350
+        "name": "Eric McConico",
+        "numericOdds": 235
       },
       "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
+    },
+    {
+      "timestamp": "2026-04-24T18:10:38Z",
+      "fighter1": {
         "name": "Eric McConico",
-        "odds": "+245",
-        "numericOdds": 245
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 37
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:48:35.220Z",
+      "timestamp": "2026-04-24T18:15:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-350",
-        "numericOdds": -350
+        "name": "Eric McConico",
+        "numericOdds": 235
       },
       "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
+    },
+    {
+      "timestamp": "2026-04-24T18:20:38Z",
+      "fighter1": {
         "name": "Eric McConico",
-        "odds": "+245",
-        "numericOdds": 245
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 38
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:48:38.227Z",
+      "timestamp": "2026-04-24T18:25:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-350",
-        "numericOdds": -350
+        "name": "Eric McConico",
+        "numericOdds": 235
       },
       "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
+    },
+    {
+      "timestamp": "2026-04-24T18:30:39Z",
+      "fighter1": {
         "name": "Eric McConico",
-        "odds": "+245",
-        "numericOdds": 245
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 39
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:48:41.231Z",
+      "timestamp": "2026-04-24T18:35:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-350",
-        "numericOdds": -350
+        "name": "Eric McConico",
+        "numericOdds": 235
       },
       "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
+    },
+    {
+      "timestamp": "2026-04-24T18:40:38Z",
+      "fighter1": {
         "name": "Eric McConico",
-        "odds": "+245",
-        "numericOdds": 245
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 40
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:48:50.272Z",
+      "timestamp": "2026-04-24T18:45:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-350",
-        "numericOdds": -350
+        "name": "Eric McConico",
+        "numericOdds": 235
       },
       "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
+    },
+    {
+      "timestamp": "2026-04-24T18:50:39Z",
+      "fighter1": {
         "name": "Eric McConico",
-        "odds": "+245",
-        "numericOdds": 245
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 41
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:48:53.284Z",
+      "timestamp": "2026-04-24T18:55:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-350",
-        "numericOdds": -350
+        "name": "Eric McConico",
+        "numericOdds": 235
       },
       "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
+    },
+    {
+      "timestamp": "2026-04-24T19:00:38Z",
+      "fighter1": {
         "name": "Eric McConico",
-        "odds": "+245",
-        "numericOdds": 245
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 2
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:48:56.289Z",
+      "timestamp": "2026-04-24T19:05:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-235",
-        "numericOdds": -235
+        "name": "Eric McConico",
+        "numericOdds": 235
       },
       "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
+    },
+    {
+      "timestamp": "2026-04-24T19:10:38Z",
+      "fighter1": {
         "name": "Eric McConico",
-        "odds": "+180",
-        "numericOdds": 180
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 3
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:48:59.297Z",
+      "timestamp": "2026-04-24T19:15:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-235",
-        "numericOdds": -235
+        "name": "Eric McConico",
+        "numericOdds": 235
       },
       "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
+    },
+    {
+      "timestamp": "2026-04-24T19:20:38Z",
+      "fighter1": {
         "name": "Eric McConico",
-        "odds": "+180",
-        "numericOdds": 180
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 4
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:49:02.299Z",
+      "timestamp": "2026-04-24T19:25:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-235",
-        "numericOdds": -235
+        "name": "Eric McConico",
+        "numericOdds": 235
       },
       "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
+    },
+    {
+      "timestamp": "2026-04-24T19:30:38Z",
+      "fighter1": {
         "name": "Eric McConico",
-        "odds": "+180",
-        "numericOdds": 180
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 5
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:49:11.312Z",
+      "timestamp": "2026-04-24T19:35:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-142",
-        "numericOdds": -142
+        "name": "Eric McConico",
+        "numericOdds": 235
       },
       "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
+    },
+    {
+      "timestamp": "2026-04-24T19:40:38Z",
+      "fighter1": {
         "name": "Eric McConico",
-        "odds": "+112",
-        "numericOdds": 112
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 6
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:49:14.319Z",
+      "timestamp": "2026-04-24T19:45:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-142",
-        "numericOdds": -142
+        "name": "Eric McConico",
+        "numericOdds": 235
       },
       "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
+    },
+    {
+      "timestamp": "2026-04-24T19:50:38Z",
+      "fighter1": {
         "name": "Eric McConico",
-        "odds": "+112",
-        "numericOdds": 112
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 2
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:49:17.329Z",
+      "timestamp": "2026-04-24T19:55:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-142",
-        "numericOdds": -142
+        "name": "Eric McConico",
+        "numericOdds": 235
       },
       "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
+    },
+    {
+      "timestamp": "2026-04-24T20:00:38Z",
+      "fighter1": {
         "name": "Eric McConico",
-        "odds": "+112",
-        "numericOdds": 112
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 3
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:49:35.360Z",
+      "timestamp": "2026-04-24T20:05:37Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-118",
-        "numericOdds": -118
+        "name": "Eric McConico",
+        "numericOdds": 235
       },
       "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
+    },
+    {
+      "timestamp": "2026-04-24T20:10:37Z",
+      "fighter1": {
         "name": "Eric McConico",
-        "odds": "-108",
-        "numericOdds": -108
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 4
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:49:38.366Z",
+      "timestamp": "2026-04-24T20:15:37Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-118",
-        "numericOdds": -118
+        "name": "Eric McConico",
+        "numericOdds": 235
       },
       "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
+    },
+    {
+      "timestamp": "2026-04-24T20:20:38Z",
+      "fighter1": {
         "name": "Eric McConico",
-        "odds": "-108",
-        "numericOdds": -108
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 2
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:49:41.379Z",
+      "timestamp": "2026-04-24T20:25:37Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-118",
-        "numericOdds": -118
+        "name": "Eric McConico",
+        "numericOdds": 235
       },
       "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
+    },
+    {
+      "timestamp": "2026-04-24T20:30:38Z",
+      "fighter1": {
         "name": "Eric McConico",
-        "odds": "-108",
-        "numericOdds": -108
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 3
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:49:44.386Z",
+      "timestamp": "2026-04-24T20:35:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-118",
-        "numericOdds": -118
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-108",
-        "numericOdds": -108
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 4
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:49:47.388Z",
+      "timestamp": "2026-04-24T20:40:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-118",
-        "numericOdds": -118
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-108",
-        "numericOdds": -108
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 5
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:49:50.393Z",
+      "timestamp": "2026-04-24T20:45:37Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-108",
-        "numericOdds": -108
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-118",
-        "numericOdds": -118
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 6
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:49:53.407Z",
+      "timestamp": "2026-04-24T20:50:37Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "-108",
-        "numericOdds": -108
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-118",
-        "numericOdds": -118
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 7
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:50:05.427Z",
+      "timestamp": "2026-04-24T20:55:37Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+180",
-        "numericOdds": 180
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 8
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:50:08.431Z",
+      "timestamp": "2026-04-24T21:00:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+180",
-        "numericOdds": 180
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 2
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:50:11.438Z",
+      "timestamp": "2026-04-24T21:05:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+225",
-        "numericOdds": 225
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-310",
-        "numericOdds": -310
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 3
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:50:14.439Z",
+      "timestamp": "2026-04-24T21:10:37Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+225",
-        "numericOdds": 225
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-310",
-        "numericOdds": -310
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 4
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:50:17.442Z",
+      "timestamp": "2026-04-24T21:15:37Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+225",
-        "numericOdds": 225
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-310",
-        "numericOdds": -310
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 5
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:50:20.452Z",
+      "timestamp": "2026-04-24T21:20:40Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+225",
-        "numericOdds": 225
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-310",
-        "numericOdds": -310
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 6
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:50:23.466Z",
+      "timestamp": "2026-04-24T21:25:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+225",
-        "numericOdds": 225
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-310",
-        "numericOdds": -310
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 7
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:50:35.480Z",
+      "timestamp": "2026-04-24T21:30:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+350",
-        "numericOdds": 350
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-550",
-        "numericOdds": -550
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 8
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:50:38.491Z",
+      "timestamp": "2026-04-24T21:35:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+350",
-        "numericOdds": 350
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-550",
-        "numericOdds": -550
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 2
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:50:41.496Z",
+      "timestamp": "2026-04-24T21:40:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+350",
-        "numericOdds": 350
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-550",
-        "numericOdds": -550
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 3
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:50:44.502Z",
+      "timestamp": "2026-04-24T21:45:39Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+350",
-        "numericOdds": 350
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-550",
-        "numericOdds": -550
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 4
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:50:47.508Z",
+      "timestamp": "2026-04-24T21:50:39Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+350",
-        "numericOdds": 350
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-550",
-        "numericOdds": -550
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 5
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:50:50.507Z",
+      "timestamp": "2026-04-24T21:55:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+300",
-        "numericOdds": 300
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-430",
-        "numericOdds": -430
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 6
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:50:53.507Z",
+      "timestamp": "2026-04-24T22:00:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+300",
-        "numericOdds": 300
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-430",
-        "numericOdds": -430
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 7
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:51:02.517Z",
+      "timestamp": "2026-04-24T22:05:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-176",
-        "numericOdds": -176
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 8
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:51:05.520Z",
+      "timestamp": "2026-04-24T22:10:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-176",
-        "numericOdds": -176
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 2
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:51:08.533Z",
+      "timestamp": "2026-04-24T22:15:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-176",
-        "numericOdds": -176
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 3
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:51:11.539Z",
+      "timestamp": "2026-04-24T22:20:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-176",
-        "numericOdds": -176
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 4
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:51:14.541Z",
+      "timestamp": "2026-04-24T22:25:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-176",
-        "numericOdds": -176
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 5
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:51:26.575Z",
+      "timestamp": "2026-04-24T22:30:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+128",
-        "numericOdds": 128
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-164",
-        "numericOdds": -164
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 6
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:51:29.579Z",
+      "timestamp": "2026-04-24T22:35:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+128",
-        "numericOdds": 128
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-164",
-        "numericOdds": -164
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 2
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:51:32.594Z",
+      "timestamp": "2026-04-24T22:40:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+128",
-        "numericOdds": 128
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-164",
-        "numericOdds": -164
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 3
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:51:35.605Z",
+      "timestamp": "2026-04-24T22:45:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+120",
-        "numericOdds": 120
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-152",
-        "numericOdds": -152
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 4
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:51:38.620Z",
+      "timestamp": "2026-04-24T22:50:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+120",
-        "numericOdds": 120
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-152",
-        "numericOdds": -152
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 5
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:51:41.623Z",
+      "timestamp": "2026-04-24T22:55:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+120",
-        "numericOdds": 120
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-152",
-        "numericOdds": -152
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 6
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:51:44.638Z",
+      "timestamp": "2026-04-24T23:00:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+120",
-        "numericOdds": 120
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-152",
-        "numericOdds": -152
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 7
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:51:50.649Z",
+      "timestamp": "2026-04-24T23:05:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-176",
-        "numericOdds": -176
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 8
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:51:53.654Z",
+      "timestamp": "2026-04-24T23:10:39Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-176",
-        "numericOdds": -176
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 2
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:51:56.661Z",
+      "timestamp": "2026-04-24T23:15:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-176",
-        "numericOdds": -176
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 3
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:51:59.669Z",
+      "timestamp": "2026-04-24T23:20:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-176",
-        "numericOdds": -176
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 4
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:52:02.678Z",
+      "timestamp": "2026-04-24T23:25:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+120",
-        "numericOdds": 120
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-152",
-        "numericOdds": -152
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 5
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:52:05.686Z",
+      "timestamp": "2026-04-24T23:30:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+120",
-        "numericOdds": 120
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-152",
-        "numericOdds": -152
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 6
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:52:08.690Z",
+      "timestamp": "2026-04-24T23:35:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+120",
-        "numericOdds": 120
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-152",
-        "numericOdds": -152
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 7
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:52:11.698Z",
+      "timestamp": "2026-04-24T23:40:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+126",
-        "numericOdds": 126
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-160",
-        "numericOdds": -160
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 8
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:52:14.712Z",
+      "timestamp": "2026-04-24T23:45:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+126",
-        "numericOdds": 126
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-160",
-        "numericOdds": -160
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 9
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:52:17.720Z",
+      "timestamp": "2026-04-24T23:50:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+126",
-        "numericOdds": 126
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-160",
-        "numericOdds": -160
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 10
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:52:32.758Z",
+      "timestamp": "2026-04-24T23:55:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+140",
-        "numericOdds": 140
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-180",
-        "numericOdds": -180
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 11
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:52:35.764Z",
+      "timestamp": "2026-04-25T00:00:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+140",
-        "numericOdds": 140
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-180",
-        "numericOdds": -180
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 2
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:52:38.771Z",
+      "timestamp": "2026-04-25T00:05:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+180",
-        "numericOdds": 180
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 3
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:52:41.778Z",
+      "timestamp": "2026-04-25T00:10:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+180",
-        "numericOdds": 180
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 4
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:52:44.778Z",
+      "timestamp": "2026-04-25T00:15:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+180",
-        "numericOdds": 180
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 5
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:52:47.784Z",
+      "timestamp": "2026-04-25T00:20:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+180",
-        "numericOdds": 180
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 6
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:53:11.828Z",
+      "timestamp": "2026-04-25T00:25:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+162",
-        "numericOdds": 162
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-210",
-        "numericOdds": -210
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 7
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:53:14.832Z",
+      "timestamp": "2026-04-25T00:30:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+162",
-        "numericOdds": 162
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-210",
-        "numericOdds": -210
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 2
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:53:17.834Z",
+      "timestamp": "2026-04-25T00:35:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+162",
-        "numericOdds": 162
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-210",
-        "numericOdds": -210
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 3
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:53:20.840Z",
+      "timestamp": "2026-04-25T00:40:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+162",
-        "numericOdds": 162
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-210",
-        "numericOdds": -210
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 4
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:53:23.854Z",
+      "timestamp": "2026-04-25T00:45:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+162",
-        "numericOdds": 162
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-210",
-        "numericOdds": -210
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 5
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:53:26.858Z",
+      "timestamp": "2026-04-25T00:50:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+162",
-        "numericOdds": 162
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-210",
-        "numericOdds": -210
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 6
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:53:29.872Z",
+      "timestamp": "2026-04-25T00:55:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+162",
-        "numericOdds": 162
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-210",
-        "numericOdds": -210
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 7
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:53:32.888Z",
+      "timestamp": "2026-04-25T01:00:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+162",
-        "numericOdds": 162
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-210",
-        "numericOdds": -210
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 8
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:53:35.896Z",
+      "timestamp": "2026-04-25T01:05:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+162",
-        "numericOdds": 162
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-210",
-        "numericOdds": -210
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 9
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:53:38.902Z",
+      "timestamp": "2026-04-25T01:10:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+162",
-        "numericOdds": 162
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-210",
-        "numericOdds": -210
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 10
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:53:41.904Z",
+      "timestamp": "2026-04-25T01:15:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+162",
-        "numericOdds": 162
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-210",
-        "numericOdds": -210
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 11
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:53:44.914Z",
+      "timestamp": "2026-04-25T01:20:39Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+162",
-        "numericOdds": 162
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-210",
-        "numericOdds": -210
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 12
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:53:47.927Z",
+      "timestamp": "2026-04-25T01:25:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+162",
-        "numericOdds": 162
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-210",
-        "numericOdds": -210
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 13
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:53:50.933Z",
+      "timestamp": "2026-04-25T01:30:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+162",
-        "numericOdds": 162
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-210",
-        "numericOdds": -210
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 14
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:53:53.937Z",
+      "timestamp": "2026-04-25T01:35:37Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+162",
-        "numericOdds": 162
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-210",
-        "numericOdds": -210
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 15
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:53:56.940Z",
+      "timestamp": "2026-04-25T01:40:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+162",
-        "numericOdds": 162
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-210",
-        "numericOdds": -210
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 16
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:53:59.947Z",
+      "timestamp": "2026-04-25T01:45:37Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+162",
-        "numericOdds": 162
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-210",
-        "numericOdds": -210
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 17
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:54:11.981Z",
+      "timestamp": "2026-04-25T01:50:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+162",
-        "numericOdds": 162
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-210",
-        "numericOdds": -210
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 18
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:54:14.987Z",
+      "timestamp": "2026-04-25T01:55:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+162",
-        "numericOdds": 162
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-210",
-        "numericOdds": -210
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 2
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:54:17.987Z",
+      "timestamp": "2026-04-25T02:00:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+152",
-        "numericOdds": 152
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-196",
-        "numericOdds": -196
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 3
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:54:20.995Z",
+      "timestamp": "2026-04-25T02:05:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+152",
-        "numericOdds": 152
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-196",
-        "numericOdds": -196
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 4
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:54:24.006Z",
+      "timestamp": "2026-04-25T02:10:37Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+152",
-        "numericOdds": 152
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-196",
-        "numericOdds": -196
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 5
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:54:27.016Z",
+      "timestamp": "2026-04-25T02:15:37Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+200",
-        "numericOdds": 200
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-270",
-        "numericOdds": -270
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 6
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:54:30.016Z",
+      "timestamp": "2026-04-25T02:20:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+200",
-        "numericOdds": 200
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-270",
-        "numericOdds": -270
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 7
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:55:03.111Z",
+      "timestamp": "2026-04-25T02:25:37Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+350",
-        "numericOdds": 350
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-550",
-        "numericOdds": -550
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 8
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:55:06.112Z",
+      "timestamp": "2026-04-25T02:30:37Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+350",
-        "numericOdds": 350
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-550",
-        "numericOdds": -550
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 2
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:55:09.118Z",
+      "timestamp": "2026-04-25T02:35:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+350",
-        "numericOdds": 350
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-550",
-        "numericOdds": -550
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 3
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:55:12.122Z",
+      "timestamp": "2026-04-25T02:40:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+350",
-        "numericOdds": 350
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-550",
-        "numericOdds": -550
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 4
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:55:15.138Z",
+      "timestamp": "2026-04-25T02:45:37Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+350",
-        "numericOdds": 350
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-550",
-        "numericOdds": -550
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 5
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:55:18.150Z",
+      "timestamp": "2026-04-25T02:50:37Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+370",
-        "numericOdds": 370
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-600",
-        "numericOdds": -600
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 6
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:55:21.164Z",
+      "timestamp": "2026-04-25T02:55:37Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+370",
-        "numericOdds": 370
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-600",
-        "numericOdds": -600
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 7
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:55:24.166Z",
+      "timestamp": "2026-04-25T03:00:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+370",
-        "numericOdds": 370
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-600",
-        "numericOdds": -600
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 8
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:55:27.175Z",
+      "timestamp": "2026-04-25T03:05:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+370",
-        "numericOdds": 370
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-600",
-        "numericOdds": -600
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 9
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:55:30.180Z",
+      "timestamp": "2026-04-25T03:10:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+370",
-        "numericOdds": 370
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-600",
-        "numericOdds": -600
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 10
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:55:33.180Z",
+      "timestamp": "2026-04-25T03:15:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+370",
-        "numericOdds": 370
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-600",
-        "numericOdds": -600
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 11
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:55:36.185Z",
+      "timestamp": "2026-04-25T03:20:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+370",
-        "numericOdds": 370
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-600",
-        "numericOdds": -600
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 12
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:55:39.191Z",
+      "timestamp": "2026-04-25T03:25:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+330",
-        "numericOdds": 330
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-480",
-        "numericOdds": -480
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 13
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:55:42.192Z",
+      "timestamp": "2026-04-25T03:30:37Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+330",
-        "numericOdds": 330
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-480",
-        "numericOdds": -480
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 14
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:55:45.192Z",
+      "timestamp": "2026-04-25T03:35:37Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+330",
-        "numericOdds": 330
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-480",
-        "numericOdds": -480
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 15
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:55:48.193Z",
+      "timestamp": "2026-04-25T03:40:37Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+310",
-        "numericOdds": 310
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-450",
-        "numericOdds": -450
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 16
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:55:51.198Z",
+      "timestamp": "2026-04-25T03:45:37Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+310",
-        "numericOdds": 310
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-450",
-        "numericOdds": -450
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 17
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:55:54.212Z",
+      "timestamp": "2026-04-25T03:50:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+310",
-        "numericOdds": 310
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-450",
-        "numericOdds": -450
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 18
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:55:57.221Z",
+      "timestamp": "2026-04-25T03:55:37Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+310",
-        "numericOdds": 310
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-450",
-        "numericOdds": -450
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 19
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:56:00.222Z",
+      "timestamp": "2026-04-25T04:00:37Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+310",
-        "numericOdds": 310
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-450",
-        "numericOdds": -450
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 20
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:56:03.230Z",
+      "timestamp": "2026-04-25T04:05:37Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+310",
-        "numericOdds": 310
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-450",
-        "numericOdds": -450
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 21
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:56:06.234Z",
+      "timestamp": "2026-04-25T04:10:37Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+310",
-        "numericOdds": 310
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-450",
-        "numericOdds": -450
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 22
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:56:09.234Z",
+      "timestamp": "2026-04-25T04:15:37Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+300",
-        "numericOdds": 300
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-430",
-        "numericOdds": -430
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 23
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:56:12.239Z",
+      "timestamp": "2026-04-25T04:20:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+300",
-        "numericOdds": 300
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-430",
-        "numericOdds": -430
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 24
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:56:15.244Z",
+      "timestamp": "2026-04-25T04:25:37Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+300",
-        "numericOdds": 300
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-430",
-        "numericOdds": -430
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 25
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:56:18.253Z",
+      "timestamp": "2026-04-25T04:30:37Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+300",
-        "numericOdds": 300
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-430",
-        "numericOdds": -430
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 26
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:56:21.263Z",
+      "timestamp": "2026-04-25T04:35:37Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+300",
-        "numericOdds": 300
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-430",
-        "numericOdds": -430
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 27
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:56:24.275Z",
+      "timestamp": "2026-04-25T04:40:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+300",
-        "numericOdds": 300
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-430",
-        "numericOdds": -430
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 28
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:56:27.278Z",
+      "timestamp": "2026-04-25T04:45:37Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+300",
-        "numericOdds": 300
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-430",
-        "numericOdds": -430
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 29
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:56:30.288Z",
+      "timestamp": "2026-04-25T04:50:37Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+270",
-        "numericOdds": 270
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-380",
-        "numericOdds": -380
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 30
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:56:33.292Z",
+      "timestamp": "2026-04-25T04:55:37Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+270",
-        "numericOdds": 270
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-380",
-        "numericOdds": -380
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 31
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:56:36.299Z",
+      "timestamp": "2026-04-25T05:00:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+270",
-        "numericOdds": 270
-      },
-      "fighter2": {
         "name": "Eric McConico",
-        "odds": "-380",
-        "numericOdds": -380
+        "numericOdds": 235
       },
-      "isLocked": false,
-      "extractionId": 32
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -290
+      }
     },
     {
-      "timestamp": "2026-04-25T23:56:39.301Z",
+      "timestamp": "2026-04-25T05:05:37Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+250",
+        "name": "Eric McConico",
         "numericOdds": 250
       },
       "fighter2": {
-        "name": "Eric McConico",
-        "odds": "-350",
-        "numericOdds": -350
-      },
-      "isLocked": false,
-      "extractionId": 33
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
     },
     {
-      "timestamp": "2026-04-25T23:56:42.307Z",
+      "timestamp": "2026-04-25T05:10:37Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+250",
+        "name": "Eric McConico",
         "numericOdds": 250
       },
       "fighter2": {
-        "name": "Eric McConico",
-        "odds": "-350",
-        "numericOdds": -350
-      },
-      "isLocked": false,
-      "extractionId": 34
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
     },
     {
-      "timestamp": "2026-04-25T23:56:45.318Z",
+      "timestamp": "2026-04-25T05:15:37Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+240",
-        "numericOdds": 240
+        "name": "Eric McConico",
+        "numericOdds": 250
       },
       "fighter2": {
-        "name": "Eric McConico",
-        "odds": "-340",
-        "numericOdds": -340
-      },
-      "isLocked": false,
-      "extractionId": 35
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
     },
     {
-      "timestamp": "2026-04-25T23:56:48.326Z",
+      "timestamp": "2026-04-25T05:20:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+240",
-        "numericOdds": 240
+        "name": "Eric McConico",
+        "numericOdds": 250
       },
       "fighter2": {
-        "name": "Eric McConico",
-        "odds": "-340",
-        "numericOdds": -340
-      },
-      "isLocked": false,
-      "extractionId": 36
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
     },
     {
-      "timestamp": "2026-04-25T23:56:51.338Z",
+      "timestamp": "2026-04-25T05:25:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+240",
-        "numericOdds": 240
+        "name": "Eric McConico",
+        "numericOdds": 250
       },
       "fighter2": {
-        "name": "Eric McConico",
-        "odds": "-340",
-        "numericOdds": -340
-      },
-      "isLocked": false,
-      "extractionId": 37
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
     },
     {
-      "timestamp": "2026-04-25T23:56:54.341Z",
+      "timestamp": "2026-04-25T05:30:40Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+240",
-        "numericOdds": 240
+        "name": "Eric McConico",
+        "numericOdds": 250
       },
       "fighter2": {
-        "name": "Eric McConico",
-        "odds": "-340",
-        "numericOdds": -340
-      },
-      "isLocked": false,
-      "extractionId": 38
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
     },
     {
-      "timestamp": "2026-04-25T23:56:57.345Z",
+      "timestamp": "2026-04-25T05:35:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+240",
-        "numericOdds": 240
+        "name": "Eric McConico",
+        "numericOdds": 250
       },
       "fighter2": {
-        "name": "Eric McConico",
-        "odds": "-340",
-        "numericOdds": -340
-      },
-      "isLocked": false,
-      "extractionId": 39
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
     },
     {
-      "timestamp": "2026-04-25T23:57:00.358Z",
+      "timestamp": "2026-04-25T05:40:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+240",
-        "numericOdds": 240
+        "name": "Eric McConico",
+        "numericOdds": 250
       },
       "fighter2": {
-        "name": "Eric McConico",
-        "odds": "-340",
-        "numericOdds": -340
-      },
-      "isLocked": false,
-      "extractionId": 40
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
     },
     {
-      "timestamp": "2026-04-25T23:57:03.361Z",
+      "timestamp": "2026-04-25T05:45:39Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+240",
-        "numericOdds": 240
+        "name": "Eric McConico",
+        "numericOdds": 250
       },
       "fighter2": {
-        "name": "Eric McConico",
-        "odds": "-340",
-        "numericOdds": -340
-      },
-      "isLocked": false,
-      "extractionId": 41
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
     },
     {
-      "timestamp": "2026-04-25T23:57:06.373Z",
+      "timestamp": "2026-04-25T05:50:38Z",
       "fighter1": {
-        "name": "Rodolfo Vieira",
-        "odds": "+240",
-        "numericOdds": 240
+        "name": "Eric McConico",
+        "numericOdds": 250
       },
       "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T05:55:38Z",
+      "fighter1": {
         "name": "Eric McConico",
-        "odds": "-340",
-        "numericOdds": -340
+        "numericOdds": 250
       },
-      "isLocked": false,
-      "extractionId": 42
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:00:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:05:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:10:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:15:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:20:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:25:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:30:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:35:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:40:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:45:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:50:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:55:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:00:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:05:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:10:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:15:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:20:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:25:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:30:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:35:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:40:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:45:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:50:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:55:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:00:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:05:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:10:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:15:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:20:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:25:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:30:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:35:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:40:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:45:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:50:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:55:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:00:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:05:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:10:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:15:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:20:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:25:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:30:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:35:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:40:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:45:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:50:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:55:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:00:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:05:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:10:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:15:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:20:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:25:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:30:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:35:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:40:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:45:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:50:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:55:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:00:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:05:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:10:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:15:39Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:20:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:25:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:30:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:35:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:40:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:45:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:50:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:55:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:00:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:05:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:10:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:15:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:20:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:25:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:30:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:35:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:40:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:45:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:50:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:55:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T13:00:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T13:05:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T13:10:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T13:15:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T13:20:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T13:25:39Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T13:30:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T13:35:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T13:40:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T13:45:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T13:50:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T13:55:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T14:00:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T14:05:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T14:10:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T14:15:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T14:20:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T14:25:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T14:30:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T14:35:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T14:40:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T14:45:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T14:50:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T14:55:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T15:00:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T15:05:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T15:10:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T15:15:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T15:20:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T15:25:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T15:30:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T15:35:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T15:40:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T15:45:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T15:50:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T15:55:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T16:00:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T16:05:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T16:10:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T16:15:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T16:20:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T16:25:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T16:30:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T16:35:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T16:40:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T16:45:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T16:50:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T16:55:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:00:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:05:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:10:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:15:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:20:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -325
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:25:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -340
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:30:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -340
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:35:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -340
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:40:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -340
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:45:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -340
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:50:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -340
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:55:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -340
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:00:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -340
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:05:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -340
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:10:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -340
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:15:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -340
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:20:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -340
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:25:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -340
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:30:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -340
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:35:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -340
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:40:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -340
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:45:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -340
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:50:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -340
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:55:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -340
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:00:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -340
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:05:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -340
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:10:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -340
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:15:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -340
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:20:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -340
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:25:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -340
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:30:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -340
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:35:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -340
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:40:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -340
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:45:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -340
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:50:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -340
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:55:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -340
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:00:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -340
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:05:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -340
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:10:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -340
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:15:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -340
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:20:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -340
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:25:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -340
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:30:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -340
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:35:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -340
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:40:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -340
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:45:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -340
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:50:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 275
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -345
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:55:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:00:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:05:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:10:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:15:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:20:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:25:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:30:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:35:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:40:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:45:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:50:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:55:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:00:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:05:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:10:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:15:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:20:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:25:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:30:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:35:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:40:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:45:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:50:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:55:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2026-04-25T23:00:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2026-04-25T23:05:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2026-04-25T23:10:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2026-04-25T23:15:38Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2026-04-25T23:20:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2026-04-25T23:25:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2026-04-25T23:30:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2026-04-25T23:35:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2026-04-25T23:40:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2026-04-25T23:45:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": 400
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -620
+      }
+    },
+    {
+      "timestamp": "2026-04-25T23:50:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": -115
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": -115
+      }
+    },
+    {
+      "timestamp": "2026-04-25T23:55:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": -425
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": 300
+      }
+    },
+    {
+      "timestamp": "2026-04-26T00:00:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": -1750
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": 850
+      }
+    },
+    {
+      "timestamp": "2026-04-26T00:05:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": -1750
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": 850
+      }
+    },
+    {
+      "timestamp": "2026-04-26T00:10:37Z",
+      "fighter1": {
+        "name": "Eric McConico",
+        "numericOdds": -1750
+      },
+      "fighter2": {
+        "name": "Rodolfo Vieira",
+        "numericOdds": 850
+      }
     }
-  ],
-  "createdAt": "2026-04-25T23:46:43.934Z",
-  "outcome": {
-    "winner": "fighter2",
-    "winnerName": "Eric McConico",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:52:16.106Z",
-    "openingF1Odds": -550,
-    "openingF2Odds": 340,
-    "closingF1Odds": 240,
-    "closingF2Odds": -340,
-    "lineMovementF1": 790,
-    "crossoverOccurred": true,
-    "crossoverMinute": 5
-  },
-  "derived": {
-    "inferredFinishMin": 1,
-    "inferredFinishRound": 1,
-    "peakOddsSwing": 920,
-    "finishSpeed": "fast",
-    "preFightSteam": 790,
-    "dominanceScore": 80,
-    "crossoverCount": 1,
-    "derivedAt": "2026-06-14T11:47:28.487Z"
-  }
+  ]
 }

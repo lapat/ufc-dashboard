@@ -1,2992 +1,4717 @@
 {
-  "fightId": "mayrabuenosilva_vs_michellemontague",
-  "fightTitle": "Connected but no betting buttons found",
-  "startTime": "2026-04-25T23:00:19.338Z",
-  "endTime": "2026-04-25T23:15:27.324Z",
-  "duration": 907986,
-  "dataPoints": 197,
+  "fightId": "mayrabuenosilva_vs_michellemontague_2026-04-25",
+  "fightTitle": "Mayra Bueno Silva vs Michelle Montague",
+  "startTime": "2026-04-24T11:55:38Z",
+  "endTime": "2026-04-25T23:30:37Z",
+  "dataPoints": 428,
   "oddsHistory": [
     {
-      "timestamp": "2026-04-25T23:00:19.338Z",
+      "timestamp": "2026-04-24T11:55:38Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+340",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T12:00:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T12:05:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T12:10:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T12:15:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T12:20:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T12:25:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T12:30:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T12:35:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T12:40:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T12:45:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T12:50:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T12:55:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T13:00:40Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T13:05:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T13:10:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T13:15:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T13:20:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T13:25:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T13:30:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T13:35:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T13:40:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T13:45:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T13:50:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T13:55:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T14:00:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T14:05:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T14:10:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T14:15:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T14:20:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T14:25:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T14:30:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T14:35:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T14:40:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T14:45:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T14:50:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T14:55:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T15:00:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T15:05:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T15:10:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T15:15:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T15:20:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T15:25:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T15:30:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T15:35:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T15:40:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T15:45:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T15:50:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T15:55:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T16:00:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T16:05:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T16:10:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T16:15:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T16:20:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T16:25:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T16:30:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T16:35:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T16:40:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T16:45:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T16:50:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T16:55:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T17:00:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T17:05:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T17:10:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T17:15:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T17:20:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T17:25:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T17:30:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T17:35:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T17:40:39Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T17:45:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T17:50:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T17:55:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T18:00:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T18:05:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T18:10:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T18:15:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T18:20:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T18:25:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T18:30:39Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T18:35:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T18:40:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T18:45:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T18:50:39Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T18:55:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T19:00:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T19:05:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T19:10:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T19:15:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T19:20:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T19:25:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T19:30:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T19:35:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T19:40:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T19:45:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T19:50:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T19:55:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T20:00:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T20:05:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T20:10:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T20:15:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T20:20:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T20:25:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T20:30:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T20:35:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T20:40:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T20:45:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T20:50:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T20:55:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T21:00:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T21:05:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T21:10:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T21:15:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T21:20:40Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T21:25:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T21:30:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T21:35:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T21:40:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T21:45:39Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T21:50:39Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T21:55:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T22:00:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T22:05:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T22:10:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T22:15:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T22:20:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T22:25:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T22:30:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T22:35:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T22:40:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T22:45:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T22:50:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T22:55:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T23:00:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T23:05:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T23:10:39Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T23:15:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T23:20:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T23:25:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T23:30:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T23:35:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T23:40:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T23:45:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T23:50:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-24T23:55:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T00:00:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T00:05:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T00:10:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T00:15:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T00:20:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T00:25:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T00:30:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T00:35:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T00:40:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T00:45:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T00:50:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T00:55:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T01:00:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T01:05:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T01:10:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T01:15:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T01:20:39Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T01:25:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T01:30:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T01:35:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T01:40:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T01:45:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T01:50:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T01:55:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T02:00:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T02:05:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T02:10:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T02:15:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T02:20:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T02:25:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T02:30:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T02:35:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T02:40:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T02:45:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T02:50:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T02:55:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T03:00:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T03:05:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T03:10:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T03:15:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T03:20:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T03:25:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T03:30:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T03:35:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T03:40:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T03:45:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T03:50:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T03:55:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T04:00:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T04:05:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T04:10:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T04:15:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T04:20:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T04:25:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T04:30:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T04:35:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T04:40:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T04:45:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T04:50:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T04:55:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T05:00:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T05:05:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T05:10:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T05:15:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T05:20:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T05:25:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T05:30:40Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T05:35:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T05:40:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T05:45:39Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T05:50:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T05:55:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:00:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:05:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:10:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:15:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:20:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:25:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:30:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:35:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:40:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:45:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:50:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T06:55:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:00:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:05:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:10:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:15:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:20:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:25:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:30:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:35:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:40:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:45:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:50:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T07:55:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:00:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:05:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:10:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:15:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:20:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:25:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:30:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:35:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:40:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:45:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:50:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T08:55:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:00:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:05:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:10:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:15:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:20:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:25:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:30:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:35:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:40:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:45:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:50:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T09:55:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:00:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:05:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:10:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:15:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:20:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:25:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:30:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:35:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:40:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:45:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:50:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T10:55:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:00:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:05:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:10:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:15:39Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:20:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:25:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:30:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:35:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:40:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:45:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:50:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-04-25T11:55:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:00:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:05:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:10:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:15:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:20:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:25:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:30:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:35:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:40:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-04-25T12:45:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
         "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-430",
-        "numericOdds": -430
-      },
-      "isLocked": false,
-      "extractionId": 14
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:00:22.341Z",
+      "timestamp": "2026-04-25T12:50:38Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+340",
         "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-430",
-        "numericOdds": -430
-      },
-      "isLocked": false,
-      "extractionId": 2
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:00:25.340Z",
+      "timestamp": "2026-04-25T12:55:38Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+340",
         "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-430",
-        "numericOdds": -430
-      },
-      "isLocked": false,
-      "extractionId": 3
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:00:28.350Z",
+      "timestamp": "2026-04-25T13:00:38Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+340",
         "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-430",
-        "numericOdds": -430
-      },
-      "isLocked": false,
-      "extractionId": 4
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:00:31.362Z",
+      "timestamp": "2026-04-25T13:05:38Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+340",
         "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-430",
-        "numericOdds": -430
-      },
-      "isLocked": false,
-      "extractionId": 5
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:00:34.364Z",
+      "timestamp": "2026-04-25T13:10:38Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+340",
         "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-430",
-        "numericOdds": -430
-      },
-      "isLocked": false,
-      "extractionId": 6
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:00:37.369Z",
+      "timestamp": "2026-04-25T13:15:38Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+340",
         "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-430",
-        "numericOdds": -430
-      },
-      "isLocked": false,
-      "extractionId": 7
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:00:40.371Z",
+      "timestamp": "2026-04-25T13:20:38Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+340",
         "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-430",
-        "numericOdds": -430
-      },
-      "isLocked": false,
-      "extractionId": 8
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:00:43.381Z",
+      "timestamp": "2026-04-25T13:25:39Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+340",
         "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-430",
-        "numericOdds": -430
-      },
-      "isLocked": false,
-      "extractionId": 9
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:00:46.389Z",
+      "timestamp": "2026-04-25T13:30:38Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+340",
         "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-430",
-        "numericOdds": -430
-      },
-      "isLocked": false,
-      "extractionId": 10
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:00:49.393Z",
+      "timestamp": "2026-04-25T13:35:38Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+340",
         "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-430",
-        "numericOdds": -430
-      },
-      "isLocked": false,
-      "extractionId": 11
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:00:52.400Z",
+      "timestamp": "2026-04-25T13:40:38Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+320",
-        "numericOdds": 320
+        "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-460",
-        "numericOdds": -460
-      },
-      "isLocked": false,
-      "extractionId": 12
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:00:55.406Z",
+      "timestamp": "2026-04-25T13:45:38Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+320",
-        "numericOdds": 320
+        "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-460",
-        "numericOdds": -460
-      },
-      "isLocked": false,
-      "extractionId": 13
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:00:58.414Z",
+      "timestamp": "2026-04-25T13:50:38Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+320",
-        "numericOdds": 320
+        "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-460",
-        "numericOdds": -460
-      },
-      "isLocked": false,
-      "extractionId": 14
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:01:01.425Z",
+      "timestamp": "2026-04-25T13:55:38Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+320",
-        "numericOdds": 320
+        "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-460",
-        "numericOdds": -460
-      },
-      "isLocked": false,
-      "extractionId": 15
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:01:04.430Z",
+      "timestamp": "2026-04-25T14:00:38Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+320",
-        "numericOdds": 320
+        "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-460",
-        "numericOdds": -460
-      },
-      "isLocked": false,
-      "extractionId": 16
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:01:07.433Z",
+      "timestamp": "2026-04-25T14:05:38Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+320",
-        "numericOdds": 320
+        "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-460",
-        "numericOdds": -460
-      },
-      "isLocked": false,
-      "extractionId": 17
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:01:10.445Z",
+      "timestamp": "2026-04-25T14:10:38Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+440",
-        "numericOdds": 440
+        "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "isLocked": false,
-      "extractionId": 18
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:01:13.450Z",
+      "timestamp": "2026-04-25T14:15:38Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+440",
-        "numericOdds": 440
+        "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "isLocked": false,
-      "extractionId": 19
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:01:16.451Z",
+      "timestamp": "2026-04-25T14:20:38Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+440",
-        "numericOdds": 440
+        "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "isLocked": false,
-      "extractionId": 20
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:01:19.457Z",
+      "timestamp": "2026-04-25T14:25:38Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+440",
-        "numericOdds": 440
+        "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "isLocked": false,
-      "extractionId": 21
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:01:22.470Z",
+      "timestamp": "2026-04-25T14:30:38Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+620",
-        "numericOdds": 620
+        "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-1100",
-        "numericOdds": -1100
-      },
-      "isLocked": false,
-      "extractionId": 22
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:01:25.469Z",
+      "timestamp": "2026-04-25T14:35:38Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+620",
-        "numericOdds": 620
+        "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-1100",
-        "numericOdds": -1100
-      },
-      "isLocked": false,
-      "extractionId": 23
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:01:28.476Z",
+      "timestamp": "2026-04-25T14:40:38Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+620",
-        "numericOdds": 620
+        "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-1100",
-        "numericOdds": -1100
-      },
-      "isLocked": false,
-      "extractionId": 24
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:01:31.480Z",
+      "timestamp": "2026-04-25T14:45:38Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+840",
-        "numericOdds": 840
+        "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-1600",
-        "numericOdds": -1600
-      },
-      "isLocked": false,
-      "extractionId": 25
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:01:34.489Z",
+      "timestamp": "2026-04-25T14:50:38Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+840",
-        "numericOdds": 840
+        "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-1600",
-        "numericOdds": -1600
-      },
-      "isLocked": false,
-      "extractionId": 26
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:01:37.489Z",
+      "timestamp": "2026-04-25T14:55:38Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+840",
-        "numericOdds": 840
+        "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-1600",
-        "numericOdds": -1600
-      },
-      "isLocked": false,
-      "extractionId": 27
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:01:40.490Z",
+      "timestamp": "2026-04-25T15:00:38Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+840",
-        "numericOdds": 840
+        "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-1600",
-        "numericOdds": -1600
-      },
-      "isLocked": false,
-      "extractionId": 28
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:01:43.497Z",
+      "timestamp": "2026-04-25T15:05:38Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+840",
-        "numericOdds": 840
+        "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-1600",
-        "numericOdds": -1600
-      },
-      "isLocked": false,
-      "extractionId": 29
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:01:46.507Z",
+      "timestamp": "2026-04-25T15:10:38Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+1040",
-        "numericOdds": 1040
+        "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-2000",
-        "numericOdds": -2000
-      },
-      "isLocked": false,
-      "extractionId": 30
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:01:49.518Z",
+      "timestamp": "2026-04-25T15:15:38Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+1040",
-        "numericOdds": 1040
+        "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-2000",
-        "numericOdds": -2000
-      },
-      "isLocked": false,
-      "extractionId": 31
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:01:52.525Z",
+      "timestamp": "2026-04-25T15:20:38Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+1040",
-        "numericOdds": 1040
+        "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-2000",
-        "numericOdds": -2000
-      },
-      "isLocked": false,
-      "extractionId": 32
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:01:55.530Z",
+      "timestamp": "2026-04-25T15:25:38Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+1040",
-        "numericOdds": 1040
+        "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-2000",
-        "numericOdds": -2000
-      },
-      "isLocked": false,
-      "extractionId": 33
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:01:58.540Z",
+      "timestamp": "2026-04-25T15:30:37Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+1040",
-        "numericOdds": 1040
+        "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-2000",
-        "numericOdds": -2000
-      },
-      "isLocked": false,
-      "extractionId": 34
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:02:01.554Z",
+      "timestamp": "2026-04-25T15:35:38Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+1340",
-        "numericOdds": 1340
+        "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-2000",
-        "numericOdds": -2000
-      },
-      "isLocked": false,
-      "extractionId": 35
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:02:04.567Z",
+      "timestamp": "2026-04-25T15:40:38Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+1340",
-        "numericOdds": 1340
+        "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-2000",
-        "numericOdds": -2000
-      },
-      "isLocked": false,
-      "extractionId": 36
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:02:07.570Z",
+      "timestamp": "2026-04-25T15:45:37Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+1340",
-        "numericOdds": 1340
+        "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-3000",
-        "numericOdds": -3000
-      },
-      "isLocked": false,
-      "extractionId": 37
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:02:10.575Z",
+      "timestamp": "2026-04-25T15:50:37Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+1340",
-        "numericOdds": 1340
+        "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-3000",
-        "numericOdds": -3000
-      },
-      "isLocked": false,
-      "extractionId": 38
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:02:13.575Z",
+      "timestamp": "2026-04-25T15:55:37Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+1340",
-        "numericOdds": 1340
+        "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-3000",
-        "numericOdds": -3000
-      },
-      "isLocked": false,
-      "extractionId": 39
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:02:16.576Z",
+      "timestamp": "2026-04-25T16:00:37Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+1340",
-        "numericOdds": 1340
+        "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-3000",
-        "numericOdds": -3000
-      },
-      "isLocked": false,
-      "extractionId": 40
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:02:19.588Z",
+      "timestamp": "2026-04-25T16:05:37Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+1340",
-        "numericOdds": 1340
+        "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-3000",
-        "numericOdds": -3000
-      },
-      "isLocked": false,
-      "extractionId": 41
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:02:22.591Z",
+      "timestamp": "2026-04-25T16:10:37Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+1480",
-        "numericOdds": 1480
+        "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-3500",
-        "numericOdds": -3500
-      },
-      "isLocked": false,
-      "extractionId": 42
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:02:25.594Z",
+      "timestamp": "2026-04-25T16:15:37Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+1480",
-        "numericOdds": 1480
+        "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-3500",
-        "numericOdds": -3500
-      },
-      "isLocked": false,
-      "extractionId": 43
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:02:28.594Z",
+      "timestamp": "2026-04-25T16:20:37Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+1480",
-        "numericOdds": 1480
+        "numericOdds": 340
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-3500",
-        "numericOdds": -3500
-      },
-      "isLocked": false,
-      "extractionId": 44
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-04-25T23:03:28.719Z",
+      "timestamp": "2026-04-25T16:25:37Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+1800",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T16:30:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T16:35:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T16:40:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T16:45:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T16:50:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T16:55:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:00:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:05:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:10:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:15:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:20:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:25:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:30:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:35:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:40:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:45:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:50:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T17:55:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:00:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:05:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:10:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:15:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:20:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:25:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:30:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:35:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:40:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:45:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:50:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T18:55:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:00:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:05:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:10:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:15:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:20:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:25:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:30:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:35:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:40:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:45:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:50:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T19:55:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:00:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:05:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:10:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:15:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:20:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:25:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:30:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:35:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:40:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:45:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:50:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T20:55:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:00:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:05:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:10:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:15:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:20:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:25:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:30:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:35:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:40:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:45:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:50:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T21:55:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:00:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:05:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:10:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:15:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:20:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:25:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:30:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:35:38Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:40:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:45:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:50:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T22:55:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T23:00:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Michelle Montague",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-04-25T23:05:37Z",
+      "fighter1": {
+        "name": "Mayra Bueno Silva",
         "numericOdds": 1800
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-4500",
-        "numericOdds": -4500
-      },
-      "isLocked": false,
-      "extractionId": 45
+        "numericOdds": -6500
+      }
     },
     {
-      "timestamp": "2026-04-25T23:03:31.727Z",
+      "timestamp": "2026-04-25T23:10:37Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+1800",
-        "numericOdds": 1800
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-4500",
-        "numericOdds": -4500
-      },
-      "isLocked": false,
-      "extractionId": 2
-    },
-    {
-      "timestamp": "2026-04-25T23:08:41.518Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+840",
-        "numericOdds": 840
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1600",
-        "numericOdds": -1600
-      },
-      "isLocked": false,
-      "extractionId": 3
-    },
-    {
-      "timestamp": "2026-04-25T23:08:44.524Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+840",
-        "numericOdds": 840
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1600",
-        "numericOdds": -1600
-      },
-      "isLocked": false,
-      "extractionId": 2
-    },
-    {
-      "timestamp": "2026-04-25T23:08:47.528Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+840",
-        "numericOdds": 840
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1600",
-        "numericOdds": -1600
-      },
-      "isLocked": false,
-      "extractionId": 3
-    },
-    {
-      "timestamp": "2026-04-25T23:08:50.541Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+840",
-        "numericOdds": 840
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1600",
-        "numericOdds": -1600
-      },
-      "isLocked": false,
-      "extractionId": 4
-    },
-    {
-      "timestamp": "2026-04-25T23:08:53.554Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+840",
-        "numericOdds": 840
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1600",
-        "numericOdds": -1600
-      },
-      "isLocked": false,
-      "extractionId": 5
-    },
-    {
-      "timestamp": "2026-04-25T23:08:56.560Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+440",
-        "numericOdds": 440
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "isLocked": false,
-      "extractionId": 6
-    },
-    {
-      "timestamp": "2026-04-25T23:08:59.562Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+440",
-        "numericOdds": 440
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "isLocked": false,
-      "extractionId": 7
-    },
-    {
-      "timestamp": "2026-04-25T23:09:02.564Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+440",
-        "numericOdds": 440
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-700",
-        "numericOdds": -700
-      },
-      "isLocked": false,
-      "extractionId": 8
-    },
-    {
-      "timestamp": "2026-04-25T23:09:17.592Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+370",
-        "numericOdds": 370
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-600",
-        "numericOdds": -600
-      },
-      "isLocked": false,
-      "extractionId": 9
-    },
-    {
-      "timestamp": "2026-04-25T23:09:20.591Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+370",
-        "numericOdds": 370
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-600",
-        "numericOdds": -600
-      },
-      "isLocked": false,
-      "extractionId": 2
-    },
-    {
-      "timestamp": "2026-04-25T23:09:23.592Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+370",
-        "numericOdds": 370
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-600",
-        "numericOdds": -600
-      },
-      "isLocked": false,
-      "extractionId": 3
-    },
-    {
-      "timestamp": "2026-04-25T23:09:26.607Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+370",
-        "numericOdds": 370
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-600",
-        "numericOdds": -600
-      },
-      "isLocked": false,
-      "extractionId": 4
-    },
-    {
-      "timestamp": "2026-04-25T23:09:29.611Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+370",
-        "numericOdds": 370
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-600",
-        "numericOdds": -600
-      },
-      "isLocked": false,
-      "extractionId": 5
-    },
-    {
-      "timestamp": "2026-04-25T23:09:47.634Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+200",
         "numericOdds": 200
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-270",
         "numericOdds": -270
-      },
-      "isLocked": false,
-      "extractionId": 6
-    },
-    {
-      "timestamp": "2026-04-25T23:09:50.636Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+225",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-310",
-        "numericOdds": -310
-      },
-      "isLocked": false,
-      "extractionId": 2
-    },
-    {
-      "timestamp": "2026-04-25T23:09:53.641Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+225",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-310",
-        "numericOdds": -310
-      },
-      "isLocked": false,
-      "extractionId": 3
-    },
-    {
-      "timestamp": "2026-04-25T23:09:56.654Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+225",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-310",
-        "numericOdds": -310
-      },
-      "isLocked": false,
-      "extractionId": 4
-    },
-    {
-      "timestamp": "2026-04-25T23:09:59.660Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+225",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-310",
-        "numericOdds": -310
-      },
-      "isLocked": false,
-      "extractionId": 5
-    },
-    {
-      "timestamp": "2026-04-25T23:10:11.677Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+260",
-        "numericOdds": 260
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-370",
-        "numericOdds": -370
-      },
-      "isLocked": false,
-      "extractionId": 6
-    },
-    {
-      "timestamp": "2026-04-25T23:10:14.689Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+260",
-        "numericOdds": 260
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-370",
-        "numericOdds": -370
-      },
-      "isLocked": false,
-      "extractionId": 2
-    },
-    {
-      "timestamp": "2026-04-25T23:10:20.706Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+300",
-        "numericOdds": 300
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-430",
-        "numericOdds": -430
-      },
-      "isLocked": false,
-      "extractionId": 3
-    },
-    {
-      "timestamp": "2026-04-25T23:10:23.709Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+300",
-        "numericOdds": 300
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-430",
-        "numericOdds": -430
-      },
-      "isLocked": false,
-      "extractionId": 2
-    },
-    {
-      "timestamp": "2026-04-25T23:10:26.714Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+300",
-        "numericOdds": 300
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-430",
-        "numericOdds": -430
-      },
-      "isLocked": false,
-      "extractionId": 3
-    },
-    {
-      "timestamp": "2026-04-25T23:10:29.723Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+300",
-        "numericOdds": 300
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-430",
-        "numericOdds": -430
-      },
-      "isLocked": false,
-      "extractionId": 4
-    },
-    {
-      "timestamp": "2026-04-25T23:10:32.724Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+300",
-        "numericOdds": 300
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-430",
-        "numericOdds": -430
-      },
-      "isLocked": false,
-      "extractionId": 5
-    },
-    {
-      "timestamp": "2026-04-25T23:10:35.726Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+300",
-        "numericOdds": 300
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-430",
-        "numericOdds": -430
-      },
-      "isLocked": false,
-      "extractionId": 6
-    },
-    {
-      "timestamp": "2026-04-25T23:10:38.728Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+300",
-        "numericOdds": 300
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-430",
-        "numericOdds": -430
-      },
-      "isLocked": false,
-      "extractionId": 7
-    },
-    {
-      "timestamp": "2026-04-25T23:10:41.732Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+400",
-        "numericOdds": 400
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "isLocked": false,
-      "extractionId": 8
-    },
-    {
-      "timestamp": "2026-04-25T23:10:44.746Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+400",
-        "numericOdds": 400
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "isLocked": false,
-      "extractionId": 9
-    },
-    {
-      "timestamp": "2026-04-25T23:10:47.754Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+400",
-        "numericOdds": 400
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "isLocked": false,
-      "extractionId": 10
-    },
-    {
-      "timestamp": "2026-04-25T23:10:50.755Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+400",
-        "numericOdds": 400
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-650",
-        "numericOdds": -650
-      },
-      "isLocked": false,
-      "extractionId": 11
-    },
-    {
-      "timestamp": "2026-04-25T23:10:53.759Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+580",
-        "numericOdds": 580
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1000",
-        "numericOdds": -1000
-      },
-      "isLocked": false,
-      "extractionId": 12
-    },
-    {
-      "timestamp": "2026-04-25T23:10:56.764Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+580",
-        "numericOdds": 580
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1000",
-        "numericOdds": -1000
-      },
-      "isLocked": false,
-      "extractionId": 13
-    },
-    {
-      "timestamp": "2026-04-25T23:10:59.768Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+580",
-        "numericOdds": 580
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1000",
-        "numericOdds": -1000
-      },
-      "isLocked": false,
-      "extractionId": 14
-    },
-    {
-      "timestamp": "2026-04-25T23:11:02.769Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+580",
-        "numericOdds": 580
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1000",
-        "numericOdds": -1000
-      },
-      "isLocked": false,
-      "extractionId": 15
-    },
-    {
-      "timestamp": "2026-04-25T23:11:05.783Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+580",
-        "numericOdds": 580
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1000",
-        "numericOdds": -1000
-      },
-      "isLocked": false,
-      "extractionId": 16
-    },
-    {
-      "timestamp": "2026-04-25T23:11:08.787Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+1040",
-        "numericOdds": 1040
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-2000",
-        "numericOdds": -2000
-      },
-      "isLocked": false,
-      "extractionId": 17
-    },
-    {
-      "timestamp": "2026-04-25T23:11:11.793Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+1040",
-        "numericOdds": 1040
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-2000",
-        "numericOdds": -2000
-      },
-      "isLocked": false,
-      "extractionId": 18
-    },
-    {
-      "timestamp": "2026-04-25T23:11:14.807Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+1040",
-        "numericOdds": 1040
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-2000",
-        "numericOdds": -2000
-      },
-      "isLocked": false,
-      "extractionId": 19
-    },
-    {
-      "timestamp": "2026-04-25T23:11:17.811Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+1040",
-        "numericOdds": 1040
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-2000",
-        "numericOdds": -2000
-      },
-      "isLocked": false,
-      "extractionId": 20
-    },
-    {
-      "timestamp": "2026-04-25T23:11:20.817Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+1040",
-        "numericOdds": 1040
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-2000",
-        "numericOdds": -2000
-      },
-      "isLocked": false,
-      "extractionId": 21
-    },
-    {
-      "timestamp": "2026-04-25T23:12:44.985Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+580",
-        "numericOdds": 580
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1000",
-        "numericOdds": -1000
-      },
-      "isLocked": false,
-      "extractionId": 22
-    },
-    {
-      "timestamp": "2026-04-25T23:12:47.995Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+580",
-        "numericOdds": 580
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1000",
-        "numericOdds": -1000
-      },
-      "isLocked": false,
-      "extractionId": 2
-    },
-    {
-      "timestamp": "2026-04-25T23:12:51.010Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+580",
-        "numericOdds": 580
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1000",
-        "numericOdds": -1000
-      },
-      "isLocked": false,
-      "extractionId": 3
-    },
-    {
-      "timestamp": "2026-04-25T23:12:54.009Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+580",
-        "numericOdds": 580
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1000",
-        "numericOdds": -1000
-      },
-      "isLocked": false,
-      "extractionId": 4
-    },
-    {
-      "timestamp": "2026-04-25T23:12:57.010Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+580",
-        "numericOdds": 580
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1000",
-        "numericOdds": -1000
-      },
-      "isLocked": false,
-      "extractionId": 5
-    },
-    {
-      "timestamp": "2026-04-25T23:13:00.015Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+580",
-        "numericOdds": 580
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1000",
-        "numericOdds": -1000
-      },
-      "isLocked": false,
-      "extractionId": 6
-    },
-    {
-      "timestamp": "2026-04-25T23:13:03.015Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+550",
-        "numericOdds": 550
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-950",
-        "numericOdds": -950
-      },
-      "isLocked": false,
-      "extractionId": 7
-    },
-    {
-      "timestamp": "2026-04-25T23:13:06.020Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+550",
-        "numericOdds": 550
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-950",
-        "numericOdds": -950
-      },
-      "isLocked": false,
-      "extractionId": 8
-    },
-    {
-      "timestamp": "2026-04-25T23:13:09.033Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+550",
-        "numericOdds": 550
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-950",
-        "numericOdds": -950
-      },
-      "isLocked": false,
-      "extractionId": 9
-    },
-    {
-      "timestamp": "2026-04-25T23:13:12.033Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+550",
-        "numericOdds": 550
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-950",
-        "numericOdds": -950
-      },
-      "isLocked": false,
-      "extractionId": 10
-    },
-    {
-      "timestamp": "2026-04-25T23:13:15.038Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+580",
-        "numericOdds": 580
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1000",
-        "numericOdds": -1000
-      },
-      "isLocked": false,
-      "extractionId": 11
-    },
-    {
-      "timestamp": "2026-04-25T23:13:18.041Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+580",
-        "numericOdds": 580
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1000",
-        "numericOdds": -1000
-      },
-      "isLocked": false,
-      "extractionId": 12
-    },
-    {
-      "timestamp": "2026-04-25T23:13:21.047Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+580",
-        "numericOdds": 580
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1000",
-        "numericOdds": -1000
-      },
-      "isLocked": false,
-      "extractionId": 13
-    },
-    {
-      "timestamp": "2026-04-25T23:13:24.060Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+580",
-        "numericOdds": 580
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1000",
-        "numericOdds": -1000
-      },
-      "isLocked": false,
-      "extractionId": 14
-    },
-    {
-      "timestamp": "2026-04-25T23:13:27.066Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+580",
-        "numericOdds": 580
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1000",
-        "numericOdds": -1000
-      },
-      "isLocked": false,
-      "extractionId": 15
-    },
-    {
-      "timestamp": "2026-04-25T23:13:30.080Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+580",
-        "numericOdds": 580
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1000",
-        "numericOdds": -1000
-      },
-      "isLocked": false,
-      "extractionId": 16
-    },
-    {
-      "timestamp": "2026-04-25T23:13:33.084Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+580",
-        "numericOdds": 580
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1000",
-        "numericOdds": -1000
-      },
-      "isLocked": false,
-      "extractionId": 17
-    },
-    {
-      "timestamp": "2026-04-25T23:13:36.085Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+580",
-        "numericOdds": 580
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1000",
-        "numericOdds": -1000
-      },
-      "isLocked": false,
-      "extractionId": 18
-    },
-    {
-      "timestamp": "2026-04-25T23:13:39.098Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+580",
-        "numericOdds": 580
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1000",
-        "numericOdds": -1000
-      },
-      "isLocked": false,
-      "extractionId": 19
-    },
-    {
-      "timestamp": "2026-04-25T23:13:42.105Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+580",
-        "numericOdds": 580
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1000",
-        "numericOdds": -1000
-      },
-      "isLocked": false,
-      "extractionId": 20
-    },
-    {
-      "timestamp": "2026-04-25T23:13:45.119Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+520",
-        "numericOdds": 520
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-850",
-        "numericOdds": -850
-      },
-      "isLocked": false,
-      "extractionId": 21
-    },
-    {
-      "timestamp": "2026-04-25T23:13:48.120Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+460",
-        "numericOdds": 460
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-750",
-        "numericOdds": -750
-      },
-      "isLocked": false,
-      "extractionId": 22
-    },
-    {
-      "timestamp": "2026-04-25T23:13:51.127Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+460",
-        "numericOdds": 460
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-750",
-        "numericOdds": -750
-      },
-      "isLocked": false,
-      "extractionId": 23
-    },
-    {
-      "timestamp": "2026-04-25T23:13:54.137Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+460",
-        "numericOdds": 460
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-750",
-        "numericOdds": -750
-      },
-      "isLocked": false,
-      "extractionId": 24
-    },
-    {
-      "timestamp": "2026-04-25T23:13:57.145Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+460",
-        "numericOdds": 460
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-750",
-        "numericOdds": -750
-      },
-      "isLocked": false,
-      "extractionId": 25
-    },
-    {
-      "timestamp": "2026-04-25T23:14:00.155Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+460",
-        "numericOdds": 460
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-750",
-        "numericOdds": -750
-      },
-      "isLocked": false,
-      "extractionId": 26
-    },
-    {
-      "timestamp": "2026-04-25T23:14:03.156Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+460",
-        "numericOdds": 460
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-750",
-        "numericOdds": -750
-      },
-      "isLocked": false,
-      "extractionId": 27
-    },
-    {
-      "timestamp": "2026-04-25T23:14:06.160Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+460",
-        "numericOdds": 460
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-750",
-        "numericOdds": -750
-      },
-      "isLocked": false,
-      "extractionId": 28
-    },
-    {
-      "timestamp": "2026-04-25T23:14:09.163Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+460",
-        "numericOdds": 460
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-750",
-        "numericOdds": -750
-      },
-      "isLocked": false,
-      "extractionId": 29
-    },
-    {
-      "timestamp": "2026-04-25T23:14:12.168Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+460",
-        "numericOdds": 460
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-750",
-        "numericOdds": -750
-      },
-      "isLocked": false,
-      "extractionId": 30
-    },
-    {
-      "timestamp": "2026-04-25T23:14:15.172Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+520",
-        "numericOdds": 520
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-850",
-        "numericOdds": -850
-      },
-      "isLocked": false,
-      "extractionId": 31
-    },
-    {
-      "timestamp": "2026-04-25T23:14:18.179Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+550",
-        "numericOdds": 550
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-950",
-        "numericOdds": -950
-      },
-      "isLocked": false,
-      "extractionId": 32
-    },
-    {
-      "timestamp": "2026-04-25T23:14:21.193Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+550",
-        "numericOdds": 550
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-950",
-        "numericOdds": -950
-      },
-      "isLocked": false,
-      "extractionId": 33
-    },
-    {
-      "timestamp": "2026-04-25T23:14:24.198Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+550",
-        "numericOdds": 550
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-950",
-        "numericOdds": -950
-      },
-      "isLocked": false,
-      "extractionId": 34
-    },
-    {
-      "timestamp": "2026-04-25T23:14:27.207Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+550",
-        "numericOdds": 550
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-950",
-        "numericOdds": -950
-      },
-      "isLocked": false,
-      "extractionId": 35
-    },
-    {
-      "timestamp": "2026-04-25T23:14:30.209Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+550",
-        "numericOdds": 550
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-950",
-        "numericOdds": -950
-      },
-      "isLocked": false,
-      "extractionId": 36
-    },
-    {
-      "timestamp": "2026-04-25T23:14:33.222Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+550",
-        "numericOdds": 550
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-950",
-        "numericOdds": -950
-      },
-      "isLocked": false,
-      "extractionId": 37
-    },
-    {
-      "timestamp": "2026-04-25T23:14:36.235Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+620",
-        "numericOdds": 620
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1100",
-        "numericOdds": -1100
-      },
-      "isLocked": false,
-      "extractionId": 38
-    },
-    {
-      "timestamp": "2026-04-25T23:14:39.245Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+620",
-        "numericOdds": 620
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1100",
-        "numericOdds": -1100
-      },
-      "isLocked": false,
-      "extractionId": 39
-    },
-    {
-      "timestamp": "2026-04-25T23:14:42.261Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+620",
-        "numericOdds": 620
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1100",
-        "numericOdds": -1100
-      },
-      "isLocked": false,
-      "extractionId": 40
-    },
-    {
-      "timestamp": "2026-04-25T23:14:45.263Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+620",
-        "numericOdds": 620
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1100",
-        "numericOdds": -1100
-      },
-      "isLocked": false,
-      "extractionId": 41
-    },
-    {
-      "timestamp": "2026-04-25T23:14:48.263Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+620",
-        "numericOdds": 620
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1100",
-        "numericOdds": -1100
-      },
-      "isLocked": false,
-      "extractionId": 42
-    },
-    {
-      "timestamp": "2026-04-25T23:14:51.266Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+620",
-        "numericOdds": 620
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1100",
-        "numericOdds": -1100
-      },
-      "isLocked": false,
-      "extractionId": 43
-    },
-    {
-      "timestamp": "2026-04-25T23:14:54.268Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+620",
-        "numericOdds": 620
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1100",
-        "numericOdds": -1100
-      },
-      "isLocked": false,
-      "extractionId": 44
-    },
-    {
-      "timestamp": "2026-04-25T23:14:57.273Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+620",
-        "numericOdds": 620
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1100",
-        "numericOdds": -1100
-      },
-      "isLocked": false,
-      "extractionId": 45
-    },
-    {
-      "timestamp": "2026-04-25T23:15:00.283Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+920",
-        "numericOdds": 920
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1800",
-        "numericOdds": -1800
-      },
-      "isLocked": false,
-      "extractionId": 46
-    },
-    {
-      "timestamp": "2026-04-25T23:15:03.285Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+920",
-        "numericOdds": 920
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1800",
-        "numericOdds": -1800
-      },
-      "isLocked": false,
-      "extractionId": 47
-    },
-    {
-      "timestamp": "2026-04-25T23:15:06.293Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+920",
-        "numericOdds": 920
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1800",
-        "numericOdds": -1800
-      },
-      "isLocked": false,
-      "extractionId": 48
-    },
-    {
-      "timestamp": "2026-04-25T23:15:09.295Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+920",
-        "numericOdds": 920
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1800",
-        "numericOdds": -1800
-      },
-      "isLocked": false,
-      "extractionId": 49
-    },
-    {
-      "timestamp": "2026-04-25T23:15:12.297Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+920",
-        "numericOdds": 920
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1800",
-        "numericOdds": -1800
-      },
-      "isLocked": false,
-      "extractionId": 50
-    },
-    {
-      "timestamp": "2026-04-25T23:15:15.302Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+920",
-        "numericOdds": 920
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1800",
-        "numericOdds": -1800
-      },
-      "isLocked": false,
-      "extractionId": 51
-    },
-    {
-      "timestamp": "2026-04-25T23:15:18.306Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+920",
-        "numericOdds": 920
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1800",
-        "numericOdds": -1800
-      },
-      "isLocked": false,
-      "extractionId": 52
-    },
-    {
-      "timestamp": "2026-04-25T23:15:21.319Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+1180",
-        "numericOdds": 1180
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-2400",
-        "numericOdds": -2400
-      },
-      "isLocked": false,
-      "extractionId": 53
-    },
-    {
-      "timestamp": "2026-04-25T23:15:24.323Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+1480",
-        "numericOdds": 1480
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-3500",
-        "numericOdds": -3500
-      },
-      "isLocked": false,
-      "extractionId": 54
-    },
-    {
-      "timestamp": "2026-04-25T23:15:27.324Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+1480",
-        "numericOdds": 1480
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-3500",
-        "numericOdds": -3500
-      },
-      "isLocked": false,
-      "extractionId": 55
-    },
-    {
-      "timestamp": "2026-04-25T23:12:44.985Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+580",
-        "numericOdds": 580
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1000",
-        "numericOdds": -1000
-      },
-      "isLocked": false,
-      "extractionId": 22
-    },
-    {
-      "timestamp": "2026-04-25T23:12:47.995Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+580",
-        "numericOdds": 580
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1000",
-        "numericOdds": -1000
-      },
-      "isLocked": false,
-      "extractionId": 2
-    },
-    {
-      "timestamp": "2026-04-25T23:12:51.010Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+580",
-        "numericOdds": 580
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1000",
-        "numericOdds": -1000
-      },
-      "isLocked": false,
-      "extractionId": 3
-    },
-    {
-      "timestamp": "2026-04-25T23:12:54.009Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+580",
-        "numericOdds": 580
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1000",
-        "numericOdds": -1000
-      },
-      "isLocked": false,
-      "extractionId": 4
-    },
-    {
-      "timestamp": "2026-04-25T23:12:57.010Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+580",
-        "numericOdds": 580
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1000",
-        "numericOdds": -1000
-      },
-      "isLocked": false,
-      "extractionId": 5
-    },
-    {
-      "timestamp": "2026-04-25T23:13:00.015Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+580",
-        "numericOdds": 580
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1000",
-        "numericOdds": -1000
-      },
-      "isLocked": false,
-      "extractionId": 6
-    },
-    {
-      "timestamp": "2026-04-25T23:13:03.015Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+550",
-        "numericOdds": 550
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-950",
-        "numericOdds": -950
-      },
-      "isLocked": false,
-      "extractionId": 7
-    },
-    {
-      "timestamp": "2026-04-25T23:13:06.020Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+550",
-        "numericOdds": 550
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-950",
-        "numericOdds": -950
-      },
-      "isLocked": false,
-      "extractionId": 8
-    },
-    {
-      "timestamp": "2026-04-25T23:13:09.033Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+550",
-        "numericOdds": 550
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-950",
-        "numericOdds": -950
-      },
-      "isLocked": false,
-      "extractionId": 9
-    },
-    {
-      "timestamp": "2026-04-25T23:13:12.033Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+550",
-        "numericOdds": 550
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-950",
-        "numericOdds": -950
-      },
-      "isLocked": false,
-      "extractionId": 10
-    },
-    {
-      "timestamp": "2026-04-25T23:13:15.038Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+580",
-        "numericOdds": 580
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1000",
-        "numericOdds": -1000
-      },
-      "isLocked": false,
-      "extractionId": 11
-    },
-    {
-      "timestamp": "2026-04-25T23:13:18.041Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+580",
-        "numericOdds": 580
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1000",
-        "numericOdds": -1000
-      },
-      "isLocked": false,
-      "extractionId": 12
-    },
-    {
-      "timestamp": "2026-04-25T23:13:21.047Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+580",
-        "numericOdds": 580
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1000",
-        "numericOdds": -1000
-      },
-      "isLocked": false,
-      "extractionId": 13
-    },
-    {
-      "timestamp": "2026-04-25T23:13:24.060Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+580",
-        "numericOdds": 580
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1000",
-        "numericOdds": -1000
-      },
-      "isLocked": false,
-      "extractionId": 14
-    },
-    {
-      "timestamp": "2026-04-25T23:13:27.066Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+580",
-        "numericOdds": 580
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1000",
-        "numericOdds": -1000
-      },
-      "isLocked": false,
-      "extractionId": 15
-    },
-    {
-      "timestamp": "2026-04-25T23:13:30.080Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+580",
-        "numericOdds": 580
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1000",
-        "numericOdds": -1000
-      },
-      "isLocked": false,
-      "extractionId": 16
-    },
-    {
-      "timestamp": "2026-04-25T23:13:33.084Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+580",
-        "numericOdds": 580
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1000",
-        "numericOdds": -1000
-      },
-      "isLocked": false,
-      "extractionId": 17
-    },
-    {
-      "timestamp": "2026-04-25T23:13:36.085Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+580",
-        "numericOdds": 580
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1000",
-        "numericOdds": -1000
-      },
-      "isLocked": false,
-      "extractionId": 18
-    },
-    {
-      "timestamp": "2026-04-25T23:13:39.098Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+580",
-        "numericOdds": 580
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1000",
-        "numericOdds": -1000
-      },
-      "isLocked": false,
-      "extractionId": 19
-    },
-    {
-      "timestamp": "2026-04-25T23:13:42.105Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+580",
-        "numericOdds": 580
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1000",
-        "numericOdds": -1000
-      },
-      "isLocked": false,
-      "extractionId": 20
-    },
-    {
-      "timestamp": "2026-04-25T23:13:45.119Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+520",
-        "numericOdds": 520
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-850",
-        "numericOdds": -850
-      },
-      "isLocked": false,
-      "extractionId": 21
-    },
-    {
-      "timestamp": "2026-04-25T23:13:48.120Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+460",
-        "numericOdds": 460
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-750",
-        "numericOdds": -750
-      },
-      "isLocked": false,
-      "extractionId": 22
-    },
-    {
-      "timestamp": "2026-04-25T23:13:51.127Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+460",
-        "numericOdds": 460
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-750",
-        "numericOdds": -750
-      },
-      "isLocked": false,
-      "extractionId": 23
-    },
-    {
-      "timestamp": "2026-04-25T23:13:54.137Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+460",
-        "numericOdds": 460
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-750",
-        "numericOdds": -750
-      },
-      "isLocked": false,
-      "extractionId": 24
-    },
-    {
-      "timestamp": "2026-04-25T23:13:57.145Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+460",
-        "numericOdds": 460
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-750",
-        "numericOdds": -750
-      },
-      "isLocked": false,
-      "extractionId": 25
-    },
-    {
-      "timestamp": "2026-04-25T23:14:00.155Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+460",
-        "numericOdds": 460
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-750",
-        "numericOdds": -750
-      },
-      "isLocked": false,
-      "extractionId": 26
-    },
-    {
-      "timestamp": "2026-04-25T23:14:03.156Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+460",
-        "numericOdds": 460
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-750",
-        "numericOdds": -750
-      },
-      "isLocked": false,
-      "extractionId": 27
-    },
-    {
-      "timestamp": "2026-04-25T23:14:06.160Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+460",
-        "numericOdds": 460
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-750",
-        "numericOdds": -750
-      },
-      "isLocked": false,
-      "extractionId": 28
-    },
-    {
-      "timestamp": "2026-04-25T23:14:09.163Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+460",
-        "numericOdds": 460
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-750",
-        "numericOdds": -750
-      },
-      "isLocked": false,
-      "extractionId": 29
-    },
-    {
-      "timestamp": "2026-04-25T23:14:12.168Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+460",
-        "numericOdds": 460
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-750",
-        "numericOdds": -750
-      },
-      "isLocked": false,
-      "extractionId": 30
-    },
-    {
-      "timestamp": "2026-04-25T23:14:15.172Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+520",
-        "numericOdds": 520
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-850",
-        "numericOdds": -850
-      },
-      "isLocked": false,
-      "extractionId": 31
-    },
-    {
-      "timestamp": "2026-04-25T23:14:18.179Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+550",
-        "numericOdds": 550
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-950",
-        "numericOdds": -950
-      },
-      "isLocked": false,
-      "extractionId": 32
-    },
-    {
-      "timestamp": "2026-04-25T23:14:21.193Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+550",
-        "numericOdds": 550
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-950",
-        "numericOdds": -950
-      },
-      "isLocked": false,
-      "extractionId": 33
-    },
-    {
-      "timestamp": "2026-04-25T23:14:24.198Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+550",
-        "numericOdds": 550
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-950",
-        "numericOdds": -950
-      },
-      "isLocked": false,
-      "extractionId": 34
-    },
-    {
-      "timestamp": "2026-04-25T23:14:27.207Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+550",
-        "numericOdds": 550
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-950",
-        "numericOdds": -950
-      },
-      "isLocked": false,
-      "extractionId": 35
-    },
-    {
-      "timestamp": "2026-04-25T23:14:30.209Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+550",
-        "numericOdds": 550
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-950",
-        "numericOdds": -950
-      },
-      "isLocked": false,
-      "extractionId": 36
-    },
-    {
-      "timestamp": "2026-04-25T23:14:33.222Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+550",
-        "numericOdds": 550
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-950",
-        "numericOdds": -950
-      },
-      "isLocked": false,
-      "extractionId": 37
-    },
-    {
-      "timestamp": "2026-04-25T23:14:36.235Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+620",
-        "numericOdds": 620
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1100",
-        "numericOdds": -1100
-      },
-      "isLocked": false,
-      "extractionId": 38
-    },
-    {
-      "timestamp": "2026-04-25T23:14:39.245Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+620",
-        "numericOdds": 620
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1100",
-        "numericOdds": -1100
-      },
-      "isLocked": false,
-      "extractionId": 39
-    },
-    {
-      "timestamp": "2026-04-25T23:14:42.261Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+620",
-        "numericOdds": 620
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1100",
-        "numericOdds": -1100
-      },
-      "isLocked": false,
-      "extractionId": 40
-    },
-    {
-      "timestamp": "2026-04-25T23:14:45.263Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+620",
-        "numericOdds": 620
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1100",
-        "numericOdds": -1100
-      },
-      "isLocked": false,
-      "extractionId": 41
-    },
-    {
-      "timestamp": "2026-04-25T23:14:48.263Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+620",
-        "numericOdds": 620
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1100",
-        "numericOdds": -1100
-      },
-      "isLocked": false,
-      "extractionId": 42
-    },
-    {
-      "timestamp": "2026-04-25T23:14:51.266Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+620",
-        "numericOdds": 620
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1100",
-        "numericOdds": -1100
-      },
-      "isLocked": false,
-      "extractionId": 43
-    },
-    {
-      "timestamp": "2026-04-25T23:14:54.268Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+620",
-        "numericOdds": 620
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1100",
-        "numericOdds": -1100
-      },
-      "isLocked": false,
-      "extractionId": 44
-    },
-    {
-      "timestamp": "2026-04-25T23:14:57.273Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+620",
-        "numericOdds": 620
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1100",
-        "numericOdds": -1100
-      },
-      "isLocked": false,
-      "extractionId": 45
-    },
-    {
-      "timestamp": "2026-04-25T23:15:00.283Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+920",
-        "numericOdds": 920
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1800",
-        "numericOdds": -1800
-      },
-      "isLocked": false,
-      "extractionId": 46
-    },
-    {
-      "timestamp": "2026-04-25T23:15:03.285Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+920",
-        "numericOdds": 920
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1800",
-        "numericOdds": -1800
-      },
-      "isLocked": false,
-      "extractionId": 47
-    },
-    {
-      "timestamp": "2026-04-25T23:15:06.293Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+920",
-        "numericOdds": 920
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1800",
-        "numericOdds": -1800
-      },
-      "isLocked": false,
-      "extractionId": 48
-    },
-    {
-      "timestamp": "2026-04-25T23:15:09.295Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+920",
-        "numericOdds": 920
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1800",
-        "numericOdds": -1800
-      },
-      "isLocked": false,
-      "extractionId": 49
-    },
-    {
-      "timestamp": "2026-04-25T23:15:12.297Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+920",
-        "numericOdds": 920
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1800",
-        "numericOdds": -1800
-      },
-      "isLocked": false,
-      "extractionId": 50
-    },
-    {
-      "timestamp": "2026-04-25T23:15:15.302Z",
-      "fighter1": {
-        "name": "Mayra Bueno Silva",
-        "odds": "+920",
-        "numericOdds": 920
-      },
-      "fighter2": {
-        "name": "Michelle Montague",
-        "odds": "-1800",
-        "numericOdds": -1800
-      },
-      "isLocked": false,
-      "extractionId": 51
+      }
     },
     {
-      "timestamp": "2026-04-25T23:15:18.306Z",
+      "timestamp": "2026-04-25T23:15:38Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+920",
-        "numericOdds": 920
+        "numericOdds": 800
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-1800",
-        "numericOdds": -1800
-      },
-      "isLocked": false,
-      "extractionId": 52
+        "numericOdds": -1600
+      }
     },
     {
-      "timestamp": "2026-04-25T23:15:21.319Z",
+      "timestamp": "2026-04-25T23:20:37Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+1180",
-        "numericOdds": 1180
+        "numericOdds": 3000
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-2400",
-        "numericOdds": -2400
-      },
-      "isLocked": false,
-      "extractionId": 53
+        "numericOdds": -20000
+      }
     },
     {
-      "timestamp": "2026-04-25T23:15:24.323Z",
+      "timestamp": "2026-04-25T23:25:37Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+1480",
-        "numericOdds": 1480
+        "numericOdds": 3000
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-3500",
-        "numericOdds": -3500
-      },
-      "isLocked": false,
-      "extractionId": 54
+        "numericOdds": -20000
+      }
     },
     {
-      "timestamp": "2026-04-25T23:15:27.324Z",
+      "timestamp": "2026-04-25T23:30:37Z",
       "fighter1": {
         "name": "Mayra Bueno Silva",
-        "odds": "+1480",
-        "numericOdds": 1480
+        "numericOdds": 3000
       },
       "fighter2": {
         "name": "Michelle Montague",
-        "odds": "-3500",
-        "numericOdds": -3500
-      },
-      "isLocked": false,
-      "extractionId": 55
+        "numericOdds": -20000
+      }
     }
-  ],
-  "createdAt": "2026-04-25T23:03:28.718Z",
-  "outcome": {
-    "winner": "fighter2",
-    "winnerName": "Michelle Montague",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:52:00.029Z",
-    "openingF1Odds": 340,
-    "openingF2Odds": -430,
-    "closingF1Odds": 1480,
-    "closingF2Odds": -3500,
-    "lineMovementF1": 1140,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": 1,
-    "inferredFinishRound": 1,
-    "peakOddsSwing": 1460,
-    "finishSpeed": "fast",
-    "preFightSteam": 1140,
-    "dominanceScore": 100,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.461Z"
-  }
+  ]
 }

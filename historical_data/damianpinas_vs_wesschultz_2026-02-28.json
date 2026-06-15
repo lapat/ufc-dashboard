@@ -1,847 +1,1406 @@
 {
-  "fightId": "damianpinas_vs_wesschultz",
-  "fightTitle": "Connected but no betting buttons found",
-  "startTime": "2026-02-28T22:14:55.606Z",
-  "endTime": "2026-02-28T22:18:02.042Z",
-  "duration": 186436,
-  "dataPoints": 54,
+  "fightId": "damianpinas_vs_wesschultz_2026-02-28",
+  "fightTitle": "Damian Pinas vs Wes Schultz",
+  "startTime": "2026-02-27T11:55:38Z",
+  "endTime": "2026-02-27T22:25:37Z",
+  "dataPoints": 127,
   "oddsHistory": [
     {
-      "timestamp": "2026-02-28T22:14:55.606Z",
+      "timestamp": "2026-02-27T11:55:38Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-240",
-        "numericOdds": -240
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+198",
-        "numericOdds": 198
-      },
-      "isLocked": false,
-      "extractionId": 1
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:14:58.609Z",
+      "timestamp": "2026-02-27T12:00:38Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-240",
-        "numericOdds": -240
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+198",
-        "numericOdds": 198
-      },
-      "isLocked": false,
-      "extractionId": 2
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:15:01.611Z",
+      "timestamp": "2026-02-27T12:05:38Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-240",
-        "numericOdds": -240
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+198",
-        "numericOdds": 198
-      },
-      "isLocked": false,
-      "extractionId": 3
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:15:04.624Z",
+      "timestamp": "2026-02-27T12:10:37Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-240",
-        "numericOdds": -240
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+198",
-        "numericOdds": 198
-      },
-      "isLocked": false,
-      "extractionId": 4
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:15:07.624Z",
+      "timestamp": "2026-02-27T12:15:37Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-240",
-        "numericOdds": -240
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+198",
-        "numericOdds": 198
-      },
-      "isLocked": false,
-      "extractionId": 5
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:15:10.626Z",
+      "timestamp": "2026-02-27T12:20:37Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-240",
-        "numericOdds": -240
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+198",
-        "numericOdds": 198
-      },
-      "isLocked": false,
-      "extractionId": 6
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:15:13.628Z",
+      "timestamp": "2026-02-27T12:25:39Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-240",
-        "numericOdds": -240
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+198",
-        "numericOdds": 198
-      },
-      "isLocked": false,
-      "extractionId": 7
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:15:16.634Z",
+      "timestamp": "2026-02-27T12:30:37Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-240",
-        "numericOdds": -240
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+198",
-        "numericOdds": 198
-      },
-      "isLocked": false,
-      "extractionId": 8
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:15:19.635Z",
+      "timestamp": "2026-02-27T12:35:37Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-240",
-        "numericOdds": -240
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+198",
-        "numericOdds": 198
-      },
-      "isLocked": false,
-      "extractionId": 9
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:15:22.642Z",
+      "timestamp": "2026-02-27T12:40:37Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-260",
-        "numericOdds": -260
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+190",
-        "numericOdds": 190
-      },
-      "isLocked": false,
-      "extractionId": 10
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:15:25.646Z",
+      "timestamp": "2026-02-27T12:45:37Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-260",
-        "numericOdds": -260
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+190",
-        "numericOdds": 190
-      },
-      "isLocked": false,
-      "extractionId": 11
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:15:28.648Z",
+      "timestamp": "2026-02-27T12:50:37Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-260",
-        "numericOdds": -260
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+190",
-        "numericOdds": 190
-      },
-      "isLocked": false,
-      "extractionId": 12
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:15:31.652Z",
+      "timestamp": "2026-02-27T12:55:37Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-260",
-        "numericOdds": -260
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+190",
-        "numericOdds": 190
-      },
-      "isLocked": false,
-      "extractionId": 13
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:15:34.656Z",
+      "timestamp": "2026-02-27T13:00:38Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-260",
-        "numericOdds": -260
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+190",
-        "numericOdds": 190
-      },
-      "isLocked": false,
-      "extractionId": 14
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:15:37.669Z",
+      "timestamp": "2026-02-27T13:05:37Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-260",
-        "numericOdds": -260
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+190",
-        "numericOdds": 190
-      },
-      "isLocked": false,
-      "extractionId": 15
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:15:40.675Z",
+      "timestamp": "2026-02-27T13:10:37Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-260",
-        "numericOdds": -260
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+190",
-        "numericOdds": 190
-      },
-      "isLocked": false,
-      "extractionId": 16
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:15:43.685Z",
+      "timestamp": "2026-02-27T13:15:37Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-260",
-        "numericOdds": -260
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+190",
-        "numericOdds": 190
-      },
-      "isLocked": false,
-      "extractionId": 17
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:15:46.686Z",
+      "timestamp": "2026-02-27T13:20:37Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-260",
-        "numericOdds": -260
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+190",
-        "numericOdds": 190
-      },
-      "isLocked": false,
-      "extractionId": 18
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:15:49.695Z",
+      "timestamp": "2026-02-27T13:25:37Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-260",
-        "numericOdds": -260
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+190",
-        "numericOdds": 190
-      },
-      "isLocked": false,
-      "extractionId": 19
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:15:52.697Z",
+      "timestamp": "2026-02-27T13:30:39Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-260",
-        "numericOdds": -260
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+190",
-        "numericOdds": 190
-      },
-      "isLocked": false,
-      "extractionId": 20
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:15:55.710Z",
+      "timestamp": "2026-02-27T13:35:37Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-260",
-        "numericOdds": -260
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+190",
-        "numericOdds": 190
-      },
-      "isLocked": false,
-      "extractionId": 21
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:15:58.718Z",
+      "timestamp": "2026-02-27T13:40:37Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-260",
-        "numericOdds": -260
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+190",
-        "numericOdds": 190
-      },
-      "isLocked": false,
-      "extractionId": 22
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:16:01.732Z",
+      "timestamp": "2026-02-27T13:45:37Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-260",
-        "numericOdds": -260
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+194",
-        "numericOdds": 194
-      },
-      "isLocked": false,
-      "extractionId": 23
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:16:04.742Z",
+      "timestamp": "2026-02-27T13:50:37Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-260",
-        "numericOdds": -260
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+194",
-        "numericOdds": 194
-      },
-      "isLocked": false,
-      "extractionId": 24
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:16:07.756Z",
+      "timestamp": "2026-02-27T13:55:37Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-260",
-        "numericOdds": -260
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+194",
-        "numericOdds": 194
-      },
-      "isLocked": false,
-      "extractionId": 25
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:16:10.757Z",
+      "timestamp": "2026-02-27T14:00:37Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-260",
-        "numericOdds": -260
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+194",
-        "numericOdds": 194
-      },
-      "isLocked": false,
-      "extractionId": 26
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:16:13.760Z",
+      "timestamp": "2026-02-27T14:05:37Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-260",
-        "numericOdds": -260
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+194",
-        "numericOdds": 194
-      },
-      "isLocked": false,
-      "extractionId": 27
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:16:16.767Z",
+      "timestamp": "2026-02-27T14:10:39Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-260",
-        "numericOdds": -260
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+194",
-        "numericOdds": 194
-      },
-      "isLocked": false,
-      "extractionId": 28
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:16:19.778Z",
+      "timestamp": "2026-02-27T14:15:37Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-260",
-        "numericOdds": -260
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+194",
-        "numericOdds": 194
-      },
-      "isLocked": false,
-      "extractionId": 29
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:16:22.780Z",
+      "timestamp": "2026-02-27T14:20:38Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-260",
-        "numericOdds": -260
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+194",
-        "numericOdds": 194
-      },
-      "isLocked": false,
-      "extractionId": 30
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:16:25.798Z",
+      "timestamp": "2026-02-27T14:25:37Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-260",
-        "numericOdds": -260
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+194",
-        "numericOdds": 194
-      },
-      "isLocked": false,
-      "extractionId": 31
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:16:28.803Z",
+      "timestamp": "2026-02-27T14:30:37Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-260",
-        "numericOdds": -260
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+194",
-        "numericOdds": 194
-      },
-      "isLocked": false,
-      "extractionId": 32
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:16:46.840Z",
+      "timestamp": "2026-02-27T14:35:37Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-1100",
-        "numericOdds": -1100
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+610",
-        "numericOdds": 610
-      },
-      "isLocked": false,
-      "extractionId": 33
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:16:49.837Z",
+      "timestamp": "2026-02-27T14:40:37Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-1100",
-        "numericOdds": -1100
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+610",
-        "numericOdds": 610
-      },
-      "isLocked": false,
-      "extractionId": 2
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:16:52.850Z",
+      "timestamp": "2026-02-27T14:45:37Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-1100",
-        "numericOdds": -1100
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+610",
-        "numericOdds": 610
-      },
-      "isLocked": false,
-      "extractionId": 3
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:16:55.851Z",
+      "timestamp": "2026-02-27T14:50:37Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-1100",
-        "numericOdds": -1100
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+610",
-        "numericOdds": 610
-      },
-      "isLocked": false,
-      "extractionId": 4
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:16:58.865Z",
+      "timestamp": "2026-02-27T14:55:38Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-1100",
-        "numericOdds": -1100
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+610",
-        "numericOdds": 610
-      },
-      "isLocked": false,
-      "extractionId": 5
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:17:01.878Z",
+      "timestamp": "2026-02-27T15:00:38Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-1100",
-        "numericOdds": -1100
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+610",
-        "numericOdds": 610
-      },
-      "isLocked": false,
-      "extractionId": 6
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:17:04.878Z",
+      "timestamp": "2026-02-27T15:05:37Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-1200",
-        "numericOdds": -1200
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+660",
-        "numericOdds": 660
-      },
-      "isLocked": false,
-      "extractionId": 7
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:17:07.893Z",
+      "timestamp": "2026-02-27T15:10:38Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-1200",
-        "numericOdds": -1200
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+660",
-        "numericOdds": 660
-      },
-      "isLocked": false,
-      "extractionId": 8
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:17:10.895Z",
+      "timestamp": "2026-02-27T15:15:37Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-1200",
-        "numericOdds": -1200
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+660",
-        "numericOdds": 660
-      },
-      "isLocked": false,
-      "extractionId": 9
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:17:28.957Z",
+      "timestamp": "2026-02-27T15:20:37Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-2400",
-        "numericOdds": -2400
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+1140",
-        "numericOdds": 1140
-      },
-      "isLocked": false,
-      "extractionId": 10
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:17:31.959Z",
+      "timestamp": "2026-02-27T15:25:37Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-2400",
-        "numericOdds": -2400
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+1140",
-        "numericOdds": 1140
-      },
-      "isLocked": false,
-      "extractionId": 2
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:17:34.962Z",
+      "timestamp": "2026-02-27T15:30:38Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-2400",
-        "numericOdds": -2400
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+1140",
-        "numericOdds": 1140
-      },
-      "isLocked": false,
-      "extractionId": 3
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:17:37.968Z",
+      "timestamp": "2026-02-27T15:35:37Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-2400",
-        "numericOdds": -2400
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+1140",
-        "numericOdds": 1140
-      },
-      "isLocked": false,
-      "extractionId": 4
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:17:40.970Z",
+      "timestamp": "2026-02-27T15:40:38Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-2400",
-        "numericOdds": -2400
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+1140",
-        "numericOdds": 1140
-      },
-      "isLocked": false,
-      "extractionId": 5
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:17:53.014Z",
+      "timestamp": "2026-02-27T15:45:37Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-3500",
-        "numericOdds": -3500
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+1480",
-        "numericOdds": 1480
-      },
-      "isLocked": false,
-      "extractionId": 6
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:17:56.024Z",
+      "timestamp": "2026-02-27T15:50:37Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-3500",
-        "numericOdds": -3500
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+1480",
-        "numericOdds": 1480
-      },
-      "isLocked": false,
-      "extractionId": 2
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:17:59.031Z",
+      "timestamp": "2026-02-27T15:55:37Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-3500",
-        "numericOdds": -3500
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+1480",
-        "numericOdds": 1480
-      },
-      "isLocked": false,
-      "extractionId": 3
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:18:02.042Z",
+      "timestamp": "2026-02-27T16:00:37Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-3500",
-        "numericOdds": -3500
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+1480",
-        "numericOdds": 1480
-      },
-      "isLocked": false,
-      "extractionId": 4
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:17:53.014Z",
+      "timestamp": "2026-02-27T16:05:37Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-3500",
-        "numericOdds": -3500
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+1480",
-        "numericOdds": 1480
-      },
-      "isLocked": false,
-      "extractionId": 6
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:17:56.024Z",
+      "timestamp": "2026-02-27T16:10:37Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-3500",
-        "numericOdds": -3500
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+1480",
-        "numericOdds": 1480
-      },
-      "isLocked": false,
-      "extractionId": 2
+        "numericOdds": 205
+      }
     },
     {
-      "timestamp": "2026-02-28T22:17:59.031Z",
+      "timestamp": "2026-02-27T16:15:37Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-3500",
-        "numericOdds": -3500
+        "numericOdds": -245
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+1480",
-        "numericOdds": 1480
-      },
-      "isLocked": false,
-      "extractionId": 3
+        "numericOdds": 200
+      }
     },
     {
-      "timestamp": "2026-02-28T22:18:02.042Z",
+      "timestamp": "2026-02-27T16:20:37Z",
       "fighter1": {
         "name": "Damian Pinas",
-        "odds": "-3500",
-        "numericOdds": -3500
+        "numericOdds": -245
       },
       "fighter2": {
         "name": "Wes Schultz",
-        "odds": "+1480",
-        "numericOdds": 1480
+        "numericOdds": 200
+      }
+    },
+    {
+      "timestamp": "2026-02-27T16:25:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -245
       },
-      "isLocked": false,
-      "extractionId": 4
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 200
+      }
+    },
+    {
+      "timestamp": "2026-02-27T16:30:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T16:35:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T16:40:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T16:45:38Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T16:50:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T16:55:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T17:00:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T17:05:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T17:10:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T17:15:38Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T17:20:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T17:25:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T17:30:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T17:35:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T17:40:38Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T17:45:39Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T17:50:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T17:55:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T18:00:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T18:05:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T18:10:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T18:15:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T18:20:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T18:25:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T18:30:38Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T18:35:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T18:40:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T18:45:38Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T18:50:38Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T18:55:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T19:00:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T19:05:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T19:10:38Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T19:15:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T19:20:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T19:25:38Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T19:30:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T19:35:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T19:40:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T19:45:38Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T19:50:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T19:55:38Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T20:00:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T20:05:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T20:10:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T20:15:38Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T20:20:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T20:25:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T20:30:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T20:35:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T20:40:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T20:45:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T20:50:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T20:55:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T21:00:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T21:05:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T21:10:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T21:15:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T21:20:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T21:25:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T21:30:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T21:35:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T21:40:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T21:45:38Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T21:50:39Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T21:55:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T22:00:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T22:05:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T22:10:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T22:15:38Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T22:20:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
+    },
+    {
+      "timestamp": "2026-02-27T22:25:37Z",
+      "fighter1": {
+        "name": "Damian Pinas",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "numericOdds": 205
+      }
     }
-  ],
-  "createdAt": "2026-02-28T22:16:46.838Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Damian Pinas",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:51:10.640Z",
-    "openingF1Odds": -240,
-    "openingF2Odds": 198,
-    "closingF1Odds": -3500,
-    "closingF2Odds": 1480,
-    "lineMovementF1": -3260,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": 2,
-    "inferredFinishRound": 1,
-    "peakOddsSwing": 3260,
-    "finishSpeed": "fast",
-    "preFightSteam": -3260,
-    "dominanceScore": 100,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.407Z"
-  }
+  ]
 }

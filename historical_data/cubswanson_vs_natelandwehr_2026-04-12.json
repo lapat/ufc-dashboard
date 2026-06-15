@@ -1,1657 +1,1835 @@
 {
-  "fightId": "cubswanson_vs_natelandwehr",
-  "fightTitle": "Connected but no betting buttons found",
-  "startTime": "2026-04-12T01:24:50.240Z",
-  "endTime": "2026-04-12T01:30:03.038Z",
-  "duration": 312798,
-  "dataPoints": 108,
+  "fightId": "cubswanson_vs_natelandwehr_2026-04-12",
+  "fightTitle": "Cub Swanson vs Nate Landwehr",
+  "startTime": "2026-04-11T11:55:38Z",
+  "endTime": "2026-04-12T01:40:38Z",
+  "dataPoints": 166,
   "oddsHistory": [
     {
-      "timestamp": "2026-04-12T01:24:50.240Z",
+      "timestamp": "2026-04-11T11:55:38Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-130",
-        "numericOdds": -130
+        "numericOdds": -112
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+108",
-        "numericOdds": 108
-      },
-      "isLocked": false,
-      "extractionId": 134
+        "numericOdds": -108
+      }
     },
     {
-      "timestamp": "2026-04-12T01:24:53.251Z",
+      "timestamp": "2026-04-11T12:00:43Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-130",
-        "numericOdds": -130
+        "numericOdds": -112
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+108",
-        "numericOdds": 108
-      },
-      "isLocked": false,
-      "extractionId": 2
+        "numericOdds": -108
+      }
     },
     {
-      "timestamp": "2026-04-12T01:24:56.257Z",
+      "timestamp": "2026-04-11T12:05:38Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-130",
-        "numericOdds": -130
+        "numericOdds": -112
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+108",
-        "numericOdds": 108
-      },
-      "isLocked": false,
-      "extractionId": 3
+        "numericOdds": -108
+      }
     },
     {
-      "timestamp": "2026-04-12T01:24:59.272Z",
+      "timestamp": "2026-04-11T12:10:38Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-130",
-        "numericOdds": -130
+        "numericOdds": -112
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+108",
-        "numericOdds": 108
-      },
-      "isLocked": false,
-      "extractionId": 4
+        "numericOdds": -108
+      }
     },
     {
-      "timestamp": "2026-04-12T01:25:02.286Z",
+      "timestamp": "2026-04-11T12:15:38Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-130",
-        "numericOdds": -130
+        "numericOdds": -112
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+108",
-        "numericOdds": 108
-      },
-      "isLocked": false,
-      "extractionId": 5
+        "numericOdds": -108
+      }
     },
     {
-      "timestamp": "2026-04-12T01:25:05.287Z",
+      "timestamp": "2026-04-11T12:20:38Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-130",
-        "numericOdds": -130
+        "numericOdds": -112
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+108",
-        "numericOdds": 108
-      },
-      "isLocked": false,
-      "extractionId": 6
+        "numericOdds": -108
+      }
     },
     {
-      "timestamp": "2026-04-12T01:25:08.303Z",
+      "timestamp": "2026-04-11T12:25:38Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-130",
-        "numericOdds": -130
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+108",
-        "numericOdds": 108
-      },
-      "isLocked": false,
-      "extractionId": 7
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:25:11.307Z",
+      "timestamp": "2026-04-11T12:30:42Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-130",
-        "numericOdds": -130
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+108",
-        "numericOdds": 108
-      },
-      "isLocked": false,
-      "extractionId": 8
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:25:14.312Z",
+      "timestamp": "2026-04-11T12:35:38Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-130",
-        "numericOdds": -130
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+108",
-        "numericOdds": 108
-      },
-      "isLocked": false,
-      "extractionId": 9
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:25:17.317Z",
+      "timestamp": "2026-04-11T12:40:38Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-130",
-        "numericOdds": -130
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+108",
-        "numericOdds": 108
-      },
-      "isLocked": false,
-      "extractionId": 10
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:25:20.319Z",
+      "timestamp": "2026-04-11T12:45:38Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-130",
-        "numericOdds": -130
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+108",
-        "numericOdds": 108
-      },
-      "isLocked": false,
-      "extractionId": 11
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:25:23.321Z",
+      "timestamp": "2026-04-11T12:50:38Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-130",
-        "numericOdds": -130
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+108",
-        "numericOdds": 108
-      },
-      "isLocked": false,
-      "extractionId": 12
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:25:26.328Z",
+      "timestamp": "2026-04-11T12:55:38Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-130",
-        "numericOdds": -130
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+108",
-        "numericOdds": 108
-      },
-      "isLocked": false,
-      "extractionId": 13
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:25:29.333Z",
+      "timestamp": "2026-04-11T13:00:56Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-130",
-        "numericOdds": -130
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+108",
-        "numericOdds": 108
-      },
-      "isLocked": false,
-      "extractionId": 14
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:25:32.335Z",
+      "timestamp": "2026-04-11T13:05:38Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-130",
-        "numericOdds": -130
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+108",
-        "numericOdds": 108
-      },
-      "isLocked": false,
-      "extractionId": 15
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:25:35.344Z",
+      "timestamp": "2026-04-11T13:10:38Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-130",
-        "numericOdds": -130
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+108",
-        "numericOdds": 108
-      },
-      "isLocked": false,
-      "extractionId": 16
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:25:38.356Z",
+      "timestamp": "2026-04-11T13:15:38Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-130",
-        "numericOdds": -130
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+108",
-        "numericOdds": 108
-      },
-      "isLocked": false,
-      "extractionId": 17
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:25:41.367Z",
+      "timestamp": "2026-04-11T13:20:38Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-130",
-        "numericOdds": -130
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+108",
-        "numericOdds": 108
-      },
-      "isLocked": false,
-      "extractionId": 18
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:25:44.379Z",
+      "timestamp": "2026-04-11T13:25:38Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-130",
-        "numericOdds": -130
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+108",
-        "numericOdds": 108
-      },
-      "isLocked": false,
-      "extractionId": 19
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:25:47.385Z",
+      "timestamp": "2026-04-11T13:30:44Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-130",
-        "numericOdds": -130
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+108",
-        "numericOdds": 108
+        "numericOdds": -105
+      }
+    },
+    {
+      "timestamp": "2026-04-11T13:35:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -115
       },
-      "isLocked": false,
-      "extractionId": 20
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:25:50.394Z",
+      "timestamp": "2026-04-11T13:40:38Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-130",
-        "numericOdds": -130
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+108",
-        "numericOdds": 108
+        "numericOdds": -105
+      }
+    },
+    {
+      "timestamp": "2026-04-11T13:45:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -115
       },
-      "isLocked": false,
-      "extractionId": 21
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:25:53.401Z",
+      "timestamp": "2026-04-11T13:50:37Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-134",
-        "numericOdds": -134
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+104",
-        "numericOdds": 104
+        "numericOdds": -105
+      }
+    },
+    {
+      "timestamp": "2026-04-11T13:55:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -115
       },
-      "isLocked": false,
-      "extractionId": 22
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:25:56.410Z",
+      "timestamp": "2026-04-11T14:00:50Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-134",
-        "numericOdds": -134
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+104",
-        "numericOdds": 104
+        "numericOdds": -105
+      }
+    },
+    {
+      "timestamp": "2026-04-11T14:05:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -115
       },
-      "isLocked": false,
-      "extractionId": 23
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:25:59.415Z",
+      "timestamp": "2026-04-11T14:10:37Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-134",
-        "numericOdds": -134
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+104",
-        "numericOdds": 104
+        "numericOdds": -105
+      }
+    },
+    {
+      "timestamp": "2026-04-11T14:15:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -115
       },
-      "isLocked": false,
-      "extractionId": 24
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:26:02.416Z",
+      "timestamp": "2026-04-11T14:20:37Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-134",
-        "numericOdds": -134
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+104",
-        "numericOdds": 104
+        "numericOdds": -105
+      }
+    },
+    {
+      "timestamp": "2026-04-11T14:25:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -115
       },
-      "isLocked": false,
-      "extractionId": 25
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:26:05.430Z",
+      "timestamp": "2026-04-11T14:30:44Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-134",
-        "numericOdds": -134
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+104",
-        "numericOdds": 104
+        "numericOdds": -105
+      }
+    },
+    {
+      "timestamp": "2026-04-11T14:35:38Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -115
       },
-      "isLocked": false,
-      "extractionId": 26
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:26:08.433Z",
+      "timestamp": "2026-04-11T14:40:37Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-134",
-        "numericOdds": -134
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+104",
-        "numericOdds": 104
+        "numericOdds": -105
+      }
+    },
+    {
+      "timestamp": "2026-04-11T14:45:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -115
       },
-      "isLocked": false,
-      "extractionId": 27
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:26:11.445Z",
+      "timestamp": "2026-04-11T14:50:37Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-134",
-        "numericOdds": -134
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+104",
-        "numericOdds": 104
+        "numericOdds": -105
+      }
+    },
+    {
+      "timestamp": "2026-04-11T14:55:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -115
       },
-      "isLocked": false,
-      "extractionId": 28
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:26:14.458Z",
+      "timestamp": "2026-04-11T15:00:53Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-134",
-        "numericOdds": -134
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+104",
-        "numericOdds": 104
+        "numericOdds": -105
+      }
+    },
+    {
+      "timestamp": "2026-04-11T15:05:39Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -115
       },
-      "isLocked": false,
-      "extractionId": 29
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:26:17.467Z",
+      "timestamp": "2026-04-11T15:10:37Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-134",
-        "numericOdds": -134
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+104",
-        "numericOdds": 104
+        "numericOdds": -105
+      }
+    },
+    {
+      "timestamp": "2026-04-11T15:15:38Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -115
       },
-      "isLocked": false,
-      "extractionId": 30
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:26:20.471Z",
+      "timestamp": "2026-04-11T15:20:37Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-134",
-        "numericOdds": -134
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+104",
-        "numericOdds": 104
+        "numericOdds": -105
+      }
+    },
+    {
+      "timestamp": "2026-04-11T15:25:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -115
       },
-      "isLocked": false,
-      "extractionId": 31
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:26:23.482Z",
+      "timestamp": "2026-04-11T15:30:45Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-134",
-        "numericOdds": -134
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+104",
-        "numericOdds": 104
+        "numericOdds": -105
+      }
+    },
+    {
+      "timestamp": "2026-04-11T15:35:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -115
       },
-      "isLocked": false,
-      "extractionId": 32
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:26:26.492Z",
+      "timestamp": "2026-04-11T15:40:37Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-142",
-        "numericOdds": -142
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+112",
-        "numericOdds": 112
+        "numericOdds": -105
+      }
+    },
+    {
+      "timestamp": "2026-04-11T15:45:38Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -115
       },
-      "isLocked": false,
-      "extractionId": 33
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:26:29.493Z",
+      "timestamp": "2026-04-11T15:50:37Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-142",
-        "numericOdds": -142
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+112",
-        "numericOdds": 112
+        "numericOdds": -105
+      }
+    },
+    {
+      "timestamp": "2026-04-11T15:55:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -115
       },
-      "isLocked": false,
-      "extractionId": 34
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:26:32.498Z",
+      "timestamp": "2026-04-11T16:00:51Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-142",
-        "numericOdds": -142
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+112",
-        "numericOdds": 112
+        "numericOdds": -105
+      }
+    },
+    {
+      "timestamp": "2026-04-11T16:05:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -115
       },
-      "isLocked": false,
-      "extractionId": 35
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:26:35.513Z",
+      "timestamp": "2026-04-11T16:10:37Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-142",
-        "numericOdds": -142
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+112",
-        "numericOdds": 112
+        "numericOdds": -105
+      }
+    },
+    {
+      "timestamp": "2026-04-11T16:15:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -115
       },
-      "isLocked": false,
-      "extractionId": 36
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:26:38.513Z",
+      "timestamp": "2026-04-11T16:20:37Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-142",
-        "numericOdds": -142
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+112",
-        "numericOdds": 112
+        "numericOdds": -105
+      }
+    },
+    {
+      "timestamp": "2026-04-11T16:25:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -115
       },
-      "isLocked": false,
-      "extractionId": 37
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:26:41.513Z",
+      "timestamp": "2026-04-11T16:30:47Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-142",
-        "numericOdds": -142
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+112",
-        "numericOdds": 112
+        "numericOdds": -105
+      }
+    },
+    {
+      "timestamp": "2026-04-11T16:35:38Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -115
       },
-      "isLocked": false,
-      "extractionId": 38
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:26:44.518Z",
+      "timestamp": "2026-04-11T16:40:38Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-142",
-        "numericOdds": -142
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+112",
-        "numericOdds": 112
+        "numericOdds": -105
+      }
+    },
+    {
+      "timestamp": "2026-04-11T16:45:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -115
       },
-      "isLocked": false,
-      "extractionId": 39
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:26:47.525Z",
+      "timestamp": "2026-04-11T16:50:37Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-134",
-        "numericOdds": -134
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+104",
-        "numericOdds": 104
+        "numericOdds": -105
+      }
+    },
+    {
+      "timestamp": "2026-04-11T16:55:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -115
       },
-      "isLocked": false,
-      "extractionId": 40
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:26:50.530Z",
+      "timestamp": "2026-04-11T17:00:50Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-134",
-        "numericOdds": -134
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+104",
-        "numericOdds": 104
+        "numericOdds": -105
+      }
+    },
+    {
+      "timestamp": "2026-04-11T17:05:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -115
       },
-      "isLocked": false,
-      "extractionId": 41
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:26:53.540Z",
+      "timestamp": "2026-04-11T17:10:37Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-134",
-        "numericOdds": -134
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+104",
-        "numericOdds": 104
+        "numericOdds": -105
+      }
+    },
+    {
+      "timestamp": "2026-04-11T17:15:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -115
       },
-      "isLocked": false,
-      "extractionId": 42
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:26:56.547Z",
+      "timestamp": "2026-04-11T17:20:38Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-134",
-        "numericOdds": -134
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+104",
-        "numericOdds": 104
+        "numericOdds": -105
+      }
+    },
+    {
+      "timestamp": "2026-04-11T17:25:38Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -115
       },
-      "isLocked": false,
-      "extractionId": 43
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:26:59.548Z",
+      "timestamp": "2026-04-11T17:30:43Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-134",
-        "numericOdds": -134
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+104",
-        "numericOdds": 104
+        "numericOdds": -105
+      }
+    },
+    {
+      "timestamp": "2026-04-11T17:35:38Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -115
       },
-      "isLocked": false,
-      "extractionId": 44
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:27:02.550Z",
+      "timestamp": "2026-04-11T17:40:38Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-134",
-        "numericOdds": -134
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+104",
-        "numericOdds": 104
+        "numericOdds": -105
+      }
+    },
+    {
+      "timestamp": "2026-04-11T17:45:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -115
       },
-      "isLocked": false,
-      "extractionId": 45
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:27:05.558Z",
+      "timestamp": "2026-04-11T17:50:38Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-134",
-        "numericOdds": -134
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+104",
-        "numericOdds": 104
+        "numericOdds": -105
+      }
+    },
+    {
+      "timestamp": "2026-04-11T17:55:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -115
       },
-      "isLocked": false,
-      "extractionId": 46
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:27:08.567Z",
+      "timestamp": "2026-04-11T18:00:55Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-134",
-        "numericOdds": -134
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+104",
-        "numericOdds": 104
+        "numericOdds": -105
+      }
+    },
+    {
+      "timestamp": "2026-04-11T18:05:38Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -115
       },
-      "isLocked": false,
-      "extractionId": 47
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:27:11.574Z",
+      "timestamp": "2026-04-11T18:10:38Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-134",
-        "numericOdds": -134
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+104",
-        "numericOdds": 104
+        "numericOdds": -105
+      }
+    },
+    {
+      "timestamp": "2026-04-11T18:15:38Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -115
       },
-      "isLocked": false,
-      "extractionId": 48
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:27:14.582Z",
+      "timestamp": "2026-04-11T18:20:38Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-134",
-        "numericOdds": -134
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+104",
-        "numericOdds": 104
+        "numericOdds": -105
+      }
+    },
+    {
+      "timestamp": "2026-04-11T18:25:38Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -115
       },
-      "isLocked": false,
-      "extractionId": 49
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:27:17.588Z",
+      "timestamp": "2026-04-11T18:30:44Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-138",
-        "numericOdds": -138
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+108",
-        "numericOdds": 108
+        "numericOdds": -105
+      }
+    },
+    {
+      "timestamp": "2026-04-11T18:35:38Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -115
       },
-      "isLocked": false,
-      "extractionId": 50
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:27:20.597Z",
+      "timestamp": "2026-04-11T18:40:38Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-138",
-        "numericOdds": -138
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+108",
-        "numericOdds": 108
+        "numericOdds": -105
+      }
+    },
+    {
+      "timestamp": "2026-04-11T18:45:38Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -115
       },
-      "isLocked": false,
-      "extractionId": 51
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:27:23.597Z",
+      "timestamp": "2026-04-11T18:50:38Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-138",
-        "numericOdds": -138
+        "numericOdds": -118
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+108",
-        "numericOdds": 108
+        "numericOdds": -102
+      }
+    },
+    {
+      "timestamp": "2026-04-11T18:55:38Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -118
       },
-      "isLocked": false,
-      "extractionId": 52
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -102
+      }
     },
     {
-      "timestamp": "2026-04-12T01:27:26.602Z",
+      "timestamp": "2026-04-11T19:00:50Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-138",
-        "numericOdds": -138
+        "numericOdds": -118
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+108",
-        "numericOdds": 108
+        "numericOdds": -102
+      }
+    },
+    {
+      "timestamp": "2026-04-11T19:05:38Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -118
       },
-      "isLocked": false,
-      "extractionId": 53
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -102
+      }
     },
     {
-      "timestamp": "2026-04-12T01:27:29.607Z",
+      "timestamp": "2026-04-11T19:10:39Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-146",
-        "numericOdds": -146
+        "numericOdds": -118
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+114",
-        "numericOdds": 114
+        "numericOdds": -102
+      }
+    },
+    {
+      "timestamp": "2026-04-11T19:15:38Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -118
       },
-      "isLocked": false,
-      "extractionId": 54
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -102
+      }
     },
     {
-      "timestamp": "2026-04-12T01:27:32.612Z",
+      "timestamp": "2026-04-11T19:20:38Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-146",
-        "numericOdds": -146
+        "numericOdds": -118
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+114",
-        "numericOdds": 114
+        "numericOdds": -102
+      }
+    },
+    {
+      "timestamp": "2026-04-11T19:25:38Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -118
       },
-      "isLocked": false,
-      "extractionId": 55
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -102
+      }
     },
     {
-      "timestamp": "2026-04-12T01:27:35.616Z",
+      "timestamp": "2026-04-11T19:30:47Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-146",
-        "numericOdds": -146
+        "numericOdds": -118
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+114",
-        "numericOdds": 114
+        "numericOdds": -102
+      }
+    },
+    {
+      "timestamp": "2026-04-11T19:35:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -118
       },
-      "isLocked": false,
-      "extractionId": 56
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -102
+      }
     },
     {
-      "timestamp": "2026-04-12T01:27:38.621Z",
+      "timestamp": "2026-04-11T19:40:37Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-152",
-        "numericOdds": -152
+        "numericOdds": -118
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+120",
-        "numericOdds": 120
+        "numericOdds": -102
+      }
+    },
+    {
+      "timestamp": "2026-04-11T19:45:39Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -118
       },
-      "isLocked": false,
-      "extractionId": 57
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -102
+      }
     },
     {
-      "timestamp": "2026-04-12T01:27:41.622Z",
+      "timestamp": "2026-04-11T19:50:38Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-152",
-        "numericOdds": -152
+        "numericOdds": -118
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+120",
-        "numericOdds": 120
+        "numericOdds": -102
+      }
+    },
+    {
+      "timestamp": "2026-04-11T19:55:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -118
       },
-      "isLocked": false,
-      "extractionId": 58
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -102
+      }
     },
     {
-      "timestamp": "2026-04-12T01:27:44.625Z",
+      "timestamp": "2026-04-11T20:00:48Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-152",
-        "numericOdds": -152
+        "numericOdds": -118
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+120",
-        "numericOdds": 120
+        "numericOdds": -102
+      }
+    },
+    {
+      "timestamp": "2026-04-11T20:05:38Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -118
       },
-      "isLocked": false,
-      "extractionId": 59
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -102
+      }
     },
     {
-      "timestamp": "2026-04-12T01:27:47.639Z",
+      "timestamp": "2026-04-11T20:10:37Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-152",
-        "numericOdds": -152
+        "numericOdds": -118
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+120",
-        "numericOdds": 120
+        "numericOdds": -102
+      }
+    },
+    {
+      "timestamp": "2026-04-11T20:15:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -118
       },
-      "isLocked": false,
-      "extractionId": 60
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -102
+      }
     },
     {
-      "timestamp": "2026-04-12T01:27:50.642Z",
+      "timestamp": "2026-04-11T20:20:37Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-152",
-        "numericOdds": -152
+        "numericOdds": -118
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+120",
-        "numericOdds": 120
+        "numericOdds": -102
+      }
+    },
+    {
+      "timestamp": "2026-04-11T20:25:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -118
       },
-      "isLocked": false,
-      "extractionId": 61
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -102
+      }
     },
     {
-      "timestamp": "2026-04-12T01:27:53.643Z",
+      "timestamp": "2026-04-11T20:30:42Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": -118
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+180",
-        "numericOdds": 180
+        "numericOdds": -102
+      }
+    },
+    {
+      "timestamp": "2026-04-11T20:35:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -118
       },
-      "isLocked": false,
-      "extractionId": 62
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -102
+      }
     },
     {
-      "timestamp": "2026-04-12T01:27:56.657Z",
+      "timestamp": "2026-04-11T20:40:37Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": -118
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+180",
-        "numericOdds": 180
+        "numericOdds": -102
+      }
+    },
+    {
+      "timestamp": "2026-04-11T20:45:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -118
       },
-      "isLocked": false,
-      "extractionId": 63
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -102
+      }
     },
     {
-      "timestamp": "2026-04-12T01:27:59.664Z",
+      "timestamp": "2026-04-11T20:50:37Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": -118
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+180",
-        "numericOdds": 180
+        "numericOdds": -102
+      }
+    },
+    {
+      "timestamp": "2026-04-11T20:55:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -118
       },
-      "isLocked": false,
-      "extractionId": 64
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": -102
+      }
     },
     {
-      "timestamp": "2026-04-12T01:28:02.674Z",
+      "timestamp": "2026-04-11T21:00:49Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": -122
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+180",
-        "numericOdds": 180
+        "numericOdds": 102
+      }
+    },
+    {
+      "timestamp": "2026-04-11T21:05:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -122
       },
-      "isLocked": false,
-      "extractionId": 65
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": 102
+      }
     },
     {
-      "timestamp": "2026-04-12T01:28:05.685Z",
+      "timestamp": "2026-04-11T21:10:37Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": -122
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+180",
-        "numericOdds": 180
+        "numericOdds": 102
+      }
+    },
+    {
+      "timestamp": "2026-04-11T21:15:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -122
       },
-      "isLocked": false,
-      "extractionId": 66
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": 102
+      }
     },
     {
-      "timestamp": "2026-04-12T01:28:08.693Z",
+      "timestamp": "2026-04-11T21:20:37Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": -122
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+180",
-        "numericOdds": 180
+        "numericOdds": 102
+      }
+    },
+    {
+      "timestamp": "2026-04-11T21:25:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -122
       },
-      "isLocked": false,
-      "extractionId": 67
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": 102
+      }
     },
     {
-      "timestamp": "2026-04-12T01:28:11.694Z",
+      "timestamp": "2026-04-11T21:30:40Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": -122
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+180",
-        "numericOdds": 180
+        "numericOdds": 102
+      }
+    },
+    {
+      "timestamp": "2026-04-11T21:35:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -122
       },
-      "isLocked": false,
-      "extractionId": 68
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": 102
+      }
     },
     {
-      "timestamp": "2026-04-12T01:28:14.703Z",
+      "timestamp": "2026-04-11T21:40:37Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-235",
-        "numericOdds": -235
+        "numericOdds": -122
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+180",
-        "numericOdds": 180
+        "numericOdds": 102
+      }
+    },
+    {
+      "timestamp": "2026-04-11T21:45:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -122
       },
-      "isLocked": false,
-      "extractionId": 69
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": 102
+      }
     },
     {
-      "timestamp": "2026-04-12T01:28:17.708Z",
+      "timestamp": "2026-04-11T21:50:37Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-430",
-        "numericOdds": -430
+        "numericOdds": -122
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+300",
-        "numericOdds": 300
+        "numericOdds": 102
+      }
+    },
+    {
+      "timestamp": "2026-04-11T21:55:38Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -122
       },
-      "isLocked": false,
-      "extractionId": 70
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": 102
+      }
     },
     {
-      "timestamp": "2026-04-12T01:28:20.721Z",
+      "timestamp": "2026-04-11T22:00:46Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-430",
-        "numericOdds": -430
+        "numericOdds": -122
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+300",
-        "numericOdds": 300
+        "numericOdds": 102
+      }
+    },
+    {
+      "timestamp": "2026-04-11T22:05:39Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -122
       },
-      "isLocked": false,
-      "extractionId": 71
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": 102
+      }
     },
     {
-      "timestamp": "2026-04-12T01:28:23.734Z",
+      "timestamp": "2026-04-11T22:10:38Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-700",
-        "numericOdds": -700
+        "numericOdds": -122
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+440",
-        "numericOdds": 440
+        "numericOdds": 102
+      }
+    },
+    {
+      "timestamp": "2026-04-11T22:15:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -122
       },
-      "isLocked": false,
-      "extractionId": 72
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": 102
+      }
     },
     {
-      "timestamp": "2026-04-12T01:28:26.737Z",
+      "timestamp": "2026-04-11T22:20:38Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-700",
-        "numericOdds": -700
+        "numericOdds": -122
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+440",
-        "numericOdds": 440
+        "numericOdds": 102
+      }
+    },
+    {
+      "timestamp": "2026-04-11T22:25:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -122
       },
-      "isLocked": false,
-      "extractionId": 73
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": 102
+      }
     },
     {
-      "timestamp": "2026-04-12T01:28:29.749Z",
+      "timestamp": "2026-04-11T22:30:40Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-700",
-        "numericOdds": -700
+        "numericOdds": -122
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+440",
-        "numericOdds": 440
+        "numericOdds": 102
+      }
+    },
+    {
+      "timestamp": "2026-04-11T22:35:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -122
       },
-      "isLocked": false,
-      "extractionId": 74
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": 102
+      }
     },
     {
-      "timestamp": "2026-04-12T01:28:32.756Z",
+      "timestamp": "2026-04-11T22:40:38Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-700",
-        "numericOdds": -700
+        "numericOdds": -122
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+440",
-        "numericOdds": 440
+        "numericOdds": 102
+      }
+    },
+    {
+      "timestamp": "2026-04-11T22:45:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -122
       },
-      "isLocked": false,
-      "extractionId": 75
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": 102
+      }
     },
     {
-      "timestamp": "2026-04-12T01:28:35.762Z",
+      "timestamp": "2026-04-11T22:50:37Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-700",
-        "numericOdds": -700
+        "numericOdds": -122
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+440",
-        "numericOdds": 440
+        "numericOdds": 102
+      }
+    },
+    {
+      "timestamp": "2026-04-11T22:55:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -122
       },
-      "isLocked": false,
-      "extractionId": 76
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": 102
+      }
     },
     {
-      "timestamp": "2026-04-12T01:28:38.766Z",
+      "timestamp": "2026-04-11T23:00:43Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-700",
-        "numericOdds": -700
+        "numericOdds": -122
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+440",
-        "numericOdds": 440
+        "numericOdds": 102
+      }
+    },
+    {
+      "timestamp": "2026-04-11T23:05:38Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -122
       },
-      "isLocked": false,
-      "extractionId": 77
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": 102
+      }
     },
     {
-      "timestamp": "2026-04-12T01:28:41.769Z",
+      "timestamp": "2026-04-11T23:10:38Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-700",
-        "numericOdds": -700
+        "numericOdds": -122
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+440",
-        "numericOdds": 440
+        "numericOdds": 102
+      }
+    },
+    {
+      "timestamp": "2026-04-11T23:15:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -122
       },
-      "isLocked": false,
-      "extractionId": 78
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": 102
+      }
     },
     {
-      "timestamp": "2026-04-12T01:28:44.783Z",
+      "timestamp": "2026-04-11T23:20:37Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-700",
-        "numericOdds": -700
+        "numericOdds": -122
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+440",
-        "numericOdds": 440
+        "numericOdds": 102
+      }
+    },
+    {
+      "timestamp": "2026-04-11T23:25:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -122
       },
-      "isLocked": false,
-      "extractionId": 79
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": 102
+      }
     },
     {
-      "timestamp": "2026-04-12T01:28:47.787Z",
+      "timestamp": "2026-04-11T23:30:40Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-700",
-        "numericOdds": -700
+        "numericOdds": -122
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+440",
-        "numericOdds": 440
+        "numericOdds": 102
+      }
+    },
+    {
+      "timestamp": "2026-04-11T23:35:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -122
       },
-      "isLocked": false,
-      "extractionId": 80
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": 102
+      }
     },
     {
-      "timestamp": "2026-04-12T01:28:50.794Z",
+      "timestamp": "2026-04-11T23:40:37Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-700",
-        "numericOdds": -700
+        "numericOdds": -122
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+440",
-        "numericOdds": 440
+        "numericOdds": 102
+      }
+    },
+    {
+      "timestamp": "2026-04-11T23:45:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -122
       },
-      "isLocked": false,
-      "extractionId": 81
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": 102
+      }
     },
     {
-      "timestamp": "2026-04-12T01:28:53.801Z",
+      "timestamp": "2026-04-11T23:50:37Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-430",
-        "numericOdds": -430
+        "numericOdds": -122
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+300",
-        "numericOdds": 300
+        "numericOdds": 102
+      }
+    },
+    {
+      "timestamp": "2026-04-11T23:55:38Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -122
       },
-      "isLocked": false,
-      "extractionId": 82
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": 102
+      }
     },
     {
-      "timestamp": "2026-04-12T01:28:56.812Z",
+      "timestamp": "2026-04-12T00:00:45Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-430",
-        "numericOdds": -430
+        "numericOdds": -122
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+300",
-        "numericOdds": 300
+        "numericOdds": 102
+      }
+    },
+    {
+      "timestamp": "2026-04-12T00:05:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -122
       },
-      "isLocked": false,
-      "extractionId": 83
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": 102
+      }
     },
     {
-      "timestamp": "2026-04-12T01:28:59.827Z",
+      "timestamp": "2026-04-12T00:10:37Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-310",
-        "numericOdds": -310
+        "numericOdds": -122
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+225",
-        "numericOdds": 225
+        "numericOdds": 102
+      }
+    },
+    {
+      "timestamp": "2026-04-12T00:15:38Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -125
       },
-      "isLocked": false,
-      "extractionId": 84
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": 105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:29:29.927Z",
+      "timestamp": "2026-04-12T00:20:37Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-1100",
-        "numericOdds": -1100
+        "numericOdds": -125
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+620",
-        "numericOdds": 620
+        "numericOdds": 105
+      }
+    },
+    {
+      "timestamp": "2026-04-12T00:25:38Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -125
       },
-      "isLocked": false,
-      "extractionId": 85
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": 105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:29:32.934Z",
+      "timestamp": "2026-04-12T00:30:38Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-1100",
-        "numericOdds": -1100
+        "numericOdds": -122
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+620",
-        "numericOdds": 620
+        "numericOdds": 102
+      }
+    },
+    {
+      "timestamp": "2026-04-12T00:35:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -122
       },
-      "isLocked": false,
-      "extractionId": 2
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": 102
+      }
     },
     {
-      "timestamp": "2026-04-12T01:29:35.946Z",
+      "timestamp": "2026-04-12T00:40:37Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-1100",
-        "numericOdds": -1100
+        "numericOdds": -122
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+620",
-        "numericOdds": 620
+        "numericOdds": 102
+      }
+    },
+    {
+      "timestamp": "2026-04-12T00:45:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -122
       },
-      "isLocked": false,
-      "extractionId": 3
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": 102
+      }
     },
     {
-      "timestamp": "2026-04-12T01:29:38.953Z",
+      "timestamp": "2026-04-12T00:50:37Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-1100",
-        "numericOdds": -1100
+        "numericOdds": -122
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+620",
-        "numericOdds": 620
+        "numericOdds": 102
+      }
+    },
+    {
+      "timestamp": "2026-04-12T00:55:38Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -122
       },
-      "isLocked": false,
-      "extractionId": 4
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": 102
+      }
     },
     {
-      "timestamp": "2026-04-12T01:29:41.964Z",
+      "timestamp": "2026-04-12T01:00:43Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-1100",
-        "numericOdds": -1100
+        "numericOdds": -122
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+620",
-        "numericOdds": 620
+        "numericOdds": 102
+      }
+    },
+    {
+      "timestamp": "2026-04-12T01:05:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -122
       },
-      "isLocked": false,
-      "extractionId": 5
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": 102
+      }
     },
     {
-      "timestamp": "2026-04-12T01:29:44.978Z",
+      "timestamp": "2026-04-12T01:10:37Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-1100",
-        "numericOdds": -1100
+        "numericOdds": -122
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+620",
-        "numericOdds": 620
+        "numericOdds": 102
+      }
+    },
+    {
+      "timestamp": "2026-04-12T01:15:38Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -125
       },
-      "isLocked": false,
-      "extractionId": 6
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": 105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:29:47.991Z",
+      "timestamp": "2026-04-12T01:20:37Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-1100",
-        "numericOdds": -1100
+        "numericOdds": -125
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+620",
-        "numericOdds": 620
+        "numericOdds": 105
+      }
+    },
+    {
+      "timestamp": "2026-04-12T01:25:37Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": -125
       },
-      "isLocked": false,
-      "extractionId": 7
+      "fighter2": {
+        "name": "Nate Landwehr",
+        "numericOdds": 105
+      }
     },
     {
-      "timestamp": "2026-04-12T01:29:51.006Z",
+      "timestamp": "2026-04-12T01:30:38Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-1600",
         "numericOdds": -1600
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+840",
-        "numericOdds": 840
-      },
-      "isLocked": false,
-      "extractionId": 8
+        "numericOdds": 800
+      }
     },
     {
-      "timestamp": "2026-04-12T01:29:54.006Z",
+      "timestamp": "2026-04-12T01:35:37Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-1600",
         "numericOdds": -1600
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+840",
-        "numericOdds": 840
-      },
-      "isLocked": false,
-      "extractionId": 9
+        "numericOdds": 800
+      }
     },
     {
-      "timestamp": "2026-04-12T01:29:57.018Z",
+      "timestamp": "2026-04-12T01:40:38Z",
       "fighter1": {
         "name": "Cub Swanson",
-        "odds": "-1600",
         "numericOdds": -1600
       },
       "fighter2": {
         "name": "Nate Landwehr",
-        "odds": "+840",
-        "numericOdds": 840
-      },
-      "isLocked": false,
-      "extractionId": 10
-    },
-    {
-      "timestamp": "2026-04-12T01:30:00.025Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "odds": "-1600",
-        "numericOdds": -1600
-      },
-      "fighter2": {
-        "name": "Nate Landwehr",
-        "odds": "+840",
-        "numericOdds": 840
-      },
-      "isLocked": false,
-      "extractionId": 11
-    },
-    {
-      "timestamp": "2026-04-12T01:30:03.038Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "odds": "-1600",
-        "numericOdds": -1600
-      },
-      "fighter2": {
-        "name": "Nate Landwehr",
-        "odds": "+840",
-        "numericOdds": 840
-      },
-      "isLocked": false,
-      "extractionId": 12
-    },
-    {
-      "timestamp": "2026-04-12T01:29:29.927Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "odds": "-1100",
-        "numericOdds": -1100
-      },
-      "fighter2": {
-        "name": "Nate Landwehr",
-        "odds": "+620",
-        "numericOdds": 620
-      },
-      "isLocked": false,
-      "extractionId": 85
-    },
-    {
-      "timestamp": "2026-04-12T01:29:32.934Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "odds": "-1100",
-        "numericOdds": -1100
-      },
-      "fighter2": {
-        "name": "Nate Landwehr",
-        "odds": "+620",
-        "numericOdds": 620
-      },
-      "isLocked": false,
-      "extractionId": 2
-    },
-    {
-      "timestamp": "2026-04-12T01:29:35.946Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "odds": "-1100",
-        "numericOdds": -1100
-      },
-      "fighter2": {
-        "name": "Nate Landwehr",
-        "odds": "+620",
-        "numericOdds": 620
-      },
-      "isLocked": false,
-      "extractionId": 3
-    },
-    {
-      "timestamp": "2026-04-12T01:29:38.953Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "odds": "-1100",
-        "numericOdds": -1100
-      },
-      "fighter2": {
-        "name": "Nate Landwehr",
-        "odds": "+620",
-        "numericOdds": 620
-      },
-      "isLocked": false,
-      "extractionId": 4
-    },
-    {
-      "timestamp": "2026-04-12T01:29:41.964Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "odds": "-1100",
-        "numericOdds": -1100
-      },
-      "fighter2": {
-        "name": "Nate Landwehr",
-        "odds": "+620",
-        "numericOdds": 620
-      },
-      "isLocked": false,
-      "extractionId": 5
-    },
-    {
-      "timestamp": "2026-04-12T01:29:44.978Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "odds": "-1100",
-        "numericOdds": -1100
-      },
-      "fighter2": {
-        "name": "Nate Landwehr",
-        "odds": "+620",
-        "numericOdds": 620
-      },
-      "isLocked": false,
-      "extractionId": 6
-    },
-    {
-      "timestamp": "2026-04-12T01:29:47.991Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "odds": "-1100",
-        "numericOdds": -1100
-      },
-      "fighter2": {
-        "name": "Nate Landwehr",
-        "odds": "+620",
-        "numericOdds": 620
-      },
-      "isLocked": false,
-      "extractionId": 7
-    },
-    {
-      "timestamp": "2026-04-12T01:29:51.006Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "odds": "-1600",
-        "numericOdds": -1600
-      },
-      "fighter2": {
-        "name": "Nate Landwehr",
-        "odds": "+840",
-        "numericOdds": 840
-      },
-      "isLocked": false,
-      "extractionId": 8
-    },
-    {
-      "timestamp": "2026-04-12T01:29:54.006Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "odds": "-1600",
-        "numericOdds": -1600
-      },
-      "fighter2": {
-        "name": "Nate Landwehr",
-        "odds": "+840",
-        "numericOdds": 840
-      },
-      "isLocked": false,
-      "extractionId": 9
-    },
-    {
-      "timestamp": "2026-04-12T01:29:57.018Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "odds": "-1600",
-        "numericOdds": -1600
-      },
-      "fighter2": {
-        "name": "Nate Landwehr",
-        "odds": "+840",
-        "numericOdds": 840
-      },
-      "isLocked": false,
-      "extractionId": 10
-    },
-    {
-      "timestamp": "2026-04-12T01:30:00.025Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "odds": "-1600",
-        "numericOdds": -1600
-      },
-      "fighter2": {
-        "name": "Nate Landwehr",
-        "odds": "+840",
-        "numericOdds": 840
-      },
-      "isLocked": false,
-      "extractionId": 11
-    },
-    {
-      "timestamp": "2026-04-12T01:30:03.038Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "odds": "-1600",
-        "numericOdds": -1600
-      },
-      "fighter2": {
-        "name": "Nate Landwehr",
-        "odds": "+840",
-        "numericOdds": 840
-      },
-      "isLocked": false,
-      "extractionId": 12
+        "numericOdds": 800
+      }
     }
-  ],
-  "createdAt": "2026-04-12T01:29:29.926Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Cub Swanson",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:51:09.765Z",
-    "openingF1Odds": -130,
-    "openingF2Odds": 108,
-    "closingF1Odds": -1600,
-    "closingF2Odds": 840,
-    "lineMovementF1": -1470,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": 5,
-    "inferredFinishRound": 1,
-    "peakOddsSwing": 1470,
-    "finishSpeed": "medium",
-    "preFightSteam": -1470,
-    "dominanceScore": 44,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.405Z"
-  }
+  ]
 }

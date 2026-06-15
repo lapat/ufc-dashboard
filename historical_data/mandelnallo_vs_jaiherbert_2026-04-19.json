@@ -1,907 +1,801 @@
 {
-  "fightId": "mandelnallo_vs_jaiherbert",
-  "fightTitle": "Connected but no betting buttons found",
-  "startTime": "2026-04-19T01:22:15.233Z",
-  "endTime": "2026-04-19T01:23:39.486Z",
-  "duration": 84253,
-  "dataPoints": 58,
+  "fightId": "mandelnallo_vs_jaiherbert_2026-04-19",
+  "fightTitle": "Mandel Nallo vs Jai Herbert",
+  "startTime": "2026-04-18T19:40:37Z",
+  "endTime": "2026-04-19T01:35:37Z",
+  "dataPoints": 72,
   "oddsHistory": [
     {
-      "timestamp": "2026-04-19T01:22:15.233Z",
+      "timestamp": "2026-04-18T19:40:37Z",
       "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-168",
-        "numericOdds": -168
+        "name": "Jai Herbert",
+        "numericOdds": 140
       },
       "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -166
+      }
+    },
+    {
+      "timestamp": "2026-04-18T19:45:37Z",
+      "fighter1": {
         "name": "Jai Herbert",
-        "odds": "+142",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -166
+      }
+    },
+    {
+      "timestamp": "2026-04-18T19:50:37Z",
+      "fighter1": {
+        "name": "Jai Herbert",
         "numericOdds": 142
       },
-      "isLocked": false,
-      "extractionId": 130
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
     },
     {
-      "timestamp": "2026-04-19T01:22:18.248Z",
+      "timestamp": "2026-04-18T19:55:38Z",
       "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-168",
-        "numericOdds": -168
-      },
-      "fighter2": {
         "name": "Jai Herbert",
-        "odds": "+142",
         "numericOdds": 142
       },
-      "isLocked": false,
-      "extractionId": 2
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
     },
     {
-      "timestamp": "2026-04-19T01:22:21.262Z",
+      "timestamp": "2026-04-18T20:00:49Z",
       "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-168",
-        "numericOdds": -168
-      },
-      "fighter2": {
         "name": "Jai Herbert",
-        "odds": "+142",
         "numericOdds": 142
       },
-      "isLocked": false,
-      "extractionId": 3
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
     },
     {
-      "timestamp": "2026-04-19T01:22:24.274Z",
+      "timestamp": "2026-04-18T20:05:37Z",
       "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-168",
-        "numericOdds": -168
-      },
-      "fighter2": {
         "name": "Jai Herbert",
-        "odds": "+142",
         "numericOdds": 142
       },
-      "isLocked": false,
-      "extractionId": 4
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
     },
     {
-      "timestamp": "2026-04-19T01:22:27.278Z",
+      "timestamp": "2026-04-18T20:10:37Z",
       "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-168",
-        "numericOdds": -168
-      },
-      "fighter2": {
         "name": "Jai Herbert",
-        "odds": "+142",
         "numericOdds": 142
       },
-      "isLocked": false,
-      "extractionId": 5
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
     },
     {
-      "timestamp": "2026-04-19T01:22:30.286Z",
+      "timestamp": "2026-04-18T20:15:37Z",
       "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-168",
-        "numericOdds": -168
-      },
-      "fighter2": {
         "name": "Jai Herbert",
-        "odds": "+142",
         "numericOdds": 142
       },
-      "isLocked": false,
-      "extractionId": 6
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
     },
     {
-      "timestamp": "2026-04-19T01:22:33.300Z",
+      "timestamp": "2026-04-18T20:20:38Z",
       "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-168",
-        "numericOdds": -168
-      },
-      "fighter2": {
         "name": "Jai Herbert",
-        "odds": "+142",
         "numericOdds": 142
       },
-      "isLocked": false,
-      "extractionId": 7
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
     },
     {
-      "timestamp": "2026-04-19T01:22:36.315Z",
+      "timestamp": "2026-04-18T20:25:37Z",
       "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-168",
-        "numericOdds": -168
-      },
-      "fighter2": {
         "name": "Jai Herbert",
-        "odds": "+142",
         "numericOdds": 142
       },
-      "isLocked": false,
-      "extractionId": 8
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
     },
     {
-      "timestamp": "2026-04-19T01:22:39.320Z",
+      "timestamp": "2026-04-18T20:30:43Z",
       "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-168",
-        "numericOdds": -168
-      },
-      "fighter2": {
         "name": "Jai Herbert",
-        "odds": "+142",
         "numericOdds": 142
       },
-      "isLocked": false,
-      "extractionId": 9
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
     },
     {
-      "timestamp": "2026-04-19T01:22:42.328Z",
+      "timestamp": "2026-04-18T20:35:37Z",
       "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-168",
-        "numericOdds": -168
-      },
-      "fighter2": {
         "name": "Jai Herbert",
-        "odds": "+142",
         "numericOdds": 142
       },
-      "isLocked": false,
-      "extractionId": 10
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
     },
     {
-      "timestamp": "2026-04-19T01:22:45.340Z",
+      "timestamp": "2026-04-18T20:40:37Z",
       "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-168",
-        "numericOdds": -168
-      },
-      "fighter2": {
         "name": "Jai Herbert",
-        "odds": "+142",
         "numericOdds": 142
       },
-      "isLocked": false,
-      "extractionId": 11
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
     },
     {
-      "timestamp": "2026-04-19T01:22:48.343Z",
+      "timestamp": "2026-04-18T20:45:39Z",
       "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-168",
-        "numericOdds": -168
-      },
-      "fighter2": {
         "name": "Jai Herbert",
-        "odds": "+142",
         "numericOdds": 142
       },
-      "isLocked": false,
-      "extractionId": 12
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
     },
     {
-      "timestamp": "2026-04-19T01:22:51.350Z",
+      "timestamp": "2026-04-18T20:50:37Z",
       "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-168",
-        "numericOdds": -168
-      },
-      "fighter2": {
         "name": "Jai Herbert",
-        "odds": "+142",
         "numericOdds": 142
       },
-      "isLocked": false,
-      "extractionId": 13
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
     },
     {
-      "timestamp": "2026-04-19T01:22:54.361Z",
+      "timestamp": "2026-04-18T20:55:37Z",
       "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-176",
-        "numericOdds": -176
-      },
-      "fighter2": {
         "name": "Jai Herbert",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "isLocked": false,
-      "extractionId": 14
-    },
-    {
-      "timestamp": "2026-04-19T01:22:57.374Z",
-      "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-176",
-        "numericOdds": -176
-      },
-      "fighter2": {
-        "name": "Jai Herbert",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "isLocked": false,
-      "extractionId": 15
-    },
-    {
-      "timestamp": "2026-04-19T01:23:00.378Z",
-      "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-176",
-        "numericOdds": -176
-      },
-      "fighter2": {
-        "name": "Jai Herbert",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "isLocked": false,
-      "extractionId": 16
-    },
-    {
-      "timestamp": "2026-04-19T01:23:03.386Z",
-      "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-176",
-        "numericOdds": -176
-      },
-      "fighter2": {
-        "name": "Jai Herbert",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "isLocked": false,
-      "extractionId": 17
-    },
-    {
-      "timestamp": "2026-04-19T01:23:06.392Z",
-      "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-176",
-        "numericOdds": -176
-      },
-      "fighter2": {
-        "name": "Jai Herbert",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "isLocked": false,
-      "extractionId": 18
-    },
-    {
-      "timestamp": "2026-04-19T01:23:09.398Z",
-      "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-176",
-        "numericOdds": -176
-      },
-      "fighter2": {
-        "name": "Jai Herbert",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "isLocked": false,
-      "extractionId": 19
-    },
-    {
-      "timestamp": "2026-04-19T01:23:12.407Z",
-      "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-176",
-        "numericOdds": -176
-      },
-      "fighter2": {
-        "name": "Jai Herbert",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "isLocked": false,
-      "extractionId": 20
-    },
-    {
-      "timestamp": "2026-04-19T01:23:15.419Z",
-      "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-176",
-        "numericOdds": -176
-      },
-      "fighter2": {
-        "name": "Jai Herbert",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "isLocked": false,
-      "extractionId": 21
-    },
-    {
-      "timestamp": "2026-04-19T01:23:18.431Z",
-      "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-176",
-        "numericOdds": -176
-      },
-      "fighter2": {
-        "name": "Jai Herbert",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "isLocked": false,
-      "extractionId": 22
-    },
-    {
-      "timestamp": "2026-04-19T01:23:21.445Z",
-      "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-176",
-        "numericOdds": -176
-      },
-      "fighter2": {
-        "name": "Jai Herbert",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "isLocked": false,
-      "extractionId": 23
-    },
-    {
-      "timestamp": "2026-04-19T01:23:24.447Z",
-      "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-176",
-        "numericOdds": -176
-      },
-      "fighter2": {
-        "name": "Jai Herbert",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "isLocked": false,
-      "extractionId": 24
-    },
-    {
-      "timestamp": "2026-04-19T01:23:27.456Z",
-      "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-176",
-        "numericOdds": -176
-      },
-      "fighter2": {
-        "name": "Jai Herbert",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "isLocked": false,
-      "extractionId": 25
-    },
-    {
-      "timestamp": "2026-04-19T01:23:30.459Z",
-      "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-176",
-        "numericOdds": -176
-      },
-      "fighter2": {
-        "name": "Jai Herbert",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "isLocked": false,
-      "extractionId": 26
-    },
-    {
-      "timestamp": "2026-04-19T01:23:33.465Z",
-      "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-176",
-        "numericOdds": -176
-      },
-      "fighter2": {
-        "name": "Jai Herbert",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "isLocked": false,
-      "extractionId": 27
-    },
-    {
-      "timestamp": "2026-04-19T01:23:36.474Z",
-      "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-176",
-        "numericOdds": -176
-      },
-      "fighter2": {
-        "name": "Jai Herbert",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "isLocked": false,
-      "extractionId": 28
-    },
-    {
-      "timestamp": "2026-04-19T01:23:39.486Z",
-      "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-176",
-        "numericOdds": -176
-      },
-      "fighter2": {
-        "name": "Jai Herbert",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "isLocked": false,
-      "extractionId": 29
-    },
-    {
-      "timestamp": "2026-04-19T01:22:15.233Z",
-      "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-168",
-        "numericOdds": -168
-      },
-      "fighter2": {
-        "name": "Jai Herbert",
-        "odds": "+142",
         "numericOdds": 142
       },
-      "isLocked": false,
-      "extractionId": 130
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
     },
     {
-      "timestamp": "2026-04-19T01:22:18.248Z",
+      "timestamp": "2026-04-18T21:00:53Z",
       "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-168",
-        "numericOdds": -168
-      },
-      "fighter2": {
         "name": "Jai Herbert",
-        "odds": "+142",
         "numericOdds": 142
       },
-      "isLocked": false,
-      "extractionId": 2
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
     },
     {
-      "timestamp": "2026-04-19T01:22:21.262Z",
+      "timestamp": "2026-04-18T21:05:37Z",
       "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-168",
-        "numericOdds": -168
-      },
-      "fighter2": {
         "name": "Jai Herbert",
-        "odds": "+142",
         "numericOdds": 142
       },
-      "isLocked": false,
-      "extractionId": 3
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
     },
     {
-      "timestamp": "2026-04-19T01:22:24.274Z",
+      "timestamp": "2026-04-18T21:10:38Z",
       "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-168",
-        "numericOdds": -168
-      },
-      "fighter2": {
         "name": "Jai Herbert",
-        "odds": "+142",
         "numericOdds": 142
       },
-      "isLocked": false,
-      "extractionId": 4
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
     },
     {
-      "timestamp": "2026-04-19T01:22:27.278Z",
+      "timestamp": "2026-04-18T21:15:38Z",
       "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-168",
-        "numericOdds": -168
-      },
-      "fighter2": {
         "name": "Jai Herbert",
-        "odds": "+142",
         "numericOdds": 142
       },
-      "isLocked": false,
-      "extractionId": 5
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
     },
     {
-      "timestamp": "2026-04-19T01:22:30.286Z",
+      "timestamp": "2026-04-18T21:20:37Z",
       "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-168",
-        "numericOdds": -168
-      },
-      "fighter2": {
         "name": "Jai Herbert",
-        "odds": "+142",
         "numericOdds": 142
       },
-      "isLocked": false,
-      "extractionId": 6
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
     },
     {
-      "timestamp": "2026-04-19T01:22:33.300Z",
+      "timestamp": "2026-04-18T21:25:37Z",
       "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-168",
-        "numericOdds": -168
-      },
-      "fighter2": {
         "name": "Jai Herbert",
-        "odds": "+142",
         "numericOdds": 142
       },
-      "isLocked": false,
-      "extractionId": 7
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
     },
     {
-      "timestamp": "2026-04-19T01:22:36.315Z",
+      "timestamp": "2026-04-18T21:30:45Z",
       "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-168",
-        "numericOdds": -168
-      },
-      "fighter2": {
         "name": "Jai Herbert",
-        "odds": "+142",
         "numericOdds": 142
       },
-      "isLocked": false,
-      "extractionId": 8
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
     },
     {
-      "timestamp": "2026-04-19T01:22:39.320Z",
+      "timestamp": "2026-04-18T21:35:37Z",
       "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-168",
-        "numericOdds": -168
-      },
-      "fighter2": {
         "name": "Jai Herbert",
-        "odds": "+142",
         "numericOdds": 142
       },
-      "isLocked": false,
-      "extractionId": 9
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
     },
     {
-      "timestamp": "2026-04-19T01:22:42.328Z",
+      "timestamp": "2026-04-18T21:40:37Z",
       "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-168",
-        "numericOdds": -168
-      },
-      "fighter2": {
         "name": "Jai Herbert",
-        "odds": "+142",
         "numericOdds": 142
       },
-      "isLocked": false,
-      "extractionId": 10
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
     },
     {
-      "timestamp": "2026-04-19T01:22:45.340Z",
+      "timestamp": "2026-04-18T21:45:37Z",
       "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-168",
-        "numericOdds": -168
-      },
-      "fighter2": {
         "name": "Jai Herbert",
-        "odds": "+142",
         "numericOdds": 142
       },
-      "isLocked": false,
-      "extractionId": 11
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
     },
     {
-      "timestamp": "2026-04-19T01:22:48.343Z",
+      "timestamp": "2026-04-18T21:50:37Z",
       "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-168",
-        "numericOdds": -168
-      },
-      "fighter2": {
         "name": "Jai Herbert",
-        "odds": "+142",
         "numericOdds": 142
       },
-      "isLocked": false,
-      "extractionId": 12
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
     },
     {
-      "timestamp": "2026-04-19T01:22:51.350Z",
+      "timestamp": "2026-04-18T21:55:37Z",
       "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-168",
-        "numericOdds": -168
-      },
-      "fighter2": {
         "name": "Jai Herbert",
-        "odds": "+142",
         "numericOdds": 142
       },
-      "isLocked": false,
-      "extractionId": 13
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
     },
     {
-      "timestamp": "2026-04-19T01:22:54.361Z",
+      "timestamp": "2026-04-18T22:00:44Z",
       "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-176",
-        "numericOdds": -176
+        "name": "Jai Herbert",
+        "numericOdds": 142
       },
       "fighter2": {
-        "name": "Jai Herbert",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "isLocked": false,
-      "extractionId": 14
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
     },
     {
-      "timestamp": "2026-04-19T01:22:57.374Z",
+      "timestamp": "2026-04-18T22:05:37Z",
       "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-176",
-        "numericOdds": -176
+        "name": "Jai Herbert",
+        "numericOdds": 142
       },
       "fighter2": {
-        "name": "Jai Herbert",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "isLocked": false,
-      "extractionId": 15
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
     },
     {
-      "timestamp": "2026-04-19T01:23:00.378Z",
+      "timestamp": "2026-04-18T22:10:37Z",
       "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-176",
-        "numericOdds": -176
+        "name": "Jai Herbert",
+        "numericOdds": 142
       },
       "fighter2": {
-        "name": "Jai Herbert",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "isLocked": false,
-      "extractionId": 16
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
     },
     {
-      "timestamp": "2026-04-19T01:23:03.386Z",
+      "timestamp": "2026-04-18T22:15:37Z",
       "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-176",
-        "numericOdds": -176
+        "name": "Jai Herbert",
+        "numericOdds": 142
       },
       "fighter2": {
-        "name": "Jai Herbert",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "isLocked": false,
-      "extractionId": 17
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
     },
     {
-      "timestamp": "2026-04-19T01:23:06.392Z",
+      "timestamp": "2026-04-18T22:20:37Z",
       "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-176",
-        "numericOdds": -176
+        "name": "Jai Herbert",
+        "numericOdds": 142
       },
       "fighter2": {
-        "name": "Jai Herbert",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "isLocked": false,
-      "extractionId": 18
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
     },
     {
-      "timestamp": "2026-04-19T01:23:09.398Z",
+      "timestamp": "2026-04-18T22:25:38Z",
       "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-176",
-        "numericOdds": -176
+        "name": "Jai Herbert",
+        "numericOdds": 142
       },
       "fighter2": {
-        "name": "Jai Herbert",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "isLocked": false,
-      "extractionId": 19
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
     },
     {
-      "timestamp": "2026-04-19T01:23:12.407Z",
+      "timestamp": "2026-04-18T22:30:43Z",
       "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-176",
-        "numericOdds": -176
+        "name": "Jai Herbert",
+        "numericOdds": 142
       },
       "fighter2": {
-        "name": "Jai Herbert",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "isLocked": false,
-      "extractionId": 20
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
     },
     {
-      "timestamp": "2026-04-19T01:23:15.419Z",
+      "timestamp": "2026-04-18T22:35:37Z",
       "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-176",
-        "numericOdds": -176
+        "name": "Jai Herbert",
+        "numericOdds": 142
       },
       "fighter2": {
-        "name": "Jai Herbert",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "isLocked": false,
-      "extractionId": 21
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
     },
     {
-      "timestamp": "2026-04-19T01:23:18.431Z",
+      "timestamp": "2026-04-18T22:40:37Z",
       "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-176",
-        "numericOdds": -176
+        "name": "Jai Herbert",
+        "numericOdds": 142
       },
       "fighter2": {
-        "name": "Jai Herbert",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "isLocked": false,
-      "extractionId": 22
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
     },
     {
-      "timestamp": "2026-04-19T01:23:21.445Z",
+      "timestamp": "2026-04-18T22:45:39Z",
       "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-176",
-        "numericOdds": -176
+        "name": "Jai Herbert",
+        "numericOdds": 142
       },
       "fighter2": {
-        "name": "Jai Herbert",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "isLocked": false,
-      "extractionId": 23
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
     },
     {
-      "timestamp": "2026-04-19T01:23:24.447Z",
+      "timestamp": "2026-04-18T22:50:37Z",
       "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-176",
-        "numericOdds": -176
+        "name": "Jai Herbert",
+        "numericOdds": 142
       },
       "fighter2": {
-        "name": "Jai Herbert",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "isLocked": false,
-      "extractionId": 24
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
     },
     {
-      "timestamp": "2026-04-19T01:23:27.456Z",
+      "timestamp": "2026-04-18T22:55:37Z",
       "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-176",
-        "numericOdds": -176
+        "name": "Jai Herbert",
+        "numericOdds": 142
       },
       "fighter2": {
-        "name": "Jai Herbert",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "isLocked": false,
-      "extractionId": 25
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
     },
     {
-      "timestamp": "2026-04-19T01:23:30.459Z",
+      "timestamp": "2026-04-18T23:00:46Z",
       "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-176",
-        "numericOdds": -176
+        "name": "Jai Herbert",
+        "numericOdds": 142
       },
       "fighter2": {
-        "name": "Jai Herbert",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "isLocked": false,
-      "extractionId": 26
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
     },
     {
-      "timestamp": "2026-04-19T01:23:33.465Z",
+      "timestamp": "2026-04-18T23:05:37Z",
       "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-176",
-        "numericOdds": -176
+        "name": "Jai Herbert",
+        "numericOdds": 142
       },
       "fighter2": {
-        "name": "Jai Herbert",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "isLocked": false,
-      "extractionId": 27
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
     },
     {
-      "timestamp": "2026-04-19T01:23:36.474Z",
+      "timestamp": "2026-04-18T23:10:37Z",
       "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-176",
-        "numericOdds": -176
+        "name": "Jai Herbert",
+        "numericOdds": 142
       },
       "fighter2": {
-        "name": "Jai Herbert",
-        "odds": "+138",
-        "numericOdds": 138
-      },
-      "isLocked": false,
-      "extractionId": 28
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
     },
     {
-      "timestamp": "2026-04-19T01:23:39.486Z",
+      "timestamp": "2026-04-18T23:15:38Z",
       "fighter1": {
-        "name": "Mandel Nallo",
-        "odds": "-176",
-        "numericOdds": -176
+        "name": "Jai Herbert",
+        "numericOdds": 142
       },
       "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
+    },
+    {
+      "timestamp": "2026-04-18T23:20:38Z",
+      "fighter1": {
         "name": "Jai Herbert",
-        "odds": "+138",
-        "numericOdds": 138
+        "numericOdds": 142
       },
-      "isLocked": false,
-      "extractionId": 29
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
+    },
+    {
+      "timestamp": "2026-04-18T23:25:37Z",
+      "fighter1": {
+        "name": "Jai Herbert",
+        "numericOdds": 142
+      },
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
+    },
+    {
+      "timestamp": "2026-04-18T23:30:40Z",
+      "fighter1": {
+        "name": "Jai Herbert",
+        "numericOdds": 142
+      },
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
+    },
+    {
+      "timestamp": "2026-04-18T23:35:37Z",
+      "fighter1": {
+        "name": "Jai Herbert",
+        "numericOdds": 142
+      },
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
+    },
+    {
+      "timestamp": "2026-04-18T23:40:38Z",
+      "fighter1": {
+        "name": "Jai Herbert",
+        "numericOdds": 142
+      },
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
+    },
+    {
+      "timestamp": "2026-04-18T23:45:37Z",
+      "fighter1": {
+        "name": "Jai Herbert",
+        "numericOdds": 142
+      },
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
+    },
+    {
+      "timestamp": "2026-04-18T23:50:37Z",
+      "fighter1": {
+        "name": "Jai Herbert",
+        "numericOdds": 142
+      },
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
+    },
+    {
+      "timestamp": "2026-04-18T23:55:37Z",
+      "fighter1": {
+        "name": "Jai Herbert",
+        "numericOdds": 142
+      },
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
+    },
+    {
+      "timestamp": "2026-04-19T00:00:46Z",
+      "fighter1": {
+        "name": "Jai Herbert",
+        "numericOdds": 142
+      },
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -170
+      }
+    },
+    {
+      "timestamp": "2026-04-19T00:05:38Z",
+      "fighter1": {
+        "name": "Jai Herbert",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -166
+      }
+    },
+    {
+      "timestamp": "2026-04-19T00:10:37Z",
+      "fighter1": {
+        "name": "Jai Herbert",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -166
+      }
+    },
+    {
+      "timestamp": "2026-04-19T00:15:38Z",
+      "fighter1": {
+        "name": "Jai Herbert",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -166
+      }
+    },
+    {
+      "timestamp": "2026-04-19T00:20:37Z",
+      "fighter1": {
+        "name": "Jai Herbert",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -166
+      }
+    },
+    {
+      "timestamp": "2026-04-19T00:25:37Z",
+      "fighter1": {
+        "name": "Jai Herbert",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -166
+      }
+    },
+    {
+      "timestamp": "2026-04-19T00:30:43Z",
+      "fighter1": {
+        "name": "Jai Herbert",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -166
+      }
+    },
+    {
+      "timestamp": "2026-04-19T00:35:37Z",
+      "fighter1": {
+        "name": "Jai Herbert",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -166
+      }
+    },
+    {
+      "timestamp": "2026-04-19T00:40:37Z",
+      "fighter1": {
+        "name": "Jai Herbert",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -166
+      }
+    },
+    {
+      "timestamp": "2026-04-19T00:45:38Z",
+      "fighter1": {
+        "name": "Jai Herbert",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -166
+      }
+    },
+    {
+      "timestamp": "2026-04-19T00:50:37Z",
+      "fighter1": {
+        "name": "Jai Herbert",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -166
+      }
+    },
+    {
+      "timestamp": "2026-04-19T00:55:37Z",
+      "fighter1": {
+        "name": "Jai Herbert",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -166
+      }
+    },
+    {
+      "timestamp": "2026-04-19T01:00:43Z",
+      "fighter1": {
+        "name": "Jai Herbert",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -166
+      }
+    },
+    {
+      "timestamp": "2026-04-19T01:05:37Z",
+      "fighter1": {
+        "name": "Jai Herbert",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -166
+      }
+    },
+    {
+      "timestamp": "2026-04-19T01:10:37Z",
+      "fighter1": {
+        "name": "Jai Herbert",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -166
+      }
+    },
+    {
+      "timestamp": "2026-04-19T01:15:37Z",
+      "fighter1": {
+        "name": "Jai Herbert",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -166
+      }
+    },
+    {
+      "timestamp": "2026-04-19T01:20:37Z",
+      "fighter1": {
+        "name": "Jai Herbert",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -166
+      }
+    },
+    {
+      "timestamp": "2026-04-19T01:25:37Z",
+      "fighter1": {
+        "name": "Jai Herbert",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -130
+      }
+    },
+    {
+      "timestamp": "2026-04-19T01:30:40Z",
+      "fighter1": {
+        "name": "Jai Herbert",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -130
+      }
+    },
+    {
+      "timestamp": "2026-04-19T01:35:37Z",
+      "fighter1": {
+        "name": "Jai Herbert",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Mandel Nallo",
+        "numericOdds": -130
+      }
     }
-  ],
-  "createdAt": "2026-04-19T01:27:06.763Z",
-  "outcome": {
-    "winner": "fighter2",
-    "winnerName": "Jai Herbert",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:51:51.766Z",
-    "openingF1Odds": -168,
-    "openingF2Odds": 142,
-    "closingF1Odds": -176,
-    "closingF2Odds": 138,
-    "lineMovementF1": -8,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": null,
-    "inferredFinishRound": null,
-    "peakOddsSwing": 8,
-    "finishSpeed": "decision",
-    "preFightSteam": -8,
-    "dominanceScore": 0,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.451Z"
-  }
+  ]
 }
