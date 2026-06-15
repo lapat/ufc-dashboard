@@ -2468,24 +2468,26 @@ function toggleSpyInput() {
   const log    = document.getElementById('spy-log');
   const rowOpen = row.style.display === 'flex';
 
-  // If spy is active and banner is visible, first click collapses everything
-  if (_spyUser && banner.style.display === 'flex') {
-    row.style.display    = 'none';
-    banner.style.display = 'none';
-    log.style.display    = 'none';
-    return;
-  }
-  // If spy is active but collapsed, restore banner
-  if (_spyUser && banner.style.display !== 'flex') {
-    banner.style.display = 'flex';
-    log.style.display    = 'block';
+  if (_spyUser) {
+    // Toggle: if input row is showing, collapse to banner; otherwise show input row to allow clear/change
+    if (rowOpen) {
+      row.style.display    = 'none';
+      banner.style.display = 'flex';
+      log.style.display    = 'block';
+    } else {
+      row.style.display    = 'flex';
+      banner.style.display = 'none';
+      log.style.display    = 'none';
+      const inp = document.getElementById('spy-input');
+      if (inp) { inp.value = _spyUser; inp.focus(); }
+    }
     return;
   }
   // No spy user — toggle the input row
   row.style.display = rowOpen ? 'none' : 'flex';
   if (!rowOpen) {
     const inp = document.getElementById('spy-input');
-    if (inp) { inp.value = _spyUser; inp.focus(); }
+    if (inp) { inp.value = ''; inp.focus(); }
   }
 }
 

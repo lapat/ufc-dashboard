@@ -483,6 +483,110 @@ async function run() {
     assert(ok, 'pollLiveCrossovers crashed on network error — needs try/catch');
   });
 
+  // ── Spy panel tests ───────────────────────────────────────────────────────
+  await check('spy-input-row exists in DOM', async () => {
+    const exists = await page.$eval('#spy-input-row', el => !!el);
+    assert(exists, 'spy-input-row not found');
+  });
+
+  await check('spy-input-row hidden by default (no spy user)', async () => {
+    await page.evaluate(() => {
+      _spyUser = '';
+      localStorage.removeItem('spyUser');
+      document.getElementById('spy-input-row').style.display = 'none';
+      document.getElementById('spy-banner').style.display = 'none';
+    });
+    const display = await page.$eval('#spy-input-row', el => el.style.display);
+    assert(display === 'none', `spy-input-row should be hidden, got: ${display}`);
+  });
+
+  await check('spy-banner hidden when no spy user', async () => {
+    const display = await page.$eval('#spy-banner', el => el.style.display);
+    assert(display === 'none', `spy-banner should be hidden, got: ${display}`);
+  });
+
+  await check('clicking spy button shows input row when no spy active', async () => {
+    await page.evaluate(() => {
+      _spyUser = '';
+      localStorage.removeItem('spyUser');
+      document.getElementById('spy-input-row').style.display = 'none';
+      document.getElementById('spy-banner').style.display = 'none';
+      toggleSpyInput();
+    });
+    const display = await page.$eval('#spy-input-row', el => el.style.display);
+    assert(display === 'flex', `input row should show, got: ${display}`);
+  });
+
+  await check('applySpyUser sets _spyUser and shows banner', async () => {
+    await page.evaluate(() => {
+      document.getElementById('spy-input').value = 'testuser';
+      applySpyUser();
+    });
+    const spyUser = await page.evaluate(() => _spyUser);
+    const bannerDisplay = await page.$eval('#spy-banner', el => el.style.display);
+    const rowDisplay = await page.$eval('#spy-input-row', el => el.style.display);
+    assert(spyUser === 'testuser', `_spyUser should be "testuser", got: ${spyUser}`);
+    assert(bannerDisplay === 'flex', `banner should be visible after apply, got: ${bannerDisplay}`);
+    assert(rowDisplay === 'none', `input row should hide after apply, got: ${rowDisplay}`);
+  });
+
+  await check('spy name appears in banner after applySpyUser', async () => {
+    const name = await page.$eval('#spy-name', el => el.textContent);
+    assert(name === 'testuser', `spy-name should be "testuser", got: ${name}`);
+  });
+
+  await check('applySpyUser persists spy user to localStorage', async () => {
+    const stored = await page.evaluate(() => localStorage.getItem('spyUser'));
+    assert(stored === 'testuser', `localStorage should have "testuser", got: ${stored}`);
+  });
+
+  await check('toggleSpyInput when spy active shows input row (allows clearing)', async () => {
+    // spy is currently active (testuser) and banner is showing
+    await page.evaluate(() => toggleSpyInput());
+    const rowDisplay = await page.$eval('#spy-input-row', el => el.style.display);
+    const bannerDisplay = await page.$eval('#spy-banner', el => el.style.display);
+    assert(rowDisplay === 'flex', `input row should show when spy active and spy button clicked, got: ${rowDisplay}`);
+    assert(bannerDisplay === 'none', `banner should hide when input row shows, got: ${bannerDisplay}`);
+  });
+
+  await check('spy input pre-filled with current spy user when opened', async () => {
+    const inputVal = await page.$eval('#spy-input', el => el.value);
+    assert(inputVal === 'testuser', `input should be pre-filled with "testuser", got: ${inputVal}`);
+  });
+
+  await check('toggleSpyInput again collapses input row back to banner', async () => {
+    // input row is showing, toggle again should collapse back to banner
+    await page.evaluate(() => toggleSpyInput());
+    const rowDisplay = await page.$eval('#spy-input-row', el => el.style.display);
+    const bannerDisplay = await page.$eval('#spy-banner', el => el.style.display);
+    assert(rowDisplay === 'none', `input row should hide, got: ${rowDisplay}`);
+    assert(bannerDisplay === 'flex', `banner should show, got: ${bannerDisplay}`);
+  });
+
+  await check('clearSpy removes spy user and hides banner', async () => {
+    await page.evaluate(() => clearSpy());
+    const spyUser = await page.evaluate(() => _spyUser);
+    const bannerDisplay = await page.$eval('#spy-banner', el => el.style.display);
+    const stored = await page.evaluate(() => localStorage.getItem('spyUser'));
+    assert(spyUser === '', `_spyUser should be empty after clear, got: "${spyUser}"`);
+    assert(bannerDisplay === 'none', `banner should hide after clear, got: ${bannerDisplay}`);
+    assert(stored === null, `localStorage should be cleared, got: ${stored}`);
+  });
+
+  await check('spy mode restores on page reload if localStorage has spyUser', async () => {
+    // set localStorage before reload
+    await page.evaluate(() => localStorage.setItem('spyUser', 'ish'));
+    await page.reload({ waitUntil: 'networkidle0' });
+    const spyUser = await page.evaluate(() => _spyUser);
+    const bannerDisplay = await page.$eval('#spy-banner', el => el.style.display);
+    assert(spyUser === 'ish', `_spyUser should restore to "ish" on reload, got: "${spyUser}"`);
+    assert(bannerDisplay === 'flex', `banner should show on reload when spy in localStorage, got: ${bannerDisplay}`);
+    // clean up
+    await page.evaluate(() => { localStorage.removeItem('spyUser'); clearSpy(); });
+  });
+
+  // ── end spy tests ────────────────────────────────────────────────────────
+
   // cleanup injected test element
   await page.evaluate(() => {
     const el = document.getElementById('test-bet-verdict');
