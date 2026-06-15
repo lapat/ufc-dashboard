@@ -1,0 +1,21 @@
+{
+  "fightId": "mma__alexpereira_vs_cirylgane_2026-06-15",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "Alex Pereira vs Ciryl Gane",
+  "startTime": "2026-06-15T03:55:03.697Z",
+  "endTime": "2026-06-15T05:08:01.603Z",
+  "dataPoints": 1,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-06-15T03:55:03.693Z",
+      "fighter1": {
+        "name": "Alex Pereira",
+        "numericOdds": -115
+      },
+      "fighter2": {
+        "name": "Ciryl Gane",
+        "numericOdds": -105
+      }
+    }
+  ]
+}
