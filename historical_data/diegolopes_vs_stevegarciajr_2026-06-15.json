@@ -1,13 +1,221 @@
 {
-  "fightId": "mma__diegolopes_vs_stevegarciajr_2026-06-15",
-  "sport": "mma_mixed_martial_arts",
+  "fightId": "diegolopes_vs_stevegarciajr_2026-06-15",
   "fightTitle": "Diego Lopes vs Steve Garcia Jr.",
-  "startTime": "2026-06-15T00:59:22.234Z",
-  "endTime": "2026-06-15T01:17:55.632Z",
-  "dataPoints": 4,
+  "startTime": "2026-06-14T23:25:36Z",
+  "endTime": "2026-06-15T01:15:36Z",
+  "dataPoints": 23,
   "oddsHistory": [
     {
-      "timestamp": "2026-06-15T00:59:22.229Z",
+      "timestamp": "2026-06-14T23:25:36Z",
+      "fighter1": {
+        "name": "Diego Lopes",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Steve Garcia Jr.",
+        "numericOdds": 124
+      }
+    },
+    {
+      "timestamp": "2026-06-14T23:30:36Z",
+      "fighter1": {
+        "name": "Diego Lopes",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Steve Garcia Jr.",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-06-14T23:35:36Z",
+      "fighter1": {
+        "name": "Diego Lopes",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Steve Garcia Jr.",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-06-14T23:40:36Z",
+      "fighter1": {
+        "name": "Diego Lopes",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Steve Garcia Jr.",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-06-14T23:45:36Z",
+      "fighter1": {
+        "name": "Diego Lopes",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Steve Garcia Jr.",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-06-14T23:50:36Z",
+      "fighter1": {
+        "name": "Diego Lopes",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Steve Garcia Jr.",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-06-14T23:55:36Z",
+      "fighter1": {
+        "name": "Diego Lopes",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Steve Garcia Jr.",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-06-15T00:00:36Z",
+      "fighter1": {
+        "name": "Diego Lopes",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Steve Garcia Jr.",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-06-15T00:05:36Z",
+      "fighter1": {
+        "name": "Diego Lopes",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Steve Garcia Jr.",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-06-15T00:10:36Z",
+      "fighter1": {
+        "name": "Diego Lopes",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Steve Garcia Jr.",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-06-15T00:15:36Z",
+      "fighter1": {
+        "name": "Diego Lopes",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Steve Garcia Jr.",
+        "numericOdds": 136
+      }
+    },
+    {
+      "timestamp": "2026-06-15T00:20:36Z",
+      "fighter1": {
+        "name": "Diego Lopes",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Steve Garcia Jr.",
+        "numericOdds": 136
+      }
+    },
+    {
+      "timestamp": "2026-06-15T00:25:36Z",
+      "fighter1": {
+        "name": "Diego Lopes",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Steve Garcia Jr.",
+        "numericOdds": 136
+      }
+    },
+    {
+      "timestamp": "2026-06-15T00:30:36Z",
+      "fighter1": {
+        "name": "Diego Lopes",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Steve Garcia Jr.",
+        "numericOdds": 136
+      }
+    },
+    {
+      "timestamp": "2026-06-15T00:35:36Z",
+      "fighter1": {
+        "name": "Diego Lopes",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Steve Garcia Jr.",
+        "numericOdds": 136
+      }
+    },
+    {
+      "timestamp": "2026-06-15T00:40:36Z",
+      "fighter1": {
+        "name": "Diego Lopes",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Steve Garcia Jr.",
+        "numericOdds": 136
+      }
+    },
+    {
+      "timestamp": "2026-06-15T00:45:37Z",
+      "fighter1": {
+        "name": "Diego Lopes",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Steve Garcia Jr.",
+        "numericOdds": 136
+      }
+    },
+    {
+      "timestamp": "2026-06-15T00:50:36Z",
+      "fighter1": {
+        "name": "Diego Lopes",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Steve Garcia Jr.",
+        "numericOdds": 136
+      }
+    },
+    {
+      "timestamp": "2026-06-15T00:55:36Z",
+      "fighter1": {
+        "name": "Diego Lopes",
+        "numericOdds": -130
+      },
+      "fighter2": {
+        "name": "Steve Garcia Jr.",
+        "numericOdds": 100
+      }
+    },
+    {
+      "timestamp": "2026-06-15T01:00:36Z",
       "fighter1": {
         "name": "Diego Lopes",
         "numericOdds": -115
@@ -18,29 +226,29 @@
       }
     },
     {
-      "timestamp": "2026-06-15T01:01:20.178Z",
+      "timestamp": "2026-06-15T01:05:36Z",
       "fighter1": {
         "name": "Diego Lopes",
-        "numericOdds": -105
+        "numericOdds": 220
       },
       "fighter2": {
         "name": "Steve Garcia Jr.",
-        "numericOdds": -125
+        "numericOdds": -298
       }
     },
     {
-      "timestamp": "2026-06-15T01:02:06.935Z",
+      "timestamp": "2026-06-15T01:10:36Z",
       "fighter1": {
         "name": "Diego Lopes",
-        "numericOdds": 170
+        "numericOdds": 220
       },
       "fighter2": {
         "name": "Steve Garcia Jr.",
-        "numericOdds": -220
+        "numericOdds": -298
       }
     },
     {
-      "timestamp": "2026-06-15T01:02:57.270Z",
+      "timestamp": "2026-06-15T01:15:36Z",
       "fighter1": {
         "name": "Diego Lopes",
         "numericOdds": 220
