@@ -2006,7 +2006,7 @@ setInterval(()=>{ if(!selectedGame) loadGames(); },30000);
     graphSelect(simFk,f1,f2);
     document.getElementById('sim-bar').classList.add('open');
     document.getElementById('sim-toggle').textContent='✕ Close';
-    document.getElementById('sim-fight-name').textContent=`${f1} vs ${f2}`;
+    const _sfn=document.getElementById('sim-fight-name'); if(_sfn) _sfn.textContent=`${f1} vs ${f2}`;
     loadSimFights();
   }catch(e){ console.error('Auto-sim error:', e); }
 })();

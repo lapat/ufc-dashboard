@@ -4,6 +4,8 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Bet Bot — Recordings</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3/dist/chartjs-plugin-annotation.min.js"></script>
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
     body{background:#0a0a0a;color:#ccc;font-family:'SF Mono',monospace;font-size:13px}
@@ -14,7 +16,7 @@
     .nav-link{font-size:0.65rem;color:#555;padding:4px 8px;border-radius:3px;border:1px solid #222}
     .nav-link:hover{color:#888;border-color:#333}
 
-    #main{max-width:980px;margin:0 auto;padding:24px}
+    #main{max-width:1020px;margin:0 auto;padding:24px}
 
     /* Live section */
     #live-section{margin-bottom:32px}
@@ -23,9 +25,8 @@
     .live-dot{width:8px;height:8px;border-radius:50%;background:#e74c3c;animation:pulse 1.2s infinite;flex-shrink:0}
     @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
     .live-fighters{font-weight:700;font-size:0.85rem;color:#fff;flex:1}
-    .live-sport{font-size:0.6rem;color:#e74c3c;text-transform:uppercase;letter-spacing:1px}
-    .live-pts{font-size:0.65rem;color:#666;white-space:nowrap}
     .live-started{font-size:0.6rem;color:#444}
+    .live-pts{font-size:0.65rem;color:#666;white-space:nowrap}
     .no-live{color:#2a2a2a;font-size:0.75rem;padding:12px 0}
 
     /* Filters */
@@ -34,12 +35,14 @@
     .filter-pill:hover,.filter-pill.active{border-color:#e8b84b;color:#e8b84b}
     #search-box{font-size:0.65rem;padding:4px 10px;background:#111;border:1px solid #222;border-radius:4px;color:#888;outline:none;width:180px}
     #search-box:focus{border-color:#333}
+    #sort-sel{font-size:0.6rem;padding:4px 8px;background:#111;border:1px solid #222;border-radius:4px;color:#555;outline:none;cursor:pointer}
     #rec-count{font-size:0.6rem;color:#333;margin-left:auto}
 
     /* Table */
     #rec-table{width:100%;border-collapse:collapse}
     .rec-row{border-bottom:1px solid #111;cursor:pointer;transition:background 0.1s}
     .rec-row:hover{background:#111}
+    .rec-row.selected{background:#0d1a0d;border-left:2px solid #e8b84b}
     .rec-row td{padding:10px 12px;vertical-align:middle}
     .sport-badge{font-size:0.55rem;padding:2px 6px;border-radius:3px;text-transform:uppercase;letter-spacing:1px;font-weight:700;white-space:nowrap}
     .badge-ufc{background:#2a1a0a;color:#e8b84b;border:1px solid #3a2a0a}
@@ -54,10 +57,36 @@
     .xover-cell{text-align:right}
     .xover-badge{font-size:0.6rem;color:#e8b84b}
     .xover-zero{font-size:0.6rem;color:#2a2a2a}
+    .sim-btn-cell{text-align:right}
     .open-btn{font-size:0.55rem;padding:3px 8px;background:#111;border:1px solid #222;color:#444;border-radius:3px;cursor:pointer;white-space:nowrap}
-    .open-btn:hover{border-color:#e8b84b;color:#e8b84b}
+    .open-btn:hover,.open-btn.active{border-color:#e8b84b;color:#e8b84b}
     th{font-size:0.55rem;color:#333;text-transform:uppercase;letter-spacing:1px;padding:6px 12px;text-align:left;border-bottom:1px solid #1a1a1a;font-weight:400}
     th.right{text-align:right}
+
+    /* ── Simulation panel ── */
+    #sim-panel{display:none;background:#0b0b0b;border:1px solid #1e1e1e;border-radius:8px;padding:20px 24px;margin-top:20px}
+    #sim-panel.open{display:block}
+    #sim-title{font-size:0.85rem;font-weight:700;color:#fff;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+    #sim-title .sim-date{font-size:0.65rem;color:#444;font-weight:400}
+    #sim-title .sim-xover{font-size:0.65rem;color:#e8b84b}
+    #sim-chart-wrap{position:relative;height:200px;margin-bottom:14px}
+    #sim-canvas{width:100%;height:100%}
+    #sim-controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+    .sc-btn{background:#1a1a1a;border:1px solid #2a2a2a;color:#777;border-radius:4px;padding:5px 11px;font-size:0.8rem;cursor:pointer;font-family:'SF Mono',monospace;transition:all .15s}
+    .sc-btn:hover{border-color:#444;color:#ccc}
+    .sc-btn.active-spd{background:#1c1800;border-color:#e8b84b55;color:#e8b84b}
+    .sc-btn.play{background:#0d2a0d;border-color:#69db7c44;color:#69db7c}
+    .sc-btn.pause-b{background:#1a1800;border-color:#e8b84b44;color:#e8b84b}
+    .sc-btn.close-b{background:#1a0a0a;border-color:#8b000044;color:#e74c3c}
+    .prog-wrap{flex:1;min-width:80px}
+    .prog-bg{background:#1a1a1a;border-radius:2px;height:3px}
+    .prog-fill{height:3px;border-radius:2px;background:#e8b84b;width:0%;transition:width .1s}
+    .prog-lbl{font-size:0.72rem;color:#3a3a3a;margin-top:3px}
+    #sim-legend{display:flex;gap:16px;margin-bottom:10px}
+    .leg-item{display:flex;align-items:center;gap:5px;font-size:0.68rem;color:#666}
+    .leg-dot{width:8px;height:8px;border-radius:50%}
+    .leg-f1{background:#e8b84b}
+    .leg-f2{background:#69b3e7}
   </style>
 </head>
 <body>
@@ -84,6 +113,11 @@
     <button class="filter-pill" data-sport="NFL">NFL</button>
     <button class="filter-pill" data-sport="MLB">MLB</button>
     <input id="search-box" placeholder="search fighters..."/>
+    <select id="sort-sel">
+      <option value="date">Newest first</option>
+      <option value="xovers">Most crossovers</option>
+      <option value="pts">Most data pts</option>
+    </select>
     <span id="rec-count"></span>
   </div>
 
@@ -98,10 +132,43 @@
     </tr></thead>
     <tbody id="rec-body"><tr><td colspan="6" style="color:#2a2a2a;padding:20px 12px">Loading...</td></tr></tbody>
   </table>
+
+  <!-- Inline simulation panel — shown below the table when a fight is selected -->
+  <div id="sim-panel">
+    <div id="sim-title">
+      <span id="sim-fight-name">—</span>
+      <span class="sim-date" id="sim-fight-date"></span>
+      <span class="sim-xover" id="sim-xover-count"></span>
+    </div>
+    <div id="sim-legend">
+      <div class="leg-item"><div class="leg-dot leg-f1"></div><span id="leg-f1-name">Fighter 1</span></div>
+      <div class="leg-item"><div class="leg-dot leg-f2"></div><span id="leg-f2-name">Fighter 2</span></div>
+    </div>
+    <div id="sim-chart-wrap">
+      <canvas id="sim-canvas"></canvas>
+    </div>
+    <div id="sim-controls">
+      <span class="prog-lbl">Speed:</span>
+      <button class="sc-btn" data-spd="10">10×</button>
+      <button class="sc-btn active-spd" data-spd="50">50×</button>
+      <button class="sc-btn" data-spd="100">100×</button>
+      <button class="sc-btn play" id="sc-play">▶ Play</button>
+      <button class="sc-btn" id="sc-reset" style="display:none">↺ Reset</button>
+      <div class="prog-wrap">
+        <div class="prog-bg"><div class="prog-fill" id="sc-fill"></div></div>
+        <div class="prog-lbl" id="sc-prog">—</div>
+      </div>
+      <button class="sc-btn close-b" id="sc-close">✕ Close</button>
+    </div>
+  </div>
 </div>
 
 <script>
-let allRecs=[], activeSportFilter='all', searchQuery='';
+Chart.register(window['chartjs-plugin-annotation']);
+
+let allRecs=[], activeSportFilter='all', searchQuery='', sortMode='date';
+let simChart=null, simData=null, simIdx=0, simSpeed=50, simTimer=null, simRunning=false;
+let selectedRowId=null;
 
 function sportBadgeClass(sport){
   const s=(sport||'').toUpperCase();
@@ -115,32 +182,202 @@ function sportBadgeClass(sport){
 
 function fmtDate(d){ if(!d) return '—'; const [y,m,day]=d.split('-'); return `${m}/${day}/${y.slice(2)}`; }
 
+function sortedRecs(recs){
+  const r=[...recs];
+  if(sortMode==='xovers') return r.sort((a,b)=>b.crossovers-a.crossovers||(b.date||'').localeCompare(a.date||''));
+  if(sortMode==='pts') return r.sort((a,b)=>b.dataPoints-a.dataPoints);
+  return r.sort((a,b)=>(b.date||'').localeCompare(a.date||'')||(b.startTime||'').localeCompare(a.startTime||''));
+}
+
 function renderTable(){
   const q=searchQuery.toLowerCase();
-  const rows=allRecs.filter(r=>{
+  let rows=allRecs.filter(r=>{
     if(activeSportFilter!=='all' && !r.sport.toUpperCase().includes(activeSportFilter.toUpperCase())) return false;
     if(q && !r.fighter1.toLowerCase().includes(q) && !r.fighter2.toLowerCase().includes(q)) return false;
     return true;
   });
+  rows=sortedRecs(rows);
   document.getElementById('rec-count').textContent=`${rows.length} fight${rows.length!==1?'s':''}`;
   const tbody=document.getElementById('rec-body');
   if(!rows.length){ tbody.innerHTML='<tr><td colspan="6" style="color:#2a2a2a;padding:20px 12px">No results</td></tr>'; return; }
   tbody.innerHTML=rows.map(r=>`
-    <tr class="rec-row" data-id="${r.id}">
+    <tr class="rec-row${r.id===selectedRowId?' selected':''}" data-id="${r.id}" data-f1="${encodeURIComponent(r.fighter1)}" data-f2="${encodeURIComponent(r.fighter2)}" data-date="${r.date||''}" data-xovers="${r.crossovers}">
       <td><span class="sport-badge ${sportBadgeClass(r.sport)}">${r.sport}</span></td>
       <td class="fighters-cell">${r.fighter1} <span style="color:#333">vs</span> ${r.fighter2}</td>
       <td class="date-cell">${fmtDate(r.date)}</td>
       <td class="pts-cell">${r.dataPoints.toLocaleString()}</td>
       <td class="xover-cell">${r.crossovers>0?`<span class="xover-badge">⚡ ${r.crossovers}</span>`:'<span class="xover-zero">—</span>'}</td>
-      <td><button class="open-btn" data-id="${r.id}">Simulate →</button></td>
+      <td class="sim-btn-cell"><button class="open-btn${r.id===selectedRowId?' active':''}" data-id="${r.id}">Simulate →</button></td>
     </tr>`).join('');
+
+  tbody.querySelectorAll('.rec-row').forEach(row=>{
+    row.addEventListener('click', e=>{
+      if(e.target.classList.contains('open-btn')) return; // button handles it
+      openSim(row.dataset.id, decodeURIComponent(row.dataset.f1), decodeURIComponent(row.dataset.f2), row.dataset.date, +row.dataset.xovers);
+    });
+  });
   tbody.querySelectorAll('.open-btn').forEach(btn=>{
     btn.addEventListener('click', e=>{
       e.stopPropagation();
-      window.location.href=`/?sim=${encodeURIComponent(btn.dataset.id)}`;
+      const row=btn.closest('tr');
+      openSim(btn.dataset.id, decodeURIComponent(row.dataset.f1), decodeURIComponent(row.dataset.f2), row.dataset.date, +row.dataset.xovers);
     });
   });
 }
+
+// ── Simulation ──────────────────────────────────────────────────────────────
+
+function initSimChart(){
+  if(simChart){ simChart.destroy(); simChart=null; }
+  const ctx=document.getElementById('sim-canvas').getContext('2d');
+  simChart=new Chart(ctx,{
+    type:'line',
+    data:{
+      labels:[],
+      datasets:[
+        { label:'Fighter 1', data:[], borderColor:'#e8b84b', backgroundColor:'transparent', borderWidth:2, pointRadius:0, tension:0.3 },
+        { label:'Fighter 2', data:[], borderColor:'#69b3e7', backgroundColor:'transparent', borderWidth:2, pointRadius:0, tension:0.3 }
+      ]
+    },
+    options:{
+      responsive:true, maintainAspectRatio:false, animation:false,
+      scales:{
+        x:{ ticks:{ color:'#333', font:{size:10}, maxTicksLimit:8 }, grid:{ color:'#1a1a1a' } },
+        y:{ ticks:{ color:'#444', font:{size:10}, callback:v=>v>0?`+${v}`:v }, grid:{ color:'#1a1a1a' }, border:{ color:'#222' } }
+      },
+      plugins:{
+        legend:{ display:false },
+        tooltip:{ callbacks:{ label:ctx=>`${ctx.dataset.label}: ${ctx.raw>0?'+':''}${ctx.raw}` } },
+        annotation:{ annotations:{} }
+      }
+    }
+  });
+}
+
+function simAddPoint(label, f1Odds, f2Odds){
+  const d=simChart.data;
+  d.labels.push(label);
+  d.datasets[0].data.push(f1Odds);
+  d.datasets[1].data.push(f2Odds);
+  // detect crossover — any sign flip since last point
+  const n=d.datasets[0].data.length;
+  if(n>1){
+    const pf1=d.datasets[0].data[n-2], cf1=f1Odds;
+    const pf2=d.datasets[1].data[n-2], cf2=f2Odds;
+    if((pf1>0&&cf1<0)||(pf2>0&&cf2<0)){
+      const key='xover_'+(n-1);
+      simChart.options.plugins.annotation.annotations[key]={
+        type:'line', scaleID:'x', value:n-1,
+        borderColor:'#e8b84b', borderWidth:1, borderDash:[4,4],
+        label:{ content:'⚡', display:true, color:'#e8b84b', font:{size:10}, position:'start' }
+      };
+    }
+  }
+  simChart.update('none');
+}
+
+async function openSim(id, f1, f2, date, xovers){
+  stopSim();
+  selectedRowId=id;
+  renderTable(); // re-render to highlight selected row
+
+  const panel=document.getElementById('sim-panel');
+  panel.classList.add('open');
+  panel.scrollIntoView({behavior:'smooth',block:'nearest'});
+
+  document.getElementById('sim-fight-name').textContent=`${f1} vs ${f2}`;
+  document.getElementById('sim-fight-date').textContent=fmtDate(date);
+  document.getElementById('sim-xover-count').textContent=xovers>0?`⚡ ${xovers} crossover${xovers!==1?'s':''}` :'';
+  document.getElementById('leg-f1-name').textContent=f1;
+  document.getElementById('leg-f2-name').textContent=f2;
+  document.getElementById('sc-play').textContent='⏳ loading…';
+  document.getElementById('sc-play').disabled=true;
+  document.getElementById('sc-reset').style.display='none';
+  document.getElementById('sc-fill').style.width='0%';
+  document.getElementById('sc-prog').textContent='—';
+
+  initSimChart();
+
+  try{
+    const r=await fetch(`/api/fight-history/${encodeURIComponent(id)}`);
+    if(!r.ok) throw new Error(`HTTP ${r.status}`);
+    simData=await r.json();
+    simIdx=0;
+    if(!simData.oddsHistory?.length){ document.getElementById('sc-play').textContent='No data'; return; }
+    document.getElementById('sc-play').textContent='▶ Play';
+    document.getElementById('sc-play').disabled=false;
+    document.getElementById('sc-play').className='sc-btn play';
+  }catch(e){
+    document.getElementById('sc-play').textContent='Load error';
+    console.error('sim load error:', e);
+  }
+}
+
+function stopSim(){
+  clearInterval(simTimer);
+  simRunning=false;
+  simData=null; simIdx=0;
+  document.getElementById('sc-play').textContent='▶ Play';
+  document.getElementById('sc-play').className='sc-btn play';
+  document.getElementById('sc-play').disabled=false;
+  document.getElementById('sc-reset').style.display='none';
+  document.getElementById('sc-fill').style.width='0%';
+  document.getElementById('sc-prog').textContent='—';
+}
+
+function startSimTick(){
+  simRunning=true;
+  document.getElementById('sc-play').textContent='⏸ Pause';
+  document.getElementById('sc-play').className='sc-btn pause-b';
+  simTimer=setInterval(simTick, Math.max(16, 1000/simSpeed));
+}
+
+function simTick(){
+  if(!simData||simIdx>=simData.oddsHistory.length){
+    clearInterval(simTimer); simRunning=false;
+    document.getElementById('sc-play').textContent='▶ Done';
+    document.getElementById('sc-play').disabled=true;
+    return;
+  }
+  const pt=simData.oddsHistory[simIdx++];
+  const ts=new Date(pt.timestamp).toLocaleTimeString('en-US',{hour12:false,hour:'2-digit',minute:'2-digit',second:'2-digit'});
+  simAddPoint(ts, pt.fighter1.numericOdds, pt.fighter2.numericOdds);
+  const pct=(simIdx/simData.oddsHistory.length*100).toFixed(1);
+  document.getElementById('sc-fill').style.width=pct+'%';
+  document.getElementById('sc-prog').textContent=`${simIdx}/${simData.oddsHistory.length} pts`;
+  document.getElementById('sc-reset').style.display='';
+}
+
+document.getElementById('sc-play').addEventListener('click',()=>{
+  if(!simData) return;
+  if(simRunning){ clearInterval(simTimer); simRunning=false; document.getElementById('sc-play').textContent='▶ Play'; document.getElementById('sc-play').className='sc-btn play'; }
+  else if(simIdx>=simData.oddsHistory.length){ /* done */ }
+  else startSimTick();
+});
+
+document.getElementById('sc-reset').addEventListener('click',()=>{
+  stopSim();
+  if(simData){ /* re-enable play */ document.getElementById('sc-play').disabled=false; }
+  initSimChart();
+});
+
+document.getElementById('sc-close').addEventListener('click',()=>{
+  stopSim();
+  document.getElementById('sim-panel').classList.remove('open');
+  selectedRowId=null;
+  renderTable();
+});
+
+document.querySelectorAll('#sim-controls [data-spd]').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    simSpeed=+btn.dataset.spd;
+    document.querySelectorAll('#sim-controls [data-spd]').forEach(b=>b.classList.remove('active-spd'));
+    btn.classList.add('active-spd');
+    if(simRunning){ clearInterval(simTimer); startSimTick(); }
+  });
+});
+
+// ── Live recordings ─────────────────────────────────────────────────────────
 
 async function stopRec(id){
   await fetch(`/api/recorder/stop/${encodeURIComponent(id)}`,{method:'POST'});
@@ -185,6 +422,7 @@ document.querySelectorAll('.filter-pill').forEach(btn=>{
   });
 });
 document.getElementById('search-box').addEventListener('input', e=>{ searchQuery=e.target.value; renderTable(); });
+document.getElementById('sort-sel').addEventListener('change', e=>{ sortMode=e.target.value; renderTable(); });
 
 load();
 setInterval(loadLive,5000);

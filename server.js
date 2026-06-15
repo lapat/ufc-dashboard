@@ -83,9 +83,12 @@ function analyzeFightFile(filePath) {
   }
 
   const open = h[0], close = h[h.length - 1];
+  // Use filename stem as canonical ID — it's unique per file and always includes the date.
+  // d.fightId can have mma__ prefix or lack the date suffix (old files), so filename wins.
+  const fileId = path.basename(filePath, '.json');
   return {
-    fightId: d.fightId,
-    date: d.fightId.match(/\d{4}-\d{2}-\d{2}/)?.[0] || path.basename(filePath).match(/\d{4}-\d{2}-\d{2}/)?.[0],
+    fightId: fileId,
+    date: fileId.match(/\d{4}-\d{2}-\d{2}/)?.[0] || path.basename(filePath).match(/\d{4}-\d{2}-\d{2}/)?.[0],
     fighter1: open.fighter1.name,
     fighter2: open.fighter2.name,
     openOdds: { [open.fighter1.name]: open.fighter1.numericOdds, [open.fighter2.name]: open.fighter2.numericOdds },
@@ -320,11 +323,11 @@ app.get('/api/recordings', (req, res) => {
         const d = JSON.parse(fs.readFileSync(path.join(HISTORICAL_DIR, f)));
         const h = d.oddsHistory || [];
         all.push({
-          id: d.fightId || f.replace('.json',''),
+          id: f.replace('.json',''),  // always use filename stem — unique, includes date
           sport: 'UFC/MMA',
           fighter1: h[0]?.fighter1?.name || d.fightTitle?.split(' vs ')[0] || '?',
           fighter2: h[0]?.fighter2?.name || d.fightTitle?.split(' vs ')[1] || '?',
-          date: (d.fightId||f).match(/\d{4}-\d{2}-\d{2}/)?.[0] || '',
+          date: f.match(/\d{4}-\d{2}-\d{2}/)?.[0] || (d.fightId||'').match(/\d{4}-\d{2}-\d{2}/)?.[0] || '',
           dataPoints: d.dataPoints || h.length,
           crossovers: (() => { let c=0; for(let i=1;i<h.length;i++){ const p=h[i-1],n=h[i]; if((p.fighter1.numericOdds>0&&n.fighter1.numericOdds<0)||(p.fighter2.numericOdds>0&&n.fighter2.numericOdds<0)) c++; } return c; })(),
           startTime: d.startTime || '',
@@ -343,11 +346,11 @@ app.get('/api/recordings', (req, res) => {
           const d = JSON.parse(fs.readFileSync(path.join(sportDir, f)));
           const h = d.oddsHistory || [];
           all.push({
-            id: d.fightId || f.replace('.json',''),
+            id: f.replace('.json',''),  // always use filename stem
             sport: d.sport || sport,
             fighter1: h[0]?.fighter1?.name || '?',
             fighter2: h[0]?.fighter2?.name || '?',
-            date: (d.fightId||f).match(/\d{4}-\d{2}-\d{2}/)?.[0] || '',
+            date: f.match(/\d{4}-\d{2}-\d{2}/)?.[0] || (d.fightId||'').match(/\d{4}-\d{2}-\d{2}/)?.[0] || '',
             dataPoints: d.dataPoints || h.length,
             crossovers: (() => { let c=0; for(let i=1;i<h.length;i++){ const p=h[i-1],n=h[i]; if((p.fighter1.numericOdds>0&&n.fighter1.numericOdds<0)||(p.fighter2.numericOdds>0&&n.fighter2.numericOdds<0)) c++; } return c; })(),
             startTime: d.startTime || '',
@@ -365,22 +368,37 @@ app.get('/api/recordings', (req, res) => {
       if (u.includes('MLB')) return 'MLB';
       return s;
     };
+    const normId = id => id.replace(/^mma__?/, '');  // strip mma__ prefix from subdir files
     const clean = all
       .filter(r => r.fighter1 !== '?' && r.fighter2 !== '?')          // drop unknown fighters
       .filter(r => !r.fighter1.startsWith('Test ') && !r.fighter2.startsWith('Test ')) // drop test data
-      .map(r => ({ ...r, sport: normSport(r.sport) }));
-    clean.sort((a,b) => (b.date||'').localeCompare(a.date||'') || (b.startTime||'').localeCompare(a.startTime||''));
-    res.json(clean);
+      .map(r => ({ ...r, id: normId(r.id), sport: normSport(r.sport) }));
+    // Deduplicate by id (root files take priority over sport-subdir duplicates)
+    const seen = new Set();
+    const deduped = clean.filter(r => { if (seen.has(r.id)) return false; seen.add(r.id); return true; });
+    deduped.sort((a,b) => (b.date||'').localeCompare(a.date||'') || (b.startTime||'').localeCompare(a.startTime||''));
+    res.json(deduped);
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
 // Full odds history for a specific fight (for graphing)
 app.get('/api/fight-history/:fightId', (req, res) => {
   try {
-    const files = fs.readdirSync(HISTORICAL_DIR);
+    const files = fs.readdirSync(HISTORICAL_DIR).filter(f => f.endsWith('.json'));
     const id = req.params.fightId;
-    const match = files.find(f => f.replace('.json', '') === id || f.startsWith(id + '_') || f.startsWith(id + '.'));
-    if (!match) return res.status(404).json({ error: 'Fight not found' });
+    // 1. Exact filename match (canonical path — filename stem = fightId)
+    let match = files.find(f => f.replace('.json', '') === id);
+    // 2. Strip mma__/mma_ prefix (old recorder format) and retry exact match
+    if (!match) {
+      const stripped = id.replace(/^mma__?/, '');
+      match = files.find(f => f.replace('.json', '') === stripped);
+    }
+    // 3. Prefix match — fightId without date, e.g. "fighter_vs_fighter" → "fighter_vs_fighter_2026-04-05.json"
+    if (!match) {
+      const bare = id.replace(/^mma__?/, '');
+      match = files.find(f => f.startsWith(bare + '_') || f.startsWith(bare + '.') || f.startsWith(id + '_') || f.startsWith(id + '.'));
+    }
+    if (!match) return res.status(404).json({ error: 'Fight not found', id });
     res.json(JSON.parse(fs.readFileSync(path.join(HISTORICAL_DIR, match))));
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
