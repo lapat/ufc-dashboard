@@ -2,8 +2,8 @@
   "fightId": "seanbrady_vs_michaelchiesa_2021-11-21",
   "fightTitle": "Sean Brady vs Michael Chiesa",
   "startTime": "2021-11-20T13:55:00Z",
-  "endTime": "2021-11-21T00:25:00Z",
-  "dataPoints": 64,
+  "endTime": "2021-11-21T01:05:00Z",
+  "dataPoints": 67,
   "oddsHistory": [
     {
       "timestamp": "2021-11-20T13:55:00Z",
@@ -707,6 +707,39 @@
       "fighter2": {
         "name": "Sean Brady",
         "numericOdds": -189
+      }
+    },
+    {
+      "timestamp": "2021-11-21T00:35:00Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Sean Brady",
+        "numericOdds": -189
+      }
+    },
+    {
+      "timestamp": "2021-11-21T00:45:00Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Sean Brady",
+        "numericOdds": -204
+      }
+    },
+    {
+      "timestamp": "2021-11-21T01:05:00Z",
+      "fighter1": {
+        "name": "Michael Chiesa",
+        "numericOdds": 400
+      },
+      "fighter2": {
+        "name": "Sean Brady",
+        "numericOdds": -714
       }
     }
   ]

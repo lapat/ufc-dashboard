@@ -1,74 +1,360 @@
 {
   "fightId": "ashleyyoder_vs_emilyducote_2023-10-14",
   "fightTitle": "Ashley Yoder vs Emily Ducote",
-  "startTime": "2023-10-10T13:55:42Z",
-  "endTime": "2023-10-10T15:05:41Z",
-  "dataPoints": 6,
+  "startTime": "2023-10-14T13:55:41Z",
+  "endTime": "2023-10-14T20:45:40Z",
+  "dataPoints": 32,
   "oddsHistory": [
     {
-      "timestamp": "2023-10-10T13:55:42Z",
+      "timestamp": "2023-10-14T13:55:41Z",
       "fighter1": {
         "name": "Ashley Yoder",
-        "numericOdds": 285
+        "numericOdds": 295
       },
       "fighter2": {
         "name": "Emily Ducote",
-        "numericOdds": -360
+        "numericOdds": -375
       }
     },
     {
-      "timestamp": "2023-10-10T14:10:40Z",
+      "timestamp": "2023-10-14T14:10:41Z",
       "fighter1": {
         "name": "Ashley Yoder",
-        "numericOdds": 285
+        "numericOdds": 295
       },
       "fighter2": {
         "name": "Emily Ducote",
-        "numericOdds": -360
+        "numericOdds": -375
       }
     },
     {
-      "timestamp": "2023-10-10T14:20:41Z",
+      "timestamp": "2023-10-14T14:25:41Z",
       "fighter1": {
         "name": "Ashley Yoder",
-        "numericOdds": 285
+        "numericOdds": 295
       },
       "fighter2": {
         "name": "Emily Ducote",
-        "numericOdds": -360
+        "numericOdds": -375
       }
     },
     {
-      "timestamp": "2023-10-10T14:35:41Z",
+      "timestamp": "2023-10-14T14:40:40Z",
       "fighter1": {
         "name": "Ashley Yoder",
-        "numericOdds": 285
+        "numericOdds": 295
       },
       "fighter2": {
         "name": "Emily Ducote",
-        "numericOdds": -360
+        "numericOdds": -375
       }
     },
     {
-      "timestamp": "2023-10-10T14:50:41Z",
+      "timestamp": "2023-10-14T14:50:42Z",
       "fighter1": {
         "name": "Ashley Yoder",
-        "numericOdds": 285
+        "numericOdds": 295
       },
       "fighter2": {
         "name": "Emily Ducote",
-        "numericOdds": -360
+        "numericOdds": -375
       }
     },
     {
-      "timestamp": "2023-10-10T15:05:41Z",
+      "timestamp": "2023-10-14T15:05:41Z",
       "fighter1": {
         "name": "Ashley Yoder",
-        "numericOdds": 285
+        "numericOdds": 295
       },
       "fighter2": {
         "name": "Emily Ducote",
-        "numericOdds": -360
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2023-10-14T15:20:40Z",
+      "fighter1": {
+        "name": "Ashley Yoder",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Emily Ducote",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2023-10-14T15:30:42Z",
+      "fighter1": {
+        "name": "Ashley Yoder",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Emily Ducote",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2023-10-14T15:45:41Z",
+      "fighter1": {
+        "name": "Ashley Yoder",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Emily Ducote",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2023-10-14T16:00:41Z",
+      "fighter1": {
+        "name": "Ashley Yoder",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Emily Ducote",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2023-10-14T16:15:40Z",
+      "fighter1": {
+        "name": "Ashley Yoder",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Emily Ducote",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2023-10-14T16:30:40Z",
+      "fighter1": {
+        "name": "Ashley Yoder",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Emily Ducote",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2023-10-14T16:40:41Z",
+      "fighter1": {
+        "name": "Ashley Yoder",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Emily Ducote",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2023-10-14T16:55:41Z",
+      "fighter1": {
+        "name": "Ashley Yoder",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Emily Ducote",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2023-10-14T17:10:40Z",
+      "fighter1": {
+        "name": "Ashley Yoder",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Emily Ducote",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2023-10-14T17:20:41Z",
+      "fighter1": {
+        "name": "Ashley Yoder",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Emily Ducote",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2023-10-14T17:35:41Z",
+      "fighter1": {
+        "name": "Ashley Yoder",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Emily Ducote",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2023-10-14T17:50:41Z",
+      "fighter1": {
+        "name": "Ashley Yoder",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Emily Ducote",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2023-10-14T18:00:41Z",
+      "fighter1": {
+        "name": "Ashley Yoder",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Emily Ducote",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2023-10-14T18:10:40Z",
+      "fighter1": {
+        "name": "Ashley Yoder",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Emily Ducote",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2023-10-14T18:25:40Z",
+      "fighter1": {
+        "name": "Ashley Yoder",
+        "numericOdds": 295
+      },
+      "fighter2": {
+        "name": "Emily Ducote",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2023-10-14T18:40:40Z",
+      "fighter1": {
+        "name": "Ashley Yoder",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Emily Ducote",
+        "numericOdds": -380
+      }
+    },
+    {
+      "timestamp": "2023-10-14T18:50:42Z",
+      "fighter1": {
+        "name": "Ashley Yoder",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Emily Ducote",
+        "numericOdds": -380
+      }
+    },
+    {
+      "timestamp": "2023-10-14T19:05:40Z",
+      "fighter1": {
+        "name": "Ashley Yoder",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Emily Ducote",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2023-10-14T19:15:41Z",
+      "fighter1": {
+        "name": "Ashley Yoder",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Emily Ducote",
+        "numericOdds": -375
+      }
+    },
+    {
+      "timestamp": "2023-10-14T19:25:40Z",
+      "fighter1": {
+        "name": "Ashley Yoder",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Emily Ducote",
+        "numericOdds": -380
+      }
+    },
+    {
+      "timestamp": "2023-10-14T19:40:40Z",
+      "fighter1": {
+        "name": "Ashley Yoder",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Emily Ducote",
+        "numericOdds": -380
+      }
+    },
+    {
+      "timestamp": "2023-10-14T19:55:40Z",
+      "fighter1": {
+        "name": "Ashley Yoder",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Emily Ducote",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2023-10-14T20:05:40Z",
+      "fighter1": {
+        "name": "Ashley Yoder",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Emily Ducote",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2023-10-14T20:20:40Z",
+      "fighter1": {
+        "name": "Ashley Yoder",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Emily Ducote",
+        "numericOdds": -380
+      }
+    },
+    {
+      "timestamp": "2023-10-14T20:30:40Z",
+      "fighter1": {
+        "name": "Ashley Yoder",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Emily Ducote",
+        "numericOdds": -345
+      }
+    },
+    {
+      "timestamp": "2023-10-14T20:45:40Z",
+      "fighter1": {
+        "name": "Ashley Yoder",
+        "numericOdds": 800
+      },
+      "fighter2": {
+        "name": "Emily Ducote",
+        "numericOdds": -1600
       }
     }
   ]

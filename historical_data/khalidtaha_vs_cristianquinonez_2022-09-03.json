@@ -2,8 +2,8 @@
   "fightId": "khalidtaha_vs_cristianquinonez_2022-09-03",
   "fightTitle": "Khalid Taha vs Cristian Quinonez",
   "startTime": "2022-09-03T13:55:00Z",
-  "endTime": "2022-09-03T16:35:00Z",
-  "dataPoints": 17,
+  "endTime": "2022-09-03T17:05:00Z",
+  "dataPoints": 20,
   "oddsHistory": [
     {
       "timestamp": "2022-09-03T13:55:00Z",
@@ -186,6 +186,39 @@
       "fighter1": {
         "name": "Cristian Quinonez",
         "numericOdds": 105
+      },
+      "fighter2": {
+        "name": "Khalid Taha",
+        "numericOdds": -125
+      }
+    },
+    {
+      "timestamp": "2022-09-03T16:45:00Z",
+      "fighter1": {
+        "name": "Cristian Quinonez",
+        "numericOdds": 105
+      },
+      "fighter2": {
+        "name": "Khalid Taha",
+        "numericOdds": -125
+      }
+    },
+    {
+      "timestamp": "2022-09-03T16:55:00Z",
+      "fighter1": {
+        "name": "Cristian Quinonez",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Khalid Taha",
+        "numericOdds": -135
+      }
+    },
+    {
+      "timestamp": "2022-09-03T17:05:00Z",
+      "fighter1": {
+        "name": "Cristian Quinonez",
+        "numericOdds": -105
       },
       "fighter2": {
         "name": "Khalid Taha",

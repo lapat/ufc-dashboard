@@ -1,118 +1,514 @@
 {
   "fightId": "raphaelassuncao_vs_victorhenry_2022-10-15",
   "fightTitle": "Raphael Assuncao vs Victor Henry",
-  "startTime": "2022-10-08T13:55:39Z",
-  "endTime": "2022-10-08T16:05:38Z",
-  "dataPoints": 10,
+  "startTime": "2022-10-15T13:55:39Z",
+  "endTime": "2022-10-15T23:55:38Z",
+  "dataPoints": 46,
   "oddsHistory": [
     {
-      "timestamp": "2022-10-08T13:55:39Z",
+      "timestamp": "2022-10-15T13:55:39Z",
       "fighter1": {
         "name": "Raphael Assuncao",
-        "numericOdds": 275
+        "numericOdds": 330
       },
       "fighter2": {
         "name": "Victor Henry",
-        "numericOdds": -330
+        "numericOdds": -410
       }
     },
     {
-      "timestamp": "2022-10-08T14:10:39Z",
+      "timestamp": "2022-10-15T14:05:39Z",
       "fighter1": {
         "name": "Raphael Assuncao",
-        "numericOdds": 275
+        "numericOdds": 330
       },
       "fighter2": {
         "name": "Victor Henry",
-        "numericOdds": -330
+        "numericOdds": -410
       }
     },
     {
-      "timestamp": "2022-10-08T14:25:39Z",
+      "timestamp": "2022-10-15T14:20:38Z",
       "fighter1": {
         "name": "Raphael Assuncao",
-        "numericOdds": 275
+        "numericOdds": 330
       },
       "fighter2": {
         "name": "Victor Henry",
-        "numericOdds": -330
+        "numericOdds": -410
       }
     },
     {
-      "timestamp": "2022-10-08T14:40:39Z",
+      "timestamp": "2022-10-15T14:30:39Z",
       "fighter1": {
         "name": "Raphael Assuncao",
-        "numericOdds": 275
+        "numericOdds": 330
       },
       "fighter2": {
         "name": "Victor Henry",
-        "numericOdds": -330
+        "numericOdds": -410
       }
     },
     {
-      "timestamp": "2022-10-08T14:55:38Z",
+      "timestamp": "2022-10-15T14:45:38Z",
       "fighter1": {
         "name": "Raphael Assuncao",
-        "numericOdds": 275
+        "numericOdds": 330
       },
       "fighter2": {
         "name": "Victor Henry",
-        "numericOdds": -330
+        "numericOdds": -410
       }
     },
     {
-      "timestamp": "2022-10-08T15:10:38Z",
+      "timestamp": "2022-10-15T15:00:38Z",
       "fighter1": {
         "name": "Raphael Assuncao",
-        "numericOdds": 275
+        "numericOdds": 330
       },
       "fighter2": {
         "name": "Victor Henry",
-        "numericOdds": -330
+        "numericOdds": -410
       }
     },
     {
-      "timestamp": "2022-10-08T15:25:38Z",
+      "timestamp": "2022-10-15T15:15:38Z",
       "fighter1": {
         "name": "Raphael Assuncao",
-        "numericOdds": 275
+        "numericOdds": 330
       },
       "fighter2": {
         "name": "Victor Henry",
-        "numericOdds": -330
+        "numericOdds": -410
       }
     },
     {
-      "timestamp": "2022-10-08T15:40:38Z",
+      "timestamp": "2022-10-15T15:25:39Z",
       "fighter1": {
         "name": "Raphael Assuncao",
-        "numericOdds": 275
+        "numericOdds": 330
       },
       "fighter2": {
         "name": "Victor Henry",
-        "numericOdds": -330
+        "numericOdds": -410
       }
     },
     {
-      "timestamp": "2022-10-08T15:50:39Z",
+      "timestamp": "2022-10-15T15:40:39Z",
       "fighter1": {
         "name": "Raphael Assuncao",
-        "numericOdds": 275
+        "numericOdds": 330
       },
       "fighter2": {
         "name": "Victor Henry",
-        "numericOdds": -330
+        "numericOdds": -410
       }
     },
     {
-      "timestamp": "2022-10-08T16:05:38Z",
+      "timestamp": "2022-10-15T15:55:39Z",
       "fighter1": {
         "name": "Raphael Assuncao",
-        "numericOdds": 275
+        "numericOdds": 330
       },
       "fighter2": {
         "name": "Victor Henry",
-        "numericOdds": -330
+        "numericOdds": -410
+      }
+    },
+    {
+      "timestamp": "2022-10-15T16:10:39Z",
+      "fighter1": {
+        "name": "Raphael Assuncao",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Victor Henry",
+        "numericOdds": -410
+      }
+    },
+    {
+      "timestamp": "2022-10-15T16:25:38Z",
+      "fighter1": {
+        "name": "Raphael Assuncao",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Victor Henry",
+        "numericOdds": -410
+      }
+    },
+    {
+      "timestamp": "2022-10-15T16:35:39Z",
+      "fighter1": {
+        "name": "Raphael Assuncao",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Victor Henry",
+        "numericOdds": -410
+      }
+    },
+    {
+      "timestamp": "2022-10-15T16:50:39Z",
+      "fighter1": {
+        "name": "Raphael Assuncao",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Victor Henry",
+        "numericOdds": -410
+      }
+    },
+    {
+      "timestamp": "2022-10-15T17:05:38Z",
+      "fighter1": {
+        "name": "Raphael Assuncao",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Victor Henry",
+        "numericOdds": -410
+      }
+    },
+    {
+      "timestamp": "2022-10-15T17:15:39Z",
+      "fighter1": {
+        "name": "Raphael Assuncao",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Victor Henry",
+        "numericOdds": -410
+      }
+    },
+    {
+      "timestamp": "2022-10-15T17:30:38Z",
+      "fighter1": {
+        "name": "Raphael Assuncao",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Victor Henry",
+        "numericOdds": -410
+      }
+    },
+    {
+      "timestamp": "2022-10-15T17:40:39Z",
+      "fighter1": {
+        "name": "Raphael Assuncao",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Victor Henry",
+        "numericOdds": -410
+      }
+    },
+    {
+      "timestamp": "2022-10-15T17:55:38Z",
+      "fighter1": {
+        "name": "Raphael Assuncao",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Victor Henry",
+        "numericOdds": -410
+      }
+    },
+    {
+      "timestamp": "2022-10-15T18:10:38Z",
+      "fighter1": {
+        "name": "Raphael Assuncao",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Victor Henry",
+        "numericOdds": -410
+      }
+    },
+    {
+      "timestamp": "2022-10-15T18:20:39Z",
+      "fighter1": {
+        "name": "Raphael Assuncao",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Victor Henry",
+        "numericOdds": -410
+      }
+    },
+    {
+      "timestamp": "2022-10-15T18:35:38Z",
+      "fighter1": {
+        "name": "Raphael Assuncao",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Victor Henry",
+        "numericOdds": -410
+      }
+    },
+    {
+      "timestamp": "2022-10-15T18:45:39Z",
+      "fighter1": {
+        "name": "Raphael Assuncao",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Victor Henry",
+        "numericOdds": -410
+      }
+    },
+    {
+      "timestamp": "2022-10-15T19:00:38Z",
+      "fighter1": {
+        "name": "Raphael Assuncao",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Victor Henry",
+        "numericOdds": -410
+      }
+    },
+    {
+      "timestamp": "2022-10-15T19:15:38Z",
+      "fighter1": {
+        "name": "Raphael Assuncao",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Victor Henry",
+        "numericOdds": -410
+      }
+    },
+    {
+      "timestamp": "2022-10-15T19:25:39Z",
+      "fighter1": {
+        "name": "Raphael Assuncao",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Victor Henry",
+        "numericOdds": -410
+      }
+    },
+    {
+      "timestamp": "2022-10-15T19:40:38Z",
+      "fighter1": {
+        "name": "Raphael Assuncao",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Victor Henry",
+        "numericOdds": -410
+      }
+    },
+    {
+      "timestamp": "2022-10-15T19:50:38Z",
+      "fighter1": {
+        "name": "Raphael Assuncao",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Victor Henry",
+        "numericOdds": -410
+      }
+    },
+    {
+      "timestamp": "2022-10-15T20:05:38Z",
+      "fighter1": {
+        "name": "Raphael Assuncao",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Victor Henry",
+        "numericOdds": -410
+      }
+    },
+    {
+      "timestamp": "2022-10-15T20:20:38Z",
+      "fighter1": {
+        "name": "Raphael Assuncao",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Victor Henry",
+        "numericOdds": -410
+      }
+    },
+    {
+      "timestamp": "2022-10-15T20:35:38Z",
+      "fighter1": {
+        "name": "Raphael Assuncao",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Victor Henry",
+        "numericOdds": -410
+      }
+    },
+    {
+      "timestamp": "2022-10-15T20:50:38Z",
+      "fighter1": {
+        "name": "Raphael Assuncao",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Victor Henry",
+        "numericOdds": -410
+      }
+    },
+    {
+      "timestamp": "2022-10-15T21:00:38Z",
+      "fighter1": {
+        "name": "Raphael Assuncao",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Victor Henry",
+        "numericOdds": -410
+      }
+    },
+    {
+      "timestamp": "2022-10-15T21:10:39Z",
+      "fighter1": {
+        "name": "Raphael Assuncao",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Victor Henry",
+        "numericOdds": -410
+      }
+    },
+    {
+      "timestamp": "2022-10-15T21:25:38Z",
+      "fighter1": {
+        "name": "Raphael Assuncao",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Victor Henry",
+        "numericOdds": -410
+      }
+    },
+    {
+      "timestamp": "2022-10-15T21:40:38Z",
+      "fighter1": {
+        "name": "Raphael Assuncao",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Victor Henry",
+        "numericOdds": -410
+      }
+    },
+    {
+      "timestamp": "2022-10-15T21:50:38Z",
+      "fighter1": {
+        "name": "Raphael Assuncao",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Victor Henry",
+        "numericOdds": -410
+      }
+    },
+    {
+      "timestamp": "2022-10-15T22:05:38Z",
+      "fighter1": {
+        "name": "Raphael Assuncao",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Victor Henry",
+        "numericOdds": -410
+      }
+    },
+    {
+      "timestamp": "2022-10-15T22:15:38Z",
+      "fighter1": {
+        "name": "Raphael Assuncao",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Victor Henry",
+        "numericOdds": -410
+      }
+    },
+    {
+      "timestamp": "2022-10-15T22:30:38Z",
+      "fighter1": {
+        "name": "Raphael Assuncao",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Victor Henry",
+        "numericOdds": -410
+      }
+    },
+    {
+      "timestamp": "2022-10-15T22:40:39Z",
+      "fighter1": {
+        "name": "Raphael Assuncao",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Victor Henry",
+        "numericOdds": -435
+      }
+    },
+    {
+      "timestamp": "2022-10-15T22:55:39Z",
+      "fighter1": {
+        "name": "Raphael Assuncao",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Victor Henry",
+        "numericOdds": -435
+      }
+    },
+    {
+      "timestamp": "2022-10-15T23:10:38Z",
+      "fighter1": {
+        "name": "Raphael Assuncao",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Victor Henry",
+        "numericOdds": -435
+      }
+    },
+    {
+      "timestamp": "2022-10-15T23:25:38Z",
+      "fighter1": {
+        "name": "Raphael Assuncao",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Victor Henry",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2022-10-15T23:40:38Z",
+      "fighter1": {
+        "name": "Raphael Assuncao",
+        "numericOdds": 245
+      },
+      "fighter2": {
+        "name": "Victor Henry",
+        "numericOdds": -315
+      }
+    },
+    {
+      "timestamp": "2022-10-15T23:55:38Z",
+      "fighter1": {
+        "name": "Raphael Assuncao",
+        "numericOdds": -4000
+      },
+      "fighter2": {
+        "name": "Victor Henry",
+        "numericOdds": 1300
       }
     }
   ]

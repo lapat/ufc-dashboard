@@ -1,122 +1,551 @@
 {
   "fightId": "jordanwright_vs_zacpauga_2023-02-19",
   "fightTitle": "Jordan Wright vs Zac Pauga",
-  "startTime": "2023-02-11T19:00:39Z",
-  "endTime": "2023-02-12T09:45:38Z",
-  "dataPoints": 63,
+  "startTime": "2023-02-18T13:55:39Z",
+  "endTime": "2023-02-19T02:20:38Z",
+  "dataPoints": 52,
   "oddsHistory": [
     {
-      "timestamp": "2023-02-11T19:00:39Z",
+      "timestamp": "2023-02-18T13:55:39Z",
       "fighter1": {
         "name": "Jordan Wright",
-        "numericOdds": 240
+        "numericOdds": 225
       },
       "fighter2": {
         "name": "Zac Pauga",
-        "numericOdds": -285
+        "numericOdds": -265
       }
     },
     {
-      "timestamp": "2023-02-11T19:15:39Z",
+      "timestamp": "2023-02-18T14:10:39Z",
       "fighter1": {
         "name": "Jordan Wright",
-        "numericOdds": 240
+        "numericOdds": 225
       },
       "fighter2": {
         "name": "Zac Pauga",
-        "numericOdds": -285
+        "numericOdds": -265
       }
     },
     {
-      "timestamp": "2023-02-11T19:30:39Z",
+      "timestamp": "2023-02-18T14:25:39Z",
       "fighter1": {
         "name": "Jordan Wright",
-        "numericOdds": 240
+        "numericOdds": 225
       },
       "fighter2": {
         "name": "Zac Pauga",
-        "numericOdds": -285
+        "numericOdds": -265
       }
     },
     {
-      "timestamp": "2023-02-11T19:45:39Z",
+      "timestamp": "2023-02-18T14:40:39Z",
       "fighter1": {
         "name": "Jordan Wright",
-        "numericOdds": 240
+        "numericOdds": 225
       },
       "fighter2": {
         "name": "Zac Pauga",
-        "numericOdds": -285
+        "numericOdds": -265
       }
     },
     {
-      "timestamp": "2023-02-11T20:00:39Z",
+      "timestamp": "2023-02-18T14:55:39Z",
       "fighter1": {
         "name": "Jordan Wright",
-        "numericOdds": 240
+        "numericOdds": 225
       },
       "fighter2": {
         "name": "Zac Pauga",
-        "numericOdds": -285
+        "numericOdds": -265
       }
     },
     {
-      "timestamp": "2023-02-11T20:15:38Z",
+      "timestamp": "2023-02-18T15:10:39Z",
       "fighter1": {
         "name": "Jordan Wright",
-        "numericOdds": 240
+        "numericOdds": 225
       },
       "fighter2": {
         "name": "Zac Pauga",
-        "numericOdds": -285
+        "numericOdds": -265
       }
     },
     {
-      "timestamp": "2023-02-11T20:25:39Z",
+      "timestamp": "2023-02-18T15:25:39Z",
       "fighter1": {
         "name": "Jordan Wright",
-        "numericOdds": 240
+        "numericOdds": 225
       },
       "fighter2": {
         "name": "Zac Pauga",
-        "numericOdds": -285
+        "numericOdds": -265
       }
     },
     {
-      "timestamp": "2023-02-11T20:40:39Z",
+      "timestamp": "2023-02-18T15:40:39Z",
       "fighter1": {
         "name": "Jordan Wright",
-        "numericOdds": 240
+        "numericOdds": 225
       },
       "fighter2": {
         "name": "Zac Pauga",
-        "numericOdds": -285
+        "numericOdds": -265
       }
     },
     {
-      "timestamp": "2023-02-11T20:55:39Z",
+      "timestamp": "2023-02-18T15:55:39Z",
       "fighter1": {
         "name": "Jordan Wright",
-        "numericOdds": 240
+        "numericOdds": 225
       },
       "fighter2": {
         "name": "Zac Pauga",
-        "numericOdds": -285
+        "numericOdds": -265
       }
     },
     {
-      "timestamp": "2023-02-11T21:10:38Z",
+      "timestamp": "2023-02-18T16:10:39Z",
       "fighter1": {
         "name": "Jordan Wright",
-        "numericOdds": 240
+        "numericOdds": 225
       },
       "fighter2": {
         "name": "Zac Pauga",
-        "numericOdds": -285
+        "numericOdds": -265
       }
     },
     {
-      "timestamp": "2023-02-11T21:25:38Z",
+      "timestamp": "2023-02-18T16:25:39Z",
+      "fighter1": {
+        "name": "Jordan Wright",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zac Pauga",
+        "numericOdds": -275
+      }
+    },
+    {
+      "timestamp": "2023-02-18T16:40:39Z",
+      "fighter1": {
+        "name": "Jordan Wright",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zac Pauga",
+        "numericOdds": -275
+      }
+    },
+    {
+      "timestamp": "2023-02-18T16:55:39Z",
+      "fighter1": {
+        "name": "Jordan Wright",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zac Pauga",
+        "numericOdds": -275
+      }
+    },
+    {
+      "timestamp": "2023-02-18T17:10:39Z",
+      "fighter1": {
+        "name": "Jordan Wright",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Zac Pauga",
+        "numericOdds": -280
+      }
+    },
+    {
+      "timestamp": "2023-02-18T17:25:39Z",
+      "fighter1": {
+        "name": "Jordan Wright",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Zac Pauga",
+        "numericOdds": -280
+      }
+    },
+    {
+      "timestamp": "2023-02-18T17:40:38Z",
+      "fighter1": {
+        "name": "Jordan Wright",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Zac Pauga",
+        "numericOdds": -280
+      }
+    },
+    {
+      "timestamp": "2023-02-18T17:50:38Z",
+      "fighter1": {
+        "name": "Jordan Wright",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Zac Pauga",
+        "numericOdds": -280
+      }
+    },
+    {
+      "timestamp": "2023-02-18T18:00:38Z",
+      "fighter1": {
+        "name": "Jordan Wright",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Zac Pauga",
+        "numericOdds": -280
+      }
+    },
+    {
+      "timestamp": "2023-02-18T18:10:39Z",
+      "fighter1": {
+        "name": "Jordan Wright",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Zac Pauga",
+        "numericOdds": -280
+      }
+    },
+    {
+      "timestamp": "2023-02-18T18:25:39Z",
+      "fighter1": {
+        "name": "Jordan Wright",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Zac Pauga",
+        "numericOdds": -280
+      }
+    },
+    {
+      "timestamp": "2023-02-18T18:40:38Z",
+      "fighter1": {
+        "name": "Jordan Wright",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Zac Pauga",
+        "numericOdds": -280
+      }
+    },
+    {
+      "timestamp": "2023-02-18T18:55:38Z",
+      "fighter1": {
+        "name": "Jordan Wright",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Zac Pauga",
+        "numericOdds": -280
+      }
+    },
+    {
+      "timestamp": "2023-02-18T19:10:38Z",
+      "fighter1": {
+        "name": "Jordan Wright",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Zac Pauga",
+        "numericOdds": -280
+      }
+    },
+    {
+      "timestamp": "2023-02-18T19:25:38Z",
+      "fighter1": {
+        "name": "Jordan Wright",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Zac Pauga",
+        "numericOdds": -280
+      }
+    },
+    {
+      "timestamp": "2023-02-18T19:35:38Z",
+      "fighter1": {
+        "name": "Jordan Wright",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Zac Pauga",
+        "numericOdds": -280
+      }
+    },
+    {
+      "timestamp": "2023-02-18T19:50:38Z",
+      "fighter1": {
+        "name": "Jordan Wright",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Zac Pauga",
+        "numericOdds": -280
+      }
+    },
+    {
+      "timestamp": "2023-02-18T20:05:38Z",
+      "fighter1": {
+        "name": "Jordan Wright",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Zac Pauga",
+        "numericOdds": -280
+      }
+    },
+    {
+      "timestamp": "2023-02-18T20:20:38Z",
+      "fighter1": {
+        "name": "Jordan Wright",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Zac Pauga",
+        "numericOdds": -280
+      }
+    },
+    {
+      "timestamp": "2023-02-18T20:35:38Z",
+      "fighter1": {
+        "name": "Jordan Wright",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Zac Pauga",
+        "numericOdds": -280
+      }
+    },
+    {
+      "timestamp": "2023-02-18T20:50:38Z",
+      "fighter1": {
+        "name": "Jordan Wright",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Zac Pauga",
+        "numericOdds": -280
+      }
+    },
+    {
+      "timestamp": "2023-02-18T21:05:38Z",
+      "fighter1": {
+        "name": "Jordan Wright",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Zac Pauga",
+        "numericOdds": -280
+      }
+    },
+    {
+      "timestamp": "2023-02-18T21:20:38Z",
+      "fighter1": {
+        "name": "Jordan Wright",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Zac Pauga",
+        "numericOdds": -280
+      }
+    },
+    {
+      "timestamp": "2023-02-18T21:35:38Z",
+      "fighter1": {
+        "name": "Jordan Wright",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Zac Pauga",
+        "numericOdds": -280
+      }
+    },
+    {
+      "timestamp": "2023-02-18T21:50:38Z",
+      "fighter1": {
+        "name": "Jordan Wright",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Zac Pauga",
+        "numericOdds": -280
+      }
+    },
+    {
+      "timestamp": "2023-02-18T22:05:38Z",
+      "fighter1": {
+        "name": "Jordan Wright",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Zac Pauga",
+        "numericOdds": -280
+      }
+    },
+    {
+      "timestamp": "2023-02-18T22:20:38Z",
+      "fighter1": {
+        "name": "Jordan Wright",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Zac Pauga",
+        "numericOdds": -280
+      }
+    },
+    {
+      "timestamp": "2023-02-18T22:35:38Z",
+      "fighter1": {
+        "name": "Jordan Wright",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Zac Pauga",
+        "numericOdds": -280
+      }
+    },
+    {
+      "timestamp": "2023-02-18T22:50:38Z",
+      "fighter1": {
+        "name": "Jordan Wright",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Zac Pauga",
+        "numericOdds": -280
+      }
+    },
+    {
+      "timestamp": "2023-02-18T23:05:38Z",
+      "fighter1": {
+        "name": "Jordan Wright",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Zac Pauga",
+        "numericOdds": -280
+      }
+    },
+    {
+      "timestamp": "2023-02-18T23:20:38Z",
+      "fighter1": {
+        "name": "Jordan Wright",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Zac Pauga",
+        "numericOdds": -280
+      }
+    },
+    {
+      "timestamp": "2023-02-18T23:35:38Z",
+      "fighter1": {
+        "name": "Jordan Wright",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Zac Pauga",
+        "numericOdds": -280
+      }
+    },
+    {
+      "timestamp": "2023-02-18T23:50:38Z",
+      "fighter1": {
+        "name": "Jordan Wright",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Zac Pauga",
+        "numericOdds": -280
+      }
+    },
+    {
+      "timestamp": "2023-02-19T00:05:38Z",
+      "fighter1": {
+        "name": "Jordan Wright",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Zac Pauga",
+        "numericOdds": -280
+      }
+    },
+    {
+      "timestamp": "2023-02-19T00:20:38Z",
+      "fighter1": {
+        "name": "Jordan Wright",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Zac Pauga",
+        "numericOdds": -280
+      }
+    },
+    {
+      "timestamp": "2023-02-19T00:35:38Z",
+      "fighter1": {
+        "name": "Jordan Wright",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Zac Pauga",
+        "numericOdds": -280
+      }
+    },
+    {
+      "timestamp": "2023-02-19T00:50:38Z",
+      "fighter1": {
+        "name": "Jordan Wright",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Zac Pauga",
+        "numericOdds": -280
+      }
+    },
+    {
+      "timestamp": "2023-02-19T01:05:38Z",
+      "fighter1": {
+        "name": "Jordan Wright",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Zac Pauga",
+        "numericOdds": -280
+      }
+    },
+    {
+      "timestamp": "2023-02-19T01:20:38Z",
+      "fighter1": {
+        "name": "Jordan Wright",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Zac Pauga",
+        "numericOdds": -280
+      }
+    },
+    {
+      "timestamp": "2023-02-19T01:35:38Z",
+      "fighter1": {
+        "name": "Jordan Wright",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Zac Pauga",
+        "numericOdds": -280
+      }
+    },
+    {
+      "timestamp": "2023-02-19T01:50:38Z",
       "fighter1": {
         "name": "Jordan Wright",
         "numericOdds": 245
@@ -127,575 +556,25 @@
       }
     },
     {
-      "timestamp": "2023-02-11T21:40:38Z",
+      "timestamp": "2023-02-19T02:05:38Z",
       "fighter1": {
         "name": "Jordan Wright",
-        "numericOdds": 245
+        "numericOdds": 1000
       },
       "fighter2": {
         "name": "Zac Pauga",
-        "numericOdds": -295
+        "numericOdds": -2100
       }
     },
     {
-      "timestamp": "2023-02-11T21:55:38Z",
+      "timestamp": "2023-02-19T02:20:38Z",
       "fighter1": {
         "name": "Jordan Wright",
-        "numericOdds": 245
+        "numericOdds": 2000
       },
       "fighter2": {
         "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-11T22:05:38Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-11T22:20:38Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-11T22:35:38Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-11T22:50:38Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-11T23:05:38Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-11T23:20:38Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-11T23:35:38Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-11T23:50:38Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-12T00:05:38Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-12T00:20:38Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-12T00:35:38Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-12T00:50:38Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-12T01:05:38Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-12T01:20:38Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-12T01:35:37Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-12T01:45:38Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-12T02:00:38Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-12T02:15:37Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-12T02:25:38Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-12T02:40:38Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-12T02:55:38Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-12T03:10:37Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-12T03:20:38Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-12T03:35:37Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-12T03:45:37Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-12T03:55:37Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-12T04:10:37Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-12T04:20:38Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-12T04:35:38Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-12T04:50:38Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-12T05:05:38Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-12T05:20:38Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-12T05:35:38Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-12T05:50:38Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-12T06:05:38Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-12T06:20:38Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-12T06:35:38Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-12T06:50:38Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-12T07:05:38Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-12T07:20:38Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-12T07:35:38Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-12T07:50:38Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-12T08:05:38Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-12T08:20:38Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-12T08:35:38Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-12T08:50:38Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-12T09:05:38Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-12T09:20:38Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-12T09:35:37Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
-      }
-    },
-    {
-      "timestamp": "2023-02-12T09:45:38Z",
-      "fighter1": {
-        "name": "Jordan Wright",
-        "numericOdds": 245
-      },
-      "fighter2": {
-        "name": "Zac Pauga",
-        "numericOdds": -295
+        "numericOdds": -12500
       }
     }
   ]

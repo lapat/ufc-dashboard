@@ -1,353 +1,166 @@
 {
   "fightId": "joaquinbuckley_vs_abdulrazakalhassan_2022-02-20",
   "fightTitle": "Joaquin Buckley vs Abdul Razak Alhassan",
-  "startTime": "2021-12-18T13:55:00Z",
-  "endTime": "2022-01-23T09:45:00Z",
-  "dataPoints": 240,
+  "startTime": "2022-02-19T13:55:00Z",
+  "endTime": "2022-02-20T00:35:00Z",
+  "dataPoints": 65,
   "oddsHistory": [
     {
-      "timestamp": "2021-12-18T13:55:00Z",
+      "timestamp": "2022-02-19T13:55:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-18T14:05:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-18T14:15:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-18T14:25:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-18T14:35:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-18T14:45:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-18T14:55:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-18T15:05:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-18T15:15:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-18T15:25:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-18T15:35:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-18T15:45:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-18T15:55:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-18T16:05:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-18T16:15:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-18T16:25:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-18T16:35:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-18T16:45:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
+        "numericOdds": 140
       },
       "fighter2": {
         "name": "Joaquin Buckley",
-        "numericOdds": -154
+        "numericOdds": -161
       }
     },
     {
-      "timestamp": "2021-12-18T16:55:00Z",
+      "timestamp": "2022-02-19T14:05:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
+        "numericOdds": 140
       },
       "fighter2": {
         "name": "Joaquin Buckley",
-        "numericOdds": -154
+        "numericOdds": -161
       }
     },
     {
-      "timestamp": "2021-12-18T17:05:00Z",
+      "timestamp": "2022-02-19T14:15:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
+        "numericOdds": 140
       },
       "fighter2": {
         "name": "Joaquin Buckley",
-        "numericOdds": -154
+        "numericOdds": -161
       }
     },
     {
-      "timestamp": "2021-12-18T17:15:00Z",
+      "timestamp": "2022-02-19T14:25:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
+        "numericOdds": 145
       },
       "fighter2": {
         "name": "Joaquin Buckley",
-        "numericOdds": -154
+        "numericOdds": -164
       }
     },
     {
-      "timestamp": "2021-12-18T17:25:00Z",
+      "timestamp": "2022-02-19T14:35:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
+        "numericOdds": 145
       },
       "fighter2": {
         "name": "Joaquin Buckley",
-        "numericOdds": -154
+        "numericOdds": -164
       }
     },
     {
-      "timestamp": "2021-12-18T17:35:00Z",
+      "timestamp": "2022-02-19T14:45:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
+        "numericOdds": 145
       },
       "fighter2": {
         "name": "Joaquin Buckley",
-        "numericOdds": -154
+        "numericOdds": -164
       }
     },
     {
-      "timestamp": "2021-12-18T17:45:00Z",
+      "timestamp": "2022-02-19T14:55:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
+        "numericOdds": 145
       },
       "fighter2": {
         "name": "Joaquin Buckley",
-        "numericOdds": -154
+        "numericOdds": -164
       }
     },
     {
-      "timestamp": "2021-12-18T17:55:00Z",
+      "timestamp": "2022-02-19T15:05:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
+        "numericOdds": 145
       },
       "fighter2": {
         "name": "Joaquin Buckley",
-        "numericOdds": -154
+        "numericOdds": -164
       }
     },
     {
-      "timestamp": "2021-12-18T18:05:00Z",
+      "timestamp": "2022-02-19T15:15:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
+        "numericOdds": 145
       },
       "fighter2": {
         "name": "Joaquin Buckley",
-        "numericOdds": -154
+        "numericOdds": -164
       }
     },
     {
-      "timestamp": "2021-12-18T18:15:00Z",
+      "timestamp": "2022-02-19T15:25:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
+        "numericOdds": 145
       },
       "fighter2": {
         "name": "Joaquin Buckley",
-        "numericOdds": -154
+        "numericOdds": -164
       }
     },
     {
-      "timestamp": "2021-12-18T18:25:00Z",
+      "timestamp": "2022-02-19T15:35:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
+        "numericOdds": 145
       },
       "fighter2": {
         "name": "Joaquin Buckley",
-        "numericOdds": -154
+        "numericOdds": -164
       }
     },
     {
-      "timestamp": "2021-12-18T18:35:00Z",
+      "timestamp": "2022-02-19T15:45:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
+        "numericOdds": 140
       },
       "fighter2": {
         "name": "Joaquin Buckley",
-        "numericOdds": -154
+        "numericOdds": -161
       }
     },
     {
-      "timestamp": "2021-12-18T18:45:00Z",
+      "timestamp": "2022-02-19T15:55:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
+        "numericOdds": 140
       },
       "fighter2": {
         "name": "Joaquin Buckley",
-        "numericOdds": -154
+        "numericOdds": -161
       }
     },
     {
-      "timestamp": "2021-12-18T18:55:00Z",
+      "timestamp": "2022-02-19T16:05:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
+        "numericOdds": 140
       },
       "fighter2": {
         "name": "Joaquin Buckley",
-        "numericOdds": -154
+        "numericOdds": -161
       }
     },
     {
-      "timestamp": "2021-12-18T19:05:00Z",
+      "timestamp": "2022-02-19T16:15:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
         "numericOdds": 135
@@ -358,7 +171,7 @@
       }
     },
     {
-      "timestamp": "2021-12-18T19:15:00Z",
+      "timestamp": "2022-02-19T16:25:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
         "numericOdds": 135
@@ -369,7 +182,7 @@
       }
     },
     {
-      "timestamp": "2021-12-18T19:25:00Z",
+      "timestamp": "2022-02-19T16:35:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
         "numericOdds": 135
@@ -380,106 +193,106 @@
       }
     },
     {
-      "timestamp": "2021-12-18T19:35:00Z",
+      "timestamp": "2022-02-19T16:45:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
+        "numericOdds": 140
       },
       "fighter2": {
         "name": "Joaquin Buckley",
-        "numericOdds": -154
+        "numericOdds": -161
       }
     },
     {
-      "timestamp": "2021-12-18T19:45:00Z",
+      "timestamp": "2022-02-19T16:55:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
+        "numericOdds": 140
       },
       "fighter2": {
         "name": "Joaquin Buckley",
-        "numericOdds": -154
+        "numericOdds": -161
       }
     },
     {
-      "timestamp": "2021-12-18T19:55:00Z",
+      "timestamp": "2022-02-19T17:05:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
+        "numericOdds": 140
       },
       "fighter2": {
         "name": "Joaquin Buckley",
-        "numericOdds": -154
+        "numericOdds": -161
       }
     },
     {
-      "timestamp": "2021-12-18T20:05:00Z",
+      "timestamp": "2022-02-19T17:15:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
+        "numericOdds": 140
       },
       "fighter2": {
         "name": "Joaquin Buckley",
-        "numericOdds": -154
+        "numericOdds": -161
       }
     },
     {
-      "timestamp": "2021-12-18T20:15:00Z",
+      "timestamp": "2022-02-19T17:25:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
+        "numericOdds": 140
       },
       "fighter2": {
         "name": "Joaquin Buckley",
-        "numericOdds": -154
+        "numericOdds": -161
       }
     },
     {
-      "timestamp": "2021-12-18T20:25:00Z",
+      "timestamp": "2022-02-19T17:35:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
+        "numericOdds": 140
       },
       "fighter2": {
         "name": "Joaquin Buckley",
-        "numericOdds": -154
+        "numericOdds": -161
       }
     },
     {
-      "timestamp": "2021-12-18T20:35:00Z",
+      "timestamp": "2022-02-19T17:45:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
+        "numericOdds": 140
       },
       "fighter2": {
         "name": "Joaquin Buckley",
-        "numericOdds": -154
+        "numericOdds": -161
       }
     },
     {
-      "timestamp": "2021-12-18T20:45:00Z",
+      "timestamp": "2022-02-19T17:55:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
+        "numericOdds": 140
       },
       "fighter2": {
         "name": "Joaquin Buckley",
-        "numericOdds": -154
+        "numericOdds": -161
       }
     },
     {
-      "timestamp": "2021-12-18T20:55:00Z",
+      "timestamp": "2022-02-19T18:05:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
+        "numericOdds": 140
       },
       "fighter2": {
         "name": "Joaquin Buckley",
-        "numericOdds": -154
+        "numericOdds": -161
       }
     },
     {
-      "timestamp": "2021-12-18T21:05:00Z",
+      "timestamp": "2022-02-19T18:15:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
         "numericOdds": 135
@@ -490,7 +303,7 @@
       }
     },
     {
-      "timestamp": "2021-12-18T21:15:00Z",
+      "timestamp": "2022-02-19T18:25:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
         "numericOdds": 135
@@ -501,7 +314,7 @@
       }
     },
     {
-      "timestamp": "2021-12-18T21:25:00Z",
+      "timestamp": "2022-02-19T18:35:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
         "numericOdds": 135
@@ -512,106 +325,106 @@
       }
     },
     {
-      "timestamp": "2021-12-18T21:35:00Z",
+      "timestamp": "2022-02-19T18:45:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
+        "numericOdds": 140
       },
       "fighter2": {
         "name": "Joaquin Buckley",
-        "numericOdds": -154
+        "numericOdds": -161
       }
     },
     {
-      "timestamp": "2021-12-18T21:45:00Z",
+      "timestamp": "2022-02-19T18:55:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
+        "numericOdds": 140
       },
       "fighter2": {
         "name": "Joaquin Buckley",
-        "numericOdds": -154
+        "numericOdds": -161
       }
     },
     {
-      "timestamp": "2021-12-18T21:55:00Z",
+      "timestamp": "2022-02-19T19:05:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
+        "numericOdds": 140
       },
       "fighter2": {
         "name": "Joaquin Buckley",
-        "numericOdds": -154
+        "numericOdds": -161
       }
     },
     {
-      "timestamp": "2021-12-18T22:05:00Z",
+      "timestamp": "2022-02-19T19:15:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
+        "numericOdds": 140
       },
       "fighter2": {
         "name": "Joaquin Buckley",
-        "numericOdds": -154
+        "numericOdds": -161
       }
     },
     {
-      "timestamp": "2021-12-18T22:15:00Z",
+      "timestamp": "2022-02-19T19:25:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
+        "numericOdds": 140
       },
       "fighter2": {
         "name": "Joaquin Buckley",
-        "numericOdds": -154
+        "numericOdds": -161
       }
     },
     {
-      "timestamp": "2021-12-18T22:25:00Z",
+      "timestamp": "2022-02-19T19:35:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
+        "numericOdds": 140
       },
       "fighter2": {
         "name": "Joaquin Buckley",
-        "numericOdds": -154
+        "numericOdds": -161
       }
     },
     {
-      "timestamp": "2021-12-18T22:35:00Z",
+      "timestamp": "2022-02-19T19:45:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
+        "numericOdds": 140
       },
       "fighter2": {
         "name": "Joaquin Buckley",
-        "numericOdds": -154
+        "numericOdds": -161
       }
     },
     {
-      "timestamp": "2021-12-18T22:45:00Z",
+      "timestamp": "2022-02-19T19:55:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
+        "numericOdds": 140
       },
       "fighter2": {
         "name": "Joaquin Buckley",
-        "numericOdds": -154
+        "numericOdds": -161
       }
     },
     {
-      "timestamp": "2021-12-18T22:55:00Z",
+      "timestamp": "2022-02-19T20:05:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
+        "numericOdds": 140
       },
       "fighter2": {
         "name": "Joaquin Buckley",
-        "numericOdds": -154
+        "numericOdds": -161
       }
     },
     {
-      "timestamp": "2021-12-18T23:05:00Z",
+      "timestamp": "2022-02-19T20:15:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
         "numericOdds": 135
@@ -622,7 +435,7 @@
       }
     },
     {
-      "timestamp": "2021-12-18T23:15:00Z",
+      "timestamp": "2022-02-19T20:25:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
         "numericOdds": 135
@@ -633,7 +446,7 @@
       }
     },
     {
-      "timestamp": "2021-12-18T23:25:00Z",
+      "timestamp": "2022-02-19T20:35:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
         "numericOdds": 135
@@ -644,7 +457,7 @@
       }
     },
     {
-      "timestamp": "2021-12-18T23:35:00Z",
+      "timestamp": "2022-02-19T20:45:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
         "numericOdds": 135
@@ -655,7 +468,7 @@
       }
     },
     {
-      "timestamp": "2021-12-18T23:45:00Z",
+      "timestamp": "2022-02-19T20:55:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
         "numericOdds": 135
@@ -666,7 +479,7 @@
       }
     },
     {
-      "timestamp": "2021-12-18T23:55:00Z",
+      "timestamp": "2022-02-19T21:05:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
         "numericOdds": 135
@@ -677,7 +490,7 @@
       }
     },
     {
-      "timestamp": "2021-12-19T00:05:00Z",
+      "timestamp": "2022-02-19T21:15:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
         "numericOdds": 135
@@ -688,7 +501,7 @@
       }
     },
     {
-      "timestamp": "2021-12-19T00:15:00Z",
+      "timestamp": "2022-02-19T21:25:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
         "numericOdds": 135
@@ -699,7 +512,7 @@
       }
     },
     {
-      "timestamp": "2021-12-19T00:25:00Z",
+      "timestamp": "2022-02-19T21:35:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
         "numericOdds": 135
@@ -710,7 +523,7 @@
       }
     },
     {
-      "timestamp": "2021-12-19T00:35:00Z",
+      "timestamp": "2022-02-19T21:45:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
         "numericOdds": 135
@@ -721,7 +534,7 @@
       }
     },
     {
-      "timestamp": "2021-12-19T00:45:00Z",
+      "timestamp": "2022-02-19T21:55:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
         "numericOdds": 135
@@ -732,7 +545,7 @@
       }
     },
     {
-      "timestamp": "2021-12-19T00:55:00Z",
+      "timestamp": "2022-02-19T22:05:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
         "numericOdds": 135
@@ -743,7 +556,7 @@
       }
     },
     {
-      "timestamp": "2021-12-19T01:05:00Z",
+      "timestamp": "2022-02-19T22:15:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
         "numericOdds": 135
@@ -754,7 +567,7 @@
       }
     },
     {
-      "timestamp": "2021-12-19T01:15:00Z",
+      "timestamp": "2022-02-19T22:25:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
         "numericOdds": 135
@@ -765,7 +578,7 @@
       }
     },
     {
-      "timestamp": "2021-12-19T01:25:00Z",
+      "timestamp": "2022-02-19T22:35:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
         "numericOdds": 135
@@ -776,7 +589,7 @@
       }
     },
     {
-      "timestamp": "2021-12-19T01:35:00Z",
+      "timestamp": "2022-02-19T22:45:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
         "numericOdds": 135
@@ -787,7 +600,7 @@
       }
     },
     {
-      "timestamp": "2021-12-19T01:45:00Z",
+      "timestamp": "2022-02-19T22:55:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
         "numericOdds": 135
@@ -798,7 +611,7 @@
       }
     },
     {
-      "timestamp": "2021-12-19T01:55:00Z",
+      "timestamp": "2022-02-19T23:05:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
         "numericOdds": 135
@@ -809,7 +622,7 @@
       }
     },
     {
-      "timestamp": "2021-12-19T02:05:00Z",
+      "timestamp": "2022-02-19T23:15:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
         "numericOdds": 135
@@ -820,40 +633,40 @@
       }
     },
     {
-      "timestamp": "2021-12-19T02:15:00Z",
+      "timestamp": "2022-02-19T23:25:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
+        "numericOdds": 130
       },
       "fighter2": {
         "name": "Joaquin Buckley",
-        "numericOdds": -154
+        "numericOdds": -149
       }
     },
     {
-      "timestamp": "2021-12-19T02:25:00Z",
+      "timestamp": "2022-02-19T23:35:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
+        "numericOdds": 130
       },
       "fighter2": {
         "name": "Joaquin Buckley",
-        "numericOdds": -154
+        "numericOdds": -149
       }
     },
     {
-      "timestamp": "2021-12-19T02:35:00Z",
+      "timestamp": "2022-02-19T23:45:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
+        "numericOdds": 130
       },
       "fighter2": {
         "name": "Joaquin Buckley",
-        "numericOdds": -154
+        "numericOdds": -149
       }
     },
     {
-      "timestamp": "2021-12-19T02:45:00Z",
+      "timestamp": "2022-02-19T23:55:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
         "numericOdds": 135
@@ -864,7 +677,7 @@
       }
     },
     {
-      "timestamp": "2021-12-19T02:55:00Z",
+      "timestamp": "2022-02-20T00:05:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
         "numericOdds": 135
@@ -875,7 +688,7 @@
       }
     },
     {
-      "timestamp": "2021-12-19T03:05:00Z",
+      "timestamp": "2022-02-20T00:15:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
         "numericOdds": 135
@@ -886,1763 +699,25 @@
       }
     },
     {
-      "timestamp": "2021-12-19T03:15:00Z",
+      "timestamp": "2022-02-20T00:25:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
+        "numericOdds": 140
       },
       "fighter2": {
         "name": "Joaquin Buckley",
-        "numericOdds": -154
+        "numericOdds": -189
       }
     },
     {
-      "timestamp": "2021-12-19T03:25:00Z",
+      "timestamp": "2022-02-20T00:35:00Z",
       "fighter1": {
         "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-19T03:35:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-19T03:45:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-19T03:55:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-19T04:05:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-19T04:15:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-19T04:25:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-19T04:35:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-19T04:45:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-19T04:55:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-19T05:05:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-19T05:15:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-19T05:25:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-19T05:35:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-19T05:45:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-19T05:55:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-19T06:05:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-19T06:15:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-19T06:25:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-19T06:35:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-19T06:45:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-19T06:55:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-19T07:05:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-19T07:15:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-19T07:25:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-19T07:35:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-19T07:45:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-19T07:55:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-19T08:05:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-19T08:15:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-19T08:25:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-19T08:35:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-19T08:45:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-19T08:55:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-19T09:05:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-19T09:15:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-19T09:25:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-19T09:35:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2021-12-19T09:45:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -154
-      }
-    },
-    {
-      "timestamp": "2022-01-22T13:55:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T14:05:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T14:15:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T14:25:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T14:35:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T14:45:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T14:55:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T15:05:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T15:15:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T15:25:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T15:35:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T15:45:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T15:55:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T16:05:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T16:15:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T16:25:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T16:35:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T16:45:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T16:55:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T17:05:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T17:15:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T17:25:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T17:35:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T17:45:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T17:55:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T18:05:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T18:15:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T18:25:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T18:35:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T18:45:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T18:55:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T19:05:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T19:15:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T19:25:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T19:35:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T19:45:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T19:55:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T20:05:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T20:15:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T20:25:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T20:35:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T20:45:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T20:55:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T21:05:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T21:15:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T21:25:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T21:35:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T21:45:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T21:55:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T22:05:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T22:15:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T22:25:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T22:35:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T22:45:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T22:55:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T23:05:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T23:15:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T23:25:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T23:35:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T23:45:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-22T23:55:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T00:05:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T00:15:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T00:25:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T00:35:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T00:45:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T00:55:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T01:05:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T01:15:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T01:25:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T01:35:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T01:45:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T01:55:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T02:05:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T02:15:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T02:25:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T02:35:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T02:45:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T02:55:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T03:05:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T03:15:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T03:25:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T03:35:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T03:45:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T03:55:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T04:05:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T04:15:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T04:25:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T04:35:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T04:45:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T04:55:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T05:05:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T05:15:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T05:25:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T05:35:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T05:45:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T05:55:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T06:05:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T06:15:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T06:25:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T06:35:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T06:45:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T06:55:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T07:05:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T07:15:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T07:25:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T07:35:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T07:45:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T07:55:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T08:05:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T08:15:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T08:25:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T08:35:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T08:45:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T08:55:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T09:05:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T09:15:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T09:25:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T09:35:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
-      }
-    },
-    {
-      "timestamp": "2022-01-23T09:45:00Z",
-      "fighter1": {
-        "name": "Abdul Razak Alhassan",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Joaquin Buckley",
-        "numericOdds": -149
+        "numericOdds": -115
       }
     }
   ]

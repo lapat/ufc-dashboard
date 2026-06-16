@@ -1,12 +1,298 @@
 {
   "fightId": "francismarshall_vs_isaacdulgarian_2023-08-12",
   "fightTitle": "Francis Marshall vs Isaac Dulgarian",
-  "startTime": "2023-08-08T13:55:42Z",
-  "endTime": "2023-08-08T15:15:42Z",
-  "dataPoints": 7,
+  "startTime": "2023-08-12T13:55:42Z",
+  "endTime": "2023-08-12T22:00:41Z",
+  "dataPoints": 38,
   "oddsHistory": [
     {
-      "timestamp": "2023-08-08T13:55:42Z",
+      "timestamp": "2023-08-12T13:55:42Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -180
+      },
+      "fighter2": {
+        "name": "Isaac Dulgarian",
+        "numericOdds": 150
+      }
+    },
+    {
+      "timestamp": "2023-08-12T14:05:42Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -180
+      },
+      "fighter2": {
+        "name": "Isaac Dulgarian",
+        "numericOdds": 150
+      }
+    },
+    {
+      "timestamp": "2023-08-12T14:20:42Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -180
+      },
+      "fighter2": {
+        "name": "Isaac Dulgarian",
+        "numericOdds": 150
+      }
+    },
+    {
+      "timestamp": "2023-08-12T14:35:41Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -180
+      },
+      "fighter2": {
+        "name": "Isaac Dulgarian",
+        "numericOdds": 150
+      }
+    },
+    {
+      "timestamp": "2023-08-12T14:45:42Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -180
+      },
+      "fighter2": {
+        "name": "Isaac Dulgarian",
+        "numericOdds": 150
+      }
+    },
+    {
+      "timestamp": "2023-08-12T15:00:41Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -180
+      },
+      "fighter2": {
+        "name": "Isaac Dulgarian",
+        "numericOdds": 150
+      }
+    },
+    {
+      "timestamp": "2023-08-12T15:10:40Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -180
+      },
+      "fighter2": {
+        "name": "Isaac Dulgarian",
+        "numericOdds": 150
+      }
+    },
+    {
+      "timestamp": "2023-08-12T15:20:41Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -180
+      },
+      "fighter2": {
+        "name": "Isaac Dulgarian",
+        "numericOdds": 150
+      }
+    },
+    {
+      "timestamp": "2023-08-12T15:35:41Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -180
+      },
+      "fighter2": {
+        "name": "Isaac Dulgarian",
+        "numericOdds": 150
+      }
+    },
+    {
+      "timestamp": "2023-08-12T15:45:41Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -180
+      },
+      "fighter2": {
+        "name": "Isaac Dulgarian",
+        "numericOdds": 150
+      }
+    },
+    {
+      "timestamp": "2023-08-12T15:55:42Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -180
+      },
+      "fighter2": {
+        "name": "Isaac Dulgarian",
+        "numericOdds": 150
+      }
+    },
+    {
+      "timestamp": "2023-08-12T16:10:41Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -180
+      },
+      "fighter2": {
+        "name": "Isaac Dulgarian",
+        "numericOdds": 150
+      }
+    },
+    {
+      "timestamp": "2023-08-12T16:20:41Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -180
+      },
+      "fighter2": {
+        "name": "Isaac Dulgarian",
+        "numericOdds": 150
+      }
+    },
+    {
+      "timestamp": "2023-08-12T16:35:41Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -180
+      },
+      "fighter2": {
+        "name": "Isaac Dulgarian",
+        "numericOdds": 150
+      }
+    },
+    {
+      "timestamp": "2023-08-12T16:50:41Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -185
+      },
+      "fighter2": {
+        "name": "Isaac Dulgarian",
+        "numericOdds": 154
+      }
+    },
+    {
+      "timestamp": "2023-08-12T17:05:41Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -185
+      },
+      "fighter2": {
+        "name": "Isaac Dulgarian",
+        "numericOdds": 154
+      }
+    },
+    {
+      "timestamp": "2023-08-12T17:20:41Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -185
+      },
+      "fighter2": {
+        "name": "Isaac Dulgarian",
+        "numericOdds": 154
+      }
+    },
+    {
+      "timestamp": "2023-08-12T17:35:41Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -185
+      },
+      "fighter2": {
+        "name": "Isaac Dulgarian",
+        "numericOdds": 154
+      }
+    },
+    {
+      "timestamp": "2023-08-12T17:50:41Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -180
+      },
+      "fighter2": {
+        "name": "Isaac Dulgarian",
+        "numericOdds": 150
+      }
+    },
+    {
+      "timestamp": "2023-08-12T18:05:41Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -180
+      },
+      "fighter2": {
+        "name": "Isaac Dulgarian",
+        "numericOdds": 150
+      }
+    },
+    {
+      "timestamp": "2023-08-12T18:20:41Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -180
+      },
+      "fighter2": {
+        "name": "Isaac Dulgarian",
+        "numericOdds": 150
+      }
+    },
+    {
+      "timestamp": "2023-08-12T18:35:40Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -180
+      },
+      "fighter2": {
+        "name": "Isaac Dulgarian",
+        "numericOdds": 150
+      }
+    },
+    {
+      "timestamp": "2023-08-12T18:45:41Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -180
+      },
+      "fighter2": {
+        "name": "Isaac Dulgarian",
+        "numericOdds": 150
+      }
+    },
+    {
+      "timestamp": "2023-08-12T19:00:40Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -180
+      },
+      "fighter2": {
+        "name": "Isaac Dulgarian",
+        "numericOdds": 150
+      }
+    },
+    {
+      "timestamp": "2023-08-12T19:15:40Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -180
+      },
+      "fighter2": {
+        "name": "Isaac Dulgarian",
+        "numericOdds": 150
+      }
+    },
+    {
+      "timestamp": "2023-08-12T19:25:41Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -180
+      },
+      "fighter2": {
+        "name": "Isaac Dulgarian",
+        "numericOdds": 150
+      }
+    },
+    {
+      "timestamp": "2023-08-12T19:40:41Z",
       "fighter1": {
         "name": "Francis Marshall",
         "numericOdds": -170
@@ -17,69 +303,124 @@
       }
     },
     {
-      "timestamp": "2023-08-08T14:10:41Z",
+      "timestamp": "2023-08-12T19:55:41Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "numericOdds": -170
+        "numericOdds": -162
       },
       "fighter2": {
         "name": "Isaac Dulgarian",
-        "numericOdds": 142
+        "numericOdds": 136
       }
     },
     {
-      "timestamp": "2023-08-08T14:25:41Z",
+      "timestamp": "2023-08-12T20:10:41Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "numericOdds": -170
+        "numericOdds": -155
       },
       "fighter2": {
         "name": "Isaac Dulgarian",
-        "numericOdds": 142
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2023-08-08T14:40:41Z",
+      "timestamp": "2023-08-12T20:20:40Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "numericOdds": -170
+        "numericOdds": -148
       },
       "fighter2": {
         "name": "Isaac Dulgarian",
-        "numericOdds": 142
+        "numericOdds": 124
       }
     },
     {
-      "timestamp": "2023-08-08T14:55:41Z",
+      "timestamp": "2023-08-12T20:35:40Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "numericOdds": -170
+        "numericOdds": -155
       },
       "fighter2": {
         "name": "Isaac Dulgarian",
-        "numericOdds": 142
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2023-08-08T15:05:41Z",
+      "timestamp": "2023-08-12T20:45:40Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "numericOdds": -170
+        "numericOdds": -155
       },
       "fighter2": {
         "name": "Isaac Dulgarian",
-        "numericOdds": 142
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2023-08-08T15:15:42Z",
+      "timestamp": "2023-08-12T21:00:40Z",
       "fighter1": {
         "name": "Francis Marshall",
-        "numericOdds": -170
+        "numericOdds": -142
       },
       "fighter2": {
         "name": "Isaac Dulgarian",
-        "numericOdds": 142
+        "numericOdds": 120
+      }
+    },
+    {
+      "timestamp": "2023-08-12T21:10:41Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -142
+      },
+      "fighter2": {
+        "name": "Isaac Dulgarian",
+        "numericOdds": 120
+      }
+    },
+    {
+      "timestamp": "2023-08-12T21:25:41Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Isaac Dulgarian",
+        "numericOdds": 124
+      }
+    },
+    {
+      "timestamp": "2023-08-12T21:40:41Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": -142
+      },
+      "fighter2": {
+        "name": "Isaac Dulgarian",
+        "numericOdds": 120
+      }
+    },
+    {
+      "timestamp": "2023-08-12T21:50:41Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Isaac Dulgarian",
+        "numericOdds": -345
+      }
+    },
+    {
+      "timestamp": "2023-08-12T22:00:41Z",
+      "fighter1": {
+        "name": "Francis Marshall",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Isaac Dulgarian",
+        "numericOdds": -345
       }
     }
   ]
