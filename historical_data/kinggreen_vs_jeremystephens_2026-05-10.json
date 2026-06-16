@@ -1,1732 +1,1835 @@
 {
-  "fightId": "kinggreen_vs_jeremystephens",
-  "fightTitle": "Connected but no betting buttons found",
-  "startTime": "2026-05-10T01:22:18.817Z",
-  "endTime": "2026-05-10T01:29:46.782Z",
-  "duration": 447965,
-  "dataPoints": 113,
+  "fightId": "kinggreen_vs_jeremystephens_2026-05-10",
+  "fightTitle": "King Green vs Jeremy Stephens",
+  "startTime": "2026-05-09T11:55:37Z",
+  "endTime": "2026-05-10T01:40:37Z",
+  "dataPoints": 166,
   "oddsHistory": [
     {
-      "timestamp": "2026-05-10T01:22:18.817Z",
+      "timestamp": "2026-05-09T11:55:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+315",
-        "numericOdds": 315
-      },
-      "isLocked": false,
-      "extractionId": 83
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:22:21.832Z",
+      "timestamp": "2026-05-09T12:00:38Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+315",
-        "numericOdds": 315
-      },
-      "isLocked": false,
-      "extractionId": 2
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:22:24.840Z",
+      "timestamp": "2026-05-09T12:05:38Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+315",
-        "numericOdds": 315
-      },
-      "isLocked": false,
-      "extractionId": 3
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:22:27.855Z",
+      "timestamp": "2026-05-09T12:10:38Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+315",
-        "numericOdds": 315
-      },
-      "isLocked": false,
-      "extractionId": 4
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:22:30.869Z",
+      "timestamp": "2026-05-09T12:15:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+315",
-        "numericOdds": 315
-      },
-      "isLocked": false,
-      "extractionId": 5
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:22:33.869Z",
+      "timestamp": "2026-05-09T12:20:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+315",
-        "numericOdds": 315
-      },
-      "isLocked": false,
-      "extractionId": 6
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:22:36.872Z",
+      "timestamp": "2026-05-09T12:25:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+315",
-        "numericOdds": 315
-      },
-      "isLocked": false,
-      "extractionId": 7
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:22:39.872Z",
+      "timestamp": "2026-05-09T12:30:38Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+315",
-        "numericOdds": 315
-      },
-      "isLocked": false,
-      "extractionId": 8
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:22:42.874Z",
+      "timestamp": "2026-05-09T12:35:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+315",
-        "numericOdds": 315
-      },
-      "isLocked": false,
-      "extractionId": 9
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:22:45.882Z",
+      "timestamp": "2026-05-09T12:40:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+315",
-        "numericOdds": 315
-      },
-      "isLocked": false,
-      "extractionId": 10
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:22:48.882Z",
+      "timestamp": "2026-05-09T12:45:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+315",
-        "numericOdds": 315
-      },
-      "isLocked": false,
-      "extractionId": 11
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:22:51.889Z",
+      "timestamp": "2026-05-09T12:50:38Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+315",
-        "numericOdds": 315
-      },
-      "isLocked": false,
-      "extractionId": 12
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:22:54.901Z",
+      "timestamp": "2026-05-09T12:55:39Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+315",
-        "numericOdds": 315
-      },
-      "isLocked": false,
-      "extractionId": 13
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:22:57.908Z",
+      "timestamp": "2026-05-09T13:00:38Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+315",
-        "numericOdds": 315
-      },
-      "isLocked": false,
-      "extractionId": 14
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:23:00.917Z",
+      "timestamp": "2026-05-09T13:05:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+315",
-        "numericOdds": 315
-      },
-      "isLocked": false,
-      "extractionId": 15
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:23:03.925Z",
+      "timestamp": "2026-05-09T13:10:38Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+315",
-        "numericOdds": 315
-      },
-      "isLocked": false,
-      "extractionId": 16
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:23:06.933Z",
+      "timestamp": "2026-05-09T13:15:38Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+315",
-        "numericOdds": 315
-      },
-      "isLocked": false,
-      "extractionId": 17
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:23:09.943Z",
+      "timestamp": "2026-05-09T13:20:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+315",
-        "numericOdds": 315
-      },
-      "isLocked": false,
-      "extractionId": 18
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:23:12.947Z",
+      "timestamp": "2026-05-09T13:25:38Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+315",
-        "numericOdds": 315
-      },
-      "isLocked": false,
-      "extractionId": 19
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:23:15.952Z",
+      "timestamp": "2026-05-09T13:30:38Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+315",
-        "numericOdds": 315
-      },
-      "isLocked": false,
-      "extractionId": 20
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:23:18.958Z",
+      "timestamp": "2026-05-09T13:35:38Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+315",
-        "numericOdds": 315
-      },
-      "isLocked": false,
-      "extractionId": 21
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:23:21.969Z",
+      "timestamp": "2026-05-09T13:40:38Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+315",
-        "numericOdds": 315
-      },
-      "isLocked": false,
-      "extractionId": 22
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:23:24.972Z",
+      "timestamp": "2026-05-09T13:45:38Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+315",
-        "numericOdds": 315
-      },
-      "isLocked": false,
-      "extractionId": 23
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:23:27.981Z",
+      "timestamp": "2026-05-09T13:50:38Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+315",
-        "numericOdds": 315
-      },
-      "isLocked": false,
-      "extractionId": 24
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:23:30.987Z",
+      "timestamp": "2026-05-09T13:55:38Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+315",
-        "numericOdds": 315
-      },
-      "isLocked": false,
-      "extractionId": 25
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:23:33.999Z",
+      "timestamp": "2026-05-09T14:00:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+315",
-        "numericOdds": 315
-      },
-      "isLocked": false,
-      "extractionId": 26
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:23:37.008Z",
+      "timestamp": "2026-05-09T14:05:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+315",
-        "numericOdds": 315
-      },
-      "isLocked": false,
-      "extractionId": 27
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:23:40.011Z",
+      "timestamp": "2026-05-09T14:10:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+315",
-        "numericOdds": 315
-      },
-      "isLocked": false,
-      "extractionId": 28
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:23:43.014Z",
+      "timestamp": "2026-05-09T14:15:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+315",
-        "numericOdds": 315
-      },
-      "isLocked": false,
-      "extractionId": 29
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:23:46.026Z",
+      "timestamp": "2026-05-09T14:20:38Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+315",
-        "numericOdds": 315
-      },
-      "isLocked": false,
-      "extractionId": 30
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:23:49.032Z",
+      "timestamp": "2026-05-09T14:25:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+315",
-        "numericOdds": 315
-      },
-      "isLocked": false,
-      "extractionId": 31
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:23:52.035Z",
+      "timestamp": "2026-05-09T14:30:38Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+315",
-        "numericOdds": 315
-      },
-      "isLocked": false,
-      "extractionId": 32
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:23:55.050Z",
+      "timestamp": "2026-05-09T14:35:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+315",
-        "numericOdds": 315
-      },
-      "isLocked": false,
-      "extractionId": 33
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:23:58.054Z",
+      "timestamp": "2026-05-09T14:40:38Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+315",
-        "numericOdds": 315
-      },
-      "isLocked": false,
-      "extractionId": 34
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:24:01.057Z",
+      "timestamp": "2026-05-09T14:45:38Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+315",
-        "numericOdds": 315
-      },
-      "isLocked": false,
-      "extractionId": 35
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:24:04.061Z",
+      "timestamp": "2026-05-09T14:50:38Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+315",
-        "numericOdds": 315
-      },
-      "isLocked": false,
-      "extractionId": 36
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:24:07.064Z",
+      "timestamp": "2026-05-09T14:55:38Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+315",
-        "numericOdds": 315
-      },
-      "isLocked": false,
-      "extractionId": 37
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:24:10.067Z",
+      "timestamp": "2026-05-09T15:00:39Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+315",
-        "numericOdds": 315
-      },
-      "isLocked": false,
-      "extractionId": 38
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:24:13.068Z",
+      "timestamp": "2026-05-09T15:05:38Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-450",
-        "numericOdds": -450
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+300",
-        "numericOdds": 300
-      },
-      "isLocked": false,
-      "extractionId": 39
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:24:16.082Z",
+      "timestamp": "2026-05-09T15:10:38Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-450",
-        "numericOdds": -450
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+300",
-        "numericOdds": 300
-      },
-      "isLocked": false,
-      "extractionId": 40
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:24:19.090Z",
+      "timestamp": "2026-05-09T15:15:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-450",
-        "numericOdds": -450
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+300",
-        "numericOdds": 300
-      },
-      "isLocked": false,
-      "extractionId": 41
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:24:22.099Z",
+      "timestamp": "2026-05-09T15:20:38Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-450",
-        "numericOdds": -450
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+300",
-        "numericOdds": 300
-      },
-      "isLocked": false,
-      "extractionId": 42
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:24:25.101Z",
+      "timestamp": "2026-05-09T15:25:38Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-450",
-        "numericOdds": -450
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+300",
-        "numericOdds": 300
-      },
-      "isLocked": false,
-      "extractionId": 43
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:24:28.103Z",
+      "timestamp": "2026-05-09T15:30:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-450",
-        "numericOdds": -450
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+300",
-        "numericOdds": 300
-      },
-      "isLocked": false,
-      "extractionId": 44
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:24:31.116Z",
+      "timestamp": "2026-05-09T15:35:38Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-450",
-        "numericOdds": -450
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+300",
-        "numericOdds": 300
-      },
-      "isLocked": false,
-      "extractionId": 45
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:24:34.124Z",
+      "timestamp": "2026-05-09T15:40:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-450",
-        "numericOdds": -450
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+300",
-        "numericOdds": 300
-      },
-      "isLocked": false,
-      "extractionId": 46
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:24:37.137Z",
+      "timestamp": "2026-05-09T15:45:38Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-450",
-        "numericOdds": -450
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+300",
-        "numericOdds": 300
-      },
-      "isLocked": false,
-      "extractionId": 47
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:24:40.143Z",
+      "timestamp": "2026-05-09T15:50:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-450",
-        "numericOdds": -450
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+300",
-        "numericOdds": 300
-      },
-      "isLocked": false,
-      "extractionId": 48
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:24:43.154Z",
+      "timestamp": "2026-05-09T15:55:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-450",
-        "numericOdds": -450
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+300",
-        "numericOdds": 300
-      },
-      "isLocked": false,
-      "extractionId": 49
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:24:46.156Z",
+      "timestamp": "2026-05-09T16:00:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-450",
-        "numericOdds": -450
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+300",
-        "numericOdds": 300
-      },
-      "isLocked": false,
-      "extractionId": 50
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:24:49.167Z",
+      "timestamp": "2026-05-09T16:05:38Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-450",
-        "numericOdds": -450
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+300",
-        "numericOdds": 300
-      },
-      "isLocked": false,
-      "extractionId": 51
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:24:52.170Z",
+      "timestamp": "2026-05-09T16:10:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-450",
-        "numericOdds": -450
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+300",
-        "numericOdds": 300
-      },
-      "isLocked": false,
-      "extractionId": 52
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:24:55.172Z",
+      "timestamp": "2026-05-09T16:15:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-450",
-        "numericOdds": -450
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+300",
-        "numericOdds": 300
-      },
-      "isLocked": false,
-      "extractionId": 53
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:24:58.180Z",
+      "timestamp": "2026-05-09T16:20:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-450",
-        "numericOdds": -450
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+300",
-        "numericOdds": 300
-      },
-      "isLocked": false,
-      "extractionId": 54
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:25:01.181Z",
+      "timestamp": "2026-05-09T16:25:38Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-450",
-        "numericOdds": -450
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+300",
-        "numericOdds": 300
-      },
-      "isLocked": false,
-      "extractionId": 55
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:25:04.182Z",
+      "timestamp": "2026-05-09T16:30:38Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-450",
-        "numericOdds": -450
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+300",
-        "numericOdds": 300
-      },
-      "isLocked": false,
-      "extractionId": 56
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:25:07.195Z",
+      "timestamp": "2026-05-09T16:35:38Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-450",
-        "numericOdds": -450
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+300",
-        "numericOdds": 300
-      },
-      "isLocked": false,
-      "extractionId": 57
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:25:10.197Z",
+      "timestamp": "2026-05-09T16:40:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-450",
-        "numericOdds": -450
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+300",
-        "numericOdds": 300
-      },
-      "isLocked": false,
-      "extractionId": 58
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:25:13.210Z",
+      "timestamp": "2026-05-09T16:45:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-460",
-        "numericOdds": -460
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
+        "name": "King Green",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-05-09T16:50:37Z",
+      "fighter1": {
         "name": "Jeremy Stephens",
-        "odds": "+320",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-05-09T16:55:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-05-09T17:00:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-05-09T17:05:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-05-09T17:10:38Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-05-09T17:15:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-05-09T17:20:38Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-05-09T17:25:38Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-05-09T17:30:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-05-09T17:35:38Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-05-09T17:40:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-05-09T17:45:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-05-09T17:50:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-05-09T17:55:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-05-09T18:00:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-05-09T18:05:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-05-09T18:10:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-05-09T18:15:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-05-09T18:20:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-05-09T18:25:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-05-09T18:30:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-05-09T18:35:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-05-09T18:40:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-05-09T18:45:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-05-09T18:50:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
         "numericOdds": 320
       },
-      "isLocked": false,
-      "extractionId": 59
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -410
+      }
     },
     {
-      "timestamp": "2026-05-10T01:25:16.213Z",
+      "timestamp": "2026-05-09T18:55:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-460",
-        "numericOdds": -460
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
       },
       "fighter2": {
+        "name": "King Green",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-05-09T19:00:37Z",
+      "fighter1": {
         "name": "Jeremy Stephens",
-        "odds": "+320",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-05-09T19:05:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-05-09T19:10:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-05-09T19:15:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-05-09T19:20:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
         "numericOdds": 320
       },
-      "isLocked": false,
-      "extractionId": 60
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -410
+      }
     },
     {
-      "timestamp": "2026-05-10T01:25:19.215Z",
+      "timestamp": "2026-05-09T19:25:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-460",
-        "numericOdds": -460
-      },
-      "fighter2": {
         "name": "Jeremy Stephens",
-        "odds": "+320",
         "numericOdds": 320
       },
-      "isLocked": false,
-      "extractionId": 61
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -410
+      }
     },
     {
-      "timestamp": "2026-05-10T01:25:22.222Z",
+      "timestamp": "2026-05-09T19:30:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-460",
-        "numericOdds": -460
-      },
-      "fighter2": {
         "name": "Jeremy Stephens",
-        "odds": "+320",
         "numericOdds": 320
       },
-      "isLocked": false,
-      "extractionId": 62
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -410
+      }
     },
     {
-      "timestamp": "2026-05-10T01:25:25.236Z",
+      "timestamp": "2026-05-09T19:35:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-460",
-        "numericOdds": -460
-      },
-      "fighter2": {
         "name": "Jeremy Stephens",
-        "odds": "+320",
         "numericOdds": 320
       },
-      "isLocked": false,
-      "extractionId": 63
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -410
+      }
     },
     {
-      "timestamp": "2026-05-10T01:25:28.239Z",
+      "timestamp": "2026-05-09T19:40:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-460",
-        "numericOdds": -460
-      },
-      "fighter2": {
         "name": "Jeremy Stephens",
-        "odds": "+320",
         "numericOdds": 320
       },
-      "isLocked": false,
-      "extractionId": 64
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -410
+      }
     },
     {
-      "timestamp": "2026-05-10T01:25:31.242Z",
+      "timestamp": "2026-05-09T19:45:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-460",
-        "numericOdds": -460
-      },
-      "fighter2": {
         "name": "Jeremy Stephens",
-        "odds": "+320",
         "numericOdds": 320
       },
-      "isLocked": false,
-      "extractionId": 65
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -410
+      }
     },
     {
-      "timestamp": "2026-05-10T01:25:34.257Z",
+      "timestamp": "2026-05-09T19:50:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-450",
-        "numericOdds": -450
+        "name": "Jeremy Stephens",
+        "numericOdds": 320
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+310",
-        "numericOdds": 310
-      },
-      "isLocked": false,
-      "extractionId": 66
+        "name": "King Green",
+        "numericOdds": -410
+      }
     },
     {
-      "timestamp": "2026-05-10T01:25:37.259Z",
+      "timestamp": "2026-05-09T19:55:38Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-430",
-        "numericOdds": -430
+        "name": "Jeremy Stephens",
+        "numericOdds": 320
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+300",
-        "numericOdds": 300
-      },
-      "isLocked": false,
-      "extractionId": 67
+        "name": "King Green",
+        "numericOdds": -410
+      }
     },
     {
-      "timestamp": "2026-05-10T01:25:40.261Z",
+      "timestamp": "2026-05-09T20:00:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-430",
-        "numericOdds": -430
+        "name": "Jeremy Stephens",
+        "numericOdds": 320
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+300",
-        "numericOdds": 300
-      },
-      "isLocked": false,
-      "extractionId": 68
+        "name": "King Green",
+        "numericOdds": -410
+      }
     },
     {
-      "timestamp": "2026-05-10T01:25:43.265Z",
+      "timestamp": "2026-05-09T20:05:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Jeremy Stephens",
+        "numericOdds": 320
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+280",
-        "numericOdds": 280
-      },
-      "isLocked": false,
-      "extractionId": 69
+        "name": "King Green",
+        "numericOdds": -410
+      }
     },
     {
-      "timestamp": "2026-05-10T01:25:46.271Z",
+      "timestamp": "2026-05-09T20:10:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Jeremy Stephens",
+        "numericOdds": 320
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+280",
-        "numericOdds": 280
-      },
-      "isLocked": false,
-      "extractionId": 70
+        "name": "King Green",
+        "numericOdds": -410
+      }
     },
     {
-      "timestamp": "2026-05-10T01:25:49.274Z",
+      "timestamp": "2026-05-09T20:15:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-400",
-        "numericOdds": -400
+        "name": "Jeremy Stephens",
+        "numericOdds": 320
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+280",
-        "numericOdds": 280
-      },
-      "isLocked": false,
-      "extractionId": 71
+        "name": "King Green",
+        "numericOdds": -410
+      }
     },
     {
-      "timestamp": "2026-05-10T01:25:52.279Z",
+      "timestamp": "2026-05-09T20:20:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-370",
-        "numericOdds": -370
+        "name": "Jeremy Stephens",
+        "numericOdds": 320
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+260",
-        "numericOdds": 260
-      },
-      "isLocked": false,
-      "extractionId": 72
+        "name": "King Green",
+        "numericOdds": -410
+      }
     },
     {
-      "timestamp": "2026-05-10T01:25:55.286Z",
+      "timestamp": "2026-05-09T20:25:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-370",
-        "numericOdds": -370
+        "name": "Jeremy Stephens",
+        "numericOdds": 320
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+260",
-        "numericOdds": 260
-      },
-      "isLocked": false,
-      "extractionId": 73
+        "name": "King Green",
+        "numericOdds": -410
+      }
     },
     {
-      "timestamp": "2026-05-10T01:25:58.302Z",
+      "timestamp": "2026-05-09T20:30:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-350",
-        "numericOdds": -350
+        "name": "Jeremy Stephens",
+        "numericOdds": 320
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+250",
-        "numericOdds": 250
-      },
-      "isLocked": false,
-      "extractionId": 74
+        "name": "King Green",
+        "numericOdds": -410
+      }
     },
     {
-      "timestamp": "2026-05-10T01:26:01.306Z",
+      "timestamp": "2026-05-09T20:35:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-350",
-        "numericOdds": -350
+        "name": "Jeremy Stephens",
+        "numericOdds": 320
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+250",
-        "numericOdds": 250
-      },
-      "isLocked": false,
-      "extractionId": 75
+        "name": "King Green",
+        "numericOdds": -410
+      }
     },
     {
-      "timestamp": "2026-05-10T01:26:04.312Z",
+      "timestamp": "2026-05-09T20:40:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-310",
-        "numericOdds": -310
+        "name": "Jeremy Stephens",
+        "numericOdds": 320
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+225",
-        "numericOdds": 225
-      },
-      "isLocked": false,
-      "extractionId": 76
+        "name": "King Green",
+        "numericOdds": -410
+      }
     },
     {
-      "timestamp": "2026-05-10T01:26:07.326Z",
+      "timestamp": "2026-05-09T20:45:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-310",
-        "numericOdds": -310
+        "name": "Jeremy Stephens",
+        "numericOdds": 320
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+225",
-        "numericOdds": 225
-      },
-      "isLocked": false,
-      "extractionId": 77
+        "name": "King Green",
+        "numericOdds": -410
+      }
     },
     {
-      "timestamp": "2026-05-10T01:26:10.330Z",
+      "timestamp": "2026-05-09T20:50:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-310",
-        "numericOdds": -310
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+225",
-        "numericOdds": 225
-      },
-      "isLocked": false,
-      "extractionId": 78
+        "name": "King Green",
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-05-10T01:26:22.352Z",
+      "timestamp": "2026-05-09T20:55:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-350",
-        "numericOdds": -350
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+250",
-        "numericOdds": 250
-      },
-      "isLocked": false,
-      "extractionId": 79
+        "name": "King Green",
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-05-10T01:26:25.354Z",
+      "timestamp": "2026-05-09T21:00:38Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-350",
-        "numericOdds": -350
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+250",
-        "numericOdds": 250
-      },
-      "isLocked": false,
-      "extractionId": 2
+        "name": "King Green",
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-05-10T01:26:28.357Z",
+      "timestamp": "2026-05-09T21:05:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-350",
-        "numericOdds": -350
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+250",
-        "numericOdds": 250
-      },
-      "isLocked": false,
-      "extractionId": 3
+        "name": "King Green",
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-05-10T01:26:31.368Z",
+      "timestamp": "2026-05-09T21:10:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-350",
-        "numericOdds": -350
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+250",
-        "numericOdds": 250
-      },
-      "isLocked": false,
-      "extractionId": 4
+        "name": "King Green",
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-05-10T01:26:34.373Z",
+      "timestamp": "2026-05-09T21:15:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-430",
-        "numericOdds": -430
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+300",
-        "numericOdds": 300
-      },
-      "isLocked": false,
-      "extractionId": 5
+        "name": "King Green",
+        "numericOdds": -440
+      }
     },
     {
-      "timestamp": "2026-05-10T01:28:04.578Z",
+      "timestamp": "2026-05-09T21:20:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-550",
-        "numericOdds": -550
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
       },
       "fighter2": {
+        "name": "King Green",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-05-09T21:25:37Z",
+      "fighter1": {
         "name": "Jeremy Stephens",
-        "odds": "+350",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-05-09T21:30:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-05-09T21:35:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-05-09T21:40:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-05-09T21:45:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-05-09T21:50:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-05-09T21:55:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-05-09T22:00:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-05-09T22:05:38Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-05-09T22:10:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-05-09T22:15:39Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-05-09T22:20:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-05-09T22:25:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-05-09T22:30:38Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-05-09T22:35:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-05-09T22:40:38Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-05-09T22:45:38Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-05-09T22:50:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-05-09T22:55:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-05-09T23:00:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-05-09T23:05:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-05-09T23:10:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-05-09T23:15:38Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-05-09T23:20:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-05-09T23:25:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-05-09T23:30:38Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-05-09T23:35:38Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-05-09T23:40:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-05-09T23:45:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-05-09T23:50:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-05-09T23:55:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-05-10T00:00:38Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-05-10T00:05:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-05-10T00:10:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-05-10T00:15:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-05-10T00:20:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-05-10T00:25:39Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-05-10T00:30:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-05-10T00:35:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-05-10T00:40:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-05-10T00:45:37Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-05-10T00:50:38Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-05-10T00:55:38Z",
+      "fighter1": {
+        "name": "Jeremy Stephens",
         "numericOdds": 350
       },
-      "isLocked": false,
-      "extractionId": 6
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -455
+      }
     },
     {
-      "timestamp": "2026-05-10T01:28:07.585Z",
+      "timestamp": "2026-05-10T01:00:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-550",
-        "numericOdds": -550
-      },
-      "fighter2": {
         "name": "Jeremy Stephens",
-        "odds": "+350",
         "numericOdds": 350
       },
-      "isLocked": false,
-      "extractionId": 2
+      "fighter2": {
+        "name": "King Green",
+        "numericOdds": -455
+      }
     },
     {
-      "timestamp": "2026-05-10T01:28:10.584Z",
+      "timestamp": "2026-05-10T01:05:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-600",
-        "numericOdds": -600
+        "name": "Jeremy Stephens",
+        "numericOdds": 350
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+370",
-        "numericOdds": 370
-      },
-      "isLocked": false,
-      "extractionId": 3
+        "name": "King Green",
+        "numericOdds": -455
+      }
     },
     {
-      "timestamp": "2026-05-10T01:28:13.591Z",
+      "timestamp": "2026-05-10T01:10:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-600",
-        "numericOdds": -600
+        "name": "Jeremy Stephens",
+        "numericOdds": 350
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+370",
-        "numericOdds": 370
-      },
-      "isLocked": false,
-      "extractionId": 4
+        "name": "King Green",
+        "numericOdds": -455
+      }
     },
     {
-      "timestamp": "2026-05-10T01:28:16.594Z",
+      "timestamp": "2026-05-10T01:15:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-600",
-        "numericOdds": -600
+        "name": "Jeremy Stephens",
+        "numericOdds": 350
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+370",
-        "numericOdds": 370
-      },
-      "isLocked": false,
-      "extractionId": 5
+        "name": "King Green",
+        "numericOdds": -455
+      }
     },
     {
-      "timestamp": "2026-05-10T01:28:25.604Z",
+      "timestamp": "2026-05-10T01:20:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-1100",
-        "numericOdds": -1100
+        "name": "Jeremy Stephens",
+        "numericOdds": 350
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+620",
-        "numericOdds": 620
-      },
-      "isLocked": false,
-      "extractionId": 6
+        "name": "King Green",
+        "numericOdds": -455
+      }
     },
     {
-      "timestamp": "2026-05-10T01:28:28.604Z",
+      "timestamp": "2026-05-10T01:25:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-1100",
-        "numericOdds": -1100
+        "name": "Jeremy Stephens",
+        "numericOdds": 300
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+620",
-        "numericOdds": 620
-      },
-      "isLocked": false,
-      "extractionId": 2
+        "name": "King Green",
+        "numericOdds": -425
+      }
     },
     {
-      "timestamp": "2026-05-10T01:28:31.608Z",
+      "timestamp": "2026-05-10T01:30:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-1600",
-        "numericOdds": -1600
+        "name": "Jeremy Stephens",
+        "numericOdds": 1100
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+840",
-        "numericOdds": 840
-      },
-      "isLocked": false,
-      "extractionId": 3
+        "name": "King Green",
+        "numericOdds": -2500
+      }
     },
     {
-      "timestamp": "2026-05-10T01:29:16.704Z",
+      "timestamp": "2026-05-10T01:35:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-1200",
-        "numericOdds": -1200
+        "name": "Jeremy Stephens",
+        "numericOdds": 1100
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+660",
-        "numericOdds": 660
-      },
-      "isLocked": false,
-      "extractionId": 4
+        "name": "King Green",
+        "numericOdds": -2500
+      }
     },
     {
-      "timestamp": "2026-05-10T01:29:19.711Z",
+      "timestamp": "2026-05-10T01:40:37Z",
       "fighter1": {
-        "name": "King Green",
-        "odds": "-1100",
-        "numericOdds": -1100
+        "name": "Jeremy Stephens",
+        "numericOdds": 1100
       },
       "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+620",
-        "numericOdds": 620
-      },
-      "isLocked": false,
-      "extractionId": 2
-    },
-    {
-      "timestamp": "2026-05-10T01:29:22.718Z",
-      "fighter1": {
         "name": "King Green",
-        "odds": "-1100",
-        "numericOdds": -1100
-      },
-      "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+620",
-        "numericOdds": 620
-      },
-      "isLocked": false,
-      "extractionId": 3
-    },
-    {
-      "timestamp": "2026-05-10T01:29:25.725Z",
-      "fighter1": {
-        "name": "King Green",
-        "odds": "-1300",
-        "numericOdds": -1300
-      },
-      "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+720",
-        "numericOdds": 720
-      },
-      "isLocked": false,
-      "extractionId": 4
-    },
-    {
-      "timestamp": "2026-05-10T01:29:28.738Z",
-      "fighter1": {
-        "name": "King Green",
-        "odds": "-1300",
-        "numericOdds": -1300
-      },
-      "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+720",
-        "numericOdds": 720
-      },
-      "isLocked": false,
-      "extractionId": 5
-    },
-    {
-      "timestamp": "2026-05-10T01:29:31.745Z",
-      "fighter1": {
-        "name": "King Green",
-        "odds": "-1300",
-        "numericOdds": -1300
-      },
-      "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+720",
-        "numericOdds": 720
-      },
-      "isLocked": false,
-      "extractionId": 6
-    },
-    {
-      "timestamp": "2026-05-10T01:29:34.750Z",
-      "fighter1": {
-        "name": "King Green",
-        "odds": "-1600",
-        "numericOdds": -1600
-      },
-      "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+840",
-        "numericOdds": 840
-      },
-      "isLocked": false,
-      "extractionId": 7
-    },
-    {
-      "timestamp": "2026-05-10T01:29:37.760Z",
-      "fighter1": {
-        "name": "King Green",
-        "odds": "-1600",
-        "numericOdds": -1600
-      },
-      "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+840",
-        "numericOdds": 840
-      },
-      "isLocked": false,
-      "extractionId": 8
-    },
-    {
-      "timestamp": "2026-05-10T01:29:40.763Z",
-      "fighter1": {
-        "name": "King Green",
-        "odds": "-1800",
-        "numericOdds": -1800
-      },
-      "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+920",
-        "numericOdds": 920
-      },
-      "isLocked": false,
-      "extractionId": 9
-    },
-    {
-      "timestamp": "2026-05-10T01:29:43.775Z",
-      "fighter1": {
-        "name": "King Green",
-        "odds": "-1800",
-        "numericOdds": -1800
-      },
-      "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+920",
-        "numericOdds": 920
-      },
-      "isLocked": false,
-      "extractionId": 10
-    },
-    {
-      "timestamp": "2026-05-10T01:29:46.782Z",
-      "fighter1": {
-        "name": "King Green",
-        "odds": "-2000",
-        "numericOdds": -2000
-      },
-      "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+1040",
-        "numericOdds": 1040
-      },
-      "isLocked": false,
-      "extractionId": 11
-    },
-    {
-      "timestamp": "2026-05-10T01:29:16.704Z",
-      "fighter1": {
-        "name": "King Green",
-        "odds": "-1200",
-        "numericOdds": -1200
-      },
-      "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+660",
-        "numericOdds": 660
-      },
-      "isLocked": false,
-      "extractionId": 4
-    },
-    {
-      "timestamp": "2026-05-10T01:29:19.711Z",
-      "fighter1": {
-        "name": "King Green",
-        "odds": "-1100",
-        "numericOdds": -1100
-      },
-      "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+620",
-        "numericOdds": 620
-      },
-      "isLocked": false,
-      "extractionId": 2
-    },
-    {
-      "timestamp": "2026-05-10T01:29:22.718Z",
-      "fighter1": {
-        "name": "King Green",
-        "odds": "-1100",
-        "numericOdds": -1100
-      },
-      "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+620",
-        "numericOdds": 620
-      },
-      "isLocked": false,
-      "extractionId": 3
-    },
-    {
-      "timestamp": "2026-05-10T01:29:25.725Z",
-      "fighter1": {
-        "name": "King Green",
-        "odds": "-1300",
-        "numericOdds": -1300
-      },
-      "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+720",
-        "numericOdds": 720
-      },
-      "isLocked": false,
-      "extractionId": 4
-    },
-    {
-      "timestamp": "2026-05-10T01:29:28.738Z",
-      "fighter1": {
-        "name": "King Green",
-        "odds": "-1300",
-        "numericOdds": -1300
-      },
-      "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+720",
-        "numericOdds": 720
-      },
-      "isLocked": false,
-      "extractionId": 5
-    },
-    {
-      "timestamp": "2026-05-10T01:29:31.745Z",
-      "fighter1": {
-        "name": "King Green",
-        "odds": "-1300",
-        "numericOdds": -1300
-      },
-      "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+720",
-        "numericOdds": 720
-      },
-      "isLocked": false,
-      "extractionId": 6
-    },
-    {
-      "timestamp": "2026-05-10T01:29:34.750Z",
-      "fighter1": {
-        "name": "King Green",
-        "odds": "-1600",
-        "numericOdds": -1600
-      },
-      "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+840",
-        "numericOdds": 840
-      },
-      "isLocked": false,
-      "extractionId": 7
-    },
-    {
-      "timestamp": "2026-05-10T01:29:37.760Z",
-      "fighter1": {
-        "name": "King Green",
-        "odds": "-1600",
-        "numericOdds": -1600
-      },
-      "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+840",
-        "numericOdds": 840
-      },
-      "isLocked": false,
-      "extractionId": 8
-    },
-    {
-      "timestamp": "2026-05-10T01:29:40.763Z",
-      "fighter1": {
-        "name": "King Green",
-        "odds": "-1800",
-        "numericOdds": -1800
-      },
-      "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+920",
-        "numericOdds": 920
-      },
-      "isLocked": false,
-      "extractionId": 9
-    },
-    {
-      "timestamp": "2026-05-10T01:29:43.775Z",
-      "fighter1": {
-        "name": "King Green",
-        "odds": "-1800",
-        "numericOdds": -1800
-      },
-      "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+920",
-        "numericOdds": 920
-      },
-      "isLocked": false,
-      "extractionId": 10
-    },
-    {
-      "timestamp": "2026-05-10T01:29:46.782Z",
-      "fighter1": {
-        "name": "King Green",
-        "odds": "-2000",
-        "numericOdds": -2000
-      },
-      "fighter2": {
-        "name": "Jeremy Stephens",
-        "odds": "+1040",
-        "numericOdds": 1040
-      },
-      "isLocked": false,
-      "extractionId": 11
+        "numericOdds": -2500
+      }
     }
-  ],
-  "createdAt": "2026-05-10T01:26:22.351Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "King Green",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:51:46.455Z",
-    "openingF1Odds": -400,
-    "openingF2Odds": 315,
-    "closingF1Odds": -2000,
-    "closingF2Odds": 1040,
-    "lineMovementF1": -1600,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": 6,
-    "inferredFinishRound": 2,
-    "peakOddsSwing": 1600,
-    "finishSpeed": "medium",
-    "preFightSteam": -1600,
-    "dominanceScore": 100,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.445Z"
-  }
+  ]
 }

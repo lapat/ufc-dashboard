@@ -20,3 +20,9 @@ const href = window.location.href;
 if (href.includes('/auth/login') || href.includes('/login') || href.includes('sign-in')) {
   chrome.runtime.sendMessage({ type: 'DK_LOGOUT' });
 }
+
+// Auto-refresh My Bets tab every 20 seconds — keeps live bet data current
+// setTimeout (not setInterval): fires once → reload → content script re-runs → repeat
+if (href.includes('/mybets')) {
+  setTimeout(() => location.reload(), 20000);
+}
