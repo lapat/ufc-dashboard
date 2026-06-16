@@ -1,0 +1,31 @@
+{
+  "fightId": "seungwoochoi_vs_julianerosa_2021-06-19",
+  "fightTitle": "Seung-Woo Choi vs Julian Erosa",
+  "startTime": "2021-06-20T00:05:00Z",
+  "endTime": "2021-06-20T00:15:00Z",
+  "dataPoints": 2,
+  "oddsHistory": [
+    {
+      "timestamp": "2021-06-20T00:05:00Z",
+      "fighter1": {
+        "name": "Julian Erosa",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Seung-Woo Choi",
+        "numericOdds": -303
+      }
+    },
+    {
+      "timestamp": "2021-06-20T00:15:00Z",
+      "fighter1": {
+        "name": "Julian Erosa",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Seung-Woo Choi",
+        "numericOdds": -303
+      }
+    }
+  ]
+}

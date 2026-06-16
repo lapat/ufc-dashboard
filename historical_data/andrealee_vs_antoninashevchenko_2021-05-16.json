@@ -1,0 +1,856 @@
+{
+  "fightId": "andrealee_vs_antoninashevchenko_2021-05-16",
+  "fightTitle": "Andrea Lee vs Antonina Shevchenko",
+  "startTime": "2021-05-15T11:55:00Z",
+  "endTime": "2021-05-16T00:35:00Z",
+  "dataPoints": 77,
+  "oddsHistory": [
+    {
+      "timestamp": "2021-05-15T11:55:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T12:05:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T12:15:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T12:25:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T12:35:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T12:45:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T12:55:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T13:05:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T13:15:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T13:25:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T13:35:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T13:45:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T13:55:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T14:05:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T14:15:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T14:25:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T14:35:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T14:45:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T14:55:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T15:05:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T15:15:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T15:25:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T15:35:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T15:45:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T15:55:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T16:05:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T16:15:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T16:25:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T16:35:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T16:45:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T16:55:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T17:05:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T17:15:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T17:25:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T17:35:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T17:45:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T17:55:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T18:05:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T18:15:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T18:25:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T18:35:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T18:45:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T18:55:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T19:05:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T19:15:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T19:25:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T19:35:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T19:45:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T19:55:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T20:05:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T20:15:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T20:25:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T20:35:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T20:45:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T20:55:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T21:05:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T21:15:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T21:25:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T21:35:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T21:45:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T21:55:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T22:05:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T22:15:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T22:25:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T22:35:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T22:45:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T22:55:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T23:05:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T23:15:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T23:25:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T23:35:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T23:45:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-15T23:55:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-16T00:05:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-16T00:15:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": -122
+      }
+    },
+    {
+      "timestamp": "2021-05-16T00:25:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": -1429
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": 750
+      }
+    },
+    {
+      "timestamp": "2021-05-16T00:35:00Z",
+      "fighter1": {
+        "name": "Andrea Lee",
+        "numericOdds": -1429
+      },
+      "fighter2": {
+        "name": "Antonina Shevchenko",
+        "numericOdds": 750
+      }
+    }
+  ]
+}
