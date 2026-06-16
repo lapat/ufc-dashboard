@@ -1,11 +1,41 @@
 {
   "fightId": "dennisbuzukja_vs_marciobarbosa",
   "fightTitle": "Monitoring Stopped - Click START to resume",
-  "startTime": "2026-04-18T23:37:24.012Z",
+  "startTime": "2026-04-18T23:17:05.561Z",
   "endTime": "2026-04-18T23:40:00.399Z",
   "duration": 156387,
-  "dataPoints": 53,
+  "dataPoints": 55,
   "oddsHistory": [
+    {
+      "timestamp": "2026-04-18T23:17:05.561Z",
+      "fighter1": {
+        "name": "Dennis Buzukja",
+        "odds": "+315",
+        "numericOdds": 315
+      },
+      "fighter2": {
+        "name": "Marcio Barbosa",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-04-18T23:17:08.557Z",
+      "fighter1": {
+        "name": "Dennis Buzukja",
+        "odds": "+315",
+        "numericOdds": 315
+      },
+      "fighter2": {
+        "name": "Marcio Barbosa",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
     {
       "timestamp": "2026-04-18T23:37:24.012Z",
       "fighter1": {
