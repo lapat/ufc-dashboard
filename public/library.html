@@ -422,7 +422,7 @@ function renderTable(){
       <td><span class="sport-badge ${sportBadgeClass(r.sport)}">${r.sport}</span></td>
       <td class="fighters-cell">${r.fighter1} <span style="color:#333">vs</span> ${r.fighter2}</td>
       <td class="date-cell">${fmtDate(r.date)}</td>
-      <td class="pts-cell">${r.dataPoints.toLocaleString()}</td>
+      <td class="pts-cell">${r.dataPoints < 20 ? `<span style="color:#e67e22;font-weight:600" title="Low data — crossover count unreliable">⚠ ${r.dataPoints}</span>` : r.dataPoints.toLocaleString()}</td>
       <td class="xover-cell">${r.crossovers>0?`<span class="xover-badge">⚡ ${r.crossovers}</span>`:'<span class="xover-zero">—</span>'}</td>
       <td style="text-align:right"><button class="open-btn${r.id===selectedRowId?' active':''}" data-id="${r.id}">Simulate →</button></td>
     </tr>`).join('');
