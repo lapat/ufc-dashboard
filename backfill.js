@@ -42,12 +42,10 @@ function fightFilename(home, away, date) {
   return `${nameToSlug(home)}_vs_${nameToSlug(away)}_${date}`;
 }
 
-async function backfillDate(dateStr) {
-  // Probe: one call at noon UTC day-before to check if any MMA fights exist for this date.
-  // Skips the full sweep (~288 calls) on non-event days.
-  const prevNoon = new Date(dateStr + 'T12:00:00Z');
-  prevNoon.setUTCDate(prevNoon.getUTCDate() - 1);
-  const probeTs = prevNoon.toISOString().replace(/\.\d{3}Z$/, 'Z');
+async function backfillDate(dateStr, stepMinutes = 5) {
+  // Probe: one call at noon UTC same day to check if any MMA fights exist for this date.
+  // Skips the full sweep on non-event days.
+  const probeTs = dateStr + 'T12:00:00Z';
   const probeUrl = `https://api.the-odds-api.com/v4/historical/sports/mma_mixed_martial_arts/odds/?apiKey=${API_KEY}&regions=us&markets=h2h&bookmakers=draftkings&oddsFormat=american&date=${probeTs}`;
   try {
     const probe = await get(probeUrl);
@@ -60,12 +58,11 @@ async function backfillDate(dateStr) {
 
   console.log(`\nBackfilling ${dateStr}...`);
 
-  // Sweep from noon UTC the day before to noon UTC the day after
-  // (covers events in all timezones)
-  const prevDay = new Date(dateStr + 'T12:00:00Z');
-  prevDay.setUTCDate(prevDay.getUTCDate() - 1);
-  let timestamp = prevDay.toISOString().replace(/\.\d{3}Z$/, 'Z');
-  const cutoff = new Date(dateStr + 'T12:00:00Z');
+  // Sweep from 14:00 UTC same day to 10:00 UTC next day (20 hours).
+  // UFC events in the US run ~22:00–06:00 UTC; UK/international run ~12:00–22:00 UTC.
+  // 20-hour window catches everything with 5-min resolution; ~240 calls vs old 576.
+  let timestamp = (dateStr + 'T14:00:00Z');
+  const cutoff = new Date(dateStr + 'T10:00:00Z');
   cutoff.setUTCDate(cutoff.getUTCDate() + 1);
   const cutoffStr = cutoff.toISOString();
 
@@ -90,7 +87,10 @@ async function backfillDate(dateStr) {
 
       for (const fight of (d.data || [])) {
         const ct = fight.commence_time || '';
-        if (!ct.startsWith(dateStr)) continue; // only target date
+        // Capture any fight that commences within +/-1 day of our target.
+        // US main cards commence on the UTC day AFTER the advertised date (e.g. Sat 10pm ET = Sun 02:00 UTC).
+        // Removing the strict dateStr filter means one sweep captures the whole card; each fight
+        // is saved under its actual commence_time date so no splits occur.
         const fid = fight.id;
         const bk = fight.bookmakers || [];
         if (!bk.length) continue;
@@ -111,15 +111,21 @@ async function backfillDate(dateStr) {
       const fightCount = Object.keys(allSnapshots).length;
       process.stdout.write(`\r  ${calls} calls | ${fightCount} fights | ${actualTs.slice(0,10)} ${actualTs.slice(11,16)} UTC   `);
 
-      // Early exit: UFC fights are listed weeks in advance, so if 2 calls in still 0
-      // fights for this date, there's no event here — skip the rest of the 48hr sweep
+      // Early exit if no fights found after 2 calls (probe already confirmed an event exists,
+      // so this handles edge cases where the window missed the card)
       if (fightCount === 0 && calls >= 2) {
-        process.stdout.write(`no event\n`);
+        process.stdout.write(`no fights in window\n`);
         break;
       }
 
-      if (nextTs) timestamp = nextTs; else break;
-      await sleep(100);
+      // Jump by stepMinutes (default 5 = follow API chain; 15 = 3x fewer calls, still shows full arc)
+      if (nextTs && stepMinutes <= 5) {
+        timestamp = nextTs;
+      } else if (nextTs) {
+        const next = new Date(actualTs);
+        next.setUTCMinutes(next.getUTCMinutes() + stepMinutes);
+        timestamp = next.toISOString().replace(/\.\d{3}Z$/, 'Z');
+      } else break;
     } catch (e) {
       console.error(`\n  Error at ${timestamp}: ${e.message}`);
       await sleep(2000);
@@ -172,9 +178,14 @@ async function backfillDate(dateStr) {
 }
 
 async function main() {
-  const args = process.argv.slice(2);
+  const args = process.argv.slice(2).filter(a => !a.startsWith('--'));
+  const flags = process.argv.slice(2).filter(a => a.startsWith('--'));
+  const reverse = flags.includes('--reverse');
+  const stepFlag = flags.find(f => f.startsWith('--step='));
+  const stepMinutes = stepFlag ? parseInt(stepFlag.split('=')[1]) : 5;
+
   if (!args.length) {
-    console.log('Usage: node backfill.js YYYY-MM-DD [YYYY-MM-DD]');
+    console.log('Usage: node backfill.js YYYY-MM-DD [YYYY-MM-DD] [--reverse] [--step=15]');
     process.exit(1);
   }
 
@@ -187,13 +198,25 @@ async function main() {
 
   const totalDays = Math.round((end - start) / 86400000) + 1;
   let day = 0;
-  for (let d = new Date(start); d <= end; d.setUTCDate(d.getUTCDate() + 1)) {
-    const dateStr = d.toISOString().slice(0, 10);
-    day++;
-    process.stdout.write(`[${day}/${totalDays}] ${dateStr} ... `);
-    const result = await backfillDate(dateStr);
-    total.saved += result.saved;
-    total.skipped += result.skipped;
+
+  if (reverse) {
+    for (let d = new Date(end); d >= start; d.setUTCDate(d.getUTCDate() - 1)) {
+      const dateStr = d.toISOString().slice(0, 10);
+      day++;
+      process.stdout.write(`[${day}/${totalDays}] ${dateStr} ... `);
+      const result = await backfillDate(dateStr, stepMinutes);
+      total.saved += result.saved;
+      total.skipped += result.skipped;
+    }
+  } else {
+    for (let d = new Date(start); d <= end; d.setUTCDate(d.getUTCDate() + 1)) {
+      const dateStr = d.toISOString().slice(0, 10);
+      day++;
+      process.stdout.write(`[${day}/${totalDays}] ${dateStr} ... `);
+      const result = await backfillDate(dateStr, stepMinutes);
+      total.saved += result.saved;
+      total.skipped += result.skipped;
+    }
   }
 
   console.log(`\nDone: ${total.saved} saved, ${total.skipped} skipped`);
