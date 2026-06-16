@@ -43,6 +43,21 @@ function fightFilename(home, away, date) {
 }
 
 async function backfillDate(dateStr) {
+  // Probe: one call at noon UTC day-before to check if any MMA fights exist for this date.
+  // Skips the full sweep (~288 calls) on non-event days.
+  const prevNoon = new Date(dateStr + 'T12:00:00Z');
+  prevNoon.setUTCDate(prevNoon.getUTCDate() - 1);
+  const probeTs = prevNoon.toISOString().replace(/\.\d{3}Z$/, 'Z');
+  const probeUrl = `https://api.the-odds-api.com/v4/historical/sports/mma_mixed_martial_arts/odds/?apiKey=${API_KEY}&regions=us&markets=h2h&bookmakers=draftkings&oddsFormat=american&date=${probeTs}`;
+  try {
+    const probe = await get(probeUrl);
+    const hasEvent = (probe.data || []).some(f => (f.commence_time || '').startsWith(dateStr));
+    if (!hasEvent) {
+      process.stdout.write(`  SKIP ${dateStr} — no fights found\n`);
+      return { saved: 0, skipped: 0, fights: 0 };
+    }
+  } catch(e) { /* probe failed, proceed with full sweep anyway */ }
+
   console.log(`\nBackfilling ${dateStr}...`);
 
   // Sweep from noon UTC the day before to noon UTC the day after
@@ -93,9 +108,18 @@ async function backfillDate(dateStr) {
         });
       }
 
-      process.stdout.write(`\r  ${calls} API calls | ${Object.keys(allSnapshots).length} fights found | ts: ${actualTs.slice(11, 16)} UTC   `);
+      const fightCount = Object.keys(allSnapshots).length;
+      process.stdout.write(`\r  ${calls} calls | ${fightCount} fights | ${actualTs.slice(0,10)} ${actualTs.slice(11,16)} UTC   `);
+
+      // Early exit: UFC fights are listed weeks in advance, so if 2 calls in still 0
+      // fights for this date, there's no event here — skip the rest of the 48hr sweep
+      if (fightCount === 0 && calls >= 2) {
+        process.stdout.write(`no event\n`);
+        break;
+      }
+
       if (nextTs) timestamp = nextTs; else break;
-      await sleep(250);
+      await sleep(100);
     } catch (e) {
       console.error(`\n  Error at ${timestamp}: ${e.message}`);
       await sleep(2000);
@@ -161,8 +185,12 @@ async function main() {
   const end = new Date(endDate);
   let total = { saved: 0, skipped: 0 };
 
+  const totalDays = Math.round((end - start) / 86400000) + 1;
+  let day = 0;
   for (let d = new Date(start); d <= end; d.setUTCDate(d.getUTCDate() + 1)) {
     const dateStr = d.toISOString().slice(0, 10);
+    day++;
+    process.stdout.write(`[${day}/${totalDays}] ${dateStr} ... `);
     const result = await backfillDate(dateStr);
     total.saved += result.saved;
     total.skipped += result.skipped;
