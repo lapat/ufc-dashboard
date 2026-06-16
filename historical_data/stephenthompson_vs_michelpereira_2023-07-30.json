@@ -1,0 +1,977 @@
+{
+  "fightId": "stephenthompson_vs_michelpereira_2023-07-30",
+  "fightTitle": "Stephen Thompson vs Michel Pereira",
+  "startTime": "2023-06-24T13:55:39Z",
+  "endTime": "2023-06-25T09:55:38Z",
+  "dataPoints": 88,
+  "oddsHistory": [
+    {
+      "timestamp": "2023-06-24T13:55:39Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T14:10:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T14:25:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T14:35:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T14:50:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T15:05:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T15:15:39Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T15:30:39Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T15:45:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T16:00:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T16:15:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T16:30:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T16:45:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T17:00:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T17:10:39Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T17:25:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T17:35:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T17:50:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T18:05:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T18:20:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T18:35:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T18:45:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T18:55:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T19:10:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T19:20:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T19:35:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T19:50:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T20:05:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T20:20:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T20:35:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T20:45:39Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T21:00:39Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T21:15:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T21:25:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T21:35:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T21:50:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T22:00:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T22:10:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T22:20:39Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T22:35:39Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T22:50:39Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T23:05:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T23:15:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T23:30:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-24T23:45:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-25T00:00:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-25T00:10:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-25T00:20:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-25T00:35:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-25T00:50:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-25T01:05:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-25T01:20:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-25T01:35:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-25T01:50:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-25T02:05:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-25T02:20:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-25T02:35:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-25T02:45:39Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-25T03:00:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-25T03:15:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-25T03:30:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-25T03:45:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-25T04:00:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-25T04:15:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-25T04:30:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-25T04:45:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-25T05:00:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-25T05:10:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-25T05:25:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-25T05:35:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-25T05:50:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-25T06:05:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-25T06:20:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-25T06:35:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-25T06:50:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-25T07:05:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-25T07:20:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-25T07:35:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-25T07:45:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-25T07:55:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-25T08:10:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-25T08:25:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-25T08:40:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-25T08:55:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-25T09:10:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-25T09:25:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-25T09:40:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    },
+    {
+      "timestamp": "2023-06-25T09:55:38Z",
+      "fighter1": {
+        "name": "Michel Pereira",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Stephen Thompson",
+        "numericOdds": -215
+      }
+    }
+  ]
+}

@@ -1,862 +1,1324 @@
 {
   "fightId": "kyledaukaus_vs_kevinholland_2021-10-03",
   "fightTitle": "Kyle Daukaus vs Kevin Holland",
-  "startTime": "2021-10-02T11:55:00Z",
-  "endTime": "2021-10-03T00:45:00Z",
-  "dataPoints": 78,
+  "startTime": "2021-09-25T13:55:00Z",
+  "endTime": "2021-09-26T09:45:00Z",
+  "dataPoints": 120,
   "oddsHistory": [
     {
-      "timestamp": "2021-10-02T11:55:00Z",
+      "timestamp": "2021-09-25T13:55:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -164
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 145
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T12:05:00Z",
+      "timestamp": "2021-09-25T14:05:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -164
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 145
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T12:15:00Z",
+      "timestamp": "2021-09-25T14:15:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -164
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 145
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T12:25:00Z",
+      "timestamp": "2021-09-25T14:25:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -164
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 145
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T12:35:00Z",
+      "timestamp": "2021-09-25T14:35:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -164
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 145
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T12:45:00Z",
+      "timestamp": "2021-09-25T14:45:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -164
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 145
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T12:55:00Z",
+      "timestamp": "2021-09-25T14:55:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -164
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 145
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T13:05:00Z",
+      "timestamp": "2021-09-25T15:05:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -164
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 145
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T13:15:00Z",
+      "timestamp": "2021-09-25T15:15:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -164
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 145
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T13:25:00Z",
+      "timestamp": "2021-09-25T15:25:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -164
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 145
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T13:35:00Z",
+      "timestamp": "2021-09-25T15:35:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -164
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 145
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T13:45:00Z",
+      "timestamp": "2021-09-25T15:45:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -164
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 145
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T13:55:00Z",
+      "timestamp": "2021-09-25T15:55:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -164
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 145
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T14:05:00Z",
+      "timestamp": "2021-09-25T16:05:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -164
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 145
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T14:15:00Z",
+      "timestamp": "2021-09-25T16:15:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -164
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 145
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T14:25:00Z",
+      "timestamp": "2021-09-25T16:25:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -164
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 145
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T14:35:00Z",
+      "timestamp": "2021-09-25T16:35:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T14:45:00Z",
+      "timestamp": "2021-09-25T16:45:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T14:55:00Z",
+      "timestamp": "2021-09-25T16:55:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T15:05:00Z",
+      "timestamp": "2021-09-25T17:05:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T15:15:00Z",
+      "timestamp": "2021-09-25T17:15:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -164
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 145
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T15:25:00Z",
+      "timestamp": "2021-09-25T17:25:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -179
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 155
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T15:35:00Z",
+      "timestamp": "2021-09-25T17:35:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T15:45:00Z",
+      "timestamp": "2021-09-25T17:45:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -164
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 145
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T15:55:00Z",
+      "timestamp": "2021-09-25T17:55:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T16:05:00Z",
+      "timestamp": "2021-09-25T18:05:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T16:15:00Z",
+      "timestamp": "2021-09-25T18:15:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T16:25:00Z",
+      "timestamp": "2021-09-25T18:25:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T16:35:00Z",
+      "timestamp": "2021-09-25T18:35:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T16:45:00Z",
+      "timestamp": "2021-09-25T18:45:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T16:55:00Z",
+      "timestamp": "2021-09-25T18:55:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T17:05:00Z",
+      "timestamp": "2021-09-25T19:05:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T17:15:00Z",
+      "timestamp": "2021-09-25T19:15:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T17:25:00Z",
+      "timestamp": "2021-09-25T19:25:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T17:35:00Z",
+      "timestamp": "2021-09-25T19:35:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T17:45:00Z",
+      "timestamp": "2021-09-25T19:45:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T17:55:00Z",
+      "timestamp": "2021-09-25T19:55:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T18:05:00Z",
+      "timestamp": "2021-09-25T20:05:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T18:15:00Z",
+      "timestamp": "2021-09-25T20:15:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T18:25:00Z",
+      "timestamp": "2021-09-25T20:25:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T18:35:00Z",
+      "timestamp": "2021-09-25T20:35:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T18:45:00Z",
+      "timestamp": "2021-09-25T20:45:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T18:55:00Z",
+      "timestamp": "2021-09-25T20:55:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T19:05:00Z",
+      "timestamp": "2021-09-25T21:05:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T19:15:00Z",
+      "timestamp": "2021-09-25T21:15:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T19:25:00Z",
+      "timestamp": "2021-09-25T21:25:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T19:35:00Z",
+      "timestamp": "2021-09-25T21:35:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T19:45:00Z",
+      "timestamp": "2021-09-25T21:45:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T19:55:00Z",
+      "timestamp": "2021-09-25T21:55:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T20:05:00Z",
+      "timestamp": "2021-09-25T22:05:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T20:15:00Z",
+      "timestamp": "2021-09-25T22:15:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T20:25:00Z",
+      "timestamp": "2021-09-25T22:25:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T20:35:00Z",
+      "timestamp": "2021-09-25T22:35:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T20:45:00Z",
+      "timestamp": "2021-09-25T22:45:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T20:55:00Z",
+      "timestamp": "2021-09-25T22:55:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T21:05:00Z",
+      "timestamp": "2021-09-25T23:05:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T21:15:00Z",
+      "timestamp": "2021-09-25T23:15:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T21:25:00Z",
+      "timestamp": "2021-09-25T23:25:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T21:35:00Z",
+      "timestamp": "2021-09-25T23:35:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T21:45:00Z",
+      "timestamp": "2021-09-25T23:45:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T21:55:00Z",
+      "timestamp": "2021-09-25T23:55:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T22:05:00Z",
+      "timestamp": "2021-09-26T00:05:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T22:15:00Z",
+      "timestamp": "2021-09-26T00:15:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T22:25:00Z",
+      "timestamp": "2021-09-26T00:25:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T22:35:00Z",
+      "timestamp": "2021-09-26T00:35:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T22:45:00Z",
+      "timestamp": "2021-09-26T00:45:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T22:55:00Z",
+      "timestamp": "2021-09-26T00:55:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T23:05:00Z",
+      "timestamp": "2021-09-26T01:05:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T23:15:00Z",
+      "timestamp": "2021-09-26T01:15:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T23:25:00Z",
+      "timestamp": "2021-09-26T01:25:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T23:35:00Z",
+      "timestamp": "2021-09-26T01:35:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -169
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 150
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T23:45:00Z",
+      "timestamp": "2021-09-26T01:45:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -179
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 155
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-02T23:55:00Z",
+      "timestamp": "2021-09-26T01:55:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -179
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 155
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-03T00:05:00Z",
+      "timestamp": "2021-09-26T02:05:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -179
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 155
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-03T00:15:00Z",
+      "timestamp": "2021-09-26T02:15:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -179
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 155
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-03T00:25:00Z",
+      "timestamp": "2021-09-26T02:25:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -179
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 155
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-03T00:35:00Z",
+      "timestamp": "2021-09-26T02:35:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -179
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",
-        "numericOdds": 155
+        "numericOdds": 130
       }
     },
     {
-      "timestamp": "2021-10-03T00:45:00Z",
+      "timestamp": "2021-09-26T02:45:00Z",
       "fighter1": {
         "name": "Kevin Holland",
-        "numericOdds": -175
+        "numericOdds": -149
+      },
+      "fighter2": {
+        "name": "Kyle Daukaus",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2021-09-26T02:55:00Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "numericOdds": -149
+      },
+      "fighter2": {
+        "name": "Kyle Daukaus",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2021-09-26T03:05:00Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "numericOdds": -149
+      },
+      "fighter2": {
+        "name": "Kyle Daukaus",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2021-09-26T03:15:00Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "numericOdds": -149
+      },
+      "fighter2": {
+        "name": "Kyle Daukaus",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2021-09-26T03:25:00Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "numericOdds": -149
+      },
+      "fighter2": {
+        "name": "Kyle Daukaus",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2021-09-26T03:35:00Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "numericOdds": -149
+      },
+      "fighter2": {
+        "name": "Kyle Daukaus",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2021-09-26T03:45:00Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "numericOdds": -149
+      },
+      "fighter2": {
+        "name": "Kyle Daukaus",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2021-09-26T03:55:00Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "numericOdds": -149
+      },
+      "fighter2": {
+        "name": "Kyle Daukaus",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2021-09-26T04:05:00Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "numericOdds": -149
+      },
+      "fighter2": {
+        "name": "Kyle Daukaus",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2021-09-26T04:15:00Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "numericOdds": -149
+      },
+      "fighter2": {
+        "name": "Kyle Daukaus",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2021-09-26T04:25:00Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "numericOdds": -149
+      },
+      "fighter2": {
+        "name": "Kyle Daukaus",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2021-09-26T04:35:00Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "numericOdds": -149
+      },
+      "fighter2": {
+        "name": "Kyle Daukaus",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2021-09-26T04:45:00Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "numericOdds": -149
+      },
+      "fighter2": {
+        "name": "Kyle Daukaus",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2021-09-26T04:55:00Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "numericOdds": -149
+      },
+      "fighter2": {
+        "name": "Kyle Daukaus",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2021-09-26T05:05:00Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "numericOdds": -149
+      },
+      "fighter2": {
+        "name": "Kyle Daukaus",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2021-09-26T05:15:00Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "numericOdds": -149
+      },
+      "fighter2": {
+        "name": "Kyle Daukaus",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2021-09-26T05:25:00Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "numericOdds": -149
+      },
+      "fighter2": {
+        "name": "Kyle Daukaus",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2021-09-26T05:35:00Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "numericOdds": -149
+      },
+      "fighter2": {
+        "name": "Kyle Daukaus",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2021-09-26T05:45:00Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "numericOdds": -149
+      },
+      "fighter2": {
+        "name": "Kyle Daukaus",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2021-09-26T05:55:00Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "numericOdds": -149
+      },
+      "fighter2": {
+        "name": "Kyle Daukaus",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2021-09-26T06:05:00Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "numericOdds": -149
+      },
+      "fighter2": {
+        "name": "Kyle Daukaus",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2021-09-26T06:15:00Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "numericOdds": -149
+      },
+      "fighter2": {
+        "name": "Kyle Daukaus",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2021-09-26T06:25:00Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "numericOdds": -149
+      },
+      "fighter2": {
+        "name": "Kyle Daukaus",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2021-09-26T06:35:00Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "numericOdds": -149
+      },
+      "fighter2": {
+        "name": "Kyle Daukaus",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2021-09-26T06:45:00Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "numericOdds": -149
+      },
+      "fighter2": {
+        "name": "Kyle Daukaus",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2021-09-26T06:55:00Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "numericOdds": -149
+      },
+      "fighter2": {
+        "name": "Kyle Daukaus",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2021-09-26T07:05:00Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "numericOdds": -149
+      },
+      "fighter2": {
+        "name": "Kyle Daukaus",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2021-09-26T07:15:00Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "numericOdds": -149
+      },
+      "fighter2": {
+        "name": "Kyle Daukaus",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2021-09-26T07:25:00Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "numericOdds": -149
+      },
+      "fighter2": {
+        "name": "Kyle Daukaus",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2021-09-26T07:35:00Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "numericOdds": -149
+      },
+      "fighter2": {
+        "name": "Kyle Daukaus",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2021-09-26T07:45:00Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "numericOdds": -149
+      },
+      "fighter2": {
+        "name": "Kyle Daukaus",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2021-09-26T07:55:00Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "numericOdds": -149
+      },
+      "fighter2": {
+        "name": "Kyle Daukaus",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2021-09-26T08:05:00Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "numericOdds": -149
+      },
+      "fighter2": {
+        "name": "Kyle Daukaus",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2021-09-26T08:15:00Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "numericOdds": -149
+      },
+      "fighter2": {
+        "name": "Kyle Daukaus",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2021-09-26T08:25:00Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "numericOdds": -149
+      },
+      "fighter2": {
+        "name": "Kyle Daukaus",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2021-09-26T08:35:00Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "numericOdds": -149
+      },
+      "fighter2": {
+        "name": "Kyle Daukaus",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2021-09-26T08:45:00Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "numericOdds": -149
+      },
+      "fighter2": {
+        "name": "Kyle Daukaus",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2021-09-26T08:55:00Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "numericOdds": -149
+      },
+      "fighter2": {
+        "name": "Kyle Daukaus",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2021-09-26T09:05:00Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "numericOdds": -149
+      },
+      "fighter2": {
+        "name": "Kyle Daukaus",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2021-09-26T09:15:00Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "numericOdds": -149
+      },
+      "fighter2": {
+        "name": "Kyle Daukaus",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2021-09-26T09:25:00Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "numericOdds": -149
+      },
+      "fighter2": {
+        "name": "Kyle Daukaus",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2021-09-26T09:35:00Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "numericOdds": -149
+      },
+      "fighter2": {
+        "name": "Kyle Daukaus",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2021-09-26T09:45:00Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "numericOdds": -149
       },
       "fighter2": {
         "name": "Kyle Daukaus",

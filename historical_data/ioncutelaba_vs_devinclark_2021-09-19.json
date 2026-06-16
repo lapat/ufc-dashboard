@@ -1,10 +1,32 @@
 {
   "fightId": "ioncutelaba_vs_devinclark_2021-09-19",
   "fightTitle": "Ion Cutelaba vs Devin Clark",
-  "startTime": "2021-09-18T11:55:00Z",
+  "startTime": "2021-04-18T13:55:00Z",
   "endTime": "2021-09-19T01:35:00Z",
-  "dataPoints": 82,
+  "dataPoints": 84,
   "oddsHistory": [
+    {
+      "timestamp": "2021-04-18T13:55:00Z",
+      "fighter1": {
+        "name": "Devin Clark",
+        "numericOdds": 110
+      },
+      "fighter2": {
+        "name": "Ion Cutelaba",
+        "numericOdds": -137
+      }
+    },
+    {
+      "timestamp": "2021-04-18T14:05:00Z",
+      "fighter1": {
+        "name": "Devin Clark",
+        "numericOdds": 110
+      },
+      "fighter2": {
+        "name": "Ion Cutelaba",
+        "numericOdds": -137
+      }
+    },
     {
       "timestamp": "2021-09-18T11:55:00Z",
       "fighter1": {

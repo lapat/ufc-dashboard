@@ -1,0 +1,31 @@
+{
+  "fightId": "elvesbrenner_vs_kaynankruschewsky_2023-11-05",
+  "fightTitle": "Elves Brenner vs Kaynan Kruschewsky",
+  "startTime": "2023-11-04T13:55:42Z",
+  "endTime": "2023-11-04T14:10:42Z",
+  "dataPoints": 2,
+  "oddsHistory": [
+    {
+      "timestamp": "2023-11-04T13:55:42Z",
+      "fighter1": {
+        "name": "Elves Brenner",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Kaynan Kruschewsky",
+        "numericOdds": 185
+      }
+    },
+    {
+      "timestamp": "2023-11-04T14:10:42Z",
+      "fighter1": {
+        "name": "Elves Brenner",
+        "numericOdds": -238
+      },
+      "fighter2": {
+        "name": "Kaynan Kruschewsky",
+        "numericOdds": 195
+      }
+    }
+  ]
+}

@@ -1,0 +1,933 @@
+{
+  "fightId": "zhurong_vs_chrispadilla_2024-09-07",
+  "fightTitle": "Zhu Rong vs Chris Padilla",
+  "startTime": "2024-08-31T13:55:38Z",
+  "endTime": "2024-09-01T09:50:37Z",
+  "dataPoints": 84,
+  "oddsHistory": [
+    {
+      "timestamp": "2024-08-31T13:55:38Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-08-31T14:05:39Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-08-31T14:20:38Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-08-31T14:35:38Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-08-31T14:50:38Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-08-31T15:05:38Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-08-31T15:20:38Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-08-31T15:35:38Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-08-31T15:50:38Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-08-31T16:05:38Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-08-31T16:20:38Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-08-31T16:35:38Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-08-31T16:50:38Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-08-31T17:05:38Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-08-31T17:20:38Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-08-31T17:35:38Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-08-31T17:50:38Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-08-31T18:05:38Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-08-31T18:20:38Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-08-31T18:35:38Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-08-31T18:50:38Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-08-31T19:05:38Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-08-31T19:20:38Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-08-31T19:35:38Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-08-31T19:50:38Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-08-31T20:05:38Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-08-31T20:20:38Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-08-31T20:35:38Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-08-31T20:50:37Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-08-31T21:00:37Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-08-31T21:10:38Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-08-31T21:25:38Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-08-31T21:40:38Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-08-31T21:55:38Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-08-31T22:10:38Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-08-31T22:25:38Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-08-31T22:40:37Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-08-31T22:50:37Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-08-31T23:05:37Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-08-31T23:15:38Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-08-31T23:30:38Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-08-31T23:45:38Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-09-01T00:00:38Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-09-01T00:15:38Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-09-01T00:30:38Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-09-01T00:45:37Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-09-01T00:55:37Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-09-01T01:10:37Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-09-01T01:25:37Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-09-01T01:35:37Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-09-01T01:50:37Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-09-01T02:05:37Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-09-01T02:20:37Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-09-01T02:35:37Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-09-01T02:50:37Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-09-01T03:05:37Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-09-01T03:20:37Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-09-01T03:35:37Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-09-01T03:50:37Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-09-01T04:05:37Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-09-01T04:20:37Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-09-01T04:35:37Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-09-01T04:50:37Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-09-01T05:00:37Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-09-01T05:10:37Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-09-01T05:25:37Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-09-01T05:40:37Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-09-01T05:55:37Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-09-01T06:10:37Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-09-01T06:25:37Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-09-01T06:35:39Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-09-01T06:50:37Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-09-01T07:05:37Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-09-01T07:20:37Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-09-01T07:35:37Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-09-01T07:50:37Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-09-01T08:05:37Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-09-01T08:20:37Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-09-01T08:35:37Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-09-01T08:50:37Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-09-01T09:05:37Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-09-01T09:20:37Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-09-01T09:35:37Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2024-09-01T09:50:37Z",
+      "fighter1": {
+        "name": "Chris Padilla",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Zhu Rong",
+        "numericOdds": -285
+      }
+    }
+  ]
+}

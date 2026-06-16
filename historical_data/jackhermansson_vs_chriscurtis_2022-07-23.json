@@ -1,0 +1,53 @@
+{
+  "fightId": "jackhermansson_vs_chriscurtis_2022-07-23",
+  "fightTitle": "Jack Hermansson vs Chris Curtis",
+  "startTime": "2022-07-16T13:55:00Z",
+  "endTime": "2022-07-16T14:25:00Z",
+  "dataPoints": 4,
+  "oddsHistory": [
+    {
+      "timestamp": "2022-07-16T13:55:00Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": -125
+      },
+      "fighter2": {
+        "name": "Jack Hermansson",
+        "numericOdds": 105
+      }
+    },
+    {
+      "timestamp": "2022-07-16T14:05:00Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": -125
+      },
+      "fighter2": {
+        "name": "Jack Hermansson",
+        "numericOdds": 105
+      }
+    },
+    {
+      "timestamp": "2022-07-16T14:15:00Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": -125
+      },
+      "fighter2": {
+        "name": "Jack Hermansson",
+        "numericOdds": 105
+      }
+    },
+    {
+      "timestamp": "2022-07-16T14:25:00Z",
+      "fighter1": {
+        "name": "Chris Curtis",
+        "numericOdds": -125
+      },
+      "fighter2": {
+        "name": "Jack Hermansson",
+        "numericOdds": 105
+      }
+    }
+  ]
+}

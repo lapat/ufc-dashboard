@@ -1,0 +1,53 @@
+{
+  "fightId": "julianerosa_vs_fernandopadilla_2023-04-30",
+  "fightTitle": "Julian Erosa vs Fernando Padilla",
+  "startTime": "2023-04-29T13:55:39Z",
+  "endTime": "2023-04-29T14:40:39Z",
+  "dataPoints": 4,
+  "oddsHistory": [
+    {
+      "timestamp": "2023-04-29T13:55:39Z",
+      "fighter1": {
+        "name": "Fernando Padilla",
+        "numericOdds": 125
+      },
+      "fighter2": {
+        "name": "Julian Erosa",
+        "numericOdds": -145
+      }
+    },
+    {
+      "timestamp": "2023-04-29T14:10:39Z",
+      "fighter1": {
+        "name": "Fernando Padilla",
+        "numericOdds": 125
+      },
+      "fighter2": {
+        "name": "Julian Erosa",
+        "numericOdds": -145
+      }
+    },
+    {
+      "timestamp": "2023-04-29T14:25:39Z",
+      "fighter1": {
+        "name": "Fernando Padilla",
+        "numericOdds": 125
+      },
+      "fighter2": {
+        "name": "Julian Erosa",
+        "numericOdds": -145
+      }
+    },
+    {
+      "timestamp": "2023-04-29T14:40:39Z",
+      "fighter1": {
+        "name": "Fernando Padilla",
+        "numericOdds": 125
+      },
+      "fighter2": {
+        "name": "Julian Erosa",
+        "numericOdds": -145
+      }
+    }
+  ]
+}

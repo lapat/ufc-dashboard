@@ -1,0 +1,944 @@
+{
+  "fightId": "ailinperez_vs_joselyneedwards_2024-06-01",
+  "fightTitle": "Ailin Perez vs Joselyne Edwards",
+  "startTime": "2024-05-25T13:55:38Z",
+  "endTime": "2024-05-26T09:45:38Z",
+  "dataPoints": 85,
+  "oddsHistory": [
+    {
+      "timestamp": "2024-05-25T13:55:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-25T14:10:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-25T14:20:39Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-25T14:35:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-25T14:50:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-25T15:05:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-25T15:20:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-25T15:35:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-25T15:50:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-25T16:05:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-25T16:15:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-25T16:25:39Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-25T16:40:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-25T16:55:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-25T17:10:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-25T17:20:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-25T17:35:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-25T17:50:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-25T18:05:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-25T18:15:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-25T18:30:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-25T18:45:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-25T19:00:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-25T19:15:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-25T19:25:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-25T19:35:39Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-25T19:50:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-25T20:05:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-25T20:20:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-25T20:30:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-25T20:45:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-25T21:00:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-25T21:15:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-25T21:30:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-25T21:45:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-25T22:00:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-25T22:10:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-25T22:25:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-25T22:40:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-25T22:50:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-25T23:05:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-25T23:20:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-25T23:30:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-25T23:45:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-26T00:00:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-26T00:15:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-26T00:30:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-26T00:45:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-26T01:00:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-26T01:15:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-26T01:30:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-26T01:45:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-26T02:00:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-26T02:15:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-26T02:30:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-26T02:45:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-26T03:00:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-26T03:15:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-26T03:30:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-26T03:45:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-26T04:00:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-26T04:15:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-26T04:30:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-26T04:45:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-26T05:00:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-26T05:15:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-26T05:30:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-26T05:45:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-26T05:55:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-26T06:10:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-26T06:25:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-26T06:35:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-26T06:50:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-26T07:05:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-26T07:15:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-26T07:30:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-26T07:45:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-26T08:00:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-26T08:15:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-26T08:30:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-26T08:45:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -218
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-26T09:00:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-26T09:15:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-26T09:30:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2024-05-26T09:45:38Z",
+      "fighter1": {
+        "name": "Ailin Perez",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "numericOdds": 170
+      }
+    }
+  ]
+}

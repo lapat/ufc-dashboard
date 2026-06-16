@@ -1,0 +1,614 @@
+{
+  "fightId": "paddypimblett_vs_jaredgordon_2022-12-10",
+  "fightTitle": "Paddy Pimblett vs Jared Gordon",
+  "startTime": "2022-10-22T14:25:39Z",
+  "endTime": "2022-11-18T18:30:39Z",
+  "dataPoints": 55,
+  "oddsHistory": [
+    {
+      "timestamp": "2022-10-22T14:25:39Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 145
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -170
+      }
+    },
+    {
+      "timestamp": "2022-10-22T14:40:39Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -165
+      }
+    },
+    {
+      "timestamp": "2022-10-22T14:55:39Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -165
+      }
+    },
+    {
+      "timestamp": "2022-10-22T15:10:38Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -165
+      }
+    },
+    {
+      "timestamp": "2022-10-22T15:20:39Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -165
+      }
+    },
+    {
+      "timestamp": "2022-10-22T15:35:39Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -165
+      }
+    },
+    {
+      "timestamp": "2022-10-22T15:50:38Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -165
+      }
+    },
+    {
+      "timestamp": "2022-10-22T16:00:39Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -165
+      }
+    },
+    {
+      "timestamp": "2022-10-22T16:15:39Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -165
+      }
+    },
+    {
+      "timestamp": "2022-10-22T16:30:39Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -165
+      }
+    },
+    {
+      "timestamp": "2022-10-22T16:45:39Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -165
+      }
+    },
+    {
+      "timestamp": "2022-10-22T17:00:39Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -165
+      }
+    },
+    {
+      "timestamp": "2022-10-22T17:15:39Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -165
+      }
+    },
+    {
+      "timestamp": "2022-10-22T17:30:39Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -165
+      }
+    },
+    {
+      "timestamp": "2022-10-22T17:45:39Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -165
+      }
+    },
+    {
+      "timestamp": "2022-10-22T18:00:39Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -165
+      }
+    },
+    {
+      "timestamp": "2022-10-22T18:15:38Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -165
+      }
+    },
+    {
+      "timestamp": "2022-10-22T18:25:39Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -165
+      }
+    },
+    {
+      "timestamp": "2022-10-22T18:40:39Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -165
+      }
+    },
+    {
+      "timestamp": "2022-10-22T18:55:39Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -165
+      }
+    },
+    {
+      "timestamp": "2022-10-22T19:10:38Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -165
+      }
+    },
+    {
+      "timestamp": "2022-10-22T19:20:39Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -165
+      }
+    },
+    {
+      "timestamp": "2022-10-22T19:35:38Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -165
+      }
+    },
+    {
+      "timestamp": "2022-10-22T19:50:38Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -165
+      }
+    },
+    {
+      "timestamp": "2022-10-22T20:05:38Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -165
+      }
+    },
+    {
+      "timestamp": "2022-10-22T20:20:38Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -165
+      }
+    },
+    {
+      "timestamp": "2022-10-22T20:35:38Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -165
+      }
+    },
+    {
+      "timestamp": "2022-10-22T20:45:38Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -165
+      }
+    },
+    {
+      "timestamp": "2022-10-22T20:55:38Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -165
+      }
+    },
+    {
+      "timestamp": "2022-10-22T21:05:39Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -165
+      }
+    },
+    {
+      "timestamp": "2022-10-22T21:20:39Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -165
+      }
+    },
+    {
+      "timestamp": "2022-10-22T21:35:38Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -165
+      }
+    },
+    {
+      "timestamp": "2022-10-22T21:50:38Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -165
+      }
+    },
+    {
+      "timestamp": "2022-10-22T22:05:38Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -165
+      }
+    },
+    {
+      "timestamp": "2022-11-18T13:55:39Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -190
+      }
+    },
+    {
+      "timestamp": "2022-11-18T14:10:38Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -190
+      }
+    },
+    {
+      "timestamp": "2022-11-18T14:20:38Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -190
+      }
+    },
+    {
+      "timestamp": "2022-11-18T14:35:38Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -190
+      }
+    },
+    {
+      "timestamp": "2022-11-18T14:50:38Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -190
+      }
+    },
+    {
+      "timestamp": "2022-11-18T15:00:38Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -190
+      }
+    },
+    {
+      "timestamp": "2022-11-18T15:15:38Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -190
+      }
+    },
+    {
+      "timestamp": "2022-11-18T15:25:38Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -190
+      }
+    },
+    {
+      "timestamp": "2022-11-18T15:40:38Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -190
+      }
+    },
+    {
+      "timestamp": "2022-11-18T15:55:38Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -190
+      }
+    },
+    {
+      "timestamp": "2022-11-18T16:10:38Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -190
+      }
+    },
+    {
+      "timestamp": "2022-11-18T16:20:39Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -190
+      }
+    },
+    {
+      "timestamp": "2022-11-18T16:35:39Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -190
+      }
+    },
+    {
+      "timestamp": "2022-11-18T16:50:39Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -190
+      }
+    },
+    {
+      "timestamp": "2022-11-18T17:05:39Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -190
+      }
+    },
+    {
+      "timestamp": "2022-11-18T17:20:39Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -190
+      }
+    },
+    {
+      "timestamp": "2022-11-18T17:35:39Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -190
+      }
+    },
+    {
+      "timestamp": "2022-11-18T17:50:38Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -190
+      }
+    },
+    {
+      "timestamp": "2022-11-18T18:05:38Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -190
+      }
+    },
+    {
+      "timestamp": "2022-11-18T18:15:39Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -190
+      }
+    },
+    {
+      "timestamp": "2022-11-18T18:30:39Z",
+      "fighter1": {
+        "name": "Jared Gordon",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": -190
+      }
+    }
+  ]
+}

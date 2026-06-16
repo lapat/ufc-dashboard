@@ -1,0 +1,31 @@
+{
+  "fightId": "mariaoliveira_vs_vanessademopoulos_2022-11-19",
+  "fightTitle": "Maria Oliveira vs Vanessa Demopoulos",
+  "startTime": "2022-11-12T13:55:39Z",
+  "endTime": "2022-11-12T14:10:39Z",
+  "dataPoints": 2,
+  "oddsHistory": [
+    {
+      "timestamp": "2022-11-12T13:55:39Z",
+      "fighter1": {
+        "name": "Maria Oliveira",
+        "numericOdds": -120
+      },
+      "fighter2": {
+        "name": "Vanessa Demopoulos",
+        "numericOdds": 100
+      }
+    },
+    {
+      "timestamp": "2022-11-12T14:10:39Z",
+      "fighter1": {
+        "name": "Maria Oliveira",
+        "numericOdds": -120
+      },
+      "fighter2": {
+        "name": "Vanessa Demopoulos",
+        "numericOdds": 100
+      }
+    }
+  ]
+}
