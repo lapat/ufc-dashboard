@@ -1,419 +1,35 @@
 {
   "fightId": "danielsantos_vs_johncastaneda_2022-10-01",
   "fightTitle": "Daniel Santos vs John Castaneda",
-  "startTime": "2022-10-01T13:55:39Z",
-  "endTime": "2022-10-01T22:45:38Z",
-  "dataPoints": 41,
+  "commenceTime": "2022-10-01T23:45:00Z",
+  "startTime": "2022-10-01T22:10:38Z",
+  "endTime": "2022-10-01T22:55:38Z",
+  "dataPoints": 10,
   "oddsHistory": [
     {
-      "timestamp": "2022-10-01T13:55:39Z",
-      "fighter1": {
-        "name": "Daniel Santos",
-        "numericOdds": 165
-      },
-      "fighter2": {
-        "name": "John Castaneda",
-        "numericOdds": -195
-      }
-    },
-    {
-      "timestamp": "2022-10-01T14:05:39Z",
-      "fighter1": {
-        "name": "Daniel Santos",
-        "numericOdds": 165
-      },
-      "fighter2": {
-        "name": "John Castaneda",
-        "numericOdds": -195
-      }
-    },
-    {
-      "timestamp": "2022-10-01T14:20:39Z",
-      "fighter1": {
-        "name": "Daniel Santos",
-        "numericOdds": 165
-      },
-      "fighter2": {
-        "name": "John Castaneda",
-        "numericOdds": -195
-      }
-    },
-    {
-      "timestamp": "2022-10-01T14:35:39Z",
-      "fighter1": {
-        "name": "Daniel Santos",
-        "numericOdds": 165
-      },
-      "fighter2": {
-        "name": "John Castaneda",
-        "numericOdds": -195
-      }
-    },
-    {
-      "timestamp": "2022-10-01T14:50:39Z",
-      "fighter1": {
-        "name": "Daniel Santos",
-        "numericOdds": 165
-      },
-      "fighter2": {
-        "name": "John Castaneda",
-        "numericOdds": -195
-      }
-    },
-    {
-      "timestamp": "2022-10-01T15:05:39Z",
-      "fighter1": {
-        "name": "Daniel Santos",
-        "numericOdds": 165
-      },
-      "fighter2": {
-        "name": "John Castaneda",
-        "numericOdds": -195
-      }
-    },
-    {
-      "timestamp": "2022-10-01T15:15:39Z",
-      "fighter1": {
-        "name": "Daniel Santos",
-        "numericOdds": 165
-      },
-      "fighter2": {
-        "name": "John Castaneda",
-        "numericOdds": -195
-      }
-    },
-    {
-      "timestamp": "2022-10-01T15:25:39Z",
-      "fighter1": {
-        "name": "Daniel Santos",
-        "numericOdds": 165
-      },
-      "fighter2": {
-        "name": "John Castaneda",
-        "numericOdds": -195
-      }
-    },
-    {
-      "timestamp": "2022-10-01T15:40:39Z",
-      "fighter1": {
-        "name": "Daniel Santos",
-        "numericOdds": 165
-      },
-      "fighter2": {
-        "name": "John Castaneda",
-        "numericOdds": -195
-      }
-    },
-    {
-      "timestamp": "2022-10-01T15:55:39Z",
-      "fighter1": {
-        "name": "Daniel Santos",
-        "numericOdds": 165
-      },
-      "fighter2": {
-        "name": "John Castaneda",
-        "numericOdds": -195
-      }
-    },
-    {
-      "timestamp": "2022-10-01T16:10:39Z",
-      "fighter1": {
-        "name": "Daniel Santos",
-        "numericOdds": 170
-      },
-      "fighter2": {
-        "name": "John Castaneda",
-        "numericOdds": -200
-      }
-    },
-    {
-      "timestamp": "2022-10-01T16:25:38Z",
-      "fighter1": {
-        "name": "Daniel Santos",
-        "numericOdds": 170
-      },
-      "fighter2": {
-        "name": "John Castaneda",
-        "numericOdds": -200
-      }
-    },
-    {
-      "timestamp": "2022-10-01T16:35:39Z",
-      "fighter1": {
-        "name": "Daniel Santos",
-        "numericOdds": 170
-      },
-      "fighter2": {
-        "name": "John Castaneda",
-        "numericOdds": -200
-      }
-    },
-    {
-      "timestamp": "2022-10-01T16:50:39Z",
-      "fighter1": {
-        "name": "Daniel Santos",
-        "numericOdds": 170
-      },
-      "fighter2": {
-        "name": "John Castaneda",
-        "numericOdds": -200
-      }
-    },
-    {
-      "timestamp": "2022-10-01T17:05:39Z",
-      "fighter1": {
-        "name": "Daniel Santos",
-        "numericOdds": 175
-      },
-      "fighter2": {
-        "name": "John Castaneda",
-        "numericOdds": -205
-      }
-    },
-    {
-      "timestamp": "2022-10-01T17:20:38Z",
-      "fighter1": {
-        "name": "Daniel Santos",
-        "numericOdds": 175
-      },
-      "fighter2": {
-        "name": "John Castaneda",
-        "numericOdds": -205
-      }
-    },
-    {
-      "timestamp": "2022-10-01T17:30:39Z",
-      "fighter1": {
-        "name": "Daniel Santos",
-        "numericOdds": 175
-      },
-      "fighter2": {
-        "name": "John Castaneda",
-        "numericOdds": -205
-      }
-    },
-    {
-      "timestamp": "2022-10-01T17:45:38Z",
-      "fighter1": {
-        "name": "Daniel Santos",
-        "numericOdds": 175
-      },
-      "fighter2": {
-        "name": "John Castaneda",
-        "numericOdds": -205
-      }
-    },
-    {
-      "timestamp": "2022-10-01T17:55:38Z",
-      "fighter1": {
-        "name": "Daniel Santos",
-        "numericOdds": 175
-      },
-      "fighter2": {
-        "name": "John Castaneda",
-        "numericOdds": -205
-      }
-    },
-    {
-      "timestamp": "2022-10-01T18:05:39Z",
-      "fighter1": {
-        "name": "Daniel Santos",
-        "numericOdds": 175
-      },
-      "fighter2": {
-        "name": "John Castaneda",
-        "numericOdds": -205
-      }
-    },
-    {
-      "timestamp": "2022-10-01T18:20:38Z",
-      "fighter1": {
-        "name": "Daniel Santos",
-        "numericOdds": 175
-      },
-      "fighter2": {
-        "name": "John Castaneda",
-        "numericOdds": -205
-      }
-    },
-    {
-      "timestamp": "2022-10-01T18:30:39Z",
-      "fighter1": {
-        "name": "Daniel Santos",
-        "numericOdds": 175
-      },
-      "fighter2": {
-        "name": "John Castaneda",
-        "numericOdds": -205
-      }
-    },
-    {
-      "timestamp": "2022-10-01T18:45:39Z",
-      "fighter1": {
-        "name": "Daniel Santos",
-        "numericOdds": 165
-      },
-      "fighter2": {
-        "name": "John Castaneda",
-        "numericOdds": -195
-      }
-    },
-    {
-      "timestamp": "2022-10-01T18:55:39Z",
-      "fighter1": {
-        "name": "Daniel Santos",
-        "numericOdds": 165
-      },
-      "fighter2": {
-        "name": "John Castaneda",
-        "numericOdds": -195
-      }
-    },
-    {
-      "timestamp": "2022-10-01T19:10:39Z",
-      "fighter1": {
-        "name": "Daniel Santos",
-        "numericOdds": 165
-      },
-      "fighter2": {
-        "name": "John Castaneda",
-        "numericOdds": -195
-      }
-    },
-    {
-      "timestamp": "2022-10-01T19:25:38Z",
-      "fighter1": {
-        "name": "Daniel Santos",
-        "numericOdds": 165
-      },
-      "fighter2": {
-        "name": "John Castaneda",
-        "numericOdds": -195
-      }
-    },
-    {
-      "timestamp": "2022-10-01T19:40:38Z",
-      "fighter1": {
-        "name": "Daniel Santos",
-        "numericOdds": 165
-      },
-      "fighter2": {
-        "name": "John Castaneda",
-        "numericOdds": -195
-      }
-    },
-    {
-      "timestamp": "2022-10-01T19:50:39Z",
-      "fighter1": {
-        "name": "Daniel Santos",
-        "numericOdds": 165
-      },
-      "fighter2": {
-        "name": "John Castaneda",
-        "numericOdds": -195
-      }
-    },
-    {
-      "timestamp": "2022-10-01T20:05:39Z",
-      "fighter1": {
-        "name": "Daniel Santos",
-        "numericOdds": 165
-      },
-      "fighter2": {
-        "name": "John Castaneda",
-        "numericOdds": -195
-      }
-    },
-    {
-      "timestamp": "2022-10-01T20:20:38Z",
-      "fighter1": {
-        "name": "Daniel Santos",
-        "numericOdds": 165
-      },
-      "fighter2": {
-        "name": "John Castaneda",
-        "numericOdds": -195
-      }
-    },
-    {
-      "timestamp": "2022-10-01T20:35:38Z",
-      "fighter1": {
-        "name": "Daniel Santos",
-        "numericOdds": 165
-      },
-      "fighter2": {
-        "name": "John Castaneda",
-        "numericOdds": -195
-      }
-    },
-    {
-      "timestamp": "2022-10-01T20:50:38Z",
-      "fighter1": {
-        "name": "Daniel Santos",
-        "numericOdds": 160
-      },
-      "fighter2": {
-        "name": "John Castaneda",
-        "numericOdds": -190
-      }
-    },
-    {
-      "timestamp": "2022-10-01T21:05:38Z",
-      "fighter1": {
-        "name": "Daniel Santos",
-        "numericOdds": 160
-      },
-      "fighter2": {
-        "name": "John Castaneda",
-        "numericOdds": -190
-      }
-    },
-    {
-      "timestamp": "2022-10-01T21:20:38Z",
-      "fighter1": {
-        "name": "Daniel Santos",
-        "numericOdds": 160
-      },
-      "fighter2": {
-        "name": "John Castaneda",
-        "numericOdds": -190
-      }
-    },
-    {
-      "timestamp": "2022-10-01T21:30:38Z",
-      "fighter1": {
-        "name": "Daniel Santos",
-        "numericOdds": 160
-      },
-      "fighter2": {
-        "name": "John Castaneda",
-        "numericOdds": -190
-      }
-    },
-    {
-      "timestamp": "2022-10-01T21:40:38Z",
-      "fighter1": {
-        "name": "Daniel Santos",
-        "numericOdds": 160
-      },
-      "fighter2": {
-        "name": "John Castaneda",
-        "numericOdds": -190
-      }
-    },
-    {
-      "timestamp": "2022-10-01T21:55:38Z",
-      "fighter1": {
-        "name": "Daniel Santos",
-        "numericOdds": 160
-      },
-      "fighter2": {
-        "name": "John Castaneda",
-        "numericOdds": -190
-      }
-    },
-    {
       "timestamp": "2022-10-01T22:10:38Z",
+      "fighter1": {
+        "name": "Daniel Santos",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "John Castaneda",
+        "numericOdds": -190
+      }
+    },
+    {
+      "timestamp": "2022-10-01T22:15:39Z",
+      "fighter1": {
+        "name": "Daniel Santos",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "John Castaneda",
+        "numericOdds": -190
+      }
+    },
+    {
+      "timestamp": "2022-10-01T22:20:40Z",
       "fighter1": {
         "name": "Daniel Santos",
         "numericOdds": 160
@@ -435,6 +51,17 @@
       }
     },
     {
+      "timestamp": "2022-10-01T22:30:38Z",
+      "fighter1": {
+        "name": "Daniel Santos",
+        "numericOdds": 155
+      },
+      "fighter2": {
+        "name": "John Castaneda",
+        "numericOdds": -180
+      }
+    },
+    {
       "timestamp": "2022-10-01T22:35:38Z",
       "fighter1": {
         "name": "Daniel Santos",
@@ -446,6 +73,17 @@
       }
     },
     {
+      "timestamp": "2022-10-01T22:40:39Z",
+      "fighter1": {
+        "name": "Daniel Santos",
+        "numericOdds": 155
+      },
+      "fighter2": {
+        "name": "John Castaneda",
+        "numericOdds": -190
+      }
+    },
+    {
       "timestamp": "2022-10-01T22:45:38Z",
       "fighter1": {
         "name": "Daniel Santos",
@@ -454,6 +92,28 @@
       "fighter2": {
         "name": "John Castaneda",
         "numericOdds": -390
+      }
+    },
+    {
+      "timestamp": "2022-10-01T22:50:39Z",
+      "fighter1": {
+        "name": "Daniel Santos",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "John Castaneda",
+        "numericOdds": -210
+      }
+    },
+    {
+      "timestamp": "2022-10-01T22:55:38Z",
+      "fighter1": {
+        "name": "Daniel Santos",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "John Castaneda",
+        "numericOdds": -210
       }
     }
   ]

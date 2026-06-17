@@ -1,496 +1,24 @@
 {
   "fightId": "milesjohns_vs_codygibson_2024-03-24",
   "fightTitle": "Miles Johns vs Cody Gibson",
-  "startTime": "2024-03-23T13:55:39Z",
+  "commenceTime": "2024-03-24T00:50:00Z",
+  "startTime": "2024-03-24T00:40:38Z",
   "endTime": "2024-03-24T01:25:38Z",
-  "dataPoints": 51,
+  "dataPoints": 10,
   "oddsHistory": [
     {
-      "timestamp": "2024-03-23T13:55:39Z",
+      "timestamp": "2024-03-24T00:40:38Z",
       "fighter1": {
         "name": "Cody Gibson",
-        "numericOdds": 114
+        "numericOdds": 130
       },
       "fighter2": {
         "name": "Miles Johns",
-        "numericOdds": -135
+        "numericOdds": -155
       }
     },
     {
-      "timestamp": "2024-03-23T14:10:38Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 114
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -135
-      }
-    },
-    {
-      "timestamp": "2024-03-23T14:20:38Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2024-03-23T14:30:39Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2024-03-23T14:45:39Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2024-03-23T15:00:38Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2024-03-23T15:10:38Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2024-03-23T15:20:39Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2024-03-23T15:35:38Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2024-03-23T15:50:38Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2024-03-23T16:05:38Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2024-03-23T16:20:38Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2024-03-23T16:35:38Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2024-03-23T16:50:38Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2024-03-23T17:05:38Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2024-03-23T17:20:38Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2024-03-23T17:30:39Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2024-03-23T17:45:38Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2024-03-23T18:00:38Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2024-03-23T18:15:38Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2024-03-23T18:30:38Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2024-03-23T18:45:38Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2024-03-23T18:55:38Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2024-03-23T19:10:38Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2024-03-23T19:25:38Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2024-03-23T19:40:38Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2024-03-23T19:55:38Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2024-03-23T20:10:38Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2024-03-23T20:20:38Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2024-03-23T20:30:38Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2024-03-23T20:45:38Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2024-03-23T21:00:38Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2024-03-23T21:15:38Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2024-03-23T21:25:38Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2024-03-23T21:35:38Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2024-03-23T21:50:38Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2024-03-23T22:05:38Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2024-03-23T22:20:38Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2024-03-23T22:30:38Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2024-03-23T22:45:38Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2024-03-23T23:00:38Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2024-03-23T23:15:38Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2024-03-23T23:30:38Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2024-03-23T23:40:38Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2024-03-23T23:55:38Z",
+      "timestamp": "2024-03-24T00:45:38Z",
       "fighter1": {
         "name": "Cody Gibson",
         "numericOdds": 124
@@ -501,36 +29,14 @@
       }
     },
     {
-      "timestamp": "2024-03-24T00:10:38Z",
+      "timestamp": "2024-03-24T00:50:38Z",
       "fighter1": {
         "name": "Cody Gibson",
-        "numericOdds": 130
+        "numericOdds": 124
       },
       "fighter2": {
         "name": "Miles Johns",
-        "numericOdds": -155
-      }
-    },
-    {
-      "timestamp": "2024-03-24T00:25:38Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -155
-      }
-    },
-    {
-      "timestamp": "2024-03-24T00:40:38Z",
-      "fighter1": {
-        "name": "Cody Gibson",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -155
+        "numericOdds": -148
       }
     },
     {
@@ -545,6 +51,28 @@
       }
     },
     {
+      "timestamp": "2024-03-24T01:00:38Z",
+      "fighter1": {
+        "name": "Cody Gibson",
+        "numericOdds": 124
+      },
+      "fighter2": {
+        "name": "Miles Johns",
+        "numericOdds": -160
+      }
+    },
+    {
+      "timestamp": "2024-03-24T01:05:38Z",
+      "fighter1": {
+        "name": "Cody Gibson",
+        "numericOdds": -130
+      },
+      "fighter2": {
+        "name": "Miles Johns",
+        "numericOdds": 100
+      }
+    },
+    {
       "timestamp": "2024-03-24T01:10:38Z",
       "fighter1": {
         "name": "Cody Gibson",
@@ -553,6 +81,28 @@
       "fighter2": {
         "name": "Miles Johns",
         "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2024-03-24T01:15:39Z",
+      "fighter1": {
+        "name": "Cody Gibson",
+        "numericOdds": 1500
+      },
+      "fighter2": {
+        "name": "Miles Johns",
+        "numericOdds": -4000
+      }
+    },
+    {
+      "timestamp": "2024-03-24T01:20:38Z",
+      "fighter1": {
+        "name": "Cody Gibson",
+        "numericOdds": 1500
+      },
+      "fighter2": {
+        "name": "Miles Johns",
+        "numericOdds": -4000
       }
     },
     {

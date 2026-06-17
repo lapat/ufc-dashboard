@@ -1,485 +1,13 @@
 {
   "fightId": "jimmiller_vs_jessebutler_2023-06-04",
   "fightTitle": "Jim Miller vs Jesse Butler",
-  "startTime": "2023-06-03T13:55:40Z",
-  "endTime": "2023-06-04T02:55:38Z",
-  "dataPoints": 57,
+  "commenceTime": "2023-06-04T00:00:00Z",
+  "startTime": "2023-06-03T23:50:38Z",
+  "endTime": "2023-06-04T01:25:38Z",
+  "dataPoints": 20,
   "oddsHistory": [
     {
-      "timestamp": "2023-06-03T13:55:40Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 220
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -260
-      }
-    },
-    {
-      "timestamp": "2023-06-03T14:10:38Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 215
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -255
-      }
-    },
-    {
-      "timestamp": "2023-06-03T14:20:39Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 215
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -255
-      }
-    },
-    {
-      "timestamp": "2023-06-03T14:35:39Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 215
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -255
-      }
-    },
-    {
-      "timestamp": "2023-06-03T14:50:38Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 215
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -255
-      }
-    },
-    {
-      "timestamp": "2023-06-03T15:00:39Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 215
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -255
-      }
-    },
-    {
-      "timestamp": "2023-06-03T15:15:39Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 210
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -250
-      }
-    },
-    {
-      "timestamp": "2023-06-03T15:30:39Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 210
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -250
-      }
-    },
-    {
-      "timestamp": "2023-06-03T15:45:39Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 210
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -250
-      }
-    },
-    {
-      "timestamp": "2023-06-03T16:00:39Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 210
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -250
-      }
-    },
-    {
-      "timestamp": "2023-06-03T16:15:39Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 210
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -250
-      }
-    },
-    {
-      "timestamp": "2023-06-03T16:30:38Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 210
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -250
-      }
-    },
-    {
-      "timestamp": "2023-06-03T16:45:38Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 210
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -250
-      }
-    },
-    {
-      "timestamp": "2023-06-03T16:55:38Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 210
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -250
-      }
-    },
-    {
-      "timestamp": "2023-06-03T17:10:38Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 210
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -250
-      }
-    },
-    {
-      "timestamp": "2023-06-03T17:20:38Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 210
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -250
-      }
-    },
-    {
-      "timestamp": "2023-06-03T17:35:38Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 205
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -245
-      }
-    },
-    {
-      "timestamp": "2023-06-03T17:45:39Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 205
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -245
-      }
-    },
-    {
-      "timestamp": "2023-06-03T18:00:39Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 205
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -245
-      }
-    },
-    {
-      "timestamp": "2023-06-03T18:15:39Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 205
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -245
-      }
-    },
-    {
-      "timestamp": "2023-06-03T18:30:39Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 205
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -245
-      }
-    },
-    {
-      "timestamp": "2023-06-03T18:45:38Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 205
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -245
-      }
-    },
-    {
-      "timestamp": "2023-06-03T19:00:38Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 210
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -250
-      }
-    },
-    {
-      "timestamp": "2023-06-03T19:10:39Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 210
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -250
-      }
-    },
-    {
-      "timestamp": "2023-06-03T19:25:38Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 210
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -250
-      }
-    },
-    {
-      "timestamp": "2023-06-03T19:35:38Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 210
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -250
-      }
-    },
-    {
-      "timestamp": "2023-06-03T19:45:39Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 210
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -250
-      }
-    },
-    {
-      "timestamp": "2023-06-03T20:00:38Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 210
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -250
-      }
-    },
-    {
-      "timestamp": "2023-06-03T20:15:38Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 205
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -245
-      }
-    },
-    {
-      "timestamp": "2023-06-03T20:30:38Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 205
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -245
-      }
-    },
-    {
-      "timestamp": "2023-06-03T20:40:38Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 205
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -245
-      }
-    },
-    {
-      "timestamp": "2023-06-03T20:55:38Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 205
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -245
-      }
-    },
-    {
-      "timestamp": "2023-06-03T21:05:38Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 205
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -245
-      }
-    },
-    {
-      "timestamp": "2023-06-03T21:15:39Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 205
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -245
-      }
-    },
-    {
-      "timestamp": "2023-06-03T21:30:38Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 205
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -245
-      }
-    },
-    {
-      "timestamp": "2023-06-03T21:45:38Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 205
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -245
-      }
-    },
-    {
-      "timestamp": "2023-06-03T22:00:38Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 205
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -245
-      }
-    },
-    {
-      "timestamp": "2023-06-03T22:15:38Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 205
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -245
-      }
-    },
-    {
-      "timestamp": "2023-06-03T22:30:38Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 200
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -240
-      }
-    },
-    {
-      "timestamp": "2023-06-03T22:45:38Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 190
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -225
-      }
-    },
-    {
-      "timestamp": "2023-06-03T23:00:38Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 190
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -225
-      }
-    },
-    {
-      "timestamp": "2023-06-03T23:15:38Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 190
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -225
-      }
-    },
-    {
-      "timestamp": "2023-06-03T23:25:39Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 190
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -225
-      }
-    },
-    {
-      "timestamp": "2023-06-03T23:40:39Z",
+      "timestamp": "2023-06-03T23:50:38Z",
       "fighter1": {
         "name": "Jesse Butler",
         "numericOdds": 190
@@ -501,6 +29,28 @@
       }
     },
     {
+      "timestamp": "2023-06-04T00:00:39Z",
+      "fighter1": {
+        "name": "Jesse Butler",
+        "numericOdds": 190
+      },
+      "fighter2": {
+        "name": "Jim Miller",
+        "numericOdds": -225
+      }
+    },
+    {
+      "timestamp": "2023-06-04T00:05:38Z",
+      "fighter1": {
+        "name": "Jesse Butler",
+        "numericOdds": 190
+      },
+      "fighter2": {
+        "name": "Jim Miller",
+        "numericOdds": -225
+      }
+    },
+    {
       "timestamp": "2023-06-04T00:10:38Z",
       "fighter1": {
         "name": "Jesse Butler",
@@ -509,6 +59,28 @@
       "fighter2": {
         "name": "Jim Miller",
         "numericOdds": -225
+      }
+    },
+    {
+      "timestamp": "2023-06-04T00:15:38Z",
+      "fighter1": {
+        "name": "Jesse Butler",
+        "numericOdds": 190
+      },
+      "fighter2": {
+        "name": "Jim Miller",
+        "numericOdds": -225
+      }
+    },
+    {
+      "timestamp": "2023-06-04T00:20:38Z",
+      "fighter1": {
+        "name": "Jesse Butler",
+        "numericOdds": 200
+      },
+      "fighter2": {
+        "name": "Jim Miller",
+        "numericOdds": -240
       }
     },
     {
@@ -523,6 +95,28 @@
       }
     },
     {
+      "timestamp": "2023-06-04T00:30:38Z",
+      "fighter1": {
+        "name": "Jesse Butler",
+        "numericOdds": 200
+      },
+      "fighter2": {
+        "name": "Jim Miller",
+        "numericOdds": -240
+      }
+    },
+    {
+      "timestamp": "2023-06-04T00:35:38Z",
+      "fighter1": {
+        "name": "Jesse Butler",
+        "numericOdds": 195
+      },
+      "fighter2": {
+        "name": "Jim Miller",
+        "numericOdds": -230
+      }
+    },
+    {
       "timestamp": "2023-06-04T00:40:38Z",
       "fighter1": {
         "name": "Jesse Butler",
@@ -534,7 +128,51 @@
       }
     },
     {
+      "timestamp": "2023-06-04T00:45:38Z",
+      "fighter1": {
+        "name": "Jesse Butler",
+        "numericOdds": 195
+      },
+      "fighter2": {
+        "name": "Jim Miller",
+        "numericOdds": -230
+      }
+    },
+    {
+      "timestamp": "2023-06-04T00:50:38Z",
+      "fighter1": {
+        "name": "Jesse Butler",
+        "numericOdds": 200
+      },
+      "fighter2": {
+        "name": "Jim Miller",
+        "numericOdds": -240
+      }
+    },
+    {
       "timestamp": "2023-06-04T00:55:38Z",
+      "fighter1": {
+        "name": "Jesse Butler",
+        "numericOdds": 200
+      },
+      "fighter2": {
+        "name": "Jim Miller",
+        "numericOdds": -240
+      }
+    },
+    {
+      "timestamp": "2023-06-04T01:00:38Z",
+      "fighter1": {
+        "name": "Jesse Butler",
+        "numericOdds": 200
+      },
+      "fighter2": {
+        "name": "Jim Miller",
+        "numericOdds": -240
+      }
+    },
+    {
+      "timestamp": "2023-06-04T01:05:38Z",
       "fighter1": {
         "name": "Jesse Butler",
         "numericOdds": 200
@@ -556,6 +194,28 @@
       }
     },
     {
+      "timestamp": "2023-06-04T01:15:38Z",
+      "fighter1": {
+        "name": "Jesse Butler",
+        "numericOdds": 200
+      },
+      "fighter2": {
+        "name": "Jim Miller",
+        "numericOdds": -240
+      }
+    },
+    {
+      "timestamp": "2023-06-04T01:20:38Z",
+      "fighter1": {
+        "name": "Jesse Butler",
+        "numericOdds": 195
+      },
+      "fighter2": {
+        "name": "Jim Miller",
+        "numericOdds": -230
+      }
+    },
+    {
       "timestamp": "2023-06-04T01:25:38Z",
       "fighter1": {
         "name": "Jesse Butler",
@@ -564,72 +224,6 @@
       "fighter2": {
         "name": "Jim Miller",
         "numericOdds": -230
-      }
-    },
-    {
-      "timestamp": "2023-06-04T01:40:38Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 195
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -230
-      }
-    },
-    {
-      "timestamp": "2023-06-04T01:55:38Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 205
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -245
-      }
-    },
-    {
-      "timestamp": "2023-06-04T02:10:38Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 205
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -245
-      }
-    },
-    {
-      "timestamp": "2023-06-04T02:25:38Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 205
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -245
-      }
-    },
-    {
-      "timestamp": "2023-06-04T02:40:38Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 185
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -215
-      }
-    },
-    {
-      "timestamp": "2023-06-04T02:55:38Z",
-      "fighter1": {
-        "name": "Jesse Butler",
-        "numericOdds": 195
-      },
-      "fighter2": {
-        "name": "Jim Miller",
-        "numericOdds": -240
       }
     }
   ]

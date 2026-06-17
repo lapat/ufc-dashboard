@@ -1,364 +1,35 @@
 {
   "fightId": "vanessademopoulos_vs_kanakomurata_2023-10-07",
   "fightTitle": "Vanessa Demopoulos vs Kanako Murata",
-  "startTime": "2023-10-07T13:55:41Z",
-  "endTime": "2023-10-07T21:50:40Z",
-  "dataPoints": 36,
+  "commenceTime": "2023-10-07T21:15:00Z",
+  "startTime": "2023-10-07T21:05:40Z",
+  "endTime": "2023-10-07T21:55:41Z",
+  "dataPoints": 11,
   "oddsHistory": [
     {
-      "timestamp": "2023-10-07T13:55:41Z",
-      "fighter1": {
-        "name": "Kanako Murata",
-        "numericOdds": -345
-      },
-      "fighter2": {
-        "name": "Vanessa Demopoulos",
-        "numericOdds": 275
-      }
-    },
-    {
-      "timestamp": "2023-10-07T14:05:42Z",
-      "fighter1": {
-        "name": "Kanako Murata",
-        "numericOdds": -345
-      },
-      "fighter2": {
-        "name": "Vanessa Demopoulos",
-        "numericOdds": 275
-      }
-    },
-    {
-      "timestamp": "2023-10-07T14:20:41Z",
-      "fighter1": {
-        "name": "Kanako Murata",
-        "numericOdds": -345
-      },
-      "fighter2": {
-        "name": "Vanessa Demopoulos",
-        "numericOdds": 275
-      }
-    },
-    {
-      "timestamp": "2023-10-07T14:35:40Z",
-      "fighter1": {
-        "name": "Kanako Murata",
-        "numericOdds": -345
-      },
-      "fighter2": {
-        "name": "Vanessa Demopoulos",
-        "numericOdds": 275
-      }
-    },
-    {
-      "timestamp": "2023-10-07T14:45:40Z",
-      "fighter1": {
-        "name": "Kanako Murata",
-        "numericOdds": -345
-      },
-      "fighter2": {
-        "name": "Vanessa Demopoulos",
-        "numericOdds": 275
-      }
-    },
-    {
-      "timestamp": "2023-10-07T14:55:40Z",
-      "fighter1": {
-        "name": "Kanako Murata",
-        "numericOdds": -345
-      },
-      "fighter2": {
-        "name": "Vanessa Demopoulos",
-        "numericOdds": 275
-      }
-    },
-    {
-      "timestamp": "2023-10-07T15:05:42Z",
-      "fighter1": {
-        "name": "Kanako Murata",
-        "numericOdds": -345
-      },
-      "fighter2": {
-        "name": "Vanessa Demopoulos",
-        "numericOdds": 275
-      }
-    },
-    {
-      "timestamp": "2023-10-07T15:20:41Z",
-      "fighter1": {
-        "name": "Kanako Murata",
-        "numericOdds": -345
-      },
-      "fighter2": {
-        "name": "Vanessa Demopoulos",
-        "numericOdds": 275
-      }
-    },
-    {
-      "timestamp": "2023-10-07T15:35:41Z",
-      "fighter1": {
-        "name": "Kanako Murata",
-        "numericOdds": -345
-      },
-      "fighter2": {
-        "name": "Vanessa Demopoulos",
-        "numericOdds": 275
-      }
-    },
-    {
-      "timestamp": "2023-10-07T15:45:42Z",
-      "fighter1": {
-        "name": "Kanako Murata",
-        "numericOdds": -345
-      },
-      "fighter2": {
-        "name": "Vanessa Demopoulos",
-        "numericOdds": 275
-      }
-    },
-    {
-      "timestamp": "2023-10-07T16:00:41Z",
-      "fighter1": {
-        "name": "Kanako Murata",
-        "numericOdds": -345
-      },
-      "fighter2": {
-        "name": "Vanessa Demopoulos",
-        "numericOdds": 275
-      }
-    },
-    {
-      "timestamp": "2023-10-07T16:15:41Z",
-      "fighter1": {
-        "name": "Kanako Murata",
-        "numericOdds": -345
-      },
-      "fighter2": {
-        "name": "Vanessa Demopoulos",
-        "numericOdds": 275
-      }
-    },
-    {
-      "timestamp": "2023-10-07T16:30:41Z",
-      "fighter1": {
-        "name": "Kanako Murata",
-        "numericOdds": -345
-      },
-      "fighter2": {
-        "name": "Vanessa Demopoulos",
-        "numericOdds": 275
-      }
-    },
-    {
-      "timestamp": "2023-10-07T16:45:40Z",
-      "fighter1": {
-        "name": "Kanako Murata",
-        "numericOdds": -345
-      },
-      "fighter2": {
-        "name": "Vanessa Demopoulos",
-        "numericOdds": 275
-      }
-    },
-    {
-      "timestamp": "2023-10-07T17:00:40Z",
-      "fighter1": {
-        "name": "Kanako Murata",
-        "numericOdds": -345
-      },
-      "fighter2": {
-        "name": "Vanessa Demopoulos",
-        "numericOdds": 275
-      }
-    },
-    {
-      "timestamp": "2023-10-07T17:15:40Z",
-      "fighter1": {
-        "name": "Kanako Murata",
-        "numericOdds": -345
-      },
-      "fighter2": {
-        "name": "Vanessa Demopoulos",
-        "numericOdds": 275
-      }
-    },
-    {
-      "timestamp": "2023-10-07T17:25:41Z",
-      "fighter1": {
-        "name": "Kanako Murata",
-        "numericOdds": -345
-      },
-      "fighter2": {
-        "name": "Vanessa Demopoulos",
-        "numericOdds": 275
-      }
-    },
-    {
-      "timestamp": "2023-10-07T17:40:40Z",
-      "fighter1": {
-        "name": "Kanako Murata",
-        "numericOdds": -325
-      },
-      "fighter2": {
-        "name": "Vanessa Demopoulos",
-        "numericOdds": 260
-      }
-    },
-    {
-      "timestamp": "2023-10-07T17:50:40Z",
-      "fighter1": {
-        "name": "Kanako Murata",
-        "numericOdds": -325
-      },
-      "fighter2": {
-        "name": "Vanessa Demopoulos",
-        "numericOdds": 260
-      }
-    },
-    {
-      "timestamp": "2023-10-07T18:00:40Z",
-      "fighter1": {
-        "name": "Kanako Murata",
-        "numericOdds": -325
-      },
-      "fighter2": {
-        "name": "Vanessa Demopoulos",
-        "numericOdds": 260
-      }
-    },
-    {
-      "timestamp": "2023-10-07T18:15:40Z",
-      "fighter1": {
-        "name": "Kanako Murata",
-        "numericOdds": -360
-      },
-      "fighter2": {
-        "name": "Vanessa Demopoulos",
-        "numericOdds": 285
-      }
-    },
-    {
-      "timestamp": "2023-10-07T18:30:40Z",
-      "fighter1": {
-        "name": "Kanako Murata",
-        "numericOdds": -375
-      },
-      "fighter2": {
-        "name": "Vanessa Demopoulos",
-        "numericOdds": 295
-      }
-    },
-    {
-      "timestamp": "2023-10-07T18:45:40Z",
-      "fighter1": {
-        "name": "Kanako Murata",
-        "numericOdds": -375
-      },
-      "fighter2": {
-        "name": "Vanessa Demopoulos",
-        "numericOdds": 295
-      }
-    },
-    {
-      "timestamp": "2023-10-07T19:00:40Z",
-      "fighter1": {
-        "name": "Kanako Murata",
-        "numericOdds": -375
-      },
-      "fighter2": {
-        "name": "Vanessa Demopoulos",
-        "numericOdds": 295
-      }
-    },
-    {
-      "timestamp": "2023-10-07T19:15:40Z",
-      "fighter1": {
-        "name": "Kanako Murata",
-        "numericOdds": -375
-      },
-      "fighter2": {
-        "name": "Vanessa Demopoulos",
-        "numericOdds": 295
-      }
-    },
-    {
-      "timestamp": "2023-10-07T19:30:40Z",
-      "fighter1": {
-        "name": "Kanako Murata",
-        "numericOdds": -375
-      },
-      "fighter2": {
-        "name": "Vanessa Demopoulos",
-        "numericOdds": 295
-      }
-    },
-    {
-      "timestamp": "2023-10-07T19:40:40Z",
-      "fighter1": {
-        "name": "Kanako Murata",
-        "numericOdds": -375
-      },
-      "fighter2": {
-        "name": "Vanessa Demopoulos",
-        "numericOdds": 295
-      }
-    },
-    {
-      "timestamp": "2023-10-07T19:55:40Z",
-      "fighter1": {
-        "name": "Kanako Murata",
-        "numericOdds": -375
-      },
-      "fighter2": {
-        "name": "Vanessa Demopoulos",
-        "numericOdds": 295
-      }
-    },
-    {
-      "timestamp": "2023-10-07T20:05:40Z",
-      "fighter1": {
-        "name": "Kanako Murata",
-        "numericOdds": -380
-      },
-      "fighter2": {
-        "name": "Vanessa Demopoulos",
-        "numericOdds": 300
-      }
-    },
-    {
-      "timestamp": "2023-10-07T20:20:40Z",
-      "fighter1": {
-        "name": "Kanako Murata",
-        "numericOdds": -380
-      },
-      "fighter2": {
-        "name": "Vanessa Demopoulos",
-        "numericOdds": 300
-      }
-    },
-    {
-      "timestamp": "2023-10-07T20:35:40Z",
-      "fighter1": {
-        "name": "Kanako Murata",
-        "numericOdds": -380
-      },
-      "fighter2": {
-        "name": "Vanessa Demopoulos",
-        "numericOdds": 300
-      }
-    },
-    {
-      "timestamp": "2023-10-07T20:50:40Z",
-      "fighter1": {
-        "name": "Kanako Murata",
-        "numericOdds": -380
-      },
-      "fighter2": {
-        "name": "Vanessa Demopoulos",
-        "numericOdds": 300
-      }
-    },
-    {
       "timestamp": "2023-10-07T21:05:40Z",
+      "fighter1": {
+        "name": "Kanako Murata",
+        "numericOdds": -380
+      },
+      "fighter2": {
+        "name": "Vanessa Demopoulos",
+        "numericOdds": 300
+      }
+    },
+    {
+      "timestamp": "2023-10-07T21:10:40Z",
+      "fighter1": {
+        "name": "Kanako Murata",
+        "numericOdds": -380
+      },
+      "fighter2": {
+        "name": "Vanessa Demopoulos",
+        "numericOdds": 300
+      }
+    },
+    {
+      "timestamp": "2023-10-07T21:15:40Z",
       "fighter1": {
         "name": "Kanako Murata",
         "numericOdds": -380
@@ -380,6 +51,28 @@
       }
     },
     {
+      "timestamp": "2023-10-07T21:25:41Z",
+      "fighter1": {
+        "name": "Kanako Murata",
+        "numericOdds": -375
+      },
+      "fighter2": {
+        "name": "Vanessa Demopoulos",
+        "numericOdds": 295
+      }
+    },
+    {
+      "timestamp": "2023-10-07T21:30:40Z",
+      "fighter1": {
+        "name": "Kanako Murata",
+        "numericOdds": -380
+      },
+      "fighter2": {
+        "name": "Vanessa Demopoulos",
+        "numericOdds": 300
+      }
+    },
+    {
       "timestamp": "2023-10-07T21:35:40Z",
       "fighter1": {
         "name": "Kanako Murata",
@@ -391,6 +84,28 @@
       }
     },
     {
+      "timestamp": "2023-10-07T21:40:40Z",
+      "fighter1": {
+        "name": "Kanako Murata",
+        "numericOdds": -410
+      },
+      "fighter2": {
+        "name": "Vanessa Demopoulos",
+        "numericOdds": 290
+      }
+    },
+    {
+      "timestamp": "2023-10-07T21:45:40Z",
+      "fighter1": {
+        "name": "Kanako Murata",
+        "numericOdds": -166
+      },
+      "fighter2": {
+        "name": "Vanessa Demopoulos",
+        "numericOdds": 130
+      }
+    },
+    {
       "timestamp": "2023-10-07T21:50:40Z",
       "fighter1": {
         "name": "Kanako Murata",
@@ -399,6 +114,17 @@
       "fighter2": {
         "name": "Vanessa Demopoulos",
         "numericOdds": 150
+      }
+    },
+    {
+      "timestamp": "2023-10-07T21:55:41Z",
+      "fighter1": {
+        "name": "Kanako Murata",
+        "numericOdds": -810
+      },
+      "fighter2": {
+        "name": "Vanessa Demopoulos",
+        "numericOdds": 500
       }
     }
   ]

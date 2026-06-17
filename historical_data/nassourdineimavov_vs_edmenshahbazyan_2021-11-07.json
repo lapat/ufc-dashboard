@@ -1,12 +1,24 @@
 {
   "fightId": "nassourdineimavov_vs_edmenshahbazyan_2021-11-07",
   "fightTitle": "Nassourdine Imavov vs Edmen Shahbazyan",
-  "startTime": "2021-11-06T13:55:00Z",
-  "endTime": "2021-11-06T16:45:00Z",
-  "dataPoints": 18,
+  "commenceTime": "2021-11-07T00:15:00Z",
+  "startTime": "2021-11-07T00:05:00Z",
+  "endTime": "2021-11-07T00:35:00Z",
+  "dataPoints": 4,
   "oddsHistory": [
     {
-      "timestamp": "2021-11-06T13:55:00Z",
+      "timestamp": "2021-11-07T00:05:00Z",
+      "fighter1": {
+        "name": "Edmen Shahbazyan",
+        "numericOdds": -105
+      },
+      "fighter2": {
+        "name": "Nassourdine Imavov",
+        "numericOdds": -115
+      }
+    },
+    {
+      "timestamp": "2021-11-07T00:15:00Z",
       "fighter1": {
         "name": "Edmen Shahbazyan",
         "numericOdds": 100
@@ -17,190 +29,25 @@
       }
     },
     {
-      "timestamp": "2021-11-06T14:05:00Z",
+      "timestamp": "2021-11-07T00:25:00Z",
       "fighter1": {
         "name": "Edmen Shahbazyan",
-        "numericOdds": 100
+        "numericOdds": 230
       },
       "fighter2": {
         "name": "Nassourdine Imavov",
-        "numericOdds": -120
+        "numericOdds": -333
       }
     },
     {
-      "timestamp": "2021-11-06T14:15:00Z",
+      "timestamp": "2021-11-07T00:35:00Z",
       "fighter1": {
         "name": "Edmen Shahbazyan",
-        "numericOdds": 100
+        "numericOdds": 230
       },
       "fighter2": {
         "name": "Nassourdine Imavov",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2021-11-06T14:25:00Z",
-      "fighter1": {
-        "name": "Edmen Shahbazyan",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Nassourdine Imavov",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2021-11-06T14:35:00Z",
-      "fighter1": {
-        "name": "Edmen Shahbazyan",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Nassourdine Imavov",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2021-11-06T14:45:00Z",
-      "fighter1": {
-        "name": "Edmen Shahbazyan",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Nassourdine Imavov",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2021-11-06T14:55:00Z",
-      "fighter1": {
-        "name": "Edmen Shahbazyan",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Nassourdine Imavov",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2021-11-06T15:05:00Z",
-      "fighter1": {
-        "name": "Edmen Shahbazyan",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Nassourdine Imavov",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2021-11-06T15:15:00Z",
-      "fighter1": {
-        "name": "Edmen Shahbazyan",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Nassourdine Imavov",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2021-11-06T15:25:00Z",
-      "fighter1": {
-        "name": "Edmen Shahbazyan",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Nassourdine Imavov",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2021-11-06T15:35:00Z",
-      "fighter1": {
-        "name": "Edmen Shahbazyan",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Nassourdine Imavov",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2021-11-06T15:45:00Z",
-      "fighter1": {
-        "name": "Edmen Shahbazyan",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Nassourdine Imavov",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2021-11-06T15:55:00Z",
-      "fighter1": {
-        "name": "Edmen Shahbazyan",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Nassourdine Imavov",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2021-11-06T16:05:00Z",
-      "fighter1": {
-        "name": "Edmen Shahbazyan",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Nassourdine Imavov",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2021-11-06T16:15:00Z",
-      "fighter1": {
-        "name": "Edmen Shahbazyan",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Nassourdine Imavov",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2021-11-06T16:25:00Z",
-      "fighter1": {
-        "name": "Edmen Shahbazyan",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Nassourdine Imavov",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2021-11-06T16:35:00Z",
-      "fighter1": {
-        "name": "Edmen Shahbazyan",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Nassourdine Imavov",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2021-11-06T16:45:00Z",
-      "fighter1": {
-        "name": "Edmen Shahbazyan",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Nassourdine Imavov",
-        "numericOdds": -120
+        "numericOdds": -333
       }
     }
   ]

@@ -1,12 +1,101 @@
 {
   "fightId": "jessicaandrade_vs_amandalemos_2022-04-24",
   "fightTitle": "Jessica Andrade vs Amanda Lemos",
-  "startTime": "2022-04-23T13:55:00Z",
-  "endTime": "2022-04-23T17:35:00Z",
-  "dataPoints": 23,
+  "commenceTime": "2022-04-24T03:15:00Z",
+  "startTime": "2022-04-24T01:25:00Z",
+  "endTime": "2022-04-24T02:55:00Z",
+  "dataPoints": 10,
   "oddsHistory": [
     {
-      "timestamp": "2022-04-23T13:55:00Z",
+      "timestamp": "2022-04-24T01:25:00Z",
+      "fighter1": {
+        "name": "Amanda Lemos",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Jessica Andrade",
+        "numericOdds": -227
+      }
+    },
+    {
+      "timestamp": "2022-04-24T01:35:00Z",
+      "fighter1": {
+        "name": "Amanda Lemos",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Jessica Andrade",
+        "numericOdds": -227
+      }
+    },
+    {
+      "timestamp": "2022-04-24T01:45:00Z",
+      "fighter1": {
+        "name": "Amanda Lemos",
+        "numericOdds": 190
+      },
+      "fighter2": {
+        "name": "Jessica Andrade",
+        "numericOdds": -233
+      }
+    },
+    {
+      "timestamp": "2022-04-24T01:55:00Z",
+      "fighter1": {
+        "name": "Amanda Lemos",
+        "numericOdds": 190
+      },
+      "fighter2": {
+        "name": "Jessica Andrade",
+        "numericOdds": -233
+      }
+    },
+    {
+      "timestamp": "2022-04-24T02:05:00Z",
+      "fighter1": {
+        "name": "Amanda Lemos",
+        "numericOdds": 190
+      },
+      "fighter2": {
+        "name": "Jessica Andrade",
+        "numericOdds": -233
+      }
+    },
+    {
+      "timestamp": "2022-04-24T02:15:00Z",
+      "fighter1": {
+        "name": "Amanda Lemos",
+        "numericOdds": 190
+      },
+      "fighter2": {
+        "name": "Jessica Andrade",
+        "numericOdds": -233
+      }
+    },
+    {
+      "timestamp": "2022-04-24T02:25:00Z",
+      "fighter1": {
+        "name": "Amanda Lemos",
+        "numericOdds": 190
+      },
+      "fighter2": {
+        "name": "Jessica Andrade",
+        "numericOdds": -233
+      }
+    },
+    {
+      "timestamp": "2022-04-24T02:35:00Z",
+      "fighter1": {
+        "name": "Amanda Lemos",
+        "numericOdds": 190
+      },
+      "fighter2": {
+        "name": "Jessica Andrade",
+        "numericOdds": -233
+      }
+    },
+    {
+      "timestamp": "2022-04-24T02:45:00Z",
       "fighter1": {
         "name": "Amanda Lemos",
         "numericOdds": 180
@@ -17,245 +106,14 @@
       }
     },
     {
-      "timestamp": "2022-04-23T14:05:00Z",
+      "timestamp": "2022-04-24T02:55:00Z",
       "fighter1": {
         "name": "Amanda Lemos",
-        "numericOdds": 180
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Jessica Andrade",
-        "numericOdds": -222
-      }
-    },
-    {
-      "timestamp": "2022-04-23T14:15:00Z",
-      "fighter1": {
-        "name": "Amanda Lemos",
-        "numericOdds": 180
-      },
-      "fighter2": {
-        "name": "Jessica Andrade",
-        "numericOdds": -222
-      }
-    },
-    {
-      "timestamp": "2022-04-23T14:25:00Z",
-      "fighter1": {
-        "name": "Amanda Lemos",
-        "numericOdds": 190
-      },
-      "fighter2": {
-        "name": "Jessica Andrade",
-        "numericOdds": -233
-      }
-    },
-    {
-      "timestamp": "2022-04-23T14:35:00Z",
-      "fighter1": {
-        "name": "Amanda Lemos",
-        "numericOdds": 190
-      },
-      "fighter2": {
-        "name": "Jessica Andrade",
-        "numericOdds": -233
-      }
-    },
-    {
-      "timestamp": "2022-04-23T14:45:00Z",
-      "fighter1": {
-        "name": "Amanda Lemos",
-        "numericOdds": 190
-      },
-      "fighter2": {
-        "name": "Jessica Andrade",
-        "numericOdds": -233
-      }
-    },
-    {
-      "timestamp": "2022-04-23T14:55:00Z",
-      "fighter1": {
-        "name": "Amanda Lemos",
-        "numericOdds": 190
-      },
-      "fighter2": {
-        "name": "Jessica Andrade",
-        "numericOdds": -233
-      }
-    },
-    {
-      "timestamp": "2022-04-23T15:05:00Z",
-      "fighter1": {
-        "name": "Amanda Lemos",
-        "numericOdds": 190
-      },
-      "fighter2": {
-        "name": "Jessica Andrade",
-        "numericOdds": -233
-      }
-    },
-    {
-      "timestamp": "2022-04-23T15:15:00Z",
-      "fighter1": {
-        "name": "Amanda Lemos",
-        "numericOdds": 195
-      },
-      "fighter2": {
-        "name": "Jessica Andrade",
-        "numericOdds": -238
-      }
-    },
-    {
-      "timestamp": "2022-04-23T15:25:00Z",
-      "fighter1": {
-        "name": "Amanda Lemos",
-        "numericOdds": 195
-      },
-      "fighter2": {
-        "name": "Jessica Andrade",
-        "numericOdds": -238
-      }
-    },
-    {
-      "timestamp": "2022-04-23T15:35:00Z",
-      "fighter1": {
-        "name": "Amanda Lemos",
-        "numericOdds": 195
-      },
-      "fighter2": {
-        "name": "Jessica Andrade",
-        "numericOdds": -238
-      }
-    },
-    {
-      "timestamp": "2022-04-23T15:45:00Z",
-      "fighter1": {
-        "name": "Amanda Lemos",
-        "numericOdds": 195
-      },
-      "fighter2": {
-        "name": "Jessica Andrade",
-        "numericOdds": -238
-      }
-    },
-    {
-      "timestamp": "2022-04-23T15:55:00Z",
-      "fighter1": {
-        "name": "Amanda Lemos",
-        "numericOdds": 195
-      },
-      "fighter2": {
-        "name": "Jessica Andrade",
-        "numericOdds": -238
-      }
-    },
-    {
-      "timestamp": "2022-04-23T16:05:00Z",
-      "fighter1": {
-        "name": "Amanda Lemos",
-        "numericOdds": 195
-      },
-      "fighter2": {
-        "name": "Jessica Andrade",
-        "numericOdds": -238
-      }
-    },
-    {
-      "timestamp": "2022-04-23T16:15:00Z",
-      "fighter1": {
-        "name": "Amanda Lemos",
-        "numericOdds": 190
-      },
-      "fighter2": {
-        "name": "Jessica Andrade",
-        "numericOdds": -233
-      }
-    },
-    {
-      "timestamp": "2022-04-23T16:25:00Z",
-      "fighter1": {
-        "name": "Amanda Lemos",
-        "numericOdds": 190
-      },
-      "fighter2": {
-        "name": "Jessica Andrade",
-        "numericOdds": -233
-      }
-    },
-    {
-      "timestamp": "2022-04-23T16:35:00Z",
-      "fighter1": {
-        "name": "Amanda Lemos",
-        "numericOdds": 190
-      },
-      "fighter2": {
-        "name": "Jessica Andrade",
-        "numericOdds": -233
-      }
-    },
-    {
-      "timestamp": "2022-04-23T16:45:00Z",
-      "fighter1": {
-        "name": "Amanda Lemos",
-        "numericOdds": 190
-      },
-      "fighter2": {
-        "name": "Jessica Andrade",
-        "numericOdds": -233
-      }
-    },
-    {
-      "timestamp": "2022-04-23T16:55:00Z",
-      "fighter1": {
-        "name": "Amanda Lemos",
-        "numericOdds": 190
-      },
-      "fighter2": {
-        "name": "Jessica Andrade",
-        "numericOdds": -233
-      }
-    },
-    {
-      "timestamp": "2022-04-23T17:05:00Z",
-      "fighter1": {
-        "name": "Amanda Lemos",
-        "numericOdds": 190
-      },
-      "fighter2": {
-        "name": "Jessica Andrade",
-        "numericOdds": -233
-      }
-    },
-    {
-      "timestamp": "2022-04-23T17:15:00Z",
-      "fighter1": {
-        "name": "Amanda Lemos",
-        "numericOdds": 180
-      },
-      "fighter2": {
-        "name": "Jessica Andrade",
-        "numericOdds": -222
-      }
-    },
-    {
-      "timestamp": "2022-04-23T17:25:00Z",
-      "fighter1": {
-        "name": "Amanda Lemos",
-        "numericOdds": 180
-      },
-      "fighter2": {
-        "name": "Jessica Andrade",
-        "numericOdds": -222
-      }
-    },
-    {
-      "timestamp": "2022-04-23T17:35:00Z",
-      "fighter1": {
-        "name": "Amanda Lemos",
-        "numericOdds": 180
-      },
-      "fighter2": {
-        "name": "Jessica Andrade",
-        "numericOdds": -222
+        "numericOdds": -115
       }
     }
   ]

@@ -1,12 +1,13 @@
 {
   "fightId": "matthewsemelsberger_vs_jakematthews_2022-12-17",
   "fightTitle": "Matthew Semelsberger vs Jake Matthews",
-  "startTime": "2022-12-17T13:55:39Z",
-  "endTime": "2022-12-17T17:55:39Z",
-  "dataPoints": 19,
+  "commenceTime": "2022-12-17T23:15:00Z",
+  "startTime": "2022-12-17T23:05:39Z",
+  "endTime": "2022-12-17T23:45:38Z",
+  "dataPoints": 9,
   "oddsHistory": [
     {
-      "timestamp": "2022-12-17T13:55:39Z",
+      "timestamp": "2022-12-17T23:05:39Z",
       "fighter1": {
         "name": "Jake Matthews",
         "numericOdds": -305
@@ -17,7 +18,7 @@
       }
     },
     {
-      "timestamp": "2022-12-17T14:05:39Z",
+      "timestamp": "2022-12-17T23:10:38Z",
       "fighter1": {
         "name": "Jake Matthews",
         "numericOdds": -305
@@ -28,7 +29,7 @@
       }
     },
     {
-      "timestamp": "2022-12-17T14:20:39Z",
+      "timestamp": "2022-12-17T23:15:39Z",
       "fighter1": {
         "name": "Jake Matthews",
         "numericOdds": -305
@@ -39,179 +40,69 @@
       }
     },
     {
-      "timestamp": "2022-12-17T14:30:39Z",
+      "timestamp": "2022-12-17T23:20:39Z",
       "fighter1": {
         "name": "Jake Matthews",
-        "numericOdds": -305
+        "numericOdds": 140
       },
       "fighter2": {
         "name": "Matthew Semelsberger",
-        "numericOdds": 255
+        "numericOdds": -175
       }
     },
     {
-      "timestamp": "2022-12-17T14:40:40Z",
+      "timestamp": "2022-12-17T23:25:39Z",
       "fighter1": {
         "name": "Jake Matthews",
-        "numericOdds": -305
+        "numericOdds": 160
       },
       "fighter2": {
         "name": "Matthew Semelsberger",
-        "numericOdds": 255
+        "numericOdds": -195
       }
     },
     {
-      "timestamp": "2022-12-17T14:55:40Z",
+      "timestamp": "2022-12-17T23:30:39Z",
       "fighter1": {
         "name": "Jake Matthews",
-        "numericOdds": -305
+        "numericOdds": 300
       },
       "fighter2": {
         "name": "Matthew Semelsberger",
-        "numericOdds": 255
+        "numericOdds": -400
       }
     },
     {
-      "timestamp": "2022-12-17T15:10:40Z",
+      "timestamp": "2022-12-17T23:35:38Z",
       "fighter1": {
         "name": "Jake Matthews",
-        "numericOdds": -305
+        "numericOdds": 530
       },
       "fighter2": {
         "name": "Matthew Semelsberger",
-        "numericOdds": 255
+        "numericOdds": -790
       }
     },
     {
-      "timestamp": "2022-12-17T15:25:39Z",
+      "timestamp": "2022-12-17T23:40:39Z",
       "fighter1": {
         "name": "Jake Matthews",
-        "numericOdds": -305
+        "numericOdds": 530
       },
       "fighter2": {
         "name": "Matthew Semelsberger",
-        "numericOdds": 255
+        "numericOdds": -790
       }
     },
     {
-      "timestamp": "2022-12-17T15:40:39Z",
+      "timestamp": "2022-12-17T23:45:38Z",
       "fighter1": {
         "name": "Jake Matthews",
-        "numericOdds": -305
+        "numericOdds": 530
       },
       "fighter2": {
         "name": "Matthew Semelsberger",
-        "numericOdds": 255
-      }
-    },
-    {
-      "timestamp": "2022-12-17T15:55:39Z",
-      "fighter1": {
-        "name": "Jake Matthews",
-        "numericOdds": -305
-      },
-      "fighter2": {
-        "name": "Matthew Semelsberger",
-        "numericOdds": 255
-      }
-    },
-    {
-      "timestamp": "2022-12-17T16:10:39Z",
-      "fighter1": {
-        "name": "Jake Matthews",
-        "numericOdds": -305
-      },
-      "fighter2": {
-        "name": "Matthew Semelsberger",
-        "numericOdds": 255
-      }
-    },
-    {
-      "timestamp": "2022-12-17T16:25:39Z",
-      "fighter1": {
-        "name": "Jake Matthews",
-        "numericOdds": -305
-      },
-      "fighter2": {
-        "name": "Matthew Semelsberger",
-        "numericOdds": 255
-      }
-    },
-    {
-      "timestamp": "2022-12-17T16:40:39Z",
-      "fighter1": {
-        "name": "Jake Matthews",
-        "numericOdds": -305
-      },
-      "fighter2": {
-        "name": "Matthew Semelsberger",
-        "numericOdds": 255
-      }
-    },
-    {
-      "timestamp": "2022-12-17T16:55:39Z",
-      "fighter1": {
-        "name": "Jake Matthews",
-        "numericOdds": -305
-      },
-      "fighter2": {
-        "name": "Matthew Semelsberger",
-        "numericOdds": 255
-      }
-    },
-    {
-      "timestamp": "2022-12-17T17:10:39Z",
-      "fighter1": {
-        "name": "Jake Matthews",
-        "numericOdds": -305
-      },
-      "fighter2": {
-        "name": "Matthew Semelsberger",
-        "numericOdds": 255
-      }
-    },
-    {
-      "timestamp": "2022-12-17T17:20:39Z",
-      "fighter1": {
-        "name": "Jake Matthews",
-        "numericOdds": -305
-      },
-      "fighter2": {
-        "name": "Matthew Semelsberger",
-        "numericOdds": 255
-      }
-    },
-    {
-      "timestamp": "2022-12-17T17:30:39Z",
-      "fighter1": {
-        "name": "Jake Matthews",
-        "numericOdds": -305
-      },
-      "fighter2": {
-        "name": "Matthew Semelsberger",
-        "numericOdds": 255
-      }
-    },
-    {
-      "timestamp": "2022-12-17T17:45:39Z",
-      "fighter1": {
-        "name": "Jake Matthews",
-        "numericOdds": -305
-      },
-      "fighter2": {
-        "name": "Matthew Semelsberger",
-        "numericOdds": 255
-      }
-    },
-    {
-      "timestamp": "2022-12-17T17:55:39Z",
-      "fighter1": {
-        "name": "Jake Matthews",
-        "numericOdds": -305
-      },
-      "fighter2": {
-        "name": "Matthew Semelsberger",
-        "numericOdds": 255
+        "numericOdds": -790
       }
     }
   ]

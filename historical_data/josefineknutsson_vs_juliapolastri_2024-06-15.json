@@ -1,221 +1,13 @@
 {
   "fightId": "josefineknutsson_vs_juliapolastri_2024-06-15",
   "fightTitle": "Josefine Knutsson vs Julia Polastri",
-  "startTime": "2024-06-15T13:55:38Z",
-  "endTime": "2024-06-15T21:15:37Z",
-  "dataPoints": 34,
+  "commenceTime": "2024-06-15T23:05:00Z",
+  "startTime": "2024-06-15T22:55:37Z",
+  "endTime": "2024-06-16T00:10:38Z",
+  "dataPoints": 16,
   "oddsHistory": [
     {
-      "timestamp": "2024-06-15T13:55:38Z",
-      "fighter1": {
-        "name": "Josefine Knutsson",
-        "numericOdds": -192
-      },
-      "fighter2": {
-        "name": "Julia Polastri",
-        "numericOdds": 160
-      }
-    },
-    {
-      "timestamp": "2024-06-15T14:10:37Z",
-      "fighter1": {
-        "name": "Josefine Knutsson",
-        "numericOdds": -192
-      },
-      "fighter2": {
-        "name": "Julia Polastri",
-        "numericOdds": 160
-      }
-    },
-    {
-      "timestamp": "2024-06-15T14:20:38Z",
-      "fighter1": {
-        "name": "Josefine Knutsson",
-        "numericOdds": -192
-      },
-      "fighter2": {
-        "name": "Julia Polastri",
-        "numericOdds": 160
-      }
-    },
-    {
-      "timestamp": "2024-06-15T14:35:37Z",
-      "fighter1": {
-        "name": "Josefine Knutsson",
-        "numericOdds": -192
-      },
-      "fighter2": {
-        "name": "Julia Polastri",
-        "numericOdds": 160
-      }
-    },
-    {
-      "timestamp": "2024-06-15T14:50:37Z",
-      "fighter1": {
-        "name": "Josefine Knutsson",
-        "numericOdds": -192
-      },
-      "fighter2": {
-        "name": "Julia Polastri",
-        "numericOdds": 160
-      }
-    },
-    {
-      "timestamp": "2024-06-15T15:00:37Z",
-      "fighter1": {
-        "name": "Josefine Knutsson",
-        "numericOdds": -192
-      },
-      "fighter2": {
-        "name": "Julia Polastri",
-        "numericOdds": 160
-      }
-    },
-    {
-      "timestamp": "2024-06-15T15:10:38Z",
-      "fighter1": {
-        "name": "Josefine Knutsson",
-        "numericOdds": -192
-      },
-      "fighter2": {
-        "name": "Julia Polastri",
-        "numericOdds": 160
-      }
-    },
-    {
-      "timestamp": "2024-06-15T15:25:37Z",
-      "fighter1": {
-        "name": "Josefine Knutsson",
-        "numericOdds": -198
-      },
-      "fighter2": {
-        "name": "Julia Polastri",
-        "numericOdds": 164
-      }
-    },
-    {
-      "timestamp": "2024-06-15T15:35:38Z",
-      "fighter1": {
-        "name": "Josefine Knutsson",
-        "numericOdds": -198
-      },
-      "fighter2": {
-        "name": "Julia Polastri",
-        "numericOdds": 164
-      }
-    },
-    {
-      "timestamp": "2024-06-15T15:50:38Z",
-      "fighter1": {
-        "name": "Josefine Knutsson",
-        "numericOdds": -198
-      },
-      "fighter2": {
-        "name": "Julia Polastri",
-        "numericOdds": 164
-      }
-    },
-    {
-      "timestamp": "2024-06-15T16:05:38Z",
-      "fighter1": {
-        "name": "Josefine Knutsson",
-        "numericOdds": -198
-      },
-      "fighter2": {
-        "name": "Julia Polastri",
-        "numericOdds": 164
-      }
-    },
-    {
-      "timestamp": "2024-06-15T16:20:38Z",
-      "fighter1": {
-        "name": "Josefine Knutsson",
-        "numericOdds": -198
-      },
-      "fighter2": {
-        "name": "Julia Polastri",
-        "numericOdds": 164
-      }
-    },
-    {
-      "timestamp": "2024-06-15T16:35:37Z",
-      "fighter1": {
-        "name": "Josefine Knutsson",
-        "numericOdds": -198
-      },
-      "fighter2": {
-        "name": "Julia Polastri",
-        "numericOdds": 164
-      }
-    },
-    {
-      "timestamp": "2024-06-15T16:45:37Z",
-      "fighter1": {
-        "name": "Josefine Knutsson",
-        "numericOdds": -198
-      },
-      "fighter2": {
-        "name": "Julia Polastri",
-        "numericOdds": 164
-      }
-    },
-    {
-      "timestamp": "2024-06-15T17:00:37Z",
-      "fighter1": {
-        "name": "Josefine Knutsson",
-        "numericOdds": -198
-      },
-      "fighter2": {
-        "name": "Julia Polastri",
-        "numericOdds": 164
-      }
-    },
-    {
-      "timestamp": "2024-06-15T17:10:37Z",
-      "fighter1": {
-        "name": "Josefine Knutsson",
-        "numericOdds": -198
-      },
-      "fighter2": {
-        "name": "Julia Polastri",
-        "numericOdds": 164
-      }
-    },
-    {
-      "timestamp": "2024-06-15T17:25:37Z",
-      "fighter1": {
-        "name": "Josefine Knutsson",
-        "numericOdds": -198
-      },
-      "fighter2": {
-        "name": "Julia Polastri",
-        "numericOdds": 164
-      }
-    },
-    {
-      "timestamp": "2024-06-15T17:35:37Z",
-      "fighter1": {
-        "name": "Josefine Knutsson",
-        "numericOdds": -198
-      },
-      "fighter2": {
-        "name": "Julia Polastri",
-        "numericOdds": 164
-      }
-    },
-    {
-      "timestamp": "2024-06-15T17:50:37Z",
-      "fighter1": {
-        "name": "Josefine Knutsson",
-        "numericOdds": -205
-      },
-      "fighter2": {
-        "name": "Julia Polastri",
-        "numericOdds": 164
-      }
-    },
-    {
-      "timestamp": "2024-06-15T18:00:38Z",
+      "timestamp": "2024-06-15T22:55:37Z",
       "fighter1": {
         "name": "Josefine Knutsson",
         "numericOdds": -205
@@ -226,157 +18,168 @@
       }
     },
     {
-      "timestamp": "2024-06-15T18:15:38Z",
+      "timestamp": "2024-06-15T23:00:37Z",
       "fighter1": {
         "name": "Josefine Knutsson",
-        "numericOdds": -205
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Julia Polastri",
-        "numericOdds": 170
+        "numericOdds": 180
       }
     },
     {
-      "timestamp": "2024-06-15T18:30:37Z",
+      "timestamp": "2024-06-15T23:05:37Z",
       "fighter1": {
         "name": "Josefine Knutsson",
-        "numericOdds": -205
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Julia Polastri",
-        "numericOdds": 170
+        "numericOdds": 180
       }
     },
     {
-      "timestamp": "2024-06-15T18:40:37Z",
+      "timestamp": "2024-06-15T23:10:37Z",
       "fighter1": {
         "name": "Josefine Knutsson",
-        "numericOdds": -205
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Julia Polastri",
-        "numericOdds": 170
+        "numericOdds": 180
       }
     },
     {
-      "timestamp": "2024-06-15T18:55:37Z",
+      "timestamp": "2024-06-15T23:15:38Z",
       "fighter1": {
         "name": "Josefine Knutsson",
-        "numericOdds": -205
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Julia Polastri",
-        "numericOdds": 170
+        "numericOdds": 180
       }
     },
     {
-      "timestamp": "2024-06-15T19:10:37Z",
+      "timestamp": "2024-06-15T23:20:37Z",
       "fighter1": {
         "name": "Josefine Knutsson",
-        "numericOdds": -205
+        "numericOdds": -218
       },
       "fighter2": {
         "name": "Julia Polastri",
-        "numericOdds": 170
+        "numericOdds": 180
       }
     },
     {
-      "timestamp": "2024-06-15T19:25:37Z",
+      "timestamp": "2024-06-15T23:25:37Z",
       "fighter1": {
         "name": "Josefine Knutsson",
-        "numericOdds": -205
+        "numericOdds": -225
       },
       "fighter2": {
         "name": "Julia Polastri",
-        "numericOdds": 170
+        "numericOdds": 185
       }
     },
     {
-      "timestamp": "2024-06-15T19:35:37Z",
+      "timestamp": "2024-06-15T23:30:37Z",
       "fighter1": {
         "name": "Josefine Knutsson",
-        "numericOdds": -205
+        "numericOdds": -225
       },
       "fighter2": {
         "name": "Julia Polastri",
-        "numericOdds": 170
+        "numericOdds": 185
       }
     },
     {
-      "timestamp": "2024-06-15T19:50:37Z",
+      "timestamp": "2024-06-15T23:35:37Z",
       "fighter1": {
         "name": "Josefine Knutsson",
-        "numericOdds": -205
+        "numericOdds": -225
       },
       "fighter2": {
         "name": "Julia Polastri",
-        "numericOdds": 170
+        "numericOdds": 185
       }
     },
     {
-      "timestamp": "2024-06-15T20:00:38Z",
+      "timestamp": "2024-06-15T23:40:37Z",
       "fighter1": {
         "name": "Josefine Knutsson",
-        "numericOdds": -205
+        "numericOdds": -270
       },
       "fighter2": {
         "name": "Julia Polastri",
-        "numericOdds": 170
+        "numericOdds": 200
       }
     },
     {
-      "timestamp": "2024-06-15T20:15:38Z",
+      "timestamp": "2024-06-15T23:45:37Z",
       "fighter1": {
         "name": "Josefine Knutsson",
-        "numericOdds": -205
+        "numericOdds": -1050
       },
       "fighter2": {
         "name": "Julia Polastri",
-        "numericOdds": 170
+        "numericOdds": 600
       }
     },
     {
-      "timestamp": "2024-06-15T20:30:37Z",
+      "timestamp": "2024-06-15T23:50:37Z",
       "fighter1": {
         "name": "Josefine Knutsson",
-        "numericOdds": -205
+        "numericOdds": 200
       },
       "fighter2": {
         "name": "Julia Polastri",
-        "numericOdds": 170
+        "numericOdds": -270
       }
     },
     {
-      "timestamp": "2024-06-15T20:45:37Z",
+      "timestamp": "2024-06-15T23:55:37Z",
       "fighter1": {
         "name": "Josefine Knutsson",
-        "numericOdds": -205
+        "numericOdds": -270
       },
       "fighter2": {
         "name": "Julia Polastri",
-        "numericOdds": 170
+        "numericOdds": 200
       }
     },
     {
-      "timestamp": "2024-06-15T21:00:37Z",
+      "timestamp": "2024-06-16T00:00:37Z",
       "fighter1": {
         "name": "Josefine Knutsson",
-        "numericOdds": -205
+        "numericOdds": -195
       },
       "fighter2": {
         "name": "Julia Polastri",
-        "numericOdds": 170
+        "numericOdds": 150
       }
     },
     {
-      "timestamp": "2024-06-15T21:15:37Z",
+      "timestamp": "2024-06-16T00:05:37Z",
       "fighter1": {
         "name": "Josefine Knutsson",
-        "numericOdds": -205
+        "numericOdds": -195
       },
       "fighter2": {
         "name": "Julia Polastri",
-        "numericOdds": 170
+        "numericOdds": 150
+      }
+    },
+    {
+      "timestamp": "2024-06-16T00:10:38Z",
+      "fighter1": {
+        "name": "Josefine Knutsson",
+        "numericOdds": -195
+      },
+      "fighter2": {
+        "name": "Julia Polastri",
+        "numericOdds": 150
       }
     }
   ]

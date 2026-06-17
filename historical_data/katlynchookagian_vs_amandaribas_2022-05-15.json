@@ -1,261 +1,53 @@
 {
   "fightId": "katlynchookagian_vs_amandaribas_2022-05-15",
   "fightTitle": "Katlyn Chookagian vs Amanda Ribas",
-  "startTime": "2022-05-14T13:55:00Z",
-  "endTime": "2022-05-14T17:35:00Z",
-  "dataPoints": 23,
+  "commenceTime": "2022-05-15T03:15:00Z",
+  "startTime": "2022-05-15T03:05:00Z",
+  "endTime": "2022-05-15T03:35:00Z",
+  "dataPoints": 4,
   "oddsHistory": [
     {
-      "timestamp": "2022-05-14T13:55:00Z",
+      "timestamp": "2022-05-15T03:05:00Z",
+      "fighter1": {
+        "name": "Amanda Ribas",
+        "numericOdds": 155
+      },
+      "fighter2": {
+        "name": "Katlyn Chookagian",
+        "numericOdds": -179
+      }
+    },
+    {
+      "timestamp": "2022-05-15T03:15:00Z",
+      "fighter1": {
+        "name": "Amanda Ribas",
+        "numericOdds": -294
+      },
+      "fighter2": {
+        "name": "Katlyn Chookagian",
+        "numericOdds": 210
+      }
+    },
+    {
+      "timestamp": "2022-05-15T03:25:00Z",
+      "fighter1": {
+        "name": "Amanda Ribas",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Katlyn Chookagian",
+        "numericOdds": -357
+      }
+    },
+    {
+      "timestamp": "2022-05-15T03:35:00Z",
       "fighter1": {
         "name": "Amanda Ribas",
         "numericOdds": 150
       },
       "fighter2": {
         "name": "Katlyn Chookagian",
-        "numericOdds": -169
-      }
-    },
-    {
-      "timestamp": "2022-05-14T14:05:00Z",
-      "fighter1": {
-        "name": "Amanda Ribas",
-        "numericOdds": 150
-      },
-      "fighter2": {
-        "name": "Katlyn Chookagian",
-        "numericOdds": -169
-      }
-    },
-    {
-      "timestamp": "2022-05-14T14:15:00Z",
-      "fighter1": {
-        "name": "Amanda Ribas",
-        "numericOdds": 150
-      },
-      "fighter2": {
-        "name": "Katlyn Chookagian",
-        "numericOdds": -169
-      }
-    },
-    {
-      "timestamp": "2022-05-14T14:25:00Z",
-      "fighter1": {
-        "name": "Amanda Ribas",
-        "numericOdds": 150
-      },
-      "fighter2": {
-        "name": "Katlyn Chookagian",
-        "numericOdds": -169
-      }
-    },
-    {
-      "timestamp": "2022-05-14T14:35:00Z",
-      "fighter1": {
-        "name": "Amanda Ribas",
-        "numericOdds": 150
-      },
-      "fighter2": {
-        "name": "Katlyn Chookagian",
-        "numericOdds": -169
-      }
-    },
-    {
-      "timestamp": "2022-05-14T14:45:00Z",
-      "fighter1": {
-        "name": "Amanda Ribas",
-        "numericOdds": 150
-      },
-      "fighter2": {
-        "name": "Katlyn Chookagian",
-        "numericOdds": -169
-      }
-    },
-    {
-      "timestamp": "2022-05-14T14:55:00Z",
-      "fighter1": {
-        "name": "Amanda Ribas",
-        "numericOdds": 145
-      },
-      "fighter2": {
-        "name": "Katlyn Chookagian",
-        "numericOdds": -164
-      }
-    },
-    {
-      "timestamp": "2022-05-14T15:05:00Z",
-      "fighter1": {
-        "name": "Amanda Ribas",
-        "numericOdds": 145
-      },
-      "fighter2": {
-        "name": "Katlyn Chookagian",
-        "numericOdds": -164
-      }
-    },
-    {
-      "timestamp": "2022-05-14T15:15:00Z",
-      "fighter1": {
-        "name": "Amanda Ribas",
-        "numericOdds": 145
-      },
-      "fighter2": {
-        "name": "Katlyn Chookagian",
-        "numericOdds": -164
-      }
-    },
-    {
-      "timestamp": "2022-05-14T15:25:00Z",
-      "fighter1": {
-        "name": "Amanda Ribas",
-        "numericOdds": 145
-      },
-      "fighter2": {
-        "name": "Katlyn Chookagian",
-        "numericOdds": -164
-      }
-    },
-    {
-      "timestamp": "2022-05-14T15:35:00Z",
-      "fighter1": {
-        "name": "Amanda Ribas",
-        "numericOdds": 145
-      },
-      "fighter2": {
-        "name": "Katlyn Chookagian",
-        "numericOdds": -164
-      }
-    },
-    {
-      "timestamp": "2022-05-14T15:45:00Z",
-      "fighter1": {
-        "name": "Amanda Ribas",
-        "numericOdds": 145
-      },
-      "fighter2": {
-        "name": "Katlyn Chookagian",
-        "numericOdds": -164
-      }
-    },
-    {
-      "timestamp": "2022-05-14T15:55:00Z",
-      "fighter1": {
-        "name": "Amanda Ribas",
-        "numericOdds": 145
-      },
-      "fighter2": {
-        "name": "Katlyn Chookagian",
-        "numericOdds": -164
-      }
-    },
-    {
-      "timestamp": "2022-05-14T16:05:00Z",
-      "fighter1": {
-        "name": "Amanda Ribas",
-        "numericOdds": 145
-      },
-      "fighter2": {
-        "name": "Katlyn Chookagian",
-        "numericOdds": -164
-      }
-    },
-    {
-      "timestamp": "2022-05-14T16:15:00Z",
-      "fighter1": {
-        "name": "Amanda Ribas",
-        "numericOdds": 145
-      },
-      "fighter2": {
-        "name": "Katlyn Chookagian",
-        "numericOdds": -164
-      }
-    },
-    {
-      "timestamp": "2022-05-14T16:25:00Z",
-      "fighter1": {
-        "name": "Amanda Ribas",
-        "numericOdds": 145
-      },
-      "fighter2": {
-        "name": "Katlyn Chookagian",
-        "numericOdds": -164
-      }
-    },
-    {
-      "timestamp": "2022-05-14T16:35:00Z",
-      "fighter1": {
-        "name": "Amanda Ribas",
-        "numericOdds": 145
-      },
-      "fighter2": {
-        "name": "Katlyn Chookagian",
-        "numericOdds": -164
-      }
-    },
-    {
-      "timestamp": "2022-05-14T16:45:00Z",
-      "fighter1": {
-        "name": "Amanda Ribas",
-        "numericOdds": 145
-      },
-      "fighter2": {
-        "name": "Katlyn Chookagian",
-        "numericOdds": -164
-      }
-    },
-    {
-      "timestamp": "2022-05-14T16:55:00Z",
-      "fighter1": {
-        "name": "Amanda Ribas",
-        "numericOdds": 145
-      },
-      "fighter2": {
-        "name": "Katlyn Chookagian",
-        "numericOdds": -164
-      }
-    },
-    {
-      "timestamp": "2022-05-14T17:05:00Z",
-      "fighter1": {
-        "name": "Amanda Ribas",
-        "numericOdds": 145
-      },
-      "fighter2": {
-        "name": "Katlyn Chookagian",
-        "numericOdds": -164
-      }
-    },
-    {
-      "timestamp": "2022-05-14T17:15:00Z",
-      "fighter1": {
-        "name": "Amanda Ribas",
-        "numericOdds": 145
-      },
-      "fighter2": {
-        "name": "Katlyn Chookagian",
-        "numericOdds": -164
-      }
-    },
-    {
-      "timestamp": "2022-05-14T17:25:00Z",
-      "fighter1": {
-        "name": "Amanda Ribas",
-        "numericOdds": 145
-      },
-      "fighter2": {
-        "name": "Katlyn Chookagian",
-        "numericOdds": -164
-      }
-    },
-    {
-      "timestamp": "2022-05-14T17:35:00Z",
-      "fighter1": {
-        "name": "Amanda Ribas",
-        "numericOdds": 145
-      },
-      "fighter2": {
-        "name": "Katlyn Chookagian",
-        "numericOdds": -164
+        "numericOdds": -204
       }
     }
   ]

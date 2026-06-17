@@ -1,419 +1,13 @@
 {
   "fightId": "josephholmes_vs_claudioribeiro_2023-05-06",
   "fightTitle": "Joseph Holmes vs Claudio Ribeiro",
-  "startTime": "2023-05-06T13:55:39Z",
+  "commenceTime": "2023-05-06T22:30:00Z",
+  "startTime": "2023-05-06T22:20:39Z",
   "endTime": "2023-05-06T23:00:40Z",
-  "dataPoints": 42,
+  "dataPoints": 9,
   "oddsHistory": [
     {
-      "timestamp": "2023-05-06T13:55:39Z",
-      "fighter1": {
-        "name": "Claudio Ribeiro",
-        "numericOdds": -170
-      },
-      "fighter2": {
-        "name": "Joseph Holmes",
-        "numericOdds": 145
-      }
-    },
-    {
-      "timestamp": "2023-05-06T14:10:39Z",
-      "fighter1": {
-        "name": "Claudio Ribeiro",
-        "numericOdds": -170
-      },
-      "fighter2": {
-        "name": "Joseph Holmes",
-        "numericOdds": 145
-      }
-    },
-    {
-      "timestamp": "2023-05-06T14:20:39Z",
-      "fighter1": {
-        "name": "Claudio Ribeiro",
-        "numericOdds": -170
-      },
-      "fighter2": {
-        "name": "Joseph Holmes",
-        "numericOdds": 145
-      }
-    },
-    {
-      "timestamp": "2023-05-06T14:35:39Z",
-      "fighter1": {
-        "name": "Claudio Ribeiro",
-        "numericOdds": -170
-      },
-      "fighter2": {
-        "name": "Joseph Holmes",
-        "numericOdds": 145
-      }
-    },
-    {
-      "timestamp": "2023-05-06T14:50:39Z",
-      "fighter1": {
-        "name": "Claudio Ribeiro",
-        "numericOdds": -170
-      },
-      "fighter2": {
-        "name": "Joseph Holmes",
-        "numericOdds": 145
-      }
-    },
-    {
-      "timestamp": "2023-05-06T15:05:39Z",
-      "fighter1": {
-        "name": "Claudio Ribeiro",
-        "numericOdds": -170
-      },
-      "fighter2": {
-        "name": "Joseph Holmes",
-        "numericOdds": 145
-      }
-    },
-    {
-      "timestamp": "2023-05-06T15:15:39Z",
-      "fighter1": {
-        "name": "Claudio Ribeiro",
-        "numericOdds": -170
-      },
-      "fighter2": {
-        "name": "Joseph Holmes",
-        "numericOdds": 145
-      }
-    },
-    {
-      "timestamp": "2023-05-06T15:30:39Z",
-      "fighter1": {
-        "name": "Claudio Ribeiro",
-        "numericOdds": -170
-      },
-      "fighter2": {
-        "name": "Joseph Holmes",
-        "numericOdds": 145
-      }
-    },
-    {
-      "timestamp": "2023-05-06T15:45:39Z",
-      "fighter1": {
-        "name": "Claudio Ribeiro",
-        "numericOdds": -170
-      },
-      "fighter2": {
-        "name": "Joseph Holmes",
-        "numericOdds": 145
-      }
-    },
-    {
-      "timestamp": "2023-05-06T16:00:39Z",
-      "fighter1": {
-        "name": "Claudio Ribeiro",
-        "numericOdds": -170
-      },
-      "fighter2": {
-        "name": "Joseph Holmes",
-        "numericOdds": 145
-      }
-    },
-    {
-      "timestamp": "2023-05-06T16:15:39Z",
-      "fighter1": {
-        "name": "Claudio Ribeiro",
-        "numericOdds": -170
-      },
-      "fighter2": {
-        "name": "Joseph Holmes",
-        "numericOdds": 145
-      }
-    },
-    {
-      "timestamp": "2023-05-06T16:25:39Z",
-      "fighter1": {
-        "name": "Claudio Ribeiro",
-        "numericOdds": -170
-      },
-      "fighter2": {
-        "name": "Joseph Holmes",
-        "numericOdds": 145
-      }
-    },
-    {
-      "timestamp": "2023-05-06T16:40:39Z",
-      "fighter1": {
-        "name": "Claudio Ribeiro",
-        "numericOdds": -170
-      },
-      "fighter2": {
-        "name": "Joseph Holmes",
-        "numericOdds": 145
-      }
-    },
-    {
-      "timestamp": "2023-05-06T16:55:39Z",
-      "fighter1": {
-        "name": "Claudio Ribeiro",
-        "numericOdds": -170
-      },
-      "fighter2": {
-        "name": "Joseph Holmes",
-        "numericOdds": 145
-      }
-    },
-    {
-      "timestamp": "2023-05-06T17:10:39Z",
-      "fighter1": {
-        "name": "Claudio Ribeiro",
-        "numericOdds": -170
-      },
-      "fighter2": {
-        "name": "Joseph Holmes",
-        "numericOdds": 145
-      }
-    },
-    {
-      "timestamp": "2023-05-06T17:25:39Z",
-      "fighter1": {
-        "name": "Claudio Ribeiro",
-        "numericOdds": -170
-      },
-      "fighter2": {
-        "name": "Joseph Holmes",
-        "numericOdds": 145
-      }
-    },
-    {
-      "timestamp": "2023-05-06T17:35:39Z",
-      "fighter1": {
-        "name": "Claudio Ribeiro",
-        "numericOdds": -170
-      },
-      "fighter2": {
-        "name": "Joseph Holmes",
-        "numericOdds": 145
-      }
-    },
-    {
-      "timestamp": "2023-05-06T17:45:39Z",
-      "fighter1": {
-        "name": "Claudio Ribeiro",
-        "numericOdds": -170
-      },
-      "fighter2": {
-        "name": "Joseph Holmes",
-        "numericOdds": 145
-      }
-    },
-    {
-      "timestamp": "2023-05-06T17:55:40Z",
-      "fighter1": {
-        "name": "Claudio Ribeiro",
-        "numericOdds": -170
-      },
-      "fighter2": {
-        "name": "Joseph Holmes",
-        "numericOdds": 145
-      }
-    },
-    {
-      "timestamp": "2023-05-06T18:10:40Z",
-      "fighter1": {
-        "name": "Claudio Ribeiro",
-        "numericOdds": -170
-      },
-      "fighter2": {
-        "name": "Joseph Holmes",
-        "numericOdds": 145
-      }
-    },
-    {
-      "timestamp": "2023-05-06T18:25:40Z",
-      "fighter1": {
-        "name": "Claudio Ribeiro",
-        "numericOdds": -170
-      },
-      "fighter2": {
-        "name": "Joseph Holmes",
-        "numericOdds": 145
-      }
-    },
-    {
-      "timestamp": "2023-05-06T18:40:40Z",
-      "fighter1": {
-        "name": "Claudio Ribeiro",
-        "numericOdds": -170
-      },
-      "fighter2": {
-        "name": "Joseph Holmes",
-        "numericOdds": 145
-      }
-    },
-    {
-      "timestamp": "2023-05-06T18:55:40Z",
-      "fighter1": {
-        "name": "Claudio Ribeiro",
-        "numericOdds": -170
-      },
-      "fighter2": {
-        "name": "Joseph Holmes",
-        "numericOdds": 145
-      }
-    },
-    {
-      "timestamp": "2023-05-06T19:10:40Z",
-      "fighter1": {
-        "name": "Claudio Ribeiro",
-        "numericOdds": -170
-      },
-      "fighter2": {
-        "name": "Joseph Holmes",
-        "numericOdds": 145
-      }
-    },
-    {
-      "timestamp": "2023-05-06T19:25:39Z",
-      "fighter1": {
-        "name": "Claudio Ribeiro",
-        "numericOdds": -170
-      },
-      "fighter2": {
-        "name": "Joseph Holmes",
-        "numericOdds": 145
-      }
-    },
-    {
-      "timestamp": "2023-05-06T19:35:39Z",
-      "fighter1": {
-        "name": "Claudio Ribeiro",
-        "numericOdds": -170
-      },
-      "fighter2": {
-        "name": "Joseph Holmes",
-        "numericOdds": 145
-      }
-    },
-    {
-      "timestamp": "2023-05-06T19:50:38Z",
-      "fighter1": {
-        "name": "Claudio Ribeiro",
-        "numericOdds": -170
-      },
-      "fighter2": {
-        "name": "Joseph Holmes",
-        "numericOdds": 145
-      }
-    },
-    {
-      "timestamp": "2023-05-06T20:00:39Z",
-      "fighter1": {
-        "name": "Claudio Ribeiro",
-        "numericOdds": -170
-      },
-      "fighter2": {
-        "name": "Joseph Holmes",
-        "numericOdds": 145
-      }
-    },
-    {
-      "timestamp": "2023-05-06T20:10:40Z",
-      "fighter1": {
-        "name": "Claudio Ribeiro",
-        "numericOdds": -170
-      },
-      "fighter2": {
-        "name": "Joseph Holmes",
-        "numericOdds": 145
-      }
-    },
-    {
-      "timestamp": "2023-05-06T20:25:39Z",
-      "fighter1": {
-        "name": "Claudio Ribeiro",
-        "numericOdds": -155
-      },
-      "fighter2": {
-        "name": "Joseph Holmes",
-        "numericOdds": 135
-      }
-    },
-    {
-      "timestamp": "2023-05-06T20:40:39Z",
-      "fighter1": {
-        "name": "Claudio Ribeiro",
-        "numericOdds": -155
-      },
-      "fighter2": {
-        "name": "Joseph Holmes",
-        "numericOdds": 135
-      }
-    },
-    {
-      "timestamp": "2023-05-06T20:50:39Z",
-      "fighter1": {
-        "name": "Claudio Ribeiro",
-        "numericOdds": -155
-      },
-      "fighter2": {
-        "name": "Joseph Holmes",
-        "numericOdds": 135
-      }
-    },
-    {
-      "timestamp": "2023-05-06T21:05:39Z",
-      "fighter1": {
-        "name": "Claudio Ribeiro",
-        "numericOdds": -155
-      },
-      "fighter2": {
-        "name": "Joseph Holmes",
-        "numericOdds": 135
-      }
-    },
-    {
-      "timestamp": "2023-05-06T21:15:39Z",
-      "fighter1": {
-        "name": "Claudio Ribeiro",
-        "numericOdds": -155
-      },
-      "fighter2": {
-        "name": "Joseph Holmes",
-        "numericOdds": 135
-      }
-    },
-    {
-      "timestamp": "2023-05-06T21:30:39Z",
-      "fighter1": {
-        "name": "Claudio Ribeiro",
-        "numericOdds": -155
-      },
-      "fighter2": {
-        "name": "Joseph Holmes",
-        "numericOdds": 135
-      }
-    },
-    {
-      "timestamp": "2023-05-06T21:40:39Z",
-      "fighter1": {
-        "name": "Claudio Ribeiro",
-        "numericOdds": -155
-      },
-      "fighter2": {
-        "name": "Joseph Holmes",
-        "numericOdds": 135
-      }
-    },
-    {
-      "timestamp": "2023-05-06T21:55:39Z",
-      "fighter1": {
-        "name": "Claudio Ribeiro",
-        "numericOdds": -155
-      },
-      "fighter2": {
-        "name": "Joseph Holmes",
-        "numericOdds": 135
-      }
-    },
-    {
-      "timestamp": "2023-05-06T22:10:39Z",
+      "timestamp": "2023-05-06T22:20:39Z",
       "fighter1": {
         "name": "Claudio Ribeiro",
         "numericOdds": -150
@@ -435,6 +29,17 @@
       }
     },
     {
+      "timestamp": "2023-05-06T22:30:39Z",
+      "fighter1": {
+        "name": "Claudio Ribeiro",
+        "numericOdds": -150
+      },
+      "fighter2": {
+        "name": "Joseph Holmes",
+        "numericOdds": 130
+      }
+    },
+    {
       "timestamp": "2023-05-06T22:35:39Z",
       "fighter1": {
         "name": "Claudio Ribeiro",
@@ -446,6 +51,28 @@
       }
     },
     {
+      "timestamp": "2023-05-06T22:40:40Z",
+      "fighter1": {
+        "name": "Claudio Ribeiro",
+        "numericOdds": -145
+      },
+      "fighter2": {
+        "name": "Joseph Holmes",
+        "numericOdds": 125
+      }
+    },
+    {
+      "timestamp": "2023-05-06T22:45:39Z",
+      "fighter1": {
+        "name": "Claudio Ribeiro",
+        "numericOdds": -130
+      },
+      "fighter2": {
+        "name": "Joseph Holmes",
+        "numericOdds": 100
+      }
+    },
+    {
       "timestamp": "2023-05-06T22:50:38Z",
       "fighter1": {
         "name": "Claudio Ribeiro",
@@ -454,6 +81,17 @@
       "fighter2": {
         "name": "Joseph Holmes",
         "numericOdds": 350
+      }
+    },
+    {
+      "timestamp": "2023-05-06T22:55:39Z",
+      "fighter1": {
+        "name": "Claudio Ribeiro",
+        "numericOdds": -750
+      },
+      "fighter2": {
+        "name": "Joseph Holmes",
+        "numericOdds": 500
       }
     },
     {

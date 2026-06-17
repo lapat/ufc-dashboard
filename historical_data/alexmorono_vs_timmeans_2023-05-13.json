@@ -1,12 +1,13 @@
 {
   "fightId": "alexmorono_vs_timmeans_2023-05-13",
   "fightTitle": "Alex Morono vs Tim Means",
-  "startTime": "2023-05-13T13:55:40Z",
-  "endTime": "2023-05-13T19:30:39Z",
-  "dataPoints": 24,
+  "commenceTime": "2023-05-13T19:15:00Z",
+  "startTime": "2023-05-13T19:05:40Z",
+  "endTime": "2023-05-13T19:35:39Z",
+  "dataPoints": 7,
   "oddsHistory": [
     {
-      "timestamp": "2023-05-13T13:55:40Z",
+      "timestamp": "2023-05-13T19:05:40Z",
       "fighter1": {
         "name": "Alex Morono",
         "numericOdds": -205
@@ -17,227 +18,7 @@
       }
     },
     {
-      "timestamp": "2023-05-13T14:10:40Z",
-      "fighter1": {
-        "name": "Alex Morono",
-        "numericOdds": -205
-      },
-      "fighter2": {
-        "name": "Tim Means",
-        "numericOdds": 175
-      }
-    },
-    {
-      "timestamp": "2023-05-13T14:25:40Z",
-      "fighter1": {
-        "name": "Alex Morono",
-        "numericOdds": -205
-      },
-      "fighter2": {
-        "name": "Tim Means",
-        "numericOdds": 175
-      }
-    },
-    {
-      "timestamp": "2023-05-13T14:40:40Z",
-      "fighter1": {
-        "name": "Alex Morono",
-        "numericOdds": -205
-      },
-      "fighter2": {
-        "name": "Tim Means",
-        "numericOdds": 175
-      }
-    },
-    {
-      "timestamp": "2023-05-13T14:55:40Z",
-      "fighter1": {
-        "name": "Alex Morono",
-        "numericOdds": -205
-      },
-      "fighter2": {
-        "name": "Tim Means",
-        "numericOdds": 175
-      }
-    },
-    {
-      "timestamp": "2023-05-13T15:10:40Z",
-      "fighter1": {
-        "name": "Alex Morono",
-        "numericOdds": -205
-      },
-      "fighter2": {
-        "name": "Tim Means",
-        "numericOdds": 175
-      }
-    },
-    {
-      "timestamp": "2023-05-13T15:25:40Z",
-      "fighter1": {
-        "name": "Alex Morono",
-        "numericOdds": -205
-      },
-      "fighter2": {
-        "name": "Tim Means",
-        "numericOdds": 175
-      }
-    },
-    {
-      "timestamp": "2023-05-13T15:40:40Z",
-      "fighter1": {
-        "name": "Alex Morono",
-        "numericOdds": -205
-      },
-      "fighter2": {
-        "name": "Tim Means",
-        "numericOdds": 175
-      }
-    },
-    {
-      "timestamp": "2023-05-13T15:55:40Z",
-      "fighter1": {
-        "name": "Alex Morono",
-        "numericOdds": -205
-      },
-      "fighter2": {
-        "name": "Tim Means",
-        "numericOdds": 175
-      }
-    },
-    {
-      "timestamp": "2023-05-13T16:10:40Z",
-      "fighter1": {
-        "name": "Alex Morono",
-        "numericOdds": -205
-      },
-      "fighter2": {
-        "name": "Tim Means",
-        "numericOdds": 175
-      }
-    },
-    {
-      "timestamp": "2023-05-13T16:25:40Z",
-      "fighter1": {
-        "name": "Alex Morono",
-        "numericOdds": -215
-      },
-      "fighter2": {
-        "name": "Tim Means",
-        "numericOdds": 185
-      }
-    },
-    {
-      "timestamp": "2023-05-13T16:40:40Z",
-      "fighter1": {
-        "name": "Alex Morono",
-        "numericOdds": -215
-      },
-      "fighter2": {
-        "name": "Tim Means",
-        "numericOdds": 185
-      }
-    },
-    {
-      "timestamp": "2023-05-13T16:55:40Z",
-      "fighter1": {
-        "name": "Alex Morono",
-        "numericOdds": -215
-      },
-      "fighter2": {
-        "name": "Tim Means",
-        "numericOdds": 185
-      }
-    },
-    {
-      "timestamp": "2023-05-13T17:10:39Z",
-      "fighter1": {
-        "name": "Alex Morono",
-        "numericOdds": -215
-      },
-      "fighter2": {
-        "name": "Tim Means",
-        "numericOdds": 185
-      }
-    },
-    {
-      "timestamp": "2023-05-13T17:25:39Z",
-      "fighter1": {
-        "name": "Alex Morono",
-        "numericOdds": -215
-      },
-      "fighter2": {
-        "name": "Tim Means",
-        "numericOdds": 185
-      }
-    },
-    {
-      "timestamp": "2023-05-13T17:40:39Z",
-      "fighter1": {
-        "name": "Alex Morono",
-        "numericOdds": -215
-      },
-      "fighter2": {
-        "name": "Tim Means",
-        "numericOdds": 185
-      }
-    },
-    {
-      "timestamp": "2023-05-13T17:50:40Z",
-      "fighter1": {
-        "name": "Alex Morono",
-        "numericOdds": -210
-      },
-      "fighter2": {
-        "name": "Tim Means",
-        "numericOdds": 180
-      }
-    },
-    {
-      "timestamp": "2023-05-13T18:05:40Z",
-      "fighter1": {
-        "name": "Alex Morono",
-        "numericOdds": -210
-      },
-      "fighter2": {
-        "name": "Tim Means",
-        "numericOdds": 180
-      }
-    },
-    {
-      "timestamp": "2023-05-13T18:20:40Z",
-      "fighter1": {
-        "name": "Alex Morono",
-        "numericOdds": -210
-      },
-      "fighter2": {
-        "name": "Tim Means",
-        "numericOdds": 180
-      }
-    },
-    {
-      "timestamp": "2023-05-13T18:35:40Z",
-      "fighter1": {
-        "name": "Alex Morono",
-        "numericOdds": -210
-      },
-      "fighter2": {
-        "name": "Tim Means",
-        "numericOdds": 180
-      }
-    },
-    {
-      "timestamp": "2023-05-13T18:50:39Z",
-      "fighter1": {
-        "name": "Alex Morono",
-        "numericOdds": -210
-      },
-      "fighter2": {
-        "name": "Tim Means",
-        "numericOdds": 180
-      }
-    },
-    {
-      "timestamp": "2023-05-13T19:00:39Z",
+      "timestamp": "2023-05-13T19:10:39Z",
       "fighter1": {
         "name": "Alex Morono",
         "numericOdds": -205
@@ -259,7 +40,40 @@
       }
     },
     {
+      "timestamp": "2023-05-13T19:20:39Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "numericOdds": -130
+      },
+      "fighter2": {
+        "name": "Tim Means",
+        "numericOdds": 100
+      }
+    },
+    {
+      "timestamp": "2023-05-13T19:25:40Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "numericOdds": -145
+      },
+      "fighter2": {
+        "name": "Tim Means",
+        "numericOdds": 115
+      }
+    },
+    {
       "timestamp": "2023-05-13T19:30:39Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "numericOdds": -145
+      },
+      "fighter2": {
+        "name": "Tim Means",
+        "numericOdds": 115
+      }
+    },
+    {
+      "timestamp": "2023-05-13T19:35:39Z",
       "fighter1": {
         "name": "Alex Morono",
         "numericOdds": -145

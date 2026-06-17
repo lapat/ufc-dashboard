@@ -1,217 +1,42 @@
 {
   "fightId": "bobbygreen_vs_drewdober_2022-12-18",
   "fightTitle": "Bobby Green vs Drew Dober",
-  "startTime": "2022-12-17T13:55:39Z",
-  "endTime": "2022-12-17T17:55:39Z",
-  "dataPoints": 19,
+  "commenceTime": "2022-12-18T00:45:00Z",
+  "startTime": "2022-12-18T00:35:39Z",
+  "endTime": "2022-12-18T00:45:38Z",
+  "dataPoints": 3,
   "oddsHistory": [
     {
-      "timestamp": "2022-12-17T13:55:39Z",
+      "timestamp": "2022-12-18T00:35:39Z",
       "fighter1": {
         "name": "Bobby Green",
-        "numericOdds": 135
+        "numericOdds": 110
       },
       "fighter2": {
         "name": "Drew Dober",
-        "numericOdds": -155
+        "numericOdds": -140
       }
     },
     {
-      "timestamp": "2022-12-17T14:05:39Z",
+      "timestamp": "2022-12-18T00:40:38Z",
       "fighter1": {
         "name": "Bobby Green",
-        "numericOdds": 135
+        "numericOdds": -290
       },
       "fighter2": {
         "name": "Drew Dober",
-        "numericOdds": -155
+        "numericOdds": 230
       }
     },
     {
-      "timestamp": "2022-12-17T14:20:39Z",
+      "timestamp": "2022-12-18T00:45:38Z",
       "fighter1": {
         "name": "Bobby Green",
-        "numericOdds": 135
+        "numericOdds": -265
       },
       "fighter2": {
         "name": "Drew Dober",
-        "numericOdds": -155
-      }
-    },
-    {
-      "timestamp": "2022-12-17T14:30:39Z",
-      "fighter1": {
-        "name": "Bobby Green",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Drew Dober",
-        "numericOdds": -155
-      }
-    },
-    {
-      "timestamp": "2022-12-17T14:40:40Z",
-      "fighter1": {
-        "name": "Bobby Green",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Drew Dober",
-        "numericOdds": -155
-      }
-    },
-    {
-      "timestamp": "2022-12-17T14:55:40Z",
-      "fighter1": {
-        "name": "Bobby Green",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Drew Dober",
-        "numericOdds": -155
-      }
-    },
-    {
-      "timestamp": "2022-12-17T15:10:40Z",
-      "fighter1": {
-        "name": "Bobby Green",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Drew Dober",
-        "numericOdds": -155
-      }
-    },
-    {
-      "timestamp": "2022-12-17T15:25:39Z",
-      "fighter1": {
-        "name": "Bobby Green",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Drew Dober",
-        "numericOdds": -155
-      }
-    },
-    {
-      "timestamp": "2022-12-17T15:40:39Z",
-      "fighter1": {
-        "name": "Bobby Green",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Drew Dober",
-        "numericOdds": -155
-      }
-    },
-    {
-      "timestamp": "2022-12-17T15:55:39Z",
-      "fighter1": {
-        "name": "Bobby Green",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Drew Dober",
-        "numericOdds": -155
-      }
-    },
-    {
-      "timestamp": "2022-12-17T16:10:39Z",
-      "fighter1": {
-        "name": "Bobby Green",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Drew Dober",
-        "numericOdds": -155
-      }
-    },
-    {
-      "timestamp": "2022-12-17T16:25:39Z",
-      "fighter1": {
-        "name": "Bobby Green",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Drew Dober",
-        "numericOdds": -155
-      }
-    },
-    {
-      "timestamp": "2022-12-17T16:40:39Z",
-      "fighter1": {
-        "name": "Bobby Green",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Drew Dober",
-        "numericOdds": -155
-      }
-    },
-    {
-      "timestamp": "2022-12-17T16:55:39Z",
-      "fighter1": {
-        "name": "Bobby Green",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Drew Dober",
-        "numericOdds": -155
-      }
-    },
-    {
-      "timestamp": "2022-12-17T17:10:39Z",
-      "fighter1": {
-        "name": "Bobby Green",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Drew Dober",
-        "numericOdds": -155
-      }
-    },
-    {
-      "timestamp": "2022-12-17T17:20:39Z",
-      "fighter1": {
-        "name": "Bobby Green",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Drew Dober",
-        "numericOdds": -155
-      }
-    },
-    {
-      "timestamp": "2022-12-17T17:30:39Z",
-      "fighter1": {
-        "name": "Bobby Green",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Drew Dober",
-        "numericOdds": -155
-      }
-    },
-    {
-      "timestamp": "2022-12-17T17:45:39Z",
-      "fighter1": {
-        "name": "Bobby Green",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Drew Dober",
-        "numericOdds": -155
-      }
-    },
-    {
-      "timestamp": "2022-12-17T17:55:39Z",
-      "fighter1": {
-        "name": "Bobby Green",
-        "numericOdds": 135
-      },
-      "fighter2": {
-        "name": "Drew Dober",
-        "numericOdds": -155
+        "numericOdds": 210
       }
     }
   ]

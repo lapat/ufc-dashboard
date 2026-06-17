@@ -1,536 +1,20 @@
 {
   "fightId": "cubswanson_vs_jonathanmartinez_2022-10-16",
   "fightTitle": "Cub Swanson vs Jonathan Martinez",
-  "startTime": "2022-10-15T13:55:39Z",
-  "endTime": "2022-10-16T00:55:38Z",
-  "dataPoints": 50,
+  "commenceTime": "2022-10-16T00:45:00Z",
+  "startTime": "2022-10-16T00:35:38Z",
+  "endTime": "2022-10-16T01:00:38Z",
+  "dataPoints": 6,
   "oddsHistory": [
     {
-      "timestamp": "2022-10-15T13:55:39Z",
+      "timestamp": "2022-10-16T00:35:38Z",
       "fighter1": {
         "name": "Cub Swanson",
         "numericOdds": 185
       },
       "fighter2": {
         "name": "Jonathan Martinez",
-        "numericOdds": -215
-      }
-    },
-    {
-      "timestamp": "2022-10-15T14:05:39Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 185
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -215
-      }
-    },
-    {
-      "timestamp": "2022-10-15T14:20:38Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 185
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -215
-      }
-    },
-    {
-      "timestamp": "2022-10-15T14:30:39Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 185
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -215
-      }
-    },
-    {
-      "timestamp": "2022-10-15T14:45:38Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 185
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -215
-      }
-    },
-    {
-      "timestamp": "2022-10-15T15:00:38Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 185
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -215
-      }
-    },
-    {
-      "timestamp": "2022-10-15T15:15:38Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 175
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -205
-      }
-    },
-    {
-      "timestamp": "2022-10-15T15:25:39Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 175
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -205
-      }
-    },
-    {
-      "timestamp": "2022-10-15T15:40:39Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 175
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -205
-      }
-    },
-    {
-      "timestamp": "2022-10-15T15:55:39Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 175
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -205
-      }
-    },
-    {
-      "timestamp": "2022-10-15T16:10:39Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 175
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -205
-      }
-    },
-    {
-      "timestamp": "2022-10-15T16:25:38Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 175
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -205
-      }
-    },
-    {
-      "timestamp": "2022-10-15T16:35:39Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 175
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -205
-      }
-    },
-    {
-      "timestamp": "2022-10-15T16:50:39Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 175
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -205
-      }
-    },
-    {
-      "timestamp": "2022-10-15T17:05:38Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 175
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -205
-      }
-    },
-    {
-      "timestamp": "2022-10-15T17:15:39Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 175
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -205
-      }
-    },
-    {
-      "timestamp": "2022-10-15T17:30:38Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 175
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -205
-      }
-    },
-    {
-      "timestamp": "2022-10-15T17:40:39Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 175
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -205
-      }
-    },
-    {
-      "timestamp": "2022-10-15T17:55:38Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 175
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -205
-      }
-    },
-    {
-      "timestamp": "2022-10-15T18:10:38Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 175
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -205
-      }
-    },
-    {
-      "timestamp": "2022-10-15T18:20:39Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 175
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -205
-      }
-    },
-    {
-      "timestamp": "2022-10-15T18:35:38Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 175
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -205
-      }
-    },
-    {
-      "timestamp": "2022-10-15T18:45:39Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 175
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -205
-      }
-    },
-    {
-      "timestamp": "2022-10-15T19:00:38Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 175
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -205
-      }
-    },
-    {
-      "timestamp": "2022-10-15T19:15:38Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 175
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -205
-      }
-    },
-    {
-      "timestamp": "2022-10-15T19:25:39Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 175
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -205
-      }
-    },
-    {
-      "timestamp": "2022-10-15T19:40:38Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 175
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -205
-      }
-    },
-    {
-      "timestamp": "2022-10-15T19:50:38Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 175
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -205
-      }
-    },
-    {
-      "timestamp": "2022-10-15T20:05:38Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 175
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -205
-      }
-    },
-    {
-      "timestamp": "2022-10-15T20:20:38Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 175
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -205
-      }
-    },
-    {
-      "timestamp": "2022-10-15T20:35:38Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 175
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -205
-      }
-    },
-    {
-      "timestamp": "2022-10-15T20:50:38Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 175
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -205
-      }
-    },
-    {
-      "timestamp": "2022-10-15T21:00:38Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 190
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -225
-      }
-    },
-    {
-      "timestamp": "2022-10-15T21:10:39Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 190
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -225
-      }
-    },
-    {
-      "timestamp": "2022-10-15T21:25:38Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 180
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -210
-      }
-    },
-    {
-      "timestamp": "2022-10-15T21:40:38Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 180
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -210
-      }
-    },
-    {
-      "timestamp": "2022-10-15T21:50:38Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 180
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -210
-      }
-    },
-    {
-      "timestamp": "2022-10-15T22:05:38Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 180
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -210
-      }
-    },
-    {
-      "timestamp": "2022-10-15T22:15:38Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 180
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -210
-      }
-    },
-    {
-      "timestamp": "2022-10-15T22:30:38Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 180
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -210
-      }
-    },
-    {
-      "timestamp": "2022-10-15T22:40:39Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 180
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -210
-      }
-    },
-    {
-      "timestamp": "2022-10-15T22:55:39Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 180
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -210
-      }
-    },
-    {
-      "timestamp": "2022-10-15T23:10:38Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 180
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -210
-      }
-    },
-    {
-      "timestamp": "2022-10-15T23:25:38Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 190
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -225
-      }
-    },
-    {
-      "timestamp": "2022-10-15T23:40:38Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 190
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -225
-      }
-    },
-    {
-      "timestamp": "2022-10-15T23:55:38Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 190
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -225
-      }
-    },
-    {
-      "timestamp": "2022-10-16T00:10:38Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 190
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -225
-      }
-    },
-    {
-      "timestamp": "2022-10-16T00:25:38Z",
-      "fighter1": {
-        "name": "Cub Swanson",
-        "numericOdds": 190
-      },
-      "fighter2": {
-        "name": "Jonathan Martinez",
-        "numericOdds": -225
+        "numericOdds": -230
       }
     },
     {
@@ -545,7 +29,40 @@
       }
     },
     {
+      "timestamp": "2022-10-16T00:45:38Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": 1200
+      },
+      "fighter2": {
+        "name": "Jonathan Martinez",
+        "numericOdds": -3000
+      }
+    },
+    {
+      "timestamp": "2022-10-16T00:50:38Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": 700
+      },
+      "fighter2": {
+        "name": "Jonathan Martinez",
+        "numericOdds": -1200
+      }
+    },
+    {
       "timestamp": "2022-10-16T00:55:38Z",
+      "fighter1": {
+        "name": "Cub Swanson",
+        "numericOdds": 700
+      },
+      "fighter2": {
+        "name": "Jonathan Martinez",
+        "numericOdds": -1200
+      }
+    },
+    {
+      "timestamp": "2022-10-16T01:00:38Z",
       "fighter1": {
         "name": "Cub Swanson",
         "numericOdds": 700

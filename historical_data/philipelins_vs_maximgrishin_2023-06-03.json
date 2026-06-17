@@ -1,0 +1,87 @@
+{
+  "fightId": "philipelins_vs_maximgrishin_2023-06-03",
+  "fightTitle": "Philipe Lins vs Maxim Grishin",
+  "commenceTime": "2023-06-03T22:15:00Z",
+  "startTime": "2023-06-03T22:05:38Z",
+  "endTime": "2023-06-03T22:35:38Z",
+  "dataPoints": 7,
+  "oddsHistory": [
+    {
+      "timestamp": "2023-06-03T22:05:38Z",
+      "fighter1": {
+        "name": "Maxim Grishin",
+        "numericOdds": -125
+      },
+      "fighter2": {
+        "name": "Philipe Lins",
+        "numericOdds": 105
+      }
+    },
+    {
+      "timestamp": "2023-06-03T22:10:38Z",
+      "fighter1": {
+        "name": "Maxim Grishin",
+        "numericOdds": -125
+      },
+      "fighter2": {
+        "name": "Philipe Lins",
+        "numericOdds": 105
+      }
+    },
+    {
+      "timestamp": "2023-06-03T22:15:38Z",
+      "fighter1": {
+        "name": "Maxim Grishin",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Philipe Lins",
+        "numericOdds": -450
+      }
+    },
+    {
+      "timestamp": "2023-06-03T22:20:38Z",
+      "fighter1": {
+        "name": "Maxim Grishin",
+        "numericOdds": 450
+      },
+      "fighter2": {
+        "name": "Philipe Lins",
+        "numericOdds": -650
+      }
+    },
+    {
+      "timestamp": "2023-06-03T22:25:38Z",
+      "fighter1": {
+        "name": "Maxim Grishin",
+        "numericOdds": 600
+      },
+      "fighter2": {
+        "name": "Philipe Lins",
+        "numericOdds": -950
+      }
+    },
+    {
+      "timestamp": "2023-06-03T22:30:38Z",
+      "fighter1": {
+        "name": "Maxim Grishin",
+        "numericOdds": 900
+      },
+      "fighter2": {
+        "name": "Philipe Lins",
+        "numericOdds": -1700
+      }
+    },
+    {
+      "timestamp": "2023-06-03T22:35:38Z",
+      "fighter1": {
+        "name": "Maxim Grishin",
+        "numericOdds": 900
+      },
+      "fighter2": {
+        "name": "Philipe Lins",
+        "numericOdds": -1700
+      }
+    }
+  ]
+}

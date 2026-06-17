@@ -1,232 +1,35 @@
 {
   "fightId": "marlonvera_vs_dominickcruz_2022-08-14",
   "fightTitle": "Marlon Vera vs Dominick Cruz",
-  "startTime": "2022-08-13T13:55:00Z",
-  "endTime": "2022-08-13T18:05:00Z",
-  "dataPoints": 26,
+  "commenceTime": "2022-08-14T01:35:00Z",
+  "startTime": "2022-08-14T01:25:00Z",
+  "endTime": "2022-08-14T02:15:00Z",
+  "dataPoints": 6,
   "oddsHistory": [
     {
-      "timestamp": "2022-08-13T13:55:00Z",
+      "timestamp": "2022-08-14T01:25:00Z",
       "fighter1": {
         "name": "Dominick Cruz",
-        "numericOdds": 195
+        "numericOdds": 185
       },
       "fighter2": {
         "name": "Marlon Vera",
-        "numericOdds": -233
+        "numericOdds": -213
       }
     },
     {
-      "timestamp": "2022-08-13T14:05:00Z",
+      "timestamp": "2022-08-14T01:35:00Z",
       "fighter1": {
         "name": "Dominick Cruz",
-        "numericOdds": 195
+        "numericOdds": 185
       },
       "fighter2": {
         "name": "Marlon Vera",
-        "numericOdds": -233
+        "numericOdds": -213
       }
     },
     {
-      "timestamp": "2022-08-13T14:15:00Z",
-      "fighter1": {
-        "name": "Dominick Cruz",
-        "numericOdds": 195
-      },
-      "fighter2": {
-        "name": "Marlon Vera",
-        "numericOdds": -233
-      }
-    },
-    {
-      "timestamp": "2022-08-13T14:25:00Z",
-      "fighter1": {
-        "name": "Dominick Cruz",
-        "numericOdds": 195
-      },
-      "fighter2": {
-        "name": "Marlon Vera",
-        "numericOdds": -233
-      }
-    },
-    {
-      "timestamp": "2022-08-13T14:35:00Z",
-      "fighter1": {
-        "name": "Dominick Cruz",
-        "numericOdds": 195
-      },
-      "fighter2": {
-        "name": "Marlon Vera",
-        "numericOdds": -233
-      }
-    },
-    {
-      "timestamp": "2022-08-13T14:45:00Z",
-      "fighter1": {
-        "name": "Dominick Cruz",
-        "numericOdds": 195
-      },
-      "fighter2": {
-        "name": "Marlon Vera",
-        "numericOdds": -233
-      }
-    },
-    {
-      "timestamp": "2022-08-13T14:55:00Z",
-      "fighter1": {
-        "name": "Dominick Cruz",
-        "numericOdds": 195
-      },
-      "fighter2": {
-        "name": "Marlon Vera",
-        "numericOdds": -233
-      }
-    },
-    {
-      "timestamp": "2022-08-13T15:05:00Z",
-      "fighter1": {
-        "name": "Dominick Cruz",
-        "numericOdds": 195
-      },
-      "fighter2": {
-        "name": "Marlon Vera",
-        "numericOdds": -233
-      }
-    },
-    {
-      "timestamp": "2022-08-13T15:15:00Z",
-      "fighter1": {
-        "name": "Dominick Cruz",
-        "numericOdds": 195
-      },
-      "fighter2": {
-        "name": "Marlon Vera",
-        "numericOdds": -233
-      }
-    },
-    {
-      "timestamp": "2022-08-13T15:25:00Z",
-      "fighter1": {
-        "name": "Dominick Cruz",
-        "numericOdds": 195
-      },
-      "fighter2": {
-        "name": "Marlon Vera",
-        "numericOdds": -233
-      }
-    },
-    {
-      "timestamp": "2022-08-13T15:35:00Z",
-      "fighter1": {
-        "name": "Dominick Cruz",
-        "numericOdds": 195
-      },
-      "fighter2": {
-        "name": "Marlon Vera",
-        "numericOdds": -233
-      }
-    },
-    {
-      "timestamp": "2022-08-13T15:45:00Z",
-      "fighter1": {
-        "name": "Dominick Cruz",
-        "numericOdds": 195
-      },
-      "fighter2": {
-        "name": "Marlon Vera",
-        "numericOdds": -233
-      }
-    },
-    {
-      "timestamp": "2022-08-13T15:55:00Z",
-      "fighter1": {
-        "name": "Dominick Cruz",
-        "numericOdds": 195
-      },
-      "fighter2": {
-        "name": "Marlon Vera",
-        "numericOdds": -233
-      }
-    },
-    {
-      "timestamp": "2022-08-13T16:05:00Z",
-      "fighter1": {
-        "name": "Dominick Cruz",
-        "numericOdds": 195
-      },
-      "fighter2": {
-        "name": "Marlon Vera",
-        "numericOdds": -233
-      }
-    },
-    {
-      "timestamp": "2022-08-13T16:15:00Z",
-      "fighter1": {
-        "name": "Dominick Cruz",
-        "numericOdds": 195
-      },
-      "fighter2": {
-        "name": "Marlon Vera",
-        "numericOdds": -233
-      }
-    },
-    {
-      "timestamp": "2022-08-13T16:25:00Z",
-      "fighter1": {
-        "name": "Dominick Cruz",
-        "numericOdds": 195
-      },
-      "fighter2": {
-        "name": "Marlon Vera",
-        "numericOdds": -233
-      }
-    },
-    {
-      "timestamp": "2022-08-13T16:35:00Z",
-      "fighter1": {
-        "name": "Dominick Cruz",
-        "numericOdds": 195
-      },
-      "fighter2": {
-        "name": "Marlon Vera",
-        "numericOdds": -233
-      }
-    },
-    {
-      "timestamp": "2022-08-13T16:45:00Z",
-      "fighter1": {
-        "name": "Dominick Cruz",
-        "numericOdds": 195
-      },
-      "fighter2": {
-        "name": "Marlon Vera",
-        "numericOdds": -233
-      }
-    },
-    {
-      "timestamp": "2022-08-13T16:55:00Z",
-      "fighter1": {
-        "name": "Dominick Cruz",
-        "numericOdds": 195
-      },
-      "fighter2": {
-        "name": "Marlon Vera",
-        "numericOdds": -233
-      }
-    },
-    {
-      "timestamp": "2022-08-13T17:05:00Z",
-      "fighter1": {
-        "name": "Dominick Cruz",
-        "numericOdds": 195
-      },
-      "fighter2": {
-        "name": "Marlon Vera",
-        "numericOdds": -233
-      }
-    },
-    {
-      "timestamp": "2022-08-13T17:15:00Z",
+      "timestamp": "2022-08-14T01:45:00Z",
       "fighter1": {
         "name": "Dominick Cruz",
         "numericOdds": 190
@@ -237,58 +40,36 @@
       }
     },
     {
-      "timestamp": "2022-08-13T17:25:00Z",
+      "timestamp": "2022-08-14T01:55:00Z",
       "fighter1": {
         "name": "Dominick Cruz",
-        "numericOdds": 185
+        "numericOdds": 110
       },
       "fighter2": {
         "name": "Marlon Vera",
-        "numericOdds": -213
+        "numericOdds": -149
       }
     },
     {
-      "timestamp": "2022-08-13T17:35:00Z",
+      "timestamp": "2022-08-14T02:05:00Z",
       "fighter1": {
         "name": "Dominick Cruz",
-        "numericOdds": 185
+        "numericOdds": -196
       },
       "fighter2": {
         "name": "Marlon Vera",
-        "numericOdds": -213
+        "numericOdds": 145
       }
     },
     {
-      "timestamp": "2022-08-13T17:45:00Z",
+      "timestamp": "2022-08-14T02:15:00Z",
       "fighter1": {
         "name": "Dominick Cruz",
-        "numericOdds": 185
+        "numericOdds": -196
       },
       "fighter2": {
         "name": "Marlon Vera",
-        "numericOdds": -213
-      }
-    },
-    {
-      "timestamp": "2022-08-13T17:55:00Z",
-      "fighter1": {
-        "name": "Dominick Cruz",
-        "numericOdds": 185
-      },
-      "fighter2": {
-        "name": "Marlon Vera",
-        "numericOdds": -213
-      }
-    },
-    {
-      "timestamp": "2022-08-13T18:05:00Z",
-      "fighter1": {
-        "name": "Dominick Cruz",
-        "numericOdds": 185
-      },
-      "fighter2": {
-        "name": "Marlon Vera",
-        "numericOdds": -213
+        "numericOdds": 145
       }
     }
   ]

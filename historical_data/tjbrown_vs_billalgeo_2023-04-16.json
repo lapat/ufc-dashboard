@@ -1,151 +1,75 @@
 {
   "fightId": "tjbrown_vs_billalgeo_2023-04-16",
   "fightTitle": "TJ Brown vs Bill Algeo",
-  "startTime": "2023-04-15T13:55:39Z",
-  "endTime": "2023-04-15T16:35:38Z",
-  "dataPoints": 13,
+  "commenceTime": "2023-04-16T00:20:00Z",
+  "startTime": "2023-04-16T00:10:39Z",
+  "endTime": "2023-04-16T00:35:39Z",
+  "dataPoints": 6,
   "oddsHistory": [
     {
-      "timestamp": "2023-04-15T13:55:39Z",
+      "timestamp": "2023-04-16T00:10:39Z",
+      "fighter1": {
+        "name": "Bill Algeo",
+        "numericOdds": -210
+      },
+      "fighter2": {
+        "name": "TJ Brown",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2023-04-16T00:15:39Z",
+      "fighter1": {
+        "name": "Bill Algeo",
+        "numericOdds": -210
+      },
+      "fighter2": {
+        "name": "TJ Brown",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2023-04-16T00:20:39Z",
       "fighter1": {
         "name": "Bill Algeo",
         "numericOdds": -190
       },
       "fighter2": {
         "name": "TJ Brown",
-        "numericOdds": 160
+        "numericOdds": 155
       }
     },
     {
-      "timestamp": "2023-04-15T14:05:40Z",
+      "timestamp": "2023-04-16T00:25:39Z",
       "fighter1": {
         "name": "Bill Algeo",
-        "numericOdds": -190
+        "numericOdds": 100
       },
       "fighter2": {
         "name": "TJ Brown",
-        "numericOdds": 160
+        "numericOdds": -130
       }
     },
     {
-      "timestamp": "2023-04-15T14:20:39Z",
+      "timestamp": "2023-04-16T00:30:39Z",
       "fighter1": {
         "name": "Bill Algeo",
-        "numericOdds": -190
+        "numericOdds": 100
       },
       "fighter2": {
         "name": "TJ Brown",
-        "numericOdds": 160
+        "numericOdds": -130
       }
     },
     {
-      "timestamp": "2023-04-15T14:30:39Z",
+      "timestamp": "2023-04-16T00:35:39Z",
       "fighter1": {
         "name": "Bill Algeo",
-        "numericOdds": -190
+        "numericOdds": 100
       },
       "fighter2": {
         "name": "TJ Brown",
-        "numericOdds": 160
-      }
-    },
-    {
-      "timestamp": "2023-04-15T14:45:39Z",
-      "fighter1": {
-        "name": "Bill Algeo",
-        "numericOdds": -195
-      },
-      "fighter2": {
-        "name": "TJ Brown",
-        "numericOdds": 165
-      }
-    },
-    {
-      "timestamp": "2023-04-15T14:55:39Z",
-      "fighter1": {
-        "name": "Bill Algeo",
-        "numericOdds": -195
-      },
-      "fighter2": {
-        "name": "TJ Brown",
-        "numericOdds": 165
-      }
-    },
-    {
-      "timestamp": "2023-04-15T15:10:39Z",
-      "fighter1": {
-        "name": "Bill Algeo",
-        "numericOdds": -195
-      },
-      "fighter2": {
-        "name": "TJ Brown",
-        "numericOdds": 165
-      }
-    },
-    {
-      "timestamp": "2023-04-15T15:25:39Z",
-      "fighter1": {
-        "name": "Bill Algeo",
-        "numericOdds": -195
-      },
-      "fighter2": {
-        "name": "TJ Brown",
-        "numericOdds": 165
-      }
-    },
-    {
-      "timestamp": "2023-04-15T15:40:39Z",
-      "fighter1": {
-        "name": "Bill Algeo",
-        "numericOdds": -195
-      },
-      "fighter2": {
-        "name": "TJ Brown",
-        "numericOdds": 165
-      }
-    },
-    {
-      "timestamp": "2023-04-15T15:55:39Z",
-      "fighter1": {
-        "name": "Bill Algeo",
-        "numericOdds": -195
-      },
-      "fighter2": {
-        "name": "TJ Brown",
-        "numericOdds": 165
-      }
-    },
-    {
-      "timestamp": "2023-04-15T16:10:39Z",
-      "fighter1": {
-        "name": "Bill Algeo",
-        "numericOdds": -195
-      },
-      "fighter2": {
-        "name": "TJ Brown",
-        "numericOdds": 165
-      }
-    },
-    {
-      "timestamp": "2023-04-15T16:20:39Z",
-      "fighter1": {
-        "name": "Bill Algeo",
-        "numericOdds": -195
-      },
-      "fighter2": {
-        "name": "TJ Brown",
-        "numericOdds": 165
-      }
-    },
-    {
-      "timestamp": "2023-04-15T16:35:38Z",
-      "fighter1": {
-        "name": "Bill Algeo",
-        "numericOdds": -195
-      },
-      "fighter2": {
-        "name": "TJ Brown",
-        "numericOdds": 165
+        "numericOdds": -130
       }
     }
   ]

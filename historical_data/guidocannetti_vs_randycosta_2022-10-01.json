@@ -1,318 +1,11 @@
 {
   "fightId": "guidocannetti_vs_randycosta_2022-10-01",
   "fightTitle": "Guido Cannetti vs Randy Costa",
-  "startTime": "2022-10-01T13:55:39Z",
-  "endTime": "2022-10-01T20:20:38Z",
-  "dataPoints": 30,
+  "commenceTime": "2022-10-01T20:15:00Z",
+  "startTime": "2022-10-01T20:05:39Z",
+  "endTime": "2022-10-01T20:30:39Z",
+  "dataPoints": 6,
   "oddsHistory": [
-    {
-      "timestamp": "2022-10-01T13:55:39Z",
-      "fighter1": {
-        "name": "Guido Cannetti",
-        "numericOdds": 235
-      },
-      "fighter2": {
-        "name": "Randy Costa",
-        "numericOdds": -280
-      }
-    },
-    {
-      "timestamp": "2022-10-01T14:05:39Z",
-      "fighter1": {
-        "name": "Guido Cannetti",
-        "numericOdds": 235
-      },
-      "fighter2": {
-        "name": "Randy Costa",
-        "numericOdds": -280
-      }
-    },
-    {
-      "timestamp": "2022-10-01T14:20:39Z",
-      "fighter1": {
-        "name": "Guido Cannetti",
-        "numericOdds": 235
-      },
-      "fighter2": {
-        "name": "Randy Costa",
-        "numericOdds": -280
-      }
-    },
-    {
-      "timestamp": "2022-10-01T14:35:39Z",
-      "fighter1": {
-        "name": "Guido Cannetti",
-        "numericOdds": 235
-      },
-      "fighter2": {
-        "name": "Randy Costa",
-        "numericOdds": -280
-      }
-    },
-    {
-      "timestamp": "2022-10-01T14:50:39Z",
-      "fighter1": {
-        "name": "Guido Cannetti",
-        "numericOdds": 235
-      },
-      "fighter2": {
-        "name": "Randy Costa",
-        "numericOdds": -280
-      }
-    },
-    {
-      "timestamp": "2022-10-01T15:05:39Z",
-      "fighter1": {
-        "name": "Guido Cannetti",
-        "numericOdds": 235
-      },
-      "fighter2": {
-        "name": "Randy Costa",
-        "numericOdds": -280
-      }
-    },
-    {
-      "timestamp": "2022-10-01T15:15:39Z",
-      "fighter1": {
-        "name": "Guido Cannetti",
-        "numericOdds": 235
-      },
-      "fighter2": {
-        "name": "Randy Costa",
-        "numericOdds": -280
-      }
-    },
-    {
-      "timestamp": "2022-10-01T15:25:39Z",
-      "fighter1": {
-        "name": "Guido Cannetti",
-        "numericOdds": 235
-      },
-      "fighter2": {
-        "name": "Randy Costa",
-        "numericOdds": -280
-      }
-    },
-    {
-      "timestamp": "2022-10-01T15:40:39Z",
-      "fighter1": {
-        "name": "Guido Cannetti",
-        "numericOdds": 235
-      },
-      "fighter2": {
-        "name": "Randy Costa",
-        "numericOdds": -280
-      }
-    },
-    {
-      "timestamp": "2022-10-01T15:55:39Z",
-      "fighter1": {
-        "name": "Guido Cannetti",
-        "numericOdds": 235
-      },
-      "fighter2": {
-        "name": "Randy Costa",
-        "numericOdds": -280
-      }
-    },
-    {
-      "timestamp": "2022-10-01T16:10:39Z",
-      "fighter1": {
-        "name": "Guido Cannetti",
-        "numericOdds": 235
-      },
-      "fighter2": {
-        "name": "Randy Costa",
-        "numericOdds": -280
-      }
-    },
-    {
-      "timestamp": "2022-10-01T16:25:38Z",
-      "fighter1": {
-        "name": "Guido Cannetti",
-        "numericOdds": 235
-      },
-      "fighter2": {
-        "name": "Randy Costa",
-        "numericOdds": -280
-      }
-    },
-    {
-      "timestamp": "2022-10-01T16:35:39Z",
-      "fighter1": {
-        "name": "Guido Cannetti",
-        "numericOdds": 235
-      },
-      "fighter2": {
-        "name": "Randy Costa",
-        "numericOdds": -280
-      }
-    },
-    {
-      "timestamp": "2022-10-01T16:50:39Z",
-      "fighter1": {
-        "name": "Guido Cannetti",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Randy Costa",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-10-01T17:05:39Z",
-      "fighter1": {
-        "name": "Guido Cannetti",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Randy Costa",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-10-01T17:20:38Z",
-      "fighter1": {
-        "name": "Guido Cannetti",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Randy Costa",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-10-01T17:30:39Z",
-      "fighter1": {
-        "name": "Guido Cannetti",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Randy Costa",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-10-01T17:45:38Z",
-      "fighter1": {
-        "name": "Guido Cannetti",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Randy Costa",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-10-01T17:55:38Z",
-      "fighter1": {
-        "name": "Guido Cannetti",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Randy Costa",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-10-01T18:05:39Z",
-      "fighter1": {
-        "name": "Guido Cannetti",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Randy Costa",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-10-01T18:20:38Z",
-      "fighter1": {
-        "name": "Guido Cannetti",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Randy Costa",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-10-01T18:30:39Z",
-      "fighter1": {
-        "name": "Guido Cannetti",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Randy Costa",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-10-01T18:45:39Z",
-      "fighter1": {
-        "name": "Guido Cannetti",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Randy Costa",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-10-01T18:55:39Z",
-      "fighter1": {
-        "name": "Guido Cannetti",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Randy Costa",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-10-01T19:10:39Z",
-      "fighter1": {
-        "name": "Guido Cannetti",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Randy Costa",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-10-01T19:25:38Z",
-      "fighter1": {
-        "name": "Guido Cannetti",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Randy Costa",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-10-01T19:40:38Z",
-      "fighter1": {
-        "name": "Guido Cannetti",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Randy Costa",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-10-01T19:50:39Z",
-      "fighter1": {
-        "name": "Guido Cannetti",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Randy Costa",
-        "numericOdds": -265
-      }
-    },
     {
       "timestamp": "2022-10-01T20:05:39Z",
       "fighter1": {
@@ -325,7 +18,51 @@
       }
     },
     {
+      "timestamp": "2022-10-01T20:10:39Z",
+      "fighter1": {
+        "name": "Guido Cannetti",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Randy Costa",
+        "numericOdds": -265
+      }
+    },
+    {
+      "timestamp": "2022-10-01T20:15:39Z",
+      "fighter1": {
+        "name": "Guido Cannetti",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Randy Costa",
+        "numericOdds": -280
+      }
+    },
+    {
       "timestamp": "2022-10-01T20:20:38Z",
+      "fighter1": {
+        "name": "Guido Cannetti",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Randy Costa",
+        "numericOdds": -300
+      }
+    },
+    {
+      "timestamp": "2022-10-01T20:25:39Z",
+      "fighter1": {
+        "name": "Guido Cannetti",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Randy Costa",
+        "numericOdds": -300
+      }
+    },
+    {
+      "timestamp": "2022-10-01T20:30:39Z",
       "fighter1": {
         "name": "Guido Cannetti",
         "numericOdds": 235

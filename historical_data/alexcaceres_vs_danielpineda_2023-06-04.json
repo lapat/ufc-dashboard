@@ -1,540 +1,13 @@
 {
   "fightId": "alexcaceres_vs_danielpineda_2023-06-04",
   "fightTitle": "Alex Caceres vs Daniel Pineda",
-  "startTime": "2023-06-03T13:55:40Z",
-  "endTime": "2023-06-04T03:25:38Z",
-  "dataPoints": 59,
+  "commenceTime": "2023-06-04T02:55:00Z",
+  "startTime": "2023-06-04T02:45:38Z",
+  "endTime": "2023-06-04T03:35:38Z",
+  "dataPoints": 11,
   "oddsHistory": [
     {
-      "timestamp": "2023-06-03T13:55:40Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -190
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 160
-      }
-    },
-    {
-      "timestamp": "2023-06-03T14:10:38Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -190
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 160
-      }
-    },
-    {
-      "timestamp": "2023-06-03T14:20:39Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -190
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 160
-      }
-    },
-    {
-      "timestamp": "2023-06-03T14:35:39Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -190
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 160
-      }
-    },
-    {
-      "timestamp": "2023-06-03T14:50:38Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -190
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 160
-      }
-    },
-    {
-      "timestamp": "2023-06-03T15:00:39Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -190
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 160
-      }
-    },
-    {
-      "timestamp": "2023-06-03T15:15:39Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -190
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 160
-      }
-    },
-    {
-      "timestamp": "2023-06-03T15:30:39Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -190
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 160
-      }
-    },
-    {
-      "timestamp": "2023-06-03T15:45:39Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -190
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 160
-      }
-    },
-    {
-      "timestamp": "2023-06-03T16:00:39Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -180
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 155
-      }
-    },
-    {
-      "timestamp": "2023-06-03T16:15:39Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -180
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 155
-      }
-    },
-    {
-      "timestamp": "2023-06-03T16:30:38Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -180
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 155
-      }
-    },
-    {
-      "timestamp": "2023-06-03T16:45:38Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -180
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 155
-      }
-    },
-    {
-      "timestamp": "2023-06-03T16:55:38Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -180
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 155
-      }
-    },
-    {
-      "timestamp": "2023-06-03T17:10:38Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -180
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 155
-      }
-    },
-    {
-      "timestamp": "2023-06-03T17:20:38Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -180
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 155
-      }
-    },
-    {
-      "timestamp": "2023-06-03T17:35:38Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -190
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 160
-      }
-    },
-    {
-      "timestamp": "2023-06-03T17:45:39Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -190
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 160
-      }
-    },
-    {
-      "timestamp": "2023-06-03T18:00:39Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -190
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 160
-      }
-    },
-    {
-      "timestamp": "2023-06-03T18:15:39Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -190
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 160
-      }
-    },
-    {
-      "timestamp": "2023-06-03T18:30:39Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -190
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 160
-      }
-    },
-    {
-      "timestamp": "2023-06-03T18:45:38Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -190
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 160
-      }
-    },
-    {
-      "timestamp": "2023-06-03T19:00:38Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -190
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 160
-      }
-    },
-    {
-      "timestamp": "2023-06-03T19:10:39Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -190
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 160
-      }
-    },
-    {
-      "timestamp": "2023-06-03T19:25:38Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -190
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 160
-      }
-    },
-    {
-      "timestamp": "2023-06-03T19:35:38Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -190
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 160
-      }
-    },
-    {
-      "timestamp": "2023-06-03T19:45:39Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -190
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 160
-      }
-    },
-    {
-      "timestamp": "2023-06-03T20:00:38Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -190
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 160
-      }
-    },
-    {
-      "timestamp": "2023-06-03T20:15:38Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -190
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 160
-      }
-    },
-    {
-      "timestamp": "2023-06-03T20:30:38Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -180
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 155
-      }
-    },
-    {
-      "timestamp": "2023-06-03T20:40:38Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -180
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 155
-      }
-    },
-    {
-      "timestamp": "2023-06-03T20:55:38Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -180
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 155
-      }
-    },
-    {
-      "timestamp": "2023-06-03T21:05:38Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -180
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 155
-      }
-    },
-    {
-      "timestamp": "2023-06-03T21:15:39Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -180
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 155
-      }
-    },
-    {
-      "timestamp": "2023-06-03T21:30:38Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -180
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 155
-      }
-    },
-    {
-      "timestamp": "2023-06-03T21:45:38Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -180
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 155
-      }
-    },
-    {
-      "timestamp": "2023-06-03T22:00:38Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -190
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 160
-      }
-    },
-    {
-      "timestamp": "2023-06-03T22:15:38Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -190
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 160
-      }
-    },
-    {
-      "timestamp": "2023-06-03T22:30:38Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -190
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 160
-      }
-    },
-    {
-      "timestamp": "2023-06-03T22:45:38Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -190
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 160
-      }
-    },
-    {
-      "timestamp": "2023-06-03T23:00:38Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -190
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 160
-      }
-    },
-    {
-      "timestamp": "2023-06-03T23:15:38Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -190
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 160
-      }
-    },
-    {
-      "timestamp": "2023-06-03T23:25:39Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -190
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 160
-      }
-    },
-    {
-      "timestamp": "2023-06-03T23:40:39Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -190
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 160
-      }
-    },
-    {
-      "timestamp": "2023-06-03T23:55:38Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -190
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 160
-      }
-    },
-    {
-      "timestamp": "2023-06-04T00:10:38Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -190
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 160
-      }
-    },
-    {
-      "timestamp": "2023-06-04T00:25:38Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -190
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 160
-      }
-    },
-    {
-      "timestamp": "2023-06-04T00:40:38Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -190
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 160
-      }
-    },
-    {
-      "timestamp": "2023-06-04T00:55:38Z",
+      "timestamp": "2023-06-04T02:45:38Z",
       "fighter1": {
         "name": "Alex Caceres",
         "numericOdds": -195
@@ -545,80 +18,14 @@
       }
     },
     {
-      "timestamp": "2023-06-04T01:10:38Z",
+      "timestamp": "2023-06-04T02:50:38Z",
       "fighter1": {
         "name": "Alex Caceres",
-        "numericOdds": -195
+        "numericOdds": -200
       },
       "fighter2": {
         "name": "Daniel Pineda",
-        "numericOdds": 165
-      }
-    },
-    {
-      "timestamp": "2023-06-04T01:25:38Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -195
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 165
-      }
-    },
-    {
-      "timestamp": "2023-06-04T01:40:38Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -195
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 165
-      }
-    },
-    {
-      "timestamp": "2023-06-04T01:55:38Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -195
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 165
-      }
-    },
-    {
-      "timestamp": "2023-06-04T02:10:38Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -195
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 165
-      }
-    },
-    {
-      "timestamp": "2023-06-04T02:25:38Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -195
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 165
-      }
-    },
-    {
-      "timestamp": "2023-06-04T02:40:38Z",
-      "fighter1": {
-        "name": "Alex Caceres",
-        "numericOdds": -195
-      },
-      "fighter2": {
-        "name": "Daniel Pineda",
-        "numericOdds": 165
+        "numericOdds": 170
       }
     },
     {
@@ -633,6 +40,28 @@
       }
     },
     {
+      "timestamp": "2023-06-04T03:00:38Z",
+      "fighter1": {
+        "name": "Alex Caceres",
+        "numericOdds": -200
+      },
+      "fighter2": {
+        "name": "Daniel Pineda",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2023-06-04T03:05:38Z",
+      "fighter1": {
+        "name": "Alex Caceres",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Daniel Pineda",
+        "numericOdds": 165
+      }
+    },
+    {
       "timestamp": "2023-06-04T03:10:38Z",
       "fighter1": {
         "name": "Alex Caceres",
@@ -644,7 +73,51 @@
       }
     },
     {
+      "timestamp": "2023-06-04T03:15:38Z",
+      "fighter1": {
+        "name": "Alex Caceres",
+        "numericOdds": -950
+      },
+      "fighter2": {
+        "name": "Daniel Pineda",
+        "numericOdds": 600
+      }
+    },
+    {
+      "timestamp": "2023-06-04T03:20:38Z",
+      "fighter1": {
+        "name": "Alex Caceres",
+        "numericOdds": -1200
+      },
+      "fighter2": {
+        "name": "Daniel Pineda",
+        "numericOdds": 700
+      }
+    },
+    {
       "timestamp": "2023-06-04T03:25:38Z",
+      "fighter1": {
+        "name": "Alex Caceres",
+        "numericOdds": -12500
+      },
+      "fighter2": {
+        "name": "Daniel Pineda",
+        "numericOdds": 2000
+      }
+    },
+    {
+      "timestamp": "2023-06-04T03:30:38Z",
+      "fighter1": {
+        "name": "Alex Caceres",
+        "numericOdds": -12500
+      },
+      "fighter2": {
+        "name": "Daniel Pineda",
+        "numericOdds": 2000
+      }
+    },
+    {
+      "timestamp": "2023-06-04T03:35:38Z",
       "fighter1": {
         "name": "Alex Caceres",
         "numericOdds": -12500

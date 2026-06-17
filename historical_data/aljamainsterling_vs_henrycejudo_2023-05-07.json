@@ -1,683 +1,46 @@
 {
   "fightId": "aljamainsterling_vs_henrycejudo_2023-05-07",
   "fightTitle": "Aljamain Sterling vs Henry Cejudo",
-  "startTime": "2023-05-06T13:55:39Z",
-  "endTime": "2023-05-07T05:15:39Z",
-  "dataPoints": 69,
+  "commenceTime": "2023-05-07T04:00:00Z",
+  "startTime": "2023-05-07T03:50:38Z",
+  "endTime": "2023-05-07T05:20:39Z",
+  "dataPoints": 19,
   "oddsHistory": [
     {
-      "timestamp": "2023-05-06T13:55:39Z",
+      "timestamp": "2023-05-07T03:50:38Z",
       "fighter1": {
         "name": "Aljamain Sterling",
-        "numericOdds": 100
+        "numericOdds": 105
       },
       "fighter2": {
         "name": "Henry Cejudo",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2023-05-06T14:10:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2023-05-06T14:20:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2023-05-06T14:35:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2023-05-06T14:50:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2023-05-06T15:05:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2023-05-06T15:15:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2023-05-06T15:30:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2023-05-06T15:45:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2023-05-06T16:00:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2023-05-06T16:15:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2023-05-06T16:25:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2023-05-06T16:40:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2023-05-06T16:55:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2023-05-06T17:10:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2023-05-06T17:25:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2023-05-06T17:35:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2023-05-06T17:45:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2023-05-06T17:55:40Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2023-05-06T18:10:40Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2023-05-06T18:25:40Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2023-05-06T18:40:40Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2023-05-06T18:55:40Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2023-05-06T19:10:40Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2023-05-06T19:25:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2023-05-06T19:35:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2023-05-06T19:50:38Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2023-05-06T20:00:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2023-05-06T20:10:40Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -120
-      }
-    },
-    {
-      "timestamp": "2023-05-06T20:25:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-05-06T20:40:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": -105
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -115
-      }
-    },
-    {
-      "timestamp": "2023-05-06T20:50:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": -105
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -115
-      }
-    },
-    {
-      "timestamp": "2023-05-06T21:05:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": -105
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -115
-      }
-    },
-    {
-      "timestamp": "2023-05-06T21:15:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": -105
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -115
-      }
-    },
-    {
-      "timestamp": "2023-05-06T21:30:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": -105
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -115
-      }
-    },
-    {
-      "timestamp": "2023-05-06T21:40:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-05-06T21:55:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-05-06T22:10:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-05-06T22:25:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-05-06T22:35:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-05-06T22:50:38Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-05-06T23:00:40Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-05-06T23:15:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-05-06T23:25:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-05-06T23:40:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-05-06T23:55:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-05-07T00:10:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-05-07T00:25:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-05-07T00:40:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-05-07T00:55:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-05-07T01:10:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-05-07T01:25:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-05-07T01:40:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-05-07T01:55:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-05-07T02:10:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-05-07T02:25:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-05-07T02:40:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-05-07T02:55:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-05-07T03:10:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-05-07T03:25:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-05-07T03:40:39Z",
-      "fighter1": {
-        "name": "Aljamain Sterling",
-        "numericOdds": 100
-      },
-      "fighter2": {
-        "name": "Henry Cejudo",
-        "numericOdds": -120
+        "numericOdds": -125
       }
     },
     {
       "timestamp": "2023-05-07T03:55:38Z",
+      "fighter1": {
+        "name": "Aljamain Sterling",
+        "numericOdds": 105
+      },
+      "fighter2": {
+        "name": "Henry Cejudo",
+        "numericOdds": -125
+      }
+    },
+    {
+      "timestamp": "2023-05-07T04:00:38Z",
+      "fighter1": {
+        "name": "Aljamain Sterling",
+        "numericOdds": 105
+      },
+      "fighter2": {
+        "name": "Henry Cejudo",
+        "numericOdds": -125
+      }
+    },
+    {
+      "timestamp": "2023-05-07T04:05:39Z",
       "fighter1": {
         "name": "Aljamain Sterling",
         "numericOdds": 105
@@ -699,7 +62,29 @@
       }
     },
     {
+      "timestamp": "2023-05-07T04:15:39Z",
+      "fighter1": {
+        "name": "Aljamain Sterling",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Henry Cejudo",
+        "numericOdds": -120
+      }
+    },
+    {
       "timestamp": "2023-05-07T04:20:38Z",
+      "fighter1": {
+        "name": "Aljamain Sterling",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Henry Cejudo",
+        "numericOdds": -120
+      }
+    },
+    {
+      "timestamp": "2023-05-07T04:25:39Z",
       "fighter1": {
         "name": "Aljamain Sterling",
         "numericOdds": 100
@@ -721,6 +106,17 @@
       }
     },
     {
+      "timestamp": "2023-05-07T04:35:40Z",
+      "fighter1": {
+        "name": "Aljamain Sterling",
+        "numericOdds": 105
+      },
+      "fighter2": {
+        "name": "Henry Cejudo",
+        "numericOdds": -125
+      }
+    },
+    {
       "timestamp": "2023-05-07T04:40:39Z",
       "fighter1": {
         "name": "Aljamain Sterling",
@@ -729,6 +125,28 @@
       "fighter2": {
         "name": "Henry Cejudo",
         "numericOdds": -125
+      }
+    },
+    {
+      "timestamp": "2023-05-07T04:45:39Z",
+      "fighter1": {
+        "name": "Aljamain Sterling",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Henry Cejudo",
+        "numericOdds": -160
+      }
+    },
+    {
+      "timestamp": "2023-05-07T04:50:39Z",
+      "fighter1": {
+        "name": "Aljamain Sterling",
+        "numericOdds": -165
+      },
+      "fighter2": {
+        "name": "Henry Cejudo",
+        "numericOdds": 135
       }
     },
     {
@@ -743,6 +161,17 @@
       }
     },
     {
+      "timestamp": "2023-05-07T05:00:39Z",
+      "fighter1": {
+        "name": "Aljamain Sterling",
+        "numericOdds": 120
+      },
+      "fighter2": {
+        "name": "Henry Cejudo",
+        "numericOdds": -150
+      }
+    },
+    {
       "timestamp": "2023-05-07T05:05:38Z",
       "fighter1": {
         "name": "Aljamain Sterling",
@@ -754,7 +183,29 @@
       }
     },
     {
+      "timestamp": "2023-05-07T05:10:39Z",
+      "fighter1": {
+        "name": "Aljamain Sterling",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "Henry Cejudo",
+        "numericOdds": 300
+      }
+    },
+    {
       "timestamp": "2023-05-07T05:15:39Z",
+      "fighter1": {
+        "name": "Aljamain Sterling",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "Henry Cejudo",
+        "numericOdds": 300
+      }
+    },
+    {
+      "timestamp": "2023-05-07T05:20:39Z",
       "fighter1": {
         "name": "Aljamain Sterling",
         "numericOdds": -400

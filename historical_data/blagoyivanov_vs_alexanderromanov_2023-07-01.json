@@ -1,195 +1,108 @@
 {
   "fightId": "blagoyivanov_vs_alexanderromanov_2023-07-01",
   "fightTitle": "Blagoy Ivanov vs Alexander Romanov",
-  "startTime": "2023-07-01T13:55:39Z",
-  "endTime": "2023-07-01T17:30:39Z",
-  "dataPoints": 17,
+  "commenceTime": "2023-07-01T20:14:00Z",
+  "startTime": "2023-07-01T20:05:40Z",
+  "endTime": "2023-07-01T20:50:40Z",
+  "dataPoints": 9,
   "oddsHistory": [
     {
-      "timestamp": "2023-07-01T13:55:39Z",
+      "timestamp": "2023-07-01T20:05:40Z",
       "fighter1": {
         "name": "Alexander Romanov",
-        "numericOdds": -140
+        "numericOdds": -135
       },
       "fighter2": {
         "name": "Blagoy Ivanov",
-        "numericOdds": 120
+        "numericOdds": 115
       }
     },
     {
-      "timestamp": "2023-07-01T14:10:39Z",
+      "timestamp": "2023-07-01T20:10:40Z",
       "fighter1": {
         "name": "Alexander Romanov",
-        "numericOdds": -140
+        "numericOdds": -135
       },
       "fighter2": {
         "name": "Blagoy Ivanov",
-        "numericOdds": 120
+        "numericOdds": 115
       }
     },
     {
-      "timestamp": "2023-07-01T14:20:39Z",
-      "fighter1": {
-        "name": "Alexander Romanov",
-        "numericOdds": -140
-      },
-      "fighter2": {
-        "name": "Blagoy Ivanov",
-        "numericOdds": 120
-      }
-    },
-    {
-      "timestamp": "2023-07-01T14:35:39Z",
+      "timestamp": "2023-07-01T20:20:40Z",
       "fighter1": {
         "name": "Alexander Romanov",
         "numericOdds": -145
       },
       "fighter2": {
         "name": "Blagoy Ivanov",
-        "numericOdds": 125
-      }
-    },
-    {
-      "timestamp": "2023-07-01T14:50:39Z",
-      "fighter1": {
-        "name": "Alexander Romanov",
-        "numericOdds": -145
-      },
-      "fighter2": {
-        "name": "Blagoy Ivanov",
-        "numericOdds": 125
-      }
-    },
-    {
-      "timestamp": "2023-07-01T15:05:39Z",
-      "fighter1": {
-        "name": "Alexander Romanov",
-        "numericOdds": -135
-      },
-      "fighter2": {
-        "name": "Blagoy Ivanov",
         "numericOdds": 115
       }
     },
     {
-      "timestamp": "2023-07-01T15:15:39Z",
+      "timestamp": "2023-07-01T20:25:39Z",
       "fighter1": {
         "name": "Alexander Romanov",
-        "numericOdds": -135
+        "numericOdds": -140
       },
       "fighter2": {
         "name": "Blagoy Ivanov",
-        "numericOdds": 115
+        "numericOdds": 110
       }
     },
     {
-      "timestamp": "2023-07-01T15:25:40Z",
+      "timestamp": "2023-07-01T20:30:39Z",
       "fighter1": {
         "name": "Alexander Romanov",
-        "numericOdds": -135
+        "numericOdds": -120
       },
       "fighter2": {
         "name": "Blagoy Ivanov",
-        "numericOdds": 115
+        "numericOdds": -110
       }
     },
     {
-      "timestamp": "2023-07-01T15:40:40Z",
+      "timestamp": "2023-07-01T20:35:39Z",
       "fighter1": {
         "name": "Alexander Romanov",
-        "numericOdds": -135
+        "numericOdds": -825
       },
       "fighter2": {
         "name": "Blagoy Ivanov",
-        "numericOdds": 115
+        "numericOdds": 550
       }
     },
     {
-      "timestamp": "2023-07-01T15:55:40Z",
+      "timestamp": "2023-07-01T20:40:40Z",
       "fighter1": {
         "name": "Alexander Romanov",
-        "numericOdds": -135
+        "numericOdds": -1700
       },
       "fighter2": {
         "name": "Blagoy Ivanov",
-        "numericOdds": 115
+        "numericOdds": 900
       }
     },
     {
-      "timestamp": "2023-07-01T16:10:39Z",
+      "timestamp": "2023-07-01T20:45:40Z",
       "fighter1": {
         "name": "Alexander Romanov",
-        "numericOdds": -135
+        "numericOdds": -1700
       },
       "fighter2": {
         "name": "Blagoy Ivanov",
-        "numericOdds": 115
+        "numericOdds": 900
       }
     },
     {
-      "timestamp": "2023-07-01T16:20:39Z",
+      "timestamp": "2023-07-01T20:50:40Z",
       "fighter1": {
         "name": "Alexander Romanov",
-        "numericOdds": -135
+        "numericOdds": -1700
       },
       "fighter2": {
         "name": "Blagoy Ivanov",
-        "numericOdds": 115
-      }
-    },
-    {
-      "timestamp": "2023-07-01T16:30:39Z",
-      "fighter1": {
-        "name": "Alexander Romanov",
-        "numericOdds": -135
-      },
-      "fighter2": {
-        "name": "Blagoy Ivanov",
-        "numericOdds": 115
-      }
-    },
-    {
-      "timestamp": "2023-07-01T16:45:39Z",
-      "fighter1": {
-        "name": "Alexander Romanov",
-        "numericOdds": -135
-      },
-      "fighter2": {
-        "name": "Blagoy Ivanov",
-        "numericOdds": 115
-      }
-    },
-    {
-      "timestamp": "2023-07-01T17:00:39Z",
-      "fighter1": {
-        "name": "Alexander Romanov",
-        "numericOdds": -135
-      },
-      "fighter2": {
-        "name": "Blagoy Ivanov",
-        "numericOdds": 115
-      }
-    },
-    {
-      "timestamp": "2023-07-01T17:15:39Z",
-      "fighter1": {
-        "name": "Alexander Romanov",
-        "numericOdds": -135
-      },
-      "fighter2": {
-        "name": "Blagoy Ivanov",
-        "numericOdds": 115
-      }
-    },
-    {
-      "timestamp": "2023-07-01T17:30:39Z",
-      "fighter1": {
-        "name": "Alexander Romanov",
-        "numericOdds": -135
-      },
-      "fighter2": {
-        "name": "Blagoy Ivanov",
-        "numericOdds": 115
+        "numericOdds": 900
       }
     }
   ]

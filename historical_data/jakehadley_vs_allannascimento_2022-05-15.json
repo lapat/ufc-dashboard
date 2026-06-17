@@ -1,12 +1,13 @@
 {
   "fightId": "jakehadley_vs_allannascimento_2022-05-15",
   "fightTitle": "Jake Hadley vs Allan Nascimento",
-  "startTime": "2022-05-14T13:55:00Z",
-  "endTime": "2022-05-14T17:35:00Z",
-  "dataPoints": 23,
+  "commenceTime": "2022-05-15T02:00:00Z",
+  "startTime": "2022-05-15T01:55:00Z",
+  "endTime": "2022-05-15T02:45:00Z",
+  "dataPoints": 6,
   "oddsHistory": [
     {
-      "timestamp": "2022-05-14T13:55:00Z",
+      "timestamp": "2022-05-15T01:55:00Z",
       "fighter1": {
         "name": "Allan Nascimento",
         "numericOdds": 175
@@ -17,7 +18,7 @@
       }
     },
     {
-      "timestamp": "2022-05-14T14:05:00Z",
+      "timestamp": "2022-05-15T02:05:00Z",
       "fighter1": {
         "name": "Allan Nascimento",
         "numericOdds": 175
@@ -28,7 +29,7 @@
       }
     },
     {
-      "timestamp": "2022-05-14T14:15:00Z",
+      "timestamp": "2022-05-15T02:15:00Z",
       "fighter1": {
         "name": "Allan Nascimento",
         "numericOdds": 175
@@ -39,223 +40,36 @@
       }
     },
     {
-      "timestamp": "2022-05-14T14:25:00Z",
+      "timestamp": "2022-05-15T02:25:00Z",
       "fighter1": {
         "name": "Allan Nascimento",
-        "numericOdds": 175
+        "numericOdds": -141
       },
       "fighter2": {
         "name": "Jake Hadley",
-        "numericOdds": -208
+        "numericOdds": 105
       }
     },
     {
-      "timestamp": "2022-05-14T14:35:00Z",
+      "timestamp": "2022-05-15T02:35:00Z",
       "fighter1": {
         "name": "Allan Nascimento",
-        "numericOdds": 175
+        "numericOdds": -714
       },
       "fighter2": {
         "name": "Jake Hadley",
-        "numericOdds": -208
+        "numericOdds": 400
       }
     },
     {
-      "timestamp": "2022-05-14T14:45:00Z",
+      "timestamp": "2022-05-15T02:45:00Z",
       "fighter1": {
         "name": "Allan Nascimento",
-        "numericOdds": 175
+        "numericOdds": -100000
       },
       "fighter2": {
         "name": "Jake Hadley",
-        "numericOdds": -208
-      }
-    },
-    {
-      "timestamp": "2022-05-14T14:55:00Z",
-      "fighter1": {
-        "name": "Allan Nascimento",
-        "numericOdds": 175
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -208
-      }
-    },
-    {
-      "timestamp": "2022-05-14T15:05:00Z",
-      "fighter1": {
-        "name": "Allan Nascimento",
-        "numericOdds": 175
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -208
-      }
-    },
-    {
-      "timestamp": "2022-05-14T15:15:00Z",
-      "fighter1": {
-        "name": "Allan Nascimento",
-        "numericOdds": 175
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -208
-      }
-    },
-    {
-      "timestamp": "2022-05-14T15:25:00Z",
-      "fighter1": {
-        "name": "Allan Nascimento",
-        "numericOdds": 175
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -208
-      }
-    },
-    {
-      "timestamp": "2022-05-14T15:35:00Z",
-      "fighter1": {
-        "name": "Allan Nascimento",
-        "numericOdds": 175
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -208
-      }
-    },
-    {
-      "timestamp": "2022-05-14T15:45:00Z",
-      "fighter1": {
-        "name": "Allan Nascimento",
-        "numericOdds": 175
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -208
-      }
-    },
-    {
-      "timestamp": "2022-05-14T15:55:00Z",
-      "fighter1": {
-        "name": "Allan Nascimento",
-        "numericOdds": 175
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -208
-      }
-    },
-    {
-      "timestamp": "2022-05-14T16:05:00Z",
-      "fighter1": {
-        "name": "Allan Nascimento",
-        "numericOdds": 175
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -208
-      }
-    },
-    {
-      "timestamp": "2022-05-14T16:15:00Z",
-      "fighter1": {
-        "name": "Allan Nascimento",
-        "numericOdds": 175
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -208
-      }
-    },
-    {
-      "timestamp": "2022-05-14T16:25:00Z",
-      "fighter1": {
-        "name": "Allan Nascimento",
-        "numericOdds": 170
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -200
-      }
-    },
-    {
-      "timestamp": "2022-05-14T16:35:00Z",
-      "fighter1": {
-        "name": "Allan Nascimento",
-        "numericOdds": 170
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -200
-      }
-    },
-    {
-      "timestamp": "2022-05-14T16:45:00Z",
-      "fighter1": {
-        "name": "Allan Nascimento",
-        "numericOdds": 170
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -200
-      }
-    },
-    {
-      "timestamp": "2022-05-14T16:55:00Z",
-      "fighter1": {
-        "name": "Allan Nascimento",
-        "numericOdds": 170
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -200
-      }
-    },
-    {
-      "timestamp": "2022-05-14T17:05:00Z",
-      "fighter1": {
-        "name": "Allan Nascimento",
-        "numericOdds": 170
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -200
-      }
-    },
-    {
-      "timestamp": "2022-05-14T17:15:00Z",
-      "fighter1": {
-        "name": "Allan Nascimento",
-        "numericOdds": 170
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -200
-      }
-    },
-    {
-      "timestamp": "2022-05-14T17:25:00Z",
-      "fighter1": {
-        "name": "Allan Nascimento",
-        "numericOdds": 170
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -200
-      }
-    },
-    {
-      "timestamp": "2022-05-14T17:35:00Z",
-      "fighter1": {
-        "name": "Allan Nascimento",
-        "numericOdds": 170
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -200
+        "numericOdds": 1200
       }
     }
   ]

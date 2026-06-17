@@ -1,261 +1,53 @@
 {
   "fightId": "evanelder_vs_prestonparsons_2022-04-23",
   "fightTitle": "Evan Elder vs Preston Parsons",
-  "startTime": "2022-04-23T13:55:00Z",
-  "endTime": "2022-04-23T17:35:00Z",
-  "dataPoints": 23,
+  "commenceTime": "2022-04-23T23:00:00Z",
+  "startTime": "2022-04-23T22:55:00Z",
+  "endTime": "2022-04-23T23:25:00Z",
+  "dataPoints": 4,
   "oddsHistory": [
     {
-      "timestamp": "2022-04-23T13:55:00Z",
+      "timestamp": "2022-04-23T22:55:00Z",
       "fighter1": {
         "name": "Evan Elder",
-        "numericOdds": 105
+        "numericOdds": 130
       },
       "fighter2": {
         "name": "Preston Parsons",
-        "numericOdds": -125
+        "numericOdds": -149
       }
     },
     {
-      "timestamp": "2022-04-23T14:05:00Z",
+      "timestamp": "2022-04-23T23:05:00Z",
       "fighter1": {
         "name": "Evan Elder",
-        "numericOdds": 110
+        "numericOdds": 160
       },
       "fighter2": {
         "name": "Preston Parsons",
-        "numericOdds": -130
+        "numericOdds": -222
       }
     },
     {
-      "timestamp": "2022-04-23T14:15:00Z",
+      "timestamp": "2022-04-23T23:15:00Z",
       "fighter1": {
         "name": "Evan Elder",
-        "numericOdds": 110
+        "numericOdds": 800
       },
       "fighter2": {
         "name": "Preston Parsons",
-        "numericOdds": -130
+        "numericOdds": -2500
       }
     },
     {
-      "timestamp": "2022-04-23T14:25:00Z",
+      "timestamp": "2022-04-23T23:25:00Z",
       "fighter1": {
         "name": "Evan Elder",
-        "numericOdds": 110
+        "numericOdds": 1200
       },
       "fighter2": {
         "name": "Preston Parsons",
-        "numericOdds": -130
-      }
-    },
-    {
-      "timestamp": "2022-04-23T14:35:00Z",
-      "fighter1": {
-        "name": "Evan Elder",
-        "numericOdds": 110
-      },
-      "fighter2": {
-        "name": "Preston Parsons",
-        "numericOdds": -130
-      }
-    },
-    {
-      "timestamp": "2022-04-23T14:45:00Z",
-      "fighter1": {
-        "name": "Evan Elder",
-        "numericOdds": 110
-      },
-      "fighter2": {
-        "name": "Preston Parsons",
-        "numericOdds": -130
-      }
-    },
-    {
-      "timestamp": "2022-04-23T14:55:00Z",
-      "fighter1": {
-        "name": "Evan Elder",
-        "numericOdds": 110
-      },
-      "fighter2": {
-        "name": "Preston Parsons",
-        "numericOdds": -130
-      }
-    },
-    {
-      "timestamp": "2022-04-23T15:05:00Z",
-      "fighter1": {
-        "name": "Evan Elder",
-        "numericOdds": 110
-      },
-      "fighter2": {
-        "name": "Preston Parsons",
-        "numericOdds": -130
-      }
-    },
-    {
-      "timestamp": "2022-04-23T15:15:00Z",
-      "fighter1": {
-        "name": "Evan Elder",
-        "numericOdds": 110
-      },
-      "fighter2": {
-        "name": "Preston Parsons",
-        "numericOdds": -130
-      }
-    },
-    {
-      "timestamp": "2022-04-23T15:25:00Z",
-      "fighter1": {
-        "name": "Evan Elder",
-        "numericOdds": 110
-      },
-      "fighter2": {
-        "name": "Preston Parsons",
-        "numericOdds": -130
-      }
-    },
-    {
-      "timestamp": "2022-04-23T15:35:00Z",
-      "fighter1": {
-        "name": "Evan Elder",
-        "numericOdds": 110
-      },
-      "fighter2": {
-        "name": "Preston Parsons",
-        "numericOdds": -130
-      }
-    },
-    {
-      "timestamp": "2022-04-23T15:45:00Z",
-      "fighter1": {
-        "name": "Evan Elder",
-        "numericOdds": 110
-      },
-      "fighter2": {
-        "name": "Preston Parsons",
-        "numericOdds": -130
-      }
-    },
-    {
-      "timestamp": "2022-04-23T15:55:00Z",
-      "fighter1": {
-        "name": "Evan Elder",
-        "numericOdds": 110
-      },
-      "fighter2": {
-        "name": "Preston Parsons",
-        "numericOdds": -130
-      }
-    },
-    {
-      "timestamp": "2022-04-23T16:05:00Z",
-      "fighter1": {
-        "name": "Evan Elder",
-        "numericOdds": 110
-      },
-      "fighter2": {
-        "name": "Preston Parsons",
-        "numericOdds": -130
-      }
-    },
-    {
-      "timestamp": "2022-04-23T16:15:00Z",
-      "fighter1": {
-        "name": "Evan Elder",
-        "numericOdds": 110
-      },
-      "fighter2": {
-        "name": "Preston Parsons",
-        "numericOdds": -130
-      }
-    },
-    {
-      "timestamp": "2022-04-23T16:25:00Z",
-      "fighter1": {
-        "name": "Evan Elder",
-        "numericOdds": 110
-      },
-      "fighter2": {
-        "name": "Preston Parsons",
-        "numericOdds": -130
-      }
-    },
-    {
-      "timestamp": "2022-04-23T16:35:00Z",
-      "fighter1": {
-        "name": "Evan Elder",
-        "numericOdds": 110
-      },
-      "fighter2": {
-        "name": "Preston Parsons",
-        "numericOdds": -130
-      }
-    },
-    {
-      "timestamp": "2022-04-23T16:45:00Z",
-      "fighter1": {
-        "name": "Evan Elder",
-        "numericOdds": 110
-      },
-      "fighter2": {
-        "name": "Preston Parsons",
-        "numericOdds": -130
-      }
-    },
-    {
-      "timestamp": "2022-04-23T16:55:00Z",
-      "fighter1": {
-        "name": "Evan Elder",
-        "numericOdds": 110
-      },
-      "fighter2": {
-        "name": "Preston Parsons",
-        "numericOdds": -130
-      }
-    },
-    {
-      "timestamp": "2022-04-23T17:05:00Z",
-      "fighter1": {
-        "name": "Evan Elder",
-        "numericOdds": 110
-      },
-      "fighter2": {
-        "name": "Preston Parsons",
-        "numericOdds": -130
-      }
-    },
-    {
-      "timestamp": "2022-04-23T17:15:00Z",
-      "fighter1": {
-        "name": "Evan Elder",
-        "numericOdds": 110
-      },
-      "fighter2": {
-        "name": "Preston Parsons",
-        "numericOdds": -130
-      }
-    },
-    {
-      "timestamp": "2022-04-23T17:25:00Z",
-      "fighter1": {
-        "name": "Evan Elder",
-        "numericOdds": 110
-      },
-      "fighter2": {
-        "name": "Preston Parsons",
-        "numericOdds": -130
-      }
-    },
-    {
-      "timestamp": "2022-04-23T17:35:00Z",
-      "fighter1": {
-        "name": "Evan Elder",
-        "numericOdds": 110
-      },
-      "fighter2": {
-        "name": "Preston Parsons",
-        "numericOdds": -130
+        "numericOdds": -10000
       }
     }
   ]

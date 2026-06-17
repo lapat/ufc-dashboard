@@ -1,0 +1,76 @@
+{
+  "fightId": "diegolopes_vs_patsabatini_2023-11-12",
+  "fightTitle": "Diego Lopes vs Pat Sabatini",
+  "commenceTime": "2023-11-12T03:19:00Z",
+  "startTime": "2023-11-12T03:10:40Z",
+  "endTime": "2023-11-12T03:35:40Z",
+  "dataPoints": 6,
+  "oddsHistory": [
+    {
+      "timestamp": "2023-11-12T03:10:40Z",
+      "fighter1": {
+        "name": "Diego Lopes",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Pat Sabatini",
+        "numericOdds": -120
+      }
+    },
+    {
+      "timestamp": "2023-11-12T03:15:40Z",
+      "fighter1": {
+        "name": "Diego Lopes",
+        "numericOdds": 105
+      },
+      "fighter2": {
+        "name": "Pat Sabatini",
+        "numericOdds": -125
+      }
+    },
+    {
+      "timestamp": "2023-11-12T03:20:40Z",
+      "fighter1": {
+        "name": "Diego Lopes",
+        "numericOdds": 110
+      },
+      "fighter2": {
+        "name": "Pat Sabatini",
+        "numericOdds": -130
+      }
+    },
+    {
+      "timestamp": "2023-11-12T03:25:39Z",
+      "fighter1": {
+        "name": "Diego Lopes",
+        "numericOdds": -105
+      },
+      "fighter2": {
+        "name": "Pat Sabatini",
+        "numericOdds": -125
+      }
+    },
+    {
+      "timestamp": "2023-11-12T03:30:40Z",
+      "fighter1": {
+        "name": "Diego Lopes",
+        "numericOdds": -105
+      },
+      "fighter2": {
+        "name": "Pat Sabatini",
+        "numericOdds": -125
+      }
+    },
+    {
+      "timestamp": "2023-11-12T03:35:40Z",
+      "fighter1": {
+        "name": "Diego Lopes",
+        "numericOdds": -105
+      },
+      "fighter2": {
+        "name": "Pat Sabatini",
+        "numericOdds": -125
+      }
+    }
+  ]
+}

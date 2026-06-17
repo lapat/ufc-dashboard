@@ -1,382 +1,108 @@
 {
   "fightId": "douglassilvadeandrade_vs_milesjohns_2024-06-16",
   "fightTitle": "Douglas Silva de Andrade vs Miles Johns",
-  "startTime": "2024-06-15T13:55:38Z",
-  "endTime": "2024-06-15T21:15:37Z",
-  "dataPoints": 34,
+  "commenceTime": "2024-06-16T04:15:00Z",
+  "startTime": "2024-06-16T04:05:37Z",
+  "endTime": "2024-06-16T04:45:37Z",
+  "dataPoints": 9,
   "oddsHistory": [
     {
-      "timestamp": "2024-06-15T13:55:38Z",
+      "timestamp": "2024-06-16T04:05:37Z",
       "fighter1": {
         "name": "Douglas Silva de Andrade",
-        "numericOdds": 124
+        "numericOdds": 145
       },
       "fighter2": {
         "name": "Miles Johns",
-        "numericOdds": -148
+        "numericOdds": -175
       }
     },
     {
-      "timestamp": "2024-06-15T14:10:37Z",
+      "timestamp": "2024-06-16T04:10:37Z",
       "fighter1": {
         "name": "Douglas Silva de Andrade",
-        "numericOdds": 124
+        "numericOdds": 145
       },
       "fighter2": {
         "name": "Miles Johns",
-        "numericOdds": -148
+        "numericOdds": -175
       }
     },
     {
-      "timestamp": "2024-06-15T14:20:38Z",
+      "timestamp": "2024-06-16T04:15:37Z",
       "fighter1": {
         "name": "Douglas Silva de Andrade",
-        "numericOdds": 124
+        "numericOdds": 140
       },
       "fighter2": {
         "name": "Miles Johns",
-        "numericOdds": -148
+        "numericOdds": -180
       }
     },
     {
-      "timestamp": "2024-06-15T14:35:37Z",
+      "timestamp": "2024-06-16T04:20:37Z",
       "fighter1": {
         "name": "Douglas Silva de Andrade",
-        "numericOdds": 124
+        "numericOdds": 300
       },
       "fighter2": {
         "name": "Miles Johns",
-        "numericOdds": -148
+        "numericOdds": -425
       }
     },
     {
-      "timestamp": "2024-06-15T14:50:37Z",
+      "timestamp": "2024-06-16T04:25:37Z",
       "fighter1": {
         "name": "Douglas Silva de Andrade",
-        "numericOdds": 124
+        "numericOdds": 400
       },
       "fighter2": {
         "name": "Miles Johns",
-        "numericOdds": -148
+        "numericOdds": -620
       }
     },
     {
-      "timestamp": "2024-06-15T15:00:37Z",
+      "timestamp": "2024-06-16T04:30:37Z",
       "fighter1": {
         "name": "Douglas Silva de Andrade",
-        "numericOdds": 124
+        "numericOdds": 1000
       },
       "fighter2": {
         "name": "Miles Johns",
-        "numericOdds": -148
+        "numericOdds": -2100
       }
     },
     {
-      "timestamp": "2024-06-15T15:10:38Z",
+      "timestamp": "2024-06-16T04:35:37Z",
       "fighter1": {
         "name": "Douglas Silva de Andrade",
-        "numericOdds": 124
+        "numericOdds": 1500
       },
       "fighter2": {
         "name": "Miles Johns",
-        "numericOdds": -148
+        "numericOdds": -4000
       }
     },
     {
-      "timestamp": "2024-06-15T15:25:37Z",
+      "timestamp": "2024-06-16T04:40:38Z",
       "fighter1": {
         "name": "Douglas Silva de Andrade",
-        "numericOdds": 124
+        "numericOdds": 1500
       },
       "fighter2": {
         "name": "Miles Johns",
-        "numericOdds": -148
+        "numericOdds": -4000
       }
     },
     {
-      "timestamp": "2024-06-15T15:35:38Z",
+      "timestamp": "2024-06-16T04:45:37Z",
       "fighter1": {
         "name": "Douglas Silva de Andrade",
-        "numericOdds": 124
+        "numericOdds": 1500
       },
       "fighter2": {
         "name": "Miles Johns",
-        "numericOdds": -148
-      }
-    },
-    {
-      "timestamp": "2024-06-15T15:50:38Z",
-      "fighter1": {
-        "name": "Douglas Silva de Andrade",
-        "numericOdds": 124
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -148
-      }
-    },
-    {
-      "timestamp": "2024-06-15T16:05:38Z",
-      "fighter1": {
-        "name": "Douglas Silva de Andrade",
-        "numericOdds": 124
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -148
-      }
-    },
-    {
-      "timestamp": "2024-06-15T16:20:38Z",
-      "fighter1": {
-        "name": "Douglas Silva de Andrade",
-        "numericOdds": 124
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -148
-      }
-    },
-    {
-      "timestamp": "2024-06-15T16:35:37Z",
-      "fighter1": {
-        "name": "Douglas Silva de Andrade",
-        "numericOdds": 124
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -148
-      }
-    },
-    {
-      "timestamp": "2024-06-15T16:45:37Z",
-      "fighter1": {
-        "name": "Douglas Silva de Andrade",
-        "numericOdds": 124
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -148
-      }
-    },
-    {
-      "timestamp": "2024-06-15T17:00:37Z",
-      "fighter1": {
-        "name": "Douglas Silva de Andrade",
-        "numericOdds": 124
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -148
-      }
-    },
-    {
-      "timestamp": "2024-06-15T17:10:37Z",
-      "fighter1": {
-        "name": "Douglas Silva de Andrade",
-        "numericOdds": 124
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -148
-      }
-    },
-    {
-      "timestamp": "2024-06-15T17:25:37Z",
-      "fighter1": {
-        "name": "Douglas Silva de Andrade",
-        "numericOdds": 124
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -148
-      }
-    },
-    {
-      "timestamp": "2024-06-15T17:35:37Z",
-      "fighter1": {
-        "name": "Douglas Silva de Andrade",
-        "numericOdds": 124
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -148
-      }
-    },
-    {
-      "timestamp": "2024-06-15T17:50:37Z",
-      "fighter1": {
-        "name": "Douglas Silva de Andrade",
-        "numericOdds": 124
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -148
-      }
-    },
-    {
-      "timestamp": "2024-06-15T18:00:38Z",
-      "fighter1": {
-        "name": "Douglas Silva de Andrade",
-        "numericOdds": 124
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -148
-      }
-    },
-    {
-      "timestamp": "2024-06-15T18:15:38Z",
-      "fighter1": {
-        "name": "Douglas Silva de Andrade",
-        "numericOdds": 124
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -148
-      }
-    },
-    {
-      "timestamp": "2024-06-15T18:30:37Z",
-      "fighter1": {
-        "name": "Douglas Silva de Andrade",
-        "numericOdds": 124
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -148
-      }
-    },
-    {
-      "timestamp": "2024-06-15T18:40:37Z",
-      "fighter1": {
-        "name": "Douglas Silva de Andrade",
-        "numericOdds": 124
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -148
-      }
-    },
-    {
-      "timestamp": "2024-06-15T18:55:37Z",
-      "fighter1": {
-        "name": "Douglas Silva de Andrade",
-        "numericOdds": 124
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -148
-      }
-    },
-    {
-      "timestamp": "2024-06-15T19:10:37Z",
-      "fighter1": {
-        "name": "Douglas Silva de Andrade",
-        "numericOdds": 124
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -148
-      }
-    },
-    {
-      "timestamp": "2024-06-15T19:25:37Z",
-      "fighter1": {
-        "name": "Douglas Silva de Andrade",
-        "numericOdds": 124
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -148
-      }
-    },
-    {
-      "timestamp": "2024-06-15T19:35:37Z",
-      "fighter1": {
-        "name": "Douglas Silva de Andrade",
-        "numericOdds": 124
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -148
-      }
-    },
-    {
-      "timestamp": "2024-06-15T19:50:37Z",
-      "fighter1": {
-        "name": "Douglas Silva de Andrade",
-        "numericOdds": 124
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -148
-      }
-    },
-    {
-      "timestamp": "2024-06-15T20:00:38Z",
-      "fighter1": {
-        "name": "Douglas Silva de Andrade",
-        "numericOdds": 124
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -148
-      }
-    },
-    {
-      "timestamp": "2024-06-15T20:15:38Z",
-      "fighter1": {
-        "name": "Douglas Silva de Andrade",
-        "numericOdds": 124
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -148
-      }
-    },
-    {
-      "timestamp": "2024-06-15T20:30:37Z",
-      "fighter1": {
-        "name": "Douglas Silva de Andrade",
-        "numericOdds": 124
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -148
-      }
-    },
-    {
-      "timestamp": "2024-06-15T20:45:37Z",
-      "fighter1": {
-        "name": "Douglas Silva de Andrade",
-        "numericOdds": 124
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -148
-      }
-    },
-    {
-      "timestamp": "2024-06-15T21:00:37Z",
-      "fighter1": {
-        "name": "Douglas Silva de Andrade",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -155
-      }
-    },
-    {
-      "timestamp": "2024-06-15T21:15:37Z",
-      "fighter1": {
-        "name": "Douglas Silva de Andrade",
-        "numericOdds": 130
-      },
-      "fighter2": {
-        "name": "Miles Johns",
-        "numericOdds": -155
+        "numericOdds": -4000
       }
     }
   ]

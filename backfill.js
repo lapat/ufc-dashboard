@@ -42,14 +42,21 @@ function fightFilename(home, away, date) {
   return `${nameToSlug(home)}_vs_${nameToSlug(away)}_${date}`;
 }
 
-async function backfillDate(dateStr, stepMinutes = 5) {
+async function backfillDate(dateStr, stepMinutes = 5, startHour = null) {
   // Probe: one call at noon UTC same day to check if any MMA fights exist for this date.
   // Skips the full sweep on non-event days.
   const probeTs = dateStr + 'T12:00:00Z';
+  const probeNextDay = new Date(dateStr + 'T00:00:00Z');
+  probeNextDay.setUTCDate(probeNextDay.getUTCDate() + 1);
+  const probeNextDayStr = probeNextDay.toISOString().slice(0, 10);
   const probeUrl = `https://api.the-odds-api.com/v4/historical/sports/mma_mixed_martial_arts/odds/?apiKey=${API_KEY}&regions=us&markets=h2h&bookmakers=draftkings&oddsFormat=american&date=${probeTs}`;
   try {
     const probe = await get(probeUrl);
-    const hasEvent = (probe.data || []).some(f => (f.commence_time || '').startsWith(dateStr));
+    // Check both same-day fights AND next-UTC-day fights (US main cards often start after midnight UTC)
+    const hasEvent = (probe.data || []).some(f => {
+      const ct = f.commence_time || '';
+      return ct.startsWith(dateStr) || ct.startsWith(probeNextDayStr);
+    });
     if (!hasEvent) {
       process.stdout.write(`  SKIP ${dateStr} — no fights found\n`);
       return { saved: 0, skipped: 0, fights: 0 };
@@ -61,10 +68,13 @@ async function backfillDate(dateStr, stepMinutes = 5) {
   // Sweep from 14:00 UTC same day to 10:00 UTC next day (20 hours).
   // UFC events in the US run ~22:00–06:00 UTC; UK/international run ~12:00–22:00 UTC.
   // 20-hour window catches everything with 5-min resolution; ~240 calls vs old 576.
-  let timestamp = (dateStr + 'T14:00:00Z');
+  let timestamp = (dateStr + (startHour ? `T${String(startHour).padStart(2,'0')}:00:00Z` : 'T10:00:00Z'));
   const cutoff = new Date(dateStr + 'T10:00:00Z');
   cutoff.setUTCDate(cutoff.getUTCDate() + 1);
   const cutoffStr = cutoff.toISOString();
+  const nextDay = new Date(dateStr + 'T00:00:00Z');
+  nextDay.setUTCDate(nextDay.getUTCDate() + 1);
+  const nextDayStr = nextDay.toISOString().slice(0, 10);
 
   const allSnapshots = {}; // fightId -> [{ timestamp, fighter1, fighter2 }]
   const fightMeta = {};    // fightId -> { home, away, commenceDate }
@@ -87,10 +97,11 @@ async function backfillDate(dateStr, stepMinutes = 5) {
 
       for (const fight of (d.data || [])) {
         const ct = fight.commence_time || '';
-        // Capture any fight that commences within +/-1 day of our target.
-        // US main cards commence on the UTC day AFTER the advertised date (e.g. Sat 10pm ET = Sun 02:00 UTC).
-        // Removing the strict dateStr filter means one sweep captures the whole card; each fight
-        // is saved under its actual commence_time date so no splits occur.
+        // Only capture fights commencing on the sweep date OR the next UTC day.
+        // US main cards start at ~10pm ET = 02:00 UTC next day, so we need +1 day.
+        // Excluding fights further out prevents capturing weeks-ahead pre-fight odds.
+        const commenceDay = ct.slice(0, 10);
+        if (commenceDay !== dateStr && commenceDay !== nextDayStr) continue;
         const fid = fight.id;
         const bk = fight.bookmakers || [];
         if (!bk.length) continue;
@@ -99,7 +110,7 @@ async function backfillDate(dateStr, stepMinutes = 5) {
         const [o1, o2] = outcomes;
         if (!allSnapshots[fid]) {
           allSnapshots[fid] = [];
-          fightMeta[fid] = { home: fight.home_team, away: fight.away_team, commenceDate: ct.slice(0, 10) };
+          fightMeta[fid] = { home: fight.home_team, away: fight.away_team, commenceDate: ct.slice(0, 10), commenceTime: ct };
         }
         allSnapshots[fid].push({
           timestamp: actualTs,
@@ -150,11 +161,41 @@ async function backfillDate(dateStr, stepMinutes = 5) {
     }
     unique.sort((a, b) => a.timestamp < b.timestamp ? -1 : 1);
 
-    // Only overwrite if we have more data
+    // Trim to fight window: commence_time - 10min to commence_time + 90min.
+    // This keeps context just before the fight starts plus the full fight duration
+    // (max ~75min for a 5-round main event that starts late), discarding days of
+    // static pre-fight odds that inflate point counts and break graph rendering.
+    let trimmed = unique;
+    if (meta.commenceTime) {
+      const ct = new Date(meta.commenceTime);
+      const windowStart = new Date(ct.getTime() - 10 * 60000);
+      const windowEnd   = new Date(ct.getTime() + 90 * 60000);
+      trimmed = unique.filter(s => {
+        const ts = new Date(s.timestamp);
+        return ts >= windowStart && ts <= windowEnd;
+      });
+      // If window is empty (fight already ended before our window or window missed),
+      // fall back to the 10 most recent snapshots as a best-effort capture.
+      if (!trimmed.length) trimmed = unique.slice(-10);
+    }
+
+    // Only overwrite if new data is better:
+    // - prefer data with odds movement over flat pre-fight accumulation
+    // - otherwise prefer more data points
     if (fs.existsSync(filepath)) {
       const existing = JSON.parse(fs.readFileSync(filepath, 'utf8'));
-      if ((existing.dataPoints || 0) >= unique.length) {
-        console.log(`  SKIP ${filename}: already has ${existing.dataPoints} pts (recovered ${unique.length})`);
+      const existH = existing.oddsHistory || [];
+      const existMoved = existH.length > 1 &&
+        existH[0].fighter1.numericOdds !== existH[existH.length-1].fighter1.numericOdds;
+      const newMoved = trimmed.length > 1 &&
+        trimmed[0].fighter1.numericOdds !== trimmed[trimmed.length-1].fighter1.numericOdds;
+      if (existMoved && !newMoved) {
+        console.log(`  SKIP ${filename}: existing has movement (${existing.dataPoints}pts), new is flat`);
+        skipped++;
+        continue;
+      }
+      if (!newMoved && !existMoved && (existing.dataPoints || 0) >= trimmed.length) {
+        console.log(`  SKIP ${filename}: already has ${existing.dataPoints} pts (recovered ${trimmed.length})`);
         skipped++;
         continue;
       }
@@ -163,14 +204,16 @@ async function backfillDate(dateStr, stepMinutes = 5) {
     const record = {
       fightId: filename,
       fightTitle: `${meta.home} vs ${meta.away}`,
-      startTime: unique[0].timestamp,
-      endTime: unique[unique.length - 1].timestamp,
-      dataPoints: unique.length,
-      oddsHistory: unique,
+      commenceTime: meta.commenceTime || null,
+      startTime: trimmed[0].timestamp,
+      endTime: trimmed[trimmed.length - 1].timestamp,
+      dataPoints: trimmed.length,
+      oddsHistory: trimmed,
     };
 
     fs.writeFileSync(filepath, JSON.stringify(record, null, 2));
-    console.log(`  SAVED ${filename}: ${unique.length} pts | ${unique[0].fighter1.numericOdds} → ${unique[unique.length-1].fighter1.numericOdds}`);
+    const moved = trimmed[0].fighter1.numericOdds !== trimmed[trimmed.length-1].fighter1.numericOdds;
+    console.log(`  SAVED ${filename}: ${trimmed.length} pts (${unique.length} raw) | ${trimmed[0].fighter1.numericOdds} → ${trimmed[trimmed.length-1].fighter1.numericOdds}${moved ? '' : ' [flat]'}`);
     saved++;
   }
 
@@ -183,6 +226,8 @@ async function main() {
   const reverse = flags.includes('--reverse');
   const stepFlag = flags.find(f => f.startsWith('--step='));
   const stepMinutes = stepFlag ? parseInt(stepFlag.split('=')[1]) : 5;
+  const startFlag = flags.find(f => f.startsWith('--start='));
+  const startHour = startFlag ? parseInt(startFlag.split('=')[1]) : null;
 
   if (!args.length) {
     console.log('Usage: node backfill.js YYYY-MM-DD [YYYY-MM-DD] [--reverse] [--step=15]');
@@ -204,7 +249,7 @@ async function main() {
       const dateStr = d.toISOString().slice(0, 10);
       day++;
       process.stdout.write(`[${day}/${totalDays}] ${dateStr} ... `);
-      const result = await backfillDate(dateStr, stepMinutes);
+      const result = await backfillDate(dateStr, stepMinutes, startHour);
       total.saved += result.saved;
       total.skipped += result.skipped;
     }
@@ -213,7 +258,7 @@ async function main() {
       const dateStr = d.toISOString().slice(0, 10);
       day++;
       process.stdout.write(`[${day}/${totalDays}] ${dateStr} ... `);
-      const result = await backfillDate(dateStr, stepMinutes);
+      const result = await backfillDate(dateStr, stepMinutes, startHour);
       total.saved += result.saved;
       total.skipped += result.skipped;
     }

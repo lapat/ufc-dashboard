@@ -1,217 +1,64 @@
 {
   "fightId": "codybrundage_vs_michaloleksiejczuk_2022-12-18",
   "fightTitle": "Cody Brundage vs Michal Oleksiejczuk",
-  "startTime": "2022-12-17T13:55:39Z",
-  "endTime": "2022-12-17T17:55:39Z",
-  "dataPoints": 19,
+  "commenceTime": "2022-12-18T00:15:00Z",
+  "startTime": "2022-12-18T00:05:39Z",
+  "endTime": "2022-12-18T00:25:39Z",
+  "dataPoints": 5,
   "oddsHistory": [
     {
-      "timestamp": "2022-12-17T13:55:39Z",
+      "timestamp": "2022-12-18T00:05:39Z",
       "fighter1": {
         "name": "Cody Brundage",
-        "numericOdds": 230
+        "numericOdds": 210
       },
       "fighter2": {
         "name": "Michal Oleksiejczuk",
-        "numericOdds": -275
+        "numericOdds": -250
       }
     },
     {
-      "timestamp": "2022-12-17T14:05:39Z",
+      "timestamp": "2022-12-18T00:10:39Z",
       "fighter1": {
         "name": "Cody Brundage",
-        "numericOdds": 230
+        "numericOdds": 205
       },
       "fighter2": {
         "name": "Michal Oleksiejczuk",
-        "numericOdds": -275
+        "numericOdds": -245
       }
     },
     {
-      "timestamp": "2022-12-17T14:20:39Z",
+      "timestamp": "2022-12-18T00:15:38Z",
       "fighter1": {
         "name": "Cody Brundage",
-        "numericOdds": 230
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Michal Oleksiejczuk",
-        "numericOdds": -275
+        "numericOdds": -115
       }
     },
     {
-      "timestamp": "2022-12-17T14:30:39Z",
+      "timestamp": "2022-12-18T00:20:39Z",
       "fighter1": {
         "name": "Cody Brundage",
-        "numericOdds": 230
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Michal Oleksiejczuk",
-        "numericOdds": -275
+        "numericOdds": -115
       }
     },
     {
-      "timestamp": "2022-12-17T14:40:40Z",
+      "timestamp": "2022-12-18T00:25:39Z",
       "fighter1": {
         "name": "Cody Brundage",
-        "numericOdds": 230
+        "numericOdds": -115
       },
       "fighter2": {
         "name": "Michal Oleksiejczuk",
-        "numericOdds": -275
-      }
-    },
-    {
-      "timestamp": "2022-12-17T14:55:40Z",
-      "fighter1": {
-        "name": "Cody Brundage",
-        "numericOdds": 230
-      },
-      "fighter2": {
-        "name": "Michal Oleksiejczuk",
-        "numericOdds": -275
-      }
-    },
-    {
-      "timestamp": "2022-12-17T15:10:40Z",
-      "fighter1": {
-        "name": "Cody Brundage",
-        "numericOdds": 230
-      },
-      "fighter2": {
-        "name": "Michal Oleksiejczuk",
-        "numericOdds": -275
-      }
-    },
-    {
-      "timestamp": "2022-12-17T15:25:39Z",
-      "fighter1": {
-        "name": "Cody Brundage",
-        "numericOdds": 230
-      },
-      "fighter2": {
-        "name": "Michal Oleksiejczuk",
-        "numericOdds": -275
-      }
-    },
-    {
-      "timestamp": "2022-12-17T15:40:39Z",
-      "fighter1": {
-        "name": "Cody Brundage",
-        "numericOdds": 230
-      },
-      "fighter2": {
-        "name": "Michal Oleksiejczuk",
-        "numericOdds": -275
-      }
-    },
-    {
-      "timestamp": "2022-12-17T15:55:39Z",
-      "fighter1": {
-        "name": "Cody Brundage",
-        "numericOdds": 230
-      },
-      "fighter2": {
-        "name": "Michal Oleksiejczuk",
-        "numericOdds": -275
-      }
-    },
-    {
-      "timestamp": "2022-12-17T16:10:39Z",
-      "fighter1": {
-        "name": "Cody Brundage",
-        "numericOdds": 230
-      },
-      "fighter2": {
-        "name": "Michal Oleksiejczuk",
-        "numericOdds": -275
-      }
-    },
-    {
-      "timestamp": "2022-12-17T16:25:39Z",
-      "fighter1": {
-        "name": "Cody Brundage",
-        "numericOdds": 230
-      },
-      "fighter2": {
-        "name": "Michal Oleksiejczuk",
-        "numericOdds": -275
-      }
-    },
-    {
-      "timestamp": "2022-12-17T16:40:39Z",
-      "fighter1": {
-        "name": "Cody Brundage",
-        "numericOdds": 230
-      },
-      "fighter2": {
-        "name": "Michal Oleksiejczuk",
-        "numericOdds": -275
-      }
-    },
-    {
-      "timestamp": "2022-12-17T16:55:39Z",
-      "fighter1": {
-        "name": "Cody Brundage",
-        "numericOdds": 230
-      },
-      "fighter2": {
-        "name": "Michal Oleksiejczuk",
-        "numericOdds": -275
-      }
-    },
-    {
-      "timestamp": "2022-12-17T17:10:39Z",
-      "fighter1": {
-        "name": "Cody Brundage",
-        "numericOdds": 230
-      },
-      "fighter2": {
-        "name": "Michal Oleksiejczuk",
-        "numericOdds": -275
-      }
-    },
-    {
-      "timestamp": "2022-12-17T17:20:39Z",
-      "fighter1": {
-        "name": "Cody Brundage",
-        "numericOdds": 230
-      },
-      "fighter2": {
-        "name": "Michal Oleksiejczuk",
-        "numericOdds": -275
-      }
-    },
-    {
-      "timestamp": "2022-12-17T17:30:39Z",
-      "fighter1": {
-        "name": "Cody Brundage",
-        "numericOdds": 230
-      },
-      "fighter2": {
-        "name": "Michal Oleksiejczuk",
-        "numericOdds": -275
-      }
-    },
-    {
-      "timestamp": "2022-12-17T17:45:39Z",
-      "fighter1": {
-        "name": "Cody Brundage",
-        "numericOdds": 230
-      },
-      "fighter2": {
-        "name": "Michal Oleksiejczuk",
-        "numericOdds": -275
-      }
-    },
-    {
-      "timestamp": "2022-12-17T17:55:39Z",
-      "fighter1": {
-        "name": "Cody Brundage",
-        "numericOdds": 230
-      },
-      "fighter2": {
-        "name": "Michal Oleksiejczuk",
-        "numericOdds": -275
+        "numericOdds": -115
       }
     }
   ]

@@ -1,426 +1,141 @@
 {
   "fightId": "corysandhagen_vs_robfont_2023-08-06",
   "fightTitle": "Cory Sandhagen vs Rob Font",
-  "startTime": "2023-08-05T13:55:40Z",
-  "endTime": "2023-08-05T21:55:40Z",
-  "dataPoints": 38,
+  "commenceTime": "2023-08-06T03:30:00Z",
+  "startTime": "2023-08-06T03:20:40Z",
+  "endTime": "2023-08-06T04:15:41Z",
+  "dataPoints": 12,
   "oddsHistory": [
     {
-      "timestamp": "2023-08-05T13:55:40Z",
+      "timestamp": "2023-08-06T03:20:40Z",
       "fighter1": {
         "name": "Cory Sandhagen",
-        "numericOdds": -375
+        "numericOdds": -380
       },
       "fighter2": {
         "name": "Rob Font",
-        "numericOdds": 295
+        "numericOdds": 300
       }
     },
     {
-      "timestamp": "2023-08-05T14:10:40Z",
+      "timestamp": "2023-08-06T03:25:40Z",
       "fighter1": {
         "name": "Cory Sandhagen",
-        "numericOdds": -375
+        "numericOdds": -380
       },
       "fighter2": {
         "name": "Rob Font",
-        "numericOdds": 295
+        "numericOdds": 300
       }
     },
     {
-      "timestamp": "2023-08-05T14:20:40Z",
+      "timestamp": "2023-08-06T03:30:42Z",
       "fighter1": {
         "name": "Cory Sandhagen",
-        "numericOdds": -360
+        "numericOdds": -345
       },
       "fighter2": {
         "name": "Rob Font",
-        "numericOdds": 285
+        "numericOdds": 250
       }
     },
     {
-      "timestamp": "2023-08-05T14:35:40Z",
+      "timestamp": "2023-08-06T03:35:41Z",
       "fighter1": {
         "name": "Cory Sandhagen",
-        "numericOdds": -360
+        "numericOdds": -425
       },
       "fighter2": {
         "name": "Rob Font",
-        "numericOdds": 285
+        "numericOdds": 300
       }
     },
     {
-      "timestamp": "2023-08-05T14:45:41Z",
+      "timestamp": "2023-08-06T03:40:40Z",
       "fighter1": {
         "name": "Cory Sandhagen",
-        "numericOdds": -360
+        "numericOdds": -425
       },
       "fighter2": {
         "name": "Rob Font",
-        "numericOdds": 285
+        "numericOdds": 300
       }
     },
     {
-      "timestamp": "2023-08-05T15:00:40Z",
+      "timestamp": "2023-08-06T03:45:40Z",
       "fighter1": {
         "name": "Cory Sandhagen",
-        "numericOdds": -360
+        "numericOdds": -1050
       },
       "fighter2": {
         "name": "Rob Font",
-        "numericOdds": 285
+        "numericOdds": 600
       }
     },
     {
-      "timestamp": "2023-08-05T15:10:42Z",
+      "timestamp": "2023-08-06T03:50:40Z",
       "fighter1": {
         "name": "Cory Sandhagen",
-        "numericOdds": -360
+        "numericOdds": -1300
       },
       "fighter2": {
         "name": "Rob Font",
-        "numericOdds": 285
+        "numericOdds": 700
       }
     },
     {
-      "timestamp": "2023-08-05T15:25:40Z",
+      "timestamp": "2023-08-06T03:55:40Z",
       "fighter1": {
         "name": "Cory Sandhagen",
-        "numericOdds": -360
+        "numericOdds": -2100
       },
       "fighter2": {
         "name": "Rob Font",
-        "numericOdds": 285
+        "numericOdds": 1000
       }
     },
     {
-      "timestamp": "2023-08-05T15:40:40Z",
+      "timestamp": "2023-08-06T04:00:40Z",
       "fighter1": {
         "name": "Cory Sandhagen",
-        "numericOdds": -360
+        "numericOdds": -20000
       },
       "fighter2": {
         "name": "Rob Font",
-        "numericOdds": 285
+        "numericOdds": 3000
       }
     },
     {
-      "timestamp": "2023-08-05T15:50:41Z",
+      "timestamp": "2023-08-06T04:05:41Z",
       "fighter1": {
         "name": "Cory Sandhagen",
-        "numericOdds": -360
+        "numericOdds": -20000
       },
       "fighter2": {
         "name": "Rob Font",
-        "numericOdds": 285
+        "numericOdds": 3000
       }
     },
     {
-      "timestamp": "2023-08-05T16:05:41Z",
+      "timestamp": "2023-08-06T04:10:39Z",
       "fighter1": {
         "name": "Cory Sandhagen",
-        "numericOdds": -360
+        "numericOdds": -20000
       },
       "fighter2": {
         "name": "Rob Font",
-        "numericOdds": 285
+        "numericOdds": 3000
       }
     },
     {
-      "timestamp": "2023-08-05T16:20:41Z",
+      "timestamp": "2023-08-06T04:15:41Z",
       "fighter1": {
         "name": "Cory Sandhagen",
-        "numericOdds": -360
+        "numericOdds": -20000
       },
       "fighter2": {
         "name": "Rob Font",
-        "numericOdds": 285
-      }
-    },
-    {
-      "timestamp": "2023-08-05T16:35:40Z",
-      "fighter1": {
-        "name": "Cory Sandhagen",
-        "numericOdds": -360
-      },
-      "fighter2": {
-        "name": "Rob Font",
-        "numericOdds": 285
-      }
-    },
-    {
-      "timestamp": "2023-08-05T16:45:40Z",
-      "fighter1": {
-        "name": "Cory Sandhagen",
-        "numericOdds": -360
-      },
-      "fighter2": {
-        "name": "Rob Font",
-        "numericOdds": 285
-      }
-    },
-    {
-      "timestamp": "2023-08-05T17:00:40Z",
-      "fighter1": {
-        "name": "Cory Sandhagen",
-        "numericOdds": -375
-      },
-      "fighter2": {
-        "name": "Rob Font",
-        "numericOdds": 295
-      }
-    },
-    {
-      "timestamp": "2023-08-05T17:10:40Z",
-      "fighter1": {
-        "name": "Cory Sandhagen",
-        "numericOdds": -375
-      },
-      "fighter2": {
-        "name": "Rob Font",
-        "numericOdds": 295
-      }
-    },
-    {
-      "timestamp": "2023-08-05T17:20:40Z",
-      "fighter1": {
-        "name": "Cory Sandhagen",
-        "numericOdds": -375
-      },
-      "fighter2": {
-        "name": "Rob Font",
-        "numericOdds": 295
-      }
-    },
-    {
-      "timestamp": "2023-08-05T17:30:41Z",
-      "fighter1": {
-        "name": "Cory Sandhagen",
-        "numericOdds": -375
-      },
-      "fighter2": {
-        "name": "Rob Font",
-        "numericOdds": 295
-      }
-    },
-    {
-      "timestamp": "2023-08-05T17:45:40Z",
-      "fighter1": {
-        "name": "Cory Sandhagen",
-        "numericOdds": -375
-      },
-      "fighter2": {
-        "name": "Rob Font",
-        "numericOdds": 295
-      }
-    },
-    {
-      "timestamp": "2023-08-05T17:55:41Z",
-      "fighter1": {
-        "name": "Cory Sandhagen",
-        "numericOdds": -375
-      },
-      "fighter2": {
-        "name": "Rob Font",
-        "numericOdds": 295
-      }
-    },
-    {
-      "timestamp": "2023-08-05T18:10:41Z",
-      "fighter1": {
-        "name": "Cory Sandhagen",
-        "numericOdds": -375
-      },
-      "fighter2": {
-        "name": "Rob Font",
-        "numericOdds": 295
-      }
-    },
-    {
-      "timestamp": "2023-08-05T18:25:41Z",
-      "fighter1": {
-        "name": "Cory Sandhagen",
-        "numericOdds": -375
-      },
-      "fighter2": {
-        "name": "Rob Font",
-        "numericOdds": 295
-      }
-    },
-    {
-      "timestamp": "2023-08-05T18:40:40Z",
-      "fighter1": {
-        "name": "Cory Sandhagen",
-        "numericOdds": -375
-      },
-      "fighter2": {
-        "name": "Rob Font",
-        "numericOdds": 295
-      }
-    },
-    {
-      "timestamp": "2023-08-05T18:55:40Z",
-      "fighter1": {
-        "name": "Cory Sandhagen",
-        "numericOdds": -375
-      },
-      "fighter2": {
-        "name": "Rob Font",
-        "numericOdds": 295
-      }
-    },
-    {
-      "timestamp": "2023-08-05T19:05:40Z",
-      "fighter1": {
-        "name": "Cory Sandhagen",
-        "numericOdds": -375
-      },
-      "fighter2": {
-        "name": "Rob Font",
-        "numericOdds": 295
-      }
-    },
-    {
-      "timestamp": "2023-08-05T19:15:46Z",
-      "fighter1": {
-        "name": "Cory Sandhagen",
-        "numericOdds": -375
-      },
-      "fighter2": {
-        "name": "Rob Font",
-        "numericOdds": 295
-      }
-    },
-    {
-      "timestamp": "2023-08-05T19:30:41Z",
-      "fighter1": {
-        "name": "Cory Sandhagen",
-        "numericOdds": -375
-      },
-      "fighter2": {
-        "name": "Rob Font",
-        "numericOdds": 295
-      }
-    },
-    {
-      "timestamp": "2023-08-05T19:45:41Z",
-      "fighter1": {
-        "name": "Cory Sandhagen",
-        "numericOdds": -375
-      },
-      "fighter2": {
-        "name": "Rob Font",
-        "numericOdds": 295
-      }
-    },
-    {
-      "timestamp": "2023-08-05T19:55:40Z",
-      "fighter1": {
-        "name": "Cory Sandhagen",
-        "numericOdds": -375
-      },
-      "fighter2": {
-        "name": "Rob Font",
-        "numericOdds": 295
-      }
-    },
-    {
-      "timestamp": "2023-08-05T20:05:41Z",
-      "fighter1": {
-        "name": "Cory Sandhagen",
-        "numericOdds": -375
-      },
-      "fighter2": {
-        "name": "Rob Font",
-        "numericOdds": 295
-      }
-    },
-    {
-      "timestamp": "2023-08-05T20:20:41Z",
-      "fighter1": {
-        "name": "Cory Sandhagen",
-        "numericOdds": -375
-      },
-      "fighter2": {
-        "name": "Rob Font",
-        "numericOdds": 295
-      }
-    },
-    {
-      "timestamp": "2023-08-05T20:35:40Z",
-      "fighter1": {
-        "name": "Cory Sandhagen",
-        "numericOdds": -375
-      },
-      "fighter2": {
-        "name": "Rob Font",
-        "numericOdds": 295
-      }
-    },
-    {
-      "timestamp": "2023-08-05T20:50:40Z",
-      "fighter1": {
-        "name": "Cory Sandhagen",
-        "numericOdds": -375
-      },
-      "fighter2": {
-        "name": "Rob Font",
-        "numericOdds": 295
-      }
-    },
-    {
-      "timestamp": "2023-08-05T21:00:41Z",
-      "fighter1": {
-        "name": "Cory Sandhagen",
-        "numericOdds": -375
-      },
-      "fighter2": {
-        "name": "Rob Font",
-        "numericOdds": 295
-      }
-    },
-    {
-      "timestamp": "2023-08-05T21:15:40Z",
-      "fighter1": {
-        "name": "Cory Sandhagen",
-        "numericOdds": -375
-      },
-      "fighter2": {
-        "name": "Rob Font",
-        "numericOdds": 295
-      }
-    },
-    {
-      "timestamp": "2023-08-05T21:30:40Z",
-      "fighter1": {
-        "name": "Cory Sandhagen",
-        "numericOdds": -375
-      },
-      "fighter2": {
-        "name": "Rob Font",
-        "numericOdds": 295
-      }
-    },
-    {
-      "timestamp": "2023-08-05T21:40:41Z",
-      "fighter1": {
-        "name": "Cory Sandhagen",
-        "numericOdds": -375
-      },
-      "fighter2": {
-        "name": "Rob Font",
-        "numericOdds": 295
-      }
-    },
-    {
-      "timestamp": "2023-08-05T21:55:40Z",
-      "fighter1": {
-        "name": "Cory Sandhagen",
-        "numericOdds": -375
-      },
-      "fighter2": {
-        "name": "Rob Font",
-        "numericOdds": 295
+        "numericOdds": 3000
       }
     }
   ]

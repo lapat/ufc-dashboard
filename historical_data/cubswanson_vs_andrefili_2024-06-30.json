@@ -1,510 +1,27 @@
 {
   "fightId": "cubswanson_vs_andrefili_2024-06-30",
   "fightTitle": "Cub Swanson vs Andre Fili",
-  "startTime": "2024-06-29T13:55:38Z",
+  "commenceTime": "2024-06-30T01:15:00Z",
+  "startTime": "2024-06-30T01:05:38Z",
   "endTime": "2024-06-30T01:40:38Z",
-  "dataPoints": 49,
+  "dataPoints": 8,
   "oddsHistory": [
     {
-      "timestamp": "2024-06-29T13:55:38Z",
+      "timestamp": "2024-06-30T01:05:38Z",
       "fighter1": {
         "name": "Andre Fili",
-        "numericOdds": -225
+        "numericOdds": -250
       },
       "fighter2": {
         "name": "Cub Swanson",
-        "numericOdds": 185
+        "numericOdds": 205
       }
     },
     {
-      "timestamp": "2024-06-29T14:10:38Z",
+      "timestamp": "2024-06-30T01:10:38Z",
       "fighter1": {
         "name": "Andre Fili",
-        "numericOdds": -225
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 185
-      }
-    },
-    {
-      "timestamp": "2024-06-29T14:25:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -225
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 185
-      }
-    },
-    {
-      "timestamp": "2024-06-29T14:35:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -225
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 185
-      }
-    },
-    {
-      "timestamp": "2024-06-29T14:50:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -225
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 185
-      }
-    },
-    {
-      "timestamp": "2024-06-29T15:05:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -225
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 185
-      }
-    },
-    {
-      "timestamp": "2024-06-29T15:15:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -225
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 185
-      }
-    },
-    {
-      "timestamp": "2024-06-29T15:30:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -225
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 185
-      }
-    },
-    {
-      "timestamp": "2024-06-29T15:45:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -225
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 185
-      }
-    },
-    {
-      "timestamp": "2024-06-29T16:00:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -225
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 185
-      }
-    },
-    {
-      "timestamp": "2024-06-29T16:15:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -225
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 185
-      }
-    },
-    {
-      "timestamp": "2024-06-29T16:30:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -225
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 185
-      }
-    },
-    {
-      "timestamp": "2024-06-29T16:45:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -225
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 185
-      }
-    },
-    {
-      "timestamp": "2024-06-29T17:00:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -225
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 185
-      }
-    },
-    {
-      "timestamp": "2024-06-29T17:15:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -225
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 185
-      }
-    },
-    {
-      "timestamp": "2024-06-29T17:30:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -225
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 185
-      }
-    },
-    {
-      "timestamp": "2024-06-29T17:45:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -225
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 185
-      }
-    },
-    {
-      "timestamp": "2024-06-29T18:00:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -225
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 185
-      }
-    },
-    {
-      "timestamp": "2024-06-29T18:15:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -225
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 185
-      }
-    },
-    {
-      "timestamp": "2024-06-29T18:30:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -225
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 185
-      }
-    },
-    {
-      "timestamp": "2024-06-29T18:45:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -225
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 185
-      }
-    },
-    {
-      "timestamp": "2024-06-29T19:00:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -225
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 185
-      }
-    },
-    {
-      "timestamp": "2024-06-29T19:15:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -225
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 185
-      }
-    },
-    {
-      "timestamp": "2024-06-29T19:30:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -225
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 185
-      }
-    },
-    {
-      "timestamp": "2024-06-29T19:45:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -225
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 185
-      }
-    },
-    {
-      "timestamp": "2024-06-29T20:00:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -225
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 185
-      }
-    },
-    {
-      "timestamp": "2024-06-29T20:15:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -225
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 185
-      }
-    },
-    {
-      "timestamp": "2024-06-29T20:30:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -225
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 185
-      }
-    },
-    {
-      "timestamp": "2024-06-29T20:45:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -225
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 185
-      }
-    },
-    {
-      "timestamp": "2024-06-29T21:00:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -225
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 185
-      }
-    },
-    {
-      "timestamp": "2024-06-29T21:15:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -225
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 185
-      }
-    },
-    {
-      "timestamp": "2024-06-29T21:30:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -230
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 190
-      }
-    },
-    {
-      "timestamp": "2024-06-29T21:45:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -230
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 190
-      }
-    },
-    {
-      "timestamp": "2024-06-29T22:00:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -230
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 190
-      }
-    },
-    {
-      "timestamp": "2024-06-29T22:15:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -230
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 190
-      }
-    },
-    {
-      "timestamp": "2024-06-29T22:30:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -230
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 190
-      }
-    },
-    {
-      "timestamp": "2024-06-29T22:45:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -230
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 190
-      }
-    },
-    {
-      "timestamp": "2024-06-29T23:00:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -230
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 190
-      }
-    },
-    {
-      "timestamp": "2024-06-29T23:15:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -230
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 190
-      }
-    },
-    {
-      "timestamp": "2024-06-29T23:30:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -230
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 190
-      }
-    },
-    {
-      "timestamp": "2024-06-29T23:45:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -230
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 190
-      }
-    },
-    {
-      "timestamp": "2024-06-29T23:55:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -230
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 190
-      }
-    },
-    {
-      "timestamp": "2024-06-30T00:10:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -230
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 190
-      }
-    },
-    {
-      "timestamp": "2024-06-30T00:25:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -230
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 190
-      }
-    },
-    {
-      "timestamp": "2024-06-30T00:40:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -230
-      },
-      "fighter2": {
-        "name": "Cub Swanson",
-        "numericOdds": 190
-      }
-    },
-    {
-      "timestamp": "2024-06-30T00:55:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -245
+        "numericOdds": -270
       },
       "fighter2": {
         "name": "Cub Swanson",
@@ -512,7 +29,18 @@
       }
     },
     {
-      "timestamp": "2024-06-30T01:10:38Z",
+      "timestamp": "2024-06-30T01:15:38Z",
+      "fighter1": {
+        "name": "Andre Fili",
+        "numericOdds": -425
+      },
+      "fighter2": {
+        "name": "Cub Swanson",
+        "numericOdds": 300
+      }
+    },
+    {
+      "timestamp": "2024-06-30T01:20:38Z",
       "fighter1": {
         "name": "Andre Fili",
         "numericOdds": -270
@@ -531,6 +59,28 @@
       "fighter2": {
         "name": "Cub Swanson",
         "numericOdds": -115
+      }
+    },
+    {
+      "timestamp": "2024-06-30T01:30:38Z",
+      "fighter1": {
+        "name": "Andre Fili",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Cub Swanson",
+        "numericOdds": -130
+      }
+    },
+    {
+      "timestamp": "2024-06-30T01:35:38Z",
+      "fighter1": {
+        "name": "Andre Fili",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Cub Swanson",
+        "numericOdds": -130
       }
     },
     {

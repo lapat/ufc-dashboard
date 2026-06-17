@@ -1,0 +1,65 @@
+{
+  "fightId": "mattschnell_vs_alessandrocosta_2026-06-06",
+  "fightTitle": "Matt Schnell vs Alessandro Costa",
+  "commenceTime": "2026-06-06T23:40:00Z",
+  "startTime": "2026-06-06T23:30:36Z",
+  "endTime": "2026-06-06T23:50:36Z",
+  "dataPoints": 5,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-06-06T23:30:36Z",
+      "fighter1": {
+        "name": "Alessandro Costa",
+        "numericOdds": -440
+      },
+      "fighter2": {
+        "name": "Matt Schnell",
+        "numericOdds": 340
+      }
+    },
+    {
+      "timestamp": "2026-06-06T23:35:36Z",
+      "fighter1": {
+        "name": "Alessandro Costa",
+        "numericOdds": -440
+      },
+      "fighter2": {
+        "name": "Matt Schnell",
+        "numericOdds": 340
+      }
+    },
+    {
+      "timestamp": "2026-06-06T23:40:37Z",
+      "fighter1": {
+        "name": "Alessandro Costa",
+        "numericOdds": -475
+      },
+      "fighter2": {
+        "name": "Matt Schnell",
+        "numericOdds": 325
+      }
+    },
+    {
+      "timestamp": "2026-06-06T23:45:37Z",
+      "fighter1": {
+        "name": "Alessandro Costa",
+        "numericOdds": -475
+      },
+      "fighter2": {
+        "name": "Matt Schnell",
+        "numericOdds": 325
+      }
+    },
+    {
+      "timestamp": "2026-06-06T23:50:36Z",
+      "fighter1": {
+        "name": "Alessandro Costa",
+        "numericOdds": -475
+      },
+      "fighter2": {
+        "name": "Matt Schnell",
+        "numericOdds": 325
+      }
+    }
+  ]
+}

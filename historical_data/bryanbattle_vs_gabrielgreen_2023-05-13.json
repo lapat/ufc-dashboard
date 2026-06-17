@@ -1,12 +1,112 @@
 {
   "fightId": "bryanbattle_vs_gabrielgreen_2023-05-13",
   "fightTitle": "Bryan Battle vs Gabriel Green",
-  "startTime": "2023-05-12T13:55:40Z",
-  "endTime": "2023-05-12T17:35:40Z",
-  "dataPoints": 18,
+  "commenceTime": "2023-05-13T16:05:00Z",
+  "startTime": "2023-05-13T15:55:40Z",
+  "endTime": "2023-05-13T17:05:40Z",
+  "dataPoints": 15,
   "oddsHistory": [
     {
-      "timestamp": "2023-05-12T13:55:40Z",
+      "timestamp": "2023-05-13T15:55:40Z",
+      "fighter1": {
+        "name": "Bryan Battle",
+        "numericOdds": 110
+      },
+      "fighter2": {
+        "name": "Gabriel Green",
+        "numericOdds": -130
+      }
+    },
+    {
+      "timestamp": "2023-05-13T16:00:40Z",
+      "fighter1": {
+        "name": "Bryan Battle",
+        "numericOdds": 110
+      },
+      "fighter2": {
+        "name": "Gabriel Green",
+        "numericOdds": -130
+      }
+    },
+    {
+      "timestamp": "2023-05-13T16:05:39Z",
+      "fighter1": {
+        "name": "Bryan Battle",
+        "numericOdds": 110
+      },
+      "fighter2": {
+        "name": "Gabriel Green",
+        "numericOdds": -130
+      }
+    },
+    {
+      "timestamp": "2023-05-13T16:10:40Z",
+      "fighter1": {
+        "name": "Bryan Battle",
+        "numericOdds": 110
+      },
+      "fighter2": {
+        "name": "Gabriel Green",
+        "numericOdds": -130
+      }
+    },
+    {
+      "timestamp": "2023-05-13T16:15:40Z",
+      "fighter1": {
+        "name": "Bryan Battle",
+        "numericOdds": 110
+      },
+      "fighter2": {
+        "name": "Gabriel Green",
+        "numericOdds": -130
+      }
+    },
+    {
+      "timestamp": "2023-05-13T16:20:40Z",
+      "fighter1": {
+        "name": "Bryan Battle",
+        "numericOdds": 110
+      },
+      "fighter2": {
+        "name": "Gabriel Green",
+        "numericOdds": -130
+      }
+    },
+    {
+      "timestamp": "2023-05-13T16:25:40Z",
+      "fighter1": {
+        "name": "Bryan Battle",
+        "numericOdds": 110
+      },
+      "fighter2": {
+        "name": "Gabriel Green",
+        "numericOdds": -130
+      }
+    },
+    {
+      "timestamp": "2023-05-13T16:30:40Z",
+      "fighter1": {
+        "name": "Bryan Battle",
+        "numericOdds": 110
+      },
+      "fighter2": {
+        "name": "Gabriel Green",
+        "numericOdds": -130
+      }
+    },
+    {
+      "timestamp": "2023-05-13T16:35:40Z",
+      "fighter1": {
+        "name": "Bryan Battle",
+        "numericOdds": 110
+      },
+      "fighter2": {
+        "name": "Gabriel Green",
+        "numericOdds": -130
+      }
+    },
+    {
+      "timestamp": "2023-05-13T16:40:40Z",
       "fighter1": {
         "name": "Bryan Battle",
         "numericOdds": 115
@@ -17,7 +117,7 @@
       }
     },
     {
-      "timestamp": "2023-05-12T14:10:40Z",
+      "timestamp": "2023-05-13T16:45:40Z",
       "fighter1": {
         "name": "Bryan Battle",
         "numericOdds": 115
@@ -28,7 +128,7 @@
       }
     },
     {
-      "timestamp": "2023-05-12T14:20:40Z",
+      "timestamp": "2023-05-13T16:50:40Z",
       "fighter1": {
         "name": "Bryan Battle",
         "numericOdds": 115
@@ -39,168 +139,36 @@
       }
     },
     {
-      "timestamp": "2023-05-12T14:35:40Z",
+      "timestamp": "2023-05-13T16:55:40Z",
       "fighter1": {
         "name": "Bryan Battle",
         "numericOdds": 115
       },
       "fighter2": {
         "name": "Gabriel Green",
-        "numericOdds": -135
+        "numericOdds": -145
       }
     },
     {
-      "timestamp": "2023-05-12T14:45:40Z",
+      "timestamp": "2023-05-13T17:00:40Z",
       "fighter1": {
         "name": "Bryan Battle",
         "numericOdds": 115
       },
       "fighter2": {
         "name": "Gabriel Green",
-        "numericOdds": -135
+        "numericOdds": -145
       }
     },
     {
-      "timestamp": "2023-05-12T15:00:40Z",
+      "timestamp": "2023-05-13T17:05:40Z",
       "fighter1": {
         "name": "Bryan Battle",
         "numericOdds": 115
       },
       "fighter2": {
         "name": "Gabriel Green",
-        "numericOdds": -135
-      }
-    },
-    {
-      "timestamp": "2023-05-12T15:10:41Z",
-      "fighter1": {
-        "name": "Bryan Battle",
-        "numericOdds": 115
-      },
-      "fighter2": {
-        "name": "Gabriel Green",
-        "numericOdds": -135
-      }
-    },
-    {
-      "timestamp": "2023-05-12T15:25:40Z",
-      "fighter1": {
-        "name": "Bryan Battle",
-        "numericOdds": 115
-      },
-      "fighter2": {
-        "name": "Gabriel Green",
-        "numericOdds": -135
-      }
-    },
-    {
-      "timestamp": "2023-05-12T15:40:40Z",
-      "fighter1": {
-        "name": "Bryan Battle",
-        "numericOdds": 115
-      },
-      "fighter2": {
-        "name": "Gabriel Green",
-        "numericOdds": -135
-      }
-    },
-    {
-      "timestamp": "2023-05-12T15:50:40Z",
-      "fighter1": {
-        "name": "Bryan Battle",
-        "numericOdds": 115
-      },
-      "fighter2": {
-        "name": "Gabriel Green",
-        "numericOdds": -135
-      }
-    },
-    {
-      "timestamp": "2023-05-12T16:00:41Z",
-      "fighter1": {
-        "name": "Bryan Battle",
-        "numericOdds": 115
-      },
-      "fighter2": {
-        "name": "Gabriel Green",
-        "numericOdds": -135
-      }
-    },
-    {
-      "timestamp": "2023-05-12T16:15:40Z",
-      "fighter1": {
-        "name": "Bryan Battle",
-        "numericOdds": 115
-      },
-      "fighter2": {
-        "name": "Gabriel Green",
-        "numericOdds": -135
-      }
-    },
-    {
-      "timestamp": "2023-05-12T16:25:41Z",
-      "fighter1": {
-        "name": "Bryan Battle",
-        "numericOdds": 115
-      },
-      "fighter2": {
-        "name": "Gabriel Green",
-        "numericOdds": -135
-      }
-    },
-    {
-      "timestamp": "2023-05-12T16:40:41Z",
-      "fighter1": {
-        "name": "Bryan Battle",
-        "numericOdds": 115
-      },
-      "fighter2": {
-        "name": "Gabriel Green",
-        "numericOdds": -135
-      }
-    },
-    {
-      "timestamp": "2023-05-12T16:55:41Z",
-      "fighter1": {
-        "name": "Bryan Battle",
-        "numericOdds": 115
-      },
-      "fighter2": {
-        "name": "Gabriel Green",
-        "numericOdds": -135
-      }
-    },
-    {
-      "timestamp": "2023-05-12T17:10:41Z",
-      "fighter1": {
-        "name": "Bryan Battle",
-        "numericOdds": 115
-      },
-      "fighter2": {
-        "name": "Gabriel Green",
-        "numericOdds": -135
-      }
-    },
-    {
-      "timestamp": "2023-05-12T17:25:40Z",
-      "fighter1": {
-        "name": "Bryan Battle",
-        "numericOdds": 115
-      },
-      "fighter2": {
-        "name": "Gabriel Green",
-        "numericOdds": -135
-      }
-    },
-    {
-      "timestamp": "2023-05-12T17:35:40Z",
-      "fighter1": {
-        "name": "Bryan Battle",
-        "numericOdds": 115
-      },
-      "fighter2": {
-        "name": "Gabriel Green",
-        "numericOdds": -135
+        "numericOdds": -145
       }
     }
   ]

@@ -1,452 +1,35 @@
 {
   "fightId": "angelahill_vs_denisegomes_2023-11-04",
   "fightTitle": "Angela Hill vs Denise Gomes",
-  "startTime": "2023-11-04T13:55:42Z",
-  "endTime": "2023-11-04T23:35:40Z",
-  "dataPoints": 43,
+  "commenceTime": "2023-11-04T23:15:00Z",
+  "startTime": "2023-11-04T23:05:41Z",
+  "endTime": "2023-11-04T23:45:40Z",
+  "dataPoints": 9,
   "oddsHistory": [
     {
-      "timestamp": "2023-11-04T13:55:42Z",
-      "fighter1": {
-        "name": "Angela Hill",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Denise Gomes",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2023-11-04T14:10:42Z",
-      "fighter1": {
-        "name": "Angela Hill",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Denise Gomes",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2023-11-04T14:20:43Z",
-      "fighter1": {
-        "name": "Angela Hill",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Denise Gomes",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2023-11-04T14:35:41Z",
-      "fighter1": {
-        "name": "Angela Hill",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Denise Gomes",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2023-11-04T14:45:43Z",
-      "fighter1": {
-        "name": "Angela Hill",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Denise Gomes",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2023-11-04T15:00:43Z",
-      "fighter1": {
-        "name": "Angela Hill",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Denise Gomes",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2023-11-04T15:15:42Z",
-      "fighter1": {
-        "name": "Angela Hill",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Denise Gomes",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2023-11-04T15:25:44Z",
-      "fighter1": {
-        "name": "Angela Hill",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Denise Gomes",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2023-11-04T15:40:42Z",
-      "fighter1": {
-        "name": "Angela Hill",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Denise Gomes",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2023-11-04T15:55:42Z",
-      "fighter1": {
-        "name": "Angela Hill",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Denise Gomes",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2023-11-04T16:10:42Z",
-      "fighter1": {
-        "name": "Angela Hill",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Denise Gomes",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2023-11-04T16:25:42Z",
-      "fighter1": {
-        "name": "Angela Hill",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Denise Gomes",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2023-11-04T16:40:42Z",
-      "fighter1": {
-        "name": "Angela Hill",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Denise Gomes",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2023-11-04T16:55:42Z",
-      "fighter1": {
-        "name": "Angela Hill",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Denise Gomes",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2023-11-04T17:10:42Z",
-      "fighter1": {
-        "name": "Angela Hill",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Denise Gomes",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2023-11-04T17:25:42Z",
-      "fighter1": {
-        "name": "Angela Hill",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Denise Gomes",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2023-11-04T17:35:41Z",
-      "fighter1": {
-        "name": "Angela Hill",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Denise Gomes",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2023-11-04T17:50:41Z",
-      "fighter1": {
-        "name": "Angela Hill",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Denise Gomes",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2023-11-04T18:00:43Z",
-      "fighter1": {
-        "name": "Angela Hill",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Denise Gomes",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2023-11-04T18:15:42Z",
-      "fighter1": {
-        "name": "Angela Hill",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Denise Gomes",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2023-11-04T18:30:42Z",
-      "fighter1": {
-        "name": "Angela Hill",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Denise Gomes",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2023-11-04T18:45:42Z",
-      "fighter1": {
-        "name": "Angela Hill",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Denise Gomes",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2023-11-04T19:00:42Z",
-      "fighter1": {
-        "name": "Angela Hill",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Denise Gomes",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2023-11-04T19:15:41Z",
-      "fighter1": {
-        "name": "Angela Hill",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Denise Gomes",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2023-11-04T19:30:41Z",
-      "fighter1": {
-        "name": "Angela Hill",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Denise Gomes",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2023-11-04T19:45:41Z",
-      "fighter1": {
-        "name": "Angela Hill",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Denise Gomes",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2023-11-04T20:00:41Z",
-      "fighter1": {
-        "name": "Angela Hill",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Denise Gomes",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2023-11-04T20:15:41Z",
-      "fighter1": {
-        "name": "Angela Hill",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Denise Gomes",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2023-11-04T20:30:41Z",
-      "fighter1": {
-        "name": "Angela Hill",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Denise Gomes",
-        "numericOdds": -142
-      }
-    },
-    {
-      "timestamp": "2023-11-04T20:40:40Z",
-      "fighter1": {
-        "name": "Angela Hill",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Denise Gomes",
-        "numericOdds": -148
-      }
-    },
-    {
-      "timestamp": "2023-11-04T20:50:40Z",
-      "fighter1": {
-        "name": "Angela Hill",
-        "numericOdds": 114
-      },
-      "fighter2": {
-        "name": "Denise Gomes",
-        "numericOdds": -135
-      }
-    },
-    {
-      "timestamp": "2023-11-04T21:00:41Z",
-      "fighter1": {
-        "name": "Angela Hill",
-        "numericOdds": 114
-      },
-      "fighter2": {
-        "name": "Denise Gomes",
-        "numericOdds": -135
-      }
-    },
-    {
-      "timestamp": "2023-11-04T21:15:41Z",
-      "fighter1": {
-        "name": "Angela Hill",
-        "numericOdds": 114
-      },
-      "fighter2": {
-        "name": "Denise Gomes",
-        "numericOdds": -135
-      }
-    },
-    {
-      "timestamp": "2023-11-04T21:30:41Z",
-      "fighter1": {
-        "name": "Angela Hill",
-        "numericOdds": 114
-      },
-      "fighter2": {
-        "name": "Denise Gomes",
-        "numericOdds": -135
-      }
-    },
-    {
-      "timestamp": "2023-11-04T21:40:41Z",
-      "fighter1": {
-        "name": "Angela Hill",
-        "numericOdds": 114
-      },
-      "fighter2": {
-        "name": "Denise Gomes",
-        "numericOdds": -135
-      }
-    },
-    {
-      "timestamp": "2023-11-04T21:55:41Z",
-      "fighter1": {
-        "name": "Angela Hill",
-        "numericOdds": 114
-      },
-      "fighter2": {
-        "name": "Denise Gomes",
-        "numericOdds": -135
-      }
-    },
-    {
-      "timestamp": "2023-11-04T22:10:41Z",
-      "fighter1": {
-        "name": "Angela Hill",
-        "numericOdds": 114
-      },
-      "fighter2": {
-        "name": "Denise Gomes",
-        "numericOdds": -135
-      }
-    },
-    {
-      "timestamp": "2023-11-04T22:20:47Z",
-      "fighter1": {
-        "name": "Angela Hill",
-        "numericOdds": 114
-      },
-      "fighter2": {
-        "name": "Denise Gomes",
-        "numericOdds": -135
-      }
-    },
-    {
-      "timestamp": "2023-11-04T22:35:42Z",
-      "fighter1": {
-        "name": "Angela Hill",
-        "numericOdds": 114
-      },
-      "fighter2": {
-        "name": "Denise Gomes",
-        "numericOdds": -135
-      }
-    },
-    {
-      "timestamp": "2023-11-04T22:50:41Z",
-      "fighter1": {
-        "name": "Angela Hill",
-        "numericOdds": 120
-      },
-      "fighter2": {
-        "name": "Denise Gomes",
-        "numericOdds": -135
-      }
-    },
-    {
       "timestamp": "2023-11-04T23:05:41Z",
+      "fighter1": {
+        "name": "Angela Hill",
+        "numericOdds": 110
+      },
+      "fighter2": {
+        "name": "Denise Gomes",
+        "numericOdds": -130
+      }
+    },
+    {
+      "timestamp": "2023-11-04T23:10:40Z",
+      "fighter1": {
+        "name": "Angela Hill",
+        "numericOdds": 110
+      },
+      "fighter2": {
+        "name": "Denise Gomes",
+        "numericOdds": -130
+      }
+    },
+    {
+      "timestamp": "2023-11-04T23:15:42Z",
       "fighter1": {
         "name": "Angela Hill",
         "numericOdds": 110
@@ -468,7 +51,51 @@
       }
     },
     {
+      "timestamp": "2023-11-04T23:25:40Z",
+      "fighter1": {
+        "name": "Angela Hill",
+        "numericOdds": -130
+      },
+      "fighter2": {
+        "name": "Denise Gomes",
+        "numericOdds": 100
+      }
+    },
+    {
+      "timestamp": "2023-11-04T23:30:40Z",
+      "fighter1": {
+        "name": "Angela Hill",
+        "numericOdds": -210
+      },
+      "fighter2": {
+        "name": "Denise Gomes",
+        "numericOdds": 160
+      }
+    },
+    {
       "timestamp": "2023-11-04T23:35:40Z",
+      "fighter1": {
+        "name": "Angela Hill",
+        "numericOdds": -2100
+      },
+      "fighter2": {
+        "name": "Denise Gomes",
+        "numericOdds": 1000
+      }
+    },
+    {
+      "timestamp": "2023-11-04T23:40:41Z",
+      "fighter1": {
+        "name": "Angela Hill",
+        "numericOdds": -2100
+      },
+      "fighter2": {
+        "name": "Denise Gomes",
+        "numericOdds": 1000
+      }
+    },
+    {
+      "timestamp": "2023-11-04T23:45:40Z",
       "fighter1": {
         "name": "Angela Hill",
         "numericOdds": -2100

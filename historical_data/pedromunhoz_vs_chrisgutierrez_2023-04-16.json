@@ -1,283 +1,97 @@
 {
   "fightId": "pedromunhoz_vs_chrisgutierrez_2023-04-16",
   "fightTitle": "Pedro Munhoz vs Chris Gutierrez",
-  "startTime": "2023-04-15T13:55:39Z",
-  "endTime": "2023-04-15T19:30:39Z",
-  "dataPoints": 25,
+  "commenceTime": "2023-04-16T01:15:00Z",
+  "startTime": "2023-04-16T01:05:38Z",
+  "endTime": "2023-04-16T01:40:39Z",
+  "dataPoints": 8,
   "oddsHistory": [
     {
-      "timestamp": "2023-04-15T13:55:39Z",
+      "timestamp": "2023-04-16T01:05:38Z",
       "fighter1": {
         "name": "Chris Gutierrez",
-        "numericOdds": -200
+        "numericOdds": -215
       },
       "fighter2": {
         "name": "Pedro Munhoz",
-        "numericOdds": 170
+        "numericOdds": 185
       }
     },
     {
-      "timestamp": "2023-04-15T14:05:40Z",
+      "timestamp": "2023-04-16T01:10:38Z",
       "fighter1": {
         "name": "Chris Gutierrez",
-        "numericOdds": -200
+        "numericOdds": -225
       },
       "fighter2": {
         "name": "Pedro Munhoz",
-        "numericOdds": 170
+        "numericOdds": 190
       }
     },
     {
-      "timestamp": "2023-04-15T14:20:39Z",
+      "timestamp": "2023-04-16T01:15:38Z",
       "fighter1": {
         "name": "Chris Gutierrez",
-        "numericOdds": -200
+        "numericOdds": -230
       },
       "fighter2": {
         "name": "Pedro Munhoz",
-        "numericOdds": 170
+        "numericOdds": 195
       }
     },
     {
-      "timestamp": "2023-04-15T14:30:39Z",
+      "timestamp": "2023-04-16T01:20:40Z",
       "fighter1": {
         "name": "Chris Gutierrez",
-        "numericOdds": -200
+        "numericOdds": -235
       },
       "fighter2": {
         "name": "Pedro Munhoz",
-        "numericOdds": 170
+        "numericOdds": 190
       }
     },
     {
-      "timestamp": "2023-04-15T14:45:39Z",
+      "timestamp": "2023-04-16T01:25:39Z",
       "fighter1": {
         "name": "Chris Gutierrez",
-        "numericOdds": -200
+        "numericOdds": 200
       },
       "fighter2": {
         "name": "Pedro Munhoz",
-        "numericOdds": 170
+        "numericOdds": -250
       }
     },
     {
-      "timestamp": "2023-04-15T14:55:39Z",
+      "timestamp": "2023-04-16T01:30:39Z",
       "fighter1": {
         "name": "Chris Gutierrez",
-        "numericOdds": -200
+        "numericOdds": 250
       },
       "fighter2": {
         "name": "Pedro Munhoz",
-        "numericOdds": 170
+        "numericOdds": -320
       }
     },
     {
-      "timestamp": "2023-04-15T15:10:39Z",
+      "timestamp": "2023-04-16T01:35:39Z",
       "fighter1": {
         "name": "Chris Gutierrez",
-        "numericOdds": -200
+        "numericOdds": 500
       },
       "fighter2": {
         "name": "Pedro Munhoz",
-        "numericOdds": 170
+        "numericOdds": -750
       }
     },
     {
-      "timestamp": "2023-04-15T15:25:39Z",
+      "timestamp": "2023-04-16T01:40:39Z",
       "fighter1": {
         "name": "Chris Gutierrez",
-        "numericOdds": -200
+        "numericOdds": 2000
       },
       "fighter2": {
         "name": "Pedro Munhoz",
-        "numericOdds": 170
-      }
-    },
-    {
-      "timestamp": "2023-04-15T15:40:39Z",
-      "fighter1": {
-        "name": "Chris Gutierrez",
-        "numericOdds": -200
-      },
-      "fighter2": {
-        "name": "Pedro Munhoz",
-        "numericOdds": 170
-      }
-    },
-    {
-      "timestamp": "2023-04-15T15:55:39Z",
-      "fighter1": {
-        "name": "Chris Gutierrez",
-        "numericOdds": -200
-      },
-      "fighter2": {
-        "name": "Pedro Munhoz",
-        "numericOdds": 170
-      }
-    },
-    {
-      "timestamp": "2023-04-15T16:10:39Z",
-      "fighter1": {
-        "name": "Chris Gutierrez",
-        "numericOdds": -200
-      },
-      "fighter2": {
-        "name": "Pedro Munhoz",
-        "numericOdds": 170
-      }
-    },
-    {
-      "timestamp": "2023-04-15T16:20:39Z",
-      "fighter1": {
-        "name": "Chris Gutierrez",
-        "numericOdds": -200
-      },
-      "fighter2": {
-        "name": "Pedro Munhoz",
-        "numericOdds": 170
-      }
-    },
-    {
-      "timestamp": "2023-04-15T16:35:38Z",
-      "fighter1": {
-        "name": "Chris Gutierrez",
-        "numericOdds": -200
-      },
-      "fighter2": {
-        "name": "Pedro Munhoz",
-        "numericOdds": 170
-      }
-    },
-    {
-      "timestamp": "2023-04-15T16:45:39Z",
-      "fighter1": {
-        "name": "Chris Gutierrez",
-        "numericOdds": -200
-      },
-      "fighter2": {
-        "name": "Pedro Munhoz",
-        "numericOdds": 170
-      }
-    },
-    {
-      "timestamp": "2023-04-15T17:00:39Z",
-      "fighter1": {
-        "name": "Chris Gutierrez",
-        "numericOdds": -200
-      },
-      "fighter2": {
-        "name": "Pedro Munhoz",
-        "numericOdds": 170
-      }
-    },
-    {
-      "timestamp": "2023-04-15T17:15:39Z",
-      "fighter1": {
-        "name": "Chris Gutierrez",
-        "numericOdds": -200
-      },
-      "fighter2": {
-        "name": "Pedro Munhoz",
-        "numericOdds": 170
-      }
-    },
-    {
-      "timestamp": "2023-04-15T17:30:39Z",
-      "fighter1": {
-        "name": "Chris Gutierrez",
-        "numericOdds": -200
-      },
-      "fighter2": {
-        "name": "Pedro Munhoz",
-        "numericOdds": 170
-      }
-    },
-    {
-      "timestamp": "2023-04-15T17:45:39Z",
-      "fighter1": {
-        "name": "Chris Gutierrez",
-        "numericOdds": -200
-      },
-      "fighter2": {
-        "name": "Pedro Munhoz",
-        "numericOdds": 170
-      }
-    },
-    {
-      "timestamp": "2023-04-15T18:00:39Z",
-      "fighter1": {
-        "name": "Chris Gutierrez",
-        "numericOdds": -200
-      },
-      "fighter2": {
-        "name": "Pedro Munhoz",
-        "numericOdds": 170
-      }
-    },
-    {
-      "timestamp": "2023-04-15T18:15:39Z",
-      "fighter1": {
-        "name": "Chris Gutierrez",
-        "numericOdds": -200
-      },
-      "fighter2": {
-        "name": "Pedro Munhoz",
-        "numericOdds": 170
-      }
-    },
-    {
-      "timestamp": "2023-04-15T18:30:39Z",
-      "fighter1": {
-        "name": "Chris Gutierrez",
-        "numericOdds": -200
-      },
-      "fighter2": {
-        "name": "Pedro Munhoz",
-        "numericOdds": 170
-      }
-    },
-    {
-      "timestamp": "2023-04-15T18:45:39Z",
-      "fighter1": {
-        "name": "Chris Gutierrez",
-        "numericOdds": -200
-      },
-      "fighter2": {
-        "name": "Pedro Munhoz",
-        "numericOdds": 170
-      }
-    },
-    {
-      "timestamp": "2023-04-15T19:00:39Z",
-      "fighter1": {
-        "name": "Chris Gutierrez",
-        "numericOdds": -200
-      },
-      "fighter2": {
-        "name": "Pedro Munhoz",
-        "numericOdds": 170
-      }
-    },
-    {
-      "timestamp": "2023-04-15T19:15:39Z",
-      "fighter1": {
-        "name": "Chris Gutierrez",
-        "numericOdds": -200
-      },
-      "fighter2": {
-        "name": "Pedro Munhoz",
-        "numericOdds": 170
-      }
-    },
-    {
-      "timestamp": "2023-04-15T19:30:39Z",
-      "fighter1": {
-        "name": "Chris Gutierrez",
-        "numericOdds": -200
-      },
-      "fighter2": {
-        "name": "Pedro Munhoz",
-        "numericOdds": 170
+        "numericOdds": -12500
       }
     }
   ]

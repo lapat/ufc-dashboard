@@ -1,360 +1,20 @@
 {
   "fightId": "codystamann_vs_taylorlapilus_2024-06-08",
   "fightTitle": "Cody Stamann vs Taylor Lapilus",
-  "startTime": "2024-06-08T13:55:37Z",
-  "endTime": "2024-06-08T21:55:37Z",
-  "dataPoints": 34,
+  "commenceTime": "2024-06-08T21:45:00Z",
+  "startTime": "2024-06-08T21:35:37Z",
+  "endTime": "2024-06-08T22:00:37Z",
+  "dataPoints": 6,
   "oddsHistory": [
     {
-      "timestamp": "2024-06-08T13:55:37Z",
+      "timestamp": "2024-06-08T21:35:37Z",
       "fighter1": {
         "name": "Cody Stamann",
-        "numericOdds": 225
+        "numericOdds": 350
       },
       "fighter2": {
         "name": "Taylor Lapilus",
-        "numericOdds": -278
-      }
-    },
-    {
-      "timestamp": "2024-06-08T14:10:37Z",
-      "fighter1": {
-        "name": "Cody Stamann",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Taylor Lapilus",
-        "numericOdds": -278
-      }
-    },
-    {
-      "timestamp": "2024-06-08T14:25:37Z",
-      "fighter1": {
-        "name": "Cody Stamann",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Taylor Lapilus",
-        "numericOdds": -278
-      }
-    },
-    {
-      "timestamp": "2024-06-08T14:40:37Z",
-      "fighter1": {
-        "name": "Cody Stamann",
-        "numericOdds": 220
-      },
-      "fighter2": {
-        "name": "Taylor Lapilus",
-        "numericOdds": -270
-      }
-    },
-    {
-      "timestamp": "2024-06-08T14:55:37Z",
-      "fighter1": {
-        "name": "Cody Stamann",
-        "numericOdds": 220
-      },
-      "fighter2": {
-        "name": "Taylor Lapilus",
-        "numericOdds": -270
-      }
-    },
-    {
-      "timestamp": "2024-06-08T15:10:37Z",
-      "fighter1": {
-        "name": "Cody Stamann",
-        "numericOdds": 220
-      },
-      "fighter2": {
-        "name": "Taylor Lapilus",
-        "numericOdds": -278
-      }
-    },
-    {
-      "timestamp": "2024-06-08T15:25:37Z",
-      "fighter1": {
-        "name": "Cody Stamann",
-        "numericOdds": 220
-      },
-      "fighter2": {
-        "name": "Taylor Lapilus",
-        "numericOdds": -270
-      }
-    },
-    {
-      "timestamp": "2024-06-08T15:40:37Z",
-      "fighter1": {
-        "name": "Cody Stamann",
-        "numericOdds": 220
-      },
-      "fighter2": {
-        "name": "Taylor Lapilus",
-        "numericOdds": -278
-      }
-    },
-    {
-      "timestamp": "2024-06-08T15:55:37Z",
-      "fighter1": {
-        "name": "Cody Stamann",
-        "numericOdds": 220
-      },
-      "fighter2": {
-        "name": "Taylor Lapilus",
-        "numericOdds": -270
-      }
-    },
-    {
-      "timestamp": "2024-06-08T16:10:37Z",
-      "fighter1": {
-        "name": "Cody Stamann",
-        "numericOdds": 220
-      },
-      "fighter2": {
-        "name": "Taylor Lapilus",
-        "numericOdds": -270
-      }
-    },
-    {
-      "timestamp": "2024-06-08T16:25:37Z",
-      "fighter1": {
-        "name": "Cody Stamann",
-        "numericOdds": 220
-      },
-      "fighter2": {
-        "name": "Taylor Lapilus",
-        "numericOdds": -270
-      }
-    },
-    {
-      "timestamp": "2024-06-08T16:40:37Z",
-      "fighter1": {
-        "name": "Cody Stamann",
-        "numericOdds": 220
-      },
-      "fighter2": {
-        "name": "Taylor Lapilus",
-        "numericOdds": -270
-      }
-    },
-    {
-      "timestamp": "2024-06-08T16:55:37Z",
-      "fighter1": {
-        "name": "Cody Stamann",
-        "numericOdds": 220
-      },
-      "fighter2": {
-        "name": "Taylor Lapilus",
-        "numericOdds": -270
-      }
-    },
-    {
-      "timestamp": "2024-06-08T17:10:37Z",
-      "fighter1": {
-        "name": "Cody Stamann",
-        "numericOdds": 215
-      },
-      "fighter2": {
-        "name": "Taylor Lapilus",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2024-06-08T17:25:37Z",
-      "fighter1": {
-        "name": "Cody Stamann",
-        "numericOdds": 215
-      },
-      "fighter2": {
-        "name": "Taylor Lapilus",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2024-06-08T17:40:37Z",
-      "fighter1": {
-        "name": "Cody Stamann",
-        "numericOdds": 215
-      },
-      "fighter2": {
-        "name": "Taylor Lapilus",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2024-06-08T17:50:38Z",
-      "fighter1": {
-        "name": "Cody Stamann",
-        "numericOdds": 215
-      },
-      "fighter2": {
-        "name": "Taylor Lapilus",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2024-06-08T18:05:37Z",
-      "fighter1": {
-        "name": "Cody Stamann",
-        "numericOdds": 215
-      },
-      "fighter2": {
-        "name": "Taylor Lapilus",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2024-06-08T18:20:37Z",
-      "fighter1": {
-        "name": "Cody Stamann",
-        "numericOdds": 215
-      },
-      "fighter2": {
-        "name": "Taylor Lapilus",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2024-06-08T18:35:37Z",
-      "fighter1": {
-        "name": "Cody Stamann",
-        "numericOdds": 215
-      },
-      "fighter2": {
-        "name": "Taylor Lapilus",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2024-06-08T18:50:37Z",
-      "fighter1": {
-        "name": "Cody Stamann",
-        "numericOdds": 215
-      },
-      "fighter2": {
-        "name": "Taylor Lapilus",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2024-06-08T19:05:37Z",
-      "fighter1": {
-        "name": "Cody Stamann",
-        "numericOdds": 215
-      },
-      "fighter2": {
-        "name": "Taylor Lapilus",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2024-06-08T19:20:37Z",
-      "fighter1": {
-        "name": "Cody Stamann",
-        "numericOdds": 215
-      },
-      "fighter2": {
-        "name": "Taylor Lapilus",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2024-06-08T19:35:37Z",
-      "fighter1": {
-        "name": "Cody Stamann",
-        "numericOdds": 215
-      },
-      "fighter2": {
-        "name": "Taylor Lapilus",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2024-06-08T19:50:37Z",
-      "fighter1": {
-        "name": "Cody Stamann",
-        "numericOdds": 215
-      },
-      "fighter2": {
-        "name": "Taylor Lapilus",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2024-06-08T20:05:37Z",
-      "fighter1": {
-        "name": "Cody Stamann",
-        "numericOdds": 215
-      },
-      "fighter2": {
-        "name": "Taylor Lapilus",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2024-06-08T20:15:37Z",
-      "fighter1": {
-        "name": "Cody Stamann",
-        "numericOdds": 215
-      },
-      "fighter2": {
-        "name": "Taylor Lapilus",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2024-06-08T20:30:37Z",
-      "fighter1": {
-        "name": "Cody Stamann",
-        "numericOdds": 215
-      },
-      "fighter2": {
-        "name": "Taylor Lapilus",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2024-06-08T20:40:37Z",
-      "fighter1": {
-        "name": "Cody Stamann",
-        "numericOdds": 215
-      },
-      "fighter2": {
-        "name": "Taylor Lapilus",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2024-06-08T20:55:37Z",
-      "fighter1": {
-        "name": "Cody Stamann",
-        "numericOdds": 220
-      },
-      "fighter2": {
-        "name": "Taylor Lapilus",
-        "numericOdds": -270
-      }
-    },
-    {
-      "timestamp": "2024-06-08T21:10:37Z",
-      "fighter1": {
-        "name": "Cody Stamann",
-        "numericOdds": 220
-      },
-      "fighter2": {
-        "name": "Taylor Lapilus",
-        "numericOdds": -270
-      }
-    },
-    {
-      "timestamp": "2024-06-08T21:25:37Z",
-      "fighter1": {
-        "name": "Cody Stamann",
-        "numericOdds": 220
-      },
-      "fighter2": {
-        "name": "Taylor Lapilus",
-        "numericOdds": -270
+        "numericOdds": -520
       }
     },
     {
@@ -369,7 +29,40 @@
       }
     },
     {
+      "timestamp": "2024-06-08T21:45:37Z",
+      "fighter1": {
+        "name": "Cody Stamann",
+        "numericOdds": 1000
+      },
+      "fighter2": {
+        "name": "Taylor Lapilus",
+        "numericOdds": -2100
+      }
+    },
+    {
+      "timestamp": "2024-06-08T21:50:37Z",
+      "fighter1": {
+        "name": "Cody Stamann",
+        "numericOdds": 1500
+      },
+      "fighter2": {
+        "name": "Taylor Lapilus",
+        "numericOdds": -4000
+      }
+    },
+    {
       "timestamp": "2024-06-08T21:55:37Z",
+      "fighter1": {
+        "name": "Cody Stamann",
+        "numericOdds": 1500
+      },
+      "fighter2": {
+        "name": "Taylor Lapilus",
+        "numericOdds": -4000
+      }
+    },
+    {
+      "timestamp": "2024-06-08T22:00:37Z",
       "fighter1": {
         "name": "Cody Stamann",
         "numericOdds": 1500

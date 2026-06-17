@@ -1,12 +1,13 @@
 {
   "fightId": "joandersonbrito_vs_andrefili_2022-05-01",
   "fightTitle": "Joanderson Brito vs Andre Fili",
-  "startTime": "2022-04-30T13:55:00Z",
-  "endTime": "2022-04-30T21:05:00Z",
-  "dataPoints": 44,
+  "commenceTime": "2022-05-01T00:35:00Z",
+  "startTime": "2022-05-01T00:25:00Z",
+  "endTime": "2022-05-01T01:05:00Z",
+  "dataPoints": 5,
   "oddsHistory": [
     {
-      "timestamp": "2022-04-30T13:55:00Z",
+      "timestamp": "2022-05-01T00:25:00Z",
       "fighter1": {
         "name": "Andre Fili",
         "numericOdds": -250
@@ -17,7 +18,7 @@
       }
     },
     {
-      "timestamp": "2022-04-30T14:05:00Z",
+      "timestamp": "2022-05-01T00:35:00Z",
       "fighter1": {
         "name": "Andre Fili",
         "numericOdds": -250
@@ -28,7 +29,7 @@
       }
     },
     {
-      "timestamp": "2022-04-30T14:15:00Z",
+      "timestamp": "2022-05-01T00:45:00Z",
       "fighter1": {
         "name": "Andre Fili",
         "numericOdds": -250
@@ -39,454 +40,25 @@
       }
     },
     {
-      "timestamp": "2022-04-30T14:25:00Z",
+      "timestamp": "2022-05-01T00:55:00Z",
       "fighter1": {
         "name": "Andre Fili",
-        "numericOdds": -250
+        "numericOdds": -263
       },
       "fighter2": {
         "name": "Joanderson Brito",
-        "numericOdds": 200
+        "numericOdds": 210
       }
     },
     {
-      "timestamp": "2022-04-30T14:35:00Z",
+      "timestamp": "2022-05-01T01:05:00Z",
       "fighter1": {
         "name": "Andre Fili",
-        "numericOdds": -250
+        "numericOdds": -294
       },
       "fighter2": {
         "name": "Joanderson Brito",
-        "numericOdds": 200
-      }
-    },
-    {
-      "timestamp": "2022-04-30T14:45:00Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Joanderson Brito",
-        "numericOdds": 200
-      }
-    },
-    {
-      "timestamp": "2022-04-30T14:55:00Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Joanderson Brito",
-        "numericOdds": 200
-      }
-    },
-    {
-      "timestamp": "2022-04-30T15:05:00Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Joanderson Brito",
-        "numericOdds": 200
-      }
-    },
-    {
-      "timestamp": "2022-04-30T15:15:00Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Joanderson Brito",
-        "numericOdds": 200
-      }
-    },
-    {
-      "timestamp": "2022-04-30T15:25:00Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Joanderson Brito",
-        "numericOdds": 200
-      }
-    },
-    {
-      "timestamp": "2022-04-30T15:35:00Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Joanderson Brito",
-        "numericOdds": 200
-      }
-    },
-    {
-      "timestamp": "2022-04-30T15:45:00Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Joanderson Brito",
-        "numericOdds": 200
-      }
-    },
-    {
-      "timestamp": "2022-04-30T15:55:00Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Joanderson Brito",
-        "numericOdds": 200
-      }
-    },
-    {
-      "timestamp": "2022-04-30T16:05:00Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Joanderson Brito",
-        "numericOdds": 200
-      }
-    },
-    {
-      "timestamp": "2022-04-30T16:15:00Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Joanderson Brito",
-        "numericOdds": 200
-      }
-    },
-    {
-      "timestamp": "2022-04-30T16:25:00Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Joanderson Brito",
-        "numericOdds": 200
-      }
-    },
-    {
-      "timestamp": "2022-04-30T16:35:00Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Joanderson Brito",
-        "numericOdds": 200
-      }
-    },
-    {
-      "timestamp": "2022-04-30T16:45:00Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Joanderson Brito",
-        "numericOdds": 200
-      }
-    },
-    {
-      "timestamp": "2022-04-30T16:55:00Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Joanderson Brito",
-        "numericOdds": 200
-      }
-    },
-    {
-      "timestamp": "2022-04-30T17:05:00Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Joanderson Brito",
-        "numericOdds": 200
-      }
-    },
-    {
-      "timestamp": "2022-04-30T17:15:00Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Joanderson Brito",
-        "numericOdds": 200
-      }
-    },
-    {
-      "timestamp": "2022-04-30T17:25:00Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Joanderson Brito",
-        "numericOdds": 200
-      }
-    },
-    {
-      "timestamp": "2022-04-30T17:35:00Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Joanderson Brito",
-        "numericOdds": 200
-      }
-    },
-    {
-      "timestamp": "2022-04-30T17:45:00Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Joanderson Brito",
-        "numericOdds": 200
-      }
-    },
-    {
-      "timestamp": "2022-04-30T17:55:00Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Joanderson Brito",
-        "numericOdds": 200
-      }
-    },
-    {
-      "timestamp": "2022-04-30T18:05:00Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Joanderson Brito",
-        "numericOdds": 200
-      }
-    },
-    {
-      "timestamp": "2022-04-30T18:15:00Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Joanderson Brito",
-        "numericOdds": 200
-      }
-    },
-    {
-      "timestamp": "2022-04-30T18:25:00Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Joanderson Brito",
-        "numericOdds": 200
-      }
-    },
-    {
-      "timestamp": "2022-04-30T18:35:00Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Joanderson Brito",
-        "numericOdds": 200
-      }
-    },
-    {
-      "timestamp": "2022-04-30T18:45:00Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Joanderson Brito",
-        "numericOdds": 200
-      }
-    },
-    {
-      "timestamp": "2022-04-30T18:55:00Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Joanderson Brito",
-        "numericOdds": 200
-      }
-    },
-    {
-      "timestamp": "2022-04-30T19:05:00Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Joanderson Brito",
-        "numericOdds": 200
-      }
-    },
-    {
-      "timestamp": "2022-04-30T19:15:00Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Joanderson Brito",
-        "numericOdds": 200
-      }
-    },
-    {
-      "timestamp": "2022-04-30T19:25:00Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Joanderson Brito",
-        "numericOdds": 200
-      }
-    },
-    {
-      "timestamp": "2022-04-30T19:35:00Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Joanderson Brito",
-        "numericOdds": 200
-      }
-    },
-    {
-      "timestamp": "2022-04-30T19:45:00Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Joanderson Brito",
-        "numericOdds": 200
-      }
-    },
-    {
-      "timestamp": "2022-04-30T19:55:00Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Joanderson Brito",
-        "numericOdds": 200
-      }
-    },
-    {
-      "timestamp": "2022-04-30T20:05:00Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Joanderson Brito",
-        "numericOdds": 200
-      }
-    },
-    {
-      "timestamp": "2022-04-30T20:15:00Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Joanderson Brito",
-        "numericOdds": 200
-      }
-    },
-    {
-      "timestamp": "2022-04-30T20:25:00Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Joanderson Brito",
-        "numericOdds": 200
-      }
-    },
-    {
-      "timestamp": "2022-04-30T20:35:00Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Joanderson Brito",
-        "numericOdds": 200
-      }
-    },
-    {
-      "timestamp": "2022-04-30T20:45:00Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Joanderson Brito",
-        "numericOdds": 200
-      }
-    },
-    {
-      "timestamp": "2022-04-30T20:55:00Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Joanderson Brito",
-        "numericOdds": 200
-      }
-    },
-    {
-      "timestamp": "2022-04-30T21:05:00Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": -250
-      },
-      "fighter2": {
-        "name": "Joanderson Brito",
-        "numericOdds": 200
+        "numericOdds": 210
       }
     }
   ]

@@ -1,12 +1,13 @@
 {
   "fightId": "weilizhang_vs_rosenamajunas_2021-11-07",
   "fightTitle": "Weili Zhang vs Rose Namajunas",
-  "startTime": "2021-11-06T13:55:00Z",
-  "endTime": "2021-11-06T16:45:00Z",
-  "dataPoints": 18,
+  "commenceTime": "2021-11-07T03:45:00Z",
+  "startTime": "2021-11-07T03:35:00Z",
+  "endTime": "2021-11-07T04:45:00Z",
+  "dataPoints": 8,
   "oddsHistory": [
     {
-      "timestamp": "2021-11-06T13:55:00Z",
+      "timestamp": "2021-11-07T03:35:00Z",
       "fighter1": {
         "name": "Rose Namajunas",
         "numericOdds": 100
@@ -17,7 +18,7 @@
       }
     },
     {
-      "timestamp": "2021-11-06T14:05:00Z",
+      "timestamp": "2021-11-07T03:45:00Z",
       "fighter1": {
         "name": "Rose Namajunas",
         "numericOdds": 100
@@ -28,7 +29,7 @@
       }
     },
     {
-      "timestamp": "2021-11-06T14:15:00Z",
+      "timestamp": "2021-11-07T03:55:00Z",
       "fighter1": {
         "name": "Rose Namajunas",
         "numericOdds": 100
@@ -39,7 +40,7 @@
       }
     },
     {
-      "timestamp": "2021-11-06T14:25:00Z",
+      "timestamp": "2021-11-07T04:05:00Z",
       "fighter1": {
         "name": "Rose Namajunas",
         "numericOdds": 100
@@ -50,157 +51,47 @@
       }
     },
     {
-      "timestamp": "2021-11-06T14:35:00Z",
+      "timestamp": "2021-11-07T04:15:00Z",
+      "fighter1": {
+        "name": "Rose Namajunas",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Weili Zhang",
+        "numericOdds": -175
+      }
+    },
+    {
+      "timestamp": "2021-11-07T04:25:00Z",
       "fighter1": {
         "name": "Rose Namajunas",
         "numericOdds": 100
       },
       "fighter2": {
         "name": "Weili Zhang",
-        "numericOdds": -120
+        "numericOdds": -135
       }
     },
     {
-      "timestamp": "2021-11-06T14:45:00Z",
+      "timestamp": "2021-11-07T04:35:00Z",
       "fighter1": {
         "name": "Rose Namajunas",
-        "numericOdds": 105
+        "numericOdds": 100
       },
       "fighter2": {
         "name": "Weili Zhang",
-        "numericOdds": -125
+        "numericOdds": -135
       }
     },
     {
-      "timestamp": "2021-11-06T14:55:00Z",
+      "timestamp": "2021-11-07T04:45:00Z",
       "fighter1": {
         "name": "Rose Namajunas",
-        "numericOdds": 105
+        "numericOdds": -333
       },
       "fighter2": {
         "name": "Weili Zhang",
-        "numericOdds": -125
-      }
-    },
-    {
-      "timestamp": "2021-11-06T15:05:00Z",
-      "fighter1": {
-        "name": "Rose Namajunas",
-        "numericOdds": 105
-      },
-      "fighter2": {
-        "name": "Weili Zhang",
-        "numericOdds": -125
-      }
-    },
-    {
-      "timestamp": "2021-11-06T15:15:00Z",
-      "fighter1": {
-        "name": "Rose Namajunas",
-        "numericOdds": 105
-      },
-      "fighter2": {
-        "name": "Weili Zhang",
-        "numericOdds": -125
-      }
-    },
-    {
-      "timestamp": "2021-11-06T15:25:00Z",
-      "fighter1": {
-        "name": "Rose Namajunas",
-        "numericOdds": 105
-      },
-      "fighter2": {
-        "name": "Weili Zhang",
-        "numericOdds": -125
-      }
-    },
-    {
-      "timestamp": "2021-11-06T15:35:00Z",
-      "fighter1": {
-        "name": "Rose Namajunas",
-        "numericOdds": 105
-      },
-      "fighter2": {
-        "name": "Weili Zhang",
-        "numericOdds": -125
-      }
-    },
-    {
-      "timestamp": "2021-11-06T15:45:00Z",
-      "fighter1": {
-        "name": "Rose Namajunas",
-        "numericOdds": 105
-      },
-      "fighter2": {
-        "name": "Weili Zhang",
-        "numericOdds": -125
-      }
-    },
-    {
-      "timestamp": "2021-11-06T15:55:00Z",
-      "fighter1": {
-        "name": "Rose Namajunas",
-        "numericOdds": 105
-      },
-      "fighter2": {
-        "name": "Weili Zhang",
-        "numericOdds": -125
-      }
-    },
-    {
-      "timestamp": "2021-11-06T16:05:00Z",
-      "fighter1": {
-        "name": "Rose Namajunas",
-        "numericOdds": 105
-      },
-      "fighter2": {
-        "name": "Weili Zhang",
-        "numericOdds": -125
-      }
-    },
-    {
-      "timestamp": "2021-11-06T16:15:00Z",
-      "fighter1": {
-        "name": "Rose Namajunas",
-        "numericOdds": 105
-      },
-      "fighter2": {
-        "name": "Weili Zhang",
-        "numericOdds": -125
-      }
-    },
-    {
-      "timestamp": "2021-11-06T16:25:00Z",
-      "fighter1": {
-        "name": "Rose Namajunas",
-        "numericOdds": 105
-      },
-      "fighter2": {
-        "name": "Weili Zhang",
-        "numericOdds": -125
-      }
-    },
-    {
-      "timestamp": "2021-11-06T16:35:00Z",
-      "fighter1": {
-        "name": "Rose Namajunas",
-        "numericOdds": 105
-      },
-      "fighter2": {
-        "name": "Weili Zhang",
-        "numericOdds": -125
-      }
-    },
-    {
-      "timestamp": "2021-11-06T16:45:00Z",
-      "fighter1": {
-        "name": "Rose Namajunas",
-        "numericOdds": 110
-      },
-      "fighter2": {
-        "name": "Weili Zhang",
-        "numericOdds": -130
+        "numericOdds": 230
       }
     }
   ]

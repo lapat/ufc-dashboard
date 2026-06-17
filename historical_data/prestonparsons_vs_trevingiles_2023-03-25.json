@@ -1,342 +1,13 @@
 {
   "fightId": "prestonparsons_vs_trevingiles_2023-03-25",
   "fightTitle": "Preston Parsons vs Trevin Giles",
-  "startTime": "2023-03-25T13:55:38Z",
-  "endTime": "2023-03-25T22:05:38Z",
-  "dataPoints": 34,
+  "commenceTime": "2023-03-25T21:45:00Z",
+  "startTime": "2023-03-25T21:35:38Z",
+  "endTime": "2023-03-25T22:10:39Z",
+  "dataPoints": 8,
   "oddsHistory": [
     {
-      "timestamp": "2023-03-25T13:55:38Z",
-      "fighter1": {
-        "name": "Preston Parsons",
-        "numericOdds": -105
-      },
-      "fighter2": {
-        "name": "Trevin Giles",
-        "numericOdds": -115
-      }
-    },
-    {
-      "timestamp": "2023-03-25T14:10:38Z",
-      "fighter1": {
-        "name": "Preston Parsons",
-        "numericOdds": -105
-      },
-      "fighter2": {
-        "name": "Trevin Giles",
-        "numericOdds": -115
-      }
-    },
-    {
-      "timestamp": "2023-03-25T14:25:38Z",
-      "fighter1": {
-        "name": "Preston Parsons",
-        "numericOdds": -105
-      },
-      "fighter2": {
-        "name": "Trevin Giles",
-        "numericOdds": -115
-      }
-    },
-    {
-      "timestamp": "2023-03-25T14:40:38Z",
-      "fighter1": {
-        "name": "Preston Parsons",
-        "numericOdds": -105
-      },
-      "fighter2": {
-        "name": "Trevin Giles",
-        "numericOdds": -115
-      }
-    },
-    {
-      "timestamp": "2023-03-25T14:55:38Z",
-      "fighter1": {
-        "name": "Preston Parsons",
-        "numericOdds": -105
-      },
-      "fighter2": {
-        "name": "Trevin Giles",
-        "numericOdds": -115
-      }
-    },
-    {
-      "timestamp": "2023-03-25T15:10:38Z",
-      "fighter1": {
-        "name": "Preston Parsons",
-        "numericOdds": -105
-      },
-      "fighter2": {
-        "name": "Trevin Giles",
-        "numericOdds": -115
-      }
-    },
-    {
-      "timestamp": "2023-03-25T15:25:38Z",
-      "fighter1": {
-        "name": "Preston Parsons",
-        "numericOdds": -105
-      },
-      "fighter2": {
-        "name": "Trevin Giles",
-        "numericOdds": -115
-      }
-    },
-    {
-      "timestamp": "2023-03-25T15:40:38Z",
-      "fighter1": {
-        "name": "Preston Parsons",
-        "numericOdds": -105
-      },
-      "fighter2": {
-        "name": "Trevin Giles",
-        "numericOdds": -115
-      }
-    },
-    {
-      "timestamp": "2023-03-25T15:55:38Z",
-      "fighter1": {
-        "name": "Preston Parsons",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Trevin Giles",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-03-25T16:10:38Z",
-      "fighter1": {
-        "name": "Preston Parsons",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Trevin Giles",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-03-25T16:25:38Z",
-      "fighter1": {
-        "name": "Preston Parsons",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Trevin Giles",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-03-25T16:40:38Z",
-      "fighter1": {
-        "name": "Preston Parsons",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Trevin Giles",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-03-25T16:55:38Z",
-      "fighter1": {
-        "name": "Preston Parsons",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Trevin Giles",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-03-25T17:10:38Z",
-      "fighter1": {
-        "name": "Preston Parsons",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Trevin Giles",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-03-25T17:25:38Z",
-      "fighter1": {
-        "name": "Preston Parsons",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Trevin Giles",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-03-25T17:40:38Z",
-      "fighter1": {
-        "name": "Preston Parsons",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Trevin Giles",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-03-25T17:55:38Z",
-      "fighter1": {
-        "name": "Preston Parsons",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Trevin Giles",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-03-25T18:10:38Z",
-      "fighter1": {
-        "name": "Preston Parsons",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Trevin Giles",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-03-25T18:25:38Z",
-      "fighter1": {
-        "name": "Preston Parsons",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Trevin Giles",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-03-25T18:40:38Z",
-      "fighter1": {
-        "name": "Preston Parsons",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Trevin Giles",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-03-25T18:55:38Z",
-      "fighter1": {
-        "name": "Preston Parsons",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Trevin Giles",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-03-25T19:10:38Z",
-      "fighter1": {
-        "name": "Preston Parsons",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Trevin Giles",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-03-25T19:25:38Z",
-      "fighter1": {
-        "name": "Preston Parsons",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Trevin Giles",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-03-25T19:40:38Z",
-      "fighter1": {
-        "name": "Preston Parsons",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Trevin Giles",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-03-25T19:55:38Z",
-      "fighter1": {
-        "name": "Preston Parsons",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Trevin Giles",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-03-25T20:10:38Z",
-      "fighter1": {
-        "name": "Preston Parsons",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Trevin Giles",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-03-25T20:25:38Z",
-      "fighter1": {
-        "name": "Preston Parsons",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Trevin Giles",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-03-25T20:40:38Z",
-      "fighter1": {
-        "name": "Preston Parsons",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Trevin Giles",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-03-25T20:55:38Z",
-      "fighter1": {
-        "name": "Preston Parsons",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Trevin Giles",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-03-25T21:10:38Z",
-      "fighter1": {
-        "name": "Preston Parsons",
-        "numericOdds": -110
-      },
-      "fighter2": {
-        "name": "Trevin Giles",
-        "numericOdds": -110
-      }
-    },
-    {
-      "timestamp": "2023-03-25T21:25:38Z",
+      "timestamp": "2023-03-25T21:35:38Z",
       "fighter1": {
         "name": "Preston Parsons",
         "numericOdds": -125
@@ -358,6 +29,28 @@
       }
     },
     {
+      "timestamp": "2023-03-25T21:45:38Z",
+      "fighter1": {
+        "name": "Preston Parsons",
+        "numericOdds": 120
+      },
+      "fighter2": {
+        "name": "Trevin Giles",
+        "numericOdds": -150
+      }
+    },
+    {
+      "timestamp": "2023-03-25T21:50:38Z",
+      "fighter1": {
+        "name": "Preston Parsons",
+        "numericOdds": -130
+      },
+      "fighter2": {
+        "name": "Trevin Giles",
+        "numericOdds": 100
+      }
+    },
+    {
       "timestamp": "2023-03-25T21:55:38Z",
       "fighter1": {
         "name": "Preston Parsons",
@@ -369,7 +62,29 @@
       }
     },
     {
+      "timestamp": "2023-03-25T22:00:38Z",
+      "fighter1": {
+        "name": "Preston Parsons",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Trevin Giles",
+        "numericOdds": -185
+      }
+    },
+    {
       "timestamp": "2023-03-25T22:05:38Z",
+      "fighter1": {
+        "name": "Preston Parsons",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Trevin Giles",
+        "numericOdds": -185
+      }
+    },
+    {
+      "timestamp": "2023-03-25T22:10:39Z",
       "fighter1": {
         "name": "Preston Parsons",
         "numericOdds": 150

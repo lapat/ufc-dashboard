@@ -1,195 +1,64 @@
 {
   "fightId": "leonedwards_vs_natediaz_2021-06-13",
   "fightTitle": "Leon Edwards vs Nate Diaz",
-  "startTime": "2021-06-12T13:55:00Z",
-  "endTime": "2021-06-12T16:35:00Z",
-  "dataPoints": 17,
+  "commenceTime": "2021-06-13T03:25:00Z",
+  "startTime": "2021-06-13T03:15:00Z",
+  "endTime": "2021-06-13T03:55:00Z",
+  "dataPoints": 5,
   "oddsHistory": [
     {
-      "timestamp": "2021-06-12T13:55:00Z",
+      "timestamp": "2021-06-13T03:15:00Z",
       "fighter1": {
         "name": "Leon Edwards",
-        "numericOdds": -556
+        "numericOdds": -500
       },
       "fighter2": {
         "name": "Nate Diaz",
-        "numericOdds": 385
+        "numericOdds": 355
       }
     },
     {
-      "timestamp": "2021-06-12T14:05:00Z",
+      "timestamp": "2021-06-13T03:25:00Z",
       "fighter1": {
         "name": "Leon Edwards",
-        "numericOdds": -556
+        "numericOdds": -833
       },
       "fighter2": {
         "name": "Nate Diaz",
-        "numericOdds": 385
+        "numericOdds": 500
       }
     },
     {
-      "timestamp": "2021-06-12T14:15:00Z",
+      "timestamp": "2021-06-13T03:35:00Z",
       "fighter1": {
         "name": "Leon Edwards",
-        "numericOdds": -556
+        "numericOdds": -5000
       },
       "fighter2": {
         "name": "Nate Diaz",
-        "numericOdds": 385
+        "numericOdds": 1300
       }
     },
     {
-      "timestamp": "2021-06-12T14:25:00Z",
+      "timestamp": "2021-06-13T03:45:00Z",
       "fighter1": {
         "name": "Leon Edwards",
-        "numericOdds": -556
+        "numericOdds": -10000
       },
       "fighter2": {
         "name": "Nate Diaz",
-        "numericOdds": 385
+        "numericOdds": 1500
       }
     },
     {
-      "timestamp": "2021-06-12T14:35:00Z",
+      "timestamp": "2021-06-13T03:55:00Z",
       "fighter1": {
         "name": "Leon Edwards",
-        "numericOdds": -556
+        "numericOdds": -10000
       },
       "fighter2": {
         "name": "Nate Diaz",
-        "numericOdds": 385
-      }
-    },
-    {
-      "timestamp": "2021-06-12T14:45:00Z",
-      "fighter1": {
-        "name": "Leon Edwards",
-        "numericOdds": -556
-      },
-      "fighter2": {
-        "name": "Nate Diaz",
-        "numericOdds": 385
-      }
-    },
-    {
-      "timestamp": "2021-06-12T14:55:00Z",
-      "fighter1": {
-        "name": "Leon Edwards",
-        "numericOdds": -556
-      },
-      "fighter2": {
-        "name": "Nate Diaz",
-        "numericOdds": 385
-      }
-    },
-    {
-      "timestamp": "2021-06-12T15:05:00Z",
-      "fighter1": {
-        "name": "Leon Edwards",
-        "numericOdds": -556
-      },
-      "fighter2": {
-        "name": "Nate Diaz",
-        "numericOdds": 385
-      }
-    },
-    {
-      "timestamp": "2021-06-12T15:15:00Z",
-      "fighter1": {
-        "name": "Leon Edwards",
-        "numericOdds": -556
-      },
-      "fighter2": {
-        "name": "Nate Diaz",
-        "numericOdds": 385
-      }
-    },
-    {
-      "timestamp": "2021-06-12T15:25:00Z",
-      "fighter1": {
-        "name": "Leon Edwards",
-        "numericOdds": -556
-      },
-      "fighter2": {
-        "name": "Nate Diaz",
-        "numericOdds": 385
-      }
-    },
-    {
-      "timestamp": "2021-06-12T15:35:00Z",
-      "fighter1": {
-        "name": "Leon Edwards",
-        "numericOdds": -556
-      },
-      "fighter2": {
-        "name": "Nate Diaz",
-        "numericOdds": 385
-      }
-    },
-    {
-      "timestamp": "2021-06-12T15:45:00Z",
-      "fighter1": {
-        "name": "Leon Edwards",
-        "numericOdds": -556
-      },
-      "fighter2": {
-        "name": "Nate Diaz",
-        "numericOdds": 385
-      }
-    },
-    {
-      "timestamp": "2021-06-12T15:55:00Z",
-      "fighter1": {
-        "name": "Leon Edwards",
-        "numericOdds": -556
-      },
-      "fighter2": {
-        "name": "Nate Diaz",
-        "numericOdds": 385
-      }
-    },
-    {
-      "timestamp": "2021-06-12T16:05:00Z",
-      "fighter1": {
-        "name": "Leon Edwards",
-        "numericOdds": -556
-      },
-      "fighter2": {
-        "name": "Nate Diaz",
-        "numericOdds": 385
-      }
-    },
-    {
-      "timestamp": "2021-06-12T16:15:00Z",
-      "fighter1": {
-        "name": "Leon Edwards",
-        "numericOdds": -556
-      },
-      "fighter2": {
-        "name": "Nate Diaz",
-        "numericOdds": 385
-      }
-    },
-    {
-      "timestamp": "2021-06-12T16:25:00Z",
-      "fighter1": {
-        "name": "Leon Edwards",
-        "numericOdds": -556
-      },
-      "fighter2": {
-        "name": "Nate Diaz",
-        "numericOdds": 385
-      }
-    },
-    {
-      "timestamp": "2021-06-12T16:35:00Z",
-      "fighter1": {
-        "name": "Leon Edwards",
-        "numericOdds": -556
-      },
-      "fighter2": {
-        "name": "Nate Diaz",
-        "numericOdds": 385
+        "numericOdds": 1500
       }
     }
   ]

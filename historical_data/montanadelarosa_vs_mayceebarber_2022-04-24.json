@@ -1,261 +1,31 @@
 {
   "fightId": "montanadelarosa_vs_mayceebarber_2022-04-24",
   "fightTitle": "Montana De La Rosa vs Maycee Barber",
-  "startTime": "2022-04-23T13:55:00Z",
-  "endTime": "2022-04-23T17:35:00Z",
-  "dataPoints": 23,
+  "commenceTime": "2022-04-24T02:15:00Z",
+  "startTime": "2022-04-24T02:05:00Z",
+  "endTime": "2022-04-24T02:15:00Z",
+  "dataPoints": 2,
   "oddsHistory": [
     {
-      "timestamp": "2022-04-23T13:55:00Z",
+      "timestamp": "2022-04-24T02:05:00Z",
       "fighter1": {
         "name": "Maycee Barber",
-        "numericOdds": -179
+        "numericOdds": -370
       },
       "fighter2": {
         "name": "Montana De La Rosa",
-        "numericOdds": 155
+        "numericOdds": 255
       }
     },
     {
-      "timestamp": "2022-04-23T14:05:00Z",
+      "timestamp": "2022-04-24T02:15:00Z",
       "fighter1": {
         "name": "Maycee Barber",
-        "numericOdds": -179
+        "numericOdds": -100000
       },
       "fighter2": {
         "name": "Montana De La Rosa",
-        "numericOdds": 155
-      }
-    },
-    {
-      "timestamp": "2022-04-23T14:15:00Z",
-      "fighter1": {
-        "name": "Maycee Barber",
-        "numericOdds": -179
-      },
-      "fighter2": {
-        "name": "Montana De La Rosa",
-        "numericOdds": 155
-      }
-    },
-    {
-      "timestamp": "2022-04-23T14:25:00Z",
-      "fighter1": {
-        "name": "Maycee Barber",
-        "numericOdds": -179
-      },
-      "fighter2": {
-        "name": "Montana De La Rosa",
-        "numericOdds": 155
-      }
-    },
-    {
-      "timestamp": "2022-04-23T14:35:00Z",
-      "fighter1": {
-        "name": "Maycee Barber",
-        "numericOdds": -179
-      },
-      "fighter2": {
-        "name": "Montana De La Rosa",
-        "numericOdds": 155
-      }
-    },
-    {
-      "timestamp": "2022-04-23T14:45:00Z",
-      "fighter1": {
-        "name": "Maycee Barber",
-        "numericOdds": -179
-      },
-      "fighter2": {
-        "name": "Montana De La Rosa",
-        "numericOdds": 155
-      }
-    },
-    {
-      "timestamp": "2022-04-23T14:55:00Z",
-      "fighter1": {
-        "name": "Maycee Barber",
-        "numericOdds": -179
-      },
-      "fighter2": {
-        "name": "Montana De La Rosa",
-        "numericOdds": 155
-      }
-    },
-    {
-      "timestamp": "2022-04-23T15:05:00Z",
-      "fighter1": {
-        "name": "Maycee Barber",
-        "numericOdds": -179
-      },
-      "fighter2": {
-        "name": "Montana De La Rosa",
-        "numericOdds": 155
-      }
-    },
-    {
-      "timestamp": "2022-04-23T15:15:00Z",
-      "fighter1": {
-        "name": "Maycee Barber",
-        "numericOdds": -179
-      },
-      "fighter2": {
-        "name": "Montana De La Rosa",
-        "numericOdds": 155
-      }
-    },
-    {
-      "timestamp": "2022-04-23T15:25:00Z",
-      "fighter1": {
-        "name": "Maycee Barber",
-        "numericOdds": -179
-      },
-      "fighter2": {
-        "name": "Montana De La Rosa",
-        "numericOdds": 155
-      }
-    },
-    {
-      "timestamp": "2022-04-23T15:35:00Z",
-      "fighter1": {
-        "name": "Maycee Barber",
-        "numericOdds": -179
-      },
-      "fighter2": {
-        "name": "Montana De La Rosa",
-        "numericOdds": 155
-      }
-    },
-    {
-      "timestamp": "2022-04-23T15:45:00Z",
-      "fighter1": {
-        "name": "Maycee Barber",
-        "numericOdds": -179
-      },
-      "fighter2": {
-        "name": "Montana De La Rosa",
-        "numericOdds": 155
-      }
-    },
-    {
-      "timestamp": "2022-04-23T15:55:00Z",
-      "fighter1": {
-        "name": "Maycee Barber",
-        "numericOdds": -179
-      },
-      "fighter2": {
-        "name": "Montana De La Rosa",
-        "numericOdds": 155
-      }
-    },
-    {
-      "timestamp": "2022-04-23T16:05:00Z",
-      "fighter1": {
-        "name": "Maycee Barber",
-        "numericOdds": -179
-      },
-      "fighter2": {
-        "name": "Montana De La Rosa",
-        "numericOdds": 155
-      }
-    },
-    {
-      "timestamp": "2022-04-23T16:15:00Z",
-      "fighter1": {
-        "name": "Maycee Barber",
-        "numericOdds": -179
-      },
-      "fighter2": {
-        "name": "Montana De La Rosa",
-        "numericOdds": 155
-      }
-    },
-    {
-      "timestamp": "2022-04-23T16:25:00Z",
-      "fighter1": {
-        "name": "Maycee Barber",
-        "numericOdds": -179
-      },
-      "fighter2": {
-        "name": "Montana De La Rosa",
-        "numericOdds": 155
-      }
-    },
-    {
-      "timestamp": "2022-04-23T16:35:00Z",
-      "fighter1": {
-        "name": "Maycee Barber",
-        "numericOdds": -179
-      },
-      "fighter2": {
-        "name": "Montana De La Rosa",
-        "numericOdds": 155
-      }
-    },
-    {
-      "timestamp": "2022-04-23T16:45:00Z",
-      "fighter1": {
-        "name": "Maycee Barber",
-        "numericOdds": -179
-      },
-      "fighter2": {
-        "name": "Montana De La Rosa",
-        "numericOdds": 155
-      }
-    },
-    {
-      "timestamp": "2022-04-23T16:55:00Z",
-      "fighter1": {
-        "name": "Maycee Barber",
-        "numericOdds": -179
-      },
-      "fighter2": {
-        "name": "Montana De La Rosa",
-        "numericOdds": 155
-      }
-    },
-    {
-      "timestamp": "2022-04-23T17:05:00Z",
-      "fighter1": {
-        "name": "Maycee Barber",
-        "numericOdds": -179
-      },
-      "fighter2": {
-        "name": "Montana De La Rosa",
-        "numericOdds": 155
-      }
-    },
-    {
-      "timestamp": "2022-04-23T17:15:00Z",
-      "fighter1": {
-        "name": "Maycee Barber",
-        "numericOdds": -179
-      },
-      "fighter2": {
-        "name": "Montana De La Rosa",
-        "numericOdds": 155
-      }
-    },
-    {
-      "timestamp": "2022-04-23T17:25:00Z",
-      "fighter1": {
-        "name": "Maycee Barber",
-        "numericOdds": -179
-      },
-      "fighter2": {
-        "name": "Montana De La Rosa",
-        "numericOdds": 155
-      }
-    },
-    {
-      "timestamp": "2022-04-23T17:35:00Z",
-      "fighter1": {
-        "name": "Maycee Barber",
-        "numericOdds": -179
-      },
-      "fighter2": {
-        "name": "Montana De La Rosa",
-        "numericOdds": 155
+        "numericOdds": 1200
       }
     }
   ]

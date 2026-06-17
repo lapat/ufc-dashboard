@@ -1,12 +1,35 @@
 {
   "fightId": "janblachowicz_vs_magomedankalaev_2022-12-11",
   "fightTitle": "Jan Blachowicz vs Magomed Ankalaev",
-  "startTime": "2022-12-10T13:55:39Z",
-  "endTime": "2022-12-10T21:45:40Z",
-  "dataPoints": 35,
+  "commenceTime": "2022-12-11T05:15:00Z",
+  "startTime": "2022-12-11T05:05:38Z",
+  "endTime": "2022-12-11T06:15:38Z",
+  "dataPoints": 15,
   "oddsHistory": [
     {
-      "timestamp": "2022-12-10T13:55:39Z",
+      "timestamp": "2022-12-11T05:05:38Z",
+      "fighter1": {
+        "name": "Jan Blachowicz",
+        "numericOdds": 290
+      },
+      "fighter2": {
+        "name": "Magomed Ankalaev",
+        "numericOdds": -350
+      }
+    },
+    {
+      "timestamp": "2022-12-11T05:10:38Z",
+      "fighter1": {
+        "name": "Jan Blachowicz",
+        "numericOdds": 290
+      },
+      "fighter2": {
+        "name": "Magomed Ankalaev",
+        "numericOdds": -350
+      }
+    },
+    {
+      "timestamp": "2022-12-11T05:15:38Z",
       "fighter1": {
         "name": "Jan Blachowicz",
         "numericOdds": 280
@@ -17,377 +40,135 @@
       }
     },
     {
-      "timestamp": "2022-12-10T14:10:39Z",
+      "timestamp": "2022-12-11T05:20:38Z",
       "fighter1": {
         "name": "Jan Blachowicz",
-        "numericOdds": 280
+        "numericOdds": 270
       },
       "fighter2": {
         "name": "Magomed Ankalaev",
-        "numericOdds": -340
+        "numericOdds": -325
       }
     },
     {
-      "timestamp": "2022-12-10T14:25:39Z",
+      "timestamp": "2022-12-11T05:25:38Z",
       "fighter1": {
         "name": "Jan Blachowicz",
-        "numericOdds": 280
+        "numericOdds": 275
       },
       "fighter2": {
         "name": "Magomed Ankalaev",
-        "numericOdds": -340
+        "numericOdds": -330
       }
     },
     {
-      "timestamp": "2022-12-10T14:40:38Z",
+      "timestamp": "2022-12-11T05:30:38Z",
       "fighter1": {
         "name": "Jan Blachowicz",
-        "numericOdds": 280
+        "numericOdds": 255
       },
       "fighter2": {
         "name": "Magomed Ankalaev",
-        "numericOdds": -340
+        "numericOdds": -305
       }
     },
     {
-      "timestamp": "2022-12-10T14:50:39Z",
+      "timestamp": "2022-12-11T05:35:38Z",
       "fighter1": {
         "name": "Jan Blachowicz",
-        "numericOdds": 280
+        "numericOdds": 260
       },
       "fighter2": {
         "name": "Magomed Ankalaev",
-        "numericOdds": -340
+        "numericOdds": -335
       }
     },
     {
-      "timestamp": "2022-12-10T15:05:39Z",
+      "timestamp": "2022-12-11T05:40:38Z",
       "fighter1": {
         "name": "Jan Blachowicz",
-        "numericOdds": 280
+        "numericOdds": 225
       },
       "fighter2": {
         "name": "Magomed Ankalaev",
-        "numericOdds": -340
+        "numericOdds": -285
       }
     },
     {
-      "timestamp": "2022-12-10T15:20:39Z",
+      "timestamp": "2022-12-11T05:45:38Z",
       "fighter1": {
         "name": "Jan Blachowicz",
-        "numericOdds": 280
+        "numericOdds": 175
       },
       "fighter2": {
         "name": "Magomed Ankalaev",
-        "numericOdds": -340
+        "numericOdds": -215
       }
     },
     {
-      "timestamp": "2022-12-10T15:35:39Z",
+      "timestamp": "2022-12-11T05:50:38Z",
       "fighter1": {
         "name": "Jan Blachowicz",
-        "numericOdds": 280
+        "numericOdds": -625
       },
       "fighter2": {
         "name": "Magomed Ankalaev",
-        "numericOdds": -340
+        "numericOdds": 440
       }
     },
     {
-      "timestamp": "2022-12-10T15:50:39Z",
+      "timestamp": "2022-12-11T05:55:38Z",
       "fighter1": {
         "name": "Jan Blachowicz",
-        "numericOdds": 280
+        "numericOdds": -185
       },
       "fighter2": {
         "name": "Magomed Ankalaev",
-        "numericOdds": -340
+        "numericOdds": 150
       }
     },
     {
-      "timestamp": "2022-12-10T16:05:38Z",
+      "timestamp": "2022-12-11T06:00:38Z",
       "fighter1": {
         "name": "Jan Blachowicz",
-        "numericOdds": 280
+        "numericOdds": 300
       },
       "fighter2": {
         "name": "Magomed Ankalaev",
-        "numericOdds": -340
+        "numericOdds": -400
       }
     },
     {
-      "timestamp": "2022-12-10T16:15:39Z",
+      "timestamp": "2022-12-11T06:05:38Z",
       "fighter1": {
         "name": "Jan Blachowicz",
-        "numericOdds": 280
+        "numericOdds": 800
       },
       "fighter2": {
         "name": "Magomed Ankalaev",
-        "numericOdds": -340
+        "numericOdds": -1450
       }
     },
     {
-      "timestamp": "2022-12-10T16:30:39Z",
+      "timestamp": "2022-12-11T06:10:38Z",
       "fighter1": {
         "name": "Jan Blachowicz",
-        "numericOdds": 280
+        "numericOdds": 800
       },
       "fighter2": {
         "name": "Magomed Ankalaev",
-        "numericOdds": -340
+        "numericOdds": -1450
       }
     },
     {
-      "timestamp": "2022-12-10T16:45:38Z",
+      "timestamp": "2022-12-11T06:15:38Z",
       "fighter1": {
         "name": "Jan Blachowicz",
-        "numericOdds": 280
+        "numericOdds": 800
       },
       "fighter2": {
         "name": "Magomed Ankalaev",
-        "numericOdds": -340
-      }
-    },
-    {
-      "timestamp": "2022-12-10T16:55:39Z",
-      "fighter1": {
-        "name": "Jan Blachowicz",
-        "numericOdds": 280
-      },
-      "fighter2": {
-        "name": "Magomed Ankalaev",
-        "numericOdds": -340
-      }
-    },
-    {
-      "timestamp": "2022-12-10T17:10:39Z",
-      "fighter1": {
-        "name": "Jan Blachowicz",
-        "numericOdds": 280
-      },
-      "fighter2": {
-        "name": "Magomed Ankalaev",
-        "numericOdds": -340
-      }
-    },
-    {
-      "timestamp": "2022-12-10T17:25:39Z",
-      "fighter1": {
-        "name": "Jan Blachowicz",
-        "numericOdds": 280
-      },
-      "fighter2": {
-        "name": "Magomed Ankalaev",
-        "numericOdds": -340
-      }
-    },
-    {
-      "timestamp": "2022-12-10T17:40:38Z",
-      "fighter1": {
-        "name": "Jan Blachowicz",
-        "numericOdds": 280
-      },
-      "fighter2": {
-        "name": "Magomed Ankalaev",
-        "numericOdds": -340
-      }
-    },
-    {
-      "timestamp": "2022-12-10T17:55:38Z",
-      "fighter1": {
-        "name": "Jan Blachowicz",
-        "numericOdds": 280
-      },
-      "fighter2": {
-        "name": "Magomed Ankalaev",
-        "numericOdds": -340
-      }
-    },
-    {
-      "timestamp": "2022-12-10T18:05:40Z",
-      "fighter1": {
-        "name": "Jan Blachowicz",
-        "numericOdds": 280
-      },
-      "fighter2": {
-        "name": "Magomed Ankalaev",
-        "numericOdds": -340
-      }
-    },
-    {
-      "timestamp": "2022-12-10T18:20:39Z",
-      "fighter1": {
-        "name": "Jan Blachowicz",
-        "numericOdds": 280
-      },
-      "fighter2": {
-        "name": "Magomed Ankalaev",
-        "numericOdds": -340
-      }
-    },
-    {
-      "timestamp": "2022-12-10T18:35:39Z",
-      "fighter1": {
-        "name": "Jan Blachowicz",
-        "numericOdds": 280
-      },
-      "fighter2": {
-        "name": "Magomed Ankalaev",
-        "numericOdds": -340
-      }
-    },
-    {
-      "timestamp": "2022-12-10T18:50:39Z",
-      "fighter1": {
-        "name": "Jan Blachowicz",
-        "numericOdds": 280
-      },
-      "fighter2": {
-        "name": "Magomed Ankalaev",
-        "numericOdds": -340
-      }
-    },
-    {
-      "timestamp": "2022-12-10T19:05:38Z",
-      "fighter1": {
-        "name": "Jan Blachowicz",
-        "numericOdds": 280
-      },
-      "fighter2": {
-        "name": "Magomed Ankalaev",
-        "numericOdds": -340
-      }
-    },
-    {
-      "timestamp": "2022-12-10T19:20:38Z",
-      "fighter1": {
-        "name": "Jan Blachowicz",
-        "numericOdds": 280
-      },
-      "fighter2": {
-        "name": "Magomed Ankalaev",
-        "numericOdds": -340
-      }
-    },
-    {
-      "timestamp": "2022-12-10T19:30:39Z",
-      "fighter1": {
-        "name": "Jan Blachowicz",
-        "numericOdds": 280
-      },
-      "fighter2": {
-        "name": "Magomed Ankalaev",
-        "numericOdds": -340
-      }
-    },
-    {
-      "timestamp": "2022-12-10T19:45:38Z",
-      "fighter1": {
-        "name": "Jan Blachowicz",
-        "numericOdds": 285
-      },
-      "fighter2": {
-        "name": "Magomed Ankalaev",
-        "numericOdds": -345
-      }
-    },
-    {
-      "timestamp": "2022-12-10T19:55:39Z",
-      "fighter1": {
-        "name": "Jan Blachowicz",
-        "numericOdds": 285
-      },
-      "fighter2": {
-        "name": "Magomed Ankalaev",
-        "numericOdds": -345
-      }
-    },
-    {
-      "timestamp": "2022-12-10T20:10:39Z",
-      "fighter1": {
-        "name": "Jan Blachowicz",
-        "numericOdds": 285
-      },
-      "fighter2": {
-        "name": "Magomed Ankalaev",
-        "numericOdds": -345
-      }
-    },
-    {
-      "timestamp": "2022-12-10T20:25:39Z",
-      "fighter1": {
-        "name": "Jan Blachowicz",
-        "numericOdds": 285
-      },
-      "fighter2": {
-        "name": "Magomed Ankalaev",
-        "numericOdds": -345
-      }
-    },
-    {
-      "timestamp": "2022-12-10T20:40:38Z",
-      "fighter1": {
-        "name": "Jan Blachowicz",
-        "numericOdds": 285
-      },
-      "fighter2": {
-        "name": "Magomed Ankalaev",
-        "numericOdds": -345
-      }
-    },
-    {
-      "timestamp": "2022-12-10T20:55:38Z",
-      "fighter1": {
-        "name": "Jan Blachowicz",
-        "numericOdds": 285
-      },
-      "fighter2": {
-        "name": "Magomed Ankalaev",
-        "numericOdds": -345
-      }
-    },
-    {
-      "timestamp": "2022-12-10T21:05:39Z",
-      "fighter1": {
-        "name": "Jan Blachowicz",
-        "numericOdds": 285
-      },
-      "fighter2": {
-        "name": "Magomed Ankalaev",
-        "numericOdds": -345
-      }
-    },
-    {
-      "timestamp": "2022-12-10T21:20:39Z",
-      "fighter1": {
-        "name": "Jan Blachowicz",
-        "numericOdds": 285
-      },
-      "fighter2": {
-        "name": "Magomed Ankalaev",
-        "numericOdds": -345
-      }
-    },
-    {
-      "timestamp": "2022-12-10T21:35:38Z",
-      "fighter1": {
-        "name": "Jan Blachowicz",
-        "numericOdds": 285
-      },
-      "fighter2": {
-        "name": "Magomed Ankalaev",
-        "numericOdds": -345
-      }
-    },
-    {
-      "timestamp": "2022-12-10T21:45:40Z",
-      "fighter1": {
-        "name": "Jan Blachowicz",
-        "numericOdds": 285
-      },
-      "fighter2": {
-        "name": "Magomed Ankalaev",
-        "numericOdds": -345
+        "numericOdds": -1450
       }
     }
   ]

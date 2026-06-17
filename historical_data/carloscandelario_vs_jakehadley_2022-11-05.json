@@ -1,987 +1,108 @@
 {
   "fightId": "carloscandelario_vs_jakehadley_2022-11-05",
   "fightTitle": "Carlos Candelario vs Jake Hadley",
-  "startTime": "2022-11-04T13:55:39Z",
-  "endTime": "2022-11-05T09:45:39Z",
-  "dataPoints": 89,
+  "commenceTime": "2022-11-05T20:35:00Z",
+  "startTime": "2022-11-05T20:25:39Z",
+  "endTime": "2022-11-05T21:05:38Z",
+  "dataPoints": 9,
   "oddsHistory": [
     {
-      "timestamp": "2022-11-04T13:55:39Z",
+      "timestamp": "2022-11-05T20:25:39Z",
+      "fighter1": {
+        "name": "Carlos Candelario",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Jake Hadley",
+        "numericOdds": -265
+      }
+    },
+    {
+      "timestamp": "2022-11-05T20:30:39Z",
+      "fighter1": {
+        "name": "Carlos Candelario",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Jake Hadley",
+        "numericOdds": -265
+      }
+    },
+    {
+      "timestamp": "2022-11-05T20:35:39Z",
+      "fighter1": {
+        "name": "Carlos Candelario",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Jake Hadley",
+        "numericOdds": -265
+      }
+    },
+    {
+      "timestamp": "2022-11-05T20:40:39Z",
+      "fighter1": {
+        "name": "Carlos Candelario",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Jake Hadley",
+        "numericOdds": -265
+      }
+    },
+    {
+      "timestamp": "2022-11-05T20:45:39Z",
       "fighter1": {
         "name": "Carlos Candelario",
         "numericOdds": 215
       },
       "fighter2": {
         "name": "Jake Hadley",
-        "numericOdds": -255
+        "numericOdds": -270
       }
     },
     {
-      "timestamp": "2022-11-04T14:10:39Z",
+      "timestamp": "2022-11-05T20:50:39Z",
       "fighter1": {
         "name": "Carlos Candelario",
-        "numericOdds": 215
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Jake Hadley",
-        "numericOdds": -255
+        "numericOdds": -210
       }
     },
     {
-      "timestamp": "2022-11-04T14:25:39Z",
+      "timestamp": "2022-11-05T20:55:39Z",
       "fighter1": {
         "name": "Carlos Candelario",
-        "numericOdds": 215
+        "numericOdds": 750
       },
       "fighter2": {
         "name": "Jake Hadley",
-        "numericOdds": -255
+        "numericOdds": -1300
       }
     },
     {
-      "timestamp": "2022-11-04T14:40:39Z",
+      "timestamp": "2022-11-05T21:00:39Z",
       "fighter1": {
         "name": "Carlos Candelario",
-        "numericOdds": 215
+        "numericOdds": 750
       },
       "fighter2": {
         "name": "Jake Hadley",
-        "numericOdds": -255
+        "numericOdds": -1300
       }
     },
     {
-      "timestamp": "2022-11-04T14:55:39Z",
+      "timestamp": "2022-11-05T21:05:38Z",
       "fighter1": {
         "name": "Carlos Candelario",
-        "numericOdds": 215
+        "numericOdds": 750
       },
       "fighter2": {
         "name": "Jake Hadley",
-        "numericOdds": -255
-      }
-    },
-    {
-      "timestamp": "2022-11-04T15:10:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 215
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -255
-      }
-    },
-    {
-      "timestamp": "2022-11-04T15:25:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 215
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -255
-      }
-    },
-    {
-      "timestamp": "2022-11-04T15:35:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 215
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -255
-      }
-    },
-    {
-      "timestamp": "2022-11-04T15:50:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 215
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -255
-      }
-    },
-    {
-      "timestamp": "2022-11-04T16:05:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 215
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -255
-      }
-    },
-    {
-      "timestamp": "2022-11-04T16:20:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 215
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -255
-      }
-    },
-    {
-      "timestamp": "2022-11-04T16:35:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 215
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -255
-      }
-    },
-    {
-      "timestamp": "2022-11-04T16:50:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 215
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -255
-      }
-    },
-    {
-      "timestamp": "2022-11-04T17:00:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 215
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -255
-      }
-    },
-    {
-      "timestamp": "2022-11-04T17:10:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 215
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -255
-      }
-    },
-    {
-      "timestamp": "2022-11-04T17:25:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 215
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -255
-      }
-    },
-    {
-      "timestamp": "2022-11-04T17:35:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 215
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -255
-      }
-    },
-    {
-      "timestamp": "2022-11-04T17:50:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 215
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -255
-      }
-    },
-    {
-      "timestamp": "2022-11-04T18:00:40Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 215
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -255
-      }
-    },
-    {
-      "timestamp": "2022-11-04T18:15:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 215
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -255
-      }
-    },
-    {
-      "timestamp": "2022-11-04T18:25:40Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 215
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -255
-      }
-    },
-    {
-      "timestamp": "2022-11-04T18:40:40Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 215
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -255
-      }
-    },
-    {
-      "timestamp": "2022-11-04T18:55:40Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 220
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -260
-      }
-    },
-    {
-      "timestamp": "2022-11-04T19:10:40Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 220
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -260
-      }
-    },
-    {
-      "timestamp": "2022-11-04T19:25:40Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-04T19:35:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-04T19:45:40Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-04T20:00:40Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-04T20:15:40Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-04T20:30:40Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-04T20:45:40Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-04T21:00:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-04T21:10:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-04T21:25:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-04T21:35:41Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-04T21:50:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-04T22:05:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-04T22:15:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-04T22:25:40Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-04T22:40:40Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-04T22:55:40Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-04T23:10:40Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-04T23:25:40Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-04T23:40:40Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-04T23:55:40Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T00:10:40Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T00:25:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T00:35:40Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T00:50:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T01:00:40Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T01:15:40Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T01:30:40Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T01:45:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T02:00:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T02:10:40Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T02:25:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T02:40:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T02:50:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T03:05:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T03:20:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T03:35:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T03:50:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T04:05:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T04:15:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T04:25:40Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T04:40:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T04:55:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T05:05:40Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T05:20:40Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T05:35:40Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T05:50:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T06:00:40Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T06:15:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T06:25:40Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T06:40:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T06:55:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T07:10:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T07:20:40Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T07:35:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T07:50:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T08:00:40Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T08:15:40Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T08:30:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T08:45:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T08:55:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T09:05:40Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T09:20:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T09:35:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2022-11-05T09:45:39Z",
-      "fighter1": {
-        "name": "Carlos Candelario",
-        "numericOdds": 225
-      },
-      "fighter2": {
-        "name": "Jake Hadley",
-        "numericOdds": -265
+        "numericOdds": -1300
       }
     }
   ]

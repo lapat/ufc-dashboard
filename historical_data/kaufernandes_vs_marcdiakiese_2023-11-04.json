@@ -1,397 +1,13 @@
 {
   "fightId": "kaufernandes_vs_marcdiakiese_2023-11-04",
   "fightTitle": "Kauê Fernandes vs Marc Diakiese",
-  "startTime": "2023-11-04T13:55:42Z",
-  "endTime": "2023-11-04T22:35:42Z",
-  "dataPoints": 39,
+  "commenceTime": "2023-11-04T22:15:00Z",
+  "startTime": "2023-11-04T22:05:41Z",
+  "endTime": "2023-11-04T22:40:41Z",
+  "dataPoints": 8,
   "oddsHistory": [
     {
-      "timestamp": "2023-11-04T13:55:42Z",
-      "fighter1": {
-        "name": "Kauê Fernandes",
-        "numericOdds": 164
-      },
-      "fighter2": {
-        "name": "Marc Diakiese",
-        "numericOdds": -198
-      }
-    },
-    {
-      "timestamp": "2023-11-04T14:10:42Z",
-      "fighter1": {
-        "name": "Kauê Fernandes",
-        "numericOdds": 164
-      },
-      "fighter2": {
-        "name": "Marc Diakiese",
-        "numericOdds": -198
-      }
-    },
-    {
-      "timestamp": "2023-11-04T14:20:43Z",
-      "fighter1": {
-        "name": "Kauê Fernandes",
-        "numericOdds": 164
-      },
-      "fighter2": {
-        "name": "Marc Diakiese",
-        "numericOdds": -198
-      }
-    },
-    {
-      "timestamp": "2023-11-04T14:35:41Z",
-      "fighter1": {
-        "name": "Kauê Fernandes",
-        "numericOdds": 164
-      },
-      "fighter2": {
-        "name": "Marc Diakiese",
-        "numericOdds": -198
-      }
-    },
-    {
-      "timestamp": "2023-11-04T14:45:43Z",
-      "fighter1": {
-        "name": "Kauê Fernandes",
-        "numericOdds": 164
-      },
-      "fighter2": {
-        "name": "Marc Diakiese",
-        "numericOdds": -198
-      }
-    },
-    {
-      "timestamp": "2023-11-04T15:00:43Z",
-      "fighter1": {
-        "name": "Kauê Fernandes",
-        "numericOdds": 164
-      },
-      "fighter2": {
-        "name": "Marc Diakiese",
-        "numericOdds": -198
-      }
-    },
-    {
-      "timestamp": "2023-11-04T15:15:42Z",
-      "fighter1": {
-        "name": "Kauê Fernandes",
-        "numericOdds": 164
-      },
-      "fighter2": {
-        "name": "Marc Diakiese",
-        "numericOdds": -198
-      }
-    },
-    {
-      "timestamp": "2023-11-04T15:25:44Z",
-      "fighter1": {
-        "name": "Kauê Fernandes",
-        "numericOdds": 164
-      },
-      "fighter2": {
-        "name": "Marc Diakiese",
-        "numericOdds": -198
-      }
-    },
-    {
-      "timestamp": "2023-11-04T15:40:42Z",
-      "fighter1": {
-        "name": "Kauê Fernandes",
-        "numericOdds": 164
-      },
-      "fighter2": {
-        "name": "Marc Diakiese",
-        "numericOdds": -198
-      }
-    },
-    {
-      "timestamp": "2023-11-04T15:55:42Z",
-      "fighter1": {
-        "name": "Kauê Fernandes",
-        "numericOdds": 164
-      },
-      "fighter2": {
-        "name": "Marc Diakiese",
-        "numericOdds": -198
-      }
-    },
-    {
-      "timestamp": "2023-11-04T16:10:42Z",
-      "fighter1": {
-        "name": "Kauê Fernandes",
-        "numericOdds": 164
-      },
-      "fighter2": {
-        "name": "Marc Diakiese",
-        "numericOdds": -198
-      }
-    },
-    {
-      "timestamp": "2023-11-04T16:25:42Z",
-      "fighter1": {
-        "name": "Kauê Fernandes",
-        "numericOdds": 164
-      },
-      "fighter2": {
-        "name": "Marc Diakiese",
-        "numericOdds": -198
-      }
-    },
-    {
-      "timestamp": "2023-11-04T16:40:42Z",
-      "fighter1": {
-        "name": "Kauê Fernandes",
-        "numericOdds": 164
-      },
-      "fighter2": {
-        "name": "Marc Diakiese",
-        "numericOdds": -198
-      }
-    },
-    {
-      "timestamp": "2023-11-04T16:55:42Z",
-      "fighter1": {
-        "name": "Kauê Fernandes",
-        "numericOdds": 164
-      },
-      "fighter2": {
-        "name": "Marc Diakiese",
-        "numericOdds": -198
-      }
-    },
-    {
-      "timestamp": "2023-11-04T17:10:42Z",
-      "fighter1": {
-        "name": "Kauê Fernandes",
-        "numericOdds": 164
-      },
-      "fighter2": {
-        "name": "Marc Diakiese",
-        "numericOdds": -198
-      }
-    },
-    {
-      "timestamp": "2023-11-04T17:25:42Z",
-      "fighter1": {
-        "name": "Kauê Fernandes",
-        "numericOdds": 164
-      },
-      "fighter2": {
-        "name": "Marc Diakiese",
-        "numericOdds": -198
-      }
-    },
-    {
-      "timestamp": "2023-11-04T17:35:41Z",
-      "fighter1": {
-        "name": "Kauê Fernandes",
-        "numericOdds": 164
-      },
-      "fighter2": {
-        "name": "Marc Diakiese",
-        "numericOdds": -205
-      }
-    },
-    {
-      "timestamp": "2023-11-04T17:50:41Z",
-      "fighter1": {
-        "name": "Kauê Fernandes",
-        "numericOdds": 164
-      },
-      "fighter2": {
-        "name": "Marc Diakiese",
-        "numericOdds": -198
-      }
-    },
-    {
-      "timestamp": "2023-11-04T18:00:43Z",
-      "fighter1": {
-        "name": "Kauê Fernandes",
-        "numericOdds": 164
-      },
-      "fighter2": {
-        "name": "Marc Diakiese",
-        "numericOdds": -198
-      }
-    },
-    {
-      "timestamp": "2023-11-04T18:15:42Z",
-      "fighter1": {
-        "name": "Kauê Fernandes",
-        "numericOdds": 164
-      },
-      "fighter2": {
-        "name": "Marc Diakiese",
-        "numericOdds": -198
-      }
-    },
-    {
-      "timestamp": "2023-11-04T18:30:42Z",
-      "fighter1": {
-        "name": "Kauê Fernandes",
-        "numericOdds": 164
-      },
-      "fighter2": {
-        "name": "Marc Diakiese",
-        "numericOdds": -198
-      }
-    },
-    {
-      "timestamp": "2023-11-04T18:45:42Z",
-      "fighter1": {
-        "name": "Kauê Fernandes",
-        "numericOdds": 164
-      },
-      "fighter2": {
-        "name": "Marc Diakiese",
-        "numericOdds": -198
-      }
-    },
-    {
-      "timestamp": "2023-11-04T19:00:42Z",
-      "fighter1": {
-        "name": "Kauê Fernandes",
-        "numericOdds": 164
-      },
-      "fighter2": {
-        "name": "Marc Diakiese",
-        "numericOdds": -198
-      }
-    },
-    {
-      "timestamp": "2023-11-04T19:15:41Z",
-      "fighter1": {
-        "name": "Kauê Fernandes",
-        "numericOdds": 164
-      },
-      "fighter2": {
-        "name": "Marc Diakiese",
-        "numericOdds": -198
-      }
-    },
-    {
-      "timestamp": "2023-11-04T19:30:41Z",
-      "fighter1": {
-        "name": "Kauê Fernandes",
-        "numericOdds": 164
-      },
-      "fighter2": {
-        "name": "Marc Diakiese",
-        "numericOdds": -198
-      }
-    },
-    {
-      "timestamp": "2023-11-04T19:45:41Z",
-      "fighter1": {
-        "name": "Kauê Fernandes",
-        "numericOdds": 164
-      },
-      "fighter2": {
-        "name": "Marc Diakiese",
-        "numericOdds": -198
-      }
-    },
-    {
-      "timestamp": "2023-11-04T20:00:41Z",
-      "fighter1": {
-        "name": "Kauê Fernandes",
-        "numericOdds": 164
-      },
-      "fighter2": {
-        "name": "Marc Diakiese",
-        "numericOdds": -198
-      }
-    },
-    {
-      "timestamp": "2023-11-04T20:15:41Z",
-      "fighter1": {
-        "name": "Kauê Fernandes",
-        "numericOdds": 164
-      },
-      "fighter2": {
-        "name": "Marc Diakiese",
-        "numericOdds": -198
-      }
-    },
-    {
-      "timestamp": "2023-11-04T20:30:41Z",
-      "fighter1": {
-        "name": "Kauê Fernandes",
-        "numericOdds": 164
-      },
-      "fighter2": {
-        "name": "Marc Diakiese",
-        "numericOdds": -198
-      }
-    },
-    {
-      "timestamp": "2023-11-04T20:40:40Z",
-      "fighter1": {
-        "name": "Kauê Fernandes",
-        "numericOdds": 164
-      },
-      "fighter2": {
-        "name": "Marc Diakiese",
-        "numericOdds": -205
-      }
-    },
-    {
-      "timestamp": "2023-11-04T20:50:40Z",
-      "fighter1": {
-        "name": "Kauê Fernandes",
-        "numericOdds": 170
-      },
-      "fighter2": {
-        "name": "Marc Diakiese",
-        "numericOdds": -205
-      }
-    },
-    {
-      "timestamp": "2023-11-04T21:00:41Z",
-      "fighter1": {
-        "name": "Kauê Fernandes",
-        "numericOdds": 170
-      },
-      "fighter2": {
-        "name": "Marc Diakiese",
-        "numericOdds": -205
-      }
-    },
-    {
-      "timestamp": "2023-11-04T21:15:41Z",
-      "fighter1": {
-        "name": "Kauê Fernandes",
-        "numericOdds": 170
-      },
-      "fighter2": {
-        "name": "Marc Diakiese",
-        "numericOdds": -205
-      }
-    },
-    {
-      "timestamp": "2023-11-04T21:30:41Z",
-      "fighter1": {
-        "name": "Kauê Fernandes",
-        "numericOdds": 170
-      },
-      "fighter2": {
-        "name": "Marc Diakiese",
-        "numericOdds": -205
-      }
-    },
-    {
-      "timestamp": "2023-11-04T21:40:41Z",
-      "fighter1": {
-        "name": "Kauê Fernandes",
-        "numericOdds": 170
-      },
-      "fighter2": {
-        "name": "Marc Diakiese",
-        "numericOdds": -205
-      }
-    },
-    {
-      "timestamp": "2023-11-04T21:55:41Z",
+      "timestamp": "2023-11-04T22:05:41Z",
       "fighter1": {
         "name": "Kauê Fernandes",
         "numericOdds": 170
@@ -413,6 +29,17 @@
       }
     },
     {
+      "timestamp": "2023-11-04T22:20:42Z",
+      "fighter1": {
+        "name": "Kauê Fernandes",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Marc Diakiese",
+        "numericOdds": -205
+      }
+    },
+    {
       "timestamp": "2023-11-04T22:20:47Z",
       "fighter1": {
         "name": "Kauê Fernandes",
@@ -424,6 +51,28 @@
       }
     },
     {
+      "timestamp": "2023-11-04T22:25:42Z",
+      "fighter1": {
+        "name": "Kauê Fernandes",
+        "numericOdds": 114
+      },
+      "fighter2": {
+        "name": "Marc Diakiese",
+        "numericOdds": -145
+      }
+    },
+    {
+      "timestamp": "2023-11-04T22:30:41Z",
+      "fighter1": {
+        "name": "Kauê Fernandes",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Marc Diakiese",
+        "numericOdds": -210
+      }
+    },
+    {
       "timestamp": "2023-11-04T22:35:42Z",
       "fighter1": {
         "name": "Kauê Fernandes",
@@ -432,6 +81,17 @@
       "fighter2": {
         "name": "Marc Diakiese",
         "numericOdds": -345
+      }
+    },
+    {
+      "timestamp": "2023-11-04T22:40:41Z",
+      "fighter1": {
+        "name": "Kauê Fernandes",
+        "numericOdds": 1500
+      },
+      "fighter2": {
+        "name": "Marc Diakiese",
+        "numericOdds": -4000
       }
     }
   ]

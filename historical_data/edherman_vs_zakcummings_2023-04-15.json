@@ -1,283 +1,75 @@
 {
   "fightId": "edherman_vs_zakcummings_2023-04-15",
   "fightTitle": "Ed Herman vs Zak Cummings",
-  "startTime": "2023-04-15T13:55:39Z",
-  "endTime": "2023-04-15T19:30:39Z",
-  "dataPoints": 25,
+  "commenceTime": "2023-04-15T23:40:00Z",
+  "startTime": "2023-04-15T23:30:39Z",
+  "endTime": "2023-04-15T23:55:39Z",
+  "dataPoints": 6,
   "oddsHistory": [
     {
-      "timestamp": "2023-04-15T13:55:39Z",
+      "timestamp": "2023-04-15T23:30:39Z",
       "fighter1": {
         "name": "Ed Herman",
-        "numericOdds": 190
+        "numericOdds": 170
       },
       "fighter2": {
         "name": "Zak Cummings",
-        "numericOdds": -225
+        "numericOdds": -200
       }
     },
     {
-      "timestamp": "2023-04-15T14:05:40Z",
+      "timestamp": "2023-04-15T23:35:38Z",
       "fighter1": {
         "name": "Ed Herman",
-        "numericOdds": 190
+        "numericOdds": 150
       },
       "fighter2": {
         "name": "Zak Cummings",
-        "numericOdds": -225
+        "numericOdds": -185
       }
     },
     {
-      "timestamp": "2023-04-15T14:20:39Z",
+      "timestamp": "2023-04-15T23:40:39Z",
       "fighter1": {
         "name": "Ed Herman",
-        "numericOdds": 190
+        "numericOdds": 500
       },
       "fighter2": {
         "name": "Zak Cummings",
-        "numericOdds": -225
+        "numericOdds": -750
       }
     },
     {
-      "timestamp": "2023-04-15T14:30:39Z",
+      "timestamp": "2023-04-15T23:45:39Z",
       "fighter1": {
         "name": "Ed Herman",
-        "numericOdds": 190
+        "numericOdds": 800
       },
       "fighter2": {
         "name": "Zak Cummings",
-        "numericOdds": -225
+        "numericOdds": -1450
       }
     },
     {
-      "timestamp": "2023-04-15T14:45:39Z",
+      "timestamp": "2023-04-15T23:50:39Z",
       "fighter1": {
         "name": "Ed Herman",
-        "numericOdds": 190
+        "numericOdds": 1500
       },
       "fighter2": {
         "name": "Zak Cummings",
-        "numericOdds": -225
+        "numericOdds": -6000
       }
     },
     {
-      "timestamp": "2023-04-15T14:55:39Z",
+      "timestamp": "2023-04-15T23:55:39Z",
       "fighter1": {
         "name": "Ed Herman",
-        "numericOdds": 190
+        "numericOdds": 2000
       },
       "fighter2": {
         "name": "Zak Cummings",
-        "numericOdds": -225
-      }
-    },
-    {
-      "timestamp": "2023-04-15T15:10:39Z",
-      "fighter1": {
-        "name": "Ed Herman",
-        "numericOdds": 190
-      },
-      "fighter2": {
-        "name": "Zak Cummings",
-        "numericOdds": -225
-      }
-    },
-    {
-      "timestamp": "2023-04-15T15:25:39Z",
-      "fighter1": {
-        "name": "Ed Herman",
-        "numericOdds": 190
-      },
-      "fighter2": {
-        "name": "Zak Cummings",
-        "numericOdds": -225
-      }
-    },
-    {
-      "timestamp": "2023-04-15T15:40:39Z",
-      "fighter1": {
-        "name": "Ed Herman",
-        "numericOdds": 190
-      },
-      "fighter2": {
-        "name": "Zak Cummings",
-        "numericOdds": -225
-      }
-    },
-    {
-      "timestamp": "2023-04-15T15:55:39Z",
-      "fighter1": {
-        "name": "Ed Herman",
-        "numericOdds": 190
-      },
-      "fighter2": {
-        "name": "Zak Cummings",
-        "numericOdds": -225
-      }
-    },
-    {
-      "timestamp": "2023-04-15T16:10:39Z",
-      "fighter1": {
-        "name": "Ed Herman",
-        "numericOdds": 190
-      },
-      "fighter2": {
-        "name": "Zak Cummings",
-        "numericOdds": -225
-      }
-    },
-    {
-      "timestamp": "2023-04-15T16:20:39Z",
-      "fighter1": {
-        "name": "Ed Herman",
-        "numericOdds": 190
-      },
-      "fighter2": {
-        "name": "Zak Cummings",
-        "numericOdds": -225
-      }
-    },
-    {
-      "timestamp": "2023-04-15T16:35:38Z",
-      "fighter1": {
-        "name": "Ed Herman",
-        "numericOdds": 190
-      },
-      "fighter2": {
-        "name": "Zak Cummings",
-        "numericOdds": -225
-      }
-    },
-    {
-      "timestamp": "2023-04-15T16:45:39Z",
-      "fighter1": {
-        "name": "Ed Herman",
-        "numericOdds": 190
-      },
-      "fighter2": {
-        "name": "Zak Cummings",
-        "numericOdds": -225
-      }
-    },
-    {
-      "timestamp": "2023-04-15T17:00:39Z",
-      "fighter1": {
-        "name": "Ed Herman",
-        "numericOdds": 190
-      },
-      "fighter2": {
-        "name": "Zak Cummings",
-        "numericOdds": -225
-      }
-    },
-    {
-      "timestamp": "2023-04-15T17:15:39Z",
-      "fighter1": {
-        "name": "Ed Herman",
-        "numericOdds": 190
-      },
-      "fighter2": {
-        "name": "Zak Cummings",
-        "numericOdds": -225
-      }
-    },
-    {
-      "timestamp": "2023-04-15T17:30:39Z",
-      "fighter1": {
-        "name": "Ed Herman",
-        "numericOdds": 190
-      },
-      "fighter2": {
-        "name": "Zak Cummings",
-        "numericOdds": -225
-      }
-    },
-    {
-      "timestamp": "2023-04-15T17:45:39Z",
-      "fighter1": {
-        "name": "Ed Herman",
-        "numericOdds": 190
-      },
-      "fighter2": {
-        "name": "Zak Cummings",
-        "numericOdds": -225
-      }
-    },
-    {
-      "timestamp": "2023-04-15T18:00:39Z",
-      "fighter1": {
-        "name": "Ed Herman",
-        "numericOdds": 190
-      },
-      "fighter2": {
-        "name": "Zak Cummings",
-        "numericOdds": -225
-      }
-    },
-    {
-      "timestamp": "2023-04-15T18:15:39Z",
-      "fighter1": {
-        "name": "Ed Herman",
-        "numericOdds": 190
-      },
-      "fighter2": {
-        "name": "Zak Cummings",
-        "numericOdds": -225
-      }
-    },
-    {
-      "timestamp": "2023-04-15T18:30:39Z",
-      "fighter1": {
-        "name": "Ed Herman",
-        "numericOdds": 190
-      },
-      "fighter2": {
-        "name": "Zak Cummings",
-        "numericOdds": -225
-      }
-    },
-    {
-      "timestamp": "2023-04-15T18:45:39Z",
-      "fighter1": {
-        "name": "Ed Herman",
-        "numericOdds": 190
-      },
-      "fighter2": {
-        "name": "Zak Cummings",
-        "numericOdds": -225
-      }
-    },
-    {
-      "timestamp": "2023-04-15T19:00:39Z",
-      "fighter1": {
-        "name": "Ed Herman",
-        "numericOdds": 180
-      },
-      "fighter2": {
-        "name": "Zak Cummings",
-        "numericOdds": -210
-      }
-    },
-    {
-      "timestamp": "2023-04-15T19:15:39Z",
-      "fighter1": {
-        "name": "Ed Herman",
-        "numericOdds": 180
-      },
-      "fighter2": {
-        "name": "Zak Cummings",
-        "numericOdds": -210
-      }
-    },
-    {
-      "timestamp": "2023-04-15T19:30:39Z",
-      "fighter1": {
-        "name": "Ed Herman",
-        "numericOdds": 180
-      },
-      "fighter2": {
-        "name": "Zak Cummings",
-        "numericOdds": -210
+        "numericOdds": -12500
       }
     }
   ]

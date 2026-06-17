@@ -1,261 +1,42 @@
 {
   "fightId": "vivianearaujo_vs_andrealee_2022-05-15",
   "fightTitle": "Viviane Araujo vs Andrea Lee",
-  "startTime": "2022-05-14T13:55:00Z",
-  "endTime": "2022-05-14T17:35:00Z",
-  "dataPoints": 23,
+  "commenceTime": "2022-05-15T01:45:00Z",
+  "startTime": "2022-05-15T01:35:00Z",
+  "endTime": "2022-05-15T02:05:00Z",
+  "dataPoints": 3,
   "oddsHistory": [
     {
-      "timestamp": "2022-05-14T13:55:00Z",
+      "timestamp": "2022-05-15T01:35:00Z",
       "fighter1": {
         "name": "Andrea Lee",
-        "numericOdds": -125
+        "numericOdds": -135
       },
       "fighter2": {
         "name": "Viviane Araujo",
-        "numericOdds": 105
+        "numericOdds": 115
       }
     },
     {
-      "timestamp": "2022-05-14T14:05:00Z",
+      "timestamp": "2022-05-15T01:45:00Z",
       "fighter1": {
         "name": "Andrea Lee",
-        "numericOdds": -125
+        "numericOdds": -714
       },
       "fighter2": {
         "name": "Viviane Araujo",
-        "numericOdds": 105
+        "numericOdds": 400
       }
     },
     {
-      "timestamp": "2022-05-14T14:15:00Z",
+      "timestamp": "2022-05-15T02:05:00Z",
       "fighter1": {
         "name": "Andrea Lee",
-        "numericOdds": -125
+        "numericOdds": 1200
       },
       "fighter2": {
         "name": "Viviane Araujo",
-        "numericOdds": 105
-      }
-    },
-    {
-      "timestamp": "2022-05-14T14:25:00Z",
-      "fighter1": {
-        "name": "Andrea Lee",
-        "numericOdds": -125
-      },
-      "fighter2": {
-        "name": "Viviane Araujo",
-        "numericOdds": 105
-      }
-    },
-    {
-      "timestamp": "2022-05-14T14:35:00Z",
-      "fighter1": {
-        "name": "Andrea Lee",
-        "numericOdds": -125
-      },
-      "fighter2": {
-        "name": "Viviane Araujo",
-        "numericOdds": 105
-      }
-    },
-    {
-      "timestamp": "2022-05-14T14:45:00Z",
-      "fighter1": {
-        "name": "Andrea Lee",
-        "numericOdds": -125
-      },
-      "fighter2": {
-        "name": "Viviane Araujo",
-        "numericOdds": 105
-      }
-    },
-    {
-      "timestamp": "2022-05-14T14:55:00Z",
-      "fighter1": {
-        "name": "Andrea Lee",
-        "numericOdds": -125
-      },
-      "fighter2": {
-        "name": "Viviane Araujo",
-        "numericOdds": 105
-      }
-    },
-    {
-      "timestamp": "2022-05-14T15:05:00Z",
-      "fighter1": {
-        "name": "Andrea Lee",
-        "numericOdds": -125
-      },
-      "fighter2": {
-        "name": "Viviane Araujo",
-        "numericOdds": 105
-      }
-    },
-    {
-      "timestamp": "2022-05-14T15:15:00Z",
-      "fighter1": {
-        "name": "Andrea Lee",
-        "numericOdds": -125
-      },
-      "fighter2": {
-        "name": "Viviane Araujo",
-        "numericOdds": 105
-      }
-    },
-    {
-      "timestamp": "2022-05-14T15:25:00Z",
-      "fighter1": {
-        "name": "Andrea Lee",
-        "numericOdds": -125
-      },
-      "fighter2": {
-        "name": "Viviane Araujo",
-        "numericOdds": 105
-      }
-    },
-    {
-      "timestamp": "2022-05-14T15:35:00Z",
-      "fighter1": {
-        "name": "Andrea Lee",
-        "numericOdds": -125
-      },
-      "fighter2": {
-        "name": "Viviane Araujo",
-        "numericOdds": 105
-      }
-    },
-    {
-      "timestamp": "2022-05-14T15:45:00Z",
-      "fighter1": {
-        "name": "Andrea Lee",
-        "numericOdds": -125
-      },
-      "fighter2": {
-        "name": "Viviane Araujo",
-        "numericOdds": 105
-      }
-    },
-    {
-      "timestamp": "2022-05-14T15:55:00Z",
-      "fighter1": {
-        "name": "Andrea Lee",
-        "numericOdds": -125
-      },
-      "fighter2": {
-        "name": "Viviane Araujo",
-        "numericOdds": 105
-      }
-    },
-    {
-      "timestamp": "2022-05-14T16:05:00Z",
-      "fighter1": {
-        "name": "Andrea Lee",
-        "numericOdds": -125
-      },
-      "fighter2": {
-        "name": "Viviane Araujo",
-        "numericOdds": 105
-      }
-    },
-    {
-      "timestamp": "2022-05-14T16:15:00Z",
-      "fighter1": {
-        "name": "Andrea Lee",
-        "numericOdds": -125
-      },
-      "fighter2": {
-        "name": "Viviane Araujo",
-        "numericOdds": 105
-      }
-    },
-    {
-      "timestamp": "2022-05-14T16:25:00Z",
-      "fighter1": {
-        "name": "Andrea Lee",
-        "numericOdds": -120
-      },
-      "fighter2": {
-        "name": "Viviane Araujo",
-        "numericOdds": 100
-      }
-    },
-    {
-      "timestamp": "2022-05-14T16:35:00Z",
-      "fighter1": {
-        "name": "Andrea Lee",
-        "numericOdds": -120
-      },
-      "fighter2": {
-        "name": "Viviane Araujo",
-        "numericOdds": 100
-      }
-    },
-    {
-      "timestamp": "2022-05-14T16:45:00Z",
-      "fighter1": {
-        "name": "Andrea Lee",
-        "numericOdds": -120
-      },
-      "fighter2": {
-        "name": "Viviane Araujo",
-        "numericOdds": 100
-      }
-    },
-    {
-      "timestamp": "2022-05-14T16:55:00Z",
-      "fighter1": {
-        "name": "Andrea Lee",
-        "numericOdds": -120
-      },
-      "fighter2": {
-        "name": "Viviane Araujo",
-        "numericOdds": 100
-      }
-    },
-    {
-      "timestamp": "2022-05-14T17:05:00Z",
-      "fighter1": {
-        "name": "Andrea Lee",
-        "numericOdds": -120
-      },
-      "fighter2": {
-        "name": "Viviane Araujo",
-        "numericOdds": 100
-      }
-    },
-    {
-      "timestamp": "2022-05-14T17:15:00Z",
-      "fighter1": {
-        "name": "Andrea Lee",
-        "numericOdds": -120
-      },
-      "fighter2": {
-        "name": "Viviane Araujo",
-        "numericOdds": 100
-      }
-    },
-    {
-      "timestamp": "2022-05-14T17:25:00Z",
-      "fighter1": {
-        "name": "Andrea Lee",
-        "numericOdds": -120
-      },
-      "fighter2": {
-        "name": "Viviane Araujo",
-        "numericOdds": 100
-      }
-    },
-    {
-      "timestamp": "2022-05-14T17:35:00Z",
-      "fighter1": {
-        "name": "Andrea Lee",
-        "numericOdds": -120
-      },
-      "fighter2": {
-        "name": "Viviane Araujo",
-        "numericOdds": 100
+        "numericOdds": -100000
       }
     }
   ]

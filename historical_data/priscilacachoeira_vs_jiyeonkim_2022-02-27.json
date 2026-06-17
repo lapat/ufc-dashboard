@@ -1,613 +1,64 @@
 {
   "fightId": "priscilacachoeira_vs_jiyeonkim_2022-02-27",
   "fightTitle": "Priscila Cachoeira vs Ji Yeon Kim",
-  "startTime": "2022-02-26T13:55:00Z",
-  "endTime": "2022-02-26T22:55:00Z",
-  "dataPoints": 55,
+  "commenceTime": "2022-02-27T01:15:00Z",
+  "startTime": "2022-02-27T01:05:00Z",
+  "endTime": "2022-02-27T01:45:00Z",
+  "dataPoints": 5,
   "oddsHistory": [
     {
-      "timestamp": "2022-02-26T13:55:00Z",
+      "timestamp": "2022-02-27T01:05:00Z",
       "fighter1": {
         "name": "Ji Yeon Kim",
-        "numericOdds": -154
+        "numericOdds": -161
       },
       "fighter2": {
         "name": "Priscila Cachoeira",
+        "numericOdds": 140
+      }
+    },
+    {
+      "timestamp": "2022-02-27T01:15:00Z",
+      "fighter1": {
+        "name": "Ji Yeon Kim",
+        "numericOdds": -179
+      },
+      "fighter2": {
+        "name": "Priscila Cachoeira",
+        "numericOdds": 155
+      }
+    },
+    {
+      "timestamp": "2022-02-27T01:25:00Z",
+      "fighter1": {
+        "name": "Ji Yeon Kim",
         "numericOdds": 135
-      }
-    },
-    {
-      "timestamp": "2022-02-26T14:05:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -154
       },
       "fighter2": {
         "name": "Priscila Cachoeira",
-        "numericOdds": 135
+        "numericOdds": -175
       }
     },
     {
-      "timestamp": "2022-02-26T14:15:00Z",
+      "timestamp": "2022-02-27T01:35:00Z",
       "fighter1": {
         "name": "Ji Yeon Kim",
-        "numericOdds": -154
+        "numericOdds": -2500
       },
       "fighter2": {
         "name": "Priscila Cachoeira",
-        "numericOdds": 135
+        "numericOdds": 800
       }
     },
     {
-      "timestamp": "2022-02-26T14:25:00Z",
+      "timestamp": "2022-02-27T01:45:00Z",
       "fighter1": {
         "name": "Ji Yeon Kim",
-        "numericOdds": -149
+        "numericOdds": -2500
       },
       "fighter2": {
         "name": "Priscila Cachoeira",
-        "numericOdds": 130
-      }
-    },
-    {
-      "timestamp": "2022-02-26T14:35:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -149
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 130
-      }
-    },
-    {
-      "timestamp": "2022-02-26T14:45:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -154
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 135
-      }
-    },
-    {
-      "timestamp": "2022-02-26T14:55:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -154
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 135
-      }
-    },
-    {
-      "timestamp": "2022-02-26T15:05:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -154
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 135
-      }
-    },
-    {
-      "timestamp": "2022-02-26T15:15:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -154
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 135
-      }
-    },
-    {
-      "timestamp": "2022-02-26T15:25:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -154
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 135
-      }
-    },
-    {
-      "timestamp": "2022-02-26T15:35:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -154
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 135
-      }
-    },
-    {
-      "timestamp": "2022-02-26T15:45:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -154
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 135
-      }
-    },
-    {
-      "timestamp": "2022-02-26T15:55:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -154
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 135
-      }
-    },
-    {
-      "timestamp": "2022-02-26T16:05:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -154
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 135
-      }
-    },
-    {
-      "timestamp": "2022-02-26T16:15:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -154
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 135
-      }
-    },
-    {
-      "timestamp": "2022-02-26T16:25:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -154
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 135
-      }
-    },
-    {
-      "timestamp": "2022-02-26T16:35:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -154
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 135
-      }
-    },
-    {
-      "timestamp": "2022-02-26T16:45:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -154
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 135
-      }
-    },
-    {
-      "timestamp": "2022-02-26T16:55:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -154
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 135
-      }
-    },
-    {
-      "timestamp": "2022-02-26T17:05:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -154
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 135
-      }
-    },
-    {
-      "timestamp": "2022-02-26T17:15:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -154
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 135
-      }
-    },
-    {
-      "timestamp": "2022-02-26T17:25:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -154
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 135
-      }
-    },
-    {
-      "timestamp": "2022-02-26T17:35:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -154
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 135
-      }
-    },
-    {
-      "timestamp": "2022-02-26T17:45:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -154
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 135
-      }
-    },
-    {
-      "timestamp": "2022-02-26T17:55:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -154
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 135
-      }
-    },
-    {
-      "timestamp": "2022-02-26T18:05:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -154
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 135
-      }
-    },
-    {
-      "timestamp": "2022-02-26T18:15:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -154
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 135
-      }
-    },
-    {
-      "timestamp": "2022-02-26T18:25:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -154
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 135
-      }
-    },
-    {
-      "timestamp": "2022-02-26T18:35:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -154
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 135
-      }
-    },
-    {
-      "timestamp": "2022-02-26T18:45:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -154
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 135
-      }
-    },
-    {
-      "timestamp": "2022-02-26T18:55:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -154
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 135
-      }
-    },
-    {
-      "timestamp": "2022-02-26T19:05:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -154
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 135
-      }
-    },
-    {
-      "timestamp": "2022-02-26T19:15:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -154
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 135
-      }
-    },
-    {
-      "timestamp": "2022-02-26T19:25:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -154
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 135
-      }
-    },
-    {
-      "timestamp": "2022-02-26T19:35:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -154
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 135
-      }
-    },
-    {
-      "timestamp": "2022-02-26T19:45:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -154
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 135
-      }
-    },
-    {
-      "timestamp": "2022-02-26T19:55:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -149
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 130
-      }
-    },
-    {
-      "timestamp": "2022-02-26T20:05:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -149
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 130
-      }
-    },
-    {
-      "timestamp": "2022-02-26T20:15:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -149
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 130
-      }
-    },
-    {
-      "timestamp": "2022-02-26T20:25:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -149
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 130
-      }
-    },
-    {
-      "timestamp": "2022-02-26T20:35:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -149
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 130
-      }
-    },
-    {
-      "timestamp": "2022-02-26T20:45:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -149
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 130
-      }
-    },
-    {
-      "timestamp": "2022-02-26T20:55:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -149
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 130
-      }
-    },
-    {
-      "timestamp": "2022-02-26T21:05:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -149
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 130
-      }
-    },
-    {
-      "timestamp": "2022-02-26T21:15:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -149
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 130
-      }
-    },
-    {
-      "timestamp": "2022-02-26T21:25:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -149
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 130
-      }
-    },
-    {
-      "timestamp": "2022-02-26T21:35:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -149
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 130
-      }
-    },
-    {
-      "timestamp": "2022-02-26T21:45:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -149
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 130
-      }
-    },
-    {
-      "timestamp": "2022-02-26T21:55:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -149
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 130
-      }
-    },
-    {
-      "timestamp": "2022-02-26T22:05:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -149
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 130
-      }
-    },
-    {
-      "timestamp": "2022-02-26T22:15:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -149
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 130
-      }
-    },
-    {
-      "timestamp": "2022-02-26T22:25:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -149
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 130
-      }
-    },
-    {
-      "timestamp": "2022-02-26T22:35:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -149
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 130
-      }
-    },
-    {
-      "timestamp": "2022-02-26T22:45:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -149
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 130
-      }
-    },
-    {
-      "timestamp": "2022-02-26T22:55:00Z",
-      "fighter1": {
-        "name": "Ji Yeon Kim",
-        "numericOdds": -149
-      },
-      "fighter2": {
-        "name": "Priscila Cachoeira",
-        "numericOdds": 130
+        "numericOdds": 800
       }
     }
   ]

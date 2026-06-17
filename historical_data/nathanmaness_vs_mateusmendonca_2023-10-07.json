@@ -1,384 +1,11 @@
 {
   "fightId": "nathanmaness_vs_mateusmendonca_2023-10-07",
   "fightTitle": "Nathan Maness vs Mateus Mendonca",
-  "startTime": "2023-10-07T13:55:41Z",
-  "endTime": "2023-10-07T22:15:40Z",
-  "dataPoints": 38,
+  "commenceTime": "2023-10-07T21:45:10Z",
+  "startTime": "2023-10-07T21:35:40Z",
+  "endTime": "2023-10-07T22:25:40Z",
+  "dataPoints": 10,
   "oddsHistory": [
-    {
-      "timestamp": "2023-10-07T13:55:41Z",
-      "fighter1": {
-        "name": "Mateus Mendonca",
-        "numericOdds": -230
-      },
-      "fighter2": {
-        "name": "Nathan Maness",
-        "numericOdds": 190
-      }
-    },
-    {
-      "timestamp": "2023-10-07T14:05:42Z",
-      "fighter1": {
-        "name": "Mateus Mendonca",
-        "numericOdds": -245
-      },
-      "fighter2": {
-        "name": "Nathan Maness",
-        "numericOdds": 190
-      }
-    },
-    {
-      "timestamp": "2023-10-07T14:20:41Z",
-      "fighter1": {
-        "name": "Mateus Mendonca",
-        "numericOdds": -230
-      },
-      "fighter2": {
-        "name": "Nathan Maness",
-        "numericOdds": 190
-      }
-    },
-    {
-      "timestamp": "2023-10-07T14:35:40Z",
-      "fighter1": {
-        "name": "Mateus Mendonca",
-        "numericOdds": -230
-      },
-      "fighter2": {
-        "name": "Nathan Maness",
-        "numericOdds": 190
-      }
-    },
-    {
-      "timestamp": "2023-10-07T14:45:40Z",
-      "fighter1": {
-        "name": "Mateus Mendonca",
-        "numericOdds": -230
-      },
-      "fighter2": {
-        "name": "Nathan Maness",
-        "numericOdds": 190
-      }
-    },
-    {
-      "timestamp": "2023-10-07T14:55:40Z",
-      "fighter1": {
-        "name": "Mateus Mendonca",
-        "numericOdds": -230
-      },
-      "fighter2": {
-        "name": "Nathan Maness",
-        "numericOdds": 190
-      }
-    },
-    {
-      "timestamp": "2023-10-07T15:05:42Z",
-      "fighter1": {
-        "name": "Mateus Mendonca",
-        "numericOdds": -230
-      },
-      "fighter2": {
-        "name": "Nathan Maness",
-        "numericOdds": 190
-      }
-    },
-    {
-      "timestamp": "2023-10-07T15:20:41Z",
-      "fighter1": {
-        "name": "Mateus Mendonca",
-        "numericOdds": -230
-      },
-      "fighter2": {
-        "name": "Nathan Maness",
-        "numericOdds": 190
-      }
-    },
-    {
-      "timestamp": "2023-10-07T15:35:41Z",
-      "fighter1": {
-        "name": "Mateus Mendonca",
-        "numericOdds": -230
-      },
-      "fighter2": {
-        "name": "Nathan Maness",
-        "numericOdds": 190
-      }
-    },
-    {
-      "timestamp": "2023-10-07T15:45:42Z",
-      "fighter1": {
-        "name": "Mateus Mendonca",
-        "numericOdds": -238
-      },
-      "fighter2": {
-        "name": "Nathan Maness",
-        "numericOdds": 195
-      }
-    },
-    {
-      "timestamp": "2023-10-07T16:00:41Z",
-      "fighter1": {
-        "name": "Mateus Mendonca",
-        "numericOdds": -238
-      },
-      "fighter2": {
-        "name": "Nathan Maness",
-        "numericOdds": 195
-      }
-    },
-    {
-      "timestamp": "2023-10-07T16:15:41Z",
-      "fighter1": {
-        "name": "Mateus Mendonca",
-        "numericOdds": -238
-      },
-      "fighter2": {
-        "name": "Nathan Maness",
-        "numericOdds": 195
-      }
-    },
-    {
-      "timestamp": "2023-10-07T16:30:41Z",
-      "fighter1": {
-        "name": "Mateus Mendonca",
-        "numericOdds": -238
-      },
-      "fighter2": {
-        "name": "Nathan Maness",
-        "numericOdds": 195
-      }
-    },
-    {
-      "timestamp": "2023-10-07T16:45:40Z",
-      "fighter1": {
-        "name": "Mateus Mendonca",
-        "numericOdds": -238
-      },
-      "fighter2": {
-        "name": "Nathan Maness",
-        "numericOdds": 195
-      }
-    },
-    {
-      "timestamp": "2023-10-07T17:00:40Z",
-      "fighter1": {
-        "name": "Mateus Mendonca",
-        "numericOdds": -238
-      },
-      "fighter2": {
-        "name": "Nathan Maness",
-        "numericOdds": 195
-      }
-    },
-    {
-      "timestamp": "2023-10-07T17:15:40Z",
-      "fighter1": {
-        "name": "Mateus Mendonca",
-        "numericOdds": -238
-      },
-      "fighter2": {
-        "name": "Nathan Maness",
-        "numericOdds": 195
-      }
-    },
-    {
-      "timestamp": "2023-10-07T17:25:41Z",
-      "fighter1": {
-        "name": "Mateus Mendonca",
-        "numericOdds": -238
-      },
-      "fighter2": {
-        "name": "Nathan Maness",
-        "numericOdds": 195
-      }
-    },
-    {
-      "timestamp": "2023-10-07T17:40:40Z",
-      "fighter1": {
-        "name": "Mateus Mendonca",
-        "numericOdds": -258
-      },
-      "fighter2": {
-        "name": "Nathan Maness",
-        "numericOdds": 210
-      }
-    },
-    {
-      "timestamp": "2023-10-07T17:50:40Z",
-      "fighter1": {
-        "name": "Mateus Mendonca",
-        "numericOdds": -258
-      },
-      "fighter2": {
-        "name": "Nathan Maness",
-        "numericOdds": 210
-      }
-    },
-    {
-      "timestamp": "2023-10-07T18:00:40Z",
-      "fighter1": {
-        "name": "Mateus Mendonca",
-        "numericOdds": -270
-      },
-      "fighter2": {
-        "name": "Nathan Maness",
-        "numericOdds": 220
-      }
-    },
-    {
-      "timestamp": "2023-10-07T18:15:40Z",
-      "fighter1": {
-        "name": "Mateus Mendonca",
-        "numericOdds": -258
-      },
-      "fighter2": {
-        "name": "Nathan Maness",
-        "numericOdds": 210
-      }
-    },
-    {
-      "timestamp": "2023-10-07T18:30:40Z",
-      "fighter1": {
-        "name": "Mateus Mendonca",
-        "numericOdds": -258
-      },
-      "fighter2": {
-        "name": "Nathan Maness",
-        "numericOdds": 210
-      }
-    },
-    {
-      "timestamp": "2023-10-07T18:45:40Z",
-      "fighter1": {
-        "name": "Mateus Mendonca",
-        "numericOdds": -258
-      },
-      "fighter2": {
-        "name": "Nathan Maness",
-        "numericOdds": 210
-      }
-    },
-    {
-      "timestamp": "2023-10-07T19:00:40Z",
-      "fighter1": {
-        "name": "Mateus Mendonca",
-        "numericOdds": -258
-      },
-      "fighter2": {
-        "name": "Nathan Maness",
-        "numericOdds": 210
-      }
-    },
-    {
-      "timestamp": "2023-10-07T19:15:40Z",
-      "fighter1": {
-        "name": "Mateus Mendonca",
-        "numericOdds": -258
-      },
-      "fighter2": {
-        "name": "Nathan Maness",
-        "numericOdds": 220
-      }
-    },
-    {
-      "timestamp": "2023-10-07T19:30:40Z",
-      "fighter1": {
-        "name": "Mateus Mendonca",
-        "numericOdds": -258
-      },
-      "fighter2": {
-        "name": "Nathan Maness",
-        "numericOdds": 210
-      }
-    },
-    {
-      "timestamp": "2023-10-07T19:40:40Z",
-      "fighter1": {
-        "name": "Mateus Mendonca",
-        "numericOdds": -258
-      },
-      "fighter2": {
-        "name": "Nathan Maness",
-        "numericOdds": 210
-      }
-    },
-    {
-      "timestamp": "2023-10-07T19:55:40Z",
-      "fighter1": {
-        "name": "Mateus Mendonca",
-        "numericOdds": -258
-      },
-      "fighter2": {
-        "name": "Nathan Maness",
-        "numericOdds": 210
-      }
-    },
-    {
-      "timestamp": "2023-10-07T20:05:40Z",
-      "fighter1": {
-        "name": "Mateus Mendonca",
-        "numericOdds": -258
-      },
-      "fighter2": {
-        "name": "Nathan Maness",
-        "numericOdds": 210
-      }
-    },
-    {
-      "timestamp": "2023-10-07T20:20:40Z",
-      "fighter1": {
-        "name": "Mateus Mendonca",
-        "numericOdds": -290
-      },
-      "fighter2": {
-        "name": "Nathan Maness",
-        "numericOdds": 235
-      }
-    },
-    {
-      "timestamp": "2023-10-07T20:35:40Z",
-      "fighter1": {
-        "name": "Mateus Mendonca",
-        "numericOdds": -290
-      },
-      "fighter2": {
-        "name": "Nathan Maness",
-        "numericOdds": 235
-      }
-    },
-    {
-      "timestamp": "2023-10-07T20:50:40Z",
-      "fighter1": {
-        "name": "Mateus Mendonca",
-        "numericOdds": -290
-      },
-      "fighter2": {
-        "name": "Nathan Maness",
-        "numericOdds": 235
-      }
-    },
-    {
-      "timestamp": "2023-10-07T21:05:40Z",
-      "fighter1": {
-        "name": "Mateus Mendonca",
-        "numericOdds": -290
-      },
-      "fighter2": {
-        "name": "Nathan Maness",
-        "numericOdds": 235
-      }
-    },
-    {
-      "timestamp": "2023-10-07T21:20:40Z",
-      "fighter1": {
-        "name": "Mateus Mendonca",
-        "numericOdds": -298
-      },
-      "fighter2": {
-        "name": "Nathan Maness",
-        "numericOdds": 240
-      }
-    },
     {
       "timestamp": "2023-10-07T21:35:40Z",
       "fighter1": {
@@ -391,7 +18,51 @@
       }
     },
     {
+      "timestamp": "2023-10-07T21:40:40Z",
+      "fighter1": {
+        "name": "Mateus Mendonca",
+        "numericOdds": -298
+      },
+      "fighter2": {
+        "name": "Nathan Maness",
+        "numericOdds": 240
+      }
+    },
+    {
+      "timestamp": "2023-10-07T21:45:40Z",
+      "fighter1": {
+        "name": "Mateus Mendonca",
+        "numericOdds": -298
+      },
+      "fighter2": {
+        "name": "Nathan Maness",
+        "numericOdds": 240
+      }
+    },
+    {
       "timestamp": "2023-10-07T21:50:40Z",
+      "fighter1": {
+        "name": "Mateus Mendonca",
+        "numericOdds": -298
+      },
+      "fighter2": {
+        "name": "Nathan Maness",
+        "numericOdds": 240
+      }
+    },
+    {
+      "timestamp": "2023-10-07T21:55:41Z",
+      "fighter1": {
+        "name": "Mateus Mendonca",
+        "numericOdds": -298
+      },
+      "fighter2": {
+        "name": "Nathan Maness",
+        "numericOdds": 240
+      }
+    },
+    {
+      "timestamp": "2023-10-07T22:00:40Z",
       "fighter1": {
         "name": "Mateus Mendonca",
         "numericOdds": -298
@@ -414,6 +85,28 @@
     },
     {
       "timestamp": "2023-10-07T22:15:40Z",
+      "fighter1": {
+        "name": "Mateus Mendonca",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Nathan Maness",
+        "numericOdds": -195
+      }
+    },
+    {
+      "timestamp": "2023-10-07T22:20:40Z",
+      "fighter1": {
+        "name": "Mateus Mendonca",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Nathan Maness",
+        "numericOdds": -195
+      }
+    },
+    {
+      "timestamp": "2023-10-07T22:25:40Z",
       "fighter1": {
         "name": "Mateus Mendonca",
         "numericOdds": 150
