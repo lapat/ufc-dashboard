@@ -1,35 +1,46 @@
 {
-  "fightId": "seanomalley_vs_aiemannzahabi_2026-06-15",
+  "fightId": "mma__seanomalley_vs_aiemannzahabi_2026-06-15",
+  "sport": "mma_mixed_martial_arts",
   "fightTitle": "Sean O'Malley vs Aiemann Zahabi",
-  "commenceTime": null,
-  "startTime": "2026-06-15T03:05:36Z",
-  "endTime": "2026-06-15T03:30:36Z",
-  "dataPoints": 6,
+  "startTime": "2026-06-15T03:12:06.922Z",
+  "endTime": "2026-06-15T03:35:02.865Z",
+  "dataPoints": 8,
   "oddsHistory": [
     {
-      "timestamp": "2026-06-15T03:05:36Z",
+      "timestamp": "2026-06-15T03:12:06.922Z",
       "fighter1": {
         "name": "Aiemann Zahabi",
-        "numericOdds": 320
+        "numericOdds": 300
       },
       "fighter2": {
         "name": "Sean O'Malley",
-        "numericOdds": -410
+        "numericOdds": -425
       }
     },
     {
-      "timestamp": "2026-06-15T03:10:36Z",
+      "timestamp": "2026-06-15T03:12:37.866Z",
       "fighter1": {
         "name": "Aiemann Zahabi",
-        "numericOdds": 310
+        "numericOdds": 250
       },
       "fighter2": {
         "name": "Sean O'Malley",
-        "numericOdds": -395
+        "numericOdds": -345
       }
     },
     {
-      "timestamp": "2026-06-15T03:15:36Z",
+      "timestamp": "2026-06-15T03:14:17.656Z",
+      "fighter1": {
+        "name": "Aiemann Zahabi",
+        "numericOdds": 450
+      },
+      "fighter2": {
+        "name": "Sean O'Malley",
+        "numericOdds": -720
+      }
+    },
+    {
+      "timestamp": "2026-06-15T03:15:07.556Z",
       "fighter1": {
         "name": "Aiemann Zahabi",
         "numericOdds": 400
@@ -40,29 +51,40 @@
       }
     },
     {
-      "timestamp": "2026-06-15T03:20:36Z",
+      "timestamp": "2026-06-15T03:16:47.076Z",
       "fighter1": {
         "name": "Aiemann Zahabi",
-        "numericOdds": 340
+        "numericOdds": 500
       },
       "fighter2": {
         "name": "Sean O'Malley",
-        "numericOdds": -500
+        "numericOdds": -810
       }
     },
     {
-      "timestamp": "2026-06-15T03:25:36Z",
+      "timestamp": "2026-06-15T03:18:26.451Z",
       "fighter1": {
         "name": "Aiemann Zahabi",
-        "numericOdds": 340
+        "numericOdds": 575
       },
       "fighter2": {
         "name": "Sean O'Malley",
-        "numericOdds": -500
+        "numericOdds": -950
       }
     },
     {
-      "timestamp": "2026-06-15T03:30:36Z",
+      "timestamp": "2026-06-15T03:19:13.249Z",
+      "fighter1": {
+        "name": "Aiemann Zahabi",
+        "numericOdds": 400
+      },
+      "fighter2": {
+        "name": "Sean O'Malley",
+        "numericOdds": -620
+      }
+    },
+    {
+      "timestamp": "2026-06-15T03:20:03.355Z",
       "fighter1": {
         "name": "Aiemann Zahabi",
         "numericOdds": 340

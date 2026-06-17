@@ -1,11 +1,866 @@
 {
   "fightId": "danhooker_vs_benoitsaintdenis",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-02-01T03:51:14.116Z",
+  "startTime": "2026-02-01T03:48:22.705Z",
   "endTime": "2026-02-01T03:58:21.098Z",
-  "dataPoints": 142,
+  "duration": 598393,
+  "dataPoints": 199,
   "oddsHistory": [
+    {
+      "timestamp": "2026-02-01T03:48:22.705Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 204
+    },
+    {
+      "timestamp": "2026-02-01T03:48:25.717Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-02-01T03:48:28.731Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-02-01T03:48:31.733Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-02-01T03:48:34.739Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-02-01T03:48:37.753Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-02-01T03:48:40.762Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-02-01T03:48:43.773Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-02-01T03:48:46.786Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-02-01T03:48:49.797Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-02-01T03:48:52.797Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-02-01T03:48:55.801Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-02-01T03:48:58.807Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-02-01T03:49:01.813Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-02-01T03:49:04.817Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-02-01T03:49:07.822Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-02-01T03:49:10.830Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-02-01T03:49:13.844Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-02-01T03:49:16.849Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-02-01T03:49:19.860Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-02-01T03:49:22.867Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-02-01T03:49:25.874Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-02-01T03:49:28.887Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-02-01T03:49:31.890Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-02-01T03:49:34.894Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-02-01T03:49:37.905Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-02-01T03:49:40.915Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-02-01T03:49:43.926Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-02-01T03:49:46.932Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-02-01T03:49:49.935Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-02-01T03:49:52.948Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-02-01T03:49:55.960Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-02-01T03:49:58.962Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-02-01T03:50:01.973Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-02-01T03:50:04.977Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-02-01T03:50:07.976Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-02-01T03:50:10.985Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2026-02-01T03:50:13.991Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2026-02-01T03:50:16.998Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 39
+    },
+    {
+      "timestamp": "2026-02-01T03:50:20.012Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 40
+    },
+    {
+      "timestamp": "2026-02-01T03:50:23.022Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 41
+    },
+    {
+      "timestamp": "2026-02-01T03:50:26.031Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 42
+    },
+    {
+      "timestamp": "2026-02-01T03:50:29.038Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 43
+    },
+    {
+      "timestamp": "2026-02-01T03:50:32.045Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 44
+    },
+    {
+      "timestamp": "2026-02-01T03:50:35.045Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 45
+    },
+    {
+      "timestamp": "2026-02-01T03:50:38.046Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 46
+    },
+    {
+      "timestamp": "2026-02-01T03:50:41.058Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 47
+    },
+    {
+      "timestamp": "2026-02-01T03:50:44.062Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 48
+    },
+    {
+      "timestamp": "2026-02-01T03:50:47.071Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 49
+    },
+    {
+      "timestamp": "2026-02-01T03:50:50.073Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 50
+    },
+    {
+      "timestamp": "2026-02-01T03:50:53.073Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 51
+    },
+    {
+      "timestamp": "2026-02-01T03:50:56.078Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-380",
+        "numericOdds": -380
+      },
+      "isLocked": false,
+      "extractionId": 52
+    },
+    {
+      "timestamp": "2026-02-01T03:50:59.089Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-380",
+        "numericOdds": -380
+      },
+      "isLocked": false,
+      "extractionId": 53
+    },
+    {
+      "timestamp": "2026-02-01T03:51:02.093Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-380",
+        "numericOdds": -380
+      },
+      "isLocked": false,
+      "extractionId": 54
+    },
+    {
+      "timestamp": "2026-02-01T03:51:05.099Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-380",
+        "numericOdds": -380
+      },
+      "isLocked": false,
+      "extractionId": 55
+    },
+    {
+      "timestamp": "2026-02-01T03:51:08.112Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-380",
+        "numericOdds": -380
+      },
+      "isLocked": false,
+      "extractionId": 56
+    },
+    {
+      "timestamp": "2026-02-01T03:51:11.115Z",
+      "fighter1": {
+        "name": "Dan Hooker",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Benoit Saint Denis",
+        "odds": "-380",
+        "numericOdds": -380
+      },
+      "isLocked": false,
+      "extractionId": 57
+    },
     {
       "timestamp": "2026-02-01T03:51:14.116Z",
       "fighter1": {
@@ -2136,5 +2991,16 @@
       "isLocked": false,
       "extractionId": 17
     }
-  ]
+  ],
+  "createdAt": "2026-02-01T03:52:50.319Z",
+  "derived": {
+    "inferredFinishMin": 9,
+    "inferredFinishRound": 2,
+    "peakOddsSwing": 422,
+    "finishSpeed": "slow",
+    "preFightSteam": 350,
+    "dominanceScore": 72,
+    "crossoverCount": 2,
+    "derivedAt": "2026-06-14T11:47:28.407Z"
+  }
 }

@@ -1,11 +1,461 @@
 {
   "fightId": "luanlacerda_vs_hechersosa",
   "fightTitle": "Luan Lacerda vs Hecher Sosa",
-  "commenceTime": null,
-  "startTime": "2026-03-14T21:33:03.552Z",
+  "startTime": "2026-03-14T21:29:40.339Z",
   "endTime": "2026-03-14T21:48:59.613Z",
-  "dataPoints": 383,
+  "duration": 1159274,
+  "dataPoints": 413,
   "oddsHistory": [
+    {
+      "timestamp": "2026-03-14T21:29:40.339Z",
+      "fighter1": {
+        "name": "Luan Lacerda",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Hecher Sosa",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-03-14T21:29:43.347Z",
+      "fighter1": {
+        "name": "Luan Lacerda",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Hecher Sosa",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-14T21:29:40.339Z",
+      "fighter1": {
+        "name": "Luan Lacerda",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Hecher Sosa",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-03-14T21:29:43.347Z",
+      "fighter1": {
+        "name": "Luan Lacerda",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Hecher Sosa",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-14T21:31:45.368Z",
+      "fighter1": {
+        "name": "Luan Lacerda",
+        "odds": "+166",
+        "numericOdds": 166
+      },
+      "fighter2": {
+        "name": "Hecher Sosa",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-14T21:31:48.375Z",
+      "fighter1": {
+        "name": "Luan Lacerda",
+        "odds": "+166",
+        "numericOdds": 166
+      },
+      "fighter2": {
+        "name": "Hecher Sosa",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-14T21:31:51.381Z",
+      "fighter1": {
+        "name": "Luan Lacerda",
+        "odds": "+166",
+        "numericOdds": 166
+      },
+      "fighter2": {
+        "name": "Hecher Sosa",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-14T21:31:54.384Z",
+      "fighter1": {
+        "name": "Luan Lacerda",
+        "odds": "+160",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Hecher Sosa",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-14T21:31:57.385Z",
+      "fighter1": {
+        "name": "Luan Lacerda",
+        "odds": "+160",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Hecher Sosa",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-14T21:32:00.392Z",
+      "fighter1": {
+        "name": "Luan Lacerda",
+        "odds": "+160",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Hecher Sosa",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-03-14T21:32:03.399Z",
+      "fighter1": {
+        "name": "Luan Lacerda",
+        "odds": "+160",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Hecher Sosa",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-03-14T21:32:06.412Z",
+      "fighter1": {
+        "name": "Luan Lacerda",
+        "odds": "+160",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Hecher Sosa",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-03-14T21:32:09.426Z",
+      "fighter1": {
+        "name": "Luan Lacerda",
+        "odds": "+160",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Hecher Sosa",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-03-14T21:32:12.431Z",
+      "fighter1": {
+        "name": "Luan Lacerda",
+        "odds": "+160",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Hecher Sosa",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-03-14T21:32:15.437Z",
+      "fighter1": {
+        "name": "Luan Lacerda",
+        "odds": "+160",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Hecher Sosa",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-03-14T21:32:18.452Z",
+      "fighter1": {
+        "name": "Luan Lacerda",
+        "odds": "+160",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Hecher Sosa",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-03-14T21:32:21.467Z",
+      "fighter1": {
+        "name": "Luan Lacerda",
+        "odds": "+160",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Hecher Sosa",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-03-14T21:32:24.476Z",
+      "fighter1": {
+        "name": "Luan Lacerda",
+        "odds": "+160",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Hecher Sosa",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-03-14T21:32:27.482Z",
+      "fighter1": {
+        "name": "Luan Lacerda",
+        "odds": "+160",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Hecher Sosa",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-03-14T21:32:30.495Z",
+      "fighter1": {
+        "name": "Luan Lacerda",
+        "odds": "+160",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Hecher Sosa",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-03-14T21:32:33.497Z",
+      "fighter1": {
+        "name": "Luan Lacerda",
+        "odds": "+146",
+        "numericOdds": 146
+      },
+      "fighter2": {
+        "name": "Hecher Sosa",
+        "odds": "-186",
+        "numericOdds": -186
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-03-14T21:32:36.501Z",
+      "fighter1": {
+        "name": "Luan Lacerda",
+        "odds": "+146",
+        "numericOdds": 146
+      },
+      "fighter2": {
+        "name": "Hecher Sosa",
+        "odds": "-186",
+        "numericOdds": -186
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-03-14T21:32:39.502Z",
+      "fighter1": {
+        "name": "Luan Lacerda",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Hecher Sosa",
+        "odds": "-182",
+        "numericOdds": -182
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-03-14T21:32:42.515Z",
+      "fighter1": {
+        "name": "Luan Lacerda",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Hecher Sosa",
+        "odds": "-182",
+        "numericOdds": -182
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-03-14T21:32:45.522Z",
+      "fighter1": {
+        "name": "Luan Lacerda",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Hecher Sosa",
+        "odds": "-182",
+        "numericOdds": -182
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-03-14T21:32:48.524Z",
+      "fighter1": {
+        "name": "Luan Lacerda",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Hecher Sosa",
+        "odds": "-182",
+        "numericOdds": -182
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-03-14T21:32:51.529Z",
+      "fighter1": {
+        "name": "Luan Lacerda",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Hecher Sosa",
+        "odds": "-182",
+        "numericOdds": -182
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-03-14T21:32:54.532Z",
+      "fighter1": {
+        "name": "Luan Lacerda",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Hecher Sosa",
+        "odds": "-182",
+        "numericOdds": -182
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-03-14T21:32:57.537Z",
+      "fighter1": {
+        "name": "Luan Lacerda",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Hecher Sosa",
+        "odds": "-182",
+        "numericOdds": -182
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-03-14T21:33:00.550Z",
+      "fighter1": {
+        "name": "Luan Lacerda",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Hecher Sosa",
+        "odds": "-182",
+        "numericOdds": -182
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
     {
       "timestamp": "2026-03-14T21:33:03.552Z",
       "fighter1": {
@@ -5751,5 +6201,32 @@
       "isLocked": false,
       "extractionId": 54
     }
-  ]
+  ],
+  "createdAt": "2026-03-14T21:29:45.657Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Hecher Sosa",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:51:49.535Z",
+    "openingF1Odds": 164,
+    "openingF2Odds": -196,
+    "closingF1Odds": 1340,
+    "closingF2Odds": -3000,
+    "lineMovementF1": 1176,
+    "crossoverOccurred": true,
+    "crossoverMinute": 4
+  },
+  "derived": {
+    "inferredFinishMin": 16,
+    "inferredFinishRound": 3,
+    "peakOddsSwing": 1636,
+    "finishSpeed": "medium",
+    "preFightSteam": 1176,
+    "dominanceScore": 68,
+    "crossoverCount": 6,
+    "derivedAt": "2026-06-14T11:47:28.450Z"
+  }
 }

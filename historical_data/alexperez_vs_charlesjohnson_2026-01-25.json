@@ -1,11 +1,251 @@
 {
   "fightId": "alexperez_vs_charlesjohnson",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-01-25T00:17:24.944Z",
+  "startTime": "2026-01-25T00:16:36.789Z",
   "endTime": "2026-01-25T00:21:16.628Z",
-  "dataPoints": 59,
+  "duration": 279839,
+  "dataPoints": 75,
   "oddsHistory": [
+    {
+      "timestamp": "2026-01-25T00:16:36.789Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "fighter2": {
+        "name": "Charles Johnson",
+        "odds": "-184",
+        "numericOdds": -184
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-01-25T00:16:39.799Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "fighter2": {
+        "name": "Charles Johnson",
+        "odds": "-184",
+        "numericOdds": -184
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-01-25T00:16:42.807Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "fighter2": {
+        "name": "Charles Johnson",
+        "odds": "-184",
+        "numericOdds": -184
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-01-25T00:16:45.820Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "fighter2": {
+        "name": "Charles Johnson",
+        "odds": "-184",
+        "numericOdds": -184
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-01-25T00:16:48.822Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "fighter2": {
+        "name": "Charles Johnson",
+        "odds": "-184",
+        "numericOdds": -184
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-01-25T00:16:51.836Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "+168",
+        "numericOdds": 168
+      },
+      "fighter2": {
+        "name": "Charles Johnson",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-01-25T00:16:54.847Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "+168",
+        "numericOdds": 168
+      },
+      "fighter2": {
+        "name": "Charles Johnson",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-01-25T00:16:57.856Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "+168",
+        "numericOdds": 168
+      },
+      "fighter2": {
+        "name": "Charles Johnson",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-01-25T00:17:00.869Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Charles Johnson",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-01-25T00:17:03.877Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Charles Johnson",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-01-25T00:17:06.888Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Charles Johnson",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-01-25T00:17:09.896Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Charles Johnson",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-01-25T00:17:12.907Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Charles Johnson",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-01-25T00:17:15.919Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Charles Johnson",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-01-25T00:17:18.932Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Charles Johnson",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-01-25T00:17:21.931Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Charles Johnson",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
     {
       "timestamp": "2026-01-25T00:17:24.944Z",
       "fighter1": {
@@ -891,5 +1131,32 @@
       "isLocked": false,
       "extractionId": 7
     }
-  ]
+  ],
+  "createdAt": "2026-01-25T00:20:28.482Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Alex Perez",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:50:45.328Z",
+    "openingF1Odds": 154,
+    "openingF2Odds": -184,
+    "closingF1Odds": -850,
+    "closingF2Odds": 520,
+    "lineMovementF1": -1004,
+    "crossoverOccurred": true,
+    "crossoverMinute": 4
+  },
+  "derived": {
+    "inferredFinishMin": 4,
+    "inferredFinishRound": 1,
+    "peakOddsSwing": 1004,
+    "finishSpeed": "medium",
+    "preFightSteam": -1004,
+    "dominanceScore": 89,
+    "crossoverCount": 1,
+    "derivedAt": "2026-06-14T11:47:28.369Z"
+  }
 }

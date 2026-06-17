@@ -1,11 +1,431 @@
 {
   "fightId": "movsarevloev_vs_leronemurphy",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-03-21T22:53:02.946Z",
+  "startTime": "2026-03-21T22:51:38.661Z",
   "endTime": "2026-03-21T23:23:38.392Z",
-  "dataPoints": 567,
+  "duration": 1919731,
+  "dataPoints": 595,
   "oddsHistory": [
+    {
+      "timestamp": "2026-03-21T22:51:38.661Z",
+      "fighter1": {
+        "name": "Movsar Evloev",
+        "odds": "-240",
+        "numericOdds": -240
+      },
+      "fighter2": {
+        "name": "Lerone Murphy",
+        "odds": "+198",
+        "numericOdds": 198
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2026-03-21T22:51:41.674Z",
+      "fighter1": {
+        "name": "Movsar Evloev",
+        "odds": "-240",
+        "numericOdds": -240
+      },
+      "fighter2": {
+        "name": "Lerone Murphy",
+        "odds": "+198",
+        "numericOdds": 198
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-21T22:51:44.690Z",
+      "fighter1": {
+        "name": "Movsar Evloev",
+        "odds": "-240",
+        "numericOdds": -240
+      },
+      "fighter2": {
+        "name": "Lerone Murphy",
+        "odds": "+198",
+        "numericOdds": 198
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-21T22:51:47.691Z",
+      "fighter1": {
+        "name": "Movsar Evloev",
+        "odds": "-240",
+        "numericOdds": -240
+      },
+      "fighter2": {
+        "name": "Lerone Murphy",
+        "odds": "+198",
+        "numericOdds": 198
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-21T22:51:50.693Z",
+      "fighter1": {
+        "name": "Movsar Evloev",
+        "odds": "-240",
+        "numericOdds": -240
+      },
+      "fighter2": {
+        "name": "Lerone Murphy",
+        "odds": "+198",
+        "numericOdds": 198
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-21T22:51:53.703Z",
+      "fighter1": {
+        "name": "Movsar Evloev",
+        "odds": "-240",
+        "numericOdds": -240
+      },
+      "fighter2": {
+        "name": "Lerone Murphy",
+        "odds": "+198",
+        "numericOdds": 198
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-03-21T22:51:56.708Z",
+      "fighter1": {
+        "name": "Movsar Evloev",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "Lerone Murphy",
+        "odds": "+192",
+        "numericOdds": 192
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-03-21T22:51:59.717Z",
+      "fighter1": {
+        "name": "Movsar Evloev",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "Lerone Murphy",
+        "odds": "+192",
+        "numericOdds": 192
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-03-21T22:52:02.727Z",
+      "fighter1": {
+        "name": "Movsar Evloev",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "Lerone Murphy",
+        "odds": "+192",
+        "numericOdds": 192
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-03-21T22:52:05.726Z",
+      "fighter1": {
+        "name": "Movsar Evloev",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "Lerone Murphy",
+        "odds": "+192",
+        "numericOdds": 192
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-03-21T22:52:08.739Z",
+      "fighter1": {
+        "name": "Movsar Evloev",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "Lerone Murphy",
+        "odds": "+192",
+        "numericOdds": 192
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-03-21T22:52:11.752Z",
+      "fighter1": {
+        "name": "Movsar Evloev",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "Lerone Murphy",
+        "odds": "+205",
+        "numericOdds": 205
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-03-21T22:52:14.765Z",
+      "fighter1": {
+        "name": "Movsar Evloev",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "Lerone Murphy",
+        "odds": "+205",
+        "numericOdds": 205
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-03-21T22:52:17.777Z",
+      "fighter1": {
+        "name": "Movsar Evloev",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "Lerone Murphy",
+        "odds": "+205",
+        "numericOdds": 205
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-03-21T22:52:20.790Z",
+      "fighter1": {
+        "name": "Movsar Evloev",
+        "odds": "-290",
+        "numericOdds": -290
+      },
+      "fighter2": {
+        "name": "Lerone Murphy",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-03-21T22:52:23.804Z",
+      "fighter1": {
+        "name": "Movsar Evloev",
+        "odds": "-290",
+        "numericOdds": -290
+      },
+      "fighter2": {
+        "name": "Lerone Murphy",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-03-21T22:52:26.816Z",
+      "fighter1": {
+        "name": "Movsar Evloev",
+        "odds": "-290",
+        "numericOdds": -290
+      },
+      "fighter2": {
+        "name": "Lerone Murphy",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-03-21T22:52:29.831Z",
+      "fighter1": {
+        "name": "Movsar Evloev",
+        "odds": "-290",
+        "numericOdds": -290
+      },
+      "fighter2": {
+        "name": "Lerone Murphy",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-03-21T22:52:32.844Z",
+      "fighter1": {
+        "name": "Movsar Evloev",
+        "odds": "-290",
+        "numericOdds": -290
+      },
+      "fighter2": {
+        "name": "Lerone Murphy",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-03-21T22:52:35.848Z",
+      "fighter1": {
+        "name": "Movsar Evloev",
+        "odds": "-290",
+        "numericOdds": -290
+      },
+      "fighter2": {
+        "name": "Lerone Murphy",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-03-21T22:52:38.855Z",
+      "fighter1": {
+        "name": "Movsar Evloev",
+        "odds": "-290",
+        "numericOdds": -290
+      },
+      "fighter2": {
+        "name": "Lerone Murphy",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-03-21T22:52:41.863Z",
+      "fighter1": {
+        "name": "Movsar Evloev",
+        "odds": "-290",
+        "numericOdds": -290
+      },
+      "fighter2": {
+        "name": "Lerone Murphy",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-03-21T22:52:44.875Z",
+      "fighter1": {
+        "name": "Movsar Evloev",
+        "odds": "-290",
+        "numericOdds": -290
+      },
+      "fighter2": {
+        "name": "Lerone Murphy",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-03-21T22:52:47.889Z",
+      "fighter1": {
+        "name": "Movsar Evloev",
+        "odds": "-290",
+        "numericOdds": -290
+      },
+      "fighter2": {
+        "name": "Lerone Murphy",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-03-21T22:52:50.899Z",
+      "fighter1": {
+        "name": "Movsar Evloev",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "Lerone Murphy",
+        "odds": "+205",
+        "numericOdds": 205
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-03-21T22:52:53.911Z",
+      "fighter1": {
+        "name": "Movsar Evloev",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "Lerone Murphy",
+        "odds": "+205",
+        "numericOdds": 205
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-03-21T22:52:56.923Z",
+      "fighter1": {
+        "name": "Movsar Evloev",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "Lerone Murphy",
+        "odds": "+205",
+        "numericOdds": 205
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-03-21T22:52:59.937Z",
+      "fighter1": {
+        "name": "Movsar Evloev",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "Lerone Murphy",
+        "odds": "+205",
+        "numericOdds": 205
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
     {
       "timestamp": "2026-03-21T22:53:02.946Z",
       "fighter1": {
@@ -8511,5 +8931,32 @@
       "isLocked": false,
       "extractionId": 7
     }
-  ]
+  ],
+  "createdAt": "2026-03-21T23:01:13.367Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Movsar Evloev",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:52:03.081Z",
+    "openingF1Odds": -240,
+    "openingF2Odds": 198,
+    "closingF1Odds": 172,
+    "closingF2Odds": -220,
+    "lineMovementF1": 412,
+    "crossoverOccurred": true,
+    "crossoverMinute": 11
+  },
+  "derived": {
+    "inferredFinishMin": null,
+    "inferredFinishRound": null,
+    "peakOddsSwing": 680,
+    "finishSpeed": "decision",
+    "preFightSteam": -70,
+    "dominanceScore": 66,
+    "crossoverCount": 7,
+    "derivedAt": "2026-06-14T11:47:28.466Z"
+  }
 }

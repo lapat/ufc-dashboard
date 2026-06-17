@@ -1,11 +1,6851 @@
 {
   "fightId": "santiagoluna_vs_angelpacheco",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-03-01T01:16:40.901Z",
+  "startTime": "2026-03-01T00:53:48.989Z",
   "endTime": "2026-03-01T01:31:33.818Z",
-  "dataPoints": 287,
+  "duration": 2264829,
+  "dataPoints": 743,
   "oddsHistory": [
+    {
+      "timestamp": "2026-03-01T00:53:48.989Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 171
+    },
+    {
+      "timestamp": "2026-03-01T00:53:52.001Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 172
+    },
+    {
+      "timestamp": "2026-03-01T00:53:55.001Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 173
+    },
+    {
+      "timestamp": "2026-03-01T00:53:58.002Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 174
+    },
+    {
+      "timestamp": "2026-03-01T00:54:01.004Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 175
+    },
+    {
+      "timestamp": "2026-03-01T00:54:04.018Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 176
+    },
+    {
+      "timestamp": "2026-03-01T00:54:07.030Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 177
+    },
+    {
+      "timestamp": "2026-03-01T00:54:10.042Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 178
+    },
+    {
+      "timestamp": "2026-03-01T00:54:13.064Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 179
+    },
+    {
+      "timestamp": "2026-03-01T00:54:16.072Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 180
+    },
+    {
+      "timestamp": "2026-03-01T00:54:19.073Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 181
+    },
+    {
+      "timestamp": "2026-03-01T00:54:22.088Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 182
+    },
+    {
+      "timestamp": "2026-03-01T00:54:25.094Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 183
+    },
+    {
+      "timestamp": "2026-03-01T00:54:28.099Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 184
+    },
+    {
+      "timestamp": "2026-03-01T00:54:31.113Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 185
+    },
+    {
+      "timestamp": "2026-03-01T00:54:34.118Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 186
+    },
+    {
+      "timestamp": "2026-03-01T00:54:37.120Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 187
+    },
+    {
+      "timestamp": "2026-03-01T00:54:40.131Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 188
+    },
+    {
+      "timestamp": "2026-03-01T00:54:43.142Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 189
+    },
+    {
+      "timestamp": "2026-03-01T00:54:46.142Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 190
+    },
+    {
+      "timestamp": "2026-03-01T00:54:49.146Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 191
+    },
+    {
+      "timestamp": "2026-03-01T00:54:52.161Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 192
+    },
+    {
+      "timestamp": "2026-03-01T00:54:55.172Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 193
+    },
+    {
+      "timestamp": "2026-03-01T00:54:58.180Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 194
+    },
+    {
+      "timestamp": "2026-03-01T00:55:01.189Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 195
+    },
+    {
+      "timestamp": "2026-03-01T00:55:04.199Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 196
+    },
+    {
+      "timestamp": "2026-03-01T00:55:07.199Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 197
+    },
+    {
+      "timestamp": "2026-03-01T00:55:10.207Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 198
+    },
+    {
+      "timestamp": "2026-03-01T00:55:13.208Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 199
+    },
+    {
+      "timestamp": "2026-03-01T00:55:16.208Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 200
+    },
+    {
+      "timestamp": "2026-03-01T00:55:19.217Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 201
+    },
+    {
+      "timestamp": "2026-03-01T00:55:22.231Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 202
+    },
+    {
+      "timestamp": "2026-03-01T00:55:25.232Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 203
+    },
+    {
+      "timestamp": "2026-03-01T00:55:28.246Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 204
+    },
+    {
+      "timestamp": "2026-03-01T00:55:31.260Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 205
+    },
+    {
+      "timestamp": "2026-03-01T00:55:34.268Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 206
+    },
+    {
+      "timestamp": "2026-03-01T00:55:37.276Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 207
+    },
+    {
+      "timestamp": "2026-03-01T00:55:40.281Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 208
+    },
+    {
+      "timestamp": "2026-03-01T00:55:43.293Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 209
+    },
+    {
+      "timestamp": "2026-03-01T00:55:46.304Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 210
+    },
+    {
+      "timestamp": "2026-03-01T00:55:49.312Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 211
+    },
+    {
+      "timestamp": "2026-03-01T00:55:52.325Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 212
+    },
+    {
+      "timestamp": "2026-03-01T00:55:55.335Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 213
+    },
+    {
+      "timestamp": "2026-03-01T00:55:58.348Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 214
+    },
+    {
+      "timestamp": "2026-03-01T00:56:01.361Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 215
+    },
+    {
+      "timestamp": "2026-03-01T00:56:04.375Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 216
+    },
+    {
+      "timestamp": "2026-03-01T00:56:07.382Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 217
+    },
+    {
+      "timestamp": "2026-03-01T00:56:10.393Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 218
+    },
+    {
+      "timestamp": "2026-03-01T00:56:13.403Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 219
+    },
+    {
+      "timestamp": "2026-03-01T00:56:16.413Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 220
+    },
+    {
+      "timestamp": "2026-03-01T00:56:19.416Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 221
+    },
+    {
+      "timestamp": "2026-03-01T00:56:22.424Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 222
+    },
+    {
+      "timestamp": "2026-03-01T00:56:25.440Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 223
+    },
+    {
+      "timestamp": "2026-03-01T00:56:28.452Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 224
+    },
+    {
+      "timestamp": "2026-03-01T00:56:31.453Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 225
+    },
+    {
+      "timestamp": "2026-03-01T00:56:34.461Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 226
+    },
+    {
+      "timestamp": "2026-03-01T00:56:37.476Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 227
+    },
+    {
+      "timestamp": "2026-03-01T00:56:40.478Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 228
+    },
+    {
+      "timestamp": "2026-03-01T00:56:43.493Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 229
+    },
+    {
+      "timestamp": "2026-03-01T00:56:46.495Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 230
+    },
+    {
+      "timestamp": "2026-03-01T00:56:49.510Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 231
+    },
+    {
+      "timestamp": "2026-03-01T00:56:52.519Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 232
+    },
+    {
+      "timestamp": "2026-03-01T00:56:55.519Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 233
+    },
+    {
+      "timestamp": "2026-03-01T00:56:58.530Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 234
+    },
+    {
+      "timestamp": "2026-03-01T00:57:01.542Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 235
+    },
+    {
+      "timestamp": "2026-03-01T00:57:04.551Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 236
+    },
+    {
+      "timestamp": "2026-03-01T00:57:07.558Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 237
+    },
+    {
+      "timestamp": "2026-03-01T00:57:10.565Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 238
+    },
+    {
+      "timestamp": "2026-03-01T00:57:13.576Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 239
+    },
+    {
+      "timestamp": "2026-03-01T00:57:16.587Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 240
+    },
+    {
+      "timestamp": "2026-03-01T00:57:19.588Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 241
+    },
+    {
+      "timestamp": "2026-03-01T00:57:22.592Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 242
+    },
+    {
+      "timestamp": "2026-03-01T00:57:25.601Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 243
+    },
+    {
+      "timestamp": "2026-03-01T00:57:28.612Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 244
+    },
+    {
+      "timestamp": "2026-03-01T00:57:31.628Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 245
+    },
+    {
+      "timestamp": "2026-03-01T00:57:34.638Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 246
+    },
+    {
+      "timestamp": "2026-03-01T00:57:37.651Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 247
+    },
+    {
+      "timestamp": "2026-03-01T00:57:40.657Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 248
+    },
+    {
+      "timestamp": "2026-03-01T00:57:43.672Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 249
+    },
+    {
+      "timestamp": "2026-03-01T00:57:46.676Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 250
+    },
+    {
+      "timestamp": "2026-03-01T00:57:49.686Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 251
+    },
+    {
+      "timestamp": "2026-03-01T00:57:52.694Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 252
+    },
+    {
+      "timestamp": "2026-03-01T00:57:55.700Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 253
+    },
+    {
+      "timestamp": "2026-03-01T00:57:58.708Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 254
+    },
+    {
+      "timestamp": "2026-03-01T00:58:01.719Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 255
+    },
+    {
+      "timestamp": "2026-03-01T00:58:04.736Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 256
+    },
+    {
+      "timestamp": "2026-03-01T00:58:07.745Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 257
+    },
+    {
+      "timestamp": "2026-03-01T00:58:10.755Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 258
+    },
+    {
+      "timestamp": "2026-03-01T00:58:13.770Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 259
+    },
+    {
+      "timestamp": "2026-03-01T00:58:16.779Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 260
+    },
+    {
+      "timestamp": "2026-03-01T00:58:19.785Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 261
+    },
+    {
+      "timestamp": "2026-03-01T00:58:22.798Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 262
+    },
+    {
+      "timestamp": "2026-03-01T00:58:25.801Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 263
+    },
+    {
+      "timestamp": "2026-03-01T00:58:28.811Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 264
+    },
+    {
+      "timestamp": "2026-03-01T00:58:31.812Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 265
+    },
+    {
+      "timestamp": "2026-03-01T00:58:34.823Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 266
+    },
+    {
+      "timestamp": "2026-03-01T00:58:37.823Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 267
+    },
+    {
+      "timestamp": "2026-03-01T00:58:40.832Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 268
+    },
+    {
+      "timestamp": "2026-03-01T00:58:43.832Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 269
+    },
+    {
+      "timestamp": "2026-03-01T00:58:46.839Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 270
+    },
+    {
+      "timestamp": "2026-03-01T00:58:49.851Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 271
+    },
+    {
+      "timestamp": "2026-03-01T00:58:52.852Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 272
+    },
+    {
+      "timestamp": "2026-03-01T00:58:55.867Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 273
+    },
+    {
+      "timestamp": "2026-03-01T00:58:58.880Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 274
+    },
+    {
+      "timestamp": "2026-03-01T00:59:01.888Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 275
+    },
+    {
+      "timestamp": "2026-03-01T00:59:04.901Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 276
+    },
+    {
+      "timestamp": "2026-03-01T00:59:07.916Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 277
+    },
+    {
+      "timestamp": "2026-03-01T00:59:10.928Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 278
+    },
+    {
+      "timestamp": "2026-03-01T00:59:13.937Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 279
+    },
+    {
+      "timestamp": "2026-03-01T00:59:16.944Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 280
+    },
+    {
+      "timestamp": "2026-03-01T00:59:19.957Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 281
+    },
+    {
+      "timestamp": "2026-03-01T00:59:22.962Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 282
+    },
+    {
+      "timestamp": "2026-03-01T00:59:25.964Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 283
+    },
+    {
+      "timestamp": "2026-03-01T00:59:28.969Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 284
+    },
+    {
+      "timestamp": "2026-03-01T00:59:31.984Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 285
+    },
+    {
+      "timestamp": "2026-03-01T00:59:34.994Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 286
+    },
+    {
+      "timestamp": "2026-03-01T00:59:38.006Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 287
+    },
+    {
+      "timestamp": "2026-03-01T00:59:41.015Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 288
+    },
+    {
+      "timestamp": "2026-03-01T00:59:44.021Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 289
+    },
+    {
+      "timestamp": "2026-03-01T00:59:47.029Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 290
+    },
+    {
+      "timestamp": "2026-03-01T00:59:50.044Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 291
+    },
+    {
+      "timestamp": "2026-03-01T00:59:53.049Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 292
+    },
+    {
+      "timestamp": "2026-03-01T00:59:56.056Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 293
+    },
+    {
+      "timestamp": "2026-03-01T00:59:59.069Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 294
+    },
+    {
+      "timestamp": "2026-03-01T01:00:02.077Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 295
+    },
+    {
+      "timestamp": "2026-03-01T01:00:05.085Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 296
+    },
+    {
+      "timestamp": "2026-03-01T01:00:08.100Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 297
+    },
+    {
+      "timestamp": "2026-03-01T01:00:11.105Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 298
+    },
+    {
+      "timestamp": "2026-03-01T01:00:14.114Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 299
+    },
+    {
+      "timestamp": "2026-03-01T01:00:17.127Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 300
+    },
+    {
+      "timestamp": "2026-03-01T01:00:20.140Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 301
+    },
+    {
+      "timestamp": "2026-03-01T01:00:23.145Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 302
+    },
+    {
+      "timestamp": "2026-03-01T01:00:26.153Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 303
+    },
+    {
+      "timestamp": "2026-03-01T01:00:29.154Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 304
+    },
+    {
+      "timestamp": "2026-03-01T01:00:32.163Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 305
+    },
+    {
+      "timestamp": "2026-03-01T01:00:35.168Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 306
+    },
+    {
+      "timestamp": "2026-03-01T01:00:38.173Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 307
+    },
+    {
+      "timestamp": "2026-03-01T01:00:41.184Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 308
+    },
+    {
+      "timestamp": "2026-03-01T01:00:44.186Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 309
+    },
+    {
+      "timestamp": "2026-03-01T01:00:47.196Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 310
+    },
+    {
+      "timestamp": "2026-03-01T01:00:50.209Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 311
+    },
+    {
+      "timestamp": "2026-03-01T01:00:53.218Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 312
+    },
+    {
+      "timestamp": "2026-03-01T01:00:56.230Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 313
+    },
+    {
+      "timestamp": "2026-03-01T01:00:59.240Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 314
+    },
+    {
+      "timestamp": "2026-03-01T01:01:02.249Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 315
+    },
+    {
+      "timestamp": "2026-03-01T01:01:05.260Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 316
+    },
+    {
+      "timestamp": "2026-03-01T01:01:08.262Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 317
+    },
+    {
+      "timestamp": "2026-03-01T01:01:11.269Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 318
+    },
+    {
+      "timestamp": "2026-03-01T01:01:14.277Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 319
+    },
+    {
+      "timestamp": "2026-03-01T01:01:17.282Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 320
+    },
+    {
+      "timestamp": "2026-03-01T01:01:20.283Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 321
+    },
+    {
+      "timestamp": "2026-03-01T01:01:23.296Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 322
+    },
+    {
+      "timestamp": "2026-03-01T01:01:26.296Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 323
+    },
+    {
+      "timestamp": "2026-03-01T01:01:29.308Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 324
+    },
+    {
+      "timestamp": "2026-03-01T01:01:32.312Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 325
+    },
+    {
+      "timestamp": "2026-03-01T01:01:35.321Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 326
+    },
+    {
+      "timestamp": "2026-03-01T01:01:38.334Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 327
+    },
+    {
+      "timestamp": "2026-03-01T01:01:41.338Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 328
+    },
+    {
+      "timestamp": "2026-03-01T01:01:44.346Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 329
+    },
+    {
+      "timestamp": "2026-03-01T01:01:47.352Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 330
+    },
+    {
+      "timestamp": "2026-03-01T01:01:50.360Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 331
+    },
+    {
+      "timestamp": "2026-03-01T01:01:53.369Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 332
+    },
+    {
+      "timestamp": "2026-03-01T01:01:56.374Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 333
+    },
+    {
+      "timestamp": "2026-03-01T01:01:59.385Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 334
+    },
+    {
+      "timestamp": "2026-03-01T01:02:02.396Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 335
+    },
+    {
+      "timestamp": "2026-03-01T01:02:05.405Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 336
+    },
+    {
+      "timestamp": "2026-03-01T01:02:08.410Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 337
+    },
+    {
+      "timestamp": "2026-03-01T01:02:11.421Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 338
+    },
+    {
+      "timestamp": "2026-03-01T01:02:14.422Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 339
+    },
+    {
+      "timestamp": "2026-03-01T01:02:17.434Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 340
+    },
+    {
+      "timestamp": "2026-03-01T01:02:20.448Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 341
+    },
+    {
+      "timestamp": "2026-03-01T01:02:23.457Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 342
+    },
+    {
+      "timestamp": "2026-03-01T01:02:26.462Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 343
+    },
+    {
+      "timestamp": "2026-03-01T01:02:29.474Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 344
+    },
+    {
+      "timestamp": "2026-03-01T01:02:32.484Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 345
+    },
+    {
+      "timestamp": "2026-03-01T01:02:35.496Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 346
+    },
+    {
+      "timestamp": "2026-03-01T01:02:38.501Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 347
+    },
+    {
+      "timestamp": "2026-03-01T01:02:41.510Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 348
+    },
+    {
+      "timestamp": "2026-03-01T01:02:44.515Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 349
+    },
+    {
+      "timestamp": "2026-03-01T01:02:47.528Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 350
+    },
+    {
+      "timestamp": "2026-03-01T01:02:50.532Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 351
+    },
+    {
+      "timestamp": "2026-03-01T01:02:53.546Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 352
+    },
+    {
+      "timestamp": "2026-03-01T01:02:56.555Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 353
+    },
+    {
+      "timestamp": "2026-03-01T01:02:59.556Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 354
+    },
+    {
+      "timestamp": "2026-03-01T01:03:02.567Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 355
+    },
+    {
+      "timestamp": "2026-03-01T01:03:05.576Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 356
+    },
+    {
+      "timestamp": "2026-03-01T01:03:08.584Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 357
+    },
+    {
+      "timestamp": "2026-03-01T01:03:11.595Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 358
+    },
+    {
+      "timestamp": "2026-03-01T01:03:14.605Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 359
+    },
+    {
+      "timestamp": "2026-03-01T01:03:17.615Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 360
+    },
+    {
+      "timestamp": "2026-03-01T01:03:20.622Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 361
+    },
+    {
+      "timestamp": "2026-03-01T01:03:23.636Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 362
+    },
+    {
+      "timestamp": "2026-03-01T01:03:26.645Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 363
+    },
+    {
+      "timestamp": "2026-03-01T01:03:29.658Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 364
+    },
+    {
+      "timestamp": "2026-03-01T01:03:32.667Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 365
+    },
+    {
+      "timestamp": "2026-03-01T01:03:35.672Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 366
+    },
+    {
+      "timestamp": "2026-03-01T01:03:38.676Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 367
+    },
+    {
+      "timestamp": "2026-03-01T01:03:41.690Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 368
+    },
+    {
+      "timestamp": "2026-03-01T01:03:44.702Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 369
+    },
+    {
+      "timestamp": "2026-03-01T01:03:47.702Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 370
+    },
+    {
+      "timestamp": "2026-03-01T01:03:50.707Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 371
+    },
+    {
+      "timestamp": "2026-03-01T01:03:53.719Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 372
+    },
+    {
+      "timestamp": "2026-03-01T01:03:56.733Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 373
+    },
+    {
+      "timestamp": "2026-03-01T01:03:59.745Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 374
+    },
+    {
+      "timestamp": "2026-03-01T01:04:02.753Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 375
+    },
+    {
+      "timestamp": "2026-03-01T01:04:05.762Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 376
+    },
+    {
+      "timestamp": "2026-03-01T01:04:08.770Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 377
+    },
+    {
+      "timestamp": "2026-03-01T01:04:11.785Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 378
+    },
+    {
+      "timestamp": "2026-03-01T01:04:14.785Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 379
+    },
+    {
+      "timestamp": "2026-03-01T01:04:17.793Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 380
+    },
+    {
+      "timestamp": "2026-03-01T01:04:20.804Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 381
+    },
+    {
+      "timestamp": "2026-03-01T01:04:23.813Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 382
+    },
+    {
+      "timestamp": "2026-03-01T01:04:26.823Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 383
+    },
+    {
+      "timestamp": "2026-03-01T01:04:29.827Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 384
+    },
+    {
+      "timestamp": "2026-03-01T01:04:32.832Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 385
+    },
+    {
+      "timestamp": "2026-03-01T01:04:35.842Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 386
+    },
+    {
+      "timestamp": "2026-03-01T01:04:38.854Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 387
+    },
+    {
+      "timestamp": "2026-03-01T01:04:41.858Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 388
+    },
+    {
+      "timestamp": "2026-03-01T01:04:44.871Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 389
+    },
+    {
+      "timestamp": "2026-03-01T01:04:47.877Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 390
+    },
+    {
+      "timestamp": "2026-03-01T01:04:50.887Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 391
+    },
+    {
+      "timestamp": "2026-03-01T01:04:53.888Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 392
+    },
+    {
+      "timestamp": "2026-03-01T01:04:56.894Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 393
+    },
+    {
+      "timestamp": "2026-03-01T01:04:59.902Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 394
+    },
+    {
+      "timestamp": "2026-03-01T01:05:02.915Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 395
+    },
+    {
+      "timestamp": "2026-03-01T01:05:05.929Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 396
+    },
+    {
+      "timestamp": "2026-03-01T01:05:08.943Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 397
+    },
+    {
+      "timestamp": "2026-03-01T01:05:11.950Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 398
+    },
+    {
+      "timestamp": "2026-03-01T01:05:14.955Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 399
+    },
+    {
+      "timestamp": "2026-03-01T01:05:17.962Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 400
+    },
+    {
+      "timestamp": "2026-03-01T01:05:20.965Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 401
+    },
+    {
+      "timestamp": "2026-03-01T01:05:23.974Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 402
+    },
+    {
+      "timestamp": "2026-03-01T01:05:26.975Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 403
+    },
+    {
+      "timestamp": "2026-03-01T01:05:29.976Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 404
+    },
+    {
+      "timestamp": "2026-03-01T01:05:32.979Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 405
+    },
+    {
+      "timestamp": "2026-03-01T01:05:35.989Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 406
+    },
+    {
+      "timestamp": "2026-03-01T01:05:39.003Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 407
+    },
+    {
+      "timestamp": "2026-03-01T01:05:42.010Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 408
+    },
+    {
+      "timestamp": "2026-03-01T01:05:45.019Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 409
+    },
+    {
+      "timestamp": "2026-03-01T01:05:48.026Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 410
+    },
+    {
+      "timestamp": "2026-03-01T01:05:51.036Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 411
+    },
+    {
+      "timestamp": "2026-03-01T01:05:54.038Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 412
+    },
+    {
+      "timestamp": "2026-03-01T01:05:57.053Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 413
+    },
+    {
+      "timestamp": "2026-03-01T01:06:00.060Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 414
+    },
+    {
+      "timestamp": "2026-03-01T01:06:03.067Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 415
+    },
+    {
+      "timestamp": "2026-03-01T01:06:06.081Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 416
+    },
+    {
+      "timestamp": "2026-03-01T01:06:09.095Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 417
+    },
+    {
+      "timestamp": "2026-03-01T01:06:12.102Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 418
+    },
+    {
+      "timestamp": "2026-03-01T01:06:15.113Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 419
+    },
+    {
+      "timestamp": "2026-03-01T01:06:18.115Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 420
+    },
+    {
+      "timestamp": "2026-03-01T01:06:21.128Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 421
+    },
+    {
+      "timestamp": "2026-03-01T01:06:24.142Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 422
+    },
+    {
+      "timestamp": "2026-03-01T01:06:27.153Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 423
+    },
+    {
+      "timestamp": "2026-03-01T01:06:30.168Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 424
+    },
+    {
+      "timestamp": "2026-03-01T01:06:33.175Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 425
+    },
+    {
+      "timestamp": "2026-03-01T01:06:36.188Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 426
+    },
+    {
+      "timestamp": "2026-03-01T01:06:39.199Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 427
+    },
+    {
+      "timestamp": "2026-03-01T01:06:42.209Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 428
+    },
+    {
+      "timestamp": "2026-03-01T01:06:45.215Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 429
+    },
+    {
+      "timestamp": "2026-03-01T01:06:48.220Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 430
+    },
+    {
+      "timestamp": "2026-03-01T01:06:51.231Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 431
+    },
+    {
+      "timestamp": "2026-03-01T01:06:54.239Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 432
+    },
+    {
+      "timestamp": "2026-03-01T01:06:57.254Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 433
+    },
+    {
+      "timestamp": "2026-03-01T01:07:00.262Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 434
+    },
+    {
+      "timestamp": "2026-03-01T01:07:03.275Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 435
+    },
+    {
+      "timestamp": "2026-03-01T01:07:06.281Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 436
+    },
+    {
+      "timestamp": "2026-03-01T01:07:09.293Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 437
+    },
+    {
+      "timestamp": "2026-03-01T01:07:12.306Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 438
+    },
+    {
+      "timestamp": "2026-03-01T01:07:15.312Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 439
+    },
+    {
+      "timestamp": "2026-03-01T01:07:18.313Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 440
+    },
+    {
+      "timestamp": "2026-03-01T01:07:21.316Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 441
+    },
+    {
+      "timestamp": "2026-03-01T01:07:24.325Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 442
+    },
+    {
+      "timestamp": "2026-03-01T01:07:27.330Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 443
+    },
+    {
+      "timestamp": "2026-03-01T01:07:30.338Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 444
+    },
+    {
+      "timestamp": "2026-03-01T01:07:33.349Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 445
+    },
+    {
+      "timestamp": "2026-03-01T01:07:36.352Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 446
+    },
+    {
+      "timestamp": "2026-03-01T01:07:39.355Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 447
+    },
+    {
+      "timestamp": "2026-03-01T01:07:42.358Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 448
+    },
+    {
+      "timestamp": "2026-03-01T01:07:45.370Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 449
+    },
+    {
+      "timestamp": "2026-03-01T01:07:48.382Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 450
+    },
+    {
+      "timestamp": "2026-03-01T01:07:51.388Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 451
+    },
+    {
+      "timestamp": "2026-03-01T01:07:54.392Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 452
+    },
+    {
+      "timestamp": "2026-03-01T01:07:57.402Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 453
+    },
+    {
+      "timestamp": "2026-03-01T01:08:00.406Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 454
+    },
+    {
+      "timestamp": "2026-03-01T01:08:03.414Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 455
+    },
+    {
+      "timestamp": "2026-03-01T01:08:06.428Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 456
+    },
+    {
+      "timestamp": "2026-03-01T01:08:09.440Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 457
+    },
+    {
+      "timestamp": "2026-03-01T01:08:12.454Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 458
+    },
+    {
+      "timestamp": "2026-03-01T01:08:15.463Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 459
+    },
+    {
+      "timestamp": "2026-03-01T01:08:18.474Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 460
+    },
+    {
+      "timestamp": "2026-03-01T01:08:21.484Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 461
+    },
+    {
+      "timestamp": "2026-03-01T01:08:24.496Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 462
+    },
+    {
+      "timestamp": "2026-03-01T01:08:27.499Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 463
+    },
+    {
+      "timestamp": "2026-03-01T01:08:30.513Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 464
+    },
+    {
+      "timestamp": "2026-03-01T01:08:33.525Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 465
+    },
+    {
+      "timestamp": "2026-03-01T01:08:36.536Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 466
+    },
+    {
+      "timestamp": "2026-03-01T01:08:39.543Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 467
+    },
+    {
+      "timestamp": "2026-03-01T01:08:42.551Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 468
+    },
+    {
+      "timestamp": "2026-03-01T01:08:45.559Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 469
+    },
+    {
+      "timestamp": "2026-03-01T01:08:48.567Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 470
+    },
+    {
+      "timestamp": "2026-03-01T01:08:51.573Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 471
+    },
+    {
+      "timestamp": "2026-03-01T01:08:54.581Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 472
+    },
+    {
+      "timestamp": "2026-03-01T01:08:57.594Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 473
+    },
+    {
+      "timestamp": "2026-03-01T01:09:00.602Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 474
+    },
+    {
+      "timestamp": "2026-03-01T01:09:03.614Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 475
+    },
+    {
+      "timestamp": "2026-03-01T01:09:06.630Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 476
+    },
+    {
+      "timestamp": "2026-03-01T01:09:09.637Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 477
+    },
+    {
+      "timestamp": "2026-03-01T01:09:12.651Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 478
+    },
+    {
+      "timestamp": "2026-03-01T01:09:15.663Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 479
+    },
+    {
+      "timestamp": "2026-03-01T01:09:18.670Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 480
+    },
+    {
+      "timestamp": "2026-03-01T01:09:21.683Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 481
+    },
+    {
+      "timestamp": "2026-03-01T01:09:24.695Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 482
+    },
+    {
+      "timestamp": "2026-03-01T01:09:27.695Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 483
+    },
+    {
+      "timestamp": "2026-03-01T01:09:30.704Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 484
+    },
+    {
+      "timestamp": "2026-03-01T01:09:33.710Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 485
+    },
+    {
+      "timestamp": "2026-03-01T01:09:36.710Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 486
+    },
+    {
+      "timestamp": "2026-03-01T01:09:39.719Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 487
+    },
+    {
+      "timestamp": "2026-03-01T01:09:42.732Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 488
+    },
+    {
+      "timestamp": "2026-03-01T01:09:45.732Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 489
+    },
+    {
+      "timestamp": "2026-03-01T01:09:48.734Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 490
+    },
+    {
+      "timestamp": "2026-03-01T01:09:51.734Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 491
+    },
+    {
+      "timestamp": "2026-03-01T01:09:54.740Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 492
+    },
+    {
+      "timestamp": "2026-03-01T01:09:57.749Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 493
+    },
+    {
+      "timestamp": "2026-03-01T01:10:00.762Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 494
+    },
+    {
+      "timestamp": "2026-03-01T01:10:03.775Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 495
+    },
+    {
+      "timestamp": "2026-03-01T01:10:06.777Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 496
+    },
+    {
+      "timestamp": "2026-03-01T01:10:09.791Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 497
+    },
+    {
+      "timestamp": "2026-03-01T01:10:12.802Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 498
+    },
+    {
+      "timestamp": "2026-03-01T01:10:15.811Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 499
+    },
+    {
+      "timestamp": "2026-03-01T01:10:18.819Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 500
+    },
+    {
+      "timestamp": "2026-03-01T01:10:21.829Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:10:24.831Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:10:27.837Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:10:30.837Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:10:33.844Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:10:36.852Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:10:39.864Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:10:42.877Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:10:45.890Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:10:48.898Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:10:51.906Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:10:54.907Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:10:57.918Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:11:00.922Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:11:03.932Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-820",
+        "numericOdds": -820
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+570",
+        "numericOdds": 570
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:11:06.941Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-820",
+        "numericOdds": -820
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+570",
+        "numericOdds": 570
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:11:09.950Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-820",
+        "numericOdds": -820
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+570",
+        "numericOdds": 570
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:11:12.957Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-820",
+        "numericOdds": -820
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+570",
+        "numericOdds": 570
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:11:15.965Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-820",
+        "numericOdds": -820
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+570",
+        "numericOdds": 570
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:11:18.969Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-820",
+        "numericOdds": -820
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+570",
+        "numericOdds": 570
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:11:21.981Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-820",
+        "numericOdds": -820
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+570",
+        "numericOdds": 570
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:11:24.986Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-820",
+        "numericOdds": -820
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+570",
+        "numericOdds": 570
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:11:27.999Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-820",
+        "numericOdds": -820
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+570",
+        "numericOdds": 570
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:11:31.000Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-820",
+        "numericOdds": -820
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+570",
+        "numericOdds": 570
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:11:34.012Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-820",
+        "numericOdds": -820
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+570",
+        "numericOdds": 570
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:11:37.027Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-820",
+        "numericOdds": -820
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+570",
+        "numericOdds": 570
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:11:40.041Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-820",
+        "numericOdds": -820
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+570",
+        "numericOdds": 570
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:11:43.062Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-820",
+        "numericOdds": -820
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+570",
+        "numericOdds": 570
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:11:46.072Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-820",
+        "numericOdds": -820
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+570",
+        "numericOdds": 570
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:11:49.085Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-820",
+        "numericOdds": -820
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+570",
+        "numericOdds": 570
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:11:52.097Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-820",
+        "numericOdds": -820
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+570",
+        "numericOdds": 570
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:11:55.106Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-820",
+        "numericOdds": -820
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+570",
+        "numericOdds": 570
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:11:58.107Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-820",
+        "numericOdds": -820
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+570",
+        "numericOdds": 570
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:12:01.113Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-820",
+        "numericOdds": -820
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+570",
+        "numericOdds": 570
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:12:04.124Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-820",
+        "numericOdds": -820
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+570",
+        "numericOdds": 570
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:12:07.131Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-820",
+        "numericOdds": -820
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+570",
+        "numericOdds": 570
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:12:10.143Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-820",
+        "numericOdds": -820
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+570",
+        "numericOdds": 570
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:12:13.144Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-820",
+        "numericOdds": -820
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+570",
+        "numericOdds": 570
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:12:16.152Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-820",
+        "numericOdds": -820
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+570",
+        "numericOdds": 570
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:12:19.156Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-820",
+        "numericOdds": -820
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+570",
+        "numericOdds": 570
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:12:22.169Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-820",
+        "numericOdds": -820
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+570",
+        "numericOdds": 570
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:12:25.183Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-820",
+        "numericOdds": -820
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+570",
+        "numericOdds": 570
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:12:28.190Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-820",
+        "numericOdds": -820
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+570",
+        "numericOdds": 570
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:12:31.200Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-820",
+        "numericOdds": -820
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+570",
+        "numericOdds": 570
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:12:34.210Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-820",
+        "numericOdds": -820
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+570",
+        "numericOdds": 570
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:12:37.223Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-820",
+        "numericOdds": -820
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+570",
+        "numericOdds": 570
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:12:40.234Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:12:43.234Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:12:46.242Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:12:49.248Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:12:52.258Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:12:55.270Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:12:58.282Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:13:01.292Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:13:04.295Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:13:07.306Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:13:10.318Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:13:13.319Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:13:16.328Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:13:19.339Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:13:22.344Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:13:25.353Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:13:28.364Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:13:31.372Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:13:34.382Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:13:37.386Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:13:40.390Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:13:43.403Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:13:46.411Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:13:49.421Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:13:52.433Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:13:55.448Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:13:58.461Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:14:01.461Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:14:04.473Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:14:07.484Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:14:10.498Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:14:13.512Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:14:16.522Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:14:19.527Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:14:22.531Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:14:25.536Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:14:28.548Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:14:31.554Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:14:34.566Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:14:37.578Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:14:40.588Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:14:43.588Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:14:46.601Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:14:49.610Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:14:52.618Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:14:55.628Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:14:58.638Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:15:01.645Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:15:04.652Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:15:07.663Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:15:10.669Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:15:13.677Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:15:16.683Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:15:19.692Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:15:22.701Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:15:25.706Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:15:28.717Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:15:31.727Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:15:34.737Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:15:37.742Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:15:40.753Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:15:43.752Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:15:46.753Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:15:49.760Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:15:52.770Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:15:55.782Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:15:58.792Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:16:01.802Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:16:04.816Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:16:07.824Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:16:10.830Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:16:13.831Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:16:16.842Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:16:19.857Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:16:22.862Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:16:25.863Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:16:28.875Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:16:31.884Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:16:34.892Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
+    {
+      "timestamp": "2026-03-01T01:16:37.899Z",
+      "fighter1": {
+        "name": "Santiago Luna",
+        "odds": "-770",
+        "numericOdds": -770
+      },
+      "fighter2": {
+        "name": "Angel Pacheco",
+        "odds": "+540",
+        "numericOdds": 540
+      },
+      "isLocked": false,
+      "extractionId": 501
+    },
     {
       "timestamp": "2026-03-01T01:16:40.901Z",
       "fighter1": {
@@ -4311,5 +11151,32 @@
       "isLocked": false,
       "extractionId": 29
     }
-  ]
+  ],
+  "createdAt": "2026-03-01T01:18:59.315Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Santiago Luna",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:52:18.775Z",
+    "openingF1Odds": -770,
+    "openingF2Odds": 540,
+    "closingF1Odds": -6000,
+    "closingF2Odds": 2300,
+    "lineMovementF1": -5230,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  },
+  "derived": {
+    "inferredFinishMin": 17,
+    "inferredFinishRound": 3,
+    "peakOddsSwing": 5230,
+    "finishSpeed": "fast",
+    "preFightSteam": 0,
+    "dominanceScore": 100,
+    "crossoverCount": 0,
+    "derivedAt": "2026-06-14T11:47:28.490Z"
+  }
 }

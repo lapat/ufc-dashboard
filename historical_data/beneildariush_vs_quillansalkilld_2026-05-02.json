@@ -1,11 +1,521 @@
 {
   "fightId": "beneildariush_vs_quillansalkilld",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-05-02T13:21:18.853Z",
+  "startTime": "2026-05-02T13:19:30.565Z",
   "endTime": "2026-05-02T13:23:52.220Z",
-  "dataPoints": 104,
+  "duration": 261655,
+  "dataPoints": 138,
   "oddsHistory": [
+    {
+      "timestamp": "2026-05-02T13:19:30.565Z",
+      "fighter1": {
+        "name": "Beneil Dariush",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Quillan Salkilld",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 238
+    },
+    {
+      "timestamp": "2026-05-02T13:19:33.573Z",
+      "fighter1": {
+        "name": "Beneil Dariush",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Quillan Salkilld",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-05-02T13:19:36.576Z",
+      "fighter1": {
+        "name": "Beneil Dariush",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Quillan Salkilld",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-02T13:19:39.587Z",
+      "fighter1": {
+        "name": "Beneil Dariush",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Quillan Salkilld",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-02T13:19:42.600Z",
+      "fighter1": {
+        "name": "Beneil Dariush",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Quillan Salkilld",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-05-02T13:19:45.612Z",
+      "fighter1": {
+        "name": "Beneil Dariush",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Quillan Salkilld",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-05-02T13:19:48.624Z",
+      "fighter1": {
+        "name": "Beneil Dariush",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Quillan Salkilld",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-05-02T13:19:51.633Z",
+      "fighter1": {
+        "name": "Beneil Dariush",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Quillan Salkilld",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-05-02T13:19:54.642Z",
+      "fighter1": {
+        "name": "Beneil Dariush",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Quillan Salkilld",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-05-02T13:19:57.657Z",
+      "fighter1": {
+        "name": "Beneil Dariush",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Quillan Salkilld",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-05-02T13:20:00.662Z",
+      "fighter1": {
+        "name": "Beneil Dariush",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Quillan Salkilld",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-05-02T13:20:03.670Z",
+      "fighter1": {
+        "name": "Beneil Dariush",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Quillan Salkilld",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-05-02T13:20:06.680Z",
+      "fighter1": {
+        "name": "Beneil Dariush",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Quillan Salkilld",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-05-02T13:20:09.683Z",
+      "fighter1": {
+        "name": "Beneil Dariush",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Quillan Salkilld",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-05-02T13:20:12.690Z",
+      "fighter1": {
+        "name": "Beneil Dariush",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Quillan Salkilld",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-05-02T13:20:15.691Z",
+      "fighter1": {
+        "name": "Beneil Dariush",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Quillan Salkilld",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-05-02T13:20:18.698Z",
+      "fighter1": {
+        "name": "Beneil Dariush",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Quillan Salkilld",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-05-02T13:20:21.710Z",
+      "fighter1": {
+        "name": "Beneil Dariush",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Quillan Salkilld",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-05-02T13:20:24.710Z",
+      "fighter1": {
+        "name": "Beneil Dariush",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Quillan Salkilld",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-05-02T13:20:27.715Z",
+      "fighter1": {
+        "name": "Beneil Dariush",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Quillan Salkilld",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-05-02T13:20:30.721Z",
+      "fighter1": {
+        "name": "Beneil Dariush",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Quillan Salkilld",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-05-02T13:20:33.735Z",
+      "fighter1": {
+        "name": "Beneil Dariush",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Quillan Salkilld",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-05-02T13:20:36.750Z",
+      "fighter1": {
+        "name": "Beneil Dariush",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Quillan Salkilld",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-05-02T13:20:39.753Z",
+      "fighter1": {
+        "name": "Beneil Dariush",
+        "odds": "+330",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Quillan Salkilld",
+        "odds": "-480",
+        "numericOdds": -480
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-05-02T13:20:42.759Z",
+      "fighter1": {
+        "name": "Beneil Dariush",
+        "odds": "+330",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Quillan Salkilld",
+        "odds": "-480",
+        "numericOdds": -480
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-05-02T13:20:45.764Z",
+      "fighter1": {
+        "name": "Beneil Dariush",
+        "odds": "+330",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Quillan Salkilld",
+        "odds": "-480",
+        "numericOdds": -480
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-05-02T13:20:48.771Z",
+      "fighter1": {
+        "name": "Beneil Dariush",
+        "odds": "+330",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Quillan Salkilld",
+        "odds": "-480",
+        "numericOdds": -480
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-05-02T13:20:51.778Z",
+      "fighter1": {
+        "name": "Beneil Dariush",
+        "odds": "+330",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Quillan Salkilld",
+        "odds": "-480",
+        "numericOdds": -480
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-05-02T13:20:54.785Z",
+      "fighter1": {
+        "name": "Beneil Dariush",
+        "odds": "+330",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Quillan Salkilld",
+        "odds": "-480",
+        "numericOdds": -480
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-05-02T13:20:57.796Z",
+      "fighter1": {
+        "name": "Beneil Dariush",
+        "odds": "+330",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Quillan Salkilld",
+        "odds": "-480",
+        "numericOdds": -480
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-05-02T13:21:00.807Z",
+      "fighter1": {
+        "name": "Beneil Dariush",
+        "odds": "+330",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Quillan Salkilld",
+        "odds": "-480",
+        "numericOdds": -480
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-05-02T13:21:03.820Z",
+      "fighter1": {
+        "name": "Beneil Dariush",
+        "odds": "+330",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Quillan Salkilld",
+        "odds": "-480",
+        "numericOdds": -480
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-05-02T13:21:06.828Z",
+      "fighter1": {
+        "name": "Beneil Dariush",
+        "odds": "+330",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Quillan Salkilld",
+        "odds": "-480",
+        "numericOdds": -480
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-05-02T13:21:09.838Z",
+      "fighter1": {
+        "name": "Beneil Dariush",
+        "odds": "+330",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Quillan Salkilld",
+        "odds": "-480",
+        "numericOdds": -480
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
     {
       "timestamp": "2026-05-02T13:21:18.853Z",
       "fighter1": {
@@ -1566,5 +2076,32 @@
       "isLocked": false,
       "extractionId": 52
     }
-  ]
+  ],
+  "createdAt": "2026-05-02T13:21:18.852Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Quillan Salkilld",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:50:56.580Z",
+    "openingF1Odds": 350,
+    "openingF2Odds": -450,
+    "closingF1Odds": 166,
+    "closingF2Odds": -215,
+    "lineMovementF1": -184,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  },
+  "derived": {
+    "inferredFinishMin": null,
+    "inferredFinishRound": null,
+    "peakOddsSwing": 198,
+    "finishSpeed": "decision",
+    "preFightSteam": -184,
+    "dominanceScore": 88,
+    "crossoverCount": 0,
+    "derivedAt": "2026-06-14T11:47:28.387Z"
+  }
 }

@@ -1,11 +1,386 @@
 {
   "fightId": "taituivasa_vs_tallisonteixeira",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-02-01T02:44:12.513Z",
-  "endTime": "2026-02-01T03:00:02.513Z",
-  "dataPoints": 264,
+  "startTime": "2026-02-01T02:42:57.327Z",
+  "endTime": "2026-02-01T03:00:26.563Z",
+  "duration": 1049236,
+  "dataPoints": 297,
   "oddsHistory": [
+    {
+      "timestamp": "2026-02-01T02:42:57.327Z",
+      "fighter1": {
+        "name": "Tai Tuivasa",
+        "odds": "+245",
+        "numericOdds": 245
+      },
+      "fighter2": {
+        "name": "Tallison Teixeira",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-02-01T02:43:00.344Z",
+      "fighter1": {
+        "name": "Tai Tuivasa",
+        "odds": "+245",
+        "numericOdds": 245
+      },
+      "fighter2": {
+        "name": "Tallison Teixeira",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-02-01T02:43:03.351Z",
+      "fighter1": {
+        "name": "Tai Tuivasa",
+        "odds": "+245",
+        "numericOdds": 245
+      },
+      "fighter2": {
+        "name": "Tallison Teixeira",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-02-01T02:43:06.357Z",
+      "fighter1": {
+        "name": "Tai Tuivasa",
+        "odds": "+245",
+        "numericOdds": 245
+      },
+      "fighter2": {
+        "name": "Tallison Teixeira",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-02-01T02:43:09.370Z",
+      "fighter1": {
+        "name": "Tai Tuivasa",
+        "odds": "+245",
+        "numericOdds": 245
+      },
+      "fighter2": {
+        "name": "Tallison Teixeira",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-02-01T02:43:12.370Z",
+      "fighter1": {
+        "name": "Tai Tuivasa",
+        "odds": "+245",
+        "numericOdds": 245
+      },
+      "fighter2": {
+        "name": "Tallison Teixeira",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-02-01T02:43:15.379Z",
+      "fighter1": {
+        "name": "Tai Tuivasa",
+        "odds": "+245",
+        "numericOdds": 245
+      },
+      "fighter2": {
+        "name": "Tallison Teixeira",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-02-01T02:43:18.385Z",
+      "fighter1": {
+        "name": "Tai Tuivasa",
+        "odds": "+245",
+        "numericOdds": 245
+      },
+      "fighter2": {
+        "name": "Tallison Teixeira",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-02-01T02:43:21.394Z",
+      "fighter1": {
+        "name": "Tai Tuivasa",
+        "odds": "+245",
+        "numericOdds": 245
+      },
+      "fighter2": {
+        "name": "Tallison Teixeira",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-02-01T02:43:24.399Z",
+      "fighter1": {
+        "name": "Tai Tuivasa",
+        "odds": "+245",
+        "numericOdds": 245
+      },
+      "fighter2": {
+        "name": "Tallison Teixeira",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-02-01T02:43:27.413Z",
+      "fighter1": {
+        "name": "Tai Tuivasa",
+        "odds": "+245",
+        "numericOdds": 245
+      },
+      "fighter2": {
+        "name": "Tallison Teixeira",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-02-01T02:43:30.423Z",
+      "fighter1": {
+        "name": "Tai Tuivasa",
+        "odds": "+245",
+        "numericOdds": 245
+      },
+      "fighter2": {
+        "name": "Tallison Teixeira",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-02-01T02:43:33.426Z",
+      "fighter1": {
+        "name": "Tai Tuivasa",
+        "odds": "+245",
+        "numericOdds": 245
+      },
+      "fighter2": {
+        "name": "Tallison Teixeira",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-02-01T02:43:36.434Z",
+      "fighter1": {
+        "name": "Tai Tuivasa",
+        "odds": "+245",
+        "numericOdds": 245
+      },
+      "fighter2": {
+        "name": "Tallison Teixeira",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-02-01T02:43:39.436Z",
+      "fighter1": {
+        "name": "Tai Tuivasa",
+        "odds": "+245",
+        "numericOdds": 245
+      },
+      "fighter2": {
+        "name": "Tallison Teixeira",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-02-01T02:43:42.441Z",
+      "fighter1": {
+        "name": "Tai Tuivasa",
+        "odds": "+245",
+        "numericOdds": 245
+      },
+      "fighter2": {
+        "name": "Tallison Teixeira",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-02-01T02:43:45.452Z",
+      "fighter1": {
+        "name": "Tai Tuivasa",
+        "odds": "+245",
+        "numericOdds": 245
+      },
+      "fighter2": {
+        "name": "Tallison Teixeira",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-02-01T02:43:48.457Z",
+      "fighter1": {
+        "name": "Tai Tuivasa",
+        "odds": "+245",
+        "numericOdds": 245
+      },
+      "fighter2": {
+        "name": "Tallison Teixeira",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-02-01T02:43:51.462Z",
+      "fighter1": {
+        "name": "Tai Tuivasa",
+        "odds": "+245",
+        "numericOdds": 245
+      },
+      "fighter2": {
+        "name": "Tallison Teixeira",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-02-01T02:43:54.478Z",
+      "fighter1": {
+        "name": "Tai Tuivasa",
+        "odds": "+245",
+        "numericOdds": 245
+      },
+      "fighter2": {
+        "name": "Tallison Teixeira",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-02-01T02:43:57.481Z",
+      "fighter1": {
+        "name": "Tai Tuivasa",
+        "odds": "+245",
+        "numericOdds": 245
+      },
+      "fighter2": {
+        "name": "Tallison Teixeira",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-02-01T02:44:00.496Z",
+      "fighter1": {
+        "name": "Tai Tuivasa",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Tallison Teixeira",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-02-01T02:44:03.501Z",
+      "fighter1": {
+        "name": "Tai Tuivasa",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Tallison Teixeira",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-02-01T02:44:06.503Z",
+      "fighter1": {
+        "name": "Tai Tuivasa",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Tallison Teixeira",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-02-01T02:44:09.514Z",
+      "fighter1": {
+        "name": "Tai Tuivasa",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Tallison Teixeira",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
     {
       "timestamp": "2026-02-01T02:44:12.513Z",
       "fighter1": {
@@ -3965,6 +4340,153 @@
       },
       "isLocked": false,
       "extractionId": 6
+    },
+    {
+      "timestamp": "2026-02-01T03:00:05.516Z",
+      "fighter1": {
+        "name": "Tai Tuivasa",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Tallison Teixeira",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-02-01T03:00:08.521Z",
+      "fighter1": {
+        "name": "Tai Tuivasa",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Tallison Teixeira",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-02-01T03:00:11.531Z",
+      "fighter1": {
+        "name": "Tai Tuivasa",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Tallison Teixeira",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-02-01T03:00:14.534Z",
+      "fighter1": {
+        "name": "Tai Tuivasa",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Tallison Teixeira",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-02-01T03:00:17.536Z",
+      "fighter1": {
+        "name": "Tai Tuivasa",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Tallison Teixeira",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-02-01T03:00:20.541Z",
+      "fighter1": {
+        "name": "Tai Tuivasa",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Tallison Teixeira",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-02-01T03:00:23.555Z",
+      "fighter1": {
+        "name": "Tai Tuivasa",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Tallison Teixeira",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-02-01T03:00:26.563Z",
+      "fighter1": {
+        "name": "Tai Tuivasa",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Tallison Teixeira",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 14
     }
-  ]
+  ],
+  "createdAt": "2026-02-01T02:45:39.701Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Tallison Teixeira",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:52:25.310Z",
+    "openingF1Odds": 245,
+    "openingF2Odds": -300,
+    "closingF1Odds": 225,
+    "closingF2Odds": -310,
+    "lineMovementF1": -20,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  },
+  "derived": {
+    "inferredFinishMin": 3,
+    "inferredFinishRound": 1,
+    "peakOddsSwing": 595,
+    "finishSpeed": "medium",
+    "preFightSteam": -20,
+    "dominanceScore": 85,
+    "crossoverCount": 0,
+    "derivedAt": "2026-06-14T11:47:28.499Z"
+  }
 }

@@ -1,11 +1,896 @@
 {
   "fightId": "jjaldrich_vs_jameylynhorth",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-04-18T22:01:00.563Z",
+  "startTime": "2026-04-18T21:58:03.142Z",
   "endTime": "2026-04-18T22:14:44.742Z",
-  "dataPoints": 319,
+  "duration": 1001600,
+  "dataPoints": 378,
   "oddsHistory": [
+    {
+      "timestamp": "2026-04-18T21:58:03.142Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-04-18T21:58:06.149Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-04-18T21:58:09.150Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-04-18T21:58:12.152Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-04-18T21:58:15.160Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-04-18T21:58:18.169Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-04-18T21:58:21.185Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-04-18T21:58:24.192Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-04-18T21:58:27.205Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-04-18T21:58:30.216Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-04-18T21:58:33.226Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-04-18T21:58:36.229Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-04-18T21:58:39.243Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-04-18T21:58:42.245Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-04-18T21:58:45.254Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-04-18T21:58:48.262Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-04-18T21:58:51.265Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-04-18T21:58:54.272Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-04-18T21:58:57.275Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-04-18T21:59:00.281Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-04-18T21:59:03.289Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-04-18T21:59:06.291Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-04-18T21:59:09.293Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-04-18T21:59:12.294Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-04-18T21:59:15.307Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-04-18T21:59:18.323Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-04-18T21:59:21.327Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-04-18T21:59:24.339Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-04-18T21:59:27.343Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-04-18T21:59:30.355Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-04-18T21:59:33.355Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-04-18T21:59:36.357Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-04-18T21:59:39.368Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-04-18T21:59:42.375Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-04-18T21:59:45.381Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-04-18T21:59:48.386Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-04-18T21:59:51.389Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2026-04-18T21:59:54.390Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2026-04-18T21:59:57.404Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 39
+    },
+    {
+      "timestamp": "2026-04-18T22:00:00.415Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 40
+    },
+    {
+      "timestamp": "2026-04-18T22:00:03.424Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 41
+    },
+    {
+      "timestamp": "2026-04-18T22:00:06.432Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 42
+    },
+    {
+      "timestamp": "2026-04-18T22:00:09.440Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 43
+    },
+    {
+      "timestamp": "2026-04-18T22:00:12.454Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 44
+    },
+    {
+      "timestamp": "2026-04-18T22:00:15.470Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 45
+    },
+    {
+      "timestamp": "2026-04-18T22:00:18.474Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 46
+    },
+    {
+      "timestamp": "2026-04-18T22:00:21.489Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 47
+    },
+    {
+      "timestamp": "2026-04-18T22:00:24.495Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 48
+    },
+    {
+      "timestamp": "2026-04-18T22:00:27.496Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 49
+    },
+    {
+      "timestamp": "2026-04-18T22:00:30.502Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 50
+    },
+    {
+      "timestamp": "2026-04-18T22:00:33.506Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 51
+    },
+    {
+      "timestamp": "2026-04-18T22:00:36.509Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 52
+    },
+    {
+      "timestamp": "2026-04-18T22:00:39.514Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 53
+    },
+    {
+      "timestamp": "2026-04-18T22:00:42.529Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 54
+    },
+    {
+      "timestamp": "2026-04-18T22:00:45.536Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 55
+    },
+    {
+      "timestamp": "2026-04-18T22:00:48.539Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 56
+    },
+    {
+      "timestamp": "2026-04-18T22:00:51.539Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 57
+    },
+    {
+      "timestamp": "2026-04-18T22:00:54.547Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 58
+    },
+    {
+      "timestamp": "2026-04-18T22:00:57.554Z",
+      "fighter1": {
+        "name": "JJ Aldrich",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Jamey-Lyn Horth",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 59
+    },
     {
       "timestamp": "2026-04-18T22:01:00.563Z",
       "fighter1": {
@@ -4791,5 +5676,32 @@
       "isLocked": false,
       "extractionId": 112
     }
-  ]
+  ],
+  "createdAt": "2026-04-18T22:02:45.816Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "JJ Aldrich",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:51:34.569Z",
+    "openingF1Odds": 164,
+    "openingF2Odds": -196,
+    "closingF1Odds": 1800,
+    "closingF2Odds": -4500,
+    "lineMovementF1": 1636,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  },
+  "derived": {
+    "inferredFinishMin": 11,
+    "inferredFinishRound": 2,
+    "peakOddsSwing": 1636,
+    "finishSpeed": "medium",
+    "preFightSteam": 1636,
+    "dominanceScore": 96,
+    "crossoverCount": 0,
+    "derivedAt": "2026-06-14T11:47:28.433Z"
+  }
 }

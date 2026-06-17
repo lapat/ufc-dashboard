@@ -1,11 +1,251 @@
 {
   "fightId": "benjohnston_vs_wesschultz",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-05-02T09:04:16.402Z",
+  "startTime": "2026-05-02T09:03:28.227Z",
   "endTime": "2026-05-02T09:18:21.649Z",
-  "dataPoints": 267,
+  "duration": 893422,
+  "dataPoints": 283,
   "oddsHistory": [
+    {
+      "timestamp": "2026-05-02T09:03:28.227Z",
+      "fighter1": {
+        "name": "Ben Johnston",
+        "odds": "-152",
+        "numericOdds": -152
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-05-02T09:03:31.244Z",
+      "fighter1": {
+        "name": "Ben Johnston",
+        "odds": "-152",
+        "numericOdds": -152
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-05-02T09:03:34.259Z",
+      "fighter1": {
+        "name": "Ben Johnston",
+        "odds": "-152",
+        "numericOdds": -152
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-02T09:03:37.269Z",
+      "fighter1": {
+        "name": "Ben Johnston",
+        "odds": "-152",
+        "numericOdds": -152
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-02T09:03:40.279Z",
+      "fighter1": {
+        "name": "Ben Johnston",
+        "odds": "-152",
+        "numericOdds": -152
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-05-02T09:03:43.292Z",
+      "fighter1": {
+        "name": "Ben Johnston",
+        "odds": "-152",
+        "numericOdds": -152
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-05-02T09:03:46.297Z",
+      "fighter1": {
+        "name": "Ben Johnston",
+        "odds": "-152",
+        "numericOdds": -152
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-05-02T09:03:49.305Z",
+      "fighter1": {
+        "name": "Ben Johnston",
+        "odds": "-152",
+        "numericOdds": -152
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-05-02T09:03:52.319Z",
+      "fighter1": {
+        "name": "Ben Johnston",
+        "odds": "-152",
+        "numericOdds": -152
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-05-02T09:03:55.329Z",
+      "fighter1": {
+        "name": "Ben Johnston",
+        "odds": "-152",
+        "numericOdds": -152
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-05-02T09:03:58.345Z",
+      "fighter1": {
+        "name": "Ben Johnston",
+        "odds": "-152",
+        "numericOdds": -152
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-05-02T09:04:01.357Z",
+      "fighter1": {
+        "name": "Ben Johnston",
+        "odds": "-152",
+        "numericOdds": -152
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-05-02T09:04:04.373Z",
+      "fighter1": {
+        "name": "Ben Johnston",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "odds": "+122",
+        "numericOdds": 122
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-05-02T09:04:07.379Z",
+      "fighter1": {
+        "name": "Ben Johnston",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "odds": "+122",
+        "numericOdds": 122
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-05-02T09:04:10.387Z",
+      "fighter1": {
+        "name": "Ben Johnston",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "odds": "+122",
+        "numericOdds": 122
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-05-02T09:04:13.397Z",
+      "fighter1": {
+        "name": "Ben Johnston",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "Wes Schultz",
+        "odds": "+122",
+        "numericOdds": 122
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
     {
       "timestamp": "2026-05-02T09:04:16.402Z",
       "fighter1": {
@@ -4011,5 +4251,32 @@
       "isLocked": false,
       "extractionId": 20
     }
-  ]
+  ],
+  "createdAt": "2026-05-02T09:04:37.468Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Wes Schultz",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:50:56.995Z",
+    "openingF1Odds": -152,
+    "openingF2Odds": 128,
+    "closingF1Odds": -460,
+    "closingF2Odds": 320,
+    "lineMovementF1": -308,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  },
+  "derived": {
+    "inferredFinishMin": 5,
+    "inferredFinishRound": 1,
+    "peakOddsSwing": 1298,
+    "finishSpeed": "medium",
+    "preFightSteam": -308,
+    "dominanceScore": 93,
+    "crossoverCount": 0,
+    "derivedAt": "2026-06-14T11:47:28.387Z"
+  }
 }

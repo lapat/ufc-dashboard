@@ -1,11 +1,341 @@
 {
   "fightId": "dontejohnson_vs_codybrundage",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-03-08T01:14:06.213Z",
+  "startTime": "2026-03-08T01:13:00.064Z",
   "endTime": "2026-03-08T01:31:59.534Z",
-  "dataPoints": 442,
+  "duration": 1139470,
+  "dataPoints": 464,
   "oddsHistory": [
+    {
+      "timestamp": "2026-03-08T01:13:00.064Z",
+      "fighter1": {
+        "name": "Donte Johnson",
+        "odds": "-900",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+610",
+        "numericOdds": 610
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-03-08T01:13:03.075Z",
+      "fighter1": {
+        "name": "Donte Johnson",
+        "odds": "-900",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+610",
+        "numericOdds": 610
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-08T01:13:06.079Z",
+      "fighter1": {
+        "name": "Donte Johnson",
+        "odds": "-900",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+610",
+        "numericOdds": 610
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-08T01:13:09.079Z",
+      "fighter1": {
+        "name": "Donte Johnson",
+        "odds": "-900",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+610",
+        "numericOdds": 610
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-08T01:13:12.085Z",
+      "fighter1": {
+        "name": "Donte Johnson",
+        "odds": "-900",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+610",
+        "numericOdds": 610
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-08T01:13:15.099Z",
+      "fighter1": {
+        "name": "Donte Johnson",
+        "odds": "-900",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+610",
+        "numericOdds": 610
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-03-08T01:13:18.114Z",
+      "fighter1": {
+        "name": "Donte Johnson",
+        "odds": "-900",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+610",
+        "numericOdds": 610
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-03-08T01:13:21.118Z",
+      "fighter1": {
+        "name": "Donte Johnson",
+        "odds": "-900",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+610",
+        "numericOdds": 610
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-03-08T01:13:24.130Z",
+      "fighter1": {
+        "name": "Donte Johnson",
+        "odds": "-900",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+610",
+        "numericOdds": 610
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-03-08T01:13:27.134Z",
+      "fighter1": {
+        "name": "Donte Johnson",
+        "odds": "-900",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+610",
+        "numericOdds": 610
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-03-08T01:13:30.143Z",
+      "fighter1": {
+        "name": "Donte Johnson",
+        "odds": "-900",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+610",
+        "numericOdds": 610
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-03-08T01:13:33.153Z",
+      "fighter1": {
+        "name": "Donte Johnson",
+        "odds": "-900",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+610",
+        "numericOdds": 610
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-03-08T01:13:36.157Z",
+      "fighter1": {
+        "name": "Donte Johnson",
+        "odds": "-900",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+610",
+        "numericOdds": 610
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-03-08T01:13:39.159Z",
+      "fighter1": {
+        "name": "Donte Johnson",
+        "odds": "-900",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+610",
+        "numericOdds": 610
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-03-08T01:13:42.164Z",
+      "fighter1": {
+        "name": "Donte Johnson",
+        "odds": "-900",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+610",
+        "numericOdds": 610
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-03-08T01:13:45.168Z",
+      "fighter1": {
+        "name": "Donte Johnson",
+        "odds": "-900",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+610",
+        "numericOdds": 610
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-03-08T01:13:48.180Z",
+      "fighter1": {
+        "name": "Donte Johnson",
+        "odds": "-900",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+610",
+        "numericOdds": 610
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-03-08T01:13:51.179Z",
+      "fighter1": {
+        "name": "Donte Johnson",
+        "odds": "-900",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+610",
+        "numericOdds": 610
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-03-08T01:13:54.188Z",
+      "fighter1": {
+        "name": "Donte Johnson",
+        "odds": "-900",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+610",
+        "numericOdds": 610
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-03-08T01:13:57.195Z",
+      "fighter1": {
+        "name": "Donte Johnson",
+        "odds": "-900",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+610",
+        "numericOdds": 610
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-03-08T01:14:00.206Z",
+      "fighter1": {
+        "name": "Donte Johnson",
+        "odds": "-900",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+610",
+        "numericOdds": 610
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-03-08T01:14:03.212Z",
+      "fighter1": {
+        "name": "Donte Johnson",
+        "odds": "-900",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+610",
+        "numericOdds": 610
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
     {
       "timestamp": "2026-03-08T01:14:06.213Z",
       "fighter1": {
@@ -6636,5 +6966,32 @@
       "isLocked": false,
       "extractionId": 121
     }
-  ]
+  ],
+  "createdAt": "2026-03-08T01:14:48.306Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Donte Johnson",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:51:16.220Z",
+    "openingF1Odds": -900,
+    "openingF2Odds": 610,
+    "closingF1Odds": -310,
+    "closingF2Odds": 225,
+    "lineMovementF1": 590,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  },
+  "derived": {
+    "inferredFinishMin": 0,
+    "inferredFinishRound": 1,
+    "peakOddsSwing": 700,
+    "finishSpeed": "fast",
+    "preFightSteam": 590,
+    "dominanceScore": 100,
+    "crossoverCount": 0,
+    "derivedAt": "2026-06-14T11:47:28.413Z"
+  }
 }

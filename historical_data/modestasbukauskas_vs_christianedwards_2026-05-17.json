@@ -1,76 +1,6442 @@
 {
-  "fightId": "modestasbukauskas_vs_christianedwards_2026-05-17",
-  "fightTitle": "Modestas Bukauskas vs Christian Edwards",
-  "commenceTime": "2026-05-17T01:15:00Z",
-  "startTime": "2026-05-17T01:05:37Z",
-  "endTime": "2026-05-17T01:30:37Z",
-  "dataPoints": 6,
+  "fightId": "modestasbukauskas_vs_christianedwards",
+  "fightTitle": "Connected but no betting buttons found",
+  "startTime": "2026-05-17T00:59:42.362Z",
+  "endTime": "2026-05-17T01:18:05.624Z",
+  "duration": 1103262,
+  "dataPoints": 427,
   "oddsHistory": [
     {
-      "timestamp": "2026-05-17T01:05:37Z",
+      "timestamp": "2026-05-17T00:59:42.362Z",
       "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "fighter2": {
         "name": "Christian Edwards",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-17T00:59:45.372Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-05-17T00:59:48.381Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-17T00:59:51.394Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-17T00:59:54.393Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-05-17T00:59:57.397Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-05-17T01:00:00.402Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-05-17T01:00:03.407Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-05-17T01:00:06.420Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-05-17T01:00:09.432Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-05-17T01:00:12.447Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-05-17T01:00:15.454Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-05-17T01:00:18.459Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-05-17T01:00:21.463Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-05-17T01:00:24.470Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-05-17T01:00:27.474Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-05-17T01:00:30.481Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-05-17T01:00:33.490Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-05-17T01:00:36.506Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-05-17T01:00:39.508Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-05-17T01:00:42.513Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-05-17T01:00:45.516Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-05-17T01:00:48.529Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-05-17T01:00:51.538Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-05-17T01:00:54.553Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-05-17T01:00:57.557Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-05-17T01:01:00.561Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-05-17T01:01:03.570Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-05-17T01:01:06.577Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-05-17T01:01:09.582Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-05-17T01:01:12.588Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-05-17T01:01:15.593Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-05-17T01:01:18.608Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-05-17T01:01:21.614Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-05-17T01:01:24.628Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-05-17T01:01:27.633Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-05-17T01:01:30.636Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2026-05-17T01:01:33.640Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2026-05-17T01:01:36.642Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 39
+    },
+    {
+      "timestamp": "2026-05-17T01:01:39.646Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 40
+    },
+    {
+      "timestamp": "2026-05-17T01:01:42.646Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 41
+    },
+    {
+      "timestamp": "2026-05-17T01:01:45.662Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "isLocked": false,
+      "extractionId": 42
+    },
+    {
+      "timestamp": "2026-05-17T01:01:48.666Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "isLocked": false,
+      "extractionId": 43
+    },
+    {
+      "timestamp": "2026-05-17T01:01:51.666Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "isLocked": false,
+      "extractionId": 44
+    },
+    {
+      "timestamp": "2026-05-17T01:01:54.672Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "isLocked": false,
+      "extractionId": 45
+    },
+    {
+      "timestamp": "2026-05-17T01:01:57.674Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "isLocked": false,
+      "extractionId": 46
+    },
+    {
+      "timestamp": "2026-05-17T01:02:00.688Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "isLocked": false,
+      "extractionId": 47
+    },
+    {
+      "timestamp": "2026-05-17T01:02:03.690Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "isLocked": false,
+      "extractionId": 48
+    },
+    {
+      "timestamp": "2026-05-17T01:02:06.698Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "isLocked": false,
+      "extractionId": 49
+    },
+    {
+      "timestamp": "2026-05-17T01:02:09.702Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "isLocked": false,
+      "extractionId": 50
+    },
+    {
+      "timestamp": "2026-05-17T01:02:12.706Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "isLocked": false,
+      "extractionId": 51
+    },
+    {
+      "timestamp": "2026-05-17T01:02:15.710Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-270",
+        "numericOdds": -270
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+200",
         "numericOdds": 200
       },
-      "fighter2": {
+      "isLocked": false,
+      "extractionId": 52
+    },
+    {
+      "timestamp": "2026-05-17T01:02:18.722Z",
+      "fighter1": {
         "name": "Modestas Bukauskas",
+        "odds": "-270",
         "numericOdds": -270
-      }
-    },
-    {
-      "timestamp": "2026-05-17T01:10:37Z",
-      "fighter1": {
-        "name": "Christian Edwards",
-        "numericOdds": 900
       },
       "fighter2": {
-        "name": "Modestas Bukauskas",
-        "numericOdds": -1850
-      }
+        "name": "Christian Edwards",
+        "odds": "+200",
+        "numericOdds": 200
+      },
+      "isLocked": false,
+      "extractionId": 53
     },
     {
-      "timestamp": "2026-05-17T01:15:37Z",
+      "timestamp": "2026-05-17T01:02:21.728Z",
       "fighter1": {
-        "name": "Christian Edwards",
-        "numericOdds": 750
+        "name": "Modestas Bukauskas",
+        "odds": "-270",
+        "numericOdds": -270
       },
       "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+200",
+        "numericOdds": 200
+      },
+      "isLocked": false,
+      "extractionId": 54
+    },
+    {
+      "timestamp": "2026-05-17T01:02:24.730Z",
+      "fighter1": {
         "name": "Modestas Bukauskas",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+230",
+        "numericOdds": 230
+      },
+      "isLocked": false,
+      "extractionId": 55
+    },
+    {
+      "timestamp": "2026-05-17T01:02:27.731Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+230",
+        "numericOdds": 230
+      },
+      "isLocked": false,
+      "extractionId": 56
+    },
+    {
+      "timestamp": "2026-05-17T01:02:30.735Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+230",
+        "numericOdds": 230
+      },
+      "isLocked": false,
+      "extractionId": 57
+    },
+    {
+      "timestamp": "2026-05-17T01:02:33.738Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+230",
+        "numericOdds": 230
+      },
+      "isLocked": false,
+      "extractionId": 58
+    },
+    {
+      "timestamp": "2026-05-17T01:02:36.743Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+230",
+        "numericOdds": 230
+      },
+      "isLocked": false,
+      "extractionId": 59
+    },
+    {
+      "timestamp": "2026-05-17T01:02:39.748Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "isLocked": false,
+      "extractionId": 60
+    },
+    {
+      "timestamp": "2026-05-17T01:02:42.755Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "isLocked": false,
+      "extractionId": 61
+    },
+    {
+      "timestamp": "2026-05-17T01:02:45.767Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "isLocked": false,
+      "extractionId": 62
+    },
+    {
+      "timestamp": "2026-05-17T01:02:48.774Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "isLocked": false,
+      "extractionId": 63
+    },
+    {
+      "timestamp": "2026-05-17T01:02:51.781Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "isLocked": false,
+      "extractionId": 64
+    },
+    {
+      "timestamp": "2026-05-17T01:02:54.796Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-250",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+188",
+        "numericOdds": 188
+      },
+      "isLocked": false,
+      "extractionId": 65
+    },
+    {
+      "timestamp": "2026-05-17T01:02:57.809Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-250",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+188",
+        "numericOdds": 188
+      },
+      "isLocked": false,
+      "extractionId": 66
+    },
+    {
+      "timestamp": "2026-05-17T01:03:00.824Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-250",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+188",
+        "numericOdds": 188
+      },
+      "isLocked": false,
+      "extractionId": 67
+    },
+    {
+      "timestamp": "2026-05-17T01:03:03.824Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-250",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+188",
+        "numericOdds": 188
+      },
+      "isLocked": false,
+      "extractionId": 68
+    },
+    {
+      "timestamp": "2026-05-17T01:03:06.833Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-250",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+188",
+        "numericOdds": 188
+      },
+      "isLocked": false,
+      "extractionId": 69
+    },
+    {
+      "timestamp": "2026-05-17T01:03:09.838Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-250",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+188",
+        "numericOdds": 188
+      },
+      "isLocked": false,
+      "extractionId": 70
+    },
+    {
+      "timestamp": "2026-05-17T01:03:12.838Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-250",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+188",
+        "numericOdds": 188
+      },
+      "isLocked": false,
+      "extractionId": 71
+    },
+    {
+      "timestamp": "2026-05-17T01:03:15.845Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-250",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+188",
+        "numericOdds": 188
+      },
+      "isLocked": false,
+      "extractionId": 72
+    },
+    {
+      "timestamp": "2026-05-17T01:03:18.854Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-250",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+188",
+        "numericOdds": 188
+      },
+      "isLocked": false,
+      "extractionId": 73
+    },
+    {
+      "timestamp": "2026-05-17T01:03:21.866Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-250",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+188",
+        "numericOdds": 188
+      },
+      "isLocked": false,
+      "extractionId": 74
+    },
+    {
+      "timestamp": "2026-05-17T01:03:24.880Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 75
+    },
+    {
+      "timestamp": "2026-05-17T01:03:27.881Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 76
+    },
+    {
+      "timestamp": "2026-05-17T01:03:30.887Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 77
+    },
+    {
+      "timestamp": "2026-05-17T01:03:33.892Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 78
+    },
+    {
+      "timestamp": "2026-05-17T01:03:36.896Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 79
+    },
+    {
+      "timestamp": "2026-05-17T01:03:39.909Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 80
+    },
+    {
+      "timestamp": "2026-05-17T01:03:42.914Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 81
+    },
+    {
+      "timestamp": "2026-05-17T01:03:45.923Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 82
+    },
+    {
+      "timestamp": "2026-05-17T01:03:48.931Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 83
+    },
+    {
+      "timestamp": "2026-05-17T01:03:51.936Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 84
+    },
+    {
+      "timestamp": "2026-05-17T01:03:54.937Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-225",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 85
+    },
+    {
+      "timestamp": "2026-05-17T01:03:57.940Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-225",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 86
+    },
+    {
+      "timestamp": "2026-05-17T01:04:00.945Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-225",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 87
+    },
+    {
+      "timestamp": "2026-05-17T01:04:03.954Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-225",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 88
+    },
+    {
+      "timestamp": "2026-05-17T01:04:06.958Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-225",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 89
+    },
+    {
+      "timestamp": "2026-05-17T01:04:15.996Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+196",
+        "numericOdds": 196
+      },
+      "isLocked": false,
+      "extractionId": 90
+    },
+    {
+      "timestamp": "2026-05-17T01:04:18.996Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+196",
+        "numericOdds": 196
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-05-17T01:04:22.000Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+196",
+        "numericOdds": 196
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-17T01:04:25.011Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+230",
+        "numericOdds": 230
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-17T01:04:28.021Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+230",
+        "numericOdds": 230
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-05-17T01:04:31.031Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-05-17T01:04:34.034Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-05-17T01:04:37.041Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-05-17T01:04:40.043Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-05-17T01:04:43.045Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-05-17T01:04:46.047Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-05-17T01:04:49.061Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-05-17T01:04:52.062Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-460",
+        "numericOdds": -460
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+320",
+        "numericOdds": 320
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-05-17T01:04:55.067Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-460",
+        "numericOdds": -460
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+320",
+        "numericOdds": 320
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-05-17T01:04:58.082Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-460",
+        "numericOdds": -460
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+320",
+        "numericOdds": 320
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-05-17T01:05:01.085Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-05-17T01:05:04.087Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-05-17T01:05:10.095Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-270",
+        "numericOdds": -270
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+200",
+        "numericOdds": 200
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-05-17T01:05:13.094Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-270",
+        "numericOdds": -270
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+200",
+        "numericOdds": 200
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-05-17T01:05:16.096Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-290",
+        "numericOdds": -290
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-17T01:05:19.099Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-290",
+        "numericOdds": -290
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-17T01:05:22.102Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-05-17T01:05:25.109Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-05-17T01:05:28.115Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-05-17T01:05:31.123Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-05-17T01:05:34.124Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-05-17T01:05:37.128Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-05-17T01:05:40.136Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-05-17T01:05:43.139Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-05-17T01:05:46.142Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-05-17T01:05:49.146Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-05-17T01:05:52.161Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-460",
+        "numericOdds": -460
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+320",
+        "numericOdds": 320
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-05-17T01:05:55.161Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-460",
+        "numericOdds": -460
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+320",
+        "numericOdds": 320
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-05-17T01:05:58.176Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-460",
+        "numericOdds": -460
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+320",
+        "numericOdds": 320
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-05-17T01:06:01.178Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-460",
+        "numericOdds": -460
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+320",
+        "numericOdds": 320
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-05-17T01:06:04.180Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-460",
+        "numericOdds": -460
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+320",
+        "numericOdds": 320
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-05-17T01:06:07.189Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-05-17T01:06:10.202Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-05-17T01:06:13.207Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-380",
+        "numericOdds": -380
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-05-17T01:06:16.207Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-380",
+        "numericOdds": -380
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-05-17T01:06:19.207Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-380",
+        "numericOdds": -380
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-05-17T01:06:22.217Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-380",
+        "numericOdds": -380
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-05-17T01:06:25.220Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-380",
+        "numericOdds": -380
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-05-17T01:06:28.225Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-380",
+        "numericOdds": -380
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-05-17T01:06:37.245Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-05-17T01:06:40.246Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-05-17T01:06:43.260Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-17T01:06:46.262Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-17T01:06:49.262Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-05-17T01:06:52.268Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-05-17T01:06:55.269Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-05-17T01:06:58.281Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-05-17T01:07:01.283Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-05-17T01:07:04.298Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-05-17T01:07:07.301Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-05-17T01:07:10.305Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-05-17T01:07:13.310Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-05-17T01:07:16.310Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-05-17T01:07:19.316Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-05-17T01:07:22.328Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-05-17T01:07:25.336Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-05-17T01:07:28.340Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-05-17T01:07:31.352Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-05-17T01:07:34.357Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-05-17T01:07:37.361Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-05-17T01:07:40.361Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-05-17T01:07:43.374Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-05-17T01:07:46.377Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-05-17T01:07:49.377Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-05-17T01:07:52.382Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-05-17T01:07:55.389Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-05-17T01:07:58.391Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-05-17T01:08:01.396Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-05-17T01:08:04.397Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-05-17T01:08:07.405Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-460",
+        "numericOdds": -460
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+320",
+        "numericOdds": 320
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-05-17T01:08:10.414Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-460",
+        "numericOdds": -460
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+320",
+        "numericOdds": 320
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-05-17T01:08:13.415Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-460",
+        "numericOdds": -460
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+320",
+        "numericOdds": 320
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-05-17T01:08:16.415Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-460",
+        "numericOdds": -460
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+320",
+        "numericOdds": 320
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-05-17T01:08:19.420Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-05-17T01:08:22.431Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-05-17T01:08:25.435Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2026-05-17T01:08:28.450Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2026-05-17T01:08:31.454Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 39
+    },
+    {
+      "timestamp": "2026-05-17T01:08:34.455Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-650",
+        "numericOdds": -650
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+420",
+        "numericOdds": 420
+      },
+      "isLocked": false,
+      "extractionId": 40
+    },
+    {
+      "timestamp": "2026-05-17T01:08:37.459Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+520",
+        "numericOdds": 520
+      },
+      "isLocked": false,
+      "extractionId": 41
+    },
+    {
+      "timestamp": "2026-05-17T01:08:40.459Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+520",
+        "numericOdds": 520
+      },
+      "isLocked": false,
+      "extractionId": 42
+    },
+    {
+      "timestamp": "2026-05-17T01:08:43.463Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-950",
+        "numericOdds": -950
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+550",
+        "numericOdds": 550
+      },
+      "isLocked": false,
+      "extractionId": 43
+    },
+    {
+      "timestamp": "2026-05-17T01:08:46.473Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-950",
+        "numericOdds": -950
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+550",
+        "numericOdds": 550
+      },
+      "isLocked": false,
+      "extractionId": 44
+    },
+    {
+      "timestamp": "2026-05-17T01:08:52.484Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1200",
+        "numericOdds": -1200
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 45
+    },
+    {
+      "timestamp": "2026-05-17T01:08:55.488Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1200",
+        "numericOdds": -1200
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-05-17T01:08:58.491Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1200",
+        "numericOdds": -1200
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-17T01:09:01.496Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1200",
+        "numericOdds": -1200
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-17T01:09:04.505Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-05-17T01:09:07.512Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-05-17T01:09:10.513Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-05-17T01:09:13.524Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-05-17T01:09:16.525Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-05-17T01:09:19.532Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+520",
+        "numericOdds": 520
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-05-17T01:09:22.539Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+520",
+        "numericOdds": 520
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-05-17T01:09:25.546Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+520",
+        "numericOdds": 520
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-05-17T01:09:28.555Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+520",
+        "numericOdds": 520
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-05-17T01:09:31.570Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+520",
+        "numericOdds": 520
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-05-17T01:09:34.571Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-950",
+        "numericOdds": -950
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+550",
+        "numericOdds": 550
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-05-17T01:09:37.582Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-05-17T01:09:40.586Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-05-17T01:09:43.586Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-05-17T01:09:46.593Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-05-17T01:09:49.597Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-05-17T01:09:52.605Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-05-17T01:09:55.620Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-05-17T01:10:19.687Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-05-17T01:10:22.686Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-05-17T01:10:25.691Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-17T01:10:28.696Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-17T01:10:31.701Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-05-17T01:10:34.714Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-05-17T01:10:37.725Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-05-17T01:10:40.726Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-05-17T01:10:43.727Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-05-17T01:10:46.741Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-05-17T01:10:49.745Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-05-17T01:10:52.747Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-05-17T01:10:55.758Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-05-17T01:10:58.765Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-05-17T01:11:01.771Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-05-17T01:11:04.776Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-05-17T01:11:07.779Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-05-17T01:11:10.780Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-05-17T01:11:13.788Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-05-17T01:11:16.794Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-05-17T01:11:19.796Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-05-17T01:11:22.801Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-05-17T01:11:25.804Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-05-17T01:11:28.817Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1200",
+        "numericOdds": -1200
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-05-17T01:11:31.822Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1200",
+        "numericOdds": -1200
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-05-17T01:11:34.827Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-05-17T01:11:37.841Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-05-17T01:11:40.842Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-05-17T01:11:43.849Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-05-17T01:11:46.857Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-05-17T01:11:49.857Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-05-17T01:11:52.861Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-05-17T01:11:58.876Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1200",
+        "numericOdds": -1200
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-05-17T01:12:01.875Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1200",
+        "numericOdds": -1200
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-05-17T01:12:04.880Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1200",
+        "numericOdds": -1200
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-17T01:12:07.890Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1200",
+        "numericOdds": -1200
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-17T01:12:10.901Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-05-17T01:12:13.917Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-05-17T01:12:16.919Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-05-17T01:12:19.922Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-05-17T01:12:22.934Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-05-17T01:12:25.934Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-05-17T01:12:28.940Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-05-17T01:12:31.955Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1200",
+        "numericOdds": -1200
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-05-17T01:12:34.958Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1200",
+        "numericOdds": -1200
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-05-17T01:12:37.959Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1200",
+        "numericOdds": -1200
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-05-17T01:12:40.962Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1200",
+        "numericOdds": -1200
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-05-17T01:12:43.975Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1200",
+        "numericOdds": -1200
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-05-17T01:12:46.986Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1200",
+        "numericOdds": -1200
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-05-17T01:12:49.985Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1200",
+        "numericOdds": -1200
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-05-17T01:12:52.993Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1200",
+        "numericOdds": -1200
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-05-17T01:12:56.000Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1450",
         "numericOdds": -1450
-      }
-    },
-    {
-      "timestamp": "2026-05-17T01:20:37Z",
-      "fighter1": {
-        "name": "Christian Edwards",
-        "numericOdds": 1100
       },
       "fighter2": {
-        "name": "Modestas Bukauskas",
-        "numericOdds": -2500
-      }
+        "name": "Christian Edwards",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "isLocked": false,
+      "extractionId": 20
     },
     {
-      "timestamp": "2026-05-17T01:25:37Z",
+      "timestamp": "2026-05-17T01:12:59.000Z",
       "fighter1": {
-        "name": "Christian Edwards",
-        "numericOdds": 1100
+        "name": "Modestas Bukauskas",
+        "odds": "-1450",
+        "numericOdds": -1450
       },
       "fighter2": {
-        "name": "Modestas Bukauskas",
-        "numericOdds": -2500
-      }
+        "name": "Christian Edwards",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "isLocked": false,
+      "extractionId": 21
     },
     {
-      "timestamp": "2026-05-17T01:30:37Z",
+      "timestamp": "2026-05-17T01:13:02.002Z",
       "fighter1": {
-        "name": "Christian Edwards",
-        "numericOdds": 1100
+        "name": "Modestas Bukauskas",
+        "odds": "-1450",
+        "numericOdds": -1450
       },
       "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-05-17T01:13:05.003Z",
+      "fighter1": {
         "name": "Modestas Bukauskas",
-        "numericOdds": -2500
-      }
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-05-17T01:13:08.006Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-05-17T01:13:11.008Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-05-17T01:13:14.022Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-05-17T01:13:17.024Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-05-17T01:13:20.031Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-05-17T01:13:23.040Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-05-17T01:13:26.040Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-05-17T01:13:29.043Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-05-17T01:13:32.045Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-05-17T01:13:35.050Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-05-17T01:13:38.056Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-05-17T01:13:41.066Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-05-17T01:13:44.080Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-05-17T01:13:47.085Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2026-05-17T01:13:50.099Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2026-05-17T01:13:53.107Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "isLocked": false,
+      "extractionId": 39
+    },
+    {
+      "timestamp": "2026-05-17T01:13:56.115Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1200",
+        "numericOdds": -1200
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 40
+    },
+    {
+      "timestamp": "2026-05-17T01:13:59.121Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1200",
+        "numericOdds": -1200
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 41
+    },
+    {
+      "timestamp": "2026-05-17T01:14:02.127Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1200",
+        "numericOdds": -1200
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 42
+    },
+    {
+      "timestamp": "2026-05-17T01:14:17.170Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "isLocked": false,
+      "extractionId": 43
+    },
+    {
+      "timestamp": "2026-05-17T01:14:20.175Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-05-17T01:14:23.182Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-17T01:14:26.184Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-17T01:14:29.194Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-05-17T01:14:32.205Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-05-17T01:14:35.218Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-05-17T01:14:38.230Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-05-17T01:14:41.232Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-05-17T01:14:44.239Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-05-17T01:14:47.244Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-05-17T01:14:50.245Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-05-17T01:14:53.258Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-05-17T01:14:56.259Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-05-17T01:14:59.268Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-05-17T01:15:02.278Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-05-17T01:15:05.282Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-05-17T01:15:08.294Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-05-17T01:15:11.304Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-05-17T01:15:14.305Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-05-17T01:15:17.309Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-05-17T01:15:20.315Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-05-17T01:15:23.321Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-05-17T01:15:26.323Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-05-17T01:15:29.331Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-05-17T01:15:32.344Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-05-17T01:15:35.350Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-05-17T01:15:38.354Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-05-17T01:15:41.354Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-05-17T01:15:44.368Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-05-17T01:15:47.381Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-05-17T01:15:50.385Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-05-17T01:15:53.399Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-05-17T01:15:56.399Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-05-17T01:15:59.405Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-05-17T01:16:02.414Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-05-17T01:16:05.423Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2026-05-17T01:16:08.426Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2026-05-17T01:16:11.428Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 39
+    },
+    {
+      "timestamp": "2026-05-17T01:16:14.434Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 40
+    },
+    {
+      "timestamp": "2026-05-17T01:16:17.438Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "isLocked": false,
+      "extractionId": 41
+    },
+    {
+      "timestamp": "2026-05-17T01:16:20.445Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "isLocked": false,
+      "extractionId": 42
+    },
+    {
+      "timestamp": "2026-05-17T01:16:23.460Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "isLocked": false,
+      "extractionId": 43
+    },
+    {
+      "timestamp": "2026-05-17T01:16:26.460Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "isLocked": false,
+      "extractionId": 44
+    },
+    {
+      "timestamp": "2026-05-17T01:16:29.462Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "isLocked": false,
+      "extractionId": 45
+    },
+    {
+      "timestamp": "2026-05-17T01:16:32.463Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 46
+    },
+    {
+      "timestamp": "2026-05-17T01:16:35.464Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 47
+    },
+    {
+      "timestamp": "2026-05-17T01:16:38.468Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 48
+    },
+    {
+      "timestamp": "2026-05-17T01:16:41.470Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 49
+    },
+    {
+      "timestamp": "2026-05-17T01:16:44.478Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 50
+    },
+    {
+      "timestamp": "2026-05-17T01:16:47.483Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 51
+    },
+    {
+      "timestamp": "2026-05-17T01:16:50.498Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 52
+    },
+    {
+      "timestamp": "2026-05-17T01:16:53.507Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "isLocked": false,
+      "extractionId": 53
+    },
+    {
+      "timestamp": "2026-05-17T01:16:56.511Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "isLocked": false,
+      "extractionId": 54
+    },
+    {
+      "timestamp": "2026-05-17T01:16:59.515Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "isLocked": false,
+      "extractionId": 55
+    },
+    {
+      "timestamp": "2026-05-17T01:17:02.527Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "isLocked": false,
+      "extractionId": 56
+    },
+    {
+      "timestamp": "2026-05-17T01:17:05.533Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "isLocked": false,
+      "extractionId": 57
+    },
+    {
+      "timestamp": "2026-05-17T01:17:08.539Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 58
+    },
+    {
+      "timestamp": "2026-05-17T01:17:11.541Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 59
+    },
+    {
+      "timestamp": "2026-05-17T01:17:14.555Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 60
+    },
+    {
+      "timestamp": "2026-05-17T01:17:17.560Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "isLocked": false,
+      "extractionId": 61
+    },
+    {
+      "timestamp": "2026-05-17T01:17:20.559Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "isLocked": false,
+      "extractionId": 62
+    },
+    {
+      "timestamp": "2026-05-17T01:17:23.560Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "isLocked": false,
+      "extractionId": 63
+    },
+    {
+      "timestamp": "2026-05-17T01:17:26.565Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "isLocked": false,
+      "extractionId": 64
+    },
+    {
+      "timestamp": "2026-05-17T01:17:29.571Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "isLocked": false,
+      "extractionId": 65
+    },
+    {
+      "timestamp": "2026-05-17T01:17:32.576Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "isLocked": false,
+      "extractionId": 66
+    },
+    {
+      "timestamp": "2026-05-17T01:17:35.577Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "isLocked": false,
+      "extractionId": 67
+    },
+    {
+      "timestamp": "2026-05-17T01:17:38.577Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 68
+    },
+    {
+      "timestamp": "2026-05-17T01:17:41.583Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 69
+    },
+    {
+      "timestamp": "2026-05-17T01:17:44.588Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 70
+    },
+    {
+      "timestamp": "2026-05-17T01:17:47.588Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 71
+    },
+    {
+      "timestamp": "2026-05-17T01:17:50.591Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 72
+    },
+    {
+      "timestamp": "2026-05-17T01:17:53.598Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 73
+    },
+    {
+      "timestamp": "2026-05-17T01:17:56.603Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 74
+    },
+    {
+      "timestamp": "2026-05-17T01:17:59.610Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 75
+    },
+    {
+      "timestamp": "2026-05-17T01:18:02.617Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 76
+    },
+    {
+      "timestamp": "2026-05-17T01:18:05.624Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 77
+    },
+    {
+      "timestamp": "2026-05-17T01:14:17.170Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "isLocked": false,
+      "extractionId": 43
+    },
+    {
+      "timestamp": "2026-05-17T01:14:20.175Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-05-17T01:14:23.182Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-17T01:14:26.184Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-17T01:14:29.194Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-05-17T01:14:32.205Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-05-17T01:14:35.218Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-05-17T01:14:38.230Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-05-17T01:14:41.232Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-05-17T01:14:44.239Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-05-17T01:14:47.244Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-05-17T01:14:50.245Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-05-17T01:14:53.258Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-05-17T01:14:56.259Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-05-17T01:14:59.268Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-05-17T01:15:02.278Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-05-17T01:15:05.282Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-05-17T01:15:08.294Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-05-17T01:15:11.304Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-05-17T01:15:14.305Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-05-17T01:15:17.309Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-05-17T01:15:20.315Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-05-17T01:15:23.321Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-05-17T01:15:26.323Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-05-17T01:15:29.331Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-05-17T01:15:32.344Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-05-17T01:15:35.350Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-05-17T01:15:38.354Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-05-17T01:15:41.354Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-05-17T01:15:44.368Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-05-17T01:15:47.381Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-05-17T01:15:50.385Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-05-17T01:15:53.399Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-05-17T01:15:56.399Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-05-17T01:15:59.405Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-05-17T01:16:02.414Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-05-17T01:16:05.423Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2026-05-17T01:16:08.426Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2026-05-17T01:16:11.428Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 39
+    },
+    {
+      "timestamp": "2026-05-17T01:16:14.434Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 40
+    },
+    {
+      "timestamp": "2026-05-17T01:16:17.438Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "isLocked": false,
+      "extractionId": 41
+    },
+    {
+      "timestamp": "2026-05-17T01:16:20.445Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "isLocked": false,
+      "extractionId": 42
+    },
+    {
+      "timestamp": "2026-05-17T01:16:23.460Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "isLocked": false,
+      "extractionId": 43
+    },
+    {
+      "timestamp": "2026-05-17T01:16:26.460Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "isLocked": false,
+      "extractionId": 44
+    },
+    {
+      "timestamp": "2026-05-17T01:16:29.462Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "isLocked": false,
+      "extractionId": 45
+    },
+    {
+      "timestamp": "2026-05-17T01:16:32.463Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 46
+    },
+    {
+      "timestamp": "2026-05-17T01:16:35.464Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 47
+    },
+    {
+      "timestamp": "2026-05-17T01:16:38.468Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 48
+    },
+    {
+      "timestamp": "2026-05-17T01:16:41.470Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 49
+    },
+    {
+      "timestamp": "2026-05-17T01:16:44.478Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 50
+    },
+    {
+      "timestamp": "2026-05-17T01:16:47.483Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 51
+    },
+    {
+      "timestamp": "2026-05-17T01:16:50.498Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 52
+    },
+    {
+      "timestamp": "2026-05-17T01:16:53.507Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "isLocked": false,
+      "extractionId": 53
+    },
+    {
+      "timestamp": "2026-05-17T01:16:56.511Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "isLocked": false,
+      "extractionId": 54
+    },
+    {
+      "timestamp": "2026-05-17T01:16:59.515Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "isLocked": false,
+      "extractionId": 55
+    },
+    {
+      "timestamp": "2026-05-17T01:17:02.527Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "isLocked": false,
+      "extractionId": 56
+    },
+    {
+      "timestamp": "2026-05-17T01:17:05.533Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "isLocked": false,
+      "extractionId": 57
+    },
+    {
+      "timestamp": "2026-05-17T01:17:08.539Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 58
+    },
+    {
+      "timestamp": "2026-05-17T01:17:11.541Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 59
+    },
+    {
+      "timestamp": "2026-05-17T01:17:14.555Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 60
+    },
+    {
+      "timestamp": "2026-05-17T01:17:17.560Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "isLocked": false,
+      "extractionId": 61
+    },
+    {
+      "timestamp": "2026-05-17T01:17:20.559Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "isLocked": false,
+      "extractionId": 62
+    },
+    {
+      "timestamp": "2026-05-17T01:17:23.560Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "isLocked": false,
+      "extractionId": 63
+    },
+    {
+      "timestamp": "2026-05-17T01:17:26.565Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "isLocked": false,
+      "extractionId": 64
+    },
+    {
+      "timestamp": "2026-05-17T01:17:29.571Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "isLocked": false,
+      "extractionId": 65
+    },
+    {
+      "timestamp": "2026-05-17T01:17:32.576Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "isLocked": false,
+      "extractionId": 66
+    },
+    {
+      "timestamp": "2026-05-17T01:17:35.577Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "isLocked": false,
+      "extractionId": 67
+    },
+    {
+      "timestamp": "2026-05-17T01:17:38.577Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 68
+    },
+    {
+      "timestamp": "2026-05-17T01:17:41.583Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 69
+    },
+    {
+      "timestamp": "2026-05-17T01:17:44.588Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 70
+    },
+    {
+      "timestamp": "2026-05-17T01:17:47.588Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 71
+    },
+    {
+      "timestamp": "2026-05-17T01:17:50.591Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 72
+    },
+    {
+      "timestamp": "2026-05-17T01:17:53.598Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 73
+    },
+    {
+      "timestamp": "2026-05-17T01:17:56.603Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 74
+    },
+    {
+      "timestamp": "2026-05-17T01:17:59.610Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 75
+    },
+    {
+      "timestamp": "2026-05-17T01:18:02.617Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 76
+    },
+    {
+      "timestamp": "2026-05-17T01:18:05.624Z",
+      "fighter1": {
+        "name": "Modestas Bukauskas",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Christian Edwards",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 77
     }
-  ]
+  ],
+  "createdAt": "2026-05-17T01:04:15.995Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Modestas Bukauskas",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:52:02.242Z",
+    "openingF1Odds": -320,
+    "openingF2Odds": 260,
+    "closingF1Odds": -2000,
+    "closingF2Odds": 1040,
+    "lineMovementF1": -1680,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  },
+  "derived": {
+    "inferredFinishMin": 9,
+    "inferredFinishRound": 2,
+    "peakOddsSwing": 2680,
+    "finishSpeed": "medium",
+    "preFightSteam": -1680,
+    "dominanceScore": 100,
+    "crossoverCount": 0,
+    "derivedAt": "2026-06-14T11:47:28.465Z"
+  }
 }

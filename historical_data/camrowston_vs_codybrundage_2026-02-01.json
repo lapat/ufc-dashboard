@@ -1,11 +1,611 @@
 {
   "fightId": "camrowston_vs_codybrundage",
   "fightTitle": "Cam Rowston vs Cody Brundage",
-  "commenceTime": null,
-  "startTime": "2026-02-01T01:15:13.817Z",
+  "startTime": "2026-02-01T01:02:56.193Z",
   "endTime": "2026-02-01T01:24:53.979Z",
-  "dataPoints": 296,
+  "duration": 1317786,
+  "dataPoints": 336,
   "oddsHistory": [
+    {
+      "timestamp": "2026-02-01T01:02:56.193Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "isLocked": false,
+      "extractionId": 75
+    },
+    {
+      "timestamp": "2026-02-01T01:02:59.195Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-02-01T01:02:56.193Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "isLocked": false,
+      "extractionId": 75
+    },
+    {
+      "timestamp": "2026-02-01T01:02:59.195Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-02-01T01:13:25.601Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-02-01T01:13:28.609Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-02-01T01:13:31.614Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-02-01T01:13:34.628Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-02-01T01:13:37.640Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-02-01T01:13:40.641Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-02-01T01:13:43.647Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-02-01T01:13:46.652Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-02-01T01:13:49.652Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-02-01T01:13:52.653Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-02-01T01:13:55.659Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-02-01T01:13:58.671Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-02-01T01:14:01.673Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-02-01T01:14:04.681Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-02-01T01:14:07.686Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-02-01T01:14:10.693Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-02-01T01:14:13.704Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-02-01T01:14:16.711Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-02-01T01:14:19.714Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-02-01T01:14:22.720Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-02-01T01:14:25.723Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-02-01T01:14:28.725Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-02-01T01:14:31.729Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-02-01T01:14:34.736Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-02-01T01:14:37.739Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-02-01T01:14:40.745Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-02-01T01:14:43.749Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-02-01T01:14:46.765Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-02-01T01:14:49.765Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-02-01T01:14:52.775Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-02-01T01:14:55.781Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-02-01T01:14:58.786Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-02-01T01:15:01.799Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-02-01T01:15:04.804Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-02-01T01:15:07.805Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-02-01T01:15:10.810Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "Cody Brundage",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
     {
       "timestamp": "2026-02-01T01:15:13.817Z",
       "fighter1": {
@@ -4446,5 +5046,32 @@
       "isLocked": false,
       "extractionId": 120
     }
-  ]
+  ],
+  "createdAt": "2026-02-01T01:02:59.415Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Cam Rowston",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:51:02.217Z",
+    "openingF1Odds": -360,
+    "openingF2Odds": 290,
+    "closingF1Odds": -1000,
+    "closingF2Odds": 580,
+    "lineMovementF1": -640,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  },
+  "derived": {
+    "inferredFinishMin": 21,
+    "inferredFinishRound": 4,
+    "peakOddsSwing": 640,
+    "finishSpeed": "slow",
+    "preFightSteam": -640,
+    "dominanceScore": 92,
+    "crossoverCount": 0,
+    "derivedAt": "2026-06-14T11:47:28.394Z"
+  }
 }

@@ -1,11 +1,521 @@
 {
   "fightId": "elijahsmith_vs_yousuyoung",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-03-14T23:10:44.534Z",
-  "endTime": "2026-03-14T23:17:00.258Z",
-  "dataPoints": 165,
+  "startTime": "2026-03-14T23:09:02.343Z",
+  "endTime": "2026-03-14T23:17:09.277Z",
+  "duration": 486934,
+  "dataPoints": 202,
   "oddsHistory": [
+    {
+      "timestamp": "2026-03-14T23:09:02.343Z",
+      "fighter1": {
+        "name": "Elijah Smith",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "You Su-young",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-14T23:09:05.355Z",
+      "fighter1": {
+        "name": "Elijah Smith",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "You Su-young",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-14T23:09:08.362Z",
+      "fighter1": {
+        "name": "Elijah Smith",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "You Su-young",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-14T23:09:11.374Z",
+      "fighter1": {
+        "name": "Elijah Smith",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "You Su-young",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-14T23:09:14.380Z",
+      "fighter1": {
+        "name": "Elijah Smith",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "You Su-young",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-14T23:09:17.387Z",
+      "fighter1": {
+        "name": "Elijah Smith",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "You Su-young",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-03-14T23:09:20.390Z",
+      "fighter1": {
+        "name": "Elijah Smith",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "You Su-young",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-03-14T23:09:23.396Z",
+      "fighter1": {
+        "name": "Elijah Smith",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "You Su-young",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-03-14T23:09:26.406Z",
+      "fighter1": {
+        "name": "Elijah Smith",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "You Su-young",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-03-14T23:09:29.408Z",
+      "fighter1": {
+        "name": "Elijah Smith",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "You Su-young",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-03-14T23:09:32.415Z",
+      "fighter1": {
+        "name": "Elijah Smith",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "You Su-young",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-03-14T23:09:35.418Z",
+      "fighter1": {
+        "name": "Elijah Smith",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "You Su-young",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-03-14T23:09:38.419Z",
+      "fighter1": {
+        "name": "Elijah Smith",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "You Su-young",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-03-14T23:09:41.421Z",
+      "fighter1": {
+        "name": "Elijah Smith",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "You Su-young",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-03-14T23:09:44.423Z",
+      "fighter1": {
+        "name": "Elijah Smith",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "You Su-young",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-03-14T23:09:47.426Z",
+      "fighter1": {
+        "name": "Elijah Smith",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "You Su-young",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-03-14T23:09:50.427Z",
+      "fighter1": {
+        "name": "Elijah Smith",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "You Su-young",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-03-14T23:09:53.442Z",
+      "fighter1": {
+        "name": "Elijah Smith",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "You Su-young",
+        "odds": "+205",
+        "numericOdds": 205
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-03-14T23:09:56.458Z",
+      "fighter1": {
+        "name": "Elijah Smith",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "You Su-young",
+        "odds": "+205",
+        "numericOdds": 205
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-03-14T23:09:59.462Z",
+      "fighter1": {
+        "name": "Elijah Smith",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "You Su-young",
+        "odds": "+205",
+        "numericOdds": 205
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-03-14T23:10:02.467Z",
+      "fighter1": {
+        "name": "Elijah Smith",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "You Su-young",
+        "odds": "+205",
+        "numericOdds": 205
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-03-14T23:10:05.471Z",
+      "fighter1": {
+        "name": "Elijah Smith",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "You Su-young",
+        "odds": "+205",
+        "numericOdds": 205
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-03-14T23:10:08.485Z",
+      "fighter1": {
+        "name": "Elijah Smith",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "You Su-young",
+        "odds": "+205",
+        "numericOdds": 205
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-03-14T23:10:11.486Z",
+      "fighter1": {
+        "name": "Elijah Smith",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "You Su-young",
+        "odds": "+205",
+        "numericOdds": 205
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-03-14T23:10:14.493Z",
+      "fighter1": {
+        "name": "Elijah Smith",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "You Su-young",
+        "odds": "+205",
+        "numericOdds": 205
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-03-14T23:10:17.496Z",
+      "fighter1": {
+        "name": "Elijah Smith",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "You Su-young",
+        "odds": "+205",
+        "numericOdds": 205
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-03-14T23:10:20.501Z",
+      "fighter1": {
+        "name": "Elijah Smith",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "You Su-young",
+        "odds": "+205",
+        "numericOdds": 205
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-03-14T23:10:23.503Z",
+      "fighter1": {
+        "name": "Elijah Smith",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "You Su-young",
+        "odds": "+205",
+        "numericOdds": 205
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-03-14T23:10:26.506Z",
+      "fighter1": {
+        "name": "Elijah Smith",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "You Su-young",
+        "odds": "+205",
+        "numericOdds": 205
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-03-14T23:10:29.506Z",
+      "fighter1": {
+        "name": "Elijah Smith",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "You Su-young",
+        "odds": "+205",
+        "numericOdds": 205
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-03-14T23:10:32.511Z",
+      "fighter1": {
+        "name": "Elijah Smith",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "You Su-young",
+        "odds": "+205",
+        "numericOdds": 205
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-03-14T23:10:35.515Z",
+      "fighter1": {
+        "name": "Elijah Smith",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "You Su-young",
+        "odds": "+205",
+        "numericOdds": 205
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-03-14T23:10:38.522Z",
+      "fighter1": {
+        "name": "Elijah Smith",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "You Su-young",
+        "odds": "+205",
+        "numericOdds": 205
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-03-14T23:10:41.530Z",
+      "fighter1": {
+        "name": "Elijah Smith",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "fighter2": {
+        "name": "You Su-young",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
     {
       "timestamp": "2026-03-14T23:10:44.534Z",
       "fighter1": {
@@ -2480,6 +2990,62 @@
       },
       "isLocked": false,
       "extractionId": 59
+    },
+    {
+      "timestamp": "2026-03-14T23:17:03.263Z",
+      "fighter1": {
+        "name": "Elijah Smith",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "fighter2": {
+        "name": "You Su-young",
+        "odds": "+170",
+        "numericOdds": 170
+      },
+      "isLocked": false,
+      "extractionId": 60
+    },
+    {
+      "timestamp": "2026-03-14T23:17:06.274Z",
+      "fighter1": {
+        "name": "Elijah Smith",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "fighter2": {
+        "name": "You Su-young",
+        "odds": "+170",
+        "numericOdds": 170
+      },
+      "isLocked": false,
+      "extractionId": 61
+    },
+    {
+      "timestamp": "2026-03-14T23:17:09.277Z",
+      "fighter1": {
+        "name": "Elijah Smith",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "fighter2": {
+        "name": "You Su-young",
+        "odds": "+170",
+        "numericOdds": 170
+      },
+      "isLocked": false,
+      "extractionId": 62
     }
-  ]
+  ],
+  "createdAt": "2026-03-14T23:11:11.588Z",
+  "derived": {
+    "inferredFinishMin": 2,
+    "inferredFinishRound": 1,
+    "peakOddsSwing": 1340,
+    "finishSpeed": "fast",
+    "preFightSteam": 40,
+    "dominanceScore": 86,
+    "crossoverCount": 0,
+    "derivedAt": "2026-06-14T11:47:28.415Z"
+  }
 }

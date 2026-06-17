@@ -1,87 +1,4117 @@
 {
-  "fightId": "marcintybura_vs_tyrellfortune_2026-03-28",
-  "fightTitle": "Marcin Tybura vs Tyrell Fortune",
-  "commenceTime": null,
-  "startTime": "2026-03-28T22:45:37Z",
-  "endTime": "2026-03-28T23:15:39Z",
-  "dataPoints": 7,
+  "fightId": "marcintybura_vs_tyrellfortune",
+  "fightTitle": "Connected but no betting buttons found",
+  "startTime": "2026-03-28T22:49:47.311Z",
+  "endTime": "2026-03-28T23:06:40.645Z",
+  "duration": 1013334,
+  "dataPoints": 272,
   "oddsHistory": [
     {
-      "timestamp": "2026-03-28T22:45:37Z",
+      "timestamp": "2026-03-28T22:49:47.311Z",
       "fighter1": {
         "name": "Marcin Tybura",
-        "numericOdds": 105
+        "odds": "+108",
+        "numericOdds": 108
       },
       "fighter2": {
         "name": "Tyrell Fortune",
-        "numericOdds": -125
-      }
+        "odds": "-126",
+        "numericOdds": -126
+      },
+      "isLocked": false,
+      "extractionId": 33
     },
     {
-      "timestamp": "2026-03-28T22:50:37Z",
+      "timestamp": "2026-03-28T22:49:50.319Z",
       "fighter1": {
         "name": "Marcin Tybura",
-        "numericOdds": 100
+        "odds": "+108",
+        "numericOdds": 108
       },
       "fighter2": {
         "name": "Tyrell Fortune",
-        "numericOdds": -130
-      }
+        "odds": "-126",
+        "numericOdds": -126
+      },
+      "isLocked": false,
+      "extractionId": 2
     },
     {
-      "timestamp": "2026-03-28T22:55:37Z",
+      "timestamp": "2026-03-28T22:49:53.334Z",
       "fighter1": {
         "name": "Marcin Tybura",
-        "numericOdds": 220
+        "odds": "+108",
+        "numericOdds": 108
       },
       "fighter2": {
         "name": "Tyrell Fortune",
-        "numericOdds": -298
-      }
+        "odds": "-126",
+        "numericOdds": -126
+      },
+      "isLocked": false,
+      "extractionId": 3
     },
     {
-      "timestamp": "2026-03-28T23:00:41Z",
+      "timestamp": "2026-03-28T22:49:56.342Z",
       "fighter1": {
         "name": "Marcin Tybura",
-        "numericOdds": 340
+        "odds": "+108",
+        "numericOdds": 108
       },
       "fighter2": {
         "name": "Tyrell Fortune",
-        "numericOdds": -500
-      }
+        "odds": "-126",
+        "numericOdds": -126
+      },
+      "isLocked": false,
+      "extractionId": 4
     },
     {
-      "timestamp": "2026-03-28T23:05:37Z",
+      "timestamp": "2026-03-28T22:49:59.357Z",
       "fighter1": {
         "name": "Marcin Tybura",
-        "numericOdds": 950
+        "odds": "+108",
+        "numericOdds": 108
       },
       "fighter2": {
         "name": "Tyrell Fortune",
-        "numericOdds": -1950
-      }
+        "odds": "-126",
+        "numericOdds": -126
+      },
+      "isLocked": false,
+      "extractionId": 5
     },
     {
-      "timestamp": "2026-03-28T23:10:37Z",
+      "timestamp": "2026-03-28T22:50:02.357Z",
       "fighter1": {
         "name": "Marcin Tybura",
-        "numericOdds": 1100
+        "odds": "+108",
+        "numericOdds": 108
       },
       "fighter2": {
         "name": "Tyrell Fortune",
-        "numericOdds": -2500
-      }
+        "odds": "-126",
+        "numericOdds": -126
+      },
+      "isLocked": false,
+      "extractionId": 6
     },
     {
-      "timestamp": "2026-03-28T23:15:39Z",
+      "timestamp": "2026-03-28T22:50:05.370Z",
       "fighter1": {
         "name": "Marcin Tybura",
-        "numericOdds": 1100
+        "odds": "+108",
+        "numericOdds": 108
       },
       "fighter2": {
         "name": "Tyrell Fortune",
-        "numericOdds": -2500
-      }
+        "odds": "-126",
+        "numericOdds": -126
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-03-28T22:50:08.372Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-03-28T22:50:11.377Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-03-28T22:50:14.377Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-03-28T22:50:17.382Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-03-28T22:50:20.384Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-03-28T22:50:23.397Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-03-28T22:50:26.403Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-03-28T22:50:29.402Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-03-28T22:50:32.404Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-03-28T22:50:35.415Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-03-28T22:50:38.419Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-122",
+        "numericOdds": -122
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-03-28T22:50:41.420Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-122",
+        "numericOdds": -122
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-03-28T22:50:44.435Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-122",
+        "numericOdds": -122
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-03-28T22:50:47.450Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-122",
+        "numericOdds": -122
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-03-28T22:50:50.457Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-122",
+        "numericOdds": -122
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-03-28T22:50:53.472Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "-102",
+        "numericOdds": -102
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-126",
+        "numericOdds": -126
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-03-28T22:50:56.481Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "-102",
+        "numericOdds": -102
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-126",
+        "numericOdds": -126
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-03-28T22:50:59.486Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "-102",
+        "numericOdds": -102
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-126",
+        "numericOdds": -126
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-03-28T22:51:02.487Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "-102",
+        "numericOdds": -102
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-126",
+        "numericOdds": -126
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-03-28T22:51:05.488Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "-102",
+        "numericOdds": -102
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-126",
+        "numericOdds": -126
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-03-28T22:51:08.490Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+102",
+        "numericOdds": 102
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-128",
+        "numericOdds": -128
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-03-28T22:51:11.500Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+102",
+        "numericOdds": 102
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-128",
+        "numericOdds": -128
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-03-28T22:51:14.515Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-03-28T22:53:29.843Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-03-28T22:53:32.845Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-28T22:53:35.848Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-28T22:53:38.850Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-28T22:53:41.858Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-28T22:53:44.870Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-03-28T22:53:47.885Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-03-28T22:53:50.887Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-380",
+        "numericOdds": -380
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-03-28T22:53:53.892Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-380",
+        "numericOdds": -380
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-03-28T22:53:56.899Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-380",
+        "numericOdds": -380
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-03-28T22:53:59.900Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-03-28T22:54:02.903Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-03-28T22:54:05.904Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-03-28T22:54:08.917Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-03-28T22:54:11.930Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-03-28T22:54:14.944Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-03-28T22:54:17.949Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-03-28T22:54:20.961Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+230",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-03-28T22:54:23.964Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-03-28T22:54:26.965Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-03-28T22:54:29.977Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+196",
+        "numericOdds": 196
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-03-28T22:54:32.988Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+196",
+        "numericOdds": 196
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-03-28T22:54:36.003Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-03-28T22:54:39.008Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-03-28T22:54:42.015Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-225",
+        "numericOdds": -225
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-03-28T22:54:45.030Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-225",
+        "numericOdds": -225
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-03-28T22:54:48.037Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-225",
+        "numericOdds": -225
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-03-28T22:54:51.040Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-03-28T22:54:54.045Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-03-28T22:54:57.060Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-03-28T22:55:00.071Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-03-28T22:55:03.080Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-03-28T22:55:06.081Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-03-28T22:55:09.090Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-03-28T22:55:12.097Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-03-28T22:55:15.103Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-03-28T22:55:18.114Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2026-03-28T22:55:21.124Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2026-03-28T22:55:24.128Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 39
+    },
+    {
+      "timestamp": "2026-03-28T22:55:27.137Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 40
+    },
+    {
+      "timestamp": "2026-03-28T22:55:30.149Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 41
+    },
+    {
+      "timestamp": "2026-03-28T22:55:33.161Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 42
+    },
+    {
+      "timestamp": "2026-03-28T22:55:36.168Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 43
+    },
+    {
+      "timestamp": "2026-03-28T22:55:39.176Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 44
+    },
+    {
+      "timestamp": "2026-03-28T22:55:42.181Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 45
+    },
+    {
+      "timestamp": "2026-03-28T22:55:45.185Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 46
+    },
+    {
+      "timestamp": "2026-03-28T22:55:48.197Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 47
+    },
+    {
+      "timestamp": "2026-03-28T22:55:51.200Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 48
+    },
+    {
+      "timestamp": "2026-03-28T22:55:54.205Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 49
+    },
+    {
+      "timestamp": "2026-03-28T22:55:57.207Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 50
+    },
+    {
+      "timestamp": "2026-03-28T22:56:00.220Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 51
+    },
+    {
+      "timestamp": "2026-03-28T22:56:03.234Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 52
+    },
+    {
+      "timestamp": "2026-03-28T22:56:06.235Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 53
+    },
+    {
+      "timestamp": "2026-03-28T22:56:09.239Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 54
+    },
+    {
+      "timestamp": "2026-03-28T22:56:12.243Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 55
+    },
+    {
+      "timestamp": "2026-03-28T22:56:15.244Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 56
+    },
+    {
+      "timestamp": "2026-03-28T22:56:18.259Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 57
+    },
+    {
+      "timestamp": "2026-03-28T22:56:21.263Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "isLocked": false,
+      "extractionId": 58
+    },
+    {
+      "timestamp": "2026-03-28T22:56:24.264Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "isLocked": false,
+      "extractionId": 59
+    },
+    {
+      "timestamp": "2026-03-28T22:56:27.272Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 60
+    },
+    {
+      "timestamp": "2026-03-28T22:56:30.273Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 61
+    },
+    {
+      "timestamp": "2026-03-28T22:56:33.281Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 62
+    },
+    {
+      "timestamp": "2026-03-28T22:56:36.286Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 63
+    },
+    {
+      "timestamp": "2026-03-28T22:56:39.287Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 64
+    },
+    {
+      "timestamp": "2026-03-28T22:56:42.288Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 65
+    },
+    {
+      "timestamp": "2026-03-28T22:56:45.294Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 66
+    },
+    {
+      "timestamp": "2026-03-28T22:56:48.308Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 67
+    },
+    {
+      "timestamp": "2026-03-28T22:56:57.339Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 68
+    },
+    {
+      "timestamp": "2026-03-28T22:57:00.341Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-28T22:57:03.354Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-28T22:57:06.362Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-28T22:57:09.375Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-28T22:57:12.380Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-03-28T22:57:15.382Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-03-28T22:57:18.382Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-03-28T22:57:21.391Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-03-28T22:57:24.405Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-03-28T22:57:27.406Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-03-28T22:57:30.410Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-03-28T22:57:33.423Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-186",
+        "numericOdds": -186
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-03-28T22:57:36.425Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-186",
+        "numericOdds": -186
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-03-28T22:57:39.439Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-186",
+        "numericOdds": -186
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-03-28T22:57:42.444Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-03-28T22:57:45.458Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-03-28T22:57:48.473Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+160",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-03-28T22:57:51.481Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-03-28T22:57:54.483Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-03-28T22:57:57.491Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-03-28T22:58:00.493Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-03-28T22:58:03.498Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-03-28T22:58:06.501Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+184",
+        "numericOdds": 184
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-240",
+        "numericOdds": -240
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-03-28T22:58:09.503Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+184",
+        "numericOdds": 184
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-240",
+        "numericOdds": -240
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-03-28T22:58:12.509Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+192",
+        "numericOdds": 192
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-03-28T22:58:15.522Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+192",
+        "numericOdds": 192
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-03-28T22:58:18.526Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+192",
+        "numericOdds": 192
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-03-28T22:58:21.527Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+192",
+        "numericOdds": 192
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-03-28T22:58:24.529Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+192",
+        "numericOdds": 192
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-03-28T22:58:27.530Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+205",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-03-28T22:58:30.538Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+205",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-03-28T22:58:33.551Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+205",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-03-28T22:58:57.655Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-03-28T22:59:00.666Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-28T22:59:03.676Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-28T22:59:06.686Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-28T22:59:09.687Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-28T22:59:12.699Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-03-28T22:59:15.711Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-03-28T22:59:18.717Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-03-28T22:59:21.721Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-03-28T22:59:24.730Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-03-28T22:59:27.733Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+420",
+        "numericOdds": 420
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-650",
+        "numericOdds": -650
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-03-28T22:59:30.734Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+420",
+        "numericOdds": 420
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-650",
+        "numericOdds": -650
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-03-28T22:59:33.737Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+420",
+        "numericOdds": 420
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-650",
+        "numericOdds": -650
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-03-28T22:59:36.741Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+420",
+        "numericOdds": 420
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-650",
+        "numericOdds": -650
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-03-28T22:59:39.745Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-03-28T22:59:42.750Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-03-28T22:59:45.762Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-03-28T22:59:48.777Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-03-28T22:59:51.779Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-03-28T22:59:54.795Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-03-28T22:59:57.801Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-03-28T23:00:00.805Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-03-28T23:00:03.819Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-03-28T23:00:06.828Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-03-28T23:00:09.828Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-03-28T23:00:54.923Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-03-28T23:00:57.925Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-28T23:01:00.935Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-28T23:01:03.937Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-28T23:01:06.942Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-28T23:01:09.945Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-03-28T23:01:12.957Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-03-28T23:01:15.960Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-03-28T23:01:18.964Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-03-28T23:01:21.976Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-03-28T23:01:24.980Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-03-28T23:01:27.985Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-03-28T23:01:30.987Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-03-28T23:01:33.989Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-03-28T23:01:36.992Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-03-28T23:01:39.995Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-03-28T23:01:42.998Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-03-28T23:01:46.005Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-03-28T23:01:49.017Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-03-28T23:01:52.018Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-03-28T23:01:55.019Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-03-28T23:01:58.024Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-03-28T23:02:01.023Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-03-28T23:02:04.024Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-03-28T23:02:07.029Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-03-28T23:02:10.032Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-03-28T23:02:13.045Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-03-28T23:02:16.056Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-03-28T23:02:19.071Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-03-28T23:02:22.074Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-03-28T23:02:25.077Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-03-28T23:02:28.078Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-03-28T23:02:31.081Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-03-28T23:02:34.084Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-03-28T23:02:37.098Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-03-28T23:02:40.109Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+550",
+        "numericOdds": 550
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-950",
+        "numericOdds": -950
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-03-28T23:02:43.122Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+550",
+        "numericOdds": 550
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-950",
+        "numericOdds": -950
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2026-03-28T23:02:46.137Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+550",
+        "numericOdds": 550
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-950",
+        "numericOdds": -950
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2026-03-28T23:02:49.139Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+550",
+        "numericOdds": 550
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-950",
+        "numericOdds": -950
+      },
+      "isLocked": false,
+      "extractionId": 39
+    },
+    {
+      "timestamp": "2026-03-28T23:02:52.154Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+550",
+        "numericOdds": 550
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-950",
+        "numericOdds": -950
+      },
+      "isLocked": false,
+      "extractionId": 40
+    },
+    {
+      "timestamp": "2026-03-28T23:02:55.155Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+550",
+        "numericOdds": 550
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-950",
+        "numericOdds": -950
+      },
+      "isLocked": false,
+      "extractionId": 41
+    },
+    {
+      "timestamp": "2026-03-28T23:02:58.156Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+550",
+        "numericOdds": 550
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-950",
+        "numericOdds": -950
+      },
+      "isLocked": false,
+      "extractionId": 42
+    },
+    {
+      "timestamp": "2026-03-28T23:03:01.158Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+620",
+        "numericOdds": 620
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1100",
+        "numericOdds": -1100
+      },
+      "isLocked": false,
+      "extractionId": 43
+    },
+    {
+      "timestamp": "2026-03-28T23:03:04.163Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "isLocked": false,
+      "extractionId": 44
+    },
+    {
+      "timestamp": "2026-03-28T23:03:07.176Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "isLocked": false,
+      "extractionId": 45
+    },
+    {
+      "timestamp": "2026-03-28T23:03:10.184Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "isLocked": false,
+      "extractionId": 46
+    },
+    {
+      "timestamp": "2026-03-28T23:03:13.197Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "isLocked": false,
+      "extractionId": 47
+    },
+    {
+      "timestamp": "2026-03-28T23:03:16.201Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 48
+    },
+    {
+      "timestamp": "2026-03-28T23:03:19.208Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "isLocked": false,
+      "extractionId": 49
+    },
+    {
+      "timestamp": "2026-03-28T23:03:22.213Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "isLocked": false,
+      "extractionId": 50
+    },
+    {
+      "timestamp": "2026-03-28T23:03:25.227Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "isLocked": false,
+      "extractionId": 51
+    },
+    {
+      "timestamp": "2026-03-28T23:03:28.229Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "isLocked": false,
+      "extractionId": 52
+    },
+    {
+      "timestamp": "2026-03-28T23:03:31.229Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "isLocked": false,
+      "extractionId": 53
+    },
+    {
+      "timestamp": "2026-03-28T23:03:34.230Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "isLocked": false,
+      "extractionId": 54
+    },
+    {
+      "timestamp": "2026-03-28T23:03:37.234Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "isLocked": false,
+      "extractionId": 55
+    },
+    {
+      "timestamp": "2026-03-28T23:03:40.235Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "isLocked": false,
+      "extractionId": 56
+    },
+    {
+      "timestamp": "2026-03-28T23:03:43.235Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "isLocked": false,
+      "extractionId": 57
+    },
+    {
+      "timestamp": "2026-03-28T23:03:46.250Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "isLocked": false,
+      "extractionId": 58
+    },
+    {
+      "timestamp": "2026-03-28T23:03:49.261Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "isLocked": false,
+      "extractionId": 59
+    },
+    {
+      "timestamp": "2026-03-28T23:03:52.263Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "isLocked": false,
+      "extractionId": 60
+    },
+    {
+      "timestamp": "2026-03-28T23:03:55.275Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "isLocked": false,
+      "extractionId": 61
+    },
+    {
+      "timestamp": "2026-03-28T23:03:58.278Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "isLocked": false,
+      "extractionId": 62
+    },
+    {
+      "timestamp": "2026-03-28T23:04:01.288Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1200",
+        "numericOdds": -1200
+      },
+      "isLocked": false,
+      "extractionId": 63
+    },
+    {
+      "timestamp": "2026-03-28T23:04:04.296Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1200",
+        "numericOdds": -1200
+      },
+      "isLocked": false,
+      "extractionId": 64
+    },
+    {
+      "timestamp": "2026-03-28T23:04:07.303Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 65
+    },
+    {
+      "timestamp": "2026-03-28T23:04:10.303Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 66
+    },
+    {
+      "timestamp": "2026-03-28T23:04:13.306Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 67
+    },
+    {
+      "timestamp": "2026-03-28T23:04:16.320Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 68
+    },
+    {
+      "timestamp": "2026-03-28T23:04:19.321Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 69
+    },
+    {
+      "timestamp": "2026-03-28T23:04:22.325Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+620",
+        "numericOdds": 620
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1100",
+        "numericOdds": -1100
+      },
+      "isLocked": false,
+      "extractionId": 70
+    },
+    {
+      "timestamp": "2026-03-28T23:04:25.331Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+620",
+        "numericOdds": 620
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1100",
+        "numericOdds": -1100
+      },
+      "isLocked": false,
+      "extractionId": 71
+    },
+    {
+      "timestamp": "2026-03-28T23:04:28.345Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+620",
+        "numericOdds": 620
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1100",
+        "numericOdds": -1100
+      },
+      "isLocked": false,
+      "extractionId": 72
+    },
+    {
+      "timestamp": "2026-03-28T23:04:31.358Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1200",
+        "numericOdds": -1200
+      },
+      "isLocked": false,
+      "extractionId": 73
+    },
+    {
+      "timestamp": "2026-03-28T23:04:34.368Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-1200",
+        "numericOdds": -1200
+      },
+      "isLocked": false,
+      "extractionId": 74
+    },
+    {
+      "timestamp": "2026-03-28T23:04:52.410Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 75
+    },
+    {
+      "timestamp": "2026-03-28T23:06:01.578Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-28T23:06:04.580Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-28T23:06:07.584Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-28T23:06:10.586Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-28T23:06:13.591Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-28T23:06:16.605Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-03-28T23:06:19.604Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-03-28T23:06:22.606Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-03-28T23:06:25.610Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-03-28T23:06:28.623Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-03-28T23:06:31.625Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-03-28T23:06:34.627Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-03-28T23:06:37.631Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+1800",
+        "numericOdds": 1800
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-4500",
+        "numericOdds": -4500
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-03-28T23:06:40.645Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+1800",
+        "numericOdds": 1800
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-4500",
+        "numericOdds": -4500
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-03-28T23:06:01.578Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-28T23:06:04.580Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-28T23:06:07.584Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-28T23:06:10.586Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-28T23:06:13.591Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-28T23:06:16.605Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-03-28T23:06:19.604Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-03-28T23:06:22.606Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-03-28T23:06:25.610Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-03-28T23:06:28.623Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-03-28T23:06:31.625Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-03-28T23:06:34.627Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-03-28T23:06:37.631Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+1800",
+        "numericOdds": 1800
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-4500",
+        "numericOdds": -4500
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-03-28T23:06:40.645Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+1800",
+        "numericOdds": 1800
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-4500",
+        "numericOdds": -4500
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-03-28T23:06:01.578Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-28T23:06:04.580Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-28T23:06:07.584Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-28T23:06:10.586Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-28T23:06:13.591Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-28T23:06:16.605Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-03-28T23:06:19.604Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-03-28T23:06:22.606Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-03-28T23:06:25.610Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-03-28T23:06:28.623Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-03-28T23:06:31.625Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-03-28T23:06:34.627Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-03-28T23:06:37.631Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+1800",
+        "numericOdds": 1800
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-4500",
+        "numericOdds": -4500
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-03-28T23:06:40.645Z",
+      "fighter1": {
+        "name": "Marcin Tybura",
+        "odds": "+1800",
+        "numericOdds": 1800
+      },
+      "fighter2": {
+        "name": "Tyrell Fortune",
+        "odds": "-4500",
+        "numericOdds": -4500
+      },
+      "isLocked": false,
+      "extractionId": 14
     }
-  ]
+  ],
+  "createdAt": "2026-03-28T22:53:29.842Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Tyrell Fortune",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:51:53.507Z",
+    "openingF1Odds": 108,
+    "openingF2Odds": -126,
+    "closingF1Odds": 1800,
+    "closingF2Odds": -4500,
+    "lineMovementF1": 1692,
+    "crossoverOccurred": true,
+    "crossoverMinute": 1
+  },
+  "derived": {
+    "inferredFinishMin": 11,
+    "inferredFinishRound": 2,
+    "peakOddsSwing": 1692,
+    "finishSpeed": "medium",
+    "preFightSteam": 1692,
+    "dominanceScore": 71,
+    "crossoverCount": 2,
+    "derivedAt": "2026-06-14T11:47:28.453Z"
+  }
 }

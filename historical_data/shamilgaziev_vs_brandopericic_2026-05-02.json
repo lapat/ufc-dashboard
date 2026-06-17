@@ -1,11 +1,476 @@
 {
   "fightId": "shamilgaziev_vs_brandopericic",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-05-02T11:52:29.495Z",
+  "startTime": "2026-05-02T11:50:56.222Z",
   "endTime": "2026-05-02T12:01:45.897Z",
-  "dataPoints": 203,
+  "duration": 649675,
+  "dataPoints": 234,
   "oddsHistory": [
+    {
+      "timestamp": "2026-05-02T11:50:56.222Z",
+      "fighter1": {
+        "name": "Shamil Gaziev",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "fighter2": {
+        "name": "Brando Pericic",
+        "odds": "-122",
+        "numericOdds": -122
+      },
+      "isLocked": false,
+      "extractionId": 259
+    },
+    {
+      "timestamp": "2026-05-02T11:50:59.239Z",
+      "fighter1": {
+        "name": "Shamil Gaziev",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "fighter2": {
+        "name": "Brando Pericic",
+        "odds": "-122",
+        "numericOdds": -122
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-05-02T11:51:02.250Z",
+      "fighter1": {
+        "name": "Shamil Gaziev",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "fighter2": {
+        "name": "Brando Pericic",
+        "odds": "-122",
+        "numericOdds": -122
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-02T11:51:05.256Z",
+      "fighter1": {
+        "name": "Shamil Gaziev",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "fighter2": {
+        "name": "Brando Pericic",
+        "odds": "-122",
+        "numericOdds": -122
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-02T11:51:08.268Z",
+      "fighter1": {
+        "name": "Shamil Gaziev",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "fighter2": {
+        "name": "Brando Pericic",
+        "odds": "-122",
+        "numericOdds": -122
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-05-02T11:51:11.275Z",
+      "fighter1": {
+        "name": "Shamil Gaziev",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "fighter2": {
+        "name": "Brando Pericic",
+        "odds": "-122",
+        "numericOdds": -122
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-05-02T11:51:14.286Z",
+      "fighter1": {
+        "name": "Shamil Gaziev",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "fighter2": {
+        "name": "Brando Pericic",
+        "odds": "-122",
+        "numericOdds": -122
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-05-02T11:51:17.286Z",
+      "fighter1": {
+        "name": "Shamil Gaziev",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "fighter2": {
+        "name": "Brando Pericic",
+        "odds": "-122",
+        "numericOdds": -122
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-05-02T11:51:20.299Z",
+      "fighter1": {
+        "name": "Shamil Gaziev",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "fighter2": {
+        "name": "Brando Pericic",
+        "odds": "-122",
+        "numericOdds": -122
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-05-02T11:51:23.302Z",
+      "fighter1": {
+        "name": "Shamil Gaziev",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "fighter2": {
+        "name": "Brando Pericic",
+        "odds": "-122",
+        "numericOdds": -122
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-05-02T11:51:26.315Z",
+      "fighter1": {
+        "name": "Shamil Gaziev",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "fighter2": {
+        "name": "Brando Pericic",
+        "odds": "-122",
+        "numericOdds": -122
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-05-02T11:51:29.327Z",
+      "fighter1": {
+        "name": "Shamil Gaziev",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "fighter2": {
+        "name": "Brando Pericic",
+        "odds": "-122",
+        "numericOdds": -122
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-05-02T11:51:32.332Z",
+      "fighter1": {
+        "name": "Shamil Gaziev",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "fighter2": {
+        "name": "Brando Pericic",
+        "odds": "-122",
+        "numericOdds": -122
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-05-02T11:51:35.344Z",
+      "fighter1": {
+        "name": "Shamil Gaziev",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "fighter2": {
+        "name": "Brando Pericic",
+        "odds": "-122",
+        "numericOdds": -122
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-05-02T11:51:38.354Z",
+      "fighter1": {
+        "name": "Shamil Gaziev",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "fighter2": {
+        "name": "Brando Pericic",
+        "odds": "-122",
+        "numericOdds": -122
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-05-02T11:51:41.354Z",
+      "fighter1": {
+        "name": "Shamil Gaziev",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "fighter2": {
+        "name": "Brando Pericic",
+        "odds": "-122",
+        "numericOdds": -122
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-05-02T11:51:44.365Z",
+      "fighter1": {
+        "name": "Shamil Gaziev",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "fighter2": {
+        "name": "Brando Pericic",
+        "odds": "-122",
+        "numericOdds": -122
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-05-02T11:51:47.368Z",
+      "fighter1": {
+        "name": "Shamil Gaziev",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "fighter2": {
+        "name": "Brando Pericic",
+        "odds": "-122",
+        "numericOdds": -122
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-05-02T11:51:50.378Z",
+      "fighter1": {
+        "name": "Shamil Gaziev",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "fighter2": {
+        "name": "Brando Pericic",
+        "odds": "-122",
+        "numericOdds": -122
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-05-02T11:51:53.392Z",
+      "fighter1": {
+        "name": "Shamil Gaziev",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "fighter2": {
+        "name": "Brando Pericic",
+        "odds": "-122",
+        "numericOdds": -122
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-05-02T11:51:56.398Z",
+      "fighter1": {
+        "name": "Shamil Gaziev",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "fighter2": {
+        "name": "Brando Pericic",
+        "odds": "-122",
+        "numericOdds": -122
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-05-02T11:51:59.408Z",
+      "fighter1": {
+        "name": "Shamil Gaziev",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "fighter2": {
+        "name": "Brando Pericic",
+        "odds": "-122",
+        "numericOdds": -122
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-05-02T11:52:02.424Z",
+      "fighter1": {
+        "name": "Shamil Gaziev",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "fighter2": {
+        "name": "Brando Pericic",
+        "odds": "-122",
+        "numericOdds": -122
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-05-02T11:52:05.434Z",
+      "fighter1": {
+        "name": "Shamil Gaziev",
+        "odds": "+100",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Brando Pericic",
+        "odds": "-128",
+        "numericOdds": -128
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-05-02T11:52:08.440Z",
+      "fighter1": {
+        "name": "Shamil Gaziev",
+        "odds": "+100",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Brando Pericic",
+        "odds": "-128",
+        "numericOdds": -128
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-05-02T11:52:11.440Z",
+      "fighter1": {
+        "name": "Shamil Gaziev",
+        "odds": "+100",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Brando Pericic",
+        "odds": "-128",
+        "numericOdds": -128
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-05-02T11:52:14.452Z",
+      "fighter1": {
+        "name": "Shamil Gaziev",
+        "odds": "+100",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Brando Pericic",
+        "odds": "-128",
+        "numericOdds": -128
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-05-02T11:52:17.458Z",
+      "fighter1": {
+        "name": "Shamil Gaziev",
+        "odds": "+100",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Brando Pericic",
+        "odds": "-128",
+        "numericOdds": -128
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-05-02T11:52:20.462Z",
+      "fighter1": {
+        "name": "Shamil Gaziev",
+        "odds": "+100",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Brando Pericic",
+        "odds": "-128",
+        "numericOdds": -128
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-05-02T11:52:23.467Z",
+      "fighter1": {
+        "name": "Shamil Gaziev",
+        "odds": "+100",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Brando Pericic",
+        "odds": "-128",
+        "numericOdds": -128
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-05-02T11:52:26.481Z",
+      "fighter1": {
+        "name": "Shamil Gaziev",
+        "odds": "+110",
+        "numericOdds": 110
+      },
+      "fighter2": {
+        "name": "Brando Pericic",
+        "odds": "-140",
+        "numericOdds": -140
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
     {
       "timestamp": "2026-05-02T11:52:29.495Z",
       "fighter1": {
@@ -3051,5 +3516,16 @@
       "isLocked": false,
       "extractionId": 36
     }
-  ]
+  ],
+  "createdAt": "2026-05-02T11:54:56.835Z",
+  "derived": {
+    "inferredFinishMin": null,
+    "inferredFinishRound": null,
+    "peakOddsSwing": 336,
+    "finishSpeed": "decision",
+    "preFightSteam": 146,
+    "dominanceScore": 56,
+    "crossoverCount": 6,
+    "derivedAt": "2026-06-14T11:47:28.493Z"
+  }
 }

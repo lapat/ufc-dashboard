@@ -1,11 +1,1451 @@
 {
   "fightId": "romankopylov_vs_gregoryrodrigues",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2025-11-16T02:14:47.300Z",
+  "startTime": "2025-11-16T02:09:58.299Z",
   "endTime": "2025-11-16T02:28:20.117Z",
-  "dataPoints": 247,
+  "duration": 1101818,
+  "dataPoints": 343,
   "oddsHistory": [
+    {
+      "timestamp": "2025-11-16T02:09:58.299Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2025-11-16T02:10:01.303Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2025-11-16T02:10:04.314Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2025-11-16T02:10:07.326Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2025-11-16T02:10:10.334Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2025-11-16T02:10:13.349Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2025-11-16T02:10:16.360Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2025-11-16T02:10:19.375Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2025-11-16T02:10:22.386Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2025-11-16T02:10:25.398Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2025-11-16T02:10:28.398Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2025-11-16T02:10:31.410Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2025-11-16T02:10:34.424Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2025-11-16T02:10:37.435Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2025-11-16T02:10:40.450Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2025-11-16T02:10:43.464Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2025-11-16T02:10:46.478Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2025-11-16T02:10:49.491Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2025-11-16T02:10:52.505Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2025-11-16T02:10:55.516Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2025-11-16T02:10:58.531Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2025-11-16T02:11:01.544Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2025-11-16T02:11:04.558Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2025-11-16T02:11:07.568Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2025-11-16T02:11:10.582Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2025-11-16T02:11:13.591Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2025-11-16T02:11:16.599Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2025-11-16T02:11:19.610Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+152",
+        "numericOdds": 152
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2025-11-16T02:11:22.622Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+152",
+        "numericOdds": 152
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2025-11-16T02:11:25.635Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+152",
+        "numericOdds": 152
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2025-11-16T02:11:28.647Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+152",
+        "numericOdds": 152
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2025-11-16T02:11:31.658Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+148",
+        "numericOdds": 148
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-190",
+        "numericOdds": -190
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2025-11-16T02:11:34.673Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+148",
+        "numericOdds": 148
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-190",
+        "numericOdds": -190
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2025-11-16T02:11:37.683Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+148",
+        "numericOdds": 148
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-190",
+        "numericOdds": -190
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2025-11-16T02:11:40.695Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+148",
+        "numericOdds": 148
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-190",
+        "numericOdds": -190
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2025-11-16T02:11:43.705Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+148",
+        "numericOdds": 148
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-190",
+        "numericOdds": -190
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2025-11-16T02:11:46.719Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+140",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-180",
+        "numericOdds": -180
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2025-11-16T02:11:49.731Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+140",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-180",
+        "numericOdds": -180
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2025-11-16T02:11:52.744Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+140",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-180",
+        "numericOdds": -180
+      },
+      "isLocked": false,
+      "extractionId": 39
+    },
+    {
+      "timestamp": "2025-11-16T02:11:55.759Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "isLocked": false,
+      "extractionId": 40
+    },
+    {
+      "timestamp": "2025-11-16T02:11:58.771Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "isLocked": false,
+      "extractionId": 41
+    },
+    {
+      "timestamp": "2025-11-16T02:12:01.783Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "isLocked": false,
+      "extractionId": 42
+    },
+    {
+      "timestamp": "2025-11-16T02:12:04.798Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "isLocked": false,
+      "extractionId": 43
+    },
+    {
+      "timestamp": "2025-11-16T02:12:07.797Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "isLocked": false,
+      "extractionId": 44
+    },
+    {
+      "timestamp": "2025-11-16T02:12:10.812Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "isLocked": false,
+      "extractionId": 45
+    },
+    {
+      "timestamp": "2025-11-16T02:12:13.825Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "isLocked": false,
+      "extractionId": 46
+    },
+    {
+      "timestamp": "2025-11-16T02:12:16.826Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "isLocked": false,
+      "extractionId": 47
+    },
+    {
+      "timestamp": "2025-11-16T02:12:19.840Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "isLocked": false,
+      "extractionId": 48
+    },
+    {
+      "timestamp": "2025-11-16T02:12:22.841Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "isLocked": false,
+      "extractionId": 49
+    },
+    {
+      "timestamp": "2025-11-16T02:12:25.853Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+124",
+        "numericOdds": 124
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-158",
+        "numericOdds": -158
+      },
+      "isLocked": false,
+      "extractionId": 50
+    },
+    {
+      "timestamp": "2025-11-16T02:12:28.852Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+124",
+        "numericOdds": 124
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-158",
+        "numericOdds": -158
+      },
+      "isLocked": false,
+      "extractionId": 51
+    },
+    {
+      "timestamp": "2025-11-16T02:12:31.863Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+124",
+        "numericOdds": 124
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-158",
+        "numericOdds": -158
+      },
+      "isLocked": false,
+      "extractionId": 52
+    },
+    {
+      "timestamp": "2025-11-16T02:12:34.877Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+124",
+        "numericOdds": 124
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-158",
+        "numericOdds": -158
+      },
+      "isLocked": false,
+      "extractionId": 53
+    },
+    {
+      "timestamp": "2025-11-16T02:12:37.878Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+124",
+        "numericOdds": 124
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-158",
+        "numericOdds": -158
+      },
+      "isLocked": false,
+      "extractionId": 54
+    },
+    {
+      "timestamp": "2025-11-16T02:12:40.884Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "isLocked": false,
+      "extractionId": 55
+    },
+    {
+      "timestamp": "2025-11-16T02:12:43.885Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "isLocked": false,
+      "extractionId": 56
+    },
+    {
+      "timestamp": "2025-11-16T02:12:46.898Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "isLocked": false,
+      "extractionId": 57
+    },
+    {
+      "timestamp": "2025-11-16T02:12:49.906Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "isLocked": false,
+      "extractionId": 58
+    },
+    {
+      "timestamp": "2025-11-16T02:12:52.914Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "isLocked": false,
+      "extractionId": 59
+    },
+    {
+      "timestamp": "2025-11-16T02:12:55.925Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "isLocked": false,
+      "extractionId": 60
+    },
+    {
+      "timestamp": "2025-11-16T02:12:58.926Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "isLocked": false,
+      "extractionId": 61
+    },
+    {
+      "timestamp": "2025-11-16T02:13:01.939Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "isLocked": false,
+      "extractionId": 62
+    },
+    {
+      "timestamp": "2025-11-16T02:13:04.952Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "isLocked": false,
+      "extractionId": 63
+    },
+    {
+      "timestamp": "2025-11-16T02:13:07.965Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "isLocked": false,
+      "extractionId": 64
+    },
+    {
+      "timestamp": "2025-11-16T02:13:10.977Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "isLocked": false,
+      "extractionId": 65
+    },
+    {
+      "timestamp": "2025-11-16T02:13:13.977Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "isLocked": false,
+      "extractionId": 66
+    },
+    {
+      "timestamp": "2025-11-16T02:13:16.979Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "isLocked": false,
+      "extractionId": 67
+    },
+    {
+      "timestamp": "2025-11-16T02:13:19.982Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "isLocked": false,
+      "extractionId": 68
+    },
+    {
+      "timestamp": "2025-11-16T02:13:22.992Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "isLocked": false,
+      "extractionId": 69
+    },
+    {
+      "timestamp": "2025-11-16T02:13:26.005Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "isLocked": false,
+      "extractionId": 70
+    },
+    {
+      "timestamp": "2025-11-16T02:13:29.005Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "isLocked": false,
+      "extractionId": 71
+    },
+    {
+      "timestamp": "2025-11-16T02:13:32.018Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "isLocked": false,
+      "extractionId": 72
+    },
+    {
+      "timestamp": "2025-11-16T02:13:35.033Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "isLocked": false,
+      "extractionId": 73
+    },
+    {
+      "timestamp": "2025-11-16T02:13:38.037Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "isLocked": false,
+      "extractionId": 74
+    },
+    {
+      "timestamp": "2025-11-16T02:13:41.044Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "isLocked": false,
+      "extractionId": 75
+    },
+    {
+      "timestamp": "2025-11-16T02:13:44.057Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "isLocked": false,
+      "extractionId": 76
+    },
+    {
+      "timestamp": "2025-11-16T02:13:47.070Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "isLocked": false,
+      "extractionId": 77
+    },
+    {
+      "timestamp": "2025-11-16T02:13:50.081Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "isLocked": false,
+      "extractionId": 78
+    },
+    {
+      "timestamp": "2025-11-16T02:13:53.092Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "isLocked": false,
+      "extractionId": 79
+    },
+    {
+      "timestamp": "2025-11-16T02:13:56.103Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "isLocked": false,
+      "extractionId": 80
+    },
+    {
+      "timestamp": "2025-11-16T02:13:59.114Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "isLocked": false,
+      "extractionId": 81
+    },
+    {
+      "timestamp": "2025-11-16T02:14:02.124Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "isLocked": false,
+      "extractionId": 82
+    },
+    {
+      "timestamp": "2025-11-16T02:14:05.138Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "isLocked": false,
+      "extractionId": 83
+    },
+    {
+      "timestamp": "2025-11-16T02:14:08.151Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "isLocked": false,
+      "extractionId": 84
+    },
+    {
+      "timestamp": "2025-11-16T02:14:11.159Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 85
+    },
+    {
+      "timestamp": "2025-11-16T02:14:14.174Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 86
+    },
+    {
+      "timestamp": "2025-11-16T02:14:17.185Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+134",
+        "numericOdds": 134
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-172",
+        "numericOdds": -172
+      },
+      "isLocked": false,
+      "extractionId": 87
+    },
+    {
+      "timestamp": "2025-11-16T02:14:20.199Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+134",
+        "numericOdds": 134
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-172",
+        "numericOdds": -172
+      },
+      "isLocked": false,
+      "extractionId": 88
+    },
+    {
+      "timestamp": "2025-11-16T02:14:23.209Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+134",
+        "numericOdds": 134
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-172",
+        "numericOdds": -172
+      },
+      "isLocked": false,
+      "extractionId": 89
+    },
+    {
+      "timestamp": "2025-11-16T02:14:26.222Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+140",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-180",
+        "numericOdds": -180
+      },
+      "isLocked": false,
+      "extractionId": 90
+    },
+    {
+      "timestamp": "2025-11-16T02:14:29.230Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+140",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-180",
+        "numericOdds": -180
+      },
+      "isLocked": false,
+      "extractionId": 91
+    },
+    {
+      "timestamp": "2025-11-16T02:14:32.242Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+148",
+        "numericOdds": 148
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-190",
+        "numericOdds": -190
+      },
+      "isLocked": false,
+      "extractionId": 92
+    },
+    {
+      "timestamp": "2025-11-16T02:14:35.254Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+148",
+        "numericOdds": 148
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-190",
+        "numericOdds": -190
+      },
+      "isLocked": false,
+      "extractionId": 93
+    },
+    {
+      "timestamp": "2025-11-16T02:14:38.267Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 94
+    },
+    {
+      "timestamp": "2025-11-16T02:14:41.277Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 95
+    },
+    {
+      "timestamp": "2025-11-16T02:14:44.287Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Gregory Rodrigues",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 96
+    },
     {
       "timestamp": "2025-11-16T02:14:47.300Z",
       "fighter1": {
@@ -3711,5 +5151,32 @@
       "isLocked": false,
       "extractionId": 15
     }
-  ]
+  ],
+  "createdAt": "2025-11-16T02:16:08.582Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Gregory Rodrigues",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:52:17.378Z",
+    "openingF1Odds": 164,
+    "openingF2Odds": -196,
+    "closingF1Odds": 2300,
+    "closingF2Odds": -6000,
+    "lineMovementF1": 2136,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  },
+  "derived": {
+    "inferredFinishMin": 11,
+    "inferredFinishRound": 2,
+    "peakOddsSwing": 2136,
+    "finishSpeed": "medium",
+    "preFightSteam": 2136,
+    "dominanceScore": 76,
+    "crossoverCount": 0,
+    "derivedAt": "2026-06-14T11:47:28.488Z"
+  }
 }

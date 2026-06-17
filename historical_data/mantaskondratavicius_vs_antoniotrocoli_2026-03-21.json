@@ -1,11 +1,431 @@
 {
   "fightId": "mantaskondratavicius_vs_antoniotrocoli",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-03-21T18:17:33.161Z",
+  "startTime": "2026-03-21T18:16:08.976Z",
   "endTime": "2026-03-21T18:33:44.436Z",
-  "dataPoints": 173,
+  "duration": 1055460,
+  "dataPoints": 201,
   "oddsHistory": [
+    {
+      "timestamp": "2026-03-21T18:16:08.976Z",
+      "fighter1": {
+        "name": "Mantas Kondratavicius",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Antonio Trocoli",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-03-21T18:16:11.988Z",
+      "fighter1": {
+        "name": "Mantas Kondratavicius",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Antonio Trocoli",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-21T18:16:15.000Z",
+      "fighter1": {
+        "name": "Mantas Kondratavicius",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Antonio Trocoli",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-21T18:16:18.013Z",
+      "fighter1": {
+        "name": "Mantas Kondratavicius",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Antonio Trocoli",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-21T18:16:21.026Z",
+      "fighter1": {
+        "name": "Mantas Kondratavicius",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Antonio Trocoli",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-21T18:16:24.036Z",
+      "fighter1": {
+        "name": "Mantas Kondratavicius",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Antonio Trocoli",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-03-21T18:16:27.036Z",
+      "fighter1": {
+        "name": "Mantas Kondratavicius",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Antonio Trocoli",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-03-21T18:16:30.039Z",
+      "fighter1": {
+        "name": "Mantas Kondratavicius",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Antonio Trocoli",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-03-21T18:16:33.039Z",
+      "fighter1": {
+        "name": "Mantas Kondratavicius",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Antonio Trocoli",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-03-21T18:16:36.051Z",
+      "fighter1": {
+        "name": "Mantas Kondratavicius",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Antonio Trocoli",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-03-21T18:16:39.055Z",
+      "fighter1": {
+        "name": "Mantas Kondratavicius",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Antonio Trocoli",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-03-21T18:16:42.067Z",
+      "fighter1": {
+        "name": "Mantas Kondratavicius",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Antonio Trocoli",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-03-21T18:16:45.068Z",
+      "fighter1": {
+        "name": "Mantas Kondratavicius",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Antonio Trocoli",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-03-21T18:16:48.079Z",
+      "fighter1": {
+        "name": "Mantas Kondratavicius",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Antonio Trocoli",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-03-21T18:16:51.080Z",
+      "fighter1": {
+        "name": "Mantas Kondratavicius",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Antonio Trocoli",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-03-21T18:16:54.081Z",
+      "fighter1": {
+        "name": "Mantas Kondratavicius",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Antonio Trocoli",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-03-21T18:16:57.089Z",
+      "fighter1": {
+        "name": "Mantas Kondratavicius",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Antonio Trocoli",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-03-21T18:17:00.096Z",
+      "fighter1": {
+        "name": "Mantas Kondratavicius",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Antonio Trocoli",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-03-21T18:17:03.097Z",
+      "fighter1": {
+        "name": "Mantas Kondratavicius",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Antonio Trocoli",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-03-21T18:17:06.100Z",
+      "fighter1": {
+        "name": "Mantas Kondratavicius",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Antonio Trocoli",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-03-21T18:17:09.115Z",
+      "fighter1": {
+        "name": "Mantas Kondratavicius",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Antonio Trocoli",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-03-21T18:17:12.117Z",
+      "fighter1": {
+        "name": "Mantas Kondratavicius",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Antonio Trocoli",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-03-21T18:17:15.131Z",
+      "fighter1": {
+        "name": "Mantas Kondratavicius",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Antonio Trocoli",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-03-21T18:17:18.135Z",
+      "fighter1": {
+        "name": "Mantas Kondratavicius",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Antonio Trocoli",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-03-21T18:17:21.149Z",
+      "fighter1": {
+        "name": "Mantas Kondratavicius",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Antonio Trocoli",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-03-21T18:17:24.153Z",
+      "fighter1": {
+        "name": "Mantas Kondratavicius",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Antonio Trocoli",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-03-21T18:17:27.157Z",
+      "fighter1": {
+        "name": "Mantas Kondratavicius",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Antonio Trocoli",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-03-21T18:17:30.160Z",
+      "fighter1": {
+        "name": "Mantas Kondratavicius",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Antonio Trocoli",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
     {
       "timestamp": "2026-03-21T18:17:33.161Z",
       "fighter1": {
@@ -2601,5 +3021,16 @@
       "isLocked": false,
       "extractionId": 7
     }
-  ]
+  ],
+  "createdAt": "2026-03-21T18:18:42.305Z",
+  "derived": {
+    "inferredFinishMin": 0,
+    "inferredFinishRound": 1,
+    "peakOddsSwing": 5000,
+    "finishSpeed": "fast",
+    "preFightSteam": -5000,
+    "dominanceScore": 100,
+    "crossoverCount": 0,
+    "derivedAt": "2026-06-14T11:47:28.452Z"
+  }
 }

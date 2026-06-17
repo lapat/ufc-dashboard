@@ -1,11 +1,596 @@
 {
   "fightId": "reitsuruya_vs_luisgurule",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-05-30T09:18:48.383Z",
+  "startTime": "2026-05-30T09:16:51.124Z",
   "endTime": "2026-05-30T09:19:57.567Z",
-  "dataPoints": 87,
+  "duration": 186443,
+  "dataPoints": 126,
   "oddsHistory": [
+    {
+      "timestamp": "2026-05-30T09:16:51.124Z",
+      "fighter1": {
+        "name": "Rei Tsuruya",
+        "odds": "-390",
+        "numericOdds": -390
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 253
+    },
+    {
+      "timestamp": "2026-05-30T09:16:54.135Z",
+      "fighter1": {
+        "name": "Rei Tsuruya",
+        "odds": "-390",
+        "numericOdds": -390
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-05-30T09:16:57.147Z",
+      "fighter1": {
+        "name": "Rei Tsuruya",
+        "odds": "-390",
+        "numericOdds": -390
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-30T09:17:00.154Z",
+      "fighter1": {
+        "name": "Rei Tsuruya",
+        "odds": "-390",
+        "numericOdds": -390
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-30T09:17:03.163Z",
+      "fighter1": {
+        "name": "Rei Tsuruya",
+        "odds": "-390",
+        "numericOdds": -390
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-05-30T09:17:06.178Z",
+      "fighter1": {
+        "name": "Rei Tsuruya",
+        "odds": "-390",
+        "numericOdds": -390
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-05-30T09:17:09.180Z",
+      "fighter1": {
+        "name": "Rei Tsuruya",
+        "odds": "-390",
+        "numericOdds": -390
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-05-30T09:17:12.180Z",
+      "fighter1": {
+        "name": "Rei Tsuruya",
+        "odds": "-390",
+        "numericOdds": -390
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-05-30T09:17:15.181Z",
+      "fighter1": {
+        "name": "Rei Tsuruya",
+        "odds": "-390",
+        "numericOdds": -390
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-05-30T09:17:18.181Z",
+      "fighter1": {
+        "name": "Rei Tsuruya",
+        "odds": "-390",
+        "numericOdds": -390
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-05-30T09:17:21.186Z",
+      "fighter1": {
+        "name": "Rei Tsuruya",
+        "odds": "-390",
+        "numericOdds": -390
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-05-30T09:17:24.192Z",
+      "fighter1": {
+        "name": "Rei Tsuruya",
+        "odds": "-390",
+        "numericOdds": -390
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-05-30T09:17:27.195Z",
+      "fighter1": {
+        "name": "Rei Tsuruya",
+        "odds": "-390",
+        "numericOdds": -390
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-05-30T09:17:30.196Z",
+      "fighter1": {
+        "name": "Rei Tsuruya",
+        "odds": "-390",
+        "numericOdds": -390
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-05-30T09:17:33.199Z",
+      "fighter1": {
+        "name": "Rei Tsuruya",
+        "odds": "-390",
+        "numericOdds": -390
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-05-30T09:17:36.200Z",
+      "fighter1": {
+        "name": "Rei Tsuruya",
+        "odds": "-390",
+        "numericOdds": -390
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-05-30T09:17:39.205Z",
+      "fighter1": {
+        "name": "Rei Tsuruya",
+        "odds": "-390",
+        "numericOdds": -390
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-05-30T09:17:42.220Z",
+      "fighter1": {
+        "name": "Rei Tsuruya",
+        "odds": "-390",
+        "numericOdds": -390
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-05-30T09:17:45.222Z",
+      "fighter1": {
+        "name": "Rei Tsuruya",
+        "odds": "-390",
+        "numericOdds": -390
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-05-30T09:17:48.230Z",
+      "fighter1": {
+        "name": "Rei Tsuruya",
+        "odds": "-390",
+        "numericOdds": -390
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-05-30T09:17:51.233Z",
+      "fighter1": {
+        "name": "Rei Tsuruya",
+        "odds": "-390",
+        "numericOdds": -390
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-05-30T09:17:54.243Z",
+      "fighter1": {
+        "name": "Rei Tsuruya",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-05-30T09:17:57.258Z",
+      "fighter1": {
+        "name": "Rei Tsuruya",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-05-30T09:18:00.264Z",
+      "fighter1": {
+        "name": "Rei Tsuruya",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-05-30T09:18:03.268Z",
+      "fighter1": {
+        "name": "Rei Tsuruya",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-05-30T09:18:06.274Z",
+      "fighter1": {
+        "name": "Rei Tsuruya",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-05-30T09:18:09.282Z",
+      "fighter1": {
+        "name": "Rei Tsuruya",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-05-30T09:18:12.293Z",
+      "fighter1": {
+        "name": "Rei Tsuruya",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-05-30T09:18:15.307Z",
+      "fighter1": {
+        "name": "Rei Tsuruya",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-05-30T09:18:18.311Z",
+      "fighter1": {
+        "name": "Rei Tsuruya",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-05-30T09:18:21.322Z",
+      "fighter1": {
+        "name": "Rei Tsuruya",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-05-30T09:18:24.332Z",
+      "fighter1": {
+        "name": "Rei Tsuruya",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-05-30T09:18:27.336Z",
+      "fighter1": {
+        "name": "Rei Tsuruya",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-05-30T09:18:30.338Z",
+      "fighter1": {
+        "name": "Rei Tsuruya",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-05-30T09:18:33.352Z",
+      "fighter1": {
+        "name": "Rei Tsuruya",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-05-30T09:18:36.355Z",
+      "fighter1": {
+        "name": "Rei Tsuruya",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-05-30T09:18:39.356Z",
+      "fighter1": {
+        "name": "Rei Tsuruya",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2026-05-30T09:18:42.370Z",
+      "fighter1": {
+        "name": "Rei Tsuruya",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2026-05-30T09:18:45.371Z",
+      "fighter1": {
+        "name": "Rei Tsuruya",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 39
+    },
     {
       "timestamp": "2026-05-30T09:18:48.383Z",
       "fighter1": {
@@ -1311,5 +1896,32 @@
       "isLocked": false,
       "extractionId": 63
     }
-  ]
+  ],
+  "createdAt": "2026-05-30T09:21:31.487Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Rei Tsuruya",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:52:14.323Z",
+    "openingF1Odds": -390,
+    "openingF2Odds": 310,
+    "closingF1Odds": -1600,
+    "closingF2Odds": 840,
+    "lineMovementF1": -1210,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  },
+  "derived": {
+    "inferredFinishMin": 3,
+    "inferredFinishRound": 1,
+    "peakOddsSwing": 1210,
+    "finishSpeed": "fast",
+    "preFightSteam": -1210,
+    "dominanceScore": 100,
+    "crossoverCount": 0,
+    "derivedAt": "2026-06-14T11:47:28.483Z"
+  }
 }

@@ -1,11 +1,806 @@
 {
   "fightId": "bekzatalmakhan_vs_aleksandretopuria",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2025-11-22T16:15:54.329Z",
+  "startTime": "2025-11-22T16:13:08.862Z",
   "endTime": "2025-11-22T16:31:14.996Z",
-  "dataPoints": 263,
+  "duration": 1086134,
+  "dataPoints": 316,
   "oddsHistory": [
+    {
+      "timestamp": "2025-11-22T16:13:08.862Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+118",
+        "numericOdds": 118
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-138",
+        "numericOdds": -138
+      },
+      "isLocked": false,
+      "extractionId": 57
+    },
+    {
+      "timestamp": "2025-11-22T16:13:11.879Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+118",
+        "numericOdds": 118
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-138",
+        "numericOdds": -138
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2025-11-22T16:13:14.891Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+118",
+        "numericOdds": 118
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-138",
+        "numericOdds": -138
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2025-11-22T16:13:17.906Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+118",
+        "numericOdds": 118
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-138",
+        "numericOdds": -138
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2025-11-22T16:13:20.907Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+118",
+        "numericOdds": 118
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-138",
+        "numericOdds": -138
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2025-11-22T16:13:23.918Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+118",
+        "numericOdds": 118
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-138",
+        "numericOdds": -138
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2025-11-22T16:13:26.924Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+118",
+        "numericOdds": 118
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-138",
+        "numericOdds": -138
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2025-11-22T16:13:29.934Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+118",
+        "numericOdds": 118
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-138",
+        "numericOdds": -138
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2025-11-22T16:13:32.939Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+118",
+        "numericOdds": 118
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-138",
+        "numericOdds": -138
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2025-11-22T16:13:35.949Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+118",
+        "numericOdds": 118
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-138",
+        "numericOdds": -138
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2025-11-22T16:13:38.951Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+118",
+        "numericOdds": 118
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-138",
+        "numericOdds": -138
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2025-11-22T16:13:41.962Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+118",
+        "numericOdds": 118
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-138",
+        "numericOdds": -138
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2025-11-22T16:13:44.969Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+118",
+        "numericOdds": 118
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-138",
+        "numericOdds": -138
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2025-11-22T16:13:47.974Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+118",
+        "numericOdds": 118
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-138",
+        "numericOdds": -138
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2025-11-22T16:13:50.982Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+118",
+        "numericOdds": 118
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-138",
+        "numericOdds": -138
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2025-11-22T16:13:53.986Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+118",
+        "numericOdds": 118
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-138",
+        "numericOdds": -138
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2025-11-22T16:13:56.995Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+118",
+        "numericOdds": 118
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-138",
+        "numericOdds": -138
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2025-11-22T16:14:00.003Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+118",
+        "numericOdds": 118
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-138",
+        "numericOdds": -138
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2025-11-22T16:14:03.009Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+118",
+        "numericOdds": 118
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-138",
+        "numericOdds": -138
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2025-11-22T16:14:06.018Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+118",
+        "numericOdds": 118
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-138",
+        "numericOdds": -138
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2025-11-22T16:14:09.030Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+118",
+        "numericOdds": 118
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-138",
+        "numericOdds": -138
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2025-11-22T16:14:12.043Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+118",
+        "numericOdds": 118
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-138",
+        "numericOdds": -138
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2025-11-22T16:14:15.052Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+118",
+        "numericOdds": 118
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-138",
+        "numericOdds": -138
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2025-11-22T16:14:18.067Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+118",
+        "numericOdds": 118
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-138",
+        "numericOdds": -138
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2025-11-22T16:14:21.080Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2025-11-22T16:14:24.088Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2025-11-22T16:14:27.095Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2025-11-22T16:14:30.096Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2025-11-22T16:14:33.101Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2025-11-22T16:14:36.106Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2025-11-22T16:14:39.118Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2025-11-22T16:14:42.126Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2025-11-22T16:14:45.134Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2025-11-22T16:14:48.142Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2025-11-22T16:14:51.148Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2025-11-22T16:14:54.164Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2025-11-22T16:14:57.174Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2025-11-22T16:15:00.184Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2025-11-22T16:15:03.192Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 39
+    },
+    {
+      "timestamp": "2025-11-22T16:15:06.201Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 40
+    },
+    {
+      "timestamp": "2025-11-22T16:15:09.208Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 41
+    },
+    {
+      "timestamp": "2025-11-22T16:15:12.215Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 42
+    },
+    {
+      "timestamp": "2025-11-22T16:15:15.217Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 43
+    },
+    {
+      "timestamp": "2025-11-22T16:15:18.226Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 44
+    },
+    {
+      "timestamp": "2025-11-22T16:15:21.234Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 45
+    },
+    {
+      "timestamp": "2025-11-22T16:15:24.239Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 46
+    },
+    {
+      "timestamp": "2025-11-22T16:15:27.250Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 47
+    },
+    {
+      "timestamp": "2025-11-22T16:15:30.251Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 48
+    },
+    {
+      "timestamp": "2025-11-22T16:15:33.263Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 49
+    },
+    {
+      "timestamp": "2025-11-22T16:15:36.275Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 50
+    },
+    {
+      "timestamp": "2025-11-22T16:15:45.308Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 51
+    },
+    {
+      "timestamp": "2025-11-22T16:15:48.316Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2025-11-22T16:15:51.326Z",
+      "fighter1": {
+        "name": "Bekzat Almakhan",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "Aleksandre Topuria",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
     {
       "timestamp": "2025-11-22T16:15:54.329Z",
       "fighter1": {
@@ -3951,5 +4746,32 @@
       "isLocked": false,
       "extractionId": 9
     }
-  ]
+  ],
+  "createdAt": "2025-11-22T16:15:45.306Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Aleksandre Topuria",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:50:54.144Z",
+    "openingF1Odds": 118,
+    "openingF2Odds": -138,
+    "closingF1Odds": 2300,
+    "closingF2Odds": -6000,
+    "lineMovementF1": 2182,
+    "crossoverOccurred": true,
+    "crossoverMinute": 3
+  },
+  "derived": {
+    "inferredFinishMin": 12,
+    "inferredFinishRound": 3,
+    "peakOddsSwing": 2182,
+    "finishSpeed": "medium",
+    "preFightSteam": 2182,
+    "dominanceScore": 58,
+    "crossoverCount": 2,
+    "derivedAt": "2026-06-14T11:47:28.384Z"
+  }
 }

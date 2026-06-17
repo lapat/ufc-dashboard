@@ -1,11 +1,476 @@
 {
   "fightId": "amiralbazi_vs_kyojihoriguchi",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-02-08T03:13:20.551Z",
+  "startTime": "2026-02-08T03:11:47.319Z",
   "endTime": "2026-02-08T03:28:07.783Z",
-  "dataPoints": 296,
+  "duration": 980464,
+  "dataPoints": 327,
   "oddsHistory": [
+    {
+      "timestamp": "2026-02-08T03:11:47.319Z",
+      "fighter1": {
+        "name": "Amir Albazi",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "fighter2": {
+        "name": "Kyoji Horiguchi",
+        "odds": "-410",
+        "numericOdds": -410
+      },
+      "isLocked": false,
+      "extractionId": 298
+    },
+    {
+      "timestamp": "2026-02-08T03:11:50.325Z",
+      "fighter1": {
+        "name": "Amir Albazi",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "fighter2": {
+        "name": "Kyoji Horiguchi",
+        "odds": "-410",
+        "numericOdds": -410
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-02-08T03:11:53.337Z",
+      "fighter1": {
+        "name": "Amir Albazi",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "fighter2": {
+        "name": "Kyoji Horiguchi",
+        "odds": "-410",
+        "numericOdds": -410
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-02-08T03:11:56.337Z",
+      "fighter1": {
+        "name": "Amir Albazi",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "fighter2": {
+        "name": "Kyoji Horiguchi",
+        "odds": "-410",
+        "numericOdds": -410
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-02-08T03:11:59.352Z",
+      "fighter1": {
+        "name": "Amir Albazi",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "fighter2": {
+        "name": "Kyoji Horiguchi",
+        "odds": "-410",
+        "numericOdds": -410
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-02-08T03:12:02.365Z",
+      "fighter1": {
+        "name": "Amir Albazi",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "fighter2": {
+        "name": "Kyoji Horiguchi",
+        "odds": "-410",
+        "numericOdds": -410
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-02-08T03:12:05.369Z",
+      "fighter1": {
+        "name": "Amir Albazi",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "fighter2": {
+        "name": "Kyoji Horiguchi",
+        "odds": "-410",
+        "numericOdds": -410
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-02-08T03:12:08.372Z",
+      "fighter1": {
+        "name": "Amir Albazi",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "fighter2": {
+        "name": "Kyoji Horiguchi",
+        "odds": "-410",
+        "numericOdds": -410
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-02-08T03:12:11.376Z",
+      "fighter1": {
+        "name": "Amir Albazi",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "fighter2": {
+        "name": "Kyoji Horiguchi",
+        "odds": "-410",
+        "numericOdds": -410
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-02-08T03:12:14.385Z",
+      "fighter1": {
+        "name": "Amir Albazi",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "fighter2": {
+        "name": "Kyoji Horiguchi",
+        "odds": "-410",
+        "numericOdds": -410
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-02-08T03:12:17.387Z",
+      "fighter1": {
+        "name": "Amir Albazi",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "fighter2": {
+        "name": "Kyoji Horiguchi",
+        "odds": "-410",
+        "numericOdds": -410
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-02-08T03:12:20.399Z",
+      "fighter1": {
+        "name": "Amir Albazi",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "fighter2": {
+        "name": "Kyoji Horiguchi",
+        "odds": "-410",
+        "numericOdds": -410
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-02-08T03:12:23.402Z",
+      "fighter1": {
+        "name": "Amir Albazi",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "fighter2": {
+        "name": "Kyoji Horiguchi",
+        "odds": "-410",
+        "numericOdds": -410
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-02-08T03:12:26.414Z",
+      "fighter1": {
+        "name": "Amir Albazi",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "fighter2": {
+        "name": "Kyoji Horiguchi",
+        "odds": "-410",
+        "numericOdds": -410
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-02-08T03:12:29.418Z",
+      "fighter1": {
+        "name": "Amir Albazi",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "fighter2": {
+        "name": "Kyoji Horiguchi",
+        "odds": "-410",
+        "numericOdds": -410
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-02-08T03:12:32.419Z",
+      "fighter1": {
+        "name": "Amir Albazi",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "fighter2": {
+        "name": "Kyoji Horiguchi",
+        "odds": "-410",
+        "numericOdds": -410
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-02-08T03:12:35.433Z",
+      "fighter1": {
+        "name": "Amir Albazi",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "fighter2": {
+        "name": "Kyoji Horiguchi",
+        "odds": "-410",
+        "numericOdds": -410
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-02-08T03:12:38.446Z",
+      "fighter1": {
+        "name": "Amir Albazi",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "fighter2": {
+        "name": "Kyoji Horiguchi",
+        "odds": "-410",
+        "numericOdds": -410
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-02-08T03:12:41.446Z",
+      "fighter1": {
+        "name": "Amir Albazi",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "fighter2": {
+        "name": "Kyoji Horiguchi",
+        "odds": "-410",
+        "numericOdds": -410
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-02-08T03:12:44.457Z",
+      "fighter1": {
+        "name": "Amir Albazi",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "fighter2": {
+        "name": "Kyoji Horiguchi",
+        "odds": "-410",
+        "numericOdds": -410
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-02-08T03:12:47.466Z",
+      "fighter1": {
+        "name": "Amir Albazi",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "fighter2": {
+        "name": "Kyoji Horiguchi",
+        "odds": "-410",
+        "numericOdds": -410
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-02-08T03:12:50.466Z",
+      "fighter1": {
+        "name": "Amir Albazi",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "fighter2": {
+        "name": "Kyoji Horiguchi",
+        "odds": "-410",
+        "numericOdds": -410
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-02-08T03:12:53.470Z",
+      "fighter1": {
+        "name": "Amir Albazi",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "fighter2": {
+        "name": "Kyoji Horiguchi",
+        "odds": "-410",
+        "numericOdds": -410
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-02-08T03:12:56.475Z",
+      "fighter1": {
+        "name": "Amir Albazi",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "fighter2": {
+        "name": "Kyoji Horiguchi",
+        "odds": "-410",
+        "numericOdds": -410
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-02-08T03:12:59.488Z",
+      "fighter1": {
+        "name": "Amir Albazi",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "fighter2": {
+        "name": "Kyoji Horiguchi",
+        "odds": "-410",
+        "numericOdds": -410
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-02-08T03:13:02.494Z",
+      "fighter1": {
+        "name": "Amir Albazi",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Kyoji Horiguchi",
+        "odds": "-380",
+        "numericOdds": -380
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-02-08T03:13:05.499Z",
+      "fighter1": {
+        "name": "Amir Albazi",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Kyoji Horiguchi",
+        "odds": "-380",
+        "numericOdds": -380
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-02-08T03:13:08.509Z",
+      "fighter1": {
+        "name": "Amir Albazi",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Kyoji Horiguchi",
+        "odds": "-380",
+        "numericOdds": -380
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-02-08T03:13:11.522Z",
+      "fighter1": {
+        "name": "Amir Albazi",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Kyoji Horiguchi",
+        "odds": "-380",
+        "numericOdds": -380
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-02-08T03:13:14.535Z",
+      "fighter1": {
+        "name": "Amir Albazi",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Kyoji Horiguchi",
+        "odds": "-380",
+        "numericOdds": -380
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-02-08T03:13:17.539Z",
+      "fighter1": {
+        "name": "Amir Albazi",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Kyoji Horiguchi",
+        "odds": "-380",
+        "numericOdds": -380
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
     {
       "timestamp": "2026-02-08T03:13:20.551Z",
       "fighter1": {
@@ -4446,5 +4911,32 @@
       "isLocked": false,
       "extractionId": 327
     }
-  ]
+  ],
+  "createdAt": "2026-02-08T03:42:04.526Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Kyoji Horiguchi",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:50:48.045Z",
+    "openingF1Odds": 290,
+    "openingF2Odds": -410,
+    "closingF1Odds": 2300,
+    "closingF2Odds": -6000,
+    "lineMovementF1": 2010,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  },
+  "derived": {
+    "inferredFinishMin": 10,
+    "inferredFinishRound": 2,
+    "peakOddsSwing": 2010,
+    "finishSpeed": "medium",
+    "preFightSteam": 2010,
+    "dominanceScore": 100,
+    "crossoverCount": 0,
+    "derivedAt": "2026-06-14T11:47:28.373Z"
+  }
 }

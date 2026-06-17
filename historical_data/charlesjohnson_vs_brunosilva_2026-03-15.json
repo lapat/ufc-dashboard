@@ -1,33 +1,11 @@
 {
   "fightId": "charlesjohnson_vs_brunosilva",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-03-13T21:35:38Z",
+  "startTime": "2026-03-15T00:23:38.322Z",
   "endTime": "2026-03-15T00:43:01.824Z",
-  "dataPoints": 361,
+  "duration": 1163502,
+  "dataPoints": 379,
   "oddsHistory": [
-    {
-      "timestamp": "2026-03-13T21:35:38Z",
-      "fighter1": {
-        "name": "Bruno Silva",
-        "numericOdds": 140
-      },
-      "fighter2": {
-        "name": "Charles Johnson",
-        "numericOdds": -166
-      }
-    },
-    {
-      "timestamp": "2026-03-13T21:40:38Z",
-      "fighter1": {
-        "name": "Bruno Silva",
-        "numericOdds": 140
-      },
-      "fighter2": {
-        "name": "Charles Johnson",
-        "numericOdds": -166
-      }
-    },
     {
       "timestamp": "2026-03-15T00:23:38.322Z",
       "fighter1": {
@@ -5412,6 +5390,333 @@
       },
       "isLocked": false,
       "extractionId": 20
+    },
+    {
+      "timestamp": "2026-03-15T00:42:04.739Z",
+      "fighter1": {
+        "name": "Charles Johnson",
+        "odds": "+1800",
+        "numericOdds": 1800
+      },
+      "fighter2": {
+        "name": "Bruno Silva",
+        "odds": "-4500",
+        "numericOdds": -4500
+      },
+      "isLocked": false,
+      "extractionId": 98
+    },
+    {
+      "timestamp": "2026-03-15T00:42:07.749Z",
+      "fighter1": {
+        "name": "Charles Johnson",
+        "odds": "+1800",
+        "numericOdds": 1800
+      },
+      "fighter2": {
+        "name": "Bruno Silva",
+        "odds": "-4500",
+        "numericOdds": -4500
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-15T00:42:10.750Z",
+      "fighter1": {
+        "name": "Charles Johnson",
+        "odds": "+1800",
+        "numericOdds": 1800
+      },
+      "fighter2": {
+        "name": "Bruno Silva",
+        "odds": "-4500",
+        "numericOdds": -4500
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-15T00:42:13.750Z",
+      "fighter1": {
+        "name": "Charles Johnson",
+        "odds": "+1800",
+        "numericOdds": 1800
+      },
+      "fighter2": {
+        "name": "Bruno Silva",
+        "odds": "-4500",
+        "numericOdds": -4500
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-15T00:42:16.757Z",
+      "fighter1": {
+        "name": "Charles Johnson",
+        "odds": "+1800",
+        "numericOdds": 1800
+      },
+      "fighter2": {
+        "name": "Bruno Silva",
+        "odds": "-4500",
+        "numericOdds": -4500
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-15T00:42:19.757Z",
+      "fighter1": {
+        "name": "Charles Johnson",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Bruno Silva",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-03-15T00:42:22.761Z",
+      "fighter1": {
+        "name": "Charles Johnson",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Bruno Silva",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-03-15T00:42:25.764Z",
+      "fighter1": {
+        "name": "Charles Johnson",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Bruno Silva",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-03-15T00:42:28.776Z",
+      "fighter1": {
+        "name": "Charles Johnson",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Bruno Silva",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-03-15T00:42:31.778Z",
+      "fighter1": {
+        "name": "Charles Johnson",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Bruno Silva",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-03-15T00:42:34.778Z",
+      "fighter1": {
+        "name": "Charles Johnson",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Bruno Silva",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-03-15T00:42:37.790Z",
+      "fighter1": {
+        "name": "Charles Johnson",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Bruno Silva",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-03-15T00:42:40.791Z",
+      "fighter1": {
+        "name": "Charles Johnson",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Bruno Silva",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-03-15T00:42:43.792Z",
+      "fighter1": {
+        "name": "Charles Johnson",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Bruno Silva",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-03-15T00:42:46.798Z",
+      "fighter1": {
+        "name": "Charles Johnson",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Bruno Silva",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-03-15T00:42:49.806Z",
+      "fighter1": {
+        "name": "Charles Johnson",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Bruno Silva",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-03-15T00:42:52.811Z",
+      "fighter1": {
+        "name": "Charles Johnson",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Bruno Silva",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-03-15T00:42:55.812Z",
+      "fighter1": {
+        "name": "Charles Johnson",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Bruno Silva",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-03-15T00:42:58.823Z",
+      "fighter1": {
+        "name": "Charles Johnson",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Bruno Silva",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-03-15T00:43:01.824Z",
+      "fighter1": {
+        "name": "Charles Johnson",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Bruno Silva",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 20
     }
-  ]
+  ],
+  "createdAt": "2026-03-15T00:36:31.050Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Charles Johnson",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:51:03.871Z",
+    "openingF1Odds": -178,
+    "openingF2Odds": 150,
+    "closingF1Odds": 2300,
+    "closingF2Odds": -6000,
+    "lineMovementF1": 2478,
+    "crossoverOccurred": true,
+    "crossoverMinute": 12
+  },
+  "derived": {
+    "inferredFinishMin": 18,
+    "inferredFinishRound": 4,
+    "peakOddsSwing": 2478,
+    "finishSpeed": "medium",
+    "preFightSteam": 2478,
+    "dominanceScore": 30,
+    "crossoverCount": 1,
+    "derivedAt": "2026-06-14T11:47:28.396Z"
+  }
 }

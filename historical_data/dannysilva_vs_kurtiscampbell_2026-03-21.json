@@ -1,11 +1,446 @@
 {
   "fightId": "dannysilva_vs_kurtiscampbell",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-03-21T20:22:00.345Z",
+  "startTime": "2026-03-21T20:20:33.047Z",
   "endTime": "2026-03-21T20:27:40.396Z",
-  "dataPoints": 257,
+  "duration": 427349,
+  "dataPoints": 286,
   "oddsHistory": [
+    {
+      "timestamp": "2026-03-21T20:20:33.047Z",
+      "fighter1": {
+        "name": "Danny Silva",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Kurtis Campbell",
+        "odds": "-275",
+        "numericOdds": -275
+      },
+      "isLocked": false,
+      "extractionId": 240
+    },
+    {
+      "timestamp": "2026-03-21T20:20:36.051Z",
+      "fighter1": {
+        "name": "Danny Silva",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Kurtis Campbell",
+        "odds": "-275",
+        "numericOdds": -275
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-21T20:20:39.058Z",
+      "fighter1": {
+        "name": "Danny Silva",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Kurtis Campbell",
+        "odds": "-275",
+        "numericOdds": -275
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-21T20:20:42.069Z",
+      "fighter1": {
+        "name": "Danny Silva",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Kurtis Campbell",
+        "odds": "-275",
+        "numericOdds": -275
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-21T20:20:45.082Z",
+      "fighter1": {
+        "name": "Danny Silva",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Kurtis Campbell",
+        "odds": "-275",
+        "numericOdds": -275
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-21T20:20:48.092Z",
+      "fighter1": {
+        "name": "Danny Silva",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Kurtis Campbell",
+        "odds": "-275",
+        "numericOdds": -275
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-03-21T20:20:51.105Z",
+      "fighter1": {
+        "name": "Danny Silva",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Kurtis Campbell",
+        "odds": "-275",
+        "numericOdds": -275
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-03-21T20:20:54.116Z",
+      "fighter1": {
+        "name": "Danny Silva",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Kurtis Campbell",
+        "odds": "-275",
+        "numericOdds": -275
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-03-21T20:20:57.128Z",
+      "fighter1": {
+        "name": "Danny Silva",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Kurtis Campbell",
+        "odds": "-275",
+        "numericOdds": -275
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-03-21T20:21:00.135Z",
+      "fighter1": {
+        "name": "Danny Silva",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Kurtis Campbell",
+        "odds": "-275",
+        "numericOdds": -275
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-03-21T20:21:03.147Z",
+      "fighter1": {
+        "name": "Danny Silva",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Kurtis Campbell",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-03-21T20:21:06.160Z",
+      "fighter1": {
+        "name": "Danny Silva",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Kurtis Campbell",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-03-21T20:21:09.174Z",
+      "fighter1": {
+        "name": "Danny Silva",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Kurtis Campbell",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-03-21T20:21:12.189Z",
+      "fighter1": {
+        "name": "Danny Silva",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Kurtis Campbell",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-03-21T20:21:15.201Z",
+      "fighter1": {
+        "name": "Danny Silva",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Kurtis Campbell",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-03-21T20:21:18.214Z",
+      "fighter1": {
+        "name": "Danny Silva",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Kurtis Campbell",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-03-21T20:21:21.217Z",
+      "fighter1": {
+        "name": "Danny Silva",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Kurtis Campbell",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-03-21T20:21:24.216Z",
+      "fighter1": {
+        "name": "Danny Silva",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Kurtis Campbell",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-03-21T20:21:27.227Z",
+      "fighter1": {
+        "name": "Danny Silva",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Kurtis Campbell",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-03-21T20:21:30.241Z",
+      "fighter1": {
+        "name": "Danny Silva",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Kurtis Campbell",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-03-21T20:21:33.253Z",
+      "fighter1": {
+        "name": "Danny Silva",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Kurtis Campbell",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-03-21T20:21:36.264Z",
+      "fighter1": {
+        "name": "Danny Silva",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Kurtis Campbell",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-03-21T20:21:39.277Z",
+      "fighter1": {
+        "name": "Danny Silva",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Kurtis Campbell",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-03-21T20:21:42.278Z",
+      "fighter1": {
+        "name": "Danny Silva",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Kurtis Campbell",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-03-21T20:21:45.287Z",
+      "fighter1": {
+        "name": "Danny Silva",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Kurtis Campbell",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-03-21T20:21:48.301Z",
+      "fighter1": {
+        "name": "Danny Silva",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Kurtis Campbell",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-03-21T20:21:51.303Z",
+      "fighter1": {
+        "name": "Danny Silva",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Kurtis Campbell",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-03-21T20:21:54.319Z",
+      "fighter1": {
+        "name": "Danny Silva",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Kurtis Campbell",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-03-21T20:21:57.331Z",
+      "fighter1": {
+        "name": "Danny Silva",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Kurtis Campbell",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
     {
       "timestamp": "2026-03-21T20:22:00.345Z",
       "fighter1": {
@@ -3861,5 +4296,32 @@
       "isLocked": false,
       "extractionId": 143
     }
-  ]
+  ],
+  "createdAt": "2026-03-21T20:29:22.934Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Danny Silva",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:51:12.352Z",
+    "openingF1Odds": 225,
+    "openingF2Odds": -275,
+    "closingF1Odds": 164,
+    "closingF2Odds": -215,
+    "lineMovementF1": -61,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  },
+  "derived": {
+    "inferredFinishMin": null,
+    "inferredFinishRound": null,
+    "peakOddsSwing": 145,
+    "finishSpeed": "decision",
+    "preFightSteam": -61,
+    "dominanceScore": 100,
+    "crossoverCount": 0,
+    "derivedAt": "2026-06-14T11:47:28.409Z"
+  }
 }

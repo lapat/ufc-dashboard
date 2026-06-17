@@ -1,11 +1,71 @@
 {
   "fightId": "amandalemos_vs_gillianrobertson",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-03-15T02:18:22.689Z",
+  "startTime": "2026-03-15T02:18:10.639Z",
   "endTime": "2026-03-15T02:35:42.685Z",
-  "dataPoints": 304,
+  "duration": 1052046,
+  "dataPoints": 339,
   "oddsHistory": [
+    {
+      "timestamp": "2026-03-15T02:18:10.639Z",
+      "fighter1": {
+        "name": "Amanda Lemos",
+        "odds": "+194",
+        "numericOdds": 194
+      },
+      "fighter2": {
+        "name": "Gillian Robertson",
+        "odds": "-240",
+        "numericOdds": -240
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-03-15T02:18:13.646Z",
+      "fighter1": {
+        "name": "Amanda Lemos",
+        "odds": "+194",
+        "numericOdds": 194
+      },
+      "fighter2": {
+        "name": "Gillian Robertson",
+        "odds": "-240",
+        "numericOdds": -240
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-15T02:18:16.662Z",
+      "fighter1": {
+        "name": "Amanda Lemos",
+        "odds": "+194",
+        "numericOdds": 194
+      },
+      "fighter2": {
+        "name": "Gillian Robertson",
+        "odds": "-240",
+        "numericOdds": -240
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-15T02:18:19.677Z",
+      "fighter1": {
+        "name": "Amanda Lemos",
+        "odds": "+194",
+        "numericOdds": 194
+      },
+      "fighter2": {
+        "name": "Gillian Robertson",
+        "odds": "-240",
+        "numericOdds": -240
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
     {
       "timestamp": "2026-03-15T02:18:22.689Z",
       "fighter1": {
@@ -4565,6 +4625,498 @@
       },
       "isLocked": false,
       "extractionId": 31
+    },
+    {
+      "timestamp": "2026-03-15T02:34:12.504Z",
+      "fighter1": {
+        "name": "Amanda Lemos",
+        "odds": "+520",
+        "numericOdds": 520
+      },
+      "fighter2": {
+        "name": "Gillian Robertson",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-15T02:34:15.502Z",
+      "fighter1": {
+        "name": "Amanda Lemos",
+        "odds": "+520",
+        "numericOdds": 520
+      },
+      "fighter2": {
+        "name": "Gillian Robertson",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-15T02:34:18.507Z",
+      "fighter1": {
+        "name": "Amanda Lemos",
+        "odds": "+520",
+        "numericOdds": 520
+      },
+      "fighter2": {
+        "name": "Gillian Robertson",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-15T02:34:21.519Z",
+      "fighter1": {
+        "name": "Amanda Lemos",
+        "odds": "+520",
+        "numericOdds": 520
+      },
+      "fighter2": {
+        "name": "Gillian Robertson",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-15T02:34:24.524Z",
+      "fighter1": {
+        "name": "Amanda Lemos",
+        "odds": "+520",
+        "numericOdds": 520
+      },
+      "fighter2": {
+        "name": "Gillian Robertson",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-15T02:34:27.525Z",
+      "fighter1": {
+        "name": "Amanda Lemos",
+        "odds": "+520",
+        "numericOdds": 520
+      },
+      "fighter2": {
+        "name": "Gillian Robertson",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-03-15T02:34:30.536Z",
+      "fighter1": {
+        "name": "Amanda Lemos",
+        "odds": "+520",
+        "numericOdds": 520
+      },
+      "fighter2": {
+        "name": "Gillian Robertson",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-03-15T02:34:33.542Z",
+      "fighter1": {
+        "name": "Amanda Lemos",
+        "odds": "+520",
+        "numericOdds": 520
+      },
+      "fighter2": {
+        "name": "Gillian Robertson",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-03-15T02:34:36.543Z",
+      "fighter1": {
+        "name": "Amanda Lemos",
+        "odds": "+520",
+        "numericOdds": 520
+      },
+      "fighter2": {
+        "name": "Gillian Robertson",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-03-15T02:34:39.549Z",
+      "fighter1": {
+        "name": "Amanda Lemos",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Gillian Robertson",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-03-15T02:34:42.563Z",
+      "fighter1": {
+        "name": "Amanda Lemos",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Gillian Robertson",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-03-15T02:34:45.567Z",
+      "fighter1": {
+        "name": "Amanda Lemos",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Gillian Robertson",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-03-15T02:34:48.569Z",
+      "fighter1": {
+        "name": "Amanda Lemos",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Gillian Robertson",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-03-15T02:34:51.572Z",
+      "fighter1": {
+        "name": "Amanda Lemos",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Gillian Robertson",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-03-15T02:34:54.576Z",
+      "fighter1": {
+        "name": "Amanda Lemos",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "fighter2": {
+        "name": "Gillian Robertson",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-03-15T02:34:57.584Z",
+      "fighter1": {
+        "name": "Amanda Lemos",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "fighter2": {
+        "name": "Gillian Robertson",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-03-15T02:35:00.596Z",
+      "fighter1": {
+        "name": "Amanda Lemos",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "fighter2": {
+        "name": "Gillian Robertson",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-03-15T02:35:03.598Z",
+      "fighter1": {
+        "name": "Amanda Lemos",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "fighter2": {
+        "name": "Gillian Robertson",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-03-15T02:35:06.613Z",
+      "fighter1": {
+        "name": "Amanda Lemos",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "fighter2": {
+        "name": "Gillian Robertson",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-03-15T02:35:09.615Z",
+      "fighter1": {
+        "name": "Amanda Lemos",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "fighter2": {
+        "name": "Gillian Robertson",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-03-15T02:35:12.615Z",
+      "fighter1": {
+        "name": "Amanda Lemos",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "fighter2": {
+        "name": "Gillian Robertson",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-03-15T02:35:15.621Z",
+      "fighter1": {
+        "name": "Amanda Lemos",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Gillian Robertson",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-03-15T02:35:18.622Z",
+      "fighter1": {
+        "name": "Amanda Lemos",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Gillian Robertson",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-03-15T02:35:21.633Z",
+      "fighter1": {
+        "name": "Amanda Lemos",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Gillian Robertson",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-03-15T02:35:24.638Z",
+      "fighter1": {
+        "name": "Amanda Lemos",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Gillian Robertson",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-03-15T02:35:27.652Z",
+      "fighter1": {
+        "name": "Amanda Lemos",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Gillian Robertson",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-03-15T02:35:30.665Z",
+      "fighter1": {
+        "name": "Amanda Lemos",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Gillian Robertson",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-03-15T02:35:33.669Z",
+      "fighter1": {
+        "name": "Amanda Lemos",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Gillian Robertson",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-03-15T02:35:36.671Z",
+      "fighter1": {
+        "name": "Amanda Lemos",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Gillian Robertson",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-03-15T02:35:39.672Z",
+      "fighter1": {
+        "name": "Amanda Lemos",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Gillian Robertson",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-03-15T02:35:42.685Z",
+      "fighter1": {
+        "name": "Amanda Lemos",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Gillian Robertson",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 31
     }
-  ]
+  ],
+  "createdAt": "2026-03-15T02:21:32.065Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Gillian Robertson",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:50:47.559Z",
+    "openingF1Odds": 194,
+    "openingF2Odds": -240,
+    "closingF1Odds": 2300,
+    "closingF2Odds": -6000,
+    "lineMovementF1": 2106,
+    "crossoverOccurred": true,
+    "crossoverMinute": 4
+  },
+  "derived": {
+    "inferredFinishMin": 16,
+    "inferredFinishRound": 3,
+    "peakOddsSwing": 2106,
+    "finishSpeed": "medium",
+    "preFightSteam": 2106,
+    "dominanceScore": 52,
+    "crossoverCount": 4,
+    "derivedAt": "2026-06-14T11:47:28.372Z"
+  }
 }

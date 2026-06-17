@@ -1,11 +1,311 @@
 {
   "fightId": "bradtavares_vs_erykanders",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-03-14T22:18:45.638Z",
+  "startTime": "2026-03-14T22:17:45.523Z",
   "endTime": "2026-03-14T22:28:40.883Z",
-  "dataPoints": 203,
+  "duration": 655360,
+  "dataPoints": 223,
   "oddsHistory": [
+    {
+      "timestamp": "2026-03-14T22:17:45.523Z",
+      "fighter1": {
+        "name": "Brad Tavares",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Eryk Anders",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "isLocked": false,
+      "extractionId": 55
+    },
+    {
+      "timestamp": "2026-03-14T22:17:48.538Z",
+      "fighter1": {
+        "name": "Brad Tavares",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Eryk Anders",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-14T22:17:51.547Z",
+      "fighter1": {
+        "name": "Brad Tavares",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Eryk Anders",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-14T22:17:54.551Z",
+      "fighter1": {
+        "name": "Brad Tavares",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Eryk Anders",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-14T22:17:57.566Z",
+      "fighter1": {
+        "name": "Brad Tavares",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Eryk Anders",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-14T22:18:00.575Z",
+      "fighter1": {
+        "name": "Brad Tavares",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Eryk Anders",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-03-14T22:18:03.580Z",
+      "fighter1": {
+        "name": "Brad Tavares",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Eryk Anders",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-03-14T22:18:06.583Z",
+      "fighter1": {
+        "name": "Brad Tavares",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Eryk Anders",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-03-14T22:18:09.590Z",
+      "fighter1": {
+        "name": "Brad Tavares",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Eryk Anders",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-03-14T22:18:12.591Z",
+      "fighter1": {
+        "name": "Brad Tavares",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Eryk Anders",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-03-14T22:18:15.603Z",
+      "fighter1": {
+        "name": "Brad Tavares",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Eryk Anders",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-03-14T22:18:18.604Z",
+      "fighter1": {
+        "name": "Brad Tavares",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Eryk Anders",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-03-14T22:18:21.607Z",
+      "fighter1": {
+        "name": "Brad Tavares",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Eryk Anders",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-03-14T22:18:24.607Z",
+      "fighter1": {
+        "name": "Brad Tavares",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Eryk Anders",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-03-14T22:18:27.611Z",
+      "fighter1": {
+        "name": "Brad Tavares",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Eryk Anders",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-03-14T22:18:30.617Z",
+      "fighter1": {
+        "name": "Brad Tavares",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Eryk Anders",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-03-14T22:18:33.618Z",
+      "fighter1": {
+        "name": "Brad Tavares",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Eryk Anders",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-03-14T22:18:36.619Z",
+      "fighter1": {
+        "name": "Brad Tavares",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Eryk Anders",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-03-14T22:18:39.622Z",
+      "fighter1": {
+        "name": "Brad Tavares",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Eryk Anders",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-03-14T22:18:42.637Z",
+      "fighter1": {
+        "name": "Brad Tavares",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Eryk Anders",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
     {
       "timestamp": "2026-03-14T22:18:45.638Z",
       "fighter1": {
@@ -3051,5 +3351,32 @@
       "isLocked": false,
       "extractionId": 32
     }
-  ]
+  ],
+  "createdAt": "2026-03-14T22:20:42.880Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Eryk Anders",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:50:58.628Z",
+    "openingF1Odds": 250,
+    "openingF2Odds": -350,
+    "closingF1Odds": 840,
+    "closingF2Odds": -1600,
+    "lineMovementF1": 590,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  },
+  "derived": {
+    "inferredFinishMin": 10,
+    "inferredFinishRound": 2,
+    "peakOddsSwing": 590,
+    "finishSpeed": "slow",
+    "preFightSteam": 590,
+    "dominanceScore": 47,
+    "crossoverCount": 0,
+    "derivedAt": "2026-06-14T11:47:28.389Z"
+  }
 }

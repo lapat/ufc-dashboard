@@ -1,11 +1,1751 @@
 {
   "fightId": "alexperez_vs_sumudaerji",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-05-30T11:20:23.333Z",
+  "startTime": "2026-05-30T11:14:34.561Z",
   "endTime": "2026-05-30T11:24:26.921Z",
-  "dataPoints": 81,
+  "duration": 592360,
+  "dataPoints": 197,
   "oddsHistory": [
+    {
+      "timestamp": "2026-05-30T11:14:34.561Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-30T11:14:37.573Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-05-30T11:14:40.587Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-30T11:14:43.603Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-30T11:14:46.605Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-05-30T11:14:49.607Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-05-30T11:14:52.612Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-05-30T11:14:55.613Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-05-30T11:14:58.614Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-05-30T11:15:01.616Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-05-30T11:15:04.623Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-05-30T11:15:07.625Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-05-30T11:15:10.625Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-05-30T11:15:13.631Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-05-30T11:15:16.640Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-05-30T11:15:19.643Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-05-30T11:15:22.646Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-05-30T11:15:25.652Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-05-30T11:15:28.653Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-05-30T11:15:31.654Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-05-30T11:15:34.667Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-05-30T11:15:37.681Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-05-30T11:15:40.687Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-05-30T11:15:43.699Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-05-30T11:15:46.706Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-05-30T11:15:49.720Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-05-30T11:15:52.727Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-05-30T11:15:55.730Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-05-30T11:15:58.732Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-05-30T11:16:01.737Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-05-30T11:16:04.746Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-05-30T11:16:07.751Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-05-30T11:16:10.753Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-05-30T11:16:13.754Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-05-30T11:16:16.757Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-05-30T11:16:19.771Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-05-30T11:16:22.780Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2026-05-30T11:16:25.784Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2026-05-30T11:16:28.788Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 39
+    },
+    {
+      "timestamp": "2026-05-30T11:16:31.800Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 40
+    },
+    {
+      "timestamp": "2026-05-30T11:16:34.810Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 41
+    },
+    {
+      "timestamp": "2026-05-30T11:16:37.813Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 42
+    },
+    {
+      "timestamp": "2026-05-30T11:16:40.815Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 43
+    },
+    {
+      "timestamp": "2026-05-30T11:16:43.827Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 44
+    },
+    {
+      "timestamp": "2026-05-30T11:16:46.832Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 45
+    },
+    {
+      "timestamp": "2026-05-30T11:16:49.843Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 46
+    },
+    {
+      "timestamp": "2026-05-30T11:16:52.848Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 47
+    },
+    {
+      "timestamp": "2026-05-30T11:16:55.861Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 48
+    },
+    {
+      "timestamp": "2026-05-30T11:16:58.874Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 49
+    },
+    {
+      "timestamp": "2026-05-30T11:17:01.888Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 50
+    },
+    {
+      "timestamp": "2026-05-30T11:17:04.899Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 51
+    },
+    {
+      "timestamp": "2026-05-30T11:17:07.902Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "isLocked": false,
+      "extractionId": 52
+    },
+    {
+      "timestamp": "2026-05-30T11:17:10.915Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "isLocked": false,
+      "extractionId": 53
+    },
+    {
+      "timestamp": "2026-05-30T11:17:13.927Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "isLocked": false,
+      "extractionId": 54
+    },
+    {
+      "timestamp": "2026-05-30T11:17:16.935Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "isLocked": false,
+      "extractionId": 55
+    },
+    {
+      "timestamp": "2026-05-30T11:17:19.941Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "isLocked": false,
+      "extractionId": 56
+    },
+    {
+      "timestamp": "2026-05-30T11:17:22.944Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "isLocked": false,
+      "extractionId": 57
+    },
+    {
+      "timestamp": "2026-05-30T11:17:25.950Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "isLocked": false,
+      "extractionId": 58
+    },
+    {
+      "timestamp": "2026-05-30T11:17:28.952Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "isLocked": false,
+      "extractionId": 59
+    },
+    {
+      "timestamp": "2026-05-30T11:17:31.963Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "isLocked": false,
+      "extractionId": 60
+    },
+    {
+      "timestamp": "2026-05-30T11:17:34.966Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "isLocked": false,
+      "extractionId": 61
+    },
+    {
+      "timestamp": "2026-05-30T11:17:37.966Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "isLocked": false,
+      "extractionId": 62
+    },
+    {
+      "timestamp": "2026-05-30T11:17:40.973Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "isLocked": false,
+      "extractionId": 63
+    },
+    {
+      "timestamp": "2026-05-30T11:17:43.974Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "isLocked": false,
+      "extractionId": 64
+    },
+    {
+      "timestamp": "2026-05-30T11:17:46.986Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "isLocked": false,
+      "extractionId": 65
+    },
+    {
+      "timestamp": "2026-05-30T11:17:49.997Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "isLocked": false,
+      "extractionId": 66
+    },
+    {
+      "timestamp": "2026-05-30T11:17:53.001Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "isLocked": false,
+      "extractionId": 67
+    },
+    {
+      "timestamp": "2026-05-30T11:17:56.008Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "isLocked": false,
+      "extractionId": 68
+    },
+    {
+      "timestamp": "2026-05-30T11:17:59.018Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "isLocked": false,
+      "extractionId": 69
+    },
+    {
+      "timestamp": "2026-05-30T11:18:02.018Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "isLocked": false,
+      "extractionId": 70
+    },
+    {
+      "timestamp": "2026-05-30T11:18:05.021Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "isLocked": false,
+      "extractionId": 71
+    },
+    {
+      "timestamp": "2026-05-30T11:18:08.022Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "isLocked": false,
+      "extractionId": 72
+    },
+    {
+      "timestamp": "2026-05-30T11:18:11.023Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "isLocked": false,
+      "extractionId": 73
+    },
+    {
+      "timestamp": "2026-05-30T11:18:14.024Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "isLocked": false,
+      "extractionId": 74
+    },
+    {
+      "timestamp": "2026-05-30T11:18:17.039Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-180",
+        "numericOdds": -180
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+140",
+        "numericOdds": 140
+      },
+      "isLocked": false,
+      "extractionId": 75
+    },
+    {
+      "timestamp": "2026-05-30T11:18:20.052Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-180",
+        "numericOdds": -180
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+140",
+        "numericOdds": 140
+      },
+      "isLocked": false,
+      "extractionId": 76
+    },
+    {
+      "timestamp": "2026-05-30T11:18:23.065Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 77
+    },
+    {
+      "timestamp": "2026-05-30T11:18:26.077Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 78
+    },
+    {
+      "timestamp": "2026-05-30T11:18:29.078Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 79
+    },
+    {
+      "timestamp": "2026-05-30T11:18:32.087Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 80
+    },
+    {
+      "timestamp": "2026-05-30T11:18:35.090Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 81
+    },
+    {
+      "timestamp": "2026-05-30T11:18:38.096Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 82
+    },
+    {
+      "timestamp": "2026-05-30T11:18:41.097Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 83
+    },
+    {
+      "timestamp": "2026-05-30T11:18:44.099Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 84
+    },
+    {
+      "timestamp": "2026-05-30T11:18:47.103Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 85
+    },
+    {
+      "timestamp": "2026-05-30T11:18:50.106Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 86
+    },
+    {
+      "timestamp": "2026-05-30T11:18:53.109Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 87
+    },
+    {
+      "timestamp": "2026-05-30T11:18:56.110Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 88
+    },
+    {
+      "timestamp": "2026-05-30T11:18:59.120Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 89
+    },
+    {
+      "timestamp": "2026-05-30T11:19:02.121Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 90
+    },
+    {
+      "timestamp": "2026-05-30T11:19:05.125Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 91
+    },
+    {
+      "timestamp": "2026-05-30T11:19:08.132Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 92
+    },
+    {
+      "timestamp": "2026-05-30T11:19:11.134Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 93
+    },
+    {
+      "timestamp": "2026-05-30T11:19:14.147Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 94
+    },
+    {
+      "timestamp": "2026-05-30T11:19:17.161Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 95
+    },
+    {
+      "timestamp": "2026-05-30T11:19:20.169Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 96
+    },
+    {
+      "timestamp": "2026-05-30T11:19:23.176Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 97
+    },
+    {
+      "timestamp": "2026-05-30T11:19:26.179Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 98
+    },
+    {
+      "timestamp": "2026-05-30T11:19:29.186Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 99
+    },
+    {
+      "timestamp": "2026-05-30T11:19:32.200Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "isLocked": false,
+      "extractionId": 100
+    },
+    {
+      "timestamp": "2026-05-30T11:19:35.209Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "isLocked": false,
+      "extractionId": 101
+    },
+    {
+      "timestamp": "2026-05-30T11:19:38.214Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "isLocked": false,
+      "extractionId": 102
+    },
+    {
+      "timestamp": "2026-05-30T11:19:41.220Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "isLocked": false,
+      "extractionId": 103
+    },
+    {
+      "timestamp": "2026-05-30T11:19:44.225Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "isLocked": false,
+      "extractionId": 104
+    },
+    {
+      "timestamp": "2026-05-30T11:19:47.237Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "isLocked": false,
+      "extractionId": 105
+    },
+    {
+      "timestamp": "2026-05-30T11:19:50.239Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "isLocked": false,
+      "extractionId": 106
+    },
+    {
+      "timestamp": "2026-05-30T11:19:53.245Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 107
+    },
+    {
+      "timestamp": "2026-05-30T11:19:56.251Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 108
+    },
+    {
+      "timestamp": "2026-05-30T11:19:59.265Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 109
+    },
+    {
+      "timestamp": "2026-05-30T11:20:02.272Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 110
+    },
+    {
+      "timestamp": "2026-05-30T11:20:05.280Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 111
+    },
+    {
+      "timestamp": "2026-05-30T11:20:08.286Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "isLocked": false,
+      "extractionId": 112
+    },
+    {
+      "timestamp": "2026-05-30T11:20:11.291Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "isLocked": false,
+      "extractionId": 113
+    },
+    {
+      "timestamp": "2026-05-30T11:20:14.301Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "isLocked": false,
+      "extractionId": 114
+    },
+    {
+      "timestamp": "2026-05-30T11:20:17.311Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "isLocked": false,
+      "extractionId": 115
+    },
+    {
+      "timestamp": "2026-05-30T11:20:20.324Z",
+      "fighter1": {
+        "name": "Alex Perez",
+        "odds": "-136",
+        "numericOdds": -136
+      },
+      "fighter2": {
+        "name": "Sumudaerji",
+        "odds": "+108",
+        "numericOdds": 108
+      },
+      "isLocked": false,
+      "extractionId": 116
+    },
     {
       "timestamp": "2026-05-30T11:20:23.333Z",
       "fighter1": {
@@ -1221,5 +2961,16 @@
       "isLocked": false,
       "extractionId": 21
     }
-  ]
+  ],
+  "createdAt": "2026-05-30T11:20:50.369Z",
+  "derived": {
+    "inferredFinishMin": 9,
+    "inferredFinishRound": 2,
+    "peakOddsSwing": 706,
+    "finishSpeed": "slow",
+    "preFightSteam": 506,
+    "dominanceScore": 28,
+    "crossoverCount": 3,
+    "derivedAt": "2026-06-14T11:47:28.370Z"
+  }
 }

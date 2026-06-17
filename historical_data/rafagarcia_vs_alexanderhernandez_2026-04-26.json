@@ -1,11 +1,356 @@
 {
   "fightId": "rafagarcia_vs_alexanderhernandez",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-04-26T01:46:48.259Z",
+  "startTime": "2026-04-26T01:45:39.106Z",
   "endTime": "2026-04-26T02:01:23.278Z",
-  "dataPoints": 232,
+  "duration": 944172,
+  "dataPoints": 255,
   "oddsHistory": [
+    {
+      "timestamp": "2026-04-26T01:45:39.106Z",
+      "fighter1": {
+        "name": "Rafa Garcia",
+        "odds": "+100",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Alexander Hernandez",
+        "odds": "-128",
+        "numericOdds": -128
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-04-26T01:45:42.121Z",
+      "fighter1": {
+        "name": "Rafa Garcia",
+        "odds": "+100",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Alexander Hernandez",
+        "odds": "-128",
+        "numericOdds": -128
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-04-26T01:45:45.128Z",
+      "fighter1": {
+        "name": "Rafa Garcia",
+        "odds": "+100",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Alexander Hernandez",
+        "odds": "-128",
+        "numericOdds": -128
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-04-26T01:45:48.137Z",
+      "fighter1": {
+        "name": "Rafa Garcia",
+        "odds": "+100",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Alexander Hernandez",
+        "odds": "-128",
+        "numericOdds": -128
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-04-26T01:45:51.139Z",
+      "fighter1": {
+        "name": "Rafa Garcia",
+        "odds": "+100",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Alexander Hernandez",
+        "odds": "-128",
+        "numericOdds": -128
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-04-26T01:45:54.147Z",
+      "fighter1": {
+        "name": "Rafa Garcia",
+        "odds": "+100",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Alexander Hernandez",
+        "odds": "-128",
+        "numericOdds": -128
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-04-26T01:45:57.159Z",
+      "fighter1": {
+        "name": "Rafa Garcia",
+        "odds": "+100",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Alexander Hernandez",
+        "odds": "-128",
+        "numericOdds": -128
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-04-26T01:46:00.165Z",
+      "fighter1": {
+        "name": "Rafa Garcia",
+        "odds": "+100",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Alexander Hernandez",
+        "odds": "-128",
+        "numericOdds": -128
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-04-26T01:46:03.173Z",
+      "fighter1": {
+        "name": "Rafa Garcia",
+        "odds": "+100",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Alexander Hernandez",
+        "odds": "-128",
+        "numericOdds": -128
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-04-26T01:46:06.173Z",
+      "fighter1": {
+        "name": "Rafa Garcia",
+        "odds": "+100",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Alexander Hernandez",
+        "odds": "-128",
+        "numericOdds": -128
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-04-26T01:46:09.185Z",
+      "fighter1": {
+        "name": "Rafa Garcia",
+        "odds": "+100",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Alexander Hernandez",
+        "odds": "-128",
+        "numericOdds": -128
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-04-26T01:46:12.189Z",
+      "fighter1": {
+        "name": "Rafa Garcia",
+        "odds": "+100",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Alexander Hernandez",
+        "odds": "-128",
+        "numericOdds": -128
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-04-26T01:46:15.190Z",
+      "fighter1": {
+        "name": "Rafa Garcia",
+        "odds": "+100",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Alexander Hernandez",
+        "odds": "-128",
+        "numericOdds": -128
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-04-26T01:46:18.197Z",
+      "fighter1": {
+        "name": "Rafa Garcia",
+        "odds": "+100",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Alexander Hernandez",
+        "odds": "-128",
+        "numericOdds": -128
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-04-26T01:46:21.206Z",
+      "fighter1": {
+        "name": "Rafa Garcia",
+        "odds": "+100",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Alexander Hernandez",
+        "odds": "-128",
+        "numericOdds": -128
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-04-26T01:46:24.208Z",
+      "fighter1": {
+        "name": "Rafa Garcia",
+        "odds": "+100",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Alexander Hernandez",
+        "odds": "-128",
+        "numericOdds": -128
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-04-26T01:46:27.210Z",
+      "fighter1": {
+        "name": "Rafa Garcia",
+        "odds": "+100",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Alexander Hernandez",
+        "odds": "-128",
+        "numericOdds": -128
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-04-26T01:46:30.215Z",
+      "fighter1": {
+        "name": "Rafa Garcia",
+        "odds": "+100",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Alexander Hernandez",
+        "odds": "-128",
+        "numericOdds": -128
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-04-26T01:46:33.226Z",
+      "fighter1": {
+        "name": "Rafa Garcia",
+        "odds": "+100",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Alexander Hernandez",
+        "odds": "-128",
+        "numericOdds": -128
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-04-26T01:46:36.227Z",
+      "fighter1": {
+        "name": "Rafa Garcia",
+        "odds": "+100",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Alexander Hernandez",
+        "odds": "-128",
+        "numericOdds": -128
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-04-26T01:46:39.232Z",
+      "fighter1": {
+        "name": "Rafa Garcia",
+        "odds": "+100",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Alexander Hernandez",
+        "odds": "-128",
+        "numericOdds": -128
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-04-26T01:46:42.241Z",
+      "fighter1": {
+        "name": "Rafa Garcia",
+        "odds": "+100",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Alexander Hernandez",
+        "odds": "-128",
+        "numericOdds": -128
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-04-26T01:46:45.247Z",
+      "fighter1": {
+        "name": "Rafa Garcia",
+        "odds": "+100",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Alexander Hernandez",
+        "odds": "-128",
+        "numericOdds": -128
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
     {
       "timestamp": "2026-04-26T01:46:48.259Z",
       "fighter1": {
@@ -3486,5 +3831,32 @@
       "isLocked": false,
       "extractionId": 42
     }
-  ]
+  ],
+  "createdAt": "2026-04-26T01:47:18.326Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Rafa Garcia",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:52:13.054Z",
+    "openingF1Odds": 100,
+    "openingF2Odds": -128,
+    "closingF1Odds": -2400,
+    "closingF2Odds": 1180,
+    "lineMovementF1": -2500,
+    "crossoverOccurred": true,
+    "crossoverMinute": 1
+  },
+  "derived": {
+    "inferredFinishMin": 10,
+    "inferredFinishRound": 2,
+    "peakOddsSwing": 6100,
+    "finishSpeed": "fast",
+    "preFightSteam": -2500,
+    "dominanceScore": 78,
+    "crossoverCount": 1,
+    "derivedAt": "2026-06-14T11:47:28.481Z"
+  }
 }

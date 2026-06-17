@@ -1,11 +1,296 @@
 {
   "fightId": "jailtonalmeida_vs_rizvankuniev",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-02-08T02:43:36.003Z",
+  "startTime": "2026-02-08T02:42:38.847Z",
   "endTime": "2026-02-08T02:59:38.372Z",
-  "dataPoints": 616,
+  "duration": 1019525,
+  "dataPoints": 635,
   "oddsHistory": [
+    {
+      "timestamp": "2026-02-08T02:42:38.847Z",
+      "fighter1": {
+        "name": "Jailton Almeida",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "fighter2": {
+        "name": "Rizvan Kuniev",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 353
+    },
+    {
+      "timestamp": "2026-02-08T02:42:41.864Z",
+      "fighter1": {
+        "name": "Jailton Almeida",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "fighter2": {
+        "name": "Rizvan Kuniev",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-02-08T02:42:44.868Z",
+      "fighter1": {
+        "name": "Jailton Almeida",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "fighter2": {
+        "name": "Rizvan Kuniev",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-02-08T02:42:47.876Z",
+      "fighter1": {
+        "name": "Jailton Almeida",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "fighter2": {
+        "name": "Rizvan Kuniev",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-02-08T02:42:50.881Z",
+      "fighter1": {
+        "name": "Jailton Almeida",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "fighter2": {
+        "name": "Rizvan Kuniev",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-02-08T02:42:53.889Z",
+      "fighter1": {
+        "name": "Jailton Almeida",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "fighter2": {
+        "name": "Rizvan Kuniev",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-02-08T02:42:56.889Z",
+      "fighter1": {
+        "name": "Jailton Almeida",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "fighter2": {
+        "name": "Rizvan Kuniev",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-02-08T02:42:59.896Z",
+      "fighter1": {
+        "name": "Jailton Almeida",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "fighter2": {
+        "name": "Rizvan Kuniev",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-02-08T02:43:02.897Z",
+      "fighter1": {
+        "name": "Jailton Almeida",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "fighter2": {
+        "name": "Rizvan Kuniev",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-02-08T02:43:05.905Z",
+      "fighter1": {
+        "name": "Jailton Almeida",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "fighter2": {
+        "name": "Rizvan Kuniev",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-02-08T02:43:08.918Z",
+      "fighter1": {
+        "name": "Jailton Almeida",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "fighter2": {
+        "name": "Rizvan Kuniev",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-02-08T02:43:11.932Z",
+      "fighter1": {
+        "name": "Jailton Almeida",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "fighter2": {
+        "name": "Rizvan Kuniev",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-02-08T02:43:14.942Z",
+      "fighter1": {
+        "name": "Jailton Almeida",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "fighter2": {
+        "name": "Rizvan Kuniev",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-02-08T02:43:17.956Z",
+      "fighter1": {
+        "name": "Jailton Almeida",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "fighter2": {
+        "name": "Rizvan Kuniev",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-02-08T02:43:20.969Z",
+      "fighter1": {
+        "name": "Jailton Almeida",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "fighter2": {
+        "name": "Rizvan Kuniev",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-02-08T02:43:23.975Z",
+      "fighter1": {
+        "name": "Jailton Almeida",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "fighter2": {
+        "name": "Rizvan Kuniev",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-02-08T02:43:26.979Z",
+      "fighter1": {
+        "name": "Jailton Almeida",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Rizvan Kuniev",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-02-08T02:43:29.989Z",
+      "fighter1": {
+        "name": "Jailton Almeida",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Rizvan Kuniev",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-02-08T02:43:32.998Z",
+      "fighter1": {
+        "name": "Jailton Almeida",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "fighter2": {
+        "name": "Rizvan Kuniev",
+        "odds": "+160",
+        "numericOdds": 160
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
     {
       "timestamp": "2026-02-08T02:43:36.003Z",
       "fighter1": {
@@ -9246,5 +9531,32 @@
       "isLocked": false,
       "extractionId": 297
     }
-  ]
+  ],
+  "createdAt": "2026-02-08T02:44:48.191Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Rizvan Kuniev",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:51:30.771Z",
+    "openingF1Odds": -174,
+    "openingF2Odds": 136,
+    "closingF1Odds": 2300,
+    "closingF2Odds": -6000,
+    "lineMovementF1": 2474,
+    "crossoverOccurred": true,
+    "crossoverMinute": 2
+  },
+  "derived": {
+    "inferredFinishMin": 11,
+    "inferredFinishRound": 2,
+    "peakOddsSwing": 2474,
+    "finishSpeed": "medium",
+    "preFightSteam": 2474,
+    "dominanceScore": 90,
+    "crossoverCount": 3,
+    "derivedAt": "2026-06-14T11:47:28.428Z"
+  }
 }

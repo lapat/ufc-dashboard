@@ -1,11 +1,251 @@
 {
   "fightId": "nurulloaliev_vs_shemrock",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2025-11-22T15:31:00.846Z",
+  "startTime": "2025-11-22T15:30:06.665Z",
   "endTime": "2025-11-22T15:47:33.663Z",
-  "dataPoints": 276,
+  "duration": 1046998,
+  "dataPoints": 292,
   "oddsHistory": [
+    {
+      "timestamp": "2025-11-22T15:30:06.665Z",
+      "fighter1": {
+        "name": "Nurullo Aliev",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "Shem Rock",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 70
+    },
+    {
+      "timestamp": "2025-11-22T15:30:09.679Z",
+      "fighter1": {
+        "name": "Nurullo Aliev",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "Shem Rock",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2025-11-22T15:30:12.691Z",
+      "fighter1": {
+        "name": "Nurullo Aliev",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "Shem Rock",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2025-11-22T15:30:15.701Z",
+      "fighter1": {
+        "name": "Nurullo Aliev",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "Shem Rock",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2025-11-22T15:30:18.707Z",
+      "fighter1": {
+        "name": "Nurullo Aliev",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "Shem Rock",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2025-11-22T15:30:21.713Z",
+      "fighter1": {
+        "name": "Nurullo Aliev",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "Shem Rock",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2025-11-22T15:30:24.723Z",
+      "fighter1": {
+        "name": "Nurullo Aliev",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "Shem Rock",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2025-11-22T15:30:27.733Z",
+      "fighter1": {
+        "name": "Nurullo Aliev",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "Shem Rock",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2025-11-22T15:30:30.746Z",
+      "fighter1": {
+        "name": "Nurullo Aliev",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "Shem Rock",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2025-11-22T15:30:39.781Z",
+      "fighter1": {
+        "name": "Nurullo Aliev",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "fighter2": {
+        "name": "Shem Rock",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2025-11-22T15:30:42.791Z",
+      "fighter1": {
+        "name": "Nurullo Aliev",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "fighter2": {
+        "name": "Shem Rock",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2025-11-22T15:30:45.802Z",
+      "fighter1": {
+        "name": "Nurullo Aliev",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "fighter2": {
+        "name": "Shem Rock",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2025-11-22T15:30:48.802Z",
+      "fighter1": {
+        "name": "Nurullo Aliev",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "fighter2": {
+        "name": "Shem Rock",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2025-11-22T15:30:51.812Z",
+      "fighter1": {
+        "name": "Nurullo Aliev",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "fighter2": {
+        "name": "Shem Rock",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2025-11-22T15:30:54.825Z",
+      "fighter1": {
+        "name": "Nurullo Aliev",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "fighter2": {
+        "name": "Shem Rock",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2025-11-22T15:30:57.839Z",
+      "fighter1": {
+        "name": "Nurullo Aliev",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "fighter2": {
+        "name": "Shem Rock",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
     {
       "timestamp": "2025-11-22T15:31:00.846Z",
       "fighter1": {
@@ -4146,5 +4386,32 @@
       "isLocked": false,
       "extractionId": 15
     }
-  ]
+  ],
+  "createdAt": "2025-11-22T15:30:39.779Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Nurullo Aliev",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:52:08.288Z",
+    "openingF1Odds": -350,
+    "openingF2Odds": 250,
+    "closingF1Odds": -6000,
+    "closingF2Odds": 2300,
+    "lineMovementF1": -5650,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  },
+  "derived": {
+    "inferredFinishMin": 3,
+    "inferredFinishRound": 1,
+    "peakOddsSwing": 5650,
+    "finishSpeed": "fast",
+    "preFightSteam": -5650,
+    "dominanceScore": 100,
+    "crossoverCount": 0,
+    "derivedAt": "2026-06-14T11:47:28.474Z"
+  }
 }

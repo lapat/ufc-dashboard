@@ -1,11 +1,1076 @@
 {
   "fightId": "kevinholland_vs_randybrown",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-04-12T00:16:26.660Z",
+  "startTime": "2026-04-12T00:12:53.061Z",
   "endTime": "2026-04-12T00:29:58.587Z",
-  "dataPoints": 390,
+  "duration": 1025526,
+  "dataPoints": 461,
   "oddsHistory": [
+    {
+      "timestamp": "2026-04-12T00:12:53.061Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-130",
+        "numericOdds": -130
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+110",
+        "numericOdds": 110
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2026-04-12T00:12:56.068Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+106",
+        "numericOdds": 106
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-04-12T00:12:59.070Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+106",
+        "numericOdds": 106
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-04-12T00:13:02.083Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+106",
+        "numericOdds": 106
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-04-12T00:13:05.085Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+106",
+        "numericOdds": 106
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-04-12T00:13:08.098Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+106",
+        "numericOdds": 106
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-04-12T00:13:11.112Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+106",
+        "numericOdds": 106
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-04-12T00:13:14.124Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+106",
+        "numericOdds": 106
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-04-12T00:13:17.135Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+106",
+        "numericOdds": 106
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-04-12T00:13:20.144Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+106",
+        "numericOdds": 106
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-04-12T00:13:23.145Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+106",
+        "numericOdds": 106
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-04-12T00:13:26.157Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+106",
+        "numericOdds": 106
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-04-12T00:13:29.168Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+106",
+        "numericOdds": 106
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-04-12T00:13:32.175Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+106",
+        "numericOdds": 106
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-04-12T00:13:35.179Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+106",
+        "numericOdds": 106
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-04-12T00:13:38.181Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+106",
+        "numericOdds": 106
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-04-12T00:13:41.188Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+106",
+        "numericOdds": 106
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-04-12T00:13:44.194Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+106",
+        "numericOdds": 106
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-04-12T00:13:47.206Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+106",
+        "numericOdds": 106
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-04-12T00:13:50.219Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-140",
+        "numericOdds": -140
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+110",
+        "numericOdds": 110
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-04-12T00:13:53.230Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-140",
+        "numericOdds": -140
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+110",
+        "numericOdds": 110
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-04-12T00:13:56.236Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-04-12T00:13:59.244Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-04-12T00:14:02.251Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-04-12T00:14:05.261Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-04-12T00:14:08.268Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-04-12T00:14:11.280Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-04-12T00:14:14.291Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-04-12T00:14:17.295Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-04-12T00:14:20.305Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-146",
+        "numericOdds": -146
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+114",
+        "numericOdds": 114
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-04-12T00:14:23.316Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-146",
+        "numericOdds": -146
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+114",
+        "numericOdds": 114
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-04-12T00:14:26.320Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-146",
+        "numericOdds": -146
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+114",
+        "numericOdds": 114
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-04-12T00:14:29.326Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-146",
+        "numericOdds": -146
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+114",
+        "numericOdds": 114
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-04-12T00:14:32.338Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-146",
+        "numericOdds": -146
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+114",
+        "numericOdds": 114
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-04-12T00:14:35.352Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-146",
+        "numericOdds": -146
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+114",
+        "numericOdds": 114
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-04-12T00:14:38.360Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-146",
+        "numericOdds": -146
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+114",
+        "numericOdds": 114
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-04-12T00:14:41.368Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-146",
+        "numericOdds": -146
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+114",
+        "numericOdds": 114
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2026-04-12T00:14:44.372Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-146",
+        "numericOdds": -146
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+114",
+        "numericOdds": 114
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2026-04-12T00:14:47.381Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-154",
+        "numericOdds": -154
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "isLocked": false,
+      "extractionId": 39
+    },
+    {
+      "timestamp": "2026-04-12T00:14:50.390Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-154",
+        "numericOdds": -154
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "isLocked": false,
+      "extractionId": 40
+    },
+    {
+      "timestamp": "2026-04-12T00:14:53.396Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-154",
+        "numericOdds": -154
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "isLocked": false,
+      "extractionId": 41
+    },
+    {
+      "timestamp": "2026-04-12T00:14:56.405Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-154",
+        "numericOdds": -154
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "isLocked": false,
+      "extractionId": 42
+    },
+    {
+      "timestamp": "2026-04-12T00:14:59.417Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-154",
+        "numericOdds": -154
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "isLocked": false,
+      "extractionId": 43
+    },
+    {
+      "timestamp": "2026-04-12T00:15:02.429Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-154",
+        "numericOdds": -154
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "isLocked": false,
+      "extractionId": 44
+    },
+    {
+      "timestamp": "2026-04-12T00:15:05.444Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-154",
+        "numericOdds": -154
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "isLocked": false,
+      "extractionId": 45
+    },
+    {
+      "timestamp": "2026-04-12T00:15:08.451Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-154",
+        "numericOdds": -154
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "isLocked": false,
+      "extractionId": 46
+    },
+    {
+      "timestamp": "2026-04-12T00:15:11.464Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 47
+    },
+    {
+      "timestamp": "2026-04-12T00:15:14.472Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 48
+    },
+    {
+      "timestamp": "2026-04-12T00:15:17.484Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 49
+    },
+    {
+      "timestamp": "2026-04-12T00:15:20.496Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 50
+    },
+    {
+      "timestamp": "2026-04-12T00:15:23.510Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 51
+    },
+    {
+      "timestamp": "2026-04-12T00:15:26.516Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 52
+    },
+    {
+      "timestamp": "2026-04-12T00:15:29.518Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 53
+    },
+    {
+      "timestamp": "2026-04-12T00:15:32.523Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 54
+    },
+    {
+      "timestamp": "2026-04-12T00:15:35.524Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "isLocked": false,
+      "extractionId": 55
+    },
+    {
+      "timestamp": "2026-04-12T00:15:38.525Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "isLocked": false,
+      "extractionId": 56
+    },
+    {
+      "timestamp": "2026-04-12T00:15:41.535Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "isLocked": false,
+      "extractionId": 57
+    },
+    {
+      "timestamp": "2026-04-12T00:15:44.548Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "isLocked": false,
+      "extractionId": 58
+    },
+    {
+      "timestamp": "2026-04-12T00:15:47.562Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "isLocked": false,
+      "extractionId": 59
+    },
+    {
+      "timestamp": "2026-04-12T00:15:50.567Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "isLocked": false,
+      "extractionId": 60
+    },
+    {
+      "timestamp": "2026-04-12T00:15:53.568Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "isLocked": false,
+      "extractionId": 61
+    },
+    {
+      "timestamp": "2026-04-12T00:15:56.570Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "isLocked": false,
+      "extractionId": 62
+    },
+    {
+      "timestamp": "2026-04-12T00:15:59.586Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "isLocked": false,
+      "extractionId": 63
+    },
+    {
+      "timestamp": "2026-04-12T00:16:02.592Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "isLocked": false,
+      "extractionId": 64
+    },
+    {
+      "timestamp": "2026-04-12T00:16:05.596Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "isLocked": false,
+      "extractionId": 65
+    },
+    {
+      "timestamp": "2026-04-12T00:16:08.609Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "isLocked": false,
+      "extractionId": 66
+    },
+    {
+      "timestamp": "2026-04-12T00:16:11.616Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "isLocked": false,
+      "extractionId": 67
+    },
+    {
+      "timestamp": "2026-04-12T00:16:14.629Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "isLocked": false,
+      "extractionId": 68
+    },
+    {
+      "timestamp": "2026-04-12T00:16:17.641Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "isLocked": false,
+      "extractionId": 69
+    },
+    {
+      "timestamp": "2026-04-12T00:16:20.643Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "isLocked": false,
+      "extractionId": 70
+    },
+    {
+      "timestamp": "2026-04-12T00:16:23.652Z",
+      "fighter1": {
+        "name": "Kevin Holland",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "fighter2": {
+        "name": "Randy Brown",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "isLocked": false,
+      "extractionId": 71
+    },
     {
       "timestamp": "2026-04-12T00:16:26.660Z",
       "fighter1": {
@@ -5856,5 +6921,32 @@
       "isLocked": false,
       "extractionId": 146
     }
-  ]
+  ],
+  "createdAt": "2026-04-12T00:22:42.580Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Kevin Holland",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:51:45.603Z",
+    "openingF1Odds": -130,
+    "openingF2Odds": 110,
+    "closingF1Odds": -6000,
+    "closingF2Odds": 2300,
+    "lineMovementF1": -5870,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  },
+  "derived": {
+    "inferredFinishMin": 10,
+    "inferredFinishRound": 2,
+    "peakOddsSwing": 5870,
+    "finishSpeed": "fast",
+    "preFightSteam": -5870,
+    "dominanceScore": 84,
+    "crossoverCount": 0,
+    "derivedAt": "2026-06-14T11:47:28.444Z"
+  }
 }

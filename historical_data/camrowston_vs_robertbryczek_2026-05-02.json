@@ -1,11 +1,611 @@
 {
   "fightId": "camrowston_vs_robertbryczek",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-05-02T10:43:27.917Z",
+  "startTime": "2026-05-02T10:41:27.642Z",
   "endTime": "2026-05-02T10:55:42.078Z",
-  "dataPoints": 244,
+  "duration": 854436,
+  "dataPoints": 284,
   "oddsHistory": [
+    {
+      "timestamp": "2026-05-02T10:41:27.642Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Robert Bryczek",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-05-02T10:41:30.648Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Robert Bryczek",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-05-02T10:41:33.661Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Robert Bryczek",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-02T10:41:36.667Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Robert Bryczek",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-02T10:41:39.669Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Robert Bryczek",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-05-02T10:41:42.676Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Robert Bryczek",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-05-02T10:41:45.685Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Robert Bryczek",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-05-02T10:41:48.686Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Robert Bryczek",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-05-02T10:41:51.696Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Robert Bryczek",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-05-02T10:41:54.711Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Robert Bryczek",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-05-02T10:41:57.712Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Robert Bryczek",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-05-02T10:42:00.719Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Robert Bryczek",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-05-02T10:42:03.719Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Robert Bryczek",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-05-02T10:42:06.731Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Robert Bryczek",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-05-02T10:42:09.736Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Robert Bryczek",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-05-02T10:42:12.750Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "fighter2": {
+        "name": "Robert Bryczek",
+        "odds": "+166",
+        "numericOdds": 166
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-05-02T10:42:15.758Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "fighter2": {
+        "name": "Robert Bryczek",
+        "odds": "+166",
+        "numericOdds": 166
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-05-02T10:42:18.768Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "fighter2": {
+        "name": "Robert Bryczek",
+        "odds": "+166",
+        "numericOdds": 166
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-05-02T10:42:21.781Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "fighter2": {
+        "name": "Robert Bryczek",
+        "odds": "+166",
+        "numericOdds": 166
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-05-02T10:42:24.789Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "fighter2": {
+        "name": "Robert Bryczek",
+        "odds": "+166",
+        "numericOdds": 166
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-05-02T10:42:27.789Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-225",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Robert Bryczek",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-05-02T10:42:30.791Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-225",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Robert Bryczek",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-05-02T10:42:33.793Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-225",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Robert Bryczek",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-05-02T10:42:36.798Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-225",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Robert Bryczek",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-05-02T10:42:39.813Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-225",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Robert Bryczek",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-05-02T10:42:42.819Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-225",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Robert Bryczek",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-05-02T10:42:45.832Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-225",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Robert Bryczek",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-05-02T10:42:48.838Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-225",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Robert Bryczek",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-05-02T10:42:51.849Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-225",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Robert Bryczek",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-05-02T10:42:54.853Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-225",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Robert Bryczek",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-05-02T10:42:57.860Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-225",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Robert Bryczek",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-05-02T10:43:00.868Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-225",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Robert Bryczek",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-05-02T10:43:03.873Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-225",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Robert Bryczek",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-05-02T10:43:06.879Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-225",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Robert Bryczek",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-05-02T10:43:09.889Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-225",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Robert Bryczek",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-05-02T10:43:12.890Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-240",
+        "numericOdds": -240
+      },
+      "fighter2": {
+        "name": "Robert Bryczek",
+        "odds": "+184",
+        "numericOdds": 184
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-05-02T10:43:15.896Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-240",
+        "numericOdds": -240
+      },
+      "fighter2": {
+        "name": "Robert Bryczek",
+        "odds": "+184",
+        "numericOdds": 184
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2026-05-02T10:43:18.899Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-240",
+        "numericOdds": -240
+      },
+      "fighter2": {
+        "name": "Robert Bryczek",
+        "odds": "+184",
+        "numericOdds": 184
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2026-05-02T10:43:21.899Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-240",
+        "numericOdds": -240
+      },
+      "fighter2": {
+        "name": "Robert Bryczek",
+        "odds": "+184",
+        "numericOdds": 184
+      },
+      "isLocked": false,
+      "extractionId": 39
+    },
+    {
+      "timestamp": "2026-05-02T10:43:24.903Z",
+      "fighter1": {
+        "name": "Cam Rowston",
+        "odds": "-240",
+        "numericOdds": -240
+      },
+      "fighter2": {
+        "name": "Robert Bryczek",
+        "odds": "+184",
+        "numericOdds": 184
+      },
+      "isLocked": false,
+      "extractionId": 40
+    },
     {
       "timestamp": "2026-05-02T10:43:27.917Z",
       "fighter1": {
@@ -3666,5 +4266,32 @@
       "isLocked": false,
       "extractionId": 195
     }
-  ]
+  ],
+  "createdAt": "2026-05-02T10:45:58.275Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Cam Rowston",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:51:02.596Z",
+    "openingF1Odds": -205,
+    "openingF2Odds": 172,
+    "closingF1Odds": -6000,
+    "closingF2Odds": 2300,
+    "lineMovementF1": -5795,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  },
+  "derived": {
+    "inferredFinishMin": 8,
+    "inferredFinishRound": 2,
+    "peakOddsSwing": 5795,
+    "finishSpeed": "fast",
+    "preFightSteam": -5795,
+    "dominanceScore": 100,
+    "crossoverCount": 0,
+    "derivedAt": "2026-06-14T11:47:28.394Z"
+  }
 }

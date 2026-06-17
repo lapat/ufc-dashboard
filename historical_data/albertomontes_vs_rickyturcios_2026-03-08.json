@@ -1,11 +1,1466 @@
 {
   "fightId": "albertomontes_vs_rickyturcios",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-03-08T00:43:52.716Z",
+  "startTime": "2026-03-08T00:38:43.016Z",
   "endTime": "2026-03-08T00:46:17.021Z",
-  "dataPoints": 82,
+  "duration": 454005,
+  "dataPoints": 179,
   "oddsHistory": [
+    {
+      "timestamp": "2026-03-08T00:38:43.016Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-188",
+        "numericOdds": -188
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-08T00:38:46.025Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-188",
+        "numericOdds": -188
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-08T00:38:49.030Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-188",
+        "numericOdds": -188
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-08T00:38:52.043Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-188",
+        "numericOdds": -188
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-08T00:38:55.051Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-188",
+        "numericOdds": -188
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-08T00:38:58.067Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-188",
+        "numericOdds": -188
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-03-08T00:39:01.067Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-188",
+        "numericOdds": -188
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-03-08T00:39:04.080Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-188",
+        "numericOdds": -188
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-03-08T00:39:07.090Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-188",
+        "numericOdds": -188
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-03-08T00:39:10.092Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-188",
+        "numericOdds": -188
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-03-08T00:39:13.105Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-188",
+        "numericOdds": -188
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-03-08T00:39:16.110Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-188",
+        "numericOdds": -188
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-03-08T00:39:19.115Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-188",
+        "numericOdds": -188
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-03-08T00:39:22.122Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-188",
+        "numericOdds": -188
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-03-08T00:39:25.127Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-188",
+        "numericOdds": -188
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-03-08T00:39:28.135Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-188",
+        "numericOdds": -188
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-03-08T00:39:31.139Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+152",
+        "numericOdds": 152
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-03-08T00:39:34.149Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+152",
+        "numericOdds": 152
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-03-08T00:39:37.155Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+152",
+        "numericOdds": 152
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-03-08T00:39:40.164Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+152",
+        "numericOdds": 152
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-03-08T00:39:43.170Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-03-08T00:39:46.174Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-03-08T00:39:49.177Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-03-08T00:39:52.186Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-03-08T00:39:55.195Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-03-08T00:39:58.205Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-03-08T00:40:01.215Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-03-08T00:40:04.220Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-03-08T00:40:07.221Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-03-08T00:40:10.236Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-03-08T00:40:13.242Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-03-08T00:40:16.246Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-03-08T00:40:19.254Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-03-08T00:40:22.262Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-03-08T00:40:25.264Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-03-08T00:40:28.272Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-03-08T00:40:31.279Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2026-03-08T00:40:34.281Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2026-03-08T00:40:37.289Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 39
+    },
+    {
+      "timestamp": "2026-03-08T00:40:40.293Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 40
+    },
+    {
+      "timestamp": "2026-03-08T00:40:43.299Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 41
+    },
+    {
+      "timestamp": "2026-03-08T00:40:46.305Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 42
+    },
+    {
+      "timestamp": "2026-03-08T00:40:49.322Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 43
+    },
+    {
+      "timestamp": "2026-03-08T00:40:52.331Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 44
+    },
+    {
+      "timestamp": "2026-03-08T00:40:55.338Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 45
+    },
+    {
+      "timestamp": "2026-03-08T00:40:58.351Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 46
+    },
+    {
+      "timestamp": "2026-03-08T00:41:01.358Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 47
+    },
+    {
+      "timestamp": "2026-03-08T00:41:04.371Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 48
+    },
+    {
+      "timestamp": "2026-03-08T00:41:07.376Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 49
+    },
+    {
+      "timestamp": "2026-03-08T00:41:10.378Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 50
+    },
+    {
+      "timestamp": "2026-03-08T00:41:13.384Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 51
+    },
+    {
+      "timestamp": "2026-03-08T00:41:16.392Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 52
+    },
+    {
+      "timestamp": "2026-03-08T00:41:19.401Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 53
+    },
+    {
+      "timestamp": "2026-03-08T00:41:22.406Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 54
+    },
+    {
+      "timestamp": "2026-03-08T00:41:25.407Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 55
+    },
+    {
+      "timestamp": "2026-03-08T00:41:28.413Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 56
+    },
+    {
+      "timestamp": "2026-03-08T00:41:31.415Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 57
+    },
+    {
+      "timestamp": "2026-03-08T00:41:34.420Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 58
+    },
+    {
+      "timestamp": "2026-03-08T00:41:37.424Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 59
+    },
+    {
+      "timestamp": "2026-03-08T00:41:40.433Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 60
+    },
+    {
+      "timestamp": "2026-03-08T00:41:43.442Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 61
+    },
+    {
+      "timestamp": "2026-03-08T00:41:46.461Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 62
+    },
+    {
+      "timestamp": "2026-03-08T00:41:49.464Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-172",
+        "numericOdds": -172
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+134",
+        "numericOdds": 134
+      },
+      "isLocked": false,
+      "extractionId": 63
+    },
+    {
+      "timestamp": "2026-03-08T00:41:52.475Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-154",
+        "numericOdds": -154
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "isLocked": false,
+      "extractionId": 64
+    },
+    {
+      "timestamp": "2026-03-08T00:41:55.489Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-154",
+        "numericOdds": -154
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "isLocked": false,
+      "extractionId": 65
+    },
+    {
+      "timestamp": "2026-03-08T00:41:58.494Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-154",
+        "numericOdds": -154
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "isLocked": false,
+      "extractionId": 66
+    },
+    {
+      "timestamp": "2026-03-08T00:42:01.501Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-154",
+        "numericOdds": -154
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "isLocked": false,
+      "extractionId": 67
+    },
+    {
+      "timestamp": "2026-03-08T00:42:04.506Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-154",
+        "numericOdds": -154
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "isLocked": false,
+      "extractionId": 68
+    },
+    {
+      "timestamp": "2026-03-08T00:42:07.506Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-144",
+        "numericOdds": -144
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+114",
+        "numericOdds": 114
+      },
+      "isLocked": false,
+      "extractionId": 69
+    },
+    {
+      "timestamp": "2026-03-08T00:42:10.521Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-144",
+        "numericOdds": -144
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+114",
+        "numericOdds": 114
+      },
+      "isLocked": false,
+      "extractionId": 70
+    },
+    {
+      "timestamp": "2026-03-08T00:42:13.525Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-144",
+        "numericOdds": -144
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+114",
+        "numericOdds": 114
+      },
+      "isLocked": false,
+      "extractionId": 71
+    },
+    {
+      "timestamp": "2026-03-08T00:42:16.529Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-144",
+        "numericOdds": -144
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+114",
+        "numericOdds": 114
+      },
+      "isLocked": false,
+      "extractionId": 72
+    },
+    {
+      "timestamp": "2026-03-08T00:42:19.531Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-144",
+        "numericOdds": -144
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+114",
+        "numericOdds": 114
+      },
+      "isLocked": false,
+      "extractionId": 73
+    },
+    {
+      "timestamp": "2026-03-08T00:42:22.535Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-144",
+        "numericOdds": -144
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+114",
+        "numericOdds": 114
+      },
+      "isLocked": false,
+      "extractionId": 74
+    },
+    {
+      "timestamp": "2026-03-08T00:42:25.537Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-144",
+        "numericOdds": -144
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+114",
+        "numericOdds": 114
+      },
+      "isLocked": false,
+      "extractionId": 75
+    },
+    {
+      "timestamp": "2026-03-08T00:42:40.565Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-182",
+        "numericOdds": -182
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "isLocked": false,
+      "extractionId": 76
+    },
+    {
+      "timestamp": "2026-03-08T00:42:49.589Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-182",
+        "numericOdds": -182
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-08T00:42:52.588Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-182",
+        "numericOdds": -182
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-08T00:42:55.590Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-180",
+        "numericOdds": -180
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+140",
+        "numericOdds": 140
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-08T00:42:58.590Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-180",
+        "numericOdds": -180
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+140",
+        "numericOdds": 140
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-08T00:43:01.596Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-180",
+        "numericOdds": -180
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+140",
+        "numericOdds": 140
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-08T00:43:04.600Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-180",
+        "numericOdds": -180
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+140",
+        "numericOdds": 140
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-03-08T00:43:07.600Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-180",
+        "numericOdds": -180
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+140",
+        "numericOdds": 140
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-03-08T00:43:10.612Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-180",
+        "numericOdds": -180
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+140",
+        "numericOdds": 140
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-03-08T00:43:13.624Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-03-08T00:43:16.627Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-03-08T00:43:19.629Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-03-08T00:43:22.628Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-03-08T00:43:25.643Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-03-08T00:43:28.647Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-03-08T00:43:31.661Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-03-08T00:43:34.673Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-03-08T00:43:37.674Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-03-08T00:43:40.687Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-03-08T00:43:43.699Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-03-08T00:43:46.707Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-03-08T00:43:49.711Z",
+      "fighter1": {
+        "name": "Alberto Montes",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "fighter2": {
+        "name": "Ricky Turcios",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
     {
       "timestamp": "2026-03-08T00:43:52.716Z",
       "fighter1": {
@@ -1236,5 +2691,32 @@
       "isLocked": false,
       "extractionId": 35
     }
-  ]
+  ],
+  "createdAt": "2026-03-08T00:42:40.564Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Alberto Montes",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:50:41.357Z",
+    "openingF1Odds": -188,
+    "openingF2Odds": 158,
+    "closingF1Odds": -1200,
+    "closingF2Odds": 660,
+    "lineMovementF1": -1012,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  },
+  "derived": {
+    "inferredFinishMin": 7,
+    "inferredFinishRound": 2,
+    "peakOddsSwing": 1012,
+    "finishSpeed": "medium",
+    "preFightSteam": -1012,
+    "dominanceScore": 64,
+    "crossoverCount": 0,
+    "derivedAt": "2026-06-14T11:47:28.362Z"
+  }
 }

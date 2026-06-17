@@ -1,11 +1,821 @@
 {
   "fightId": "robfont_vs_raulrosasjr",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-03-08T03:26:47.158Z",
+  "startTime": "2026-03-08T03:24:04.757Z",
   "endTime": "2026-03-08T03:40:12.925Z",
-  "dataPoints": 509,
+  "duration": 968168,
+  "dataPoints": 563,
   "oddsHistory": [
+    {
+      "timestamp": "2026-03-08T03:24:04.757Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 42
+    },
+    {
+      "timestamp": "2026-03-08T03:24:07.761Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-08T03:24:10.774Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-08T03:24:13.786Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-08T03:24:16.801Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-08T03:24:19.816Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-03-08T03:24:22.830Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-03-08T03:24:25.830Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-03-08T03:24:28.830Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-03-08T03:24:31.845Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-03-08T03:24:34.855Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-03-08T03:24:37.858Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-03-08T03:24:40.871Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-03-08T03:24:43.885Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-03-08T03:24:46.886Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-03-08T03:24:49.898Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-03-08T03:24:52.899Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-03-08T03:24:55.903Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-03-08T03:24:58.909Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-03-08T03:25:01.920Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-03-08T03:25:04.923Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-03-08T03:25:07.934Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-03-08T03:25:10.947Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-03-08T03:25:13.950Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-03-08T03:25:16.951Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-03-08T03:25:19.953Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-03-08T03:25:22.959Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-03-08T03:25:25.972Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-03-08T03:25:28.976Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-03-08T03:25:31.977Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-03-08T03:25:34.982Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-03-08T03:25:37.994Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-03-08T03:25:41.000Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-03-08T03:25:44.003Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-03-08T03:25:47.008Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-03-08T03:25:50.017Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-03-08T03:25:53.018Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2026-03-08T03:25:56.018Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2026-03-08T03:25:59.020Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 39
+    },
+    {
+      "timestamp": "2026-03-08T03:26:02.024Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 40
+    },
+    {
+      "timestamp": "2026-03-08T03:26:05.027Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 41
+    },
+    {
+      "timestamp": "2026-03-08T03:26:08.029Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 42
+    },
+    {
+      "timestamp": "2026-03-08T03:26:11.032Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 43
+    },
+    {
+      "timestamp": "2026-03-08T03:26:14.039Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 44
+    },
+    {
+      "timestamp": "2026-03-08T03:26:17.051Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 45
+    },
+    {
+      "timestamp": "2026-03-08T03:26:20.066Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 46
+    },
+    {
+      "timestamp": "2026-03-08T03:26:23.068Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 47
+    },
+    {
+      "timestamp": "2026-03-08T03:26:26.068Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 48
+    },
+    {
+      "timestamp": "2026-03-08T03:26:29.084Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 49
+    },
+    {
+      "timestamp": "2026-03-08T03:26:32.086Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+230",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "isLocked": false,
+      "extractionId": 50
+    },
+    {
+      "timestamp": "2026-03-08T03:26:35.127Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+230",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "isLocked": false,
+      "extractionId": 51
+    },
+    {
+      "timestamp": "2026-03-08T03:26:38.136Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-290",
+        "numericOdds": -290
+      },
+      "isLocked": false,
+      "extractionId": 52
+    },
+    {
+      "timestamp": "2026-03-08T03:26:41.139Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-290",
+        "numericOdds": -290
+      },
+      "isLocked": false,
+      "extractionId": 53
+    },
+    {
+      "timestamp": "2026-03-08T03:26:44.151Z",
+      "fighter1": {
+        "name": "Rob Font",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "fighter2": {
+        "name": "Raul Rosas Jr.",
+        "odds": "-290",
+        "numericOdds": -290
+      },
+      "isLocked": false,
+      "extractionId": 54
+    },
     {
       "timestamp": "2026-03-08T03:26:47.158Z",
       "fighter1": {
@@ -7641,5 +8451,32 @@
       "isLocked": false,
       "extractionId": 244
     }
-  ]
+  ],
+  "createdAt": "2026-03-08T03:27:47.319Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Raul Rosas Jr.",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:52:15.718Z",
+    "openingF1Odds": 250,
+    "openingF2Odds": -310,
+    "closingF1Odds": 2300,
+    "closingF2Odds": -6000,
+    "lineMovementF1": 2050,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  },
+  "derived": {
+    "inferredFinishMin": 9,
+    "inferredFinishRound": 2,
+    "peakOddsSwing": 2050,
+    "finishSpeed": "medium",
+    "preFightSteam": 2050,
+    "dominanceScore": 100,
+    "crossoverCount": 0,
+    "derivedAt": "2026-06-14T11:47:28.486Z"
+  }
 }

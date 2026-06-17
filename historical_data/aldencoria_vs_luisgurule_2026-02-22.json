@@ -1,11 +1,446 @@
 {
   "fightId": "aldencoria_vs_luisgurule",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-02-22T00:12:14.754Z",
+  "startTime": "2026-02-22T00:10:47.522Z",
   "endTime": "2026-02-22T00:25:59.083Z",
-  "dataPoints": 319,
+  "duration": 911561,
+  "dataPoints": 348,
   "oddsHistory": [
+    {
+      "timestamp": "2026-02-22T00:10:47.522Z",
+      "fighter1": {
+        "name": "Alden Coria",
+        "odds": "-390",
+        "numericOdds": -390
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-02-22T00:10:50.539Z",
+      "fighter1": {
+        "name": "Alden Coria",
+        "odds": "-390",
+        "numericOdds": -390
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-02-22T00:10:53.552Z",
+      "fighter1": {
+        "name": "Alden Coria",
+        "odds": "-390",
+        "numericOdds": -390
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-02-22T00:10:56.561Z",
+      "fighter1": {
+        "name": "Alden Coria",
+        "odds": "-390",
+        "numericOdds": -390
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-02-22T00:10:59.570Z",
+      "fighter1": {
+        "name": "Alden Coria",
+        "odds": "-390",
+        "numericOdds": -390
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-02-22T00:11:02.579Z",
+      "fighter1": {
+        "name": "Alden Coria",
+        "odds": "-390",
+        "numericOdds": -390
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-02-22T00:11:05.579Z",
+      "fighter1": {
+        "name": "Alden Coria",
+        "odds": "-390",
+        "numericOdds": -390
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-02-22T00:11:08.582Z",
+      "fighter1": {
+        "name": "Alden Coria",
+        "odds": "-390",
+        "numericOdds": -390
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-02-22T00:11:11.588Z",
+      "fighter1": {
+        "name": "Alden Coria",
+        "odds": "-390",
+        "numericOdds": -390
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-02-22T00:11:14.598Z",
+      "fighter1": {
+        "name": "Alden Coria",
+        "odds": "-390",
+        "numericOdds": -390
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-02-22T00:11:17.606Z",
+      "fighter1": {
+        "name": "Alden Coria",
+        "odds": "-390",
+        "numericOdds": -390
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-02-22T00:11:20.620Z",
+      "fighter1": {
+        "name": "Alden Coria",
+        "odds": "-390",
+        "numericOdds": -390
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-02-22T00:11:23.633Z",
+      "fighter1": {
+        "name": "Alden Coria",
+        "odds": "-390",
+        "numericOdds": -390
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-02-22T00:11:26.641Z",
+      "fighter1": {
+        "name": "Alden Coria",
+        "odds": "-390",
+        "numericOdds": -390
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-02-22T00:11:29.648Z",
+      "fighter1": {
+        "name": "Alden Coria",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-02-22T00:11:32.652Z",
+      "fighter1": {
+        "name": "Alden Coria",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-02-22T00:11:35.661Z",
+      "fighter1": {
+        "name": "Alden Coria",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-02-22T00:11:38.676Z",
+      "fighter1": {
+        "name": "Alden Coria",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-02-22T00:11:41.691Z",
+      "fighter1": {
+        "name": "Alden Coria",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-02-22T00:11:44.691Z",
+      "fighter1": {
+        "name": "Alden Coria",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-02-22T00:11:47.706Z",
+      "fighter1": {
+        "name": "Alden Coria",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-02-22T00:11:50.719Z",
+      "fighter1": {
+        "name": "Alden Coria",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-02-22T00:11:53.732Z",
+      "fighter1": {
+        "name": "Alden Coria",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-02-22T00:11:56.745Z",
+      "fighter1": {
+        "name": "Alden Coria",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-02-22T00:11:59.745Z",
+      "fighter1": {
+        "name": "Alden Coria",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-02-22T00:12:02.746Z",
+      "fighter1": {
+        "name": "Alden Coria",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-02-22T00:12:05.746Z",
+      "fighter1": {
+        "name": "Alden Coria",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-02-22T00:12:08.752Z",
+      "fighter1": {
+        "name": "Alden Coria",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-02-22T00:12:11.754Z",
+      "fighter1": {
+        "name": "Alden Coria",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
     {
       "timestamp": "2026-02-22T00:12:14.754Z",
       "fighter1": {
@@ -4791,5 +5226,32 @@
       "isLocked": false,
       "extractionId": 65
     }
-  ]
+  ],
+  "createdAt": "2026-02-22T00:20:28.210Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Alden Coria",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:50:41.872Z",
+    "openingF1Odds": -390,
+    "openingF2Odds": 310,
+    "closingF1Odds": -4500,
+    "closingF2Odds": 1800,
+    "lineMovementF1": -4110,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  },
+  "derived": {
+    "inferredFinishMin": 8,
+    "inferredFinishRound": 2,
+    "peakOddsSwing": 4110,
+    "finishSpeed": "fast",
+    "preFightSteam": -4110,
+    "dominanceScore": 100,
+    "crossoverCount": 0,
+    "derivedAt": "2026-06-14T11:47:28.363Z"
+  }
 }

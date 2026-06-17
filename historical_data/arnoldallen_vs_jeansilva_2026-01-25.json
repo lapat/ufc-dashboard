@@ -1,11 +1,1421 @@
 {
   "fightId": "arnoldallen_vs_jeansilva",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-01-25T02:34:38.475Z",
+  "startTime": "2026-01-25T02:29:55.612Z",
   "endTime": "2026-01-25T02:48:46.988Z",
-  "dataPoints": 419,
+  "duration": 1131376,
+  "dataPoints": 513,
   "oddsHistory": [
+    {
+      "timestamp": "2026-01-25T02:29:55.612Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+184",
+        "numericOdds": 184
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 279
+    },
+    {
+      "timestamp": "2026-01-25T02:29:58.616Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+184",
+        "numericOdds": 184
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-01-25T02:30:01.621Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+184",
+        "numericOdds": 184
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-01-25T02:30:04.623Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+184",
+        "numericOdds": 184
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-01-25T02:30:07.637Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+184",
+        "numericOdds": 184
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-01-25T02:30:10.642Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+184",
+        "numericOdds": 184
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-01-25T02:30:13.653Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+184",
+        "numericOdds": 184
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-01-25T02:30:16.659Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+184",
+        "numericOdds": 184
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-01-25T02:30:19.666Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+184",
+        "numericOdds": 184
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-01-25T02:30:22.679Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+184",
+        "numericOdds": 184
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-01-25T02:30:25.690Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+184",
+        "numericOdds": 184
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-01-25T02:30:28.697Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+184",
+        "numericOdds": 184
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-01-25T02:30:31.713Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+184",
+        "numericOdds": 184
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-01-25T02:30:34.715Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+184",
+        "numericOdds": 184
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-01-25T02:30:37.728Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+184",
+        "numericOdds": 184
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-01-25T02:30:40.728Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+184",
+        "numericOdds": 184
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-01-25T02:30:43.742Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+184",
+        "numericOdds": 184
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-01-25T02:30:46.755Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+184",
+        "numericOdds": 184
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-01-25T02:30:49.768Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+184",
+        "numericOdds": 184
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-01-25T02:30:52.783Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+184",
+        "numericOdds": 184
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-01-25T02:30:55.793Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+184",
+        "numericOdds": 184
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-01-25T02:30:58.803Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+184",
+        "numericOdds": 184
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-01-25T02:31:01.818Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+184",
+        "numericOdds": 184
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-01-25T02:31:04.831Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+184",
+        "numericOdds": 184
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-01-25T02:31:07.844Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-01-25T02:31:10.853Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-01-25T02:31:13.865Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-01-25T02:31:16.877Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-01-25T02:31:19.890Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-01-25T02:31:22.903Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-01-25T02:31:25.906Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-01-25T02:31:28.921Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-01-25T02:31:31.933Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-01-25T02:31:34.939Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+192",
+        "numericOdds": 192
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-01-25T02:31:37.950Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+192",
+        "numericOdds": 192
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-01-25T02:31:40.959Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+192",
+        "numericOdds": 192
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-01-25T02:31:43.966Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+192",
+        "numericOdds": 192
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2026-01-25T02:31:46.977Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+192",
+        "numericOdds": 192
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2026-01-25T02:31:49.977Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+192",
+        "numericOdds": 192
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 39
+    },
+    {
+      "timestamp": "2026-01-25T02:31:52.983Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+192",
+        "numericOdds": 192
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 40
+    },
+    {
+      "timestamp": "2026-01-25T02:31:55.998Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+192",
+        "numericOdds": 192
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 41
+    },
+    {
+      "timestamp": "2026-01-25T02:31:58.998Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+192",
+        "numericOdds": 192
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 42
+    },
+    {
+      "timestamp": "2026-01-25T02:32:01.999Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+192",
+        "numericOdds": 192
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 43
+    },
+    {
+      "timestamp": "2026-01-25T02:32:05.011Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+192",
+        "numericOdds": 192
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 44
+    },
+    {
+      "timestamp": "2026-01-25T02:32:08.013Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+192",
+        "numericOdds": 192
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 45
+    },
+    {
+      "timestamp": "2026-01-25T02:32:11.029Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+192",
+        "numericOdds": 192
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 46
+    },
+    {
+      "timestamp": "2026-01-25T02:32:14.038Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+192",
+        "numericOdds": 192
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 47
+    },
+    {
+      "timestamp": "2026-01-25T02:32:17.053Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+192",
+        "numericOdds": 192
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 48
+    },
+    {
+      "timestamp": "2026-01-25T02:32:20.062Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+192",
+        "numericOdds": 192
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 49
+    },
+    {
+      "timestamp": "2026-01-25T02:32:23.075Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+192",
+        "numericOdds": 192
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 50
+    },
+    {
+      "timestamp": "2026-01-25T02:32:26.080Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+192",
+        "numericOdds": 192
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 51
+    },
+    {
+      "timestamp": "2026-01-25T02:32:29.080Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+192",
+        "numericOdds": 192
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 52
+    },
+    {
+      "timestamp": "2026-01-25T02:32:32.092Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+192",
+        "numericOdds": 192
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 53
+    },
+    {
+      "timestamp": "2026-01-25T02:32:35.101Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+192",
+        "numericOdds": 192
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 54
+    },
+    {
+      "timestamp": "2026-01-25T02:32:38.105Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+192",
+        "numericOdds": 192
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 55
+    },
+    {
+      "timestamp": "2026-01-25T02:32:41.110Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 56
+    },
+    {
+      "timestamp": "2026-01-25T02:32:44.119Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 57
+    },
+    {
+      "timestamp": "2026-01-25T02:32:47.128Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 58
+    },
+    {
+      "timestamp": "2026-01-25T02:32:50.142Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 59
+    },
+    {
+      "timestamp": "2026-01-25T02:32:53.150Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 60
+    },
+    {
+      "timestamp": "2026-01-25T02:32:56.169Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 61
+    },
+    {
+      "timestamp": "2026-01-25T02:32:59.171Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 62
+    },
+    {
+      "timestamp": "2026-01-25T02:33:02.182Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 63
+    },
+    {
+      "timestamp": "2026-01-25T02:33:05.182Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 64
+    },
+    {
+      "timestamp": "2026-01-25T02:33:08.194Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 65
+    },
+    {
+      "timestamp": "2026-01-25T02:33:11.204Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 66
+    },
+    {
+      "timestamp": "2026-01-25T02:33:14.216Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 67
+    },
+    {
+      "timestamp": "2026-01-25T02:33:17.231Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 68
+    },
+    {
+      "timestamp": "2026-01-25T02:33:20.237Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-225",
+        "numericOdds": -225
+      },
+      "isLocked": false,
+      "extractionId": 69
+    },
+    {
+      "timestamp": "2026-01-25T02:33:23.252Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-225",
+        "numericOdds": -225
+      },
+      "isLocked": false,
+      "extractionId": 70
+    },
+    {
+      "timestamp": "2026-01-25T02:33:26.264Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 71
+    },
+    {
+      "timestamp": "2026-01-25T02:33:29.271Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 72
+    },
+    {
+      "timestamp": "2026-01-25T02:33:32.285Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 73
+    },
+    {
+      "timestamp": "2026-01-25T02:33:35.293Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 74
+    },
+    {
+      "timestamp": "2026-01-25T02:33:38.307Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 75
+    },
+    {
+      "timestamp": "2026-01-25T02:33:41.317Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 76
+    },
+    {
+      "timestamp": "2026-01-25T02:33:44.332Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 77
+    },
+    {
+      "timestamp": "2026-01-25T02:33:47.346Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 78
+    },
+    {
+      "timestamp": "2026-01-25T02:33:50.350Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 79
+    },
+    {
+      "timestamp": "2026-01-25T02:33:53.356Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 80
+    },
+    {
+      "timestamp": "2026-01-25T02:33:56.363Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 81
+    },
+    {
+      "timestamp": "2026-01-25T02:33:59.370Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 82
+    },
+    {
+      "timestamp": "2026-01-25T02:34:02.373Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 83
+    },
+    {
+      "timestamp": "2026-01-25T02:34:05.384Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 84
+    },
+    {
+      "timestamp": "2026-01-25T02:34:08.397Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 85
+    },
+    {
+      "timestamp": "2026-01-25T02:34:11.402Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 86
+    },
+    {
+      "timestamp": "2026-01-25T02:34:14.409Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 87
+    },
+    {
+      "timestamp": "2026-01-25T02:34:17.415Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 88
+    },
+    {
+      "timestamp": "2026-01-25T02:34:20.423Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 89
+    },
+    {
+      "timestamp": "2026-01-25T02:34:23.434Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 90
+    },
+    {
+      "timestamp": "2026-01-25T02:34:26.446Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-182",
+        "numericOdds": -182
+      },
+      "isLocked": false,
+      "extractionId": 91
+    },
+    {
+      "timestamp": "2026-01-25T02:34:29.456Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-182",
+        "numericOdds": -182
+      },
+      "isLocked": false,
+      "extractionId": 92
+    },
+    {
+      "timestamp": "2026-01-25T02:34:32.465Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-182",
+        "numericOdds": -182
+      },
+      "isLocked": false,
+      "extractionId": 93
+    },
+    {
+      "timestamp": "2026-01-25T02:34:35.467Z",
+      "fighter1": {
+        "name": "Arnold Allen",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Jean Silva",
+        "odds": "-182",
+        "numericOdds": -182
+      },
+      "isLocked": false,
+      "extractionId": 94
+    },
     {
       "timestamp": "2026-01-25T02:34:38.475Z",
       "fighter1": {
@@ -6291,5 +7701,32 @@
       "isLocked": false,
       "extractionId": 144
     }
-  ]
+  ],
+  "createdAt": "2026-01-25T02:35:02.533Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Jean Silva",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:50:50.607Z",
+    "openingF1Odds": 184,
+    "openingF2Odds": -220,
+    "closingF1Odds": 920,
+    "closingF2Odds": -1800,
+    "lineMovementF1": 736,
+    "crossoverOccurred": true,
+    "crossoverMinute": 6
+  },
+  "derived": {
+    "inferredFinishMin": 18,
+    "inferredFinishRound": 4,
+    "peakOddsSwing": 736,
+    "finishSpeed": "slow",
+    "preFightSteam": 736,
+    "dominanceScore": 82,
+    "crossoverCount": 2,
+    "derivedAt": "2026-06-14T11:47:28.377Z"
+  }
 }

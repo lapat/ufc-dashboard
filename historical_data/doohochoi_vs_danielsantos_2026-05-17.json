@@ -1,65 +1,3292 @@
 {
-  "fightId": "doohochoi_vs_danielsantos_2026-05-17",
-  "fightTitle": "Dooho Choi vs Daniel Santos",
-  "commenceTime": "2026-05-17T02:15:00Z",
-  "startTime": "2026-05-17T02:05:37Z",
-  "endTime": "2026-05-17T02:25:37Z",
-  "dataPoints": 5,
+  "fightId": "doohochoi_vs_danielsantos",
+  "fightTitle": "Connected but no betting buttons found",
+  "startTime": "2026-05-17T02:02:48.490Z",
+  "endTime": "2026-05-17T02:14:49.971Z",
+  "duration": 721481,
+  "dataPoints": 217,
   "oddsHistory": [
     {
-      "timestamp": "2026-05-17T02:05:37Z",
+      "timestamp": "2026-05-17T02:02:48.490Z",
       "fighter1": {
-        "name": "Daniel Santos",
-        "numericOdds": -200
+        "name": "Dooho Choi",
+        "odds": "+142",
+        "numericOdds": 142
       },
       "fighter2": {
-        "name": "Dooho Choi",
-        "numericOdds": 154
-      }
+        "name": "Daniel Santos",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 12
     },
     {
-      "timestamp": "2026-05-17T02:10:37Z",
+      "timestamp": "2026-05-17T02:02:51.505Z",
       "fighter1": {
-        "name": "Daniel Santos",
-        "numericOdds": -345
+        "name": "Dooho Choi",
+        "odds": "+142",
+        "numericOdds": 142
       },
       "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-05-17T02:02:54.511Z",
+      "fighter1": {
         "name": "Dooho Choi",
+        "odds": "+142",
+        "numericOdds": 142
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-17T02:02:57.512Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+142",
+        "numericOdds": 142
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-17T02:03:00.529Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+142",
+        "numericOdds": 142
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-05-17T02:03:03.531Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+142",
+        "numericOdds": 142
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-05-17T02:03:06.535Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+142",
+        "numericOdds": 142
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-05-17T02:03:09.537Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+142",
+        "numericOdds": 142
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-05-17T02:03:12.542Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+142",
+        "numericOdds": 142
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-05-17T02:03:15.555Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+142",
+        "numericOdds": 142
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-05-17T02:03:18.557Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+142",
+        "numericOdds": 142
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-05-17T02:03:21.570Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+142",
+        "numericOdds": 142
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-05-17T02:03:24.584Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+142",
+        "numericOdds": 142
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-05-17T02:03:27.586Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+142",
+        "numericOdds": 142
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-05-17T02:03:30.586Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+142",
+        "numericOdds": 142
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-05-17T02:03:33.601Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+142",
+        "numericOdds": 142
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-05-17T02:03:36.603Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+142",
+        "numericOdds": 142
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-05-17T02:03:39.606Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+142",
+        "numericOdds": 142
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-05-17T02:03:42.607Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+142",
+        "numericOdds": 142
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-05-17T02:03:45.610Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+142",
+        "numericOdds": 142
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-05-17T02:03:48.610Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+142",
+        "numericOdds": 142
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-05-17T02:03:51.625Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+142",
+        "numericOdds": 142
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-05-17T02:03:54.632Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+142",
+        "numericOdds": 142
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-05-17T02:03:57.648Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-05-17T02:04:00.663Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-05-17T02:04:03.670Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-05-17T02:04:06.684Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-05-17T02:04:09.686Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-05-17T02:04:12.687Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-05-17T02:04:15.696Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-05-17T02:04:18.710Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-05-17T02:04:21.716Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-05-17T02:04:24.716Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-05-17T02:04:27.725Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-05-17T02:04:30.725Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-05-17T02:04:33.726Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-05-17T02:04:36.730Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2026-05-17T02:04:39.735Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2026-05-17T02:04:42.749Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 39
+    },
+    {
+      "timestamp": "2026-05-17T02:04:45.756Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 40
+    },
+    {
+      "timestamp": "2026-05-17T02:04:48.757Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+134",
+        "numericOdds": 134
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-172",
+        "numericOdds": -172
+      },
+      "isLocked": false,
+      "extractionId": 41
+    },
+    {
+      "timestamp": "2026-05-17T02:04:51.762Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+134",
+        "numericOdds": 134
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-172",
+        "numericOdds": -172
+      },
+      "isLocked": false,
+      "extractionId": 42
+    },
+    {
+      "timestamp": "2026-05-17T02:04:54.762Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+134",
+        "numericOdds": 134
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-172",
+        "numericOdds": -172
+      },
+      "isLocked": false,
+      "extractionId": 43
+    },
+    {
+      "timestamp": "2026-05-17T02:04:57.763Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+134",
+        "numericOdds": 134
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-172",
+        "numericOdds": -172
+      },
+      "isLocked": false,
+      "extractionId": 44
+    },
+    {
+      "timestamp": "2026-05-17T02:05:00.769Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+134",
+        "numericOdds": 134
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-172",
+        "numericOdds": -172
+      },
+      "isLocked": false,
+      "extractionId": 45
+    },
+    {
+      "timestamp": "2026-05-17T02:05:03.780Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "isLocked": false,
+      "extractionId": 46
+    },
+    {
+      "timestamp": "2026-05-17T02:05:06.781Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "isLocked": false,
+      "extractionId": 47
+    },
+    {
+      "timestamp": "2026-05-17T02:05:09.784Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "isLocked": false,
+      "extractionId": 48
+    },
+    {
+      "timestamp": "2026-05-17T02:05:12.798Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "isLocked": false,
+      "extractionId": 49
+    },
+    {
+      "timestamp": "2026-05-17T02:05:15.802Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "isLocked": false,
+      "extractionId": 50
+    },
+    {
+      "timestamp": "2026-05-17T02:05:24.824Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+166",
+        "numericOdds": 166
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 51
+    },
+    {
+      "timestamp": "2026-05-17T02:05:27.836Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+166",
+        "numericOdds": 166
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-05-17T02:05:30.838Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+200",
+        "numericOdds": 200
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-270",
+        "numericOdds": -270
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-17T02:05:33.841Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+184",
+        "numericOdds": 184
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-240",
+        "numericOdds": -240
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-17T02:05:36.845Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+184",
+        "numericOdds": 184
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-240",
+        "numericOdds": -240
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-05-17T02:05:45.855Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+184",
+        "numericOdds": 184
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-240",
+        "numericOdds": -240
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-05-17T02:05:48.856Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+235",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-05-17T02:05:51.856Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+235",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-17T02:05:54.857Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+205",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-17T02:05:57.861Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+205",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-05-17T02:06:00.867Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+192",
+        "numericOdds": 192
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-05-17T02:06:03.872Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-05-17T02:06:06.877Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-05-17T02:06:09.882Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-05-17T02:06:12.885Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-05-17T02:06:15.892Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-05-17T02:06:18.906Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-05-17T02:06:21.916Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-05-17T02:06:24.918Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-05-17T02:06:27.922Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-05-17T02:06:30.922Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-05-17T02:06:33.936Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-05-17T02:06:36.938Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-05-17T02:06:45.959Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+250",
         "numericOdds": 250
-      }
-    },
-    {
-      "timestamp": "2026-05-17T02:15:37Z",
-      "fighter1": {
-        "name": "Daniel Santos",
-        "numericOdds": 325
       },
       "fighter2": {
-        "name": "Dooho Choi",
-        "numericOdds": -475
-      }
+        "name": "Daniel Santos",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "isLocked": false,
+      "extractionId": 19
     },
     {
-      "timestamp": "2026-05-17T02:20:37Z",
+      "timestamp": "2026-05-17T02:06:48.960Z",
       "fighter1": {
-        "name": "Daniel Santos",
-        "numericOdds": 325
+        "name": "Dooho Choi",
+        "odds": "+250",
+        "numericOdds": 250
       },
       "fighter2": {
-        "name": "Dooho Choi",
-        "numericOdds": -475
-      }
+        "name": "Daniel Santos",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "isLocked": false,
+      "extractionId": 2
     },
     {
-      "timestamp": "2026-05-17T02:25:37Z",
+      "timestamp": "2026-05-17T02:06:51.971Z",
       "fighter1": {
-        "name": "Daniel Santos",
-        "numericOdds": 325
+        "name": "Dooho Choi",
+        "odds": "+250",
+        "numericOdds": 250
       },
       "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-17T02:07:16.027Z",
+      "fighter1": {
         "name": "Dooho Choi",
-        "numericOdds": -475
-      }
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-17T02:07:19.029Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-05-17T02:07:22.040Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-17T02:07:25.048Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+370",
+        "numericOdds": 370
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-600",
+        "numericOdds": -600
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-17T02:07:28.050Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+370",
+        "numericOdds": 370
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-600",
+        "numericOdds": -600
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-05-17T02:07:37.057Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-05-17T02:07:52.082Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+148",
+        "numericOdds": 148
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-190",
+        "numericOdds": -190
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-05-17T02:07:55.086Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+196",
+        "numericOdds": 196
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-05-17T02:07:58.093Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+196",
+        "numericOdds": 196
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-17T02:08:01.096Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-17T02:08:04.110Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-05-17T02:08:07.113Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-05-17T02:08:10.116Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-05-17T02:08:13.121Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-05-17T02:08:22.132Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-05-17T02:08:25.134Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-05-17T02:08:28.133Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-17T02:08:31.136Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-17T02:08:34.143Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-05-17T02:08:37.158Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-05-17T02:08:40.162Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-05-17T02:08:43.167Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-05-17T02:08:52.197Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+330",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-480",
+        "numericOdds": -480
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-05-17T02:08:55.207Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+330",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-480",
+        "numericOdds": -480
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-05-17T02:08:58.208Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+390",
+        "numericOdds": 390
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-600",
+        "numericOdds": -600
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-17T02:09:01.214Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+370",
+        "numericOdds": 370
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-600",
+        "numericOdds": -600
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-17T02:09:04.219Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+370",
+        "numericOdds": 370
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-600",
+        "numericOdds": -600
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-05-17T02:09:07.235Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-05-17T02:09:10.242Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-05-17T02:09:13.245Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-05-17T02:09:16.259Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-05-17T02:09:19.263Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-05-17T02:09:22.275Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-05-17T02:09:25.278Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-05-17T02:09:28.287Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-05-17T02:09:31.288Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-05-17T02:09:34.292Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-05-17T02:09:37.296Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-05-17T02:09:40.302Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-05-17T02:09:43.307Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-05-17T02:09:46.315Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-05-17T02:09:49.322Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-05-17T02:09:52.331Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-05-17T02:09:55.333Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-05-17T02:09:58.335Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-05-17T02:10:01.342Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-05-17T02:10:04.349Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+235",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-05-17T02:10:07.358Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+235",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-05-17T02:10:10.359Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+235",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-05-17T02:10:13.369Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+235",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-05-17T02:10:16.373Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+235",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-05-17T02:10:19.375Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+235",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-05-17T02:10:22.376Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-290",
+        "numericOdds": -290
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-05-17T02:10:25.391Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-290",
+        "numericOdds": -290
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-05-17T02:10:28.405Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-290",
+        "numericOdds": -290
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-05-17T02:10:31.412Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-290",
+        "numericOdds": -290
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-05-17T02:10:34.425Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-05-17T02:10:37.430Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-05-17T02:10:40.431Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2026-05-17T02:10:43.432Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+235",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2026-05-17T02:10:46.435Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+235",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 39
+    },
+    {
+      "timestamp": "2026-05-17T02:10:49.438Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-380",
+        "numericOdds": -380
+      },
+      "isLocked": false,
+      "extractionId": 40
+    },
+    {
+      "timestamp": "2026-05-17T02:10:52.443Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-380",
+        "numericOdds": -380
+      },
+      "isLocked": false,
+      "extractionId": 41
+    },
+    {
+      "timestamp": "2026-05-17T02:10:55.452Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-380",
+        "numericOdds": -380
+      },
+      "isLocked": false,
+      "extractionId": 42
+    },
+    {
+      "timestamp": "2026-05-17T02:10:58.457Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "isLocked": false,
+      "extractionId": 43
+    },
+    {
+      "timestamp": "2026-05-17T02:11:01.466Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "isLocked": false,
+      "extractionId": 44
+    },
+    {
+      "timestamp": "2026-05-17T02:11:04.469Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "isLocked": false,
+      "extractionId": 45
+    },
+    {
+      "timestamp": "2026-05-17T02:11:07.472Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "isLocked": false,
+      "extractionId": 46
+    },
+    {
+      "timestamp": "2026-05-17T02:11:10.486Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "isLocked": false,
+      "extractionId": 47
+    },
+    {
+      "timestamp": "2026-05-17T02:11:13.499Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "isLocked": false,
+      "extractionId": 48
+    },
+    {
+      "timestamp": "2026-05-17T02:11:16.501Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "isLocked": false,
+      "extractionId": 49
+    },
+    {
+      "timestamp": "2026-05-17T02:11:19.508Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "isLocked": false,
+      "extractionId": 50
+    },
+    {
+      "timestamp": "2026-05-17T02:11:22.514Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "isLocked": false,
+      "extractionId": 51
+    },
+    {
+      "timestamp": "2026-05-17T02:11:25.526Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "isLocked": false,
+      "extractionId": 52
+    },
+    {
+      "timestamp": "2026-05-17T02:11:28.534Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 53
+    },
+    {
+      "timestamp": "2026-05-17T02:11:31.545Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 54
+    },
+    {
+      "timestamp": "2026-05-17T02:11:34.558Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 55
+    },
+    {
+      "timestamp": "2026-05-17T02:11:37.558Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 56
+    },
+    {
+      "timestamp": "2026-05-17T02:11:40.572Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 57
+    },
+    {
+      "timestamp": "2026-05-17T02:11:43.577Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+230",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "isLocked": false,
+      "extractionId": 58
+    },
+    {
+      "timestamp": "2026-05-17T02:11:46.578Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+230",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "isLocked": false,
+      "extractionId": 59
+    },
+    {
+      "timestamp": "2026-05-17T02:11:49.578Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 60
+    },
+    {
+      "timestamp": "2026-05-17T02:11:52.580Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 61
+    },
+    {
+      "timestamp": "2026-05-17T02:11:55.583Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "isLocked": false,
+      "extractionId": 62
+    },
+    {
+      "timestamp": "2026-05-17T02:11:58.583Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 63
+    },
+    {
+      "timestamp": "2026-05-17T02:12:01.585Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 64
+    },
+    {
+      "timestamp": "2026-05-17T02:12:04.597Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 65
+    },
+    {
+      "timestamp": "2026-05-17T02:12:07.603Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 66
+    },
+    {
+      "timestamp": "2026-05-17T02:12:10.603Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 67
+    },
+    {
+      "timestamp": "2026-05-17T02:12:13.607Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 68
+    },
+    {
+      "timestamp": "2026-05-17T02:12:16.618Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 69
+    },
+    {
+      "timestamp": "2026-05-17T02:12:19.618Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-380",
+        "numericOdds": -380
+      },
+      "isLocked": false,
+      "extractionId": 70
+    },
+    {
+      "timestamp": "2026-05-17T02:12:22.621Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-380",
+        "numericOdds": -380
+      },
+      "isLocked": false,
+      "extractionId": 71
+    },
+    {
+      "timestamp": "2026-05-17T02:12:25.622Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "isLocked": false,
+      "extractionId": 72
+    },
+    {
+      "timestamp": "2026-05-17T02:12:28.635Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+235",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 73
+    },
+    {
+      "timestamp": "2026-05-17T02:12:31.640Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+235",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 74
+    },
+    {
+      "timestamp": "2026-05-17T02:12:34.655Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-290",
+        "numericOdds": -290
+      },
+      "isLocked": false,
+      "extractionId": 75
+    },
+    {
+      "timestamp": "2026-05-17T02:12:37.668Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-290",
+        "numericOdds": -290
+      },
+      "isLocked": false,
+      "extractionId": 76
+    },
+    {
+      "timestamp": "2026-05-17T02:12:40.674Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-290",
+        "numericOdds": -290
+      },
+      "isLocked": false,
+      "extractionId": 77
+    },
+    {
+      "timestamp": "2026-05-17T02:12:43.682Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+188",
+        "numericOdds": 188
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-250",
+        "numericOdds": -250
+      },
+      "isLocked": false,
+      "extractionId": 78
+    },
+    {
+      "timestamp": "2026-05-17T02:12:46.688Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+188",
+        "numericOdds": 188
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-250",
+        "numericOdds": -250
+      },
+      "isLocked": false,
+      "extractionId": 79
+    },
+    {
+      "timestamp": "2026-05-17T02:12:49.693Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 80
+    },
+    {
+      "timestamp": "2026-05-17T02:12:52.698Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 81
+    },
+    {
+      "timestamp": "2026-05-17T02:12:55.707Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 82
+    },
+    {
+      "timestamp": "2026-05-17T02:12:58.712Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 83
+    },
+    {
+      "timestamp": "2026-05-17T02:13:01.721Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+140",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-180",
+        "numericOdds": -180
+      },
+      "isLocked": false,
+      "extractionId": 84
+    },
+    {
+      "timestamp": "2026-05-17T02:13:04.726Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "isLocked": false,
+      "extractionId": 85
+    },
+    {
+      "timestamp": "2026-05-17T02:13:07.728Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "isLocked": false,
+      "extractionId": 86
+    },
+    {
+      "timestamp": "2026-05-17T02:13:10.729Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "isLocked": false,
+      "extractionId": 87
+    },
+    {
+      "timestamp": "2026-05-17T02:13:13.739Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "isLocked": false,
+      "extractionId": 88
+    },
+    {
+      "timestamp": "2026-05-17T02:13:16.746Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "isLocked": false,
+      "extractionId": 89
+    },
+    {
+      "timestamp": "2026-05-17T02:13:19.754Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "isLocked": false,
+      "extractionId": 90
+    },
+    {
+      "timestamp": "2026-05-17T02:13:22.763Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "isLocked": false,
+      "extractionId": 91
+    },
+    {
+      "timestamp": "2026-05-17T02:13:31.785Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+124",
+        "numericOdds": 124
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-158",
+        "numericOdds": -158
+      },
+      "isLocked": false,
+      "extractionId": 92
+    },
+    {
+      "timestamp": "2026-05-17T02:13:34.792Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+124",
+        "numericOdds": 124
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-158",
+        "numericOdds": -158
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-05-17T02:13:37.804Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+124",
+        "numericOdds": 124
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-158",
+        "numericOdds": -158
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-17T02:13:40.809Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+122",
+        "numericOdds": 122
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-17T02:13:43.812Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+122",
+        "numericOdds": 122
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-05-17T02:13:46.825Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+122",
+        "numericOdds": 122
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-05-17T02:13:49.832Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-154",
+        "numericOdds": -154
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-05-17T02:13:52.844Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-154",
+        "numericOdds": -154
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-05-17T02:13:55.847Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+114",
+        "numericOdds": 114
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-146",
+        "numericOdds": -146
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-05-17T02:13:58.856Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+114",
+        "numericOdds": 114
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-146",
+        "numericOdds": -146
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-05-17T02:14:01.863Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "+110",
+        "numericOdds": 110
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-140",
+        "numericOdds": -140
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-05-17T02:14:04.865Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "-116",
+        "numericOdds": -116
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-110",
+        "numericOdds": -110
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-05-17T02:14:07.871Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "-116",
+        "numericOdds": -116
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "-110",
+        "numericOdds": -110
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-05-17T02:14:37.944Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-05-17T02:14:40.950Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-05-17T02:14:43.961Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-17T02:14:46.967Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-17T02:14:49.971Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-05-17T02:14:37.944Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-05-17T02:14:40.950Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-05-17T02:14:43.961Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-17T02:14:46.967Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-17T02:14:49.971Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-05-17T02:14:37.944Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-05-17T02:14:40.950Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-05-17T02:14:43.961Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-17T02:14:46.967Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-17T02:14:49.971Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Daniel Santos",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 5
     }
-  ]
+  ],
+  "createdAt": "2026-05-17T02:05:24.823Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Dooho Choi",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:51:16.644Z",
+    "openingF1Odds": 142,
+    "openingF2Odds": -168,
+    "closingF1Odds": -430,
+    "closingF2Odds": 300,
+    "lineMovementF1": -572,
+    "crossoverOccurred": true,
+    "crossoverMinute": 11
+  },
+  "derived": {
+    "inferredFinishMin": null,
+    "inferredFinishRound": null,
+    "peakOddsSwing": 572,
+    "finishSpeed": "decision",
+    "preFightSteam": -572,
+    "dominanceScore": 65,
+    "crossoverCount": 1,
+    "derivedAt": "2026-06-14T11:47:28.414Z"
+  }
 }

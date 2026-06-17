@@ -1,11 +1,671 @@
 {
   "fightId": "imanolrodriguez_vs_kevinborjas",
   "fightTitle": "Imanol Rodriguez vs Kevin Borjas",
-  "commenceTime": null,
-  "startTime": "2026-03-01T01:42:44.699Z",
+  "startTime": "2026-03-01T01:41:41.555Z",
   "endTime": "2026-03-01T02:02:33.447Z",
-  "dataPoints": 224,
+  "duration": 1251892,
+  "dataPoints": 268,
   "oddsHistory": [
+    {
+      "timestamp": "2026-03-01T01:41:41.555Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-03-01T01:41:44.564Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-01T01:41:47.563Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-01T01:41:50.564Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-01T01:41:53.565Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-01T01:41:56.575Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-03-01T01:41:59.585Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-03-01T01:42:02.585Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-03-01T01:42:05.593Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-03-01T01:42:08.602Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-03-01T01:42:11.603Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-03-01T01:42:14.612Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-03-01T01:42:17.623Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-03-01T01:42:20.635Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-03-01T01:42:23.644Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-03-01T01:42:26.652Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-03-01T01:42:29.656Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-03-01T01:42:32.663Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-03-01T01:42:35.669Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-03-01T01:42:38.677Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-03-01T01:42:41.688Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-03-01T01:42:44.699Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-03-01T01:42:47.706Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-03-01T01:41:41.555Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-03-01T01:41:44.564Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-01T01:41:47.563Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-01T01:41:50.564Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-01T01:41:53.565Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-01T01:41:56.575Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-03-01T01:41:59.585Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-03-01T01:42:02.585Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-03-01T01:42:05.593Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-03-01T01:42:08.602Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-03-01T01:42:11.603Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-03-01T01:42:14.612Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-03-01T01:42:17.623Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-03-01T01:42:20.635Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-03-01T01:42:23.644Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-03-01T01:42:26.652Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-03-01T01:42:29.656Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-03-01T01:42:32.663Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-03-01T01:42:35.669Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-03-01T01:42:38.677Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-03-01T01:42:41.688Z",
+      "fighter1": {
+        "name": "Imanol Rodriguez",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Kevin Borjas",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
     {
       "timestamp": "2026-03-01T01:42:44.699Z",
       "fighter1": {
@@ -3366,5 +4026,32 @@
       "isLocked": false,
       "extractionId": 5
     }
-  ]
+  ],
+  "createdAt": "2026-03-01T01:42:47.753Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Imanol Rodriguez",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:51:25.173Z",
+    "openingF1Odds": -450,
+    "openingF2Odds": 350,
+    "closingF1Odds": -600,
+    "closingF2Odds": 370,
+    "lineMovementF1": -150,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  },
+  "derived": {
+    "inferredFinishMin": null,
+    "inferredFinishRound": null,
+    "peakOddsSwing": 240,
+    "finishSpeed": "decision",
+    "preFightSteam": -150,
+    "dominanceScore": 100,
+    "crossoverCount": 0,
+    "derivedAt": "2026-06-14T11:47:28.421Z"
+  }
 }

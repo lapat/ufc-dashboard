@@ -1,33 +1,11 @@
 {
   "fightId": "marwanrahiki_vs_harryhardwick",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-03-13T21:35:38Z",
+  "startTime": "2026-03-15T01:18:14.870Z",
   "endTime": "2026-03-15T01:30:40.429Z",
-  "dataPoints": 202,
+  "duration": 745559,
+  "dataPoints": 262,
   "oddsHistory": [
-    {
-      "timestamp": "2026-03-13T21:35:38Z",
-      "fighter1": {
-        "name": "Harry Hardwick",
-        "numericOdds": 215
-      },
-      "fighter2": {
-        "name": "Marwan Rahiki",
-        "numericOdds": -265
-      }
-    },
-    {
-      "timestamp": "2026-03-13T21:40:38Z",
-      "fighter1": {
-        "name": "Harry Hardwick",
-        "numericOdds": 215
-      },
-      "fighter2": {
-        "name": "Marwan Rahiki",
-        "numericOdds": -265
-      }
-    },
     {
       "timestamp": "2026-03-15T01:18:14.870Z",
       "fighter1": {
@@ -3027,6 +3005,963 @@
       },
       "isLocked": false,
       "extractionId": 62
+    },
+    {
+      "timestamp": "2026-03-15T01:27:37.033Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-15T01:27:40.039Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-15T01:27:43.043Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-15T01:27:46.044Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-15T01:27:49.051Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-15T01:27:52.055Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-03-15T01:27:55.063Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-03-15T01:27:58.063Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-03-15T01:28:01.073Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-03-15T01:28:04.075Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-03-15T01:28:07.083Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-03-15T01:28:10.099Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-03-15T01:28:13.101Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-03-15T01:28:16.114Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-03-15T01:28:19.125Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-03-15T01:28:22.139Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-03-15T01:28:25.150Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-03-15T01:28:28.152Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-03-15T01:28:31.157Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-03-15T01:28:34.170Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-03-15T01:28:37.172Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-03-15T01:28:40.172Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-03-15T01:28:43.183Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-03-15T01:28:46.197Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-03-15T01:28:49.201Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-03-15T01:28:52.213Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-03-15T01:28:55.216Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-03-15T01:28:58.219Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-03-15T01:29:01.222Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-03-15T01:29:04.225Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-03-15T01:29:07.232Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-03-15T01:29:10.233Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-03-15T01:29:13.239Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-03-15T01:29:16.252Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-03-15T01:29:19.257Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-03-15T01:29:22.260Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-03-15T01:29:25.262Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2026-03-15T01:29:28.264Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2026-03-15T01:29:31.265Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 39
+    },
+    {
+      "timestamp": "2026-03-15T01:29:34.269Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 40
+    },
+    {
+      "timestamp": "2026-03-15T01:29:37.285Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 41
+    },
+    {
+      "timestamp": "2026-03-15T01:29:40.296Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "isLocked": false,
+      "extractionId": 42
+    },
+    {
+      "timestamp": "2026-03-15T01:29:43.296Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "isLocked": false,
+      "extractionId": 43
+    },
+    {
+      "timestamp": "2026-03-15T01:29:46.304Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "isLocked": false,
+      "extractionId": 44
+    },
+    {
+      "timestamp": "2026-03-15T01:29:49.309Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "isLocked": false,
+      "extractionId": 45
+    },
+    {
+      "timestamp": "2026-03-15T01:29:52.322Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "isLocked": false,
+      "extractionId": 46
+    },
+    {
+      "timestamp": "2026-03-15T01:29:55.326Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1200",
+        "numericOdds": -1200
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 47
+    },
+    {
+      "timestamp": "2026-03-15T01:29:58.328Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1200",
+        "numericOdds": -1200
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 48
+    },
+    {
+      "timestamp": "2026-03-15T01:30:01.337Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1200",
+        "numericOdds": -1200
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 49
+    },
+    {
+      "timestamp": "2026-03-15T01:30:04.350Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1200",
+        "numericOdds": -1200
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 50
+    },
+    {
+      "timestamp": "2026-03-15T01:30:07.357Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1200",
+        "numericOdds": -1200
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 51
+    },
+    {
+      "timestamp": "2026-03-15T01:30:10.368Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 52
+    },
+    {
+      "timestamp": "2026-03-15T01:30:13.370Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 53
+    },
+    {
+      "timestamp": "2026-03-15T01:30:16.377Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 54
+    },
+    {
+      "timestamp": "2026-03-15T01:30:19.383Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 55
+    },
+    {
+      "timestamp": "2026-03-15T01:30:22.388Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 56
+    },
+    {
+      "timestamp": "2026-03-15T01:30:25.400Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 57
+    },
+    {
+      "timestamp": "2026-03-15T01:30:28.401Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 58
+    },
+    {
+      "timestamp": "2026-03-15T01:30:31.404Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 59
+    },
+    {
+      "timestamp": "2026-03-15T01:30:34.410Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 60
+    },
+    {
+      "timestamp": "2026-03-15T01:30:37.414Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 61
+    },
+    {
+      "timestamp": "2026-03-15T01:30:40.429Z",
+      "fighter1": {
+        "name": "Marwan Rahiki",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "fighter2": {
+        "name": "Harry Hardwick",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "isLocked": false,
+      "extractionId": 62
     }
-  ]
+  ],
+  "createdAt": "2026-03-15T01:19:54.042Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Marwan Rahiki",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:51:56.702Z",
+    "openingF1Odds": -320,
+    "openingF2Odds": 260,
+    "closingF1Odds": -1300,
+    "closingF2Odds": 720,
+    "lineMovementF1": -980,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  },
+  "derived": {
+    "inferredFinishMin": 9,
+    "inferredFinishRound": 2,
+    "peakOddsSwing": 2080,
+    "finishSpeed": "medium",
+    "preFightSteam": -980,
+    "dominanceScore": 94,
+    "crossoverCount": 0,
+    "derivedAt": "2026-06-14T11:47:28.457Z"
+  }
 }

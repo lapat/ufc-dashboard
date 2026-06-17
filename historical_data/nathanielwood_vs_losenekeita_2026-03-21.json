@@ -1,11 +1,521 @@
 {
   "fightId": "nathanielwood_vs_losenekeita",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-03-21T19:14:25.161Z",
+  "startTime": "2026-03-21T19:12:42.953Z",
   "endTime": "2026-03-21T19:30:27.139Z",
-  "dataPoints": 676,
+  "duration": 1064186,
+  "dataPoints": 710,
   "oddsHistory": [
+    {
+      "timestamp": "2026-03-21T19:12:42.953Z",
+      "fighter1": {
+        "name": "Nathaniel Wood",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "fighter2": {
+        "name": "Losene Keita",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 340
+    },
+    {
+      "timestamp": "2026-03-21T19:12:45.959Z",
+      "fighter1": {
+        "name": "Nathaniel Wood",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "fighter2": {
+        "name": "Losene Keita",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-21T19:12:48.960Z",
+      "fighter1": {
+        "name": "Nathaniel Wood",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "fighter2": {
+        "name": "Losene Keita",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-21T19:12:51.972Z",
+      "fighter1": {
+        "name": "Nathaniel Wood",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "fighter2": {
+        "name": "Losene Keita",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-21T19:12:54.979Z",
+      "fighter1": {
+        "name": "Nathaniel Wood",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "fighter2": {
+        "name": "Losene Keita",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-21T19:12:57.993Z",
+      "fighter1": {
+        "name": "Nathaniel Wood",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "fighter2": {
+        "name": "Losene Keita",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-03-21T19:13:01.007Z",
+      "fighter1": {
+        "name": "Nathaniel Wood",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "fighter2": {
+        "name": "Losene Keita",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-03-21T19:13:04.008Z",
+      "fighter1": {
+        "name": "Nathaniel Wood",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "fighter2": {
+        "name": "Losene Keita",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-03-21T19:13:07.011Z",
+      "fighter1": {
+        "name": "Nathaniel Wood",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "fighter2": {
+        "name": "Losene Keita",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-03-21T19:13:10.017Z",
+      "fighter1": {
+        "name": "Nathaniel Wood",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "fighter2": {
+        "name": "Losene Keita",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-03-21T19:13:13.030Z",
+      "fighter1": {
+        "name": "Nathaniel Wood",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "fighter2": {
+        "name": "Losene Keita",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-03-21T19:13:16.036Z",
+      "fighter1": {
+        "name": "Nathaniel Wood",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "fighter2": {
+        "name": "Losene Keita",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-03-21T19:13:19.038Z",
+      "fighter1": {
+        "name": "Nathaniel Wood",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "fighter2": {
+        "name": "Losene Keita",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-03-21T19:13:22.041Z",
+      "fighter1": {
+        "name": "Nathaniel Wood",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "fighter2": {
+        "name": "Losene Keita",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-03-21T19:13:25.055Z",
+      "fighter1": {
+        "name": "Nathaniel Wood",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "fighter2": {
+        "name": "Losene Keita",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-03-21T19:13:28.068Z",
+      "fighter1": {
+        "name": "Nathaniel Wood",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "fighter2": {
+        "name": "Losene Keita",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-03-21T19:13:31.083Z",
+      "fighter1": {
+        "name": "Nathaniel Wood",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "fighter2": {
+        "name": "Losene Keita",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-03-21T19:13:34.086Z",
+      "fighter1": {
+        "name": "Nathaniel Wood",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "fighter2": {
+        "name": "Losene Keita",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-03-21T19:13:37.101Z",
+      "fighter1": {
+        "name": "Nathaniel Wood",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "fighter2": {
+        "name": "Losene Keita",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-03-21T19:13:40.110Z",
+      "fighter1": {
+        "name": "Nathaniel Wood",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "fighter2": {
+        "name": "Losene Keita",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-03-21T19:13:43.113Z",
+      "fighter1": {
+        "name": "Nathaniel Wood",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "fighter2": {
+        "name": "Losene Keita",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-03-21T19:13:46.115Z",
+      "fighter1": {
+        "name": "Nathaniel Wood",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "fighter2": {
+        "name": "Losene Keita",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-03-21T19:13:49.116Z",
+      "fighter1": {
+        "name": "Nathaniel Wood",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "fighter2": {
+        "name": "Losene Keita",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-03-21T19:13:52.118Z",
+      "fighter1": {
+        "name": "Nathaniel Wood",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "fighter2": {
+        "name": "Losene Keita",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-03-21T19:13:55.124Z",
+      "fighter1": {
+        "name": "Nathaniel Wood",
+        "odds": "+188",
+        "numericOdds": 188
+      },
+      "fighter2": {
+        "name": "Losene Keita",
+        "odds": "-250",
+        "numericOdds": -250
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-03-21T19:13:58.125Z",
+      "fighter1": {
+        "name": "Nathaniel Wood",
+        "odds": "+188",
+        "numericOdds": 188
+      },
+      "fighter2": {
+        "name": "Losene Keita",
+        "odds": "-250",
+        "numericOdds": -250
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-03-21T19:14:01.127Z",
+      "fighter1": {
+        "name": "Nathaniel Wood",
+        "odds": "+184",
+        "numericOdds": 184
+      },
+      "fighter2": {
+        "name": "Losene Keita",
+        "odds": "-240",
+        "numericOdds": -240
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-03-21T19:14:04.138Z",
+      "fighter1": {
+        "name": "Nathaniel Wood",
+        "odds": "+184",
+        "numericOdds": 184
+      },
+      "fighter2": {
+        "name": "Losene Keita",
+        "odds": "-240",
+        "numericOdds": -240
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-03-21T19:14:07.139Z",
+      "fighter1": {
+        "name": "Nathaniel Wood",
+        "odds": "+184",
+        "numericOdds": 184
+      },
+      "fighter2": {
+        "name": "Losene Keita",
+        "odds": "-240",
+        "numericOdds": -240
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-03-21T19:14:10.143Z",
+      "fighter1": {
+        "name": "Nathaniel Wood",
+        "odds": "+184",
+        "numericOdds": 184
+      },
+      "fighter2": {
+        "name": "Losene Keita",
+        "odds": "-240",
+        "numericOdds": -240
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-03-21T19:14:13.149Z",
+      "fighter1": {
+        "name": "Nathaniel Wood",
+        "odds": "+184",
+        "numericOdds": 184
+      },
+      "fighter2": {
+        "name": "Losene Keita",
+        "odds": "-240",
+        "numericOdds": -240
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-03-21T19:14:16.151Z",
+      "fighter1": {
+        "name": "Nathaniel Wood",
+        "odds": "+184",
+        "numericOdds": 184
+      },
+      "fighter2": {
+        "name": "Losene Keita",
+        "odds": "-240",
+        "numericOdds": -240
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-03-21T19:14:19.158Z",
+      "fighter1": {
+        "name": "Nathaniel Wood",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "fighter2": {
+        "name": "Losene Keita",
+        "odds": "-225",
+        "numericOdds": -225
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-03-21T19:14:22.158Z",
+      "fighter1": {
+        "name": "Nathaniel Wood",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "fighter2": {
+        "name": "Losene Keita",
+        "odds": "-225",
+        "numericOdds": -225
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
     {
       "timestamp": "2026-03-21T19:14:25.161Z",
       "fighter1": {
@@ -10146,5 +10656,32 @@
       "isLocked": false,
       "extractionId": 355
     }
-  ]
+  ],
+  "createdAt": "2026-03-21T19:31:33.193Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Nathaniel Wood",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:52:04.351Z",
+    "openingF1Odds": 215,
+    "openingF2Odds": -260,
+    "closingF1Odds": 138,
+    "closingF2Odds": -176,
+    "lineMovementF1": -77,
+    "crossoverOccurred": true,
+    "crossoverMinute": 10
+  },
+  "derived": {
+    "inferredFinishMin": null,
+    "inferredFinishRound": null,
+    "peakOddsSwing": 345,
+    "finishSpeed": "decision",
+    "preFightSteam": -77,
+    "dominanceScore": 27,
+    "crossoverCount": 12,
+    "derivedAt": "2026-06-14T11:47:28.469Z"
+  }
 }

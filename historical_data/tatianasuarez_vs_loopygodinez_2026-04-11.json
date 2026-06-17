@@ -1,11 +1,806 @@
 {
   "fightId": "tatianasuarez_vs_loopygodinez",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-04-11T23:13:10.994Z",
+  "startTime": "2026-04-11T23:09:34.455Z",
   "endTime": "2026-04-11T23:19:23.828Z",
-  "dataPoints": 232,
+  "duration": 589373,
+  "dataPoints": 285,
   "oddsHistory": [
+    {
+      "timestamp": "2026-04-11T23:09:34.455Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-04-11T23:09:37.467Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-04-11T23:09:40.467Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-04-11T23:09:43.467Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-04-11T23:09:46.470Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-04-11T23:09:49.479Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-04-11T23:09:52.486Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-04-11T23:09:55.494Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-04-11T23:09:58.499Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-04-11T23:10:01.511Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-04-11T23:10:04.523Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-04-11T23:10:07.536Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-04-11T23:10:10.542Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-04-11T23:10:13.546Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-04-11T23:10:16.551Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-04-11T23:10:19.556Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-04-11T23:10:22.564Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-04-11T23:10:25.568Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-04-11T23:10:28.573Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-04-11T23:10:31.576Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-04-11T23:10:34.582Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-04-11T23:10:37.588Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-04-11T23:10:40.601Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-04-11T23:10:43.609Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-04-11T23:10:46.610Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-04-11T23:10:49.623Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-04-11T23:10:52.633Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-04-11T23:10:55.638Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-04-11T23:10:58.653Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-04-11T23:11:01.668Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-04-11T23:11:04.674Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-04-11T23:11:07.682Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-04-11T23:11:10.693Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-04-11T23:11:13.702Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-04-11T23:11:16.713Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-04-11T23:11:19.720Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-04-11T23:11:22.733Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2026-04-11T23:11:25.834Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2026-04-11T23:11:28.744Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 39
+    },
+    {
+      "timestamp": "2026-04-11T23:11:31.746Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 40
+    },
+    {
+      "timestamp": "2026-04-11T23:11:34.754Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 41
+    },
+    {
+      "timestamp": "2026-04-11T23:11:37.755Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 42
+    },
+    {
+      "timestamp": "2026-04-11T23:11:40.762Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 43
+    },
+    {
+      "timestamp": "2026-04-11T23:11:43.765Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 44
+    },
+    {
+      "timestamp": "2026-04-11T23:11:46.770Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 45
+    },
+    {
+      "timestamp": "2026-04-11T23:11:49.775Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 46
+    },
+    {
+      "timestamp": "2026-04-11T23:11:52.779Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 47
+    },
+    {
+      "timestamp": "2026-04-11T23:11:55.830Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 48
+    },
+    {
+      "timestamp": "2026-04-11T23:11:58.838Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "isLocked": false,
+      "extractionId": 49
+    },
+    {
+      "timestamp": "2026-04-11T23:12:58.976Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "isLocked": false,
+      "extractionId": 50
+    },
+    {
+      "timestamp": "2026-04-11T23:13:01.979Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-04-11T23:13:04.989Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-04-11T23:13:07.991Z",
+      "fighter1": {
+        "name": "Tatiana Suarez",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "fighter2": {
+        "name": "Loopy Godinez",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
     {
       "timestamp": "2026-04-11T23:13:10.994Z",
       "fighter1": {
@@ -3486,5 +4281,16 @@
       "isLocked": false,
       "extractionId": 108
     }
-  ]
+  ],
+  "createdAt": "2026-04-11T23:12:58.975Z",
+  "derived": {
+    "inferredFinishMin": 9,
+    "inferredFinishRound": 2,
+    "peakOddsSwing": 1438,
+    "finishSpeed": "medium",
+    "preFightSteam": -1438,
+    "dominanceScore": 78,
+    "crossoverCount": 0,
+    "derivedAt": "2026-06-14T11:47:28.500Z"
+  }
 }

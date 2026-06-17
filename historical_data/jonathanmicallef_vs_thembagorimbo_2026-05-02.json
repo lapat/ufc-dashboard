@@ -1,11 +1,536 @@
 {
   "fightId": "jonathanmicallef_vs_thembagorimbo",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-05-02T08:34:34.445Z",
+  "startTime": "2026-05-02T08:32:49.160Z",
   "endTime": "2026-05-02T08:50:46.101Z",
-  "dataPoints": 335,
+  "duration": 1076941,
+  "dataPoints": 370,
   "oddsHistory": [
+    {
+      "timestamp": "2026-05-02T08:32:49.160Z",
+      "fighter1": {
+        "name": "Jonathan Micallef",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "fighter2": {
+        "name": "Themba Gorimbo",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-05-02T08:32:52.167Z",
+      "fighter1": {
+        "name": "Jonathan Micallef",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "fighter2": {
+        "name": "Themba Gorimbo",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-05-02T08:32:55.175Z",
+      "fighter1": {
+        "name": "Jonathan Micallef",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "fighter2": {
+        "name": "Themba Gorimbo",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-02T08:32:58.185Z",
+      "fighter1": {
+        "name": "Jonathan Micallef",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "fighter2": {
+        "name": "Themba Gorimbo",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-02T08:33:01.188Z",
+      "fighter1": {
+        "name": "Jonathan Micallef",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "fighter2": {
+        "name": "Themba Gorimbo",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-05-02T08:33:04.199Z",
+      "fighter1": {
+        "name": "Jonathan Micallef",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "fighter2": {
+        "name": "Themba Gorimbo",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-05-02T08:33:07.210Z",
+      "fighter1": {
+        "name": "Jonathan Micallef",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "fighter2": {
+        "name": "Themba Gorimbo",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-05-02T08:33:10.217Z",
+      "fighter1": {
+        "name": "Jonathan Micallef",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "fighter2": {
+        "name": "Themba Gorimbo",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-05-02T08:33:13.230Z",
+      "fighter1": {
+        "name": "Jonathan Micallef",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "fighter2": {
+        "name": "Themba Gorimbo",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-05-02T08:33:16.244Z",
+      "fighter1": {
+        "name": "Jonathan Micallef",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "fighter2": {
+        "name": "Themba Gorimbo",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-05-02T08:33:19.246Z",
+      "fighter1": {
+        "name": "Jonathan Micallef",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "fighter2": {
+        "name": "Themba Gorimbo",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-05-02T08:33:22.251Z",
+      "fighter1": {
+        "name": "Jonathan Micallef",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "fighter2": {
+        "name": "Themba Gorimbo",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-05-02T08:33:25.252Z",
+      "fighter1": {
+        "name": "Jonathan Micallef",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "fighter2": {
+        "name": "Themba Gorimbo",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-05-02T08:33:28.268Z",
+      "fighter1": {
+        "name": "Jonathan Micallef",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Themba Gorimbo",
+        "odds": "+174",
+        "numericOdds": 174
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-05-02T08:33:31.267Z",
+      "fighter1": {
+        "name": "Jonathan Micallef",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Themba Gorimbo",
+        "odds": "+174",
+        "numericOdds": 174
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-05-02T08:33:34.269Z",
+      "fighter1": {
+        "name": "Jonathan Micallef",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Themba Gorimbo",
+        "odds": "+174",
+        "numericOdds": 174
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-05-02T08:33:37.278Z",
+      "fighter1": {
+        "name": "Jonathan Micallef",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Themba Gorimbo",
+        "odds": "+174",
+        "numericOdds": 174
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-05-02T08:33:40.284Z",
+      "fighter1": {
+        "name": "Jonathan Micallef",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Themba Gorimbo",
+        "odds": "+174",
+        "numericOdds": 174
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-05-02T08:33:43.296Z",
+      "fighter1": {
+        "name": "Jonathan Micallef",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Themba Gorimbo",
+        "odds": "+174",
+        "numericOdds": 174
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-05-02T08:33:46.298Z",
+      "fighter1": {
+        "name": "Jonathan Micallef",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Themba Gorimbo",
+        "odds": "+174",
+        "numericOdds": 174
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-05-02T08:33:49.298Z",
+      "fighter1": {
+        "name": "Jonathan Micallef",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Themba Gorimbo",
+        "odds": "+174",
+        "numericOdds": 174
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-05-02T08:33:52.311Z",
+      "fighter1": {
+        "name": "Jonathan Micallef",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Themba Gorimbo",
+        "odds": "+174",
+        "numericOdds": 174
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-05-02T08:33:55.324Z",
+      "fighter1": {
+        "name": "Jonathan Micallef",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "Themba Gorimbo",
+        "odds": "+192",
+        "numericOdds": 192
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-05-02T08:33:58.332Z",
+      "fighter1": {
+        "name": "Jonathan Micallef",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "Themba Gorimbo",
+        "odds": "+192",
+        "numericOdds": 192
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-05-02T08:34:01.340Z",
+      "fighter1": {
+        "name": "Jonathan Micallef",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Themba Gorimbo",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-05-02T08:34:04.347Z",
+      "fighter1": {
+        "name": "Jonathan Micallef",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "fighter2": {
+        "name": "Themba Gorimbo",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-05-02T08:34:07.357Z",
+      "fighter1": {
+        "name": "Jonathan Micallef",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "fighter2": {
+        "name": "Themba Gorimbo",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-05-02T08:34:10.367Z",
+      "fighter1": {
+        "name": "Jonathan Micallef",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "fighter2": {
+        "name": "Themba Gorimbo",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-05-02T08:34:13.382Z",
+      "fighter1": {
+        "name": "Jonathan Micallef",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "fighter2": {
+        "name": "Themba Gorimbo",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-05-02T08:34:16.396Z",
+      "fighter1": {
+        "name": "Jonathan Micallef",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "fighter2": {
+        "name": "Themba Gorimbo",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-05-02T08:34:19.404Z",
+      "fighter1": {
+        "name": "Jonathan Micallef",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "Themba Gorimbo",
+        "odds": "+196",
+        "numericOdds": 196
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-05-02T08:34:22.407Z",
+      "fighter1": {
+        "name": "Jonathan Micallef",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "Themba Gorimbo",
+        "odds": "+196",
+        "numericOdds": 196
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-05-02T08:34:25.416Z",
+      "fighter1": {
+        "name": "Jonathan Micallef",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "Themba Gorimbo",
+        "odds": "+192",
+        "numericOdds": 192
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-05-02T08:34:28.420Z",
+      "fighter1": {
+        "name": "Jonathan Micallef",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "Themba Gorimbo",
+        "odds": "+192",
+        "numericOdds": 192
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-05-02T08:34:31.430Z",
+      "fighter1": {
+        "name": "Jonathan Micallef",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "Themba Gorimbo",
+        "odds": "+192",
+        "numericOdds": 192
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
     {
       "timestamp": "2026-05-02T08:34:34.445Z",
       "fighter1": {
@@ -5031,5 +5556,32 @@
       "isLocked": false,
       "extractionId": 33
     }
-  ]
+  ],
+  "createdAt": "2026-05-02T08:37:10.804Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Jonathan Micallef",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:51:35.978Z",
+    "openingF1Odds": -215,
+    "openingF2Odds": 180,
+    "closingF1Odds": -1450,
+    "closingF2Odds": 770,
+    "lineMovementF1": -1235,
+    "crossoverOccurred": true,
+    "crossoverMinute": 11
+  },
+  "derived": {
+    "inferredFinishMin": 18,
+    "inferredFinishRound": 4,
+    "peakOddsSwing": 1235,
+    "finishSpeed": "slow",
+    "preFightSteam": -1235,
+    "dominanceScore": 58,
+    "crossoverCount": 4,
+    "derivedAt": "2026-06-14T11:47:28.435Z"
+  }
 }

@@ -1,11 +1,371 @@
 {
   "fightId": "juniortafa_vs_billyelekana",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-02-01T01:39:42.146Z",
+  "startTime": "2026-02-01T01:38:29.999Z",
   "endTime": "2026-02-01T01:47:49.248Z",
-  "dataPoints": 160,
+  "duration": 559249,
+  "dataPoints": 184,
   "oddsHistory": [
+    {
+      "timestamp": "2026-02-01T01:38:29.999Z",
+      "fighter1": {
+        "name": "Junior Tafa",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Billy Elekana",
+        "odds": "-270",
+        "numericOdds": -270
+      },
+      "isLocked": false,
+      "extractionId": 121
+    },
+    {
+      "timestamp": "2026-02-01T01:38:33.010Z",
+      "fighter1": {
+        "name": "Junior Tafa",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Billy Elekana",
+        "odds": "-270",
+        "numericOdds": -270
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-02-01T01:38:36.011Z",
+      "fighter1": {
+        "name": "Junior Tafa",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Billy Elekana",
+        "odds": "-270",
+        "numericOdds": -270
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-02-01T01:38:39.013Z",
+      "fighter1": {
+        "name": "Junior Tafa",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Billy Elekana",
+        "odds": "-270",
+        "numericOdds": -270
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-02-01T01:38:42.019Z",
+      "fighter1": {
+        "name": "Junior Tafa",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Billy Elekana",
+        "odds": "-270",
+        "numericOdds": -270
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-02-01T01:38:45.024Z",
+      "fighter1": {
+        "name": "Junior Tafa",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Billy Elekana",
+        "odds": "-270",
+        "numericOdds": -270
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-02-01T01:38:48.027Z",
+      "fighter1": {
+        "name": "Junior Tafa",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "fighter2": {
+        "name": "Billy Elekana",
+        "odds": "-290",
+        "numericOdds": -290
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-02-01T01:38:51.037Z",
+      "fighter1": {
+        "name": "Junior Tafa",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "fighter2": {
+        "name": "Billy Elekana",
+        "odds": "-290",
+        "numericOdds": -290
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-02-01T01:38:54.047Z",
+      "fighter1": {
+        "name": "Junior Tafa",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "fighter2": {
+        "name": "Billy Elekana",
+        "odds": "-290",
+        "numericOdds": -290
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-02-01T01:38:57.052Z",
+      "fighter1": {
+        "name": "Junior Tafa",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "fighter2": {
+        "name": "Billy Elekana",
+        "odds": "-290",
+        "numericOdds": -290
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-02-01T01:39:00.056Z",
+      "fighter1": {
+        "name": "Junior Tafa",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "fighter2": {
+        "name": "Billy Elekana",
+        "odds": "-290",
+        "numericOdds": -290
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-02-01T01:39:03.066Z",
+      "fighter1": {
+        "name": "Junior Tafa",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "fighter2": {
+        "name": "Billy Elekana",
+        "odds": "-290",
+        "numericOdds": -290
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-02-01T01:39:06.072Z",
+      "fighter1": {
+        "name": "Junior Tafa",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "fighter2": {
+        "name": "Billy Elekana",
+        "odds": "-290",
+        "numericOdds": -290
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-02-01T01:39:09.082Z",
+      "fighter1": {
+        "name": "Junior Tafa",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "fighter2": {
+        "name": "Billy Elekana",
+        "odds": "-290",
+        "numericOdds": -290
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-02-01T01:39:12.088Z",
+      "fighter1": {
+        "name": "Junior Tafa",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "fighter2": {
+        "name": "Billy Elekana",
+        "odds": "-290",
+        "numericOdds": -290
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-02-01T01:39:15.094Z",
+      "fighter1": {
+        "name": "Junior Tafa",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "fighter2": {
+        "name": "Billy Elekana",
+        "odds": "-290",
+        "numericOdds": -290
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-02-01T01:39:18.094Z",
+      "fighter1": {
+        "name": "Junior Tafa",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "fighter2": {
+        "name": "Billy Elekana",
+        "odds": "-290",
+        "numericOdds": -290
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-02-01T01:39:21.096Z",
+      "fighter1": {
+        "name": "Junior Tafa",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "fighter2": {
+        "name": "Billy Elekana",
+        "odds": "-290",
+        "numericOdds": -290
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-02-01T01:39:24.103Z",
+      "fighter1": {
+        "name": "Junior Tafa",
+        "odds": "+192",
+        "numericOdds": 192
+      },
+      "fighter2": {
+        "name": "Billy Elekana",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-02-01T01:39:27.118Z",
+      "fighter1": {
+        "name": "Junior Tafa",
+        "odds": "+192",
+        "numericOdds": 192
+      },
+      "fighter2": {
+        "name": "Billy Elekana",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-02-01T01:39:30.122Z",
+      "fighter1": {
+        "name": "Junior Tafa",
+        "odds": "+192",
+        "numericOdds": 192
+      },
+      "fighter2": {
+        "name": "Billy Elekana",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-02-01T01:39:33.128Z",
+      "fighter1": {
+        "name": "Junior Tafa",
+        "odds": "+192",
+        "numericOdds": 192
+      },
+      "fighter2": {
+        "name": "Billy Elekana",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-02-01T01:39:36.136Z",
+      "fighter1": {
+        "name": "Junior Tafa",
+        "odds": "+192",
+        "numericOdds": 192
+      },
+      "fighter2": {
+        "name": "Billy Elekana",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-02-01T01:39:39.151Z",
+      "fighter1": {
+        "name": "Junior Tafa",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Billy Elekana",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
     {
       "timestamp": "2026-02-01T01:39:42.146Z",
       "fighter1": {
@@ -2406,5 +2766,32 @@
       "isLocked": false,
       "extractionId": 12
     }
-  ]
+  ],
+  "createdAt": "2026-02-01T01:40:24.232Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Billy Elekana",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:51:40.996Z",
+    "openingF1Odds": 220,
+    "openingF2Odds": -270,
+    "closingF1Odds": 104,
+    "closingF2Odds": -134,
+    "lineMovementF1": -116,
+    "crossoverOccurred": true,
+    "crossoverMinute": 3
+  },
+  "derived": {
+    "inferredFinishMin": null,
+    "inferredFinishRound": null,
+    "peakOddsSwing": 362,
+    "finishSpeed": "decision",
+    "preFightSteam": -116,
+    "dominanceScore": 14,
+    "crossoverCount": 10,
+    "derivedAt": "2026-06-14T11:47:28.439Z"
+  }
 }

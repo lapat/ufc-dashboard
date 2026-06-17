@@ -1,11 +1,521 @@
 {
   "fightId": "wangcong_vs_eduardamoura",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-02-07T23:11:13.689Z",
+  "startTime": "2026-02-07T23:09:31.428Z",
   "endTime": "2026-02-07T23:27:10.114Z",
-  "dataPoints": 278,
+  "duration": 1058686,
+  "dataPoints": 312,
   "oddsHistory": [
+    {
+      "timestamp": "2026-02-07T23:09:31.428Z",
+      "fighter1": {
+        "name": "Wang Cong",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "fighter2": {
+        "name": "Eduarda Moura",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2026-02-07T23:09:34.444Z",
+      "fighter1": {
+        "name": "Wang Cong",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "fighter2": {
+        "name": "Eduarda Moura",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-02-07T23:09:37.455Z",
+      "fighter1": {
+        "name": "Wang Cong",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "fighter2": {
+        "name": "Eduarda Moura",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-02-07T23:09:40.462Z",
+      "fighter1": {
+        "name": "Wang Cong",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "fighter2": {
+        "name": "Eduarda Moura",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-02-07T23:09:43.473Z",
+      "fighter1": {
+        "name": "Wang Cong",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "fighter2": {
+        "name": "Eduarda Moura",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-02-07T23:09:46.476Z",
+      "fighter1": {
+        "name": "Wang Cong",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "fighter2": {
+        "name": "Eduarda Moura",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-02-07T23:09:49.476Z",
+      "fighter1": {
+        "name": "Wang Cong",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "fighter2": {
+        "name": "Eduarda Moura",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-02-07T23:09:52.480Z",
+      "fighter1": {
+        "name": "Wang Cong",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "fighter2": {
+        "name": "Eduarda Moura",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-02-07T23:09:55.492Z",
+      "fighter1": {
+        "name": "Wang Cong",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "fighter2": {
+        "name": "Eduarda Moura",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-02-07T23:09:58.493Z",
+      "fighter1": {
+        "name": "Wang Cong",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "fighter2": {
+        "name": "Eduarda Moura",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-02-07T23:10:01.500Z",
+      "fighter1": {
+        "name": "Wang Cong",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "fighter2": {
+        "name": "Eduarda Moura",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-02-07T23:10:04.510Z",
+      "fighter1": {
+        "name": "Wang Cong",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "Eduarda Moura",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-02-07T23:10:07.525Z",
+      "fighter1": {
+        "name": "Wang Cong",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "Eduarda Moura",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-02-07T23:10:10.532Z",
+      "fighter1": {
+        "name": "Wang Cong",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "Eduarda Moura",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-02-07T23:10:13.544Z",
+      "fighter1": {
+        "name": "Wang Cong",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "Eduarda Moura",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-02-07T23:10:16.548Z",
+      "fighter1": {
+        "name": "Wang Cong",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "Eduarda Moura",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-02-07T23:10:19.559Z",
+      "fighter1": {
+        "name": "Wang Cong",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "Eduarda Moura",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-02-07T23:10:22.563Z",
+      "fighter1": {
+        "name": "Wang Cong",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "Eduarda Moura",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-02-07T23:10:25.566Z",
+      "fighter1": {
+        "name": "Wang Cong",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "Eduarda Moura",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-02-07T23:10:28.573Z",
+      "fighter1": {
+        "name": "Wang Cong",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "Eduarda Moura",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-02-07T23:10:31.574Z",
+      "fighter1": {
+        "name": "Wang Cong",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "Eduarda Moura",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-02-07T23:10:34.581Z",
+      "fighter1": {
+        "name": "Wang Cong",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "fighter2": {
+        "name": "Eduarda Moura",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-02-07T23:10:37.592Z",
+      "fighter1": {
+        "name": "Wang Cong",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "fighter2": {
+        "name": "Eduarda Moura",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-02-07T23:10:40.600Z",
+      "fighter1": {
+        "name": "Wang Cong",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "fighter2": {
+        "name": "Eduarda Moura",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-02-07T23:10:43.611Z",
+      "fighter1": {
+        "name": "Wang Cong",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "fighter2": {
+        "name": "Eduarda Moura",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-02-07T23:10:46.626Z",
+      "fighter1": {
+        "name": "Wang Cong",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "fighter2": {
+        "name": "Eduarda Moura",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-02-07T23:10:49.638Z",
+      "fighter1": {
+        "name": "Wang Cong",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "fighter2": {
+        "name": "Eduarda Moura",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-02-07T23:10:52.640Z",
+      "fighter1": {
+        "name": "Wang Cong",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "fighter2": {
+        "name": "Eduarda Moura",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-02-07T23:10:55.653Z",
+      "fighter1": {
+        "name": "Wang Cong",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "fighter2": {
+        "name": "Eduarda Moura",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-02-07T23:10:58.653Z",
+      "fighter1": {
+        "name": "Wang Cong",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "Eduarda Moura",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-02-07T23:11:01.665Z",
+      "fighter1": {
+        "name": "Wang Cong",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "Eduarda Moura",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-02-07T23:11:04.666Z",
+      "fighter1": {
+        "name": "Wang Cong",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "fighter2": {
+        "name": "Eduarda Moura",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-02-07T23:11:07.680Z",
+      "fighter1": {
+        "name": "Wang Cong",
+        "odds": "-290",
+        "numericOdds": -290
+      },
+      "fighter2": {
+        "name": "Eduarda Moura",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-02-07T23:11:10.687Z",
+      "fighter1": {
+        "name": "Wang Cong",
+        "odds": "-290",
+        "numericOdds": -290
+      },
+      "fighter2": {
+        "name": "Eduarda Moura",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
     {
       "timestamp": "2026-02-07T23:11:13.689Z",
       "fighter1": {
@@ -4176,5 +4686,32 @@
       "isLocked": false,
       "extractionId": 8
     }
-  ]
+  ],
+  "createdAt": "2026-02-07T23:12:19.876Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Wang Cong",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:52:33.512Z",
+    "openingF1Odds": -320,
+    "openingF2Odds": 260,
+    "closingF1Odds": -2400,
+    "closingF2Odds": 1180,
+    "lineMovementF1": -2080,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  },
+  "derived": {
+    "inferredFinishMin": 6,
+    "inferredFinishRound": 2,
+    "peakOddsSwing": 2080,
+    "finishSpeed": "fast",
+    "preFightSteam": -2080,
+    "dominanceScore": 57,
+    "crossoverCount": 0,
+    "derivedAt": "2026-06-14T11:47:28.511Z"
+  }
 }

@@ -1,11 +1,416 @@
 {
   "fightId": "marquelmederos_vs_chrispadilla",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-04-11T22:39:13.718Z",
+  "startTime": "2026-04-11T22:37:52.537Z",
   "endTime": "2026-04-11T22:56:22.188Z",
-  "dataPoints": 317,
+  "duration": 1109651,
+  "dataPoints": 344,
   "oddsHistory": [
+    {
+      "timestamp": "2026-04-11T22:37:52.537Z",
+      "fighter1": {
+        "name": "Marquel Mederos",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "fighter2": {
+        "name": "Chris Padilla",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "isLocked": false,
+      "extractionId": 83
+    },
+    {
+      "timestamp": "2026-04-11T22:37:55.539Z",
+      "fighter1": {
+        "name": "Marquel Mederos",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "fighter2": {
+        "name": "Chris Padilla",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-04-11T22:37:58.550Z",
+      "fighter1": {
+        "name": "Marquel Mederos",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "fighter2": {
+        "name": "Chris Padilla",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-04-11T22:38:01.557Z",
+      "fighter1": {
+        "name": "Marquel Mederos",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "fighter2": {
+        "name": "Chris Padilla",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-04-11T22:38:04.558Z",
+      "fighter1": {
+        "name": "Marquel Mederos",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "fighter2": {
+        "name": "Chris Padilla",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-04-11T22:38:07.562Z",
+      "fighter1": {
+        "name": "Marquel Mederos",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "fighter2": {
+        "name": "Chris Padilla",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-04-11T22:38:10.568Z",
+      "fighter1": {
+        "name": "Marquel Mederos",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "fighter2": {
+        "name": "Chris Padilla",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-04-11T22:38:13.580Z",
+      "fighter1": {
+        "name": "Marquel Mederos",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "fighter2": {
+        "name": "Chris Padilla",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-04-11T22:38:16.593Z",
+      "fighter1": {
+        "name": "Marquel Mederos",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "fighter2": {
+        "name": "Chris Padilla",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-04-11T22:38:19.608Z",
+      "fighter1": {
+        "name": "Marquel Mederos",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "fighter2": {
+        "name": "Chris Padilla",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-04-11T22:38:22.611Z",
+      "fighter1": {
+        "name": "Marquel Mederos",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "fighter2": {
+        "name": "Chris Padilla",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-04-11T22:38:25.619Z",
+      "fighter1": {
+        "name": "Marquel Mederos",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "fighter2": {
+        "name": "Chris Padilla",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-04-11T22:38:28.624Z",
+      "fighter1": {
+        "name": "Marquel Mederos",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "fighter2": {
+        "name": "Chris Padilla",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-04-11T22:38:31.627Z",
+      "fighter1": {
+        "name": "Marquel Mederos",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "fighter2": {
+        "name": "Chris Padilla",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-04-11T22:38:34.628Z",
+      "fighter1": {
+        "name": "Marquel Mederos",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "fighter2": {
+        "name": "Chris Padilla",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-04-11T22:38:37.642Z",
+      "fighter1": {
+        "name": "Marquel Mederos",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "fighter2": {
+        "name": "Chris Padilla",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-04-11T22:38:40.642Z",
+      "fighter1": {
+        "name": "Marquel Mederos",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "fighter2": {
+        "name": "Chris Padilla",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-04-11T22:38:43.653Z",
+      "fighter1": {
+        "name": "Marquel Mederos",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Chris Padilla",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-04-11T22:38:46.656Z",
+      "fighter1": {
+        "name": "Marquel Mederos",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Chris Padilla",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-04-11T22:38:49.668Z",
+      "fighter1": {
+        "name": "Marquel Mederos",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Chris Padilla",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-04-11T22:38:52.675Z",
+      "fighter1": {
+        "name": "Marquel Mederos",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Chris Padilla",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-04-11T22:38:55.678Z",
+      "fighter1": {
+        "name": "Marquel Mederos",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Chris Padilla",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-04-11T22:38:58.680Z",
+      "fighter1": {
+        "name": "Marquel Mederos",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Chris Padilla",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-04-11T22:39:01.693Z",
+      "fighter1": {
+        "name": "Marquel Mederos",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Chris Padilla",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-04-11T22:39:04.695Z",
+      "fighter1": {
+        "name": "Marquel Mederos",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Chris Padilla",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-04-11T22:39:07.699Z",
+      "fighter1": {
+        "name": "Marquel Mederos",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Chris Padilla",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-04-11T22:39:10.707Z",
+      "fighter1": {
+        "name": "Marquel Mederos",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Chris Padilla",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
     {
       "timestamp": "2026-04-11T22:39:13.718Z",
       "fighter1": {
@@ -4761,5 +5166,16 @@
       "isLocked": false,
       "extractionId": 4
     }
-  ]
+  ],
+  "createdAt": "2026-04-11T22:47:33.035Z",
+  "derived": {
+    "inferredFinishMin": 17,
+    "inferredFinishRound": 3,
+    "peakOddsSwing": 2168,
+    "finishSpeed": "medium",
+    "preFightSteam": 2168,
+    "dominanceScore": 92,
+    "crossoverCount": 0,
+    "derivedAt": "2026-06-14T11:47:28.457Z"
+  }
 }

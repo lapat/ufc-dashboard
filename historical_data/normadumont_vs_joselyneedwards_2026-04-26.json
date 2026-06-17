@@ -1,11 +1,431 @@
 {
   "fightId": "normadumont_vs_joselyneedwards",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-04-26T02:20:36.503Z",
+  "startTime": "2026-04-26T02:19:12.275Z",
   "endTime": "2026-04-26T02:37:56.876Z",
-  "dataPoints": 293,
+  "duration": 1124601,
+  "dataPoints": 321,
   "oddsHistory": [
+    {
+      "timestamp": "2026-04-26T02:19:12.275Z",
+      "fighter1": {
+        "name": "Norma Dumont",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 43
+    },
+    {
+      "timestamp": "2026-04-26T02:19:15.286Z",
+      "fighter1": {
+        "name": "Norma Dumont",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-04-26T02:19:18.292Z",
+      "fighter1": {
+        "name": "Norma Dumont",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-04-26T02:19:21.301Z",
+      "fighter1": {
+        "name": "Norma Dumont",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-04-26T02:19:24.308Z",
+      "fighter1": {
+        "name": "Norma Dumont",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-04-26T02:19:27.315Z",
+      "fighter1": {
+        "name": "Norma Dumont",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-04-26T02:19:30.327Z",
+      "fighter1": {
+        "name": "Norma Dumont",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-04-26T02:19:33.333Z",
+      "fighter1": {
+        "name": "Norma Dumont",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-04-26T02:19:36.342Z",
+      "fighter1": {
+        "name": "Norma Dumont",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-04-26T02:19:39.346Z",
+      "fighter1": {
+        "name": "Norma Dumont",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-04-26T02:19:42.351Z",
+      "fighter1": {
+        "name": "Norma Dumont",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-04-26T02:19:45.357Z",
+      "fighter1": {
+        "name": "Norma Dumont",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-04-26T02:19:48.368Z",
+      "fighter1": {
+        "name": "Norma Dumont",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-04-26T02:19:51.374Z",
+      "fighter1": {
+        "name": "Norma Dumont",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-04-26T02:19:54.389Z",
+      "fighter1": {
+        "name": "Norma Dumont",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-04-26T02:19:57.401Z",
+      "fighter1": {
+        "name": "Norma Dumont",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-04-26T02:20:00.406Z",
+      "fighter1": {
+        "name": "Norma Dumont",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-04-26T02:20:03.413Z",
+      "fighter1": {
+        "name": "Norma Dumont",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-04-26T02:20:06.423Z",
+      "fighter1": {
+        "name": "Norma Dumont",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-04-26T02:20:09.437Z",
+      "fighter1": {
+        "name": "Norma Dumont",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-04-26T02:20:12.452Z",
+      "fighter1": {
+        "name": "Norma Dumont",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "odds": "+168",
+        "numericOdds": 168
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-04-26T02:20:15.456Z",
+      "fighter1": {
+        "name": "Norma Dumont",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "odds": "+168",
+        "numericOdds": 168
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-04-26T02:20:18.463Z",
+      "fighter1": {
+        "name": "Norma Dumont",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "odds": "+168",
+        "numericOdds": 168
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-04-26T02:20:21.469Z",
+      "fighter1": {
+        "name": "Norma Dumont",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "odds": "+168",
+        "numericOdds": 168
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-04-26T02:20:24.478Z",
+      "fighter1": {
+        "name": "Norma Dumont",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "odds": "+168",
+        "numericOdds": 168
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-04-26T02:20:27.484Z",
+      "fighter1": {
+        "name": "Norma Dumont",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "odds": "+168",
+        "numericOdds": 168
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-04-26T02:20:30.487Z",
+      "fighter1": {
+        "name": "Norma Dumont",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "odds": "+168",
+        "numericOdds": 168
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-04-26T02:20:33.489Z",
+      "fighter1": {
+        "name": "Norma Dumont",
+        "odds": "-240",
+        "numericOdds": -240
+      },
+      "fighter2": {
+        "name": "Joselyne Edwards",
+        "odds": "+184",
+        "numericOdds": 184
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
     {
       "timestamp": "2026-04-26T02:20:36.503Z",
       "fighter1": {
@@ -4401,5 +4821,32 @@
       "isLocked": false,
       "extractionId": 2
     }
-  ]
+  ],
+  "createdAt": "2026-04-26T02:21:57.671Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Joselyne Edwards",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:52:07.872Z",
+    "openingF1Odds": -205,
+    "openingF2Odds": 172,
+    "closingF1Odds": 440,
+    "closingF2Odds": -700,
+    "lineMovementF1": 645,
+    "crossoverOccurred": true,
+    "crossoverMinute": 16
+  },
+  "derived": {
+    "inferredFinishMin": 16,
+    "inferredFinishRound": 3,
+    "peakOddsSwing": 825,
+    "finishSpeed": "slow",
+    "preFightSteam": 645,
+    "dominanceScore": 50,
+    "crossoverCount": 1,
+    "derivedAt": "2026-06-14T11:47:28.474Z"
+  }
 }

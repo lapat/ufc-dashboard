@@ -1,33 +1,11 @@
 {
   "fightId": "iwobaraniewski_vs_iboaslan",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2025-12-06T23:25:37Z",
-  "endTime": "2025-12-06T23:55:37Z",
-  "dataPoints": 17,
+  "startTime": "2025-12-06T23:49:18.353Z",
+  "endTime": "2025-12-06T23:49:57.443Z",
+  "duration": 39090,
+  "dataPoints": 14,
   "oddsHistory": [
-    {
-      "timestamp": "2025-12-06T23:25:37Z",
-      "fighter1": {
-        "name": "Ibo Aslan",
-        "numericOdds": 164
-      },
-      "fighter2": {
-        "name": "Iwo Baraniewski",
-        "numericOdds": -198
-      }
-    },
-    {
-      "timestamp": "2025-12-06T23:40:37Z",
-      "fighter1": {
-        "name": "Ibo Aslan",
-        "numericOdds": 170
-      },
-      "fighter2": {
-        "name": "Iwo Baraniewski",
-        "numericOdds": -205
-      }
-    },
     {
       "timestamp": "2025-12-06T23:49:18.353Z",
       "fighter1": {
@@ -237,17 +215,33 @@
       },
       "isLocked": false,
       "extractionId": 14
-    },
-    {
-      "timestamp": "2025-12-06T23:55:37Z",
-      "fighter1": {
-        "name": "Ibo Aslan",
-        "numericOdds": -130
-      },
-      "fighter2": {
-        "name": "Iwo Baraniewski",
-        "numericOdds": 100
-      }
     }
-  ]
+  ],
+  "createdAt": "2025-12-06T23:53:59.465Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Iwo Baraniewski",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:51:26.919Z",
+    "openingF1Odds": -225,
+    "openingF2Odds": 172,
+    "closingF1Odds": -225,
+    "closingF2Odds": 172,
+    "lineMovementF1": 0,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  },
+  "derived": {
+    "inferredFinishMin": null,
+    "inferredFinishRound": null,
+    "peakOddsSwing": 0,
+    "finishSpeed": "decision",
+    "preFightSteam": 0,
+    "dominanceScore": 100,
+    "crossoverCount": 0,
+    "derivedAt": "2026-06-14T11:47:28.423Z"
+  }
 }

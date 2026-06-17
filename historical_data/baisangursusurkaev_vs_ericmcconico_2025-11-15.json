@@ -1,11 +1,491 @@
 {
   "fightId": "baisangursusurkaev_vs_ericmcconico",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2025-11-15T23:31:41.776Z",
+  "startTime": "2025-11-15T23:30:05.435Z",
   "endTime": "2025-11-15T23:47:57.064Z",
-  "dataPoints": 264,
+  "duration": 1071629,
+  "dataPoints": 296,
   "oddsHistory": [
+    {
+      "timestamp": "2025-11-15T23:30:05.435Z",
+      "fighter1": {
+        "name": "Baisangur Susurkaev",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Eric McConico",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 1
+    },
+    {
+      "timestamp": "2025-11-15T23:30:08.443Z",
+      "fighter1": {
+        "name": "Baisangur Susurkaev",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Eric McConico",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2025-11-15T23:30:11.592Z",
+      "fighter1": {
+        "name": "Baisangur Susurkaev",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Eric McConico",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2025-11-15T23:30:14.470Z",
+      "fighter1": {
+        "name": "Baisangur Susurkaev",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Eric McConico",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2025-11-15T23:30:17.478Z",
+      "fighter1": {
+        "name": "Baisangur Susurkaev",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Eric McConico",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2025-11-15T23:30:20.492Z",
+      "fighter1": {
+        "name": "Baisangur Susurkaev",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Eric McConico",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2025-11-15T23:30:23.502Z",
+      "fighter1": {
+        "name": "Baisangur Susurkaev",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Eric McConico",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2025-11-15T23:30:26.511Z",
+      "fighter1": {
+        "name": "Baisangur Susurkaev",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Eric McConico",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2025-11-15T23:30:29.522Z",
+      "fighter1": {
+        "name": "Baisangur Susurkaev",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Eric McConico",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2025-11-15T23:30:32.521Z",
+      "fighter1": {
+        "name": "Baisangur Susurkaev",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Eric McConico",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2025-11-15T23:30:35.527Z",
+      "fighter1": {
+        "name": "Baisangur Susurkaev",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Eric McConico",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2025-11-15T23:30:38.540Z",
+      "fighter1": {
+        "name": "Baisangur Susurkaev",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Eric McConico",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2025-11-15T23:30:41.547Z",
+      "fighter1": {
+        "name": "Baisangur Susurkaev",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Eric McConico",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2025-11-15T23:30:44.558Z",
+      "fighter1": {
+        "name": "Baisangur Susurkaev",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Eric McConico",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2025-11-15T23:30:47.568Z",
+      "fighter1": {
+        "name": "Baisangur Susurkaev",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Eric McConico",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2025-11-15T23:30:50.582Z",
+      "fighter1": {
+        "name": "Baisangur Susurkaev",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Eric McConico",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2025-11-15T23:30:53.589Z",
+      "fighter1": {
+        "name": "Baisangur Susurkaev",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Eric McConico",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2025-11-15T23:30:56.602Z",
+      "fighter1": {
+        "name": "Baisangur Susurkaev",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Eric McConico",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2025-11-15T23:30:59.611Z",
+      "fighter1": {
+        "name": "Baisangur Susurkaev",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Eric McConico",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2025-11-15T23:31:02.624Z",
+      "fighter1": {
+        "name": "Baisangur Susurkaev",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Eric McConico",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2025-11-15T23:31:05.634Z",
+      "fighter1": {
+        "name": "Baisangur Susurkaev",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Eric McConico",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2025-11-15T23:31:08.647Z",
+      "fighter1": {
+        "name": "Baisangur Susurkaev",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Eric McConico",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2025-11-15T23:31:11.659Z",
+      "fighter1": {
+        "name": "Baisangur Susurkaev",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Eric McConico",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2025-11-15T23:31:14.670Z",
+      "fighter1": {
+        "name": "Baisangur Susurkaev",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Eric McConico",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2025-11-15T23:31:17.682Z",
+      "fighter1": {
+        "name": "Baisangur Susurkaev",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Eric McConico",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2025-11-15T23:31:20.694Z",
+      "fighter1": {
+        "name": "Baisangur Susurkaev",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Eric McConico",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2025-11-15T23:31:23.708Z",
+      "fighter1": {
+        "name": "Baisangur Susurkaev",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Eric McConico",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2025-11-15T23:31:26.721Z",
+      "fighter1": {
+        "name": "Baisangur Susurkaev",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Eric McConico",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2025-11-15T23:31:29.724Z",
+      "fighter1": {
+        "name": "Baisangur Susurkaev",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Eric McConico",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2025-11-15T23:31:32.738Z",
+      "fighter1": {
+        "name": "Baisangur Susurkaev",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Eric McConico",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2025-11-15T23:31:35.749Z",
+      "fighter1": {
+        "name": "Baisangur Susurkaev",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Eric McConico",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2025-11-15T23:31:38.762Z",
+      "fighter1": {
+        "name": "Baisangur Susurkaev",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Eric McConico",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
     {
       "timestamp": "2025-11-15T23:31:41.776Z",
       "fighter1": {
@@ -3966,5 +4446,32 @@
       "isLocked": false,
       "extractionId": 5
     }
-  ]
+  ],
+  "createdAt": "2025-11-15T23:36:57.860Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Baisangur Susurkaev",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:50:53.717Z",
+    "openingF1Odds": -1000,
+    "openingF2Odds": 660,
+    "closingF1Odds": -460,
+    "closingF2Odds": 320,
+    "lineMovementF1": 540,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  },
+  "derived": {
+    "inferredFinishMin": 0,
+    "inferredFinishRound": 1,
+    "peakOddsSwing": 818,
+    "finishSpeed": "fast",
+    "preFightSteam": 540,
+    "dominanceScore": 96,
+    "crossoverCount": 0,
+    "derivedAt": "2026-06-14T11:47:28.383Z"
+  }
 }

@@ -1,98 +1,5197 @@
 {
-  "fightId": "rafaeltobias_vs_diyarnurgozhay_2026-03-07",
-  "fightTitle": "Rafael Tobias vs Diyar Nurgozhay",
-  "commenceTime": null,
-  "startTime": "2026-03-07T23:10:37Z",
-  "endTime": "2026-03-07T23:45:37Z",
-  "dataPoints": 8,
+  "fightId": "rafaeltobias_vs_diyarnurgozhay",
+  "fightTitle": "Connected but no betting buttons found",
+  "startTime": "2026-03-07T23:11:22.395Z",
+  "endTime": "2026-03-07T23:31:16.182Z",
+  "duration": 1193787,
+  "dataPoints": 344,
   "oddsHistory": [
     {
-      "timestamp": "2026-03-07T23:10:37Z",
+      "timestamp": "2026-03-07T23:11:22.395Z",
       "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "fighter2": {
         "name": "Diyar Nurgozhay",
+        "odds": "+146",
+        "numericOdds": 146
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-07T23:11:25.405Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+146",
+        "numericOdds": 146
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-07T23:11:28.417Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+146",
+        "numericOdds": 146
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-07T23:11:31.418Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+146",
+        "numericOdds": 146
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-07T23:11:34.426Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+146",
+        "numericOdds": 146
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-07T23:11:37.428Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+146",
+        "numericOdds": 146
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-03-07T23:11:40.438Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+146",
+        "numericOdds": 146
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-03-07T23:11:43.445Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+146",
+        "numericOdds": 146
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-03-07T23:11:46.444Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+146",
+        "numericOdds": 146
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-03-07T23:11:49.446Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+146",
+        "numericOdds": 146
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-03-07T23:11:52.448Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+146",
+        "numericOdds": 146
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-03-07T23:11:55.457Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+146",
+        "numericOdds": 146
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-03-07T23:11:58.471Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+146",
+        "numericOdds": 146
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-03-07T23:12:01.476Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+146",
+        "numericOdds": 146
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-03-07T23:12:04.478Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+146",
+        "numericOdds": 146
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-03-07T23:12:07.488Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+146",
+        "numericOdds": 146
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-03-07T23:12:10.492Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+146",
+        "numericOdds": 146
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-03-07T23:12:13.507Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-182",
+        "numericOdds": -182
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+142",
         "numericOdds": 142
       },
-      "fighter2": {
-        "name": "Rafael Tobias",
-        "numericOdds": -170
-      }
+      "isLocked": false,
+      "extractionId": 18
     },
     {
-      "timestamp": "2026-03-07T23:15:38Z",
+      "timestamp": "2026-03-07T23:12:16.508Z",
       "fighter1": {
-        "name": "Diyar Nurgozhay",
-        "numericOdds": 110
+        "name": "Rafael Tobias",
+        "odds": "-182",
+        "numericOdds": -182
       },
       "fighter2": {
-        "name": "Rafael Tobias",
-        "numericOdds": -140
-      }
+        "name": "Diyar Nurgozhay",
+        "odds": "+142",
+        "numericOdds": 142
+      },
+      "isLocked": false,
+      "extractionId": 19
     },
     {
-      "timestamp": "2026-03-07T23:20:37Z",
+      "timestamp": "2026-03-07T23:12:19.509Z",
       "fighter1": {
-        "name": "Diyar Nurgozhay",
-        "numericOdds": -250
+        "name": "Rafael Tobias",
+        "odds": "-182",
+        "numericOdds": -182
       },
       "fighter2": {
-        "name": "Rafael Tobias",
-        "numericOdds": 190
-      }
+        "name": "Diyar Nurgozhay",
+        "odds": "+142",
+        "numericOdds": 142
+      },
+      "isLocked": false,
+      "extractionId": 20
     },
     {
-      "timestamp": "2026-03-07T23:25:37Z",
+      "timestamp": "2026-03-07T23:12:22.517Z",
       "fighter1": {
-        "name": "Diyar Nurgozhay",
-        "numericOdds": -130
+        "name": "Rafael Tobias",
+        "odds": "-182",
+        "numericOdds": -182
       },
       "fighter2": {
-        "name": "Rafael Tobias",
-        "numericOdds": 100
-      }
+        "name": "Diyar Nurgozhay",
+        "odds": "+142",
+        "numericOdds": 142
+      },
+      "isLocked": false,
+      "extractionId": 21
     },
     {
-      "timestamp": "2026-03-07T23:30:38Z",
+      "timestamp": "2026-03-07T23:12:25.526Z",
       "fighter1": {
-        "name": "Diyar Nurgozhay",
-        "numericOdds": -4800
+        "name": "Rafael Tobias",
+        "odds": "-182",
+        "numericOdds": -182
       },
       "fighter2": {
-        "name": "Rafael Tobias",
-        "numericOdds": 1600
-      }
+        "name": "Diyar Nurgozhay",
+        "odds": "+142",
+        "numericOdds": 142
+      },
+      "isLocked": false,
+      "extractionId": 22
     },
     {
-      "timestamp": "2026-03-07T23:35:37Z",
+      "timestamp": "2026-03-07T23:12:28.535Z",
       "fighter1": {
-        "name": "Diyar Nurgozhay",
-        "numericOdds": -15000
+        "name": "Rafael Tobias",
+        "odds": "-182",
+        "numericOdds": -182
       },
       "fighter2": {
-        "name": "Rafael Tobias",
-        "numericOdds": 2500
-      }
+        "name": "Diyar Nurgozhay",
+        "odds": "+142",
+        "numericOdds": 142
+      },
+      "isLocked": false,
+      "extractionId": 23
     },
     {
-      "timestamp": "2026-03-07T23:40:37Z",
+      "timestamp": "2026-03-07T23:12:31.541Z",
       "fighter1": {
-        "name": "Diyar Nurgozhay",
-        "numericOdds": -15000
+        "name": "Rafael Tobias",
+        "odds": "-182",
+        "numericOdds": -182
       },
       "fighter2": {
-        "name": "Rafael Tobias",
-        "numericOdds": 2500
-      }
+        "name": "Diyar Nurgozhay",
+        "odds": "+142",
+        "numericOdds": 142
+      },
+      "isLocked": false,
+      "extractionId": 24
     },
     {
-      "timestamp": "2026-03-07T23:45:37Z",
+      "timestamp": "2026-03-07T23:12:34.550Z",
       "fighter1": {
-        "name": "Diyar Nurgozhay",
-        "numericOdds": -15000
+        "name": "Rafael Tobias",
+        "odds": "-182",
+        "numericOdds": -182
       },
       "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+142",
+        "numericOdds": 142
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-03-07T23:12:37.558Z",
+      "fighter1": {
         "name": "Rafael Tobias",
-        "numericOdds": 2500
-      }
+        "odds": "-182",
+        "numericOdds": -182
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+142",
+        "numericOdds": 142
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-03-07T23:12:40.566Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-182",
+        "numericOdds": -182
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+142",
+        "numericOdds": 142
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-03-07T23:12:43.569Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-182",
+        "numericOdds": -182
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+142",
+        "numericOdds": 142
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-03-07T23:12:46.571Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-182",
+        "numericOdds": -182
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+142",
+        "numericOdds": 142
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-03-07T23:12:49.576Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-182",
+        "numericOdds": -182
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+142",
+        "numericOdds": 142
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-03-07T23:12:52.579Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-03-07T23:12:55.587Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-03-07T23:12:58.588Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-03-07T23:13:01.589Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-03-07T23:13:04.594Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-03-07T23:13:07.597Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+160",
+        "numericOdds": 160
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-03-07T23:13:10.600Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+160",
+        "numericOdds": 160
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2026-03-07T23:13:13.608Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+166",
+        "numericOdds": 166
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2026-03-07T23:13:16.612Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+166",
+        "numericOdds": 166
+      },
+      "isLocked": false,
+      "extractionId": 39
+    },
+    {
+      "timestamp": "2026-03-07T23:13:19.623Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-225",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 40
+    },
+    {
+      "timestamp": "2026-03-07T23:13:22.626Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-225",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 41
+    },
+    {
+      "timestamp": "2026-03-07T23:13:25.630Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-225",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 42
+    },
+    {
+      "timestamp": "2026-03-07T23:13:28.633Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-225",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 43
+    },
+    {
+      "timestamp": "2026-03-07T23:13:31.637Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-225",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 44
+    },
+    {
+      "timestamp": "2026-03-07T23:13:34.645Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-225",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 45
+    },
+    {
+      "timestamp": "2026-03-07T23:13:37.655Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-225",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 46
+    },
+    {
+      "timestamp": "2026-03-07T23:13:40.656Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-225",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 47
+    },
+    {
+      "timestamp": "2026-03-07T23:13:43.658Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-225",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 48
+    },
+    {
+      "timestamp": "2026-03-07T23:13:46.660Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-225",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 49
+    },
+    {
+      "timestamp": "2026-03-07T23:13:49.667Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 50
+    },
+    {
+      "timestamp": "2026-03-07T23:13:52.671Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 51
+    },
+    {
+      "timestamp": "2026-03-07T23:13:55.675Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 52
+    },
+    {
+      "timestamp": "2026-03-07T23:13:58.679Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 53
+    },
+    {
+      "timestamp": "2026-03-07T23:14:01.682Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 54
+    },
+    {
+      "timestamp": "2026-03-07T23:14:04.684Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 55
+    },
+    {
+      "timestamp": "2026-03-07T23:14:07.693Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 56
+    },
+    {
+      "timestamp": "2026-03-07T23:14:10.702Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "isLocked": false,
+      "extractionId": 57
+    },
+    {
+      "timestamp": "2026-03-07T23:14:13.706Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-172",
+        "numericOdds": -172
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+134",
+        "numericOdds": 134
+      },
+      "isLocked": false,
+      "extractionId": 58
+    },
+    {
+      "timestamp": "2026-03-07T23:14:16.721Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "-172",
+        "numericOdds": -172
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "+134",
+        "numericOdds": 134
+      },
+      "isLocked": false,
+      "extractionId": 59
+    },
+    {
+      "timestamp": "2026-03-07T23:17:05.210Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+108",
+        "numericOdds": 108
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-136",
+        "numericOdds": -136
+      },
+      "isLocked": false,
+      "extractionId": 60
+    },
+    {
+      "timestamp": "2026-03-07T23:17:08.215Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+108",
+        "numericOdds": 108
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-136",
+        "numericOdds": -136
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-07T23:17:11.228Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-154",
+        "numericOdds": -154
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-07T23:17:14.242Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-154",
+        "numericOdds": -154
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-07T23:17:17.249Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-07T23:17:20.252Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+140",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-180",
+        "numericOdds": -180
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-03-07T23:17:23.266Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+140",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-180",
+        "numericOdds": -180
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-03-07T23:17:26.268Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-186",
+        "numericOdds": -186
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-03-07T23:17:29.270Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-186",
+        "numericOdds": -186
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-03-07T23:17:32.271Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-186",
+        "numericOdds": -186
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-03-07T23:17:35.274Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-186",
+        "numericOdds": -186
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-03-07T23:17:38.289Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-186",
+        "numericOdds": -186
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-03-07T23:17:41.303Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+156",
+        "numericOdds": 156
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-03-07T23:17:44.319Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+156",
+        "numericOdds": 156
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-03-07T23:17:47.322Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+156",
+        "numericOdds": 156
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-03-07T23:17:50.332Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+156",
+        "numericOdds": 156
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-03-07T23:17:53.337Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+156",
+        "numericOdds": 156
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-03-07T23:17:56.338Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+162",
+        "numericOdds": 162
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-03-07T23:17:59.340Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+162",
+        "numericOdds": 162
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-03-07T23:18:02.351Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-03-07T23:18:05.359Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-03-07T23:18:08.365Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-03-07T23:18:11.369Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+198",
+        "numericOdds": 198
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-03-07T23:18:14.380Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+198",
+        "numericOdds": 198
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-03-07T23:18:17.390Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+198",
+        "numericOdds": 198
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-03-07T23:18:20.396Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+198",
+        "numericOdds": 198
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-03-07T23:18:23.410Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+198",
+        "numericOdds": 198
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-03-07T23:18:26.417Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+198",
+        "numericOdds": 198
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-03-07T23:18:29.421Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+198",
+        "numericOdds": 198
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-03-07T23:18:32.424Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-290",
+        "numericOdds": -290
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-03-07T23:18:35.431Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-290",
+        "numericOdds": -290
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-03-07T23:18:38.441Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-290",
+        "numericOdds": -290
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-03-07T23:18:41.442Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+230",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-03-07T23:18:44.447Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+230",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-03-07T23:18:47.449Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+230",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-03-07T23:18:50.454Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+230",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-03-07T23:18:53.461Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+230",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2026-03-07T23:18:56.464Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+230",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2026-03-07T23:18:59.471Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+230",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "isLocked": false,
+      "extractionId": 39
+    },
+    {
+      "timestamp": "2026-03-07T23:19:02.474Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 40
+    },
+    {
+      "timestamp": "2026-03-07T23:19:05.488Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 41
+    },
+    {
+      "timestamp": "2026-03-07T23:19:08.492Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 42
+    },
+    {
+      "timestamp": "2026-03-07T23:19:11.503Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 43
+    },
+    {
+      "timestamp": "2026-03-07T23:19:14.513Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 44
+    },
+    {
+      "timestamp": "2026-03-07T23:19:17.517Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 45
+    },
+    {
+      "timestamp": "2026-03-07T23:19:20.529Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 46
+    },
+    {
+      "timestamp": "2026-03-07T23:19:23.533Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 47
+    },
+    {
+      "timestamp": "2026-03-07T23:19:26.545Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 48
+    },
+    {
+      "timestamp": "2026-03-07T23:19:29.560Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 49
+    },
+    {
+      "timestamp": "2026-03-07T23:19:32.564Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 50
+    },
+    {
+      "timestamp": "2026-03-07T23:19:35.574Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 51
+    },
+    {
+      "timestamp": "2026-03-07T23:19:38.578Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 52
+    },
+    {
+      "timestamp": "2026-03-07T23:19:41.579Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 53
+    },
+    {
+      "timestamp": "2026-03-07T23:19:44.582Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 54
+    },
+    {
+      "timestamp": "2026-03-07T23:19:47.583Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 55
+    },
+    {
+      "timestamp": "2026-03-07T23:19:50.589Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 56
+    },
+    {
+      "timestamp": "2026-03-07T23:19:53.595Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 57
+    },
+    {
+      "timestamp": "2026-03-07T23:19:56.602Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 58
+    },
+    {
+      "timestamp": "2026-03-07T23:19:59.607Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 59
+    },
+    {
+      "timestamp": "2026-03-07T23:20:02.620Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 60
+    },
+    {
+      "timestamp": "2026-03-07T23:20:05.622Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 61
+    },
+    {
+      "timestamp": "2026-03-07T23:20:08.624Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 62
+    },
+    {
+      "timestamp": "2026-03-07T23:20:11.625Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 63
+    },
+    {
+      "timestamp": "2026-03-07T23:20:14.627Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 64
+    },
+    {
+      "timestamp": "2026-03-07T23:20:17.640Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 65
+    },
+    {
+      "timestamp": "2026-03-07T23:20:20.643Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 66
+    },
+    {
+      "timestamp": "2026-03-07T23:20:23.647Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 67
+    },
+    {
+      "timestamp": "2026-03-07T23:20:26.657Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 68
+    },
+    {
+      "timestamp": "2026-03-07T23:20:29.662Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 69
+    },
+    {
+      "timestamp": "2026-03-07T23:20:32.669Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 70
+    },
+    {
+      "timestamp": "2026-03-07T23:20:35.669Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 71
+    },
+    {
+      "timestamp": "2026-03-07T23:20:38.673Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 72
+    },
+    {
+      "timestamp": "2026-03-07T23:20:41.677Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 73
+    },
+    {
+      "timestamp": "2026-03-07T23:20:44.681Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 74
+    },
+    {
+      "timestamp": "2026-03-07T23:20:47.697Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 75
+    },
+    {
+      "timestamp": "2026-03-07T23:20:50.700Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 76
+    },
+    {
+      "timestamp": "2026-03-07T23:20:53.715Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 77
+    },
+    {
+      "timestamp": "2026-03-07T23:20:56.715Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 78
+    },
+    {
+      "timestamp": "2026-03-07T23:20:59.715Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 79
+    },
+    {
+      "timestamp": "2026-03-07T23:21:02.717Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 80
+    },
+    {
+      "timestamp": "2026-03-07T23:21:05.731Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 81
+    },
+    {
+      "timestamp": "2026-03-07T23:21:08.743Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 82
+    },
+    {
+      "timestamp": "2026-03-07T23:21:11.757Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 83
+    },
+    {
+      "timestamp": "2026-03-07T23:21:14.771Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 84
+    },
+    {
+      "timestamp": "2026-03-07T23:21:17.778Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 85
+    },
+    {
+      "timestamp": "2026-03-07T23:21:20.793Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 86
+    },
+    {
+      "timestamp": "2026-03-07T23:21:23.806Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 87
+    },
+    {
+      "timestamp": "2026-03-07T23:21:26.819Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 88
+    },
+    {
+      "timestamp": "2026-03-07T23:21:29.821Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 89
+    },
+    {
+      "timestamp": "2026-03-07T23:21:32.826Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+245",
+        "numericOdds": 245
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "isLocked": false,
+      "extractionId": 90
+    },
+    {
+      "timestamp": "2026-03-07T23:21:35.831Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+245",
+        "numericOdds": 245
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "isLocked": false,
+      "extractionId": 91
+    },
+    {
+      "timestamp": "2026-03-07T23:21:38.835Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+245",
+        "numericOdds": 245
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 92
+    },
+    {
+      "timestamp": "2026-03-07T23:21:41.843Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+245",
+        "numericOdds": 245
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 93
+    },
+    {
+      "timestamp": "2026-03-07T23:21:44.845Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "isLocked": false,
+      "extractionId": 94
+    },
+    {
+      "timestamp": "2026-03-07T23:21:47.850Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 95
+    },
+    {
+      "timestamp": "2026-03-07T23:21:50.859Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 96
+    },
+    {
+      "timestamp": "2026-03-07T23:21:53.862Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 97
+    },
+    {
+      "timestamp": "2026-03-07T23:21:56.874Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 98
+    },
+    {
+      "timestamp": "2026-03-07T23:21:59.874Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 99
+    },
+    {
+      "timestamp": "2026-03-07T23:22:02.883Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 100
+    },
+    {
+      "timestamp": "2026-03-07T23:22:05.885Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 101
+    },
+    {
+      "timestamp": "2026-03-07T23:22:08.899Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+370",
+        "numericOdds": 370
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-600",
+        "numericOdds": -600
+      },
+      "isLocked": false,
+      "extractionId": 102
+    },
+    {
+      "timestamp": "2026-03-07T23:22:11.899Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+370",
+        "numericOdds": 370
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-600",
+        "numericOdds": -600
+      },
+      "isLocked": false,
+      "extractionId": 103
+    },
+    {
+      "timestamp": "2026-03-07T23:22:14.902Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+370",
+        "numericOdds": 370
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-600",
+        "numericOdds": -600
+      },
+      "isLocked": false,
+      "extractionId": 104
+    },
+    {
+      "timestamp": "2026-03-07T23:22:17.908Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+370",
+        "numericOdds": 370
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-600",
+        "numericOdds": -600
+      },
+      "isLocked": false,
+      "extractionId": 105
+    },
+    {
+      "timestamp": "2026-03-07T23:22:20.908Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+370",
+        "numericOdds": 370
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-600",
+        "numericOdds": -600
+      },
+      "isLocked": false,
+      "extractionId": 106
+    },
+    {
+      "timestamp": "2026-03-07T23:22:23.918Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+370",
+        "numericOdds": 370
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-600",
+        "numericOdds": -600
+      },
+      "isLocked": false,
+      "extractionId": 107
+    },
+    {
+      "timestamp": "2026-03-07T23:22:26.934Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+370",
+        "numericOdds": 370
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-600",
+        "numericOdds": -600
+      },
+      "isLocked": false,
+      "extractionId": 108
+    },
+    {
+      "timestamp": "2026-03-07T23:22:29.940Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 109
+    },
+    {
+      "timestamp": "2026-03-07T23:22:32.951Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 110
+    },
+    {
+      "timestamp": "2026-03-07T23:22:35.961Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 111
+    },
+    {
+      "timestamp": "2026-03-07T23:22:38.965Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 112
+    },
+    {
+      "timestamp": "2026-03-07T23:22:41.978Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 113
+    },
+    {
+      "timestamp": "2026-03-07T23:22:44.993Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+320",
+        "numericOdds": 320
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-460",
+        "numericOdds": -460
+      },
+      "isLocked": false,
+      "extractionId": 114
+    },
+    {
+      "timestamp": "2026-03-07T23:22:48.005Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+320",
+        "numericOdds": 320
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-460",
+        "numericOdds": -460
+      },
+      "isLocked": false,
+      "extractionId": 115
+    },
+    {
+      "timestamp": "2026-03-07T23:22:51.021Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+320",
+        "numericOdds": 320
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-460",
+        "numericOdds": -460
+      },
+      "isLocked": false,
+      "extractionId": 116
+    },
+    {
+      "timestamp": "2026-03-07T23:22:54.034Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+320",
+        "numericOdds": 320
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-460",
+        "numericOdds": -460
+      },
+      "isLocked": false,
+      "extractionId": 117
+    },
+    {
+      "timestamp": "2026-03-07T23:22:57.039Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+320",
+        "numericOdds": 320
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-460",
+        "numericOdds": -460
+      },
+      "isLocked": false,
+      "extractionId": 118
+    },
+    {
+      "timestamp": "2026-03-07T23:23:00.044Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-410",
+        "numericOdds": -410
+      },
+      "isLocked": false,
+      "extractionId": 119
+    },
+    {
+      "timestamp": "2026-03-07T23:23:03.045Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-410",
+        "numericOdds": -410
+      },
+      "isLocked": false,
+      "extractionId": 120
+    },
+    {
+      "timestamp": "2026-03-07T23:23:06.050Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-380",
+        "numericOdds": -380
+      },
+      "isLocked": false,
+      "extractionId": 121
+    },
+    {
+      "timestamp": "2026-03-07T23:23:09.054Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+235",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "isLocked": false,
+      "extractionId": 122
+    },
+    {
+      "timestamp": "2026-03-07T23:23:12.068Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+235",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "isLocked": false,
+      "extractionId": 123
+    },
+    {
+      "timestamp": "2026-03-07T23:23:15.077Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+235",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "isLocked": false,
+      "extractionId": 124
+    },
+    {
+      "timestamp": "2026-03-07T23:23:18.089Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+235",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "isLocked": false,
+      "extractionId": 125
+    },
+    {
+      "timestamp": "2026-03-07T23:23:21.104Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+235",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "isLocked": false,
+      "extractionId": 126
+    },
+    {
+      "timestamp": "2026-03-07T23:23:39.151Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 127
+    },
+    {
+      "timestamp": "2026-03-07T23:23:42.152Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-07T23:25:21.388Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-07T23:25:24.399Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-07T23:25:27.401Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-07T23:25:42.451Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-07T23:25:45.452Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-07T23:25:48.459Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-07T23:25:51.474Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-07T23:25:54.488Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-07T23:25:57.498Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-03-07T23:26:00.509Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-03-07T23:26:03.519Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-03-07T23:26:06.521Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-03-07T23:26:09.534Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-03-07T23:26:12.534Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-03-07T23:26:15.542Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-03-07T23:26:18.542Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-03-07T23:26:21.558Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-03-07T23:26:24.570Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-03-07T23:26:27.574Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-03-07T23:26:30.588Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-03-07T23:26:33.600Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-03-07T23:26:36.603Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-03-07T23:26:39.617Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-03-07T23:26:42.630Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-03-07T23:26:45.632Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-03-07T23:26:48.643Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-03-07T23:26:51.652Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-03-07T23:26:54.655Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-03-07T23:26:57.660Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-380",
+        "numericOdds": -380
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-03-07T23:27:00.661Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+235",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-03-07T23:27:03.667Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+235",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-03-07T23:27:06.679Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+235",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-03-07T23:27:09.689Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+235",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-03-07T23:27:12.689Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+235",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-03-07T23:27:15.700Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-03-07T23:27:18.702Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-03-07T23:27:21.710Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-03-07T23:27:24.712Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-03-07T23:27:27.715Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-380",
+        "numericOdds": -380
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-03-07T23:27:30.715Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-380",
+        "numericOdds": -380
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2026-03-07T23:27:33.715Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-380",
+        "numericOdds": -380
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2026-03-07T23:27:36.726Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 39
+    },
+    {
+      "timestamp": "2026-03-07T23:27:39.728Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+280",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "isLocked": false,
+      "extractionId": 40
+    },
+    {
+      "timestamp": "2026-03-07T23:27:42.729Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 41
+    },
+    {
+      "timestamp": "2026-03-07T23:27:45.743Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 42
+    },
+    {
+      "timestamp": "2026-03-07T23:27:48.742Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 43
+    },
+    {
+      "timestamp": "2026-03-07T23:27:51.757Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 44
+    },
+    {
+      "timestamp": "2026-03-07T23:27:54.758Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 45
+    },
+    {
+      "timestamp": "2026-03-07T23:27:57.769Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 46
+    },
+    {
+      "timestamp": "2026-03-07T23:28:00.771Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 47
+    },
+    {
+      "timestamp": "2026-03-07T23:28:03.784Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 48
+    },
+    {
+      "timestamp": "2026-03-07T23:28:06.788Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 49
+    },
+    {
+      "timestamp": "2026-03-07T23:28:09.791Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 50
+    },
+    {
+      "timestamp": "2026-03-07T23:28:12.791Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 51
+    },
+    {
+      "timestamp": "2026-03-07T23:28:15.806Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 52
+    },
+    {
+      "timestamp": "2026-03-07T23:28:18.810Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+520",
+        "numericOdds": 520
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "isLocked": false,
+      "extractionId": 53
+    },
+    {
+      "timestamp": "2026-03-07T23:28:21.813Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+520",
+        "numericOdds": 520
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "isLocked": false,
+      "extractionId": 54
+    },
+    {
+      "timestamp": "2026-03-07T23:28:24.814Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+520",
+        "numericOdds": 520
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "isLocked": false,
+      "extractionId": 55
+    },
+    {
+      "timestamp": "2026-03-07T23:28:27.822Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+570",
+        "numericOdds": 570
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 56
+    },
+    {
+      "timestamp": "2026-03-07T23:28:30.822Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+570",
+        "numericOdds": 570
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 57
+    },
+    {
+      "timestamp": "2026-03-07T23:28:33.830Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+570",
+        "numericOdds": 570
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 58
+    },
+    {
+      "timestamp": "2026-03-07T23:28:36.844Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+610",
+        "numericOdds": 610
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-1100",
+        "numericOdds": -1100
+      },
+      "isLocked": false,
+      "extractionId": 59
+    },
+    {
+      "timestamp": "2026-03-07T23:28:39.855Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+610",
+        "numericOdds": 610
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-1100",
+        "numericOdds": -1100
+      },
+      "isLocked": false,
+      "extractionId": 60
+    },
+    {
+      "timestamp": "2026-03-07T23:28:57.887Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "isLocked": false,
+      "extractionId": 61
+    },
+    {
+      "timestamp": "2026-03-07T23:29:00.888Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-07T23:29:03.890Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-07T23:29:06.891Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-07T23:29:09.902Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-07T23:29:12.906Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-03-07T23:29:15.920Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-03-07T23:29:18.926Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-03-07T23:29:21.928Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1140",
+        "numericOdds": 1140
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-03-07T23:29:24.938Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1140",
+        "numericOdds": 1140
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-03-07T23:29:27.944Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1140",
+        "numericOdds": 1140
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-03-07T23:29:30.946Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1140",
+        "numericOdds": 1140
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-03-07T23:29:33.953Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1140",
+        "numericOdds": 1140
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-03-07T23:29:36.963Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1140",
+        "numericOdds": 1140
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-03-07T23:29:39.977Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1220",
+        "numericOdds": 1220
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-03-07T23:29:42.977Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1220",
+        "numericOdds": 1220
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-03-07T23:29:45.980Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1220",
+        "numericOdds": 1220
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-03-07T23:29:48.981Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1220",
+        "numericOdds": 1220
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-03-07T23:29:51.981Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1220",
+        "numericOdds": 1220
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-03-07T23:29:54.993Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1220",
+        "numericOdds": 1220
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-03-07T23:29:58.007Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1360",
+        "numericOdds": 1360
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-03-07T23:30:01.016Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1360",
+        "numericOdds": 1360
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-03-07T23:30:04.023Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1360",
+        "numericOdds": 1360
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-03-07T23:30:07.038Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1360",
+        "numericOdds": 1360
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-03-07T23:30:10.037Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1140",
+        "numericOdds": 1140
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-03-07T23:30:13.052Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1140",
+        "numericOdds": 1140
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-03-07T23:30:16.054Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1140",
+        "numericOdds": 1140
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-03-07T23:30:19.055Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1140",
+        "numericOdds": 1140
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-03-07T23:30:22.068Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1140",
+        "numericOdds": 1140
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-03-07T23:30:25.074Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1140",
+        "numericOdds": 1140
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-03-07T23:30:28.078Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1140",
+        "numericOdds": 1140
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-03-07T23:30:31.088Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1140",
+        "numericOdds": 1140
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-03-07T23:30:34.091Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1000",
+        "numericOdds": 1000
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-03-07T23:30:37.094Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1000",
+        "numericOdds": 1000
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-03-07T23:30:40.098Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-03-07T23:30:43.100Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-03-07T23:30:46.115Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2026-03-07T23:30:49.122Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2026-03-07T23:30:52.126Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "isLocked": false,
+      "extractionId": 39
+    },
+    {
+      "timestamp": "2026-03-07T23:30:55.137Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "isLocked": false,
+      "extractionId": 40
+    },
+    {
+      "timestamp": "2026-03-07T23:30:58.138Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1000",
+        "numericOdds": 1000
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "isLocked": false,
+      "extractionId": 41
+    },
+    {
+      "timestamp": "2026-03-07T23:31:01.150Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1000",
+        "numericOdds": 1000
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "isLocked": false,
+      "extractionId": 42
+    },
+    {
+      "timestamp": "2026-03-07T23:31:04.159Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1000",
+        "numericOdds": 1000
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "isLocked": false,
+      "extractionId": 43
+    },
+    {
+      "timestamp": "2026-03-07T23:31:07.166Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1000",
+        "numericOdds": 1000
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "isLocked": false,
+      "extractionId": 44
+    },
+    {
+      "timestamp": "2026-03-07T23:31:10.174Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1220",
+        "numericOdds": 1220
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 45
+    },
+    {
+      "timestamp": "2026-03-07T23:31:13.179Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1220",
+        "numericOdds": 1220
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 46
+    },
+    {
+      "timestamp": "2026-03-07T23:31:16.182Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1220",
+        "numericOdds": 1220
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 47
+    },
+    {
+      "timestamp": "2026-03-07T23:28:57.887Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "isLocked": false,
+      "extractionId": 61
+    },
+    {
+      "timestamp": "2026-03-07T23:29:00.888Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-07T23:29:03.890Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-07T23:29:06.891Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-07T23:29:09.902Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-07T23:29:12.906Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-03-07T23:29:15.920Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-03-07T23:29:18.926Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-03-07T23:29:21.928Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1140",
+        "numericOdds": 1140
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-03-07T23:29:24.938Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1140",
+        "numericOdds": 1140
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-03-07T23:29:27.944Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1140",
+        "numericOdds": 1140
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-03-07T23:29:30.946Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1140",
+        "numericOdds": 1140
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-03-07T23:29:33.953Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1140",
+        "numericOdds": 1140
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-03-07T23:29:36.963Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1140",
+        "numericOdds": 1140
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-03-07T23:29:39.977Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1220",
+        "numericOdds": 1220
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-03-07T23:29:42.977Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1220",
+        "numericOdds": 1220
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-03-07T23:29:45.980Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1220",
+        "numericOdds": 1220
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-03-07T23:29:48.981Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1220",
+        "numericOdds": 1220
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-03-07T23:29:51.981Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1220",
+        "numericOdds": 1220
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-03-07T23:29:54.993Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1220",
+        "numericOdds": 1220
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-03-07T23:29:58.007Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1360",
+        "numericOdds": 1360
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-03-07T23:30:01.016Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1360",
+        "numericOdds": 1360
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-03-07T23:30:04.023Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1360",
+        "numericOdds": 1360
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-03-07T23:30:07.038Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1360",
+        "numericOdds": 1360
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-03-07T23:30:10.037Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1140",
+        "numericOdds": 1140
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-03-07T23:30:13.052Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1140",
+        "numericOdds": 1140
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-03-07T23:30:16.054Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1140",
+        "numericOdds": 1140
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-03-07T23:30:19.055Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1140",
+        "numericOdds": 1140
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-03-07T23:30:22.068Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1140",
+        "numericOdds": 1140
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-03-07T23:30:25.074Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1140",
+        "numericOdds": 1140
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-03-07T23:30:28.078Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1140",
+        "numericOdds": 1140
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-03-07T23:30:31.088Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1140",
+        "numericOdds": 1140
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-03-07T23:30:34.091Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1000",
+        "numericOdds": 1000
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-03-07T23:30:37.094Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1000",
+        "numericOdds": 1000
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-03-07T23:30:40.098Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-03-07T23:30:43.100Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-03-07T23:30:46.115Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2026-03-07T23:30:49.122Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2026-03-07T23:30:52.126Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "isLocked": false,
+      "extractionId": 39
+    },
+    {
+      "timestamp": "2026-03-07T23:30:55.137Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "isLocked": false,
+      "extractionId": 40
+    },
+    {
+      "timestamp": "2026-03-07T23:30:58.138Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1000",
+        "numericOdds": 1000
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "isLocked": false,
+      "extractionId": 41
+    },
+    {
+      "timestamp": "2026-03-07T23:31:01.150Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1000",
+        "numericOdds": 1000
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "isLocked": false,
+      "extractionId": 42
+    },
+    {
+      "timestamp": "2026-03-07T23:31:04.159Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1000",
+        "numericOdds": 1000
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "isLocked": false,
+      "extractionId": 43
+    },
+    {
+      "timestamp": "2026-03-07T23:31:07.166Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1000",
+        "numericOdds": 1000
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "isLocked": false,
+      "extractionId": 44
+    },
+    {
+      "timestamp": "2026-03-07T23:31:10.174Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1220",
+        "numericOdds": 1220
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 45
+    },
+    {
+      "timestamp": "2026-03-07T23:31:13.179Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1220",
+        "numericOdds": 1220
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 46
+    },
+    {
+      "timestamp": "2026-03-07T23:31:16.182Z",
+      "fighter1": {
+        "name": "Rafael Tobias",
+        "odds": "+1220",
+        "numericOdds": 1220
+      },
+      "fighter2": {
+        "name": "Diyar Nurgozhay",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 47
     }
-  ]
+  ],
+  "createdAt": "2026-03-07T23:17:05.208Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Diyar Nurgozhay",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:52:12.615Z",
+    "openingF1Odds": -174,
+    "openingF2Odds": 146,
+    "closingF1Odds": 1220,
+    "closingF2Odds": -2400,
+    "lineMovementF1": 1394,
+    "crossoverOccurred": true,
+    "crossoverMinute": 6
+  },
+  "derived": {
+    "inferredFinishMin": 17,
+    "inferredFinishRound": 3,
+    "peakOddsSwing": 1534,
+    "finishSpeed": "slow",
+    "preFightSteam": 1394,
+    "dominanceScore": 84,
+    "crossoverCount": 1,
+    "derivedAt": "2026-06-14T11:47:28.481Z"
+  }
 }

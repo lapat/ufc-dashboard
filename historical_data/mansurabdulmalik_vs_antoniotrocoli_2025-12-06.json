@@ -1,33 +1,11 @@
 {
   "fightId": "mansurabdulmalik_vs_antoniotrocoli",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2025-02-09T09:40:37Z",
+  "startTime": "2025-12-06T23:29:00.144Z",
   "endTime": "2025-12-06T23:30:27.359Z",
-  "dataPoints": 30,
+  "duration": 87215,
+  "dataPoints": 38,
   "oddsHistory": [
-    {
-      "timestamp": "2025-02-09T09:40:37Z",
-      "fighter1": {
-        "name": "Antonio Trocoli",
-        "numericOdds": 550
-      },
-      "fighter2": {
-        "name": "Mansur Abdul-Malik",
-        "numericOdds": -800
-      }
-    },
-    {
-      "timestamp": "2025-02-09T09:50:38Z",
-      "fighter1": {
-        "name": "Antonio Trocoli",
-        "numericOdds": 550
-      },
-      "fighter2": {
-        "name": "Mansur Abdul-Malik",
-        "numericOdds": -800
-      }
-    },
     {
       "timestamp": "2025-12-06T23:29:00.144Z",
       "fighter1": {
@@ -447,6 +425,183 @@
       },
       "isLocked": false,
       "extractionId": 10
+    },
+    {
+      "timestamp": "2025-12-06T23:30:00.302Z",
+      "fighter1": {
+        "name": "Mansur Abdul Malik",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Antonio Trocoli",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2025-12-06T23:30:03.306Z",
+      "fighter1": {
+        "name": "Mansur Abdul Malik",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Antonio Trocoli",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2025-12-06T23:30:06.317Z",
+      "fighter1": {
+        "name": "Mansur Abdul Malik",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Antonio Trocoli",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2025-12-06T23:30:09.323Z",
+      "fighter1": {
+        "name": "Mansur Abdul Malik",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Antonio Trocoli",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2025-12-06T23:30:12.331Z",
+      "fighter1": {
+        "name": "Mansur Abdul Malik",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Antonio Trocoli",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2025-12-06T23:30:15.341Z",
+      "fighter1": {
+        "name": "Mansur Abdul Malik",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Antonio Trocoli",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2025-12-06T23:30:18.349Z",
+      "fighter1": {
+        "name": "Mansur Abdul Malik",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Antonio Trocoli",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2025-12-06T23:30:21.357Z",
+      "fighter1": {
+        "name": "Mansur Abdul Malik",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Antonio Trocoli",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2025-12-06T23:30:24.357Z",
+      "fighter1": {
+        "name": "Mansur Abdul Malik",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Antonio Trocoli",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2025-12-06T23:30:27.359Z",
+      "fighter1": {
+        "name": "Mansur Abdul Malik",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "fighter2": {
+        "name": "Antonio Trocoli",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "isLocked": false,
+      "extractionId": 10
     }
-  ]
+  ],
+  "createdAt": "2025-12-06T23:30:00.300Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Mansur Abdul-Malik",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:51:52.202Z",
+    "openingF1Odds": -1800,
+    "openingF2Odds": 980,
+    "closingF1Odds": -2400,
+    "closingF2Odds": 1180,
+    "lineMovementF1": -600,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  },
+  "derived": {
+    "inferredFinishMin": 0,
+    "inferredFinishRound": 1,
+    "peakOddsSwing": 600,
+    "finishSpeed": "fast",
+    "preFightSteam": -600,
+    "dominanceScore": 100,
+    "crossoverCount": 0,
+    "derivedAt": "2026-06-14T11:47:28.452Z"
+  }
 }

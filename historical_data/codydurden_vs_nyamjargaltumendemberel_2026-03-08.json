@@ -1,11 +1,416 @@
 {
   "fightId": "codydurden_vs_nyamjargaltumendemberel",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-03-08T00:09:30.590Z",
+  "startTime": "2026-03-08T00:08:09.411Z",
   "endTime": "2026-03-08T00:26:23.942Z",
-  "dataPoints": 255,
+  "duration": 1094531,
+  "dataPoints": 282,
   "oddsHistory": [
+    {
+      "timestamp": "2026-03-08T00:08:09.411Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "odds": "+162",
+        "numericOdds": 162
+      },
+      "fighter2": {
+        "name": "Nyamjargal Tumendemberel",
+        "odds": "-194",
+        "numericOdds": -194
+      },
+      "isLocked": false,
+      "extractionId": 63
+    },
+    {
+      "timestamp": "2026-03-08T00:08:12.427Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "odds": "+162",
+        "numericOdds": 162
+      },
+      "fighter2": {
+        "name": "Nyamjargal Tumendemberel",
+        "odds": "-194",
+        "numericOdds": -194
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-08T00:08:15.430Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "odds": "+162",
+        "numericOdds": 162
+      },
+      "fighter2": {
+        "name": "Nyamjargal Tumendemberel",
+        "odds": "-194",
+        "numericOdds": -194
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-08T00:08:18.439Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "odds": "+162",
+        "numericOdds": 162
+      },
+      "fighter2": {
+        "name": "Nyamjargal Tumendemberel",
+        "odds": "-194",
+        "numericOdds": -194
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-08T00:08:21.443Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "odds": "+162",
+        "numericOdds": 162
+      },
+      "fighter2": {
+        "name": "Nyamjargal Tumendemberel",
+        "odds": "-194",
+        "numericOdds": -194
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-08T00:08:24.455Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "odds": "+162",
+        "numericOdds": 162
+      },
+      "fighter2": {
+        "name": "Nyamjargal Tumendemberel",
+        "odds": "-194",
+        "numericOdds": -194
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-03-08T00:08:27.460Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "odds": "+162",
+        "numericOdds": 162
+      },
+      "fighter2": {
+        "name": "Nyamjargal Tumendemberel",
+        "odds": "-194",
+        "numericOdds": -194
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-03-08T00:08:30.461Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "odds": "+162",
+        "numericOdds": 162
+      },
+      "fighter2": {
+        "name": "Nyamjargal Tumendemberel",
+        "odds": "-194",
+        "numericOdds": -194
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-03-08T00:08:33.463Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "odds": "+162",
+        "numericOdds": 162
+      },
+      "fighter2": {
+        "name": "Nyamjargal Tumendemberel",
+        "odds": "-194",
+        "numericOdds": -194
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-03-08T00:08:36.472Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "odds": "+162",
+        "numericOdds": 162
+      },
+      "fighter2": {
+        "name": "Nyamjargal Tumendemberel",
+        "odds": "-194",
+        "numericOdds": -194
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-03-08T00:08:39.474Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "odds": "+162",
+        "numericOdds": 162
+      },
+      "fighter2": {
+        "name": "Nyamjargal Tumendemberel",
+        "odds": "-194",
+        "numericOdds": -194
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-03-08T00:08:42.476Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "odds": "+162",
+        "numericOdds": 162
+      },
+      "fighter2": {
+        "name": "Nyamjargal Tumendemberel",
+        "odds": "-194",
+        "numericOdds": -194
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-03-08T00:08:45.477Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "odds": "+162",
+        "numericOdds": 162
+      },
+      "fighter2": {
+        "name": "Nyamjargal Tumendemberel",
+        "odds": "-194",
+        "numericOdds": -194
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-03-08T00:08:48.483Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "odds": "+162",
+        "numericOdds": 162
+      },
+      "fighter2": {
+        "name": "Nyamjargal Tumendemberel",
+        "odds": "-194",
+        "numericOdds": -194
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-03-08T00:08:51.494Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "odds": "+162",
+        "numericOdds": 162
+      },
+      "fighter2": {
+        "name": "Nyamjargal Tumendemberel",
+        "odds": "-194",
+        "numericOdds": -194
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-03-08T00:08:54.496Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "odds": "+162",
+        "numericOdds": 162
+      },
+      "fighter2": {
+        "name": "Nyamjargal Tumendemberel",
+        "odds": "-194",
+        "numericOdds": -194
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-03-08T00:08:57.505Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "odds": "+162",
+        "numericOdds": 162
+      },
+      "fighter2": {
+        "name": "Nyamjargal Tumendemberel",
+        "odds": "-194",
+        "numericOdds": -194
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-03-08T00:09:00.514Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "odds": "+162",
+        "numericOdds": 162
+      },
+      "fighter2": {
+        "name": "Nyamjargal Tumendemberel",
+        "odds": "-194",
+        "numericOdds": -194
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-03-08T00:09:03.520Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "odds": "+162",
+        "numericOdds": 162
+      },
+      "fighter2": {
+        "name": "Nyamjargal Tumendemberel",
+        "odds": "-194",
+        "numericOdds": -194
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-03-08T00:09:06.527Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "odds": "+162",
+        "numericOdds": 162
+      },
+      "fighter2": {
+        "name": "Nyamjargal Tumendemberel",
+        "odds": "-194",
+        "numericOdds": -194
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-03-08T00:09:09.528Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "odds": "+156",
+        "numericOdds": 156
+      },
+      "fighter2": {
+        "name": "Nyamjargal Tumendemberel",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-03-08T00:09:12.532Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "odds": "+156",
+        "numericOdds": 156
+      },
+      "fighter2": {
+        "name": "Nyamjargal Tumendemberel",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-03-08T00:09:15.536Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "odds": "+156",
+        "numericOdds": 156
+      },
+      "fighter2": {
+        "name": "Nyamjargal Tumendemberel",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-03-08T00:09:18.541Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "odds": "+156",
+        "numericOdds": 156
+      },
+      "fighter2": {
+        "name": "Nyamjargal Tumendemberel",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-03-08T00:09:21.551Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "odds": "+156",
+        "numericOdds": 156
+      },
+      "fighter2": {
+        "name": "Nyamjargal Tumendemberel",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-03-08T00:09:24.561Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Nyamjargal Tumendemberel",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-03-08T00:09:27.577Z",
+      "fighter1": {
+        "name": "Cody Durden",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Nyamjargal Tumendemberel",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
     {
       "timestamp": "2026-03-08T00:09:30.590Z",
       "fighter1": {
@@ -3831,5 +4236,32 @@
       "isLocked": false,
       "extractionId": 2
     }
-  ]
+  ],
+  "createdAt": "2026-03-08T00:10:36.758Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Nyamjargal Tumendemberel",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:51:07.399Z",
+    "openingF1Odds": 162,
+    "openingF2Odds": -194,
+    "closingF1Odds": 1180,
+    "closingF2Odds": -2400,
+    "lineMovementF1": 1018,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  },
+  "derived": {
+    "inferredFinishMin": 9,
+    "inferredFinishRound": 2,
+    "peakOddsSwing": 2138,
+    "finishSpeed": "medium",
+    "preFightSteam": 1018,
+    "dominanceScore": 82,
+    "crossoverCount": 0,
+    "derivedAt": "2026-06-14T11:47:28.400Z"
+  }
 }

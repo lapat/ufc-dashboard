@@ -1,11 +1,416 @@
 {
   "fightId": "shanelledyer_vs_ravenaoliveira",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-03-21T17:12:17.007Z",
+  "startTime": "2026-03-21T17:10:55.850Z",
   "endTime": "2026-03-21T17:19:39.060Z",
-  "dataPoints": 147,
+  "duration": 523210,
+  "dataPoints": 174,
   "oddsHistory": [
+    {
+      "timestamp": "2026-03-21T17:10:55.850Z",
+      "fighter1": {
+        "name": "Shanelle Dyer",
+        "odds": "-500",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Ravena Oliveira",
+        "odds": "+385",
+        "numericOdds": 385
+      },
+      "isLocked": false,
+      "extractionId": 1
+    },
+    {
+      "timestamp": "2026-03-21T17:10:58.856Z",
+      "fighter1": {
+        "name": "Shanelle Dyer",
+        "odds": "-500",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Ravena Oliveira",
+        "odds": "+385",
+        "numericOdds": 385
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-21T17:11:01.870Z",
+      "fighter1": {
+        "name": "Shanelle Dyer",
+        "odds": "-500",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Ravena Oliveira",
+        "odds": "+385",
+        "numericOdds": 385
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-21T17:11:04.872Z",
+      "fighter1": {
+        "name": "Shanelle Dyer",
+        "odds": "-500",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Ravena Oliveira",
+        "odds": "+385",
+        "numericOdds": 385
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-21T17:11:07.878Z",
+      "fighter1": {
+        "name": "Shanelle Dyer",
+        "odds": "-500",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Ravena Oliveira",
+        "odds": "+385",
+        "numericOdds": 385
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-21T17:11:10.878Z",
+      "fighter1": {
+        "name": "Shanelle Dyer",
+        "odds": "-500",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Ravena Oliveira",
+        "odds": "+385",
+        "numericOdds": 385
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-03-21T17:11:13.885Z",
+      "fighter1": {
+        "name": "Shanelle Dyer",
+        "odds": "-500",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Ravena Oliveira",
+        "odds": "+385",
+        "numericOdds": 385
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-03-21T17:11:16.898Z",
+      "fighter1": {
+        "name": "Shanelle Dyer",
+        "odds": "-500",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Ravena Oliveira",
+        "odds": "+385",
+        "numericOdds": 385
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-03-21T17:11:19.902Z",
+      "fighter1": {
+        "name": "Shanelle Dyer",
+        "odds": "-500",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Ravena Oliveira",
+        "odds": "+385",
+        "numericOdds": 385
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-03-21T17:11:22.916Z",
+      "fighter1": {
+        "name": "Shanelle Dyer",
+        "odds": "-500",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Ravena Oliveira",
+        "odds": "+385",
+        "numericOdds": 385
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-03-21T17:11:25.917Z",
+      "fighter1": {
+        "name": "Shanelle Dyer",
+        "odds": "-500",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Ravena Oliveira",
+        "odds": "+385",
+        "numericOdds": 385
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-03-21T17:11:28.923Z",
+      "fighter1": {
+        "name": "Shanelle Dyer",
+        "odds": "-500",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Ravena Oliveira",
+        "odds": "+385",
+        "numericOdds": 385
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-03-21T17:11:31.924Z",
+      "fighter1": {
+        "name": "Shanelle Dyer",
+        "odds": "-500",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Ravena Oliveira",
+        "odds": "+385",
+        "numericOdds": 385
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-03-21T17:11:34.930Z",
+      "fighter1": {
+        "name": "Shanelle Dyer",
+        "odds": "-500",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Ravena Oliveira",
+        "odds": "+385",
+        "numericOdds": 385
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-03-21T17:11:37.932Z",
+      "fighter1": {
+        "name": "Shanelle Dyer",
+        "odds": "-500",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Ravena Oliveira",
+        "odds": "+385",
+        "numericOdds": 385
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-03-21T17:11:40.935Z",
+      "fighter1": {
+        "name": "Shanelle Dyer",
+        "odds": "-500",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Ravena Oliveira",
+        "odds": "+385",
+        "numericOdds": 385
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-03-21T17:11:43.937Z",
+      "fighter1": {
+        "name": "Shanelle Dyer",
+        "odds": "-500",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Ravena Oliveira",
+        "odds": "+385",
+        "numericOdds": 385
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-03-21T17:11:46.939Z",
+      "fighter1": {
+        "name": "Shanelle Dyer",
+        "odds": "-500",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Ravena Oliveira",
+        "odds": "+385",
+        "numericOdds": 385
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-03-21T17:11:49.944Z",
+      "fighter1": {
+        "name": "Shanelle Dyer",
+        "odds": "-500",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Ravena Oliveira",
+        "odds": "+385",
+        "numericOdds": 385
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-03-21T17:11:52.957Z",
+      "fighter1": {
+        "name": "Shanelle Dyer",
+        "odds": "-500",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Ravena Oliveira",
+        "odds": "+385",
+        "numericOdds": 385
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-03-21T17:11:55.962Z",
+      "fighter1": {
+        "name": "Shanelle Dyer",
+        "odds": "-500",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Ravena Oliveira",
+        "odds": "+385",
+        "numericOdds": 385
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-03-21T17:11:58.968Z",
+      "fighter1": {
+        "name": "Shanelle Dyer",
+        "odds": "-500",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Ravena Oliveira",
+        "odds": "+385",
+        "numericOdds": 385
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-03-21T17:12:01.969Z",
+      "fighter1": {
+        "name": "Shanelle Dyer",
+        "odds": "-500",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Ravena Oliveira",
+        "odds": "+385",
+        "numericOdds": 385
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-03-21T17:12:04.977Z",
+      "fighter1": {
+        "name": "Shanelle Dyer",
+        "odds": "-500",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Ravena Oliveira",
+        "odds": "+385",
+        "numericOdds": 385
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-03-21T17:12:07.988Z",
+      "fighter1": {
+        "name": "Shanelle Dyer",
+        "odds": "-500",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Ravena Oliveira",
+        "odds": "+385",
+        "numericOdds": 385
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-03-21T17:12:10.994Z",
+      "fighter1": {
+        "name": "Shanelle Dyer",
+        "odds": "-500",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Ravena Oliveira",
+        "odds": "+385",
+        "numericOdds": 385
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-03-21T17:12:14.001Z",
+      "fighter1": {
+        "name": "Shanelle Dyer",
+        "odds": "-500",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Ravena Oliveira",
+        "odds": "+385",
+        "numericOdds": 385
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
     {
       "timestamp": "2026-03-21T17:12:17.007Z",
       "fighter1": {
@@ -2211,5 +2616,32 @@
       "isLocked": false,
       "extractionId": 8
     }
-  ]
+  ],
+  "createdAt": "2026-03-21T17:15:20.453Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Shanelle Dyer",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:52:22.000Z",
+    "openingF1Odds": -500,
+    "openingF2Odds": 385,
+    "closingF1Odds": -1000,
+    "closingF2Odds": 580,
+    "lineMovementF1": -500,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  },
+  "derived": {
+    "inferredFinishMin": 5,
+    "inferredFinishRound": 1,
+    "peakOddsSwing": 1300,
+    "finishSpeed": "medium",
+    "preFightSteam": -500,
+    "dominanceScore": 100,
+    "crossoverCount": 0,
+    "derivedAt": "2026-06-14T11:47:28.494Z"
+  }
 }

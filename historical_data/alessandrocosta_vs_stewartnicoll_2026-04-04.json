@@ -1,11 +1,446 @@
 {
   "fightId": "alessandrocosta_vs_stewartnicoll",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-04-04T23:20:23.687Z",
+  "startTime": "2026-04-04T23:18:56.541Z",
   "endTime": "2026-04-04T23:31:24.908Z",
-  "dataPoints": 190,
+  "duration": 748367,
+  "dataPoints": 219,
   "oddsHistory": [
+    {
+      "timestamp": "2026-04-04T23:18:56.541Z",
+      "fighter1": {
+        "name": "Alessandro Costa",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Stewart Nicoll",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-04-04T23:18:59.548Z",
+      "fighter1": {
+        "name": "Alessandro Costa",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Stewart Nicoll",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-04-04T23:19:02.547Z",
+      "fighter1": {
+        "name": "Alessandro Costa",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Stewart Nicoll",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-04-04T23:19:05.554Z",
+      "fighter1": {
+        "name": "Alessandro Costa",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Stewart Nicoll",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-04-04T23:19:08.558Z",
+      "fighter1": {
+        "name": "Alessandro Costa",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Stewart Nicoll",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-04-04T23:19:11.557Z",
+      "fighter1": {
+        "name": "Alessandro Costa",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Stewart Nicoll",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-04-04T23:19:14.564Z",
+      "fighter1": {
+        "name": "Alessandro Costa",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Stewart Nicoll",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-04-04T23:19:17.568Z",
+      "fighter1": {
+        "name": "Alessandro Costa",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Stewart Nicoll",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-04-04T23:19:20.576Z",
+      "fighter1": {
+        "name": "Alessandro Costa",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Stewart Nicoll",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-04-04T23:19:23.581Z",
+      "fighter1": {
+        "name": "Alessandro Costa",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Stewart Nicoll",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-04-04T23:19:26.589Z",
+      "fighter1": {
+        "name": "Alessandro Costa",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Stewart Nicoll",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-04-04T23:19:29.595Z",
+      "fighter1": {
+        "name": "Alessandro Costa",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Stewart Nicoll",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-04-04T23:19:32.601Z",
+      "fighter1": {
+        "name": "Alessandro Costa",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Stewart Nicoll",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-04-04T23:19:35.600Z",
+      "fighter1": {
+        "name": "Alessandro Costa",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Stewart Nicoll",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-04-04T23:19:38.602Z",
+      "fighter1": {
+        "name": "Alessandro Costa",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Stewart Nicoll",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-04-04T23:19:41.610Z",
+      "fighter1": {
+        "name": "Alessandro Costa",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Stewart Nicoll",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-04-04T23:19:44.610Z",
+      "fighter1": {
+        "name": "Alessandro Costa",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Stewart Nicoll",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-04-04T23:19:47.613Z",
+      "fighter1": {
+        "name": "Alessandro Costa",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Stewart Nicoll",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-04-04T23:19:50.618Z",
+      "fighter1": {
+        "name": "Alessandro Costa",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Stewart Nicoll",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-04-04T23:19:53.619Z",
+      "fighter1": {
+        "name": "Alessandro Costa",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Stewart Nicoll",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-04-04T23:19:56.626Z",
+      "fighter1": {
+        "name": "Alessandro Costa",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Stewart Nicoll",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-04-04T23:19:59.630Z",
+      "fighter1": {
+        "name": "Alessandro Costa",
+        "odds": "-460",
+        "numericOdds": -460
+      },
+      "fighter2": {
+        "name": "Stewart Nicoll",
+        "odds": "+320",
+        "numericOdds": 320
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-04-04T23:20:02.645Z",
+      "fighter1": {
+        "name": "Alessandro Costa",
+        "odds": "-460",
+        "numericOdds": -460
+      },
+      "fighter2": {
+        "name": "Stewart Nicoll",
+        "odds": "+320",
+        "numericOdds": 320
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-04-04T23:20:05.648Z",
+      "fighter1": {
+        "name": "Alessandro Costa",
+        "odds": "-460",
+        "numericOdds": -460
+      },
+      "fighter2": {
+        "name": "Stewart Nicoll",
+        "odds": "+320",
+        "numericOdds": 320
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-04-04T23:20:08.662Z",
+      "fighter1": {
+        "name": "Alessandro Costa",
+        "odds": "-460",
+        "numericOdds": -460
+      },
+      "fighter2": {
+        "name": "Stewart Nicoll",
+        "odds": "+320",
+        "numericOdds": 320
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-04-04T23:20:11.664Z",
+      "fighter1": {
+        "name": "Alessandro Costa",
+        "odds": "-460",
+        "numericOdds": -460
+      },
+      "fighter2": {
+        "name": "Stewart Nicoll",
+        "odds": "+320",
+        "numericOdds": 320
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-04-04T23:20:14.664Z",
+      "fighter1": {
+        "name": "Alessandro Costa",
+        "odds": "-460",
+        "numericOdds": -460
+      },
+      "fighter2": {
+        "name": "Stewart Nicoll",
+        "odds": "+320",
+        "numericOdds": 320
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-04-04T23:20:17.668Z",
+      "fighter1": {
+        "name": "Alessandro Costa",
+        "odds": "-460",
+        "numericOdds": -460
+      },
+      "fighter2": {
+        "name": "Stewart Nicoll",
+        "odds": "+320",
+        "numericOdds": 320
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-04-04T23:20:20.673Z",
+      "fighter1": {
+        "name": "Alessandro Costa",
+        "odds": "-460",
+        "numericOdds": -460
+      },
+      "fighter2": {
+        "name": "Stewart Nicoll",
+        "odds": "+320",
+        "numericOdds": 320
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
     {
       "timestamp": "2026-04-04T23:20:23.687Z",
       "fighter1": {
@@ -2856,5 +3291,32 @@
       "isLocked": false,
       "extractionId": 14
     }
-  ]
+  ],
+  "createdAt": "2026-04-04T23:21:41.825Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Alessandro Costa",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:50:42.292Z",
+    "openingF1Odds": -430,
+    "openingF2Odds": 340,
+    "closingF1Odds": -3500,
+    "closingF2Odds": 1480,
+    "lineMovementF1": -3070,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  },
+  "derived": {
+    "inferredFinishMin": 4,
+    "inferredFinishRound": 1,
+    "peakOddsSwing": 4070,
+    "finishSpeed": "fast",
+    "preFightSteam": -3070,
+    "dominanceScore": 100,
+    "crossoverCount": 0,
+    "derivedAt": "2026-06-14T11:47:28.364Z"
+  }
 }

@@ -1,65 +1,2167 @@
 {
-  "fightId": "marcusbuchecha_vs_ryanspann_2026-04-26",
-  "fightTitle": "Marcus Buchecha vs Ryan Spann",
-  "commenceTime": null,
-  "startTime": "2026-04-26T00:10:37Z",
-  "endTime": "2026-04-26T00:30:38Z",
-  "dataPoints": 5,
+  "fightId": "marcusbuchecha_vs_ryanspann",
+  "fightTitle": "Connected but no betting buttons found",
+  "startTime": "2026-04-26T00:15:15.219Z",
+  "endTime": "2026-04-26T00:24:43.575Z",
+  "duration": 568356,
+  "dataPoints": 142,
   "oddsHistory": [
     {
-      "timestamp": "2026-04-26T00:10:37Z",
+      "timestamp": "2026-04-26T00:15:15.219Z",
       "fighter1": {
         "name": "Marcus Buchecha",
-        "numericOdds": -170
+        "odds": "-162",
+        "numericOdds": -162
       },
       "fighter2": {
         "name": "Ryan Spann",
-        "numericOdds": 142
-      }
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 18
     },
     {
-      "timestamp": "2026-04-26T00:15:37Z",
+      "timestamp": "2026-04-26T00:15:18.231Z",
       "fighter1": {
         "name": "Marcus Buchecha",
-        "numericOdds": -170
+        "odds": "-162",
+        "numericOdds": -162
       },
       "fighter2": {
         "name": "Ryan Spann",
-        "numericOdds": 142
-      }
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 2
     },
     {
-      "timestamp": "2026-04-26T00:20:37Z",
+      "timestamp": "2026-04-26T00:15:21.236Z",
       "fighter1": {
         "name": "Marcus Buchecha",
-        "numericOdds": 120
+        "odds": "-162",
+        "numericOdds": -162
       },
       "fighter2": {
         "name": "Ryan Spann",
-        "numericOdds": -154
-      }
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 3
     },
     {
-      "timestamp": "2026-04-26T00:25:37Z",
+      "timestamp": "2026-04-26T00:15:24.241Z",
       "fighter1": {
         "name": "Marcus Buchecha",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-04-26T00:15:27.243Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-04-26T00:15:30.246Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-04-26T00:15:33.245Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-04-26T00:15:36.247Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-04-26T00:15:39.250Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-04-26T00:15:42.250Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-04-26T00:15:45.257Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-04-26T00:15:48.271Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-04-26T00:15:51.273Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-04-26T00:15:54.283Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-04-26T00:15:57.285Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-04-26T00:16:00.296Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-04-26T00:16:03.298Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-04-26T00:16:06.303Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-04-26T00:16:09.307Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-04-26T00:16:12.310Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-172",
+        "numericOdds": -172
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "+134",
+        "numericOdds": 134
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-04-26T00:16:15.310Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-172",
+        "numericOdds": -172
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "+134",
+        "numericOdds": 134
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-04-26T00:16:18.322Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-172",
+        "numericOdds": -172
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "+134",
+        "numericOdds": 134
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-04-26T00:16:21.330Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-172",
+        "numericOdds": -172
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "+134",
+        "numericOdds": 134
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-04-26T00:16:24.332Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-172",
+        "numericOdds": -172
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "+134",
+        "numericOdds": 134
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-04-26T00:16:27.334Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-172",
+        "numericOdds": -172
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "+134",
+        "numericOdds": 134
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-04-26T00:16:30.349Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-172",
+        "numericOdds": -172
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "+134",
+        "numericOdds": 134
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-04-26T00:16:33.362Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-186",
+        "numericOdds": -186
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-04-26T00:16:36.366Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-186",
+        "numericOdds": -186
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-04-26T00:16:39.370Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-04-26T00:16:42.381Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-04-26T00:16:45.395Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-04-26T00:16:48.397Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-04-26T00:16:51.404Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-04-26T00:16:54.419Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-04-26T00:17:54.587Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-186",
+        "numericOdds": -186
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-04-26T00:17:57.596Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-186",
+        "numericOdds": -186
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-04-26T00:18:00.608Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-225",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-04-26T00:18:03.618Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-04-26T00:18:06.625Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-04-26T00:18:09.632Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-04-26T00:18:12.640Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-04-26T00:18:15.645Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "+205",
+        "numericOdds": 205
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-04-26T00:18:24.655Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "+205",
+        "numericOdds": 205
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-04-26T00:18:27.663Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "+205",
+        "numericOdds": 205
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-04-26T00:18:30.669Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-04-26T00:19:03.752Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-108",
+        "numericOdds": -108
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-118",
+        "numericOdds": -118
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-04-26T00:19:06.754Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-108",
+        "numericOdds": -108
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-118",
+        "numericOdds": -118
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-04-26T00:19:09.764Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-108",
+        "numericOdds": -108
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-118",
+        "numericOdds": -118
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-04-26T00:19:12.774Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-108",
+        "numericOdds": -108
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-118",
+        "numericOdds": -118
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-04-26T00:19:18.793Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-108",
+        "numericOdds": -108
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-118",
+        "numericOdds": -118
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-04-26T00:19:21.796Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-108",
+        "numericOdds": -108
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-118",
+        "numericOdds": -118
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-04-26T00:19:24.798Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-108",
+        "numericOdds": -108
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-118",
+        "numericOdds": -118
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-04-26T00:19:27.808Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-108",
+        "numericOdds": -108
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-118",
+        "numericOdds": -118
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-04-26T00:19:30.822Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-102",
+        "numericOdds": -102
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-126",
+        "numericOdds": -126
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-04-26T00:19:33.833Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-102",
+        "numericOdds": -102
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-126",
+        "numericOdds": -126
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-04-26T00:19:36.835Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-102",
+        "numericOdds": -102
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-126",
+        "numericOdds": -126
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-04-26T00:19:39.838Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-102",
+        "numericOdds": -102
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-126",
+        "numericOdds": -126
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-04-26T00:19:42.845Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "-102",
+        "numericOdds": -102
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-126",
+        "numericOdds": -126
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-04-26T00:19:45.850Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+134",
+        "numericOdds": 134
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-172",
+        "numericOdds": -172
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-04-26T00:19:48.850Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+134",
+        "numericOdds": 134
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-172",
+        "numericOdds": -172
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-04-26T00:19:51.860Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+134",
+        "numericOdds": 134
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-172",
+        "numericOdds": -172
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-04-26T00:19:54.862Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+154",
         "numericOdds": 154
       },
       "fighter2": {
         "name": "Ryan Spann",
+        "odds": "-200",
         "numericOdds": -200
-      }
+      },
+      "isLocked": false,
+      "extractionId": 13
     },
     {
-      "timestamp": "2026-04-26T00:30:38Z",
+      "timestamp": "2026-04-26T00:19:57.872Z",
       "fighter1": {
         "name": "Marcus Buchecha",
+        "odds": "+154",
         "numericOdds": 154
       },
       "fighter2": {
         "name": "Ryan Spann",
+        "odds": "-200",
         "numericOdds": -200
-      }
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-04-26T00:20:00.877Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-04-26T00:20:30.939Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-04-26T00:20:33.947Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-04-26T00:20:36.950Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-04-26T00:20:39.963Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-04-26T00:20:42.973Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-04-26T00:20:45.988Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-04-26T00:20:48.994Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-04-26T00:20:51.999Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+140",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-180",
+        "numericOdds": -180
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-04-26T00:20:55.003Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+140",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-180",
+        "numericOdds": -180
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-04-26T00:20:58.008Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+140",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-180",
+        "numericOdds": -180
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-04-26T00:21:01.015Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+134",
+        "numericOdds": 134
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-172",
+        "numericOdds": -172
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-04-26T00:21:04.018Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+134",
+        "numericOdds": 134
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-172",
+        "numericOdds": -172
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-04-26T00:21:07.022Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+134",
+        "numericOdds": 134
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-172",
+        "numericOdds": -172
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-04-26T00:21:25.076Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-04-26T00:21:28.087Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-04-26T00:21:31.102Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+124",
+        "numericOdds": 124
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-158",
+        "numericOdds": -158
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-04-26T00:21:34.107Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+124",
+        "numericOdds": 124
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-158",
+        "numericOdds": -158
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-04-26T00:21:37.110Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+124",
+        "numericOdds": 124
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-158",
+        "numericOdds": -158
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-04-26T00:21:40.115Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-04-26T00:21:43.116Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-04-26T00:21:46.118Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-04-26T00:21:49.129Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-04-26T00:21:52.141Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-04-26T00:21:55.157Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-04-26T00:21:58.162Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-04-26T00:22:01.163Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-148",
+        "numericOdds": -148
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-04-26T00:22:04.167Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-148",
+        "numericOdds": -148
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-04-26T00:22:07.181Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+114",
+        "numericOdds": 114
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-146",
+        "numericOdds": -146
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-04-26T00:22:10.186Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+114",
+        "numericOdds": 114
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-146",
+        "numericOdds": -146
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-04-26T00:22:13.195Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+114",
+        "numericOdds": 114
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-146",
+        "numericOdds": -146
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-04-26T00:22:16.199Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-04-26T00:22:19.203Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-04-26T00:22:22.213Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-04-26T00:22:25.214Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-04-26T00:22:28.217Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-04-26T00:22:31.222Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-148",
+        "numericOdds": -148
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-04-26T00:22:34.232Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-148",
+        "numericOdds": -148
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-04-26T00:22:37.235Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-148",
+        "numericOdds": -148
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-04-26T00:22:40.237Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-148",
+        "numericOdds": -148
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-04-26T00:22:43.251Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-148",
+        "numericOdds": -148
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-04-26T00:22:46.253Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-148",
+        "numericOdds": -148
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-04-26T00:22:49.267Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-148",
+        "numericOdds": -148
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-04-26T00:23:13.324Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+148",
+        "numericOdds": 148
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-190",
+        "numericOdds": -190
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-04-26T00:23:16.331Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-04-26T00:23:19.338Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-04-26T00:23:22.354Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-04-26T00:23:25.360Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-04-26T00:23:28.365Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+166",
+        "numericOdds": 166
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-04-26T00:24:01.470Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-04-26T00:24:04.474Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-04-26T00:24:07.478Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-04-26T00:24:10.489Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-04-26T00:24:13.498Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-04-26T00:24:16.502Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-04-26T00:24:19.505Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-04-26T00:24:22.517Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-04-26T00:24:25.524Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-04-26T00:24:28.527Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-04-26T00:24:31.529Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-04-26T00:24:34.538Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-04-26T00:24:37.548Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+188",
+        "numericOdds": 188
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-250",
+        "numericOdds": -250
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-04-26T00:24:40.560Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+188",
+        "numericOdds": 188
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-250",
+        "numericOdds": -250
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-04-26T00:24:43.575Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+188",
+        "numericOdds": 188
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-250",
+        "numericOdds": -250
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-04-26T00:24:01.470Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-04-26T00:24:04.474Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-04-26T00:24:07.478Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-04-26T00:24:10.489Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-04-26T00:24:13.498Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-04-26T00:24:16.502Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-04-26T00:24:19.505Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-04-26T00:24:22.517Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-04-26T00:24:25.524Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+164",
+        "numericOdds": 164
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-04-26T00:24:28.527Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-04-26T00:24:31.529Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-04-26T00:24:34.538Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-04-26T00:24:37.548Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+188",
+        "numericOdds": 188
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-250",
+        "numericOdds": -250
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-04-26T00:24:40.560Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+188",
+        "numericOdds": 188
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-250",
+        "numericOdds": -250
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-04-26T00:24:43.575Z",
+      "fighter1": {
+        "name": "Marcus Buchecha",
+        "odds": "+188",
+        "numericOdds": 188
+      },
+      "fighter2": {
+        "name": "Ryan Spann",
+        "odds": "-250",
+        "numericOdds": -250
+      },
+      "isLocked": false,
+      "extractionId": 15
     }
-  ]
+  ],
+  "createdAt": "2026-04-26T00:17:54.586Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Ryan Spann",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:51:53.970Z",
+    "openingF1Odds": -162,
+    "openingF2Odds": 136,
+    "closingF1Odds": 188,
+    "closingF2Odds": -250,
+    "lineMovementF1": 350,
+    "crossoverOccurred": true,
+    "crossoverMinute": 5
+  },
+  "derived": {
+    "inferredFinishMin": null,
+    "inferredFinishRound": null,
+    "peakOddsSwing": 350,
+    "finishSpeed": "decision",
+    "preFightSteam": 350,
+    "dominanceScore": 24,
+    "crossoverCount": 1,
+    "derivedAt": "2026-06-14T11:47:28.453Z"
+  }
 }

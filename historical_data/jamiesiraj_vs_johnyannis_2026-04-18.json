@@ -1,65 +1,1162 @@
 {
-  "fightId": "jamiesiraj_vs_johnyannis_2026-04-18",
-  "fightTitle": "Jamie Siraj vs John Yannis",
-  "commenceTime": null,
-  "startTime": "2026-04-18T21:05:37Z",
-  "endTime": "2026-04-18T21:25:37Z",
-  "dataPoints": 5,
+  "fightId": "jamiesiraj_vs_johnyannis",
+  "fightTitle": "Connected but no betting buttons found",
+  "startTime": "2026-04-18T21:11:10.986Z",
+  "endTime": "2026-04-18T21:15:26.508Z",
+  "duration": 255522,
+  "dataPoints": 75,
   "oddsHistory": [
     {
-      "timestamp": "2026-04-18T21:05:37Z",
+      "timestamp": "2026-04-18T21:11:10.986Z",
       "fighter1": {
         "name": "Jamie Siraj",
-        "numericOdds": -250
+        "odds": "-260",
+        "numericOdds": -260
       },
       "fighter2": {
         "name": "John Yannis",
-        "numericOdds": 205
-      }
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 1
     },
     {
-      "timestamp": "2026-04-18T21:10:38Z",
+      "timestamp": "2026-04-18T21:11:14.000Z",
       "fighter1": {
         "name": "Jamie Siraj",
-        "numericOdds": -250
+        "odds": "-260",
+        "numericOdds": -260
       },
       "fighter2": {
         "name": "John Yannis",
-        "numericOdds": 205
-      }
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 2
     },
     {
-      "timestamp": "2026-04-18T21:15:38Z",
+      "timestamp": "2026-04-18T21:11:16.999Z",
       "fighter1": {
         "name": "Jamie Siraj",
-        "numericOdds": -180
+        "odds": "-260",
+        "numericOdds": -260
       },
       "fighter2": {
         "name": "John Yannis",
-        "numericOdds": 140
-      }
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 3
     },
     {
-      "timestamp": "2026-04-18T21:20:37Z",
+      "timestamp": "2026-04-18T21:11:20.003Z",
       "fighter1": {
         "name": "Jamie Siraj",
-        "numericOdds": -115
+        "odds": "-260",
+        "numericOdds": -260
       },
       "fighter2": {
         "name": "John Yannis",
-        "numericOdds": -115
-      }
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 4
     },
     {
-      "timestamp": "2026-04-18T21:25:37Z",
+      "timestamp": "2026-04-18T21:11:23.012Z",
       "fighter1": {
         "name": "Jamie Siraj",
-        "numericOdds": -115
+        "odds": "-260",
+        "numericOdds": -260
       },
       "fighter2": {
         "name": "John Yannis",
-        "numericOdds": -115
-      }
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-04-18T21:11:26.018Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-04-18T21:11:29.027Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-04-18T21:11:32.039Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-04-18T21:11:35.047Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-04-18T21:11:38.049Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-04-18T21:11:41.063Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-04-18T21:11:44.072Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-04-18T21:11:47.074Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-04-18T21:11:50.077Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-04-18T21:11:53.090Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-04-18T21:11:56.094Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-04-18T21:11:59.099Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-04-18T21:12:02.099Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-04-18T21:12:05.105Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-04-18T21:12:08.112Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-04-18T21:12:11.112Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-04-18T21:12:14.125Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-04-18T21:12:17.125Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-04-18T21:12:20.126Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-04-18T21:12:23.127Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-04-18T21:12:26.134Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-04-18T21:12:29.145Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+215",
+        "numericOdds": 215
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-04-18T21:12:32.157Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-04-18T21:12:35.165Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-04-18T21:12:38.172Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-04-18T21:12:41.174Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-04-18T21:12:44.186Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-04-18T21:12:47.194Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-04-18T21:12:50.198Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-04-18T21:12:53.207Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-04-18T21:12:56.211Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-04-18T21:12:59.216Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2026-04-18T21:13:02.220Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2026-04-18T21:13:05.222Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "isLocked": false,
+      "extractionId": 39
+    },
+    {
+      "timestamp": "2026-04-18T21:13:08.230Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "isLocked": false,
+      "extractionId": 40
+    },
+    {
+      "timestamp": "2026-04-18T21:13:11.233Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "isLocked": false,
+      "extractionId": 41
+    },
+    {
+      "timestamp": "2026-04-18T21:13:14.239Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "isLocked": false,
+      "extractionId": 42
+    },
+    {
+      "timestamp": "2026-04-18T21:13:17.241Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "isLocked": false,
+      "extractionId": 43
+    },
+    {
+      "timestamp": "2026-04-18T21:13:20.249Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "isLocked": false,
+      "extractionId": 44
+    },
+    {
+      "timestamp": "2026-04-18T21:13:23.253Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "isLocked": false,
+      "extractionId": 45
+    },
+    {
+      "timestamp": "2026-04-18T21:13:26.257Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "isLocked": false,
+      "extractionId": 46
+    },
+    {
+      "timestamp": "2026-04-18T21:13:29.262Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "isLocked": false,
+      "extractionId": 47
+    },
+    {
+      "timestamp": "2026-04-18T21:13:32.269Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "isLocked": false,
+      "extractionId": 48
+    },
+    {
+      "timestamp": "2026-04-18T21:13:35.280Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "isLocked": false,
+      "extractionId": 49
+    },
+    {
+      "timestamp": "2026-04-18T21:13:38.288Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 50
+    },
+    {
+      "timestamp": "2026-04-18T21:13:41.291Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 51
+    },
+    {
+      "timestamp": "2026-04-18T21:13:44.301Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 52
+    },
+    {
+      "timestamp": "2026-04-18T21:13:47.313Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 53
+    },
+    {
+      "timestamp": "2026-04-18T21:13:50.318Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 54
+    },
+    {
+      "timestamp": "2026-04-18T21:13:53.320Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 55
+    },
+    {
+      "timestamp": "2026-04-18T21:13:56.328Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 56
+    },
+    {
+      "timestamp": "2026-04-18T21:13:59.329Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 57
+    },
+    {
+      "timestamp": "2026-04-18T21:14:02.337Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 58
+    },
+    {
+      "timestamp": "2026-04-18T21:14:05.345Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 59
+    },
+    {
+      "timestamp": "2026-04-18T21:14:08.356Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 60
+    },
+    {
+      "timestamp": "2026-04-18T21:14:11.356Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 61
+    },
+    {
+      "timestamp": "2026-04-18T21:14:14.365Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-350",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 62
+    },
+    {
+      "timestamp": "2026-04-18T21:14:47.452Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-182",
+        "numericOdds": -182
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+142",
+        "numericOdds": 142
+      },
+      "isLocked": false,
+      "extractionId": 63
+    },
+    {
+      "timestamp": "2026-04-18T21:14:50.452Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-182",
+        "numericOdds": -182
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+142",
+        "numericOdds": 142
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-04-18T21:14:53.452Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-182",
+        "numericOdds": -182
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+142",
+        "numericOdds": 142
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-04-18T21:14:56.456Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-182",
+        "numericOdds": -182
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+142",
+        "numericOdds": 142
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-04-18T21:14:59.464Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-182",
+        "numericOdds": -182
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "+142",
+        "numericOdds": 142
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-04-18T21:15:17.492Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-04-18T21:15:20.505Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-04-18T21:15:23.505Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-04-18T21:15:26.508Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-04-18T21:15:17.492Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-04-18T21:15:20.505Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-04-18T21:15:23.505Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-04-18T21:15:26.508Z",
+      "fighter1": {
+        "name": "Jamie Siraj",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "John Yannis",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "isLocked": false,
+      "extractionId": 4
     }
-  ]
+  ],
+  "createdAt": "2026-04-18T21:14:47.450Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "John Yannis",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:51:31.593Z",
+    "openingF1Odds": -260,
+    "openingF2Odds": 215,
+    "closingF1Odds": -112,
+    "closingF2Odds": -112,
+    "lineMovementF1": 148,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  },
+  "derived": {
+    "inferredFinishMin": null,
+    "inferredFinishRound": null,
+    "peakOddsSwing": 148,
+    "finishSpeed": "decision",
+    "preFightSteam": 148,
+    "dominanceScore": 83,
+    "crossoverCount": 0,
+    "derivedAt": "2026-06-14T11:47:28.429Z"
+  }
 }

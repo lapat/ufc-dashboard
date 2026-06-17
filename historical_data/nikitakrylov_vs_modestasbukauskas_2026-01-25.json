@@ -1,11 +1,416 @@
 {
   "fightId": "nikitakrylov_vs_modestasbukauskas",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-01-25T00:38:21.373Z",
+  "startTime": "2026-01-25T00:37:00.106Z",
   "endTime": "2026-01-25T00:54:03.205Z",
-  "dataPoints": 492,
+  "duration": 1023099,
+  "dataPoints": 519,
   "oddsHistory": [
+    {
+      "timestamp": "2026-01-25T00:37:00.106Z",
+      "fighter1": {
+        "name": "Nikita Krylov",
+        "odds": "+108",
+        "numericOdds": 108
+      },
+      "fighter2": {
+        "name": "Modestas Bukauskas",
+        "odds": "-136",
+        "numericOdds": -136
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-01-25T00:37:03.118Z",
+      "fighter1": {
+        "name": "Nikita Krylov",
+        "odds": "+108",
+        "numericOdds": 108
+      },
+      "fighter2": {
+        "name": "Modestas Bukauskas",
+        "odds": "-136",
+        "numericOdds": -136
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-01-25T00:37:06.131Z",
+      "fighter1": {
+        "name": "Nikita Krylov",
+        "odds": "+108",
+        "numericOdds": 108
+      },
+      "fighter2": {
+        "name": "Modestas Bukauskas",
+        "odds": "-136",
+        "numericOdds": -136
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-01-25T00:37:09.141Z",
+      "fighter1": {
+        "name": "Nikita Krylov",
+        "odds": "+108",
+        "numericOdds": 108
+      },
+      "fighter2": {
+        "name": "Modestas Bukauskas",
+        "odds": "-136",
+        "numericOdds": -136
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-01-25T00:37:12.148Z",
+      "fighter1": {
+        "name": "Nikita Krylov",
+        "odds": "+108",
+        "numericOdds": 108
+      },
+      "fighter2": {
+        "name": "Modestas Bukauskas",
+        "odds": "-136",
+        "numericOdds": -136
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-01-25T00:37:15.158Z",
+      "fighter1": {
+        "name": "Nikita Krylov",
+        "odds": "+108",
+        "numericOdds": 108
+      },
+      "fighter2": {
+        "name": "Modestas Bukauskas",
+        "odds": "-136",
+        "numericOdds": -136
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-01-25T00:37:18.164Z",
+      "fighter1": {
+        "name": "Nikita Krylov",
+        "odds": "+108",
+        "numericOdds": 108
+      },
+      "fighter2": {
+        "name": "Modestas Bukauskas",
+        "odds": "-136",
+        "numericOdds": -136
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-01-25T00:37:21.170Z",
+      "fighter1": {
+        "name": "Nikita Krylov",
+        "odds": "+108",
+        "numericOdds": 108
+      },
+      "fighter2": {
+        "name": "Modestas Bukauskas",
+        "odds": "-136",
+        "numericOdds": -136
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-01-25T00:37:24.181Z",
+      "fighter1": {
+        "name": "Nikita Krylov",
+        "odds": "+108",
+        "numericOdds": 108
+      },
+      "fighter2": {
+        "name": "Modestas Bukauskas",
+        "odds": "-136",
+        "numericOdds": -136
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-01-25T00:37:27.190Z",
+      "fighter1": {
+        "name": "Nikita Krylov",
+        "odds": "+108",
+        "numericOdds": 108
+      },
+      "fighter2": {
+        "name": "Modestas Bukauskas",
+        "odds": "-136",
+        "numericOdds": -136
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-01-25T00:37:30.201Z",
+      "fighter1": {
+        "name": "Nikita Krylov",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "Modestas Bukauskas",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-01-25T00:37:33.215Z",
+      "fighter1": {
+        "name": "Nikita Krylov",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "Modestas Bukauskas",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-01-25T00:37:36.225Z",
+      "fighter1": {
+        "name": "Nikita Krylov",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "Modestas Bukauskas",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-01-25T00:37:39.237Z",
+      "fighter1": {
+        "name": "Nikita Krylov",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "Modestas Bukauskas",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-01-25T00:37:42.250Z",
+      "fighter1": {
+        "name": "Nikita Krylov",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "Modestas Bukauskas",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-01-25T00:37:45.254Z",
+      "fighter1": {
+        "name": "Nikita Krylov",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "fighter2": {
+        "name": "Modestas Bukauskas",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-01-25T00:37:48.256Z",
+      "fighter1": {
+        "name": "Nikita Krylov",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "fighter2": {
+        "name": "Modestas Bukauskas",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-01-25T00:37:51.269Z",
+      "fighter1": {
+        "name": "Nikita Krylov",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "fighter2": {
+        "name": "Modestas Bukauskas",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-01-25T00:37:54.282Z",
+      "fighter1": {
+        "name": "Nikita Krylov",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "fighter2": {
+        "name": "Modestas Bukauskas",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-01-25T00:37:57.291Z",
+      "fighter1": {
+        "name": "Nikita Krylov",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "fighter2": {
+        "name": "Modestas Bukauskas",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-01-25T00:38:00.303Z",
+      "fighter1": {
+        "name": "Nikita Krylov",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Modestas Bukauskas",
+        "odds": "-182",
+        "numericOdds": -182
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-01-25T00:38:03.317Z",
+      "fighter1": {
+        "name": "Nikita Krylov",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Modestas Bukauskas",
+        "odds": "-182",
+        "numericOdds": -182
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-01-25T00:38:06.325Z",
+      "fighter1": {
+        "name": "Nikita Krylov",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Modestas Bukauskas",
+        "odds": "-182",
+        "numericOdds": -182
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-01-25T00:38:09.336Z",
+      "fighter1": {
+        "name": "Nikita Krylov",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Modestas Bukauskas",
+        "odds": "-182",
+        "numericOdds": -182
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-01-25T00:38:12.344Z",
+      "fighter1": {
+        "name": "Nikita Krylov",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Modestas Bukauskas",
+        "odds": "-182",
+        "numericOdds": -182
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-01-25T00:38:15.347Z",
+      "fighter1": {
+        "name": "Nikita Krylov",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Modestas Bukauskas",
+        "odds": "-182",
+        "numericOdds": -182
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-01-25T00:38:18.364Z",
+      "fighter1": {
+        "name": "Nikita Krylov",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Modestas Bukauskas",
+        "odds": "-182",
+        "numericOdds": -182
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
     {
       "timestamp": "2026-01-25T00:38:21.373Z",
       "fighter1": {
@@ -7386,5 +7791,32 @@
       "isLocked": false,
       "extractionId": 183
     }
-  ]
+  ],
+  "createdAt": "2026-01-25T00:44:55.615Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Nikita Krylov",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:52:05.679Z",
+    "openingF1Odds": 108,
+    "openingF2Odds": -136,
+    "closingF1Odds": -1100,
+    "closingF2Odds": 620,
+    "lineMovementF1": -1208,
+    "crossoverOccurred": true,
+    "crossoverMinute": 5
+  },
+  "derived": {
+    "inferredFinishMin": 14,
+    "inferredFinishRound": 3,
+    "peakOddsSwing": 1708,
+    "finishSpeed": "medium",
+    "preFightSteam": -1208,
+    "dominanceScore": 53,
+    "crossoverCount": 9,
+    "derivedAt": "2026-06-14T11:47:28.471Z"
+  }
 }

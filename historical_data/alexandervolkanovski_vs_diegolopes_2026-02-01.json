@@ -1,11 +1,1466 @@
 {
   "fightId": "alexandervolkanovski_vs_diegolopes",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-02-01T04:28:36.926Z",
+  "startTime": "2026-02-01T04:23:45.252Z",
   "endTime": "2026-02-01T04:55:21.965Z",
-  "dataPoints": 498,
+  "duration": 1896713,
+  "dataPoints": 595,
   "oddsHistory": [
+    {
+      "timestamp": "2026-02-01T04:23:45.252Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-02-01T04:23:48.263Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-02-01T04:23:51.264Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-02-01T04:23:54.273Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-02-01T04:23:57.278Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-02-01T04:24:00.282Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-02-01T04:24:03.287Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-02-01T04:24:06.300Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-02-01T04:24:09.301Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-02-01T04:24:12.310Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-02-01T04:24:15.319Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-02-01T04:24:18.325Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-02-01T04:24:21.333Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-02-01T04:24:24.339Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-02-01T04:24:27.338Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-02-01T04:24:30.352Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-02-01T04:24:33.352Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-02-01T04:24:36.356Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-02-01T04:24:39.363Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-02-01T04:24:42.371Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-02-01T04:24:45.379Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-02-01T04:24:48.379Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-02-01T04:24:51.387Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-02-01T04:24:54.403Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-02-01T04:24:57.415Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-02-01T04:25:00.419Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-02-01T04:25:03.425Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-02-01T04:25:06.432Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-02-01T04:25:09.438Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-02-01T04:25:12.447Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-02-01T04:25:15.456Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-02-01T04:25:18.464Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-02-01T04:25:21.470Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-02-01T04:25:24.479Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-02-01T04:25:27.487Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-02-01T04:25:30.497Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-02-01T04:25:33.501Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2026-02-01T04:25:36.510Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2026-02-01T04:25:39.521Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 39
+    },
+    {
+      "timestamp": "2026-02-01T04:25:42.526Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 40
+    },
+    {
+      "timestamp": "2026-02-01T04:25:45.536Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 41
+    },
+    {
+      "timestamp": "2026-02-01T04:25:48.538Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 42
+    },
+    {
+      "timestamp": "2026-02-01T04:25:51.546Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "isLocked": false,
+      "extractionId": 43
+    },
+    {
+      "timestamp": "2026-02-01T04:25:54.547Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "isLocked": false,
+      "extractionId": 44
+    },
+    {
+      "timestamp": "2026-02-01T04:25:57.552Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "isLocked": false,
+      "extractionId": 45
+    },
+    {
+      "timestamp": "2026-02-01T04:26:00.558Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "isLocked": false,
+      "extractionId": 46
+    },
+    {
+      "timestamp": "2026-02-01T04:26:03.561Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "isLocked": false,
+      "extractionId": 47
+    },
+    {
+      "timestamp": "2026-02-01T04:26:06.568Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "isLocked": false,
+      "extractionId": 48
+    },
+    {
+      "timestamp": "2026-02-01T04:26:09.572Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "isLocked": false,
+      "extractionId": 49
+    },
+    {
+      "timestamp": "2026-02-01T04:26:12.580Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "isLocked": false,
+      "extractionId": 50
+    },
+    {
+      "timestamp": "2026-02-01T04:26:15.585Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "isLocked": false,
+      "extractionId": 51
+    },
+    {
+      "timestamp": "2026-02-01T04:26:18.591Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "isLocked": false,
+      "extractionId": 52
+    },
+    {
+      "timestamp": "2026-02-01T04:26:21.604Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "isLocked": false,
+      "extractionId": 53
+    },
+    {
+      "timestamp": "2026-02-01T04:26:24.608Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "isLocked": false,
+      "extractionId": 54
+    },
+    {
+      "timestamp": "2026-02-01T04:26:27.611Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "isLocked": false,
+      "extractionId": 55
+    },
+    {
+      "timestamp": "2026-02-01T04:26:30.618Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "isLocked": false,
+      "extractionId": 56
+    },
+    {
+      "timestamp": "2026-02-01T04:26:33.632Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 57
+    },
+    {
+      "timestamp": "2026-02-01T04:26:36.641Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 58
+    },
+    {
+      "timestamp": "2026-02-01T04:26:39.649Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 59
+    },
+    {
+      "timestamp": "2026-02-01T04:26:42.661Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 60
+    },
+    {
+      "timestamp": "2026-02-01T04:26:45.669Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 61
+    },
+    {
+      "timestamp": "2026-02-01T04:26:48.671Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 62
+    },
+    {
+      "timestamp": "2026-02-01T04:26:51.675Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 63
+    },
+    {
+      "timestamp": "2026-02-01T04:26:54.684Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 64
+    },
+    {
+      "timestamp": "2026-02-01T04:26:57.689Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 65
+    },
+    {
+      "timestamp": "2026-02-01T04:27:00.698Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 66
+    },
+    {
+      "timestamp": "2026-02-01T04:27:03.712Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 67
+    },
+    {
+      "timestamp": "2026-02-01T04:27:06.724Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 68
+    },
+    {
+      "timestamp": "2026-02-01T04:27:09.727Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 69
+    },
+    {
+      "timestamp": "2026-02-01T04:27:12.727Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 70
+    },
+    {
+      "timestamp": "2026-02-01T04:27:15.728Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 71
+    },
+    {
+      "timestamp": "2026-02-01T04:27:18.735Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 72
+    },
+    {
+      "timestamp": "2026-02-01T04:27:21.745Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 73
+    },
+    {
+      "timestamp": "2026-02-01T04:27:24.753Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 74
+    },
+    {
+      "timestamp": "2026-02-01T04:27:27.761Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 75
+    },
+    {
+      "timestamp": "2026-02-01T04:27:30.765Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 76
+    },
+    {
+      "timestamp": "2026-02-01T04:27:33.771Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 77
+    },
+    {
+      "timestamp": "2026-02-01T04:27:36.782Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 78
+    },
+    {
+      "timestamp": "2026-02-01T04:27:39.789Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 79
+    },
+    {
+      "timestamp": "2026-02-01T04:27:42.791Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-148",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "isLocked": false,
+      "extractionId": 80
+    },
+    {
+      "timestamp": "2026-02-01T04:27:45.797Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-148",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "isLocked": false,
+      "extractionId": 81
+    },
+    {
+      "timestamp": "2026-02-01T04:27:48.803Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-148",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "isLocked": false,
+      "extractionId": 82
+    },
+    {
+      "timestamp": "2026-02-01T04:27:51.814Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-148",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "isLocked": false,
+      "extractionId": 83
+    },
+    {
+      "timestamp": "2026-02-01T04:27:54.823Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-148",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "isLocked": false,
+      "extractionId": 84
+    },
+    {
+      "timestamp": "2026-02-01T04:27:57.830Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-148",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "isLocked": false,
+      "extractionId": 85
+    },
+    {
+      "timestamp": "2026-02-01T04:28:00.843Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-148",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "isLocked": false,
+      "extractionId": 86
+    },
+    {
+      "timestamp": "2026-02-01T04:28:03.851Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-148",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "isLocked": false,
+      "extractionId": 87
+    },
+    {
+      "timestamp": "2026-02-01T04:28:06.856Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-148",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "isLocked": false,
+      "extractionId": 88
+    },
+    {
+      "timestamp": "2026-02-01T04:28:09.864Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-148",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "isLocked": false,
+      "extractionId": 89
+    },
+    {
+      "timestamp": "2026-02-01T04:28:12.873Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-148",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "isLocked": false,
+      "extractionId": 90
+    },
+    {
+      "timestamp": "2026-02-01T04:28:15.883Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-148",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "isLocked": false,
+      "extractionId": 91
+    },
+    {
+      "timestamp": "2026-02-01T04:28:18.889Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-148",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "isLocked": false,
+      "extractionId": 92
+    },
+    {
+      "timestamp": "2026-02-01T04:28:21.895Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-148",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "isLocked": false,
+      "extractionId": 93
+    },
+    {
+      "timestamp": "2026-02-01T04:28:24.909Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-136",
+        "numericOdds": -136
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+108",
+        "numericOdds": 108
+      },
+      "isLocked": false,
+      "extractionId": 94
+    },
+    {
+      "timestamp": "2026-02-01T04:28:27.914Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-136",
+        "numericOdds": -136
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+108",
+        "numericOdds": 108
+      },
+      "isLocked": false,
+      "extractionId": 95
+    },
+    {
+      "timestamp": "2026-02-01T04:28:30.917Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-136",
+        "numericOdds": -136
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+108",
+        "numericOdds": 108
+      },
+      "isLocked": false,
+      "extractionId": 96
+    },
+    {
+      "timestamp": "2026-02-01T04:28:33.925Z",
+      "fighter1": {
+        "name": "Alexander Volkanovski",
+        "odds": "-136",
+        "numericOdds": -136
+      },
+      "fighter2": {
+        "name": "Diego Lopes",
+        "odds": "+108",
+        "numericOdds": 108
+      },
+      "isLocked": false,
+      "extractionId": 97
+    },
     {
       "timestamp": "2026-02-01T04:28:36.926Z",
       "fighter1": {
@@ -7476,5 +8931,32 @@
       "isLocked": false,
       "extractionId": 52
     }
-  ]
+  ],
+  "createdAt": "2026-02-01T04:37:19.944Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Alexander Volkanovski",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:50:43.179Z",
+    "openingF1Odds": -162,
+    "openingF2Odds": 136,
+    "closingF1Odds": -1600,
+    "closingF2Odds": 840,
+    "lineMovementF1": -1438,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  },
+  "derived": {
+    "inferredFinishMin": 29,
+    "inferredFinishRound": 5,
+    "peakOddsSwing": 2838,
+    "finishSpeed": "slow",
+    "preFightSteam": 14,
+    "dominanceScore": 44,
+    "crossoverCount": 0,
+    "derivedAt": "2026-06-14T11:47:28.366Z"
+  }
 }

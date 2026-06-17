@@ -1,11 +1,476 @@
 {
   "fightId": "romankopylov_vs_marcotulio",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-05-09T22:42:06.047Z",
+  "startTime": "2026-05-09T22:40:26.669Z",
   "endTime": "2026-05-09T22:57:49.931Z",
-  "dataPoints": 199,
+  "duration": 1043262,
+  "dataPoints": 230,
   "oddsHistory": [
+    {
+      "timestamp": "2026-05-09T22:40:26.669Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "fighter2": {
+        "name": "Marco Tulio",
+        "odds": "-184",
+        "numericOdds": -184
+      },
+      "isLocked": false,
+      "extractionId": 85
+    },
+    {
+      "timestamp": "2026-05-09T22:40:29.687Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "fighter2": {
+        "name": "Marco Tulio",
+        "odds": "-184",
+        "numericOdds": -184
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-05-09T22:40:32.691Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "fighter2": {
+        "name": "Marco Tulio",
+        "odds": "-184",
+        "numericOdds": -184
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-09T22:40:35.691Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "fighter2": {
+        "name": "Marco Tulio",
+        "odds": "-184",
+        "numericOdds": -184
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-09T22:40:38.706Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "fighter2": {
+        "name": "Marco Tulio",
+        "odds": "-184",
+        "numericOdds": -184
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-05-09T22:40:41.835Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "fighter2": {
+        "name": "Marco Tulio",
+        "odds": "-184",
+        "numericOdds": -184
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-05-09T22:40:44.838Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "fighter2": {
+        "name": "Marco Tulio",
+        "odds": "-184",
+        "numericOdds": -184
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-05-09T22:40:47.841Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "fighter2": {
+        "name": "Marco Tulio",
+        "odds": "-184",
+        "numericOdds": -184
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-05-09T22:40:50.851Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "fighter2": {
+        "name": "Marco Tulio",
+        "odds": "-184",
+        "numericOdds": -184
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-05-09T22:40:53.862Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "fighter2": {
+        "name": "Marco Tulio",
+        "odds": "-184",
+        "numericOdds": -184
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-05-09T22:40:56.868Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "fighter2": {
+        "name": "Marco Tulio",
+        "odds": "-184",
+        "numericOdds": -184
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-05-09T22:40:59.883Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "fighter2": {
+        "name": "Marco Tulio",
+        "odds": "-184",
+        "numericOdds": -184
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-05-09T22:41:02.892Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "fighter2": {
+        "name": "Marco Tulio",
+        "odds": "-184",
+        "numericOdds": -184
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-05-09T22:41:05.898Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Marco Tulio",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-05-09T22:41:08.913Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Marco Tulio",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-05-09T22:41:11.916Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Marco Tulio",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-05-09T22:41:14.930Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Marco Tulio",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-05-09T22:41:17.932Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Marco Tulio",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-05-09T22:41:20.939Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Marco Tulio",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-05-09T22:41:23.945Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Marco Tulio",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-05-09T22:41:26.955Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Marco Tulio",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-05-09T22:41:29.963Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Marco Tulio",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-05-09T22:41:32.964Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Marco Tulio",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-05-09T22:41:35.976Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Marco Tulio",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-05-09T22:41:38.982Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Marco Tulio",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-05-09T22:41:41.985Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Marco Tulio",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-05-09T22:41:44.986Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Marco Tulio",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-05-09T22:41:47.990Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Marco Tulio",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-05-09T22:41:50.994Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Marco Tulio",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-05-09T22:41:54.005Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Marco Tulio",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-05-09T22:42:03.039Z",
+      "fighter1": {
+        "name": "Roman Kopylov",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "Marco Tulio",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
     {
       "timestamp": "2026-05-09T22:42:06.047Z",
       "fighter1": {
@@ -2991,5 +3456,32 @@
       "isLocked": false,
       "extractionId": 19
     }
-  ]
+  ],
+  "createdAt": "2026-05-09T22:42:03.038Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Roman Kopylov",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:52:17.803Z",
+    "openingF1Odds": 154,
+    "openingF2Odds": -184,
+    "closingF1Odds": -2000,
+    "closingF2Odds": 1040,
+    "lineMovementF1": -2154,
+    "crossoverOccurred": true,
+    "crossoverMinute": 2
+  },
+  "derived": {
+    "inferredFinishMin": 16,
+    "inferredFinishRound": 3,
+    "peakOddsSwing": 3154,
+    "finishSpeed": "medium",
+    "preFightSteam": -2154,
+    "dominanceScore": 36,
+    "crossoverCount": 5,
+    "derivedAt": "2026-06-14T11:47:28.489Z"
+  }
 }

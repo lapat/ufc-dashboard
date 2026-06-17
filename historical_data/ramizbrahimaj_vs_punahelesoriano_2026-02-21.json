@@ -1,11 +1,896 @@
 {
   "fightId": "ramizbrahimaj_vs_punahelesoriano",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-02-21T23:29:12.044Z",
+  "startTime": "2026-02-21T23:26:16.612Z",
   "endTime": "2026-02-21T23:42:59.298Z",
-  "dataPoints": 197,
+  "duration": 1002686,
+  "dataPoints": 256,
   "oddsHistory": [
+    {
+      "timestamp": "2026-02-21T23:26:16.612Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 68
+    },
+    {
+      "timestamp": "2026-02-21T23:26:19.622Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-02-21T23:26:20.567Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-02-21T23:26:23.584Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-02-21T23:26:26.588Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-02-21T23:26:29.594Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-02-21T23:26:32.606Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-02-21T23:26:35.614Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-02-21T23:26:38.620Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-02-21T23:26:41.630Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-02-21T23:26:44.635Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-02-21T23:26:47.640Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-02-21T23:26:50.653Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-02-21T23:26:53.654Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-02-21T23:26:56.666Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-02-21T23:26:59.672Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-148",
+        "numericOdds": -148
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-02-21T23:27:02.682Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-148",
+        "numericOdds": -148
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-02-21T23:27:05.683Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-148",
+        "numericOdds": -148
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-02-21T23:27:08.684Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-148",
+        "numericOdds": -148
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-02-21T23:27:11.696Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-148",
+        "numericOdds": -148
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-02-21T23:27:14.704Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-148",
+        "numericOdds": -148
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-02-21T23:27:17.709Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-148",
+        "numericOdds": -148
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-02-21T23:27:20.723Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-148",
+        "numericOdds": -148
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-02-21T23:27:23.732Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-148",
+        "numericOdds": -148
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-02-21T23:27:26.743Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-148",
+        "numericOdds": -148
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-02-21T23:27:29.746Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-148",
+        "numericOdds": -148
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-02-21T23:27:32.753Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-148",
+        "numericOdds": -148
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-02-21T23:27:35.755Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+102",
+        "numericOdds": 102
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-130",
+        "numericOdds": -130
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-02-21T23:27:38.767Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+102",
+        "numericOdds": 102
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-130",
+        "numericOdds": -130
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-02-21T23:27:41.772Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+102",
+        "numericOdds": 102
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-130",
+        "numericOdds": -130
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-02-21T23:27:44.785Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+102",
+        "numericOdds": 102
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-130",
+        "numericOdds": -130
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-02-21T23:27:47.795Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+106",
+        "numericOdds": 106
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-02-21T23:27:50.807Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+106",
+        "numericOdds": 106
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-02-21T23:27:53.820Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+106",
+        "numericOdds": 106
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-02-21T23:27:56.832Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+106",
+        "numericOdds": 106
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-02-21T23:27:59.838Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+106",
+        "numericOdds": 106
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-02-21T23:28:02.847Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+106",
+        "numericOdds": 106
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2026-02-21T23:28:05.858Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+106",
+        "numericOdds": 106
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2026-02-21T23:28:08.864Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+106",
+        "numericOdds": 106
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "isLocked": false,
+      "extractionId": 39
+    },
+    {
+      "timestamp": "2026-02-21T23:28:11.871Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+106",
+        "numericOdds": 106
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "isLocked": false,
+      "extractionId": 40
+    },
+    {
+      "timestamp": "2026-02-21T23:28:14.881Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+106",
+        "numericOdds": 106
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "isLocked": false,
+      "extractionId": 41
+    },
+    {
+      "timestamp": "2026-02-21T23:28:17.887Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+106",
+        "numericOdds": 106
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "isLocked": false,
+      "extractionId": 42
+    },
+    {
+      "timestamp": "2026-02-21T23:28:20.895Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+106",
+        "numericOdds": 106
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "isLocked": false,
+      "extractionId": 43
+    },
+    {
+      "timestamp": "2026-02-21T23:28:23.909Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+106",
+        "numericOdds": 106
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "isLocked": false,
+      "extractionId": 44
+    },
+    {
+      "timestamp": "2026-02-21T23:28:26.917Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+106",
+        "numericOdds": 106
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "isLocked": false,
+      "extractionId": 45
+    },
+    {
+      "timestamp": "2026-02-21T23:28:29.917Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+106",
+        "numericOdds": 106
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "isLocked": false,
+      "extractionId": 46
+    },
+    {
+      "timestamp": "2026-02-21T23:28:32.928Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 47
+    },
+    {
+      "timestamp": "2026-02-21T23:28:35.940Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 48
+    },
+    {
+      "timestamp": "2026-02-21T23:28:38.948Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 49
+    },
+    {
+      "timestamp": "2026-02-21T23:28:41.960Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+108",
+        "numericOdds": 108
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-138",
+        "numericOdds": -138
+      },
+      "isLocked": false,
+      "extractionId": 50
+    },
+    {
+      "timestamp": "2026-02-21T23:28:44.967Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+108",
+        "numericOdds": 108
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-138",
+        "numericOdds": -138
+      },
+      "isLocked": false,
+      "extractionId": 51
+    },
+    {
+      "timestamp": "2026-02-21T23:28:47.981Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+108",
+        "numericOdds": 108
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-138",
+        "numericOdds": -138
+      },
+      "isLocked": false,
+      "extractionId": 52
+    },
+    {
+      "timestamp": "2026-02-21T23:28:50.987Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+108",
+        "numericOdds": 108
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-138",
+        "numericOdds": -138
+      },
+      "isLocked": false,
+      "extractionId": 53
+    },
+    {
+      "timestamp": "2026-02-21T23:28:53.989Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+108",
+        "numericOdds": 108
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-138",
+        "numericOdds": -138
+      },
+      "isLocked": false,
+      "extractionId": 54
+    },
+    {
+      "timestamp": "2026-02-21T23:28:57.003Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+108",
+        "numericOdds": 108
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-138",
+        "numericOdds": -138
+      },
+      "isLocked": false,
+      "extractionId": 55
+    },
+    {
+      "timestamp": "2026-02-21T23:29:00.013Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+108",
+        "numericOdds": 108
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-138",
+        "numericOdds": -138
+      },
+      "isLocked": false,
+      "extractionId": 56
+    },
+    {
+      "timestamp": "2026-02-21T23:29:03.020Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "isLocked": false,
+      "extractionId": 57
+    },
+    {
+      "timestamp": "2026-02-21T23:29:06.028Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "isLocked": false,
+      "extractionId": 58
+    },
+    {
+      "timestamp": "2026-02-21T23:29:09.033Z",
+      "fighter1": {
+        "name": "Ramiz Brahimaj",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "fighter2": {
+        "name": "Punahele Soriano",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "isLocked": false,
+      "extractionId": 59
+    },
     {
       "timestamp": "2026-02-21T23:29:12.044Z",
       "fighter1": {
@@ -2961,5 +3846,32 @@
       "isLocked": false,
       "extractionId": 5
     }
-  ]
+  ],
+  "createdAt": "2026-02-21T23:29:24.081Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Punahele Soriano",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:52:13.441Z",
+    "openingF1Odds": 120,
+    "openingF2Odds": -142,
+    "closingF1Odds": -134,
+    "closingF2Odds": 104,
+    "lineMovementF1": -254,
+    "crossoverOccurred": true,
+    "crossoverMinute": 3
+  },
+  "derived": {
+    "inferredFinishMin": null,
+    "inferredFinishRound": null,
+    "peakOddsSwing": 550,
+    "finishSpeed": "decision",
+    "preFightSteam": -254,
+    "dominanceScore": 40,
+    "crossoverCount": 1,
+    "derivedAt": "2026-06-14T11:47:28.482Z"
+  }
 }

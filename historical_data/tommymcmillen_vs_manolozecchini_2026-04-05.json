@@ -1,11 +1,326 @@
 {
   "fightId": "tommymcmillen_vs_manolozecchini",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-04-05T00:54:12.762Z",
+  "startTime": "2026-04-05T00:53:09.625Z",
   "endTime": "2026-04-05T00:58:49.217Z",
-  "dataPoints": 98,
+  "duration": 339592,
+  "dataPoints": 119,
   "oddsHistory": [
+    {
+      "timestamp": "2026-04-05T00:53:09.625Z",
+      "fighter1": {
+        "name": "Tommy McMillen",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Manolo Zecchini",
+        "odds": "+590",
+        "numericOdds": 590
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-04-05T00:53:12.640Z",
+      "fighter1": {
+        "name": "Tommy McMillen",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Manolo Zecchini",
+        "odds": "+590",
+        "numericOdds": 590
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-04-05T00:53:15.652Z",
+      "fighter1": {
+        "name": "Tommy McMillen",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Manolo Zecchini",
+        "odds": "+590",
+        "numericOdds": 590
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-04-05T00:53:18.654Z",
+      "fighter1": {
+        "name": "Tommy McMillen",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Manolo Zecchini",
+        "odds": "+590",
+        "numericOdds": 590
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-04-05T00:53:21.663Z",
+      "fighter1": {
+        "name": "Tommy McMillen",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Manolo Zecchini",
+        "odds": "+590",
+        "numericOdds": 590
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-04-05T00:53:24.666Z",
+      "fighter1": {
+        "name": "Tommy McMillen",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Manolo Zecchini",
+        "odds": "+590",
+        "numericOdds": 590
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-04-05T00:53:27.672Z",
+      "fighter1": {
+        "name": "Tommy McMillen",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Manolo Zecchini",
+        "odds": "+590",
+        "numericOdds": 590
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-04-05T00:53:30.687Z",
+      "fighter1": {
+        "name": "Tommy McMillen",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Manolo Zecchini",
+        "odds": "+590",
+        "numericOdds": 590
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-04-05T00:53:33.693Z",
+      "fighter1": {
+        "name": "Tommy McMillen",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Manolo Zecchini",
+        "odds": "+590",
+        "numericOdds": 590
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-04-05T00:53:36.700Z",
+      "fighter1": {
+        "name": "Tommy McMillen",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Manolo Zecchini",
+        "odds": "+590",
+        "numericOdds": 590
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-04-05T00:53:39.702Z",
+      "fighter1": {
+        "name": "Tommy McMillen",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Manolo Zecchini",
+        "odds": "+590",
+        "numericOdds": 590
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-04-05T00:53:42.710Z",
+      "fighter1": {
+        "name": "Tommy McMillen",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Manolo Zecchini",
+        "odds": "+590",
+        "numericOdds": 590
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-04-05T00:53:45.714Z",
+      "fighter1": {
+        "name": "Tommy McMillen",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Manolo Zecchini",
+        "odds": "+590",
+        "numericOdds": 590
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-04-05T00:53:48.715Z",
+      "fighter1": {
+        "name": "Tommy McMillen",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Manolo Zecchini",
+        "odds": "+590",
+        "numericOdds": 590
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-04-05T00:53:51.719Z",
+      "fighter1": {
+        "name": "Tommy McMillen",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Manolo Zecchini",
+        "odds": "+590",
+        "numericOdds": 590
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-04-05T00:53:54.735Z",
+      "fighter1": {
+        "name": "Tommy McMillen",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Manolo Zecchini",
+        "odds": "+590",
+        "numericOdds": 590
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-04-05T00:53:57.737Z",
+      "fighter1": {
+        "name": "Tommy McMillen",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Manolo Zecchini",
+        "odds": "+590",
+        "numericOdds": 590
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-04-05T00:54:00.739Z",
+      "fighter1": {
+        "name": "Tommy McMillen",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Manolo Zecchini",
+        "odds": "+590",
+        "numericOdds": 590
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-04-05T00:54:03.742Z",
+      "fighter1": {
+        "name": "Tommy McMillen",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Manolo Zecchini",
+        "odds": "+590",
+        "numericOdds": 590
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-04-05T00:54:06.756Z",
+      "fighter1": {
+        "name": "Tommy McMillen",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Manolo Zecchini",
+        "odds": "+590",
+        "numericOdds": 590
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-04-05T00:54:09.756Z",
+      "fighter1": {
+        "name": "Tommy McMillen",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Manolo Zecchini",
+        "odds": "+590",
+        "numericOdds": 590
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
     {
       "timestamp": "2026-04-05T00:54:12.762Z",
       "fighter1": {
@@ -1476,5 +1791,32 @@
       "isLocked": false,
       "extractionId": 29
     }
-  ]
+  ],
+  "createdAt": "2026-04-05T00:55:24.887Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Tommy McMillen",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:52:28.426Z",
+    "openingF1Odds": -850,
+    "openingF2Odds": 590,
+    "closingF1Odds": -450,
+    "closingF2Odds": 310,
+    "lineMovementF1": 400,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  },
+  "derived": {
+    "inferredFinishMin": 0,
+    "inferredFinishRound": 1,
+    "peakOddsSwing": 750,
+    "finishSpeed": "fast",
+    "preFightSteam": 400,
+    "dominanceScore": 100,
+    "crossoverCount": 0,
+    "derivedAt": "2026-06-14T11:47:28.503Z"
+  }
 }

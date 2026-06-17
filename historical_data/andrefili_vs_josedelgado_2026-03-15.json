@@ -1,506 +1,11 @@
 {
   "fightId": "andrefili_vs_josedelgado",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-03-13T18:00:42Z",
+  "startTime": "2026-03-15T01:46:33.756Z",
   "endTime": "2026-03-15T02:04:12.001Z",
-  "dataPoints": 363,
+  "duration": 1058245,
+  "dataPoints": 340,
   "oddsHistory": [
-    {
-      "timestamp": "2026-03-13T18:00:42Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 310
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -395
-      }
-    },
-    {
-      "timestamp": "2026-03-13T18:05:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 310
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -395
-      }
-    },
-    {
-      "timestamp": "2026-03-13T18:10:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 340
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -440
-      }
-    },
-    {
-      "timestamp": "2026-03-13T18:15:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 340
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -440
-      }
-    },
-    {
-      "timestamp": "2026-03-13T18:20:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 340
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -440
-      }
-    },
-    {
-      "timestamp": "2026-03-13T18:25:40Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 340
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -440
-      }
-    },
-    {
-      "timestamp": "2026-03-13T18:30:39Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 340
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -440
-      }
-    },
-    {
-      "timestamp": "2026-03-13T18:35:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 340
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -440
-      }
-    },
-    {
-      "timestamp": "2026-03-13T18:40:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 340
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -440
-      }
-    },
-    {
-      "timestamp": "2026-03-13T18:45:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 340
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -440
-      }
-    },
-    {
-      "timestamp": "2026-03-13T18:50:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 340
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -440
-      }
-    },
-    {
-      "timestamp": "2026-03-13T18:55:39Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 340
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -440
-      }
-    },
-    {
-      "timestamp": "2026-03-13T19:00:40Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 340
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -440
-      }
-    },
-    {
-      "timestamp": "2026-03-13T19:05:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 340
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -440
-      }
-    },
-    {
-      "timestamp": "2026-03-13T19:10:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 340
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -440
-      }
-    },
-    {
-      "timestamp": "2026-03-13T19:15:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 340
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -440
-      }
-    },
-    {
-      "timestamp": "2026-03-13T19:20:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 340
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -440
-      }
-    },
-    {
-      "timestamp": "2026-03-13T19:25:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 340
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -440
-      }
-    },
-    {
-      "timestamp": "2026-03-13T19:30:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 340
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -440
-      }
-    },
-    {
-      "timestamp": "2026-03-13T19:35:39Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 340
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -440
-      }
-    },
-    {
-      "timestamp": "2026-03-13T19:40:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 340
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -440
-      }
-    },
-    {
-      "timestamp": "2026-03-13T19:45:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 340
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -440
-      }
-    },
-    {
-      "timestamp": "2026-03-13T19:50:39Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 340
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -440
-      }
-    },
-    {
-      "timestamp": "2026-03-13T19:55:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 340
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -440
-      }
-    },
-    {
-      "timestamp": "2026-03-13T20:00:41Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 340
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -440
-      }
-    },
-    {
-      "timestamp": "2026-03-13T20:05:39Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 340
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -440
-      }
-    },
-    {
-      "timestamp": "2026-03-13T20:10:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 340
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -440
-      }
-    },
-    {
-      "timestamp": "2026-03-13T20:15:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 340
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -440
-      }
-    },
-    {
-      "timestamp": "2026-03-13T20:20:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 340
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -440
-      }
-    },
-    {
-      "timestamp": "2026-03-13T20:25:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 340
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -440
-      }
-    },
-    {
-      "timestamp": "2026-03-13T20:30:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 340
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -440
-      }
-    },
-    {
-      "timestamp": "2026-03-13T20:35:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 340
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -440
-      }
-    },
-    {
-      "timestamp": "2026-03-13T20:40:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 340
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -440
-      }
-    },
-    {
-      "timestamp": "2026-03-13T20:45:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 340
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -440
-      }
-    },
-    {
-      "timestamp": "2026-03-13T20:50:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 340
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -440
-      }
-    },
-    {
-      "timestamp": "2026-03-13T20:55:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 340
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -440
-      }
-    },
-    {
-      "timestamp": "2026-03-13T21:00:42Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 340
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -440
-      }
-    },
-    {
-      "timestamp": "2026-03-13T21:05:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 340
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -440
-      }
-    },
-    {
-      "timestamp": "2026-03-13T21:10:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 340
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -440
-      }
-    },
-    {
-      "timestamp": "2026-03-13T21:15:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 340
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -440
-      }
-    },
-    {
-      "timestamp": "2026-03-13T21:20:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 340
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -440
-      }
-    },
-    {
-      "timestamp": "2026-03-13T21:25:37Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 340
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -440
-      }
-    },
-    {
-      "timestamp": "2026-03-13T21:30:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 340
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -440
-      }
-    },
-    {
-      "timestamp": "2026-03-13T21:35:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 340
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -440
-      }
-    },
-    {
-      "timestamp": "2026-03-13T21:40:38Z",
-      "fighter1": {
-        "name": "Andre Fili",
-        "numericOdds": 340
-      },
-      "fighter2": {
-        "name": "Jose Delgado",
-        "numericOdds": -440
-      }
-    },
     {
       "timestamp": "2026-03-15T01:46:33.756Z",
       "fighter1": {
@@ -5270,6 +4775,347 @@
       },
       "isLocked": false,
       "extractionId": 22
+    },
+    {
+      "timestamp": "2026-03-15T02:03:08.832Z",
+      "fighter1": {
+        "name": "Andre Fili",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Jose Delgado",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-03-15T02:03:11.835Z",
+      "fighter1": {
+        "name": "Andre Fili",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Jose Delgado",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-15T02:03:14.839Z",
+      "fighter1": {
+        "name": "Andre Fili",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Jose Delgado",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-15T02:03:17.852Z",
+      "fighter1": {
+        "name": "Andre Fili",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Jose Delgado",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-15T02:03:20.858Z",
+      "fighter1": {
+        "name": "Andre Fili",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Jose Delgado",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-15T02:03:23.872Z",
+      "fighter1": {
+        "name": "Andre Fili",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Jose Delgado",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-03-15T02:03:26.874Z",
+      "fighter1": {
+        "name": "Andre Fili",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Jose Delgado",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-03-15T02:03:29.887Z",
+      "fighter1": {
+        "name": "Andre Fili",
+        "odds": "+200",
+        "numericOdds": 200
+      },
+      "fighter2": {
+        "name": "Jose Delgado",
+        "odds": "-270",
+        "numericOdds": -270
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-03-15T02:03:32.895Z",
+      "fighter1": {
+        "name": "Andre Fili",
+        "odds": "+200",
+        "numericOdds": 200
+      },
+      "fighter2": {
+        "name": "Jose Delgado",
+        "odds": "-270",
+        "numericOdds": -270
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-03-15T02:03:35.901Z",
+      "fighter1": {
+        "name": "Andre Fili",
+        "odds": "+230",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Jose Delgado",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-03-15T02:03:38.903Z",
+      "fighter1": {
+        "name": "Andre Fili",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Jose Delgado",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-03-15T02:03:41.911Z",
+      "fighter1": {
+        "name": "Andre Fili",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Jose Delgado",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-03-15T02:03:44.924Z",
+      "fighter1": {
+        "name": "Andre Fili",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jose Delgado",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-03-15T02:03:47.936Z",
+      "fighter1": {
+        "name": "Andre Fili",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Jose Delgado",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-03-15T02:03:50.946Z",
+      "fighter1": {
+        "name": "Andre Fili",
+        "odds": "+520",
+        "numericOdds": 520
+      },
+      "fighter2": {
+        "name": "Jose Delgado",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-03-15T02:03:53.952Z",
+      "fighter1": {
+        "name": "Andre Fili",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "fighter2": {
+        "name": "Jose Delgado",
+        "odds": "-1200",
+        "numericOdds": -1200
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-03-15T02:03:56.954Z",
+      "fighter1": {
+        "name": "Andre Fili",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "fighter2": {
+        "name": "Jose Delgado",
+        "odds": "-1200",
+        "numericOdds": -1200
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-03-15T02:03:59.963Z",
+      "fighter1": {
+        "name": "Andre Fili",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "fighter2": {
+        "name": "Jose Delgado",
+        "odds": "-1200",
+        "numericOdds": -1200
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-03-15T02:04:02.969Z",
+      "fighter1": {
+        "name": "Andre Fili",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "fighter2": {
+        "name": "Jose Delgado",
+        "odds": "-1200",
+        "numericOdds": -1200
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-03-15T02:04:05.976Z",
+      "fighter1": {
+        "name": "Andre Fili",
+        "odds": "+660",
+        "numericOdds": 660
+      },
+      "fighter2": {
+        "name": "Jose Delgado",
+        "odds": "-1200",
+        "numericOdds": -1200
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-03-15T02:04:08.988Z",
+      "fighter1": {
+        "name": "Andre Fili",
+        "odds": "+620",
+        "numericOdds": 620
+      },
+      "fighter2": {
+        "name": "Jose Delgado",
+        "odds": "-1100",
+        "numericOdds": -1100
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-03-15T02:04:12.001Z",
+      "fighter1": {
+        "name": "Andre Fili",
+        "odds": "+620",
+        "numericOdds": 620
+      },
+      "fighter2": {
+        "name": "Jose Delgado",
+        "odds": "-1100",
+        "numericOdds": -1100
+      },
+      "isLocked": false,
+      "extractionId": 22
     }
-  ]
+  ],
+  "createdAt": "2026-03-15T01:49:01.083Z",
+  "derived": {
+    "inferredFinishMin": 17,
+    "inferredFinishRound": 3,
+    "peakOddsSwing": 536,
+    "finishSpeed": "slow",
+    "preFightSteam": 250,
+    "dominanceScore": 37,
+    "crossoverCount": 4,
+    "derivedAt": "2026-06-14T11:47:28.374Z"
+  }
 }

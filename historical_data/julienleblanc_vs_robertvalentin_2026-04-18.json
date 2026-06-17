@@ -1,65 +1,802 @@
 {
-  "fightId": "julienleblanc_vs_robertvalentin_2026-04-18",
-  "fightTitle": "Julien Leblanc vs Robert Valentin",
-  "commenceTime": null,
-  "startTime": "2026-04-18T23:05:37Z",
-  "endTime": "2026-04-18T23:25:37Z",
-  "dataPoints": 5,
+  "fightId": "julienleblanc_vs_robertvalentin",
+  "fightTitle": "Connected but no betting buttons found",
+  "startTime": "2026-04-18T23:12:37.925Z",
+  "endTime": "2026-04-18T23:15:41.332Z",
+  "duration": 183407,
+  "dataPoints": 51,
   "oddsHistory": [
     {
-      "timestamp": "2026-04-18T23:05:37Z",
+      "timestamp": "2026-04-18T23:12:37.925Z",
       "fighter1": {
         "name": "Julien Leblanc",
-        "numericOdds": 145
+        "odds": "+150",
+        "numericOdds": 150
       },
       "fighter2": {
         "name": "Robert Valentin",
-        "numericOdds": -175
-      }
+        "odds": "-178",
+        "numericOdds": -178
+      },
+      "isLocked": false,
+      "extractionId": 45
     },
     {
-      "timestamp": "2026-04-18T23:10:37Z",
+      "timestamp": "2026-04-18T23:12:40.933Z",
       "fighter1": {
         "name": "Julien Leblanc",
-        "numericOdds": 145
+        "odds": "+150",
+        "numericOdds": 150
       },
       "fighter2": {
         "name": "Robert Valentin",
-        "numericOdds": -175
-      }
+        "odds": "-178",
+        "numericOdds": -178
+      },
+      "isLocked": false,
+      "extractionId": 2
     },
     {
-      "timestamp": "2026-04-18T23:15:38Z",
+      "timestamp": "2026-04-18T23:12:43.937Z",
       "fighter1": {
         "name": "Julien Leblanc",
-        "numericOdds": 300
+        "odds": "+150",
+        "numericOdds": 150
       },
       "fighter2": {
         "name": "Robert Valentin",
-        "numericOdds": -425
-      }
+        "odds": "-178",
+        "numericOdds": -178
+      },
+      "isLocked": false,
+      "extractionId": 3
     },
     {
-      "timestamp": "2026-04-18T23:20:38Z",
+      "timestamp": "2026-04-18T23:12:46.939Z",
       "fighter1": {
         "name": "Julien Leblanc",
-        "numericOdds": 500
+        "odds": "+150",
+        "numericOdds": 150
       },
       "fighter2": {
         "name": "Robert Valentin",
-        "numericOdds": -810
-      }
+        "odds": "-178",
+        "numericOdds": -178
+      },
+      "isLocked": false,
+      "extractionId": 4
     },
     {
-      "timestamp": "2026-04-18T23:25:37Z",
+      "timestamp": "2026-04-18T23:12:49.948Z",
       "fighter1": {
         "name": "Julien Leblanc",
-        "numericOdds": 500
+        "odds": "+150",
+        "numericOdds": 150
       },
       "fighter2": {
         "name": "Robert Valentin",
-        "numericOdds": -810
-      }
+        "odds": "-178",
+        "numericOdds": -178
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-04-18T23:12:52.948Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-178",
+        "numericOdds": -178
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-04-18T23:12:55.960Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-178",
+        "numericOdds": -178
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-04-18T23:12:58.965Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-178",
+        "numericOdds": -178
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-04-18T23:13:01.975Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-178",
+        "numericOdds": -178
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-04-18T23:13:04.982Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-178",
+        "numericOdds": -178
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-04-18T23:13:07.984Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-178",
+        "numericOdds": -178
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-04-18T23:13:10.986Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-178",
+        "numericOdds": -178
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-04-18T23:13:13.991Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-178",
+        "numericOdds": -178
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-04-18T23:13:17.004Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-178",
+        "numericOdds": -178
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-04-18T23:13:20.013Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-178",
+        "numericOdds": -178
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-04-18T23:13:23.028Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-178",
+        "numericOdds": -178
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-04-18T23:13:26.043Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-178",
+        "numericOdds": -178
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-04-18T23:13:29.043Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-178",
+        "numericOdds": -178
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-04-18T23:13:32.045Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-178",
+        "numericOdds": -178
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-04-18T23:13:35.047Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-186",
+        "numericOdds": -186
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-04-18T23:13:38.056Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-186",
+        "numericOdds": -186
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-04-18T23:13:41.065Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-186",
+        "numericOdds": -186
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-04-18T23:13:44.080Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-186",
+        "numericOdds": -186
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-04-18T23:13:47.088Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-186",
+        "numericOdds": -186
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-04-18T23:13:50.089Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-186",
+        "numericOdds": -186
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-04-18T23:13:53.095Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-186",
+        "numericOdds": -186
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-04-18T23:13:56.096Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-186",
+        "numericOdds": -186
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-04-18T23:13:59.110Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-186",
+        "numericOdds": -186
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-04-18T23:14:02.114Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-186",
+        "numericOdds": -186
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-04-18T23:14:05.128Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-186",
+        "numericOdds": -186
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-04-18T23:14:08.140Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-186",
+        "numericOdds": -186
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-04-18T23:14:11.150Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-186",
+        "numericOdds": -186
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-04-18T23:14:14.157Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-186",
+        "numericOdds": -186
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-04-18T23:14:17.160Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-186",
+        "numericOdds": -186
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-04-18T23:14:20.173Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-186",
+        "numericOdds": -186
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-04-18T23:14:23.180Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-186",
+        "numericOdds": -186
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-04-18T23:14:26.184Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-186",
+        "numericOdds": -186
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2026-04-18T23:14:56.260Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+620",
+        "numericOdds": 620
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-1100",
+        "numericOdds": -1100
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2026-04-18T23:14:59.272Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+420",
+        "numericOdds": 420
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-650",
+        "numericOdds": -650
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-04-18T23:15:02.280Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+420",
+        "numericOdds": 420
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-650",
+        "numericOdds": -650
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-04-18T23:15:11.284Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+420",
+        "numericOdds": 420
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-650",
+        "numericOdds": -650
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-04-18T23:15:14.282Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+420",
+        "numericOdds": 420
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-650",
+        "numericOdds": -650
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-04-18T23:15:17.292Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+420",
+        "numericOdds": 420
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-650",
+        "numericOdds": -650
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-04-18T23:15:20.302Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+420",
+        "numericOdds": 420
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-650",
+        "numericOdds": -650
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-04-18T23:15:23.309Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+420",
+        "numericOdds": 420
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-650",
+        "numericOdds": -650
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-04-18T23:15:26.309Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+420",
+        "numericOdds": 420
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-650",
+        "numericOdds": -650
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-04-18T23:15:29.315Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+420",
+        "numericOdds": 420
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-650",
+        "numericOdds": -650
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-04-18T23:15:32.320Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+420",
+        "numericOdds": 420
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-650",
+        "numericOdds": -650
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-04-18T23:15:35.321Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+420",
+        "numericOdds": 420
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-650",
+        "numericOdds": -650
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-04-18T23:15:38.326Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+420",
+        "numericOdds": 420
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-650",
+        "numericOdds": -650
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-04-18T23:15:41.332Z",
+      "fighter1": {
+        "name": "Julien Leblanc",
+        "odds": "+420",
+        "numericOdds": 420
+      },
+      "fighter2": {
+        "name": "Robert Valentin",
+        "odds": "-650",
+        "numericOdds": -650
+      },
+      "isLocked": false,
+      "extractionId": 11
     }
-  ]
+  ],
+  "createdAt": "2026-04-18T23:14:56.258Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Robert Valentin",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:51:40.568Z",
+    "openingF1Odds": 150,
+    "openingF2Odds": -178,
+    "closingF1Odds": 420,
+    "closingF2Odds": -650,
+    "lineMovementF1": 270,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  },
+  "derived": {
+    "inferredFinishMin": 2,
+    "inferredFinishRound": 1,
+    "peakOddsSwing": 470,
+    "finishSpeed": "medium",
+    "preFightSteam": 270,
+    "dominanceScore": 27,
+    "crossoverCount": 0,
+    "derivedAt": "2026-06-14T11:47:28.439Z"
+  }
 }

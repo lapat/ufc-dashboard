@@ -1,11 +1,521 @@
 {
   "fightId": "yaroslavamosov_vs_joelalvarez",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-05-10T00:14:05.348Z",
+  "startTime": "2026-05-10T00:12:23.131Z",
   "endTime": "2026-05-10T00:20:39.395Z",
-  "dataPoints": 121,
+  "duration": 496264,
+  "dataPoints": 155,
   "oddsHistory": [
+    {
+      "timestamp": "2026-05-10T00:12:23.131Z",
+      "fighter1": {
+        "name": "Yaroslav Amosov",
+        "odds": "-184",
+        "numericOdds": -184
+      },
+      "fighter2": {
+        "name": "Joel Alvarez",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-05-10T00:12:26.138Z",
+      "fighter1": {
+        "name": "Yaroslav Amosov",
+        "odds": "-184",
+        "numericOdds": -184
+      },
+      "fighter2": {
+        "name": "Joel Alvarez",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-05-10T00:12:29.144Z",
+      "fighter1": {
+        "name": "Yaroslav Amosov",
+        "odds": "-184",
+        "numericOdds": -184
+      },
+      "fighter2": {
+        "name": "Joel Alvarez",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-10T00:12:32.151Z",
+      "fighter1": {
+        "name": "Yaroslav Amosov",
+        "odds": "-184",
+        "numericOdds": -184
+      },
+      "fighter2": {
+        "name": "Joel Alvarez",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-10T00:12:35.156Z",
+      "fighter1": {
+        "name": "Yaroslav Amosov",
+        "odds": "-184",
+        "numericOdds": -184
+      },
+      "fighter2": {
+        "name": "Joel Alvarez",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-05-10T00:12:38.157Z",
+      "fighter1": {
+        "name": "Yaroslav Amosov",
+        "odds": "-184",
+        "numericOdds": -184
+      },
+      "fighter2": {
+        "name": "Joel Alvarez",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-05-10T00:12:41.160Z",
+      "fighter1": {
+        "name": "Yaroslav Amosov",
+        "odds": "-184",
+        "numericOdds": -184
+      },
+      "fighter2": {
+        "name": "Joel Alvarez",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-05-10T00:12:44.162Z",
+      "fighter1": {
+        "name": "Yaroslav Amosov",
+        "odds": "-184",
+        "numericOdds": -184
+      },
+      "fighter2": {
+        "name": "Joel Alvarez",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-05-10T00:12:47.172Z",
+      "fighter1": {
+        "name": "Yaroslav Amosov",
+        "odds": "-184",
+        "numericOdds": -184
+      },
+      "fighter2": {
+        "name": "Joel Alvarez",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-05-10T00:12:50.186Z",
+      "fighter1": {
+        "name": "Yaroslav Amosov",
+        "odds": "-184",
+        "numericOdds": -184
+      },
+      "fighter2": {
+        "name": "Joel Alvarez",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-05-10T00:12:53.188Z",
+      "fighter1": {
+        "name": "Yaroslav Amosov",
+        "odds": "-184",
+        "numericOdds": -184
+      },
+      "fighter2": {
+        "name": "Joel Alvarez",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-05-10T00:12:56.195Z",
+      "fighter1": {
+        "name": "Yaroslav Amosov",
+        "odds": "-184",
+        "numericOdds": -184
+      },
+      "fighter2": {
+        "name": "Joel Alvarez",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-05-10T00:12:59.196Z",
+      "fighter1": {
+        "name": "Yaroslav Amosov",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Joel Alvarez",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-05-10T00:13:02.204Z",
+      "fighter1": {
+        "name": "Yaroslav Amosov",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Joel Alvarez",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-05-10T00:13:05.213Z",
+      "fighter1": {
+        "name": "Yaroslav Amosov",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Joel Alvarez",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-05-10T00:13:08.224Z",
+      "fighter1": {
+        "name": "Yaroslav Amosov",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Joel Alvarez",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-05-10T00:13:11.233Z",
+      "fighter1": {
+        "name": "Yaroslav Amosov",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Joel Alvarez",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-05-10T00:13:14.237Z",
+      "fighter1": {
+        "name": "Yaroslav Amosov",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Joel Alvarez",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-05-10T00:13:17.239Z",
+      "fighter1": {
+        "name": "Yaroslav Amosov",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Joel Alvarez",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-05-10T00:13:20.248Z",
+      "fighter1": {
+        "name": "Yaroslav Amosov",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Joel Alvarez",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-05-10T00:13:23.253Z",
+      "fighter1": {
+        "name": "Yaroslav Amosov",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Joel Alvarez",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-05-10T00:13:26.254Z",
+      "fighter1": {
+        "name": "Yaroslav Amosov",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Joel Alvarez",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-05-10T00:13:29.259Z",
+      "fighter1": {
+        "name": "Yaroslav Amosov",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Joel Alvarez",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-05-10T00:13:32.270Z",
+      "fighter1": {
+        "name": "Yaroslav Amosov",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Joel Alvarez",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-05-10T00:13:35.274Z",
+      "fighter1": {
+        "name": "Yaroslav Amosov",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "fighter2": {
+        "name": "Joel Alvarez",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-05-10T00:13:38.286Z",
+      "fighter1": {
+        "name": "Yaroslav Amosov",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joel Alvarez",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-05-10T00:13:41.288Z",
+      "fighter1": {
+        "name": "Yaroslav Amosov",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Joel Alvarez",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-05-10T00:13:44.289Z",
+      "fighter1": {
+        "name": "Yaroslav Amosov",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "fighter2": {
+        "name": "Joel Alvarez",
+        "odds": "+166",
+        "numericOdds": 166
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-05-10T00:13:47.292Z",
+      "fighter1": {
+        "name": "Yaroslav Amosov",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "fighter2": {
+        "name": "Joel Alvarez",
+        "odds": "+166",
+        "numericOdds": 166
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-05-10T00:13:50.302Z",
+      "fighter1": {
+        "name": "Yaroslav Amosov",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "fighter2": {
+        "name": "Joel Alvarez",
+        "odds": "+166",
+        "numericOdds": 166
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-05-10T00:13:53.312Z",
+      "fighter1": {
+        "name": "Yaroslav Amosov",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "fighter2": {
+        "name": "Joel Alvarez",
+        "odds": "+166",
+        "numericOdds": 166
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-05-10T00:13:56.325Z",
+      "fighter1": {
+        "name": "Yaroslav Amosov",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "fighter2": {
+        "name": "Joel Alvarez",
+        "odds": "+166",
+        "numericOdds": 166
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-05-10T00:13:59.327Z",
+      "fighter1": {
+        "name": "Yaroslav Amosov",
+        "odds": "-225",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Joel Alvarez",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-05-10T00:14:02.335Z",
+      "fighter1": {
+        "name": "Yaroslav Amosov",
+        "odds": "-225",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Joel Alvarez",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
     {
       "timestamp": "2026-05-10T00:14:05.348Z",
       "fighter1": {
@@ -1821,5 +2331,16 @@
       "isLocked": false,
       "extractionId": 3
     }
-  ]
+  ],
+  "createdAt": "2026-05-10T00:14:56.483Z",
+  "derived": {
+    "inferredFinishMin": 4,
+    "inferredFinishRound": 1,
+    "peakOddsSwing": 1016,
+    "finishSpeed": "medium",
+    "preFightSteam": -566,
+    "dominanceScore": 84,
+    "crossoverCount": 0,
+    "derivedAt": "2026-06-14T11:47:28.512Z"
+  }
 }

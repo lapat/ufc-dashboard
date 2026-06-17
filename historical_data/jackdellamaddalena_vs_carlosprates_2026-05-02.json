@@ -1,11 +1,1706 @@
 {
   "fightId": "jackdellamaddalena_vs_carlosprates",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-05-02T13:49:42.328Z",
+  "startTime": "2026-05-02T13:44:02.476Z",
   "endTime": "2026-05-02T14:01:50.338Z",
-  "dataPoints": 212,
+  "duration": 1067862,
+  "dataPoints": 325,
   "oddsHistory": [
+    {
+      "timestamp": "2026-05-02T13:44:02.476Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 53
+    },
+    {
+      "timestamp": "2026-05-02T13:44:05.483Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-05-02T13:44:08.489Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-02T13:44:11.504Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-02T13:44:14.510Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-05-02T13:44:17.515Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-05-02T13:44:20.527Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-05-02T13:44:23.530Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-05-02T13:44:26.532Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-05-02T13:44:29.543Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-05-02T13:44:32.548Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-05-02T13:44:35.562Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-05-02T13:44:38.562Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-05-02T13:44:41.562Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-05-02T13:44:44.563Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-05-02T13:44:47.565Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-05-02T13:44:50.575Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-05-02T13:44:53.579Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-05-02T13:44:56.591Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-05-02T13:44:59.602Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-05-02T13:45:02.608Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-05-02T13:45:05.612Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-05-02T13:45:08.626Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-05-02T13:45:11.626Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-05-02T13:45:14.633Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-05-02T13:45:17.646Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-05-02T13:45:20.647Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-05-02T13:45:23.647Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-05-02T13:45:26.652Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-05-02T13:45:29.652Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-05-02T13:45:32.666Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-05-02T13:45:35.678Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-05-02T13:45:38.687Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-05-02T13:45:41.700Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-05-02T13:45:44.706Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-05-02T13:45:47.714Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-05-02T13:45:50.725Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2026-05-02T13:45:53.725Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2026-05-02T13:45:56.727Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 39
+    },
+    {
+      "timestamp": "2026-05-02T13:45:59.732Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 40
+    },
+    {
+      "timestamp": "2026-05-02T13:46:02.741Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 41
+    },
+    {
+      "timestamp": "2026-05-02T13:46:05.750Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 42
+    },
+    {
+      "timestamp": "2026-05-02T13:46:08.750Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 43
+    },
+    {
+      "timestamp": "2026-05-02T13:46:11.751Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 44
+    },
+    {
+      "timestamp": "2026-05-02T13:46:14.751Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 45
+    },
+    {
+      "timestamp": "2026-05-02T13:46:17.751Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 46
+    },
+    {
+      "timestamp": "2026-05-02T13:46:20.760Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 47
+    },
+    {
+      "timestamp": "2026-05-02T13:46:23.765Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 48
+    },
+    {
+      "timestamp": "2026-05-02T13:46:26.770Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 49
+    },
+    {
+      "timestamp": "2026-05-02T13:46:29.778Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 50
+    },
+    {
+      "timestamp": "2026-05-02T13:46:32.787Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 51
+    },
+    {
+      "timestamp": "2026-05-02T13:46:35.802Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 52
+    },
+    {
+      "timestamp": "2026-05-02T13:46:38.805Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 53
+    },
+    {
+      "timestamp": "2026-05-02T13:46:41.815Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 54
+    },
+    {
+      "timestamp": "2026-05-02T13:46:44.826Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 55
+    },
+    {
+      "timestamp": "2026-05-02T13:46:47.841Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 56
+    },
+    {
+      "timestamp": "2026-05-02T13:46:50.846Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 57
+    },
+    {
+      "timestamp": "2026-05-02T13:46:53.856Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 58
+    },
+    {
+      "timestamp": "2026-05-02T13:46:56.857Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 59
+    },
+    {
+      "timestamp": "2026-05-02T13:46:59.864Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 60
+    },
+    {
+      "timestamp": "2026-05-02T13:47:02.875Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-104",
+        "numericOdds": -104
+      },
+      "isLocked": false,
+      "extractionId": 61
+    },
+    {
+      "timestamp": "2026-05-02T13:47:05.885Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-118",
+        "numericOdds": -118
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-108",
+        "numericOdds": -108
+      },
+      "isLocked": false,
+      "extractionId": 62
+    },
+    {
+      "timestamp": "2026-05-02T13:47:08.893Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-118",
+        "numericOdds": -118
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-108",
+        "numericOdds": -108
+      },
+      "isLocked": false,
+      "extractionId": 63
+    },
+    {
+      "timestamp": "2026-05-02T13:47:11.903Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-118",
+        "numericOdds": -118
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-108",
+        "numericOdds": -108
+      },
+      "isLocked": false,
+      "extractionId": 64
+    },
+    {
+      "timestamp": "2026-05-02T13:47:14.907Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-118",
+        "numericOdds": -118
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-108",
+        "numericOdds": -108
+      },
+      "isLocked": false,
+      "extractionId": 65
+    },
+    {
+      "timestamp": "2026-05-02T13:47:17.916Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-118",
+        "numericOdds": -118
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-108",
+        "numericOdds": -108
+      },
+      "isLocked": false,
+      "extractionId": 66
+    },
+    {
+      "timestamp": "2026-05-02T13:47:20.927Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-118",
+        "numericOdds": -118
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-108",
+        "numericOdds": -108
+      },
+      "isLocked": false,
+      "extractionId": 67
+    },
+    {
+      "timestamp": "2026-05-02T13:47:23.942Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-118",
+        "numericOdds": -118
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-108",
+        "numericOdds": -108
+      },
+      "isLocked": false,
+      "extractionId": 68
+    },
+    {
+      "timestamp": "2026-05-02T13:47:26.943Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-118",
+        "numericOdds": -118
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-108",
+        "numericOdds": -108
+      },
+      "isLocked": false,
+      "extractionId": 69
+    },
+    {
+      "timestamp": "2026-05-02T13:47:29.948Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-120",
+        "numericOdds": -120
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-106",
+        "numericOdds": -106
+      },
+      "isLocked": false,
+      "extractionId": 70
+    },
+    {
+      "timestamp": "2026-05-02T13:47:32.960Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-120",
+        "numericOdds": -120
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-106",
+        "numericOdds": -106
+      },
+      "isLocked": false,
+      "extractionId": 71
+    },
+    {
+      "timestamp": "2026-05-02T13:47:35.967Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-120",
+        "numericOdds": -120
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-106",
+        "numericOdds": -106
+      },
+      "isLocked": false,
+      "extractionId": 72
+    },
+    {
+      "timestamp": "2026-05-02T13:47:38.982Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-120",
+        "numericOdds": -120
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-106",
+        "numericOdds": -106
+      },
+      "isLocked": false,
+      "extractionId": 73
+    },
+    {
+      "timestamp": "2026-05-02T13:47:41.988Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-120",
+        "numericOdds": -120
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-106",
+        "numericOdds": -106
+      },
+      "isLocked": false,
+      "extractionId": 74
+    },
+    {
+      "timestamp": "2026-05-02T13:47:45.001Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-120",
+        "numericOdds": -120
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-106",
+        "numericOdds": -106
+      },
+      "isLocked": false,
+      "extractionId": 75
+    },
+    {
+      "timestamp": "2026-05-02T13:47:48.011Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-120",
+        "numericOdds": -120
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-106",
+        "numericOdds": -106
+      },
+      "isLocked": false,
+      "extractionId": 76
+    },
+    {
+      "timestamp": "2026-05-02T13:47:51.018Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-120",
+        "numericOdds": -120
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-106",
+        "numericOdds": -106
+      },
+      "isLocked": false,
+      "extractionId": 77
+    },
+    {
+      "timestamp": "2026-05-02T13:47:54.019Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-120",
+        "numericOdds": -120
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-106",
+        "numericOdds": -106
+      },
+      "isLocked": false,
+      "extractionId": 78
+    },
+    {
+      "timestamp": "2026-05-02T13:47:57.026Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-120",
+        "numericOdds": -120
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-106",
+        "numericOdds": -106
+      },
+      "isLocked": false,
+      "extractionId": 79
+    },
+    {
+      "timestamp": "2026-05-02T13:48:00.032Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "isLocked": false,
+      "extractionId": 80
+    },
+    {
+      "timestamp": "2026-05-02T13:48:03.042Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "isLocked": false,
+      "extractionId": 81
+    },
+    {
+      "timestamp": "2026-05-02T13:48:06.057Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "isLocked": false,
+      "extractionId": 82
+    },
+    {
+      "timestamp": "2026-05-02T13:48:09.068Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "isLocked": false,
+      "extractionId": 83
+    },
+    {
+      "timestamp": "2026-05-02T13:48:12.079Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "isLocked": false,
+      "extractionId": 84
+    },
+    {
+      "timestamp": "2026-05-02T13:48:15.090Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "isLocked": false,
+      "extractionId": 85
+    },
+    {
+      "timestamp": "2026-05-02T13:48:18.095Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "isLocked": false,
+      "extractionId": 86
+    },
+    {
+      "timestamp": "2026-05-02T13:48:21.097Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "isLocked": false,
+      "extractionId": 87
+    },
+    {
+      "timestamp": "2026-05-02T13:48:24.100Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "isLocked": false,
+      "extractionId": 88
+    },
+    {
+      "timestamp": "2026-05-02T13:48:27.110Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "isLocked": false,
+      "extractionId": 89
+    },
+    {
+      "timestamp": "2026-05-02T13:48:30.118Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "isLocked": false,
+      "extractionId": 90
+    },
+    {
+      "timestamp": "2026-05-02T13:48:33.126Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "isLocked": false,
+      "extractionId": 91
+    },
+    {
+      "timestamp": "2026-05-02T13:48:36.132Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-108",
+        "numericOdds": -108
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-118",
+        "numericOdds": -118
+      },
+      "isLocked": false,
+      "extractionId": 92
+    },
+    {
+      "timestamp": "2026-05-02T13:48:39.146Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-108",
+        "numericOdds": -108
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-118",
+        "numericOdds": -118
+      },
+      "isLocked": false,
+      "extractionId": 93
+    },
+    {
+      "timestamp": "2026-05-02T13:48:42.157Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-108",
+        "numericOdds": -108
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-118",
+        "numericOdds": -118
+      },
+      "isLocked": false,
+      "extractionId": 94
+    },
+    {
+      "timestamp": "2026-05-02T13:48:45.172Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-108",
+        "numericOdds": -108
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-118",
+        "numericOdds": -118
+      },
+      "isLocked": false,
+      "extractionId": 95
+    },
+    {
+      "timestamp": "2026-05-02T13:48:48.186Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-108",
+        "numericOdds": -108
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-118",
+        "numericOdds": -118
+      },
+      "isLocked": false,
+      "extractionId": 96
+    },
+    {
+      "timestamp": "2026-05-02T13:48:51.185Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-108",
+        "numericOdds": -108
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-118",
+        "numericOdds": -118
+      },
+      "isLocked": false,
+      "extractionId": 97
+    },
+    {
+      "timestamp": "2026-05-02T13:48:54.188Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-108",
+        "numericOdds": -108
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-118",
+        "numericOdds": -118
+      },
+      "isLocked": false,
+      "extractionId": 98
+    },
+    {
+      "timestamp": "2026-05-02T13:48:57.196Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "isLocked": false,
+      "extractionId": 99
+    },
+    {
+      "timestamp": "2026-05-02T13:49:00.198Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "isLocked": false,
+      "extractionId": 100
+    },
+    {
+      "timestamp": "2026-05-02T13:49:03.212Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "isLocked": false,
+      "extractionId": 101
+    },
+    {
+      "timestamp": "2026-05-02T13:49:06.218Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "isLocked": false,
+      "extractionId": 102
+    },
+    {
+      "timestamp": "2026-05-02T13:49:09.229Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "isLocked": false,
+      "extractionId": 103
+    },
+    {
+      "timestamp": "2026-05-02T13:49:12.236Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-102",
+        "numericOdds": -102
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-126",
+        "numericOdds": -126
+      },
+      "isLocked": false,
+      "extractionId": 104
+    },
+    {
+      "timestamp": "2026-05-02T13:49:15.247Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-102",
+        "numericOdds": -102
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-126",
+        "numericOdds": -126
+      },
+      "isLocked": false,
+      "extractionId": 105
+    },
+    {
+      "timestamp": "2026-05-02T13:49:18.254Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-102",
+        "numericOdds": -102
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-126",
+        "numericOdds": -126
+      },
+      "isLocked": false,
+      "extractionId": 106
+    },
+    {
+      "timestamp": "2026-05-02T13:49:21.263Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-102",
+        "numericOdds": -102
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-126",
+        "numericOdds": -126
+      },
+      "isLocked": false,
+      "extractionId": 107
+    },
+    {
+      "timestamp": "2026-05-02T13:49:24.274Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-102",
+        "numericOdds": -102
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-126",
+        "numericOdds": -126
+      },
+      "isLocked": false,
+      "extractionId": 108
+    },
+    {
+      "timestamp": "2026-05-02T13:49:27.283Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-102",
+        "numericOdds": -102
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-126",
+        "numericOdds": -126
+      },
+      "isLocked": false,
+      "extractionId": 109
+    },
+    {
+      "timestamp": "2026-05-02T13:49:30.290Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-102",
+        "numericOdds": -102
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-126",
+        "numericOdds": -126
+      },
+      "isLocked": false,
+      "extractionId": 110
+    },
+    {
+      "timestamp": "2026-05-02T13:49:33.299Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-102",
+        "numericOdds": -102
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-126",
+        "numericOdds": -126
+      },
+      "isLocked": false,
+      "extractionId": 111
+    },
+    {
+      "timestamp": "2026-05-02T13:49:36.308Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-102",
+        "numericOdds": -102
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-126",
+        "numericOdds": -126
+      },
+      "isLocked": false,
+      "extractionId": 112
+    },
+    {
+      "timestamp": "2026-05-02T13:49:39.317Z",
+      "fighter1": {
+        "name": "Jack Della Maddalena",
+        "odds": "-102",
+        "numericOdds": -102
+      },
+      "fighter2": {
+        "name": "Carlos Prates",
+        "odds": "-126",
+        "numericOdds": -126
+      },
+      "isLocked": false,
+      "extractionId": 113
+    },
     {
       "timestamp": "2026-05-02T13:49:42.328Z",
       "fighter1": {
@@ -3186,5 +4881,32 @@
       "isLocked": false,
       "extractionId": 15
     }
-  ]
+  ],
+  "createdAt": "2026-05-02T13:51:57.682Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Carlos Prates",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:51:27.772Z",
+    "openingF1Odds": -112,
+    "openingF2Odds": -104,
+    "closingF1Odds": 2300,
+    "closingF2Odds": -6000,
+    "lineMovementF1": 2412,
+    "crossoverOccurred": true,
+    "crossoverMinute": 6
+  },
+  "derived": {
+    "inferredFinishMin": 15,
+    "inferredFinishRound": 3,
+    "peakOddsSwing": 2412,
+    "finishSpeed": "medium",
+    "preFightSteam": 2412,
+    "dominanceScore": 42,
+    "crossoverCount": 1,
+    "derivedAt": "2026-06-14T11:47:28.423Z"
+  }
 }

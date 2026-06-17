@@ -1,11 +1,251 @@
 {
   "fightId": "zhangmingyang_vs_alonzomenifield",
   "fightTitle": "Connected but no betting buttons found",
-  "commenceTime": null,
-  "startTime": "2026-05-30T13:03:55.536Z",
+  "startTime": "2026-05-30T13:03:07.413Z",
   "endTime": "2026-05-30T13:06:49.924Z",
-  "dataPoints": 61,
+  "duration": 222511,
+  "dataPoints": 77,
   "oddsHistory": [
+    {
+      "timestamp": "2026-05-30T13:03:07.413Z",
+      "fighter1": {
+        "name": "Zhang Mingyang",
+        "odds": "-250",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Alonzo Menifield",
+        "odds": "+186",
+        "numericOdds": 186
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-05-30T13:03:10.418Z",
+      "fighter1": {
+        "name": "Zhang Mingyang",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "Alonzo Menifield",
+        "odds": "+196",
+        "numericOdds": 196
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-05-30T13:03:13.422Z",
+      "fighter1": {
+        "name": "Zhang Mingyang",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "Alonzo Menifield",
+        "odds": "+196",
+        "numericOdds": 196
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-30T13:03:16.426Z",
+      "fighter1": {
+        "name": "Zhang Mingyang",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "Alonzo Menifield",
+        "odds": "+196",
+        "numericOdds": 196
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-30T13:03:19.432Z",
+      "fighter1": {
+        "name": "Zhang Mingyang",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "Alonzo Menifield",
+        "odds": "+196",
+        "numericOdds": 196
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-05-30T13:03:22.445Z",
+      "fighter1": {
+        "name": "Zhang Mingyang",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "Alonzo Menifield",
+        "odds": "+196",
+        "numericOdds": 196
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-05-30T13:03:25.456Z",
+      "fighter1": {
+        "name": "Zhang Mingyang",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "Alonzo Menifield",
+        "odds": "+196",
+        "numericOdds": 196
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-05-30T13:03:28.469Z",
+      "fighter1": {
+        "name": "Zhang Mingyang",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "fighter2": {
+        "name": "Alonzo Menifield",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-05-30T13:03:31.474Z",
+      "fighter1": {
+        "name": "Zhang Mingyang",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "fighter2": {
+        "name": "Alonzo Menifield",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-05-30T13:03:34.485Z",
+      "fighter1": {
+        "name": "Zhang Mingyang",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "fighter2": {
+        "name": "Alonzo Menifield",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-05-30T13:03:37.494Z",
+      "fighter1": {
+        "name": "Zhang Mingyang",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "fighter2": {
+        "name": "Alonzo Menifield",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-05-30T13:03:40.507Z",
+      "fighter1": {
+        "name": "Zhang Mingyang",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "fighter2": {
+        "name": "Alonzo Menifield",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-05-30T13:03:43.514Z",
+      "fighter1": {
+        "name": "Zhang Mingyang",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "fighter2": {
+        "name": "Alonzo Menifield",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-05-30T13:03:46.524Z",
+      "fighter1": {
+        "name": "Zhang Mingyang",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "fighter2": {
+        "name": "Alonzo Menifield",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-05-30T13:03:49.533Z",
+      "fighter1": {
+        "name": "Zhang Mingyang",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "fighter2": {
+        "name": "Alonzo Menifield",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-05-30T13:03:52.534Z",
+      "fighter1": {
+        "name": "Zhang Mingyang",
+        "odds": "-220",
+        "numericOdds": -220
+      },
+      "fighter2": {
+        "name": "Alonzo Menifield",
+        "odds": "+172",
+        "numericOdds": 172
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
     {
       "timestamp": "2026-05-30T13:03:55.536Z",
       "fighter1": {
@@ -921,5 +1161,32 @@
       "isLocked": false,
       "extractionId": 6
     }
-  ]
+  ],
+  "createdAt": "2026-05-30T13:05:43.785Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Alonzo Menifield",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:52:34.908Z",
+    "openingF1Odds": -250,
+    "openingF2Odds": 186,
+    "closingF1Odds": -148,
+    "closingF2Odds": 116,
+    "lineMovementF1": 102,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  },
+  "derived": {
+    "inferredFinishMin": null,
+    "inferredFinishRound": null,
+    "peakOddsSwing": 126,
+    "finishSpeed": "decision",
+    "preFightSteam": 102,
+    "dominanceScore": 23,
+    "crossoverCount": 0,
+    "derivedAt": "2026-06-14T11:47:28.512Z"
+  }
 }
