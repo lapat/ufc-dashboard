@@ -359,27 +359,6 @@ app.get('/api/recordings', (req, res) => {
         } catch {}
       }
     }
-    // Also include Odds API backfill data (browse-only — NOT used by AI brain)
-    if (fs.existsSync(ODDS_API_BACKFILL_DIR)) {
-      const backfillFiles = fs.readdirSync(ODDS_API_BACKFILL_DIR).filter(f => f.endsWith('.json'));
-      for (const f of backfillFiles) {
-        try {
-          const d = JSON.parse(fs.readFileSync(path.join(ODDS_API_BACKFILL_DIR, f)));
-          const h = d.oddsHistory || [];
-          all.push({
-            id: 'backfill__' + f.replace('.json',''),
-            sport: 'UFC/MMA',
-            fighter1: h[0]?.fighter1?.name || d.fightTitle?.split(' vs ')[0] || '?',
-            fighter2: h[0]?.fighter2?.name || d.fightTitle?.split(' vs ')[1] || '?',
-            date: f.match(/\d{4}-\d{2}-\d{2}/)?.[0] || '',
-            dataPoints: d.dataPoints || h.length,
-            crossovers: 0,
-            startTime: d.startTime || '',
-            isBackfill: true,
-          });
-        } catch {}
-      }
-    }
     // Normalize sport labels and strip bad entries before returning
     const normSport = s => {
       const u = (s||'').toUpperCase();
@@ -401,6 +380,33 @@ app.get('/api/recordings', (req, res) => {
     const deduped = clean.filter(r => { if (seen.has(r.id)) return false; seen.add(r.id); return true; });
     deduped.sort((a,b) => (b.date||'').localeCompare(a.date||'') || (b.startTime||'').localeCompare(a.startTime||''));
     res.json(deduped);
+  } catch (e) { res.status(500).json({ error: e.message }); }
+});
+
+// Historical Odds API backfill data — browse only, separate from Ish's live data
+app.get('/api/historical-recordings', (req, res) => {
+  try {
+    if (!fs.existsSync(ODDS_API_BACKFILL_DIR)) return res.json([]);
+    const files = fs.readdirSync(ODDS_API_BACKFILL_DIR).filter(f => f.endsWith('.json'));
+    const results = [];
+    for (const f of files) {
+      try {
+        const d = JSON.parse(fs.readFileSync(path.join(ODDS_API_BACKFILL_DIR, f)));
+        const h = d.oddsHistory || [];
+        if (h.length < 5) continue;
+        results.push({
+          id: 'backfill__' + f.replace('.json',''),
+          sport: 'UFC/MMA',
+          fighter1: h[0]?.fighter1?.name || d.fightTitle?.split(' vs ')[0] || '?',
+          fighter2: h[0]?.fighter2?.name || d.fightTitle?.split(' vs ')[1] || '?',
+          date: f.match(/\d{4}-\d{2}-\d{2}/)?.[0] || '',
+          dataPoints: d.dataPoints || h.length,
+          startTime: d.startTime || '',
+        });
+      } catch {}
+    }
+    results.sort((a,b) => (b.date||'').localeCompare(a.date||''));
+    res.json(results);
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 

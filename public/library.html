@@ -104,7 +104,12 @@
     <div id="live-list"><div class="no-live">No live recordings active</div></div>
   </div>
 
-  <div class="section-title">All recorded fights</div>
+  <div style="display:flex;gap:12px;margin-bottom:4px;border-bottom:1px solid #1a1a1a;">
+    <button id="tab-live" onclick="switchTab('live')" style="background:none;border:none;color:#e8b84b;padding:8px 16px;cursor:pointer;border-bottom:2px solid #e8b84b;font-family:inherit;font-size:0.75rem;letter-spacing:0.08em">ISH'S FIGHTS</button>
+    <button id="tab-historical" onclick="switchTab('historical')" style="background:none;border:none;color:#444;padding:8px 16px;cursor:pointer;border-bottom:2px solid transparent;font-family:inherit;font-size:0.75rem;letter-spacing:0.08em">HISTORICAL (ODDS API)</button>
+  </div>
+
+  <div class="section-title" id="section-label">Ish's recorded fights</div>
   <div id="filters">
     <button class="filter-pill active" data-sport="all">All</button>
     <button class="filter-pill" data-sport="UFC/MMA">UFC/MMA</button>
@@ -474,6 +479,27 @@ async function loadLive(){
       <div class="live-pts">${f.dataPoints} pts recorded</div>
       <button onclick="stopRec('${f.id}')" style="font-size:0.6rem;padding:3px 8px;background:#1a0a0a;border:1px solid #8b0000;border-radius:3px;color:#e74c3c;cursor:pointer;margin-left:8px">⏹ Stop</button>
     </div>`).join('');
+}
+
+let currentTab = 'live';
+
+async function switchTab(tab) {
+  currentTab = tab;
+  const btnLive = document.getElementById('tab-live');
+  const btnHist = document.getElementById('tab-historical');
+  const label = document.getElementById('section-label');
+  if (tab === 'live') {
+    btnLive.style.color='#e8b84b'; btnLive.style.borderBottom='2px solid #e8b84b';
+    btnHist.style.color='#444'; btnHist.style.borderBottom='2px solid transparent';
+    label.textContent = "Ish's recorded fights";
+    allRecs = await fetch('/api/recordings').then(r=>r.json());
+  } else {
+    btnHist.style.color='#e8b84b'; btnHist.style.borderBottom='2px solid #e8b84b';
+    btnLive.style.color='#444'; btnLive.style.borderBottom='2px solid transparent';
+    label.textContent = 'Historical Odds API data (browse only — not used by AI)';
+    allRecs = await fetch('/api/historical-recordings').then(r=>r.json());
+  }
+  renderTable();
 }
 
 async function load(){
