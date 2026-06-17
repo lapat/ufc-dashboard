@@ -15,7 +15,10 @@ const fs = require('fs');
 const path = require('path');
 
 const API_KEY = process.env.ODDS_API_KEY;
-const DATA_DIR = path.join(__dirname, 'historical_data');
+const outdirFlag = process.argv.find(a => a.startsWith('--outdir='));
+const DATA_DIR = outdirFlag
+  ? path.resolve(__dirname, outdirFlag.split('=')[1])
+  : path.join(__dirname, 'historical_data');
 
 if (!API_KEY) { console.error('ODDS_API_KEY not set'); process.exit(1); }
 

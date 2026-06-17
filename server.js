@@ -10,7 +10,6 @@ const PORT = process.env.PORT || 3000;
 const ODDS_API_KEY = process.env.ODDS_API_KEY;
 const BASE_URL = 'https://api.the-odds-api.com/v4';
 const HISTORICAL_DIR = path.join(__dirname, 'historical_data');
-const ODDS_API_BACKFILL_DIR = path.join(__dirname, 'odds_api_backfill'); // browse-only, NOT used by AI brain
 const API_CACHE_DIR = path.join(__dirname, 'historical_data', 'api_cache');
 if (!fs.existsSync(API_CACHE_DIR)) fs.mkdirSync(API_CACHE_DIR, { recursive: true });
 
@@ -383,45 +382,10 @@ app.get('/api/recordings', (req, res) => {
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
-// Historical Odds API backfill data — browse only, separate from Ish's live data
-app.get('/api/historical-recordings', (req, res) => {
-  try {
-    if (!fs.existsSync(ODDS_API_BACKFILL_DIR)) return res.json([]);
-    const files = fs.readdirSync(ODDS_API_BACKFILL_DIR).filter(f => f.endsWith('.json'));
-    const results = [];
-    for (const f of files) {
-      try {
-        const d = JSON.parse(fs.readFileSync(path.join(ODDS_API_BACKFILL_DIR, f)));
-        const h = d.oddsHistory || [];
-        if (h.length < 5) continue;
-        results.push({
-          id: 'backfill__' + f.replace('.json',''),
-          sport: 'UFC/MMA',
-          fighter1: h[0]?.fighter1?.name || d.fightTitle?.split(' vs ')[0] || '?',
-          fighter2: h[0]?.fighter2?.name || d.fightTitle?.split(' vs ')[1] || '?',
-          date: f.match(/\d{4}-\d{2}-\d{2}/)?.[0] || '',
-          dataPoints: d.dataPoints || h.length,
-          startTime: d.startTime || '',
-        });
-      } catch {}
-    }
-    results.sort((a,b) => (b.date||'').localeCompare(a.date||''));
-    res.json(results);
-  } catch (e) { res.status(500).json({ error: e.message }); }
-});
-
 // Full odds history for a specific fight (for graphing)
 app.get('/api/fight-history/:fightId', (req, res) => {
   try {
     const id = req.params.fightId;
-
-    // If id starts with backfill__ serve from odds_api_backfill (browse-only)
-    if (id.startsWith('backfill__') && fs.existsSync(ODDS_API_BACKFILL_DIR)) {
-      const bare = id.replace('backfill__', '');
-      const bfiles = fs.readdirSync(ODDS_API_BACKFILL_DIR).filter(f => f.endsWith('.json'));
-      const bmatch = bfiles.find(f => f.replace('.json','') === bare);
-      if (bmatch) return res.json(JSON.parse(fs.readFileSync(path.join(ODDS_API_BACKFILL_DIR, bmatch))));
-    }
 
     const files = fs.readdirSync(HISTORICAL_DIR).filter(f => f.endsWith('.json'));
     // 1. Exact filename match (canonical path — filename stem = fightId)

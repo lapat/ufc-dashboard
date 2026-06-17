@@ -1,5 +1,64 @@
 # UFC Dashboard — Project Rules
 
+## ⚠️ THE CORE PURPOSE OF THIS PROJECT
+
+**This project records LIVE in-fight DraftKings odds every second during UFC fights.**
+
+That is the entire point. Ish watches live UFC fights and needs a tool that:
+1. **Automatically detects when a UFC fight goes live** on DraftKings
+2. **Records the live h2h moneyline every second** as it shifts during the fight
+3. **Only saves a data point when odds change** (no duplicate timestamps)
+4. **Persists the full odds arc** (start of fight → finish) to a JSON file in `historical_data/`
+5. **Auto-pushes to GitHub** immediately after each fight via the Contents API
+
+This live odds movement (e.g., Fighter A: -220 → +380 → -950 within a single fight) is what
+Ish uses to identify live betting opportunities. It is NOT pre-fight odds. It is NOT Odds API
+historical backfill. It is the live DraftKings line as it moves round by round.
+
+### How it works
+
+**The live endpoint:** `GET /v4/sports/mma_mixed_martial_arts/odds/?regions=us&markets=h2h&bookmakers=draftkings`
+- Returns all upcoming AND in-progress UFC fights with current DraftKings odds
+- Polled every 1 second during active fights, every 5 minutes when idle
+- When a fight's `commence_time` is in the past and within 3 hours, it's treated as "live"
+- DraftKings keeps h2h odds live throughout the fight as the action unfolds
+
+**The recorder loop** lives inside `server.js` (function `recPoll`, starts automatically at boot).
+- It runs 24/7 on Railway as part of `npm start` → `node server.js`
+- Both the web server AND the recorder run in the same process
+- No separate recorder process needed — it's embedded
+
+**What a good fight file looks like:**
+- 200–1000+ data points over 10–40 minutes (only odds-change events saved)
+- Massive odds swings: e.g., Luna vs Pacheco — Luna opened -770, closed -6000 (743 pts, 38 min)
+- `startTime` ≈ fight's actual in-ring start, `endTime` ≈ when fight leaves the live feed
+
+### Verifying the recorder is alive
+
+```bash
+curl https://<railway-url>/api/recorder/status
+curl https://<railway-url>/health
+```
+
+`/health` returns 503 if the last poll was >10 min ago (recorder stalled).
+
+### If recording missed a fight
+
+DraftKings live MMA odds are NOT available in the Odds API **historical** endpoint.
+Testing confirmed: the historical API returns NO ODDS for fights during their in-progress window
+(DraftKings appears to suspend the standard API endpoint for in-play lines, routing them through
+their own live-betting platform instead). This means:
+
+- **There is NO way to recover live in-fight odds for past fights from any known API**
+- The Odds API historical endpoint (`/v4/historical/...`) only captures pre-fight line movement
+- The `odds_api_backfill/` folder contains pre-fight data only — useful for line-movement
+  context but NOT representative of how odds actually moved during the fight
+- If the recorder was down during a card, that data is gone
+
+**Implication:** Keep the recorder running at all times. Every missed fight = permanently lost data.
+
+---
+
 ## ⚠️ CRITICAL: Historical Data Is Sacred — Never Destroy It
 
 `historical_data/*.json` files are the core asset of this project. They represent
@@ -32,24 +91,12 @@ repopulated automatically. Do NOT add them to git.
 
 ---
 
-## Backfill
-
-```bash
-node backfill.js YYYY-MM-DD              # single date
-node backfill.js 2025-08-01 2025-10-31  # date range
-```
-
-- Probes first: 2 API calls to check if any UFC fights exist for that date, skips if not
-- Only overwrites existing files if recovered data has MORE points
-- Run after every UFC event before touching any code
-
 ## After Every UFC Event — Checklist
 
-1. `node backfill.js YYYY-MM-DD` (the event date)
-2. Verify files in `historical_data/` look right
-3. `git add historical_data/ && git commit -m "Add [event name] recordings"`
-4. `git push`
-5. ONLY THEN make any code changes
+1. Verify new fight files auto-committed to GitHub by recorder (check git log)
+2. `git add historical_data/ && git commit -m "Add [event name] recordings"` if any weren't auto-committed
+3. `git push`
+4. ONLY THEN make any code changes
 
 ---
 
@@ -69,27 +116,18 @@ node backfill.js 2025-08-01 2025-10-31  # date range
 - **NEVER use this as the canonical source.** Use `historical_data/` (backed by git).
 - To sync it: `comm -23 <(ls historical_data/*.json | xargs -I{} basename {} | sort) <(ls "Bet Data Dec 2025 - May 2026"/*.json | xargs -I{} basename {} | sort) | xargs -I{} cp historical_data/{} "Bet Data Dec 2025 - May 2026"/`
 
-**3. `odds_api_backfill/` — Historical Odds API data (BROWSE ONLY)**
-- Added by `backfill.js` from The Odds API historical endpoint
-- Quality is inconsistent — sparse snapshots for old fights, trimming logic sometimes wrong
-- **NEVER** use for AI brain, analysis, or answering questions
-- **NEVER** move these files into `historical_data/` — they are not live recordings
-- Browseable via the "Historical (Odds API)" tab on the library page only
-
 ### Rules that exist because of past fuck-ups:
 
 **NEVER restore `historical_data/` from `"Bet Data Dec 2025 - May 2026"`** — it is stale and incomplete.
 The canonical restore point is git: `git checkout <commit> -- historical_data/`
 The pre-backfill baseline is commit `429ba49`.
 
-**NEVER run `backfill.js` without checking if the target files already exist in `historical_data/`**
-and have real live-recorded data. The no-overwrite logic is not foolproof — check manually first.
-
 **NEVER run `trim-fights.js` on `historical_data/`** — it modifies live recordings.
-It was written for old backfill data and has no business touching Ish's real recordings.
 
-**NEVER overwrite a live recording with Odds API data**, even if the API data has more points.
-Live data = Ish was watching. API data = pre-fight static odds reconstructed after the fact.
+**The Odds API historical endpoint does NOT contain live in-fight odds.** It captures pre-fight
+snapshots every 5 minutes. DraftKings suspends its standard API feed when a fight goes live.
+`backfill.js` and `odds_api_backfill/` have been deleted — do not recreate them. They were
+useless for this project's actual purpose.
 
 **After every UFC event**, sync `"Bet Data Dec 2025 - May 2026"` immediately:
 ```bash
