@@ -63,11 +63,11 @@ node backfill.js 2025-08-01 2025-10-31  # date range
 - **This is the ONLY authoritative source.** Git history is the backup.
 - When in doubt about what belongs here: `git log --oneline` → find the pre-backfill commit (429ba49) → that's the baseline of Ish's real recordings
 
-**2. `"bet data - ish"` folder (Desktop) — LOCAL BACKUP, NOT CANONICAL, OFTEN STALE**
+**2. `"Bet Data Dec 2025 - May 2026"` folder (Desktop) — LOCAL BACKUP, NOT CANONICAL, OFTEN STALE**
 - This is a manual local copy. It is NOT automatically updated when new fights are recorded.
 - It will always lag behind `historical_data/` — after every UFC card, new fights will be in `historical_data/` but missing from this folder.
 - **NEVER use this as the canonical source.** Use `historical_data/` (backed by git).
-- To sync it: `comm -23 <(ls historical_data/*.json | xargs -I{} basename {} | sort) <(ls "bet data - ish"/*.json | xargs -I{} basename {} | sort) | xargs -I{} cp historical_data/{} "bet data - ish"/`
+- To sync it: `comm -23 <(ls historical_data/*.json | xargs -I{} basename {} | sort) <(ls "Bet Data Dec 2025 - May 2026"/*.json | xargs -I{} basename {} | sort) | xargs -I{} cp historical_data/{} "Bet Data Dec 2025 - May 2026"/`
 
 **3. `odds_api_backfill/` — Historical Odds API data (BROWSE ONLY)**
 - Added by `backfill.js` from The Odds API historical endpoint
@@ -78,7 +78,7 @@ node backfill.js 2025-08-01 2025-10-31  # date range
 
 ### Rules that exist because of past fuck-ups:
 
-**NEVER restore `historical_data/` from `"bet data - ish"`** — it is stale and incomplete.
+**NEVER restore `historical_data/` from `"Bet Data Dec 2025 - May 2026"`** — it is stale and incomplete.
 The canonical restore point is git: `git checkout <commit> -- historical_data/`
 The pre-backfill baseline is commit `429ba49`.
 
@@ -91,11 +91,11 @@ It was written for old backfill data and has no business touching Ish's real rec
 **NEVER overwrite a live recording with Odds API data**, even if the API data has more points.
 Live data = Ish was watching. API data = pre-fight static odds reconstructed after the fact.
 
-**After every UFC event**, sync `"bet data - ish"` immediately:
+**After every UFC event**, sync `"Bet Data Dec 2025 - May 2026"` immediately:
 ```bash
 comm -23 <(ls historical_data/*.json | xargs -I{} basename {} | grep -vE "^(dk_|bench|fighter)" | sort) \
-         <(ls "/Users/louislapat/Desktop/vibe/fights/bet data - ish/"*.json | xargs -I{} basename {} | sort) \
-| while read f; do cp "historical_data/$f" "/Users/louislapat/Desktop/vibe/fights/bet data - ish/"; done
+         <(ls "/Users/louislapat/Desktop/vibe/fights/Bet Data Dec 2025 - May 2026/"*.json | xargs -I{} basename {} | sort) \
+| while read f; do cp "historical_data/$f" "/Users/louislapat/Desktop/vibe/fights/Bet Data Dec 2025 - May 2026/"; done
 ```
 
 ---
