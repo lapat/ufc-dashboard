@@ -1,11 +1,22 @@
 {
   "fightId": "mickeygall_vs_alexmorono_2021-12-05",
   "fightTitle": "Mickey Gall vs Alex Morono",
-  "commenceTime": null,
-  "startTime": "2021-12-05T03:15:00Z",
+  "commenceTime": "2021-12-05T03:15:00Z",
+  "startTime": "2021-12-05T03:05:00Z",
   "endTime": "2021-12-05T03:45:00Z",
-  "dataPoints": 4,
+  "dataPoints": 5,
   "oddsHistory": [
+    {
+      "timestamp": "2021-12-05T03:05:00Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "numericOdds": -250
+      },
+      "fighter2": {
+        "name": "Mickey Gall",
+        "numericOdds": 200
+      }
+    },
     {
       "timestamp": "2021-12-05T03:15:00Z",
       "fighter1": {

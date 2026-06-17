@@ -372,6 +372,7 @@ app.get('/api/recordings', (req, res) => {
     const clean = all
       .filter(r => r.fighter1 !== '?' && r.fighter2 !== '?')          // drop unknown fighters
       .filter(r => !r.fighter1.startsWith('Test ') && !r.fighter2.startsWith('Test ')) // drop test data
+      .filter(r => r.dataPoints >= 5)                                  // drop thin files (no real fight data)
       .map(r => ({ ...r, id: normId(r.id), sport: normSport(r.sport) }));
     // Deduplicate by id (root files take priority over sport-subdir duplicates)
     const seen = new Set();

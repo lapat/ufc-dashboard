@@ -1,11 +1,33 @@
 {
   "fightId": "jimcrute_vs_jamahalhill_2021-12-05",
   "fightTitle": "Jim Crute vs Jamahal Hill",
-  "commenceTime": null,
-  "startTime": "2021-12-05T04:25:00Z",
+  "commenceTime": "2021-12-05T04:15:00Z",
+  "startTime": "2021-12-05T04:05:00Z",
   "endTime": "2021-12-05T04:45:00Z",
-  "dataPoints": 3,
+  "dataPoints": 5,
   "oddsHistory": [
+    {
+      "timestamp": "2021-12-05T04:05:00Z",
+      "fighter1": {
+        "name": "Jamahal Hill",
+        "numericOdds": 155
+      },
+      "fighter2": {
+        "name": "Jim Crute",
+        "numericOdds": -179
+      }
+    },
+    {
+      "timestamp": "2021-12-05T04:15:00Z",
+      "fighter1": {
+        "name": "Jamahal Hill",
+        "numericOdds": 155
+      },
+      "fighter2": {
+        "name": "Jim Crute",
+        "numericOdds": -179
+      }
+    },
     {
       "timestamp": "2021-12-05T04:25:00Z",
       "fighter1": {
