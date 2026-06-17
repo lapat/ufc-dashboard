@@ -757,31 +757,5 @@
       "extractionId": 2
     }
   ],
-  "createdAt": "2025-11-22T18:46:29.884Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Waldo Cortes Acosta",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:52:33.088Z",
-    "openingF1Odds": -148,
-    "openingF2Odds": 126,
-    "closingF1Odds": -164,
-    "closingF2Odds": 128,
-    "lineMovementF1": -16,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": null,
-    "inferredFinishRound": null,
-    "peakOddsSwing": 16,
-    "finishSpeed": "decision",
-    "preFightSteam": -16,
-    "dominanceScore": 0,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.510Z"
-  }
+  "createdAt": "2025-11-22T18:46:29.884Z"
 }

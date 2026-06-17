@@ -8932,31 +8932,5 @@
       "extractionId": 7
     }
   ],
-  "createdAt": "2026-03-21T23:01:13.367Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Movsar Evloev",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:52:03.081Z",
-    "openingF1Odds": -240,
-    "openingF2Odds": 198,
-    "closingF1Odds": 172,
-    "closingF2Odds": -220,
-    "lineMovementF1": 412,
-    "crossoverOccurred": true,
-    "crossoverMinute": 11
-  },
-  "derived": {
-    "inferredFinishMin": null,
-    "inferredFinishRound": null,
-    "peakOddsSwing": 680,
-    "finishSpeed": "decision",
-    "preFightSteam": -70,
-    "dominanceScore": 66,
-    "crossoverCount": 7,
-    "derivedAt": "2026-06-14T11:47:28.466Z"
-  }
+  "createdAt": "2026-03-21T23:01:13.367Z"
 }

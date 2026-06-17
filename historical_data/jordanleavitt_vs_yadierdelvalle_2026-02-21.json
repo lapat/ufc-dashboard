@@ -3472,31 +3472,5 @@
       "extractionId": 44
     }
   ],
-  "createdAt": "2026-02-21T22:31:57.924Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Jordan Leavitt",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:51:36.808Z",
-    "openingF1Odds": 320,
-    "openingF2Odds": -405,
-    "closingF1Odds": -1300,
-    "closingF2Odds": 690,
-    "lineMovementF1": -1620,
-    "crossoverOccurred": true,
-    "crossoverMinute": 5
-  },
-  "derived": {
-    "inferredFinishMin": 14,
-    "inferredFinishRound": 3,
-    "peakOddsSwing": 1620,
-    "finishSpeed": "medium",
-    "preFightSteam": -1620,
-    "dominanceScore": 61,
-    "crossoverCount": 5,
-    "derivedAt": "2026-06-14T11:47:28.436Z"
-  }
+  "createdAt": "2026-02-21T22:31:57.924Z"
 }

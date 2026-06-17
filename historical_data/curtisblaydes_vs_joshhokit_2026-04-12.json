@@ -7387,31 +7387,5 @@
       "extractionId": 161
     }
   ],
-  "createdAt": "2026-04-12T02:32:00.096Z",
-  "outcome": {
-    "winner": "fighter2",
-    "winnerName": "Josh Hokit",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:51:10.215Z",
-    "openingF1Odds": 100,
-    "openingF2Odds": -118,
-    "closingF1Odds": 580,
-    "closingF2Odds": -1000,
-    "lineMovementF1": 480,
-    "crossoverOccurred": true,
-    "crossoverMinute": 1
-  },
-  "derived": {
-    "inferredFinishMin": 6,
-    "inferredFinishRound": 2,
-    "peakOddsSwing": 1100,
-    "finishSpeed": "medium",
-    "preFightSteam": 480,
-    "dominanceScore": 46,
-    "crossoverCount": 10,
-    "derivedAt": "2026-06-14T11:47:28.406Z"
-  }
+  "createdAt": "2026-04-12T02:32:00.096Z"
 }

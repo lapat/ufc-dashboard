@@ -1132,31 +1132,5 @@
       "extractionId": 4
     }
   ],
-  "createdAt": "2026-04-18T21:14:47.450Z",
-  "outcome": {
-    "winner": "fighter2",
-    "winnerName": "John Yannis",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:51:31.593Z",
-    "openingF1Odds": -260,
-    "openingF2Odds": 215,
-    "closingF1Odds": -112,
-    "closingF2Odds": -112,
-    "lineMovementF1": 148,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": null,
-    "inferredFinishRound": null,
-    "peakOddsSwing": 148,
-    "finishSpeed": "decision",
-    "preFightSteam": 148,
-    "dominanceScore": 83,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.429Z"
-  }
+  "createdAt": "2026-04-18T21:14:47.450Z"
 }

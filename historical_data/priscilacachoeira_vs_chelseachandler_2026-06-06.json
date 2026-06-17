@@ -2047,31 +2047,5 @@
       "extractionId": 29
     }
   ],
-  "createdAt": "2026-06-06T22:18:19.937Z",
-  "outcome": {
-    "winner": "fighter2",
-    "winnerName": "Chelsea Chandler",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:52:11.254Z",
-    "openingF1Odds": 112,
-    "openingF2Odds": -132,
-    "closingF1Odds": 350,
-    "closingF2Odds": -550,
-    "lineMovementF1": 238,
-    "crossoverOccurred": true,
-    "crossoverMinute": 1
-  },
-  "derived": {
-    "inferredFinishMin": null,
-    "inferredFinishRound": null,
-    "peakOddsSwing": 392,
-    "finishSpeed": "decision",
-    "preFightSteam": 238,
-    "dominanceScore": 68,
-    "crossoverCount": 2,
-    "derivedAt": "2026-06-14T11:47:28.479Z"
-  }
+  "createdAt": "2026-06-06T22:18:19.937Z"
 }

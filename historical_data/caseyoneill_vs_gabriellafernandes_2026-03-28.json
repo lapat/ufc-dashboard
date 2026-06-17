@@ -1522,31 +1522,5 @@
       "extractionId": 32
     }
   ],
-  "createdAt": "2026-03-28T22:29:53.137Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Casey O'Neill",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:51:03.001Z",
-    "openingF1Odds": -132,
-    "openingF2Odds": 112,
-    "closingF1Odds": -250,
-    "closingF2Odds": 188,
-    "lineMovementF1": -118,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": null,
-    "inferredFinishRound": null,
-    "peakOddsSwing": 118,
-    "finishSpeed": "decision",
-    "preFightSteam": -118,
-    "dominanceScore": 12,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.395Z"
-  }
+  "createdAt": "2026-03-28T22:29:53.137Z"
 }

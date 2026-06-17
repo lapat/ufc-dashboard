@@ -1,0 +1,3862 @@
+{
+  "fightId": "codygarbrandt_vs_xiaolong",
+  "fightTitle": "Connected but no betting buttons found",
+  "startTime": "2026-03-08T01:47:12.654Z",
+  "endTime": "2026-03-08T02:04:41.896Z",
+  "duration": 1049242,
+  "dataPoints": 255,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-03-08T01:47:12.654Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-154",
+        "numericOdds": -154
+      },
+      "isLocked": false,
+      "extractionId": 122
+    },
+    {
+      "timestamp": "2026-03-08T01:47:15.666Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+134",
+        "numericOdds": 134
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-172",
+        "numericOdds": -172
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-08T01:47:18.668Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+134",
+        "numericOdds": 134
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-172",
+        "numericOdds": -172
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-08T01:47:21.672Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+134",
+        "numericOdds": 134
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-172",
+        "numericOdds": -172
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-08T01:47:24.683Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-08T01:47:27.686Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-03-08T01:47:30.689Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-03-08T01:47:33.696Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-03-08T01:47:36.709Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-03-08T01:47:39.724Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-03-08T01:47:42.731Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-03-08T01:47:45.739Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-03-08T01:47:48.752Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-03-08T01:47:51.751Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-03-08T01:47:54.753Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-03-08T01:47:57.754Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-03-08T01:48:00.761Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-03-08T01:48:03.766Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-03-08T01:48:06.779Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-03-08T01:48:09.791Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-03-08T01:48:12.805Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-03-08T01:48:15.806Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-03-08T01:48:18.820Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-03-08T01:48:21.830Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-03-08T01:48:24.837Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-03-08T01:48:27.838Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-03-08T01:48:30.851Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+160",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-03-08T01:48:33.854Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+160",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-03-08T01:48:36.864Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+160",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-03-08T01:48:39.875Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+160",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-03-08T01:48:42.888Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+160",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-03-08T01:48:45.889Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+160",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-03-08T01:48:48.900Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+160",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-03-08T01:48:51.912Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-03-08T01:48:54.918Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-03-08T01:48:57.932Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-03-08T01:49:00.945Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2026-03-08T01:49:03.960Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2026-03-08T01:49:06.961Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "isLocked": false,
+      "extractionId": 39
+    },
+    {
+      "timestamp": "2026-03-08T01:49:09.967Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "isLocked": false,
+      "extractionId": 40
+    },
+    {
+      "timestamp": "2026-03-08T01:49:12.978Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "isLocked": false,
+      "extractionId": 41
+    },
+    {
+      "timestamp": "2026-03-08T01:49:15.989Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "isLocked": false,
+      "extractionId": 42
+    },
+    {
+      "timestamp": "2026-03-08T01:49:18.990Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "isLocked": false,
+      "extractionId": 43
+    },
+    {
+      "timestamp": "2026-03-08T01:49:21.996Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-186",
+        "numericOdds": -186
+      },
+      "isLocked": false,
+      "extractionId": 44
+    },
+    {
+      "timestamp": "2026-03-08T01:49:24.996Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 45
+    },
+    {
+      "timestamp": "2026-03-08T01:49:28.000Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 46
+    },
+    {
+      "timestamp": "2026-03-08T01:49:31.000Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 47
+    },
+    {
+      "timestamp": "2026-03-08T01:49:34.006Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 48
+    },
+    {
+      "timestamp": "2026-03-08T01:49:37.009Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "isLocked": false,
+      "extractionId": 49
+    },
+    {
+      "timestamp": "2026-03-08T01:49:40.021Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+134",
+        "numericOdds": 134
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-172",
+        "numericOdds": -172
+      },
+      "isLocked": false,
+      "extractionId": 50
+    },
+    {
+      "timestamp": "2026-03-08T01:49:43.026Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+134",
+        "numericOdds": 134
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-172",
+        "numericOdds": -172
+      },
+      "isLocked": false,
+      "extractionId": 51
+    },
+    {
+      "timestamp": "2026-03-08T01:49:46.034Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+134",
+        "numericOdds": 134
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-172",
+        "numericOdds": -172
+      },
+      "isLocked": false,
+      "extractionId": 52
+    },
+    {
+      "timestamp": "2026-03-08T01:49:49.050Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+134",
+        "numericOdds": 134
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-172",
+        "numericOdds": -172
+      },
+      "isLocked": false,
+      "extractionId": 53
+    },
+    {
+      "timestamp": "2026-03-08T01:49:52.051Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 54
+    },
+    {
+      "timestamp": "2026-03-08T01:49:55.053Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 55
+    },
+    {
+      "timestamp": "2026-03-08T01:49:58.061Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 56
+    },
+    {
+      "timestamp": "2026-03-08T01:50:01.062Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+134",
+        "numericOdds": 134
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-172",
+        "numericOdds": -172
+      },
+      "isLocked": false,
+      "extractionId": 57
+    },
+    {
+      "timestamp": "2026-03-08T01:50:04.061Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+134",
+        "numericOdds": 134
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-172",
+        "numericOdds": -172
+      },
+      "isLocked": false,
+      "extractionId": 58
+    },
+    {
+      "timestamp": "2026-03-08T01:50:07.065Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+134",
+        "numericOdds": 134
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-172",
+        "numericOdds": -172
+      },
+      "isLocked": false,
+      "extractionId": 59
+    },
+    {
+      "timestamp": "2026-03-08T01:50:10.078Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+134",
+        "numericOdds": 134
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-172",
+        "numericOdds": -172
+      },
+      "isLocked": false,
+      "extractionId": 60
+    },
+    {
+      "timestamp": "2026-03-08T01:50:13.082Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+134",
+        "numericOdds": 134
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-172",
+        "numericOdds": -172
+      },
+      "isLocked": false,
+      "extractionId": 61
+    },
+    {
+      "timestamp": "2026-03-08T01:50:16.089Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "isLocked": false,
+      "extractionId": 62
+    },
+    {
+      "timestamp": "2026-03-08T01:50:19.095Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "isLocked": false,
+      "extractionId": 63
+    },
+    {
+      "timestamp": "2026-03-08T01:50:22.108Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "isLocked": false,
+      "extractionId": 64
+    },
+    {
+      "timestamp": "2026-03-08T01:50:25.110Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "isLocked": false,
+      "extractionId": 65
+    },
+    {
+      "timestamp": "2026-03-08T01:50:28.124Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "isLocked": false,
+      "extractionId": 66
+    },
+    {
+      "timestamp": "2026-03-08T01:50:31.125Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "isLocked": false,
+      "extractionId": 67
+    },
+    {
+      "timestamp": "2026-03-08T01:50:34.139Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "isLocked": false,
+      "extractionId": 68
+    },
+    {
+      "timestamp": "2026-03-08T01:50:37.141Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "isLocked": false,
+      "extractionId": 69
+    },
+    {
+      "timestamp": "2026-03-08T01:50:40.147Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "isLocked": false,
+      "extractionId": 70
+    },
+    {
+      "timestamp": "2026-03-08T01:50:43.148Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "isLocked": false,
+      "extractionId": 71
+    },
+    {
+      "timestamp": "2026-03-08T01:50:46.151Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+134",
+        "numericOdds": 134
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-172",
+        "numericOdds": -172
+      },
+      "isLocked": false,
+      "extractionId": 72
+    },
+    {
+      "timestamp": "2026-03-08T01:50:49.158Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+134",
+        "numericOdds": 134
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-172",
+        "numericOdds": -172
+      },
+      "isLocked": false,
+      "extractionId": 73
+    },
+    {
+      "timestamp": "2026-03-08T01:50:52.173Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 74
+    },
+    {
+      "timestamp": "2026-03-08T01:50:55.174Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 75
+    },
+    {
+      "timestamp": "2026-03-08T01:50:58.180Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 76
+    },
+    {
+      "timestamp": "2026-03-08T01:51:01.188Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+152",
+        "numericOdds": 152
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "isLocked": false,
+      "extractionId": 77
+    },
+    {
+      "timestamp": "2026-03-08T01:51:04.192Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+152",
+        "numericOdds": 152
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "isLocked": false,
+      "extractionId": 78
+    },
+    {
+      "timestamp": "2026-03-08T01:51:07.194Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+152",
+        "numericOdds": 152
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "isLocked": false,
+      "extractionId": 79
+    },
+    {
+      "timestamp": "2026-03-08T01:51:10.209Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+152",
+        "numericOdds": 152
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-196",
+        "numericOdds": -196
+      },
+      "isLocked": false,
+      "extractionId": 80
+    },
+    {
+      "timestamp": "2026-03-08T01:51:13.215Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+160",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 81
+    },
+    {
+      "timestamp": "2026-03-08T01:51:16.215Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+160",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 82
+    },
+    {
+      "timestamp": "2026-03-08T01:51:19.226Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+160",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 83
+    },
+    {
+      "timestamp": "2026-03-08T01:51:22.231Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+160",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 84
+    },
+    {
+      "timestamp": "2026-03-08T01:51:25.241Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+160",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 85
+    },
+    {
+      "timestamp": "2026-03-08T01:51:28.245Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+166",
+        "numericOdds": 166
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 86
+    },
+    {
+      "timestamp": "2026-03-08T01:51:31.247Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 87
+    },
+    {
+      "timestamp": "2026-03-08T01:51:34.257Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 88
+    },
+    {
+      "timestamp": "2026-03-08T01:51:37.261Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 89
+    },
+    {
+      "timestamp": "2026-03-08T01:51:40.275Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "isLocked": false,
+      "extractionId": 90
+    },
+    {
+      "timestamp": "2026-03-08T01:51:43.290Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+200",
+        "numericOdds": 200
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-270",
+        "numericOdds": -270
+      },
+      "isLocked": false,
+      "extractionId": 91
+    },
+    {
+      "timestamp": "2026-03-08T01:51:46.291Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 92
+    },
+    {
+      "timestamp": "2026-03-08T01:51:49.305Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 93
+    },
+    {
+      "timestamp": "2026-03-08T01:51:52.320Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 94
+    },
+    {
+      "timestamp": "2026-03-08T01:51:55.323Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 95
+    },
+    {
+      "timestamp": "2026-03-08T01:51:58.325Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+235",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 96
+    },
+    {
+      "timestamp": "2026-03-08T01:52:01.327Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+235",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 97
+    },
+    {
+      "timestamp": "2026-03-08T01:52:04.328Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+235",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 98
+    },
+    {
+      "timestamp": "2026-03-08T01:52:07.329Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+235",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 99
+    },
+    {
+      "timestamp": "2026-03-08T01:52:10.330Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+235",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 100
+    },
+    {
+      "timestamp": "2026-03-08T01:52:13.335Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+235",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 101
+    },
+    {
+      "timestamp": "2026-03-08T01:52:16.336Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "isLocked": false,
+      "extractionId": 102
+    },
+    {
+      "timestamp": "2026-03-08T01:52:19.337Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "isLocked": false,
+      "extractionId": 103
+    },
+    {
+      "timestamp": "2026-03-08T01:52:22.340Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "isLocked": false,
+      "extractionId": 104
+    },
+    {
+      "timestamp": "2026-03-08T01:52:25.350Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "isLocked": false,
+      "extractionId": 105
+    },
+    {
+      "timestamp": "2026-03-08T01:52:28.358Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "isLocked": false,
+      "extractionId": 106
+    },
+    {
+      "timestamp": "2026-03-08T01:52:31.366Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "isLocked": false,
+      "extractionId": 107
+    },
+    {
+      "timestamp": "2026-03-08T01:52:34.380Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 108
+    },
+    {
+      "timestamp": "2026-03-08T01:52:37.380Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 109
+    },
+    {
+      "timestamp": "2026-03-08T01:52:40.394Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 110
+    },
+    {
+      "timestamp": "2026-03-08T01:52:43.396Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+320",
+        "numericOdds": 320
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-460",
+        "numericOdds": -460
+      },
+      "isLocked": false,
+      "extractionId": 111
+    },
+    {
+      "timestamp": "2026-03-08T01:52:46.409Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+320",
+        "numericOdds": 320
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-460",
+        "numericOdds": -460
+      },
+      "isLocked": false,
+      "extractionId": 112
+    },
+    {
+      "timestamp": "2026-03-08T01:52:49.412Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+320",
+        "numericOdds": 320
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-460",
+        "numericOdds": -460
+      },
+      "isLocked": false,
+      "extractionId": 113
+    },
+    {
+      "timestamp": "2026-03-08T01:52:52.416Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+370",
+        "numericOdds": 370
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-600",
+        "numericOdds": -600
+      },
+      "isLocked": false,
+      "extractionId": 114
+    },
+    {
+      "timestamp": "2026-03-08T01:52:55.420Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+370",
+        "numericOdds": 370
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-600",
+        "numericOdds": -600
+      },
+      "isLocked": false,
+      "extractionId": 115
+    },
+    {
+      "timestamp": "2026-03-08T01:52:58.427Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 116
+    },
+    {
+      "timestamp": "2026-03-08T01:53:01.435Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 117
+    },
+    {
+      "timestamp": "2026-03-08T01:53:04.438Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 118
+    },
+    {
+      "timestamp": "2026-03-08T01:53:07.437Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 119
+    },
+    {
+      "timestamp": "2026-03-08T01:53:10.440Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 120
+    },
+    {
+      "timestamp": "2026-03-08T01:53:13.451Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+490",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-800",
+        "numericOdds": -800
+      },
+      "isLocked": false,
+      "extractionId": 121
+    },
+    {
+      "timestamp": "2026-03-08T01:53:16.451Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+490",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-800",
+        "numericOdds": -800
+      },
+      "isLocked": false,
+      "extractionId": 122
+    },
+    {
+      "timestamp": "2026-03-08T01:53:28.480Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+490",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-800",
+        "numericOdds": -800
+      },
+      "isLocked": false,
+      "extractionId": 123
+    },
+    {
+      "timestamp": "2026-03-08T01:53:31.479Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+490",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-800",
+        "numericOdds": -800
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-08T01:53:34.494Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+490",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-800",
+        "numericOdds": -800
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-08T01:53:37.507Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+490",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-800",
+        "numericOdds": -800
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-08T01:53:40.516Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+490",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-800",
+        "numericOdds": -800
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-08T01:53:43.530Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+490",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-800",
+        "numericOdds": -800
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-03-08T01:53:46.543Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+490",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-800",
+        "numericOdds": -800
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-03-08T01:53:49.545Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+490",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-800",
+        "numericOdds": -800
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-03-08T01:53:52.555Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+520",
+        "numericOdds": 520
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-03-08T01:53:55.567Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+520",
+        "numericOdds": 520
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-03-08T01:53:58.573Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+520",
+        "numericOdds": 520
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-03-08T01:54:01.580Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+520",
+        "numericOdds": 520
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-03-08T01:54:04.593Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+520",
+        "numericOdds": 520
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-03-08T01:54:07.595Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+520",
+        "numericOdds": 520
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-03-08T01:54:10.595Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+520",
+        "numericOdds": 520
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-03-08T01:54:13.596Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+520",
+        "numericOdds": 520
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-03-08T01:54:16.597Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+520",
+        "numericOdds": 520
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-03-08T01:54:19.602Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+520",
+        "numericOdds": 520
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-03-08T01:54:22.616Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+520",
+        "numericOdds": 520
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-03-08T01:54:25.617Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+520",
+        "numericOdds": 520
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-03-08T01:54:28.632Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+520",
+        "numericOdds": 520
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-03-08T01:54:31.637Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+520",
+        "numericOdds": 520
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-03-08T01:54:34.641Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+520",
+        "numericOdds": 520
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-03-08T01:54:37.646Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+520",
+        "numericOdds": 520
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-03-08T01:54:40.660Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+520",
+        "numericOdds": 520
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-03-08T01:54:43.661Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+520",
+        "numericOdds": 520
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-03-08T01:54:46.664Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+520",
+        "numericOdds": 520
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-850",
+        "numericOdds": -850
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-03-08T01:54:49.665Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+460",
+        "numericOdds": 460
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-750",
+        "numericOdds": -750
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-03-08T01:54:52.666Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+460",
+        "numericOdds": 460
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-750",
+        "numericOdds": -750
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-03-08T01:54:55.679Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+460",
+        "numericOdds": 460
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-750",
+        "numericOdds": -750
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-03-08T01:54:58.680Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+460",
+        "numericOdds": 460
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-750",
+        "numericOdds": -750
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-03-08T01:55:01.684Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+460",
+        "numericOdds": 460
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-750",
+        "numericOdds": -750
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-03-08T01:55:04.691Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+460",
+        "numericOdds": 460
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-750",
+        "numericOdds": -750
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-03-08T01:55:07.690Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+460",
+        "numericOdds": 460
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-750",
+        "numericOdds": -750
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-03-08T01:55:10.697Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-03-08T01:55:13.699Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-03-08T01:55:16.704Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2026-03-08T01:55:19.710Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+460",
+        "numericOdds": 460
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-750",
+        "numericOdds": -750
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2026-03-08T01:55:22.713Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+460",
+        "numericOdds": 460
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-750",
+        "numericOdds": -750
+      },
+      "isLocked": false,
+      "extractionId": 39
+    },
+    {
+      "timestamp": "2026-03-08T01:55:25.725Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+460",
+        "numericOdds": 460
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-750",
+        "numericOdds": -750
+      },
+      "isLocked": false,
+      "extractionId": 40
+    },
+    {
+      "timestamp": "2026-03-08T01:55:28.739Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 41
+    },
+    {
+      "timestamp": "2026-03-08T01:55:31.749Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 42
+    },
+    {
+      "timestamp": "2026-03-08T01:55:34.751Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 43
+    },
+    {
+      "timestamp": "2026-03-08T01:55:37.753Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 44
+    },
+    {
+      "timestamp": "2026-03-08T01:55:40.765Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 45
+    },
+    {
+      "timestamp": "2026-03-08T01:55:43.769Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 46
+    },
+    {
+      "timestamp": "2026-03-08T01:55:46.783Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 47
+    },
+    {
+      "timestamp": "2026-03-08T01:55:49.784Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 48
+    },
+    {
+      "timestamp": "2026-03-08T01:55:52.789Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 49
+    },
+    {
+      "timestamp": "2026-03-08T01:55:55.803Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+420",
+        "numericOdds": 420
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-650",
+        "numericOdds": -650
+      },
+      "isLocked": false,
+      "extractionId": 50
+    },
+    {
+      "timestamp": "2026-03-08T01:55:58.814Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+420",
+        "numericOdds": 420
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-650",
+        "numericOdds": -650
+      },
+      "isLocked": false,
+      "extractionId": 51
+    },
+    {
+      "timestamp": "2026-03-08T01:56:01.817Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+420",
+        "numericOdds": 420
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-650",
+        "numericOdds": -650
+      },
+      "isLocked": false,
+      "extractionId": 52
+    },
+    {
+      "timestamp": "2026-03-08T01:56:04.817Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+420",
+        "numericOdds": 420
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-650",
+        "numericOdds": -650
+      },
+      "isLocked": false,
+      "extractionId": 53
+    },
+    {
+      "timestamp": "2026-03-08T01:56:07.821Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+420",
+        "numericOdds": 420
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-650",
+        "numericOdds": -650
+      },
+      "isLocked": false,
+      "extractionId": 54
+    },
+    {
+      "timestamp": "2026-03-08T01:56:10.821Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 55
+    },
+    {
+      "timestamp": "2026-03-08T01:56:13.836Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 56
+    },
+    {
+      "timestamp": "2026-03-08T01:56:16.836Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 57
+    },
+    {
+      "timestamp": "2026-03-08T01:56:19.849Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 58
+    },
+    {
+      "timestamp": "2026-03-08T01:56:22.857Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 59
+    },
+    {
+      "timestamp": "2026-03-08T01:56:25.863Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 60
+    },
+    {
+      "timestamp": "2026-03-08T01:56:28.866Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 61
+    },
+    {
+      "timestamp": "2026-03-08T01:56:31.870Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+440",
+        "numericOdds": 440
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-700",
+        "numericOdds": -700
+      },
+      "isLocked": false,
+      "extractionId": 62
+    },
+    {
+      "timestamp": "2026-03-08T01:56:34.878Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+490",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-800",
+        "numericOdds": -800
+      },
+      "isLocked": false,
+      "extractionId": 63
+    },
+    {
+      "timestamp": "2026-03-08T01:56:37.879Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+490",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-800",
+        "numericOdds": -800
+      },
+      "isLocked": false,
+      "extractionId": 64
+    },
+    {
+      "timestamp": "2026-03-08T01:56:40.881Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+490",
+        "numericOdds": 490
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-800",
+        "numericOdds": -800
+      },
+      "isLocked": false,
+      "extractionId": 65
+    },
+    {
+      "timestamp": "2026-03-08T01:59:38.257Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 66
+    },
+    {
+      "timestamp": "2026-03-08T01:59:41.257Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-08T01:59:44.257Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-08T02:01:29.481Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-08T02:01:32.493Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-08T02:01:35.496Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-08T02:01:44.521Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-08T02:01:47.521Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-08T02:01:50.523Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-08T02:01:53.526Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-08T02:01:56.528Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-08T02:02:29.646Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-380",
+        "numericOdds": -380
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-03-08T02:02:32.656Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-380",
+        "numericOdds": -380
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-08T02:02:35.669Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-380",
+        "numericOdds": -380
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-08T02:02:38.680Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-08T02:02:41.683Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-08T02:02:44.683Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-03-08T02:02:47.683Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-03-08T02:02:50.685Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-03-08T02:02:53.691Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-03-08T02:02:56.701Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-03-08T02:02:59.711Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-03-08T02:03:35.766Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-03-08T02:03:38.764Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-08T02:03:41.766Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-08T02:03:44.769Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-08T02:03:47.771Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-08T02:03:50.782Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-03-08T02:03:53.796Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-03-08T02:03:56.809Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-03-08T02:03:59.822Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-03-08T02:04:02.822Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-03-08T02:04:05.826Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-03-08T02:04:08.839Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-03-08T02:04:11.841Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-03-08T02:04:14.841Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-03-08T02:04:17.843Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-03-08T02:04:20.845Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-03-08T02:04:23.846Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-03-08T02:04:26.849Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-03-08T02:04:29.858Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-03-08T02:04:32.869Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-03-08T02:04:35.882Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+162",
+        "numericOdds": 162
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-03-08T02:04:38.884Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+162",
+        "numericOdds": 162
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-03-08T02:04:41.896Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+162",
+        "numericOdds": 162
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-03-08T02:03:35.766Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-03-08T02:03:38.764Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-08T02:03:41.766Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-08T02:03:44.769Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-08T02:03:47.771Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-08T02:03:50.782Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-03-08T02:03:53.796Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-03-08T02:03:56.809Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-03-08T02:03:59.822Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-03-08T02:04:02.822Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-03-08T02:04:05.826Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-03-08T02:04:08.839Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-03-08T02:04:11.841Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-03-08T02:04:14.841Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-03-08T02:04:17.843Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-03-08T02:04:20.845Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-03-08T02:04:23.846Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-03-08T02:04:26.849Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-03-08T02:04:29.858Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-03-08T02:04:32.869Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-03-08T02:04:35.882Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+162",
+        "numericOdds": 162
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-03-08T02:04:38.884Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+162",
+        "numericOdds": 162
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-03-08T02:04:41.896Z",
+      "fighter1": {
+        "name": "Cody Garbrandt",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "fighter2": {
+        "name": "Xiao Long",
+        "odds": "+162",
+        "numericOdds": 162
+      },
+      "isLocked": false,
+      "extractionId": 23
+    }
+  ],
+  "createdAt": "2026-03-08T01:53:28.479Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Cody Garbrandt",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:51:07.828Z",
+    "openingF1Odds": 120,
+    "openingF2Odds": -154,
+    "closingF1Odds": -210,
+    "closingF2Odds": 162,
+    "lineMovementF1": -330,
+    "crossoverOccurred": true,
+    "crossoverMinute": 15
+  },
+  "derived": {
+    "inferredFinishMin": 7,
+    "inferredFinishRound": 2,
+    "peakOddsSwing": 670,
+    "finishSpeed": "slow",
+    "preFightSteam": -330,
+    "dominanceScore": 66,
+    "crossoverCount": 1,
+    "derivedAt": "2026-06-14T11:47:28.401Z"
+  }
+}

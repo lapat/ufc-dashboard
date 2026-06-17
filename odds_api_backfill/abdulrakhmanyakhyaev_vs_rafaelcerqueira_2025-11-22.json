@@ -1,0 +1,202 @@
+{
+  "fightId": "abdulrakhmanyakhyaev_vs_rafaelcerqueira",
+  "fightTitle": "Connected but no betting buttons found",
+  "startTime": "2025-11-22T16:40:32.257Z",
+  "endTime": "2025-11-22T16:41:02.354Z",
+  "duration": 30097,
+  "dataPoints": 11,
+  "oddsHistory": [
+    {
+      "timestamp": "2025-11-22T16:40:32.257Z",
+      "fighter1": {
+        "name": "Abdul-Rakhman Yakhyaev",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "fighter2": {
+        "name": "Rafael Cerqueira",
+        "odds": "+900",
+        "numericOdds": 900
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2025-11-22T16:40:35.263Z",
+      "fighter1": {
+        "name": "Abdul-Rakhman Yakhyaev",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "fighter2": {
+        "name": "Rafael Cerqueira",
+        "odds": "+900",
+        "numericOdds": 900
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2025-11-22T16:40:38.274Z",
+      "fighter1": {
+        "name": "Abdul-Rakhman Yakhyaev",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "fighter2": {
+        "name": "Rafael Cerqueira",
+        "odds": "+900",
+        "numericOdds": 900
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2025-11-22T16:40:41.284Z",
+      "fighter1": {
+        "name": "Abdul-Rakhman Yakhyaev",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "fighter2": {
+        "name": "Rafael Cerqueira",
+        "odds": "+900",
+        "numericOdds": 900
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2025-11-22T16:40:44.293Z",
+      "fighter1": {
+        "name": "Abdul-Rakhman Yakhyaev",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "fighter2": {
+        "name": "Rafael Cerqueira",
+        "odds": "+900",
+        "numericOdds": 900
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2025-11-22T16:40:47.302Z",
+      "fighter1": {
+        "name": "Abdul-Rakhman Yakhyaev",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "fighter2": {
+        "name": "Rafael Cerqueira",
+        "odds": "+860",
+        "numericOdds": 860
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2025-11-22T16:40:50.309Z",
+      "fighter1": {
+        "name": "Abdul-Rakhman Yakhyaev",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "fighter2": {
+        "name": "Rafael Cerqueira",
+        "odds": "+860",
+        "numericOdds": 860
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2025-11-22T16:40:53.316Z",
+      "fighter1": {
+        "name": "Abdul-Rakhman Yakhyaev",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "fighter2": {
+        "name": "Rafael Cerqueira",
+        "odds": "+860",
+        "numericOdds": 860
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2025-11-22T16:40:56.331Z",
+      "fighter1": {
+        "name": "Abdul-Rakhman Yakhyaev",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "fighter2": {
+        "name": "Rafael Cerqueira",
+        "odds": "+860",
+        "numericOdds": 860
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2025-11-22T16:40:59.341Z",
+      "fighter1": {
+        "name": "Abdul-Rakhman Yakhyaev",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "fighter2": {
+        "name": "Rafael Cerqueira",
+        "odds": "+860",
+        "numericOdds": 860
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2025-11-22T16:41:02.354Z",
+      "fighter1": {
+        "name": "Abdul-Rakhman Yakhyaev",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "fighter2": {
+        "name": "Rafael Cerqueira",
+        "odds": "+860",
+        "numericOdds": 860
+      },
+      "isLocked": false,
+      "extractionId": 11
+    }
+  ],
+  "createdAt": "2025-11-22T16:50:18.884Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Abdul-Rakhman Yakhyaev",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:50:40.409Z",
+    "openingF1Odds": -1600,
+    "openingF2Odds": 900,
+    "closingF1Odds": -1600,
+    "closingF2Odds": 860,
+    "lineMovementF1": 0,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  },
+  "derived": {
+    "inferredFinishMin": 0,
+    "inferredFinishRound": 1,
+    "peakOddsSwing": 0,
+    "finishSpeed": "slow",
+    "preFightSteam": 0,
+    "dominanceScore": 100,
+    "crossoverCount": 0,
+    "derivedAt": "2026-06-14T11:47:28.360Z"
+  }
+}

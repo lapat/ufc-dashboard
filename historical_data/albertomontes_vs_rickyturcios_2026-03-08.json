@@ -2692,31 +2692,5 @@
       "extractionId": 35
     }
   ],
-  "createdAt": "2026-03-08T00:42:40.564Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Alberto Montes",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:50:41.357Z",
-    "openingF1Odds": -188,
-    "openingF2Odds": 158,
-    "closingF1Odds": -1200,
-    "closingF2Odds": 660,
-    "lineMovementF1": -1012,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": 7,
-    "inferredFinishRound": 2,
-    "peakOddsSwing": 1012,
-    "finishSpeed": "medium",
-    "preFightSteam": -1012,
-    "dominanceScore": 64,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.362Z"
-  }
+  "createdAt": "2026-03-08T00:42:40.564Z"
 }

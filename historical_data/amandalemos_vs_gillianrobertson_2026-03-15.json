@@ -5092,31 +5092,5 @@
       "extractionId": 31
     }
   ],
-  "createdAt": "2026-03-15T02:21:32.065Z",
-  "outcome": {
-    "winner": "fighter2",
-    "winnerName": "Gillian Robertson",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:50:47.559Z",
-    "openingF1Odds": 194,
-    "openingF2Odds": -240,
-    "closingF1Odds": 2300,
-    "closingF2Odds": -6000,
-    "lineMovementF1": 2106,
-    "crossoverOccurred": true,
-    "crossoverMinute": 4
-  },
-  "derived": {
-    "inferredFinishMin": 16,
-    "inferredFinishRound": 3,
-    "peakOddsSwing": 2106,
-    "finishSpeed": "medium",
-    "preFightSteam": 2106,
-    "dominanceScore": 52,
-    "crossoverCount": 4,
-    "derivedAt": "2026-06-14T11:47:28.372Z"
-  }
+  "createdAt": "2026-03-15T02:21:32.065Z"
 }

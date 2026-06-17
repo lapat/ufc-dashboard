@@ -1,0 +1,757 @@
+{
+  "fightId": "jacksonmcvey_vs_sedriquesdumas",
+  "fightTitle": "Connected but no betting buttons found",
+  "startTime": "2026-04-25T23:26:45.560Z",
+  "endTime": "2026-04-25T23:29:21.947Z",
+  "duration": 156387,
+  "dataPoints": 48,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-04-25T23:26:45.560Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-180",
+        "numericOdds": -180
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+152",
+        "numericOdds": 152
+      },
+      "isLocked": false,
+      "extractionId": 56
+    },
+    {
+      "timestamp": "2026-04-25T23:26:48.564Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-180",
+        "numericOdds": -180
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+152",
+        "numericOdds": 152
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-04-25T23:26:51.571Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-180",
+        "numericOdds": -180
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+152",
+        "numericOdds": 152
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-04-25T23:26:54.574Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-04-25T23:26:57.575Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-04-25T23:27:00.575Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-04-25T23:27:03.581Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-04-25T23:27:06.582Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-04-25T23:27:09.588Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-04-25T23:27:12.595Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-04-25T23:27:15.605Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-04-25T23:27:18.613Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-04-25T23:27:21.627Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-04-25T23:27:24.633Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-04-25T23:27:27.638Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-04-25T23:27:30.639Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-04-25T23:27:33.642Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-04-25T23:27:36.643Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-04-25T23:27:39.653Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-04-25T23:27:48.678Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-04-25T23:27:51.682Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-04-25T23:27:54.693Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-04-25T23:27:57.704Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-04-25T23:28:00.708Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-04-25T23:28:03.717Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-04-25T23:28:06.721Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-235",
+        "numericOdds": -235
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+180",
+        "numericOdds": 180
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-04-25T23:28:09.726Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-270",
+        "numericOdds": -270
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+200",
+        "numericOdds": 200
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-04-25T23:28:12.731Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-270",
+        "numericOdds": -270
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+200",
+        "numericOdds": 200
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-04-25T23:28:15.747Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-04-25T23:28:18.755Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-04-25T23:28:21.764Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-04-25T23:28:33.805Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-04-25T23:28:36.809Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-04-25T23:28:39.822Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-04-25T23:28:42.831Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-04-25T23:28:45.845Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-04-25T23:28:48.850Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-04-25T23:28:51.858Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-04-25T23:29:09.902Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-460",
+        "numericOdds": -460
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+320",
+        "numericOdds": 320
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-04-25T23:29:12.911Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-460",
+        "numericOdds": -460
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+320",
+        "numericOdds": 320
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-04-25T23:29:15.917Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-460",
+        "numericOdds": -460
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+320",
+        "numericOdds": 320
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-04-25T23:29:18.931Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-460",
+        "numericOdds": -460
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+320",
+        "numericOdds": 320
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-04-25T23:29:21.947Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-460",
+        "numericOdds": -460
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+320",
+        "numericOdds": 320
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-04-25T23:29:09.902Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-460",
+        "numericOdds": -460
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+320",
+        "numericOdds": 320
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-04-25T23:29:12.911Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-460",
+        "numericOdds": -460
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+320",
+        "numericOdds": 320
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-04-25T23:29:15.917Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-460",
+        "numericOdds": -460
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+320",
+        "numericOdds": 320
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-04-25T23:29:18.931Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-460",
+        "numericOdds": -460
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+320",
+        "numericOdds": 320
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-04-25T23:29:21.947Z",
+      "fighter1": {
+        "name": "Jackson McVey",
+        "odds": "-460",
+        "numericOdds": -460
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "odds": "+320",
+        "numericOdds": 320
+      },
+      "isLocked": false,
+      "extractionId": 5
+    }
+  ],
+  "createdAt": "2026-04-25T23:27:48.677Z",
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Jackson McVey",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:51:29.027Z",
+    "openingF1Odds": -180,
+    "openingF2Odds": 152,
+    "closingF1Odds": -460,
+    "closingF2Odds": 320,
+    "lineMovementF1": -280,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  },
+  "derived": {
+    "inferredFinishMin": null,
+    "inferredFinishRound": null,
+    "peakOddsSwing": 280,
+    "finishSpeed": "decision",
+    "preFightSteam": -280,
+    "dominanceScore": 73,
+    "crossoverCount": 0,
+    "derivedAt": "2026-06-14T11:47:28.425Z"
+  }
+}

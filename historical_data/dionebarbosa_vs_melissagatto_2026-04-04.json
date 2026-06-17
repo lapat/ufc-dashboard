@@ -2482,31 +2482,5 @@
       "extractionId": 14
     }
   ],
-  "createdAt": "2026-04-04T21:43:44.939Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Dione Barbosa",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:51:14.512Z",
-    "openingF1Odds": -110,
-    "openingF2Odds": -106,
-    "closingF1Odds": -400,
-    "closingF2Odds": 280,
-    "lineMovementF1": -290,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": null,
-    "inferredFinishRound": null,
-    "peakOddsSwing": 290,
-    "finishSpeed": "decision",
-    "preFightSteam": -290,
-    "dominanceScore": 48,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.411Z"
-  }
+  "createdAt": "2026-04-04T21:43:44.939Z"
 }

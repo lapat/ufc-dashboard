@@ -7072,31 +7072,5 @@
       "extractionId": 129
     }
   ],
-  "createdAt": "2026-04-19T00:57:44.589Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Jasmine Jasudavicius",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:51:32.022Z",
-    "openingF1Odds": -310,
-    "openingF2Odds": 250,
-    "closingF1Odds": -1450,
-    "closingF2Odds": 770,
-    "lineMovementF1": -1140,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": 16,
-    "inferredFinishRound": 3,
-    "peakOddsSwing": 1140,
-    "finishSpeed": "slow",
-    "preFightSteam": -1140,
-    "dominanceScore": 80,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.429Z"
-  }
+  "createdAt": "2026-04-19T00:57:44.589Z"
 }

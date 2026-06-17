@@ -3847,31 +3847,5 @@
       "extractionId": 5
     }
   ],
-  "createdAt": "2026-02-21T23:29:24.081Z",
-  "outcome": {
-    "winner": "fighter2",
-    "winnerName": "Punahele Soriano",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:52:13.441Z",
-    "openingF1Odds": 120,
-    "openingF2Odds": -142,
-    "closingF1Odds": -134,
-    "closingF2Odds": 104,
-    "lineMovementF1": -254,
-    "crossoverOccurred": true,
-    "crossoverMinute": 3
-  },
-  "derived": {
-    "inferredFinishMin": null,
-    "inferredFinishRound": null,
-    "peakOddsSwing": 550,
-    "finishSpeed": "decision",
-    "preFightSteam": -254,
-    "dominanceScore": 40,
-    "crossoverCount": 1,
-    "derivedAt": "2026-06-14T11:47:28.482Z"
-  }
+  "createdAt": "2026-02-21T23:29:24.081Z"
 }

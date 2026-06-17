@@ -1912,31 +1912,5 @@
       "extractionId": 127
     }
   ],
-  "createdAt": "2026-02-08T00:25:37.893Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Javid Basharat",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:51:32.879Z",
-    "openingF1Odds": -215,
-    "openingF2Odds": 166,
-    "closingF1Odds": -6000,
-    "closingF2Odds": 2300,
-    "lineMovementF1": -5785,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": 4,
-    "inferredFinishRound": 1,
-    "peakOddsSwing": 5785,
-    "finishSpeed": "fast",
-    "preFightSteam": -5785,
-    "dominanceScore": 88,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.430Z"
-  }
+  "createdAt": "2026-02-08T00:25:37.893Z"
 }

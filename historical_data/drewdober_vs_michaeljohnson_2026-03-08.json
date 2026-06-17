@@ -1237,31 +1237,5 @@
       "extractionId": 41
     }
   ],
-  "createdAt": "2026-03-08T03:05:11.460Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Drew Dober",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:51:17.456Z",
-    "openingF1Odds": 120,
-    "openingF2Odds": -152,
-    "closingF1Odds": 140,
-    "closingF2Odds": -180,
-    "lineMovementF1": 20,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": null,
-    "inferredFinishRound": null,
-    "peakOddsSwing": 72,
-    "finishSpeed": "decision",
-    "preFightSteam": 20,
-    "dominanceScore": 66,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.414Z"
-  }
+  "createdAt": "2026-03-08T03:05:11.460Z"
 }

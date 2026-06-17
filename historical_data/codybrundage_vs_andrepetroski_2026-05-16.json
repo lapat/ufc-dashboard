@@ -4177,31 +4177,5 @@
       "extractionId": 139
     }
   ],
-  "createdAt": "2026-05-16T22:39:48.557Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Cody Brundage",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:51:06.934Z",
-    "openingF1Odds": 130,
-    "openingF2Odds": -154,
-    "closingF1Odds": 310,
-    "closingF2Odds": -450,
-    "lineMovementF1": 180,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": null,
-    "inferredFinishRound": null,
-    "peakOddsSwing": 270,
-    "finishSpeed": "decision",
-    "preFightSteam": 180,
-    "dominanceScore": 78,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.400Z"
-  }
+  "createdAt": "2026-05-16T22:39:48.557Z"
 }

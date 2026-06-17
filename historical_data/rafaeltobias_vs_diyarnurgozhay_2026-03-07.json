@@ -5167,31 +5167,5 @@
       "extractionId": 47
     }
   ],
-  "createdAt": "2026-03-07T23:17:05.208Z",
-  "outcome": {
-    "winner": "fighter2",
-    "winnerName": "Diyar Nurgozhay",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:52:12.615Z",
-    "openingF1Odds": -174,
-    "openingF2Odds": 146,
-    "closingF1Odds": 1220,
-    "closingF2Odds": -2400,
-    "lineMovementF1": 1394,
-    "crossoverOccurred": true,
-    "crossoverMinute": 6
-  },
-  "derived": {
-    "inferredFinishMin": 17,
-    "inferredFinishRound": 3,
-    "peakOddsSwing": 1534,
-    "finishSpeed": "slow",
-    "preFightSteam": 1394,
-    "dominanceScore": 84,
-    "crossoverCount": 1,
-    "derivedAt": "2026-06-14T11:47:28.481Z"
-  }
+  "createdAt": "2026-03-07T23:17:05.208Z"
 }

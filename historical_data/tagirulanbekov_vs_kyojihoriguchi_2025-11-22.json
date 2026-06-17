@@ -2452,31 +2452,5 @@
       "extractionId": 2
     }
   ],
-  "createdAt": "2025-11-22T18:16:59.169Z",
-  "outcome": {
-    "winner": "fighter2",
-    "winnerName": "Kyoji Horiguchi",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:52:24.474Z",
-    "openingF1Odds": -250,
-    "openingF2Odds": 188,
-    "closingF1Odds": 2300,
-    "closingF2Odds": -6000,
-    "lineMovementF1": 2550,
-    "crossoverOccurred": true,
-    "crossoverMinute": 7
-  },
-  "derived": {
-    "inferredFinishMin": 10,
-    "inferredFinishRound": 2,
-    "peakOddsSwing": 2550,
-    "finishSpeed": "medium",
-    "preFightSteam": 2550,
-    "dominanceScore": 93,
-    "crossoverCount": 1,
-    "derivedAt": "2026-06-14T11:47:28.497Z"
-  }
+  "createdAt": "2025-11-22T18:16:59.169Z"
 }

@@ -4507,31 +4507,5 @@
       "extractionId": 5
     }
   ],
-  "createdAt": "2026-04-04T23:44:25.838Z",
-  "outcome": {
-    "winner": "fighter2",
-    "winnerName": "Thomas Petersen",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:51:23.475Z",
-    "openingF1Odds": -108,
-    "openingF2Odds": -108,
-    "closingF1Odds": 390,
-    "closingF2Odds": -600,
-    "lineMovementF1": 498,
-    "crossoverOccurred": true,
-    "crossoverMinute": 15
-  },
-  "derived": {
-    "inferredFinishMin": 15,
-    "inferredFinishRound": 3,
-    "peakOddsSwing": 688,
-    "finishSpeed": "slow",
-    "preFightSteam": 498,
-    "dominanceScore": 59,
-    "crossoverCount": 1,
-    "derivedAt": "2026-06-14T11:47:28.420Z"
-  }
+  "createdAt": "2026-04-04T23:44:25.838Z"
 }

@@ -1012,31 +1012,5 @@
       "extractionId": 67
     }
   ],
-  "createdAt": "2026-06-06T23:41:59.984Z",
-  "outcome": {
-    "winner": "fighter2",
-    "winnerName": "Alessandro Costa",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:51:58.765Z",
-    "openingF1Odds": 340,
-    "openingF2Odds": -430,
-    "closingF1Odds": 225,
-    "closingF2Odds": -310,
-    "lineMovementF1": -115,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": null,
-    "inferredFinishRound": null,
-    "peakOddsSwing": 115,
-    "finishSpeed": "decision",
-    "preFightSteam": -115,
-    "dominanceScore": 100,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.460Z"
-  }
+  "createdAt": "2026-06-06T23:41:59.984Z"
 }

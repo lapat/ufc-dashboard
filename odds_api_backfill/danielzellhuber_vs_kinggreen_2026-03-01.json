@@ -1,0 +1,3232 @@
+{
+  "fightId": "danielzellhuber_vs_kinggreen",
+  "fightTitle": "Connected but no betting buttons found",
+  "startTime": "2026-03-01T02:53:57.129Z",
+  "endTime": "2026-03-01T03:05:59.144Z",
+  "duration": 722015,
+  "dataPoints": 213,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-03-01T02:53:57.129Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "isLocked": false,
+      "extractionId": 67
+    },
+    {
+      "timestamp": "2026-03-01T02:54:00.143Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-01T02:54:03.152Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-01T02:54:06.153Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-01T02:54:09.163Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-01T02:54:12.165Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-03-01T02:54:15.171Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-03-01T02:54:18.179Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-03-01T02:54:21.188Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-03-01T02:54:24.200Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-03-01T02:54:27.208Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-03-01T02:54:30.212Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-03-01T02:54:33.213Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-03-01T02:54:36.221Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-03-01T02:54:39.222Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-03-01T02:54:42.225Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-03-01T02:54:45.238Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-03-01T02:54:48.239Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-03-01T02:54:51.253Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-03-01T02:54:54.265Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-03-01T02:54:57.270Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-03-01T02:55:00.274Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-03-01T02:55:03.286Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-03-01T02:55:06.302Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-03-01T02:55:09.309Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-03-01T02:55:12.321Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-03-01T02:55:15.335Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-03-01T02:55:18.343Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-03-01T02:55:21.355Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-03-01T02:55:24.369Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-03-01T02:55:27.375Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-03-01T02:55:30.392Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-03-01T02:55:33.392Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-03-01T02:55:36.397Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-03-01T02:55:39.409Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-03-01T02:55:42.417Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-03-01T02:55:45.432Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2026-03-01T02:55:48.439Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2026-03-01T02:55:51.452Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "isLocked": false,
+      "extractionId": 39
+    },
+    {
+      "timestamp": "2026-03-01T02:55:54.464Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "isLocked": false,
+      "extractionId": 40
+    },
+    {
+      "timestamp": "2026-03-01T02:55:57.466Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "isLocked": false,
+      "extractionId": 41
+    },
+    {
+      "timestamp": "2026-03-01T02:56:00.480Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-400",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "isLocked": false,
+      "extractionId": 42
+    },
+    {
+      "timestamp": "2026-03-01T02:56:03.493Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "isLocked": false,
+      "extractionId": 43
+    },
+    {
+      "timestamp": "2026-03-01T02:56:06.507Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "isLocked": false,
+      "extractionId": 44
+    },
+    {
+      "timestamp": "2026-03-01T02:56:09.512Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "isLocked": false,
+      "extractionId": 45
+    },
+    {
+      "timestamp": "2026-03-01T02:56:12.514Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "isLocked": false,
+      "extractionId": 46
+    },
+    {
+      "timestamp": "2026-03-01T02:56:15.522Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "isLocked": false,
+      "extractionId": 47
+    },
+    {
+      "timestamp": "2026-03-01T02:56:18.526Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "isLocked": false,
+      "extractionId": 48
+    },
+    {
+      "timestamp": "2026-03-01T02:56:21.526Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "isLocked": false,
+      "extractionId": 49
+    },
+    {
+      "timestamp": "2026-03-01T02:56:24.526Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "isLocked": false,
+      "extractionId": 50
+    },
+    {
+      "timestamp": "2026-03-01T02:56:27.530Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "isLocked": false,
+      "extractionId": 51
+    },
+    {
+      "timestamp": "2026-03-01T02:56:30.539Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "isLocked": false,
+      "extractionId": 52
+    },
+    {
+      "timestamp": "2026-03-01T02:56:33.551Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "isLocked": false,
+      "extractionId": 53
+    },
+    {
+      "timestamp": "2026-03-01T02:56:36.561Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "isLocked": false,
+      "extractionId": 54
+    },
+    {
+      "timestamp": "2026-03-01T02:56:39.575Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "isLocked": false,
+      "extractionId": 55
+    },
+    {
+      "timestamp": "2026-03-01T02:56:42.581Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "isLocked": false,
+      "extractionId": 56
+    },
+    {
+      "timestamp": "2026-03-01T02:56:45.593Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-280",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+210",
+        "numericOdds": 210
+      },
+      "isLocked": false,
+      "extractionId": 57
+    },
+    {
+      "timestamp": "2026-03-01T02:56:48.601Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-270",
+        "numericOdds": -270
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+200",
+        "numericOdds": 200
+      },
+      "isLocked": false,
+      "extractionId": 58
+    },
+    {
+      "timestamp": "2026-03-01T02:56:51.610Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-270",
+        "numericOdds": -270
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+200",
+        "numericOdds": 200
+      },
+      "isLocked": false,
+      "extractionId": 59
+    },
+    {
+      "timestamp": "2026-03-01T02:56:54.616Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-270",
+        "numericOdds": -270
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+200",
+        "numericOdds": 200
+      },
+      "isLocked": false,
+      "extractionId": 60
+    },
+    {
+      "timestamp": "2026-03-01T02:56:57.626Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+196",
+        "numericOdds": 196
+      },
+      "isLocked": false,
+      "extractionId": 61
+    },
+    {
+      "timestamp": "2026-03-01T02:57:00.637Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+196",
+        "numericOdds": 196
+      },
+      "isLocked": false,
+      "extractionId": 62
+    },
+    {
+      "timestamp": "2026-03-01T02:57:03.643Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+196",
+        "numericOdds": 196
+      },
+      "isLocked": false,
+      "extractionId": 63
+    },
+    {
+      "timestamp": "2026-03-01T02:57:06.643Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+196",
+        "numericOdds": 196
+      },
+      "isLocked": false,
+      "extractionId": 64
+    },
+    {
+      "timestamp": "2026-03-01T02:57:09.655Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+196",
+        "numericOdds": 196
+      },
+      "isLocked": false,
+      "extractionId": 65
+    },
+    {
+      "timestamp": "2026-03-01T02:57:12.668Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+196",
+        "numericOdds": 196
+      },
+      "isLocked": false,
+      "extractionId": 66
+    },
+    {
+      "timestamp": "2026-03-01T02:57:15.669Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+196",
+        "numericOdds": 196
+      },
+      "isLocked": false,
+      "extractionId": 67
+    },
+    {
+      "timestamp": "2026-03-01T02:57:18.678Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+196",
+        "numericOdds": 196
+      },
+      "isLocked": false,
+      "extractionId": 68
+    },
+    {
+      "timestamp": "2026-03-01T02:57:21.679Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+196",
+        "numericOdds": 196
+      },
+      "isLocked": false,
+      "extractionId": 69
+    },
+    {
+      "timestamp": "2026-03-01T02:57:24.686Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+196",
+        "numericOdds": 196
+      },
+      "isLocked": false,
+      "extractionId": 70
+    },
+    {
+      "timestamp": "2026-03-01T02:57:27.700Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+196",
+        "numericOdds": 196
+      },
+      "isLocked": false,
+      "extractionId": 71
+    },
+    {
+      "timestamp": "2026-03-01T02:57:30.713Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+196",
+        "numericOdds": 196
+      },
+      "isLocked": false,
+      "extractionId": 72
+    },
+    {
+      "timestamp": "2026-03-01T02:57:33.721Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+196",
+        "numericOdds": 196
+      },
+      "isLocked": false,
+      "extractionId": 73
+    },
+    {
+      "timestamp": "2026-03-01T02:57:36.735Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+196",
+        "numericOdds": 196
+      },
+      "isLocked": false,
+      "extractionId": 74
+    },
+    {
+      "timestamp": "2026-03-01T02:57:39.735Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+196",
+        "numericOdds": 196
+      },
+      "isLocked": false,
+      "extractionId": 75
+    },
+    {
+      "timestamp": "2026-03-01T02:57:42.746Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+196",
+        "numericOdds": 196
+      },
+      "isLocked": false,
+      "extractionId": 76
+    },
+    {
+      "timestamp": "2026-03-01T02:57:45.759Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+196",
+        "numericOdds": 196
+      },
+      "isLocked": false,
+      "extractionId": 77
+    },
+    {
+      "timestamp": "2026-03-01T02:57:48.768Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+196",
+        "numericOdds": 196
+      },
+      "isLocked": false,
+      "extractionId": 78
+    },
+    {
+      "timestamp": "2026-03-01T02:57:51.782Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-260",
+        "numericOdds": -260
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+196",
+        "numericOdds": 196
+      },
+      "isLocked": false,
+      "extractionId": 79
+    },
+    {
+      "timestamp": "2026-03-01T02:57:54.789Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 80
+    },
+    {
+      "timestamp": "2026-03-01T02:57:57.789Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 81
+    },
+    {
+      "timestamp": "2026-03-01T02:58:00.802Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 82
+    },
+    {
+      "timestamp": "2026-03-01T02:58:03.814Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 83
+    },
+    {
+      "timestamp": "2026-03-01T02:58:06.828Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 84
+    },
+    {
+      "timestamp": "2026-03-01T02:58:09.831Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 85
+    },
+    {
+      "timestamp": "2026-03-01T02:58:12.840Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 86
+    },
+    {
+      "timestamp": "2026-03-01T02:58:15.840Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 87
+    },
+    {
+      "timestamp": "2026-03-01T02:58:18.845Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 88
+    },
+    {
+      "timestamp": "2026-03-01T02:58:21.849Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-205",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+158",
+        "numericOdds": 158
+      },
+      "isLocked": false,
+      "extractionId": 89
+    },
+    {
+      "timestamp": "2026-03-01T02:58:24.864Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-182",
+        "numericOdds": -182
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+142",
+        "numericOdds": 142
+      },
+      "isLocked": false,
+      "extractionId": 90
+    },
+    {
+      "timestamp": "2026-03-01T02:58:27.871Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-158",
+        "numericOdds": -158
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+124",
+        "numericOdds": 124
+      },
+      "isLocked": false,
+      "extractionId": 91
+    },
+    {
+      "timestamp": "2026-03-01T02:58:30.871Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-158",
+        "numericOdds": -158
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+124",
+        "numericOdds": 124
+      },
+      "isLocked": false,
+      "extractionId": 92
+    },
+    {
+      "timestamp": "2026-03-01T02:58:33.884Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-148",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "isLocked": false,
+      "extractionId": 93
+    },
+    {
+      "timestamp": "2026-03-01T02:58:36.894Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-148",
+        "numericOdds": -148
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "isLocked": false,
+      "extractionId": 94
+    },
+    {
+      "timestamp": "2026-03-01T02:58:39.897Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "isLocked": false,
+      "extractionId": 95
+    },
+    {
+      "timestamp": "2026-03-01T02:58:42.906Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "isLocked": false,
+      "extractionId": 96
+    },
+    {
+      "timestamp": "2026-03-01T02:58:45.922Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "isLocked": false,
+      "extractionId": 97
+    },
+    {
+      "timestamp": "2026-03-01T02:58:48.925Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "isLocked": false,
+      "extractionId": 98
+    },
+    {
+      "timestamp": "2026-03-01T02:58:51.927Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "isLocked": false,
+      "extractionId": 99
+    },
+    {
+      "timestamp": "2026-03-01T02:58:54.938Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "isLocked": false,
+      "extractionId": 100
+    },
+    {
+      "timestamp": "2026-03-01T02:58:57.946Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-136",
+        "numericOdds": -136
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+108",
+        "numericOdds": 108
+      },
+      "isLocked": false,
+      "extractionId": 101
+    },
+    {
+      "timestamp": "2026-03-01T02:59:00.949Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-136",
+        "numericOdds": -136
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+108",
+        "numericOdds": 108
+      },
+      "isLocked": false,
+      "extractionId": 102
+    },
+    {
+      "timestamp": "2026-03-01T02:59:03.957Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "isLocked": false,
+      "extractionId": 103
+    },
+    {
+      "timestamp": "2026-03-01T02:59:06.962Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "isLocked": false,
+      "extractionId": 104
+    },
+    {
+      "timestamp": "2026-03-01T02:59:09.965Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "isLocked": false,
+      "extractionId": 105
+    },
+    {
+      "timestamp": "2026-03-01T02:59:12.970Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "isLocked": false,
+      "extractionId": 106
+    },
+    {
+      "timestamp": "2026-03-01T02:59:15.972Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "isLocked": false,
+      "extractionId": 107
+    },
+    {
+      "timestamp": "2026-03-01T02:59:18.984Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "isLocked": false,
+      "extractionId": 108
+    },
+    {
+      "timestamp": "2026-03-01T02:59:21.986Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "isLocked": false,
+      "extractionId": 109
+    },
+    {
+      "timestamp": "2026-03-01T02:59:25.001Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "isLocked": false,
+      "extractionId": 110
+    },
+    {
+      "timestamp": "2026-03-01T02:59:28.013Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "isLocked": false,
+      "extractionId": 111
+    },
+    {
+      "timestamp": "2026-03-01T02:59:31.013Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "isLocked": false,
+      "extractionId": 112
+    },
+    {
+      "timestamp": "2026-03-01T02:59:34.014Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "isLocked": false,
+      "extractionId": 113
+    },
+    {
+      "timestamp": "2026-03-01T02:59:37.023Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "isLocked": false,
+      "extractionId": 114
+    },
+    {
+      "timestamp": "2026-03-01T02:59:40.032Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "isLocked": false,
+      "extractionId": 115
+    },
+    {
+      "timestamp": "2026-03-01T02:59:43.070Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-134",
+        "numericOdds": -134
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+104",
+        "numericOdds": 104
+      },
+      "isLocked": false,
+      "extractionId": 116
+    },
+    {
+      "timestamp": "2026-03-01T02:59:46.082Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 117
+    },
+    {
+      "timestamp": "2026-03-01T02:59:49.094Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 118
+    },
+    {
+      "timestamp": "2026-03-01T02:59:52.107Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 119
+    },
+    {
+      "timestamp": "2026-03-01T02:59:55.121Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 120
+    },
+    {
+      "timestamp": "2026-03-01T02:59:58.132Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 121
+    },
+    {
+      "timestamp": "2026-03-01T03:00:01.138Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 122
+    },
+    {
+      "timestamp": "2026-03-01T03:00:04.142Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 123
+    },
+    {
+      "timestamp": "2026-03-01T03:00:07.151Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 124
+    },
+    {
+      "timestamp": "2026-03-01T03:00:10.161Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 125
+    },
+    {
+      "timestamp": "2026-03-01T03:00:13.163Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-160",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+126",
+        "numericOdds": 126
+      },
+      "isLocked": false,
+      "extractionId": 126
+    },
+    {
+      "timestamp": "2026-03-01T03:00:16.176Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-152",
+        "numericOdds": -152
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "isLocked": false,
+      "extractionId": 127
+    },
+    {
+      "timestamp": "2026-03-01T03:00:19.186Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-152",
+        "numericOdds": -152
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "isLocked": false,
+      "extractionId": 128
+    },
+    {
+      "timestamp": "2026-03-01T03:00:22.201Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-152",
+        "numericOdds": -152
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "isLocked": false,
+      "extractionId": 129
+    },
+    {
+      "timestamp": "2026-03-01T03:00:25.209Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-152",
+        "numericOdds": -152
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "isLocked": false,
+      "extractionId": 130
+    },
+    {
+      "timestamp": "2026-03-01T03:00:28.223Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-152",
+        "numericOdds": -152
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "isLocked": false,
+      "extractionId": 131
+    },
+    {
+      "timestamp": "2026-03-01T03:00:31.236Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-152",
+        "numericOdds": -152
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "isLocked": false,
+      "extractionId": 132
+    },
+    {
+      "timestamp": "2026-03-01T03:00:34.238Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-152",
+        "numericOdds": -152
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "isLocked": false,
+      "extractionId": 133
+    },
+    {
+      "timestamp": "2026-03-01T03:00:37.250Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-152",
+        "numericOdds": -152
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "isLocked": false,
+      "extractionId": 134
+    },
+    {
+      "timestamp": "2026-03-01T03:00:40.253Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-152",
+        "numericOdds": -152
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "isLocked": false,
+      "extractionId": 135
+    },
+    {
+      "timestamp": "2026-03-01T03:00:43.255Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-152",
+        "numericOdds": -152
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "isLocked": false,
+      "extractionId": 136
+    },
+    {
+      "timestamp": "2026-03-01T03:00:46.266Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-152",
+        "numericOdds": -152
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "isLocked": false,
+      "extractionId": 137
+    },
+    {
+      "timestamp": "2026-03-01T03:00:49.280Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-152",
+        "numericOdds": -152
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "isLocked": false,
+      "extractionId": 138
+    },
+    {
+      "timestamp": "2026-03-01T03:00:52.288Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-152",
+        "numericOdds": -152
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "isLocked": false,
+      "extractionId": 139
+    },
+    {
+      "timestamp": "2026-03-01T03:00:55.296Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-152",
+        "numericOdds": -152
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "isLocked": false,
+      "extractionId": 140
+    },
+    {
+      "timestamp": "2026-03-01T03:00:58.302Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-152",
+        "numericOdds": -152
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "isLocked": false,
+      "extractionId": 141
+    },
+    {
+      "timestamp": "2026-03-01T03:01:01.315Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-152",
+        "numericOdds": -152
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+120",
+        "numericOdds": 120
+      },
+      "isLocked": false,
+      "extractionId": 142
+    },
+    {
+      "timestamp": "2026-03-01T03:01:04.314Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+122",
+        "numericOdds": 122
+      },
+      "isLocked": false,
+      "extractionId": 143
+    },
+    {
+      "timestamp": "2026-03-01T03:01:07.326Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+122",
+        "numericOdds": 122
+      },
+      "isLocked": false,
+      "extractionId": 144
+    },
+    {
+      "timestamp": "2026-03-01T03:01:10.341Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+122",
+        "numericOdds": 122
+      },
+      "isLocked": false,
+      "extractionId": 145
+    },
+    {
+      "timestamp": "2026-03-01T03:01:13.343Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+122",
+        "numericOdds": 122
+      },
+      "isLocked": false,
+      "extractionId": 146
+    },
+    {
+      "timestamp": "2026-03-01T03:01:16.356Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+122",
+        "numericOdds": 122
+      },
+      "isLocked": false,
+      "extractionId": 147
+    },
+    {
+      "timestamp": "2026-03-01T03:01:19.367Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+122",
+        "numericOdds": 122
+      },
+      "isLocked": false,
+      "extractionId": 148
+    },
+    {
+      "timestamp": "2026-03-01T03:01:22.381Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+122",
+        "numericOdds": 122
+      },
+      "isLocked": false,
+      "extractionId": 149
+    },
+    {
+      "timestamp": "2026-03-01T03:01:25.393Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+122",
+        "numericOdds": 122
+      },
+      "isLocked": false,
+      "extractionId": 150
+    },
+    {
+      "timestamp": "2026-03-01T03:01:28.396Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+122",
+        "numericOdds": 122
+      },
+      "isLocked": false,
+      "extractionId": 151
+    },
+    {
+      "timestamp": "2026-03-01T03:01:31.409Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+122",
+        "numericOdds": 122
+      },
+      "isLocked": false,
+      "extractionId": 152
+    },
+    {
+      "timestamp": "2026-03-01T03:01:34.422Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+122",
+        "numericOdds": 122
+      },
+      "isLocked": false,
+      "extractionId": 153
+    },
+    {
+      "timestamp": "2026-03-01T03:01:37.436Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-156",
+        "numericOdds": -156
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+122",
+        "numericOdds": 122
+      },
+      "isLocked": false,
+      "extractionId": 154
+    },
+    {
+      "timestamp": "2026-03-01T03:01:40.443Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 155
+    },
+    {
+      "timestamp": "2026-03-01T03:01:43.452Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "isLocked": false,
+      "extractionId": 156
+    },
+    {
+      "timestamp": "2026-03-01T03:03:22.746Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "-166",
+        "numericOdds": -166
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "+130",
+        "numericOdds": 130
+      },
+      "isLocked": false,
+      "extractionId": 157
+    },
+    {
+      "timestamp": "2026-03-01T03:03:31.769Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-01T03:03:34.778Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-01T03:03:37.786Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-01T03:03:40.794Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-01T03:03:43.805Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-01T03:03:46.807Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-03-01T03:03:49.821Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-03-01T03:03:52.824Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-03-01T03:03:55.833Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-03-01T03:03:58.841Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-146",
+        "numericOdds": -146
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-03-01T03:04:01.845Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-146",
+        "numericOdds": -146
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-03-01T03:04:04.860Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-146",
+        "numericOdds": -146
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-03-01T03:04:07.869Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-146",
+        "numericOdds": -146
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-03-01T03:04:10.881Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-146",
+        "numericOdds": -146
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-03-01T03:04:13.887Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-146",
+        "numericOdds": -146
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-03-01T03:04:16.889Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-146",
+        "numericOdds": -146
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-03-01T03:04:19.896Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-146",
+        "numericOdds": -146
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-03-01T03:04:22.898Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-146",
+        "numericOdds": -146
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-03-01T03:04:25.906Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-146",
+        "numericOdds": -146
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-03-01T03:04:28.912Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-146",
+        "numericOdds": -146
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-03-01T03:04:31.919Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-146",
+        "numericOdds": -146
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-03-01T03:04:34.929Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+116",
+        "numericOdds": 116
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-146",
+        "numericOdds": -146
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-03-01T03:04:37.929Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-03-01T03:04:40.930Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-03-01T03:04:43.940Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-03-01T03:04:46.949Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-03-01T03:04:49.958Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-03-01T03:04:52.959Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-03-01T03:04:55.973Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+112",
+        "numericOdds": 112
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-142",
+        "numericOdds": -142
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-03-01T03:04:58.986Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+108",
+        "numericOdds": 108
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-136",
+        "numericOdds": -136
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-03-01T03:05:01.996Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+108",
+        "numericOdds": 108
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-136",
+        "numericOdds": -136
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-03-01T03:05:05.002Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+108",
+        "numericOdds": 108
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-136",
+        "numericOdds": -136
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-03-01T03:05:08.013Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+108",
+        "numericOdds": 108
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-136",
+        "numericOdds": -136
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-03-01T03:05:11.027Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+108",
+        "numericOdds": 108
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-136",
+        "numericOdds": -136
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-03-01T03:05:14.038Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+108",
+        "numericOdds": 108
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-136",
+        "numericOdds": -136
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-03-01T03:05:17.039Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+108",
+        "numericOdds": 108
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-136",
+        "numericOdds": -136
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-03-01T03:05:20.051Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+108",
+        "numericOdds": 108
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-136",
+        "numericOdds": -136
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2026-03-01T03:05:23.052Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+108",
+        "numericOdds": 108
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-136",
+        "numericOdds": -136
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2026-03-01T03:05:26.060Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+108",
+        "numericOdds": 108
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-136",
+        "numericOdds": -136
+      },
+      "isLocked": false,
+      "extractionId": 39
+    },
+    {
+      "timestamp": "2026-03-01T03:05:29.061Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+108",
+        "numericOdds": 108
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-136",
+        "numericOdds": -136
+      },
+      "isLocked": false,
+      "extractionId": 40
+    },
+    {
+      "timestamp": "2026-03-01T03:05:38.096Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+230",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "isLocked": false,
+      "extractionId": 41
+    },
+    {
+      "timestamp": "2026-03-01T03:05:41.108Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+230",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-01T03:05:44.115Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-01T03:05:47.117Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-01T03:05:50.123Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-01T03:05:53.127Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-03-01T03:05:56.131Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-03-01T03:05:59.144Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-03-01T03:05:38.096Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+230",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "isLocked": false,
+      "extractionId": 41
+    },
+    {
+      "timestamp": "2026-03-01T03:05:41.108Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+230",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-03-01T03:05:44.115Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-03-01T03:05:47.117Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-03-01T03:05:50.123Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-03-01T03:05:53.127Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-03-01T03:05:56.131Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-03-01T03:05:59.144Z",
+      "fighter1": {
+        "name": "Daniel Zellhuber",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "King Green",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 8
+    }
+  ],
+  "createdAt": "2026-03-01T03:03:22.744Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "King Green",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:51:11.949Z",
+    "openingF1Odds": -360,
+    "openingF2Odds": 290,
+    "closingF1Odds": 300,
+    "closingF2Odds": -430,
+    "lineMovementF1": 660,
+    "crossoverOccurred": true,
+    "crossoverMinute": 10
+  },
+  "derived": {
+    "inferredFinishMin": null,
+    "inferredFinishRound": null,
+    "peakOddsSwing": 660,
+    "finishSpeed": "decision",
+    "preFightSteam": 660,
+    "dominanceScore": 49,
+    "crossoverCount": 1,
+    "derivedAt": "2026-06-14T11:47:28.408Z"
+  }
+}

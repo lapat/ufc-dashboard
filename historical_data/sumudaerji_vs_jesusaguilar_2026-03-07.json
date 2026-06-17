@@ -4087,31 +4087,5 @@
       "extractionId": 170
     }
   ],
-  "createdAt": "2026-03-07T23:44:25.366Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Sumudaerji",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:52:23.619Z",
-    "openingF1Odds": -172,
-    "openingF2Odds": 144,
-    "closingF1Odds": -6000,
-    "closingF2Odds": 2300,
-    "lineMovementF1": -5828,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": 5,
-    "inferredFinishRound": 1,
-    "peakOddsSwing": 5828,
-    "finishSpeed": "fast",
-    "preFightSteam": -5828,
-    "dominanceScore": 78,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.496Z"
-  }
+  "createdAt": "2026-03-07T23:44:25.366Z"
 }

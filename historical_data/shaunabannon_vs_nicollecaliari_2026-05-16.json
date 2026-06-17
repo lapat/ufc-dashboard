@@ -4747,31 +4747,5 @@
       "extractionId": 24
     }
   ],
-  "createdAt": "2026-05-16T21:13:38.967Z",
-  "outcome": {
-    "winner": "fighter2",
-    "winnerName": "Nicolle Caliari",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:52:22.415Z",
-    "openingF1Odds": 215,
-    "openingF2Odds": -260,
-    "closingF1Odds": 920,
-    "closingF2Odds": -1800,
-    "lineMovementF1": 705,
-    "crossoverOccurred": true,
-    "crossoverMinute": 13
-  },
-  "derived": {
-    "inferredFinishMin": 3,
-    "inferredFinishRound": 1,
-    "peakOddsSwing": 2085,
-    "finishSpeed": "fast",
-    "preFightSteam": 705,
-    "dominanceScore": 89,
-    "crossoverCount": 2,
-    "derivedAt": "2026-06-14T11:47:28.494Z"
-  }
+  "createdAt": "2026-05-16T21:13:38.967Z"
 }

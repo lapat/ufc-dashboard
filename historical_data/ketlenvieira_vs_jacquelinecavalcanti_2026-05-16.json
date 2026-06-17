@@ -5002,31 +5002,5 @@
       "extractionId": 5
     }
   ],
-  "createdAt": "2026-05-16T22:52:39.568Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Ketlen Vieira",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:51:45.172Z",
-    "openingF1Odds": 130,
-    "openingF2Odds": -154,
-    "closingF1Odds": -350,
-    "closingF2Odds": 250,
-    "lineMovementF1": -480,
-    "crossoverOccurred": true,
-    "crossoverMinute": 3
-  },
-  "derived": {
-    "inferredFinishMin": 10,
-    "inferredFinishRound": 2,
-    "peakOddsSwing": 1080,
-    "finishSpeed": "medium",
-    "preFightSteam": -480,
-    "dominanceScore": 56,
-    "crossoverCount": 3,
-    "derivedAt": "2026-06-14T11:47:28.443Z"
-  }
+  "createdAt": "2026-05-16T22:52:39.568Z"
 }

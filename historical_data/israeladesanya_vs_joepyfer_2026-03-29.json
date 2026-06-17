@@ -2587,31 +2587,5 @@
       "extractionId": 7
     }
   ],
-  "createdAt": "2026-03-29T02:34:01.267Z",
-  "outcome": {
-    "winner": "fighter2",
-    "winnerName": "Joe Pyfer",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:51:26.106Z",
-    "openingF1Odds": -142,
-    "openingF2Odds": 118,
-    "closingF1Odds": -400,
-    "closingF2Odds": 280,
-    "lineMovementF1": -258,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": null,
-    "inferredFinishRound": null,
-    "peakOddsSwing": 338,
-    "finishSpeed": "decision",
-    "preFightSteam": -258,
-    "dominanceScore": 29,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.422Z"
-  }
+  "createdAt": "2026-03-29T02:34:01.267Z"
 }

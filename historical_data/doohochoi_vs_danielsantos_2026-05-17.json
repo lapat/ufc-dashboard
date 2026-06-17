@@ -3262,31 +3262,5 @@
       "extractionId": 5
     }
   ],
-  "createdAt": "2026-05-17T02:05:24.823Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Dooho Choi",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:51:16.644Z",
-    "openingF1Odds": 142,
-    "openingF2Odds": -168,
-    "closingF1Odds": -430,
-    "closingF2Odds": 300,
-    "lineMovementF1": -572,
-    "crossoverOccurred": true,
-    "crossoverMinute": 11
-  },
-  "derived": {
-    "inferredFinishMin": null,
-    "inferredFinishRound": null,
-    "peakOddsSwing": 572,
-    "finishSpeed": "decision",
-    "preFightSteam": -572,
-    "dominanceScore": 65,
-    "crossoverCount": 1,
-    "derivedAt": "2026-06-14T11:47:28.414Z"
-  }
+  "createdAt": "2026-05-17T02:05:24.823Z"
 }

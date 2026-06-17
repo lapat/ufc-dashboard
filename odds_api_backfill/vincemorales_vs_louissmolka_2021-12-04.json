@@ -1,0 +1,65 @@
+{
+  "fightId": "vincemorales_vs_louissmolka_2021-12-04",
+  "fightTitle": "Vince Morales vs Louis Smolka",
+  "commenceTime": "2021-12-04T23:40:00Z",
+  "startTime": "2021-12-04T23:35:00Z",
+  "endTime": "2021-12-05T00:15:00Z",
+  "dataPoints": 5,
+  "oddsHistory": [
+    {
+      "timestamp": "2021-12-04T23:35:00Z",
+      "fighter1": {
+        "name": "Louis Smolka",
+        "numericOdds": -154
+      },
+      "fighter2": {
+        "name": "Vince Morales",
+        "numericOdds": 135
+      }
+    },
+    {
+      "timestamp": "2021-12-04T23:45:00Z",
+      "fighter1": {
+        "name": "Louis Smolka",
+        "numericOdds": -154
+      },
+      "fighter2": {
+        "name": "Vince Morales",
+        "numericOdds": 135
+      }
+    },
+    {
+      "timestamp": "2021-12-04T23:55:00Z",
+      "fighter1": {
+        "name": "Louis Smolka",
+        "numericOdds": -154
+      },
+      "fighter2": {
+        "name": "Vince Morales",
+        "numericOdds": 135
+      }
+    },
+    {
+      "timestamp": "2021-12-05T00:05:00Z",
+      "fighter1": {
+        "name": "Louis Smolka",
+        "numericOdds": -164
+      },
+      "fighter2": {
+        "name": "Vince Morales",
+        "numericOdds": 145
+      }
+    },
+    {
+      "timestamp": "2021-12-05T00:15:00Z",
+      "fighter1": {
+        "name": "Louis Smolka",
+        "numericOdds": -185
+      },
+      "fighter2": {
+        "name": "Vince Morales",
+        "numericOdds": 135
+      }
+    }
+  ]
+}

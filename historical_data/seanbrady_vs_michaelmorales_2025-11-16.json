@@ -292,31 +292,5 @@
       "extractionId": 19
     }
   ],
-  "createdAt": "2025-11-16T04:30:40.922Z",
-  "outcome": {
-    "winner": "fighter2",
-    "winnerName": "Michael Morales",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:52:19.601Z",
-    "openingF1Odds": 180,
-    "openingF2Odds": -235,
-    "closingF1Odds": 300,
-    "closingF2Odds": -430,
-    "lineMovementF1": 120,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": null,
-    "inferredFinishRound": null,
-    "peakOddsSwing": 170,
-    "finishSpeed": "decision",
-    "preFightSteam": 120,
-    "dominanceScore": 100,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.491Z"
-  }
+  "createdAt": "2025-11-16T04:30:40.922Z"
 }

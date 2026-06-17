@@ -4147,31 +4147,5 @@
       "extractionId": 35
     }
   ],
-  "createdAt": "2026-05-30T11:44:22.419Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Jake Matthews",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:51:31.186Z",
-    "openingF1Odds": -500,
-    "openingF2Odds": 385,
-    "closingF1Odds": -3500,
-    "closingF2Odds": 1480,
-    "lineMovementF1": -3000,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": 4,
-    "inferredFinishRound": 1,
-    "peakOddsSwing": 5500,
-    "finishSpeed": "fast",
-    "preFightSteam": -3000,
-    "dominanceScore": 100,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.428Z"
-  }
+  "createdAt": "2026-05-30T11:44:22.419Z"
 }

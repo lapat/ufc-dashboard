@@ -6637,31 +6637,5 @@
       "extractionId": 54
     }
   ],
-  "createdAt": "2026-01-25T05:00:55.816Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Justin Gaethje",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:51:41.857Z",
-    "openingF1Odds": 200,
-    "openingF2Odds": -245,
-    "closingF1Odds": 144,
-    "closingF2Odds": -182,
-    "lineMovementF1": -56,
-    "crossoverOccurred": true,
-    "crossoverMinute": 7
-  },
-  "derived": {
-    "inferredFinishMin": 18,
-    "inferredFinishRound": 4,
-    "peakOddsSwing": 1050,
-    "finishSpeed": "slow",
-    "preFightSteam": -56,
-    "dominanceScore": 63,
-    "crossoverCount": 4,
-    "derivedAt": "2026-06-14T11:47:28.440Z"
-  }
+  "createdAt": "2026-01-25T05:00:55.816Z"
 }

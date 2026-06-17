@@ -2707,31 +2707,5 @@
       "extractionId": 11
     }
   ],
-  "createdAt": "2025-11-16T01:22:48.850Z",
-  "outcome": {
-    "winner": "fighter2",
-    "winnerName": "Ethyn Ewing",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:51:50.858Z",
-    "openingF1Odds": -112,
-    "openingF2Odds": -112,
-    "closingF1Odds": 770,
-    "closingF2Odds": -1450,
-    "lineMovementF1": 882,
-    "crossoverOccurred": true,
-    "crossoverMinute": 2
-  },
-  "derived": {
-    "inferredFinishMin": 10,
-    "inferredFinishRound": 2,
-    "peakOddsSwing": 882,
-    "finishSpeed": "slow",
-    "preFightSteam": 882,
-    "dominanceScore": 27,
-    "crossoverCount": 5,
-    "derivedAt": "2026-06-14T11:47:28.451Z"
-  }
+  "createdAt": "2025-11-16T01:22:48.850Z"
 }

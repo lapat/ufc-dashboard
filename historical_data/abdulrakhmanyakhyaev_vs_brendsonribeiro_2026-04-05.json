@@ -1147,31 +1147,5 @@
       "extractionId": 4
     }
   ],
-  "createdAt": "2026-04-05T01:44:18.330Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Abdul-Rakhman Yakhyaev",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:50:39.994Z",
-    "openingF1Odds": -1400,
-    "openingF2Odds": 830,
-    "closingF1Odds": -750,
-    "closingF2Odds": 460,
-    "lineMovementF1": 650,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": 0,
-    "inferredFinishRound": 1,
-    "peakOddsSwing": 990,
-    "finishSpeed": "fast",
-    "preFightSteam": 650,
-    "dominanceScore": 100,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.359Z"
-  }
+  "createdAt": "2026-04-05T01:44:18.330Z"
 }

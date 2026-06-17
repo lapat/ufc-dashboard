@@ -8722,31 +8722,5 @@
       "extractionId": 252
     }
   ],
-  "createdAt": "2026-05-30T08:49:27.258Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Angela Hill",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:50:49.772Z",
-    "openingF1Odds": 160,
-    "openingF2Odds": -190,
-    "closingF1Odds": -6000,
-    "closingF2Odds": 2300,
-    "lineMovementF1": -6160,
-    "crossoverOccurred": true,
-    "crossoverMinute": 3
-  },
-  "derived": {
-    "inferredFinishMin": 10,
-    "inferredFinishRound": 2,
-    "peakOddsSwing": 6160,
-    "finishSpeed": "fast",
-    "preFightSteam": -6160,
-    "dominanceScore": 84,
-    "crossoverCount": 1,
-    "derivedAt": "2026-06-14T11:47:28.376Z"
-  }
+  "createdAt": "2026-05-30T08:49:27.258Z"
 }

@@ -7582,31 +7582,5 @@
       "extractionId": 155
     }
   ],
-  "createdAt": "2026-01-31T22:58:42.050Z",
-  "outcome": {
-    "winner": "fighter2",
-    "winnerName": "Keiichiro Nakamura",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:52:20.420Z",
-    "openingF1Odds": -126,
-    "openingF2Odds": 108,
-    "closingF1Odds": -3500,
-    "closingF2Odds": 1480,
-    "lineMovementF1": -3374,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": 9,
-    "inferredFinishRound": 2,
-    "peakOddsSwing": 3374,
-    "finishSpeed": "fast",
-    "preFightSteam": -3374,
-    "dominanceScore": 83,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.492Z"
-  }
+  "createdAt": "2026-01-31T22:58:42.050Z"
 }

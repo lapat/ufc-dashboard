@@ -772,31 +772,5 @@
       "extractionId": 21
     }
   ],
-  "createdAt": "2026-02-01T02:22:54.352Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Quillan Salkilld",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:52:11.737Z",
-    "openingF1Odds": -1100,
-    "openingF2Odds": 620,
-    "closingF1Odds": -235,
-    "closingF2Odds": 180,
-    "lineMovementF1": 865,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": 0,
-    "inferredFinishRound": 1,
-    "peakOddsSwing": 865,
-    "finishSpeed": "fast",
-    "preFightSteam": 865,
-    "dominanceScore": 100,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.479Z"
-  }
+  "createdAt": "2026-02-01T02:22:54.352Z"
 }

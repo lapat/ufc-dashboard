@@ -1132,31 +1132,5 @@
       "extractionId": 7
     }
   ],
-  "createdAt": "2026-01-25T00:20:28.482Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Alex Perez",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:50:45.328Z",
-    "openingF1Odds": 154,
-    "openingF2Odds": -184,
-    "closingF1Odds": -850,
-    "closingF2Odds": 520,
-    "lineMovementF1": -1004,
-    "crossoverOccurred": true,
-    "crossoverMinute": 4
-  },
-  "derived": {
-    "inferredFinishMin": 4,
-    "inferredFinishRound": 1,
-    "peakOddsSwing": 1004,
-    "finishSpeed": "medium",
-    "preFightSteam": -1004,
-    "dominanceScore": 89,
-    "crossoverCount": 1,
-    "derivedAt": "2026-06-14T11:47:28.369Z"
-  }
+  "createdAt": "2026-01-25T00:20:28.482Z"
 }

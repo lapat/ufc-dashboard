@@ -6922,31 +6922,5 @@
       "extractionId": 146
     }
   ],
-  "createdAt": "2026-04-12T00:22:42.580Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Kevin Holland",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:51:45.603Z",
-    "openingF1Odds": -130,
-    "openingF2Odds": 110,
-    "closingF1Odds": -6000,
-    "closingF2Odds": 2300,
-    "lineMovementF1": -5870,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": 10,
-    "inferredFinishRound": 2,
-    "peakOddsSwing": 5870,
-    "finishSpeed": "fast",
-    "preFightSteam": -5870,
-    "dominanceScore": 84,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.444Z"
-  }
+  "createdAt": "2026-04-12T00:22:42.580Z"
 }

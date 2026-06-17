@@ -3202,31 +3202,5 @@
       "extractionId": 11
     }
   ],
-  "createdAt": "2026-05-17T01:39:28.870Z",
-  "outcome": {
-    "winner": "fighter2",
-    "winnerName": "Juan Diaz",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:51:51.356Z",
-    "openingF1Odds": -245,
-    "openingF2Odds": 200,
-    "closingF1Odds": 620,
-    "closingF2Odds": -1100,
-    "lineMovementF1": 865,
-    "crossoverOccurred": true,
-    "crossoverMinute": 10
-  },
-  "derived": {
-    "inferredFinishMin": 13,
-    "inferredFinishRound": 3,
-    "peakOddsSwing": 1085,
-    "finishSpeed": "slow",
-    "preFightSteam": 865,
-    "dominanceScore": 77,
-    "crossoverCount": 1,
-    "derivedAt": "2026-06-14T11:47:28.451Z"
-  }
+  "createdAt": "2026-05-17T01:39:28.870Z"
 }

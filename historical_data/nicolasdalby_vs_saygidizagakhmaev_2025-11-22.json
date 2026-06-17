@@ -4507,31 +4507,5 @@
       "extractionId": 4
     }
   ],
-  "createdAt": "2025-11-22T17:26:02.293Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Nicolas Dalby",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:52:05.190Z",
-    "openingF1Odds": 270,
-    "openingF2Odds": -335,
-    "closingF1Odds": 108,
-    "closingF2Odds": -136,
-    "lineMovementF1": -162,
-    "crossoverOccurred": true,
-    "crossoverMinute": 16
-  },
-  "derived": {
-    "inferredFinishMin": 6,
-    "inferredFinishRound": 2,
-    "peakOddsSwing": 505,
-    "finishSpeed": "slow",
-    "preFightSteam": -162,
-    "dominanceScore": 88,
-    "crossoverCount": 2,
-    "derivedAt": "2026-06-14T11:47:28.471Z"
-  }
+  "createdAt": "2025-11-22T17:26:02.293Z"
 }

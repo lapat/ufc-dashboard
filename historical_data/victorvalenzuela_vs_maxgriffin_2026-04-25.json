@@ -3667,31 +3667,5 @@
       "extractionId": 8
     }
   ],
-  "createdAt": "2026-04-25T21:44:41.466Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Victor Valenzuela",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:52:30.941Z",
-    "openingF1Odds": -134,
-    "openingF2Odds": 114,
-    "closingF1Odds": -1800,
-    "closingF2Odds": 920,
-    "lineMovementF1": -1666,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": 12,
-    "inferredFinishRound": 3,
-    "peakOddsSwing": 1866,
-    "finishSpeed": "medium",
-    "preFightSteam": -1666,
-    "dominanceScore": 80,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.508Z"
-  }
+  "createdAt": "2026-04-25T21:44:41.466Z"
 }

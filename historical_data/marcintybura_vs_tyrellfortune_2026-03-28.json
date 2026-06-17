@@ -4087,31 +4087,5 @@
       "extractionId": 14
     }
   ],
-  "createdAt": "2026-03-28T22:53:29.842Z",
-  "outcome": {
-    "winner": "fighter2",
-    "winnerName": "Tyrell Fortune",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:51:53.507Z",
-    "openingF1Odds": 108,
-    "openingF2Odds": -126,
-    "closingF1Odds": 1800,
-    "closingF2Odds": -4500,
-    "lineMovementF1": 1692,
-    "crossoverOccurred": true,
-    "crossoverMinute": 1
-  },
-  "derived": {
-    "inferredFinishMin": 11,
-    "inferredFinishRound": 2,
-    "peakOddsSwing": 1692,
-    "finishSpeed": "medium",
-    "preFightSteam": 1692,
-    "dominanceScore": 71,
-    "crossoverCount": 2,
-    "derivedAt": "2026-06-14T11:47:28.453Z"
-  }
+  "createdAt": "2026-03-28T22:53:29.842Z"
 }

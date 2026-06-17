@@ -787,31 +787,5 @@
       "extractionId": 26
     }
   ],
-  "createdAt": "2026-05-30T12:38:44.440Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Sergei Pavlovich",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:52:20.829Z",
-    "openingF1Odds": -650,
-    "openingF2Odds": 480,
-    "closingF1Odds": -700,
-    "closingF2Odds": 450,
-    "lineMovementF1": -50,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": null,
-    "inferredFinishRound": null,
-    "peakOddsSwing": 50,
-    "finishSpeed": "decision",
-    "preFightSteam": -50,
-    "dominanceScore": 100,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.493Z"
-  }
+  "createdAt": "2026-05-30T12:38:44.440Z"
 }

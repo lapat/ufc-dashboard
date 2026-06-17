@@ -3757,31 +3757,5 @@
       "extractionId": 44
     }
   ],
-  "createdAt": "2026-05-30T13:36:10.239Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Song Yadong",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:52:23.185Z",
-    "openingF1Odds": -620,
-    "openingF2Odds": 460,
-    "closingF1Odds": -1300,
-    "closingF2Odds": 720,
-    "lineMovementF1": -680,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": 12,
-    "inferredFinishRound": 3,
-    "peakOddsSwing": 680,
-    "finishSpeed": "slow",
-    "preFightSteam": -680,
-    "dominanceScore": 100,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.495Z"
-  }
+  "createdAt": "2026-05-30T13:36:10.239Z"
 }

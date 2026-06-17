@@ -1057,31 +1057,5 @@
       "extractionId": 35
     }
   ],
-  "createdAt": "2026-02-08T00:28:18.516Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Nikolay Veretennikov",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:52:06.547Z",
-    "openingF1Odds": -280,
-    "openingF2Odds": 210,
-    "closingF1Odds": -650,
-    "closingF2Odds": 420,
-    "lineMovementF1": -370,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": null,
-    "inferredFinishRound": null,
-    "peakOddsSwing": 370,
-    "finishSpeed": "decision",
-    "preFightSteam": -370,
-    "dominanceScore": 100,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.473Z"
-  }
+  "createdAt": "2026-02-08T00:28:18.516Z"
 }

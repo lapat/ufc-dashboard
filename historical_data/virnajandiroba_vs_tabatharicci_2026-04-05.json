@@ -5302,31 +5302,5 @@
       "extractionId": 17
     }
   ],
-  "createdAt": "2026-04-05T02:02:49.296Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Virna Jandiroba",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:52:31.415Z",
-    "openingF1Odds": -134,
-    "openingF2Odds": 114,
-    "closingF1Odds": -6000,
-    "closingF2Odds": 2300,
-    "lineMovementF1": -5866,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": 8,
-    "inferredFinishRound": 2,
-    "peakOddsSwing": 5866,
-    "finishSpeed": "fast",
-    "preFightSteam": -5866,
-    "dominanceScore": 83,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.508Z"
-  }
+  "createdAt": "2026-04-05T02:02:49.296Z"
 }

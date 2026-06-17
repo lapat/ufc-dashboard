@@ -337,31 +337,5 @@
       "extractionId": 8
     }
   ],
-  "createdAt": "2026-05-02T10:27:34.023Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Junior Tafa",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:51:41.398Z",
-    "openingF1Odds": -192,
-    "openingF2Odds": 150,
-    "closingF1Odds": -192,
-    "closingF2Odds": 150,
-    "lineMovementF1": 0,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": null,
-    "inferredFinishRound": null,
-    "peakOddsSwing": 88,
-    "finishSpeed": "decision",
-    "preFightSteam": 0,
-    "dominanceScore": 36,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.440Z"
-  }
+  "createdAt": "2026-05-02T10:27:34.023Z"
 }

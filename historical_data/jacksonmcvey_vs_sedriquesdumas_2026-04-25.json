@@ -727,31 +727,5 @@
       "extractionId": 5
     }
   ],
-  "createdAt": "2026-04-25T23:27:48.677Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Jackson McVey",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:51:29.027Z",
-    "openingF1Odds": -180,
-    "openingF2Odds": 152,
-    "closingF1Odds": -460,
-    "closingF2Odds": 320,
-    "lineMovementF1": -280,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": null,
-    "inferredFinishRound": null,
-    "peakOddsSwing": 280,
-    "finishSpeed": "decision",
-    "preFightSteam": -280,
-    "dominanceScore": 73,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.425Z"
-  }
+  "createdAt": "2026-04-25T23:27:48.677Z"
 }

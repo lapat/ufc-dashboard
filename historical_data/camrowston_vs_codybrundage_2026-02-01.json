@@ -5047,31 +5047,5 @@
       "extractionId": 120
     }
   ],
-  "createdAt": "2026-02-01T01:02:59.415Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Cam Rowston",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:51:02.217Z",
-    "openingF1Odds": -360,
-    "openingF2Odds": 290,
-    "closingF1Odds": -1000,
-    "closingF2Odds": 580,
-    "lineMovementF1": -640,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": 21,
-    "inferredFinishRound": 4,
-    "peakOddsSwing": 640,
-    "finishSpeed": "slow",
-    "preFightSteam": -640,
-    "dominanceScore": 92,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.394Z"
-  }
+  "createdAt": "2026-02-01T01:02:59.415Z"
 }

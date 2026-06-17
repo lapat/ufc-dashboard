@@ -7882,31 +7882,5 @@
       "extractionId": 175
     }
   ],
-  "createdAt": "2026-03-21T21:47:22.935Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Michael Page",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:52:01.332Z",
-    "openingF1Odds": -200,
-    "openingF2Odds": 168,
-    "closingF1Odds": -6000,
-    "closingF2Odds": 2300,
-    "lineMovementF1": -5800,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": 9,
-    "inferredFinishRound": 2,
-    "peakOddsSwing": 5800,
-    "finishSpeed": "fast",
-    "preFightSteam": -5800,
-    "dominanceScore": 95,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.463Z"
-  }
+  "createdAt": "2026-03-21T21:47:22.935Z"
 }

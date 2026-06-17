@@ -4462,31 +4462,5 @@
       "extractionId": 14
     }
   ],
-  "createdAt": "2026-02-01T02:45:39.701Z",
-  "outcome": {
-    "winner": "fighter2",
-    "winnerName": "Tallison Teixeira",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:52:25.310Z",
-    "openingF1Odds": 245,
-    "openingF2Odds": -300,
-    "closingF1Odds": 225,
-    "closingF2Odds": -310,
-    "lineMovementF1": -20,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": 3,
-    "inferredFinishRound": 1,
-    "peakOddsSwing": 595,
-    "finishSpeed": "medium",
-    "preFightSteam": -20,
-    "dominanceScore": 85,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.499Z"
-  }
+  "createdAt": "2026-02-01T02:45:39.701Z"
 }

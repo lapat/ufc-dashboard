@@ -937,31 +937,5 @@
       "extractionId": 3
     }
   ],
-  "createdAt": "2026-04-25T22:08:41.845Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Francis Marshall",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:51:20.660Z",
-    "openingF1Odds": -520,
-    "openingF2Odds": 390,
-    "closingF1Odds": -2400,
-    "closingF2Odds": 1180,
-    "lineMovementF1": -1880,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": 3,
-    "inferredFinishRound": 1,
-    "peakOddsSwing": 1880,
-    "finishSpeed": "fast",
-    "preFightSteam": -1880,
-    "dominanceScore": 100,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.418Z"
-  }
+  "createdAt": "2026-04-25T22:08:41.845Z"
 }

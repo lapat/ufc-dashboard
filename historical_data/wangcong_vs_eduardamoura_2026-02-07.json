@@ -4687,31 +4687,5 @@
       "extractionId": 8
     }
   ],
-  "createdAt": "2026-02-07T23:12:19.876Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Wang Cong",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:52:33.512Z",
-    "openingF1Odds": -320,
-    "openingF2Odds": 260,
-    "closingF1Odds": -2400,
-    "closingF2Odds": 1180,
-    "lineMovementF1": -2080,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": 6,
-    "inferredFinishRound": 2,
-    "peakOddsSwing": 2080,
-    "finishSpeed": "fast",
-    "preFightSteam": -2080,
-    "dominanceScore": 57,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.511Z"
-  }
+  "createdAt": "2026-02-07T23:12:19.876Z"
 }

@@ -3832,31 +3832,5 @@
       "extractionId": 23
     }
   ],
-  "createdAt": "2026-03-08T01:53:28.479Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Cody Garbrandt",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:51:07.828Z",
-    "openingF1Odds": 120,
-    "openingF2Odds": -154,
-    "closingF1Odds": -210,
-    "closingF2Odds": 162,
-    "lineMovementF1": -330,
-    "crossoverOccurred": true,
-    "crossoverMinute": 15
-  },
-  "derived": {
-    "inferredFinishMin": 7,
-    "inferredFinishRound": 2,
-    "peakOddsSwing": 670,
-    "finishSpeed": "slow",
-    "preFightSteam": -330,
-    "dominanceScore": 66,
-    "crossoverCount": 1,
-    "derivedAt": "2026-06-14T11:47:28.401Z"
-  }
+  "createdAt": "2026-03-08T01:53:28.479Z"
 }

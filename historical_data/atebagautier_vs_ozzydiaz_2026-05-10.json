@@ -3667,31 +3667,5 @@
       "extractionId": 82
     }
   ],
-  "createdAt": "2026-05-10T00:44:32.061Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Ateba Gautier",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:50:52.027Z",
-    "openingF1Odds": -1800,
-    "openingF2Odds": 800,
-    "closingF1Odds": -950,
-    "closingF2Odds": 550,
-    "lineMovementF1": 850,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": 0,
-    "inferredFinishRound": 1,
-    "peakOddsSwing": 1100,
-    "finishSpeed": "fast",
-    "preFightSteam": 850,
-    "dominanceScore": 100,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.380Z"
-  }
+  "createdAt": "2026-05-10T00:44:32.061Z"
 }

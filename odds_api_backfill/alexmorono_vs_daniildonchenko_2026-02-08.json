@@ -1,0 +1,4372 @@
+{
+  "fightId": "alexmorono_vs_daniildonchenko",
+  "fightTitle": "Connected but no betting buttons found",
+  "startTime": "2026-02-08T00:39:47.920Z",
+  "endTime": "2026-02-08T00:56:23.098Z",
+  "duration": 995178,
+  "dataPoints": 289,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-02-08T00:39:47.920Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+610",
+        "numericOdds": 610
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-900",
+        "numericOdds": -900
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-02-08T00:39:50.926Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-02-08T00:39:53.931Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-02-08T00:39:56.933Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-02-08T00:39:59.934Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-02-08T00:40:02.939Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-02-08T00:40:11.957Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-02-08T00:40:14.958Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+580",
+        "numericOdds": 580
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1000",
+        "numericOdds": -1000
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-02-08T00:40:17.959Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-02-08T00:40:20.969Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-02-08T00:40:23.975Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-02-08T00:40:26.977Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-02-08T00:40:29.979Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-02-08T00:40:32.982Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-02-08T00:40:35.985Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-02-08T00:40:38.988Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-02-08T00:40:41.991Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-02-08T00:40:44.999Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-02-08T00:40:48.005Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-02-08T00:40:51.011Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-02-08T00:40:54.018Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-02-08T00:40:57.019Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-02-08T00:41:00.035Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-02-08T00:41:03.038Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-02-08T00:41:06.038Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-02-08T00:41:09.052Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-02-08T00:41:12.052Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-02-08T00:41:15.065Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-02-08T00:41:18.071Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-02-08T00:41:21.071Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-02-08T00:41:24.083Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-02-08T00:41:27.084Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1800",
+        "numericOdds": 1800
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-4500",
+        "numericOdds": -4500
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-02-08T00:41:30.087Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1800",
+        "numericOdds": 1800
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-4500",
+        "numericOdds": -4500
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-02-08T00:41:33.089Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1800",
+        "numericOdds": 1800
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-4500",
+        "numericOdds": -4500
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-02-08T00:41:36.094Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1800",
+        "numericOdds": 1800
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-4500",
+        "numericOdds": -4500
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-02-08T00:41:39.096Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1800",
+        "numericOdds": 1800
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-4500",
+        "numericOdds": -4500
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-02-08T00:41:42.102Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1800",
+        "numericOdds": 1800
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-4500",
+        "numericOdds": -4500
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-02-08T00:41:45.102Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1800",
+        "numericOdds": 1800
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-4500",
+        "numericOdds": -4500
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-02-08T00:41:48.111Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-02-08T00:41:51.112Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-02-08T00:41:54.117Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-02-08T00:41:57.129Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-02-08T00:42:00.139Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2026-02-08T00:42:03.144Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2026-02-08T00:42:06.148Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "isLocked": false,
+      "extractionId": 39
+    },
+    {
+      "timestamp": "2026-02-08T00:42:09.162Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "isLocked": false,
+      "extractionId": 40
+    },
+    {
+      "timestamp": "2026-02-08T00:42:12.173Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "isLocked": false,
+      "extractionId": 41
+    },
+    {
+      "timestamp": "2026-02-08T00:42:15.182Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "isLocked": false,
+      "extractionId": 42
+    },
+    {
+      "timestamp": "2026-02-08T00:42:18.191Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "isLocked": false,
+      "extractionId": 43
+    },
+    {
+      "timestamp": "2026-02-08T00:42:21.196Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "isLocked": false,
+      "extractionId": 44
+    },
+    {
+      "timestamp": "2026-02-08T00:42:24.196Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "isLocked": false,
+      "extractionId": 45
+    },
+    {
+      "timestamp": "2026-02-08T00:42:27.209Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "isLocked": false,
+      "extractionId": 46
+    },
+    {
+      "timestamp": "2026-02-08T00:42:30.219Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "isLocked": false,
+      "extractionId": 47
+    },
+    {
+      "timestamp": "2026-02-08T00:42:33.233Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "isLocked": false,
+      "extractionId": 48
+    },
+    {
+      "timestamp": "2026-02-08T00:42:36.243Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "isLocked": false,
+      "extractionId": 49
+    },
+    {
+      "timestamp": "2026-02-08T00:42:39.249Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 50
+    },
+    {
+      "timestamp": "2026-02-08T00:42:42.261Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 51
+    },
+    {
+      "timestamp": "2026-02-08T00:42:45.267Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 52
+    },
+    {
+      "timestamp": "2026-02-08T00:42:48.267Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "isLocked": false,
+      "extractionId": 53
+    },
+    {
+      "timestamp": "2026-02-08T00:42:51.267Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "isLocked": false,
+      "extractionId": 54
+    },
+    {
+      "timestamp": "2026-02-08T00:42:54.272Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "isLocked": false,
+      "extractionId": 55
+    },
+    {
+      "timestamp": "2026-02-08T00:42:57.278Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "isLocked": false,
+      "extractionId": 56
+    },
+    {
+      "timestamp": "2026-02-08T00:43:00.278Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "isLocked": false,
+      "extractionId": 57
+    },
+    {
+      "timestamp": "2026-02-08T00:43:03.289Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "isLocked": false,
+      "extractionId": 58
+    },
+    {
+      "timestamp": "2026-02-08T00:43:06.302Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "isLocked": false,
+      "extractionId": 59
+    },
+    {
+      "timestamp": "2026-02-08T00:43:09.303Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 60
+    },
+    {
+      "timestamp": "2026-02-08T00:43:12.317Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 61
+    },
+    {
+      "timestamp": "2026-02-08T00:43:15.323Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 62
+    },
+    {
+      "timestamp": "2026-02-08T00:43:18.332Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 63
+    },
+    {
+      "timestamp": "2026-02-08T00:43:21.333Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 64
+    },
+    {
+      "timestamp": "2026-02-08T00:43:24.346Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "isLocked": false,
+      "extractionId": 65
+    },
+    {
+      "timestamp": "2026-02-08T00:45:33.632Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "isLocked": false,
+      "extractionId": 66
+    },
+    {
+      "timestamp": "2026-02-08T00:45:36.638Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-02-08T00:45:39.652Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-02-08T00:45:42.667Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-02-08T00:45:45.670Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-02-08T00:45:48.680Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-02-08T00:45:51.685Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-02-08T00:45:54.687Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-02-08T00:45:57.694Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-02-08T00:46:00.695Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-02-08T00:46:03.701Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-02-08T00:46:06.714Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-02-08T00:46:09.727Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-02-08T00:46:12.730Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-02-08T00:46:15.731Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-02-08T00:46:18.734Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-02-08T00:46:21.746Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-02-08T00:46:24.760Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-02-08T00:46:27.765Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-02-08T00:46:30.768Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-02-08T00:46:33.772Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-02-08T00:46:36.777Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-02-08T00:46:39.788Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-02-08T00:46:42.789Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-02-08T00:46:45.795Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-02-08T00:46:48.805Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-02-08T00:46:51.810Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-02-08T00:46:54.819Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-02-08T00:46:57.828Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-02-08T00:47:00.839Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-02-08T00:47:03.853Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-02-08T00:47:06.856Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-02-08T00:47:09.866Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-02-08T00:47:12.877Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-02-08T00:47:15.879Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-02-08T00:47:18.884Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-02-08T00:47:21.898Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2026-02-08T00:47:24.900Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2026-02-08T00:47:27.901Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "isLocked": false,
+      "extractionId": 39
+    },
+    {
+      "timestamp": "2026-02-08T00:47:30.902Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "isLocked": false,
+      "extractionId": 40
+    },
+    {
+      "timestamp": "2026-02-08T00:47:33.909Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "isLocked": false,
+      "extractionId": 41
+    },
+    {
+      "timestamp": "2026-02-08T00:47:36.919Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "isLocked": false,
+      "extractionId": 42
+    },
+    {
+      "timestamp": "2026-02-08T00:47:39.923Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "isLocked": false,
+      "extractionId": 43
+    },
+    {
+      "timestamp": "2026-02-08T00:47:42.929Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "isLocked": false,
+      "extractionId": 44
+    },
+    {
+      "timestamp": "2026-02-08T00:47:45.938Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "isLocked": false,
+      "extractionId": 45
+    },
+    {
+      "timestamp": "2026-02-08T00:47:48.946Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "isLocked": false,
+      "extractionId": 46
+    },
+    {
+      "timestamp": "2026-02-08T00:47:51.957Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "isLocked": false,
+      "extractionId": 47
+    },
+    {
+      "timestamp": "2026-02-08T00:47:54.958Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "isLocked": false,
+      "extractionId": 48
+    },
+    {
+      "timestamp": "2026-02-08T00:47:57.959Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "isLocked": false,
+      "extractionId": 49
+    },
+    {
+      "timestamp": "2026-02-08T00:48:00.961Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 50
+    },
+    {
+      "timestamp": "2026-02-08T00:48:03.963Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 51
+    },
+    {
+      "timestamp": "2026-02-08T00:48:06.971Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 52
+    },
+    {
+      "timestamp": "2026-02-08T00:48:09.973Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 53
+    },
+    {
+      "timestamp": "2026-02-08T00:48:12.976Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "isLocked": false,
+      "extractionId": 54
+    },
+    {
+      "timestamp": "2026-02-08T00:48:15.985Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "isLocked": false,
+      "extractionId": 55
+    },
+    {
+      "timestamp": "2026-02-08T00:48:18.993Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "isLocked": false,
+      "extractionId": 56
+    },
+    {
+      "timestamp": "2026-02-08T00:48:21.995Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "isLocked": false,
+      "extractionId": 57
+    },
+    {
+      "timestamp": "2026-02-08T00:48:25.001Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "isLocked": false,
+      "extractionId": 58
+    },
+    {
+      "timestamp": "2026-02-08T00:48:28.009Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+920",
+        "numericOdds": 920
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1800",
+        "numericOdds": -1800
+      },
+      "isLocked": false,
+      "extractionId": 59
+    },
+    {
+      "timestamp": "2026-02-08T00:48:31.019Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 60
+    },
+    {
+      "timestamp": "2026-02-08T00:48:34.032Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 61
+    },
+    {
+      "timestamp": "2026-02-08T00:48:37.032Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 62
+    },
+    {
+      "timestamp": "2026-02-08T00:48:40.038Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 63
+    },
+    {
+      "timestamp": "2026-02-08T00:48:43.041Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 64
+    },
+    {
+      "timestamp": "2026-02-08T00:48:46.044Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 65
+    },
+    {
+      "timestamp": "2026-02-08T00:48:49.049Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 66
+    },
+    {
+      "timestamp": "2026-02-08T00:48:52.056Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 67
+    },
+    {
+      "timestamp": "2026-02-08T00:48:55.057Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 68
+    },
+    {
+      "timestamp": "2026-02-08T00:48:58.060Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 69
+    },
+    {
+      "timestamp": "2026-02-08T00:49:01.063Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 70
+    },
+    {
+      "timestamp": "2026-02-08T00:49:04.072Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 71
+    },
+    {
+      "timestamp": "2026-02-08T00:49:07.083Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 72
+    },
+    {
+      "timestamp": "2026-02-08T00:49:10.092Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 73
+    },
+    {
+      "timestamp": "2026-02-08T00:49:13.099Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 74
+    },
+    {
+      "timestamp": "2026-02-08T00:49:16.108Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 75
+    },
+    {
+      "timestamp": "2026-02-08T00:49:19.111Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 76
+    },
+    {
+      "timestamp": "2026-02-08T00:49:22.123Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 77
+    },
+    {
+      "timestamp": "2026-02-08T00:49:25.125Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 78
+    },
+    {
+      "timestamp": "2026-02-08T00:49:28.127Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 79
+    },
+    {
+      "timestamp": "2026-02-08T00:49:31.138Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 80
+    },
+    {
+      "timestamp": "2026-02-08T00:49:34.142Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 81
+    },
+    {
+      "timestamp": "2026-02-08T00:49:37.156Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "isLocked": false,
+      "extractionId": 82
+    },
+    {
+      "timestamp": "2026-02-08T00:49:40.170Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "isLocked": false,
+      "extractionId": 83
+    },
+    {
+      "timestamp": "2026-02-08T00:49:43.181Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "isLocked": false,
+      "extractionId": 84
+    },
+    {
+      "timestamp": "2026-02-08T00:49:46.236Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "isLocked": false,
+      "extractionId": 85
+    },
+    {
+      "timestamp": "2026-02-08T00:49:49.204Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "isLocked": false,
+      "extractionId": 86
+    },
+    {
+      "timestamp": "2026-02-08T00:49:52.211Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "isLocked": false,
+      "extractionId": 87
+    },
+    {
+      "timestamp": "2026-02-08T00:49:55.222Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "isLocked": false,
+      "extractionId": 88
+    },
+    {
+      "timestamp": "2026-02-08T00:49:58.227Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "isLocked": false,
+      "extractionId": 89
+    },
+    {
+      "timestamp": "2026-02-08T00:50:01.240Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+770",
+        "numericOdds": 770
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1450",
+        "numericOdds": -1450
+      },
+      "isLocked": false,
+      "extractionId": 90
+    },
+    {
+      "timestamp": "2026-02-08T00:50:04.252Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "isLocked": false,
+      "extractionId": 91
+    },
+    {
+      "timestamp": "2026-02-08T00:50:07.263Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "isLocked": false,
+      "extractionId": 92
+    },
+    {
+      "timestamp": "2026-02-08T00:50:10.268Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "isLocked": false,
+      "extractionId": 93
+    },
+    {
+      "timestamp": "2026-02-08T00:50:13.274Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "isLocked": false,
+      "extractionId": 94
+    },
+    {
+      "timestamp": "2026-02-08T00:50:16.279Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "isLocked": false,
+      "extractionId": 95
+    },
+    {
+      "timestamp": "2026-02-08T00:50:19.289Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "isLocked": false,
+      "extractionId": 96
+    },
+    {
+      "timestamp": "2026-02-08T00:50:22.296Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "isLocked": false,
+      "extractionId": 97
+    },
+    {
+      "timestamp": "2026-02-08T00:50:25.302Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "isLocked": false,
+      "extractionId": 98
+    },
+    {
+      "timestamp": "2026-02-08T00:50:28.307Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "isLocked": false,
+      "extractionId": 99
+    },
+    {
+      "timestamp": "2026-02-08T00:50:31.319Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "isLocked": false,
+      "extractionId": 100
+    },
+    {
+      "timestamp": "2026-02-08T00:50:34.323Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "isLocked": false,
+      "extractionId": 101
+    },
+    {
+      "timestamp": "2026-02-08T00:50:37.325Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "isLocked": false,
+      "extractionId": 102
+    },
+    {
+      "timestamp": "2026-02-08T00:50:40.330Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "isLocked": false,
+      "extractionId": 103
+    },
+    {
+      "timestamp": "2026-02-08T00:50:43.332Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "isLocked": false,
+      "extractionId": 104
+    },
+    {
+      "timestamp": "2026-02-08T00:50:46.340Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "isLocked": false,
+      "extractionId": 105
+    },
+    {
+      "timestamp": "2026-02-08T00:50:49.343Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+720",
+        "numericOdds": 720
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1300",
+        "numericOdds": -1300
+      },
+      "isLocked": false,
+      "extractionId": 106
+    },
+    {
+      "timestamp": "2026-02-08T00:50:52.358Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 107
+    },
+    {
+      "timestamp": "2026-02-08T00:50:55.365Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 108
+    },
+    {
+      "timestamp": "2026-02-08T00:50:58.364Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 109
+    },
+    {
+      "timestamp": "2026-02-08T00:51:01.366Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 110
+    },
+    {
+      "timestamp": "2026-02-08T00:51:04.372Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 111
+    },
+    {
+      "timestamp": "2026-02-08T00:51:07.373Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 112
+    },
+    {
+      "timestamp": "2026-02-08T00:51:10.378Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 113
+    },
+    {
+      "timestamp": "2026-02-08T00:51:13.389Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 114
+    },
+    {
+      "timestamp": "2026-02-08T00:51:16.401Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 115
+    },
+    {
+      "timestamp": "2026-02-08T00:51:19.400Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+840",
+        "numericOdds": 840
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-1600",
+        "numericOdds": -1600
+      },
+      "isLocked": false,
+      "extractionId": 116
+    },
+    {
+      "timestamp": "2026-02-08T00:51:22.417Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 117
+    },
+    {
+      "timestamp": "2026-02-08T00:51:25.425Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 118
+    },
+    {
+      "timestamp": "2026-02-08T00:51:28.433Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 119
+    },
+    {
+      "timestamp": "2026-02-08T00:51:31.436Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 120
+    },
+    {
+      "timestamp": "2026-02-08T00:51:34.436Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 121
+    },
+    {
+      "timestamp": "2026-02-08T00:51:37.443Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 122
+    },
+    {
+      "timestamp": "2026-02-08T00:51:40.447Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 123
+    },
+    {
+      "timestamp": "2026-02-08T00:51:43.454Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 124
+    },
+    {
+      "timestamp": "2026-02-08T00:51:46.462Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 125
+    },
+    {
+      "timestamp": "2026-02-08T00:51:49.468Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 126
+    },
+    {
+      "timestamp": "2026-02-08T00:51:52.468Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "isLocked": false,
+      "extractionId": 127
+    },
+    {
+      "timestamp": "2026-02-08T00:51:55.476Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "isLocked": false,
+      "extractionId": 128
+    },
+    {
+      "timestamp": "2026-02-08T00:51:58.490Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 129
+    },
+    {
+      "timestamp": "2026-02-08T00:52:01.494Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 130
+    },
+    {
+      "timestamp": "2026-02-08T00:52:04.499Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 131
+    },
+    {
+      "timestamp": "2026-02-08T00:52:07.506Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 132
+    },
+    {
+      "timestamp": "2026-02-08T00:52:10.513Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "isLocked": false,
+      "extractionId": 133
+    },
+    {
+      "timestamp": "2026-02-08T00:52:13.515Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "isLocked": false,
+      "extractionId": 134
+    },
+    {
+      "timestamp": "2026-02-08T00:52:16.524Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1480",
+        "numericOdds": 1480
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-3500",
+        "numericOdds": -3500
+      },
+      "isLocked": false,
+      "extractionId": 135
+    },
+    {
+      "timestamp": "2026-02-08T00:52:19.524Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1800",
+        "numericOdds": 1800
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-4500",
+        "numericOdds": -4500
+      },
+      "isLocked": false,
+      "extractionId": 136
+    },
+    {
+      "timestamp": "2026-02-08T00:52:22.540Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1800",
+        "numericOdds": 1800
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-4500",
+        "numericOdds": -4500
+      },
+      "isLocked": false,
+      "extractionId": 137
+    },
+    {
+      "timestamp": "2026-02-08T00:52:25.548Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1800",
+        "numericOdds": 1800
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-4500",
+        "numericOdds": -4500
+      },
+      "isLocked": false,
+      "extractionId": 138
+    },
+    {
+      "timestamp": "2026-02-08T00:52:28.556Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1800",
+        "numericOdds": 1800
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-4500",
+        "numericOdds": -4500
+      },
+      "isLocked": false,
+      "extractionId": 139
+    },
+    {
+      "timestamp": "2026-02-08T00:52:31.570Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1800",
+        "numericOdds": 1800
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-4500",
+        "numericOdds": -4500
+      },
+      "isLocked": false,
+      "extractionId": 140
+    },
+    {
+      "timestamp": "2026-02-08T00:52:34.571Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1800",
+        "numericOdds": 1800
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-4500",
+        "numericOdds": -4500
+      },
+      "isLocked": false,
+      "extractionId": 141
+    },
+    {
+      "timestamp": "2026-02-08T00:52:37.571Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1800",
+        "numericOdds": 1800
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-4500",
+        "numericOdds": -4500
+      },
+      "isLocked": false,
+      "extractionId": 142
+    },
+    {
+      "timestamp": "2026-02-08T00:52:40.586Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1800",
+        "numericOdds": 1800
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-4500",
+        "numericOdds": -4500
+      },
+      "isLocked": false,
+      "extractionId": 143
+    },
+    {
+      "timestamp": "2026-02-08T00:52:43.593Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1800",
+        "numericOdds": 1800
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-4500",
+        "numericOdds": -4500
+      },
+      "isLocked": false,
+      "extractionId": 144
+    },
+    {
+      "timestamp": "2026-02-08T00:52:46.597Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1800",
+        "numericOdds": 1800
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-4500",
+        "numericOdds": -4500
+      },
+      "isLocked": false,
+      "extractionId": 145
+    },
+    {
+      "timestamp": "2026-02-08T00:52:49.612Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1800",
+        "numericOdds": 1800
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-4500",
+        "numericOdds": -4500
+      },
+      "isLocked": false,
+      "extractionId": 146
+    },
+    {
+      "timestamp": "2026-02-08T00:52:52.615Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1800",
+        "numericOdds": 1800
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-4500",
+        "numericOdds": -4500
+      },
+      "isLocked": false,
+      "extractionId": 147
+    },
+    {
+      "timestamp": "2026-02-08T00:52:55.630Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1800",
+        "numericOdds": 1800
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-4500",
+        "numericOdds": -4500
+      },
+      "isLocked": false,
+      "extractionId": 148
+    },
+    {
+      "timestamp": "2026-02-08T00:52:58.632Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1800",
+        "numericOdds": 1800
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-4500",
+        "numericOdds": -4500
+      },
+      "isLocked": false,
+      "extractionId": 149
+    },
+    {
+      "timestamp": "2026-02-08T00:53:01.638Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+1800",
+        "numericOdds": 1800
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-4500",
+        "numericOdds": -4500
+      },
+      "isLocked": false,
+      "extractionId": 150
+    },
+    {
+      "timestamp": "2026-02-08T00:53:04.647Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 151
+    },
+    {
+      "timestamp": "2026-02-08T00:53:07.660Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 152
+    },
+    {
+      "timestamp": "2026-02-08T00:53:10.672Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 153
+    },
+    {
+      "timestamp": "2026-02-08T00:53:13.675Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 154
+    },
+    {
+      "timestamp": "2026-02-08T00:53:16.680Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 155
+    },
+    {
+      "timestamp": "2026-02-08T00:53:19.684Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 156
+    },
+    {
+      "timestamp": "2026-02-08T00:53:22.698Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 157
+    },
+    {
+      "timestamp": "2026-02-08T00:53:25.701Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 158
+    },
+    {
+      "timestamp": "2026-02-08T00:53:28.701Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 159
+    },
+    {
+      "timestamp": "2026-02-08T00:53:31.712Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 160
+    },
+    {
+      "timestamp": "2026-02-08T00:53:34.715Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 161
+    },
+    {
+      "timestamp": "2026-02-08T00:53:37.715Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 162
+    },
+    {
+      "timestamp": "2026-02-08T00:53:40.718Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 163
+    },
+    {
+      "timestamp": "2026-02-08T00:53:43.727Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 164
+    },
+    {
+      "timestamp": "2026-02-08T00:53:46.738Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 165
+    },
+    {
+      "timestamp": "2026-02-08T00:53:49.743Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 166
+    },
+    {
+      "timestamp": "2026-02-08T00:53:52.754Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 167
+    },
+    {
+      "timestamp": "2026-02-08T00:53:55.757Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 168
+    },
+    {
+      "timestamp": "2026-02-08T00:53:58.760Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 169
+    },
+    {
+      "timestamp": "2026-02-08T00:54:01.775Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 170
+    },
+    {
+      "timestamp": "2026-02-08T00:54:04.776Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 171
+    },
+    {
+      "timestamp": "2026-02-08T00:54:07.788Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 172
+    },
+    {
+      "timestamp": "2026-02-08T00:54:10.791Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 173
+    },
+    {
+      "timestamp": "2026-02-08T00:54:13.797Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 174
+    },
+    {
+      "timestamp": "2026-02-08T00:54:16.808Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 175
+    },
+    {
+      "timestamp": "2026-02-08T00:54:19.811Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 176
+    },
+    {
+      "timestamp": "2026-02-08T00:54:22.813Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 177
+    },
+    {
+      "timestamp": "2026-02-08T00:54:25.823Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 178
+    },
+    {
+      "timestamp": "2026-02-08T00:54:28.838Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 179
+    },
+    {
+      "timestamp": "2026-02-08T00:54:31.842Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 180
+    },
+    {
+      "timestamp": "2026-02-08T00:54:34.844Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 181
+    },
+    {
+      "timestamp": "2026-02-08T00:54:37.856Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 182
+    },
+    {
+      "timestamp": "2026-02-08T00:54:40.864Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 183
+    },
+    {
+      "timestamp": "2026-02-08T00:54:43.867Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 184
+    },
+    {
+      "timestamp": "2026-02-08T00:54:46.868Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 185
+    },
+    {
+      "timestamp": "2026-02-08T00:54:49.881Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 186
+    },
+    {
+      "timestamp": "2026-02-08T00:54:52.885Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 187
+    },
+    {
+      "timestamp": "2026-02-08T00:54:55.887Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 188
+    },
+    {
+      "timestamp": "2026-02-08T00:54:58.901Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 189
+    },
+    {
+      "timestamp": "2026-02-08T00:55:01.916Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 190
+    },
+    {
+      "timestamp": "2026-02-08T00:55:04.921Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 191
+    },
+    {
+      "timestamp": "2026-02-08T00:55:07.927Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 192
+    },
+    {
+      "timestamp": "2026-02-08T00:55:10.935Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 193
+    },
+    {
+      "timestamp": "2026-02-08T00:55:13.944Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 194
+    },
+    {
+      "timestamp": "2026-02-08T00:55:16.952Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 195
+    },
+    {
+      "timestamp": "2026-02-08T00:55:19.953Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 196
+    },
+    {
+      "timestamp": "2026-02-08T00:55:22.963Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 197
+    },
+    {
+      "timestamp": "2026-02-08T00:55:25.966Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 198
+    },
+    {
+      "timestamp": "2026-02-08T00:55:28.975Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 199
+    },
+    {
+      "timestamp": "2026-02-08T00:55:31.983Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 200
+    },
+    {
+      "timestamp": "2026-02-08T00:55:34.986Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 201
+    },
+    {
+      "timestamp": "2026-02-08T00:55:38.001Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 202
+    },
+    {
+      "timestamp": "2026-02-08T00:55:41.008Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 203
+    },
+    {
+      "timestamp": "2026-02-08T00:55:44.023Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 204
+    },
+    {
+      "timestamp": "2026-02-08T00:55:47.025Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 205
+    },
+    {
+      "timestamp": "2026-02-08T00:55:50.030Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 206
+    },
+    {
+      "timestamp": "2026-02-08T00:55:53.036Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 207
+    },
+    {
+      "timestamp": "2026-02-08T00:55:56.039Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 208
+    },
+    {
+      "timestamp": "2026-02-08T00:55:59.040Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 209
+    },
+    {
+      "timestamp": "2026-02-08T00:56:02.054Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 210
+    },
+    {
+      "timestamp": "2026-02-08T00:56:05.056Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 211
+    },
+    {
+      "timestamp": "2026-02-08T00:56:08.064Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 212
+    },
+    {
+      "timestamp": "2026-02-08T00:56:20.091Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 213
+    },
+    {
+      "timestamp": "2026-02-08T00:56:23.098Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-02-08T00:56:20.091Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 213
+    },
+    {
+      "timestamp": "2026-02-08T00:56:23.098Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-02-08T00:56:20.091Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 213
+    },
+    {
+      "timestamp": "2026-02-08T00:56:23.098Z",
+      "fighter1": {
+        "name": "Alex Morono",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Daniil Donchenko",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 2
+    }
+  ],
+  "createdAt": "2026-02-08T00:40:11.957Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Daniil Donchenko",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:50:44.472Z",
+    "openingF1Odds": 610,
+    "openingF2Odds": -900,
+    "closingF1Odds": 2300,
+    "closingF2Odds": -6000,
+    "lineMovementF1": 1690,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  },
+  "derived": {
+    "inferredFinishMin": 0,
+    "inferredFinishRound": 1,
+    "peakOddsSwing": 1690,
+    "finishSpeed": "fast",
+    "preFightSteam": 1690,
+    "dominanceScore": 100,
+    "crossoverCount": 0,
+    "derivedAt": "2026-06-14T11:47:28.368Z"
+  }
+}

@@ -8092,31 +8092,5 @@
       "extractionId": 185
     }
   ],
-  "createdAt": "2026-02-28T22:55:15.747Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Regina Tarin",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:52:13.907Z",
-    "openingF1Odds": 116,
-    "openingF2Odds": -136,
-    "closingF1Odds": -3500,
-    "closingF2Odds": 1480,
-    "lineMovementF1": -3616,
-    "crossoverOccurred": true,
-    "crossoverMinute": 2
-  },
-  "derived": {
-    "inferredFinishMin": 14,
-    "inferredFinishRound": 3,
-    "peakOddsSwing": 6116,
-    "finishSpeed": "fast",
-    "preFightSteam": -3616,
-    "dominanceScore": 54,
-    "crossoverCount": 9,
-    "derivedAt": "2026-06-14T11:47:28.482Z"
-  }
+  "createdAt": "2026-02-28T22:55:15.747Z"
 }

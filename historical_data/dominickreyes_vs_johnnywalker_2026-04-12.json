@@ -11077,31 +11077,5 @@
       "extractionId": 369
     }
   ],
-  "createdAt": "2026-04-12T02:24:33.034Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Dominick Reyes",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:51:14.961Z",
-    "openingF1Odds": -178,
-    "openingF2Odds": 150,
-    "closingF1Odds": -138,
-    "closingF2Odds": 108,
-    "lineMovementF1": 40,
-    "crossoverOccurred": true,
-    "crossoverMinute": 8
-  },
-  "derived": {
-    "inferredFinishMin": null,
-    "inferredFinishRound": null,
-    "peakOddsSwing": 312,
-    "finishSpeed": "decision",
-    "preFightSteam": 40,
-    "dominanceScore": 3,
-    "crossoverCount": 8,
-    "derivedAt": "2026-06-14T11:47:28.412Z"
-  }
+  "createdAt": "2026-04-12T02:24:33.034Z"
 }

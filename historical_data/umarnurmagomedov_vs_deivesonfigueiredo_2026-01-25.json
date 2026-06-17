@@ -8347,31 +8347,5 @@
       "extractionId": 278
     }
   ],
-  "createdAt": "2026-01-25T01:54:45.195Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Umar Nurmagomedov",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:52:30.097Z",
-    "openingF1Odds": -1600,
-    "openingF2Odds": 840,
-    "closingF1Odds": -6000,
-    "closingF2Odds": 2300,
-    "lineMovementF1": -4400,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": 0,
-    "inferredFinishRound": 1,
-    "peakOddsSwing": 4400,
-    "finishSpeed": "fast",
-    "preFightSteam": -4400,
-    "dominanceScore": 100,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.506Z"
-  }
+  "createdAt": "2026-01-25T01:54:45.195Z"
 }

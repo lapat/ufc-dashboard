@@ -10387,31 +10387,5 @@
       "extractionId": 128
     }
   ],
-  "createdAt": "2025-11-16T04:31:28.652Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Valentina Shevchenko",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:52:30.534Z",
-    "openingF1Odds": -128,
-    "openingF2Odds": 102,
-    "closingF1Odds": -6000,
-    "closingF2Odds": 2300,
-    "lineMovementF1": -5872,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": 7,
-    "inferredFinishRound": 2,
-    "peakOddsSwing": 5872,
-    "finishSpeed": "fast",
-    "preFightSteam": -5872,
-    "dominanceScore": 98,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.507Z"
-  }
+  "createdAt": "2025-11-16T04:31:28.652Z"
 }

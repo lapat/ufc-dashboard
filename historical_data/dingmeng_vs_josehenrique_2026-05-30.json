@@ -5917,31 +5917,5 @@
       "extractionId": 32
     }
   ],
-  "createdAt": "2026-05-30T10:12:15.280Z",
-  "outcome": {
-    "winner": "fighter2",
-    "winnerName": "Jose Henrique",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:51:14.095Z",
-    "openingF1Odds": -118,
-    "openingF2Odds": 100,
-    "closingF1Odds": 144,
-    "closingF2Odds": -186,
-    "lineMovementF1": 262,
-    "crossoverOccurred": true,
-    "crossoverMinute": 3
-  },
-  "derived": {
-    "inferredFinishMin": null,
-    "inferredFinishRound": null,
-    "peakOddsSwing": 558,
-    "finishSpeed": "decision",
-    "preFightSteam": 262,
-    "dominanceScore": 19,
-    "crossoverCount": 7,
-    "derivedAt": "2026-06-14T11:47:28.410Z"
-  }
+  "createdAt": "2026-05-30T10:12:15.280Z"
 }

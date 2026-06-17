@@ -712,31 +712,5 @@
       "extractionId": 2
     }
   ],
-  "createdAt": "2026-03-29T01:38:59.582Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Michael Chiesa",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:52:00.865Z",
-    "openingF1Odds": -1000,
-    "openingF2Odds": 660,
-    "closingF1Odds": -2000,
-    "closingF2Odds": 1040,
-    "lineMovementF1": -1000,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": 0,
-    "inferredFinishRound": 1,
-    "peakOddsSwing": 1000,
-    "finishSpeed": "fast",
-    "preFightSteam": -1000,
-    "dominanceScore": 100,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.462Z"
-  }
+  "createdAt": "2026-03-29T01:38:59.582Z"
 }

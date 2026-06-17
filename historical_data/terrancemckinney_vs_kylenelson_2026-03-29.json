@@ -727,31 +727,5 @@
       "extractionId": 24
     }
   ],
-  "createdAt": "2026-03-29T00:21:26.341Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Terrance McKinney",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:52:27.101Z",
-    "openingF1Odds": -196,
-    "openingF2Odds": 164,
-    "closingF1Odds": -205,
-    "closingF2Odds": 158,
-    "lineMovementF1": -9,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": null,
-    "inferredFinishRound": null,
-    "peakOddsSwing": 9,
-    "finishSpeed": "decision",
-    "preFightSteam": -9,
-    "dominanceScore": 13,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.501Z"
-  }
+  "createdAt": "2026-03-29T00:21:26.341Z"
 }

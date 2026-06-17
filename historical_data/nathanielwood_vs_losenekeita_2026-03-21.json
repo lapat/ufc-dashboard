@@ -10657,31 +10657,5 @@
       "extractionId": 355
     }
   ],
-  "createdAt": "2026-03-21T19:31:33.193Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Nathaniel Wood",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:52:04.351Z",
-    "openingF1Odds": 215,
-    "openingF2Odds": -260,
-    "closingF1Odds": 138,
-    "closingF2Odds": -176,
-    "lineMovementF1": -77,
-    "crossoverOccurred": true,
-    "crossoverMinute": 10
-  },
-  "derived": {
-    "inferredFinishMin": null,
-    "inferredFinishRound": null,
-    "peakOddsSwing": 345,
-    "finishSpeed": "decision",
-    "preFightSteam": -77,
-    "dominanceScore": 27,
-    "crossoverCount": 12,
-    "derivedAt": "2026-06-14T11:47:28.469Z"
-  }
+  "createdAt": "2026-03-21T19:31:33.193Z"
 }

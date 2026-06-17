@@ -1927,31 +1927,5 @@
       "extractionId": 2
     }
   ],
-  "createdAt": "2026-03-28T23:41:11.777Z",
-  "outcome": {
-    "winner": "fighter2",
-    "winnerName": "Tofiq Musayev",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:51:24.326Z",
-    "openingF1Odds": -335,
-    "openingF2Odds": 270,
-    "closingF1Odds": -800,
-    "closingF2Odds": 490,
-    "lineMovementF1": -465,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": null,
-    "inferredFinishRound": null,
-    "peakOddsSwing": 465,
-    "finishSpeed": "decision",
-    "preFightSteam": -465,
-    "dominanceScore": 100,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.421Z"
-  }
+  "createdAt": "2026-03-28T23:41:11.777Z"
 }

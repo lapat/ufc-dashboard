@@ -4567,31 +4567,5 @@
       "extractionId": 19
     }
   ],
-  "createdAt": "2026-03-14T23:28:04.527Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Vitor Petrino",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:52:31.835Z",
-    "openingF1Odds": -225,
-    "openingF2Odds": 188,
-    "closingF1Odds": -1600,
-    "closingF2Odds": 840,
-    "lineMovementF1": -1375,
-    "crossoverOccurred": true,
-    "crossoverMinute": 5
-  },
-  "derived": {
-    "inferredFinishMin": 17,
-    "inferredFinishRound": 3,
-    "peakOddsSwing": 1375,
-    "finishSpeed": "slow",
-    "preFightSteam": -1375,
-    "dominanceScore": 60,
-    "crossoverCount": 4,
-    "derivedAt": "2026-06-14T11:47:28.509Z"
-  }
+  "createdAt": "2026-03-14T23:28:04.527Z"
 }

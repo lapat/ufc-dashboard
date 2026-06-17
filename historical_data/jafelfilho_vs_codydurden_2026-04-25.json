@@ -3547,31 +3547,5 @@
       "extractionId": 13
     }
   ],
-  "createdAt": "2026-04-25T22:36:13.769Z",
-  "outcome": {
-    "winner": "fighter2",
-    "winnerName": "Cody Durden",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:51:30.305Z",
-    "openingF1Odds": -650,
-    "openingF2Odds": 480,
-    "closingF1Odds": 840,
-    "closingF2Odds": -1600,
-    "lineMovementF1": 1490,
-    "crossoverOccurred": true,
-    "crossoverMinute": 10
-  },
-  "derived": {
-    "inferredFinishMin": 18,
-    "inferredFinishRound": 4,
-    "peakOddsSwing": 1490,
-    "finishSpeed": "slow",
-    "preFightSteam": 1490,
-    "dominanceScore": 75,
-    "crossoverCount": 3,
-    "derivedAt": "2026-06-14T11:47:28.427Z"
-  }
+  "createdAt": "2026-04-25T22:36:13.769Z"
 }

@@ -4747,31 +4747,5 @@
       "extractionId": 9
     }
   ],
-  "createdAt": "2025-11-22T16:15:45.306Z",
-  "outcome": {
-    "winner": "fighter2",
-    "winnerName": "Aleksandre Topuria",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:50:54.144Z",
-    "openingF1Odds": 118,
-    "openingF2Odds": -138,
-    "closingF1Odds": 2300,
-    "closingF2Odds": -6000,
-    "lineMovementF1": 2182,
-    "crossoverOccurred": true,
-    "crossoverMinute": 3
-  },
-  "derived": {
-    "inferredFinishMin": 12,
-    "inferredFinishRound": 3,
-    "peakOddsSwing": 2182,
-    "finishSpeed": "medium",
-    "preFightSteam": 2182,
-    "dominanceScore": 58,
-    "crossoverCount": 2,
-    "derivedAt": "2026-06-14T11:47:28.384Z"
-  }
+  "createdAt": "2025-11-22T16:15:45.306Z"
 }

@@ -4192,31 +4192,5 @@
       "extractionId": 94
     }
   ],
-  "createdAt": "2026-03-15T00:00:07.847Z",
-  "outcome": {
-    "winner": "fighter2",
-    "winnerName": "Myktybek Orolbai",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:51:06.104Z",
-    "openingF1Odds": 1180,
-    "openingF2Odds": -2400,
-    "closingF1Odds": 2300,
-    "closingF2Odds": -6000,
-    "lineMovementF1": 1120,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": 0,
-    "inferredFinishRound": 1,
-    "peakOddsSwing": 1120,
-    "finishSpeed": "fast",
-    "preFightSteam": 1120,
-    "dominanceScore": 100,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.399Z"
-  }
+  "createdAt": "2026-03-15T00:00:07.847Z"
 }

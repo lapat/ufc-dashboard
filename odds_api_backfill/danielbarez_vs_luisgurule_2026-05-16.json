@@ -1,0 +1,4042 @@
+{
+  "fightId": "danielbarez_vs_luisgurule",
+  "fightTitle": "Connected but no betting buttons found",
+  "startTime": "2026-05-16T21:37:32.941Z",
+  "endTime": "2026-05-16T21:53:37.990Z",
+  "duration": 965049,
+  "dataPoints": 267,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-05-16T21:37:32.941Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-05-16T21:37:35.954Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-05-16T21:37:38.954Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-16T21:37:41.955Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-16T21:37:44.957Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-05-16T21:37:47.961Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-05-16T21:37:50.967Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-05-16T21:37:53.975Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-05-16T21:37:56.978Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-05-16T21:37:59.991Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-05-16T21:38:02.995Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-05-16T21:38:05.996Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-05-16T21:38:09.004Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-05-16T21:38:12.013Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-05-16T21:38:15.023Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-05-16T21:38:18.029Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-05-16T21:38:21.180Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-05-16T21:38:24.041Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-05-16T21:38:27.042Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-05-16T21:38:30.046Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-05-16T21:38:33.055Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-05-16T21:38:36.067Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-05-16T21:38:39.070Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-05-16T21:38:42.071Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-05-16T21:38:45.072Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-05-16T21:38:48.084Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-05-16T21:38:51.179Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-05-16T21:38:54.185Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-162",
+        "numericOdds": -162
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-05-16T21:38:57.199Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-05-16T21:39:00.206Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-05-16T21:39:03.214Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-05-16T21:39:06.229Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-05-16T21:39:09.235Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-05-16T21:39:12.240Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-05-16T21:39:15.246Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-05-16T21:39:18.247Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-05-16T21:39:21.254Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+136",
+        "numericOdds": 136
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-174",
+        "numericOdds": -174
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2026-05-16T21:39:24.261Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2026-05-16T21:39:27.261Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 39
+    },
+    {
+      "timestamp": "2026-05-16T21:39:30.264Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 40
+    },
+    {
+      "timestamp": "2026-05-16T21:39:33.269Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 41
+    },
+    {
+      "timestamp": "2026-05-16T21:39:36.275Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 42
+    },
+    {
+      "timestamp": "2026-05-16T21:39:39.278Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 43
+    },
+    {
+      "timestamp": "2026-05-16T21:39:42.287Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+132",
+        "numericOdds": 132
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-168",
+        "numericOdds": -168
+      },
+      "isLocked": false,
+      "extractionId": 44
+    },
+    {
+      "timestamp": "2026-05-16T21:39:45.290Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+114",
+        "numericOdds": 114
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-144",
+        "numericOdds": -144
+      },
+      "isLocked": false,
+      "extractionId": 45
+    },
+    {
+      "timestamp": "2026-05-16T21:39:48.292Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+108",
+        "numericOdds": 108
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-136",
+        "numericOdds": -136
+      },
+      "isLocked": false,
+      "extractionId": 46
+    },
+    {
+      "timestamp": "2026-05-16T21:39:51.294Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+108",
+        "numericOdds": 108
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-136",
+        "numericOdds": -136
+      },
+      "isLocked": false,
+      "extractionId": 47
+    },
+    {
+      "timestamp": "2026-05-16T21:39:54.294Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+108",
+        "numericOdds": 108
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-136",
+        "numericOdds": -136
+      },
+      "isLocked": false,
+      "extractionId": 48
+    },
+    {
+      "timestamp": "2026-05-16T21:39:57.300Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+108",
+        "numericOdds": 108
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-136",
+        "numericOdds": -136
+      },
+      "isLocked": false,
+      "extractionId": 49
+    },
+    {
+      "timestamp": "2026-05-16T21:40:00.301Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "-102",
+        "numericOdds": -102
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-126",
+        "numericOdds": -126
+      },
+      "isLocked": false,
+      "extractionId": 50
+    },
+    {
+      "timestamp": "2026-05-16T21:40:03.305Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "-106",
+        "numericOdds": -106
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-120",
+        "numericOdds": -120
+      },
+      "isLocked": false,
+      "extractionId": 51
+    },
+    {
+      "timestamp": "2026-05-16T21:40:06.310Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "-106",
+        "numericOdds": -106
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-120",
+        "numericOdds": -120
+      },
+      "isLocked": false,
+      "extractionId": 52
+    },
+    {
+      "timestamp": "2026-05-16T21:40:09.319Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "-102",
+        "numericOdds": -102
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-126",
+        "numericOdds": -126
+      },
+      "isLocked": false,
+      "extractionId": 53
+    },
+    {
+      "timestamp": "2026-05-16T21:40:12.327Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "-102",
+        "numericOdds": -102
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-126",
+        "numericOdds": -126
+      },
+      "isLocked": false,
+      "extractionId": 54
+    },
+    {
+      "timestamp": "2026-05-16T21:40:15.332Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-112",
+        "numericOdds": -112
+      },
+      "isLocked": false,
+      "extractionId": 55
+    },
+    {
+      "timestamp": "2026-05-16T21:41:00.456Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+176",
+        "numericOdds": 176
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-230",
+        "numericOdds": -230
+      },
+      "isLocked": false,
+      "extractionId": 56
+    },
+    {
+      "timestamp": "2026-05-16T21:41:03.455Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-05-16T21:41:06.457Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-16T21:41:09.460Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+166",
+        "numericOdds": 166
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-16T21:41:12.465Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+166",
+        "numericOdds": 166
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-215",
+        "numericOdds": -215
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-05-16T21:41:54.548Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-05-16T21:41:57.554Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+225",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-310",
+        "numericOdds": -310
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-05-16T21:42:00.560Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-16T21:42:03.566Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-16T21:42:06.574Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-05-16T21:42:09.578Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-05-16T21:42:12.584Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-05-16T21:42:15.595Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-05-16T21:42:18.599Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-05-16T21:42:21.605Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-380",
+        "numericOdds": -380
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-05-16T21:42:24.620Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-410",
+        "numericOdds": -410
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-05-16T21:42:27.625Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-410",
+        "numericOdds": -410
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-05-16T21:42:30.637Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-410",
+        "numericOdds": -410
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-05-16T21:42:33.640Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-410",
+        "numericOdds": -410
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-05-16T21:42:36.647Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-380",
+        "numericOdds": -380
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-05-16T21:42:39.659Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-380",
+        "numericOdds": -380
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-05-16T21:42:42.661Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-380",
+        "numericOdds": -380
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-05-16T21:42:45.663Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-380",
+        "numericOdds": -380
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-05-16T21:42:48.667Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+270",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-380",
+        "numericOdds": -380
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-05-16T21:42:51.674Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-05-16T21:42:54.683Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-05-16T21:42:57.689Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-05-16T21:43:00.690Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+235",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-05-16T21:43:03.702Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+235",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-330",
+        "numericOdds": -330
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-05-16T21:43:06.717Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+230",
+        "numericOdds": 230
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-320",
+        "numericOdds": -320
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-05-16T21:43:09.720Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-05-16T21:43:12.725Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-05-16T21:43:15.730Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-05-16T21:43:18.731Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+240",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-340",
+        "numericOdds": -340
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-05-16T21:43:21.736Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-05-16T21:43:24.748Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-05-16T21:43:27.753Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+260",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-370",
+        "numericOdds": -370
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-05-16T21:43:36.773Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+290",
+        "numericOdds": 290
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-410",
+        "numericOdds": -410
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-05-16T21:43:39.780Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-05-16T21:43:42.786Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-16T21:43:45.788Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-16T21:43:48.798Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-05-16T21:43:51.811Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-05-16T21:43:54.817Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-05-16T21:43:57.831Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-05-16T21:44:00.832Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-05-16T21:44:03.835Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+310",
+        "numericOdds": 310
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-450",
+        "numericOdds": -450
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-05-16T21:44:06.847Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+330",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-480",
+        "numericOdds": -480
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-05-16T21:44:09.852Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+330",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-480",
+        "numericOdds": -480
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-05-16T21:44:12.853Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+330",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-480",
+        "numericOdds": -480
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-05-16T21:44:15.857Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+330",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-480",
+        "numericOdds": -480
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-05-16T21:44:18.860Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+330",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-480",
+        "numericOdds": -480
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-05-16T21:44:21.861Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+330",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-480",
+        "numericOdds": -480
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-05-16T21:44:24.866Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+330",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-480",
+        "numericOdds": -480
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-05-16T21:44:27.875Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+330",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-480",
+        "numericOdds": -480
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-05-16T21:44:30.876Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+330",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-480",
+        "numericOdds": -480
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-05-16T21:44:33.883Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+330",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-480",
+        "numericOdds": -480
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-05-16T21:44:36.885Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+370",
+        "numericOdds": 370
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-600",
+        "numericOdds": -600
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-05-16T21:44:39.887Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+370",
+        "numericOdds": 370
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-600",
+        "numericOdds": -600
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-05-16T21:44:42.900Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+370",
+        "numericOdds": 370
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-600",
+        "numericOdds": -600
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-05-16T21:44:45.903Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+370",
+        "numericOdds": 370
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-600",
+        "numericOdds": -600
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-05-16T21:44:48.903Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+370",
+        "numericOdds": 370
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-600",
+        "numericOdds": -600
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-05-16T21:44:51.912Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+370",
+        "numericOdds": 370
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-600",
+        "numericOdds": -600
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-05-16T21:44:54.920Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+370",
+        "numericOdds": 370
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-600",
+        "numericOdds": -600
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-05-16T21:44:57.925Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+370",
+        "numericOdds": 370
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-600",
+        "numericOdds": -600
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-05-16T21:45:00.931Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+370",
+        "numericOdds": 370
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-600",
+        "numericOdds": -600
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-05-16T21:45:03.936Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+370",
+        "numericOdds": 370
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-600",
+        "numericOdds": -600
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-05-16T21:45:06.951Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+370",
+        "numericOdds": 370
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-600",
+        "numericOdds": -600
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-05-16T21:45:09.953Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+370",
+        "numericOdds": 370
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-600",
+        "numericOdds": -600
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-05-16T21:45:12.954Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+370",
+        "numericOdds": 370
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-600",
+        "numericOdds": -600
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-05-16T21:45:15.959Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+370",
+        "numericOdds": 370
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-600",
+        "numericOdds": -600
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-05-16T21:45:18.963Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+370",
+        "numericOdds": 370
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-600",
+        "numericOdds": -600
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-05-16T21:45:21.975Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+370",
+        "numericOdds": 370
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-600",
+        "numericOdds": -600
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-05-16T21:45:24.983Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+370",
+        "numericOdds": 370
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-600",
+        "numericOdds": -600
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2026-05-16T21:45:27.989Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+330",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-480",
+        "numericOdds": -480
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2026-05-16T21:45:30.993Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+330",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-480",
+        "numericOdds": -480
+      },
+      "isLocked": false,
+      "extractionId": 39
+    },
+    {
+      "timestamp": "2026-05-16T21:45:34.008Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+330",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-480",
+        "numericOdds": -480
+      },
+      "isLocked": false,
+      "extractionId": 40
+    },
+    {
+      "timestamp": "2026-05-16T21:45:37.007Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 41
+    },
+    {
+      "timestamp": "2026-05-16T21:45:40.009Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 42
+    },
+    {
+      "timestamp": "2026-05-16T21:45:43.012Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 43
+    },
+    {
+      "timestamp": "2026-05-16T21:45:46.018Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 44
+    },
+    {
+      "timestamp": "2026-05-16T21:45:49.023Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 45
+    },
+    {
+      "timestamp": "2026-05-16T21:45:52.034Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 46
+    },
+    {
+      "timestamp": "2026-05-16T21:45:55.036Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 47
+    },
+    {
+      "timestamp": "2026-05-16T21:45:58.035Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 48
+    },
+    {
+      "timestamp": "2026-05-16T21:46:01.043Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+350",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 49
+    },
+    {
+      "timestamp": "2026-05-16T21:46:04.048Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 50
+    },
+    {
+      "timestamp": "2026-05-16T21:46:07.049Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 51
+    },
+    {
+      "timestamp": "2026-05-16T21:46:10.059Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+340",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-550",
+        "numericOdds": -550
+      },
+      "isLocked": false,
+      "extractionId": 52
+    },
+    {
+      "timestamp": "2026-05-16T21:46:13.061Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+320",
+        "numericOdds": 320
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-460",
+        "numericOdds": -460
+      },
+      "isLocked": false,
+      "extractionId": 53
+    },
+    {
+      "timestamp": "2026-05-16T21:46:16.064Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+320",
+        "numericOdds": 320
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-460",
+        "numericOdds": -460
+      },
+      "isLocked": false,
+      "extractionId": 54
+    },
+    {
+      "timestamp": "2026-05-16T21:46:19.067Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 55
+    },
+    {
+      "timestamp": "2026-05-16T21:46:28.096Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+160",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 56
+    },
+    {
+      "timestamp": "2026-05-16T21:46:31.099Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+160",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-210",
+        "numericOdds": -210
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-05-16T21:46:34.104Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+134",
+        "numericOdds": 134
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-172",
+        "numericOdds": -172
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-16T21:46:37.108Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-16T21:46:40.118Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-05-16T21:46:43.117Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-05-16T21:46:46.122Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+128",
+        "numericOdds": 128
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-164",
+        "numericOdds": -164
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-05-16T21:47:04.156Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+144",
+        "numericOdds": 144
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-186",
+        "numericOdds": -186
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-05-16T21:47:07.156Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-05-16T21:47:10.163Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-16T21:47:13.177Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-16T21:47:16.186Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-05-16T21:47:19.193Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+150",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-192",
+        "numericOdds": -192
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-05-16T21:47:22.204Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+140",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-180",
+        "numericOdds": -180
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-05-16T21:47:25.210Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+140",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-180",
+        "numericOdds": -180
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-05-16T21:47:28.216Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+140",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-180",
+        "numericOdds": -180
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-05-16T21:47:31.219Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+140",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-180",
+        "numericOdds": -180
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-05-16T21:47:34.221Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+138",
+        "numericOdds": 138
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-176",
+        "numericOdds": -176
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-05-16T21:47:37.226Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-05-16T21:47:40.232Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+154",
+        "numericOdds": 154
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-200",
+        "numericOdds": -200
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-05-16T21:47:43.234Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-05-16T21:47:46.245Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+220",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-300",
+        "numericOdds": -300
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-05-16T21:47:49.254Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+250",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-360",
+        "numericOdds": -360
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-05-16T21:47:52.265Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-05-16T21:47:55.269Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-05-16T21:47:58.282Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-05-16T21:48:01.291Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+300",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-430",
+        "numericOdds": -430
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-05-16T21:48:04.294Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+330",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-480",
+        "numericOdds": -480
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-05-16T21:49:19.430Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-05-16T21:49:22.433Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-05-16T21:49:25.443Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-16T21:49:28.458Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-16T21:49:31.459Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-05-16T21:49:34.468Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-05-16T21:49:37.475Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-05-16T21:49:40.475Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-05-16T21:49:43.478Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 9
+    },
+    {
+      "timestamp": "2026-05-16T21:49:46.484Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 10
+    },
+    {
+      "timestamp": "2026-05-16T21:49:49.492Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 11
+    },
+    {
+      "timestamp": "2026-05-16T21:49:52.505Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 12
+    },
+    {
+      "timestamp": "2026-05-16T21:49:55.509Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 13
+    },
+    {
+      "timestamp": "2026-05-16T21:49:58.520Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 14
+    },
+    {
+      "timestamp": "2026-05-16T21:50:01.530Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 15
+    },
+    {
+      "timestamp": "2026-05-16T21:50:04.537Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 16
+    },
+    {
+      "timestamp": "2026-05-16T21:50:07.542Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 17
+    },
+    {
+      "timestamp": "2026-05-16T21:50:10.544Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "isLocked": false,
+      "extractionId": 18
+    },
+    {
+      "timestamp": "2026-05-16T21:50:13.545Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "isLocked": false,
+      "extractionId": 19
+    },
+    {
+      "timestamp": "2026-05-16T21:50:16.547Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1040",
+        "numericOdds": 1040
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-2000",
+        "numericOdds": -2000
+      },
+      "isLocked": false,
+      "extractionId": 20
+    },
+    {
+      "timestamp": "2026-05-16T21:50:19.558Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 21
+    },
+    {
+      "timestamp": "2026-05-16T21:50:22.562Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 22
+    },
+    {
+      "timestamp": "2026-05-16T21:50:25.565Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 23
+    },
+    {
+      "timestamp": "2026-05-16T21:50:28.579Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 24
+    },
+    {
+      "timestamp": "2026-05-16T21:50:31.585Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 25
+    },
+    {
+      "timestamp": "2026-05-16T21:50:34.591Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 26
+    },
+    {
+      "timestamp": "2026-05-16T21:50:37.604Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 27
+    },
+    {
+      "timestamp": "2026-05-16T21:50:40.605Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 28
+    },
+    {
+      "timestamp": "2026-05-16T21:50:43.618Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 29
+    },
+    {
+      "timestamp": "2026-05-16T21:50:46.633Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 30
+    },
+    {
+      "timestamp": "2026-05-16T21:50:49.638Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 31
+    },
+    {
+      "timestamp": "2026-05-16T21:50:52.647Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 32
+    },
+    {
+      "timestamp": "2026-05-16T21:50:55.647Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 33
+    },
+    {
+      "timestamp": "2026-05-16T21:50:58.646Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 34
+    },
+    {
+      "timestamp": "2026-05-16T21:51:01.660Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 35
+    },
+    {
+      "timestamp": "2026-05-16T21:51:04.664Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 36
+    },
+    {
+      "timestamp": "2026-05-16T21:51:07.667Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 37
+    },
+    {
+      "timestamp": "2026-05-16T21:51:10.674Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 38
+    },
+    {
+      "timestamp": "2026-05-16T21:51:13.680Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 39
+    },
+    {
+      "timestamp": "2026-05-16T21:51:16.686Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 40
+    },
+    {
+      "timestamp": "2026-05-16T21:51:19.700Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 41
+    },
+    {
+      "timestamp": "2026-05-16T21:51:22.707Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 42
+    },
+    {
+      "timestamp": "2026-05-16T21:51:25.712Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 43
+    },
+    {
+      "timestamp": "2026-05-16T21:51:28.724Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 44
+    },
+    {
+      "timestamp": "2026-05-16T21:51:31.727Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1340",
+        "numericOdds": 1340
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-3000",
+        "numericOdds": -3000
+      },
+      "isLocked": false,
+      "extractionId": 45
+    },
+    {
+      "timestamp": "2026-05-16T21:51:34.728Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 46
+    },
+    {
+      "timestamp": "2026-05-16T21:51:37.734Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 47
+    },
+    {
+      "timestamp": "2026-05-16T21:51:40.739Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 48
+    },
+    {
+      "timestamp": "2026-05-16T21:51:43.749Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 49
+    },
+    {
+      "timestamp": "2026-05-16T21:51:46.757Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 50
+    },
+    {
+      "timestamp": "2026-05-16T21:51:49.757Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 51
+    },
+    {
+      "timestamp": "2026-05-16T21:51:52.762Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 52
+    },
+    {
+      "timestamp": "2026-05-16T21:51:55.765Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 53
+    },
+    {
+      "timestamp": "2026-05-16T21:51:58.773Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+1180",
+        "numericOdds": 1180
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-2400",
+        "numericOdds": -2400
+      },
+      "isLocked": false,
+      "extractionId": 54
+    },
+    {
+      "timestamp": "2026-05-16T21:52:01.780Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 55
+    },
+    {
+      "timestamp": "2026-05-16T21:52:04.788Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 56
+    },
+    {
+      "timestamp": "2026-05-16T21:52:07.795Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 57
+    },
+    {
+      "timestamp": "2026-05-16T21:52:10.802Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 58
+    },
+    {
+      "timestamp": "2026-05-16T21:52:13.809Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 59
+    },
+    {
+      "timestamp": "2026-05-16T21:52:16.825Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 60
+    },
+    {
+      "timestamp": "2026-05-16T21:52:19.825Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 61
+    },
+    {
+      "timestamp": "2026-05-16T21:52:22.838Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 62
+    },
+    {
+      "timestamp": "2026-05-16T21:52:25.839Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 63
+    },
+    {
+      "timestamp": "2026-05-16T21:52:28.842Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 64
+    },
+    {
+      "timestamp": "2026-05-16T21:52:31.842Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 65
+    },
+    {
+      "timestamp": "2026-05-16T21:52:34.851Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 66
+    },
+    {
+      "timestamp": "2026-05-16T21:52:37.860Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 67
+    },
+    {
+      "timestamp": "2026-05-16T21:52:40.866Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 68
+    },
+    {
+      "timestamp": "2026-05-16T21:52:43.879Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 69
+    },
+    {
+      "timestamp": "2026-05-16T21:52:46.884Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 70
+    },
+    {
+      "timestamp": "2026-05-16T21:52:49.884Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 71
+    },
+    {
+      "timestamp": "2026-05-16T21:52:52.898Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 72
+    },
+    {
+      "timestamp": "2026-05-16T21:52:55.908Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 73
+    },
+    {
+      "timestamp": "2026-05-16T21:52:58.909Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 74
+    },
+    {
+      "timestamp": "2026-05-16T21:53:01.916Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 75
+    },
+    {
+      "timestamp": "2026-05-16T21:53:04.921Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 76
+    },
+    {
+      "timestamp": "2026-05-16T21:53:16.950Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 77
+    },
+    {
+      "timestamp": "2026-05-16T21:53:19.955Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-05-16T21:53:22.957Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-16T21:53:25.964Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-16T21:53:28.969Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-05-16T21:53:31.970Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-05-16T21:53:34.979Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-05-16T21:53:37.990Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 8
+    },
+    {
+      "timestamp": "2026-05-16T21:53:16.950Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 77
+    },
+    {
+      "timestamp": "2026-05-16T21:53:19.955Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 2
+    },
+    {
+      "timestamp": "2026-05-16T21:53:22.957Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 3
+    },
+    {
+      "timestamp": "2026-05-16T21:53:25.964Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 4
+    },
+    {
+      "timestamp": "2026-05-16T21:53:28.969Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 5
+    },
+    {
+      "timestamp": "2026-05-16T21:53:31.970Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 6
+    },
+    {
+      "timestamp": "2026-05-16T21:53:34.979Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 7
+    },
+    {
+      "timestamp": "2026-05-16T21:53:37.990Z",
+      "fighter1": {
+        "name": "Daniel Barez",
+        "odds": "+2300",
+        "numericOdds": 2300
+      },
+      "fighter2": {
+        "name": "Luis Gurule",
+        "odds": "-6000",
+        "numericOdds": -6000
+      },
+      "isLocked": false,
+      "extractionId": 8
+    }
+  ],
+  "createdAt": "2026-05-16T21:41:00.454Z",
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Luis Gurule",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-14T11:51:11.539Z",
+    "openingF1Odds": 136,
+    "openingF2Odds": -162,
+    "closingF1Odds": 2300,
+    "closingF2Odds": -6000,
+    "lineMovementF1": 2164,
+    "crossoverOccurred": true,
+    "crossoverMinute": 2
+  },
+  "derived": {
+    "inferredFinishMin": 12,
+    "inferredFinishRound": 3,
+    "peakOddsSwing": 2164,
+    "finishSpeed": "medium",
+    "preFightSteam": 2164,
+    "dominanceScore": 72,
+    "crossoverCount": 2,
+    "derivedAt": "2026-06-14T11:47:28.408Z"
+  }
+}

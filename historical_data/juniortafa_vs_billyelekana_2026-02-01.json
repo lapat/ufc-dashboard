@@ -2767,31 +2767,5 @@
       "extractionId": 12
     }
   ],
-  "createdAt": "2026-02-01T01:40:24.232Z",
-  "outcome": {
-    "winner": "fighter2",
-    "winnerName": "Billy Elekana",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:51:40.996Z",
-    "openingF1Odds": 220,
-    "openingF2Odds": -270,
-    "closingF1Odds": 104,
-    "closingF2Odds": -134,
-    "lineMovementF1": -116,
-    "crossoverOccurred": true,
-    "crossoverMinute": 3
-  },
-  "derived": {
-    "inferredFinishMin": null,
-    "inferredFinishRound": null,
-    "peakOddsSwing": 362,
-    "finishSpeed": "decision",
-    "preFightSteam": -116,
-    "dominanceScore": 14,
-    "crossoverCount": 10,
-    "derivedAt": "2026-06-14T11:47:28.439Z"
-  }
+  "createdAt": "2026-02-01T01:40:24.232Z"
 }

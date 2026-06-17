@@ -5152,31 +5152,5 @@
       "extractionId": 62
     }
   ],
-  "createdAt": "2026-06-06T21:40:00.233Z",
-  "outcome": {
-    "winner": "fighter1",
-    "winnerName": "Jeisla Chaves",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:51:33.284Z",
-    "openingF1Odds": -270,
-    "openingF2Odds": 220,
-    "closingF1Odds": -6000,
-    "closingF2Odds": 2300,
-    "lineMovementF1": -5730,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": 4,
-    "inferredFinishRound": 1,
-    "peakOddsSwing": 5730,
-    "finishSpeed": "fast",
-    "preFightSteam": -5730,
-    "dominanceScore": 100,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.432Z"
-  }
+  "createdAt": "2026-06-06T21:40:00.233Z"
 }

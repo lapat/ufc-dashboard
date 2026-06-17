@@ -4597,31 +4597,5 @@
       "extractionId": 15
     }
   ],
-  "createdAt": "2025-11-16T05:34:00.501Z",
-  "outcome": {
-    "winner": "fighter2",
-    "winnerName": "Islam Makhachev",
-    "method": "Final",
-    "round": null,
-    "time": null,
-    "source": "espn",
-    "enrichedAt": "2026-06-14T11:51:28.201Z",
-    "openingF1Odds": 350,
-    "openingF2Odds": -550,
-    "closingF1Odds": 2300,
-    "closingF2Odds": -6000,
-    "lineMovementF1": 1950,
-    "crossoverOccurred": false,
-    "crossoverMinute": null
-  },
-  "derived": {
-    "inferredFinishMin": 1,
-    "inferredFinishRound": 1,
-    "peakOddsSwing": 1950,
-    "finishSpeed": "fast",
-    "preFightSteam": 1950,
-    "dominanceScore": 100,
-    "crossoverCount": 0,
-    "derivedAt": "2026-06-14T11:47:28.424Z"
-  }
+  "createdAt": "2025-11-16T05:34:00.501Z"
 }
