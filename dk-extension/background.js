@@ -3,6 +3,7 @@ const DEFAULT_URL = 'https://ufc-dashboard-production-e03d.up.railway.app';
 let betBotUrl = DEFAULT_URL;
 let dkUserId = null;
 let manualUserId = null;
+let handlingLogin = false; // prevents both tabs racing to the login page
 
 function genDeviceId() {
   return 'dev-' + Array.from(crypto.getRandomValues(new Uint8Array(8)))
@@ -115,15 +116,6 @@ chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
   }
 });
 
-// After location check clears: open mybets in second tab
-async function openMyBetsTab(mainTabId) {
-  const allTabs = await chrome.tabs.query({ url: 'https://sportsbook.draftkings.com/mybets*' });
-  if (!allTabs.length) {
-    chrome.tabs.create({ url: 'https://sportsbook.draftkings.com/mybets', openerTabId: mainTabId });
-  } else {
-    chrome.tabs.update(allTabs[0].id, { active: true });
-  }
-}
 
 function tryExtractUserId(url, data) {
   if (url.includes('/social/user/') && data?.username) return data.username;
@@ -153,19 +145,40 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
   }
 
   if (msg.type === 'DK_SPORTSBOOK_READY') {
-    addLog('Location check cleared — opening mybets tab');
-    const tabId = sender?.tab?.id;
-    if (tabId) openMyBetsTab(tabId);
+    // Location check cleared on the tab that just logged in.
+    // Navigate the OTHER (untouched) DK tab to mybets.
+    handlingLogin = false;
+    const mainTabId = sender?.tab?.id;
+    (async () => {
+      const dkTabs = await chrome.tabs.query({ url: 'https://sportsbook.draftkings.com/*' });
+      dkTabs.sort((a, b) => a.index - b.index);
+      const secondTab = dkTabs.find(t => t.id !== mainTabId && !t.url?.includes('/mybets'));
+      if (secondTab) {
+        chrome.tabs.update(secondTab.id, { url: 'https://sportsbook.draftkings.com/mybets' });
+        addLog('Location check cleared — sending second tab to mybets');
+      } else {
+        chrome.tabs.create({ url: 'https://sportsbook.draftkings.com/mybets', openerTabId: mainTabId });
+        addLog('Location check cleared — no second tab, created mybets tab');
+      }
+    })();
     return;
   }
 
   if (msg.type === 'DK_NEEDS_LOGIN') {
-    addLog('Logged out — redirecting to DK login');
+    // Only the leftmost DK tab handles login — ignore if already handling
+    if (handlingLogin) return;
+    handlingLogin = true;
     chrome.storage.local.set({ dkLoggedOut: true });
-    const tabId = sender?.tab?.id;
-    if (tabId) {
-      chrome.tabs.update(tabId, { url: 'https://myaccount.draftkings.com/auth/login' });
-    }
+    addLog('Logout detected — navigating leftmost DK tab to login');
+    (async () => {
+      const dkTabs = await chrome.tabs.query({ url: 'https://sportsbook.draftkings.com/*' });
+      dkTabs.sort((a, b) => a.index - b.index);
+      if (dkTabs.length > 0) {
+        chrome.tabs.update(dkTabs[0].id, {
+          url: 'https://myaccount.draftkings.com/auth/login?product=sportsbook&returnPath=https%3A%2F%2Fsportsbook.draftkings.com%2F'
+        });
+      }
+    })();
     return;
   }
 

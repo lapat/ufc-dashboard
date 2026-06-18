@@ -109,8 +109,8 @@ if (href.startsWith('https://sportsbook.draftkings.com') && !href.includes('/log
     if (isLoggedOut()) {
       alerted = true;
       clearInterval(logoutPoll);
+      // Background picks the leftmost DK tab to redirect — don't navigate directly here
       send({ type: 'DK_NEEDS_LOGIN' });
-      window.location.href = 'https://myaccount.draftkings.com/auth/login?product=sportsbook&returnPath=https%3A%2F%2Fsportsbook.draftkings.com%2F';
     }
   }, 3000);
 }
