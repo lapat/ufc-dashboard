@@ -30,20 +30,22 @@
   window.WebSocket = PatchedWS;
 
   const orig = window.fetch;
-  // Use .then() instead of async/await so network errors propagate to DK's caller,
-  // not to our script context — prevents "Failed to fetch" showing in our error log.
   window.fetch = function (...args) {
-    return orig.apply(this, args).then(res => {
-      const url = typeof args[0] === 'string' ? args[0] : (args[0]?.url || '');
-      if (url.includes('draftkings.com') && url.includes('/api/')) {
+    // Get the original promise and return it UNTOUCHED — this keeps any rejection
+    // attributed to the caller (DK's code), not our extension.
+    const promise = orig.apply(this, args);
+    const url = typeof args[0] === 'string' ? args[0] : (args[0]?.url || '');
+    if (url.includes('draftkings.com') && url.includes('/api/')) {
+      // Observe on a SEPARATE side-chain that never propagates to anyone
+      promise.then(res => {
         try {
           res.clone().json().then(data => {
             window.postMessage({ type: 'DK_API', url, data }, '*');
           }).catch(() => {});
         } catch (_) {}
-      }
-      return res;
-    });
+      }).catch(() => {}); // swallow errors from our side-chain only
+    }
+    return promise; // original promise, untouched — errors belong to DK's caller
   };
 
   const origOpen = XMLHttpRequest.prototype.open;

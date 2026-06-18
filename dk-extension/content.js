@@ -1,15 +1,21 @@
+// Safe wrapper — chrome.runtime becomes unavailable after extension reload/update
+// while the page is still open. All sendMessage calls must go through this.
+function send(msg) {
+  try { chrome.runtime.sendMessage(msg); } catch (_) {}
+}
+
 // Relay intercepted messages from page context to background service worker
 window.addEventListener('message', e => {
   if (e.source !== window) return;
   if (e.data?.type === 'DK_API') {
-    chrome.runtime.sendMessage({ type: 'DK_API', url: e.data.url, data: e.data.data });
+    send({ type: 'DK_API', url: e.data.url, data: e.data.data });
   }
   if (e.data?.type === 'DK_WS_STATUS') {
-    chrome.runtime.sendMessage({ type: 'DK_WS_STATUS', connected: e.data.connected, url: e.data.url, ts: e.data.ts, code: e.data.code });
+    send({ type: 'DK_WS_STATUS', connected: e.data.connected, url: e.data.url, ts: e.data.ts, code: e.data.code });
   }
   if (e.data?.type === 'DK_API') {
     if (e.data?.data?.statusCode === 401 || e.data?.data?.code === 'UNAUTHORIZED') {
-      chrome.runtime.sendMessage({ type: 'DK_LOGOUT' });
+      send({ type: 'DK_LOGOUT' });
     }
   }
 });
@@ -18,7 +24,7 @@ const href = window.location.href;
 
 // ── Detect logout page ──────────────────────────────────────────────────────
 if (href.includes('/auth/login') || href.includes('/login') || href.includes('sign-in')) {
-  chrome.runtime.sendMessage({ type: 'DK_LOGOUT' });
+  send({ type: 'DK_LOGOUT' });
 }
 
 // ── Auto-fill login page ────────────────────────────────────────────────────
@@ -27,7 +33,6 @@ if (href.includes('myaccount.draftkings.com') && href.includes('/login')) {
     if (!dkEmail || !dkPassword || !dkAutoLogin) return;
 
     function setReactInput(el, value) {
-      // React controlled inputs ignore plain .value = x; need native setter to trigger onChange
       const setter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set;
       setter.call(el, value);
       el.dispatchEvent(new Event('input', { bubbles: true }));
@@ -71,7 +76,7 @@ if (href.startsWith('https://sportsbook.draftkings.com') && !href.includes('/log
     );
     if (loggedOut) {
       alerted = true;
-      chrome.runtime.sendMessage({ type: 'DK_NEEDS_LOGIN' });
+      send({ type: 'DK_NEEDS_LOGIN' });
     }
   }
 
