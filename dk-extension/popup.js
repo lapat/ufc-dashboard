@@ -1,3 +1,65 @@
+// ── Chat / bet placement ────────────────────────────────────────────────────
+function chatMsg(who, html, cls) {
+  const log = document.getElementById('chat-log');
+  const div = document.createElement('div');
+  div.className = 'cm';
+  div.innerHTML = `<span class="cm-who ${cls||who}">${who.toUpperCase()}</span><span class="cm-text">${html}</span>`;
+  log.appendChild(div);
+  log.scrollTop = log.scrollHeight;
+}
+
+function parseBetCmd(raw) {
+  // "bet canada 0.01"  "bet draw 5"  "bet away 10"  "bet home 2.50"
+  const m = raw.trim().match(/^bet\s+(.+?)\s+([\d.]+)$/i);
+  if (!m) return null;
+  return { side: m[1].trim(), amount: parseFloat(m[2]) };
+}
+
+let betInFlight = false;
+
+function initBetChat() {
+  const input = document.getElementById('betCmd');
+  const goBtn = document.getElementById('betGo');
+
+  function sendBet() {
+    if (betInFlight) return;
+    const raw = input.value.trim();
+    if (!raw) return;
+    const parsed = parseBetCmd(raw);
+    if (!parsed) {
+      chatMsg('BOT', `Didn't understand. Try: <b>bet canada 0.01</b> or <b>bet draw 0.01</b>`, 'err');
+      return;
+    }
+    if (parsed.amount < 0.01) { chatMsg('BOT', 'Minimum $0.01', 'err'); return; }
+
+    chatMsg('YOU', `${parsed.side} — $${parsed.amount}`, 'you');
+    chatMsg('BOT', `Finding <b>${parsed.side}</b> button on DK tab…`, 'bot');
+    betInFlight = true;
+    goBtn.disabled = true;
+    input.value = '';
+
+    chrome.runtime.sendMessage({ type: 'PLACE_BET', side: parsed.side, amount: parsed.amount });
+  }
+
+  goBtn.addEventListener('click', sendBet);
+  input.addEventListener('keydown', e => { if (e.key === 'Enter') sendBet(); });
+
+  chrome.runtime.onMessage.addListener(msg => {
+    if (msg.type !== 'BET_RESULT') return;
+    betInFlight = false;
+    goBtn.disabled = false;
+    if (msg.ok) {
+      const confirmed = msg.confirmed ? ' <b>Confirmed in slip ✓</b>' : ' (check DK for confirmation)';
+      chatMsg('BOT', `Bet placed: <b>${msg.side}</b> ${msg.oddsText} for $${msg.amount}.${confirmed}`, 'ok');
+    } else {
+      chatMsg('BOT', `Failed [${msg.step||'?'}]: ${msg.error}`, 'err');
+    }
+  });
+}
+
+initBetChat();
+
+// ── Status polling ──────────────────────────────────────────────────────────
 function ago(ts) {
   if (!ts) return '—';
   const s = Math.round((Date.now() - ts) / 1000);

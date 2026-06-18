@@ -33,10 +33,34 @@
     .user-row button{background:#1a1a00;border:1px solid #e8b84b44;border-radius:4px;color:#e8b84b;font-size:0.65rem;padding:5px 10px;cursor:pointer;white-space:nowrap}
     .user-row button:hover{background:#2a2a00}
     .user-row button.saved{background:#0a1a0a;border-color:#69db7c44;color:#69db7c}
+    /* Chat */
+    #chat-log{background:#050505;border:1px solid #1a1a1a;border-radius:6px;padding:8px;min-height:60px;max-height:160px;overflow-y:auto;margin-bottom:6px;font-size:0.65rem}
+    .cm{padding:3px 0;border-bottom:1px solid #0d0d0d;display:flex;gap:6px;align-items:flex-start}
+    .cm-who{flex-shrink:0;font-size:0.58rem;font-weight:700;min-width:32px}
+    .cm-who.you{color:#e8b84b}.cm-who.bot{color:#74c0fc}.cm-who.ok{color:#69db7c}.cm-who.err{color:#ff6b6b}
+    .cm-text{color:#888;line-height:1.4}
+    .cm-text b{color:#ddd}
+    .bet-row{display:flex;gap:6px}
+    .bet-row input{flex:1;background:#111;border:1px solid #333;border-radius:4px;color:#ddd;font-size:0.72rem;padding:6px 10px;outline:none}
+    .bet-row input:focus{border-color:#e8b84b}
+    .bet-row input::placeholder{color:#333}
+    .bet-row button{background:#1a1a00;border:1px solid #e8b84b66;border-radius:4px;color:#e8b84b;font-size:0.7rem;padding:6px 12px;cursor:pointer;font-weight:700}
+    .bet-row button:hover{background:#2a2600}
+    .bet-row button:disabled{opacity:0.4;cursor:default}
   </style>
 </head>
 <body>
-  <h1>⚡ Bet Bot DK Sync <span style="color:#333;font-size:0.65rem;font-weight:400;letter-spacing:0">v1.6</span></h1>
+  <h1>⚡ Bet Bot DK Sync <span style="color:#333;font-size:0.65rem;font-weight:400;letter-spacing:0">v2.7</span></h1>
+
+  <!-- ── Bet chat ── -->
+  <div class="section" style="margin-bottom:6px">Bet Chat
+    <span style="color:#333;font-size:0.58rem;font-weight:400">try: bet canada 0.01 · bet draw 0.01</span>
+  </div>
+  <div id="chat-log"><div class="cm"><span class="cm-who bot">BOT</span><span class="cm-text">Ready. Type <b>bet [team/draw] [amount]</b> — game must be visible on DK tab.</span></div></div>
+  <div class="bet-row" style="margin-bottom:12px">
+    <input id="betCmd" placeholder="bet canada 0.01" spellcheck="false"/>
+    <button id="betGo">GO</button>
+  </div>
 
   <!-- Manual username — set once so bets are isolated per person -->
   <div class="user-row">

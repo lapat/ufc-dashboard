@@ -176,3 +176,213 @@ comm -23 <(ls historical_data/*.json | xargs -I{} basename {} | grep -vE "^(dk_|
 - Railway filesystem is wiped on every deploy — nothing outside git survives
 - `GITHUB_TOKEN` must be set on Railway for live auto-commit to work
 - Never push during a live UFC event (main cards: Sat ~10pm–2am ET)
+
+---
+
+## AI Betting Agent — Autonomous Hedge System Spec
+
+**Committed 2026-06-18. Deep research completed before implementation.**
+
+### Vision
+
+User types: *"Bet Canada $25, hedge on Qatar if the line flips"*
+→ Claude Haiku parses intent → bot places leg 1 immediately → monitors DK DOM for crossover → auto-places hedge when triggered → guarantees profit on both outcomes.
+
+### Stack
+
+- `popup.js` — chat UI, strategy display
+- `background.js` — message routing, bet placement via `chrome.scripting.executeScript`
+- `content.js` — DK DOM watching (persistent, survives service worker kill), SSE relay
+- Railway server — `/api/chat` (new), `/api/live-crossovers`, `/api/bet-coverage`
+- Claude `claude-haiku-4-5-20251001` — intent parsing, <800ms latency target
+
+### 1. NL Intent Parsing (`POST /api/chat`)
+
+Server calls Claude Haiku with game context + open bets. Returns structured JSON:
+
+```json
+{
+  "action": "bet" | "strategy" | "cancel" | "status" | "clarify",
+  "bets": [{"side": "Canada", "amount": 25, "timing": "now" | "wait"}],
+  "hedge": {"trigger": "crossover" | "odds_target" | "manual", "targetOdds": null, "autoExecute": true},
+  "clarificationNeeded": null
+}
+```
+
+System prompt template:
+```
+You are BetBot for DraftKings live sports. Parse the user's message into the JSON schema below.
+Return ONLY valid JSON — no prose, no markdown fences.
+Current game: {{gameContext}}
+Open bets: {{openBets}}
+Rules:
+- side values must exactly match fighter/team names from the current game
+- amount must be a positive USD number; if missing set action="clarify"
+- "if line flips" / "when odds cross" → trigger="crossover", autoExecute=true
+- "if line hits -120" → trigger="odds_target", targetOdds=-120
+- When ambiguous: action="clarify", ask ONE specific question
+```
+
+Use prompt caching on the system block (`cache_control: {type: "ephemeral"}`). Cache reads cost 10% of full Haiku price.
+
+**8 example input → output pairs to include as few-shot examples:**
+1. `"Bet Canada $25"` → simple bet, timing=now
+2. `"Bet Canada $25, hedge Qatar if line flips"` → strategy, crossover trigger
+3. `"Put money on Canada"` → clarify (no amount)
+4. `"Bet USA $30"` (game: Canada vs Qatar) → clarify (team not found)
+5. `"Bet Qatar $30, hedge Canada when line hits -120"` → strategy, odds_target
+6. `"Cancel the hedge"` → cancel
+7. `"Bet Canada $20 and Qatar $20 right now"` → two immediate bets
+8. `"What's the current strategy?"` → status
+
+### 2. Hedge Math
+
+**American odds → decimal:**
+- Positive: `D = 1 + (american / 100)` (+150 → 2.50)
+- Negative: `D = 1 + (100 / |american|)` (-350 → 1.286)
+
+**Equal-profit hedge formula:**
+```
+payout1 = S1 × D1
+S2 = payout1 / D2          (hedge stake for equal profit on both sides)
+guaranteedProfit = payout1 - S1 - S2
+```
+
+**Break-even minimum hedge odds:**
+```
+Required D2 ≥ D1 / (D1 - 1)
+Example: -350 (D1=1.286) → D2 ≥ 4.50 (+350 American)
+```
+
+**Vig kills small crossovers:** DK's combined implied probability is always >100% (~109% on -110/-110 markets). A hedge is only profitable when the combined implied probability of your two bets falls below 100%. This requires catching the dog at a significant underdog price (e.g., +300) before the line shifts.
+
+**Worked example showing NOT profitable:** $25 at -350 (D1=1.286, payout=$32.14), hedge at +105 (D2=2.050) → S2=$15.68, total staked=$40.68, net=-$8.54. The line must move to at least +350 to break even on a -350 first leg.
+
+**Soccer critical insight:** Soccer has 3 outcomes (home/draw/away). A two-leg hedge only covers 2/3 outcomes. Always detect `game.sport === "soccer"` and warn about draw exposure after placing both legs.
+
+### 3. Trigger Architecture
+
+**Primary (fastest): Content script watches DK DOM every 1s**
+```javascript
+// content.js polls odds buttons every 1s
+// Reads aria-label or button text for current American odds
+// When dogImplied >= favImplied → fire crossoverDetected event
+```
+Latency: 1–3s (DK's own live feed). Zero Odds API lag.
+
+**Fallback: Server polls `/api/live-crossovers` every 5s**
+Latency: up to 20s total (5s poll + 3-15s Odds API poll).
+
+**MV3 service worker survival:**
+- The 30s idle kill means `setInterval` in background.js is unreliable
+- Content.js (runs in DK tab) is persistent — hold the watch loop there
+- Use `chrome.runtime.connect` port from content.js → background to keep SW alive (Chrome 114+: open port resets idle timer)
+- `chrome.alarms` at 1-minute intervals as a second-level fallback
+
+### 4. Strategy State Machine
+
+States: `IDLE → FIRST_BET_PENDING → FIRST_BET_PLACED → WATCHING_HEDGE → HEDGE_FIRED → BOTH_PLACED | HEDGE_FAILED`
+
+Persisted in `chrome.storage.local` under key `"pendingStrategy"`:
+```javascript
+{
+  id, state, game: {id, fighter1, fighter2, sport},
+  leg1: {side, amount, odds, placedAt, betId, confirmed},
+  hedgeConfig: {trigger, autoExecute, targetOdds, minProfitUSD: 1.00},
+  leg2: {side, targetOdds, actualOdds, amount, placedAt, betId, confirmed},
+  math: {leg1Payout, guaranteedProfit, totalStaked},
+  createdAt, expiresAt,  // 4-hour expiry
+  chatHistory, errorLog
+}
+```
+
+**On service worker restart:** Read from storage. If state is `FIRST_BET_PENDING` or `HEDGE_FIRED`, check `/api/dk-bets` to verify if the bet landed. If state is `FIRST_BET_PLACED`, check if crossover already occurred while offline and notify user.
+
+**On laptop close:** Hedge watch dies. On wake, check crossover status and inform user if they missed the window.
+
+### 5. Error Modes (15 scenarios)
+
+1. First bet placed but not in DK My Bets after 10s → pause strategy, alert user
+2. Odds moved >8 points during verify window → abort hedge, keep watching
+3. Market suspended during hedge attempt → wait for reopen, re-check
+4. Service worker killed mid-hedge (MV3 30s limit) → on wake, check `/api/dk-bets`
+5. Laptop closed with leg 1 open → on wake, notify of missed crossover window
+6. Crossover on wrong game (two live simultaneously) → filter by `strategy.game.id`
+7. Odds changed between verify and click → abort, notify with old vs new
+8. DK "Accept New Odds" dialog during hedge → re-calculate profit, auto-accept if still profitable
+9. Insufficient balance for hedge amount → show shortfall, offer reduced stake
+10. First leg stake so small that hedge is below DK minimum ($1) → warn before entering WATCHING
+11. User types "cancel" after leg 1 placed → clear strategy, warn that leg 1 is irrevocable
+12. Network timeout during Place Bet → check My Bets before retrying (never blindly retry)
+13. User navigated away from DK during 3s countdown → inject fails, provide manual hedge details
+14. Both legs placed but one shows "Pending Review" → warn profit not guaranteed
+15. Odds API outage → DOM watch becomes sole trigger; surface to user with current math
+
+### 6. Triple-Verify (all 7 must pass before auto-hedge click)
+
+1. **Game identity** — both team names in DOM match `strategy.game.fighter1/fighter2`
+2. **Odds slippage** — current DK odds within ±8 American points of trigger odds
+3. **Market not suspended** — no "Market Suspended" text in DOM
+4. **Hedge still profitable** — re-run hedge math with current odds, profit ≥ `minProfitUSD`
+5. **Bet slip empty** — no pre-existing bets in slip
+6. **Balance sufficient** — DK available balance ≥ calculated hedge stake
+7. **Leg 1 confirmed** — leg 1 betId exists in `/api/dk-bets` (not just "placed")
+
+Any single failure → abort, set `HEDGE_FAILED`, surface all failed checks with specific messages, preserve full hedge details for manual placement.
+
+### 7. Model Selection
+
+**Use `claude-haiku-4-5-20251001` for all intent parsing.**
+
+Cost: $1/$5 per MTok (3x cheaper than Sonnet). TTFT: ~200-400ms. Sufficient for slot-filling tasks.
+
+With prompt caching on the system block: effective cost ~$0.20-0.25 per 1,000 bet commands.
+
+**Escalate to Sonnet only when:** confidence < 0.60 (second-opinion parse), or command is multi-layered/complex.
+
+**Idempotency:** Generate a deterministic key from intent fields before placing:
+```javascript
+sha256(userId + gameId + side + amount + Math.floor(Date.now() / 30000))
+```
+Store in Redis/chrome.storage. If key exists → return cached result, don't re-place.
+
+### 8. UX Conversation Flow (happy path)
+
+```
+YOU:  Bet Canada $25, hedge Qatar if line flips
+
+BOT:  Leg 1: Canada $25 @ -350 | Leg 2: Qatar auto-hedge on crossover
+      Placing now — confirm? (y / cancel)
+
+YOU:  y
+
+BOT:  ✓ Leg 1 placed: Canada $25 @ -350 (payout: $32.14)
+      [● WATCHING — Canada $25 @ -350]
+
+[Line moves: Qatar hits -108]
+
+BOT:  ⚡ CROSSOVER — Qatar -108 (was +280). Verifying (7/7 checks)...
+      Hedge: Qatar $15.67 → Canada wins +$6.47 | Qatar wins +$5.52
+      Auto-placing in 3s... (type STOP to cancel)
+
+BOT:  ✓ Leg 2 placed: Qatar $15.67 @ -108. WIN-WIN LOCKED.
+      ⚠ DRAW NOT COVERED — this is soccer (3 outcomes). Type "bet draw $X" to complete.
+```
+
+### 9. Tests (38 unit tests in test.js)
+
+See `── AI Agent: Hedge Math ──`, `── AI Agent: Strategy Logic ──`, `── AI Agent: Trigger Conditions ──`, `── AI Agent: Triple Verify ──`, `── AI Agent: Error Recovery ──`, `── AI Agent: NL Intent Parsing ──` sections in test.js.
+
+**All tests run with `node test.js --local` (no server needed for unit tests — they run before the async server block).**
+
+### Implementation Checklist
+
+- [ ] `POST /api/chat` server endpoint (Claude Haiku call + JSON parse + fallback)
+- [ ] `americanToDecimal()`, `calculateHedge()`, `getSportOutcomes()` in shared utils
+- [ ] `content.js` odds DOM watcher (1s poll on DK sportsbook tab)
+- [ ] `background.js` strategy state machine (load/save chrome.storage.local)
+- [ ] `background.js` triple-verify runner (7 checks before hedge click)
+- [ ] `popup.js` strategy display + STOP command + 3s countdown
+- [ ] Server: `GET /api/chat/status` for current strategy state
+- [ ] Idempotency key before every bet placement
+- [ ] Soccer 3-outcome draw exposure warning

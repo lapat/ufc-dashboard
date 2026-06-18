@@ -182,6 +182,146 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
     return;
   }
 
+  if (msg.type === 'PLACE_BET') {
+    const { side, amount, tabId: requestedTabId } = msg;
+    const popupPort = sender;
+    (async () => {
+      // Find the sportsbook tab to place on (prefer active, fall back to any non-mybets DK tab)
+      const allDk = await chrome.tabs.query({ url: 'https://sportsbook.draftkings.com/*' });
+      const target = allDk.find(t => !t.url?.includes('/mybets') && t.active)
+                  || allDk.find(t => !t.url?.includes('/mybets'))
+                  || allDk[0];
+      if (!target) {
+        chrome.runtime.sendMessage({ type: 'BET_RESULT', ok: false, error: 'No DK sportsbook tab open — go to sportsbook.draftkings.com first' });
+        return;
+      }
+      addLog(`PLACE_BET: ${side} $${amount} on tab ${target.id}`);
+      try {
+        const results = await chrome.scripting.executeScript({
+          target: { tabId: target.id },
+          func: async (side, amount) => {
+            function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+            function setReactInput(el, value) {
+              const setter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set;
+              setter.call(el, value);
+              el.dispatchEvent(new Event('input', { bubbles: true }));
+              el.dispatchEvent(new Event('change', { bubbles: true }));
+            }
+
+            // ── Step 1: find the outcome button ─────────────────────────────
+            const sideL = side.toLowerCase().trim();
+            // Grab bet-slip count before so we can detect the click registered
+            const slipBefore = document.querySelectorAll('[class*="betslip"], [class*="bet-slip"], [class*="BetSlip"]').length;
+
+            // Find clickable element whose immediate text matches the side
+            // DK buttons: <button ...><span class="...label">Canada</span><span class="...odds">-1600</span></button>
+            const allClickable = [
+              ...document.querySelectorAll('button, [role="button"]'),
+            ];
+            let outcomeBtn = null;
+
+            for (const el of allClickable) {
+              // Use direct child text so we don't match "Canada vs Qatar" game title buttons
+              const spans = el.querySelectorAll('span, div, p');
+              const labelSpan = [...spans].find(s =>
+                s.childElementCount === 0 && s.textContent.trim().toLowerCase() === sideL
+              );
+              if (labelSpan) { outcomeBtn = el; break; }
+            }
+
+            // Fallback: looser match — button whose text starts with or equals side
+            if (!outcomeBtn) {
+              outcomeBtn = allClickable.find(el => {
+                const t = el.textContent.trim().toLowerCase();
+                return (t === sideL || t.startsWith(sideL + '\n') || t.startsWith(sideL + ' '));
+              });
+            }
+
+            if (!outcomeBtn) {
+              return { ok: false, step: 'find_button', error: `No button found for "${side}" — make sure the game is visible on screen` };
+            }
+
+            // Read the odds off the button for verification
+            const oddsEl = [...outcomeBtn.querySelectorAll('span, div')].find(s =>
+              s.childElementCount === 0 && /^[+-]\d+$/.test(s.textContent.trim())
+            );
+            const oddsText = oddsEl ? oddsEl.textContent.trim() : '?';
+
+            // Check if it's already selected (active class)
+            const alreadySelected = outcomeBtn.classList.toString().toLowerCase().includes('active')
+                                 || outcomeBtn.getAttribute('aria-pressed') === 'true';
+
+            outcomeBtn.click();
+            await sleep(1200);
+
+            // ── Step 2: find bet slip amount input ───────────────────────────
+            // DK bet slip uses input with aria-label="Wager" or placeholder "Enter Wager"
+            let amtInput = null;
+            for (let attempt = 0; attempt < 8; attempt++) {
+              amtInput = [...document.querySelectorAll('input')]
+                .find(el =>
+                  /wager|amount|stake|bet amount/i.test(el.getAttribute('aria-label') || el.placeholder || '') ||
+                  el.type === 'number' && el.closest('[class*="betslip"], [class*="bet-slip"], [class*="BetSlip"], [class*="sportsbook-betslip"]')
+                );
+              if (amtInput) break;
+              await sleep(400);
+            }
+
+            if (!amtInput) {
+              return { ok: false, step: 'find_input', oddsText, error: 'Bet slip did not open or amount input not found — try opening the bet slip manually first' };
+            }
+
+            // Clear and set amount
+            amtInput.focus();
+            setReactInput(amtInput, String(amount));
+            await sleep(600);
+
+            // ── Step 3: find and click Place Bet button ───────────────────────
+            let placeBtn = [...document.querySelectorAll('button')]
+              .find(btn => /place\s*bet|bet\s*now|submit/i.test(btn.textContent.trim()) && !btn.disabled);
+
+            if (!placeBtn) {
+              // Try disabled version to diagnose
+              const disabledBtn = [...document.querySelectorAll('button')]
+                .find(btn => /place\s*bet|bet\s*now/i.test(btn.textContent.trim()));
+              if (disabledBtn) {
+                return { ok: false, step: 'btn_disabled', oddsText, amount, error: `Place Bet button is disabled — check balance or if odds changed` };
+              }
+              return { ok: false, step: 'find_placebtn', oddsText, amount, error: 'Place Bet button not found' };
+            }
+
+            placeBtn.click();
+            await sleep(1500);
+
+            // ── Step 4: detect confirmation ───────────────────────────────────
+            const bodyText = document.body.innerText;
+            const confirmed = /bet\s+placed|congrats|success|confirmed/i.test(bodyText);
+            const oddsChanged = /odds\s+(have\s+)?changed|accept\s+new\s+odds/i.test(bodyText);
+            const suspended = /market\s+suspended|betting\s+suspended/i.test(bodyText);
+
+            if (oddsChanged) {
+              return { ok: false, step: 'odds_changed', oddsText, amount, error: 'DK says odds changed — click "Accept New Odds" in the slip and retry' };
+            }
+            if (suspended) {
+              return { ok: false, step: 'suspended', oddsText, error: 'Market suspended (goal? halftime?) — retry in 30s' };
+            }
+
+            return { ok: true, side, oddsText, amount, confirmed, step: 'done' };
+          },
+          args: [side, amount]
+        });
+        const result = results?.[0]?.result || { ok: false, error: 'No result from tab' };
+        addLog(`BET_RESULT: ${JSON.stringify(result)}`);
+        chrome.runtime.sendMessage({ type: 'BET_RESULT', ...result });
+      } catch(e) {
+        addLog(`BET_RESULT error: ${e.message}`);
+        chrome.runtime.sendMessage({ type: 'BET_RESULT', ok: false, error: e.message });
+      }
+    })();
+    return true;
+  }
+
   if (msg.type !== 'DK_API') return;
 
   const url = msg.url;

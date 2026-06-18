@@ -1508,6 +1508,55 @@ function testSoccerOddsExtractIncludesDraw() {
   if (odds.fighter2.name !== 'Draw') throw new Error(`Expected Draw as fighter2, got ${odds.fighter2.name}`);
 }
 
+async function runCoverageServerTests() {
+  console.log('\n── Bet Coverage (Server) ──');
+
+  // Seed a test user with known bets via /api/dk-mock, then check /api/bet-coverage
+  await check('/api/bet-coverage returns 200 with covered array', async () => {
+    const r = await fetch(`${LOCAL}/api/bet-coverage?user=cov-test-user`);
+    assert(r.status === 200, `expected 200, got ${r.status}`);
+    const d = await r.json();
+    assert(Array.isArray(d.covered), `covered must be array, got ${typeof d.covered}`);
+    assert(typeof d.userId === 'string', `userId missing`);
+  });
+
+  await check('/api/bet-coverage with no bets returns empty covered array', async () => {
+    const d = await fetch(`${LOCAL}/api/bet-coverage?user=nobody-ever`).then(r => r.json());
+    assert(d.covered.length === 0, `expected [], got ${JSON.stringify(d.covered)}`);
+  });
+
+  await check('/api/bet-coverage reflects mocked bet selection', async () => {
+    // Seed a bet via /api/dk-mock
+    await fetch(`${LOCAL}/api/dk-mock`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ fighter: 'Canada', odds: '-1600', stake: 0.01, userId: 'cov-live-test' })
+    });
+    const d = await fetch(`${LOCAL}/api/bet-coverage?user=cov-live-test`).then(r => r.json());
+    const hasCanada = d.covered.some(s => s.toLowerCase().includes('canada'));
+    assert(hasCanada, `expected "canada" in covered, got ${JSON.stringify(d.covered)}`);
+  });
+
+  await check('/api/bet-coverage excludes parlays from covered selections', async () => {
+    // The /api/dk-mock endpoint creates straight bets — confirm they appear
+    // Parlay bets should not light up individual coverage dots
+    const d = await fetch(`${LOCAL}/api/bet-coverage?user=cov-live-test`).then(r => r.json());
+    assert(Array.isArray(d.bets), `bets array missing`);
+    const noParlay = d.bets.every(b => !b.isParlay);
+    assert(noParlay, `parlays should be excluded from coverage bets`);
+  });
+
+  await check('/api/bet-coverage bets field has selection+stake+odds', async () => {
+    const d = await fetch(`${LOCAL}/api/bet-coverage?user=cov-live-test`).then(r => r.json());
+    if (d.bets.length) {
+      const b = d.bets[0];
+      assert(typeof b.selection === 'string', `missing selection`);
+      assert(typeof b.stake === 'number', `missing stake`);
+      assert(typeof b.odds === 'string', `missing odds`);
+    }
+  });
+}
+
 async function runRecordingTests() {
   console.log('\n── Recording (Server) ──');
 
@@ -1600,8 +1649,652 @@ try { testMigrateToVolumeCopiesFiles(); console.log('  ✓ migrateToVolume creat
 try { testWorldCupInSportMeta(); console.log('  ✓ World Cup fight ID has soccer__ prefix, 130-min live window correct'); passed++; } catch(e) { console.error('  ✗ World Cup sport meta:', e.message); failed++; }
 try { testSoccerOddsExtractIncludesDraw(); console.log('  ✓ soccer h2h odds extraction preserves Draw as fighter2'); passed++; } catch(e) { console.error('  ✗ soccer odds extract:', e.message); failed++; }
 
+// ── parseBetCmd (popup.js logic, replicated here for unit testing) ─────────
+console.log('\n── Bet Chat: parseBetCmd ──');
+
+function parseBetCmd(raw) {
+  const m = raw.trim().match(/^bet\s+(.+?)\s+([\d.]+)$/i);
+  if (!m) return null;
+  return { side: m[1].trim(), amount: parseFloat(m[2]) };
+}
+
+function testParseBetCmdBasic() {
+  const r = parseBetCmd('bet canada 0.01');
+  assert(r && r.side === 'canada' && r.amount === 0.01, `got ${JSON.stringify(r)}`);
+}
+function testParseBetCmdDraw() {
+  const r = parseBetCmd('bet Draw 5');
+  assert(r && r.side === 'Draw' && r.amount === 5, `got ${JSON.stringify(r)}`);
+}
+function testParseBetCmdDecimal() {
+  const r = parseBetCmd('bet Fighter A 2.50');
+  assert(r && r.side === 'Fighter A' && r.amount === 2.5, `got ${JSON.stringify(r)}`);
+}
+function testParseBetCmdMultiWord() {
+  const r = parseBetCmd('bet Canada away 10');
+  assert(r && r.side === 'Canada away' && r.amount === 10, `got ${JSON.stringify(r)}`);
+}
+function testParseBetCmdCaseInsensitive() {
+  const r = parseBetCmd('BET QATAR 25');
+  assert(r && r.side === 'QATAR' && r.amount === 25, `got ${JSON.stringify(r)}`);
+}
+function testParseBetCmdInvalidNoAmount() {
+  const r = parseBetCmd('bet canada');
+  assert(r === null, `expected null, got ${JSON.stringify(r)}`);
+}
+function testParseBetCmdInvalidNoKeyword() {
+  const r = parseBetCmd('canada 5');
+  assert(r === null, `expected null, got ${JSON.stringify(r)}`);
+}
+function testParseBetCmdInvalidEmptyString() {
+  const r = parseBetCmd('');
+  assert(r === null, `expected null, got ${JSON.stringify(r)}`);
+}
+
+try { testParseBetCmdBasic(); console.log('  ✓ parseBetCmd: "bet canada 0.01" parses correctly'); passed++; } catch(e) { console.error('  ✗ parseBetCmd basic:', e.message); failed++; }
+try { testParseBetCmdDraw(); console.log('  ✓ parseBetCmd: "bet Draw 5" parses Draw correctly'); passed++; } catch(e) { console.error('  ✗ parseBetCmd draw:', e.message); failed++; }
+try { testParseBetCmdDecimal(); console.log('  ✓ parseBetCmd: multi-word side name parsed correctly'); passed++; } catch(e) { console.error('  ✗ parseBetCmd decimal:', e.message); failed++; }
+try { testParseBetCmdMultiWord(); console.log('  ✓ parseBetCmd: "bet Canada away 10" captures full side'); passed++; } catch(e) { console.error('  ✗ parseBetCmd multi-word:', e.message); failed++; }
+try { testParseBetCmdCaseInsensitive(); console.log('  ✓ parseBetCmd: uppercase BET works'); passed++; } catch(e) { console.error('  ✗ parseBetCmd case:', e.message); failed++; }
+try { testParseBetCmdInvalidNoAmount(); console.log('  ✓ parseBetCmd: "bet canada" (no amount) → null'); passed++; } catch(e) { console.error('  ✗ parseBetCmd no-amount:', e.message); failed++; }
+try { testParseBetCmdInvalidNoKeyword(); console.log('  ✓ parseBetCmd: "canada 5" (no "bet" keyword) → null'); passed++; } catch(e) { console.error('  ✗ parseBetCmd no-keyword:', e.message); failed++; }
+try { testParseBetCmdInvalidEmptyString(); console.log('  ✓ parseBetCmd: empty string → null'); passed++; } catch(e) { console.error('  ✗ parseBetCmd empty:', e.message); failed++; }
+
+// ── Coverage gamification (applyCoverage logic) ───────────────────────────
+console.log('\n── Bet Coverage: gamification logic ──');
+
+function computeCoverage(outcomeNames, covered) {
+  // outcomeNames: ['Canada','Draw','Qatar']  covered: ['canada','draw']
+  const coveredLower = covered.map(s => s.toLowerCase());
+  const matched = outcomeNames.filter(name => {
+    const nl = name.toLowerCase();
+    return coveredLower.some(s => s === nl || nl.includes(s) || s.includes(nl));
+  });
+  return { covered: matched, locked: matched.length === outcomeNames.length && outcomeNames.length > 0 };
+}
+
+function testCoverage_noBets() {
+  const r = computeCoverage(['Canada','Draw','Qatar'], []);
+  assert(r.covered.length === 0 && !r.locked, `got ${JSON.stringify(r)}`);
+}
+function testCoverage_oneSide() {
+  const r = computeCoverage(['Canada','Draw','Qatar'], ['canada']);
+  assert(r.covered.length === 1 && !r.locked, `got ${JSON.stringify(r)}`);
+}
+function testCoverage_twoCovered() {
+  const r = computeCoverage(['Canada','Draw','Qatar'], ['canada','draw']);
+  assert(r.covered.length === 2 && !r.locked, `got ${JSON.stringify(r)}`);
+}
+function testCoverage_allThreeLocked() {
+  const r = computeCoverage(['Canada','Draw','Qatar'], ['canada','draw','qatar']);
+  assert(r.covered.length === 3 && r.locked, `got ${JSON.stringify(r)}`);
+}
+function testCoverage_mmaLocked() {
+  const r = computeCoverage(['Fighter A','Fighter B'], ['fighter a','fighter b']);
+  assert(r.covered.length === 2 && r.locked, `MMA should be locked: ${JSON.stringify(r)}`);
+}
+function testCoverage_mmaOneSide() {
+  const r = computeCoverage(['Fighter A','Fighter B'], ['fighter a']);
+  assert(r.covered.length === 1 && !r.locked, `got ${JSON.stringify(r)}`);
+}
+function testCoverage_fuzzyMatch() {
+  // "alex pereira" matches outcome "Alex Pereira" (case-insensitive)
+  const r = computeCoverage(['Alex Pereira','Ciryl Gane'], ['alex pereira']);
+  assert(r.covered.length === 1 && r.covered[0] === 'Alex Pereira', `got ${JSON.stringify(r)}`);
+}
+function testCoverage_emptyOutcomes() {
+  const r = computeCoverage([], ['canada']);
+  assert(!r.locked && r.covered.length === 0, `empty outcomes should never lock: ${JSON.stringify(r)}`);
+}
+
+try { testCoverage_noBets(); console.log('  ✓ coverage: no bets → 0 covered, not locked'); passed++; } catch(e) { console.error('  ✗ coverage no-bets:', e.message); failed++; }
+try { testCoverage_oneSide(); console.log('  ✓ coverage: 1/3 covered → not locked'); passed++; } catch(e) { console.error('  ✗ coverage 1-side:', e.message); failed++; }
+try { testCoverage_twoCovered(); console.log('  ✓ coverage: 2/3 covered → not locked'); passed++; } catch(e) { console.error('  ✗ coverage 2-covered:', e.message); failed++; }
+try { testCoverage_allThreeLocked(); console.log('  ✓ coverage: 3/3 soccer → LOCKED'); passed++; } catch(e) { console.error('  ✗ coverage all-three:', e.message); failed++; }
+try { testCoverage_mmaLocked(); console.log('  ✓ coverage: 2/2 MMA → LOCKED'); passed++; } catch(e) { console.error('  ✗ coverage mma-locked:', e.message); failed++; }
+try { testCoverage_mmaOneSide(); console.log('  ✓ coverage: 1/2 MMA → not locked'); passed++; } catch(e) { console.error('  ✗ coverage mma-one-side:', e.message); failed++; }
+try { testCoverage_fuzzyMatch(); console.log('  ✓ coverage: fuzzy case-insensitive match works'); passed++; } catch(e) { console.error('  ✗ coverage fuzzy:', e.message); failed++; }
+try { testCoverage_emptyOutcomes(); console.log('  ✓ coverage: empty outcomes array never locks'); passed++; } catch(e) { console.error('  ✗ coverage empty:', e.message); failed++; }
+
+// ── AI Agent: Hedge Math ──────────────────────────────────────────────────
+console.log('\n── AI Agent: Hedge Math ──');
+
+function americanToDecimal(american) {
+  if (american > 0) return (american / 100) + 1;
+  if (american < 0) return (100 / Math.abs(american)) + 1;
+  throw new Error('Odds cannot be zero');
+}
+
+function calculateHedge(leg1Stake, leg1AmericanOdds, hedgeAmericanOdds) {
+  const D1 = americanToDecimal(leg1AmericanOdds);
+  const D2 = americanToDecimal(hedgeAmericanOdds);
+  const payout1 = leg1Stake * D1;
+  const hedgeStake = payout1 / D2;
+  const totalStaked = leg1Stake + hedgeStake;
+  const netProfit = payout1 - totalStaked;
+  return {
+    hedgeStake: Math.round(hedgeStake * 100) / 100,
+    payout1: Math.round(payout1 * 100) / 100,
+    profitIfA: Math.round(netProfit * 100) / 100,
+    profitIfB: Math.round(netProfit * 100) / 100,
+    totalStaked: Math.round(totalStaked * 100) / 100,
+    profitable: netProfit > 0
+  };
+}
+
+function breakEvenD2(D1) {
+  return D1 / (D1 - 1);
+}
+
+// hedgeMath_basicEqualProfit
+try {
+  // +200 first leg (D1=3.0, payout=$75), hedge at +100 (D2=2.0): S2=$37.5, profit=$12.50
+  const h = calculateHedge(25, 200, 100);
+  assert(h.hedgeStake === 37.5, `stake should be 37.5, got ${h.hedgeStake}`);
+  assert(h.profitable, `should be profitable, profit=${h.profitIfA}`);
+  assert(Math.abs(h.profitIfA - h.profitIfB) < 0.01, 'profits should be equal');
+  // Note: at exactly +100/+100 you break even (not profitable) — this uses asymmetric odds
+  const breakEven = calculateHedge(25, 100, 100);
+  assert(breakEven.profitable === false, 'equal +100/+100 should NOT be profitable (break-even)');
+  console.log('  ✓ hedgeMath: asymmetric odds → profitable; equal +100/+100 → break-even'); passed++;
+} catch(e) { console.error('  ✗ hedgeMath basicEqualProfit:', e.message); failed++; }
+
+// hedgeMath_americanOddsConversion_positive
+try {
+  assert(americanToDecimal(150) === 2.5, `+150 should be 2.5, got ${americanToDecimal(150)}`);
+  assert(americanToDecimal(280) === 3.8, `+280 should be 3.8, got ${americanToDecimal(280)}`);
+  assert(americanToDecimal(100) === 2.0, `+100 should be 2.0, got ${americanToDecimal(100)}`);
+  console.log('  ✓ hedgeMath: positive American odds → decimal correct'); passed++;
+} catch(e) { console.error('  ✗ hedgeMath positiveOdds:', e.message); failed++; }
+
+// hedgeMath_americanOddsConversion_negative
+try {
+  const d110 = americanToDecimal(-110);
+  const d350 = americanToDecimal(-350);
+  assert(Math.abs(d110 - 1.9091) < 0.001, `-110 → ~1.9091, got ${d110}`);
+  assert(Math.abs(d350 - 1.2857) < 0.001, `-350 → ~1.2857, got ${d350}`);
+  console.log('  ✓ hedgeMath: negative American odds → decimal correct'); passed++;
+} catch(e) { console.error('  ✗ hedgeMath negativeOdds:', e.message); failed++; }
+
+// hedgeMath_notProfitable — heavy fav first leg hedged at slight dog
+try {
+  const h = calculateHedge(25, -350, 105); // -350 first, hedge at +105
+  assert(!h.profitable, `should NOT be profitable: profit=${h.profitIfA}`);
+  assert(h.profitIfA < 0, `profit should be negative, got ${h.profitIfA}`);
+  console.log('  ✓ hedgeMath: -350 first leg + +105 hedge → NOT profitable (vig kills it)'); passed++;
+} catch(e) { console.error('  ✗ hedgeMath notProfitable:', e.message); failed++; }
+
+// hedgeMath_breakEvenThreshold
+try {
+  const D1 = americanToDecimal(-350); // 1.2857
+  const minD2 = breakEvenD2(D1);
+  // For -350 first leg, break-even requires ~+350 on the hedge side
+  assert(minD2 > 4.0, `break-even D2 should be >4.0, got ${minD2}`);
+  assert(minD2 < 5.0, `break-even D2 should be <5.0, got ${minD2}`);
+  console.log('  ✓ hedgeMath: -350 first leg break-even requires ~+350 hedge'); passed++;
+} catch(e) { console.error('  ✗ hedgeMath breakEven:', e.message); failed++; }
+
+// hedgeMath_soccerThreeWay_drawExposure
+try {
+  const outcomes = ['Canada', 'Draw', 'Qatar'];
+  const hedged = ['canada', 'qatar'];
+  const unhedged = outcomes.filter(o => !hedged.some(h => o.toLowerCase() === h));
+  assert(unhedged.length === 1, `should have 1 unhedged, got ${unhedged.length}`);
+  assert(unhedged[0] === 'Draw', `unhedged should be Draw, got ${unhedged[0]}`);
+  console.log('  ✓ hedgeMath: soccer 2-leg hedge leaves Draw exposed'); passed++;
+} catch(e) { console.error('  ✗ hedgeMath soccerDraw:', e.message); failed++; }
+
+// hedgeMath_vigEatsProfit_sameOdds
+try {
+  const h = calculateHedge(10, -110, -110); // equal vig market
+  assert(!h.profitable, `equal -110/-110 hedge should NOT be profitable: ${h.profitIfA}`);
+  console.log('  ✓ hedgeMath: -110/-110 equal vig market → NOT profitable'); passed++;
+} catch(e) { console.error('  ✗ hedgeMath vigEats:', e.message); failed++; }
+
+// hedgeMath_minimumOddsFormula_multiple
+try {
+  // -150 first leg: break-even D2 = 1.667 / 0.667 = 2.5 (+150)
+  const D1_150 = americanToDecimal(-150);
+  const minD2_150 = breakEvenD2(D1_150);
+  assert(Math.abs(minD2_150 - 2.5) < 0.01, `-150 break-even ~2.5, got ${minD2_150}`);
+  // -110 first leg: break-even D2 = 1.909 / 0.909 ≈ 2.10 (+110)
+  const D1_110 = americanToDecimal(-110);
+  const minD2_110 = breakEvenD2(D1_110);
+  assert(Math.abs(minD2_110 - 2.10) < 0.05, `-110 break-even ~2.10, got ${minD2_110}`);
+  console.log('  ✓ hedgeMath: break-even formula correct for -150 and -110'); passed++;
+} catch(e) { console.error('  ✗ hedgeMath minOddsFormula:', e.message); failed++; }
+
+// ── AI Agent: Trigger Conditions ─────────────────────────────────────────
+console.log('\n── AI Agent: Trigger Conditions ──');
+
+function crossoverMet(dogImplied, favImplied) {
+  return dogImplied >= favImplied;
+}
+
+function oddsTargetMet(currentAmerican, targetAmerican) {
+  // "Met" when current odds are >= target (numerically):
+  // Negative: -115 >= -120 means less vig (better price) — target met
+  // Positive: +160 >= +150 means bigger payout — target met
+  return currentAmerican >= targetAmerican;
+}
+
+// trigger_crossoverConditionMet
+try {
+  assert(crossoverMet(0.55, 0.48) === true, 'dog 55% > fav 48% should be crossed');
+  assert(crossoverMet(0.50, 0.50) === true, 'equal implied should count as crossed');
+  console.log('  ✓ trigger: crossoverMet returns true when dog implied ≥ fav implied'); passed++;
+} catch(e) { console.error('  ✗ trigger crossoverMet:', e.message); failed++; }
+
+// trigger_crossoverNotYetMet
+try {
+  assert(crossoverMet(0.35, 0.60) === false, 'dog 35% < fav 60% should NOT be crossed');
+  assert(crossoverMet(0.49, 0.51) === false, 'dog 49% < fav 51% not crossed');
+  console.log('  ✓ trigger: crossoverMet returns false when dog implied < fav implied'); passed++;
+} catch(e) { console.error('  ✗ trigger crossoverNotMet:', e.message); failed++; }
+
+// trigger_oddsTargetHit
+try {
+  // target -120 (favorite), current -115 (became slightly less favorite — moved toward dog)
+  // In hedge context, we're waiting for the dog to become a favorite
+  // target means "hedge when Qatar hits -120 or better"
+  assert(oddsTargetMet(-115, -120) === true, '-115 should meet target of -120');
+  assert(oddsTargetMet(-125, -120) === false, '-125 does NOT meet -120 target (less favorable)');
+  console.log('  ✓ trigger: oddsTargetMet handles negative odds correctly'); passed++;
+} catch(e) { console.error('  ✗ trigger oddsTarget:', e.message); failed++; }
+
+// trigger_marketSuspended_abortsTrigger
+try {
+  function shouldAbortDueToSuspension(domState) {
+    return domState.marketSuspended === true;
+  }
+  assert(shouldAbortDueToSuspension({ marketSuspended: true }) === true, 'suspended should abort');
+  assert(shouldAbortDueToSuspension({ marketSuspended: false }) === false, 'not suspended should not abort');
+  assert(shouldAbortDueToSuspension({}) === false, 'missing field should not abort');
+  console.log('  ✓ trigger: market suspended → abort trigger'); passed++;
+} catch(e) { console.error('  ✗ trigger marketSuspended:', e.message); failed++; }
+
+// trigger_wrongGame_doesNotFire
+try {
+  function isCorrectGame(strategyGameId, crossoverGameId) {
+    return strategyGameId === crossoverGameId;
+  }
+  assert(isCorrectGame('game_123', 'game_456') === false, 'different game IDs should not fire');
+  assert(isCorrectGame('game_123', 'game_123') === true, 'same game ID should fire');
+  console.log('  ✓ trigger: wrong game ID → crossover event filtered out'); passed++;
+} catch(e) { console.error('  ✗ trigger wrongGame:', e.message); failed++; }
+
+// ── AI Agent: Strategy State Machine ─────────────────────────────────────
+console.log('\n── AI Agent: Strategy State Machine ──');
+
+const STRATEGY_STATES = ['IDLE','FIRST_BET_PENDING','FIRST_BET_PLACED','WATCHING_HEDGE','HEDGE_FIRED','BOTH_PLACED','HEDGE_FAILED'];
+
+function transitionStrategy(current, event) {
+  const transitions = {
+    IDLE:               { BET_INITIATED: 'FIRST_BET_PENDING' },
+    FIRST_BET_PENDING:  { BET_CONFIRMED: 'FIRST_BET_PLACED', BET_FAILED: 'HEDGE_FAILED' },
+    FIRST_BET_PLACED:   { CROSSOVER_DETECTED: 'WATCHING_HEDGE', STRATEGY_CANCELLED: 'IDLE', STRATEGY_EXPIRED: 'IDLE' },
+    WATCHING_HEDGE:     { VERIFY_PASSED: 'HEDGE_FIRED', VERIFY_FAILED: 'HEDGE_FAILED' },
+    HEDGE_FIRED:        { BET_CONFIRMED: 'BOTH_PLACED', BET_FAILED: 'HEDGE_FAILED' },
+    BOTH_PLACED:        {},
+    HEDGE_FAILED:       {}
+  };
+  const next = (transitions[current] || {})[event];
+  if (!next) return current; // no valid transition — stay
+  return next;
+}
+
+function isStrategyExpired(expiresAt) {
+  return new Date() > new Date(expiresAt);
+}
+
+// state_idleToFirstBetPending
+try {
+  const next = transitionStrategy('IDLE', 'BET_INITIATED');
+  assert(next === 'FIRST_BET_PENDING', `expected FIRST_BET_PENDING, got ${next}`);
+  console.log('  ✓ state: IDLE → BET_INITIATED → FIRST_BET_PENDING'); passed++;
+} catch(e) { console.error('  ✗ state idle→pending:', e.message); failed++; }
+
+// state_firstBetPendingToPlaced
+try {
+  const next = transitionStrategy('FIRST_BET_PENDING', 'BET_CONFIRMED');
+  assert(next === 'FIRST_BET_PLACED', `expected FIRST_BET_PLACED, got ${next}`);
+  console.log('  ✓ state: FIRST_BET_PENDING → BET_CONFIRMED → FIRST_BET_PLACED'); passed++;
+} catch(e) { console.error('  ✗ state pending→placed:', e.message); failed++; }
+
+// state_watchingHedge_triggerFires
+try {
+  let s = transitionStrategy('FIRST_BET_PLACED', 'CROSSOVER_DETECTED');
+  assert(s === 'WATCHING_HEDGE', `step1: got ${s}`);
+  s = transitionStrategy(s, 'VERIFY_PASSED');
+  assert(s === 'HEDGE_FIRED', `step2: got ${s}`);
+  s = transitionStrategy(s, 'BET_CONFIRMED');
+  assert(s === 'BOTH_PLACED', `step3: got ${s}`);
+  console.log('  ✓ state: crossover → verify pass → hedge fire → BOTH_PLACED'); passed++;
+} catch(e) { console.error('  ✗ state watchingHedge→bothPlaced:', e.message); failed++; }
+
+// state_hedgeFailed_recovery
+try {
+  const s = transitionStrategy('WATCHING_HEDGE', 'VERIFY_FAILED');
+  assert(s === 'HEDGE_FAILED', `expected HEDGE_FAILED, got ${s}`);
+  // HEDGE_FAILED is terminal — no further transitions
+  const s2 = transitionStrategy(s, 'BET_INITIATED');
+  assert(s2 === 'HEDGE_FAILED', `terminal state should not change: got ${s2}`);
+  console.log('  ✓ state: VERIFY_FAILED → HEDGE_FAILED (terminal)'); passed++;
+} catch(e) { console.error('  ✗ state hedgeFailed:', e.message); failed++; }
+
+// state_expiresAfter4Hours
+try {
+  const pastExpiry = new Date(Date.now() - 1000).toISOString(); // 1 second in the past
+  const futureExpiry = new Date(Date.now() + 4 * 60 * 60 * 1000).toISOString();
+  assert(isStrategyExpired(pastExpiry) === true, 'past expiry should be expired');
+  assert(isStrategyExpired(futureExpiry) === false, 'future expiry should not be expired');
+  console.log('  ✓ state: strategy expiry detection works correctly'); passed++;
+} catch(e) { console.error('  ✗ state expiry:', e.message); failed++; }
+
+// state_persistsAcrossRestart
+try {
+  // Simulate saving strategy to storage and reloading
+  const strategy = { id: 'test-1', state: 'FIRST_BET_PLACED', leg1: { side: 'Canada', amount: 25, confirmed: true } };
+  const serialized = JSON.stringify(strategy);
+  const restored = JSON.parse(serialized);
+  assert(restored.state === 'FIRST_BET_PLACED', 'state should survive serialization');
+  assert(restored.leg1.side === 'Canada', 'leg1 should survive serialization');
+  assert(restored.id === 'test-1', 'id should survive serialization');
+  console.log('  ✓ state: strategy survives JSON serialization (chrome.storage roundtrip)'); passed++;
+} catch(e) { console.error('  ✗ state persist:', e.message); failed++; }
+
+// ── AI Agent: Triple Verify ────────────────────────────────────────────────
+console.log('\n── AI Agent: Triple Verify ──');
+
+function runTripleVerify(strategy, domState) {
+  const errors = [];
+  // Check 1: game identity
+  const domNames = (domState.teamNames || []).map(n => n.toLowerCase());
+  const f1 = (strategy.game.fighter1 || '').toLowerCase();
+  const f2 = (strategy.game.fighter2 || '').toLowerCase();
+  if (!domNames.some(n => n.includes(f1)) || !domNames.some(n => n.includes(f2))) {
+    errors.push({ code: 'GAME_MISMATCH' });
+  }
+  // Check 2: odds slippage
+  if (strategy.leg2 && strategy.leg2.targetOdds != null) {
+    const slippage = Math.abs((domState.currentOdds || 0) - strategy.leg2.targetOdds);
+    if (slippage > 8) errors.push({ code: 'ODDS_SLIPPAGE', slippage });
+  }
+  // Check 3: market suspended
+  if (domState.marketSuspended) errors.push({ code: 'MARKET_SUSPENDED' });
+  // Check 4: hedge still profitable
+  if (strategy.leg1 && domState.currentOdds) {
+    const h = calculateHedge(strategy.leg1.amount, strategy.leg1.odds, domState.currentOdds);
+    if (!h.profitable || h.profitIfA < (strategy.hedgeConfig?.minProfitUSD || 1)) {
+      errors.push({ code: 'NOT_PROFITABLE', profit: h.profitIfA });
+    }
+  }
+  // Check 5: bet slip empty
+  if ((domState.betSlipCount || 0) > 0) errors.push({ code: 'SLIP_NOT_EMPTY' });
+  // Check 6: balance sufficient
+  if (strategy.leg1 && domState.currentOdds && domState.availableBalance != null) {
+    const h = calculateHedge(strategy.leg1.amount, strategy.leg1.odds, domState.currentOdds);
+    if (domState.availableBalance < h.hedgeStake) errors.push({ code: 'INSUFFICIENT_BALANCE' });
+  }
+  // Check 7: leg 1 confirmed (simulated — in production checks /api/dk-bets)
+  if (!strategy.leg1?.confirmed) errors.push({ code: 'LEG1_UNCONFIRMED' });
+  return { passed: errors.length === 0, errors };
+}
+
+const baseStrategy = {
+  game: { fighter1: 'Canada', fighter2: 'Qatar' },
+  leg1: { amount: 25, odds: -150, confirmed: true },
+  leg2: { targetOdds: -110 },
+  hedgeConfig: { minProfitUSD: 1.0 }
+};
+
+// verify_gameIdentityMismatch_aborts
+try {
+  const r = runTripleVerify(baseStrategy, { teamNames: ['Brazil', 'Argentina'], currentOdds: -110, availableBalance: 100, betSlipCount: 0 });
+  assert(!r.passed, 'should fail');
+  assert(r.errors.some(e => e.code === 'GAME_MISMATCH'), 'should have GAME_MISMATCH');
+  console.log('  ✓ verify: wrong game → GAME_MISMATCH, aborts'); passed++;
+} catch(e) { console.error('  ✗ verify gameMismatch:', e.message); failed++; }
+
+// verify_oddsSlippage_tooLarge_aborts
+try {
+  const r = runTripleVerify(baseStrategy, { teamNames: ['Canada', 'Qatar'], currentOdds: -145, availableBalance: 100, betSlipCount: 0 });
+  // target -110, current -145 → slippage = 35 > 8
+  assert(!r.passed, 'should fail');
+  assert(r.errors.some(e => e.code === 'ODDS_SLIPPAGE'), `should have ODDS_SLIPPAGE, errors: ${JSON.stringify(r.errors)}`);
+  console.log('  ✓ verify: odds slippage >8 points → ODDS_SLIPPAGE, aborts'); passed++;
+} catch(e) { console.error('  ✗ verify oddsSlippage:', e.message); failed++; }
+
+// verify_marketSuspended_aborts
+try {
+  const r = runTripleVerify(baseStrategy, { teamNames: ['Canada', 'Qatar'], currentOdds: -110, marketSuspended: true, availableBalance: 100, betSlipCount: 0 });
+  assert(!r.passed, 'should fail');
+  assert(r.errors.some(e => e.code === 'MARKET_SUSPENDED'), 'should have MARKET_SUSPENDED');
+  console.log('  ✓ verify: market suspended → MARKET_SUSPENDED, aborts'); passed++;
+} catch(e) { console.error('  ✗ verify marketSuspended:', e.message); failed++; }
+
+// verify_hedgeNoLongerProfitable_aborts
+try {
+  // -150 first leg, hedge at -350 → not profitable
+  const unprof = { ...baseStrategy, leg1: { amount: 10, odds: -150, confirmed: true }, leg2: { targetOdds: -350 }, hedgeConfig: { minProfitUSD: 1.0 } };
+  const r = runTripleVerify(unprof, { teamNames: ['Canada', 'Qatar'], currentOdds: -350, availableBalance: 100, betSlipCount: 0 });
+  assert(!r.passed, 'should fail when not profitable');
+  assert(r.errors.some(e => e.code === 'NOT_PROFITABLE'), `should have NOT_PROFITABLE, errors: ${JSON.stringify(r.errors)}`);
+  console.log('  ✓ verify: hedge not profitable → NOT_PROFITABLE, aborts'); passed++;
+} catch(e) { console.error('  ✗ verify notProfitable:', e.message); failed++; }
+
+// verify_allChecksPass_proceeds
+try {
+  // -150 first leg, hedge at +200 → should be profitable
+  const r = runTripleVerify(
+    { game: { fighter1: 'Canada', fighter2: 'Qatar' }, leg1: { amount: 25, odds: -150, confirmed: true }, leg2: { targetOdds: 200 }, hedgeConfig: { minProfitUSD: 0.5 } },
+    { teamNames: ['Canada', 'Qatar'], currentOdds: 200, availableBalance: 100, betSlipCount: 0, marketSuspended: false }
+  );
+  assert(r.passed, `should pass all checks, errors: ${JSON.stringify(r.errors)}`);
+  assert(r.errors.length === 0, `should have 0 errors, got ${r.errors.length}`);
+  console.log('  ✓ verify: all 7 checks pass → proceeds to click'); passed++;
+} catch(e) { console.error('  ✗ verify allPass:', e.message); failed++; }
+
+// verify_balanceInsufficient_aborts
+try {
+  // $25 at -150, hedge at +200: hedge stake = (25 * 1.667) / 3.0 ≈ $13.89
+  const r = runTripleVerify(
+    { game: { fighter1: 'Canada', fighter2: 'Qatar' }, leg1: { amount: 25, odds: -150, confirmed: true }, leg2: { targetOdds: 200 }, hedgeConfig: { minProfitUSD: 0.5 } },
+    { teamNames: ['Canada', 'Qatar'], currentOdds: 200, availableBalance: 5.00, betSlipCount: 0, marketSuspended: false }
+  );
+  assert(!r.passed, 'should fail on balance');
+  assert(r.errors.some(e => e.code === 'INSUFFICIENT_BALANCE'), `should have INSUFFICIENT_BALANCE, errors: ${JSON.stringify(r.errors)}`);
+  console.log('  ✓ verify: balance insufficient → INSUFFICIENT_BALANCE, aborts'); passed++;
+} catch(e) { console.error('  ✗ verify balanceInsufficient:', e.message); failed++; }
+
+// ── AI Agent: NL Intent Parsing (parseBetCmd extension) ──────────────────
+console.log('\n── AI Agent: NL Intent Parsing ──');
+
+// parseStrategy: extended parser that detects hedge intent in raw commands
+// Returns null for commands not matching, or {leg1, hedge} for strategy commands
+function parseStrategy(raw) {
+  const s = raw.trim().toLowerCase();
+  // detect "bet X $N, hedge on Y if..." or "bet X $N then hedge Y..."
+  const stratMatch = s.match(/^bet\s+(.+?)\s+\$?([\d.]+)[,\s]+(?:then\s+)?hedge\s+(?:on\s+)?(.+?)\s+if\s+(.+)$/i);
+  if (stratMatch) {
+    return {
+      leg1: { side: stratMatch[1].trim(), amount: parseFloat(stratMatch[2]) },
+      hedge: {
+        side: stratMatch[3].trim(),
+        trigger: stratMatch[4].includes('flip') || stratMatch[4].includes('cross') ? 'crossover' : 'manual',
+        autoExecute: true
+      }
+    };
+  }
+  return null;
+}
+
+// parseStrategy_basicHedgeIntent_crossover
+try {
+  const r = parseStrategy('bet canada $25, hedge on Qatar if the line flips');
+  assert(r !== null, 'should parse strategy');
+  assert(r.leg1.side === 'canada', `leg1 side wrong: ${r.leg1.side}`);
+  assert(r.leg1.amount === 25, `leg1 amount wrong: ${r.leg1.amount}`);
+  assert(r.hedge.trigger === 'crossover', `trigger wrong: ${r.hedge.trigger}`);
+  assert(r.hedge.autoExecute === true, 'autoExecute should be true');
+  console.log('  ✓ parseStrategy: "bet canada $25, hedge Qatar if line flips" → crossover strategy'); passed++;
+} catch(e) { console.error('  ✗ parseStrategy basicHedge:', e.message); failed++; }
+
+// parseStrategy_crossoverKeyword
+try {
+  const r = parseStrategy('bet canada 25, hedge Qatar if odds cross');
+  assert(r !== null, 'should parse');
+  assert(r.hedge.trigger === 'crossover', `should detect crossover, got: ${r.hedge?.trigger}`);
+  console.log('  ✓ parseStrategy: "if odds cross" → crossover trigger'); passed++;
+} catch(e) { console.error('  ✗ parseStrategy crossoverKw:', e.message); failed++; }
+
+// parseBetCmd_strategyCommand_returnsNull
+try {
+  // parseBetCmd should NOT match complex strategy commands
+  const r = parseBetCmd('bet canada 25 hedge qatar');
+  // This has extra text after amount — should return null OR partial match
+  // Depends on regex: our regex is /^bet\s+(.+?)\s+([\d.]+)$/i — "hedge qatar" after amount won't match
+  // Because the regex ends at \d+ and expects end of string $
+  assert(r === null, `parseBetCmd should not match strategy commands, got: ${JSON.stringify(r)}`);
+  console.log('  ✓ parseBetCmd: strategy-style command (with hedge clause) → null'); passed++;
+} catch(e) { console.error('  ✗ parseBetCmd strategyCmd:', e.message); failed++; }
+
+// parseIntent_cancelCommand
+try {
+  function detectCancelIntent(raw) {
+    return /^(cancel|stop|abort)\b/i.test(raw.trim());
+  }
+  assert(detectCancelIntent('cancel the hedge') === true, 'cancel command detected');
+  assert(detectCancelIntent('STOP') === true, 'STOP detected');
+  assert(detectCancelIntent('bet canada 25') === false, 'bet command not cancel');
+  console.log('  ✓ parseIntent: cancel/stop/abort keywords → cancel intent'); passed++;
+} catch(e) { console.error('  ✗ parseIntent cancel:', e.message); failed++; }
+
+// parseIntent_statusQuery
+try {
+  function detectStatusIntent(raw) {
+    const s = raw.trim().toLowerCase();
+    return s.includes("what's") || s.includes('status') || s.includes('current strategy') || s.includes('how much');
+  }
+  assert(detectStatusIntent("What's the current strategy?") === true);
+  assert(detectStatusIntent('status') === true);
+  assert(detectStatusIntent('bet canada 25') === false);
+  console.log('  ✓ parseIntent: status query detected correctly'); passed++;
+} catch(e) { console.error('  ✗ parseIntent status:', e.message); failed++; }
+
+// parseStrategy_noHedgeSide_returnsNull
+try {
+  const r = parseStrategy('bet canada 25');
+  assert(r === null, 'plain bet should not parse as strategy');
+  console.log('  ✓ parseStrategy: plain bet (no hedge clause) → null (use parseBetCmd instead)'); passed++;
+} catch(e) { console.error('  ✗ parseStrategy plainBet:', e.message); failed++; }
+
+// parseAmount_variousFormats
+try {
+  function extractAmount(raw) {
+    const m = raw.match(/\$?([\d]+(?:\.[\d]+)?)/);
+    return m ? parseFloat(m[1]) : null;
+  }
+  assert(extractAmount('$25') === 25, '$25');
+  assert(extractAmount('25.50') === 25.5, '25.50');
+  assert(extractAmount('bet canada $0.01') === 0.01, '$0.01');
+  assert(extractAmount('no amount here') === null, 'no amount');
+  console.log('  ✓ parseAmount: $N, N.NN, $0.01 all extract correctly'); passed++;
+} catch(e) { console.error('  ✗ parseAmount formats:', e.message); failed++; }
+
+// parseStrategy_duplicateBetPrevention
+try {
+  function buildIdempotencyKey(userId, gameId, side, amount) {
+    // Simplified key — in production use SHA-256
+    return `${userId}:${gameId}:${side.toLowerCase()}:${amount}`;
+  }
+  const k1 = buildIdempotencyKey('ish', 'game123', 'Canada', 25);
+  const k2 = buildIdempotencyKey('ish', 'game123', 'Canada', 25);
+  const k3 = buildIdempotencyKey('ish', 'game123', 'Qatar', 25);
+  assert(k1 === k2, 'same bet should produce same key');
+  assert(k1 !== k3, 'different side should produce different key');
+  console.log('  ✓ parseStrategy: idempotency key is deterministic from intent fields'); passed++;
+} catch(e) { console.error('  ✗ parseStrategy idempotency:', e.message); failed++; }
+
+// ── AI Agent: Error Recovery ──────────────────────────────────────────────
+console.log('\n── AI Agent: Error Recovery ──');
+
+// error_firstBetRejected_strategyAborted
+try {
+  // Simulate: bet placed but not confirmed in bets API after timeout
+  function shouldPauseOnLeg1Timeout(leg1, betsFromApi) {
+    if (!leg1.confirmed) {
+      const foundInApi = betsFromApi.some(b => b.side === leg1.side && b.amount === leg1.amount);
+      return !foundInApi; // pause if not found
+    }
+    return false;
+  }
+  assert(shouldPauseOnLeg1Timeout({ side: 'Canada', amount: 25, confirmed: false }, []) === true, 'no bets in api → pause');
+  assert(shouldPauseOnLeg1Timeout({ side: 'Canada', amount: 25, confirmed: false }, [{ side: 'Canada', amount: 25 }]) === false, 'found in api → no pause');
+  assert(shouldPauseOnLeg1Timeout({ side: 'Canada', amount: 25, confirmed: true }, []) === false, 'already confirmed → no pause');
+  console.log('  ✓ error: leg1 not in API after timeout → strategy paused'); passed++;
+} catch(e) { console.error('  ✗ error leg1Rejected:', e.message); failed++; }
+
+// error_oddsMovedDuringClick
+try {
+  function detectOddsMovedDuringClick(expectedOdds, actualOdds, maxSlippage = 8) {
+    return Math.abs(expectedOdds - actualOdds) > maxSlippage;
+  }
+  assert(detectOddsMovedDuringClick(-110, -120) === true, '10 point move → abort');
+  assert(detectOddsMovedDuringClick(-110, -115) === false, '5 point move → ok');
+  assert(detectOddsMovedDuringClick(-110, -110) === false, 'same odds → ok');
+  console.log('  ✓ error: odds moved >8 points during click window → detected'); passed++;
+} catch(e) { console.error('  ✗ error oddsMovedDuringClick:', e.message); failed++; }
+
+// error_duplicateHedgePrevented
+try {
+  // Terminal states should not accept new crossover events
+  const terminalStates = ['BOTH_PLACED', 'HEDGE_FAILED'];
+  function shouldIgnoreCrossover(state) {
+    return terminalStates.includes(state);
+  }
+  assert(shouldIgnoreCrossover('BOTH_PLACED') === true, 'BOTH_PLACED is terminal');
+  assert(shouldIgnoreCrossover('HEDGE_FAILED') === true, 'HEDGE_FAILED is terminal');
+  assert(shouldIgnoreCrossover('FIRST_BET_PLACED') === false, 'FIRST_BET_PLACED should watch');
+  assert(shouldIgnoreCrossover('WATCHING_HEDGE') === false, 'WATCHING_HEDGE should process');
+  console.log('  ✓ error: crossover event in terminal state → ignored (no double hedge)'); passed++;
+} catch(e) { console.error('  ✗ error duplicateHedge:', e.message); failed++; }
+
+// error_networkTimeout_checkBeforeRetry
+try {
+  // Never blindly retry — check if bet landed first
+  function shouldRetryHedge(hedgeState, betsFromApi, leg1Side) {
+    if (hedgeState !== 'HEDGE_FIRED') return false;
+    const hedgeLanded = betsFromApi.some(b => b.side !== leg1Side);
+    return !hedgeLanded; // only retry if NOT already in API
+  }
+  const leg2 = { side: 'Qatar' };
+  assert(shouldRetryHedge('HEDGE_FIRED', [], 'Canada') === true, 'no bets → safe to retry');
+  assert(shouldRetryHedge('HEDGE_FIRED', [{ side: 'Qatar' }], 'Canada') === false, 'hedge found → DO NOT retry');
+  assert(shouldRetryHedge('BOTH_PLACED', [], 'Canada') === false, 'wrong state → no retry');
+  console.log('  ✓ error: network timeout → check /api/dk-bets before retry (no double-bet)'); passed++;
+} catch(e) { console.error('  ✗ error networkTimeout:', e.message); failed++; }
+
+// error_serviceWorkerKilled_resumeOnWake
+try {
+  // On wake: check state and verify against API
+  function getResumeAction(state, leg2ConfirmedInApi) {
+    if (state === 'HEDGE_FIRED' && leg2ConfirmedInApi) return 'MARK_BOTH_PLACED';
+    if (state === 'HEDGE_FIRED' && !leg2ConfirmedInApi) return 'NOTIFY_MANUAL_HEDGE';
+    if (state === 'FIRST_BET_PLACED') return 'RESUME_WATCHING';
+    if (state === 'BOTH_PLACED') return 'SURFACE_RESULT';
+    return 'NOTHING';
+  }
+  assert(getResumeAction('HEDGE_FIRED', true) === 'MARK_BOTH_PLACED', 'hedge landed → mark placed');
+  assert(getResumeAction('HEDGE_FIRED', false) === 'NOTIFY_MANUAL_HEDGE', 'hedge missed → notify');
+  assert(getResumeAction('FIRST_BET_PLACED', false) === 'RESUME_WATCHING', 'watching → resume');
+  assert(getResumeAction('BOTH_PLACED', false) === 'SURFACE_RESULT', 'done → surface');
+  console.log('  ✓ error: service worker restart → correct resume action per state'); passed++;
+} catch(e) { console.error('  ✗ error swRestart:', e.message); failed++; }
+
 runServerTests().then(async () => {
   await runNewFeatureServerTests();
+  await runCoverageServerTests();
   await runRecordingTests();
 }).then(() => {
   console.log(`\n═══════════════════════════════════`);

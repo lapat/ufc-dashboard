@@ -597,6 +597,22 @@ app.get('/api/dk-bets', (req, res) => {
   }
 });
 
+app.get('/api/bet-coverage', (req, res) => {
+  const userId = req.query.user || DEFAULT_USER;
+  const userBets = dkBetsByUser.get(userId) || [];
+  const openBets = userBets.filter(b =>
+    b.selection && !b.isParlay &&
+    (!b.status || /open|unsettled|pending|live/i.test(b.status))
+  );
+  // Return lowercase selection names so dashboard can fuzzy-match against game outcome names
+  const covered = [...new Set(openBets.map(b => b.selection.toLowerCase()))];
+  res.json({
+    userId,
+    covered,
+    bets: openBets.map(b => ({ selection: b.selection, stake: b.stake, odds: b.odds, status: b.status }))
+  });
+});
+
 // Extension health tracking — logout tracked per-user so one user's heartbeat won't mask another's logout
 let dkHeartbeat = { ts: null, lastBetSync: null, users: {}, loggedOutUsers: {} };
 
@@ -639,10 +655,12 @@ app.get('/api/dk-status', (req, res) => {
 });
 
 app.post('/api/dk-mock', (req, res) => {
-  const { fighter, odds, stake } = req.body;
+  const { fighter, odds, stake, userId } = req.body;
   if (!fighter) return res.status(400).json({ error: 'fighter required' });
+  const targetUser = userId || DEFAULT_USER;
   const mock = {
     betId: 'mock-' + Date.now(),
+    userId: targetUser,
     status: 'Open',
     settlementStatus: 'Pending',
     selection: fighter,
@@ -652,8 +670,10 @@ app.post('/api/dk-mock', (req, res) => {
     potentialReturns: null,
     returns: null,
     placementDate: new Date().toISOString(),
+    isParlay: false,
   };
-  dkBetsByUser.set(DEFAULT_USER, [mock]);
+  dkBetsByUser.set(targetUser, [mock]);
+  saveDKBets();
   res.json({ ok: true, bet: mock });
 });
 

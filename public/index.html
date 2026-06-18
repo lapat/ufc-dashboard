@@ -131,6 +131,17 @@
     .fav{color:#ff6b6b;background:#1f0e0e}.dog{color:#69db7c;background:#0c1c0e}.even{color:#74c0fc;background:#0d1525}
     .vs{color:#555;font-size:0.8rem;font-weight:700}
     .game-time{font-size:0.75rem;color:#666;margin-top:5px;text-align:right}
+    /* ── Coverage gamification ─────────────────────────── */
+    .cov-row{display:flex;align-items:center;gap:8px;padding:7px 0 2px;border-top:1px solid #1a1a1a;margin-top:7px}
+    .cov-pip{display:flex;flex-direction:column;align-items:center;gap:3px;min-width:36px}
+    .cov-dot{width:11px;height:11px;border-radius:50%;background:#161616;border:1px solid #252525;transition:background .35s,box-shadow .35s}
+    .cov-dot.covered{background:#2ecc71;border-color:#2ecc71;box-shadow:0 0 7px #2ecc7166}
+    .cov-name{font-size:0.47rem;color:#333;text-transform:uppercase;letter-spacing:.4px;max-width:40px;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .cov-name.covered{color:#2ecc7188}
+    .locked-badge{margin-left:auto;font-size:0.58rem;font-weight:700;letter-spacing:1.5px;color:#e8b84b;white-space:nowrap}
+    .game-card.locked{border-color:#e8b84b88 !important;animation:lockPulse 1.6s ease-in-out infinite}
+    .game-card.locked .game-ev{color:#e8b84b !important}
+    @keyframes lockPulse{0%,100%{box-shadow:0 0 6px #e8b84b11}50%{box-shadow:0 0 22px #e8b84b55}}
     #no-games{color:#666;text-align:center;padding:40px 0;font-size:0.9rem;line-height:2}
 
     /* ── NOW WATCHING card ── */
@@ -1965,10 +1976,16 @@ function renderGameList(){
   if(!currentGames.length){ c.innerHTML='<div id="no-games">No '+activeSportTitle+' odds right now.</div>'; return; }
 
   function card(game,liveFlag){
-    const out=game.bookmakers[0].markets.find(m=>m.key==='h2h').outcomes;
+    const market=game.bookmakers[0].markets.find(m=>m.key==='h2h');
+    const out=market.outcomes;
     const [a,b]=out;
+    const hasDraw=out.length===3;
+    const drawOut=hasDraw?out.find(o=>/draw/i.test(o.name)):null;
+    const awayOut=hasDraw?out.find(o=>!(/draw/i.test(o.name))&&o.name!==a.name):b;
     const el=document.createElement('div');
     el.className='game-card'+(liveFlag?' live-card':'');
+    el.dataset.gameId=game.id;
+    el.dataset.outcomes=JSON.stringify(out.map(o=>o.name));
     el.innerHTML=`
       <div class="game-ev">${liveFlag?'● LIVE — ':''}${game.sport_title||activeSportTitle}</div>
       <div class="matchup">
@@ -1978,7 +1995,14 @@ function renderGameList(){
         <div class="op ${odsCls(b.price)}">${fmtO(b.price)}</div>
         <div class="fn r">${b.name}</div>
       </div>
-      <div class="game-time">${new Date(game.commence_time).toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})}</div>`;
+      <div class="game-time">${new Date(game.commence_time).toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})}</div>
+      <div class="cov-row">${out.map(o=>`
+        <div class="cov-pip" data-outcome="${o.name.toLowerCase()}">
+          <div class="cov-dot"></div>
+          <div class="cov-name">${o.name}</div>
+        </div>`).join('')}
+        <div class="locked-badge" style="display:none">⚡ LOCKED</div>
+      </div>`;
     el.addEventListener('click',()=>selectGame(game));
     return el;
   }
@@ -1987,12 +2011,52 @@ function renderGameList(){
   if(up.length){ const l=document.createElement('div');l.className='section-label';l.textContent='Upcoming';c.appendChild(l);up.forEach(g=>c.appendChild(card(g,false))); }
 }
 
+// ── Bet coverage gamification ───────────────────────────────────────────────
+// Polls /api/bet-coverage for the active spy user (or the logged-in user)
+// and lights up outcome dots on each game card. When all outcomes covered → LOCKED.
+
+function applyCoverage(covered) {
+  // covered = array of lowercase selection strings e.g. ['canada','draw']
+  document.querySelectorAll('.game-card').forEach(card => {
+    const pips = card.querySelectorAll('.cov-pip[data-outcome]');
+    if (!pips.length) return;
+    let coveredCount = 0;
+    pips.forEach(pip => {
+      const name = pip.dataset.outcome; // already lowercase
+      // Fuzzy: covered includes this name, or this name includes a covered term
+      const isCovered = covered.some(s =>
+        s === name || name.includes(s) || s.includes(name)
+      );
+      const dot = pip.querySelector('.cov-dot');
+      const label = pip.querySelector('.cov-name');
+      dot.classList.toggle('covered', isCovered);
+      label.classList.toggle('covered', isCovered);
+      if (isCovered) coveredCount++;
+    });
+    const locked = coveredCount === pips.length && pips.length > 0;
+    card.classList.toggle('locked', locked);
+    const badge = card.querySelector('.locked-badge');
+    if (badge) badge.style.display = locked ? '' : 'none';
+  });
+}
+
+async function pollCoverage() {
+  try {
+    const user = (typeof _spyUser !== 'undefined' && _spyUser) ? _spyUser : '';
+    const url = '/api/bet-coverage' + (user ? `?user=${encodeURIComponent(user)}` : '');
+    const d = await fetch(url).then(r => r.json());
+    if (Array.isArray(d.covered)) applyCoverage(d.covered);
+  } catch(_) {}
+}
+
 // ═══════════════════════════════════════════
 // INIT
 // ═══════════════════════════════════════════
 loadSports();
 loadGames();
 setInterval(()=>{ if(!selectedGame) loadGames(); },30000);
+pollCoverage();
+setInterval(pollCoverage, 15000);
 
 // Auto-start simulation if ?sim=fightId in URL (from library page)
 (async()=>{

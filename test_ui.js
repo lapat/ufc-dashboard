@@ -3,9 +3,12 @@
 const puppeteer = require('puppeteer');
 const { spawn } = require('child_process');
 const path = require('path');
+const fs = require('fs');
 
 const PORT = 3099; // separate port so it doesn't conflict
 const BASE = `http://localhost:${PORT}`;
+const LIVE_URL = 'https://ufc-dashboard-production-e03d.up.railway.app';
+const LIVE_MODE = process.argv.includes('--live');
 
 let passed = 0, failed = 0;
 function check(name, fn) {
@@ -29,6 +32,42 @@ async function startServer() {
     setTimeout(() => { clearTimeout(timeout); res(); }, 3000);
   });
   return srv;
+}
+
+async function screenshotLive() {
+  console.log('\n── Live deploy screenshot ──\n');
+  const browser = await puppeteer.launch({ headless: true, channel: 'chrome', args: ['--no-sandbox', '--disable-setuid-sandbox'] });
+  const page = await browser.newPage();
+  await page.setViewport({ width: 1280, height: 900 });
+
+  console.log(`  Loading ${LIVE_URL} ...`);
+  try {
+    await page.goto(LIVE_URL, { waitUntil: 'networkidle0', timeout: 30000 });
+  } catch (_) {
+    await page.goto(LIVE_URL, { waitUntil: 'domcontentloaded', timeout: 30000 });
+  }
+  // Let status dot polls fire (they run on load with a short timeout)
+  await new Promise(r => setTimeout(r, 4000));
+
+  const screenshotDir = path.join(__dirname, 'screenshots');
+  if (!fs.existsSync(screenshotDir)) fs.mkdirSync(screenshotDir);
+  const date = new Date().toISOString().slice(0, 10);
+  const outPath = path.join(screenshotDir, `live-deploy-${date}.png`);
+  await page.screenshot({ path: outPath, fullPage: false });
+
+  // Report dot colors
+  const dots = ['sc-rec-dot', 'sc-dk-dot', 'sc-api-dot', 'sc-backup-dot'];
+  const labels = { 'sc-rec-dot': 'RECORDER', 'sc-dk-dot': 'DK EXT', 'sc-api-dot': 'API', 'sc-backup-dot': 'BACKUP' };
+  console.log('\n  Status dots:');
+  for (const id of dots) {
+    const cls = await page.$eval(`#${id}`, el => el.className).catch(() => 'NOT FOUND');
+    const color = ['green', 'yellow', 'red', 'grey'].find(c => cls.includes(c)) || cls;
+    const icon = color === 'green' ? '●' : color === 'yellow' ? '◐' : color === 'red' ? '✗' : '○';
+    console.log(`  ${icon} ${labels[id]}: ${color}`);
+  }
+
+  console.log(`\n  Screenshot saved: ${outPath}\n`);
+  await browser.close();
 }
 
 async function run() {
@@ -587,6 +626,228 @@ async function run() {
 
   // ── end spy tests ────────────────────────────────────────────────────────
 
+  // ── Status cluster dots ───────────────────────────────────────────────────
+  console.log('\nStatus cluster dots');
+
+  await check('status-cluster exists in DOM', async () => {
+    const el = await page.$('#status-cluster');
+    assert(el, '#status-cluster not in DOM');
+  });
+
+  await check('#sc-rec-dot exists in DOM', async () => {
+    const el = await page.$('#sc-rec-dot');
+    assert(el, '#sc-rec-dot not found');
+  });
+
+  await check('#sc-dk-dot exists in DOM', async () => {
+    const el = await page.$('#sc-dk-dot');
+    assert(el, '#sc-dk-dot not found');
+  });
+
+  await check('#sc-api-dot exists in DOM', async () => {
+    const el = await page.$('#sc-api-dot');
+    assert(el, '#sc-api-dot not found');
+  });
+
+  await check('#sc-backup-dot exists in DOM', async () => {
+    const el = await page.$('#sc-backup-dot');
+    assert(el, '#sc-backup-dot not found');
+  });
+
+  await check('sc-api-dot starts green (server is responding)', async () => {
+    // Wait up to 5s for the API poll to fire
+    let cls = '';
+    for (let i = 0; i < 10; i++) {
+      cls = await page.$eval('#sc-api-dot', el => el.className);
+      if (cls.includes('green')) break;
+      await new Promise(r => setTimeout(r, 500));
+    }
+    assert(cls.includes('green'), `sc-api-dot expected green, got "${cls}"`);
+  });
+
+  await check('sc-rec-dot is set to a known color (not unset) after poll', async () => {
+    let cls = '';
+    for (let i = 0; i < 10; i++) {
+      cls = await page.$eval('#sc-rec-dot', el => el.className);
+      if (!cls.includes('sc-dot') || cls !== 'sc-dot grey') break;
+      // Wait briefly to let the initial poll fire
+      await new Promise(r => setTimeout(r, 500));
+    }
+    const known = ['green', 'yellow', 'red', 'grey'];
+    const found = known.some(c => cls.includes(c));
+    assert(found, `sc-rec-dot has unexpected class "${cls}"`);
+  });
+
+  await check('backup dot responds to mock backup-status (green when both set)', async () => {
+    await page.evaluate(async () => {
+      const orig = window.fetch;
+      window.fetch = async (url) => {
+        if (url.includes('backup-status')) {
+          return { ok: true, json: async () => ({ githubToken: true, volumeActive: true }) };
+        }
+        return orig(url);
+      };
+      if (typeof pollBackupStatus === 'function') await pollBackupStatus();
+      window.fetch = orig;
+    });
+    const cls = await page.$eval('#sc-backup-dot', el => el.className);
+    assert(cls.includes('green'), `backup dot expected green when both set, got "${cls}"`);
+  });
+
+  await check('backup dot yellow when only volume active (no token)', async () => {
+    await page.evaluate(async () => {
+      const orig = window.fetch;
+      window.fetch = async (url) => {
+        if (url.includes('backup-status')) {
+          return { ok: true, json: async () => ({ githubToken: false, volumeActive: true }) };
+        }
+        return orig(url);
+      };
+      if (typeof pollBackupStatus === 'function') await pollBackupStatus();
+      window.fetch = orig;
+    });
+    const cls = await page.$eval('#sc-backup-dot', el => el.className);
+    assert(cls.includes('yellow'), `backup dot expected yellow for no token, got "${cls}"`);
+  });
+
+  await check('backup dot red when neither token nor volume set', async () => {
+    await page.evaluate(async () => {
+      const orig = window.fetch;
+      window.fetch = async (url) => {
+        if (url.includes('backup-status')) {
+          return { ok: true, json: async () => ({ githubToken: false, volumeActive: false }) };
+        }
+        return orig(url);
+      };
+      if (typeof pollBackupStatus === 'function') await pollBackupStatus();
+      window.fetch = orig;
+    });
+    const cls = await page.$eval('#sc-backup-dot', el => el.className);
+    assert(cls.includes('red'), `backup dot expected red when neither set, got "${cls}"`);
+  });
+
+  await check('setScItem helper updates dot color class correctly', async () => {
+    await page.evaluate(() => {
+      setScItem('sc-recorder', 'green');
+    });
+    const cls = await page.$eval('#sc-rec-dot', el => el.className);
+    assert(cls.includes('green'), `setScItem did not set green, got "${cls}"`);
+    // reset
+    await page.evaluate(() => setScItem('sc-recorder', 'grey'));
+  });
+
+  // ── Bet coverage gamification ─────────────────────────────────────────────
+  console.log('\nBet coverage gamification');
+
+  // Reload cleanly so we start with fresh game cards
+  await page.reload({ waitUntil: 'domcontentloaded' });
+  await new Promise(r => setTimeout(r, 2500));
+
+  await check('game cards render .cov-row inside each card', async () => {
+    const count = await page.$$eval('.game-card .cov-row', els => els.length);
+    assert(count > 0, `expected at least one .cov-row inside game cards, got ${count}`);
+  });
+
+  await check('each .cov-row has .cov-pip elements (one per outcome)', async () => {
+    const pipCount = await page.$$eval('.game-card .cov-pip', els => els.length);
+    assert(pipCount >= 2, `expected at least 2 .cov-pip elements, got ${pipCount}`);
+  });
+
+  await check('coverage dots start grey (no bets)', async () => {
+    const hasCovered = await page.$$eval('.cov-dot.covered', els => els.length);
+    assert(hasCovered === 0, `expected 0 green dots on load, got ${hasCovered}`);
+  });
+
+  await check('applyCoverage turns first outcome dot green', async () => {
+    await page.evaluate(() => {
+      const pip = document.querySelector('.cov-pip[data-outcome]');
+      if (pip) applyCoverage([pip.dataset.outcome]);
+    });
+    const greenCount = await page.$$eval('.cov-dot.covered', els => els.length);
+    assert(greenCount >= 1, `expected ≥1 green dot after applyCoverage, got ${greenCount}`);
+  });
+
+  await check('LOCKED badge hidden when only partial coverage', async () => {
+    const lockedCount = await page.$$eval('.game-card.locked', els => els.length);
+    assert(lockedCount === 0, `should not be locked with partial coverage, got ${lockedCount} locked`);
+  });
+
+  await check('applyCoverage all-outcomes → card gets .locked + badge shows', async () => {
+    await page.evaluate(() => {
+      const card = document.querySelector('.game-card');
+      if (!card) return;
+      const pips = [...card.querySelectorAll('.cov-pip[data-outcome]')];
+      applyCoverage(pips.map(p => p.dataset.outcome));
+    });
+    const isLocked = await page.$eval('.game-card', el => el.classList.contains('locked'));
+    const badgeDisplay = await page.$eval('.game-card .locked-badge', el => el.style.display);
+    assert(isLocked, 'card should have .locked class when all outcomes covered');
+    assert(badgeDisplay !== 'none', `LOCKED badge should show, got display="${badgeDisplay}"`);
+  });
+
+  await check('applyCoverage([]) resets all dots grey and unlocks cards', async () => {
+    await page.evaluate(() => applyCoverage([]));
+    const greenCount = await page.$$eval('.cov-dot.covered', els => els.length);
+    const lockedCount = await page.$$eval('.game-card.locked', els => els.length);
+    assert(greenCount === 0, `expected 0 green after reset, got ${greenCount}`);
+    assert(lockedCount === 0, `expected 0 locked after reset, got ${lockedCount}`);
+  });
+
+  await check('pollCoverage is defined globally', async () => {
+    const exists = await page.evaluate(() => typeof pollCoverage === 'function');
+    assert(exists, 'pollCoverage not in global scope');
+  });
+
+  await check('pollCoverage with mocked empty response leaves dots grey', async () => {
+    await page.evaluate(async () => {
+      const orig = window.fetch;
+      window.fetch = async (url, opts) => {
+        if (url.includes('bet-coverage')) return { ok: true, json: async () => ({ covered: [], userId: 'test' }) };
+        return orig(url, opts);
+      };
+      await pollCoverage();
+      window.fetch = orig;
+    });
+    const greenCount = await page.$$eval('.cov-dot.covered', els => els.length);
+    assert(greenCount === 0, `expected 0 green after empty coverage poll, got ${greenCount}`);
+  });
+
+  await check('game cards have data-game-id attribute', async () => {
+    const ids = await page.$$eval('.game-card[data-game-id]', els => els.map(e => e.dataset.gameId));
+    assert(ids.length > 0, 'game cards missing data-game-id');
+    assert(ids.every(id => id && id.length > 0), 'some data-game-id values are empty');
+  });
+
+  await check('game cards have data-outcomes JSON array', async () => {
+    const raw = await page.$eval('.game-card', el => el.dataset.outcomes);
+    const outcomes = JSON.parse(raw);
+    assert(Array.isArray(outcomes) && outcomes.length >= 2, `expected array≥2, got ${raw}`);
+  });
+
+  // Reset for screenshot
+  await page.evaluate(() => applyCoverage([]));
+
+  // ── Screenshot (always runs — saved to screenshots/) ─────────────────────
+  console.log('\nDeploy screenshot');
+
+  await check('take dashboard screenshot after status dots settle', async () => {
+    // Reset backup dot back to production state (real fetch)
+    await page.reload({ waitUntil: 'domcontentloaded' });
+    await new Promise(r => setTimeout(r, 3000)); // let polls fire
+
+    const screenshotDir = path.join(__dirname, 'screenshots');
+    if (!fs.existsSync(screenshotDir)) fs.mkdirSync(screenshotDir);
+
+    const date = new Date().toISOString().slice(0, 10);
+    const outPath = path.join(screenshotDir, `deploy-${date}.png`);
+    await page.screenshot({ path: outPath, fullPage: false });
+
+    assert(fs.existsSync(outPath), `screenshot file not written to ${outPath}`);
+    const size = fs.statSync(outPath).size;
+    assert(size > 5000, `screenshot too small (${size} bytes) — likely a blank page`);
+    console.log(`    → saved: ${outPath}`);
+  });
+
   // cleanup injected test element
   await page.evaluate(() => {
     const el = document.getElementById('test-bet-verdict');
@@ -603,7 +864,8 @@ async function run() {
   process.exit(failed > 0 ? 1 : 0);
 }
 
-run().catch(e => {
-  console.error('Fatal:', e);
-  process.exit(1);
-});
+if (LIVE_MODE) {
+  screenshotLive().catch(e => { console.error('Fatal:', e); process.exit(1); });
+} else {
+  run().catch(e => { console.error('Fatal:', e); process.exit(1); });
+}
