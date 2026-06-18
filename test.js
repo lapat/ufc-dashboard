@@ -6,6 +6,10 @@ const BASE = process.env.TEST_URL || 'https://ufc-dashboard-production-e03d.up.r
 const LOCAL = process.env.LOCAL_URL || 'http://localhost:3000';
 const target = process.argv[2] === '--local' ? LOCAL : BASE;
 
+const fs   = require('fs');
+const os   = require('os');
+const path = require('path');
+
 let passed = 0, failed = 0;
 
 async function check(name, fn) {
@@ -1411,6 +1415,125 @@ async function runNewFeatureServerTests() {
   });
 }
 
+// ── Record Engine Unit Tests ──────────────────────────────────────────────────
+
+function testRecordEngineExports() {
+  const re = require('./record_engine');
+  const required = ['recFightId','recFilePath','recIsLive','recExtractOdds',
+    'recSaveRecord','pushFightToGitHub','autoEnrich',
+    'loadPersistedState','persistState','clearPersistedState',
+    'migrateToVolume','HISTORICAL_DIR','STATE_FILE'];
+  for (const fn of required) {
+    if (!(fn in re)) throw new Error(`record_engine missing export: ${fn}`);
+  }
+}
+
+function testPushFightToGitHubNoToken() {
+  // Should log a warning and return without throwing when GITHUB_TOKEN is absent
+  const { pushFightToGitHub } = require('./record_engine');
+  const orig = process.env.GITHUB_TOKEN;
+  delete process.env.GITHUB_TOKEN;
+  const tmpFile = path.join(os.tmpdir(), 'test_fight.json');
+  fs.writeFileSync(tmpFile, JSON.stringify({ fightId: 'test', oddsHistory: [] }));
+  const result = pushFightToGitHub(tmpFile); // returns a promise
+  if (orig !== undefined) process.env.GITHUB_TOKEN = orig;
+  fs.unlinkSync(tmpFile);
+  if (!result || typeof result.then !== 'function') throw new Error('pushFightToGitHub should return a Promise');
+}
+
+function testMigrateToVolumeNoop() {
+  // When DATA_DIR is not set, migrateToVolume should be a no-op (no throw, no copies)
+  const { migrateToVolume } = require('./record_engine');
+  delete process.env.DATA_DIR; // ensure no volume
+  migrateToVolume(); // must not throw
+}
+
+function testMigrateToVolumeCopiesFiles() {
+  // When DATA_DIR points to a temp dir, migrateToVolume copies fight files
+  const { migrateToVolume, HISTORICAL_DIR } = require('./record_engine');
+  const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'test-volume-'));
+  process.env.DATA_DIR = tmpDir;
+  // Bust require cache so DATA_ROOT is re-evaluated
+  delete require.cache[require.resolve('./record_engine')];
+  const re2 = require('./record_engine');
+  re2.migrateToVolume();
+  // Check that historical_data subdir was created in the volume
+  const volumeHistDir = path.join(tmpDir, 'historical_data');
+  if (!fs.existsSync(volumeHistDir)) throw new Error('volume historical_data dir not created');
+  // Clean up
+  fs.rmSync(tmpDir, { recursive: true, force: true });
+  delete process.env.DATA_DIR;
+  delete require.cache[require.resolve('./record_engine')];
+  require('./record_engine'); // reload clean
+}
+
+function testWorldCupInSportMeta() {
+  // Verify World Cup is in ALWAYS_POLL and has correct window
+  // We can't import server.js directly (it starts a server), so test record_engine directly
+  // and spot-check that World Cup sport key is handled by recFightId
+  const { recFightId, recIsLive } = require('./record_engine');
+  const fakeGame = {
+    home_team: 'Brazil',
+    away_team: 'Argentina',
+    commence_time: new Date(Date.now() - 60000).toISOString(), // 1 min ago
+  };
+  const id = recFightId('soccer_fifa_world_cup', fakeGame);
+  if (!id.startsWith('soccer__')) throw new Error(`Expected soccer__ prefix, got: ${id}`);
+  // 130-minute window — game started 1 min ago should be live
+  const live = recIsLive(fakeGame, 130 * 60 * 1000);
+  if (!live) throw new Error('Game started 1 min ago should be live within 130-min window');
+  // Game started 131 min ago should NOT be live
+  const old = { ...fakeGame, commence_time: new Date(Date.now() - 131 * 60 * 1000).toISOString() };
+  if (recIsLive(old, 130 * 60 * 1000)) throw new Error('Game started 131 min ago should NOT be live');
+}
+
+function testSoccerOddsExtractIncludesDraw() {
+  const { recExtractOdds } = require('./record_engine');
+  // Soccer h2h has 3 outcomes: home, draw, away
+  const fakeGame = {
+    bookmakers: [{
+      markets: [{
+        key: 'h2h',
+        outcomes: [
+          { name: 'Brazil', price: -150 },
+          { name: 'Draw', price: +260 },
+          { name: 'Argentina', price: +380 },
+        ],
+      }],
+    }],
+  };
+  const odds = recExtractOdds(fakeGame);
+  if (!odds) throw new Error('recExtractOdds returned null for valid soccer game');
+  if (odds.fighter1.name !== 'Brazil') throw new Error(`Expected Brazil, got ${odds.fighter1.name}`);
+  if (odds.fighter2.name !== 'Draw') throw new Error(`Expected Draw as fighter2, got ${odds.fighter2.name}`);
+}
+
+async function runRecordingTests() {
+  console.log('\n── Recording (Server) ──');
+
+  await check('World Cup sport key accepted by /api/recorder/watch', async () => {
+    const d = await post('/api/recorder/watch', { sport: 'soccer_fifa_world_cup', team1: 'Brazil', team2: 'Argentina' });
+    assert(d.ok, `expected ok:true, got ${JSON.stringify(d)}`);
+  });
+
+  await check('recorder/status shows World Cup game in watching when heartbeat < 2 min', async () => {
+    await post('/api/recorder/watch', { sport: 'soccer_fifa_world_cup', team1: 'Brazil', team2: 'Argentina' });
+    const d = await get('/api/recorder/status');
+    assert(Array.isArray(d.watching), 'watching should be an array');
+    // status may show team names ("Brazil vs Argentina") or sport label — either is fine
+    const wc = d.watching.find(w => typeof w === 'string' &&
+      (w.includes('World Cup') || w.includes('soccer_fifa') || w.includes('Brazil') || w.includes('Argentina')));
+    assert(wc, `World Cup game not found in watching: ${JSON.stringify(d.watching)}`);
+  });
+
+  await check('recorder/status always includes UFC/MMA as always-on sport', async () => {
+    const d = await get('/api/recorder/status');
+    assert(Array.isArray(d.watching), 'watching should be array');
+    const ufc = d.watching.find(w => typeof w === 'string' && w.includes('UFC'));
+    assert(ufc, `UFC not found in watching: ${JSON.stringify(d.watching)}`);
+  });
+}
+
 // ── Main ───────────────────────────────────────────────────────────────────
 console.log('═══════════════════════════════════');
 console.log('  BET BOT TEST SUITE');
@@ -1443,8 +1566,17 @@ try { testSparklineColor(); console.log('  ✓ sparkline color: green/red/grey b
 try { testSpyModeSeparation(); console.log('  ✓ spy mode: spy bets isolated from own P&L, separate net calc'); passed++; } catch(e) { console.error('  ✗ spy mode separation:', e.message); failed++; }
 try { testLiveScoreFuzzyMatch(); console.log('  ✓ live score fuzzy match: exact/substring/case-insensitive match, false negatives'); passed++; } catch(e) { console.error('  ✗ live score fuzzy match:', e.message); failed++; }
 
+console.log('\n── Record Engine (Unit) ──');
+try { testRecordEngineExports(); console.log('  ✓ record_engine exports all required functions'); passed++; } catch(e) { console.error('  ✗ record_engine exports:', e.message); failed++; }
+try { testPushFightToGitHubNoToken(); console.log('  ✓ pushFightToGitHub returns Promise, no-throw when GITHUB_TOKEN missing'); passed++; } catch(e) { console.error('  ✗ pushFightToGitHub no-token:', e.message); failed++; }
+try { testMigrateToVolumeNoop(); console.log('  ✓ migrateToVolume is no-op when DATA_DIR not set'); passed++; } catch(e) { console.error('  ✗ migrateToVolume noop:', e.message); failed++; }
+try { testMigrateToVolumeCopiesFiles(); console.log('  ✓ migrateToVolume creates historical_data in volume on first boot'); passed++; } catch(e) { console.error('  ✗ migrateToVolume copies:', e.message); failed++; }
+try { testWorldCupInSportMeta(); console.log('  ✓ World Cup fight ID has soccer__ prefix, 130-min live window correct'); passed++; } catch(e) { console.error('  ✗ World Cup sport meta:', e.message); failed++; }
+try { testSoccerOddsExtractIncludesDraw(); console.log('  ✓ soccer h2h odds extraction preserves Draw as fighter2'); passed++; } catch(e) { console.error('  ✗ soccer odds extract:', e.message); failed++; }
+
 runServerTests().then(async () => {
   await runNewFeatureServerTests();
+  await runRecordingTests();
 }).then(() => {
   console.log(`\n═══════════════════════════════════`);
   console.log(`  ${passed} passed  ${failed} failed`);

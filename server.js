@@ -1045,12 +1045,16 @@ const OTHER_POLL_MS = 5000;  // 5s while browser is open watching
 const IDLE_POLL_MS  = 300000;
 
 const SPORT_META = {
-  'mma_mixed_martial_arts': { label: 'UFC/MMA', window: 3 * 60 * 60 * 1000 },
-  'icehockey_nhl':          { label: 'NHL',     window: 4 * 60 * 60 * 1000 },
-  'basketball_nba':         { label: 'NBA',     window: 3 * 60 * 60 * 1000 },
-  'americanfootball_nfl':   { label: 'NFL',     window: 4 * 60 * 60 * 1000 },
-  'baseball_mlb':           { label: 'MLB',     window: 4 * 60 * 60 * 1000 },
+  'mma_mixed_martial_arts': { label: 'UFC/MMA',    window: 3 * 60 * 60 * 1000 },
+  'soccer_fifa_world_cup':  { label: 'World Cup',  window: 130 * 60 * 1000 },
+  'icehockey_nhl':          { label: 'NHL',        window: 4 * 60 * 60 * 1000 },
+  'basketball_nba':         { label: 'NBA',        window: 3 * 60 * 60 * 1000 },
+  'americanfootball_nfl':   { label: 'NFL',        window: 4 * 60 * 60 * 1000 },
+  'baseball_mlb':           { label: 'MLB',        window: 4 * 60 * 60 * 1000 },
 };
+
+// Sports that are always polled (regardless of what the client browser is watching)
+const ALWAYS_POLL = ['mma_mixed_martial_arts', 'soccer_fifa_world_cup'];
 
 // Client heartbeat — single slot, last watched game wins
 // If no ping for 2 min, recording stops
@@ -1075,8 +1079,13 @@ app.post('/api/recorder/watch', (req, res) => {
 
 const {
   recFightId, recFilePath, recIsLive, recExtractOdds,
-  recSaveRecord, autoEnrich, loadPersistedState, persistState,
+  recSaveRecord, pushFightToGitHub, autoEnrich,
+  loadPersistedState, persistState,
+  migrateToVolume, HISTORICAL_DIR: REC_HISTORICAL_DIR,
 } = require('./record_engine');
+
+// One-time volume migration (no-op if DATA_DIR not set)
+migrateToVolume();
 
 const recorderState = {
   activeFights:    loadPersistedState(), // reloads in-flight fights after crash/restart
@@ -1143,10 +1152,14 @@ function recSave(id) {
     filePath:   result.filePath,
   });
 
-  // Only invalidate MMA index (other sports don't feed the analyzer)
+  // Back up to GitHub immediately (fire-and-forget)
+  pushFightToGitHub(result.filePath);
+
+  // Invalidate index for all sports so the library reflects the new file
+  invalidateIndex();
+
+  // MMA only: auto-enrich with winner/method from ESPN/UFC Stats
   if (record.meta.sport === 'mma_mixed_martial_arts') {
-    invalidateIndex();
-    // Auto-enrich: fetch winner/method from ESPN/UFC Stats immediately after save
     const filename = path.basename(result.filePath);
     autoEnrich(filename, (err, out) => {
       if (err) {
@@ -1251,20 +1264,24 @@ async function recPollSport(sportKey, meta, watchedGame) {
 async function recPoll() {
   recorderState.lastPoll = new Date().toISOString();
 
-  // Always poll UFC
-  const ufcMeta = SPORT_META['mma_mixed_martial_arts'];
-  const ufcLive = await recPollSport('mma_mixed_martial_arts', ufcMeta);
+  // Always poll UFC + World Cup (and any other ALWAYS_POLL sports)
+  let alwaysLive = 0;
+  for (const key of ALWAYS_POLL) {
+    alwaysLive += await recPollSport(key, SPORT_META[key]);
+  }
 
-  // Poll the one sport the browser is watching (if heartbeat < 2 min old)
+  // Also poll the one sport the browser is watching (if heartbeat < 2 min old)
   const now = Date.now();
   const watching = clientWatching && (now - clientWatching.ts < 120000) ? clientWatching : null;
-  const otherLive = watching
+  const otherLive = (watching && !ALWAYS_POLL.includes(watching.sport))
     ? await recPollSport(watching.sport, SPORT_META[watching.sport] || { label: watching.sport, window: 4*60*60*1000 }, watching)
     : 0;
-  const totalLive = ufcLive + otherLive;
+  const totalLive = alwaysLive + otherLive;
 
-  // Next poll: UFC drives the cadence
-  const delay = ufcLive > 0 ? UFC_POLL_MS : watching ? OTHER_POLL_MS : IDLE_POLL_MS;
+  // Next poll cadence: fast when anything is live
+  const ufcLive = recorderState.activeFights.size > 0 &&
+    [...recorderState.activeFights.values()].some(r => r.meta.sport === 'mma_mixed_martial_arts');
+  const delay = ufcLive ? UFC_POLL_MS : totalLive > 0 ? OTHER_POLL_MS : IDLE_POLL_MS;
   setTimeout(recPoll, delay);
 }
 
