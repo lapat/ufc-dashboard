@@ -122,7 +122,7 @@ async function ensureDkTabs(mainTabId) {
   await chrome.tabs.update(mainTabId, { url: 'https://sportsbook.draftkings.com/' });
 
   // Tab 2: open mybets in a second tab (or focus it if already open)
-  const allTabs = await chrome.tabs.query({ url: 'https://sportsbook.draftkings.com/mybets' });
+  const allTabs = await chrome.tabs.query({ url: 'https://sportsbook.draftkings.com/mybets*' });
   if (!allTabs.length) {
     chrome.tabs.create({ url: 'https://sportsbook.draftkings.com/mybets', openerTabId: mainTabId });
   } else {
@@ -138,7 +138,7 @@ function tryExtractUserId(url, data) {
   return null;
 }
 
-chrome.runtime.onMessage.addListener((msg) => {
+chrome.runtime.onMessage.addListener((msg, sender) => {
   if (msg.type === 'DK_WS_STATUS') {
     if (msg.connected) {
       chrome.storage.local.set({ wsConnected: true, wsLastOpen: msg.ts });
