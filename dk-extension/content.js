@@ -65,32 +65,33 @@ if (href.includes('myaccount.draftkings.com') && href.includes('/login')) {
   });
 }
 
-// ── Detect "Sign Up or Log In" button on sportsbook (= logged out) ──────────
+// ── Persistent logout detection on sportsbook pages ─────────────────────────
+// DraftKings is a SPA — logging out re-renders in place with no URL change.
+// A one-time observer misses this. Poll every 3s forever instead.
 if (href.startsWith('https://sportsbook.draftkings.com') && !href.includes('/login') && !href.includes('/auth/')) {
   let alerted = false;
 
-  function checkLoggedOut() {
-    if (alerted) return;
-    const loggedOut = [...document.querySelectorAll('a, button, span')].some(
+  function isLoggedOut() {
+    const bodyText = document.body?.innerText || '';
+    // Multiple indicators — any one is enough
+    if (/oops[^a-z]*you'?re logged out/i.test(bodyText)) return true;
+    if (/you must be logged in/i.test(bodyText)) return true;
+    if ([...document.querySelectorAll('a, button, span')].some(
       el => /sign\s*up\s*or\s*log\s*in/i.test(el.textContent?.trim())
-    );
-    if (loggedOut) {
-      alerted = true;
-      send({ type: 'DK_NEEDS_LOGIN' });
-    }
+    )) return true;
+    return false;
   }
 
-  setTimeout(() => {
-    checkLoggedOut();
-    if (!alerted) {
-      const obs = new MutationObserver(() => {
-        checkLoggedOut();
-        if (alerted) obs.disconnect();
-      });
-      obs.observe(document.body, { childList: true, subtree: true });
-      setTimeout(() => obs.disconnect(), 30000);
+  // Poll every 3 seconds — never stops while page is open
+  // This is the only reliable approach for a SPA where logout is a DOM swap, not a navigation
+  const logoutPoll = setInterval(() => {
+    if (alerted) { clearInterval(logoutPoll); return; }
+    if (isLoggedOut()) {
+      alerted = true;
+      clearInterval(logoutPoll);
+      send({ type: 'DK_NEEDS_LOGIN' });
     }
-  }, 2500);
+  }, 3000);
 }
 
 // ── Auto-refresh My Bets tab every 20 seconds ───────────────────────────────
