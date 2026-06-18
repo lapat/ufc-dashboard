@@ -90,6 +90,7 @@ if (href.startsWith('https://sportsbook.draftkings.com') && !href.includes('/log
       alerted = true;
       clearInterval(logoutPoll);
       send({ type: 'DK_NEEDS_LOGIN' });
+      window.location.href = 'https://myaccount.draftkings.com/auth/login';
     }
   }, 3000);
 }
