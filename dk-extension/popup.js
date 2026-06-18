@@ -112,6 +112,29 @@ document.getElementById('saveUser').addEventListener('click', () => {
   setTimeout(() => { btn.textContent = 'Set'; btn.className = ''; }, 2000);
 });
 
+// Auto-login credentials
+chrome.storage.local.get(['dkEmail', 'dkPassword', 'dkAutoLogin'], r => {
+  if (r.dkEmail) document.getElementById('dkEmail').value = r.dkEmail;
+  if (r.dkPassword) document.getElementById('dkPassword').value = r.dkPassword;
+  document.getElementById('dkAutoLogin').checked = !!r.dkAutoLogin;
+});
+
+document.getElementById('saveCreds').addEventListener('click', () => {
+  const email = document.getElementById('dkEmail').value.trim();
+  const pass = document.getElementById('dkPassword').value;
+  const autoLogin = document.getElementById('dkAutoLogin').checked;
+  if (!email || !pass) return;
+  chrome.storage.local.set({ dkEmail: email, dkPassword: pass, dkAutoLogin: autoLogin });
+  const btn = document.getElementById('saveCreds');
+  btn.textContent = 'Saved ✓';
+  btn.className = 'saved';
+  setTimeout(() => { btn.textContent = 'Save'; btn.className = ''; }, 2000);
+});
+
+document.getElementById('dkAutoLogin').addEventListener('change', e => {
+  chrome.storage.local.set({ dkAutoLogin: e.target.checked });
+});
+
 document.getElementById('clrLog').addEventListener('click', () => {
   chrome.storage.local.set({ debugLog: [], captures: [], wsConnected: null, wsLastOpen: null, wsLastClose: null });
 });

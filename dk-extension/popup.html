@@ -44,6 +44,20 @@
     <button id="saveUser">Set</button>
   </div>
 
+  <!-- Auto-login credentials -->
+  <div class="section" style="margin-top:8px">Auto-Login</div>
+  <div class="user-row">
+    <input id="dkEmail" type="email" placeholder="DK email" spellcheck="false" autocomplete="off"/>
+  </div>
+  <div class="user-row">
+    <input id="dkPassword" type="password" placeholder="DK password" autocomplete="off"/>
+    <button id="saveCreds">Save</button>
+  </div>
+  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+    <input type="checkbox" id="dkAutoLogin" style="accent-color:#e8b84b;width:13px;height:13px"/>
+    <label for="dkAutoLogin" style="font-size:0.65rem;color:#888;cursor:pointer">Auto-login when logged out</label>
+  </div>
+
   <div class="status-grid">
     <div class="stat">
       <div class="stat-label">DK Tab</div>

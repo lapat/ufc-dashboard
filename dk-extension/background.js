@@ -91,16 +91,43 @@ chrome.alarms.onAlarm.addListener(async (alarm) => {
   }
 });
 
-chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
   if (changeInfo.status !== 'complete') return;
   const url = tab.url || '';
+
   if (url.includes('draftkings.com') && (url.includes('/login') || url.includes('/sportsbook-auth') || url.includes('sign-in'))) {
     postToServer('/api/dk-logout', { ts: Date.now() });
     chrome.storage.local.set({ dkLoggedOut: true });
-  } else if (url.includes('draftkings.com/mybets')) {
+    return;
+  }
+
+  // Successful login: tab just landed on sportsbook after being flagged as logged out
+  if (url.startsWith('https://sportsbook.draftkings.com/') && !url.includes('/login')) {
+    const r = await chrome.storage.local.get(['dkLoggedOut']);
+    if (r.dkLoggedOut) {
+      chrome.storage.local.set({ dkLoggedOut: false });
+      addLog('Login success — opening DK tabs');
+      await ensureDkTabs(tabId);
+    }
+  }
+
+  if (url.includes('draftkings.com/mybets')) {
     chrome.storage.local.set({ dkLoggedOut: false });
   }
 });
+
+// Ensure two DK tabs are open: sportsbook main + mybets
+async function ensureDkTabs(mainTabId) {
+  const allTabs = await chrome.tabs.query({ url: 'https://sportsbook.draftkings.com/*' });
+  const mybetsTab = allTabs.find(t => t.url?.includes('/mybets'));
+
+  // Open mybets in a second tab if not already present
+  if (!mybetsTab) {
+    chrome.tabs.create({ url: 'https://sportsbook.draftkings.com/mybets', openerTabId: mainTabId });
+  } else {
+    chrome.tabs.update(mybetsTab.id, { active: true });
+  }
+}
 
 function tryExtractUserId(url, data) {
   if (url.includes('/social/user/') && data?.username) return data.username;
@@ -126,6 +153,16 @@ chrome.runtime.onMessage.addListener((msg) => {
     postToServer('/api/dk-logout', { ts: Date.now() });
     chrome.storage.local.set({ dkLoggedOut: true });
     addLog('LOGOUT detected');
+    return;
+  }
+
+  if (msg.type === 'DK_NEEDS_LOGIN') {
+    addLog('Logged out — redirecting to DK login');
+    chrome.storage.local.set({ dkLoggedOut: true });
+    const tabId = sender?.tab?.id;
+    if (tabId) {
+      chrome.tabs.update(tabId, { url: 'https://myaccount.draftkings.com/auth/login' });
+    }
     return;
   }
 

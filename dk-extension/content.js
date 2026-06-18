@@ -7,7 +7,6 @@ window.addEventListener('message', e => {
   if (e.data?.type === 'DK_WS_STATUS') {
     chrome.runtime.sendMessage({ type: 'DK_WS_STATUS', connected: e.data.connected, url: e.data.url, ts: e.data.ts, code: e.data.code });
   }
-  // Detect 401 from any DK API response
   if (e.data?.type === 'DK_API') {
     if (e.data?.data?.statusCode === 401 || e.data?.data?.code === 'UNAUTHORIZED') {
       chrome.runtime.sendMessage({ type: 'DK_LOGOUT' });
@@ -15,14 +14,81 @@ window.addEventListener('message', e => {
   }
 });
 
-// Detect logout page
 const href = window.location.href;
+
+// ── Detect logout page ──────────────────────────────────────────────────────
 if (href.includes('/auth/login') || href.includes('/login') || href.includes('sign-in')) {
   chrome.runtime.sendMessage({ type: 'DK_LOGOUT' });
 }
 
-// Auto-refresh My Bets tab every 20 seconds — keeps live bet data current
-// setTimeout (not setInterval): fires once → reload → content script re-runs → repeat
+// ── Auto-fill login page ────────────────────────────────────────────────────
+if (href.includes('myaccount.draftkings.com') && href.includes('/login')) {
+  chrome.storage.local.get(['dkEmail', 'dkPassword', 'dkAutoLogin'], ({ dkEmail, dkPassword, dkAutoLogin }) => {
+    if (!dkEmail || !dkPassword || !dkAutoLogin) return;
+
+    function setReactInput(el, value) {
+      // React controlled inputs ignore plain .value = x; need native setter to trigger onChange
+      const setter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set;
+      setter.call(el, value);
+      el.dispatchEvent(new Event('input', { bubbles: true }));
+      el.dispatchEvent(new Event('change', { bubbles: true }));
+    }
+
+    function tryFill(attempts) {
+      if (attempts <= 0) return;
+      const emailInput = document.querySelector('input[type="email"], input[name="username"]')
+        || [...document.querySelectorAll('input')].find(i => /email/i.test(i.placeholder || ''));
+      const passInput = document.querySelector('input[type="password"]');
+      if (!emailInput || !passInput) {
+        setTimeout(() => tryFill(attempts - 1), 600);
+        return;
+      }
+      emailInput.focus();
+      setReactInput(emailInput, dkEmail);
+      setTimeout(() => {
+        passInput.focus();
+        setReactInput(passInput, dkPassword);
+        setTimeout(() => {
+          const btn = document.querySelector('button[type="submit"]')
+            || [...document.querySelectorAll('button')].find(b => /log.?in/i.test(b.textContent));
+          if (btn && !btn.disabled) btn.click();
+        }, 500);
+      }, 400);
+    }
+
+    setTimeout(() => tryFill(10), 1500);
+  });
+}
+
+// ── Detect "Sign Up or Log In" button on sportsbook (= logged out) ──────────
+if (href.startsWith('https://sportsbook.draftkings.com') && !href.includes('/login') && !href.includes('/auth/')) {
+  let alerted = false;
+
+  function checkLoggedOut() {
+    if (alerted) return;
+    const loggedOut = [...document.querySelectorAll('a, button, span')].some(
+      el => /sign\s*up\s*or\s*log\s*in/i.test(el.textContent?.trim())
+    );
+    if (loggedOut) {
+      alerted = true;
+      chrome.runtime.sendMessage({ type: 'DK_NEEDS_LOGIN' });
+    }
+  }
+
+  setTimeout(() => {
+    checkLoggedOut();
+    if (!alerted) {
+      const obs = new MutationObserver(() => {
+        checkLoggedOut();
+        if (alerted) obs.disconnect();
+      });
+      obs.observe(document.body, { childList: true, subtree: true });
+      setTimeout(() => obs.disconnect(), 30000);
+    }
+  }, 2500);
+}
+
+// ── Auto-refresh My Bets tab every 20 seconds ───────────────────────────────
 if (href.includes('/mybets')) {
   setTimeout(() => location.reload(), 20000);
 }
