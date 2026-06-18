@@ -91,6 +91,38 @@ repopulated automatically. Do NOT add them to git.
 
 ---
 
+## ⚠️ TODO: Cancel TheRundown Subscription
+
+**Cancel at therundown.io** — logged-in account → billing → cancel Starter API plan ($49/mo).
+
+Confirmed before canceling: TheRundown has NO historical in-play/live odds data accessible
+via REST API on the Starter plan. In-play market (market_id=41) is absent on all past events.
+Price history endpoint returns `{"error":"invalid marketID"}` for every format tried. The only
+live data they have comes from the websocket feed (Pro plan only, real-time only — not archived).
+
+Safe to cancel.
+
+---
+
+## Chrome Extension — Location and Reload
+
+**Canonical extension path:** `/Users/louislapat/Desktop/vibe/fights/ufc-dashboard/dk-extension`
+
+Chrome must be pointed at this exact folder. If the popup shows a stale version number
+after reloading, Chrome is loading from a different folder (an old copy somewhere else).
+
+**To verify / fix:**
+1. `chrome://extensions` → find "Bet Bot — DK Sync" → click **Details**
+2. Check the **Source** path — must be the path above
+3. If wrong: click **Remove**, then **Load unpacked**, select the path above
+
+**After any code change to `dk-extension/`:**
+1. `chrome://extensions` → find "Bet Bot — DK Sync" → click **↺ reload**
+2. Open the popup and verify the version matches `manifest.json`
+3. Chrome does NOT auto-reload unpacked extensions — this step is always required
+
+---
+
 ## After Every UFC Event — Checklist
 
 1. Verify new fight files auto-committed to GitHub by recorder (check git log)
