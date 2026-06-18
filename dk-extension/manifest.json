@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Bet Bot — DK Sync",
-  "version": "2.2",
+  "version": "2.3",
   "description": "Syncs your DraftKings bets to Bet Bot in real time",
   "icons": { "16": "icon16.png", "48": "icon48.png" },
   "permissions": ["storage", "scripting", "tabs", "alarms"],

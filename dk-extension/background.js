@@ -116,16 +116,17 @@ chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
   }
 });
 
-// Ensure two DK tabs are open: sportsbook main + mybets
+// After login: tab 1 = sportsbook main, tab 2 = mybets
 async function ensureDkTabs(mainTabId) {
-  const allTabs = await chrome.tabs.query({ url: 'https://sportsbook.draftkings.com/*' });
-  const mybetsTab = allTabs.find(t => t.url?.includes('/mybets'));
+  // Tab 1: navigate current tab to clean sportsbook main
+  await chrome.tabs.update(mainTabId, { url: 'https://sportsbook.draftkings.com/' });
 
-  // Open mybets in a second tab if not already present
-  if (!mybetsTab) {
+  // Tab 2: open mybets in a second tab (or focus it if already open)
+  const allTabs = await chrome.tabs.query({ url: 'https://sportsbook.draftkings.com/mybets' });
+  if (!allTabs.length) {
     chrome.tabs.create({ url: 'https://sportsbook.draftkings.com/mybets', openerTabId: mainTabId });
   } else {
-    chrome.tabs.update(mybetsTab.id, { active: true });
+    chrome.tabs.update(allTabs[0].id, { active: true });
   }
 }
 
