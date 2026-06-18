@@ -65,6 +65,26 @@ if (href.includes('myaccount.draftkings.com') && href.includes('/login')) {
   });
 }
 
+// ── Wait for location check to clear, then open mybets ──────────────────────
+// DK shows "Checking your location..." overlay after login before the sportsbook loads.
+// Poll until it's gone (or 15s timeout), then signal background to open mybets.
+if (href.startsWith('https://sportsbook.draftkings.com/') && !href.includes('/mybets') && !href.includes('/login') && !href.includes('/auth/')) {
+  chrome.storage.local.get(['dkWaitingForTabs'], ({ dkWaitingForTabs }) => {
+    if (!dkWaitingForTabs) return;
+    let tries = 0;
+    const locPoll = setInterval(() => {
+      tries++;
+      const bodyText = document.body?.innerText || '';
+      const stillChecking = /checking.{0,10}location|verifying.{0,10}location/i.test(bodyText);
+      if (!stillChecking || tries >= 15) {
+        clearInterval(locPoll);
+        chrome.storage.local.set({ dkWaitingForTabs: false });
+        send({ type: 'DK_SPORTSBOOK_READY' });
+      }
+    }, 1000);
+  });
+}
+
 // ── Persistent logout detection on sportsbook pages ─────────────────────────
 // DraftKings is a SPA — logging out re-renders in place with no URL change.
 // A one-time observer misses this. Poll every 3s forever instead.

@@ -101,13 +101,12 @@ chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
     return;
   }
 
-  // Successful login: tab just landed on sportsbook after being flagged as logged out
+  // Successful login: tab just landed on sportsbook — set flag, content.js will signal when ready
   if (url.startsWith('https://sportsbook.draftkings.com/') && !url.includes('/login')) {
     const r = await chrome.storage.local.get(['dkLoggedOut']);
     if (r.dkLoggedOut) {
-      chrome.storage.local.set({ dkLoggedOut: false });
-      addLog('Login success — opening DK tabs');
-      await ensureDkTabs(tabId);
+      chrome.storage.local.set({ dkLoggedOut: false, dkWaitingForTabs: true });
+      addLog('Login success — waiting for location check');
     }
   }
 
@@ -116,12 +115,8 @@ chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
   }
 });
 
-// After login: tab 1 = sportsbook main, tab 2 = mybets
-async function ensureDkTabs(mainTabId) {
-  // Tab 1: navigate current tab to clean sportsbook main
-  await chrome.tabs.update(mainTabId, { url: 'https://sportsbook.draftkings.com/' });
-
-  // Tab 2: open mybets in a second tab (or focus it if already open)
+// After location check clears: open mybets in second tab
+async function openMyBetsTab(mainTabId) {
   const allTabs = await chrome.tabs.query({ url: 'https://sportsbook.draftkings.com/mybets*' });
   if (!allTabs.length) {
     chrome.tabs.create({ url: 'https://sportsbook.draftkings.com/mybets', openerTabId: mainTabId });
@@ -154,6 +149,13 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
     postToServer('/api/dk-logout', { ts: Date.now() });
     chrome.storage.local.set({ dkLoggedOut: true });
     addLog('LOGOUT detected');
+    return;
+  }
+
+  if (msg.type === 'DK_SPORTSBOOK_READY') {
+    addLog('Location check cleared — opening mybets tab');
+    const tabId = sender?.tab?.id;
+    if (tabId) openMyBetsTab(tabId);
     return;
   }
 
