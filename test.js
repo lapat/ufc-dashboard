@@ -1520,7 +1520,6 @@ async function runRecordingTests() {
     await post('/api/recorder/watch', { sport: 'soccer_fifa_world_cup', team1: 'Brazil', team2: 'Argentina' });
     const d = await get('/api/recorder/status');
     assert(Array.isArray(d.watching), 'watching should be an array');
-    // status may show team names ("Brazil vs Argentina") or sport label — either is fine
     const wc = d.watching.find(w => typeof w === 'string' &&
       (w.includes('World Cup') || w.includes('soccer_fifa') || w.includes('Brazil') || w.includes('Argentina')));
     assert(wc, `World Cup game not found in watching: ${JSON.stringify(d.watching)}`);
@@ -1531,6 +1530,33 @@ async function runRecordingTests() {
     assert(Array.isArray(d.watching), 'watching should be array');
     const ufc = d.watching.find(w => typeof w === 'string' && w.includes('UFC'));
     assert(ufc, `UFC not found in watching: ${JSON.stringify(d.watching)}`);
+  });
+
+  await check('GET /api/recorder/backup-status returns config shape', async () => {
+    const d = await get('/api/recorder/backup-status');
+    assert('githubToken' in d, 'missing githubToken field');
+    assert('volumeActive' in d, 'missing volumeActive field');
+    assert('dataDir' in d, 'missing dataDir field');
+    assert('historicalDir' in d, 'missing historicalDir field');
+    assert('ok' in d, 'missing ok field');
+    assert(typeof d.githubToken === 'boolean', 'githubToken must be boolean');
+    assert(typeof d.volumeActive === 'boolean', 'volumeActive must be boolean');
+  });
+
+  await check('backup-status githubToken true when GITHUB_TOKEN is set locally', async () => {
+    // In local test env, GITHUB_TOKEN is set in .env
+    const d = await get('/api/recorder/backup-status');
+    assert(d.githubToken === true, `GITHUB_TOKEN not detected — set it in .env for local tests. Got: ${JSON.stringify(d)}`);
+  });
+
+  await check('recorder/status has required shape (recording, activeFights, totalSaved, lastPoll, watching)', async () => {
+    const d = await get('/api/recorder/status');
+    for (const f of ['recording', 'activeFights', 'totalSaved', 'lastPoll', 'watching']) {
+      assert(f in d, `recorder/status missing field: ${f}`);
+    }
+    assert(typeof d.recording === 'boolean', 'recording must be boolean');
+    assert(Array.isArray(d.activeFights), 'activeFights must be array');
+    assert(Array.isArray(d.watching), 'watching must be array');
   });
 }
 

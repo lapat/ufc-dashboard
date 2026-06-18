@@ -976,6 +976,17 @@ app.get('/api/recorder/status', (req, res) => {
   });
 });
 
+// Verify backup config — call this to confirm GitHub + volume are wired up
+app.get('/api/recorder/backup-status', (req, res) => {
+  res.json({
+    githubToken:  !!process.env.GITHUB_TOKEN,
+    dataDir:      process.env.DATA_DIR || null,
+    volumeActive: !!(process.env.DATA_DIR && process.env.DATA_DIR !== __dirname),
+    historicalDir: HISTORICAL_DIR,
+    ok: !!(process.env.GITHUB_TOKEN && process.env.DATA_DIR),
+  });
+});
+
 // Stop a specific active recording (save what we have and remove it)
 app.post('/api/recorder/stop/:id', (req, res) => {
   const id = req.params.id;
@@ -1041,9 +1052,11 @@ app.post('/api/recorder/test', async (req, res) => {
 // UFC: always-on at 3s — events are rare (~20 hrs/mo) so very cheap
 // Other sports: client-driven — browser sends heartbeat while watching, stops when tab closes
 
-const UFC_POLL_MS   = 3000;
-const OTHER_POLL_MS = 5000;  // 5s while browser is open watching
-const IDLE_POLL_MS  = 300000;
+const UFC_POLL_MS      = 3000;
+const OTHER_POLL_MS    = 5000;    // 5s while browser is open watching
+const PREWARM_MS       = 15000;   // 15s when a fight starts within 10 min
+const PREWARM_SLOW_MS  = 60000;   // 60s when a fight starts within 60 min
+const IDLE_POLL_MS     = 300000;  // 5 min when nothing is coming soon
 
 const SPORT_META = {
   'mma_mixed_martial_arts': { label: 'UFC/MMA',    window: 3 * 60 * 60 * 1000 },
@@ -1252,7 +1265,18 @@ async function recPollSport(sportKey, meta, watchedGame) {
     }
 
     recorderState.failCounts[sportKey] = 0; // reset on success
-    return currentIds.size;
+
+    // Find the soonest upcoming (not yet live) fight so recPoll can pre-warm
+    const now = Date.now();
+    let soonestMs = null;
+    for (const fight of fights) {
+      const start = new Date(fight.commence_time).getTime();
+      if (start > now) {
+        const msUntil = start - now;
+        if (soonestMs === null || msUntil < soonestMs) soonestMs = msUntil;
+      }
+    }
+    return { live: currentIds.size, soonestMs };
   } catch (e) {
     const fails = (recorderState.failCounts[sportKey] || 0) + 1;
     recorderState.failCounts[sportKey] = fails;
@@ -1263,7 +1287,7 @@ async function recPollSport(sportKey, meta, watchedGame) {
         `Odds API has failed ${fails} times in a row for ${meta.label}.\n\nLast error: ${e.message}\n\nRecording may be missing fight data. Check Railway logs.\n\nhttps://ufc-dashboard-production-e03d.up.railway.app`
       );
     }
-    return 0;
+    return { live: 0, soonestMs: null };
   }
 }
 
@@ -1272,22 +1296,35 @@ async function recPoll() {
 
   // Always poll UFC + World Cup (and any other ALWAYS_POLL sports)
   let alwaysLive = 0;
+  let soonestMs = null; // ms until next upcoming fight across all polled sports
   for (const key of ALWAYS_POLL) {
-    alwaysLive += await recPollSport(key, SPORT_META[key]);
+    const r = await recPollSport(key, SPORT_META[key]);
+    alwaysLive += r.live;
+    if (r.soonestMs !== null && (soonestMs === null || r.soonestMs < soonestMs)) soonestMs = r.soonestMs;
   }
 
   // Also poll the one sport the browser is watching (if heartbeat < 2 min old)
   const now = Date.now();
   const watching = clientWatching && (now - clientWatching.ts < 120000) ? clientWatching : null;
-  const otherLive = (watching && !ALWAYS_POLL.includes(watching.sport))
-    ? await recPollSport(watching.sport, SPORT_META[watching.sport] || { label: watching.sport, window: 4*60*60*1000 }, watching)
-    : 0;
+  let otherLive = 0;
+  if (watching && !ALWAYS_POLL.includes(watching.sport)) {
+    const r = await recPollSport(watching.sport, SPORT_META[watching.sport] || { label: watching.sport, window: 4*60*60*1000 }, watching);
+    otherLive = r.live;
+    if (r.soonestMs !== null && (soonestMs === null || r.soonestMs < soonestMs)) soonestMs = r.soonestMs;
+  }
   const totalLive = alwaysLive + otherLive;
 
-  // Next poll cadence: fast when anything is live
+  // Smart delay: pre-warm before scheduled fights so we never miss the first punch
   const ufcLive = recorderState.activeFights.size > 0 &&
     [...recorderState.activeFights.values()].some(r => r.meta.sport === 'mma_mixed_martial_arts');
-  const delay = ufcLive ? UFC_POLL_MS : totalLive > 0 ? OTHER_POLL_MS : IDLE_POLL_MS;
+  const delay = ufcLive          ? UFC_POLL_MS                                    // live UFC: 3s
+    : totalLive > 0              ? OTHER_POLL_MS                                  // other live: 5s
+    : soonestMs !== null && soonestMs < 10 * 60 * 1000  ? PREWARM_MS             // < 10 min: 15s
+    : soonestMs !== null && soonestMs < 60 * 60 * 1000  ? PREWARM_SLOW_MS        // < 60 min: 60s
+    : IDLE_POLL_MS;                                                               // nothing soon: 5 min
+  if (soonestMs !== null && soonestMs < 60 * 60 * 1000) {
+    console.log(`[recorder] Next fight in ${Math.round(soonestMs / 60000)}min — polling every ${delay / 1000}s`);
+  }
   setTimeout(recPoll, delay);
 }
 
@@ -1403,6 +1440,20 @@ function pingHealthcheck() {
 
 app.listen(PORT, () => {
   console.log(`Bet Bot running at http://localhost:${PORT}`);
+
+  // Validate critical env vars at startup — loud errors so Railway logs catch them immediately
+  if (!process.env.GITHUB_TOKEN) {
+    console.error('🚨 CRITICAL: GITHUB_TOKEN not set — fight files will NOT be backed up to GitHub!');
+    sendAlert('🚨 BET BOT: GITHUB_TOKEN missing', 'Fight recordings will save to disk but will NOT be backed up to GitHub. Set GITHUB_TOKEN in Railway Variables immediately.\n\nhttps://ufc-dashboard-production-e03d.up.railway.app');
+  } else {
+    console.log('[startup] GITHUB_TOKEN ✓');
+  }
+  if (!process.env.DATA_DIR) {
+    console.warn('[startup] DATA_DIR not set — using ephemeral filesystem. Set DATA_DIR=/data for Railway volume.');
+  } else {
+    console.log(`[startup] DATA_DIR=${process.env.DATA_DIR} ✓`);
+  }
+
   recPoll();
   console.log('Recorder started — UFC always-on, other sports when browser is watching');
   scheduleHeartbeat();
