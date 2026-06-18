@@ -824,6 +824,149 @@ async function run() {
     assert(Array.isArray(outcomes) && outcomes.length >= 2, `expected array≥2, got ${raw}`);
   });
 
+  await check('pollCoverage with mocked single covered bet turns correct pip green', async () => {
+    // Get the first card's first outcome name, then mock coverage to include it
+    const firstOutcome = await page.evaluate(() => {
+      const pip = document.querySelector('.cov-pip[data-outcome]');
+      return pip ? pip.dataset.outcome : null;
+    });
+    assert(firstOutcome, 'could not find a .cov-pip[data-outcome] to test with');
+
+    await page.evaluate(async (outcome) => {
+      const orig = window.fetch;
+      window.fetch = async (url, opts) => {
+        if (url.includes('bet-coverage')) {
+          return { ok: true, json: async () => ({ covered: [outcome], userId: 'ui-test' }) };
+        }
+        return orig(url, opts);
+      };
+      await pollCoverage();
+      window.fetch = orig;
+    }, firstOutcome);
+
+    const greenCount = await page.$$eval('.cov-dot.covered', els => els.length);
+    assert(greenCount >= 1, `expected ≥1 green dot after mocked coverage, got ${greenCount}`);
+  });
+
+  await check('applyCoverage([]) after poll resets back to 0 green', async () => {
+    await page.evaluate(() => applyCoverage([]));
+    const greenCount = await page.$$eval('.cov-dot.covered', els => els.length);
+    assert(greenCount === 0, `expected 0 after reset, got ${greenCount}`);
+  });
+
+  await check('all game cards have .cov-row (one per card)', async () => {
+    const cardCount  = await page.$$eval('.game-card', els => els.length);
+    const rowCount   = await page.$$eval('.game-card .cov-row', els => els.length);
+    assert(cardCount > 0, 'no game cards found');
+    assert(rowCount === cardCount, `expected ${cardCount} .cov-row, got ${rowCount}`);
+  });
+
+  await check('each .cov-pip has a non-empty data-outcome attribute', async () => {
+    const outcomes = await page.$$eval('.cov-pip[data-outcome]', els => els.map(e => e.dataset.outcome));
+    assert(outcomes.length >= 2, `expected ≥2 pips, got ${outcomes.length}`);
+    assert(outcomes.every(o => o && o.trim().length > 0), `some data-outcome values are empty: ${JSON.stringify(outcomes)}`);
+  });
+
+  await check('each .cov-pip has a .cov-name span with visible text', async () => {
+    const names = await page.$$eval('.cov-pip .cov-name', els => els.map(e => e.textContent.trim()));
+    assert(names.length >= 2, `expected ≥2 .cov-name spans, got ${names.length}`);
+    assert(names.every(n => n.length > 0), `some .cov-name spans are empty: ${JSON.stringify(names)}`);
+  });
+
+  await check('each .cov-pip has a .cov-dot element (the colored circle)', async () => {
+    const dotCount = await page.$$eval('.cov-pip .cov-dot', els => els.length);
+    const pipCount = await page.$$eval('.cov-pip', els => els.length);
+    assert(dotCount === pipCount, `every pip needs a dot: pips=${pipCount}, dots=${dotCount}`);
+  });
+
+  await check('each game card .locked-badge starts hidden', async () => {
+    // Before any coverage applied, no badge should be visible
+    const badges = await page.$$eval('.locked-badge', els =>
+      els.map(e => ({ display: e.style.display, visible: e.offsetParent !== null }))
+    );
+    assert(badges.length > 0, 'no .locked-badge elements found — HTML structure issue');
+    assert(badges.every(b => b.display === 'none' || !b.visible), `some badges are visible on load: ${JSON.stringify(badges)}`);
+  });
+
+  await check('LOCKED card has lockPulse animation class after all outcomes covered', async () => {
+    await page.evaluate(() => {
+      const card = document.querySelector('.game-card');
+      if (!card) return;
+      const outcomes = [...card.querySelectorAll('.cov-pip[data-outcome]')].map(p => p.dataset.outcome);
+      applyCoverage(outcomes);
+    });
+    const hasLockedClass = await page.$eval('.game-card', el => el.classList.contains('locked'));
+    assert(hasLockedClass, 'first game card should have .locked class after all outcomes covered');
+    // The lockPulse CSS animation is applied via .game-card.locked rule — verify the class is set
+    const lockedCards = await page.$$eval('.game-card.locked', els => els.length);
+    assert(lockedCards >= 1, `expected ≥1 locked card, got ${lockedCards}`);
+    await page.evaluate(() => applyCoverage([])); // reset
+  });
+
+  await check('data-outcomes JSON is valid and contains 2+ team names', async () => {
+    const cards = await page.$$eval('.game-card[data-outcomes]', els =>
+      els.map(e => {
+        try { return { ok: true, val: JSON.parse(e.dataset.outcomes) }; }
+        catch(ex) { return { ok: false, raw: e.dataset.outcomes }; }
+      })
+    );
+    assert(cards.length > 0, 'no game cards with data-outcomes found');
+    assert(cards.every(c => c.ok), `some data-outcomes failed JSON.parse: ${JSON.stringify(cards.filter(c => !c.ok))}`);
+    assert(cards.every(c => c.val.length >= 2), `all data-outcomes arrays should have ≥2 entries`);
+    assert(cards.every(c => c.val.every(v => typeof v === 'string' && v.length > 0)), 'all outcome names should be non-empty strings');
+  });
+
+  await check('pollCoverage handles network error without throwing', async () => {
+    await page.evaluate(async () => {
+      const orig = window.fetch;
+      window.fetch = async (url) => {
+        if (url.includes('bet-coverage')) throw new Error('simulated network error');
+        return orig(url);
+      };
+      try {
+        await pollCoverage();
+        window.__pollNetworkErrorOk = true;
+      } catch(e) {
+        window.__pollNetworkErrorOk = false;
+        window.__pollNetworkError = e.message;
+      }
+      window.fetch = orig;
+    });
+    const ok = await page.evaluate(() => window.__pollNetworkErrorOk);
+    assert(ok !== false, 'pollCoverage threw on network error (should catch internally)');
+  });
+
+  await check('/api/bet-coverage returns 200 from dashboard fetch', async () => {
+    const status = await page.evaluate(async () => {
+      const r = await fetch('/api/bet-coverage');
+      return r.status;
+    });
+    assert(status === 200, `expected 200, got ${status}`);
+  });
+
+  await check('/api/bet-coverage response has covered array and bets array', async () => {
+    const d = await page.evaluate(async () => {
+      const r = await fetch('/api/bet-coverage');
+      return r.json();
+    });
+    assert(Array.isArray(d.covered), `covered must be array, got ${typeof d.covered}`);
+    assert(Array.isArray(d.bets), `bets must be array, got ${typeof d.bets}`);
+  });
+
+  await check('/api/live-crossovers returns array from dashboard fetch', async () => {
+    const result = await page.evaluate(async () => {
+      try {
+        const r = await fetch('/api/live-crossovers');
+        const d = await r.json();
+        return { ok: r.ok, isArray: Array.isArray(d), status: r.status };
+      } catch(e) {
+        return { ok: false, error: e.message };
+      }
+    });
+    assert(result.ok, `live-crossovers request failed: ${JSON.stringify(result)}`);
+    assert(result.isArray, `live-crossovers should return array, got isArray=${result.isArray}`);
+  });
+
   // Reset for screenshot
   await page.evaluate(() => applyCoverage([]));
 

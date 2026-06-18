@@ -672,7 +672,8 @@ app.post('/api/dk-mock', (req, res) => {
     placementDate: new Date().toISOString(),
     isParlay: false,
   };
-  dkBetsByUser.set(targetUser, [mock]);
+  const existing = dkBetsByUser.get(targetUser) || [];
+  dkBetsByUser.set(targetUser, [...existing, mock]);
   saveDKBets();
   res.json({ ok: true, bet: mock });
 });

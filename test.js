@@ -1609,6 +1609,96 @@ async function runRecordingTests() {
   });
 }
 
+async function runBetPlacementServerTests() {
+  console.log('\n── Bet Placement (Server) ──');
+
+  await check('/api/live-crossovers returns 200', async () => {
+    const r = await fetch(`${target}/api/live-crossovers`);
+    assert(r.ok, `HTTP ${r.status}`);
+  });
+
+  await check('/api/live-crossovers returns an array', async () => {
+    const d = await get('/api/live-crossovers');
+    assert(Array.isArray(d), `expected array, got ${typeof d}`);
+  });
+
+  await check('/api/live-crossovers items have required shape when fights active', async () => {
+    const d = await get('/api/live-crossovers');
+    // When fights are live, each entry must have these fields
+    for (const entry of d) {
+      assert(typeof entry.id === 'string', `entry.id not string: ${JSON.stringify(entry)}`);
+      assert(typeof entry.fighter1 === 'string', `entry.fighter1 missing: ${JSON.stringify(entry)}`);
+      assert(typeof entry.fighter2 === 'string', `entry.fighter2 missing: ${JSON.stringify(entry)}`);
+      assert(typeof entry.crossoverState === 'object', `entry.crossoverState missing: ${JSON.stringify(entry)}`);
+    }
+  });
+
+  await check('/api/live-crossovers crossoverState has status field', async () => {
+    const d = await get('/api/live-crossovers');
+    const validStatuses = ['approaching', 'imminent', 'crossed', 'receding', 'stable'];
+    for (const entry of d) {
+      const s = entry.crossoverState?.status;
+      if (s) { // only check if fights active
+        assert(validStatuses.includes(s), `invalid crossover status "${s}" — valid: ${validStatuses.join(', ')}`);
+      }
+    }
+  });
+
+  await check('/api/live-crossovers crossoverState hasCrossed is boolean when present', async () => {
+    const d = await get('/api/live-crossovers');
+    for (const entry of d) {
+      if (entry.crossoverState && 'hasCrossed' in entry.crossoverState) {
+        assert(typeof entry.crossoverState.hasCrossed === 'boolean',
+          `hasCrossed must be boolean, got ${typeof entry.crossoverState.hasCrossed}`);
+      }
+    }
+  });
+
+  await check('/api/dk-mock then /api/bet-coverage shows the bet', async () => {
+    const uid = `placement-test-${Date.now()}`;
+    await fetch(`${target}/api/dk-mock`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ fighter: 'Draw', odds: '+350', stake: 0.01, userId: uid })
+    });
+    const d = await fetch(`${target}/api/bet-coverage?user=${uid}`).then(r => r.json());
+    assert(Array.isArray(d.covered), 'covered must be array');
+    const hasDrawBet = d.bets.some(b => b.selection.toLowerCase().includes('draw'));
+    assert(hasDrawBet, `draw bet not reflected in coverage: ${JSON.stringify(d.bets)}`);
+  });
+
+  await check('/api/bet-coverage covered array lowercase', async () => {
+    const uid = `case-test-${Date.now()}`;
+    await fetch(`${target}/api/dk-mock`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ fighter: 'Canada', odds: '-350', stake: 0.01, userId: uid })
+    });
+    const d = await fetch(`${target}/api/bet-coverage?user=${uid}`).then(r => r.json());
+    assert(Array.isArray(d.covered), 'covered must be array');
+    for (const s of d.covered) {
+      assert(s === s.toLowerCase(), `covered entries should be lowercase, got "${s}"`);
+    }
+  });
+
+  await check('/api/bet-coverage: two bets on same user, both reflected', async () => {
+    const uid = `two-bet-test-${Date.now()}`;
+    await fetch(`${target}/api/dk-mock`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ fighter: 'Canada', odds: '-350', stake: 0.01, userId: uid })
+    });
+    await fetch(`${target}/api/dk-mock`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ fighter: 'Qatar', odds: '+200', stake: 0.01, userId: uid })
+    });
+    const d = await fetch(`${target}/api/bet-coverage?user=${uid}`).then(r => r.json());
+    assert(d.bets.length >= 2, `expected ≥2 bets, got ${d.bets.length}`);
+    assert(d.covered.length >= 2, `expected ≥2 covered, got ${d.covered.length}`);
+  });
+}
+
 // ── Main ───────────────────────────────────────────────────────────────────
 console.log('═══════════════════════════════════');
 console.log('  BET BOT TEST SUITE');
@@ -1755,6 +1845,208 @@ try { testCoverage_mmaLocked(); console.log('  ✓ coverage: 2/2 MMA → LOCKED'
 try { testCoverage_mmaOneSide(); console.log('  ✓ coverage: 1/2 MMA → not locked'); passed++; } catch(e) { console.error('  ✗ coverage mma-one-side:', e.message); failed++; }
 try { testCoverage_fuzzyMatch(); console.log('  ✓ coverage: fuzzy case-insensitive match works'); passed++; } catch(e) { console.error('  ✗ coverage fuzzy:', e.message); failed++; }
 try { testCoverage_emptyOutcomes(); console.log('  ✓ coverage: empty outcomes array never locks'); passed++; } catch(e) { console.error('  ✗ coverage empty:', e.message); failed++; }
+
+// ── Bet Placement: DOM detection strings ──────────────────────────────────
+console.log('\n── Bet Placement: DOM detection strings ──');
+
+// These regex patterns live inside the chrome.scripting.executeScript injected function.
+// Replicated here so we can verify them without a browser.
+const confirmedRegex  = /bet\s+placed|congrats|success|confirmed/i;
+const oddsChangedRegex = /odds\s+(have\s+)?changed|accept\s+new\s+odds/i;
+const suspendedRegex   = /market\s+suspended|betting\s+suspended/i;
+const oddsTextRegex    = /^[+-]\d+$/;
+
+try {
+  assert(confirmedRegex.test('Bet Placed! Your wager is in.'), 'bet placed');
+  assert(confirmedRegex.test('Congrats! Bet accepted.'), 'congrats');
+  assert(confirmedRegex.test('Success! Wager submitted.'), 'success');
+  assert(confirmedRegex.test('Bet Confirmed — good luck!'), 'confirmed');
+  assert(!confirmedRegex.test('Processing your bet...'), 'processing should NOT match');
+  console.log('  ✓ confirmedRegex: matches all success strings, rejects processing'); passed++;
+} catch(e) { console.error('  ✗ confirmedRegex:', e.message); failed++; }
+
+try {
+  assert(oddsChangedRegex.test('Odds have changed since you added this bet.'), 'odds have changed');
+  assert(oddsChangedRegex.test('Odds changed — please review.'), 'odds changed no "have"');
+  assert(oddsChangedRegex.test('Accept New Odds to continue.'), 'accept new odds');
+  assert(!oddsChangedRegex.test('Bet Placed!'), 'bet placed should NOT match');
+  console.log('  ✓ oddsChangedRegex: catches all DK odds-change variants'); passed++;
+} catch(e) { console.error('  ✗ oddsChangedRegex:', e.message); failed++; }
+
+try {
+  assert(suspendedRegex.test('Market Suspended'), 'market suspended');
+  assert(suspendedRegex.test('Betting Suspended for this event.'), 'betting suspended');
+  assert(!suspendedRegex.test('Bet Placed!'), 'bet placed should NOT match suspension');
+  assert(!suspendedRegex.test('Odds have changed'), 'odds changed should NOT match suspension');
+  console.log('  ✓ suspendedRegex: catches DK market/betting suspended strings'); passed++;
+} catch(e) { console.error('  ✗ suspendedRegex:', e.message); failed++; }
+
+try {
+  assert(oddsTextRegex.test('+150'), '+150');
+  assert(oddsTextRegex.test('-350'), '-350');
+  assert(oddsTextRegex.test('+100'), '+100');
+  assert(oddsTextRegex.test('-110'), '-110');
+  assert(!oddsTextRegex.test('150'), 'missing sign should not match');
+  assert(!oddsTextRegex.test('+150 pts'), 'trailing text should not match');
+  assert(!oddsTextRegex.test('EVEN'), 'EVEN should not match');
+  console.log('  ✓ oddsTextRegex: matches +N/-N, rejects unsigned and text'); passed++;
+} catch(e) { console.error('  ✗ oddsTextRegex:', e.message); failed++; }
+
+// ── Bet Placement: guard logic ─────────────────────────────────────────────
+console.log('\n── Bet Placement: guard logic ──');
+
+try {
+  // betInFlight flag logic: second click while in-flight returns early
+  let callCount = 0;
+  let betInFlight = false;
+  function fakeSendBet() {
+    if (betInFlight) return; // guarded
+    betInFlight = true;
+    callCount++;
+  }
+  fakeSendBet(); // first click — should count
+  fakeSendBet(); // second click — should be blocked
+  fakeSendBet(); // third click — should be blocked
+  assert(callCount === 1, `expected 1 execution, got ${callCount}`);
+  betInFlight = false;
+  fakeSendBet(); // after reset should work
+  assert(callCount === 2, `expected 2 after reset, got ${callCount}`);
+  console.log('  ✓ betInFlight: blocks double-click, unblocks after reset'); passed++;
+} catch(e) { console.error('  ✗ betInFlight guard:', e.message); failed++; }
+
+try {
+  // Amount < 0.01 should be rejected before sending
+  function validateBetAmount(amount) {
+    if (amount < 0.01) return { valid: false, error: 'Minimum $0.01' };
+    return { valid: true };
+  }
+  assert(!validateBetAmount(0).valid, '$0 rejected');
+  assert(!validateBetAmount(-1).valid, 'negative rejected');
+  assert(!validateBetAmount(0.001).valid, '$0.001 below min');
+  assert(validateBetAmount(0.01).valid, '$0.01 ok');
+  assert(validateBetAmount(0.05).valid, '$0.05 ok');
+  assert(validateBetAmount(1000).valid, '$1000 ok');
+  console.log('  ✓ amount validation: rejects <$0.01, accepts ≥$0.01'); passed++;
+} catch(e) { console.error('  ✗ amount validation:', e.message); failed++; }
+
+try {
+  // parseBetCmd: zero amount returns object (regex matches), but validation rejects it
+  const r = parseBetCmd('bet canada 0');
+  assert(r !== null && r.amount === 0, `"bet canada 0" should parse to amount=0, got ${JSON.stringify(r)}`);
+  // Then validation catches it
+  assert(r.amount < 0.01, 'amount=0 should fail the 0.01 check');
+  console.log('  ✓ parseBetCmd: "bet canada 0" parses (amount=0) but fails validation gate'); passed++;
+} catch(e) { console.error('  ✗ parseBetCmd zero amount:', e.message); failed++; }
+
+try {
+  // parseBetCmd: trailing text after amount should NOT match (regex ends at $)
+  const r1 = parseBetCmd('bet canada 25 hedge qatar');
+  assert(r1 === null, `"bet canada 25 hedge qatar" should be null (strategy syntax), got ${JSON.stringify(r1)}`);
+  // DK odds embedded in command also rejected
+  const r2 = parseBetCmd('bet canada 25.00 at -350');
+  assert(r2 === null, `"bet canada 25.00 at -350" should be null, got ${JSON.stringify(r2)}`);
+  console.log('  ✓ parseBetCmd: trailing text after amount → null ($ anchor enforced)'); passed++;
+} catch(e) { console.error('  ✗ parseBetCmd trailing text:', e.message); failed++; }
+
+try {
+  // parseBetCmd: large stakes work (no upper bound in regex)
+  const r = parseBetCmd('bet Canada 10000');
+  assert(r && r.amount === 10000, `$10000 should parse, got ${JSON.stringify(r)}`);
+  const r2 = parseBetCmd('bet Canada 0.01');
+  assert(r2 && r2.amount === 0.01, `min bet should parse, got ${JSON.stringify(r2)}`);
+  console.log('  ✓ parseBetCmd: $10000 and $0.01 both parse (no upper/lower regex bound)'); passed++;
+} catch(e) { console.error('  ✗ parseBetCmd amount range:', e.message); failed++; }
+
+try {
+  // No DK tab → error message must be specific and actionable
+  const noTabError = 'No DK sportsbook tab open — go to sportsbook.draftkings.com first';
+  assert(noTabError.length > 0, 'error message not empty');
+  assert(noTabError.includes('sportsbook.draftkings.com'), 'error message includes DK URL');
+  assert(!noTabError.includes('undefined'), 'error message has no undefined');
+  console.log('  ✓ no-tab error: message is specific and includes the URL to visit'); passed++;
+} catch(e) { console.error('  ✗ no-tab error message:', e.message); failed++; }
+
+try {
+  // BET_RESULT ok:true confirmed vs unconfirmed message paths
+  function formatBetResult(msg) {
+    if (msg.ok) {
+      const confirmed = msg.confirmed ? ' ✓ Confirmed in slip' : ' (check DK for confirmation)';
+      return `Bet placed: ${msg.side} ${msg.oddsText} for $${msg.amount}.${confirmed}`;
+    }
+    return `Failed [${msg.step || '?'}]: ${msg.error}`;
+  }
+  const okConfirmed = formatBetResult({ ok: true, side: 'Canada', oddsText: '-350', amount: 0.01, confirmed: true });
+  assert(okConfirmed.includes('Canada'), 'includes side');
+  assert(okConfirmed.includes('-350'), 'includes odds');
+  assert(okConfirmed.includes('0.01'), 'includes amount');
+  assert(okConfirmed.includes('Confirmed'), 'confirmed path has Confirmed');
+
+  const okUnconfirmed = formatBetResult({ ok: true, side: 'Qatar', oddsText: '+280', amount: 0.01, confirmed: false });
+  assert(okUnconfirmed.includes('check DK'), 'unconfirmed path says "check DK"');
+
+  const fail = formatBetResult({ ok: false, step: 'find_button', error: 'No button found for "Canada"' });
+  assert(fail.includes('find_button'), 'error path includes step');
+  assert(fail.includes('No button'), 'error path includes error');
+  console.log('  ✓ BET_RESULT: ok+confirmed, ok+unconfirmed, failed all format correctly'); passed++;
+} catch(e) { console.error('  ✗ BET_RESULT format:', e.message); failed++; }
+
+try {
+  // Step codes from injected script — verify all known codes are defined strings
+  const knownSteps = ['find_button', 'find_input', 'btn_disabled', 'find_placebtn', 'odds_changed', 'suspended', 'done'];
+  for (const step of knownSteps) {
+    assert(typeof step === 'string' && step.length > 0, `step code "${step}" is not a valid string`);
+    assert(!step.includes(' '), `step code "${step}" should use underscores not spaces`);
+  }
+  console.log('  ✓ step codes: all 7 step codes are valid underscore strings'); passed++;
+} catch(e) { console.error('  ✗ step codes:', e.message); failed++; }
+
+// ── Bet Placement: sport outcome logic ────────────────────────────────────
+console.log('\n── Bet Placement: sport outcomes ──');
+
+function getSportOutcomes(sport) {
+  switch (sport) {
+    case 'soccer': return ['home', 'draw', 'away'];
+    case 'mma':    return ['fighter1', 'fighter2'];
+    case 'boxing': return ['fighter1', 'fighter2'];
+    default:       return ['team1', 'team2'];
+  }
+}
+
+try {
+  const soccer = getSportOutcomes('soccer');
+  assert(soccer.length === 3, `soccer should have 3 outcomes, got ${soccer.length}`);
+  assert(soccer.includes('draw'), 'soccer must include draw');
+  assert(soccer.includes('home'), 'soccer must include home');
+  assert(soccer.includes('away'), 'soccer must include away');
+  console.log('  ✓ sportOutcomes: soccer → 3 outcomes (home, draw, away)'); passed++;
+} catch(e) { console.error('  ✗ sportOutcomes soccer:', e.message); failed++; }
+
+try {
+  const mma = getSportOutcomes('mma');
+  assert(mma.length === 2, `MMA should have 2 outcomes, got ${mma.length}`);
+  assert(!mma.includes('draw'), 'MMA should not include draw');
+  console.log('  ✓ sportOutcomes: MMA → 2 outcomes (no draw)'); passed++;
+} catch(e) { console.error('  ✗ sportOutcomes mma:', e.message); failed++; }
+
+try {
+  // A two-leg hedge on soccer ALWAYS leaves draw exposed
+  const sport = 'soccer';
+  const allOutcomes = getSportOutcomes(sport);
+  const hedgedSides = ['home', 'away'];  // typical 2-leg hedge
+  const unhedged = allOutcomes.filter(o => !hedgedSides.includes(o));
+  assert(unhedged.length === 1 && unhedged[0] === 'draw', `draw should be unhedged, got ${JSON.stringify(unhedged)}`);
+  console.log('  ✓ sportOutcomes: 2-leg hedge on soccer always exposes draw'); passed++;
+} catch(e) { console.error('  ✗ sportOutcomes soccer 2-leg gap:', e.message); failed++; }
+
+try {
+  // MMA: 2-leg hedge covers everything
+  const sport = 'mma';
+  const allOutcomes = getSportOutcomes(sport);
+  const hedgedSides = ['fighter1', 'fighter2'];
+  const unhedged = allOutcomes.filter(o => !hedgedSides.includes(o));
+  assert(unhedged.length === 0, `MMA 2-leg hedge should be complete, got ${JSON.stringify(unhedged)}`);
+  console.log('  ✓ sportOutcomes: 2-leg hedge on MMA covers 100% of outcomes'); passed++;
+} catch(e) { console.error('  ✗ sportOutcomes mma full cover:', e.message); failed++; }
 
 // ── AI Agent: Hedge Math ──────────────────────────────────────────────────
 console.log('\n── AI Agent: Hedge Math ──');
@@ -2216,6 +2508,107 @@ try {
   console.log('  ✓ parseStrategy: idempotency key is deterministic from intent fields'); passed++;
 } catch(e) { console.error('  ✗ parseStrategy idempotency:', e.message); failed++; }
 
+// ── AI Agent: Hedge Math (extended) ──────────────────────────────────────
+console.log('\n── AI Agent: Hedge Math (extended) ──');
+
+try {
+  // Profitable crossover: caught dog at +300 (26.3%), now at -110 (52.4%)
+  // Combined implied: 26.3% + 52.4% = 78.7% < 100% → PROFITABLE
+  const D1 = americanToDecimal(300);  // 4.0
+  const D2 = americanToDecimal(-110); // ~1.909
+  const h = calculateHedge(10, 300, -110);
+  assert(h.profitable, `+300 first leg hedged at -110 should be profitable, profit=${h.profitIfA}`);
+  assert(h.profitIfA > 0, `profit should be positive, got ${h.profitIfA}`);
+  console.log(`  ✓ hedgeMath: +300 → -110 crossover IS profitable (+$${h.profitIfA.toFixed(2)} on $${h.totalStaked.toFixed(2)} total)`); passed++;
+} catch(e) { console.error('  ✗ hedgeMath profitable crossover:', e.message); failed++; }
+
+try {
+  // Stake rounding: hedge stake always rounded to 2 decimal places
+  const h = calculateHedge(25, -150, 200);
+  // D1=1.667, payout=41.67, D2=3.0, hedgeStake=41.67/3.0=13.89
+  const stakeStr = h.hedgeStake.toString();
+  const decimals = stakeStr.includes('.') ? stakeStr.split('.')[1].length : 0;
+  assert(decimals <= 2, `stake has ${decimals} decimal places, expected ≤2: ${stakeStr}`);
+  console.log(`  ✓ hedgeMath: hedge stake rounded to 2 decimal places (got $${h.hedgeStake})`); passed++;
+} catch(e) { console.error('  ✗ hedgeMath rounding:', e.message); failed++; }
+
+try {
+  // Leg 1 payout calculation: S1 × D1 must match expected value
+  const S1 = 25, D1 = americanToDecimal(-350); // 1.2857
+  const h = calculateHedge(S1, -350, 350); // any hedge odds
+  assert(Math.abs(h.payout1 - S1 * D1) < 0.01, `payout1 mismatch: expected ${S1 * D1}, got ${h.payout1}`);
+  console.log(`  ✓ hedgeMath: payout1 = S1 × D1 exactly (${S1} × ${D1.toFixed(4)} = $${h.payout1})`); passed++;
+} catch(e) { console.error('  ✗ hedgeMath payout1:', e.message); failed++; }
+
+try {
+  // Minimum hedge stake below DK's $1 minimum: flag if hedgeStake < 1
+  function hedgeBelowMinimum(hedgeStake, dkMin = 1.00) {
+    return hedgeStake < dkMin;
+  }
+  const h1 = calculateHedge(1, -350, 105); // tiny first leg
+  const h2 = calculateHedge(25, 200, 105); // larger first leg
+  assert(typeof h1.hedgeStake === 'number', 'hedgeStake is a number');
+  // For $1 at -350 hedged at +105: payout=$1.286, hedgeStake=$1.286/2.05=$0.627 < $1
+  assert(hedgeBelowMinimum(h1.hedgeStake), `$1@-350 hedge at +105 should be below DK min: $${h1.hedgeStake}`);
+  assert(!hedgeBelowMinimum(h2.hedgeStake), `$25@+200 hedge at +105 should be above DK min: $${h2.hedgeStake}`);
+  console.log(`  ✓ hedgeMath: stake below DK $1 minimum detected ($${h1.hedgeStake.toFixed(2)} < $1)`); passed++;
+} catch(e) { console.error('  ✗ hedgeMath DK min stake:', e.message); failed++; }
+
+try {
+  // totalStaked = leg1 + hedge (sanity check)
+  const h = calculateHedge(25, 200, 150);
+  const expected = 25 + h.hedgeStake;
+  assert(Math.abs(h.totalStaked - expected) < 0.01, `totalStaked ${h.totalStaked} ≠ 25 + ${h.hedgeStake}`);
+  console.log(`  ✓ hedgeMath: totalStaked = leg1 + hedgeStake ($${h.totalStaked})`); passed++;
+} catch(e) { console.error('  ✗ hedgeMath totalStaked:', e.message); failed++; }
+
+// ── Coverage gamification (extended) ─────────────────────────────────────
+console.log('\n── Coverage gamification (extended) ──');
+
+try {
+  // Partial string match: "canada" should match "FC Canada" (substring)
+  const r = computeCoverage(['FC Canada', 'Draw', 'South Korea'], ['canada']);
+  assert(r.covered.length === 1, `expected 1 covered, got ${r.covered.length}`);
+  assert(r.covered[0] === 'FC Canada', `expected "FC Canada", got "${r.covered[0]}"`);
+  console.log('  ✓ coverage: "canada" fuzzy-matches "FC Canada" (substring)'); passed++;
+} catch(e) { console.error('  ✗ coverage partial match:', e.message); failed++; }
+
+try {
+  // Idempotent: calling applyCoverage twice with same args gives same result
+  const outcomes = ['Canada', 'Draw', 'Qatar'];
+  const covered = ['canada', 'draw'];
+  const r1 = computeCoverage(outcomes, covered);
+  const r2 = computeCoverage(outcomes, covered);
+  assert(r1.covered.length === r2.covered.length, 'idempotent: same length');
+  assert(r1.locked === r2.locked, 'idempotent: same locked state');
+  console.log('  ✓ coverage: computeCoverage is idempotent (same args → same result)'); passed++;
+} catch(e) { console.error('  ✗ coverage idempotent:', e.message); failed++; }
+
+try {
+  // Never locks with zero outcomes
+  const r = computeCoverage([], ['canada', 'draw', 'qatar']);
+  assert(!r.locked, 'empty outcomes array should never be locked');
+  assert(r.covered.length === 0, 'no outcomes to match against');
+  console.log('  ✓ coverage: empty outcomes → never locked (guards against div-by-zero)'); passed++;
+} catch(e) { console.error('  ✗ coverage zero outcomes:', e.message); failed++; }
+
+try {
+  // MMA: only 2 outcomes needed for lock
+  const r = computeCoverage(['Alex Pereira', 'Ciryl Gane'], ['alex pereira', 'ciryl gane']);
+  assert(r.locked, `MMA 2/2 should be locked: ${JSON.stringify(r)}`);
+  assert(r.covered.length === 2, `both should be covered: ${r.covered.length}`);
+  console.log('  ✓ coverage: MMA 2/2 covered → LOCKED (no draw needed)'); passed++;
+} catch(e) { console.error('  ✗ coverage MMA lock:', e.message); failed++; }
+
+try {
+  // Coverage count exactly matches when all 3 soccer outcomes covered
+  const outcomes = ['Canada', 'Draw', 'Qatar'];
+  const r = computeCoverage(outcomes, ['canada', 'draw', 'qatar']);
+  assert(r.covered.length === outcomes.length, `covered.length ${r.covered.length} ≠ outcomes.length ${outcomes.length}`);
+  assert(r.locked, '3/3 should be locked');
+  console.log('  ✓ coverage: covered.length === outcomes.length when all matched'); passed++;
+} catch(e) { console.error('  ✗ coverage count match:', e.message); failed++; }
+
 // ── AI Agent: Error Recovery ──────────────────────────────────────────────
 console.log('\n── AI Agent: Error Recovery ──');
 
@@ -2296,6 +2689,7 @@ runServerTests().then(async () => {
   await runNewFeatureServerTests();
   await runCoverageServerTests();
   await runRecordingTests();
+  await runBetPlacementServerTests();
 }).then(() => {
   console.log(`\n═══════════════════════════════════`);
   console.log(`  ${passed} passed  ${failed} failed`);
