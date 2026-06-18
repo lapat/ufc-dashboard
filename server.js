@@ -9,9 +9,10 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const ODDS_API_KEY = process.env.ODDS_API_KEY;
 const BASE_URL = 'https://api.the-odds-api.com/v4';
-const HISTORICAL_DIR = path.join(__dirname, 'historical_data');
-const API_CACHE_DIR = path.join(__dirname, 'historical_data', 'api_cache');
-if (!fs.existsSync(API_CACHE_DIR)) fs.mkdirSync(API_CACHE_DIR, { recursive: true });
+// HISTORICAL_DIR is set by record_engine (respects DATA_DIR env var for Railway volume).
+// Defined here as a placeholder — overwritten after record_engine is imported below.
+let HISTORICAL_DIR = path.join(__dirname, 'historical_data');
+let API_CACHE_DIR  = path.join(__dirname, 'historical_data', 'api_cache');
 
 const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 const TOKEN_WARN = parseInt(process.env.ANTHROPIC_TOKEN_WARN_THRESHOLD || '500000');
@@ -1083,6 +1084,11 @@ const {
   loadPersistedState, persistState,
   migrateToVolume, HISTORICAL_DIR: REC_HISTORICAL_DIR,
 } = require('./record_engine');
+
+// Use the volume-aware path from record_engine everywhere in this file
+HISTORICAL_DIR = REC_HISTORICAL_DIR;
+API_CACHE_DIR  = path.join(REC_HISTORICAL_DIR, 'api_cache');
+if (!fs.existsSync(API_CACHE_DIR)) fs.mkdirSync(API_CACHE_DIR, { recursive: true });
 
 // One-time volume migration (no-op if DATA_DIR not set)
 migrateToVolume();
