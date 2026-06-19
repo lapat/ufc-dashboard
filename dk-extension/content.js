@@ -159,15 +159,26 @@ if (href.startsWith('https://sportsbook.draftkings.com/') &&
 
   function scanOddsFromPage() {
     return [...document.querySelectorAll('button, [role="button"]')]
-      .filter(b => /^[+−\-]\d+$/.test(b.textContent.trim()))
-      .map(btn => {
-        const american = parseAmericanOdds(btn.textContent.trim());
+      .flatMap(btn => {
+        // Try full button text first (flat odds-only button)
+        const full = btn.textContent.trim();
+        if (/^[+−\-]\d+$/.test(full)) return [{ btn, oddsText: full }];
+        // DK often renders <button><span>Team</span><span>-350</span></button>
+        // In that case full text is "Team-350" — find the child span that is purely odds
+        const oddsSpan = [...btn.querySelectorAll('*')].find(
+          el => el.childElementCount === 0 && /^[+−\-]\d+$/.test(el.textContent.trim())
+        );
+        if (oddsSpan) return [{ btn, oddsText: oddsSpan.textContent.trim() }];
+        return [];
+      })
+      .map(({ btn, oddsText }) => {
+        const american = parseAmericanOdds(oddsText);
         if (american === null) return null;
         return {
-          side:     findSideNameNear(btn),
+          side:    findSideNameNear(btn),
           american,
-          oddsText: btn.textContent.trim(),
-          implied:  americanToImplied(american),
+          oddsText,
+          implied: americanToImplied(american),
         };
       })
       .filter(Boolean);

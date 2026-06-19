@@ -129,7 +129,7 @@ function tryExtractUserId(url, data) {
 function strategyTransition(current, event) {
   const table = {
     IDLE:              { BET_INITIATED:       'FIRST_BET_PENDING' },
-    FIRST_BET_PENDING: { BET_CONFIRMED:       'FIRST_BET_PLACED', BET_FAILED: 'HEDGE_FAILED' },
+    FIRST_BET_PENDING: { BET_CONFIRMED:       'FIRST_BET_PLACED', BET_FAILED: 'IDLE' },
     FIRST_BET_PLACED:  { CROSSOVER_DETECTED:  'WATCHING_HEDGE',   STRATEGY_CANCELLED: 'IDLE', STRATEGY_EXPIRED: 'IDLE' },
     WATCHING_HEDGE:    { VERIFY_PASSED:       'HEDGE_FIRED',       VERIFY_FAILED: 'HEDGE_FAILED' },
     HEDGE_FIRED:       { BET_CONFIRMED:       'BOTH_PLACED',      BET_FAILED: 'HEDGE_FAILED' },
@@ -300,7 +300,7 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
         return;
       }
 
-      const firedStrategy = { ...nextStrategy, state: 'HEDGE_FIRED', updatedAt: Date.now() };
+      const firedStrategy = { ...stratNow, state: 'HEDGE_FIRED', updatedAt: Date.now() };
       await chrome.storage.local.set({ pendingStrategy: firedStrategy });
       chrome.runtime.sendMessage({ type: 'STRATEGY_UPDATE', strategy: firedStrategy }).catch(() => {});
       addLog(`Firing hedge: ${hedgeSide} $${hedgeAmount}`);
@@ -337,7 +337,8 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
       }
       await chrome.storage.local.set({ lastBetKey: betKey, lastBetKeyTs: Date.now() });
 
-      // Find the sportsbook tab to place on (prefer active, fall back to any non-mybets DK tab)
+      // Find the sportsbook tab to place on
+      // Note: key is cleared below if bet fails, so user can retry immediately on failure (prefer active, fall back to any non-mybets DK tab)
       const allDk = await chrome.tabs.query({ url: 'https://sportsbook.draftkings.com/*' });
       const target = allDk.find(t => !t.url?.includes('/mybets') && t.active)
                   || allDk.find(t => !t.url?.includes('/mybets'))
@@ -464,6 +465,8 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
         });
         const result = results?.[0]?.result || { ok: false, error: 'No result from tab' };
         addLog(`BET_RESULT: ${JSON.stringify(result)}`);
+        // Clear idempotency key on failure so user can retry immediately
+        if (!result.ok) await chrome.storage.local.remove(['lastBetKey', 'lastBetKeyTs']);
         chrome.runtime.sendMessage({ type: 'BET_RESULT', ...result });
 
         // ── Advance state machine based on bet outcome ────────────────────

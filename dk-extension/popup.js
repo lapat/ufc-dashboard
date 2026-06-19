@@ -69,6 +69,9 @@ function clearCountdown() {
   countdownLeft = 0;
   const stopBtn = document.getElementById('stopBtn');
   if (stopBtn) stopBtn.style.display = 'none';
+  // Remove stale countdown div so "in Xs…" message doesn't linger after hedge fires/cancels
+  const cd = document.querySelector('[data-countdown="1"]');
+  if (cd) cd.remove();
 }
 
 function showCountdown(side, amount, oddsText) {
@@ -123,8 +126,10 @@ function initBetChat() {
 
     chatMsg('YOU', raw, 'you');
 
-    // NL parse
+    // Lock immediately before the async parse — prevents double-submit race during 4s await
     chatMsg('BOT', 'Parsing…', 'bot');
+    betInFlight = true;
+    goBtn.disabled = true;
     const intent = await parseNLIntent(raw);
 
     // Remove "Parsing…" message
@@ -132,11 +137,15 @@ function initBetChat() {
     if (log.lastElementChild?.textContent?.includes('Parsing')) log.removeChild(log.lastElementChild);
 
     if (intent.intent === 'cancel') {
+      betInFlight = false;
+      goBtn.disabled = false;
       handleStop();
       return;
     }
 
     if (intent.intent === 'query') {
+      betInFlight = false;
+      goBtn.disabled = false;
       const oddsText = currentOdds.length
         ? currentOdds.map(o => `${o.side} ${o.oddsText}`).join('  ·  ')
         : 'no odds visible on DK tab';
@@ -145,20 +154,24 @@ function initBetChat() {
     }
 
     if (intent.intent !== 'place_first_bet' || !intent.side || !intent.amount) {
+      betInFlight = false;
+      goBtn.disabled = false;
       chatMsg('BOT', `Didn't understand. Try: <b>bet canada 10</b> or <b>bet [player] 0.01, hedge at crossover</b>`, 'err');
       return;
     }
 
-    if (intent.amount < 0.01) { chatMsg('BOT', 'Minimum bet is $0.01', 'err'); return; }
+    if (intent.amount < 0.01) {
+      betInFlight = false;
+      goBtn.disabled = false;
+      chatMsg('BOT', 'Minimum bet is $0.01', 'err');
+      return;
+    }
 
     chatMsg('BOT',
       `Placing <b>$${intent.amount}</b> on <b>${intent.side}</b>` +
       (intent.trigger?.type === 'crossover' ? ' · auto-hedge at crossover' :
        intent.trigger?.type === 'odds_target' ? ` · hedge when odds hit ${intent.trigger.targetOdds}` : '') +
       '…', 'bot');
-
-    betInFlight = true;
-    goBtn.disabled = true;
 
     // Start strategy in background
     chrome.runtime.sendMessage({
