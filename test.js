@@ -4225,6 +4225,69 @@ async function runDashboardChatTests() {
       });
     } catch(e) { console.error('  ✗ H7:', e.message); failed++; }
   } else { console.log('  - H7: skipped (not --local)'); }
+
+  // ── SW self-message fix tests ────────────────────────────────────────────
+  // MV3 service workers cannot receive chrome.runtime.sendMessage sent from
+  // themselves. executePlaceBet() fixes this by being called directly.
+
+  // I1 — executePlaceBet is defined as a top-level function (not inside onMessage)
+  //       so pollForCommands and CROSSOVER_DETECTED can call it without sendMessage
+  try {
+    await check('I1: background.js defines executePlaceBet as top-level async function', async () => {
+      const fs = require('fs');
+      const bgSrc = fs.readFileSync(require('path').join(__dirname, 'dk-extension/background.js'), 'utf8');
+      assert(
+        /^async function executePlaceBet\s*\(/m.test(bgSrc),
+        'executePlaceBet must be a top-level async function declaration'
+      );
+      // Must NOT be sendMessage-triggered from handleExecuteCommand
+      assert(
+        !bgSrc.includes("sendMessage({ type: 'PLACE_BET'"),
+        'handleExecuteCommand and CROSSOVER_DETECTED must not use chrome.runtime.sendMessage to fire PLACE_BET'
+      );
+    });
+  } catch(e) { console.error('  ✗ I1:', e.message); failed++; }
+
+  // I2 — handleExecuteCommand calls executePlaceBet directly, not via sendMessage
+  try {
+    await check('I2: handleExecuteCommand calls executePlaceBet() directly', async () => {
+      const fs = require('fs');
+      const bgSrc = fs.readFileSync(require('path').join(__dirname, 'dk-extension/background.js'), 'utf8');
+      // Extract handleExecuteCommand body
+      const fnStart = bgSrc.indexOf('function handleExecuteCommand(command)');
+      assert(fnStart !== -1, 'handleExecuteCommand not found');
+      const fnEnd = bgSrc.indexOf('\nfunction ', fnStart + 1);
+      const fnBody = bgSrc.slice(fnStart, fnEnd === -1 ? fnStart + 2000 : fnEnd);
+      assert(
+        fnBody.includes('executePlaceBet('),
+        'handleExecuteCommand must call executePlaceBet() directly'
+      );
+      assert(
+        !fnBody.includes("sendMessage({ type: 'PLACE_BET'"),
+        'handleExecuteCommand must not use chrome.runtime.sendMessage({ type: PLACE_BET })'
+      );
+    });
+  } catch(e) { console.error('  ✗ I2:', e.message); failed++; }
+
+  // I3 — CROSSOVER_DETECTED handler calls executePlaceBet directly, not via sendMessage
+  try {
+    await check('I3: CROSSOVER_DETECTED calls executePlaceBet() directly (not via sendMessage)', async () => {
+      const fs = require('fs');
+      const bgSrc = fs.readFileSync(require('path').join(__dirname, 'dk-extension/background.js'), 'utf8');
+      const crossoverIdx = bgSrc.indexOf("msg.type === 'CROSSOVER_DETECTED'");
+      assert(crossoverIdx !== -1, 'CROSSOVER_DETECTED handler not found');
+      // Slice a generous window around the handler (up to 5000 chars)
+      const handlerSlice = bgSrc.slice(crossoverIdx, crossoverIdx + 5000);
+      assert(
+        handlerSlice.includes('executePlaceBet('),
+        'CROSSOVER_DETECTED must call executePlaceBet() directly'
+      );
+      assert(
+        !handlerSlice.includes("sendMessage({ type: 'PLACE_BET'"),
+        'CROSSOVER_DETECTED must not use chrome.runtime.sendMessage({ type: PLACE_BET })'
+      );
+    });
+  } catch(e) { console.error('  ✗ I3:', e.message); failed++; }
 }
 
 runServerTests().then(async () => {

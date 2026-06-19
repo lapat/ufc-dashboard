@@ -231,9 +231,225 @@ function handleExecuteCommand(command) {
       await chrome.storage.local.set({ pendingStrategy: strategy });
       chrome.runtime.sendMessage({ type: 'STRATEGY_UPDATE', strategy }).catch(() => {});
       postToServer('/api/strategy-update', { commandId: command.id, state: 'FIRST_BET_PENDING', message: `Placing $${command.amount} on ${command.side}…` });
-      // Fire PLACE_BET via message so the existing handler runs
-      chrome.runtime.sendMessage({ type: 'PLACE_BET', side: command.side, amount: command.amount, commandId: command.id });
+      executePlaceBet(command.side, command.amount, command.id, false);
     })();
+  }
+}
+
+// ── PLACE_BET execution — called directly (SW cannot message itself) ────────
+// MV3 service workers cannot receive chrome.runtime.sendMessage sent from
+// themselves. Extracting the logic here lets pollForCommands and
+// CROSSOVER_DETECTED call it directly without going through the message bus.
+async function executePlaceBet(side, amount, commandId, isAutoHedge) {
+  // ── Idempotency check — block duplicate bets within 30s ──────────────
+  const betKey = `${dkUserId}|${side}|${amount}`;
+  const idempotent = await chrome.storage.local.get(['lastBetKey', 'lastBetKeyTs']);
+  const keyAge = idempotent.lastBetKeyTs ? Date.now() - idempotent.lastBetKeyTs : Infinity;
+  if (idempotent.lastBetKey === betKey && keyAge < 30000) {
+    addLog(`IDEMPOTENT: duplicate PLACE_BET blocked — ${side} $${amount} (${Math.round(keyAge/1000)}s ago)`);
+    chrome.runtime.sendMessage({ type: 'BET_RESULT', ok: false, step: 'duplicate', error: `Duplicate bet blocked — same bet was placed ${Math.round(keyAge/1000)}s ago` });
+    return;
+  }
+  await chrome.storage.local.set({ lastBetKey: betKey, lastBetKeyTs: Date.now() });
+
+  // Find the sportsbook tab to place on — must NOT be /mybets (no odds buttons there)
+  const allDk = await chrome.tabs.query({ url: 'https://sportsbook.draftkings.com/*' });
+  const allUrls = allDk.map(t => `tab${t.id}:${(t.url||'').replace('https://sportsbook.draftkings.com','')}`).join(', ');
+  addLog(`PLACE_BET: tabs found: [${allUrls || 'none'}]`);
+  console.log('[BetBot BG] PLACE_BET tab search:', allUrls || 'NO TABS');
+
+  const target = allDk.find(t => !t.url?.includes('/mybets') && t.active)
+              || allDk.find(t => !t.url?.includes('/mybets'));
+
+  if (!target) {
+    const errMsg = allDk.length === 0
+      ? 'No DraftKings tab open — open sportsbook.draftkings.com and navigate to the fight'
+      : `Only My Bets tab found (${allDk.length} tab(s)) — open the fight page on DraftKings sportsbook first, then retry`;
+    addLog(`PLACE_BET FAILED: ${errMsg}`);
+    console.warn('[BetBot BG] PLACE_BET FAILED:', errMsg);
+    if (commandId) await chrome.storage.local.remove(['lastBetKey', 'lastBetKeyTs']);
+    chrome.runtime.sendMessage({ type: 'BET_RESULT', ok: false, step: 'no_tab', error: errMsg });
+    if (commandId) postToServer('/api/command-result', { commandId, result: { ok: false, error: errMsg } });
+    return;
+  }
+  addLog(`PLACE_BET: ${side} $${amount} → tab ${target.id} (${(target.url||'').replace('https://sportsbook.draftkings.com','')})`);
+  console.log('[BetBot BG] PLACE_BET executing on tab', target.id, target.url);
+  try {
+    const results = await chrome.scripting.executeScript({
+      target: { tabId: target.id },
+      func: async (side, amount) => {
+        function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+        function setReactInput(el, value) {
+          const setter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set;
+          setter.call(el, value);
+          el.dispatchEvent(new Event('input', { bubbles: true }));
+          el.dispatchEvent(new Event('change', { bubbles: true }));
+        }
+
+        // ── Step 1: find the outcome button ─────────────────────────────
+        const sideL = side.toLowerCase().trim();
+        const allClickable = [...document.querySelectorAll('button, [role="button"]')];
+        let outcomeBtn = null;
+
+        for (const el of allClickable) {
+          // Match direct child span/div/p whose full text equals the side name
+          const spans = el.querySelectorAll('span, div, p');
+          const labelSpan = [...spans].find(s =>
+            s.childElementCount === 0 && s.textContent.trim().toLowerCase() === sideL
+          );
+          if (labelSpan) { outcomeBtn = el; break; }
+        }
+
+        // Fallback: looser match on full button text
+        if (!outcomeBtn) {
+          outcomeBtn = allClickable.find(el => {
+            const t = el.textContent.trim().toLowerCase();
+            return (t === sideL || t.startsWith(sideL + '\n') || t.startsWith(sideL + ' '));
+          });
+        }
+
+        if (!outcomeBtn) {
+          const btns = [...document.querySelectorAll('button, [role="button"]')]
+            .map(b => b.textContent.trim().slice(0, 40).replace(/\s+/g, ' '))
+            .filter(t => t.length > 0)
+            .slice(0, 30);
+          console.warn('[BetBot] find_button failed for side:', side, '— visible buttons:', btns);
+          return { ok: false, step: 'find_button', error: `No button found for "${side}" — make sure the game is visible on screen`, debugButtons: btns };
+        }
+
+        // Read the odds BEFORE logging (fixes TDZ: oddsEl was referenced before its declaration)
+        const oddsEl = [...outcomeBtn.querySelectorAll('span, div')].find(s =>
+          s.childElementCount === 0 && /^[+-]\d+$/.test(s.textContent.trim())
+        );
+        const oddsText = oddsEl ? oddsEl.textContent.trim() : '?';
+        console.log('[BetBot] found outcome button for', side, '— odds:', oddsText);
+
+        const alreadySelected = outcomeBtn.classList.toString().toLowerCase().includes('active')
+                             || outcomeBtn.getAttribute('aria-pressed') === 'true';
+        void alreadySelected; // informational only
+
+        outcomeBtn.click();
+        await sleep(1200);
+
+        // ── Step 2: find bet slip amount input ───────────────────────────
+        let amtInput = null;
+        for (let attempt = 0; attempt < 8; attempt++) {
+          amtInput = [...document.querySelectorAll('input')]
+            .find(el =>
+              /wager|amount|stake|bet amount/i.test(el.getAttribute('aria-label') || el.placeholder || '') ||
+              (el.type === 'number' && el.closest('[class*="betslip"], [class*="bet-slip"], [class*="BetSlip"], [class*="sportsbook-betslip"]'))
+            );
+          if (amtInput) break;
+          await sleep(400);
+        }
+
+        if (!amtInput) {
+          const allInputs = [...document.querySelectorAll('input')].map(i => `type=${i.type} label=${i.getAttribute('aria-label')||''} ph=${i.placeholder||''}`);
+          console.warn('[BetBot] find_input failed — all inputs:', allInputs);
+          return { ok: false, step: 'find_input', oddsText, error: 'Bet slip did not open or amount input not found — try opening the bet slip manually first', debugInputs: allInputs };
+        }
+        console.log('[BetBot] bet slip input found, setting amount:', amount);
+
+        amtInput.focus();
+        setReactInput(amtInput, String(amount));
+        await sleep(600);
+
+        // ── Step 3: find and click Place Bet button ───────────────────────
+        let placeBtn = [...document.querySelectorAll('button')]
+          .find(btn => /place\s*bet|bet\s*now|submit/i.test(btn.textContent.trim()) && !btn.disabled);
+
+        if (!placeBtn) {
+          const disabledBtn = [...document.querySelectorAll('button')]
+            .find(btn => /place\s*bet|bet\s*now/i.test(btn.textContent.trim()));
+          if (disabledBtn) {
+            return { ok: false, step: 'btn_disabled', oddsText, amount, error: 'Place Bet button is disabled — check balance or if odds changed' };
+          }
+          return { ok: false, step: 'find_placebtn', oddsText, amount, error: 'Place Bet button not found' };
+        }
+
+        placeBtn.click();
+        await sleep(1500);
+
+        // ── Step 4: detect confirmation ───────────────────────────────────
+        const bodyText = document.body.innerText;
+        const confirmed = /bet\s+placed|congrats|success|confirmed/i.test(bodyText);
+        const oddsChanged = /odds\s+(have\s+)?changed|accept\s+new\s+odds/i.test(bodyText);
+        const suspended = /market\s+suspended|betting\s+suspended/i.test(bodyText);
+
+        if (oddsChanged) {
+          return { ok: false, step: 'odds_changed', oddsText, amount, error: 'DK says odds changed — click "Accept New Odds" in the slip and retry' };
+        }
+        if (suspended) {
+          return { ok: false, step: 'suspended', oddsText, error: 'Market suspended (goal? halftime?) — retry in 30s' };
+        }
+
+        return { ok: true, side, oddsText, amount, confirmed, step: 'done' };
+      },
+      args: [side, amount]
+    });
+    const result = results?.[0]?.result || { ok: false, error: 'No result from tab' };
+    const logLine = result.ok
+      ? `BET_RESULT ok: ${result.side} $${result.amount} @ ${result.oddsText} confirmed=${result.confirmed}`
+      : `BET_RESULT FAIL [${result.step}]: ${result.error}` +
+        (result.debugButtons ? ` | btns: ${result.debugButtons.slice(0,5).join(', ')}` : '') +
+        (result.debugInputs ? ` | inputs: ${result.debugInputs.slice(0,3).join(', ')}` : '');
+    addLog(logLine);
+    console.log('[BetBot BG] BET_RESULT:', JSON.stringify(result));
+    if (!result.ok) await chrome.storage.local.remove(['lastBetKey', 'lastBetKeyTs']);
+    chrome.runtime.sendMessage({ type: 'BET_RESULT', ...result });
+    if (commandId) {
+      postToServer('/api/command-result', { commandId, result });
+      if (result.ok) {
+        postToServer('/api/strategy-update', {
+          commandId,
+          state: 'FIRST_BET_PLACED',
+          message: `✅ ${result.side} $${result.amount} @ ${result.oddsText || '?'} placed${result.confirmed ? ' — confirmed ✓' : ''}`,
+        });
+      }
+    }
+
+    // ── Advance state machine based on bet outcome ────────────────────
+    (async () => {
+      const r2 = await chrome.storage.local.get(['pendingStrategy']);
+      const strat = r2.pendingStrategy || { state: 'IDLE' };
+      const event = result.ok && result.confirmed ? 'BET_CONFIRMED' : 'BET_FAILED';
+      const nextState = strategyTransition(strat.state, event);
+      if (nextState === strat.state) return;
+
+      const updated = { ...strat, state: nextState, updatedAt: Date.now() };
+      if (strat.state === 'FIRST_BET_PENDING' && event === 'BET_CONFIRMED') {
+        updated.leg1Confirmed = true;
+        updated.leg1Odds = result.oddsText || strat.leg1Odds;
+        const tabs = await chrome.tabs.query({ url: 'https://sportsbook.draftkings.com/*' });
+        if (strat.leg2Side) {
+          tabs.forEach(t => chrome.tabs.sendMessage(t.id, {
+            type: 'WATCH_SIDES',
+            leg1Side: strat.leg1Side,
+            leg2Side: strat.leg2Side,
+          }).catch(() => {}));
+        }
+      }
+      if (nextState === 'BOTH_PLACED' || nextState === 'HEDGE_FAILED') {
+        const tabs2 = await chrome.tabs.query({ url: 'https://sportsbook.draftkings.com/*' });
+        tabs2.forEach(t => chrome.tabs.sendMessage(t.id, { type: 'STOP_WATCHING' }).catch(() => {}));
+        if (strat.commandId) {
+          const termMsg = nextState === 'BOTH_PLACED'
+            ? '🎯 **Both legs placed — WIN-WIN locked!** Guaranteed profit regardless of outcome.'
+            : '❌ Hedge failed — strategy reset.';
+          postToServer('/api/command-result', {
+            commandId: strat.commandId,
+            result: { ok: nextState === 'BOTH_PLACED', bothPlaced: nextState === 'BOTH_PLACED', message: termMsg },
+          });
+        }
+      }
+      await chrome.storage.local.set({ pendingStrategy: updated });
+      addLog(`State: ${strat.state} → ${nextState} (${event})`);
+      chrome.runtime.sendMessage({ type: 'STRATEGY_UPDATE', strategy: updated }).catch(() => {});
+    })();
+  } catch(e) {
+    addLog(`BET_RESULT error: ${e.message}`);
+    chrome.runtime.sendMessage({ type: 'BET_RESULT', ok: false, error: e.message });
   }
 }
 
@@ -404,13 +620,7 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
         });
       }
 
-      chrome.runtime.sendMessage({
-        type: 'PLACE_BET',
-        side: hedgeSide,
-        amount: hedgeAmount,
-        isAutoHedge: true,
-        commandId: stratNow.commandId || null,
-      }).catch(() => {});
+      executePlaceBet(hedgeSide, hedgeAmount, stratNow.commandId || null, true);
     })();
     return;
   }
@@ -422,240 +632,8 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
   }
 
   if (msg.type === 'PLACE_BET') {
-    const { side, amount, tabId: requestedTabId, commandId } = msg;
-    const popupPort = sender;
-    (async () => {
-      // ── Idempotency check — block duplicate bets within 30s ──────────────
-      // Key: userId + side + amount (no gameId needed — same user/side/amount in 30s = duplicate)
-      const betKey = `${dkUserId}|${side}|${amount}`;
-      const idempotent = await chrome.storage.local.get(['lastBetKey', 'lastBetKeyTs']);
-      const keyAge = idempotent.lastBetKeyTs ? Date.now() - idempotent.lastBetKeyTs : Infinity;
-      if (idempotent.lastBetKey === betKey && keyAge < 30000) {
-        addLog(`IDEMPOTENT: duplicate PLACE_BET blocked — ${side} $${amount} (${Math.round(keyAge/1000)}s ago)`);
-        chrome.runtime.sendMessage({ type: 'BET_RESULT', ok: false, step: 'duplicate', error: `Duplicate bet blocked — same bet was placed ${Math.round(keyAge/1000)}s ago` });
-        return;
-      }
-      await chrome.storage.local.set({ lastBetKey: betKey, lastBetKeyTs: Date.now() });
-
-      // Find the sportsbook tab to place on — must NOT be /mybets (no odds buttons there)
-      const allDk = await chrome.tabs.query({ url: 'https://sportsbook.draftkings.com/*' });
-      const allUrls = allDk.map(t => `tab${t.id}:${(t.url||'').replace('https://sportsbook.draftkings.com','')}`).join(', ');
-      addLog(`PLACE_BET: tabs found: [${allUrls || 'none'}]`);
-      console.log('[BetBot BG] PLACE_BET tab search:', allUrls || 'NO TABS');
-
-      const target = allDk.find(t => !t.url?.includes('/mybets') && t.active)
-                  || allDk.find(t => !t.url?.includes('/mybets'));
-      // NOTE: do NOT fall back to mybets tab — it has no odds buttons to click
-
-      if (!target) {
-        const msg = allDk.length === 0
-          ? 'No DraftKings tab open — open sportsbook.draftkings.com and navigate to the fight'
-          : `Only My Bets tab found (${allDk.length} tab(s)) — open the fight page on DraftKings sportsbook first, then retry`;
-        addLog(`PLACE_BET FAILED: ${msg}`);
-        console.warn('[BetBot BG] PLACE_BET FAILED:', msg);
-        if (commandId) await chrome.storage.local.remove(['lastBetKey', 'lastBetKeyTs']);
-        chrome.runtime.sendMessage({ type: 'BET_RESULT', ok: false, step: 'no_tab', error: msg });
-        if (commandId) postToServer('/api/command-result', { commandId, result: { ok: false, error: msg } });
-        return;
-      }
-      addLog(`PLACE_BET: ${side} $${amount} → tab ${target.id} (${(target.url||'').replace('https://sportsbook.draftkings.com','')})`)
-      console.log('[BetBot BG] PLACE_BET executing on tab', target.id, target.url);
-      try {
-        const results = await chrome.scripting.executeScript({
-          target: { tabId: target.id },
-          func: async (side, amount) => {
-            function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
-
-            function setReactInput(el, value) {
-              const setter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set;
-              setter.call(el, value);
-              el.dispatchEvent(new Event('input', { bubbles: true }));
-              el.dispatchEvent(new Event('change', { bubbles: true }));
-            }
-
-            // ── Step 1: find the outcome button ─────────────────────────────
-            const sideL = side.toLowerCase().trim();
-            // Grab bet-slip count before so we can detect the click registered
-            const slipBefore = document.querySelectorAll('[class*="betslip"], [class*="bet-slip"], [class*="BetSlip"]').length;
-
-            // Find clickable element whose immediate text matches the side
-            // DK buttons: <button ...><span class="...label">Canada</span><span class="...odds">-1600</span></button>
-            const allClickable = [
-              ...document.querySelectorAll('button, [role="button"]'),
-            ];
-            let outcomeBtn = null;
-
-            for (const el of allClickable) {
-              // Use direct child text so we don't match "Canada vs Qatar" game title buttons
-              const spans = el.querySelectorAll('span, div, p');
-              const labelSpan = [...spans].find(s =>
-                s.childElementCount === 0 && s.textContent.trim().toLowerCase() === sideL
-              );
-              if (labelSpan) { outcomeBtn = el; break; }
-            }
-
-            // Fallback: looser match — button whose text starts with or equals side
-            if (!outcomeBtn) {
-              outcomeBtn = allClickable.find(el => {
-                const t = el.textContent.trim().toLowerCase();
-                return (t === sideL || t.startsWith(sideL + '\n') || t.startsWith(sideL + ' '));
-              });
-            }
-
-            if (!outcomeBtn) {
-              // Dump all visible button texts for debugging
-              const btns = [...document.querySelectorAll('button, [role="button"]')]
-                .map(b => b.textContent.trim().slice(0, 40).replace(/\s+/g, ' '))
-                .filter(t => t.length > 0)
-                .slice(0, 30);
-              console.warn('[BetBot] find_button failed for side:', side, '— visible buttons:', btns);
-              return { ok: false, step: 'find_button', error: `No button found for "${side}" — make sure the game is visible on screen`, debugButtons: btns };
-            }
-            console.log('[BetBot] found outcome button for', side, '— odds:', oddsEl?.textContent?.trim());
-
-            // Read the odds off the button for verification
-            const oddsEl = [...outcomeBtn.querySelectorAll('span, div')].find(s =>
-              s.childElementCount === 0 && /^[+-]\d+$/.test(s.textContent.trim())
-            );
-            const oddsText = oddsEl ? oddsEl.textContent.trim() : '?';
-
-            // Check if it's already selected (active class)
-            const alreadySelected = outcomeBtn.classList.toString().toLowerCase().includes('active')
-                                 || outcomeBtn.getAttribute('aria-pressed') === 'true';
-
-            outcomeBtn.click();
-            await sleep(1200);
-
-            // ── Step 2: find bet slip amount input ───────────────────────────
-            // DK bet slip uses input with aria-label="Wager" or placeholder "Enter Wager"
-            let amtInput = null;
-            for (let attempt = 0; attempt < 8; attempt++) {
-              amtInput = [...document.querySelectorAll('input')]
-                .find(el =>
-                  /wager|amount|stake|bet amount/i.test(el.getAttribute('aria-label') || el.placeholder || '') ||
-                  el.type === 'number' && el.closest('[class*="betslip"], [class*="bet-slip"], [class*="BetSlip"], [class*="sportsbook-betslip"]')
-                );
-              if (amtInput) break;
-              await sleep(400);
-            }
-
-            if (!amtInput) {
-              const allInputs = [...document.querySelectorAll('input')].map(i => `type=${i.type} label=${i.getAttribute('aria-label')||''} ph=${i.placeholder||''}`);
-              console.warn('[BetBot] find_input failed — all inputs:', allInputs);
-              return { ok: false, step: 'find_input', oddsText, error: 'Bet slip did not open or amount input not found — try opening the bet slip manually first', debugInputs: allInputs };
-            }
-            console.log('[BetBot] bet slip input found, setting amount:', amount);
-
-            // Clear and set amount
-            amtInput.focus();
-            setReactInput(amtInput, String(amount));
-            await sleep(600);
-
-            // ── Step 3: find and click Place Bet button ───────────────────────
-            let placeBtn = [...document.querySelectorAll('button')]
-              .find(btn => /place\s*bet|bet\s*now|submit/i.test(btn.textContent.trim()) && !btn.disabled);
-
-            if (!placeBtn) {
-              // Try disabled version to diagnose
-              const disabledBtn = [...document.querySelectorAll('button')]
-                .find(btn => /place\s*bet|bet\s*now/i.test(btn.textContent.trim()));
-              if (disabledBtn) {
-                return { ok: false, step: 'btn_disabled', oddsText, amount, error: `Place Bet button is disabled — check balance or if odds changed` };
-              }
-              return { ok: false, step: 'find_placebtn', oddsText, amount, error: 'Place Bet button not found' };
-            }
-
-            placeBtn.click();
-            await sleep(1500);
-
-            // ── Step 4: detect confirmation ───────────────────────────────────
-            const bodyText = document.body.innerText;
-            const confirmed = /bet\s+placed|congrats|success|confirmed/i.test(bodyText);
-            const oddsChanged = /odds\s+(have\s+)?changed|accept\s+new\s+odds/i.test(bodyText);
-            const suspended = /market\s+suspended|betting\s+suspended/i.test(bodyText);
-
-            if (oddsChanged) {
-              return { ok: false, step: 'odds_changed', oddsText, amount, error: 'DK says odds changed — click "Accept New Odds" in the slip and retry' };
-            }
-            if (suspended) {
-              return { ok: false, step: 'suspended', oddsText, error: 'Market suspended (goal? halftime?) — retry in 30s' };
-            }
-
-            return { ok: true, side, oddsText, amount, confirmed, step: 'done' };
-          },
-          args: [side, amount]
-        });
-        const result = results?.[0]?.result || { ok: false, error: 'No result from tab' };
-        const logLine = result.ok
-          ? `BET_RESULT ok: ${result.side} $${result.amount} @ ${result.oddsText} confirmed=${result.confirmed}`
-          : `BET_RESULT FAIL [${result.step}]: ${result.error}` +
-            (result.debugButtons ? ` | btns: ${result.debugButtons.slice(0,5).join(', ')}` : '') +
-            (result.debugInputs ? ` | inputs: ${result.debugInputs.slice(0,3).join(', ')}` : '');
-        addLog(logLine);
-        console.log('[BetBot BG] BET_RESULT:', JSON.stringify(result));
-        // Clear idempotency key on failure so user can retry immediately
-        if (!result.ok) await chrome.storage.local.remove(['lastBetKey', 'lastBetKeyTs']);
-        chrome.runtime.sendMessage({ type: 'BET_RESULT', ...result });
-        // If command came from dashboard chat, post result back to server
-        if (commandId) {
-          postToServer('/api/command-result', { commandId, result });
-          if (result.ok) {
-            postToServer('/api/strategy-update', {
-              commandId,
-              state: 'FIRST_BET_PLACED',
-              message: `✅ ${result.side} $${result.amount} @ ${result.oddsText || '?'} placed${result.confirmed ? ' — confirmed ✓' : ''}`,
-            });
-          }
-        }
-
-        // ── Advance state machine based on bet outcome ────────────────────
-        (async () => {
-          const r2 = await chrome.storage.local.get(['pendingStrategy']);
-          const strat = r2.pendingStrategy || { state: 'IDLE' };
-          const event = result.ok && result.confirmed ? 'BET_CONFIRMED' : 'BET_FAILED';
-          const nextState = strategyTransition(strat.state, event);
-          if (nextState === strat.state) return; // no transition
-
-          const updated = { ...strat, state: nextState, updatedAt: Date.now() };
-          if (strat.state === 'FIRST_BET_PENDING' && event === 'BET_CONFIRMED') {
-            // First leg landed — mark confirmed, set leg2Side as opposite, start crossover watch
-            updated.leg1Confirmed = true;
-            updated.leg1Odds = result.oddsText || strat.leg1Odds;
-            // Determine the hedge side: tell content.js which sides to watch
-            // leg2Side must be set by popup when starting strategy
-            const tabs = await chrome.tabs.query({ url: 'https://sportsbook.draftkings.com/*' });
-            if (strat.leg2Side) {
-              tabs.forEach(t => chrome.tabs.sendMessage(t.id, {
-                type: 'WATCH_SIDES',
-                leg1Side: strat.leg1Side,
-                leg2Side: strat.leg2Side,
-              }).catch(() => {}));
-            }
-          }
-          if (nextState === 'BOTH_PLACED' || nextState === 'HEDGE_FAILED') {
-            // Terminal state — stop the odds watcher
-            const tabs2 = await chrome.tabs.query({ url: 'https://sportsbook.draftkings.com/*' });
-            tabs2.forEach(t => chrome.tabs.sendMessage(t.id, { type: 'STOP_WATCHING' }).catch(() => {}));
-            // Report terminal state to dashboard chat
-            if (strat.commandId) {
-              const termMsg = nextState === 'BOTH_PLACED'
-                ? '🎯 **Both legs placed — WIN-WIN locked!** Guaranteed profit regardless of outcome.'
-                : `❌ Hedge failed — strategy reset.`;
-              postToServer('/api/command-result', {
-                commandId: strat.commandId,
-                result: { ok: nextState === 'BOTH_PLACED', bothPlaced: nextState === 'BOTH_PLACED', message: termMsg },
-              });
-            }
-          }
-          await chrome.storage.local.set({ pendingStrategy: updated });
-          addLog(`State: ${strat.state} → ${nextState} (${event})`);
-          chrome.runtime.sendMessage({ type: 'STRATEGY_UPDATE', strategy: updated }).catch(() => {});
-        })();
-      } catch(e) {
-        addLog(`BET_RESULT error: ${e.message}`);
-        chrome.runtime.sendMessage({ type: 'BET_RESULT', ok: false, error: e.message });
-      }
-    })();
+    const { side, amount, commandId } = msg;
+    executePlaceBet(side, amount, commandId, false);
     return true;
   }
 
