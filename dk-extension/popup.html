@@ -33,26 +33,19 @@
     .user-row button{background:#1a1a00;border:1px solid #e8b84b44;border-radius:4px;color:#e8b84b;font-size:0.65rem;padding:5px 10px;cursor:pointer;white-space:nowrap}
     .user-row button:hover{background:#2a2a00}
     .user-row button.saved{background:#0a1a0a;border-color:#69db7c44;color:#69db7c}
-    /* Chat */
-    #chat-log{background:#050505;border:1px solid #1a1a1a;border-radius:6px;padding:8px;min-height:60px;max-height:160px;overflow-y:auto;margin-bottom:6px;font-size:0.65rem}
+    /* Strategy status chat log */
+    #chat-log{background:#050505;border:1px solid #1a1a1a;border-radius:6px;padding:8px;min-height:40px;max-height:120px;overflow-y:auto;margin-bottom:8px;font-size:0.65rem}
     .cm{padding:3px 0;border-bottom:1px solid #0d0d0d;display:flex;gap:6px;align-items:flex-start}
     .cm-who{flex-shrink:0;font-size:0.58rem;font-weight:700;min-width:32px}
     .cm-who.you{color:#e8b84b}.cm-who.bot{color:#74c0fc}.cm-who.ok{color:#69db7c}.cm-who.err{color:#ff6b6b}
     .cm-text{color:#888;line-height:1.4}
     .cm-text b{color:#ddd}
-    .bet-row{display:flex;gap:6px;margin-bottom:6px}
-    .bet-row input{flex:1;background:#111;border:1px solid #333;border-radius:4px;color:#ddd;font-size:0.72rem;padding:6px 10px;outline:none}
-    .bet-row input:focus{border-color:#e8b84b}
-    .bet-row input::placeholder{color:#333}
-    .bet-row button#betGo{background:#1a1a00;border:1px solid #e8b84b66;border-radius:4px;color:#e8b84b;font-size:0.7rem;padding:6px 12px;cursor:pointer;font-weight:700}
-    .bet-row button#betGo:hover{background:#2a2600}
-    .bet-row button#betGo:disabled{opacity:0.4;cursor:default}
     /* STOP countdown button */
-    #stopBtn{display:none;background:#3a0000;border:1px solid #ff6b6b88;border-radius:4px;color:#ff6b6b;font-size:0.72rem;padding:6px 12px;cursor:pointer;font-weight:700;white-space:nowrap;animation:pulse 0.8s infinite alternate}
+    #stopBtn{display:none;background:#3a0000;border:1px solid #ff6b6b88;border-radius:4px;color:#ff6b6b;font-size:0.72rem;padding:5px 12px;cursor:pointer;font-weight:700;white-space:nowrap;animation:pulse 0.8s infinite alternate}
     #stopBtn:hover{background:#5a0000}
     @keyframes pulse{from{border-color:#ff6b6b44}to{border-color:#ff6b6b}}
     /* Strategy state badge */
-    #strategyRow{display:flex;align-items:center;gap:6px;margin-bottom:8px;font-size:0.62rem}
+    #strategyRow{display:flex;align-items:center;gap:8px;margin-bottom:8px;font-size:0.62rem}
     #stratLabel{color:#444;text-transform:uppercase;letter-spacing:1px}
     #stratState{color:#333;font-weight:700;font-size:0.68rem}
   </style>
@@ -60,25 +53,17 @@
 <body>
   <h1>⚡ Bet Bot DK Sync <span style="color:#333;font-size:0.65rem;font-weight:400;letter-spacing:0">v2.8</span></h1>
 
-  <!-- ── Bet chat ── -->
-  <div class="section" style="margin-bottom:6px">Bet Chat
-    <span style="color:#333;font-size:0.58rem;font-weight:400">try: bet canada 0.01 · cancel</span>
-  </div>
+  <!-- Strategy status log — shows hedge countdowns, confirmations, errors -->
+  <div class="section" style="margin-bottom:6px">Strategy Status</div>
   <div id="chat-log">
-    <div class="cm"><span class="cm-who bot">BOT</span><span class="cm-text">Ready. Type <b>bet [team] [amount]</b> or <b>bet canada 10, hedge at crossover</b></span></div>
+    <div class="cm"><span class="cm-who bot">BOT</span><span class="cm-text">Type bet commands in the dashboard chat → they execute here automatically</span></div>
   </div>
 
-  <!-- Input row + STOP button side by side -->
-  <div class="bet-row" style="margin-bottom:4px">
-    <input id="betCmd" placeholder="bet canada 0.01" spellcheck="false"/>
-    <button id="betGo">GO</button>
-    <button id="stopBtn">STOP</button>
-  </div>
-
-  <!-- Strategy state indicator -->
+  <!-- Strategy state + STOP button -->
   <div id="strategyRow">
     <span id="stratLabel">Strategy:</span>
     <span id="stratState">IDLE</span>
+    <button id="stopBtn">STOP</button>
   </div>
 
   <!-- Manual username -->
