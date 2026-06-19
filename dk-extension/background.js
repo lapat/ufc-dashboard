@@ -71,12 +71,25 @@ async function pollForCommands() {
       handleExecuteCommand(body.command);
     }
   } catch (e) {
-    // Network error — log quietly, don't spam
     if (!pollForCommands._lastErrLog || Date.now() - pollForCommands._lastErrLog > 30000) {
       addLog(`cmd poll error: ${e.message}`);
       pollForCommands._lastErrLog = Date.now();
     }
   }
+
+  // Also poll watch triggers and push them to content tabs
+  try {
+    const tr = await fetch(`${betBotUrl}/api/watch-triggers`);
+    if (tr.ok) {
+      const tbody = await tr.json();
+      const triggers = tbody.triggers || [];
+      // Broadcast to all DK sportsbook content tabs
+      const tabs = await chrome.tabs.query({ url: 'https://sportsbook.draftkings.com/*' });
+      for (const tab of tabs) {
+        chrome.tabs.sendMessage(tab.id, { type: 'SET_WATCH_TRIGGERS', triggers }).catch(() => {});
+      }
+    }
+  } catch {}
 }
 
 chrome.runtime.onConnect.addListener(port => {
@@ -248,7 +261,7 @@ async function executePlaceBet(side, amount, commandId, isAutoHedge, isRetry = f
   const keyAge = idempotent.lastBetKeyTs ? Date.now() - idempotent.lastBetKeyTs : Infinity;
   if (idempotent.lastBetKey === betKey && keyAge < 30000) {
     addLog(`IDEMPOTENT: duplicate PLACE_BET blocked — ${side} $${amount} (${Math.round(keyAge/1000)}s ago)`);
-    chrome.runtime.sendMessage({ type: 'BET_RESULT', ok: false, step: 'duplicate', error: `Duplicate bet blocked — same bet was placed ${Math.round(keyAge/1000)}s ago` });
+    chrome.runtime.sendMessage({ type: 'BET_RESULT', ok: false, step: 'duplicate', error: `Duplicate bet blocked — same bet was placed ${Math.round(keyAge/1000)}s ago` }).catch(() => {});
     return;
   }
   await chrome.storage.local.set({ lastBetKey: betKey, lastBetKeyTs: Date.now() });
@@ -269,7 +282,7 @@ async function executePlaceBet(side, amount, commandId, isAutoHedge, isRetry = f
     addLog(`PLACE_BET FAILED: ${errMsg}`);
     console.warn('[BetBot BG] PLACE_BET FAILED:', errMsg);
     if (commandId) await chrome.storage.local.remove(['lastBetKey', 'lastBetKeyTs']);
-    chrome.runtime.sendMessage({ type: 'BET_RESULT', ok: false, step: 'no_tab', error: errMsg });
+    chrome.runtime.sendMessage({ type: 'BET_RESULT', ok: false, step: 'no_tab', error: errMsg }).catch(() => {});
     if (commandId) postToServer('/api/command-result', { commandId, result: { ok: false, error: errMsg } });
     return;
   }
@@ -526,7 +539,7 @@ async function executePlaceBet(side, amount, commandId, isAutoHedge, isRetry = f
     addLog(logLine);
     console.log('[BetBot BG] BET_RESULT:', JSON.stringify(result));
     if (!result.ok) await chrome.storage.local.remove(['lastBetKey', 'lastBetKeyTs']);
-    chrome.runtime.sendMessage({ type: 'BET_RESULT', ...result });
+    chrome.runtime.sendMessage({ type: 'BET_RESULT', ...result }).catch(() => {});
     if (commandId) {
       postToServer('/api/command-result', { commandId, result });
       if (result.ok) {
@@ -578,7 +591,7 @@ async function executePlaceBet(side, amount, commandId, isAutoHedge, isRetry = f
     })();
   } catch(e) {
     addLog(`BET_RESULT error: ${e.message}`);
-    chrome.runtime.sendMessage({ type: 'BET_RESULT', ok: false, error: e.message });
+    chrome.runtime.sendMessage({ type: 'BET_RESULT', ok: false, error: e.message }).catch(() => {});
   }
 }
 
@@ -764,6 +777,19 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
     const { side, amount, commandId } = msg;
     executePlaceBet(side, amount, commandId, false);
     return true;
+  }
+
+  if (msg.type === 'TRIGGER_MET') {
+    const { triggerId, side, amount, currentOdds } = msg;
+    addLog(`TRIGGER_MET: ${side} $${amount} @ ${currentOdds} [trigger ${triggerId}]`);
+    // Fire the bet and delete the trigger from the server
+    executePlaceBet(side, amount, null, false);
+    fetch(`${betBotUrl}/api/watch-triggers/${triggerId}`, { method: 'DELETE' }).catch(() => {});
+    // Clear trigger from all content tabs so it doesn't re-fire
+    chrome.tabs.query({ url: 'https://sportsbook.draftkings.com/*' }).then(tabs => {
+      tabs.forEach(t => chrome.tabs.sendMessage(t.id, { type: 'CLEAR_TRIGGERS' }).catch(() => {}));
+    }).catch(() => {});
+    return;
   }
 
   if (msg.type !== 'DK_API') return;

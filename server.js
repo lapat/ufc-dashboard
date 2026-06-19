@@ -70,6 +70,24 @@ function makeCommand(type, intent) {
 }
 let commandQueue = loadCommandQueue();
 
+// ── Watch triggers ─────────────────────────────────────────────────────────────
+// Conditional bets: "bet $20 on USA as soon as their odds go plus"
+// Extension polls /api/watch-triggers every 5s, checks DOM odds against condition,
+// fires executePlaceBet when met, then DELETEs the trigger.
+let watchTriggers = [];
+
+// ── Chat history — per-user rolling context for /api/assistant ─────────────────
+const chatHistory = new Map(); // userId → [{role, content}]
+const CHAT_HIST_MAX = 10;
+
+function getChatHistory(userId) { return chatHistory.get(userId) || []; }
+function addChatTurn(userId, role, content) {
+  const hist = chatHistory.get(userId) || [];
+  hist.push({ role, content: content.slice(0, 500) });
+  if (hist.length > CHAT_HIST_MAX) hist.splice(0, hist.length - CHAT_HIST_MAX);
+  chatHistory.set(userId, hist);
+}
+
 app.use(express.static('public'));
 app.use(express.json());
 
@@ -101,6 +119,20 @@ app.use('/api/strategy-update', (req, res, next) => {
 app.use('/api/resolve-bet-target', (req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  if (req.method === 'OPTIONS') return res.sendStatus(204);
+  next();
+});
+app.use('/api/assistant', (req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  if (req.method === 'OPTIONS') return res.sendStatus(204);
+  next();
+});
+app.use('/api/watch-triggers', (req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, DELETE, OPTIONS');
   res.header('Access-Control-Allow-Headers', 'Content-Type');
   if (req.method === 'OPTIONS') return res.sendStatus(204);
   next();
@@ -1748,6 +1780,258 @@ Which option best matches "${side}"?`
   } catch (e) {
     console.error('[resolve-bet-target]', e.message);
     return res.status(500).json({ ok: false, error: e.message });
+  }
+});
+
+// ── Watch trigger CRUD ────────────────────────────────────────────────────────
+
+app.get('/api/watch-triggers', (req, res) => {
+  const now = Date.now();
+  watchTriggers = watchTriggers.filter(t => t.expiresAt > now);
+  res.json({ triggers: watchTriggers });
+});
+
+app.post('/api/watch-triggers', (req, res) => {
+  const { side, amount, condition, description, userId } = req.body || {};
+  if (!side || !amount || !condition) return res.status(400).json({ ok: false, error: 'side, amount, condition required' });
+  const trigger = {
+    id: Date.now().toString(36) + Math.random().toString(36).slice(2, 6),
+    userId: userId || 'default',
+    side, amount, condition,
+    description: description || `Bet $${amount} on ${side}`,
+    createdAt: Date.now(),
+    expiresAt: Date.now() + 4 * 60 * 60 * 1000,
+  };
+  watchTriggers.push(trigger);
+  console.log(`[watch-trigger] Created: ${trigger.description} [${trigger.id}]`);
+  res.json({ ok: true, trigger });
+});
+
+app.delete('/api/watch-triggers/:id', (req, res) => {
+  const before = watchTriggers.length;
+  watchTriggers = watchTriggers.filter(t => t.id !== req.params.id);
+  console.log(`[watch-trigger] Deleted ${req.params.id} (removed=${before - watchTriggers.length})`);
+  res.json({ ok: true, removed: before - watchTriggers.length });
+});
+
+// ── Unified assistant endpoint ─────────────────────────────────────────────────
+// Routes all dashboard chat through a single Haiku classifier, then to the right
+// handler: place_bet → command queue, watch_trigger → trigger store,
+// cancel → clear both, status → context summary, research → Sonnet pipeline,
+// clarify → surface question.
+
+const ASSISTANT_SYSTEM = (ctx) => `You are an intelligent sports betting assistant embedded in a live DraftKings betting app. Parse the user's message into structured JSON.
+
+CURRENT CONTEXT:
+${JSON.stringify(ctx, null, 1)}
+
+Respond with ONLY a JSON object — no explanation, no markdown:
+{
+  "intent": "place_bet" | "watch_trigger" | "cancel" | "status" | "research" | "clarify",
+  "side": "<team/player name or null>",
+  "amount": <dollars as number or null>,
+  "trigger": {
+    "type": "crossover" | "positive" | "negative" | "odds_threshold" | null,
+    "targetOdds": <american odds number or null>
+  },
+  "confidence": <0.0–1.0>,
+  "clarifyQuestion": "<question to ask user if intent=clarify, else null>"
+}
+
+INTENT RULES:
+- place_bet: user wants to bet RIGHT NOW — side + amount, no waiting condition
+- watch_trigger: user wants to bet WHEN something happens ("as soon as", "when odds go", "if they hit", "wait until")
+- cancel: stop strategy, cancel watching, stop auto-hedge
+- status: asking what's currently happening, current odds, open bets — informational
+- research: historical data, fight analysis, crossover stats, strategy questions — needs deep research
+- clarify: too vague to act safely (missing side or amount for a bet/trigger)
+
+TRIGGER CONDITION TYPES (use for watch_trigger):
+- "positive": fire when side's american odds > 0 ("goes plus money", "goes into plus territory")
+- "negative": fire when side's american odds < 0 ("becomes favorite")
+- "odds_threshold": fire when side's odds reach/exceed targetOdds (e.g., ">= +150")
+- "crossover": fire at crossover (implied prob swap between two sides)
+
+AMOUNT PARSING: "$1.50" → 1.50, "a penny" → 0.01, "50 cents" → 0.50, "1k" → 1000
+
+CONTEXT USAGE:
+- "another bet on X" / "also bet X" → use same amount as last bet in recentChat
+- "the favorite/underdog" and context has odds → resolve the name
+- For watch_trigger: if amount is missing, set intent=clarify and ask for it`;
+
+app.post('/api/assistant', async (req, res) => {
+  const { message, userId = 'default', currentOdds } = req.body || {};
+  if (!message) return res.status(400).json({ error: 'message required' });
+
+  const openBets = getAllBets(true);
+  const activeTriggers = watchTriggers.filter(t => t.expiresAt > Date.now());
+  const activeCmds = commandQueue.filter(c =>
+    c.status === 'pending' || c.status === 'picked_up' ||
+    (c.status === 'done' && c.result?.bothPlaced === false)
+  );
+  const history = getChatHistory(userId);
+
+  const ctx = {
+    openBets: openBets.slice(0, 5).map(b => ({ selection: b.selection, odds: b.odds, stake: b.stake })),
+    activeStrategy: activeCmds.length > 0 ? { side: activeCmds[0].side, amount: activeCmds[0].amount, state: activeCmds[0].strategyState || activeCmds[0].status } : null,
+    watchTriggers: activeTriggers.slice(0, 5).map(t => ({ id: t.id, description: t.description })),
+    currentOdds: currentOdds || null,
+    recentChat: history.slice(-4),
+  };
+
+  addChatTurn(userId, 'user', message);
+
+  try {
+    const classifyR = await anthropic.messages.create({
+      model: 'claude-haiku-4-5-20251001',
+      max_tokens: 300,
+      system: ASSISTANT_SYSTEM(ctx),
+      messages: [{ role: 'user', content: message.slice(0, 600) }],
+    });
+
+    let parsed;
+    try {
+      const raw = classifyR.content[0]?.text?.trim() || '';
+      const jsonMatch = raw.match(/\{[\s\S]*\}/);
+      parsed = JSON.parse(jsonMatch ? jsonMatch[0] : raw);
+    } catch {
+      parsed = { intent: 'research', confidence: 0.5 };
+    }
+
+    const intent = {
+      intent:          parsed.intent || 'research',
+      side:            parsed.side   || null,
+      amount:          typeof parsed.amount === 'number' ? parsed.amount : null,
+      trigger:         parsed.trigger || { type: null, targetOdds: null },
+      confidence:      typeof parsed.confidence === 'number' ? parsed.confidence : 0.5,
+      clarifyQuestion: parsed.clarifyQuestion || null,
+    };
+
+    // ── place_bet ─────────────────────────────────────────────────────────
+    if (intent.intent === 'place_bet') {
+      if (!intent.side || !intent.amount) {
+        const q = !intent.side ? 'Which side do you want to bet on?' : `How much do you want to bet on ${intent.side}?`;
+        addChatTurn(userId, 'assistant', q);
+        return res.json({ type: 'clarify', answer: q });
+      }
+      const cmd = makeCommand('place_bet', intent);
+      commandQueue.push(cmd); saveCommandQueue();
+      const triggerStr = intent.trigger?.type === 'crossover'
+        ? ' — **auto-hedging at crossover** 🔄'
+        : intent.trigger?.type === 'odds_target'
+        ? ` — auto-hedge when line hits **${intent.trigger.targetOdds}**` : '';
+      const answer = `**Bet queued** ✅\n\nPlacing **$${intent.amount}** on **${intent.side}**${triggerStr}.\n\nYour extension will execute this on DraftKings now.`;
+      addChatTurn(userId, 'assistant', answer);
+      return res.json({ type: 'bet', answer, betCommand: cmd, usage: { thisQuery: 0, sessionTotal: totalTokensUsed, sessionQueries: totalQueries, estimatedCostUSD: 0 } });
+    }
+
+    // ── watch_trigger ─────────────────────────────────────────────────────
+    if (intent.intent === 'watch_trigger') {
+      if (!intent.side || !intent.amount) {
+        const q = !intent.side ? 'Which side do you want to watch and bet on?' : `How much do you want to bet on ${intent.side} when the trigger fires?`;
+        addChatTurn(userId, 'assistant', q);
+        return res.json({ type: 'clarify', answer: q });
+      }
+      const condType = intent.trigger?.type || 'positive';
+      const trigger = {
+        id: Date.now().toString(36) + Math.random().toString(36).slice(2, 6),
+        userId,
+        side: intent.side,
+        amount: intent.amount,
+        condition: { type: condType, targetOdds: intent.trigger?.targetOdds || null },
+        description: `Bet $${intent.amount} on ${intent.side} when ${condType === 'positive' ? 'odds go plus money' : condType === 'negative' ? 'odds go negative' : `odds reach ${intent.trigger?.targetOdds}`}`,
+        createdAt: Date.now(),
+        expiresAt: Date.now() + 4 * 60 * 60 * 1000,
+      };
+      watchTriggers.push(trigger);
+      const condDesc = condType === 'positive' ? 'go into plus money'
+        : condType === 'negative' ? 'become a favorite'
+        : `hit ${intent.trigger?.targetOdds}`;
+      const answer = `**Watching** 👁️\n\nI'll bet **$${intent.amount}** on **${intent.side}** as soon as their odds ${condDesc}.\n\nThe extension checks every second — it fires the bet instantly when the condition is met.`;
+      addChatTurn(userId, 'assistant', answer);
+      return res.json({ type: 'watch_trigger', answer, trigger });
+    }
+
+    // ── cancel ────────────────────────────────────────────────────────────
+    if (intent.intent === 'cancel') {
+      let cancelledCmds = 0;
+      commandQueue.forEach(c => {
+        if (c.status === 'pending' || c.status === 'picked_up') { c.status = 'cancelled'; cancelledCmds++; }
+      });
+      saveCommandQueue();
+      const before = watchTriggers.length;
+      watchTriggers = watchTriggers.filter(t => t.userId !== userId && t.userId !== 'default');
+      const cancelledTriggers = before - watchTriggers.length;
+      const answer = `**Cancelled** 🛑\n\nStopped ${cancelledCmds} pending bet${cancelledCmds !== 1 ? 's' : ''} and ${cancelledTriggers} watch trigger${cancelledTriggers !== 1 ? 's' : ''}.`;
+      addChatTurn(userId, 'assistant', answer);
+      return res.json({ type: 'cancel', answer });
+    }
+
+    // ── status ────────────────────────────────────────────────────────────
+    if (intent.intent === 'status') {
+      const lines = [];
+      if (openBets.length) lines.push(`**Open bets:** ${openBets.map(b => `${b.selection} ${b.odds} ($${b.stake})`).join(', ')}`);
+      if (activeTriggers.length) lines.push(`**Watching:** ${activeTriggers.map(t => t.description).join('; ')}`);
+      if (activeCmds.length) lines.push(`**Active strategy:** ${activeCmds[0].side} $${activeCmds[0].amount} (${activeCmds[0].strategyState || activeCmds[0].status})`);
+      if (!lines.length) lines.push('No active bets, triggers, or strategies.');
+      const answer = lines.join('\n\n');
+      addChatTurn(userId, 'assistant', answer);
+      return res.json({ type: 'status', answer });
+    }
+
+    // ── clarify ───────────────────────────────────────────────────────────
+    if (intent.intent === 'clarify') {
+      const q = intent.clarifyQuestion || "Could you be more specific? What side and amount did you have in mind?";
+      addChatTurn(userId, 'assistant', q);
+      return res.json({ type: 'clarify', answer: q });
+    }
+
+    // ── research (default) — 2-pass Sonnet pipeline ───────────────────────
+    let liveOdds = [];
+    try {
+      const url = `${BASE_URL}/sports/mma_mixed_martial_arts/odds/?apiKey=${ODDS_API_KEY}&regions=us&markets=h2h&bookmakers=draftkings&oddsFormat=american`;
+      const { data, headers } = await fetchJson(url);
+      updateOddsCredits(headers);
+      liveOdds = (Array.isArray(data) ? data : []).filter(f => f.bookmakers?.length > 0).map(f => {
+        const outcomes = f.bookmakers[0].markets[0]?.outcomes || [];
+        return { fight: `${f.home_team} vs ${f.away_team}`, date: f.commence_time.slice(0, 10), odds: outcomes.reduce((acc, o) => { acc[o.name] = o.price; return acc; }, {}) };
+      });
+    } catch {}
+
+    const historicalSummaryJson = getCachedSummary();
+    totalQueries++;
+    const buildResearchMsgs = (extraData) => [{
+      role: 'user',
+      content: `HISTORICAL FIGHT DATA (local, Dec 2025–May 2026):\n${historicalSummaryJson}\n\nCURRENT DRAFTKINGS ODDS:\n${JSON.stringify(liveOdds, null, 1)}\n${extraData ? `\nADDITIONAL HISTORICAL API DATA:\n${JSON.stringify(extraData, null, 1)}` : ''}\n\nQuestion: ${message}`,
+    }];
+
+    const pass1 = await anthropic.messages.create({ model: 'claude-sonnet-4-6', max_tokens: 1500, system: systemPrompt, messages: buildResearchMsgs(null) });
+    const pass1Text = pass1.content[0].text;
+    let usedTokens = pass1.usage.input_tokens + pass1.usage.output_tokens;
+    let finalAnswer = pass1Text;
+
+    const lookupMatch = pass1Text.match(/LOOKUP_NEEDED:\s*(.+)/i);
+    if (lookupMatch) {
+      const dates = lookupMatch[1].trim().split(/\s+/).filter(p => /^\d{4}-\d{2}-\d{2}$/.test(p)).slice(0, 3);
+      const extraData = [];
+      for (const d of dates) { try { extraData.push(...await fetchHistoricalOdds(d)); } catch {} }
+      const pass2 = await anthropic.messages.create({ model: 'claude-sonnet-4-6', max_tokens: 1500, system: systemPrompt, messages: buildResearchMsgs(extraData.length > 0 ? extraData : null) });
+      finalAnswer = pass2.content[0].text;
+      usedTokens += pass2.usage.input_tokens + pass2.usage.output_tokens;
+    }
+
+    totalTokensUsed += usedTokens;
+    if (totalTokensUsed > TOKEN_WARN) console.warn(`WARNING: Anthropic token usage (${totalTokensUsed}) exceeded threshold (${TOKEN_WARN})`);
+    addChatTurn(userId, 'assistant', finalAnswer.slice(0, 500));
+    return res.json({
+      type: 'research',
+      answer: finalAnswer,
+      usage: { thisQuery: usedTokens, sessionTotal: totalTokensUsed, sessionQueries: totalQueries, estimatedCostUSD: +(totalTokensUsed / 1_000_000 * 3).toFixed(3) },
+    });
+
+  } catch (e) {
+    console.error('[api/assistant]', e.message);
+    res.status(500).json({ error: e.message });
   }
 });
 

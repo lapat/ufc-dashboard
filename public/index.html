@@ -2825,11 +2825,17 @@ async function sendMsg(){
   cinp.value=''; csnd.disabled=true; addMsg(q,'user');
   const thinking=addMsg('Thinking…','thinking');
   try{
-    const data=await(await fetch('/api/research',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q})})).json();
+    const data=await(await fetch('/api/assistant',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:q})})).json();
     thinking.remove();
-    const cls=data.betCommand?'bet':'assistant';
-    addMsg(data.answer||data.error,cls);
-    if(data.betCommand){ pollBetResult(data.betCommand.id); }
+    if(data.error){ addMsg('Error: '+data.error,'thinking'); csnd.disabled=false; cinp.focus(); return; }
+    const type=data.type||'research';
+    const cls = type==='bet'||type==='watch_trigger'||type==='cancel' ? 'bet' : type==='clarify' ? 'thinking' : 'assistant';
+    addMsg(data.answer,cls);
+    if(type==='bet'&&data.betCommand){ pollBetResult(data.betCommand.id); }
+    if(type==='watch_trigger'&&data.trigger){
+      // Show a live "watching" status that updates when trigger fires
+      const watchEl=addMsg('','bet-status',`<span>👁️ Watching for odds condition — extension checks every second…</span>`);
+    }
     if(data.usage&&data.usage.sessionQueries>0) culbl.textContent=`${data.usage.sessionQueries} queries · $${data.usage.estimatedCostUSD.toFixed(3)}`;
     loadCredits();
   }catch(e){ thinking.remove(); addMsg('Error: '+e.message,'thinking'); }

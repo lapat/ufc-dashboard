@@ -188,6 +188,11 @@ if (href.startsWith('https://sportsbook.draftkings.com/') &&
   let watchedSides = null;
   let lastCrossover = null; // true/false — only fire on CHANGE to avoid spam
 
+  // watchTriggers: conditional bets set by /api/assistant ("bet when USA goes plus money")
+  // Each trigger: { id, side, amount, condition: { type, targetOdds } }
+  let watchTriggers = [];
+  const firedTriggers = new Set(); // prevent double-fire per trigger id
+
   chrome.runtime.onMessage.addListener(msg => {
     if (msg.type === 'WATCH_SIDES') {
       watchedSides = { leg1Side: msg.leg1Side, leg2Side: msg.leg2Side };
@@ -196,6 +201,17 @@ if (href.startsWith('https://sportsbook.draftkings.com/') &&
     if (msg.type === 'STOP_WATCHING') {
       watchedSides = null;
       lastCrossover = null;
+    }
+    if (msg.type === 'SET_WATCH_TRIGGERS') {
+      watchTriggers = msg.triggers || [];
+      // Clear fired-set for triggers that no longer exist
+      for (const id of firedTriggers) {
+        if (!watchTriggers.find(t => t.id === id)) firedTriggers.delete(id);
+      }
+    }
+    if (msg.type === 'CLEAR_TRIGGERS') {
+      watchTriggers = [];
+      firedTriggers.clear();
     }
   });
 
@@ -206,7 +222,29 @@ if (href.startsWith('https://sportsbook.draftkings.com/') &&
     // Always report current odds so background + popup can display them
     send({ type: 'ODDS_UPDATE', outcomes, ts: Date.now() });
 
-    // Crossover check only when a strategy is active
+    // ── Watch trigger condition check ──────────────────────────────────────
+    for (const trigger of watchTriggers) {
+      if (firedTriggers.has(trigger.id)) continue;
+      const sL = s => (s || '').toLowerCase();
+      const outcome = outcomes.find(o => sL(o.side) === sL(trigger.side));
+      if (!outcome) continue;
+
+      const { type, targetOdds } = trigger.condition;
+      let conditionMet = false;
+      if (type === 'positive')       conditionMet = outcome.american > 0;
+      else if (type === 'negative')  conditionMet = outcome.american < 0;
+      else if (type === 'odds_threshold' && targetOdds != null) {
+        // Fire when odds >= targetOdds (both sides: +200 >= +150, or -110 >= -150)
+        conditionMet = outcome.american >= targetOdds;
+      }
+
+      if (conditionMet) {
+        firedTriggers.add(trigger.id);
+        send({ type: 'TRIGGER_MET', triggerId: trigger.id, side: trigger.side, amount: trigger.amount, currentOdds: outcome.american, ts: Date.now() });
+      }
+    }
+
+    // ── Crossover check only when a strategy is active ─────────────────────
     if (!watchedSides) return;
     const sL = s => (s || '').toLowerCase();
     const leg1 = outcomes.find(o => sL(o.side) === sL(watchedSides.leg1Side));
