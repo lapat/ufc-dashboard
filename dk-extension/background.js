@@ -240,7 +240,8 @@ function handleExecuteCommand(command) {
 // MV3 service workers cannot receive chrome.runtime.sendMessage sent from
 // themselves. Extracting the logic here lets pollForCommands and
 // CROSSOVER_DETECTED call it directly without going through the message bus.
-async function executePlaceBet(side, amount, commandId, isAutoHedge) {
+// isRetry=true on AI-assisted second attempt — prevents infinite recursion
+async function executePlaceBet(side, amount, commandId, isAutoHedge, isRetry = false) {
   // ── Idempotency check — block duplicate bets within 30s ──────────────
   const betKey = `${dkUserId}|${side}|${amount}`;
   const idempotent = await chrome.storage.local.get(['lastBetKey', 'lastBetKeyTs']);
@@ -361,12 +362,48 @@ async function executePlaceBet(side, amount, commandId, isAutoHedge) {
         }
 
         if (!outcomeBtn) {
-          const btns = [...document.querySelectorAll('button, [role="button"]')]
+          // Collect all visible button texts for debug
+          const allButtonTexts = [...document.querySelectorAll('button, [role="button"]')]
             .map(b => b.textContent.trim().slice(0, 50).replace(/\s+/g, ' '))
             .filter(t => t.length > 0)
-            .slice(0, 50);
-          console.warn('[BetBot] find_button failed for side:', side, 'alts tried:', sideAlts, '— visible buttons:', btns);
-          return { ok: false, step: 'find_button', error: `No button found for "${side}" — make sure the game is visible on screen`, debugButtons: btns };
+            .slice(0, 60);
+
+          // Collect text elements NEAR odds buttons — these are likely team/player names.
+          // On league pages (soccer, NBA), team names sit in the same row as odds buttons
+          // but are NOT inside the button element itself.
+          const oddsButtons = [...document.querySelectorAll('button, [role="button"]')]
+            .filter(btn => /^[+-]\d+$/.test(btn.textContent.trim().replace(/\s+/g, '')));
+          const nearbySet = new Set();
+          oddsButtons.forEach(btn => {
+            let ancestor = btn;
+            for (let depth = 0; depth < 8; depth++) {
+              ancestor = ancestor.parentElement;
+              if (!ancestor) break;
+              [...ancestor.querySelectorAll('span, div, p, td, th, li, a')]
+                .filter(el =>
+                  el.childElementCount === 0 &&
+                  el.textContent.trim().length >= 2 &&
+                  el.textContent.trim().length <= 50 &&
+                  !/^[+-]\d+$/.test(el.textContent.trim())
+                )
+                .forEach(el => nearbySet.add(el.textContent.trim()));
+              // Stop climbing once we're at a row container with multiple odds buttons
+              const rowOddsCount = [...ancestor.querySelectorAll('button, [role="button"]')]
+                .filter(b => /^[+-]\d+$/.test(b.textContent.trim().replace(/\s+/g, ''))).length;
+              if (rowOddsCount >= 2) break;
+            }
+          });
+          const nearbyLabels = [...nearbySet].slice(0, 80);
+
+          console.warn('[BetBot] find_button failed for side:', side, 'alts tried:', sideAlts,
+            '— buttons:', allButtonTexts.slice(0, 10), '— nearbyLabels:', nearbyLabels.slice(0, 10));
+          return {
+            ok: false, step: 'find_button',
+            error: `No button found for "${side}" — make sure the game is visible on screen`,
+            needsAIResolve: true,
+            nearbyLabels,
+            allButtonTexts,
+          };
         }
 
         // Read the odds BEFORE logging (fixes TDZ: oddsEl was referenced before its declaration)
@@ -439,11 +476,52 @@ async function executePlaceBet(side, amount, commandId, isAutoHedge) {
       },
       args: [side, amount]
     });
-    const result = results?.[0]?.result || { ok: false, error: 'No result from tab' };
+    let result = results?.[0]?.result || { ok: false, error: 'No result from tab' };
+
+    // ── AI-assisted name resolution (only on find_button failure, only once) ──
+    // The injected script returns needsAIResolve=true with nearbyLabels collected
+    // from the DOM. We ask Haiku which label best matches the user's intended side,
+    // then retry once with the resolved name. This handles US→USA, Korea→South Korea,
+    // and any page-layout mismatch where the name isn't inside the button itself.
+    if (!result.ok && result.step === 'find_button' && result.needsAIResolve && !isRetry) {
+      addLog(`find_button failed for "${side}" — asking AI to resolve from ${(result.nearbyLabels||[]).length} page labels`);
+      try {
+        const resolveR = await fetch(`${betBotUrl}/api/resolve-bet-target`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            side,
+            nearbyLabels:   result.nearbyLabels   || [],
+            allButtonTexts: result.allButtonTexts || [],
+            userId: dkUserId,
+          })
+        });
+        if (resolveR.ok) {
+          const resolveResult = await resolveR.json();
+          if (resolveResult.ok && resolveResult.resolvedSide) {
+            addLog(`AI resolved "${side}" → "${resolveResult.resolvedSide}" (${Math.round((resolveResult.confidence||0)*100)}%) — retrying`);
+            // Recursive call with isRetry=true so we don't loop if it fails again
+            result = await executePlaceBet(resolveResult.resolvedSide, amount, commandId, isAutoHedge, true);
+            // executePlaceBet handles logging/posting internally on the retry path; return here
+            return result;
+          } else if (resolveResult.ambiguous) {
+            const opts = (resolveResult.options || []).slice(0, 5).join(', ');
+            const errMsg = `Couldn't auto-resolve "${side}" — did you mean one of: ${opts}?`;
+            addLog(`AI resolve ambiguous: ${errMsg}`);
+            result = { ok: false, step: 'find_button', error: errMsg };
+          } else {
+            addLog(`AI resolve failed: ${resolveResult.error || 'unknown'}`);
+          }
+        }
+      } catch(resolveErr) {
+        addLog(`AI resolve network error: ${resolveErr.message}`);
+        // Fall through — report original find_button error below
+      }
+    }
+
     const logLine = result.ok
       ? `BET_RESULT ok: ${result.side} $${result.amount} @ ${result.oddsText} confirmed=${result.confirmed}`
       : `BET_RESULT FAIL [${result.step}]: ${result.error}` +
-        (result.debugButtons ? ` | btns: ${result.debugButtons.slice(0,5).join(', ')}` : '') +
         (result.debugInputs ? ` | inputs: ${result.debugInputs.slice(0,3).join(', ')}` : '');
     addLog(logLine);
     console.log('[BetBot BG] BET_RESULT:', JSON.stringify(result));

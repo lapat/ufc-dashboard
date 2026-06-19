@@ -98,6 +98,13 @@ app.use('/api/strategy-update', (req, res, next) => {
   if (req.method === 'OPTIONS') return res.sendStatus(204);
   next();
 });
+app.use('/api/resolve-bet-target', (req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  if (req.method === 'OPTIONS') return res.sendStatus(204);
+  next();
+});
 
 // ── Helpers ────────────────────────────────────────────────────────────────
 
@@ -1642,6 +1649,105 @@ app.post('/api/chat', async (req, res) => {
   } catch (e) {
     console.error('[api/chat]', e.message);
     res.status(500).json({ error: e.message });
+  }
+});
+
+// ── POST /api/resolve-bet-target — AI name matching when DOM search fails ─────
+// Called by the extension when Strategy A/B/C all fail to find the bet button.
+// Sends the visible page options to Haiku; returns the best match + confidence.
+// Only fires on failure — zero overhead on the happy path.
+//
+// Request:  { side: string, nearbyLabels: string[], allButtonTexts: string[] }
+// Response: { ok: true,  resolvedSide: string, confidence: number }
+//         | { ok: false, ambiguous: true, options: string[], reason: string }
+//         | { ok: false, error: string }
+
+const RESOLVE_SYSTEM = `You are a DraftKings sportsbook bet-target resolver. The extension tried to find a bet button for a team/player name and failed. Given the visible page options, identify the correct match.
+
+Respond with ONLY valid JSON — no markdown, no explanation:
+{
+  "match": "<exact string from visibleOptions, or null if no confident match>",
+  "confidence": <0.0–1.0>,
+  "reason": "<one short sentence>"
+}
+
+RULES:
+- match must be the exact string from visibleOptions as provided, or null
+- confidence ≥ 0.85 = safe to auto-retry; below that = surface error to user
+- If two or more options are plausible, set confidence < 0.60 and match = null
+- Common resolutions: US→USA, UK→England, Korea→South Korea, Iran→IR Iran
+- Odds values like "-165" or "+330" are NEVER a valid match
+- Navigation text (More, Home, Live, SGP) is NEVER a valid match`;
+
+app.post('/api/resolve-bet-target', async (req, res) => {
+  const { side, nearbyLabels = [], allButtonTexts = [] } = req.body || {};
+  if (!side) return res.status(400).json({ ok: false, error: 'side required' });
+
+  // Deduplicate and clean option candidates; filter out obvious non-names
+  const candidates = [...new Set([...nearbyLabels, ...allButtonTexts])]
+    .filter(t =>
+      t && t.length >= 2 && t.length <= 50 &&
+      !/^[+-]\d+$/.test(t) &&        // not odds value
+      !/^\$[\d,.]+/.test(t) &&        // not money
+      !/^\d+(\.\d+)?%?$/.test(t) &&  // not pure number
+      !['More', 'Home', 'Live', 'SGP', 'Opt In', 'Today', 'Tomorrow', 'Show DK Social',
+        'MONEYLINE', 'TIE NO BET', 'TOTAL GOALS', 'SPREAD', 'FUTURES', 'Matches',
+        'Players', 'Groups', 'Countries', 'Quick Hits', 'Match Props'].includes(t)
+    )
+    .slice(0, 80);
+
+  if (candidates.length === 0) {
+    return res.json({ ok: false, error: 'No candidates extracted from page — make sure the game is visible' });
+  }
+
+  try {
+    const response = await anthropic.messages.create({
+      model: 'claude-haiku-4-5-20251001',
+      max_tokens: 120,
+      system: RESOLVE_SYSTEM,
+      messages: [{
+        role: 'user',
+        content: `User wants to bet on: "${side}"
+
+Visible options on the DraftKings page:
+${candidates.map((o, i) => `${i + 1}. ${o}`).join('\n')}
+
+Which option best matches "${side}"?`
+      }]
+    });
+
+    const raw = response.content[0]?.text?.trim() || '';
+    let parsed;
+    try {
+      const jsonMatch = raw.match(/\{[\s\S]*\}/);
+      parsed = JSON.parse(jsonMatch ? jsonMatch[0] : raw);
+    } catch {
+      return res.json({ ok: false, error: `Haiku parse failed: ${raw.slice(0, 100)}` });
+    }
+
+    const { match, confidence = 0, reason = '' } = parsed;
+
+    // Safety: match must be in the candidate list
+    if (match && !candidates.includes(match)) {
+      // Try case-insensitive fallback
+      const caseMatch = candidates.find(c => c.toLowerCase() === match.toLowerCase());
+      if (!caseMatch) {
+        return res.json({ ok: false, error: `AI returned "${match}" which is not in the visible options` });
+      }
+      return res.json({ ok: true, resolvedSide: caseMatch, confidence, reason });
+    }
+
+    if (!match || confidence < 0.85) {
+      // Ambiguous or low-confidence — surface best candidates to user
+      const topOptions = candidates.slice(0, 10);
+      return res.json({ ok: false, ambiguous: true, options: topOptions, confidence, reason });
+    }
+
+    console.log(`[resolve-bet-target] "${side}" → "${match}" (${Math.round(confidence * 100)}%): ${reason}`);
+    return res.json({ ok: true, resolvedSide: match, confidence, reason });
+  } catch (e) {
+    console.error('[resolve-bet-target]', e.message);
+    return res.status(500).json({ ok: false, error: e.message });
   }
 });
 

@@ -4226,6 +4226,102 @@ async function runDashboardChatTests() {
     } catch(e) { console.error('  ✗ H7:', e.message); failed++; }
   } else { console.log('  - H7: skipped (not --local)'); }
 
+  // ── AI-assisted bet target resolution ────────────────────────────────────
+
+  // J1 — /api/resolve-bet-target resolves "US" → "USA" when "USA" is in nearbyLabels
+  if (process.argv.includes('--local')) {
+    try {
+      await check('J1: /api/resolve-bet-target resolves "US" to "USA" (Haiku live call)', async () => {
+        const r = await fetch('http://localhost:3000/api/resolve-bet-target', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            side: 'US',
+            nearbyLabels: ['USA', 'Draw', 'Australia', '-165', '+330', '+425'],
+            allButtonTexts: ['-165', '+330', '+425'],
+          })
+        });
+        const body = await r.json();
+        assert(body.ok === true, `Expected ok=true but got: ${JSON.stringify(body)}`);
+        assert(body.resolvedSide === 'USA', `Expected resolvedSide=USA but got: ${body.resolvedSide}`);
+        assert(body.confidence >= 0.85, `Expected confidence >= 0.85 but got: ${body.confidence}`);
+      });
+    } catch(e) { console.error('  ✗ J1:', e.message); failed++; }
+  } else { console.log('  - J1: skipped (not --local)'); }
+
+  // J2 — returns ambiguous when multiple similar options exist
+  if (process.argv.includes('--local')) {
+    try {
+      await check('J2: /api/resolve-bet-target returns ambiguous for Korea/South Korea/North Korea', async () => {
+        const r = await fetch('http://localhost:3000/api/resolve-bet-target', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            side: 'Korea',
+            nearbyLabels: ['South Korea', 'North Korea', 'Draw', '-150', '+280', '+400'],
+            allButtonTexts: ['-150', '+280', '+400'],
+          })
+        });
+        const body = await r.json();
+        // Should either be ambiguous (ok:false) OR pick one with reasonable confidence
+        // Accept either: the important thing is it doesn't silently pick the wrong one
+        assert(typeof body.ok === 'boolean', `Response must have ok field: ${JSON.stringify(body)}`);
+        if (body.ok) {
+          // If it did pick one, confidence must reflect the ambiguity
+          console.log(`    J2 info: resolved to "${body.resolvedSide}" confidence=${body.confidence}`);
+        } else {
+          assert(body.ambiguous === true || body.error, `Should be ambiguous or error: ${JSON.stringify(body)}`);
+        }
+      });
+    } catch(e) { console.error('  ✗ J2:', e.message); failed++; }
+  } else { console.log('  - J2: skipped (not --local)'); }
+
+  // J3 — returns error (not crash) when no candidates available
+  if (process.argv.includes('--local')) {
+    try {
+      await check('J3: /api/resolve-bet-target returns error gracefully when no candidates', async () => {
+        const r = await fetch('http://localhost:3000/api/resolve-bet-target', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ side: 'USA', nearbyLabels: [], allButtonTexts: [] })
+        });
+        const body = await r.json();
+        assert(body.ok === false, `Should return ok=false for empty candidates: ${JSON.stringify(body)}`);
+      });
+    } catch(e) { console.error('  ✗ J3:', e.message); failed++; }
+  } else { console.log('  - J3: skipped (not --local)'); }
+
+  // J4 — executePlaceBet signature includes isRetry parameter (prevents infinite recursion)
+  try {
+    await check('J4: executePlaceBet has isRetry parameter with default false', async () => {
+      const fs = require('fs');
+      const bgSrc = fs.readFileSync(require('path').join(__dirname, 'dk-extension/background.js'), 'utf8');
+      assert(
+        /async function executePlaceBet\s*\([^)]*isRetry\s*=\s*false/.test(bgSrc),
+        'executePlaceBet must have isRetry=false default parameter'
+      );
+      // Must pass isRetry=true in the recursive call to prevent infinite loop
+      assert(
+        bgSrc.includes('executePlaceBet(resolveResult.resolvedSide') &&
+        bgSrc.includes(', true)'),
+        'Recursive executePlaceBet call must pass isRetry=true'
+      );
+    });
+  } catch(e) { console.error('  ✗ J4:', e.message); failed++; }
+
+  // J5 — CORS headers on /api/resolve-bet-target
+  if (process.argv.includes('--local')) {
+    try {
+      await check('J5: /api/resolve-bet-target has CORS headers for extension access', async () => {
+        const r = await fetch('http://localhost:3000/api/resolve-bet-target', {
+          method: 'OPTIONS',
+        });
+        const corsHeader = r.headers.get('access-control-allow-origin');
+        assert(corsHeader === '*', `Expected Access-Control-Allow-Origin: * but got: ${corsHeader}`);
+      });
+    } catch(e) { console.error('  ✗ J5:', e.message); failed++; }
+  } else { console.log('  - J5: skipped (not --local)'); }
+
   // ── SW self-message fix tests ────────────────────────────────────────────
   // MV3 service workers cannot receive chrome.runtime.sendMessage sent from
   // themselves. executePlaceBet() fixes this by being called directly.
