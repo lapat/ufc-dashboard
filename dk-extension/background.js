@@ -289,32 +289,83 @@ async function executePlaceBet(side, amount, commandId, isAutoHedge) {
 
         // ── Step 1: find the outcome button ─────────────────────────────
         const sideL = side.toLowerCase().trim();
+
+        // Common alternate names/abbreviations — try all of them
+        const ALIASES = {
+          'us': ['usa', 'united states'],
+          'usa': ['us', 'united states'],
+          'uk': ['england', 'great britain', 'united kingdom'],
+          'south korea': ['korea', 'republic of korea'],
+          'korea': ['south korea', 'republic of korea'],
+          'north korea': ['korea dpr', 'dpr korea'],
+          'iran': ['ir iran'],
+          'uae': ['united arab emirates'],
+          'czech republic': ['czechia'],
+          'czechia': ['czech republic'],
+        };
+        const sideAlts = [sideL, ...(ALIASES[sideL] || [])];
+
         const allClickable = [...document.querySelectorAll('button, [role="button"]')];
         let outcomeBtn = null;
 
-        for (const el of allClickable) {
-          // Match direct child span/div/p whose full text equals the side name
-          const spans = el.querySelectorAll('span, div, p');
-          const labelSpan = [...spans].find(s =>
-            s.childElementCount === 0 && s.textContent.trim().toLowerCase() === sideL
-          );
-          if (labelSpan) { outcomeBtn = el; break; }
+        // ── Strategy A: team name IS inside the button ───────────────────
+        // Works for MMA fight pages where fighter name lives inside the bet button.
+        for (const alt of sideAlts) {
+          for (const el of allClickable) {
+            const spans = el.querySelectorAll('span, div, p');
+            const labelSpan = [...spans].find(s =>
+              s.childElementCount === 0 && s.textContent.trim().toLowerCase() === alt
+            );
+            if (labelSpan) { outcomeBtn = el; break; }
+          }
+          if (outcomeBtn) break;
         }
 
-        // Fallback: looser match on full button text
+        // ── Strategy B: looser full-text match on button ─────────────────
         if (!outcomeBtn) {
-          outcomeBtn = allClickable.find(el => {
-            const t = el.textContent.trim().toLowerCase();
-            return (t === sideL || t.startsWith(sideL + '\n') || t.startsWith(sideL + ' '));
-          });
+          for (const alt of sideAlts) {
+            outcomeBtn = allClickable.find(el => {
+              const t = el.textContent.trim().toLowerCase();
+              return (t === alt || t.startsWith(alt + '\n') || t.startsWith(alt + ' '));
+            });
+            if (outcomeBtn) break;
+          }
+        }
+
+        // ── Strategy C: team name is a ROW LABEL, not inside the button ──
+        // Works for soccer/league pages where odds buttons only show odds numbers
+        // (-165, +330, +425) and the team name is a separate element in the same row.
+        if (!outcomeBtn) {
+          const allText = [...document.querySelectorAll('span, div, p, td, th, li, a, h1, h2, h3')];
+          let nameEl = null;
+          for (const alt of sideAlts) {
+            nameEl = allText.find(el =>
+              el.childElementCount === 0 &&
+              el.textContent.trim().toLowerCase() === alt &&
+              !el.closest('button, [role="button"]')
+            );
+            if (nameEl) break;
+          }
+          if (nameEl) {
+            // Walk up to find a row/container that contains an odds button
+            let ancestor = nameEl;
+            for (let depth = 0; depth < 8; depth++) {
+              ancestor = ancestor.parentElement;
+              if (!ancestor) break;
+              // Odds button text is just the odds value like "-165" or "+330"
+              const oddsBtn = [...ancestor.querySelectorAll('button, [role="button"]')]
+                .find(btn => /^[+-]\d+$/.test(btn.textContent.trim().replace(/\s+/g, '')));
+              if (oddsBtn) { outcomeBtn = oddsBtn; break; }
+            }
+          }
         }
 
         if (!outcomeBtn) {
           const btns = [...document.querySelectorAll('button, [role="button"]')]
-            .map(b => b.textContent.trim().slice(0, 40).replace(/\s+/g, ' '))
+            .map(b => b.textContent.trim().slice(0, 50).replace(/\s+/g, ' '))
             .filter(t => t.length > 0)
-            .slice(0, 30);
-          console.warn('[BetBot] find_button failed for side:', side, '— visible buttons:', btns);
+            .slice(0, 50);
+          console.warn('[BetBot] find_button failed for side:', side, 'alts tried:', sideAlts, '— visible buttons:', btns);
           return { ok: false, step: 'find_button', error: `No button found for "${side}" — make sure the game is visible on screen`, debugButtons: btns };
         }
 
