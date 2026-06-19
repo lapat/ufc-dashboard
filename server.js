@@ -73,6 +73,32 @@ let commandQueue = loadCommandQueue();
 app.use(express.static('public'));
 app.use(express.json());
 
+// CORS — allow extension content scripts (running inside DK pages) to fetch command endpoints.
+// Chrome MV3 content scripts are subject to CORS even with host_permissions declared; the server
+// must respond with Access-Control-Allow-Origin so the response is readable by content.js.
+// This does NOT expose any sensitive data — command endpoints contain only bet instructions
+// that the authenticated user typed into the dashboard themselves.
+app.use('/api/pending-commands', (req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET, OPTIONS');
+  if (req.method === 'OPTIONS') return res.sendStatus(204);
+  next();
+});
+app.use('/api/command-result', (req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  if (req.method === 'OPTIONS') return res.sendStatus(204);
+  next();
+});
+app.use('/api/strategy-update', (req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  if (req.method === 'OPTIONS') return res.sendStatus(204);
+  next();
+});
+
 // ── Helpers ────────────────────────────────────────────────────────────────
 
 function fetchJson(url) {
@@ -1624,8 +1650,17 @@ app.post('/api/chat', async (req, res) => {
 // Extension polls this every 5s to pick up dashboard bet commands
 app.get('/api/pending-commands', (req, res) => {
   const now = Date.now();
-  // Purge expired commands that haven't been picked up yet
+  // Purge expired commands
   commandQueue = commandQueue.filter(c => c.status !== 'pending' || c.expiresAt > now);
+  // Recycle stuck picked_up commands: if extension fetched the command but CORS blocked
+  // the response (or SW died mid-execution), the command stays picked_up forever.
+  // Reset to pending after 30s so the next poll retries it.
+  commandQueue.forEach(c => {
+    if (c.status === 'picked_up' && c.pickedUpAt && (now - c.pickedUpAt) > 30000) {
+      c.status = 'pending';
+      delete c.pickedUpAt;
+    }
+  });
   const pending = commandQueue.find(c => c.status === 'pending');
   if (pending) {
     pending.status    = 'picked_up';

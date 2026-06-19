@@ -54,6 +54,50 @@ function addLog(msg) {
 chrome.alarms.create('heartbeat', { periodInMinutes: 1 });
 chrome.alarms.create('keepAlive', { periodInMinutes: 1 });
 
+// ── Command poll — runs in SW (no CORS restrictions) ────────────────────────
+// content.js opens a 'keepalive' port which keeps this SW alive while DK tab is open.
+// We start a 5s command poll for each connected port and stop it when the port closes.
+// This avoids CORS issues: SW fetch is not subject to page CORS policy.
+let cmdPollInterval = null;
+let activePorts = 0;
+
+async function pollForCommands() {
+  try {
+    const r = await fetch(`${betBotUrl}/api/pending-commands`);
+    if (!r.ok) { addLog(`cmd poll ${r.status}`); return; }
+    const body = await r.json();
+    if (body.command) {
+      addLog(`CMD POLL: received ${body.command.type} ${body.command.side || ''} $${body.command.amount || ''} [${body.command.id}]`);
+      handleExecuteCommand(body.command);
+    }
+  } catch (e) {
+    // Network error — log quietly, don't spam
+    if (!pollForCommands._lastErrLog || Date.now() - pollForCommands._lastErrLog > 30000) {
+      addLog(`cmd poll error: ${e.message}`);
+      pollForCommands._lastErrLog = Date.now();
+    }
+  }
+}
+
+chrome.runtime.onConnect.addListener(port => {
+  if (port.name !== 'keepalive') return;
+  activePorts++;
+  addLog(`keepalive port connected (${activePorts} active) — cmd poll started`);
+  if (!cmdPollInterval) {
+    cmdPollInterval = setInterval(pollForCommands, 5000);
+  }
+  port.onMessage.addListener(() => {}); // absorb pings
+  port.onDisconnect.addListener(() => {
+    activePorts = Math.max(0, activePorts - 1);
+    addLog(`keepalive port disconnected (${activePorts} remaining)`);
+    if (activePorts === 0 && cmdPollInterval) {
+      clearInterval(cmdPollInterval);
+      cmdPollInterval = null;
+      addLog('cmd poll stopped — no DK tabs open');
+    }
+  });
+});
+
 chrome.alarms.onAlarm.addListener(async (alarm) => {
   if (alarm.name === 'heartbeat') {
     postToServer('/api/dk-heartbeat', { ts: Date.now() });
@@ -154,6 +198,45 @@ function tripleVerify(strategy, domState) {
   return { pass: failed.length === 0, checks, failed };
 }
 
+// Called from both: the SW command poll (background fetch, no CORS) and
+// the EXECUTE_COMMAND message handler (legacy path, kept for fallback).
+function handleExecuteCommand(command) {
+  if (!command) return;
+  addLog(`handleExecuteCommand: ${command.type} ${command.side || ''} $${command.amount || ''} [${command.id}]`);
+  console.log('[BetBot BG] handleExecuteCommand:', JSON.stringify(command));
+
+  if (command.type === 'cancel') {
+    (async () => {
+      await chrome.storage.local.set({ pendingStrategy: { state: 'IDLE', updatedAt: Date.now() } });
+      const tabs = await chrome.tabs.query({ url: 'https://sportsbook.draftkings.com/*' });
+      tabs.forEach(t => chrome.tabs.sendMessage(t.id, { type: 'STOP_WATCHING' }).catch(() => {}));
+      postToServer('/api/command-result', { commandId: command.id, result: { ok: true, message: 'Strategy cancelled' } });
+      chrome.runtime.sendMessage({ type: 'STRATEGY_UPDATE', strategy: { state: 'IDLE' } }).catch(() => {});
+    })();
+    return;
+  }
+
+  if (command.type === 'place_bet' && command.side && command.amount) {
+    (async () => {
+      const strategy = {
+        state: 'FIRST_BET_PENDING',
+        leg1Side:      command.side,
+        leg1Amount:    command.amount,
+        trigger:       command.trigger || { type: 'crossover', targetOdds: null },
+        leg1Confirmed: false,
+        startedAt:     Date.now(),
+        updatedAt:     Date.now(),
+        commandId:     command.id,
+      };
+      await chrome.storage.local.set({ pendingStrategy: strategy });
+      chrome.runtime.sendMessage({ type: 'STRATEGY_UPDATE', strategy }).catch(() => {});
+      postToServer('/api/strategy-update', { commandId: command.id, state: 'FIRST_BET_PENDING', message: `Placing $${command.amount} on ${command.side}…` });
+      // Fire PLACE_BET via message so the existing handler runs
+      chrome.runtime.sendMessage({ type: 'PLACE_BET', side: command.side, amount: command.amount, commandId: command.id });
+    })();
+  }
+}
+
 chrome.runtime.onMessage.addListener((msg, sender) => {
   if (msg.type === 'DK_WS_STATUS') {
     if (msg.connected) {
@@ -218,42 +301,9 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
 
   // ── Dashboard chat → extension command relay ─────────────────────────────
   if (msg.type === 'EXECUTE_COMMAND') {
-    const { command } = msg;
-    const fromTab = sender?.tab ? `tab ${sender.tab.id} (${(sender.tab.url||'').slice(0,60)})` : 'background';
-    addLog(`EXECUTE_COMMAND received from ${fromTab}: ${command.type} ${command.side || ''} $${command.amount || ''} [${command.id}]`);
-    console.log('[BetBot BG] EXECUTE_COMMAND:', JSON.stringify(command), 'from:', fromTab);
-
-    if (command.type === 'cancel') {
-      (async () => {
-        await chrome.storage.local.set({ pendingStrategy: { state: 'IDLE', updatedAt: Date.now() } });
-        const tabs = await chrome.tabs.query({ url: 'https://sportsbook.draftkings.com/*' });
-        tabs.forEach(t => chrome.tabs.sendMessage(t.id, { type: 'STOP_WATCHING' }).catch(() => {}));
-        postToServer('/api/command-result', { commandId: command.id, result: { ok: true, message: 'Strategy cancelled' } });
-        chrome.runtime.sendMessage({ type: 'STRATEGY_UPDATE', strategy: { state: 'IDLE' } }).catch(() => {});
-      })();
-      return;
-    }
-
-    if (command.type === 'place_bet' && command.side && command.amount) {
-      (async () => {
-        const strategy = {
-          state: 'FIRST_BET_PENDING',
-          leg1Side:      command.side,
-          leg1Amount:    command.amount,
-          trigger:       command.trigger || { type: 'crossover', targetOdds: null },
-          leg1Confirmed: false,
-          startedAt:     Date.now(),
-          updatedAt:     Date.now(),
-          commandId:     command.id,
-        };
-        await chrome.storage.local.set({ pendingStrategy: strategy });
-        chrome.runtime.sendMessage({ type: 'STRATEGY_UPDATE', strategy }).catch(() => {});
-        postToServer('/api/strategy-update', { commandId: command.id, state: 'FIRST_BET_PENDING', message: `Placing $${command.amount} on ${command.side}…` });
-        // Delegate to existing PLACE_BET handler (commandId carried along)
-        chrome.runtime.sendMessage({ type: 'PLACE_BET', side: command.side, amount: command.amount, commandId: command.id });
-      })();
-      return;
-    }
+    const fromTab = sender?.tab ? `tab ${sender.tab.id} (${(sender.tab.url||'').slice(0,60)})` : 'SW poll';
+    addLog(`EXECUTE_COMMAND via message from ${fromTab}: ${msg.command?.type} ${msg.command?.side || ''} $${msg.command?.amount || ''}`);
+    handleExecuteCommand(msg.command);
     return;
   }
 

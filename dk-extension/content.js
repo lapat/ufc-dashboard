@@ -224,34 +224,20 @@ if (href.startsWith('https://sportsbook.draftkings.com/') &&
   }, 1000);
 }
 
-// ── Command poll — runs on ALL DK sportsbook pages including /mybets ─────────
-// Must be outside the non-mybets guard so commands are picked up even when
-// the user only has My Bets open. Execution (PLACE_BET) in background.js
-// will find the right tab separately.
+// ── Keepalive port — prevents MV3 service worker from dying after 30s idle ───
+// Chrome kills SW after 30s with no activity. An open port from a content script
+// resets the idle timer, keeping the SW alive as long as this DK tab is open.
+// The SW handles command polling itself (no CORS restrictions in SW context).
 if (href.startsWith('https://sportsbook.draftkings.com/')) {
-  chrome.storage.local.get(['betBotUrl'], ({ betBotUrl }) => {
-    const serverUrl = (betBotUrl || 'https://ufc-dashboard-production-e03d.up.railway.app').replace(/\/$/, '');
-    console.log(`[BetBot CMD] poll active on ${href.includes('/mybets') ? 'mybets' : 'sportsbook'} tab — server: ${serverUrl}`);
-
-    setInterval(async () => {
-      try {
-        console.log('[BetBot CMD] polling /api/pending-commands…');
-        const r = await fetch(`${serverUrl}/api/pending-commands`);
-        if (!r.ok) {
-          console.warn(`[BetBot CMD] poll returned ${r.status}`);
-          return;
-        }
-        const body = await r.json();
-        if (body.command) {
-          console.log('[BetBot CMD] received command:', JSON.stringify(body.command));
-          send({ type: 'EXECUTE_COMMAND', command: body.command });
-          console.log('[BetBot CMD] EXECUTE_COMMAND sent to background');
-        } else {
-          console.log('[BetBot CMD] no pending commands');
-        }
-      } catch (e) {
-        console.error('[BetBot CMD] poll error:', e.message);
-      }
-    }, 5000);
-  });
+  try {
+    const port = chrome.runtime.connect({ name: 'keepalive' });
+    // Ping every 25s to stay under the 30s kill threshold
+    const pingTimer = setInterval(() => {
+      try { port.postMessage({ ping: true }); } catch (_) { clearInterval(pingTimer); }
+    }, 25000);
+    port.onDisconnect.addListener(() => clearInterval(pingTimer));
+    console.log('[BetBot] keepalive port connected — SW will stay alive');
+  } catch (e) {
+    console.warn('[BetBot] keepalive port failed:', e.message);
+  }
 }

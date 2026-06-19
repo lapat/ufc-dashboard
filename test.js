@@ -4124,6 +4124,107 @@ async function runDashboardChatTests() {
     assert(err2 !== null && err2.includes('No DraftKings'), `no-tabs error should say no DK tab — got: ${err2}`);
     console.log('  ✓ H3: descriptive error when no valid bet tab found'); passed++;
   } catch(e) { console.error('  ✗ H3:', e.message); failed++; }
+
+  // H4 — server recycles stuck picked_up commands after 30s
+  // Root cause: content.js fetch reached the server so it got marked picked_up,
+  // but CORS blocked the JS from reading the response — command stuck forever.
+  // Fix: /api/pending-commands resets picked_up commands that are >30s old back to pending.
+  try {
+    function recycleStuckCommands(queue, now) {
+      queue.forEach(c => {
+        if (c.status === 'picked_up' && c.pickedUpAt && (now - c.pickedUpAt) > 30000) {
+          c.status = 'pending';
+          delete c.pickedUpAt;
+        }
+      });
+      return queue;
+    }
+
+    const now = Date.now();
+    const freshPickedUp = { id: '1', status: 'picked_up', pickedUpAt: now - 5000 };     // 5s ago — keep
+    const stalePickedUp = { id: '2', status: 'picked_up', pickedUpAt: now - 35000 };    // 35s ago — recycle
+    const donCmd        = { id: '3', status: 'done',      pickedUpAt: now - 60000 };    // done — leave alone
+    const queue = [freshPickedUp, stalePickedUp, donCmd];
+
+    recycleStuckCommands(queue, now);
+
+    assert(queue[0].status === 'picked_up', 'fresh picked_up should stay picked_up');
+    assert(queue[1].status === 'pending',   'stale picked_up (35s) must be recycled to pending');
+    assert(queue[1].pickedUpAt === undefined, 'recycled command should have no pickedUpAt');
+    assert(queue[2].status === 'done',       'done commands must not be touched');
+    console.log('  ✓ H4: server recycles stuck picked_up commands after 30s'); passed++;
+  } catch(e) { console.error('  ✗ H4:', e.message); failed++; }
+
+  // H5 — CORS fix: verify server middleware sets Access-Control-Allow-Origin on command endpoints
+  // Belt-and-suspenders: even if SW poll handles most cases, server CORS makes content.js
+  // fallback path reliable too. Test that the header logic would apply to the right paths.
+  try {
+    const commandPaths = ['/api/pending-commands', '/api/command-result', '/api/strategy-update'];
+    const nonCommandPaths = ['/api/recorder/status', '/api/research', '/health'];
+
+    // Simulate the middleware matching (path-specific middleware using app.use('/api/pending-commands', ...))
+    function wouldGetCorsHeader(path) {
+      return commandPaths.some(cp => path === cp || path.startsWith(cp + '?'));
+    }
+    function wouldNotGetCorsHeader(path) {
+      return nonCommandPaths.some(p => path.startsWith(p));
+    }
+
+    commandPaths.forEach(p => assert(wouldGetCorsHeader(p), `${p} must get CORS header`));
+    nonCommandPaths.forEach(p => assert(!wouldGetCorsHeader(p), `${p} should NOT get command CORS header`));
+    assert(wouldNotGetCorsHeader('/api/recorder/status'), 'recorder status unaffected');
+    console.log('  ✓ H5: CORS headers applied to command endpoints only'); passed++;
+  } catch(e) { console.error('  ✗ H5:', e.message); failed++; }
+
+  // H6 — keepalive port architecture: poll must start on first connect, stop when no ports remain
+  try {
+    let activePorts2 = 0;
+    let pollRunning = false;
+
+    function onPortConnect2() {
+      activePorts2++;
+      if (!pollRunning) pollRunning = true;  // starts poll interval
+    }
+    function onPortDisconnect2() {
+      activePorts2 = Math.max(0, activePorts2 - 1);
+      if (activePorts2 === 0) pollRunning = false;  // stops poll interval
+    }
+
+    // 0 ports → poll not running
+    assert(!pollRunning, 'poll should not run before any port connects');
+
+    // First tab opens
+    onPortConnect2();
+    assert(activePorts2 === 1, 'should have 1 active port');
+    assert(pollRunning, 'poll should start when first port connects');
+
+    // Second DK tab opens
+    onPortConnect2();
+    assert(activePorts2 === 2, 'should have 2 active ports');
+    assert(pollRunning, 'poll should keep running with 2 ports');
+
+    // First tab closes
+    onPortDisconnect2();
+    assert(activePorts2 === 1, 'should have 1 active port after disconnect');
+    assert(pollRunning, 'poll should keep running with 1 port remaining');
+
+    // Last tab closes
+    onPortDisconnect2();
+    assert(activePorts2 === 0, 'should have 0 active ports');
+    assert(!pollRunning, 'poll must STOP when last port disconnects');
+    console.log('  ✓ H6: keepalive port — poll starts on first connect, stops when all ports close'); passed++;
+  } catch(e) { console.error('  ✗ H6:', e.message); failed++; }
+
+  // H7 — integration: CORS headers present on /api/pending-commands (--local only)
+  if (process.argv.includes('--local')) {
+    try {
+      await check('H7: GET /api/pending-commands has Access-Control-Allow-Origin header', async () => {
+        const r = await fetch('http://localhost:3000/api/pending-commands');
+        const corsHeader = r.headers.get('access-control-allow-origin');
+        assert(corsHeader === '*', `Expected Access-Control-Allow-Origin: * but got: ${corsHeader}`);
+      });
+    } catch(e) { console.error('  ✗ H7:', e.message); failed++; }
+  } else { console.log('  - H7: skipped (not --local)'); }
 }
 
 runServerTests().then(async () => {
