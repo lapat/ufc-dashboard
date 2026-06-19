@@ -4396,6 +4396,7 @@ runServerTests().then(async () => {
   await runDashboardChatTests();
   await runUnifiedAssistantTests();
   await runAutoBetTests();
+  await runAutoBetDryRunTests();
 }).then(() => {
   console.log(`\n═══════════════════════════════════`);
   console.log(`  ${passed} passed  ${failed} failed`);
@@ -5216,4 +5217,93 @@ async function runAutoBetTests() {
       assert(fnBody.includes('AUTO-BET'), 'alert must mention AUTO-BET');
     });
   } catch(e) { console.error('  ✗ T7:', e.message); failed++; }
+}
+
+// ── U: /api/auto-bet/test dry-run endpoint ─────────────────────────────────────
+async function runAutoBetDryRunTests() {
+  console.log('\n── U: Auto-bet dry-run (/api/auto-bet/test) ──');
+
+  if (!process.argv.includes('--local')) {
+    console.log('  - U1-U5: skipped (not --local)'); return;
+  }
+
+  // U1 — dryRun=true reports all guards without queuing a command
+  try {
+    await check('U1: dryRun=true returns guards array without queuing command', async () => {
+      const before = await (await fetch('http://localhost:3000/api/auto-bet/config')).json();
+      const r = await fetch('http://localhost:3000/api/auto-bet/test', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ fighter1: 'McGregor', fighter2: 'Poirier', f1Odds: -150, f2Odds: 130, dryRun: true }),
+      });
+      assert(r.ok, `HTTP ${r.status}`);
+      const body = await r.json();
+      assert(body.dryRun === true, 'must report dryRun=true');
+      assert(Array.isArray(body.guards), 'must include guards array');
+      assert(body.guards.length >= 8, `expected >=8 guards, got ${body.guards.length}`);
+      const after = await (await fetch('http://localhost:3000/api/auto-bet/config')).json();
+      assert(after.sessionCount === before.sessionCount, 'dryRun must not increment sessionCount');
+    });
+  } catch(e) { console.error('  ✗ U1:', e.message); failed++; }
+
+  // U2 — wouldFire=false when enabled=false
+  try {
+    await check('U2: wouldFire=false when auto-bet is disabled', async () => {
+      await fetch('http://localhost:3000/api/auto-bet/config', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ enabled: false }),
+      });
+      const r = await fetch('http://localhost:3000/api/auto-bet/test', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ fighter1: 'McGregor', fighter2: 'Poirier', f1Odds: -150, f2Odds: 130, dryRun: true }),
+      });
+      const body = await r.json();
+      assert(body.wouldFire === false, `Expected wouldFire=false when disabled, got: ${body.wouldFire}`);
+      const enabledGuard = body.guards.find(g => g.guard === 'enabled');
+      assert(enabledGuard && enabledGuard.pass === false, 'enabled guard must show pass=false');
+    });
+  } catch(e) { console.error('  ✗ U2:', e.message); failed++; }
+
+  // U3 — bracket reported correctly
+  try {
+    await check('U3: dry-run reports correct bracket for given odds', async () => {
+      const r = await fetch('http://localhost:3000/api/auto-bet/test', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ fighter1: 'A', fighter2: 'B', f1Odds: -400, f2Odds: 300, dryRun: true }),
+      });
+      const body = await r.json();
+      assert(body.bracket === 'huge', `Expected huge bracket for -400/+300, got: ${body.bracket}`);
+      assert(body.bracketLabel === 'dominant', `Expected bracketLabel=dominant, got: ${body.bracketLabel}`);
+    });
+  } catch(e) { console.error('  ✗ U3:', e.message); failed++; }
+
+  // U4 — odds_too_close guard shows correct gap percentage
+  try {
+    await check('U4: dry-run shows gap% in odds_too_close guard', async () => {
+      const r = await fetch('http://localhost:3000/api/auto-bet/test', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ fighter1: 'A', fighter2: 'B', f1Odds: -110, f2Odds: -110, dryRun: true }),
+      });
+      const body = await r.json();
+      const g = body.guards.find(g => g.guard === 'odds_too_close');
+      assert(g, 'odds_too_close guard must exist');
+      assert(g.pass === false, 'near-even -110/-110 should fail odds_too_close');
+      assert(g.value.includes('gap='), 'must report gap percentage');
+    });
+  } catch(e) { console.error('  ✗ U4:', e.message); failed++; }
+
+  // U5 — fight_too_old guard reflects commenceTime parameter
+  try {
+    await check('U5: dry-run fight_too_old guard uses provided commenceTime', async () => {
+      const oldTime = new Date(Date.now() - 20 * 60 * 1000).toISOString(); // 20 min ago
+      const r = await fetch('http://localhost:3000/api/auto-bet/test', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ fighter1: 'A', fighter2: 'B', f1Odds: -150, f2Odds: 130, commenceTime: oldTime, dryRun: true }),
+      });
+      const body = await r.json();
+      const g = body.guards.find(g => g.guard === 'fight_too_old');
+      assert(g, 'fight_too_old guard must exist');
+      assert(g.pass === false, '20-min-old fight must fail fight_too_old (limit=300s)');
+      assert(g.value.includes('1200s old') || g.value.includes('s old'), `must report age in seconds: ${g.value}`);
+    });
+  } catch(e) { console.error('  ✗ U5:', e.message); failed++; }
 }

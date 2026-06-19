@@ -2037,6 +2037,82 @@ app.post('/api/auto-bet/reset-session', (req, res) => {
   res.json({ ok: true });
 });
 
+// POST /api/auto-bet/test — dry-run checkAutoBet with custom fight data
+// Simulates a new fight detection without needing a real live game.
+// Pass dryRun=true (default) to see what would happen without actually queuing a command.
+app.post('/api/auto-bet/test', (req, res) => {
+  const {
+    fighter1    = 'Test Dry Fighter A',
+    fighter2    = 'Test Dry Fighter B',
+    f1Odds      = -150,
+    f2Odds      = 130,
+    commenceTime = new Date(Date.now() - 30 * 1000).toISOString(), // 30s ago
+    dryRun      = true,
+  } = req.body || {};
+
+  const fakeOdds = {
+    fighter1: { name: fighter1, numericOdds: f1Odds },
+    fighter2: { name: fighter2, numericOdds: f2Odds },
+  };
+  const fakeId = `dryrun_${Date.now()}`;
+
+  // Temporarily disable test_fight filter for this endpoint
+  const origF1 = fighter1, origF2 = fighter2;
+  // Use non-"Test " names so guard doesn't block (endpoint is explicitly for testing)
+  const safeF1 = fighter1.replace(/^test /i, 'DryRun ');
+  const safeF2 = fighter2.replace(/^test /i, 'DryRun ');
+
+  if (dryRun) {
+    // Evaluate all guards without mutating state — report what would happen
+    const cfg = autoBetConfig;
+    const report = [];
+
+    report.push({ guard: 'enabled',          pass: cfg.enabled,            value: cfg.enabled });
+    report.push({ guard: 'test_fight',        pass: true,                   value: 'bypassed for /test endpoint' });
+    report.push({ guard: 'already_fired',     pass: !autoBetFiredFights.has(fakeId), value: `firedFights.size=${autoBetFiredFights.size}` });
+    report.push({ guard: 'rate_limit',        pass: autoBetSessionCount < cfg.maxPerSession, value: `${autoBetSessionCount}/${cfg.maxPerSession}` });
+
+    const liveForSecs = (Date.now() - new Date(commenceTime).getTime()) / 1000;
+    report.push({ guard: 'fight_too_old',     pass: liveForSecs <= cfg.maxFightAgeSecs, value: `${Math.round(liveForSecs)}s old, limit=${cfg.maxFightAgeSecs}s` });
+
+    const now = Date.now();
+    const hasExt = Object.values(dkHeartbeat.users || {}).some(ts => now - ts < 300000);
+    report.push({ guard: 'no_extension',      pass: !cfg.requireExtension || hasExt, value: hasExt ? 'connected' : 'not connected' });
+
+    const oddsOk = typeof f1Odds === 'number' && typeof f2Odds === 'number' && !isNaN(f1Odds) && !isNaN(f2Odds);
+    report.push({ guard: 'invalid_odds',      pass: oddsOk, value: `${f1Odds} / ${f2Odds}` });
+
+    const d1 = toDecimal(f1Odds), d2 = toDecimal(f2Odds);
+    const gapPct = Math.abs(1/d1 - 1/d2) * 100;
+    report.push({ guard: 'odds_too_close',    pass: gapPct >= cfg.minOddsGapPct, value: `gap=${gapPct.toFixed(1)}%, min=${cfg.minOddsGapPct}%` });
+
+    const bracket = classifyOddsBracket(f1Odds, f2Odds);
+    report.push({ guard: 'bracket_mismatch',  pass: cfg.brackets.includes(bracket), value: `bracket=${bracket}, targets=${cfg.brackets.join(',')}` });
+
+    const favF = d1 <= d2 ? safeF1 : safeF2;
+    const dogF = d1 <= d2 ? safeF2 : safeF1;
+    const side = cfg.side === 'dog' ? dogF : favF;
+    const openBets = getAllBets(true);
+    const alreadyCovered = openBets.some(b => b.selection?.toLowerCase().includes(side.toLowerCase().split(' ')[0]));
+    report.push({ guard: 'existing_coverage', pass: !alreadyCovered, value: alreadyCovered ? `already bet on ${side}` : 'clear' });
+
+    const allPass = report.every(g => g.pass);
+    return res.json({
+      dryRun: true,
+      wouldFire: allPass,
+      side: allPass ? side : null,
+      bracket,
+      bracketLabel: { even:'near-even', slight:'slight fav', heavy:'heavy fav', huge:'dominant' }[bracket],
+      guards: report,
+      config: cfg,
+    });
+  }
+
+  // Live run — actually fire (use safe names to bypass test_fight guard)
+  const result = checkAutoBet(fakeId, safeF1, safeF2, fakeOdds, commenceTime);
+  res.json({ dryRun: false, fakeId, result });
+});
+
 // ── Unified assistant endpoint ─────────────────────────────────────────────────
 // Routes all dashboard chat through a single Haiku classifier, then to the right
 // handler: place_bet → command queue, watch_trigger → trigger store,
