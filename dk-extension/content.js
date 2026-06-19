@@ -199,19 +199,6 @@ if (href.startsWith('https://sportsbook.draftkings.com/') &&
     }
   });
 
-  // Poll server every 5s for bet commands typed in the dashboard chat
-  chrome.storage.local.get(['betBotUrl'], ({ betBotUrl }) => {
-    const serverUrl = (betBotUrl || 'https://ufc-dashboard-production-e03d.up.railway.app').replace(/\/$/, '');
-    setInterval(async () => {
-      try {
-        const r = await fetch(`${serverUrl}/api/pending-commands`);
-        if (!r.ok) return;
-        const { command } = await r.json();
-        if (command) send({ type: 'EXECUTE_COMMAND', command });
-      } catch {}
-    }, 5000);
-  });
-
   setInterval(() => {
     const outcomes = scanOddsFromPage();
     if (outcomes.length === 0) return;
@@ -235,4 +222,36 @@ if (href.startsWith('https://sportsbook.draftkings.com/') &&
       }
     }
   }, 1000);
+}
+
+// ── Command poll — runs on ALL DK sportsbook pages including /mybets ─────────
+// Must be outside the non-mybets guard so commands are picked up even when
+// the user only has My Bets open. Execution (PLACE_BET) in background.js
+// will find the right tab separately.
+if (href.startsWith('https://sportsbook.draftkings.com/')) {
+  chrome.storage.local.get(['betBotUrl'], ({ betBotUrl }) => {
+    const serverUrl = (betBotUrl || 'https://ufc-dashboard-production-e03d.up.railway.app').replace(/\/$/, '');
+    console.log(`[BetBot CMD] poll active on ${href.includes('/mybets') ? 'mybets' : 'sportsbook'} tab — server: ${serverUrl}`);
+
+    setInterval(async () => {
+      try {
+        console.log('[BetBot CMD] polling /api/pending-commands…');
+        const r = await fetch(`${serverUrl}/api/pending-commands`);
+        if (!r.ok) {
+          console.warn(`[BetBot CMD] poll returned ${r.status}`);
+          return;
+        }
+        const body = await r.json();
+        if (body.command) {
+          console.log('[BetBot CMD] received command:', JSON.stringify(body.command));
+          send({ type: 'EXECUTE_COMMAND', command: body.command });
+          console.log('[BetBot CMD] EXECUTE_COMMAND sent to background');
+        } else {
+          console.log('[BetBot CMD] no pending commands');
+        }
+      } catch (e) {
+        console.error('[BetBot CMD] poll error:', e.message);
+      }
+    }, 5000);
+  });
 }

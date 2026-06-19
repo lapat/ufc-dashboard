@@ -219,7 +219,9 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
   // ── Dashboard chat → extension command relay ─────────────────────────────
   if (msg.type === 'EXECUTE_COMMAND') {
     const { command } = msg;
-    addLog(`EXECUTE_COMMAND: ${command.type} ${command.side || ''} $${command.amount || ''} [${command.id}]`);
+    const fromTab = sender?.tab ? `tab ${sender.tab.id} (${(sender.tab.url||'').slice(0,60)})` : 'background';
+    addLog(`EXECUTE_COMMAND received from ${fromTab}: ${command.type} ${command.side || ''} $${command.amount || ''} [${command.id}]`);
+    console.log('[BetBot BG] EXECUTE_COMMAND:', JSON.stringify(command), 'from:', fromTab);
 
     if (command.type === 'cancel') {
       (async () => {
@@ -385,17 +387,29 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
       }
       await chrome.storage.local.set({ lastBetKey: betKey, lastBetKeyTs: Date.now() });
 
-      // Find the sportsbook tab to place on
-      // Note: key is cleared below if bet fails, so user can retry immediately on failure (prefer active, fall back to any non-mybets DK tab)
+      // Find the sportsbook tab to place on — must NOT be /mybets (no odds buttons there)
       const allDk = await chrome.tabs.query({ url: 'https://sportsbook.draftkings.com/*' });
+      const allUrls = allDk.map(t => `tab${t.id}:${(t.url||'').replace('https://sportsbook.draftkings.com','')}`).join(', ');
+      addLog(`PLACE_BET: tabs found: [${allUrls || 'none'}]`);
+      console.log('[BetBot BG] PLACE_BET tab search:', allUrls || 'NO TABS');
+
       const target = allDk.find(t => !t.url?.includes('/mybets') && t.active)
-                  || allDk.find(t => !t.url?.includes('/mybets'))
-                  || allDk[0];
+                  || allDk.find(t => !t.url?.includes('/mybets'));
+      // NOTE: do NOT fall back to mybets tab — it has no odds buttons to click
+
       if (!target) {
-        chrome.runtime.sendMessage({ type: 'BET_RESULT', ok: false, error: 'No DK sportsbook tab open — go to sportsbook.draftkings.com first' });
+        const msg = allDk.length === 0
+          ? 'No DraftKings tab open — open sportsbook.draftkings.com and navigate to the fight'
+          : `Only My Bets tab found (${allDk.length} tab(s)) — open the fight page on DraftKings sportsbook first, then retry`;
+        addLog(`PLACE_BET FAILED: ${msg}`);
+        console.warn('[BetBot BG] PLACE_BET FAILED:', msg);
+        if (commandId) await chrome.storage.local.remove(['lastBetKey', 'lastBetKeyTs']);
+        chrome.runtime.sendMessage({ type: 'BET_RESULT', ok: false, step: 'no_tab', error: msg });
+        if (commandId) postToServer('/api/command-result', { commandId, result: { ok: false, error: msg } });
         return;
       }
-      addLog(`PLACE_BET: ${side} $${amount} on tab ${target.id}`);
+      addLog(`PLACE_BET: ${side} $${amount} → tab ${target.id} (${(target.url||'').replace('https://sportsbook.draftkings.com','')})`)
+      console.log('[BetBot BG] PLACE_BET executing on tab', target.id, target.url);
       try {
         const results = await chrome.scripting.executeScript({
           target: { tabId: target.id },
@@ -439,8 +453,15 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
             }
 
             if (!outcomeBtn) {
-              return { ok: false, step: 'find_button', error: `No button found for "${side}" — make sure the game is visible on screen` };
+              // Dump all visible button texts for debugging
+              const btns = [...document.querySelectorAll('button, [role="button"]')]
+                .map(b => b.textContent.trim().slice(0, 40).replace(/\s+/g, ' '))
+                .filter(t => t.length > 0)
+                .slice(0, 30);
+              console.warn('[BetBot] find_button failed for side:', side, '— visible buttons:', btns);
+              return { ok: false, step: 'find_button', error: `No button found for "${side}" — make sure the game is visible on screen`, debugButtons: btns };
             }
+            console.log('[BetBot] found outcome button for', side, '— odds:', oddsEl?.textContent?.trim());
 
             // Read the odds off the button for verification
             const oddsEl = [...outcomeBtn.querySelectorAll('span, div')].find(s =>
@@ -469,8 +490,11 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
             }
 
             if (!amtInput) {
-              return { ok: false, step: 'find_input', oddsText, error: 'Bet slip did not open or amount input not found — try opening the bet slip manually first' };
+              const allInputs = [...document.querySelectorAll('input')].map(i => `type=${i.type} label=${i.getAttribute('aria-label')||''} ph=${i.placeholder||''}`);
+              console.warn('[BetBot] find_input failed — all inputs:', allInputs);
+              return { ok: false, step: 'find_input', oddsText, error: 'Bet slip did not open or amount input not found — try opening the bet slip manually first', debugInputs: allInputs };
             }
+            console.log('[BetBot] bet slip input found, setting amount:', amount);
 
             // Clear and set amount
             amtInput.focus();
@@ -512,7 +536,13 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
           args: [side, amount]
         });
         const result = results?.[0]?.result || { ok: false, error: 'No result from tab' };
-        addLog(`BET_RESULT: ${JSON.stringify(result)}`);
+        const logLine = result.ok
+          ? `BET_RESULT ok: ${result.side} $${result.amount} @ ${result.oddsText} confirmed=${result.confirmed}`
+          : `BET_RESULT FAIL [${result.step}]: ${result.error}` +
+            (result.debugButtons ? ` | btns: ${result.debugButtons.slice(0,5).join(', ')}` : '') +
+            (result.debugInputs ? ` | inputs: ${result.debugInputs.slice(0,3).join(', ')}` : '');
+        addLog(logLine);
+        console.log('[BetBot BG] BET_RESULT:', JSON.stringify(result));
         // Clear idempotency key on failure so user can retry immediately
         if (!result.ok) await chrome.storage.local.remove(['lastBetKey', 'lastBetKeyTs']);
         chrome.runtime.sendMessage({ type: 'BET_RESULT', ...result });
