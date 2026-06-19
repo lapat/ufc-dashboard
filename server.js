@@ -76,6 +76,167 @@ let commandQueue = loadCommandQueue();
 // fires executePlaceBet when met, then DELETEs the trigger.
 let watchTriggers = [];
 
+// ── Auto-bet system ────────────────────────────────────────────────────────────
+// Automatically places a first bet when a new live fight matches a configured
+// odds bracket. Hedge still fires via the existing crossover trigger.
+//
+// Failure modes addressed:
+//   fight_too_old       — recorder started mid-fight; opening odds no longer valid
+//   test_fight          — /api/recorder/test pollutes the session
+//   dedup               — firedFights Set prevents double-fire per fight
+//   rate_limit          — maxPerSession caps total auto-bets per night
+//   no_extension        — block if no DK tab is alive (bet would expire unused)
+//   invalid_odds        — NaN or missing odds from Odds API
+//   odds_too_close      — implied prob diff < 5% means fav/dog is ambiguous
+//   existing_coverage   — user already has an open bet on this side
+//   bracket_mismatch    — only fire on user-targeted brackets
+
+const AUTO_BET_CONFIG_FILE = path.join(DATA_ROOT_DIR, 'auto_bet_config.json');
+const AUTO_BET_FIRED_FILE  = path.join(DATA_ROOT_DIR, 'auto_bet_fired.json');
+
+const DEFAULT_AUTO_BET_CONFIG = {
+  enabled:           false,
+  amount:            5,          // dollars per first bet
+  brackets:          ['slight'], // 'even' | 'slight' | 'heavy' | 'huge'
+  side:              'dog',      // 'dog' (underdog) | 'fav' (favorite)
+  maxPerSession:     3,          // hard cap on auto-bets this server session
+  requireExtension:  true,       // block if no DK extension heartbeat in last 5 min
+  maxFightAgeSecs:   300,        // skip if fight started > N seconds ago (missed opening)
+  minOddsGapPct:     5,          // skip if |imp1 - imp2| < N% (odds too close to call)
+  autoHedge:         true,       // include crossover trigger on the queued command
+};
+
+function loadAutoBetConfig() {
+  try {
+    if (fs.existsSync(AUTO_BET_CONFIG_FILE))
+      return { ...DEFAULT_AUTO_BET_CONFIG, ...JSON.parse(fs.readFileSync(AUTO_BET_CONFIG_FILE, 'utf8')) };
+  } catch {}
+  return { ...DEFAULT_AUTO_BET_CONFIG };
+}
+function saveAutoBetConfig() {
+  try { fs.writeFileSync(AUTO_BET_CONFIG_FILE, JSON.stringify(autoBetConfig, null, 2)); } catch {}
+}
+
+let autoBetConfig = loadAutoBetConfig();
+
+// firedFights persisted across restarts so the same fight never gets two auto-bets
+// even if server restarts mid-fight. Pruned to last 100 entries.
+function loadFiredFights() {
+  try {
+    if (fs.existsSync(AUTO_BET_FIRED_FILE))
+      return new Set(JSON.parse(fs.readFileSync(AUTO_BET_FIRED_FILE, 'utf8')));
+  } catch {}
+  return new Set();
+}
+function saveFiredFights() {
+  try {
+    const arr = [...autoBetFiredFights].slice(-100);
+    fs.writeFileSync(AUTO_BET_FIRED_FILE, JSON.stringify(arr));
+  } catch {}
+}
+
+const autoBetFiredFights = loadFiredFights();
+let autoBetSessionCount = 0;
+const autoBetLog = []; // last 20 auto-bet events (fired + skipped with reason)
+
+function autoBetLogEvent(event) {
+  autoBetLog.unshift({ ...event, ts: Date.now() });
+  if (autoBetLog.length > 20) autoBetLog.length = 20;
+}
+
+// Returns { fired: true, cmd, side, bracket } | { skipped: true, reason }
+function checkAutoBet(fightId, fighter1, fighter2, firstOdds, commenceTimeISO) {
+  const cfg = autoBetConfig;
+
+  // Guard: disabled
+  if (!cfg.enabled) return { skipped: true, reason: 'disabled' };
+
+  // Guard: test fight
+  if (/^test /i.test(fighter1) || /^test /i.test(fighter2))
+    return { skipped: true, reason: 'test_fight' };
+
+  // Guard: already fired for this fight (persistent dedup)
+  if (autoBetFiredFights.has(fightId))
+    return { skipped: true, reason: 'already_fired' };
+
+  // Guard: session rate limit
+  if (autoBetSessionCount >= cfg.maxPerSession)
+    return { skipped: true, reason: `rate_limit (${autoBetSessionCount}/${cfg.maxPerSession})` };
+
+  // Guard: fight too old (missed the opening)
+  if (commenceTimeISO) {
+    const liveForSecs = (Date.now() - new Date(commenceTimeISO).getTime()) / 1000;
+    if (liveForSecs > cfg.maxFightAgeSecs)
+      return { skipped: true, reason: `fight_too_old (${Math.round(liveForSecs)}s)` };
+  }
+
+  // Guard: extension connectivity
+  if (cfg.requireExtension) {
+    const now = Date.now();
+    const hasLiveExt = Object.values(dkHeartbeat.users || {}).some(ts => now - ts < 300000);
+    if (!hasLiveExt)
+      return { skipped: true, reason: 'no_extension_connected' };
+  }
+
+  // Guard: invalid odds
+  const f1Odds = firstOdds?.fighter1?.numericOdds;
+  const f2Odds = firstOdds?.fighter2?.numericOdds;
+  if (typeof f1Odds !== 'number' || typeof f2Odds !== 'number' || isNaN(f1Odds) || isNaN(f2Odds))
+    return { skipped: true, reason: 'invalid_odds' };
+
+  // Guard: odds too close (fav/dog ambiguous)
+  const d1 = toDecimal(f1Odds), d2 = toDecimal(f2Odds);
+  const imp1 = 1 / d1, imp2 = 1 / d2;
+  const gapPct = Math.abs(imp1 - imp2) * 100;
+  if (gapPct < cfg.minOddsGapPct)
+    return { skipped: true, reason: `odds_too_close (gap=${gapPct.toFixed(1)}%)` };
+
+  // Guard: bracket not targeted
+  const bracket = classifyOddsBracket(f1Odds, f2Odds);
+  if (!cfg.brackets.includes(bracket))
+    return { skipped: true, reason: `bracket_not_targeted (${bracket})` };
+
+  // Determine side — dog = higher decimal decimal = more positive american
+  const favFighter = d1 <= d2 ? fighter1 : fighter2;
+  const dogFighter = d1 <= d2 ? fighter2 : fighter1;
+  const side = cfg.side === 'dog' ? dogFighter : favFighter;
+
+  // Guard: already have open bet on this side (prevents double exposure)
+  const existingBets = getAllBets(true);
+  const alreadyCovered = existingBets.some(b =>
+    b.selection && b.selection.toLowerCase().includes(side.toLowerCase().split(' ')[0])
+  );
+  if (alreadyCovered)
+    return { skipped: true, reason: `existing_bet_on_${side}` };
+
+  // All guards passed — queue the command
+  const intent = {
+    side,
+    amount: cfg.amount,
+    trigger: cfg.autoHedge ? { type: 'crossover', targetOdds: null } : { type: null, targetOdds: null },
+  };
+  const cmd = makeCommand('place_bet', intent);
+  commandQueue.push(cmd);
+  saveCommandQueue();
+  autoBetFiredFights.add(fightId);
+  autoBetSessionCount++;
+  saveFiredFights();
+
+  const labels = { even: 'near-even', slight: 'slight fav', heavy: 'heavy fav', huge: 'dominant' };
+  const bracketLabel = labels[bracket] || bracket;
+  const oddsStr = `${fighter1} ${f1Odds > 0 ? '+' : ''}${f1Odds} / ${fighter2} ${f2Odds > 0 ? '+' : ''}${f2Odds}`;
+  console.log(`[auto-bet] FIRED: $${cfg.amount} on ${side} (${bracketLabel}) [${fightId}] session=${autoBetSessionCount}/${cfg.maxPerSession}`);
+
+  autoBetLogEvent({ type: 'fired', fightId, fighter1, fighter2, side, amount: cfg.amount, bracket, odds: oddsStr, cmdId: cmd.id });
+
+  sendAlert(
+    `🤖 AUTO-BET: $${cfg.amount} on ${side} — ${fighter1} vs ${fighter2}`,
+    `Auto-first-bet triggered.\n\nFight: ${fighter1} vs ${fighter2}\nSide: ${side} (${cfg.side})\nAmount: $${cfg.amount}\nBracket: ${bracketLabel}\nOdds: ${oddsStr}\nAuto-hedge: ${cfg.autoHedge ? 'YES — will hedge at crossover' : 'no'}\n\nExtension will execute on DraftKings within 5 seconds.\n\nhttps://ufc-dashboard-production-e03d.up.railway.app`
+  );
+
+  return { fired: true, cmd, side, bracket, bracketLabel };
+}
+
 // ── Chat history — per-user rolling context for /api/assistant ─────────────────
 const chatHistory = new Map(); // userId → [{role, content}]
 const CHAT_HIST_MAX = 10;
@@ -123,6 +284,13 @@ app.use('/api/resolve-bet-target', (req, res, next) => {
   if (req.method === 'OPTIONS') return res.sendStatus(204);
   next();
 });
+app.use('/api/auto-bet', (req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  if (req.method === 'OPTIONS') return res.sendStatus(204);
+  next();
+});
 app.use('/api/assistant', (req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', 'POST, OPTIONS');
@@ -155,6 +323,15 @@ function fetchJson(url) {
 
 function toDecimal(o) {
   return o > 0 ? (o / 100) + 1 : (100 / Math.abs(o)) + 1;
+}
+
+function classifyOddsBracket(f1Odds, f2Odds) {
+  const d1 = toDecimal(f1Odds), d2 = toDecimal(f2Odds);
+  const favD = Math.min(d1, d2);
+  if (favD <= 1.333) return 'huge';
+  if (favD <= 1.5)   return 'heavy';
+  if (favD <= 1.833) return 'slight';
+  return 'even';
 }
 
 function analyzeFightFile(filePath) {
@@ -1394,6 +1571,16 @@ async function recPollSport(sportKey, meta, watchedGame) {
           `🔴 BET BOT: Recording ${fight.home_team} vs ${fight.away_team} [${meta.label}]`,
           `Live game detected.\n\n${fight.home_team} vs ${fight.away_team}\n${meta.label} · Started: ${new Date().toLocaleString()}\n\nhttps://ufc-dashboard-production-e03d.up.railway.app`
         );
+
+        // Auto-bet check — fires when opening odds profile matches config
+        const abResult = checkAutoBet(id, fight.home_team, fight.away_team, odds, fight.commence_time);
+        if (abResult.fired) {
+          console.log(`[auto-bet] Queued cmd ${abResult.cmd.id} — $${autoBetConfig.amount} on ${abResult.side} (${abResult.bracketLabel})`);
+          autoBetLogEvent({ type: 'fired', fightId: id, fighter1: fight.home_team, fighter2: fight.away_team, side: abResult.side, bracket: abResult.bracket });
+        } else if (abResult.reason !== 'disabled') {
+          console.log(`[auto-bet] Skipped ${id}: ${abResult.reason}`);
+          autoBetLogEvent({ type: 'skipped', fightId: id, fighter1: fight.home_team, fighter2: fight.away_team, reason: abResult.reason });
+        }
       }
 
       const record = recorderState.activeFights.get(id);
@@ -1812,6 +1999,42 @@ app.delete('/api/watch-triggers/:id', (req, res) => {
   watchTriggers = watchTriggers.filter(t => t.id !== req.params.id);
   console.log(`[watch-trigger] Deleted ${req.params.id} (removed=${before - watchTriggers.length})`);
   res.json({ ok: true, removed: before - watchTriggers.length });
+});
+
+// ── Auto-bet API ──────────────────────────────────────────────────────────────
+
+app.get('/api/auto-bet/config', (req, res) => {
+  res.json({
+    config: autoBetConfig,
+    sessionCount: autoBetSessionCount,
+    firedFights: [...autoBetFiredFights].slice(-20),
+    recentLog: autoBetLog.slice(0, 10),
+  });
+});
+
+app.post('/api/auto-bet/config', (req, res) => {
+  const body = req.body || {};
+  const bools   = ['enabled', 'requireExtension', 'autoHedge'];
+  const numbers = ['amount', 'maxPerSession', 'maxFightAgeSecs', 'minOddsGapPct'];
+  for (const k of bools)   if (typeof body[k] === 'boolean') autoBetConfig[k] = body[k];
+  for (const k of numbers) if (typeof body[k] === 'number' && body[k] >= 0) autoBetConfig[k] = body[k];
+  if (Array.isArray(body.brackets)) {
+    const valid = ['even', 'slight', 'heavy', 'huge'];
+    autoBetConfig.brackets = body.brackets.filter(b => valid.includes(b));
+  }
+  if (['dog', 'fav'].includes(body.side)) autoBetConfig.side = body.side;
+  saveAutoBetConfig();
+  console.log('[auto-bet] Config updated:', JSON.stringify(autoBetConfig));
+  res.json({ ok: true, config: autoBetConfig });
+});
+
+app.post('/api/auto-bet/reset-session', (req, res) => {
+  autoBetSessionCount = 0;
+  autoBetFiredFights.clear();
+  saveFiredFights();
+  autoBetLog.length = 0;
+  console.log('[auto-bet] Session reset');
+  res.json({ ok: true });
 });
 
 // ── Unified assistant endpoint ─────────────────────────────────────────────────

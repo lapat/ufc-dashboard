@@ -772,6 +772,72 @@
   </div>
 </div>
 
+<!-- Auto-Bet Panel -->
+<div id="ab-panel" style="position:fixed;bottom:80px;left:22px;width:310px;background:#141414;border:1px solid #222;border-radius:12px;box-shadow:0 8px 40px rgba(0,0,0,.7);z-index:198;overflow:hidden;display:none">
+  <div style="padding:10px 13px;background:#111;border-bottom:1px solid #1e1e1e;display:flex;justify-content:space-between;align-items:center">
+    <span style="color:#e8b84b;font-size:0.86rem;font-weight:700;text-transform:uppercase;letter-spacing:1px">🤖 Auto-Bet</span>
+    <span id="ab-session-lbl" style="font-size:0.76rem;color:#555">0 / 3 fired</span>
+  </div>
+  <div style="padding:12px 14px;display:flex;flex-direction:column;gap:10px;font-size:0.84rem">
+
+    <!-- Enable toggle -->
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <span style="color:#aaa">Auto-bet</span>
+      <button id="ab-toggle" onclick="toggleAutoBet()" style="padding:4px 16px;border-radius:20px;border:none;cursor:pointer;font-weight:700;font-size:0.82rem">OFF</button>
+    </div>
+
+    <!-- Amount -->
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <span style="color:#777">Amount per bet</span>
+      <div style="display:flex;align-items:center;gap:6px">
+        <span style="color:#555">$</span>
+        <input id="ab-amount" type="number" min="0.01" step="0.5" value="5" style="width:60px;background:#0d0d0d;border:1px solid #2a2a2a;border-radius:4px;color:#ddd;padding:3px 6px;font-size:0.84rem" onchange="saveAutoBetConfig()">
+      </div>
+    </div>
+
+    <!-- Side -->
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <span style="color:#777">Bet on</span>
+      <select id="ab-side" onchange="saveAutoBetConfig()" style="background:#0d0d0d;border:1px solid #2a2a2a;border-radius:4px;color:#ddd;padding:3px 8px;font-size:0.84rem">
+        <option value="dog">Underdog</option>
+        <option value="fav">Favorite</option>
+      </select>
+    </div>
+
+    <!-- Brackets -->
+    <div>
+      <div style="color:#777;margin-bottom:5px">Brackets to play</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <label style="color:#aaa;display:flex;align-items:center;gap:4px;cursor:pointer"><input type="checkbox" id="ab-br-even" value="even" onchange="saveAutoBetConfig()"> near-even</label>
+        <label style="color:#e8b84b;display:flex;align-items:center;gap:4px;cursor:pointer"><input type="checkbox" id="ab-br-slight" value="slight" checked onchange="saveAutoBetConfig()"> slight fav</label>
+        <label style="color:#aaa;display:flex;align-items:center;gap:4px;cursor:pointer"><input type="checkbox" id="ab-br-heavy" value="heavy" onchange="saveAutoBetConfig()"> heavy fav</label>
+        <label style="color:#555;display:flex;align-items:center;gap:4px;cursor:pointer"><input type="checkbox" id="ab-br-huge" value="huge" onchange="saveAutoBetConfig()"> dominant</label>
+      </div>
+    </div>
+
+    <!-- Max per session -->
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <span style="color:#777">Max / session</span>
+      <input id="ab-max" type="number" min="1" max="20" value="3" style="width:50px;background:#0d0d0d;border:1px solid #2a2a2a;border-radius:4px;color:#ddd;padding:3px 6px;font-size:0.84rem" onchange="saveAutoBetConfig()">
+    </div>
+
+    <!-- Auto-hedge toggle -->
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <span style="color:#777">Auto-hedge at crossover</span>
+      <input type="checkbox" id="ab-hedge" checked onchange="saveAutoBetConfig()" style="width:16px;height:16px;accent-color:#e8b84b">
+    </div>
+
+    <!-- Log -->
+    <div id="ab-log" style="background:#0d0d0d;border:1px solid #1a1a1a;border-radius:4px;padding:7px 9px;font-size:0.76rem;color:#555;min-height:32px;max-height:80px;overflow-y:auto">No auto-bets fired this session.</div>
+
+    <div style="display:flex;gap:8px">
+      <button onclick="resetAutoBetSession()" style="flex:1;background:#1a1a1a;border:1px solid #2a2a2a;color:#888;border-radius:4px;padding:5px;font-size:0.78rem;cursor:pointer">Reset session</button>
+      <button onclick="document.getElementById('ab-panel').style.display='none'" style="flex:1;background:#1a1a1a;border:1px solid #2a2a2a;color:#888;border-radius:4px;padding:5px;font-size:0.78rem;cursor:pointer">Close</button>
+    </div>
+  </div>
+</div>
+<button id="ab-fab" onclick="toggleAbPanel()" title="Auto-Bet settings" style="position:fixed;bottom:22px;left:22px;width:48px;height:48px;border-radius:50%;background:#1a1a1a;border:1px solid #333;cursor:pointer;font-size:1.1rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,.6);z-index:200;transition:transform .15s">🤖</button>
+
 <!-- Chat -->
 <button id="chat-fab">💬</button>
 <div id="chat-panel">
@@ -2843,6 +2909,86 @@ async function sendMsg(){
 }
 csnd.addEventListener('click',sendMsg);
 cinp.addEventListener('keydown',e=>{ if(e.key==='Enter') sendMsg(); });
+
+// ═══════════════════════════════════════════
+// AUTO-BET PANEL
+// ═══════════════════════════════════════════
+let _abEnabled = false;
+
+function toggleAbPanel(){
+  const p=document.getElementById('ab-panel');
+  p.style.display = p.style.display==='none' ? 'block' : 'none';
+  if(p.style.display==='block') loadAutoBetConfig();
+}
+
+async function loadAutoBetConfig(){
+  try{
+    const d = await(await fetch('/api/auto-bet/config')).json();
+    const cfg = d.config;
+    _abEnabled = cfg.enabled;
+    document.getElementById('ab-toggle').textContent = cfg.enabled ? 'ON' : 'OFF';
+    document.getElementById('ab-toggle').style.background = cfg.enabled ? '#2ecc71' : '#333';
+    document.getElementById('ab-toggle').style.color = cfg.enabled ? '#000' : '#888';
+    document.getElementById('ab-amount').value = cfg.amount;
+    document.getElementById('ab-side').value = cfg.side;
+    document.getElementById('ab-max').value = cfg.maxPerSession;
+    document.getElementById('ab-hedge').checked = cfg.autoHedge;
+    ['even','slight','heavy','huge'].forEach(b=>{
+      const el=document.getElementById('ab-br-'+b);
+      if(el) el.checked = cfg.brackets.includes(b);
+    });
+    document.getElementById('ab-session-lbl').textContent = `${d.sessionCount} / ${cfg.maxPerSession} fired`;
+    // Update log
+    const logEl = document.getElementById('ab-log');
+    if(d.recentLog && d.recentLog.length){
+      logEl.innerHTML = d.recentLog.map(e=>{
+        const t = new Date(e.ts).toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'});
+        return e.type==='fired'
+          ? `<div style="color:#e8b84b">${t} ✓ $${e.amount} on ${e.side} (${e.bracket})</div>`
+          : `<div style="color:#555">${t} — skipped: ${e.reason}</div>`;
+      }).join('');
+    } else {
+      logEl.textContent = 'No auto-bets fired this session.';
+    }
+    // Fab color
+    document.getElementById('ab-fab').style.borderColor = cfg.enabled ? '#2ecc71' : '#333';
+  }catch(e){ console.error('loadAutoBetConfig:',e); }
+}
+
+async function toggleAutoBet(){
+  _abEnabled = !_abEnabled;
+  await saveAutoBetConfig();
+  loadAutoBetConfig();
+}
+
+async function saveAutoBetConfig(){
+  const brackets=[];
+  ['even','slight','heavy','huge'].forEach(b=>{
+    const el=document.getElementById('ab-br-'+b);
+    if(el&&el.checked) brackets.push(b);
+  });
+  const body={
+    enabled: _abEnabled,
+    amount:  parseFloat(document.getElementById('ab-amount').value)||5,
+    side:    document.getElementById('ab-side').value,
+    maxPerSession: parseInt(document.getElementById('ab-max').value)||3,
+    autoHedge: document.getElementById('ab-hedge').checked,
+    brackets,
+  };
+  try{
+    await fetch('/api/auto-bet/config',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
+    loadAutoBetConfig();
+  }catch(e){ console.error('saveAutoBetConfig:',e); }
+}
+
+async function resetAutoBetSession(){
+  if(!confirm('Reset auto-bet session count and fired-fights list?')) return;
+  await fetch('/api/auto-bet/reset-session',{method:'POST'});
+  loadAutoBetConfig();
+}
+
+// Refresh auto-bet log every 30s when panel is open
+setInterval(()=>{ if(document.getElementById('ab-panel').style.display!=='none') loadAutoBetConfig(); }, 30000);
 </script>
 </body>
 </html>

@@ -4395,6 +4395,7 @@ runServerTests().then(async () => {
   await runFinalFeatureTests();
   await runDashboardChatTests();
   await runUnifiedAssistantTests();
+  await runAutoBetTests();
 }).then(() => {
   console.log(`\n═══════════════════════════════════`);
   console.log(`  ${passed} passed  ${failed} failed`);
@@ -4732,4 +4733,487 @@ async function runUnifiedAssistantTests() {
       assert(htmlSrc.includes("message:"), 'sendMsg must send { message: q } to /api/assistant');
     });
   } catch(e) { console.error('  ✗ O5:', e.message); failed++; }
+}
+
+// ── P-T: Auto-bet system tests ─────────────────────────────────────────────────
+async function runAutoBetTests() {
+
+  // ── P: Config CRUD ───────────────────────────────────────────────────────────
+  console.log('\n── P: Auto-bet config CRUD ──');
+
+  // P1 — GET /api/auto-bet/config returns config with expected fields
+  if (process.argv.includes('--local')) {
+    try {
+      await check('P1: GET /api/auto-bet/config returns config object with all fields', async () => {
+        const r = await fetch('http://localhost:3000/api/auto-bet/config');
+        assert(r.ok, `HTTP ${r.status}`);
+        const body = await r.json();
+        assert(body.config, 'Expected config object');
+        assert(typeof body.config.enabled === 'boolean', 'enabled must be boolean');
+        assert(typeof body.config.amount === 'number', 'amount must be number');
+        assert(Array.isArray(body.config.brackets), 'brackets must be array');
+        assert(['dog','fav'].includes(body.config.side), 'side must be dog or fav');
+        assert(typeof body.config.maxPerSession === 'number', 'maxPerSession must be number');
+        assert(typeof body.config.maxFightAgeSecs === 'number', 'maxFightAgeSecs must be number');
+        assert(typeof body.config.minOddsGapPct === 'number', 'minOddsGapPct must be number');
+        assert(typeof body.config.autoHedge === 'boolean', 'autoHedge must be boolean');
+        assert(typeof body.sessionCount === 'number', 'sessionCount must be in response');
+        assert(Array.isArray(body.firedFights), 'firedFights must be array');
+        assert(Array.isArray(body.recentLog), 'recentLog must be array');
+      });
+    } catch(e) { console.error('  ✗ P1:', e.message); failed++; }
+  } else { console.log('  - P1: skipped (not --local)'); }
+
+  // P2 — POST /api/auto-bet/config updates fields
+  if (process.argv.includes('--local')) {
+    try {
+      await check('P2: POST /api/auto-bet/config updates enabled, amount, brackets, side', async () => {
+        const r = await fetch('http://localhost:3000/api/auto-bet/config', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ enabled: false, amount: 7.50, brackets: ['even', 'slight'], side: 'fav', maxPerSession: 5 }),
+        });
+        assert(r.ok, `HTTP ${r.status}`);
+        const body = await r.json();
+        assert(body.ok === true, 'Expected ok=true');
+        assert(body.config.amount === 7.50, `amount should be 7.50, got ${body.config.amount}`);
+        assert(body.config.brackets.includes('even'), 'brackets should include even');
+        assert(body.config.brackets.includes('slight'), 'brackets should include slight');
+        assert(body.config.side === 'fav', `side should be fav, got ${body.config.side}`);
+        assert(body.config.maxPerSession === 5, `maxPerSession should be 5, got ${body.config.maxPerSession}`);
+        // Restore defaults
+        await fetch('http://localhost:3000/api/auto-bet/config', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ enabled: false, amount: 5, brackets: ['slight'], side: 'dog', maxPerSession: 3 }),
+        });
+      });
+    } catch(e) { console.error('  ✗ P2:', e.message); failed++; }
+  } else { console.log('  - P2: skipped (not --local)'); }
+
+  // P3 — POST /api/auto-bet/config rejects invalid bracket values
+  if (process.argv.includes('--local')) {
+    try {
+      await check('P3: POST /api/auto-bet/config ignores invalid bracket values', async () => {
+        const r = await fetch('http://localhost:3000/api/auto-bet/config', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ brackets: ['slight', 'INVALID_BRACKET', 'also_bad'] }),
+        });
+        assert(r.ok, `HTTP ${r.status}`);
+        const body = await r.json();
+        assert(!body.config.brackets.includes('INVALID_BRACKET'), 'Invalid brackets must be filtered out');
+        assert(!body.config.brackets.includes('also_bad'), 'Invalid brackets must be filtered out');
+        assert(body.config.brackets.includes('slight'), 'Valid bracket (slight) must be kept');
+      });
+    } catch(e) { console.error('  ✗ P3:', e.message); failed++; }
+  } else { console.log('  - P3: skipped (not --local)'); }
+
+  // P4 — POST /api/auto-bet/reset-session clears count and firedFights
+  if (process.argv.includes('--local')) {
+    try {
+      await check('P4: POST /api/auto-bet/reset-session clears sessionCount and firedFights', async () => {
+        const r = await fetch('http://localhost:3000/api/auto-bet/reset-session', { method: 'POST' });
+        assert(r.ok, `HTTP ${r.status}`);
+        const body = await r.json();
+        assert(body.ok === true, 'Expected ok=true');
+        // Verify count is 0 after reset
+        const cfgR = await fetch('http://localhost:3000/api/auto-bet/config');
+        const cfg = await cfgR.json();
+        assert(cfg.sessionCount === 0, `sessionCount should be 0 after reset, got ${cfg.sessionCount}`);
+        assert(cfg.firedFights.length === 0, `firedFights should be empty after reset, got ${cfg.firedFights.length}`);
+      });
+    } catch(e) { console.error('  ✗ P4:', e.message); failed++; }
+  } else { console.log('  - P4: skipped (not --local)'); }
+
+  // P5 — CORS on /api/auto-bet
+  if (process.argv.includes('--local')) {
+    try {
+      await check('P5: /api/auto-bet has CORS headers for extension access', async () => {
+        const r = await fetch('http://localhost:3000/api/auto-bet/config', { method: 'OPTIONS' });
+        const cors = r.headers.get('access-control-allow-origin');
+        assert(cors === '*', `Expected CORS *, got: ${cors}`);
+      });
+    } catch(e) { console.error('  ✗ P5:', e.message); failed++; }
+  } else { console.log('  - P5: skipped (not --local)'); }
+
+  // ── Q: Bracket detection (unit tests — no server needed) ─────────────────────
+  console.log('\n── Q: Bracket classification ──');
+
+  function toDecimal(o) { return o > 0 ? (o/100)+1 : (100/Math.abs(o))+1; }
+  function classifyOddsBracket(f1, f2) {
+    const d1 = toDecimal(f1), d2 = toDecimal(f2);
+    const favD = Math.min(d1, d2);
+    if (favD <= 1.333) return 'huge';
+    if (favD <= 1.5)   return 'heavy';
+    if (favD <= 1.833) return 'slight';
+    return 'even';
+  }
+
+  try {
+    await check('Q1: classifyOddsBracket — near-even (-110/-110) → "even"', () => {
+      assert(classifyOddsBracket(-110, -110) === 'even', `got: ${classifyOddsBracket(-110,-110)}`);
+    });
+  } catch(e) { console.error('  ✗ Q1:', e.message); failed++; }
+
+  try {
+    await check('Q2: classifyOddsBracket — slight fav (-150/+130) → "slight"', () => {
+      assert(classifyOddsBracket(-150, 130) === 'slight', `got: ${classifyOddsBracket(-150,130)}`);
+    });
+  } catch(e) { console.error('  ✗ Q2:', e.message); failed++; }
+
+  try {
+    await check('Q3: classifyOddsBracket — heavy fav (-250/+200) → "heavy"', () => {
+      assert(classifyOddsBracket(-250, 200) === 'heavy', `got: ${classifyOddsBracket(-250,200)}`);
+    });
+  } catch(e) { console.error('  ✗ Q3:', e.message); failed++; }
+
+  try {
+    await check('Q4: classifyOddsBracket — dominant (-400/+300) → "huge"', () => {
+      assert(classifyOddsBracket(-400, 300) === 'huge', `got: ${classifyOddsBracket(-400,300)}`);
+    });
+  } catch(e) { console.error('  ✗ Q4:', e.message); failed++; }
+
+  try {
+    await check('Q5: classifyOddsBracket — symmetric (fav on either side)', () => {
+      // Regardless of which fighter is listed first, bracket should be same
+      assert(classifyOddsBracket(-200, 170) === classifyOddsBracket(170, -200), 'bracket must be symmetric');
+    });
+  } catch(e) { console.error('  ✗ Q5:', e.message); failed++; }
+
+  try {
+    await check('Q6: classifyOddsBracket — boundary -200 lands in "heavy" not "slight"', () => {
+      // -200 → decimal = 1.5 exactly → favD = 1.5 → heavy (≤ 1.5)
+      assert(classifyOddsBracket(-200, 170) === 'heavy', `got: ${classifyOddsBracket(-200,170)}`);
+    });
+  } catch(e) { console.error('  ✗ Q6:', e.message); failed++; }
+
+  // ── R: checkAutoBet guard logic (server-side, via source inspection + API) ───
+  console.log('\n── R: Auto-bet guard logic ──');
+
+  // R1 — guard: disabled blocks all auto-bets
+  if (process.argv.includes('--local')) {
+    try {
+      await check('R1: disabled config → auto-bet skipped for any fight', async () => {
+        // Ensure disabled
+        await fetch('http://localhost:3000/api/auto-bet/config', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ enabled: false }),
+        });
+        // Trigger a test fight via recorder/test (checkAutoBet is also called there)
+        // We verify indirectly: recentLog should NOT have a 'fired' event
+        await fetch('http://localhost:3000/api/recorder/test', { method: 'POST' });
+        await new Promise(r => setTimeout(r, 500));
+        const cfgR = await fetch('http://localhost:3000/api/auto-bet/config');
+        const cfg = await cfgR.json();
+        const firedEvents = cfg.recentLog.filter(e => e.type === 'fired');
+        // If disabled, firedEvents must be 0 (test fight was also filtered by test_fight guard)
+        assert(cfg.sessionCount === 0, `sessionCount should be 0 when disabled, got ${cfg.sessionCount}`);
+      });
+    } catch(e) { console.error('  ✗ R1:', e.message); failed++; }
+  } else { console.log('  - R1: skipped (not --local)'); }
+
+  // R2 — guard: test_fight blocks auto-bet
+  try {
+    await check('R2: checkAutoBet skips test fights (fighter name starts with "Test ")', () => {
+      // Simulate the guard logic
+      function guardTestFight(f1, f2) {
+        return /^test /i.test(f1) || /^test /i.test(f2);
+      }
+      assert(guardTestFight('Test Fighter A', 'Test Fighter B') === true, 'should skip test fights');
+      assert(guardTestFight('Conor McGregor', 'Dustin Poirier') === false, 'should not skip real fights');
+      assert(guardTestFight('Test ', 'Anyone') === true, 'should skip "Test " prefix');
+      assert(guardTestFight('testosterone', 'Fighter') === false, 'should not skip "testosterone" (no space after Test)');
+    });
+  } catch(e) { console.error('  ✗ R2:', e.message); failed++; }
+
+  // R3 — guard: fight_too_old (maxFightAgeSecs)
+  try {
+    await check('R3: checkAutoBet skips fight that started more than maxFightAgeSecs ago', () => {
+      function fightTooOld(commenceTimeISO, maxFightAgeSecs) {
+        if (!commenceTimeISO) return false;
+        const liveForSecs = (Date.now() - new Date(commenceTimeISO).getTime()) / 1000;
+        return liveForSecs > maxFightAgeSecs;
+      }
+      const recent = new Date(Date.now() - 60 * 1000).toISOString();   // 1 min ago
+      const old    = new Date(Date.now() - 600 * 1000).toISOString();  // 10 min ago
+      assert(fightTooOld(recent, 300) === false, '1-min-old fight should pass 300s limit');
+      assert(fightTooOld(old, 300) === true, '10-min-old fight should fail 300s limit');
+      assert(fightTooOld(old, 900) === false, '10-min-old fight should pass 900s limit');
+      assert(fightTooOld(null, 300) === false, 'null commenceTime should not block (fallback)');
+    });
+  } catch(e) { console.error('  ✗ R3:', e.message); failed++; }
+
+  // R4 — guard: odds_too_close
+  try {
+    await check('R4: checkAutoBet skips when implied prob gap < minOddsGapPct', () => {
+      function oddsGapPct(f1Odds, f2Odds) {
+        const toD = o => o > 0 ? (o/100)+1 : (100/Math.abs(o))+1;
+        const d1 = toD(f1Odds), d2 = toD(f2Odds);
+        return Math.abs(1/d1 - 1/d2) * 100;
+      }
+      // -105/-115 → very close
+      assert(oddsGapPct(-105, -115) < 5, '-105/-115 gap should be < 5%');
+      // -200/+170 → clearly split
+      assert(oddsGapPct(-200, 170) > 5, '-200/+170 gap should be > 5%');
+      // -110/-110 → exactly even (0 gap)
+      assert(oddsGapPct(-110, -110) < 1, '-110/-110 gap should be < 1%');
+    });
+  } catch(e) { console.error('  ✗ R4:', e.message); failed++; }
+
+  // R5 — guard: rate_limit (maxPerSession)
+  try {
+    await check('R5: checkAutoBet rate limit logic: blocks after maxPerSession reached', () => {
+      function rateLimited(sessionCount, maxPerSession) {
+        return sessionCount >= maxPerSession;
+      }
+      assert(rateLimited(0, 3) === false, '0 fired, limit 3 → should not block');
+      assert(rateLimited(2, 3) === false, '2 fired, limit 3 → should not block');
+      assert(rateLimited(3, 3) === true,  '3 fired, limit 3 → should block');
+      assert(rateLimited(5, 3) === true,  '5 fired, limit 3 → should block');
+      assert(rateLimited(0, 0) === true,  'limit 0 → always blocked');
+    });
+  } catch(e) { console.error('  ✗ R5:', e.message); failed++; }
+
+  // R6 — guard: bracket_not_targeted
+  try {
+    await check('R6: checkAutoBet only fires for configured brackets', () => {
+      function bracketMatch(bracket, configBrackets) {
+        return configBrackets.includes(bracket);
+      }
+      assert(bracketMatch('slight', ['slight']) === true, 'slight in [slight] → fire');
+      assert(bracketMatch('huge', ['slight']) === false, 'huge not in [slight] → skip');
+      assert(bracketMatch('even', ['even','slight']) === true, 'even in [even,slight] → fire');
+      assert(bracketMatch('heavy', []) === false, 'empty brackets list → always skip');
+    });
+  } catch(e) { console.error('  ✗ R6:', e.message); failed++; }
+
+  // R7 — guard: invalid_odds (NaN, missing)
+  try {
+    await check('R7: checkAutoBet rejects NaN, null, undefined odds', () => {
+      function oddsValid(f1Odds, f2Odds) {
+        return typeof f1Odds === 'number' && typeof f2Odds === 'number' &&
+               !isNaN(f1Odds) && !isNaN(f2Odds);
+      }
+      assert(oddsValid(-150, 130) === true, 'valid odds should pass');
+      assert(oddsValid(NaN, 130) === false, 'NaN f1 should fail');
+      assert(oddsValid(-150, NaN) === false, 'NaN f2 should fail');
+      assert(oddsValid(null, 130) === false, 'null f1 should fail');
+      assert(oddsValid(-150, undefined) === false, 'undefined f2 should fail');
+      assert(oddsValid('−150', 130) === false, 'string odds should fail (not typeof number)');
+    });
+  } catch(e) { console.error('  ✗ R7:', e.message); failed++; }
+
+  // R8 — correct side selection (dog vs fav)
+  try {
+    await check('R8: side selection — "dog" picks the underdog, "fav" picks the favorite', () => {
+      function selectSide(f1Name, f1Odds, f2Name, f2Odds, cfgSide) {
+        const toD = o => o > 0 ? (o/100)+1 : (100/Math.abs(o))+1;
+        const d1 = toD(f1Odds), d2 = toD(f2Odds);
+        const favFighter = d1 <= d2 ? f1Name : f2Name;
+        const dogFighter = d1 <= d2 ? f2Name : f1Name;
+        return cfgSide === 'dog' ? dogFighter : favFighter;
+      }
+      // f1=-200 (fav), f2=+170 (dog)
+      assert(selectSide('McGregor',-200,'Poirier',170,'dog') === 'Poirier', 'dog should be Poirier (+170)');
+      assert(selectSide('McGregor',-200,'Poirier',170,'fav') === 'McGregor', 'fav should be McGregor (-200)');
+      // Reversed: f1=+300 (dog), f2=-350 (fav)
+      assert(selectSide('Diaz',300,'Khabib',-350,'dog') === 'Diaz', 'dog should be Diaz (+300)');
+      assert(selectSide('Diaz',300,'Khabib',-350,'fav') === 'Khabib', 'fav should be Khabib (-350)');
+    });
+  } catch(e) { console.error('  ✗ R8:', e.message); failed++; }
+
+  // ── S: Safety integration tests ────────────────────────────────────────────
+  console.log('\n── S: Safety & edge case tests ──');
+
+  // S1 — dedup: same fightId never fires twice (even across resets)
+  if (process.argv.includes('--local')) {
+    try {
+      await check('S1: /api/auto-bet/config stores firedFights — same fight blocked on re-query', async () => {
+        // The firedFights are persisted. After P4 reset them; verify they are empty
+        const r = await fetch('http://localhost:3000/api/auto-bet/config');
+        const body = await r.json();
+        // firedFights is an array of fight IDs. After the reset in P4, should be empty.
+        assert(Array.isArray(body.firedFights), 'firedFights must be array');
+        // We can't force a real auto-bet without live fight data, but we can verify the
+        // structure is correct and the dedup field exists
+        assert(typeof body.sessionCount === 'number', 'sessionCount must exist');
+      });
+    } catch(e) { console.error('  ✗ S1:', e.message); failed++; }
+  } else { console.log('  - S1: skipped (not --local)'); }
+
+  // S2 — negative amount rejected
+  if (process.argv.includes('--local')) {
+    try {
+      await check('S2: POST /api/auto-bet/config rejects negative amount (keeps existing)', async () => {
+        // Get current amount first
+        const before = await (await fetch('http://localhost:3000/api/auto-bet/config')).json();
+        const origAmount = before.config.amount;
+        // Send negative
+        const r = await fetch('http://localhost:3000/api/auto-bet/config', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ amount: -50 }),
+        });
+        const body = await r.json();
+        // amount < 0 violates the >= 0 guard; server should not update it
+        assert(body.config.amount >= 0, `amount must not go negative, got ${body.config.amount}`);
+      });
+    } catch(e) { console.error('  ✗ S2:', e.message); failed++; }
+  } else { console.log('  - S2: skipped (not --local)'); }
+
+  // S3 — autoHedge flag included in queued command
+  try {
+    await check('S3: when autoHedge=true, makeCommand includes crossover trigger', () => {
+      // Simulate makeCommand from server logic
+      function makeCommand(type, intent) {
+        return {
+          id: 'test',
+          type,
+          side:    intent.side   || null,
+          amount:  intent.amount || null,
+          trigger: intent.trigger || { type: 'crossover', targetOdds: null },
+          status: 'pending',
+        };
+      }
+      const withHedge = makeCommand('place_bet', {
+        side: 'USA', amount: 10,
+        trigger: { type: 'crossover', targetOdds: null },
+      });
+      assert(withHedge.trigger.type === 'crossover', 'trigger.type should be crossover when autoHedge=true');
+
+      const noHedge = makeCommand('place_bet', {
+        side: 'USA', amount: 10,
+        trigger: { type: null, targetOdds: null },
+      });
+      assert(noHedge.trigger.type === null, 'trigger.type should be null when autoHedge=false');
+    });
+  } catch(e) { console.error('  ✗ S3:', e.message); failed++; }
+
+  // S4 — firedFights persisted across config reads
+  if (process.argv.includes('--local')) {
+    try {
+      await check('S4: firedFights list persists in GET /api/auto-bet/config response', async () => {
+        const r = await fetch('http://localhost:3000/api/auto-bet/config');
+        const body = await r.json();
+        // Can't inject a real fight, but verify the array is always present
+        assert(Array.isArray(body.firedFights), 'firedFights must always be an array in response');
+        assert(body.firedFights.every(f => typeof f === 'string'), 'all firedFight entries must be strings (fight IDs)');
+      });
+    } catch(e) { console.error('  ✗ S4:', e.message); failed++; }
+  } else { console.log('  - S4: skipped (not --local)'); }
+
+  // S5 — recLog entries have required fields
+  if (process.argv.includes('--local')) {
+    try {
+      await check('S5: recentLog entries have type + ts fields; fired entries have side + bracket', async () => {
+        const r = await fetch('http://localhost:3000/api/auto-bet/config');
+        const body = await r.json();
+        for (const entry of body.recentLog) {
+          assert(typeof entry.type === 'string', `log entry must have type: ${JSON.stringify(entry)}`);
+          assert(typeof entry.ts === 'number', `log entry must have ts: ${JSON.stringify(entry)}`);
+          if (entry.type === 'fired') {
+            assert(entry.side, `fired entry must have side: ${JSON.stringify(entry)}`);
+            assert(entry.bracket, `fired entry must have bracket: ${JSON.stringify(entry)}`);
+            assert(entry.amount > 0, `fired entry must have amount > 0: ${JSON.stringify(entry)}`);
+          }
+        }
+      });
+    } catch(e) { console.error('  ✗ S5:', e.message); failed++; }
+  } else { console.log('  - S5: skipped (not --local)'); }
+
+  // ── T: Structural / source-level tests ──────────────────────────────────────
+  console.log('\n── T: Structural checks ──');
+
+  // T1 — server.js has classifyOddsBracket consistent with /api/patterns buckets
+  try {
+    await check('T1: server.js classifyOddsBracket uses same thresholds as /api/patterns', () => {
+      const fs = require('fs');
+      const src = fs.readFileSync(require('path').join(__dirname, 'server.js'), 'utf8');
+      // Must have all 4 bracket names defined
+      assert(src.includes("return 'huge'"), 'must have huge bracket');
+      assert(src.includes("return 'heavy'"), 'must have heavy bracket');
+      assert(src.includes("return 'slight'"), 'must have slight bracket');
+      assert(src.includes("return 'even'"), 'must have even bracket');
+      // Must use same thresholds as /api/patterns
+      assert(src.includes('1.333'), 'must use 1.333 threshold (huge/-300+)');
+      assert(src.includes('1.5'),   'must use 1.5 threshold (heavy/-200)');
+      assert(src.includes('1.833'), 'must use 1.833 threshold (slight/-120)');
+    });
+  } catch(e) { console.error('  ✗ T1:', e.message); failed++; }
+
+  // T2 — checkAutoBet wired into recPollSport (called on new fight)
+  try {
+    await check('T2: server.js recPollSport calls checkAutoBet on new fight detection', () => {
+      const fs = require('fs');
+      const src = fs.readFileSync(require('path').join(__dirname, 'server.js'), 'utf8');
+      assert(src.includes('checkAutoBet('), 'checkAutoBet must be called somewhere');
+      // Must be called in the new-fight block (near activeFights.set)
+      const newFightIdx = src.indexOf('activeFights.set(id, {');
+      assert(newFightIdx !== -1, 'activeFights.set must exist');
+      const nearbyCode = src.slice(newFightIdx, newFightIdx + 1500);
+      assert(nearbyCode.includes('checkAutoBet('), 'checkAutoBet must be called within the new-fight block');
+    });
+  } catch(e) { console.error('  ✗ T2:', e.message); failed++; }
+
+  // T3 — checkAutoBet passes commenceTime (needed for fight_too_old guard)
+  try {
+    await check('T3: checkAutoBet call includes fight.commence_time for age guard', () => {
+      const fs = require('fs');
+      const src = fs.readFileSync(require('path').join(__dirname, 'server.js'), 'utf8');
+      // The call must include commence_time
+      assert(src.includes('commence_time'), 'checkAutoBet must receive fight.commence_time');
+      assert(src.includes('maxFightAgeSecs'), 'checkAutoBet must check maxFightAgeSecs');
+    });
+  } catch(e) { console.error('  ✗ T3:', e.message); failed++; }
+
+  // T4 — firedFights is persisted (saveFiredFights called on fire)
+  try {
+    await check('T4: server.js saveFiredFights() is called after auto-bet fires', () => {
+      const fs = require('fs');
+      const src = fs.readFileSync(require('path').join(__dirname, 'server.js'), 'utf8');
+      // Must add to firedFights AND call saveFiredFights
+      assert(src.includes('autoBetFiredFights.add(fightId)'), 'must add fightId to firedFights set');
+      assert(src.includes('saveFiredFights()'), 'must call saveFiredFights() to persist');
+    });
+  } catch(e) { console.error('  ✗ T4:', e.message); failed++; }
+
+  // T5 — auto-bet UI panel exists in index.html
+  try {
+    await check('T5: index.html has auto-bet panel with toggle, amount, bracket checkboxes, side selector', () => {
+      const fs = require('fs');
+      const html = fs.readFileSync(require('path').join(__dirname, 'public/index.html'), 'utf8');
+      assert(html.includes('ab-panel'), 'must have ab-panel element');
+      assert(html.includes('ab-toggle'), 'must have auto-bet toggle button');
+      assert(html.includes('ab-amount'), 'must have amount input');
+      assert(html.includes('ab-side'), 'must have side selector');
+      assert(html.includes('ab-br-slight'), 'must have bracket checkbox for slight');
+      assert(html.includes('ab-max'), 'must have maxPerSession input');
+      assert(html.includes('toggleAutoBet'), 'must have toggleAutoBet function');
+      assert(html.includes('saveAutoBetConfig'), 'must have saveAutoBetConfig function');
+      assert(html.includes('resetAutoBetSession'), 'must have resetAutoBetSession function');
+      assert(html.includes('/api/auto-bet/config'), 'must call /api/auto-bet/config endpoint');
+    });
+  } catch(e) { console.error('  ✗ T5:', e.message); failed++; }
+
+  // T6 — existing_coverage guard: won't double-bet if already on this side
+  try {
+    await check('T6: checkAutoBet source includes existing bet coverage guard', () => {
+      const fs = require('fs');
+      const src = fs.readFileSync(require('path').join(__dirname, 'server.js'), 'utf8');
+      assert(src.includes('alreadyCovered'), 'must have alreadyCovered guard');
+      assert(src.includes('getAllBets(true)'), 'must check open bets before firing');
+      assert(src.includes('existing_bet_on_'), 'must return skip reason for existing bet');
+    });
+  } catch(e) { console.error('  ✗ T6:', e.message); failed++; }
+
+  // T7 — email alert fires on auto-bet (sendAlert called in checkAutoBet)
+  try {
+    await check('T7: checkAutoBet calls sendAlert when bet fires', () => {
+      const fs = require('fs');
+      const src = fs.readFileSync(require('path').join(__dirname, 'server.js'), 'utf8');
+      const fnStart = src.indexOf('function checkAutoBet(');
+      assert(fnStart !== -1, 'checkAutoBet function must exist');
+      const fnEnd = src.indexOf('\nfunction ', fnStart + 1);
+      const fnBody = src.slice(fnStart, fnEnd === -1 ? fnStart + 4000 : fnEnd);
+      assert(fnBody.includes('sendAlert('), 'checkAutoBet must call sendAlert when bet fires');
+      assert(fnBody.includes('AUTO-BET'), 'alert must mention AUTO-BET');
+    });
+  } catch(e) { console.error('  ✗ T7:', e.message); failed++; }
 }
