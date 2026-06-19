@@ -772,71 +772,188 @@
   </div>
 </div>
 
-<!-- Auto-Bet Panel -->
-<div id="ab-panel" style="position:fixed;bottom:80px;left:22px;width:310px;background:#141414;border:1px solid #222;border-radius:12px;box-shadow:0 8px 40px rgba(0,0,0,.7);z-index:198;overflow:hidden;display:none">
-  <div style="padding:10px 13px;background:#111;border-bottom:1px solid #1e1e1e;display:flex;justify-content:space-between;align-items:center">
-    <span style="color:#e8b84b;font-size:0.86rem;font-weight:700;text-transform:uppercase;letter-spacing:1px">🤖 Auto-Bet</span>
-    <span id="ab-session-lbl" style="font-size:0.76rem;color:#555">0 / 3 fired</span>
-  </div>
-  <div style="padding:12px 14px;display:flex;flex-direction:column;gap:10px;font-size:0.84rem">
+<!-- Auto-Bet Panel (v2) -->
+<div id="ab-panel" style="position:fixed;bottom:80px;left:22px;width:344px;background:#141414;border:1px solid #2a2a2a;border-radius:14px;box-shadow:0 12px 48px rgba(0,0,0,.85);z-index:198;overflow:hidden;display:none;font-size:0.83rem">
 
-    <!-- Enable toggle -->
-    <div style="display:flex;justify-content:space-between;align-items:center">
-      <span style="color:#aaa">Auto-bet</span>
-      <button id="ab-toggle" onclick="toggleAutoBet()" style="padding:4px 16px;border-radius:20px;border:none;cursor:pointer;font-weight:700;font-size:0.82rem">OFF</button>
+  <!-- Header -->
+  <div style="padding:11px 14px;background:#111;border-bottom:1px solid #1e1e1e;display:flex;justify-content:space-between;align-items:center">
+    <div>
+      <div style="color:#e8b84b;font-size:0.88rem;font-weight:700;letter-spacing:0.4px">⚡ Auto-Bet</div>
+      <div style="color:#555;font-size:0.69rem;margin-top:1px">Bets the underdog automatically when fights go live</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:8px">
+      <span id="ab-session-lbl" style="font-size:0.7rem;color:#555">0 / 3 fired</span>
+      <button id="ab-toggle" onclick="toggleAutoBet()" style="padding:5px 14px;border-radius:20px;border:none;cursor:pointer;font-weight:700;font-size:0.8rem;min-width:42px">OFF</button>
+    </div>
+  </div>
+
+  <div style="padding:12px 14px;display:flex;flex-direction:column;gap:11px">
+
+    <!-- How it works flow -->
+    <div style="background:#0c0c0c;border:1px solid #1e1e1e;border-radius:8px;padding:8px 10px">
+      <div style="color:#444;font-size:0.67rem;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:6px">How it works</div>
+      <div style="display:flex;align-items:flex-start;gap:4px">
+        <div style="flex:1;text-align:center">
+          <div style="font-size:0.95rem;margin-bottom:2px">🥊</div>
+          <div style="color:#888;font-size:0.7rem;line-height:1.35">Fight<br>goes live</div>
+        </div>
+        <div style="color:#2a2a2a;font-size:0.8rem;padding-top:10px;flex-shrink:0">›</div>
+        <div style="flex:1;text-align:center">
+          <div style="font-size:0.95rem;margin-bottom:2px">💸</div>
+          <div style="color:#888;font-size:0.7rem;line-height:1.35">Bet the<br>underdog</div>
+        </div>
+        <div style="color:#2a2a2a;font-size:0.8rem;padding-top:10px;flex-shrink:0">›</div>
+        <div style="flex:1;text-align:center">
+          <div style="font-size:0.95rem;margin-bottom:2px">📈</div>
+          <div style="color:#888;font-size:0.7rem;line-height:1.35">Odds flip<br>(crossover)</div>
+        </div>
+        <div style="color:#2a2a2a;font-size:0.8rem;padding-top:10px;flex-shrink:0">›</div>
+        <div style="flex:1;text-align:center">
+          <div style="font-size:0.95rem;margin-bottom:2px">✅</div>
+          <div style="color:#2ecc71;font-size:0.7rem;line-height:1.35;font-weight:600">Profit<br>locked</div>
+        </div>
+      </div>
     </div>
 
-    <!-- Amount -->
-    <div style="display:flex;justify-content:space-between;align-items:center">
-      <span style="color:#777">Amount per bet</span>
-      <div style="display:flex;align-items:center;gap:6px">
-        <span style="color:#555">$</span>
-        <input id="ab-amount" type="number" min="0.01" step="0.5" value="5" style="width:60px;background:#0d0d0d;border:1px solid #2a2a2a;border-radius:4px;color:#ddd;padding:3px 6px;font-size:0.84rem" onchange="saveAutoBetConfig()">
+    <!-- Presets -->
+    <div>
+      <div style="color:#444;font-size:0.67rem;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:6px">Quick start</div>
+      <div style="display:flex;gap:6px">
+        <button onclick="applyAbPreset('conservative')" style="flex:1;background:#111;border:1px solid #222;color:#777;border-radius:6px;padding:6px 4px;font-size:0.72rem;cursor:pointer;line-height:1.4">🛡️ Safe<br><span style="color:#444;font-size:0.65rem">$5 · slight only</span></button>
+        <button onclick="applyAbPreset('balanced')" style="flex:1;background:#111;border:1px solid #222;color:#777;border-radius:6px;padding:6px 4px;font-size:0.72rem;cursor:pointer;line-height:1.4">⚖️ Balanced<br><span style="color:#444;font-size:0.65rem">$10 · slight+heavy</span></button>
+        <button onclick="applyAbPreset('aggressive')" style="flex:1;background:#111;border:1px solid #222;color:#777;border-radius:6px;padding:6px 4px;font-size:0.72rem;cursor:pointer;line-height:1.4">🔥 Aggressive<br><span style="color:#444;font-size:0.65rem">$15 · all ranges</span></button>
+      </div>
+    </div>
+
+    <!-- First bet amount -->
+    <div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:3px">
+        <div style="display:flex;align-items:center;gap:5px">
+          <span style="color:#bbb">First bet amount</span>
+          <button onclick="abHelp('amount')" style="width:14px;height:14px;border-radius:50%;background:#181818;border:1px solid #2e2e2e;color:#555;font-size:0.6rem;cursor:pointer;line-height:14px;padding:0;text-align:center">?</button>
+        </div>
+        <div style="display:flex;align-items:center;gap:5px">
+          <span style="color:#555">$</span>
+          <input id="ab-amount" type="number" min="0.01" step="0.5" value="5" style="width:60px;background:#0d0d0d;border:1px solid #252525;border-radius:4px;color:#ddd;padding:3px 6px;font-size:0.82rem" onchange="saveAutoBetConfig()">
+        </div>
+      </div>
+      <div id="ab-tip-amount" style="display:none;background:#0a0a0a;border:1px solid #1c1c1c;border-radius:5px;padding:6px 8px;font-size:0.71rem;color:#666;line-height:1.5">
+        Leg 1 stake — the underdog bet. Keep it small. The auto-hedge (leg 2) is placed later as a separate calculated bet. DK minimum is $0.50.
       </div>
     </div>
 
     <!-- Side -->
-    <div style="display:flex;justify-content:space-between;align-items:center">
-      <span style="color:#777">Bet on</span>
-      <select id="ab-side" onchange="saveAutoBetConfig()" style="background:#0d0d0d;border:1px solid #2a2a2a;border-radius:4px;color:#ddd;padding:3px 8px;font-size:0.84rem">
-        <option value="dog">Underdog</option>
-        <option value="fav">Favorite</option>
-      </select>
+    <div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:3px">
+        <div style="display:flex;align-items:center;gap:5px">
+          <span style="color:#bbb">Bet on</span>
+          <button onclick="abHelp('side')" style="width:14px;height:14px;border-radius:50%;background:#181818;border:1px solid #2e2e2e;color:#555;font-size:0.6rem;cursor:pointer;line-height:14px;padding:0;text-align:center">?</button>
+        </div>
+        <select id="ab-side" onchange="saveAutoBetConfig()" style="background:#0d0d0d;border:1px solid #252525;border-radius:4px;color:#ddd;padding:3px 8px;font-size:0.82rem">
+          <option value="dog">Underdog (recommended)</option>
+          <option value="fav">Favorite</option>
+        </select>
+      </div>
+      <div id="ab-tip-side" style="display:none;background:#0a0a0a;border:1px solid #1c1c1c;border-radius:5px;padding:6px 8px;font-size:0.71rem;color:#666;line-height:1.5">
+        Bet the underdog first. When momentum shifts mid-fight, the underdog often becomes the favorite — that's the crossover. Betting the favorite first also works but the hedge window tends to be narrower.
+      </div>
     </div>
 
-    <!-- Brackets -->
+    <!-- Fight selection (renamed from "brackets") -->
     <div>
-      <div style="color:#777;margin-bottom:5px">Brackets to play</div>
-      <div style="display:flex;gap:8px;flex-wrap:wrap">
-        <label style="color:#aaa;display:flex;align-items:center;gap:4px;cursor:pointer"><input type="checkbox" id="ab-br-even" value="even" onchange="saveAutoBetConfig()"> near-even</label>
-        <label style="color:#e8b84b;display:flex;align-items:center;gap:4px;cursor:pointer"><input type="checkbox" id="ab-br-slight" value="slight" checked onchange="saveAutoBetConfig()"> slight fav</label>
-        <label style="color:#aaa;display:flex;align-items:center;gap:4px;cursor:pointer"><input type="checkbox" id="ab-br-heavy" value="heavy" onchange="saveAutoBetConfig()"> heavy fav</label>
-        <label style="color:#555;display:flex;align-items:center;gap:4px;cursor:pointer"><input type="checkbox" id="ab-br-huge" value="huge" onchange="saveAutoBetConfig()"> dominant</label>
+      <div style="display:flex;align-items:center;gap:5px;margin-bottom:6px">
+        <span style="color:#bbb">Enter fights where…</span>
+        <button onclick="abHelp('brackets')" style="width:14px;height:14px;border-radius:50%;background:#181818;border:1px solid #2e2e2e;color:#555;font-size:0.6rem;cursor:pointer;line-height:14px;padding:0;text-align:center">?</button>
+      </div>
+      <div id="ab-tip-brackets" style="display:none;background:#0a0a0a;border:1px solid #1c1c1c;border-radius:5px;padding:6px 8px;font-size:0.71rem;color:#666;line-height:1.5;margin-bottom:6px">
+        This is the opening odds gap when the fight starts. Closer fights flip momentum more often — our recordings show ~42% of slight-edge fights hit the crossover window. Heavy favorites rarely flip, so profit windows are smaller.
+      </div>
+      <div style="display:flex;flex-direction:column;gap:4px">
+        <label style="display:flex;align-items:center;justify-content:space-between;cursor:pointer;padding:5px 8px;background:#0d0d0d;border-radius:6px;border:1px solid #1c1c1c">
+          <div style="display:flex;align-items:center;gap:8px">
+            <input type="checkbox" id="ab-br-even" value="even" onchange="saveAutoBetConfig()" style="accent-color:#888;flex-shrink:0">
+            <div>
+              <div style="color:#999;font-size:0.77rem">Even match</div>
+              <div style="color:#444;font-size:0.68rem">Within ±120 · unpredictable</div>
+            </div>
+          </div>
+          <span style="color:#444;font-size:0.68rem;background:#111;border-radius:3px;padding:1px 5px;flex-shrink:0">~20%</span>
+        </label>
+        <label style="display:flex;align-items:center;justify-content:space-between;cursor:pointer;padding:5px 8px;background:#0d0d0d;border-radius:6px;border:1px solid #1c1c1c">
+          <div style="display:flex;align-items:center;gap:8px">
+            <input type="checkbox" id="ab-br-slight" value="slight" checked onchange="saveAutoBetConfig()" style="accent-color:#e8b84b;flex-shrink:0">
+            <div>
+              <div style="color:#e8b84b;font-size:0.77rem">Slight edge ⭐ <span style="color:#555;font-size:0.68rem;font-weight:400">best</span></div>
+              <div style="color:#555;font-size:0.68rem">-120 to -200 / +120 to +200</div>
+            </div>
+          </div>
+          <span style="color:#e8b84b;font-size:0.68rem;background:#1a1400;border-radius:3px;padding:1px 5px;flex-shrink:0">~42%</span>
+        </label>
+        <label style="display:flex;align-items:center;justify-content:space-between;cursor:pointer;padding:5px 8px;background:#0d0d0d;border-radius:6px;border:1px solid #1c1c1c">
+          <div style="display:flex;align-items:center;gap:8px">
+            <input type="checkbox" id="ab-br-heavy" value="heavy" onchange="saveAutoBetConfig()" style="accent-color:#888;flex-shrink:0">
+            <div>
+              <div style="color:#999;font-size:0.77rem">One-sided</div>
+              <div style="color:#444;font-size:0.68rem">-200 to -400 / +200 to +400</div>
+            </div>
+          </div>
+          <span style="color:#555;font-size:0.68rem;background:#111;border-radius:3px;padding:1px 5px;flex-shrink:0">~28%</span>
+        </label>
+        <label style="display:flex;align-items:center;justify-content:space-between;cursor:pointer;padding:5px 8px;background:#0d0d0d;border-radius:6px;border:1px solid #1c1c1c">
+          <div style="display:flex;align-items:center;gap:8px">
+            <input type="checkbox" id="ab-br-huge" value="huge" onchange="saveAutoBetConfig()" style="accent-color:#555;flex-shrink:0">
+            <div>
+              <div style="color:#555;font-size:0.77rem">Dominant</div>
+              <div style="color:#383838;font-size:0.68rem">-400+ / +350+ · crossovers rare</div>
+            </div>
+          </div>
+          <span style="color:#383838;font-size:0.68rem;background:#111;border-radius:3px;padding:1px 5px;flex-shrink:0">~8%</span>
+        </label>
       </div>
     </div>
 
     <!-- Max per session -->
-    <div style="display:flex;justify-content:space-between;align-items:center">
-      <span style="color:#777">Max / session</span>
-      <input id="ab-max" type="number" min="1" max="20" value="3" style="width:50px;background:#0d0d0d;border:1px solid #2a2a2a;border-radius:4px;color:#ddd;padding:3px 6px;font-size:0.84rem" onchange="saveAutoBetConfig()">
+    <div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:3px">
+        <div style="display:flex;align-items:center;gap:5px">
+          <span style="color:#bbb">Max bets per session</span>
+          <button onclick="abHelp('max')" style="width:14px;height:14px;border-radius:50%;background:#181818;border:1px solid #2e2e2e;color:#555;font-size:0.6rem;cursor:pointer;line-height:14px;padding:0;text-align:center">?</button>
+        </div>
+        <input id="ab-max" type="number" min="1" max="20" value="3" style="width:50px;background:#0d0d0d;border:1px solid #252525;border-radius:4px;color:#ddd;padding:3px 6px;font-size:0.82rem" onchange="saveAutoBetConfig()">
+      </div>
+      <div id="ab-tip-max" style="display:none;background:#0a0a0a;border:1px solid #1c1c1c;border-radius:5px;padding:6px 8px;font-size:0.71rem;color:#666;line-height:1.5">
+        Hard cap on total auto-bets this server session. Prevents betting every fight on a big card. Resets when the server restarts or you click "Reset session."
+      </div>
     </div>
 
-    <!-- Auto-hedge toggle -->
-    <div style="display:flex;justify-content:space-between;align-items:center">
-      <span style="color:#777">Auto-hedge at crossover</span>
-      <input type="checkbox" id="ab-hedge" checked onchange="saveAutoBetConfig()" style="width:16px;height:16px;accent-color:#e8b84b">
+    <!-- Auto-hedge at crossover -->
+    <div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:3px">
+        <div style="display:flex;align-items:center;gap:5px">
+          <span style="color:#bbb">Auto-hedge at crossover</span>
+          <button onclick="abHelp('hedge')" style="width:14px;height:14px;border-radius:50%;background:#181818;border:1px solid #2e2e2e;color:#555;font-size:0.6rem;cursor:pointer;line-height:14px;padding:0;text-align:center">?</button>
+        </div>
+        <input type="checkbox" id="ab-hedge" checked onchange="saveAutoBetConfig()" style="width:16px;height:16px;accent-color:#e8b84b">
+      </div>
+      <div id="ab-tip-hedge" style="display:none;background:#0a0a0a;border:1px solid #1c1c1c;border-radius:5px;padding:6px 8px;font-size:0.71rem;color:#666;line-height:1.5">
+        When the underdog's implied odds reach the favorite's (the "crossover"), the bot places a second bet on the original favorite — now at plus-money. Both legs together guarantee profit regardless of who wins.
+      </div>
     </div>
 
-    <!-- Log -->
-    <div id="ab-log" style="background:#0d0d0d;border:1px solid #1a1a1a;border-radius:4px;padding:7px 9px;font-size:0.76rem;color:#555;min-height:32px;max-height:80px;overflow-y:auto">No auto-bets fired this session.</div>
+    <!-- Activity log -->
+    <div>
+      <div style="color:#444;font-size:0.67rem;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:5px">Activity this session</div>
+      <div id="ab-log" style="background:#0d0d0d;border:1px solid #1c1c1c;border-radius:6px;padding:7px 9px;font-size:0.74rem;color:#555;min-height:30px;max-height:80px;overflow-y:auto;line-height:1.55">No auto-bets fired this session.</div>
+    </div>
 
-    <div style="display:flex;gap:8px">
-      <button onclick="resetAutoBetSession()" style="flex:1;background:#1a1a1a;border:1px solid #2a2a2a;color:#888;border-radius:4px;padding:5px;font-size:0.78rem;cursor:pointer">Reset session</button>
-      <button onclick="document.getElementById('ab-panel').style.display='none'" style="flex:1;background:#1a1a1a;border:1px solid #2a2a2a;color:#888;border-radius:4px;padding:5px;font-size:0.78rem;cursor:pointer">Close</button>
+    <!-- Actions -->
+    <div style="display:flex;gap:7px">
+      <button onclick="resetAutoBetSession()" style="flex:1;background:#111;border:1px solid #1e1e1e;color:#555;border-radius:5px;padding:6px;font-size:0.75rem;cursor:pointer">Reset session</button>
+      <button onclick="document.getElementById('ab-panel').style.display='none'" style="flex:1;background:#111;border:1px solid #1e1e1e;color:#555;border-radius:5px;padding:6px;font-size:0.75rem;cursor:pointer">Close</button>
     </div>
   </div>
 </div>
-<button id="ab-fab" onclick="toggleAbPanel()" title="Auto-Bet settings" style="position:fixed;bottom:22px;left:22px;width:48px;height:48px;border-radius:50%;background:#1a1a1a;border:1px solid #333;cursor:pointer;font-size:1.1rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,.6);z-index:200;transition:transform .15s">🤖</button>
+<button id="ab-fab" onclick="toggleAbPanel()" title="Auto-Bet — click to configure" style="position:fixed;bottom:22px;left:22px;width:48px;height:48px;border-radius:50%;background:#1a1a1a;border:1px solid #333;cursor:pointer;font-size:1.1rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,.6);z-index:200;transition:transform .15s" title="Auto-Bet">⚡</button>
 
 <!-- Chat -->
 <button id="chat-fab">💬</button>
@@ -2989,6 +3106,31 @@ async function resetAutoBetSession(){
 
 // Refresh auto-bet log every 30s when panel is open
 setInterval(()=>{ if(document.getElementById('ab-panel').style.display!=='none') loadAutoBetConfig(); }, 30000);
+
+function abHelp(field){
+  const tip=document.getElementById('ab-tip-'+field);
+  if(!tip) return;
+  tip.style.display = tip.style.display==='none' ? 'block' : 'none';
+}
+
+function applyAbPreset(preset){
+  const presets={
+    conservative:{amount:5, side:'dog', brackets:['slight'], max:2, hedge:true},
+    balanced:    {amount:10,side:'dog', brackets:['slight','heavy'],max:3,hedge:true},
+    aggressive:  {amount:15,side:'dog', brackets:['even','slight','heavy'],max:5,hedge:true},
+  };
+  const p=presets[preset];
+  if(!p) return;
+  document.getElementById('ab-amount').value=p.amount;
+  document.getElementById('ab-side').value=p.side;
+  document.getElementById('ab-max').value=p.max;
+  document.getElementById('ab-hedge').checked=p.hedge;
+  ['even','slight','heavy','huge'].forEach(b=>{
+    const el=document.getElementById('ab-br-'+b);
+    if(el) el.checked=p.brackets.includes(b);
+  });
+  saveAutoBetConfig();
+}
 </script>
 </body>
 </html>

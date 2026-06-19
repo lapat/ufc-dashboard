@@ -4397,6 +4397,7 @@ runServerTests().then(async () => {
   await runUnifiedAssistantTests();
   await runAutoBetTests();
   await runAutoBetDryRunTests();
+  await runAutoBetUITests();
 }).then(() => {
   console.log(`\n═══════════════════════════════════`);
   console.log(`  ${passed} passed  ${failed} failed`);
@@ -5306,4 +5307,113 @@ async function runAutoBetDryRunTests() {
       assert(g.value.includes('1200s old') || g.value.includes('s old'), `must report age in seconds: ${g.value}`);
     });
   } catch(e) { console.error('  ✗ U5:', e.message); failed++; }
+}
+
+// ── V: Auto-bet UI redesign ───────────────────────────────────────────────────
+async function runAutoBetUITests() {
+  console.log('\n── V: Auto-bet UI redesign ──');
+
+  const fs = require('fs');
+  const html = fs.readFileSync(require('path').join(__dirname, 'public/index.html'), 'utf8');
+
+  // V1 — help buttons present for each field
+  try {
+    await check('V1: all ? help buttons present (amount, side, brackets, max, hedge)', () => {
+      assert(html.includes("abHelp('amount')"), "must have ? button for amount");
+      assert(html.includes("abHelp('side')"), "must have ? button for side");
+      assert(html.includes("abHelp('brackets')"), "must have ? button for brackets");
+      assert(html.includes("abHelp('max')"), "must have ? button for max");
+      assert(html.includes("abHelp('hedge')"), "must have ? button for hedge");
+    });
+  } catch(e) { console.error('  ✗ V1:', e.message); failed++; }
+
+  // V2 — tooltip divs present for each field
+  try {
+    await check('V2: tooltip divs exist for all help targets', () => {
+      assert(html.includes('ab-tip-amount'), 'must have ab-tip-amount div');
+      assert(html.includes('ab-tip-side'), 'must have ab-tip-side div');
+      assert(html.includes('ab-tip-brackets'), 'must have ab-tip-brackets div');
+      assert(html.includes('ab-tip-max'), 'must have ab-tip-max div');
+      assert(html.includes('ab-tip-hedge'), 'must have ab-tip-hedge div');
+    });
+  } catch(e) { console.error('  ✗ V2:', e.message); failed++; }
+
+  // V3 — presets present
+  try {
+    await check('V3: quick-start preset buttons present (conservative, balanced, aggressive)', () => {
+      assert(html.includes("applyAbPreset('conservative')"), "must have conservative preset");
+      assert(html.includes("applyAbPreset('balanced')"), "must have balanced preset");
+      assert(html.includes("applyAbPreset('aggressive')"), "must have aggressive preset");
+    });
+  } catch(e) { console.error('  ✗ V3:', e.message); failed++; }
+
+  // V4 — plain-English bracket labels with odds ranges
+  try {
+    await check('V4: bracket labels use plain English with odds ranges (not jargon)', () => {
+      assert(html.includes('Slight edge'), 'must have plain-English slight label');
+      assert(html.includes('One-sided'), 'must have plain-English heavy label');
+      assert(html.includes('Even match'), 'must have plain-English even label');
+      assert(html.includes('Dominant'), 'must have dominant label');
+      assert(html.includes('-120 to -200'), 'slight bracket must show actual odds range');
+      assert(html.includes('-200 to -400'), 'heavy bracket must show actual odds range');
+    });
+  } catch(e) { console.error('  ✗ V4:', e.message); failed++; }
+
+  // V5 — crossover rates shown
+  try {
+    await check('V5: crossover rates shown next to each bracket', () => {
+      assert(html.includes('~42%'), 'must show 42% crossover rate for slight');
+      assert(html.includes('~28%'), 'must show 28% for heavy');
+      assert(html.includes('~20%'), 'must show 20% for even');
+      assert(html.includes('~8%'), 'must show 8% for dominant');
+    });
+  } catch(e) { console.error('  ✗ V5:', e.message); failed++; }
+
+  // V6 — visual flow (how it works) present
+  try {
+    await check('V6: "How it works" visual flow present in panel', () => {
+      assert(html.includes('How it works'), 'must have How it works section');
+      assert(html.includes('Odds flip'), 'must mention odds flip in flow');
+      assert(html.includes('Profit'), 'must mention profit in flow');
+    });
+  } catch(e) { console.error('  ✗ V6:', e.message); failed++; }
+
+  // V7 — abHelp function defined in JS
+  try {
+    await check('V7: abHelp() function defined with toggle logic', () => {
+      assert(html.includes('function abHelp('), 'must define abHelp function');
+      assert(html.includes('ab-tip-'), 'abHelp must reference ab-tip- prefix');
+    });
+  } catch(e) { console.error('  ✗ V7:', e.message); failed++; }
+
+  // V8 — applyAbPreset function defined with all three presets
+  try {
+    await check('V8: applyAbPreset() function defined with conservative/balanced/aggressive', () => {
+      assert(html.includes('function applyAbPreset('), 'must define applyAbPreset function');
+      assert(html.includes('conservative'), 'must have conservative preset in function');
+      assert(html.includes('balanced'), 'must have balanced preset in function');
+      assert(html.includes('aggressive'), 'must have aggressive preset in function');
+      assert(html.includes('saveAutoBetConfig()'), 'presets must call saveAutoBetConfig');
+    });
+  } catch(e) { console.error('  ✗ V8:', e.message); failed++; }
+
+  // V9 — STRATEGY.md exists and covers key concepts
+  try {
+    await check('V9: STRATEGY.md exists and covers crossover math, brackets, win-win condition', () => {
+      const md = fs.readFileSync(require('path').join(__dirname, 'STRATEGY.md'), 'utf8');
+      assert(md.includes('crossover'), 'must explain crossover concept');
+      assert(md.includes('(D1 - 1)(D2 - 1) > 1'), 'must include win-win condition formula');
+      assert(md.includes('~42%'), 'must include crossover rate data');
+      assert(md.includes('classifyOddsBracket'), 'must document bracket classification');
+      assert(md.includes('9 Safety Guards') || md.includes('safety guard'), 'must document safety guards');
+    });
+  } catch(e) { console.error('  ✗ V9:', e.message); failed++; }
+
+  // V10 — FAB button uses plain label
+  try {
+    await check('V10: FAB button has plain title (not just robot emoji)', () => {
+      assert(html.includes('Auto-Bet'), 'FAB title must mention Auto-Bet');
+      assert(html.includes('toggleAbPanel'), 'FAB must call toggleAbPanel');
+    });
+  } catch(e) { console.error('  ✗ V10:', e.message); failed++; }
 }
