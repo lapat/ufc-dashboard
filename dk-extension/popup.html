@@ -27,7 +27,7 @@
     .capture .url{color:#e8b84b88;margin-bottom:2px}
     .capture .preview.bets{color:#69db7c}
     #empty{color:#252525;font-size:0.7rem;padding:8px 0}
-    .user-row{display:flex;gap:6px;align-items:center;margin-bottom:10px}
+    .user-row{display:flex;gap:6px;align-items:center;margin-bottom:6px}
     .user-row input{flex:1;background:#111;border:1px solid #333;border-radius:4px;color:#ddd;font-size:0.7rem;padding:5px 8px;outline:none}
     .user-row input:focus{border-color:#e8b84b}
     .user-row button{background:#1a1a00;border:1px solid #e8b84b44;border-radius:4px;color:#e8b84b;font-size:0.65rem;padding:5px 10px;cursor:pointer;white-space:nowrap}
@@ -40,36 +40,55 @@
     .cm-who.you{color:#e8b84b}.cm-who.bot{color:#74c0fc}.cm-who.ok{color:#69db7c}.cm-who.err{color:#ff6b6b}
     .cm-text{color:#888;line-height:1.4}
     .cm-text b{color:#ddd}
-    .bet-row{display:flex;gap:6px}
+    .bet-row{display:flex;gap:6px;margin-bottom:6px}
     .bet-row input{flex:1;background:#111;border:1px solid #333;border-radius:4px;color:#ddd;font-size:0.72rem;padding:6px 10px;outline:none}
     .bet-row input:focus{border-color:#e8b84b}
     .bet-row input::placeholder{color:#333}
-    .bet-row button{background:#1a1a00;border:1px solid #e8b84b66;border-radius:4px;color:#e8b84b;font-size:0.7rem;padding:6px 12px;cursor:pointer;font-weight:700}
-    .bet-row button:hover{background:#2a2600}
-    .bet-row button:disabled{opacity:0.4;cursor:default}
+    .bet-row button#betGo{background:#1a1a00;border:1px solid #e8b84b66;border-radius:4px;color:#e8b84b;font-size:0.7rem;padding:6px 12px;cursor:pointer;font-weight:700}
+    .bet-row button#betGo:hover{background:#2a2600}
+    .bet-row button#betGo:disabled{opacity:0.4;cursor:default}
+    /* STOP countdown button */
+    #stopBtn{display:none;background:#3a0000;border:1px solid #ff6b6b88;border-radius:4px;color:#ff6b6b;font-size:0.72rem;padding:6px 12px;cursor:pointer;font-weight:700;white-space:nowrap;animation:pulse 0.8s infinite alternate}
+    #stopBtn:hover{background:#5a0000}
+    @keyframes pulse{from{border-color:#ff6b6b44}to{border-color:#ff6b6b}}
+    /* Strategy state badge */
+    #strategyRow{display:flex;align-items:center;gap:6px;margin-bottom:8px;font-size:0.62rem}
+    #stratLabel{color:#444;text-transform:uppercase;letter-spacing:1px}
+    #stratState{color:#333;font-weight:700;font-size:0.68rem}
   </style>
 </head>
 <body>
-  <h1>⚡ Bet Bot DK Sync <span style="color:#333;font-size:0.65rem;font-weight:400;letter-spacing:0">v2.7</span></h1>
+  <h1>⚡ Bet Bot DK Sync <span style="color:#333;font-size:0.65rem;font-weight:400;letter-spacing:0">v2.8</span></h1>
 
   <!-- ── Bet chat ── -->
   <div class="section" style="margin-bottom:6px">Bet Chat
-    <span style="color:#333;font-size:0.58rem;font-weight:400">try: bet canada 0.01 · bet draw 0.01</span>
+    <span style="color:#333;font-size:0.58rem;font-weight:400">try: bet canada 0.01 · cancel</span>
   </div>
-  <div id="chat-log"><div class="cm"><span class="cm-who bot">BOT</span><span class="cm-text">Ready. Type <b>bet [team/draw] [amount]</b> — game must be visible on DK tab.</span></div></div>
-  <div class="bet-row" style="margin-bottom:12px">
-    <input id="betCmd" placeholder="bet canada 0.01" spellcheck="false"/>
-    <button id="betGo">GO</button>
+  <div id="chat-log">
+    <div class="cm"><span class="cm-who bot">BOT</span><span class="cm-text">Ready. Type <b>bet [team] [amount]</b> or <b>bet canada 10, hedge at crossover</b></span></div>
   </div>
 
-  <!-- Manual username — set once so bets are isolated per person -->
+  <!-- Input row + STOP button side by side -->
+  <div class="bet-row" style="margin-bottom:4px">
+    <input id="betCmd" placeholder="bet canada 0.01" spellcheck="false"/>
+    <button id="betGo">GO</button>
+    <button id="stopBtn">STOP</button>
+  </div>
+
+  <!-- Strategy state indicator -->
+  <div id="strategyRow">
+    <span id="stratLabel">Strategy:</span>
+    <span id="stratState">IDLE</span>
+  </div>
+
+  <!-- Manual username -->
   <div class="user-row">
     <input id="userInput" placeholder="Your username (e.g. louis, ish)" spellcheck="false"/>
     <button id="saveUser">Set</button>
   </div>
 
   <!-- Auto-login credentials -->
-  <div class="section" style="margin-top:8px">Auto-Login</div>
+  <div class="section" style="margin-top:4px">Auto-Login</div>
   <div class="user-row">
     <input id="dkEmail" type="email" placeholder="DK email" spellcheck="false" autocomplete="off"/>
   </div>
@@ -101,10 +120,7 @@
     </div>
   </div>
 
-  <div class="section">
-    Debug Log
-    <span class="clr" id="clrLog">clear</span>
-  </div>
+  <div class="section">Debug Log <span class="clr" id="clrLog">clear</span></div>
   <div id="debugLog"></div>
 
   <div class="section">Recent Captures</div>

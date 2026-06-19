@@ -280,17 +280,34 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
         return;
       }
 
-      // All 7 checks pass — fire the hedge bet
+      // All 7 checks pass — show 3s STOP countdown before firing
       const hedgeAmount = msg.hedgeAmount || strategy.hedgeAmount;
+      const hedgeSide   = strategy.leg2Side || msg.leg2?.side;
+      const hedgeOdds   = msg.leg2?.oddsText || '?';
+      addLog(`Triple verify PASSED — 3s countdown before hedge: ${hedgeSide} $${hedgeAmount}`);
+
+      // Notify popup to show STOP button countdown
+      chrome.runtime.sendMessage({ type: 'HEDGE_COUNTDOWN', side: hedgeSide, amount: hedgeAmount, oddsText: hedgeOdds }).catch(() => {});
+
+      // Wait 3s — user can send STRATEGY_CANCEL during this window
+      await new Promise(res => setTimeout(res, 3000));
+
+      // Re-check strategy wasn't cancelled during the 3s window
+      const r2 = await chrome.storage.local.get(['pendingStrategy']);
+      const stratNow = r2.pendingStrategy || { state: 'IDLE' };
+      if (stratNow.state !== 'WATCHING_HEDGE') {
+        addLog(`Hedge aborted — state changed to ${stratNow.state} during countdown`);
+        return;
+      }
+
       const firedStrategy = { ...nextStrategy, state: 'HEDGE_FIRED', updatedAt: Date.now() };
       await chrome.storage.local.set({ pendingStrategy: firedStrategy });
       chrome.runtime.sendMessage({ type: 'STRATEGY_UPDATE', strategy: firedStrategy }).catch(() => {});
-      addLog(`Triple verify PASSED — firing hedge: ${strategy.leg2Side} $${hedgeAmount}`);
+      addLog(`Firing hedge: ${hedgeSide} $${hedgeAmount}`);
 
-      // Trigger the actual hedge bet placement
       chrome.runtime.sendMessage({
         type: 'PLACE_BET',
-        side: strategy.leg2Side,
+        side: hedgeSide,
         amount: hedgeAmount,
         isAutoHedge: true,
       }).catch(() => {});
@@ -308,6 +325,18 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
     const { side, amount, tabId: requestedTabId } = msg;
     const popupPort = sender;
     (async () => {
+      // ── Idempotency check — block duplicate bets within 30s ──────────────
+      // Key: userId + side + amount (no gameId needed — same user/side/amount in 30s = duplicate)
+      const betKey = `${dkUserId}|${side}|${amount}`;
+      const idempotent = await chrome.storage.local.get(['lastBetKey', 'lastBetKeyTs']);
+      const keyAge = idempotent.lastBetKeyTs ? Date.now() - idempotent.lastBetKeyTs : Infinity;
+      if (idempotent.lastBetKey === betKey && keyAge < 30000) {
+        addLog(`IDEMPOTENT: duplicate PLACE_BET blocked — ${side} $${amount} (${Math.round(keyAge/1000)}s ago)`);
+        chrome.runtime.sendMessage({ type: 'BET_RESULT', ok: false, step: 'duplicate', error: `Duplicate bet blocked — same bet was placed ${Math.round(keyAge/1000)}s ago` });
+        return;
+      }
+      await chrome.storage.local.set({ lastBetKey: betKey, lastBetKeyTs: Date.now() });
+
       // Find the sportsbook tab to place on (prefer active, fall back to any non-mybets DK tab)
       const allDk = await chrome.tabs.query({ url: 'https://sportsbook.draftkings.com/*' });
       const target = allDk.find(t => !t.url?.includes('/mybets') && t.active)

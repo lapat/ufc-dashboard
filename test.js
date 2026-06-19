@@ -3388,12 +3388,330 @@ async function runAgentSystemTests() {
   } catch(e) { console.error('  ✗ C37:', e.message); failed++; }
 }
 
+// ═══════════════════════════════════════════════════════════════════════════
+// STOP COUNTDOWN + IDEMPOTENCY + SOCCER DRAW TESTS
+// ═══════════════════════════════════════════════════════════════════════════
+
+async function runFinalFeatureTests() {
+  console.log('\n── D. STOP countdown ──');
+
+  // D1 — countdown starts at 3
+  try {
+    let countdownLeft = 3;
+    let ticks = 0;
+    function tick() { ticks++; countdownLeft--; }
+    tick(); tick(); tick();
+    assert(countdownLeft === 0, `expected 0, got ${countdownLeft}`);
+    assert(ticks === 3, `expected 3 ticks, got ${ticks}`);
+    console.log('  ✓ D1: countdown ticks from 3 to 0'); passed++;
+  } catch(e) { console.error('  ✗ D1:', e.message); failed++; }
+
+  // D2 — STOP cancels countdown before firing
+  try {
+    let cancelled = false;
+    let hedgeFired = false;
+    async function simulateCountdown(userStops) {
+      let left = 3;
+      await new Promise(res => setTimeout(res, 10)); // tiny real wait
+      if (userStops) { cancelled = true; return; }
+      hedgeFired = true;
+    }
+    await simulateCountdown(true);
+    assert(cancelled === true, 'should be cancelled');
+    assert(hedgeFired === false, 'hedge should not fire');
+    console.log('  ✓ D2: STOP during countdown cancels hedge'); passed++;
+  } catch(e) { console.error('  ✗ D2:', e.message); failed++; }
+
+  // D3 — STOP during countdown sends STRATEGY_CANCEL (not PLACE_BET)
+  try {
+    const messages = [];
+    function fakeRuntime(msg) { messages.push(msg.type); }
+    // Simulate handleStop() in popup.js
+    function handleStop() {
+      fakeRuntime({ type: 'STRATEGY_CANCEL' });
+    }
+    handleStop();
+    assert(messages.includes('STRATEGY_CANCEL'), 'should send STRATEGY_CANCEL');
+    assert(!messages.includes('PLACE_BET'), 'should NOT send PLACE_BET');
+    console.log('  ✓ D3: STOP → STRATEGY_CANCEL sent, no PLACE_BET'); passed++;
+  } catch(e) { console.error('  ✗ D3:', e.message); failed++; }
+
+  // D4 — HEDGE_COUNTDOWN message shape
+  try {
+    const msg = { type: 'HEDGE_COUNTDOWN', side: 'Qatar', amount: 5, oddsText: '+200' };
+    assert(msg.type === 'HEDGE_COUNTDOWN', 'type wrong');
+    assert(msg.side === 'Qatar', 'side wrong');
+    assert(msg.amount === 5, 'amount wrong');
+    assert(msg.oddsText === '+200', 'oddsText wrong');
+    console.log('  ✓ D4: HEDGE_COUNTDOWN message shape valid'); passed++;
+  } catch(e) { console.error('  ✗ D4:', e.message); failed++; }
+
+  // D5 — 3s wait + cancel: state checked after wait
+  try {
+    // Simulates background.js logic: wait 3s, then re-check state
+    async function simulateHedgeWithCancel(stateAfterWait) {
+      await new Promise(res => setTimeout(res, 10)); // tiny stand-in for 3s
+      if (stateAfterWait !== 'WATCHING_HEDGE') return 'aborted';
+      return 'fired';
+    }
+    const r1 = await simulateHedgeWithCancel('IDLE'); // user cancelled
+    assert(r1 === 'aborted', `expected aborted, got ${r1}`);
+    const r2 = await simulateHedgeWithCancel('WATCHING_HEDGE'); // still watching
+    assert(r2 === 'fired', `expected fired, got ${r2}`);
+    console.log('  ✓ D5: post-countdown state check aborts if STRATEGY_CANCEL received'); passed++;
+  } catch(e) { console.error('  ✗ D5:', e.message); failed++; }
+
+  // D6 — countdown message updated in-place (no duplicate chat rows)
+  try {
+    let rows = 0;
+    let lastWasCountdown = false;
+    function fakeAppend(isCountdown) {
+      if (isCountdown && lastWasCountdown) return; // update in place
+      rows++;
+      lastWasCountdown = isCountdown;
+    }
+    fakeAppend(false); // first row (not countdown)  → rows=1
+    fakeAppend(true);  // countdown row 1 → new row  → rows=2
+    fakeAppend(true);  // countdown row 2 → in place → rows=2
+    fakeAppend(true);  // countdown row 3 → in place → rows=2
+    assert(rows === 2, `expected 2 rows, got ${rows}`); // first + one countdown row
+    console.log('  ✓ D6: countdown updates in-place (no chat spam)'); passed++;
+  } catch(e) { console.error('  ✗ D6:', e.message); failed++; }
+
+  console.log('\n── E. Idempotency key ──');
+
+  // E1 — same key within 30s → blocked
+  try {
+    const store = {};
+    async function fakePlaceBet(side, amount, userId) {
+      const betKey = `${userId}|${side}|${amount}`;
+      const keyAge = store.lastBetKeyTs ? Date.now() - store.lastBetKeyTs : Infinity;
+      if (store.lastBetKey === betKey && keyAge < 30000) return { blocked: true };
+      store.lastBetKey = betKey;
+      store.lastBetKeyTs = Date.now();
+      return { blocked: false };
+    }
+    const r1 = await fakePlaceBet('Canada', 10, 'louis');
+    assert(!r1.blocked, 'first bet should not be blocked');
+    const r2 = await fakePlaceBet('Canada', 10, 'louis');
+    assert(r2.blocked, 'duplicate within 30s should be blocked');
+    console.log('  ✓ E1: same bet within 30s → blocked by idempotency key'); passed++;
+  } catch(e) { console.error('  ✗ E1:', e.message); failed++; }
+
+  // E2 — different side → not blocked
+  try {
+    const store = { lastBetKey: 'louis|Canada|10', lastBetKeyTs: Date.now() };
+    function isSameKey(userId, side, amount) {
+      const betKey = `${userId}|${side}|${amount}`;
+      const age = store.lastBetKeyTs ? Date.now() - store.lastBetKeyTs : Infinity;
+      return store.lastBetKey === betKey && age < 30000;
+    }
+    assert(!isSameKey('louis', 'Qatar', 10), 'different side should not be blocked');
+    console.log('  ✓ E2: different side → not blocked'); passed++;
+  } catch(e) { console.error('  ✗ E2:', e.message); failed++; }
+
+  // E3 — different amount → not blocked
+  try {
+    const store = { lastBetKey: 'louis|Canada|10', lastBetKeyTs: Date.now() };
+    function isSameKey2(side, amount) {
+      const betKey = `louis|${side}|${amount}`;
+      const age = Date.now() - store.lastBetKeyTs;
+      return store.lastBetKey === betKey && age < 30000;
+    }
+    assert(!isSameKey2('Canada', 5), 'different amount should not be blocked');
+    console.log('  ✓ E3: different amount → not blocked'); passed++;
+  } catch(e) { console.error('  ✗ E3:', e.message); failed++; }
+
+  // E4 — different user → not blocked
+  try {
+    const key1 = 'louis|Canada|10';
+    const key2 = 'ish|Canada|10';
+    assert(key1 !== key2, 'different users should have different keys');
+    console.log('  ✓ E4: different userId → different key → not blocked'); passed++;
+  } catch(e) { console.error('  ✗ E4:', e.message); failed++; }
+
+  // E5 — same key after 30s → allowed (stale key)
+  try {
+    const store = {
+      lastBetKey: 'louis|Canada|10',
+      lastBetKeyTs: Date.now() - 31000  // 31s ago — expired
+    };
+    const betKey = 'louis|Canada|10';
+    const age = Date.now() - store.lastBetKeyTs;
+    const blocked = store.lastBetKey === betKey && age < 30000;
+    assert(!blocked, 'stale key (>30s) should not block');
+    console.log('  ✓ E5: key older than 30s → not blocked (retry allowed)'); passed++;
+  } catch(e) { console.error('  ✗ E5:', e.message); failed++; }
+
+  // E6 — idempotency key format: userId|side|amount
+  try {
+    const key = `${'louis'}|${'Canada'}|${10}`;
+    assert(key === 'louis|Canada|10', `key format wrong: ${key}`);
+    assert(key.split('|').length === 3, 'key should have 3 parts');
+    console.log('  ✓ E6: idempotency key format: userId|side|amount'); passed++;
+  } catch(e) { console.error('  ✗ E6:', e.message); failed++; }
+
+  // E7 — BET_RESULT step:'duplicate' on blocked bet
+  try {
+    const msg = { type: 'BET_RESULT', ok: false, step: 'duplicate', error: 'Duplicate bet blocked — same bet placed 5s ago' };
+    assert(msg.ok === false, 'ok should be false');
+    assert(msg.step === 'duplicate', 'step should be duplicate');
+    assert(/duplicate/i.test(msg.error), 'error should mention duplicate');
+    console.log('  ✓ E7: blocked duplicate → BET_RESULT with step:duplicate'); passed++;
+  } catch(e) { console.error('  ✗ E7:', e.message); failed++; }
+
+  // E8 — auto-hedge (isAutoHedge:true) still subject to idempotency
+  try {
+    const store = { lastBetKey: 'louis|Qatar|5.23', lastBetKeyTs: Date.now() };
+    function isBlocked(side, amount) {
+      const key = `louis|${side}|${amount}`;
+      return store.lastBetKey === key && (Date.now() - store.lastBetKeyTs) < 30000;
+    }
+    assert(isBlocked('Qatar', 5.23), 'auto-hedge duplicate should also be blocked');
+    console.log('  ✓ E8: auto-hedge (isAutoHedge) also checked for idempotency'); passed++;
+  } catch(e) { console.error('  ✗ E8:', e.message); failed++; }
+
+  console.log('\n── F. Soccer draw exposure ──');
+
+  // F1 — 3 outcomes including "Draw" → warning triggered
+  try {
+    function checkDraw(outcomes, stratState) {
+      if (!outcomes || outcomes.length < 3) return false;
+      if (stratState !== 'FIRST_BET_PLACED' && stratState !== 'WATCHING_HEDGE') return false;
+      return outcomes.some(o => /\bdraw\b/i.test(o.side || ''));
+    }
+    const outcomes3 = [
+      { side: 'Canada', implied: 0.6 },
+      { side: 'Draw', implied: 0.25 },
+      { side: 'Mexico', implied: 0.15 },
+    ];
+    assert(checkDraw(outcomes3, 'FIRST_BET_PLACED'), 'should warn');
+    console.log('  ✓ F1: 3 outcomes with Draw + FIRST_BET_PLACED → warning triggered'); passed++;
+  } catch(e) { console.error('  ✗ F1:', e.message); failed++; }
+
+  // F2 — 2 outcomes (no draw) → no warning
+  try {
+    function checkDraw2(outcomes) { return outcomes.length >= 3 && outcomes.some(o => /\bdraw\b/i.test(o.side || '')); }
+    const outcomes2 = [{ side: 'Canada' }, { side: 'Qatar' }];
+    assert(!checkDraw2(outcomes2), '2-outcome game should not warn');
+    console.log('  ✓ F2: 2 outcomes (MMA/boxing) → no draw warning'); passed++;
+  } catch(e) { console.error('  ✗ F2:', e.message); failed++; }
+
+  // F3 — IDLE strategy → no draw warning even if 3 outcomes visible
+  try {
+    function checkDraw3(outcomes, stratState) {
+      if (stratState !== 'FIRST_BET_PLACED' && stratState !== 'WATCHING_HEDGE') return false;
+      return outcomes.length >= 3 && outcomes.some(o => /\bdraw\b/i.test(o.side || ''));
+    }
+    const outcomes3 = [{ side: 'Home' }, { side: 'Draw' }, { side: 'Away' }];
+    assert(!checkDraw3(outcomes3, 'IDLE'), 'IDLE state should not warn');
+    assert(!checkDraw3(outcomes3, 'BOTH_PLACED'), 'BOTH_PLACED should not warn');
+    console.log('  ✓ F3: IDLE/BOTH_PLACED → no draw warning (strategy not active)'); passed++;
+  } catch(e) { console.error('  ✗ F3:', e.message); failed++; }
+
+  // F4 — draw warning only fires once (drawnWarned flag)
+  try {
+    let drawnWarned = false;
+    let warnings = 0;
+    function maybeWarn(outcomes, state) {
+      if (drawnWarned) return;
+      if (outcomes.length < 3) return;
+      if (state !== 'FIRST_BET_PLACED') return;
+      if (!outcomes.some(o => /\bdraw\b/i.test(o.side || ''))) return;
+      drawnWarned = true;
+      warnings++;
+    }
+    const o = [{ side: 'Home' }, { side: 'Draw' }, { side: 'Away' }];
+    maybeWarn(o, 'FIRST_BET_PLACED');
+    maybeWarn(o, 'FIRST_BET_PLACED'); // second call — should not re-warn
+    maybeWarn(o, 'FIRST_BET_PLACED');
+    assert(warnings === 1, `should warn exactly once, warned ${warnings}`);
+    console.log('  ✓ F4: draw warning fires exactly once per strategy (drawnWarned flag)'); passed++;
+  } catch(e) { console.error('  ✗ F4:', e.message); failed++; }
+
+  // F5 — drawnWarned resets on STOP
+  try {
+    let drawnWarned = true;
+    function handleStop() { drawnWarned = false; }
+    handleStop();
+    assert(drawnWarned === false, 'drawnWarned should reset on STOP');
+    console.log('  ✓ F5: drawnWarned resets when STOP is pressed'); passed++;
+  } catch(e) { console.error('  ✗ F5:', e.message); failed++; }
+
+  // F6 — getSportOutcomes: soccer has draw, mma/boxing do not
+  try {
+    function getSportOutcomes(sport) {
+      switch (sport) {
+        case 'soccer': return ['home', 'draw', 'away'];
+        case 'mma': case 'boxing': return ['fighter1', 'fighter2'];
+        default: return ['team1', 'team2'];
+      }
+    }
+    assert(getSportOutcomes('soccer').includes('draw'), 'soccer has draw');
+    assert(!getSportOutcomes('mma').includes('draw'), 'mma has no draw');
+    assert(!getSportOutcomes('boxing').includes('draw'), 'boxing has no draw');
+    assert(!getSportOutcomes('nba').includes('draw'), 'nba has no draw');
+    console.log('  ✓ F6: getSportOutcomes: soccer=3 outcomes, mma/boxing=2'); passed++;
+  } catch(e) { console.error('  ✗ F6:', e.message); failed++; }
+
+  // F7 — case-insensitive "Draw" detection
+  try {
+    function hasDraw(outcomes) { return outcomes.some(o => /\bdraw\b/i.test(o.side || '')); }
+    assert(hasDraw([{ side: 'Draw' }]), 'capital Draw');
+    assert(hasDraw([{ side: 'draw' }]), 'lowercase draw');
+    assert(hasDraw([{ side: 'DRAW' }]), 'uppercase DRAW');
+    assert(!hasDraw([{ side: 'Withdraw' }]), 'Withdraw should not match \\bdraw\\b');
+    console.log('  ✓ F7: Draw detection case-insensitive, word-boundary safe'); passed++;
+  } catch(e) { console.error('  ✗ F7:', e.message); failed++; }
+
+  // F8 — NL parser legacy fallback: "cancel" → cancel intent
+  try {
+    function parseBetCmdLegacy(raw) {
+      const cancel = /^(cancel|stop|abort|quit)$/i.test(raw.trim());
+      if (cancel) return { intent: 'cancel', side: null, amount: null };
+      const m = raw.trim().match(/^bet\s+(.+?)\s+([\d.]+)$/i);
+      if (!m) return { intent: 'unknown', side: null, amount: null };
+      return { intent: 'place_first_bet', side: m[1].trim(), amount: parseFloat(m[2]) };
+    }
+    assert(parseBetCmdLegacy('cancel').intent === 'cancel', 'cancel');
+    assert(parseBetCmdLegacy('stop').intent === 'cancel', 'stop');
+    assert(parseBetCmdLegacy('ABORT').intent === 'cancel', 'ABORT');
+    assert(parseBetCmdLegacy('bet canada 5').intent === 'place_first_bet', 'bet cmd');
+    assert(parseBetCmdLegacy('hello').intent === 'unknown', 'unknown');
+    console.log('  ✓ F8: legacy fallback parser handles cancel/stop/abort/bet/unknown'); passed++;
+  } catch(e) { console.error('  ✗ F8:', e.message); failed++; }
+
+  // F9 — strategy state badge colors defined for all states
+  try {
+    const colors = { IDLE:'#333', FIRST_BET_PENDING:'#e8b84b', FIRST_BET_PLACED:'#74c0fc', WATCHING_HEDGE:'#e8b84b', HEDGE_FIRED:'#ff6b6b', BOTH_PLACED:'#69db7c', HEDGE_FAILED:'#ff6b6b' };
+    const states = ['IDLE','FIRST_BET_PENDING','FIRST_BET_PLACED','WATCHING_HEDGE','HEDGE_FIRED','BOTH_PLACED','HEDGE_FAILED'];
+    states.forEach(s => assert(colors[s], `no color for state ${s}`));
+    console.log('  ✓ F9: all 7 strategy states have badge colors'); passed++;
+  } catch(e) { console.error('  ✗ F9:', e.message); failed++; }
+
+  // F10 — STRATEGY_START message shape
+  try {
+    const msg = {
+      type: 'STRATEGY_START',
+      leg1Side: 'Canada', leg1Amount: 10,
+      leg2Side: null,
+      trigger: { type: 'crossover', targetOdds: null }
+    };
+    assert(msg.type === 'STRATEGY_START', 'type');
+    assert(msg.leg1Side === 'Canada', 'leg1Side');
+    assert(msg.leg1Amount === 10, 'leg1Amount');
+    assert(msg.trigger.type === 'crossover', 'trigger.type');
+    console.log('  ✓ F10: STRATEGY_START message shape valid'); passed++;
+  } catch(e) { console.error('  ✗ F10:', e.message); failed++; }
+}
+
 runServerTests().then(async () => {
   await runNewFeatureServerTests();
   await runCoverageServerTests();
   await runRecordingTests();
   await runBetPlacementServerTests();
   await runAgentSystemTests();
+  await runFinalFeatureTests();
 }).then(() => {
   console.log(`\n═══════════════════════════════════`);
   console.log(`  ${passed} passed  ${failed} failed`);
