@@ -39,6 +39,37 @@ let _cachedSummaryJson = null;
 let _oddsApiCreditsUsed = null;
 let _oddsApiCreditsRemaining = null;
 
+// ── Dashboard bet command queue ───────────────────────────────────────────────
+// Commands typed in the dashboard chat are queued here; the Chrome extension
+// polls /api/pending-commands every 5s and executes them on DraftKings.
+const DATA_ROOT_DIR = process.env.DATA_DIR || __dirname;
+const COMMAND_QUEUE_FILE = path.join(DATA_ROOT_DIR, 'command_queue.json');
+
+function loadCommandQueue() {
+  try {
+    if (fs.existsSync(COMMAND_QUEUE_FILE)) return JSON.parse(fs.readFileSync(COMMAND_QUEUE_FILE, 'utf8'));
+  } catch {}
+  return [];
+}
+function saveCommandQueue() {
+  try { fs.writeFileSync(COMMAND_QUEUE_FILE, JSON.stringify(commandQueue, null, 2)); } catch {}
+}
+function makeCommand(type, intent) {
+  return {
+    id: Date.now().toString(36) + Math.random().toString(36).slice(2, 7),
+    type,
+    side:    intent.side   || null,
+    amount:  intent.amount || null,
+    trigger: intent.trigger || { type: 'crossover', targetOdds: null },
+    status:  'pending',
+    createdAt: Date.now(),
+    expiresAt: Date.now() + 120000,
+    result: null,
+    strategyHistory: [],
+  };
+}
+let commandQueue = loadCommandQueue();
+
 app.use(express.static('public'));
 app.use(express.json());
 
@@ -864,6 +895,50 @@ app.post('/api/research', async (req, res) => {
   if (!question) return res.status(400).json({ error: 'question required' });
 
   try {
+    // ── Bet command detection — intercept before research flow ────────────────
+    // Keywords that strongly suggest a bet command rather than a research question
+    const looksLikeBet = /\b(bet|wager|place|hedge\s+me|hedge\s+out|put\s+\$?\d+|cancel\s+(the\s+)?(bet|hedge|strategy)|stop\s+the\s+(bet|hedge))\b/i.test(question);
+    if (looksLikeBet) {
+      let intent = { intent: 'unknown' };
+      try {
+        const r = await anthropic.messages.create({
+          model:      'claude-haiku-4-5-20251001',
+          max_tokens: 256,
+          system:     CHAT_SYSTEM(null),
+          messages:   [{ role: 'user', content: question.slice(0, 500) }],
+        });
+        intent = parseChatResponse(r.content[0]?.text?.trim() || '');
+      } catch {}
+
+      if (intent.intent === 'place_first_bet' && intent.side && intent.amount) {
+        const cmd = makeCommand('place_bet', intent);
+        commandQueue.push(cmd);
+        saveCommandQueue();
+        const triggerStr = intent.trigger?.type === 'crossover'
+          ? ' — **auto-hedging at crossover** 🔄'
+          : intent.trigger?.type === 'odds_target'
+          ? ` — auto-hedge when line hits **${intent.trigger.targetOdds}**`
+          : '';
+        return res.json({
+          answer: `**Bet queued** ✅\n\nPlacing **$${intent.amount}** on **${intent.side}**${triggerStr}.\n\nYour extension will execute this on DraftKings now — I'll update you here when it's confirmed.`,
+          betCommand: cmd,
+          usage: { thisQuery: 0, sessionTotal: totalTokensUsed, sessionQueries: totalQueries, estimatedCostUSD: 0 },
+        });
+      }
+
+      if (intent.intent === 'cancel') {
+        const cmd = makeCommand('cancel', intent);
+        commandQueue.push(cmd);
+        saveCommandQueue();
+        return res.json({
+          answer: `**Cancelling strategy** 🛑\n\nStop signal sent to your extension — the watching will stop and no hedge will fire.`,
+          betCommand: cmd,
+          usage: { thisQuery: 0, sessionTotal: totalTokensUsed, sessionQueries: totalQueries, estimatedCostUSD: 0 },
+        });
+      }
+      // intent was query/unknown — fall through to normal research
+    }
+
     // Pull live upcoming odds
     let liveOdds = [];
     try {
@@ -1542,6 +1617,54 @@ app.post('/api/chat', async (req, res) => {
     console.error('[api/chat]', e.message);
     res.status(500).json({ error: e.message });
   }
+});
+
+// ── Command queue endpoints ───────────────────────────────────────────────────
+
+// Extension polls this every 5s to pick up dashboard bet commands
+app.get('/api/pending-commands', (req, res) => {
+  const now = Date.now();
+  // Purge expired commands that haven't been picked up yet
+  commandQueue = commandQueue.filter(c => c.status !== 'pending' || c.expiresAt > now);
+  const pending = commandQueue.find(c => c.status === 'pending');
+  if (pending) {
+    pending.status    = 'picked_up';
+    pending.pickedUpAt = now;
+    saveCommandQueue();
+  }
+  res.json({ command: pending || null });
+});
+
+// Extension posts bet result back so dashboard can show confirmation
+app.post('/api/command-result', (req, res) => {
+  const { commandId, result } = req.body || {};
+  const cmd = commandQueue.find(c => c.id === commandId);
+  if (cmd) {
+    cmd.status      = result?.ok ? 'done' : 'failed';
+    cmd.result      = result;
+    cmd.completedAt = Date.now();
+    saveCommandQueue();
+  }
+  res.json({ ok: true });
+});
+
+// Dashboard polls this to get live status of a queued command
+app.get('/api/command-status/:id', (req, res) => {
+  const cmd = commandQueue.find(c => c.id === req.params.id);
+  res.json(cmd || { status: 'not_found' });
+});
+
+// Extension posts strategy state-machine updates so dashboard shows live progress
+app.post('/api/strategy-update', (req, res) => {
+  const { commandId, state, message } = req.body || {};
+  const cmd = commandQueue.find(c => c.id === commandId);
+  if (cmd) {
+    cmd.strategyState   = state;
+    cmd.strategyMessage = message;
+    cmd.strategyHistory.push({ state, message, ts: Date.now() });
+    saveCommandQueue();
+  }
+  res.json({ ok: true });
 });
 
 app.listen(PORT, () => {

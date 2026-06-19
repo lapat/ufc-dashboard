@@ -199,6 +199,19 @@ if (href.startsWith('https://sportsbook.draftkings.com/') &&
     }
   });
 
+  // Poll server every 5s for bet commands typed in the dashboard chat
+  chrome.storage.local.get(['betBotUrl'], ({ betBotUrl }) => {
+    const serverUrl = (betBotUrl || 'https://ufc-dashboard-production-e03d.up.railway.app').replace(/\/$/, '');
+    setInterval(async () => {
+      try {
+        const r = await fetch(`${serverUrl}/api/pending-commands`);
+        if (!r.ok) return;
+        const { command } = await r.json();
+        if (command) send({ type: 'EXECUTE_COMMAND', command });
+      } catch {}
+    }, 5000);
+  });
+
   setInterval(() => {
     const outcomes = scanOddsFromPage();
     if (outcomes.length === 0) return;

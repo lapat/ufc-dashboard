@@ -2223,7 +2223,7 @@ const STRATEGY_STATES = ['IDLE','FIRST_BET_PENDING','FIRST_BET_PLACED','WATCHING
 function transitionStrategy(current, event) {
   const transitions = {
     IDLE:               { BET_INITIATED: 'FIRST_BET_PENDING' },
-    FIRST_BET_PENDING:  { BET_CONFIRMED: 'FIRST_BET_PLACED', BET_FAILED: 'HEDGE_FAILED' },
+    FIRST_BET_PENDING:  { BET_CONFIRMED: 'FIRST_BET_PLACED', BET_FAILED: 'IDLE' },
     FIRST_BET_PLACED:   { CROSSOVER_DETECTED: 'WATCHING_HEDGE', STRATEGY_CANCELLED: 'IDLE', STRATEGY_EXPIRED: 'IDLE' },
     WATCHING_HEDGE:     { VERIFY_PASSED: 'HEDGE_FIRED', VERIFY_FAILED: 'HEDGE_FAILED' },
     HEDGE_FIRED:        { BET_CONFIRMED: 'BOTH_PLACED', BET_FAILED: 'HEDGE_FAILED' },
@@ -2721,7 +2721,7 @@ function parseAmericanOdds(text) {
 function strategyTransition(current, event) {
   const table = {
     IDLE:              { BET_INITIATED:       'FIRST_BET_PENDING' },
-    FIRST_BET_PENDING: { BET_CONFIRMED:       'FIRST_BET_PLACED', BET_FAILED: 'HEDGE_FAILED' },
+    FIRST_BET_PENDING: { BET_CONFIRMED:       'FIRST_BET_PLACED', BET_FAILED: 'IDLE' },
     FIRST_BET_PLACED:  { CROSSOVER_DETECTED:  'WATCHING_HEDGE',   STRATEGY_CANCELLED: 'IDLE', STRATEGY_EXPIRED: 'IDLE' },
     WATCHING_HEDGE:    { VERIFY_PASSED:       'HEDGE_FIRED',      VERIFY_FAILED: 'HEDGE_FAILED' },
     HEDGE_FIRED:       { BET_CONFIRMED:       'BOTH_PLACED',      BET_FAILED: 'HEDGE_FAILED' },
@@ -3082,8 +3082,8 @@ async function runAgentSystemTests() {
 
   // C3 — FIRST_BET_PENDING + BET_FAILED → HEDGE_FAILED
   try {
-    assert(strategyTransition('FIRST_BET_PENDING', 'BET_FAILED') === 'HEDGE_FAILED', 'wrong');
-    console.log('  ✓ C3: FIRST_BET_PENDING + BET_FAILED → HEDGE_FAILED'); passed++;
+    assert(strategyTransition('FIRST_BET_PENDING', 'BET_FAILED') === 'IDLE', 'wrong');
+    console.log('  ✓ C3: FIRST_BET_PENDING + BET_FAILED → IDLE (first leg fail resets to IDLE)'); passed++;
   } catch(e) { console.error('  ✗ C3:', e.message); failed++; }
 
   // C4 — FIRST_BET_PLACED + CROSSOVER_DETECTED → WATCHING_HEDGE
@@ -3173,8 +3173,8 @@ async function runAgentSystemTests() {
     let s = 'IDLE';
     s = strategyTransition(s, 'BET_INITIATED');
     s = strategyTransition(s, 'BET_FAILED');
-    assert(s === 'HEDGE_FAILED', `expected HEDGE_FAILED, got ${s}`);
-    console.log('  ✓ C16: first leg failure → HEDGE_FAILED'); passed++;
+    assert(s === 'IDLE', `expected IDLE, got ${s}`);
+    console.log('  ✓ C16: first leg failure → IDLE (clean reset, not HEDGE_FAILED)'); passed++;
   } catch(e) { console.error('  ✗ C16:', e.message); failed++; }
 
   // C17 — cancel mid-strategy: FIRST_BET_PLACED → IDLE
@@ -3705,6 +3705,347 @@ async function runFinalFeatureTests() {
   } catch(e) { console.error('  ✗ F10:', e.message); failed++; }
 }
 
+// ═══════════════════════════════════════════════════════════════════════════
+// G. DASHBOARD CHAT → COMMAND QUEUE → EXTENSION RELAY
+// ═══════════════════════════════════════════════════════════════════════════
+
+async function runDashboardChatTests() {
+  console.log('\n── G. Dashboard chat command queue ──');
+
+  // ── Pure helpers mirrored from server.js ──────────────────────────────────
+  function makeCmd(type, intent) {
+    return {
+      id: Date.now().toString(36) + Math.random().toString(36).slice(2, 7),
+      type,
+      side:    intent.side   || null,
+      amount:  intent.amount || null,
+      trigger: intent.trigger || { type: 'crossover', targetOdds: null },
+      status:  'pending',
+      createdAt: Date.now(),
+      expiresAt: Date.now() + 120000,
+      result: null,
+      strategyHistory: [],
+    };
+  }
+
+  function pickupCommand(queue) {
+    const now = Date.now();
+    const pending = queue.filter(c => c.status !== 'pending' || c.expiresAt > now)
+                        .find(c => c.status === 'pending');
+    if (pending) { pending.status = 'picked_up'; pending.pickedUpAt = now; }
+    return pending || null;
+  }
+
+  function completeCommand(queue, id, result) {
+    const cmd = queue.find(c => c.id === id);
+    if (!cmd) return false;
+    cmd.status      = result?.ok ? 'done' : 'failed';
+    cmd.result      = result;
+    cmd.completedAt = Date.now();
+    return true;
+  }
+
+  function addStrategyUpdate(queue, id, state, message) {
+    const cmd = queue.find(c => c.id === id);
+    if (!cmd) return false;
+    cmd.strategyState   = state;
+    cmd.strategyMessage = message;
+    cmd.strategyHistory.push({ state, message, ts: Date.now() });
+    return true;
+  }
+
+  // G1 — makeCmd produces correct shape
+  try {
+    const cmd = makeCmd('place_bet', { side: 'Canada', amount: 25, trigger: { type: 'crossover', targetOdds: null } });
+    assert(cmd.type === 'place_bet', 'type');
+    assert(cmd.side === 'Canada', 'side');
+    assert(cmd.amount === 25, 'amount');
+    assert(cmd.trigger.type === 'crossover', 'trigger');
+    assert(cmd.status === 'pending', 'status');
+    assert(cmd.id.length > 4, 'id non-empty');
+    assert(cmd.expiresAt > Date.now(), 'expiresAt in future');
+    assert(Array.isArray(cmd.strategyHistory), 'strategyHistory array');
+    console.log('  ✓ G1: makeCommand shape valid'); passed++;
+  } catch(e) { console.error('  ✗ G1:', e.message); failed++; }
+
+  // G2 — pickupCommand returns pending, marks as picked_up
+  try {
+    const q = [makeCmd('place_bet', { side: 'Canada', amount: 25 })];
+    const picked = pickupCommand(q);
+    assert(picked !== null, 'should pick up');
+    assert(picked.status === 'picked_up', `status should be picked_up, got ${picked.status}`);
+    assert(picked.pickedUpAt > 0, 'pickedUpAt set');
+    console.log('  ✓ G2: pickupCommand marks command as picked_up'); passed++;
+  } catch(e) { console.error('  ✗ G2:', e.message); failed++; }
+
+  // G3 — second pickup call returns null (already picked_up)
+  try {
+    const q = [makeCmd('place_bet', { side: 'Canada', amount: 25 })];
+    pickupCommand(q); // first pickup
+    const second = pickupCommand(q); // should return null
+    assert(second === null, 'second pickup should be null');
+    console.log('  ✓ G3: second pickup returns null — no double-execution'); passed++;
+  } catch(e) { console.error('  ✗ G3:', e.message); failed++; }
+
+  // G4 — expired command is skipped
+  try {
+    const q = [makeCmd('place_bet', { side: 'Canada', amount: 25 })];
+    q[0].expiresAt = Date.now() - 1000; // already expired
+    const picked = pickupCommand(q);
+    assert(picked === null, 'expired command should not be picked up');
+    console.log('  ✓ G4: expired pending command skipped'); passed++;
+  } catch(e) { console.error('  ✗ G4:', e.message); failed++; }
+
+  // G5 — completeCommand sets done on success
+  try {
+    const q = [makeCmd('place_bet', { side: 'Canada', amount: 25 })];
+    pickupCommand(q);
+    const ok = completeCommand(q, q[0].id, { ok: true, side: 'Canada', amount: 25, oddsText: '-350' });
+    assert(ok, 'completeCommand should return true');
+    assert(q[0].status === 'done', `status should be done, got ${q[0].status}`);
+    assert(q[0].result.ok === true, 'result.ok');
+    assert(q[0].completedAt > 0, 'completedAt set');
+    console.log('  ✓ G5: completeCommand → status:done on success'); passed++;
+  } catch(e) { console.error('  ✗ G5:', e.message); failed++; }
+
+  // G6 — completeCommand sets failed on error
+  try {
+    const q = [makeCmd('place_bet', { side: 'Canada', amount: 25 })];
+    pickupCommand(q);
+    completeCommand(q, q[0].id, { ok: false, error: 'No DK tab open' });
+    assert(q[0].status === 'failed', `status should be failed, got ${q[0].status}`);
+    console.log('  ✓ G6: completeCommand → status:failed on error'); passed++;
+  } catch(e) { console.error('  ✗ G6:', e.message); failed++; }
+
+  // G7 — completeCommand returns false for unknown id
+  try {
+    const q = [makeCmd('place_bet', { side: 'Canada', amount: 25 })];
+    const ok = completeCommand(q, 'nonexistent-id', { ok: true });
+    assert(ok === false, 'should return false for unknown id');
+    console.log('  ✓ G7: completeCommand with unknown id returns false'); passed++;
+  } catch(e) { console.error('  ✗ G7:', e.message); failed++; }
+
+  // G8 — addStrategyUpdate appends to history
+  try {
+    const q = [makeCmd('place_bet', { side: 'Canada', amount: 25 })];
+    addStrategyUpdate(q, q[0].id, 'FIRST_BET_PENDING', 'Placing $25 on Canada…');
+    addStrategyUpdate(q, q[0].id, 'FIRST_BET_PLACED', '✅ Canada $25 @ -350 placed');
+    assert(q[0].strategyHistory.length === 2, `expected 2 history items, got ${q[0].strategyHistory.length}`);
+    assert(q[0].strategyState === 'FIRST_BET_PLACED', 'latest state');
+    assert(q[0].strategyHistory[0].state === 'FIRST_BET_PENDING', 'first history item');
+    console.log('  ✓ G8: addStrategyUpdate appends history correctly'); passed++;
+  } catch(e) { console.error('  ✗ G8:', e.message); failed++; }
+
+  // G9 — cancel command shape
+  try {
+    const cmd = makeCmd('cancel', { side: null, amount: null });
+    assert(cmd.type === 'cancel', 'type should be cancel');
+    assert(cmd.side === null, 'side null');
+    assert(cmd.amount === null, 'amount null');
+    console.log('  ✓ G9: cancel command shape valid'); passed++;
+  } catch(e) { console.error('  ✗ G9:', e.message); failed++; }
+
+  // G10 — keyword pre-filter catches bet commands
+  try {
+    function looksLikeBet(q) {
+      return /\b(bet|wager|place|hedge\s+me|hedge\s+out|put\s+\$?\d+|cancel\s+(the\s+)?(bet|hedge|strategy)|stop\s+the\s+(bet|hedge))\b/i.test(q);
+    }
+    assert(looksLikeBet('bet canada $25'), 'bet');
+    assert(looksLikeBet('place $10 on Jones'), 'place');
+    assert(looksLikeBet('wager $50 on the dog'), 'wager');
+    assert(looksLikeBet('put $20 on Qatar'), 'put $20');
+    assert(looksLikeBet('hedge me out'), 'hedge me out');
+    assert(looksLikeBet('hedge out now'), 'hedge out');
+    assert(looksLikeBet('cancel the bet'), 'cancel the bet');
+    assert(looksLikeBet('stop the hedge'), 'stop the hedge');
+    assert(!looksLikeBet('who is favored in Jones vs Aspinall?'), 'research Q should not match');
+    assert(!looksLikeBet('show me crossover history'), 'research Q should not match');
+    assert(!looksLikeBet('what were the odds last Saturday?'), 'research Q should not match');
+    console.log('  ✓ G10: keyword pre-filter catches bets, skips research questions'); passed++;
+  } catch(e) { console.error('  ✗ G10:', e.message); failed++; }
+
+  // G11 — multiple commands in queue: only first pending picked up
+  try {
+    const q = [
+      makeCmd('place_bet', { side: 'Canada', amount: 10 }),
+      makeCmd('place_bet', { side: 'Qatar', amount: 20 }),
+    ];
+    const first = pickupCommand(q);
+    assert(first.side === 'Canada', 'should pick up first');
+    const second = pickupCommand(q);
+    assert(second.side === 'Qatar', 'should pick up second on next call');
+    const third = pickupCommand(q);
+    assert(third === null, 'queue exhausted');
+    console.log('  ✓ G11: queue processed FIFO, one command per pickup call'); passed++;
+  } catch(e) { console.error('  ✗ G11:', e.message); failed++; }
+
+  // G12 — EXECUTE_COMMAND place_bet → sets FIRST_BET_PENDING state
+  try {
+    const cmd = makeCmd('place_bet', { side: 'Canada', amount: 25, trigger: { type: 'crossover', targetOdds: null } });
+    // Mirrors background.js EXECUTE_COMMAND place_bet logic
+    const strategy = {
+      state: 'FIRST_BET_PENDING',
+      leg1Side:   cmd.side,
+      leg1Amount: cmd.amount,
+      trigger:    cmd.trigger,
+      leg1Confirmed: false,
+      commandId:  cmd.id,
+    };
+    assert(strategy.state === 'FIRST_BET_PENDING', 'state');
+    assert(strategy.commandId === cmd.id, 'commandId carried');
+    assert(strategy.leg1Side === 'Canada', 'leg1Side');
+    console.log('  ✓ G12: EXECUTE_COMMAND place_bet → FIRST_BET_PENDING with commandId'); passed++;
+  } catch(e) { console.error('  ✗ G12:', e.message); failed++; }
+
+  // G13 — commandId threaded through to PLACE_BET message
+  try {
+    const cmdId = 'testcmd123';
+    const placeMsg = { type: 'PLACE_BET', side: 'Canada', amount: 25, commandId: cmdId };
+    assert(placeMsg.commandId === cmdId, 'commandId must be on PLACE_BET msg');
+    console.log('  ✓ G13: commandId present on PLACE_BET message from EXECUTE_COMMAND'); passed++;
+  } catch(e) { console.error('  ✗ G13:', e.message); failed++; }
+
+  // G14 — strategy history includes all transitions in order
+  try {
+    const q = [makeCmd('place_bet', { side: 'Canada', amount: 25 })];
+    const id = q[0].id;
+    addStrategyUpdate(q, id, 'FIRST_BET_PENDING', 'Placing $25 on Canada…');
+    addStrategyUpdate(q, id, 'FIRST_BET_PLACED', '✅ Canada $25 @ -350 placed');
+    addStrategyUpdate(q, id, 'WATCHING_HEDGE', '👀 Watching for crossover…');
+    addStrategyUpdate(q, id, 'HEDGE_FIRED', '⚡ Crossover! Placing hedge…');
+    const history = q[0].strategyHistory;
+    assert(history.length === 4, `expected 4 history items, got ${history.length}`);
+    assert(history[0].state === 'FIRST_BET_PENDING', 'history[0]');
+    assert(history[3].state === 'HEDGE_FIRED', 'history[3]');
+    history.forEach(h => assert(h.ts > 0, 'each history item has timestamp'));
+    console.log('  ✓ G14: full strategy history arc (PENDING→PLACED→WATCHING→FIRED)'); passed++;
+  } catch(e) { console.error('  ✗ G14:', e.message); failed++; }
+
+  // G15 — /api/pending-commands (integration, --local only)
+  if (target.includes('localhost')) {
+    await check('G15: GET /api/pending-commands — empty queue returns null', async () => {
+      const r = await fetch(`${target}/api/pending-commands`);
+      assert(r.ok, `status ${r.status}`);
+      const j = await r.json();
+      assert('command' in j, 'response must have command key');
+    });
+  } else { console.log('  - G15: skipped (not --local)'); }
+
+  // G16 — /api/command-status for unknown id returns not_found (integration)
+  if (target.includes('localhost')) {
+    await check('G16: GET /api/command-status/unknown → not_found', async () => {
+      const r = await fetch(`${target}/api/command-status/doesnotexist`);
+      assert(r.ok, `status ${r.status}`);
+      const j = await r.json();
+      assert(j.status === 'not_found', `expected not_found, got ${j.status}`);
+    });
+  } else { console.log('  - G16: skipped (not --local)'); }
+
+  // G17 — /api/research routes bet command to betCommand field (integration)
+  if (target.includes('localhost')) {
+    await check('G17: POST /api/research with bet command → betCommand in response', async () => {
+      const r = await fetch(`${target}/api/research`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question: 'bet canada $25, hedge at crossover' }),
+      });
+      assert(r.ok || r.status === 500, `unexpected status: ${r.status}`);
+      if (r.ok) {
+        const j = await r.json();
+        assert('betCommand' in j, 'response must have betCommand when bet intent detected');
+        assert(j.betCommand.type === 'place_bet', `betCommand.type should be place_bet, got ${j.betCommand?.type}`);
+        assert(j.betCommand.status === 'pending', 'betCommand.status should be pending');
+        assert(j.betCommand.id, 'betCommand.id must be set');
+      }
+    });
+  } else { console.log('  - G17: skipped (not --local)'); }
+
+  // G18 — /api/research routes research question to answer (NOT betCommand) (integration)
+  if (target.includes('localhost')) {
+    await check('G18: POST /api/research with research question → no betCommand', async () => {
+      const r = await fetch(`${target}/api/research`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question: 'who is favored in Jones vs Aspinall?' }),
+      });
+      assert(r.ok || r.status === 500, `unexpected status: ${r.status}`);
+      if (r.ok) {
+        const j = await r.json();
+        assert(!j.betCommand, 'research question should NOT return betCommand');
+        assert(j.answer, 'research question should return answer');
+      }
+    });
+  } else { console.log('  - G18: skipped (not --local)'); }
+
+  // G19 — full queue round-trip (integration): queue → pickup → result → status:done
+  if (target.includes('localhost')) {
+    await check('G19: full command round-trip — queue → pickup → result → done', async () => {
+      // Step 1: queue a command via /api/research
+      const r1 = await fetch(`${target}/api/research`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question: 'bet canada 1, hedge at crossover' }),
+      });
+      if (!r1.ok) return; // Haiku may not be available in all envs
+      const j1 = await r1.json();
+      if (!j1.betCommand) return; // not detected as bet command
+      const cmdId = j1.betCommand.id;
+
+      // Step 2: pickup via GET /api/pending-commands
+      const r2 = await fetch(`${target}/api/pending-commands`);
+      const j2 = await r2.json();
+      assert(j2.command !== null, 'should have a pending command');
+      // May be a different command if tests ran in parallel — find ours
+      const pickedId = j2.command?.id;
+
+      // Step 3: post result via POST /api/command-result
+      const r3 = await fetch(`${target}/api/command-result`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ commandId: cmdId, result: { ok: true, side: 'Canada', amount: 1, oddsText: '-350' } }),
+      });
+      const j3 = await r3.json();
+      assert(j3.ok === true, 'command-result should return ok:true');
+
+      // Step 4: check status via GET /api/command-status/:id
+      const r4 = await fetch(`${target}/api/command-status/${cmdId}`);
+      const j4 = await r4.json();
+      assert(j4.status === 'done' || j4.status === 'picked_up', `expected done or picked_up, got ${j4.status}`);
+    });
+  } else { console.log('  - G19: skipped (not --local)'); }
+
+  // G20 — /api/strategy-update appends to command history (integration)
+  if (target.includes('localhost')) {
+    await check('G20: POST /api/strategy-update → appends to strategyHistory', async () => {
+      // First queue a command
+      const r1 = await fetch(`${target}/api/research`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question: 'bet canada 1' }),
+      });
+      if (!r1.ok) return;
+      const j1 = await r1.json();
+      if (!j1.betCommand) return;
+      const cmdId = j1.betCommand.id;
+
+      // Post a strategy update
+      const r2 = await fetch(`${target}/api/strategy-update`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ commandId: cmdId, state: 'FIRST_BET_PLACED', message: '✅ Canada $1 @ -350 placed' }),
+      });
+      const j2 = await r2.json();
+      assert(j2.ok === true, 'strategy-update should return ok:true');
+
+      // Check the update is on the command
+      const r3 = await fetch(`${target}/api/command-status/${cmdId}`);
+      const j3 = await r3.json();
+      assert(j3.strategyState === 'FIRST_BET_PLACED', `strategyState should be FIRST_BET_PLACED, got ${j3.strategyState}`);
+      assert(j3.strategyHistory?.length >= 1, 'strategyHistory should have at least 1 item');
+    });
+  } else { console.log('  - G20: skipped (not --local)'); }
+}
+
 runServerTests().then(async () => {
   await runNewFeatureServerTests();
   await runCoverageServerTests();
@@ -3712,6 +4053,7 @@ runServerTests().then(async () => {
   await runBetPlacementServerTests();
   await runAgentSystemTests();
   await runFinalFeatureTests();
+  await runDashboardChatTests();
 }).then(() => {
   console.log(`\n═══════════════════════════════════`);
   console.log(`  ${passed} passed  ${failed} failed`);

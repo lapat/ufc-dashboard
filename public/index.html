@@ -264,6 +264,9 @@
     .msg.user{background:#1e1e1e;color:#aaa;align-self:flex-end;white-space:pre-wrap}
     .msg.assistant{background:#111f11;color:#9acc9a;align-self:flex-start;border:1px solid #1e2e1e}
     .msg.thinking{color:#333;font-style:italic;background:none;border:none;padding:3px 0;font-size:0.82rem}
+    .msg.bet{background:#111a00;border:1px solid #e8b84b44;color:#c8d89a}
+    .msg.bet strong{color:#e8b84b}
+    .msg.bet-status{background:#0d0d0d;border:1px solid #333;color:#666;font-size:0.82rem;font-style:italic}
     .msg.assistant p{margin-bottom:.45em}.msg.assistant p:last-child{margin-bottom:0}
     .msg.assistant strong{color:#e8b84b}
     .msg.assistant table{border-collapse:collapse;width:100%;margin:5px 0;font-size:0.82rem}
@@ -773,8 +776,8 @@
 <button id="chat-fab">💬</button>
 <div id="chat-panel">
   <div id="chat-hdr"><span id="chat-hdr-title">Research</span><span id="chat-usage">0 queries</span></div>
-  <div id="chat-msgs"><div class="msg assistant">Ask anything — fighter history, crossovers, win-win windows, any sport.</div></div>
-  <div id="chat-inp-row"><input id="chat-inp" placeholder="Ask about any matchup..."/><button id="chat-snd">Ask</button></div>
+  <div id="chat-msgs"><div class="msg assistant">Ask anything — fighter history, crossovers, win-win windows. Or: <strong>bet Canada $25, hedge at crossover</strong></div></div>
+  <div id="chat-inp-row"><input id="chat-inp" placeholder="Ask a question or place a bet…"/><button id="chat-snd">Go</button></div>
 </div>
 
 <script>
@@ -2759,17 +2762,77 @@ const fab=document.getElementById('chat-fab'),cpanel=document.getElementById('ch
       cmsgs=document.getElementById('chat-msgs'),cinp=document.getElementById('chat-inp'),
       csnd=document.getElementById('chat-snd'),culbl=document.getElementById('chat-usage');
 fab.addEventListener('click',()=>{ cpanel.classList.toggle('open'); if(cpanel.classList.contains('open')) cinp.focus(); });
-function addMsg(t,r){ const d=document.createElement('div'); d.className=`msg ${r}`; if(r==='assistant'&&typeof marked!=='undefined') d.innerHTML=marked.parse(t); else d.textContent=t; cmsgs.appendChild(d); cmsgs.scrollTop=cmsgs.scrollHeight; return d; }
+function addMsg(t,r,html){
+  const d=document.createElement('div');
+  d.className=`msg ${r}`;
+  if(html){ d.innerHTML=html; }
+  else if((r==='assistant'||r==='bet')&&typeof marked!=='undefined'){ d.innerHTML=marked.parse(t); }
+  else{ d.textContent=t; }
+  cmsgs.appendChild(d); cmsgs.scrollTop=cmsgs.scrollHeight; return d;
+}
+
+async function pollBetResult(cmdId){
+  const statusEl=addMsg('','bet-status',`<span>⏳ Waiting for extension to execute on DraftKings…</span>`);
+  let attempts=0;
+  const iv=setInterval(async()=>{
+    attempts++;
+    if(attempts>60){ clearInterval(iv); statusEl.innerHTML='⚠️ Timed out — is the extension installed with a DraftKings tab open?'; return; }
+    try{
+      const r=await(await fetch(`/api/command-status/${cmdId}`)).json();
+      if(r.status==='picked_up'||r.status==='executing'){
+        statusEl.innerHTML='🔄 Extension picked up command — placing bet on DraftKings…';
+      }
+      if(r.strategyHistory&&r.strategyHistory.length){
+        const last=r.strategyHistory[r.strategyHistory.length-1];
+        statusEl.innerHTML=marked.parse(last.message||'');
+      }
+      if(r.status==='done'){
+        clearInterval(iv);
+        const m=r.result?.message||`✅ Done`;
+        statusEl.className='msg bet'; statusEl.innerHTML=marked.parse(m);
+        // If auto-hedge strategy is running, keep showing updates
+        if(r.result?.bothPlaced===false&&r.strategyState&&r.strategyState!=='BOTH_PLACED'&&r.strategyState!=='HEDGE_FAILED'){
+          pollStrategyUpdates(cmdId);
+        }
+      }
+      if(r.status==='failed'){
+        clearInterval(iv);
+        statusEl.className='msg thinking'; statusEl.innerHTML=`❌ ${r.result?.error||'Bet failed'}`;
+      }
+    }catch{}
+  },2000);
+}
+
+async function pollStrategyUpdates(cmdId){
+  let lastHistoryLen=0;
+  const iv=setInterval(async()=>{
+    try{
+      const r=await(await fetch(`/api/command-status/${cmdId}`)).json();
+      if(r.strategyHistory&&r.strategyHistory.length>lastHistoryLen){
+        const newItems=r.strategyHistory.slice(lastHistoryLen);
+        lastHistoryLen=r.strategyHistory.length;
+        newItems.forEach(item=>addMsg('','bet',marked.parse(item.message||'')));
+      }
+      if(r.strategyState==='BOTH_PLACED'||r.strategyState==='HEDGE_FAILED'){ clearInterval(iv); }
+    }catch{}
+  },3000);
+  // Stop after 4 hours
+  setTimeout(()=>clearInterval(iv),4*60*60*1000);
+}
+
 async function sendMsg(){
   const q=cinp.value.trim(); if(!q) return;
   cinp.value=''; csnd.disabled=true; addMsg(q,'user');
-  const th=addMsg('Researching...','thinking');
+  const thinking=addMsg('Thinking…','thinking');
   try{
     const data=await(await fetch('/api/research',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q})})).json();
-    th.remove(); addMsg(data.answer||data.error,'assistant');
-    if(data.usage) culbl.textContent=`${data.usage.sessionQueries} queries · $${data.usage.estimatedCostUSD.toFixed(3)}`;
+    thinking.remove();
+    const cls=data.betCommand?'bet':'assistant';
+    addMsg(data.answer||data.error,cls);
+    if(data.betCommand){ pollBetResult(data.betCommand.id); }
+    if(data.usage&&data.usage.sessionQueries>0) culbl.textContent=`${data.usage.sessionQueries} queries · $${data.usage.estimatedCostUSD.toFixed(3)}`;
     loadCredits();
-  }catch(e){ th.remove(); addMsg('Error: '+e.message,'assistant'); }
+  }catch(e){ thinking.remove(); addMsg('Error: '+e.message,'thinking'); }
   csnd.disabled=false; cinp.focus();
 }
 csnd.addEventListener('click',sendMsg);

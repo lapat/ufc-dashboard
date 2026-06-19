@@ -1,0 +1,65 @@
+{
+  "fightId": "soccer__mexico_vs_southkorea_2026-06-19",
+  "sport": "soccer_fifa_world_cup",
+  "fightTitle": "Mexico vs South Korea",
+  "startTime": "2026-06-19T02:08:15.222Z",
+  "endTime": "2026-06-19T02:13:12.306Z",
+  "dataPoints": 5,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-06-19T02:08:15.221Z",
+      "fighter1": {
+        "name": "Mexico",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "South Korea",
+        "numericOdds": 350
+      }
+    },
+    {
+      "timestamp": "2026-06-19T02:08:57.069Z",
+      "fighter1": {
+        "name": "Mexico",
+        "numericOdds": 175
+      },
+      "fighter2": {
+        "name": "South Korea",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-06-19T02:10:38.798Z",
+      "fighter1": {
+        "name": "Mexico",
+        "numericOdds": 180
+      },
+      "fighter2": {
+        "name": "South Korea",
+        "numericOdds": 425
+      }
+    },
+    {
+      "timestamp": "2026-06-19T02:11:26.111Z",
+      "fighter1": {
+        "name": "Mexico",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "South Korea",
+        "numericOdds": 1600
+      }
+    },
+    {
+      "timestamp": "2026-06-19T02:12:18.486Z",
+      "fighter1": {
+        "name": "Mexico",
+        "numericOdds": -350
+      },
+      "fighter2": {
+        "name": "South Korea",
+        "numericOdds": 1600
+      }
+    }
+  ]
+}

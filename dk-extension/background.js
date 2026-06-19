@@ -216,6 +216,45 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
   // Schema: { state, leg1Side, leg1Amount, leg1Odds, leg2Side, trigger,
   //           gameId, startedAt, updatedAt, leg1Confirmed, hedgeAmount, expectedHedgeOdds }
 
+  // ── Dashboard chat → extension command relay ─────────────────────────────
+  if (msg.type === 'EXECUTE_COMMAND') {
+    const { command } = msg;
+    addLog(`EXECUTE_COMMAND: ${command.type} ${command.side || ''} $${command.amount || ''} [${command.id}]`);
+
+    if (command.type === 'cancel') {
+      (async () => {
+        await chrome.storage.local.set({ pendingStrategy: { state: 'IDLE', updatedAt: Date.now() } });
+        const tabs = await chrome.tabs.query({ url: 'https://sportsbook.draftkings.com/*' });
+        tabs.forEach(t => chrome.tabs.sendMessage(t.id, { type: 'STOP_WATCHING' }).catch(() => {}));
+        postToServer('/api/command-result', { commandId: command.id, result: { ok: true, message: 'Strategy cancelled' } });
+        chrome.runtime.sendMessage({ type: 'STRATEGY_UPDATE', strategy: { state: 'IDLE' } }).catch(() => {});
+      })();
+      return;
+    }
+
+    if (command.type === 'place_bet' && command.side && command.amount) {
+      (async () => {
+        const strategy = {
+          state: 'FIRST_BET_PENDING',
+          leg1Side:      command.side,
+          leg1Amount:    command.amount,
+          trigger:       command.trigger || { type: 'crossover', targetOdds: null },
+          leg1Confirmed: false,
+          startedAt:     Date.now(),
+          updatedAt:     Date.now(),
+          commandId:     command.id,
+        };
+        await chrome.storage.local.set({ pendingStrategy: strategy });
+        chrome.runtime.sendMessage({ type: 'STRATEGY_UPDATE', strategy }).catch(() => {});
+        postToServer('/api/strategy-update', { commandId: command.id, state: 'FIRST_BET_PENDING', message: `Placing $${command.amount} on ${command.side}…` });
+        // Delegate to existing PLACE_BET handler (commandId carried along)
+        chrome.runtime.sendMessage({ type: 'PLACE_BET', side: command.side, amount: command.amount, commandId: command.id });
+      })();
+      return;
+    }
+    return;
+  }
+
   if (msg.type === 'STRATEGY_START') {
     // Popup sends this after user types "bet $X on Y, auto-hedge at Z"
     const { leg1Side, leg1Amount, trigger, gameId } = msg;
@@ -304,12 +343,21 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
       await chrome.storage.local.set({ pendingStrategy: firedStrategy });
       chrome.runtime.sendMessage({ type: 'STRATEGY_UPDATE', strategy: firedStrategy }).catch(() => {});
       addLog(`Firing hedge: ${hedgeSide} $${hedgeAmount}`);
+      // Notify dashboard chat of crossover
+      if (stratNow.commandId) {
+        postToServer('/api/strategy-update', {
+          commandId: stratNow.commandId,
+          state: 'HEDGE_FIRED',
+          message: `⚡ Crossover detected! Placing hedge: ${hedgeSide} $${hedgeAmount} @ ${hedgeOdds}…`,
+        });
+      }
 
       chrome.runtime.sendMessage({
         type: 'PLACE_BET',
         side: hedgeSide,
         amount: hedgeAmount,
         isAutoHedge: true,
+        commandId: stratNow.commandId || null,
       }).catch(() => {});
     })();
     return;
@@ -322,7 +370,7 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
   }
 
   if (msg.type === 'PLACE_BET') {
-    const { side, amount, tabId: requestedTabId } = msg;
+    const { side, amount, tabId: requestedTabId, commandId } = msg;
     const popupPort = sender;
     (async () => {
       // ── Idempotency check — block duplicate bets within 30s ──────────────
@@ -468,6 +516,17 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
         // Clear idempotency key on failure so user can retry immediately
         if (!result.ok) await chrome.storage.local.remove(['lastBetKey', 'lastBetKeyTs']);
         chrome.runtime.sendMessage({ type: 'BET_RESULT', ...result });
+        // If command came from dashboard chat, post result back to server
+        if (commandId) {
+          postToServer('/api/command-result', { commandId, result });
+          if (result.ok) {
+            postToServer('/api/strategy-update', {
+              commandId,
+              state: 'FIRST_BET_PLACED',
+              message: `✅ ${result.side} $${result.amount} @ ${result.oddsText || '?'} placed${result.confirmed ? ' — confirmed ✓' : ''}`,
+            });
+          }
+        }
 
         // ── Advance state machine based on bet outcome ────────────────────
         (async () => {
@@ -497,6 +556,16 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
             // Terminal state — stop the odds watcher
             const tabs2 = await chrome.tabs.query({ url: 'https://sportsbook.draftkings.com/*' });
             tabs2.forEach(t => chrome.tabs.sendMessage(t.id, { type: 'STOP_WATCHING' }).catch(() => {}));
+            // Report terminal state to dashboard chat
+            if (strat.commandId) {
+              const termMsg = nextState === 'BOTH_PLACED'
+                ? '🎯 **Both legs placed — WIN-WIN locked!** Guaranteed profit regardless of outcome.'
+                : `❌ Hedge failed — strategy reset.`;
+              postToServer('/api/command-result', {
+                commandId: strat.commandId,
+                result: { ok: nextState === 'BOTH_PLACED', bothPlaced: nextState === 'BOTH_PLACED', message: termMsg },
+              });
+            }
           }
           await chrome.storage.local.set({ pendingStrategy: updated });
           addLog(`State: ${strat.state} → ${nextState} (${event})`);
