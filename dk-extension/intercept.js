@@ -34,6 +34,10 @@
     // Get the original promise and return it UNTOUCHED — this keeps any rejection
     // attributed to the caller (DK's code), not our extension.
     const promise = orig.apply(this, args);
+    // Attach a no-op rejection handler so Chrome doesn't attribute DK's own
+    // network failures to intercept.js line 36. DK's caller still gets the
+    // original promise and can chain .then()/.catch() independently.
+    promise.catch(() => {});
     const url = typeof args[0] === 'string' ? args[0] : (args[0]?.url || '');
     if (url.includes('draftkings.com') && url.includes('/api/')) {
       // Observe on a SEPARATE side-chain that never propagates to anyone
