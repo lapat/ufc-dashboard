@@ -125,6 +125,35 @@ function tryExtractUserId(url, data) {
   return null;
 }
 
+// ── Pure strategy helpers (no chrome.* calls — testable as plain functions) ──
+function strategyTransition(current, event) {
+  const table = {
+    IDLE:              { BET_INITIATED:       'FIRST_BET_PENDING' },
+    FIRST_BET_PENDING: { BET_CONFIRMED:       'FIRST_BET_PLACED', BET_FAILED: 'HEDGE_FAILED' },
+    FIRST_BET_PLACED:  { CROSSOVER_DETECTED:  'WATCHING_HEDGE',   STRATEGY_CANCELLED: 'IDLE', STRATEGY_EXPIRED: 'IDLE' },
+    WATCHING_HEDGE:    { VERIFY_PASSED:       'HEDGE_FIRED',       VERIFY_FAILED: 'HEDGE_FAILED' },
+    HEDGE_FIRED:       { BET_CONFIRMED:       'BOTH_PLACED',      BET_FAILED: 'HEDGE_FAILED' },
+    BOTH_PLACED:       {},
+    HEDGE_FAILED:      {},
+  };
+  return (table[current] || {})[event] || current;
+}
+
+// 7-check gate — pure function, all state passed as args
+function tripleVerify(strategy, domState) {
+  const checks = [
+    { name: 'game_identity',    pass: !strategy.gameId || !domState.gameId || strategy.gameId === domState.gameId },
+    { name: 'odds_slippage',    pass: !strategy.expectedHedgeOdds || Math.abs((domState.leg2Odds || 0) - strategy.expectedHedgeOdds) <= 8 },
+    { name: 'market_active',    pass: !domState.suspended },
+    { name: 'hedge_profitable', pass: domState.hedgeProfit === undefined || domState.hedgeProfit > 0 },
+    { name: 'slip_empty',       pass: !domState.slipHasBets },
+    { name: 'balance_sufficient', pass: domState.balance === undefined || domState.balance >= (strategy.hedgeAmount || 0) },
+    { name: 'leg1_confirmed',   pass: strategy.leg1Confirmed === true },
+  ];
+  const failed = checks.filter(c => !c.pass);
+  return { pass: failed.length === 0, checks, failed };
+}
+
 chrome.runtime.onMessage.addListener((msg, sender) => {
   if (msg.type === 'DK_WS_STATUS') {
     if (msg.connected) {
@@ -179,6 +208,99 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
         });
       }
     })();
+    return;
+  }
+
+  // ── Strategy state machine messages ──────────────────────────────────────
+  // State stored in chrome.storage.local as `pendingStrategy`.
+  // Schema: { state, leg1Side, leg1Amount, leg1Odds, leg2Side, trigger,
+  //           gameId, startedAt, updatedAt, leg1Confirmed, hedgeAmount, expectedHedgeOdds }
+
+  if (msg.type === 'STRATEGY_START') {
+    // Popup sends this after user types "bet $X on Y, auto-hedge at Z"
+    const { leg1Side, leg1Amount, trigger, gameId } = msg;
+    (async () => {
+      const strategy = {
+        state: 'FIRST_BET_PENDING',
+        leg1Side, leg1Amount, trigger, gameId: gameId || null,
+        leg1Confirmed: false, startedAt: Date.now(), updatedAt: Date.now()
+      };
+      await chrome.storage.local.set({ pendingStrategy: strategy });
+      addLog(`Strategy started: ${leg1Side} $${leg1Amount} trigger=${JSON.stringify(trigger)}`);
+      chrome.runtime.sendMessage({ type: 'STRATEGY_UPDATE', strategy }).catch(() => {});
+    })();
+    return;
+  }
+
+  if (msg.type === 'STRATEGY_CANCEL') {
+    (async () => {
+      await chrome.storage.local.set({ pendingStrategy: { state: 'IDLE', updatedAt: Date.now() } });
+      // Tell content.js to stop watching
+      const tabs = await chrome.tabs.query({ url: 'https://sportsbook.draftkings.com/*' });
+      tabs.forEach(t => chrome.tabs.sendMessage(t.id, { type: 'STOP_WATCHING' }).catch(() => {}));
+      addLog('Strategy cancelled → IDLE');
+      chrome.runtime.sendMessage({ type: 'STRATEGY_UPDATE', strategy: { state: 'IDLE' } }).catch(() => {});
+    })();
+    return;
+  }
+
+  if (msg.type === 'CROSSOVER_DETECTED') {
+    (async () => {
+      const r = await chrome.storage.local.get(['pendingStrategy']);
+      const strategy = r.pendingStrategy || { state: 'IDLE' };
+
+      // Only act in FIRST_BET_PLACED state
+      if (strategy.state !== 'FIRST_BET_PLACED') {
+        addLog(`CROSSOVER_DETECTED ignored — state is ${strategy.state}`);
+        return;
+      }
+
+      addLog(`Crossover: ${msg.leg1?.oddsText} vs ${msg.leg2?.oddsText} — running triple verify`);
+      const nextStrategy = { ...strategy, state: 'WATCHING_HEDGE', updatedAt: Date.now() };
+      await chrome.storage.local.set({ pendingStrategy: nextStrategy });
+      chrome.runtime.sendMessage({ type: 'STRATEGY_UPDATE', strategy: nextStrategy }).catch(() => {});
+
+      // Triple-verify gate (7 checks) before auto-hedging
+      const domState = {
+        gameId: msg.gameId || null,
+        leg2Odds: msg.leg2?.american,
+        suspended: msg.suspended || false,
+        hedgeProfit: msg.hedgeProfit,
+        slipHasBets: msg.slipHasBets || false,
+        balance: msg.balance,
+      };
+
+      const verify = tripleVerify(strategy, domState);
+      if (!verify.pass) {
+        addLog(`Triple verify FAILED: ${verify.failed.map(c => c.name).join(', ')}`);
+        const failed = { ...nextStrategy, state: 'HEDGE_FAILED', verifyFailures: verify.failed, updatedAt: Date.now() };
+        await chrome.storage.local.set({ pendingStrategy: failed });
+        chrome.runtime.sendMessage({ type: 'STRATEGY_UPDATE', strategy: failed }).catch(() => {});
+        chrome.runtime.sendMessage({ type: 'HEDGE_BLOCKED', reason: verify.failed }).catch(() => {});
+        return;
+      }
+
+      // All 7 checks pass — fire the hedge bet
+      const hedgeAmount = msg.hedgeAmount || strategy.hedgeAmount;
+      const firedStrategy = { ...nextStrategy, state: 'HEDGE_FIRED', updatedAt: Date.now() };
+      await chrome.storage.local.set({ pendingStrategy: firedStrategy });
+      chrome.runtime.sendMessage({ type: 'STRATEGY_UPDATE', strategy: firedStrategy }).catch(() => {});
+      addLog(`Triple verify PASSED — firing hedge: ${strategy.leg2Side} $${hedgeAmount}`);
+
+      // Trigger the actual hedge bet placement
+      chrome.runtime.sendMessage({
+        type: 'PLACE_BET',
+        side: strategy.leg2Side,
+        amount: hedgeAmount,
+        isAutoHedge: true,
+      }).catch(() => {});
+    })();
+    return;
+  }
+
+  if (msg.type === 'ODDS_UPDATE') {
+    // Forward to popup for display — no state machine logic here
+    chrome.runtime.sendMessage({ type: 'ODDS_UPDATE', outcomes: msg.outcomes, ts: msg.ts }).catch(() => {});
     return;
   }
 
@@ -314,6 +436,40 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
         const result = results?.[0]?.result || { ok: false, error: 'No result from tab' };
         addLog(`BET_RESULT: ${JSON.stringify(result)}`);
         chrome.runtime.sendMessage({ type: 'BET_RESULT', ...result });
+
+        // ── Advance state machine based on bet outcome ────────────────────
+        (async () => {
+          const r2 = await chrome.storage.local.get(['pendingStrategy']);
+          const strat = r2.pendingStrategy || { state: 'IDLE' };
+          const event = result.ok && result.confirmed ? 'BET_CONFIRMED' : 'BET_FAILED';
+          const nextState = strategyTransition(strat.state, event);
+          if (nextState === strat.state) return; // no transition
+
+          const updated = { ...strat, state: nextState, updatedAt: Date.now() };
+          if (strat.state === 'FIRST_BET_PENDING' && event === 'BET_CONFIRMED') {
+            // First leg landed — mark confirmed, set leg2Side as opposite, start crossover watch
+            updated.leg1Confirmed = true;
+            updated.leg1Odds = result.oddsText || strat.leg1Odds;
+            // Determine the hedge side: tell content.js which sides to watch
+            // leg2Side must be set by popup when starting strategy
+            const tabs = await chrome.tabs.query({ url: 'https://sportsbook.draftkings.com/*' });
+            if (strat.leg2Side) {
+              tabs.forEach(t => chrome.tabs.sendMessage(t.id, {
+                type: 'WATCH_SIDES',
+                leg1Side: strat.leg1Side,
+                leg2Side: strat.leg2Side,
+              }).catch(() => {}));
+            }
+          }
+          if (nextState === 'BOTH_PLACED' || nextState === 'HEDGE_FAILED') {
+            // Terminal state — stop the odds watcher
+            const tabs2 = await chrome.tabs.query({ url: 'https://sportsbook.draftkings.com/*' });
+            tabs2.forEach(t => chrome.tabs.sendMessage(t.id, { type: 'STOP_WATCHING' }).catch(() => {}));
+          }
+          await chrome.storage.local.set({ pendingStrategy: updated });
+          addLog(`State: ${strat.state} → ${nextState} (${event})`);
+          chrome.runtime.sendMessage({ type: 'STRATEGY_UPDATE', strategy: updated }).catch(() => {});
+        })();
       } catch(e) {
         addLog(`BET_RESULT error: ${e.message}`);
         chrome.runtime.sendMessage({ type: 'BET_RESULT', ok: false, error: e.message });

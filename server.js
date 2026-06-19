@@ -1459,6 +1459,91 @@ function pingHealthcheck() {
   https.get(HEALTHCHECK_URL, () => {}).on('error', e => console.error('[healthcheck] ping failed:', e.message));
 }
 
+// ── POST /api/chat — NL intent parser (Claude Haiku) ─────────────────────────
+// Parses natural language betting commands into structured JSON.
+// Used by the extension popup chat UI.
+//
+// Request:  { message: string, gameContext?: { sides: [...], odds: {...} } }
+// Response: { intent, side, amount, trigger, confidence, raw, error? }
+
+const CHAT_SYSTEM = (gameContext) => `You are a sports betting assistant. Parse the user's message into structured JSON.
+
+GAME CONTEXT: ${gameContext ? JSON.stringify(gameContext) : 'No active game selected'}
+
+Respond with ONLY a JSON object — no explanation, no markdown:
+{
+  "intent": "place_first_bet" | "set_hedge_trigger" | "cancel" | "query" | "unknown",
+  "side": "<team/player name as shown on DraftKings, or null>",
+  "amount": <dollars as number, or null>,
+  "trigger": { "type": "crossover" | "odds_target" | null, "targetOdds": <american odds or null> },
+  "confidence": <0.0–1.0>
+}
+
+EXAMPLES:
+"bet $10 on Canada, auto-hedge at crossover"
+→ {"intent":"place_first_bet","side":"Canada","amount":10,"trigger":{"type":"crossover","targetOdds":null},"confidence":0.97}
+
+"put $50 on the favorite and hedge automatically"
+→ {"intent":"place_first_bet","side":null,"amount":50,"trigger":{"type":"crossover","targetOdds":null},"confidence":0.85}
+
+"bet 25 on Hamad and hedge when Qatar hits +200"
+→ {"intent":"place_first_bet","side":"Hamad Medjedovic","amount":25,"trigger":{"type":"odds_target","targetOdds":200},"confidence":0.95}
+
+"cancel" or "stop"
+→ {"intent":"cancel","side":null,"amount":null,"trigger":{"type":null,"targetOdds":null},"confidence":0.99}
+
+"what's the line?" or "who's favored?"
+→ {"intent":"query","side":null,"amount":null,"trigger":{"type":null,"targetOdds":null},"confidence":0.92}
+
+RULES:
+- Amounts: "$1.50" → 1.50, "a penny" → 0.01, "50 cents" → 0.50, "1k" → 1000
+- crossover = when underdog implied probability ≥ favorite implied probability
+- If user says "favorite" or "dog/underdog" and gameContext has sides+odds, infer the side name
+- side must match the name as it appears on DraftKings exactly if possible`;
+
+function parseChatResponse(raw) {
+  const jsonMatch = raw.match(/\{[\s\S]*\}/);
+  const src = jsonMatch ? jsonMatch[0] : raw;
+  const parsed = JSON.parse(src);
+  // Normalise fields
+  return {
+    intent:     parsed.intent     || 'unknown',
+    side:       parsed.side       || null,
+    amount:     typeof parsed.amount === 'number' ? parsed.amount : null,
+    trigger:    parsed.trigger    || { type: null, targetOdds: null },
+    confidence: typeof parsed.confidence === 'number' ? Math.min(1, Math.max(0, parsed.confidence)) : 0,
+  };
+}
+
+app.post('/api/chat', async (req, res) => {
+  const { message, gameContext } = req.body || {};
+  if (!message || typeof message !== 'string') {
+    return res.status(400).json({ error: 'message (string) required' });
+  }
+
+  try {
+    const response = await anthropic.messages.create({
+      model: 'claude-haiku-4-5-20251001',
+      max_tokens: 256,
+      system: CHAT_SYSTEM(gameContext || null),
+      messages: [{ role: 'user', content: message.slice(0, 500) }]
+    });
+
+    const raw = response.content[0]?.text?.trim() || '';
+    let parsed;
+    try {
+      parsed = parseChatResponse(raw);
+    } catch {
+      return res.json({ intent: 'unknown', side: null, amount: null, trigger: { type: null, targetOdds: null }, confidence: 0, raw, error: 'parse_failed' });
+    }
+
+    res.json({ ...parsed, raw });
+  } catch (e) {
+    console.error('[api/chat]', e.message);
+    res.status(500).json({ error: e.message });
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`Bet Bot running at http://localhost:${PORT}`);
 

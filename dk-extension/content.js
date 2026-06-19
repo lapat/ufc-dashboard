@@ -119,3 +119,96 @@ if (href.startsWith('https://sportsbook.draftkings.com') && !href.includes('/log
 if (href.includes('/mybets')) {
   setTimeout(() => location.reload(), 20000);
 }
+
+// ── Live odds watcher — 1s DOM poll for crossover detection ─────────────────
+// Runs on any DK sportsbook page (not mybets/login). Sends ODDS_UPDATE every
+// second and CROSSOVER_DETECTED when the underdog's implied prob surpasses the
+// favorite's — which is the primary hedge trigger.
+
+if (href.startsWith('https://sportsbook.draftkings.com/') &&
+    !href.includes('/mybets') && !href.includes('/login') && !href.includes('/auth/')) {
+
+  // American odds → implied probability (no vig removal — raw market implied)
+  function americanToImplied(american) {
+    if (american > 0) return 100 / (american + 100);
+    return Math.abs(american) / (Math.abs(american) + 100);
+  }
+
+  // Parse odds text that may use Unicode minus (−) instead of hyphen-minus (-)
+  function parseAmericanOdds(text) {
+    const n = parseInt(text.replace(/[−–]/g, '-'), 10);
+    return isNaN(n) ? null : n;
+  }
+
+  // Walk the DOM to find the player/team name nearest to an odds button
+  function findSideNameNear(btn) {
+    let ancestor = btn.parentElement;
+    for (let i = 0; i < 8 && ancestor; i++) {
+      const nameEl = [...ancestor.querySelectorAll('*')].find(el =>
+        el.childElementCount === 0 &&
+        el.textContent.trim().length > 1 &&
+        !/^[+−\-]\d+(\.\d+)?$/.test(el.textContent.trim()) &&
+        !/^\d+$/.test(el.textContent.trim()) &&
+        el.closest('button, [role="button"]') === null
+      );
+      if (nameEl) return nameEl.textContent.trim();
+      ancestor = ancestor.parentElement;
+    }
+    return null;
+  }
+
+  function scanOddsFromPage() {
+    return [...document.querySelectorAll('button, [role="button"]')]
+      .filter(b => /^[+−\-]\d+$/.test(b.textContent.trim()))
+      .map(btn => {
+        const american = parseAmericanOdds(btn.textContent.trim());
+        if (american === null) return null;
+        return {
+          side:     findSideNameNear(btn),
+          american,
+          oddsText: btn.textContent.trim(),
+          implied:  americanToImplied(american),
+        };
+      })
+      .filter(Boolean);
+  }
+
+  // watchedSides is set by background.js via WATCH_SIDES message when a strategy starts
+  let watchedSides = null;
+  let lastCrossover = null; // true/false — only fire on CHANGE to avoid spam
+
+  chrome.runtime.onMessage.addListener(msg => {
+    if (msg.type === 'WATCH_SIDES') {
+      watchedSides = { leg1Side: msg.leg1Side, leg2Side: msg.leg2Side };
+      lastCrossover = null; // reset on new strategy
+    }
+    if (msg.type === 'STOP_WATCHING') {
+      watchedSides = null;
+      lastCrossover = null;
+    }
+  });
+
+  setInterval(() => {
+    const outcomes = scanOddsFromPage();
+    if (outcomes.length === 0) return;
+
+    // Always report current odds so background + popup can display them
+    send({ type: 'ODDS_UPDATE', outcomes, ts: Date.now() });
+
+    // Crossover check only when a strategy is active
+    if (!watchedSides) return;
+    const sL = s => (s || '').toLowerCase();
+    const leg1 = outcomes.find(o => sL(o.side) === sL(watchedSides.leg1Side));
+    const leg2 = outcomes.find(o => sL(o.side) === sL(watchedSides.leg2Side));
+    if (!leg1 || !leg2) return;
+
+    // Crossover = hedge side's implied prob has reached/passed the original side's implied prob
+    const crossed = leg2.implied >= leg1.implied;
+    if (crossed !== lastCrossover) {
+      lastCrossover = crossed;
+      if (crossed) {
+        send({ type: 'CROSSOVER_DETECTED', leg1, leg2, ts: Date.now() });
+      }
+    }
+  }, 1000);
+}

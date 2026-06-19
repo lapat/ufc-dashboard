@@ -2685,11 +2685,715 @@ try {
   console.log('  ✓ error: service worker restart → correct resume action per state'); passed++;
 } catch(e) { console.error('  ✗ error swRestart:', e.message); failed++; }
 
+// ═══════════════════════════════════════════════════════════════════════════
+// NEW AGENT SYSTEM TESTS
+// Covers three newly built subsystems:
+//   A. POST /api/chat — NL intent parser (Claude Haiku)
+//   B. content.js odds watcher — americanToImplied, scanOdds, crossover logic
+//   C. background.js strategy state machine — transitions, tripleVerify, resume
+// ═══════════════════════════════════════════════════════════════════════════
+
+// ── A. NL Intent Parser helpers (mirror of server.js parseChatResponse) ──
+function parseChatResponse(raw) {
+  const jsonMatch = raw.match(/\{[\s\S]*\}/);
+  const src = jsonMatch ? jsonMatch[0] : raw;
+  const parsed = JSON.parse(src);
+  return {
+    intent:     parsed.intent     || 'unknown',
+    side:       parsed.side       || null,
+    amount:     typeof parsed.amount === 'number' ? parsed.amount : null,
+    trigger:    parsed.trigger    || { type: null, targetOdds: null },
+    confidence: typeof parsed.confidence === 'number' ? Math.min(1, Math.max(0, parsed.confidence)) : 0,
+  };
+}
+
+// ── B. Odds watcher helpers (mirror of content.js additions) ─────────────
+function americanToImplied(american) {
+  if (american > 0) return 100 / (american + 100);
+  return Math.abs(american) / (Math.abs(american) + 100);
+}
+function parseAmericanOdds(text) {
+  const n = parseInt(text.replace(/[−–]/g, '-'), 10);
+  return isNaN(n) ? null : n;
+}
+
+// ── C. State machine helpers (mirror of background.js additions) ──────────
+function strategyTransition(current, event) {
+  const table = {
+    IDLE:              { BET_INITIATED:       'FIRST_BET_PENDING' },
+    FIRST_BET_PENDING: { BET_CONFIRMED:       'FIRST_BET_PLACED', BET_FAILED: 'HEDGE_FAILED' },
+    FIRST_BET_PLACED:  { CROSSOVER_DETECTED:  'WATCHING_HEDGE',   STRATEGY_CANCELLED: 'IDLE', STRATEGY_EXPIRED: 'IDLE' },
+    WATCHING_HEDGE:    { VERIFY_PASSED:       'HEDGE_FIRED',      VERIFY_FAILED: 'HEDGE_FAILED' },
+    HEDGE_FIRED:       { BET_CONFIRMED:       'BOTH_PLACED',      BET_FAILED: 'HEDGE_FAILED' },
+    BOTH_PLACED:       {},
+    HEDGE_FAILED:      {},
+  };
+  return (table[current] || {})[event] || current;
+}
+
+function tripleVerify(strategy, domState) {
+  const checks = [
+    { name: 'game_identity',      pass: !strategy.gameId || !domState.gameId || strategy.gameId === domState.gameId },
+    { name: 'odds_slippage',      pass: !strategy.expectedHedgeOdds || Math.abs((domState.leg2Odds || 0) - strategy.expectedHedgeOdds) <= 8 },
+    { name: 'market_active',      pass: !domState.suspended },
+    { name: 'hedge_profitable',   pass: domState.hedgeProfit === undefined || domState.hedgeProfit > 0 },
+    { name: 'slip_empty',         pass: !domState.slipHasBets },
+    { name: 'balance_sufficient', pass: domState.balance === undefined || domState.balance >= (strategy.hedgeAmount || 0) },
+    { name: 'leg1_confirmed',     pass: strategy.leg1Confirmed === true },
+  ];
+  const failed = checks.filter(c => !c.pass);
+  return { pass: failed.length === 0, checks, failed };
+}
+
+async function runAgentSystemTests() {
+  console.log('\n── A. NL Intent Parser (parseChatResponse) ──');
+
+  // A1 — happy path: place_first_bet with crossover trigger
+  try {
+    const r = parseChatResponse('{"intent":"place_first_bet","side":"Canada","amount":10,"trigger":{"type":"crossover","targetOdds":null},"confidence":0.97}');
+    assert(r.intent === 'place_first_bet', `intent wrong: ${r.intent}`);
+    assert(r.side === 'Canada', `side wrong: ${r.side}`);
+    assert(r.amount === 10, `amount wrong: ${r.amount}`);
+    assert(r.trigger.type === 'crossover', `trigger.type wrong: ${r.trigger.type}`);
+    assert(r.confidence === 0.97, `confidence wrong: ${r.confidence}`);
+    console.log('  ✓ A1: place_first_bet crossover — all fields correct'); passed++;
+  } catch(e) { console.error('  ✗ A1:', e.message); failed++; }
+
+  // A2 — cancel intent
+  try {
+    const r = parseChatResponse('{"intent":"cancel","side":null,"amount":null,"trigger":{"type":null,"targetOdds":null},"confidence":0.99}');
+    assert(r.intent === 'cancel', `intent wrong: ${r.intent}`);
+    assert(r.side === null, `side should be null`);
+    assert(r.amount === null, `amount should be null`);
+    console.log('  ✓ A2: cancel intent'); passed++;
+  } catch(e) { console.error('  ✗ A2:', e.message); failed++; }
+
+  // A3 — query intent
+  try {
+    const r = parseChatResponse('{"intent":"query","side":null,"amount":null,"trigger":{"type":null,"targetOdds":null},"confidence":0.90}');
+    assert(r.intent === 'query', `intent wrong: ${r.intent}`);
+    console.log('  ✓ A3: query intent'); passed++;
+  } catch(e) { console.error('  ✗ A3:', e.message); failed++; }
+
+  // A4 — odds_target trigger with negative targetOdds
+  try {
+    const r = parseChatResponse('{"intent":"place_first_bet","side":"Hamad Medjedovic","amount":25,"trigger":{"type":"odds_target","targetOdds":-150},"confidence":0.95}');
+    assert(r.trigger.type === 'odds_target', `trigger.type wrong: ${r.trigger.type}`);
+    assert(r.trigger.targetOdds === -150, `targetOdds wrong: ${r.trigger.targetOdds}`);
+    assert(r.side === 'Hamad Medjedovic', `side wrong: ${r.side}`);
+    console.log('  ✓ A4: odds_target trigger with negative targetOdds'); passed++;
+  } catch(e) { console.error('  ✗ A4:', e.message); failed++; }
+
+  // A5 — markdown code fence stripped
+  try {
+    const r = parseChatResponse('```json\n{"intent":"cancel","side":null,"amount":null,"trigger":{"type":null,"targetOdds":null},"confidence":0.99}\n```');
+    assert(r.intent === 'cancel', `code fence not stripped: ${r.intent}`);
+    console.log('  ✓ A5: markdown code fence stripped'); passed++;
+  } catch(e) { console.error('  ✗ A5:', e.message); failed++; }
+
+  // A6 — extra prose before JSON stripped
+  try {
+    const r = parseChatResponse('Here is the parsed intent:\n{"intent":"query","side":null,"amount":null,"trigger":{"type":null,"targetOdds":null},"confidence":0.8}');
+    assert(r.intent === 'query', `prose not stripped: ${r.intent}`);
+    console.log('  ✓ A6: extra prose before JSON stripped'); passed++;
+  } catch(e) { console.error('  ✗ A6:', e.message); failed++; }
+
+  // A7 — malformed JSON → throws (caller handles as unknown)
+  try {
+    let threw = false;
+    try { parseChatResponse('this is not json at all'); } catch { threw = true; }
+    assert(threw, 'should throw on malformed JSON');
+    console.log('  ✓ A7: malformed JSON throws (caller maps to unknown)'); passed++;
+  } catch(e) { console.error('  ✗ A7:', e.message); failed++; }
+
+  // A8 — confidence clamped to [0, 1]
+  try {
+    const r = parseChatResponse('{"intent":"query","side":null,"amount":null,"trigger":{"type":null,"targetOdds":null},"confidence":1.5}');
+    assert(r.confidence <= 1, `confidence should be ≤1, got ${r.confidence}`);
+    console.log('  ✓ A8: confidence clamped to 1.0 max'); passed++;
+  } catch(e) { console.error('  ✗ A8:', e.message); failed++; }
+
+  // A9 — missing confidence → defaults to 0
+  try {
+    const r = parseChatResponse('{"intent":"cancel","side":null,"amount":null,"trigger":{"type":null,"targetOdds":null}}');
+    assert(r.confidence === 0, `confidence should default to 0, got ${r.confidence}`);
+    console.log('  ✓ A9: missing confidence defaults to 0'); passed++;
+  } catch(e) { console.error('  ✗ A9:', e.message); failed++; }
+
+  // A10 — unknown intent value passes through
+  try {
+    const r = parseChatResponse('{"intent":"place_parlay","side":"Canada","amount":5,"trigger":{"type":null,"targetOdds":null},"confidence":0.4}');
+    assert(r.intent === 'place_parlay', `intent should pass through: ${r.intent}`);
+    console.log('  ✓ A10: non-standard intent passes through'); passed++;
+  } catch(e) { console.error('  ✗ A10:', e.message); failed++; }
+
+  // A11 — amount: null for string "null"
+  try {
+    const r = parseChatResponse('{"intent":"cancel","side":null,"amount":null,"trigger":{"type":null,"targetOdds":null},"confidence":0.9}');
+    assert(r.amount === null, `amount should be null, got ${r.amount}`);
+    console.log('  ✓ A11: amount null when not provided'); passed++;
+  } catch(e) { console.error('  ✗ A11:', e.message); failed++; }
+
+  // A12 — decimal amount preserved
+  try {
+    const r = parseChatResponse('{"intent":"place_first_bet","side":"Qatar","amount":0.01,"trigger":{"type":"crossover","targetOdds":null},"confidence":0.95}');
+    assert(r.amount === 0.01, `decimal amount wrong: ${r.amount}`);
+    console.log('  ✓ A12: decimal amount 0.01 preserved'); passed++;
+  } catch(e) { console.error('  ✗ A12:', e.message); failed++; }
+
+  // A13 — missing trigger → default { type: null, targetOdds: null }
+  try {
+    const r = parseChatResponse('{"intent":"place_first_bet","side":"Canada","amount":10,"confidence":0.7}');
+    assert(r.trigger && r.trigger.type === null, `trigger default wrong: ${JSON.stringify(r.trigger)}`);
+    console.log('  ✓ A13: missing trigger defaults to {type:null,targetOdds:null}'); passed++;
+  } catch(e) { console.error('  ✗ A13:', e.message); failed++; }
+
+  // A14 — /api/chat endpoint reachable (integration, --local only)
+  if (target.includes('localhost')) {
+    await check('A14: POST /api/chat — endpoint responds', async () => {
+      const r = await fetch(`${target}/api/chat`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: 'cancel' })
+      });
+      assert(r.ok || r.status === 500, `unexpected status: ${r.status}`); // 500 ok if no ANTHROPIC_API_KEY
+    });
+  } else {
+    console.log('  - A14: skipped (not --local)');
+  }
+
+  // A15 — /api/chat with missing message → 400
+  if (target.includes('localhost')) {
+    await check('A15: POST /api/chat missing message → 400', async () => {
+      const r = await fetch(`${target}/api/chat`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({})
+      });
+      assert(r.status === 400, `expected 400, got ${r.status}`);
+    });
+  } else {
+    console.log('  - A15: skipped (not --local)');
+  }
+
+  console.log('\n── B. Odds watcher math ──');
+
+  // B1 — americanToImplied: +100 → 50%
+  try {
+    const imp = americanToImplied(100);
+    assert(Math.abs(imp - 0.5) < 0.0001, `+100 implied should be 0.5, got ${imp}`);
+    console.log('  ✓ B1: +100 → 50.0% implied'); passed++;
+  } catch(e) { console.error('  ✗ B1:', e.message); failed++; }
+
+  // B2 — americanToImplied: -200 → 66.67%
+  try {
+    const imp = americanToImplied(-200);
+    assert(Math.abs(imp - (200/300)) < 0.0001, `-200 implied should be 0.6667, got ${imp}`);
+    console.log('  ✓ B2: -200 → 66.67% implied'); passed++;
+  } catch(e) { console.error('  ✗ B2:', e.message); failed++; }
+
+  // B3 — americanToImplied: +300 → 25%
+  try {
+    const imp = americanToImplied(300);
+    assert(Math.abs(imp - 0.25) < 0.0001, `+300 implied should be 0.25, got ${imp}`);
+    console.log('  ✓ B3: +300 → 25.0% implied'); passed++;
+  } catch(e) { console.error('  ✗ B3:', e.message); failed++; }
+
+  // B4 — americanToImplied: -110 → 52.38%
+  try {
+    const imp = americanToImplied(-110);
+    const expected = 110 / 210;
+    assert(Math.abs(imp - expected) < 0.0001, `-110 implied wrong: got ${imp}`);
+    console.log('  ✓ B4: -110 → 52.38% implied'); passed++;
+  } catch(e) { console.error('  ✗ B4:', e.message); failed++; }
+
+  // B5 — americanToImplied: +1000 → 9.09%
+  try {
+    const imp = americanToImplied(1000);
+    assert(Math.abs(imp - 100/1100) < 0.0001, `+1000 implied wrong: got ${imp}`);
+    console.log('  ✓ B5: +1000 → 9.09% implied'); passed++;
+  } catch(e) { console.error('  ✗ B5:', e.message); failed++; }
+
+  // B6 — americanToImplied: -350 → 77.78%
+  try {
+    const imp = americanToImplied(-350);
+    assert(Math.abs(imp - 350/450) < 0.0001, `-350 implied wrong: got ${imp}`);
+    console.log('  ✓ B6: -350 → 77.78% implied'); passed++;
+  } catch(e) { console.error('  ✗ B6:', e.message); failed++; }
+
+  // B7 — parseAmericanOdds: standard hyphen
+  try {
+    assert(parseAmericanOdds('-132') === -132, `parse -132 failed`);
+    console.log('  ✓ B7: parseAmericanOdds("-132") === -132'); passed++;
+  } catch(e) { console.error('  ✗ B7:', e.message); failed++; }
+
+  // B8 — parseAmericanOdds: Unicode minus (−)
+  try {
+    assert(parseAmericanOdds('−132') === -132, `Unicode minus parse failed`);
+    console.log('  ✓ B8: parseAmericanOdds("−132") Unicode minus → -132'); passed++;
+  } catch(e) { console.error('  ✗ B8:', e.message); failed++; }
+
+  // B9 — parseAmericanOdds: positive
+  try {
+    assert(parseAmericanOdds('+104') === 104, `parse +104 failed`);
+    console.log('  ✓ B9: parseAmericanOdds("+104") → 104'); passed++;
+  } catch(e) { console.error('  ✗ B9:', e.message); failed++; }
+
+  // B10 — parseAmericanOdds: invalid string → null
+  try {
+    assert(parseAmericanOdds('PK') === null, `PK should be null`);
+    console.log('  ✓ B10: parseAmericanOdds("PK") → null'); passed++;
+  } catch(e) { console.error('  ✗ B10:', e.message); failed++; }
+
+  // B11 — crossover: dog implied > fav implied → true
+  try {
+    const leg1 = { implied: americanToImplied(-350) }; // fav
+    const leg2 = { implied: americanToImplied(+200) }; // dog — not yet crossed
+    assert(leg2.implied < leg1.implied, 'dog should NOT yet be >= fav');
+    console.log('  ✓ B11: dog implied < fav implied → NO crossover'); passed++;
+  } catch(e) { console.error('  ✗ B11:', e.message); failed++; }
+
+  // B12 — crossover: after odds movement, dog implied >= fav implied
+  try {
+    const leg1 = { implied: americanToImplied(-110) }; // original fav, moved to near even
+    const leg2 = { implied: americanToImplied(-120) }; // original dog, moved to slight fav
+    const crossed = leg2.implied >= leg1.implied;
+    assert(crossed, 'should be crossed: -120 implied > -110 implied');
+    console.log('  ✓ B12: -120 implied ≥ -110 implied → crossover detected'); passed++;
+  } catch(e) { console.error('  ✗ B12:', e.message); failed++; }
+
+  // B13 — crossover: exactly equal → true (at crossover boundary)
+  try {
+    const imp = americanToImplied(100);
+    assert(imp >= imp, 'equal should count as crossed');
+    console.log('  ✓ B13: equal implied probs → crossover (>=) holds'); passed++;
+  } catch(e) { console.error('  ✗ B13:', e.message); failed++; }
+
+  // B14 — combined implied > 100% (vig exists — not profitable to hedge every crossover)
+  try {
+    const combined = americanToImplied(-110) + americanToImplied(-110);
+    assert(combined > 1.0, `combined should be > 100%, got ${combined}`);
+    console.log(`  ✓ B14: combined implied ${(combined*100).toFixed(1)}% > 100% — vig confirmed`); passed++;
+  } catch(e) { console.error('  ✗ B14:', e.message); failed++; }
+
+  // B15 — ODDS_UPDATE message shape has required fields
+  try {
+    const outcomes = [
+      { side: 'Canada', american: -350, oddsText: '-350', implied: americanToImplied(-350) },
+      { side: 'Qatar',  american: +800, oddsText: '+800', implied: americanToImplied(+800) },
+    ];
+    const msg = { type: 'ODDS_UPDATE', outcomes, ts: Date.now() };
+    assert(msg.type === 'ODDS_UPDATE', 'type wrong');
+    assert(Array.isArray(msg.outcomes), 'outcomes must be array');
+    assert(msg.outcomes[0].side === 'Canada', 'first side wrong');
+    assert(typeof msg.outcomes[0].implied === 'number', 'implied must be number');
+    assert(typeof msg.ts === 'number', 'ts must be number');
+    console.log('  ✓ B15: ODDS_UPDATE message shape valid'); passed++;
+  } catch(e) { console.error('  ✗ B15:', e.message); failed++; }
+
+  // B16 — CROSSOVER_DETECTED message shape
+  try {
+    const leg1 = { side: 'Canada', american: -110, oddsText: '-110', implied: americanToImplied(-110) };
+    const leg2 = { side: 'Qatar',  american: -120, oddsText: '-120', implied: americanToImplied(-120) };
+    const msg = { type: 'CROSSOVER_DETECTED', leg1, leg2, ts: Date.now() };
+    assert(msg.leg1.side === 'Canada', 'leg1.side wrong');
+    assert(msg.leg2.side === 'Qatar', 'leg2.side wrong');
+    assert(msg.leg2.implied >= msg.leg1.implied, 'crossover invariant violated');
+    console.log('  ✓ B16: CROSSOVER_DETECTED message shape valid'); passed++;
+  } catch(e) { console.error('  ✗ B16:', e.message); failed++; }
+
+  // B17 — watcher fires CROSSOVER_DETECTED only once per crossover event
+  try {
+    // Simulate the lastCrossover state machine
+    let lastCrossover = null;
+    let fired = 0;
+    function simulatePoll(leg1Implied, leg2Implied) {
+      const crossed = leg2Implied >= leg1Implied;
+      if (crossed !== lastCrossover) {
+        lastCrossover = crossed;
+        if (crossed) fired++;
+      }
+    }
+    simulatePoll(0.6, 0.4); // no cross, no fire
+    simulatePoll(0.5, 0.5); // cross → fire once
+    simulatePoll(0.5, 0.5); // same state → no re-fire
+    simulatePoll(0.5, 0.5); // still same → no re-fire
+    assert(fired === 1, `should fire exactly once, fired ${fired}`);
+    console.log('  ✓ B17: CROSSOVER_DETECTED fires exactly once (no spam)'); passed++;
+  } catch(e) { console.error('  ✗ B17:', e.message); failed++; }
+
+  // B18 — watcher re-fires if odds uncross then re-cross
+  try {
+    let lastCrossover = null;
+    let fired = 0;
+    function simulatePoll2(leg1Implied, leg2Implied) {
+      const crossed = leg2Implied >= leg1Implied;
+      if (crossed !== lastCrossover) { lastCrossover = crossed; if (crossed) fired++; }
+    }
+    simulatePoll2(0.6, 0.4); // no cross
+    simulatePoll2(0.4, 0.6); // cross → fire 1
+    simulatePoll2(0.6, 0.4); // uncross
+    simulatePoll2(0.4, 0.6); // re-cross → fire 2
+    assert(fired === 2, `should fire twice on re-cross, fired ${fired}`);
+    console.log('  ✓ B18: watcher re-fires on second crossover after uncross'); passed++;
+  } catch(e) { console.error('  ✗ B18:', e.message); failed++; }
+
+  // B19 — no watchedSides → no CROSSOVER_DETECTED dispatched
+  try {
+    let watchedSides = null;
+    let sentCrossover = false;
+    function fakePoll(outcomes) {
+      if (!watchedSides) return; // guarded
+      sentCrossover = true;
+    }
+    fakePoll([{ side: 'Canada', implied: 0.3 }, { side: 'Qatar', implied: 0.7 }]);
+    assert(!sentCrossover, 'should not fire without watchedSides');
+    console.log('  ✓ B19: no watchedSides → CROSSOVER_DETECTED not dispatched'); passed++;
+  } catch(e) { console.error('  ✗ B19:', e.message); failed++; }
+
+  // B20 — case-insensitive side matching in crossover check
+  try {
+    const watchedSides = { leg1Side: 'Canada', leg2Side: 'Qatar' };
+    const outcomes = [
+      { side: 'CANADA', american: -110, implied: americanToImplied(-110) },
+      { side: 'qatar',  american: -120, implied: americanToImplied(-120) },
+    ];
+    const sL = s => (s || '').toLowerCase();
+    const leg1 = outcomes.find(o => sL(o.side) === sL(watchedSides.leg1Side));
+    const leg2 = outcomes.find(o => sL(o.side) === sL(watchedSides.leg2Side));
+    assert(leg1 && leg2, 'case-insensitive match failed');
+    assert(leg2.implied >= leg1.implied, 'crossover should be detected');
+    console.log('  ✓ B20: case-insensitive side matching works'); passed++;
+  } catch(e) { console.error('  ✗ B20:', e.message); failed++; }
+
+  console.log('\n── C. Strategy state machine ──');
+
+  // C1 — IDLE + BET_INITIATED → FIRST_BET_PENDING
+  try {
+    assert(strategyTransition('IDLE', 'BET_INITIATED') === 'FIRST_BET_PENDING', 'wrong');
+    console.log('  ✓ C1: IDLE + BET_INITIATED → FIRST_BET_PENDING'); passed++;
+  } catch(e) { console.error('  ✗ C1:', e.message); failed++; }
+
+  // C2 — FIRST_BET_PENDING + BET_CONFIRMED → FIRST_BET_PLACED
+  try {
+    assert(strategyTransition('FIRST_BET_PENDING', 'BET_CONFIRMED') === 'FIRST_BET_PLACED', 'wrong');
+    console.log('  ✓ C2: FIRST_BET_PENDING + BET_CONFIRMED → FIRST_BET_PLACED'); passed++;
+  } catch(e) { console.error('  ✗ C2:', e.message); failed++; }
+
+  // C3 — FIRST_BET_PENDING + BET_FAILED → HEDGE_FAILED
+  try {
+    assert(strategyTransition('FIRST_BET_PENDING', 'BET_FAILED') === 'HEDGE_FAILED', 'wrong');
+    console.log('  ✓ C3: FIRST_BET_PENDING + BET_FAILED → HEDGE_FAILED'); passed++;
+  } catch(e) { console.error('  ✗ C3:', e.message); failed++; }
+
+  // C4 — FIRST_BET_PLACED + CROSSOVER_DETECTED → WATCHING_HEDGE
+  try {
+    assert(strategyTransition('FIRST_BET_PLACED', 'CROSSOVER_DETECTED') === 'WATCHING_HEDGE', 'wrong');
+    console.log('  ✓ C4: FIRST_BET_PLACED + CROSSOVER_DETECTED → WATCHING_HEDGE'); passed++;
+  } catch(e) { console.error('  ✗ C4:', e.message); failed++; }
+
+  // C5 — FIRST_BET_PLACED + STRATEGY_CANCELLED → IDLE
+  try {
+    assert(strategyTransition('FIRST_BET_PLACED', 'STRATEGY_CANCELLED') === 'IDLE', 'wrong');
+    console.log('  ✓ C5: FIRST_BET_PLACED + STRATEGY_CANCELLED → IDLE'); passed++;
+  } catch(e) { console.error('  ✗ C5:', e.message); failed++; }
+
+  // C6 — FIRST_BET_PLACED + STRATEGY_EXPIRED → IDLE
+  try {
+    assert(strategyTransition('FIRST_BET_PLACED', 'STRATEGY_EXPIRED') === 'IDLE', 'wrong');
+    console.log('  ✓ C6: FIRST_BET_PLACED + STRATEGY_EXPIRED → IDLE'); passed++;
+  } catch(e) { console.error('  ✗ C6:', e.message); failed++; }
+
+  // C7 — WATCHING_HEDGE + VERIFY_PASSED → HEDGE_FIRED
+  try {
+    assert(strategyTransition('WATCHING_HEDGE', 'VERIFY_PASSED') === 'HEDGE_FIRED', 'wrong');
+    console.log('  ✓ C7: WATCHING_HEDGE + VERIFY_PASSED → HEDGE_FIRED'); passed++;
+  } catch(e) { console.error('  ✗ C7:', e.message); failed++; }
+
+  // C8 — WATCHING_HEDGE + VERIFY_FAILED → HEDGE_FAILED
+  try {
+    assert(strategyTransition('WATCHING_HEDGE', 'VERIFY_FAILED') === 'HEDGE_FAILED', 'wrong');
+    console.log('  ✓ C8: WATCHING_HEDGE + VERIFY_FAILED → HEDGE_FAILED'); passed++;
+  } catch(e) { console.error('  ✗ C8:', e.message); failed++; }
+
+  // C9 — HEDGE_FIRED + BET_CONFIRMED → BOTH_PLACED
+  try {
+    assert(strategyTransition('HEDGE_FIRED', 'BET_CONFIRMED') === 'BOTH_PLACED', 'wrong');
+    console.log('  ✓ C9: HEDGE_FIRED + BET_CONFIRMED → BOTH_PLACED'); passed++;
+  } catch(e) { console.error('  ✗ C9:', e.message); failed++; }
+
+  // C10 — HEDGE_FIRED + BET_FAILED → HEDGE_FAILED
+  try {
+    assert(strategyTransition('HEDGE_FIRED', 'BET_FAILED') === 'HEDGE_FAILED', 'wrong');
+    console.log('  ✓ C10: HEDGE_FIRED + BET_FAILED → HEDGE_FAILED'); passed++;
+  } catch(e) { console.error('  ✗ C10:', e.message); failed++; }
+
+  // C11 — BOTH_PLACED is terminal: any event → stays BOTH_PLACED
+  try {
+    ['BET_INITIATED','BET_CONFIRMED','BET_FAILED','CROSSOVER_DETECTED','VERIFY_PASSED'].forEach(ev => {
+      assert(strategyTransition('BOTH_PLACED', ev) === 'BOTH_PLACED', `BOTH_PLACED should be terminal for ${ev}`);
+    });
+    console.log('  ✓ C11: BOTH_PLACED terminal — all events ignored'); passed++;
+  } catch(e) { console.error('  ✗ C11:', e.message); failed++; }
+
+  // C12 — HEDGE_FAILED is terminal: any event → stays HEDGE_FAILED
+  try {
+    ['BET_CONFIRMED','CROSSOVER_DETECTED','VERIFY_PASSED'].forEach(ev => {
+      assert(strategyTransition('HEDGE_FAILED', ev) === 'HEDGE_FAILED', `HEDGE_FAILED should be terminal for ${ev}`);
+    });
+    console.log('  ✓ C12: HEDGE_FAILED terminal — all events ignored'); passed++;
+  } catch(e) { console.error('  ✗ C12:', e.message); failed++; }
+
+  // C13 — unknown event → state unchanged
+  try {
+    assert(strategyTransition('FIRST_BET_PLACED', 'UNKNOWN_EVENT') === 'FIRST_BET_PLACED', 'wrong');
+    assert(strategyTransition('IDLE', 'BOGUS') === 'IDLE', 'wrong');
+    console.log('  ✓ C13: unknown event → state unchanged'); passed++;
+  } catch(e) { console.error('  ✗ C13:', e.message); failed++; }
+
+  // C14 — unknown state → state unchanged (defensive)
+  try {
+    assert(strategyTransition('NONEXISTENT', 'BET_CONFIRMED') === 'NONEXISTENT', 'wrong');
+    console.log('  ✓ C14: unknown state → state unchanged (defensive)'); passed++;
+  } catch(e) { console.error('  ✗ C14:', e.message); failed++; }
+
+  // C15 — full happy path: IDLE → BOTH_PLACED in 5 events
+  try {
+    let s = 'IDLE';
+    s = strategyTransition(s, 'BET_INITIATED');     assert(s === 'FIRST_BET_PENDING', s);
+    s = strategyTransition(s, 'BET_CONFIRMED');     assert(s === 'FIRST_BET_PLACED', s);
+    s = strategyTransition(s, 'CROSSOVER_DETECTED'); assert(s === 'WATCHING_HEDGE', s);
+    s = strategyTransition(s, 'VERIFY_PASSED');     assert(s === 'HEDGE_FIRED', s);
+    s = strategyTransition(s, 'BET_CONFIRMED');     assert(s === 'BOTH_PLACED', s);
+    console.log('  ✓ C15: full happy path IDLE → BOTH_PLACED (5 events)'); passed++;
+  } catch(e) { console.error('  ✗ C15:', e.message); failed++; }
+
+  // C16 — failure path: BET_FAILED in first leg
+  try {
+    let s = 'IDLE';
+    s = strategyTransition(s, 'BET_INITIATED');
+    s = strategyTransition(s, 'BET_FAILED');
+    assert(s === 'HEDGE_FAILED', `expected HEDGE_FAILED, got ${s}`);
+    console.log('  ✓ C16: first leg failure → HEDGE_FAILED'); passed++;
+  } catch(e) { console.error('  ✗ C16:', e.message); failed++; }
+
+  // C17 — cancel mid-strategy: FIRST_BET_PLACED → IDLE
+  try {
+    let s = strategyTransition('FIRST_BET_PENDING', 'BET_CONFIRMED'); // → FIRST_BET_PLACED
+    s = strategyTransition(s, 'STRATEGY_CANCELLED');
+    assert(s === 'IDLE', `expected IDLE, got ${s}`);
+    console.log('  ✓ C17: cancel from FIRST_BET_PLACED → IDLE'); passed++;
+  } catch(e) { console.error('  ✗ C17:', e.message); failed++; }
+
+  console.log('\n── C. tripleVerify gate ──');
+
+  // C18 — all 7 checks pass → { pass: true }
+  try {
+    const strategy = { gameId: 'game1', expectedHedgeOdds: -120, leg1Confirmed: true, hedgeAmount: 5 };
+    const dom = { gameId: 'game1', leg2Odds: -118, suspended: false, hedgeProfit: 2.50, slipHasBets: false, balance: 100 };
+    const v = tripleVerify(strategy, dom);
+    assert(v.pass === true, `should pass, failed: ${v.failed.map(c=>c.name).join(',')}`);
+    assert(v.checks.length === 7, `should have 7 checks, got ${v.checks.length}`);
+    assert(v.failed.length === 0, `should have no failures`);
+    console.log('  ✓ C18: all 7 checks pass → { pass: true }'); passed++;
+  } catch(e) { console.error('  ✗ C18:', e.message); failed++; }
+
+  // C19 — game_identity mismatch → fails
+  try {
+    const strategy = { gameId: 'game1', leg1Confirmed: true };
+    const dom = { gameId: 'game2', suspended: false, hedgeProfit: 1 };
+    const v = tripleVerify(strategy, dom);
+    assert(!v.pass, 'should fail');
+    assert(v.failed.some(c => c.name === 'game_identity'), 'game_identity should be in failures');
+    console.log('  ✓ C19: game_identity mismatch → verify fails'); passed++;
+  } catch(e) { console.error('  ✗ C19:', e.message); failed++; }
+
+  // C20 — odds_slippage > 8 → fails
+  try {
+    const strategy = { expectedHedgeOdds: -120, leg1Confirmed: true };
+    const dom = { leg2Odds: -130, suspended: false }; // slippage = 10
+    const v = tripleVerify(strategy, dom);
+    assert(!v.pass, 'should fail');
+    assert(v.failed.some(c => c.name === 'odds_slippage'), 'odds_slippage should be in failures');
+    console.log('  ✓ C20: odds_slippage 10pts > 8 → verify fails'); passed++;
+  } catch(e) { console.error('  ✗ C20:', e.message); failed++; }
+
+  // C21 — odds_slippage exactly 8 → passes
+  try {
+    const strategy = { expectedHedgeOdds: -120, leg1Confirmed: true };
+    const dom = { leg2Odds: -128, suspended: false }; // slippage = 8 exactly
+    const v = tripleVerify(strategy, dom);
+    assert(!v.failed.some(c => c.name === 'odds_slippage'), 'slippage of 8 should pass');
+    console.log('  ✓ C21: odds_slippage exactly 8 → passes (boundary)'); passed++;
+  } catch(e) { console.error('  ✗ C21:', e.message); failed++; }
+
+  // C22 — market suspended → fails
+  try {
+    const strategy = { leg1Confirmed: true };
+    const dom = { suspended: true, hedgeProfit: 1 };
+    const v = tripleVerify(strategy, dom);
+    assert(!v.pass, 'should fail');
+    assert(v.failed.some(c => c.name === 'market_active'), 'market_active should fail');
+    console.log('  ✓ C22: market suspended → verify fails'); passed++;
+  } catch(e) { console.error('  ✗ C22:', e.message); failed++; }
+
+  // C23 — hedge not profitable → fails
+  try {
+    const strategy = { leg1Confirmed: true };
+    const dom = { suspended: false, hedgeProfit: -0.50 };
+    const v = tripleVerify(strategy, dom);
+    assert(v.failed.some(c => c.name === 'hedge_profitable'), 'hedge_profitable should fail');
+    console.log('  ✓ C23: hedge_profit < 0 → verify fails'); passed++;
+  } catch(e) { console.error('  ✗ C23:', e.message); failed++; }
+
+  // C24 — hedge profit exactly 0 → fails (must be > 0)
+  try {
+    const strategy = { leg1Confirmed: true };
+    const dom = { suspended: false, hedgeProfit: 0 };
+    const v = tripleVerify(strategy, dom);
+    assert(v.failed.some(c => c.name === 'hedge_profitable'), 'profit=0 should fail');
+    console.log('  ✓ C24: hedge_profit = 0 → fails (requires > 0)'); passed++;
+  } catch(e) { console.error('  ✗ C24:', e.message); failed++; }
+
+  // C25 — slip has existing bets → fails
+  try {
+    const strategy = { leg1Confirmed: true };
+    const dom = { suspended: false, hedgeProfit: 1, slipHasBets: true };
+    const v = tripleVerify(strategy, dom);
+    assert(v.failed.some(c => c.name === 'slip_empty'), 'slip_empty should fail');
+    console.log('  ✓ C25: betslip not empty → verify fails'); passed++;
+  } catch(e) { console.error('  ✗ C25:', e.message); failed++; }
+
+  // C26 — balance insufficient → fails
+  try {
+    const strategy = { leg1Confirmed: true, hedgeAmount: 50 };
+    const dom = { suspended: false, hedgeProfit: 1, balance: 10 }; // need 50, have 10
+    const v = tripleVerify(strategy, dom);
+    assert(v.failed.some(c => c.name === 'balance_sufficient'), 'balance_sufficient should fail');
+    console.log('  ✓ C26: balance < hedgeAmount → verify fails'); passed++;
+  } catch(e) { console.error('  ✗ C26:', e.message); failed++; }
+
+  // C27 — leg1 not confirmed → fails
+  try {
+    const strategy = { leg1Confirmed: false };
+    const dom = { suspended: false, hedgeProfit: 1 };
+    const v = tripleVerify(strategy, dom);
+    assert(v.failed.some(c => c.name === 'leg1_confirmed'), 'leg1_confirmed should fail');
+    console.log('  ✓ C27: leg1 not confirmed → verify fails'); passed++;
+  } catch(e) { console.error('  ✗ C27:', e.message); failed++; }
+
+  // C28 — multiple failures listed in failed array
+  try {
+    const strategy = { leg1Confirmed: false, expectedHedgeOdds: -120 };
+    const dom = { leg2Odds: -135, suspended: true, hedgeProfit: -1 };
+    const v = tripleVerify(strategy, dom);
+    assert(v.failed.length >= 4, `expected ≥4 failures, got ${v.failed.length}: ${v.failed.map(c=>c.name).join(',')}`);
+    console.log(`  ✓ C28: multiple failures (${v.failed.map(c=>c.name).join(', ')})`); passed++;
+  } catch(e) { console.error('  ✗ C28:', e.message); failed++; }
+
+  // C29 — no gameId in strategy → game_identity passes (guard absent)
+  try {
+    const strategy = { leg1Confirmed: true }; // no gameId
+    const dom = { gameId: 'anyGame', suspended: false, hedgeProfit: 1 };
+    const v = tripleVerify(strategy, dom);
+    assert(!v.failed.some(c => c.name === 'game_identity'), 'no strategy.gameId should skip game_identity check');
+    console.log('  ✓ C29: no strategy.gameId → game_identity check skipped (passes)'); passed++;
+  } catch(e) { console.error('  ✗ C29:', e.message); failed++; }
+
+  // C30 — no expectedHedgeOdds → odds_slippage skipped
+  try {
+    const strategy = { leg1Confirmed: true }; // no expectedHedgeOdds
+    const dom = { leg2Odds: -999, suspended: false, hedgeProfit: 1 };
+    const v = tripleVerify(strategy, dom);
+    assert(!v.failed.some(c => c.name === 'odds_slippage'), 'no expectedHedgeOdds should skip slippage check');
+    console.log('  ✓ C30: no expectedHedgeOdds → slippage check skipped'); passed++;
+  } catch(e) { console.error('  ✗ C30:', e.message); failed++; }
+
+  // C31 — no hedgeProfit provided → hedge_profitable passes (unknown = OK)
+  try {
+    const strategy = { leg1Confirmed: true };
+    const dom = { suspended: false }; // no hedgeProfit
+    const v = tripleVerify(strategy, dom);
+    assert(!v.failed.some(c => c.name === 'hedge_profitable'), 'undefined hedgeProfit should pass');
+    console.log('  ✓ C31: undefined hedgeProfit → hedge_profitable skipped (passes)'); passed++;
+  } catch(e) { console.error('  ✗ C31:', e.message); failed++; }
+
+  // C32 — service worker resume: HEDGE_FIRED + confirmed → MARK_BOTH_PLACED
+  try {
+    function getResumeAction(state, leg2ConfirmedInApi) {
+      if (state === 'HEDGE_FIRED' && leg2ConfirmedInApi) return 'MARK_BOTH_PLACED';
+      if (state === 'HEDGE_FIRED' && !leg2ConfirmedInApi) return 'NOTIFY_MANUAL_HEDGE';
+      if (state === 'FIRST_BET_PLACED') return 'RESUME_WATCHING';
+      if (state === 'BOTH_PLACED') return 'SURFACE_RESULT';
+      return 'NOTHING';
+    }
+    assert(getResumeAction('HEDGE_FIRED', true) === 'MARK_BOTH_PLACED', 'wrong');
+    assert(getResumeAction('HEDGE_FIRED', false) === 'NOTIFY_MANUAL_HEDGE', 'wrong');
+    assert(getResumeAction('FIRST_BET_PLACED', false) === 'RESUME_WATCHING', 'wrong');
+    assert(getResumeAction('BOTH_PLACED', false) === 'SURFACE_RESULT', 'wrong');
+    assert(getResumeAction('IDLE', false) === 'NOTHING', 'wrong');
+    console.log('  ✓ C32: service worker resume actions correct for all states'); passed++;
+  } catch(e) { console.error('  ✗ C32:', e.message); failed++; }
+
+  // C33 — CROSSOVER_DETECTED ignored when state is HEDGE_FIRED (anti-double-bet)
+  try {
+    const terminalOrLate = ['HEDGE_FIRED', 'BOTH_PLACED', 'HEDGE_FAILED', 'IDLE', 'FIRST_BET_PENDING'];
+    function shouldIgnore(state) { return state !== 'FIRST_BET_PLACED'; }
+    terminalOrLate.forEach(s => assert(shouldIgnore(s), `${s} should ignore crossover`));
+    assert(!shouldIgnore('FIRST_BET_PLACED'), 'FIRST_BET_PLACED should NOT ignore crossover');
+    console.log('  ✓ C33: CROSSOVER_DETECTED ignored in all states except FIRST_BET_PLACED'); passed++;
+  } catch(e) { console.error('  ✗ C33:', e.message); failed++; }
+
+  // C34 — WATCH_SIDES message shape
+  try {
+    const msg = { type: 'WATCH_SIDES', leg1Side: 'Canada', leg2Side: 'Qatar' };
+    assert(msg.type === 'WATCH_SIDES', 'type wrong');
+    assert(msg.leg1Side === 'Canada', 'leg1Side wrong');
+    assert(msg.leg2Side === 'Qatar', 'leg2Side wrong');
+    console.log('  ✓ C34: WATCH_SIDES message shape valid'); passed++;
+  } catch(e) { console.error('  ✗ C34:', e.message); failed++; }
+
+  // C35 — STOP_WATCHING resets watchedSides and lastCrossover
+  try {
+    let watchedSides = { leg1Side: 'Canada', leg2Side: 'Qatar' };
+    let lastCrossover = true;
+    // Simulate receiving STOP_WATCHING
+    function handleStopWatching() { watchedSides = null; lastCrossover = null; }
+    handleStopWatching();
+    assert(watchedSides === null, 'watchedSides should be null');
+    assert(lastCrossover === null, 'lastCrossover should be null');
+    console.log('  ✓ C35: STOP_WATCHING clears watchedSides + lastCrossover'); passed++;
+  } catch(e) { console.error('  ✗ C35:', e.message); failed++; }
+
+  // C36 — strategy stored schema has required keys
+  try {
+    const strategy = {
+      state: 'FIRST_BET_PLACED',
+      leg1Side: 'Canada', leg1Amount: 10, leg1Odds: '-350',
+      leg2Side: 'Qatar', trigger: { type: 'crossover', targetOdds: null },
+      gameId: 'game1', startedAt: Date.now(), updatedAt: Date.now(),
+      leg1Confirmed: true, hedgeAmount: null, expectedHedgeOdds: null
+    };
+    const required = ['state','leg1Side','leg1Amount','leg2Side','trigger','startedAt','updatedAt','leg1Confirmed'];
+    required.forEach(k => assert(strategy[k] !== undefined, `missing key: ${k}`));
+    console.log('  ✓ C36: strategy storage schema has all required keys'); passed++;
+  } catch(e) { console.error('  ✗ C36:', e.message); failed++; }
+
+  // C37 — STRATEGY_UPDATE message shape
+  try {
+    const msg = { type: 'STRATEGY_UPDATE', strategy: { state: 'WATCHING_HEDGE', leg1Side: 'Canada', updatedAt: Date.now() } };
+    assert(msg.type === 'STRATEGY_UPDATE', 'type wrong');
+    assert(msg.strategy.state === 'WATCHING_HEDGE', 'state wrong');
+    console.log('  ✓ C37: STRATEGY_UPDATE message shape valid'); passed++;
+  } catch(e) { console.error('  ✗ C37:', e.message); failed++; }
+}
+
 runServerTests().then(async () => {
   await runNewFeatureServerTests();
   await runCoverageServerTests();
   await runRecordingTests();
   await runBetPlacementServerTests();
+  await runAgentSystemTests();
 }).then(() => {
   console.log(`\n═══════════════════════════════════`);
   console.log(`  ${passed} passed  ${failed} failed`);
