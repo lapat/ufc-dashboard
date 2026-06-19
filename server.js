@@ -196,10 +196,14 @@ function checkAutoBet(fightId, fighter1, fighter2, firstOdds, commenceTimeISO) {
   if (!cfg.brackets.includes(bracket))
     return { skipped: true, reason: `bracket_not_targeted (${bracket})` };
 
-  // Determine side — dog = higher decimal decimal = more positive american
+  // Determine side — dog = higher decimal = more positive american
   const favFighter = d1 <= d2 ? fighter1 : fighter2;
+  const favOdds    = d1 <= d2 ? f1Odds   : f2Odds;
   const dogFighter = d1 <= d2 ? fighter2 : fighter1;
-  const side = cfg.side === 'dog' ? dogFighter : favFighter;
+  const dogOdds    = d1 <= d2 ? f2Odds   : f1Odds;
+  const side             = cfg.side === 'dog' ? dogFighter : favFighter;
+  const leg2Side         = cfg.side === 'dog' ? favFighter : dogFighter;
+  const leg1OddsAmerican = cfg.side === 'dog' ? dogOdds    : favOdds;
 
   // Guard: already have open bet on this side (prevents double exposure)
   const existingBets = getAllBets(true);
@@ -213,6 +217,10 @@ function checkAutoBet(fightId, fighter1, fighter2, firstOdds, commenceTimeISO) {
   const intent = {
     side,
     amount: cfg.amount,
+    leg2Side,
+    leg1OddsAmerican,
+    fighter1,
+    fighter2,
     trigger: cfg.autoHedge ? { type: 'crossover', targetOdds: null } : { type: null, targetOdds: null },
   };
   const cmd = makeCommand('place_bet', intent);

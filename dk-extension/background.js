@@ -183,6 +183,13 @@ function tryExtractUserId(url, data) {
 }
 
 // ── Pure strategy helpers (no chrome.* calls — testable as plain functions) ──
+
+// American → decimal odds. Returns null if input is invalid.
+function americanToDecimal(american) {
+  if (typeof american !== 'number' || isNaN(american) || american === 0) return null;
+  return american > 0 ? 1 + american / 100 : 1 + 100 / Math.abs(american);
+}
+
 function strategyTransition(current, event) {
   const table = {
     IDLE:              { BET_INITIATED:       'FIRST_BET_PENDING' },
@@ -233,13 +240,16 @@ function handleExecuteCommand(command) {
     (async () => {
       const strategy = {
         state: 'FIRST_BET_PENDING',
-        leg1Side:      command.side,
-        leg1Amount:    command.amount,
-        trigger:       command.trigger || { type: 'crossover', targetOdds: null },
-        leg1Confirmed: false,
-        startedAt:     Date.now(),
-        updatedAt:     Date.now(),
-        commandId:     command.id,
+        leg1Side:          command.side,
+        leg1Amount:        command.amount,
+        leg2Side:          command.leg2Side || null,
+        leg1OddsAmerican:  command.leg1OddsAmerican || null,
+        leg1OddsDecimal:   americanToDecimal(command.leg1OddsAmerican),
+        trigger:           command.trigger || { type: 'crossover', targetOdds: null },
+        leg1Confirmed:     false,
+        startedAt:         Date.now(),
+        updatedAt:         Date.now(),
+        commandId:         command.id,
       };
       await chrome.storage.local.set({ pendingStrategy: strategy });
       chrome.runtime.sendMessage({ type: 'STRATEGY_UPDATE', strategy }).catch(() => {});
@@ -704,22 +714,42 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
         return;
       }
 
-      addLog(`Crossover: ${msg.leg1?.oddsText} vs ${msg.leg2?.oddsText} — running triple verify`);
-      const nextStrategy = { ...strategy, state: 'WATCHING_HEDGE', updatedAt: Date.now() };
+      // ── Hedge math — must have leg1OddsDecimal stored from first bet ────────
+      const D1 = strategy.leg1OddsDecimal;
+      const D2 = americanToDecimal(msg.leg2?.american);
+      if (!D1 || !D2) {
+        addLog(`CROSSOVER: missing odds for hedge calc (D1=${D1}, D2=${D2}) — cannot auto-hedge`);
+        return;
+      }
+      const payout1    = strategy.leg1Amount * D1;
+      const hedgeAmount  = parseFloat((payout1 / D2).toFixed(2));
+      const hedgeProfit  = parseFloat((payout1 - strategy.leg1Amount - hedgeAmount).toFixed(2));
+
+      // ── Win-win window check: (D1-1)(D2-1) > 1 ─────────────────────────────
+      // The crossover (implied probs flip) is necessary but not sufficient for profit.
+      // The vig means we need the odds gap to be wide enough. Stay in FIRST_BET_PLACED
+      // if the window hasn't opened yet — don't lock out future CROSSOVER_DETECTED events.
+      if ((D1 - 1) * (D2 - 1) <= 1) {
+        addLog(`CROSSOVER: not in win-win window yet (D1=${D1.toFixed(3)}, D2=${D2.toFixed(3)}, hedgeProfit=$${hedgeProfit}) — waiting for better odds`);
+        return;
+      }
+
+      addLog(`Crossover in win-win window: ${msg.leg1?.oddsText} vs ${msg.leg2?.oddsText} — hedge $${hedgeAmount}, profit $${hedgeProfit}`);
+      const nextStrategy = { ...strategy, state: 'WATCHING_HEDGE', hedgeAmount, hedgeProfit, updatedAt: Date.now() };
       await chrome.storage.local.set({ pendingStrategy: nextStrategy });
       chrome.runtime.sendMessage({ type: 'STRATEGY_UPDATE', strategy: nextStrategy }).catch(() => {});
 
-      // Triple-verify gate (7 checks) before auto-hedging
+      // ── Triple-verify gate (7 checks) before auto-hedging ───────────────────
       const domState = {
-        gameId: msg.gameId || null,
-        leg2Odds: msg.leg2?.american,
-        suspended: msg.suspended || false,
-        hedgeProfit: msg.hedgeProfit,
-        slipHasBets: msg.slipHasBets || false,
-        balance: msg.balance,
+        gameId:           msg.gameId || null,
+        leg2Odds:         msg.leg2?.american,
+        suspended:        msg.suspended || false,
+        hedgeProfit,
+        slipHasBets:      msg.slipHasBets || false,
+        balance:          msg.balance,
       };
 
-      const verify = tripleVerify(strategy, domState);
+      const verify = tripleVerify({ ...strategy, hedgeAmount, expectedHedgeOdds: msg.leg2?.american }, domState);
       if (!verify.pass) {
         addLog(`Triple verify FAILED: ${verify.failed.map(c => c.name).join(', ')}`);
         const failed = { ...nextStrategy, state: 'HEDGE_FAILED', verifyFailures: verify.failed, updatedAt: Date.now() };
@@ -730,13 +760,12 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
       }
 
       // All 7 checks pass — show 3s STOP countdown before firing
-      const hedgeAmount = msg.hedgeAmount || strategy.hedgeAmount;
-      const hedgeSide   = strategy.leg2Side || msg.leg2?.side;
-      const hedgeOdds   = msg.leg2?.oddsText || '?';
-      addLog(`Triple verify PASSED — 3s countdown before hedge: ${hedgeSide} $${hedgeAmount}`);
+      const hedgeSide = strategy.leg2Side || msg.leg2?.side;
+      const hedgeOdds = msg.leg2?.oddsText || '?';
+      addLog(`Triple verify PASSED — 3s countdown before hedge: ${hedgeSide} $${hedgeAmount} @ ${hedgeOdds} (profit $${hedgeProfit})`);
 
       // Notify popup to show STOP button countdown
-      chrome.runtime.sendMessage({ type: 'HEDGE_COUNTDOWN', side: hedgeSide, amount: hedgeAmount, oddsText: hedgeOdds }).catch(() => {});
+      chrome.runtime.sendMessage({ type: 'HEDGE_COUNTDOWN', side: hedgeSide, amount: hedgeAmount, oddsText: hedgeOdds, hedgeProfit }).catch(() => {});
 
       // Wait 3s — user can send STRATEGY_CANCEL during this window
       await new Promise(res => setTimeout(res, 3000));
@@ -753,12 +782,11 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
       await chrome.storage.local.set({ pendingStrategy: firedStrategy });
       chrome.runtime.sendMessage({ type: 'STRATEGY_UPDATE', strategy: firedStrategy }).catch(() => {});
       addLog(`Firing hedge: ${hedgeSide} $${hedgeAmount}`);
-      // Notify dashboard chat of crossover
       if (stratNow.commandId) {
         postToServer('/api/strategy-update', {
           commandId: stratNow.commandId,
           state: 'HEDGE_FIRED',
-          message: `⚡ Crossover detected! Placing hedge: ${hedgeSide} $${hedgeAmount} @ ${hedgeOdds}…`,
+          message: `⚡ WIN-WIN WINDOW OPEN — placing hedge: ${hedgeSide} $${hedgeAmount} @ ${hedgeOdds} | Locked profit: $${hedgeProfit}`,
         });
       }
 

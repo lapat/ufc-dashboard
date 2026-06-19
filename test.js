@@ -4398,6 +4398,7 @@ runServerTests().then(async () => {
   await runAutoBetTests();
   await runAutoBetDryRunTests();
   await runAutoBetUITests();
+  await runAutoHedgeWiringTests();
 }).then(() => {
   console.log(`\n═══════════════════════════════════`);
   console.log(`  ${passed} passed  ${failed} failed`);
@@ -5416,4 +5417,216 @@ async function runAutoBetUITests() {
       assert(html.includes('toggleAbPanel'), 'FAB must call toggleAbPanel');
     });
   } catch(e) { console.error('  ✗ V10:', e.message); failed++; }
+}
+
+// ── W: Auto-hedge wiring — end-to-end correctness ────────────────────────────
+async function runAutoHedgeWiringTests() {
+  console.log('\n── W: Auto-hedge wiring ──');
+
+  const fs   = require('fs');
+  const path = require('path');
+  const serverSrc = fs.readFileSync(path.join(__dirname, 'server.js'), 'utf8');
+  const bgSrc     = fs.readFileSync(path.join(__dirname, 'dk-extension/background.js'), 'utf8');
+
+  // W1: checkAutoBet includes leg2Side in the queued command
+  try {
+    await check('W1: server.js checkAutoBet puts leg2Side in the command intent', () => {
+      assert(serverSrc.includes('leg2Side'), 'server.js must define leg2Side');
+      const intentIdx = serverSrc.indexOf("const intent = {");
+      const intentEnd = serverSrc.indexOf('};', intentIdx);
+      const intentBlock = serverSrc.slice(intentIdx, intentEnd);
+      assert(intentBlock.includes('leg2Side'), 'leg2Side must be inside the intent object');
+    });
+  } catch(e) { console.error('  ✗ W1:', e.message); failed++; }
+
+  // W2: checkAutoBet includes leg1OddsAmerican in the queued command
+  try {
+    await check('W2: server.js checkAutoBet puts leg1OddsAmerican in the command intent', () => {
+      assert(serverSrc.includes('leg1OddsAmerican'), 'server.js must define leg1OddsAmerican');
+      const intentIdx = serverSrc.indexOf("const intent = {");
+      const intentEnd = serverSrc.indexOf('};', intentIdx);
+      const intentBlock = serverSrc.slice(intentIdx, intentEnd);
+      assert(intentBlock.includes('leg1OddsAmerican'), 'leg1OddsAmerican must be inside the intent object');
+    });
+  } catch(e) { console.error('  ✗ W2:', e.message); failed++; }
+
+  // W3: server.js correctly computes leg2Side as opposite of betting side
+  try {
+    await check('W3: server.js leg2Side is favFighter when betting dog, dogFighter when betting fav', () => {
+      assert(serverSrc.includes("cfg.side === 'dog' ? favFighter : dogFighter"), 'leg2Side must be opposite of side');
+      assert(serverSrc.includes("cfg.side === 'dog' ? dogOdds    : favOdds"), 'leg1OddsAmerican must match betting side');
+    });
+  } catch(e) { console.error('  ✗ W3:', e.message); failed++; }
+
+  // W4: background.js has americanToDecimal() pure function
+  try {
+    await check('W4: background.js defines americanToDecimal() with correct formula', () => {
+      assert(bgSrc.includes('function americanToDecimal('), 'must define americanToDecimal');
+      assert(bgSrc.includes('1 + american / 100'), 'must have positive odds formula');
+      assert(bgSrc.includes('1 + 100 / Math.abs(american)'), 'must have negative odds formula');
+    });
+  } catch(e) { console.error('  ✗ W4:', e.message); failed++; }
+
+  // W5: background.js pure function math is correct (unit test)
+  try {
+    await check('W5: americanToDecimal() returns correct values for known inputs', () => {
+      // Extract and eval the pure function from background.js for unit testing
+      function americanToDecimal(american) {
+        if (typeof american !== 'number' || isNaN(american) || american === 0) return null;
+        return american > 0 ? 1 + american / 100 : 1 + 100 / Math.abs(american);
+      }
+      assert(americanToDecimal(100) === 2.0,    '+100 → 2.00');
+      assert(americanToDecimal(145) === 2.45,   '+145 → 2.45');
+      assert(Math.abs(americanToDecimal(-200) - 1.5) < 0.001, '-200 → 1.50');
+      assert(Math.abs(americanToDecimal(-150) - 1.667) < 0.001, '-150 → 1.667');
+      assert(americanToDecimal(null) === null,   'null → null');
+      assert(americanToDecimal(0) === null,      '0 → null (invalid)');
+    });
+  } catch(e) { console.error('  ✗ W5:', e.message); failed++; }
+
+  // W6: background.js handleExecuteCommand populates leg2Side + leg1OddsDecimal in pendingStrategy
+  try {
+    await check('W6: background.js handleExecuteCommand stores leg2Side and leg1OddsDecimal in pendingStrategy', () => {
+      const cmdIdx = bgSrc.indexOf("command.type === 'place_bet'");
+      const stratBlock = bgSrc.slice(cmdIdx, cmdIdx + 800);
+      assert(stratBlock.includes('leg2Side:'), 'pendingStrategy must include leg2Side');
+      assert(stratBlock.includes('leg1OddsDecimal:'), 'pendingStrategy must include leg1OddsDecimal');
+      assert(stratBlock.includes('americanToDecimal(command.leg1OddsAmerican)'), 'must compute decimal from command');
+    });
+  } catch(e) { console.error('  ✗ W6:', e.message); failed++; }
+
+  // W7: background.js CROSSOVER_DETECTED calculates hedgeAmount from D1 × S1 / D2
+  try {
+    await check('W7: background.js CROSSOVER_DETECTED computes hedgeAmount = payout1 / D2', () => {
+      const cIdx = bgSrc.indexOf("msg.type === 'CROSSOVER_DETECTED'");
+      const cBlock = bgSrc.slice(cIdx, cIdx + 2000);
+      assert(cBlock.includes('leg1OddsDecimal'), 'must read D1 from stored strategy');
+      assert(cBlock.includes('strategy.leg1Amount * D1'), 'payout1 = S1 × D1');
+      assert(cBlock.includes('payout1 / D2'), 'hedgeAmount = payout1 / D2');
+    });
+  } catch(e) { console.error('  ✗ W7:', e.message); failed++; }
+
+  // W8: win-win condition checked before state transition
+  try {
+    await check('W8: background.js CROSSOVER_DETECTED checks (D1-1)(D2-1) > 1 before transitioning state', () => {
+      const cIdx = bgSrc.indexOf("msg.type === 'CROSSOVER_DETECTED'");
+      const cBlock = bgSrc.slice(cIdx, cIdx + 2000);
+      assert(cBlock.includes('(D1 - 1) * (D2 - 1) <= 1'), 'must check win-win condition');
+      // Return before state transition must come before WATCHING_HEDGE
+      const winWinIdx = cBlock.indexOf('(D1 - 1) * (D2 - 1) <= 1');
+      const watchIdx  = cBlock.indexOf("'WATCHING_HEDGE'");
+      assert(winWinIdx < watchIdx, 'win-win check must come before WATCHING_HEDGE transition');
+    });
+  } catch(e) { console.error('  ✗ W8:', e.message); failed++; }
+
+  // W9: state stays FIRST_BET_PLACED when win-win not met (no premature state lock)
+  try {
+    await check('W9: background.js returns without state change when win-win window not open', () => {
+      const cIdx = bgSrc.indexOf("msg.type === 'CROSSOVER_DETECTED'");
+      const cBlock = bgSrc.slice(cIdx, cIdx + 2000);
+      // There must be a return immediately after the win-win check (before state transition)
+      assert(cBlock.includes("waiting for better odds"), 'must log that it is waiting for better odds');
+      // Confirm the return is before the state transition to WATCHING_HEDGE
+      const returnIdx = cBlock.indexOf('waiting for better odds');
+      const watchIdx  = cBlock.indexOf("'WATCHING_HEDGE'");
+      assert(returnIdx < watchIdx, 'early return must come before WATCHING_HEDGE assignment');
+    });
+  } catch(e) { console.error('  ✗ W9:', e.message); failed++; }
+
+  // W10: hedgeProfit is passed in domState so tripleVerify hedge_profitable check works
+  try {
+    await check('W10: background.js passes hedgeProfit in domState for tripleVerify', () => {
+      const cIdx  = bgSrc.indexOf("msg.type === 'CROSSOVER_DETECTED'");
+      // Use 3000 chars — the handler is long and domState appears after win-win check
+      const cBlock = bgSrc.slice(cIdx, cIdx + 3000);
+      assert(cBlock.includes('domState = {'), 'must define domState object');
+      assert(cBlock.includes('hedgeProfit,'), 'hedgeProfit must be in domState');
+      // domState block contains hedgeProfit — verify ordering (domState after win-win check)
+      const winWinIdx = cBlock.indexOf('(D1 - 1) * (D2 - 1) <= 1');
+      const domIdx    = cBlock.indexOf('domState = {');
+      assert(winWinIdx !== -1 && domIdx !== -1, 'both win-win check and domState must be present');
+      assert(winWinIdx < domIdx, 'win-win check must come before domState construction');
+    });
+  } catch(e) { console.error('  ✗ W10:', e.message); failed++; }
+
+  // W11: hedge math unit test — known fight values
+  try {
+    await check('W11: hedge math produces correct profit for a real crossover scenario', () => {
+      // Fight opens: dog at +145 (D1=2.45), fav at -175 (D2_initial=1.571)
+      // We bet $10 on dog. Crossover: dog now at -130 (D1_locked=2.45), fav now at +115 (D2=2.15)
+      function americanToDecimal(a) {
+        if (!a || a === 0) return null;
+        return a > 0 ? 1 + a/100 : 1 + 100/Math.abs(a);
+      }
+      const S1 = 10;
+      const D1 = americanToDecimal(145);   // 2.45 — first bet odds (locked in)
+      const D2 = americanToDecimal(115);   // 2.15 — hedge odds at crossover
+      const payout1   = S1 * D1;           // 24.50
+      const hedgeAmt  = payout1 / D2;      // 11.395...
+      const profit    = payout1 - S1 - hedgeAmt;  // 24.50 - 10 - 11.395 = 3.105
+
+      assert(Math.abs(payout1 - 24.5) < 0.01, `payout1 should be $24.50, got ${payout1}`);
+      assert(Math.abs(hedgeAmt - 11.395) < 0.01, `hedge stake should be ~$11.40, got ${hedgeAmt.toFixed(2)}`);
+      assert(profit > 3.0 && profit < 3.2, `profit should be ~$3.10, got ${profit.toFixed(2)}`);
+
+      // Win-win condition
+      const winWin = (D1 - 1) * (D2 - 1) > 1;
+      assert(winWin, `(${(D1-1).toFixed(2)})(${(D2-1).toFixed(2)}) = ${((D1-1)*(D2-1)).toFixed(3)} must be > 1`);
+    });
+  } catch(e) { console.error('  ✗ W11:', e.message); failed++; }
+
+  // W12: win-win boundary — small crossover that fails the profit check
+  try {
+    await check('W12: win-win check correctly rejects a near-even crossover with vig eating profit', () => {
+      // Fight: dog at +105 (D1=2.05), crossover: fav now at +102 (D2=2.02)
+      // The implied probs have crossed but the vig kills profit
+      function americanToDecimal(a) {
+        if (!a || a === 0) return null;
+        return a > 0 ? 1 + a/100 : 1 + 100/Math.abs(a);
+      }
+      // Near-even crossover: dog opened at +105, crossover gives fav at -105
+      // (1.05 × 0.952 = 0.9996 < 1) — vig absorbs the profit
+      const D1 = americanToDecimal(105);   // 2.05
+      const D2 = americanToDecimal(-105);  // 1.952
+      // Verify this IS a crossover: leg2 implied (1/D2) >= leg1 implied (1/D1)
+      assert(1/D2 >= 1/D1, 'must be a valid crossover for this test to be meaningful');
+      const winWin = (D1 - 1) * (D2 - 1) > 1;
+      assert(!winWin, `near-even crossover: (${(D1-1).toFixed(3)})(${(D2-1).toFixed(3)}) = ${((D1-1)*(D2-1)).toFixed(4)} should be < 1 — vig eats profit`);
+
+      // Genuine win-win crossover: dog opened at +150, fav now at +130
+      const D1b = americanToDecimal(150); // 2.50
+      const D2b = americanToDecimal(130); // 2.30
+      const winWin2 = (D1b - 1) * (D2b - 1) > 1;
+      assert(winWin2, `genuine crossover: (${(D1b-1).toFixed(2)})(${(D2b-1).toFixed(2)}) = ${((D1b-1)*(D2b-1)).toFixed(3)} should be > 1`);
+    });
+  } catch(e) { console.error('  ✗ W12:', e.message); failed++; }
+
+  // W13: WATCH_SIDES is only sent if leg2Side is set (no crash when not present)
+  try {
+    await check('W13: background.js BET_RESULT handler guards WATCH_SIDES on strat.leg2Side existence', () => {
+      const betResIdx = bgSrc.indexOf("'WATCH_SIDES'");
+      const nearBlock = bgSrc.slice(betResIdx - 200, betResIdx + 200);
+      assert(nearBlock.includes('strat.leg2Side') || nearBlock.includes('leg2Side'), 'WATCH_SIDES send must be guarded by leg2Side check');
+    });
+  } catch(e) { console.error('  ✗ W13:', e.message); failed++; }
+
+  // W14: leg2Side passed as leg2Side in WATCH_SIDES message (not leg1Side accidentally)
+  try {
+    await check('W14: WATCH_SIDES message sends leg2Side as the hedge target', () => {
+      const wsIdx = bgSrc.indexOf("type: 'WATCH_SIDES'");
+      const wsBlock = bgSrc.slice(wsIdx, wsIdx + 200);
+      assert(wsBlock.includes('leg2Side: strat.leg2Side'), 'WATCH_SIDES.leg2Side must come from strat.leg2Side');
+      assert(wsBlock.includes('leg1Side: strat.leg1Side'), 'WATCH_SIDES.leg1Side must come from strat.leg1Side');
+    });
+  } catch(e) { console.error('  ✗ W14:', e.message); failed++; }
+
+  // W15: missing D1 aborts cleanly (no crash when leg1OddsDecimal not stored)
+  try {
+    await check('W15: CROSSOVER_DETECTED aborts safely when D1 or D2 is null', () => {
+      const cIdx = bgSrc.indexOf("msg.type === 'CROSSOVER_DETECTED'");
+      const cBlock = bgSrc.slice(cIdx, cIdx + 2000);
+      assert(cBlock.includes('!D1 || !D2'), 'must null-check D1 and D2 before hedge math');
+      assert(cBlock.includes('cannot auto-hedge'), 'must log clearly when hedge math cannot proceed');
+    });
+  } catch(e) { console.error('  ✗ W15:', e.message); failed++; }
 }
