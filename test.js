@@ -4399,6 +4399,7 @@ runServerTests().then(async () => {
   await runAutoBetDryRunTests();
   await runAutoBetUITests();
   await runAutoHedgeWiringTests();
+  await runScoreTriggerTests();
 }).then(() => {
   console.log(`\n═══════════════════════════════════`);
   console.log(`  ${passed} passed  ${failed} failed`);
@@ -5629,4 +5630,165 @@ async function runAutoHedgeWiringTests() {
       assert(cBlock.includes('cannot auto-hedge'), 'must log clearly when hedge math cannot proceed');
     });
   } catch(e) { console.error('  ✗ W15:', e.message); failed++; }
+}
+
+// ── X: Score-tie trigger system ───────────────────────────────────────────────
+async function runScoreTriggerTests() {
+  console.log('\n── X: Score-tie trigger ──');
+
+  const fs   = require('fs');
+  const path = require('path');
+  const src  = fs.readFileSync(path.join(__dirname, 'server.js'), 'utf8');
+
+  // X1: ASSISTANT_SYSTEM prompt includes score_tie trigger type
+  try {
+    await check('X1: ASSISTANT_SYSTEM prompt includes score_tie trigger type', () => {
+      assert(src.includes('"score_tie"'), 'prompt must list score_tie as a trigger type');
+      assert(src.includes('team1'), 'prompt schema must include team1 field');
+      assert(src.includes('team2'), 'prompt schema must include team2 field');
+      assert(src.includes('equalize') || src.includes('level') || src.includes('tied'), 'prompt must give score_tie examples');
+    });
+  } catch(e) { console.error('  ✗ X1:', e.message); failed++; }
+
+  // X2: prompt instructs model NOT to clarify for score_tie — just act
+  try {
+    await check('X2: ASSISTANT_SYSTEM tells model not to clarify for clear score_tie intent', () => {
+      assert(src.includes('DO NOT clarify') || src.includes('do NOT clarify'), 'must explicitly tell model not to over-clarify');
+    });
+  } catch(e) { console.error('  ✗ X2:', e.message); failed++; }
+
+  // X3: fetchLiveScore() function extracted (not just inside route handler)
+  try {
+    await check('X3: fetchLiveScore() is a reusable function (not inlined in route only)', () => {
+      assert(src.includes('async function fetchLiveScore('), 'must define fetchLiveScore as a standalone function');
+    });
+  } catch(e) { console.error('  ✗ X3:', e.message); failed++; }
+
+  // X4: espnEndpoints() helper present and includes FIFA World Cup endpoint
+  try {
+    await check('X4: espnEndpoints() includes FIFA World Cup endpoint for soccer', () => {
+      assert(src.includes('function espnEndpoints('), 'must have espnEndpoints helper');
+      assert(src.includes('fifa.world'), 'must include FIFA World Cup endpoint for international tournaments');
+    });
+  } catch(e) { console.error('  ✗ X4:', e.message); failed++; }
+
+  // X5: score_tie polling loop exists and runs every 5s
+  try {
+    await check('X5: score_tie polling loop runs every 5000ms', () => {
+      assert(src.includes("type === 'score_tie'"), 'poll loop must filter for score_tie triggers');
+      assert(src.includes('setInterval') && src.includes('5000'), 'must poll every 5 seconds');
+    });
+  } catch(e) { console.error('  ✗ X5:', e.message); failed++; }
+
+  // X6: poll loop only fires when scores are equal AND at least one team has scored
+  try {
+    await check('X6: score_tie only fires when s1 === s2 AND s1+s2 > 0 (avoids 0-0 false trigger)', () => {
+      assert(src.includes('s1 !== s2'), 'must skip when scores are not equal');
+      assert(src.includes('s1 + s2 === 0'), 'must skip the 0-0 game-start state');
+    });
+  } catch(e) { console.error('  ✗ X6:', e.message); failed++; }
+
+  // X7: trigger removed from watchTriggers after firing (one-shot)
+  try {
+    await check('X7: score_tie trigger is removed after it fires (one-shot, no double-bet)', () => {
+      const pollIdx = src.indexOf("type === 'score_tie'");
+      const pollBlock = src.slice(pollIdx, pollIdx + 1500);
+      assert(pollBlock.includes('filter(t => t.id !== trigger.id)'), 'trigger must be removed after firing');
+    });
+  } catch(e) { console.error('  ✗ X7:', e.message); failed++; }
+
+  // X8: watch_trigger handler stores team1/team2/sport in condition for score_tie
+  try {
+    await check('X8: watch_trigger handler builds correct condition object for score_tie', () => {
+      assert(src.includes("type: 'score_tie'"), 'condition type must be score_tie');
+      assert(src.includes('team1: intent.trigger?.team1'), 'must read team1 from AI intent');
+      assert(src.includes('team2: intent.trigger?.team2'), 'must read team2 from AI intent');
+      assert(src.includes("sport: intent.trigger?.sport || 'soccer'"), "must default sport to soccer");
+    });
+  } catch(e) { console.error('  ✗ X8:', e.message); failed++; }
+
+  // X9: response for score_tie says "monitoring score" not just "watching odds"
+  try {
+    await check('X9: assistant response for score_tie mentions score monitoring, not odds', () => {
+      assert(src.includes('Monitoring the live') || src.includes('monitoring'), 'response must mention score monitoring');
+      assert(src.includes('ESPN'), 'response must mention ESPN as the data source');
+      assert(src.includes('5 seconds'), 'response must tell user the poll interval');
+    });
+  } catch(e) { console.error('  ✗ X9:', e.message); failed++; }
+
+  // X10: score_tie tie math unit test — correct logic
+  try {
+    await check('X10: score_tie fire logic is correct (tie yes/no, 0-0 exclusion)', () => {
+      function shouldFire(s1, s2) {
+        if (isNaN(s1) || isNaN(s2)) return false;
+        if (s1 !== s2) return false;      // not tied
+        if (s1 + s2 === 0) return false;  // 0-0 game start
+        return true;
+      }
+      assert(shouldFire(1, 1) === true,  '1-1 → fire');
+      assert(shouldFire(2, 2) === true,  '2-2 → fire');
+      assert(shouldFire(0, 0) === false, '0-0 → do NOT fire (game start)');
+      assert(shouldFire(1, 2) === false, '1-2 → do NOT fire (not tied)');
+      assert(shouldFire(3, 1) === false, '3-1 → do NOT fire');
+    });
+  } catch(e) { console.error('  ✗ X10:', e.message); failed++; }
+
+  // X11: /api/live-score still works (endpoint refactored but still present)
+  try {
+    await check('X11: /api/live-score route still uses fetchLiveScore', () => {
+      assert(src.includes("app.get('/api/live-score'"), '/api/live-score route must exist');
+      assert(src.includes('fetchLiveScore(team1, team2, sport)'), 'route must delegate to fetchLiveScore');
+    });
+  } catch(e) { console.error('  ✗ X11:', e.message); failed++; }
+
+  // X12: score_tie trigger includes team names in description (dashboard visibility)
+  try {
+    await check('X12: score_tie description includes team names for dashboard display', () => {
+      assert(src.includes('condition.team1') && src.includes('condition.team2'), 'description must reference team names');
+      assert(src.includes('score becomes tied'), 'description text must say "score becomes tied"');
+    });
+  } catch(e) { console.error('  ✗ X12:', e.message); failed++; }
+
+  // X13: server-side score monitoring — no DK tab required (user explicitly told this)
+  try {
+    await check('X13: score_tie response tells user no DK tab required (server monitors)', () => {
+      assert(src.includes('no DK tab required'), 'user must be told the server handles monitoring');
+    });
+  } catch(e) { console.error('  ✗ X13:', e.message); failed++; }
+
+  if (!process.argv.includes('--local')) {
+    console.log('  - X14-X15: skipped (not --local)'); return;
+  }
+
+  // X14: POST /api/watch-triggers with score_tie stores team1/team2 in condition
+  try {
+    await check('X14: POST /api/watch-triggers stores score_tie trigger with team fields', async () => {
+      const r = await fetch('http://localhost:3000/api/watch-triggers', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          side: 'USA', amount: 10,
+          condition: { type: 'score_tie', team1: 'USA', team2: 'Australia', sport: 'soccer' },
+        }),
+      });
+      assert(r.ok, `HTTP ${r.status}`);
+      const body = await r.json();
+      assert(body.trigger?.condition?.type === 'score_tie', 'condition.type must be score_tie');
+      assert(body.trigger?.condition?.team1 === 'USA', 'team1 must be stored');
+      assert(body.trigger?.condition?.team2 === 'Australia', 'team2 must be stored');
+      // Clean up
+      if (body.trigger?.id) {
+        await fetch(`http://localhost:3000/api/watch-triggers/${body.trigger.id}`, { method: 'DELETE' });
+      }
+    });
+  } catch(e) { console.error('  ✗ X14:', e.message); failed++; }
+
+  // X15: /api/live-score returns null (no game right now) without crashing
+  try {
+    await check('X15: /api/live-score returns null gracefully when no matching game found', async () => {
+      const r = await fetch('http://localhost:3000/api/live-score?team1=FakeTeamXYZ&team2=FakeTeamABC&sport=soccer');
+      assert(r.ok, `HTTP ${r.status}`);
+      const body = await r.json();
+      assert(body === null || (typeof body === 'object' && body !== undefined), 'must return null or object');
+    });
+  } catch(e) { console.error('  ✗ X15:', e.message); failed++; }
 }

@@ -1036,67 +1036,107 @@ app.get('/api/live-check', async (req, res) => {
 
 // Live odds for any sport key
 // ── Live Score via ESPN public API ────────────────────────────────────────
-app.get('/api/live-score', async (req, res) => {
-  const { sport, team1, team2 } = req.query;
-  if (!team1 || !team2) return res.json(null);
-
+// ── Live score lookup via ESPN public API ──────────────────────────────────────
+// Shared by /api/live-score and the score_tie trigger poll loop.
+function espnEndpoints(sport) {
   const s = (sport || '').toLowerCase();
-  const endpoints = [];
-  if (s.includes('soccer') || s.includes('football') && !s.includes('nfl')) {
-    endpoints.push(
-      'https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/scoreboard',
-      'https://site.api.espn.com/apis/site/v2/sports/soccer/concacaf.nations.league/scoreboard',
-      'https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard',
-      'https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.euro/scoreboard',
-      'https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard',
-      'https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard',
-    );
-  } else if (s.includes('mma') || s.includes('ufc') || s.includes('fight')) {
-    endpoints.push('https://site.api.espn.com/apis/site/v2/sports/mma/ufc/scoreboard');
-  } else if (s.includes('nfl') || (s.includes('football') && s.includes('nfl'))) {
-    endpoints.push('https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard');
-  } else if (s.includes('nba') || s.includes('basketball')) {
-    endpoints.push('https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard');
-  } else if (s.includes('nhl') || s.includes('hockey')) {
-    endpoints.push('https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard');
-  } else {
-    endpoints.push(
-      'https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/scoreboard',
-      'https://site.api.espn.com/apis/site/v2/sports/mma/ufc/scoreboard',
-    );
-  }
+  if (s.includes('soccer') || (s.includes('football') && !s.includes('nfl'))) return [
+    'https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard',
+    'https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/scoreboard',
+    'https://site.api.espn.com/apis/site/v2/sports/soccer/concacaf.nations.league/scoreboard',
+    'https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.euro/scoreboard',
+    'https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard',
+    'https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard',
+  ];
+  if (s.includes('mma') || s.includes('ufc') || s.includes('fight'))
+    return ['https://site.api.espn.com/apis/site/v2/sports/mma/ufc/scoreboard'];
+  if (s.includes('nfl') || (s.includes('football') && s.includes('nfl')))
+    return ['https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard'];
+  if (s.includes('nba') || s.includes('basketball'))
+    return ['https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard'];
+  if (s.includes('nhl') || s.includes('hockey'))
+    return ['https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard'];
+  // Default: soccer + UFC
+  return [
+    'https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard',
+    'https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/scoreboard',
+    'https://site.api.espn.com/apis/site/v2/sports/mma/ufc/scoreboard',
+  ];
+}
 
-  const norm = str => (str || '').toLowerCase().replace(/[^a-z0-9]/g, '');
-  const fuzzy = (a, b) => { const na = norm(a), nb = norm(b); return na.includes(nb) || nb.includes(na); };
+const scoreNorm  = str => (str || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+const scoreFuzzy = (a, b) => { const na = scoreNorm(a), nb = scoreNorm(b); return na.includes(nb) || nb.includes(na); };
 
-  for (const url of endpoints) {
+async function fetchLiveScore(team1, team2, sport) {
+  for (const url of espnEndpoints(sport)) {
     try {
       const { data } = await fetchJson(url);
       for (const event of (data.events || [])) {
-        const comp = event.competitions?.[0];
+        const comp  = event.competitions?.[0];
         if (!comp) continue;
         const comps = comp.competitors || [];
         if (comps.length < 2) continue;
         const names = comps.map(c => c.team?.displayName || c.team?.name || '');
-        const hasT1 = names.some(n => fuzzy(n, team1));
-        const hasT2 = names.some(n => fuzzy(n, team2));
-        if (!hasT1 || !hasT2) continue;
-        // Align to team1/team2 order
-        const c1 = fuzzy(comps[0].team?.displayName || '', team1) ? comps[0] : comps[1];
+        if (!names.some(n => scoreFuzzy(n, team1))) continue;
+        if (!names.some(n => scoreFuzzy(n, team2))) continue;
+        const c1 = scoreFuzzy(comps[0].team?.displayName || '', team1) ? comps[0] : comps[1];
         const c2 = c1 === comps[0] ? comps[1] : comps[0];
         const st = comp.status;
-        return res.json({
-          score1: c1.score ?? '0',
-          score2: c2.score ?? '0',
-          period: st?.type?.shortDetail || st?.type?.description || '',
-          clock: st?.displayClock || '',
+        return {
+          score1:    c1.score ?? '0',
+          score2:    c2.score ?? '0',
+          period:    st?.type?.shortDetail || st?.type?.description || '',
+          clock:     st?.displayClock || '',
           completed: st?.type?.completed || false,
-        });
+        };
       }
-    } catch (_) { /* try next */ }
+    } catch (_) { /* try next endpoint */ }
   }
-  res.json(null);
+  return null;
+}
+
+app.get('/api/live-score', async (req, res) => {
+  const { sport, team1, team2 } = req.query;
+  if (!team1 || !team2) return res.json(null);
+  res.json(await fetchLiveScore(team1, team2, sport));
 });
+
+// ── Score-tie trigger polling — server-side, every 5s ─────────────────────────
+// For each active score_tie trigger, poll ESPN. When scores are equal and both
+// teams have scored (avoids 0-0 game-start false fire), queue the bet command.
+// The trigger is removed after firing (one-shot).
+setInterval(async () => {
+  const tieTriggers = watchTriggers.filter(t =>
+    t.condition?.type === 'score_tie' && t.expiresAt > Date.now()
+  );
+  if (!tieTriggers.length) return;
+
+  for (const trigger of tieTriggers) {
+    try {
+      const { team1, team2, sport } = trigger.condition;
+      const score = await fetchLiveScore(team1, team2, sport || 'soccer');
+      if (!score) continue;
+
+      const s1 = parseInt(score.score1, 10);
+      const s2 = parseInt(score.score2, 10);
+      if (isNaN(s1) || isNaN(s2)) continue;
+      if (s1 !== s2) continue;         // not tied
+      if (s1 + s2 === 0) continue;    // 0-0 at game start — not a real tie yet
+
+      // Score is tied (and at least one team has scored) — fire
+      const scoreStr = `${s1}-${s2}`;
+      console.log(`[score_tie] FIRED: ${team1} ${scoreStr} ${team2} → $${trigger.amount} on ${trigger.side} [${score.period || '?'}']`);
+      const cmd = makeCommand('place_bet', { side: trigger.side, amount: trigger.amount, trigger: null });
+      commandQueue.push(cmd);
+      saveCommandQueue();
+      watchTriggers = watchTriggers.filter(t => t.id !== trigger.id); // one-shot
+      sendAlert(
+        `⚽ SCORE TIE TRIGGER FIRED: ${team1} ${scoreStr} ${team2}`,
+        `Score became tied at ${scoreStr} (${score.period || 'unknown period'}).\nPlacing $${trigger.amount} on ${trigger.side} to win.\n\nExtension will execute within 5 seconds.`
+      );
+    } catch (_) { /* ignore per-trigger errors */ }
+  }
+}, 5000);
 
 app.get('/api/sport/:key', async (req, res) => {
   try {
@@ -2135,11 +2175,14 @@ ${JSON.stringify(ctx, null, 1)}
 Respond with ONLY a JSON object — no explanation, no markdown:
 {
   "intent": "place_bet" | "watch_trigger" | "cancel" | "status" | "research" | "clarify",
-  "side": "<team/player name or null>",
+  "side": "<team/player name to bet on, or null>",
   "amount": <dollars as number or null>,
   "trigger": {
-    "type": "crossover" | "positive" | "negative" | "odds_threshold" | null,
-    "targetOdds": <american odds number or null>
+    "type": "crossover" | "positive" | "negative" | "odds_threshold" | "score_tie" | null,
+    "targetOdds": <american odds number or null>,
+    "team1": "<first team name for score_tie, else null>",
+    "team2": "<second team name for score_tie, else null>",
+    "sport": "<sport name for score_tie e.g. 'soccer', else null>"
   },
   "confidence": <0.0–1.0>,
   "clarifyQuestion": "<question to ask user if intent=clarify, else null>"
@@ -2147,24 +2190,30 @@ Respond with ONLY a JSON object — no explanation, no markdown:
 
 INTENT RULES:
 - place_bet: user wants to bet RIGHT NOW — side + amount, no waiting condition
-- watch_trigger: user wants to bet WHEN something happens ("as soon as", "when odds go", "if they hit", "wait until")
+- watch_trigger: user wants to bet WHEN something happens ("as soon as", "when odds go", "if they hit", "wait until", "when score is tied", "if they equalize", "when the game is level")
 - cancel: stop strategy, cancel watching, stop auto-hedge
 - status: asking what's currently happening, current odds, open bets — informational
 - research: historical data, fight analysis, crossover stats, strategy questions — needs deep research
-- clarify: too vague to act safely (missing side or amount for a bet/trigger)
+- clarify: ONLY when truly ambiguous (missing side or amount) — do NOT clarify if intent is clear
 
 TRIGGER CONDITION TYPES (use for watch_trigger):
 - "positive": fire when side's american odds > 0 ("goes plus money", "goes into plus territory")
 - "negative": fire when side's american odds < 0 ("becomes favorite")
 - "odds_threshold": fire when side's odds reach/exceed targetOdds (e.g., ">= +150")
 - "crossover": fire at crossover (implied prob swap between two sides)
+- "score_tie": fire when the live game score becomes tied/equal
+  WHEN TO USE: "if game is tied", "when they tie it", "if score is level", "when [team] equalizes", "if it goes to a tie", "monitor the score, if [team] ties"
+  → set trigger.team1 and trigger.team2 to the teams playing (extract from user message or context)
+  → set trigger.sport to the sport (usually "soccer" for international team names; "nfl"/"nba"/"nhl" if clear)
+  → side = the team the user wants to BET ON when the tie happens
 
 AMOUNT PARSING: "$1.50" → 1.50, "a penny" → 0.01, "50 cents" → 0.50, "1k" → 1000
 
 CONTEXT USAGE:
 - "another bet on X" / "also bet X" → use same amount as last bet in recentChat
 - "the favorite/underdog" and context has odds → resolve the name
-- For watch_trigger: if amount is missing, set intent=clarify and ask for it`;
+- For watch_trigger: if amount is missing, set intent=clarify and ask for it
+- For score_tie: DO NOT clarify just because you're not sure about monitoring — set intent=watch_trigger and fire the trigger. The system handles real-time score monitoring automatically.`;
 
 app.post('/api/assistant', async (req, res) => {
   const { message, userId = 'default', currentOdds } = req.body || {};
@@ -2240,21 +2289,44 @@ app.post('/api/assistant', async (req, res) => {
         return res.json({ type: 'clarify', answer: q });
       }
       const condType = intent.trigger?.type || 'positive';
+      const isScoreTie = condType === 'score_tie';
+      const condition = isScoreTie
+        ? {
+            type: 'score_tie',
+            team1: intent.trigger?.team1 || intent.side || '',
+            team2: intent.trigger?.team2 || '',
+            sport: intent.trigger?.sport || 'soccer',
+          }
+        : { type: condType, targetOdds: intent.trigger?.targetOdds || null };
+
+      const descSuffix = isScoreTie
+        ? `score becomes tied (${condition.team1} vs ${condition.team2})`
+        : condType === 'positive' ? 'odds go plus money'
+        : condType === 'negative' ? 'odds go negative'
+        : `odds reach ${intent.trigger?.targetOdds}`;
+
       const trigger = {
         id: Date.now().toString(36) + Math.random().toString(36).slice(2, 6),
         userId,
         side: intent.side,
         amount: intent.amount,
-        condition: { type: condType, targetOdds: intent.trigger?.targetOdds || null },
-        description: `Bet $${intent.amount} on ${intent.side} when ${condType === 'positive' ? 'odds go plus money' : condType === 'negative' ? 'odds go negative' : `odds reach ${intent.trigger?.targetOdds}`}`,
+        condition,
+        description: `Bet $${intent.amount} on ${intent.side} when ${descSuffix}`,
         createdAt: Date.now(),
         expiresAt: Date.now() + 4 * 60 * 60 * 1000,
       };
       watchTriggers.push(trigger);
-      const condDesc = condType === 'positive' ? 'go into plus money'
-        : condType === 'negative' ? 'become a favorite'
-        : `hit ${intent.trigger?.targetOdds}`;
-      const answer = `**Watching** 👁️\n\nI'll bet **$${intent.amount}** on **${intent.side}** as soon as their odds ${condDesc}.\n\nThe extension checks every second — it fires the bet instantly when the condition is met.`;
+
+      let answer;
+      if (isScoreTie) {
+        const t1 = condition.team1, t2 = condition.team2;
+        answer = `**Score trigger set** ⚽\n\nMonitoring the live ${condition.sport} score via ESPN. The moment ${t1 && t2 ? `${t1} vs ${t2}` : 'the game'} becomes tied, I'll place **$${intent.amount}** on **${intent.side}** to win instantly.\n\nServer checks score every 5 seconds — no DK tab required.`;
+      } else {
+        const condDesc = condType === 'positive' ? 'go into plus money'
+          : condType === 'negative' ? 'become a favorite'
+          : `hit ${intent.trigger?.targetOdds}`;
+        answer = `**Watching** 👁️\n\nI'll bet **$${intent.amount}** on **${intent.side}** as soon as their odds ${condDesc}.\n\nThe extension checks every second — it fires the bet instantly when the condition is met.`;
+      }
       addChatTurn(userId, 'assistant', answer);
       return res.json({ type: 'watch_trigger', answer, trigger });
     }
