@@ -179,6 +179,54 @@ comm -23 <(ls historical_data/*.json | xargs -I{} basename {} | grep -vE "^(dk_|
 
 ---
 
+## ⚠️ CRITICAL: Three Non-Negotiable Guarantees — Fight Data Must Always Be
+
+### 1. ALWAYS RECORDING — recorder must be running 24/7
+- `recPoll` starts automatically at boot inside `server.js` — no separate process needed
+- Verify: `GET /health` → `status: ok`. A `503` means the recorder stalled (last poll >10 min ago)
+- Verify: `GET /api/recorder/status` → check `lastPoll` timestamp
+
+### 2. ALWAYS WRITTEN TO PERSISTENT STORAGE — never the ephemeral filesystem
+- Railway volume `ufc-dashboard-volume` is mounted at `/data`
+- `DATA_DIR=/data` env var MUST be set on Railway — this is what routes all writes to the volume
+- Without it, fight files go to `/app/historical_data` which is wiped on every redeploy
+- Verify: `GET https://ufc-dashboard-production-e03d.up.railway.app/api/recorder/backup-status`
+  - `volumeActive` must be `true`
+  - `historicalDir` must be `/data/historical_data`
+  - `ok` must be `true`
+- **If `volumeActive` is ever `false`: DO NOT PUSH. Fix Railway env vars first.**
+
+### 3. ALWAYS BACKED UP TO GITHUB — every completed fight pushed automatically
+- `pushFightToGitHub()` is called in `recSave()` immediately when a fight ends
+- `GITHUB_TOKEN` env var must be set on Railway (repo: `lapat/ufc-dashboard`)
+- Verify: check `ok: true` in `/api/recorder/backup-status` (requires both DATA_DIR + GITHUB_TOKEN)
+
+### Pre-deploy test commands — run BOTH before every push
+
+```bash
+# 1. Static code guarantees (no server needed) — 448 must pass, 0 fail
+node test.js --local
+
+# 2. Live server deploy gate — hits Railway, verifies volume + backup are active
+node test.js
+# Look for the 🔴 DEPLOY GATE tests — all 4 must pass
+# If any fail: DO NOT DEPLOY until Railway env vars / volume are fixed
+```
+
+### What the deploy gate tests check (`node test.js`, prod only)
+- `🔴 DEPLOY GATE: volumeActive must be true` — DATA_DIR points at mounted volume
+- `🔴 DEPLOY GATE: historicalDir must be /data/historical_data` — not an ephemeral app path
+- `🔴 DEPLOY GATE: ok must be true` — both DATA_DIR and GITHUB_TOKEN configured
+- `🔴 DEPLOY GATE: write test` — dataDir is `/data`, not a git checkout path
+
+### Railway env vars required (both must be set)
+| Var | Value | Purpose |
+|-----|-------|---------|
+| `DATA_DIR` | `/data` | Routes all fight file writes to the persistent volume |
+| `GITHUB_TOKEN` | (token) | Auto-commits completed fights to `lapat/ufc-dashboard` |
+
+---
+
 ## AI Betting Agent — Autonomous Hedge System Spec
 
 **Committed 2026-06-18. Deep research completed before implementation.**

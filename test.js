@@ -1598,6 +1598,41 @@ async function runRecordingTests() {
     assert(d.githubToken === true, `GITHUB_TOKEN not detected — set it in .env for local tests. Got: ${JSON.stringify(d)}`);
   });
 
+  // ── DEPLOY GATE: volume + persistence must be active (prod only) ──────────
+  if (!target.includes('localhost')) {
+    await check('🔴 DEPLOY GATE: volumeActive must be true — fight recordings go to /data not ephemeral fs', async () => {
+      const d = await get('/api/recorder/backup-status');
+      assert(d.volumeActive === true,
+        `volumeActive is FALSE — DATA_DIR env var not set or not pointing at mounted volume. ` +
+        `dataDir=${d.dataDir}, historicalDir=${d.historicalDir}. ` +
+        `Fix: Railway Variables → DATA_DIR=/data, and confirm volume is mounted at /data.`);
+    });
+
+    await check('🔴 DEPLOY GATE: historicalDir must be /data/historical_data not ephemeral path', async () => {
+      const d = await get('/api/recorder/backup-status');
+      assert(d.historicalDir && d.historicalDir.startsWith('/data'),
+        `historicalDir is "${d.historicalDir}" — fight recordings are going to the EPHEMERAL filesystem ` +
+        `and will be WIPED on every Railway redeploy. Set DATA_DIR=/data.`);
+    });
+
+    await check('🔴 DEPLOY GATE: ok must be true — both DATA_DIR and GITHUB_TOKEN required for safe operation', async () => {
+      const d = await get('/api/recorder/backup-status');
+      assert(d.ok === true,
+        `backup-status ok=false — githubToken=${d.githubToken}, volumeActive=${d.volumeActive}. ` +
+        `Both must be true. Without GITHUB_TOKEN, Railway filesystem wipe = permanent data loss.`);
+    });
+
+    await check('🔴 DEPLOY GATE: write test — confirm /data/historical_data is actually writable', async () => {
+      const d = await get('/api/recorder/backup-status');
+      assert(d.historicalDir !== '/app/historical_data' && d.historicalDir !== '/usr/src/app/historical_data',
+        `historicalDir looks like a git checkout path ("${d.historicalDir}") — this is ephemeral on Railway. Must be /data/historical_data.`);
+      assert(d.dataDir === '/data',
+        `dataDir is "${d.dataDir}" — expected "/data". Confirm Railway volume is mounted at /data and DATA_DIR=/data is set.`);
+    });
+  } else {
+    console.log('  - 🔴 DEPLOY GATE tests: skipped (--local). Run `node test.js` against prod to verify volume.');
+  }
+
   await check('recorder/status has required shape (recording, activeFights, totalSaved, lastPoll, watching)', async () => {
     const d = await get('/api/recorder/status');
     for (const f of ['recording', 'activeFights', 'totalSaved', 'lastPoll', 'watching']) {
@@ -6176,4 +6211,87 @@ async function runSecurityAndExpiryTests() {
       assert(ph.includes('clrTriggers'), 'popup.html must have #clrTriggers cancel-all button');
     });
   } catch(e) { console.error('  ✗ AA10:', e.message); failed++; }
+
+  // ── AB: Volume & Data Persistence — static code guarantees ───────────────
+  console.log('\n── AB: Volume & data persistence (static) ──');
+
+  const re = fs.readFileSync(path.join(__dirname, 'record_engine.js'), 'utf8');
+
+  // AB1: record_engine uses DATA_DIR env var for HISTORICAL_DIR
+  try {
+    await check('AB1: record_engine.js builds HISTORICAL_DIR from DATA_DIR env var (not hardcoded __dirname)', () => {
+      assert(re.includes("process.env.DATA_DIR"), 'must read DATA_DIR env var');
+      assert(re.includes("DATA_ROOT") && re.includes("HISTORICAL_DIR"), 'must derive HISTORICAL_DIR from DATA_ROOT');
+      const rootLine = re.slice(re.indexOf('DATA_ROOT'), re.indexOf('DATA_ROOT') + 80);
+      assert(rootLine.includes('__dirname'), 'must fall back to __dirname when DATA_DIR not set');
+    });
+  } catch(e) { console.error('  ✗ AB1:', e.message); failed++; }
+
+  // AB2: migrateToVolume is exported and called from server.js
+  try {
+    await check('AB2: migrateToVolume() is exported from record_engine and called in server.js on startup', () => {
+      assert(re.includes('migrateToVolume'), 'record_engine.js must define migrateToVolume');
+      assert(re.includes('module.exports') && re.includes('migrateToVolume'), 'migrateToVolume must be exported');
+      assert(src.includes('migrateToVolume'), 'server.js must call migrateToVolume on startup');
+    });
+  } catch(e) { console.error('  ✗ AB2:', e.message); failed++; }
+
+  // AB3: server.js warns at startup if DATA_DIR is not set
+  try {
+    await check('AB3: server.js logs a warning at startup when DATA_DIR env var is missing', () => {
+      assert(src.includes('DATA_DIR') && src.includes('ephemeral'),
+        'server.js must warn about ephemeral filesystem when DATA_DIR is not set');
+    });
+  } catch(e) { console.error('  ✗ AB3:', e.message); failed++; }
+
+  // AB4: /api/recorder/backup-status endpoint exists in server.js
+  try {
+    await check('AB4: /api/recorder/backup-status endpoint exists and returns volumeActive + ok fields', () => {
+      assert(src.includes('/api/recorder/backup-status'), 'server.js must define backup-status endpoint');
+      const epBlock = src.slice(src.indexOf('/api/recorder/backup-status'), src.indexOf('/api/recorder/backup-status') + 400);
+      assert(epBlock.includes('volumeActive'), 'backup-status must return volumeActive');
+      assert(epBlock.includes('githubToken'), 'backup-status must return githubToken');
+      assert(epBlock.includes('historicalDir'), 'backup-status must return historicalDir');
+    });
+  } catch(e) { console.error('  ✗ AB4:', e.message); failed++; }
+
+  // AB5: recording state is persisted on every data point (not just on fight end)
+  try {
+    await check('AB5: persistState() is called on every odds update — not just on fight end', () => {
+      assert(re.includes('persistState') || src.includes('persistState'), 'must define persistState()');
+      // persistState and oddsHistory.push must appear close together
+      const pushIdx = src.indexOf('oddsHistory.push');
+      if (pushIdx !== -1) {
+        const nearbyBlock = src.slice(pushIdx, pushIdx + 200);
+        assert(nearbyBlock.includes('persistState'), 'persistState must be called right after each oddsHistory.push');
+      } else {
+        // If push is in record_engine, check there
+        const rePushIdx = re.indexOf('oddsHistory.push');
+        if (rePushIdx !== -1) {
+          const nearbyBlock = re.slice(rePushIdx, rePushIdx + 200);
+          assert(nearbyBlock.includes('persistState'), 'persistState must be called right after each oddsHistory.push in record_engine');
+        }
+      }
+    });
+  } catch(e) { console.error('  ✗ AB5:', e.message); failed++; }
+
+  // AB6: pushFightToGitHub is called in recSave (fight end backup)
+  try {
+    await check('AB6: pushFightToGitHub() is called inside recSave() to back up every completed fight', () => {
+      assert(src.includes('pushFightToGitHub') || re.includes('pushFightToGitHub'), 'must define pushFightToGitHub');
+      // Find the function definition, not just any call
+      const fnIdx = src.indexOf('function recSave');
+      assert(fnIdx !== -1, 'server.js must define function recSave');
+      const fnBlock = src.slice(fnIdx, fnIdx + 2000);
+      assert(fnBlock.includes('pushFightToGitHub'), 'pushFightToGitHub must be called inside function recSave');
+    });
+  } catch(e) { console.error('  ✗ AB6:', e.message); failed++; }
+
+  // AB7: HISTORICAL_DIR is overridden from record_engine at startup (not left as __dirname)
+  try {
+    await check('AB7: server.js overrides HISTORICAL_DIR with the volume path from record_engine on startup', () => {
+      assert(src.includes('HISTORICAL_DIR = ') || src.includes('HISTORICAL_DIR='),
+        'server.js must reassign HISTORICAL_DIR from record_engine (volume-aware path)');
+    });
+  } catch(e) { console.error('  ✗ AB7:', e.message); failed++; }
 }
