@@ -1,0 +1,43 @@
+{
+  "fightId": "soccer__usa_vs_australia_2026-06-19",
+  "sport": "soccer_fifa_world_cup",
+  "fightTitle": "USA vs Australia",
+  "startTime": "2026-06-19T20:30:40.648Z",
+  "endTime": "2026-06-19T21:05:07.724Z",
+  "dataPoints": 3,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-06-19T20:30:40.648Z",
+      "fighter1": {
+        "name": "Australia",
+        "numericOdds": 5500
+      },
+      "fighter2": {
+        "name": "USA",
+        "numericOdds": -20000
+      }
+    },
+    {
+      "timestamp": "2026-06-19T20:44:12.591Z",
+      "fighter1": {
+        "name": "Australia",
+        "numericOdds": 6500
+      },
+      "fighter2": {
+        "name": "USA",
+        "numericOdds": -20000
+      }
+    },
+    {
+      "timestamp": "2026-06-19T20:50:12.745Z",
+      "fighter1": {
+        "name": "Australia",
+        "numericOdds": 7000
+      },
+      "fighter2": {
+        "name": "USA",
+        "numericOdds": -20000
+      }
+    }
+  ]
+}

@@ -1,0 +1,483 @@
+{
+  "fightId": "soccer__scotland_vs_morocco_2026-06-19",
+  "sport": "soccer_fifa_world_cup",
+  "fightTitle": "Scotland vs Morocco",
+  "startTime": "2026-06-19T22:00:37.791Z",
+  "endTime": "2026-06-20T00:10:00.425Z",
+  "dataPoints": 43,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-06-19T22:00:37.791Z",
+      "fighter1": {
+        "name": "Morocco",
+        "numericOdds": -140
+      },
+      "fighter2": {
+        "name": "Scotland",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-06-19T22:01:19.912Z",
+      "fighter1": {
+        "name": "Morocco",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Scotland",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-06-19T22:02:12.651Z",
+      "fighter1": {
+        "name": "Morocco",
+        "numericOdds": -150
+      },
+      "fighter2": {
+        "name": "Scotland",
+        "numericOdds": 450
+      }
+    },
+    {
+      "timestamp": "2026-06-19T22:03:52.674Z",
+      "fighter1": {
+        "name": "Morocco",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "Scotland",
+        "numericOdds": 1000
+      }
+    },
+    {
+      "timestamp": "2026-06-19T22:04:45.487Z",
+      "fighter1": {
+        "name": "Morocco",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Scotland",
+        "numericOdds": 1200
+      }
+    },
+    {
+      "timestamp": "2026-06-19T22:08:06.325Z",
+      "fighter1": {
+        "name": "Morocco",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Scotland",
+        "numericOdds": 1300
+      }
+    },
+    {
+      "timestamp": "2026-06-19T22:08:59.060Z",
+      "fighter1": {
+        "name": "Morocco",
+        "numericOdds": -525
+      },
+      "fighter2": {
+        "name": "Scotland",
+        "numericOdds": 1300
+      }
+    },
+    {
+      "timestamp": "2026-06-19T22:10:39.187Z",
+      "fighter1": {
+        "name": "Morocco",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Scotland",
+        "numericOdds": 1300
+      }
+    },
+    {
+      "timestamp": "2026-06-19T22:13:12.339Z",
+      "fighter1": {
+        "name": "Morocco",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Scotland",
+        "numericOdds": 1200
+      }
+    },
+    {
+      "timestamp": "2026-06-19T22:14:05.017Z",
+      "fighter1": {
+        "name": "Morocco",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Scotland",
+        "numericOdds": 1300
+      }
+    },
+    {
+      "timestamp": "2026-06-19T22:14:52.477Z",
+      "fighter1": {
+        "name": "Morocco",
+        "numericOdds": -525
+      },
+      "fighter2": {
+        "name": "Scotland",
+        "numericOdds": 1300
+      }
+    },
+    {
+      "timestamp": "2026-06-19T22:15:45.112Z",
+      "fighter1": {
+        "name": "Morocco",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Scotland",
+        "numericOdds": 1300
+      }
+    },
+    {
+      "timestamp": "2026-06-19T22:20:48.595Z",
+      "fighter1": {
+        "name": "Morocco",
+        "numericOdds": -525
+      },
+      "fighter2": {
+        "name": "Scotland",
+        "numericOdds": 1300
+      }
+    },
+    {
+      "timestamp": "2026-06-19T22:21:41.356Z",
+      "fighter1": {
+        "name": "Morocco",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Scotland",
+        "numericOdds": 1600
+      }
+    },
+    {
+      "timestamp": "2026-06-19T22:24:08.824Z",
+      "fighter1": {
+        "name": "Morocco",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Scotland",
+        "numericOdds": 1400
+      }
+    },
+    {
+      "timestamp": "2026-06-19T22:28:27.368Z",
+      "fighter1": {
+        "name": "Morocco",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "Scotland",
+        "numericOdds": 1200
+      }
+    },
+    {
+      "timestamp": "2026-06-19T22:29:20.124Z",
+      "fighter1": {
+        "name": "Morocco",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Scotland",
+        "numericOdds": 1400
+      }
+    },
+    {
+      "timestamp": "2026-06-19T22:35:13.146Z",
+      "fighter1": {
+        "name": "Morocco",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Scotland",
+        "numericOdds": 1600
+      }
+    },
+    {
+      "timestamp": "2026-06-19T22:38:34.544Z",
+      "fighter1": {
+        "name": "Morocco",
+        "numericOdds": -550
+      },
+      "fighter2": {
+        "name": "Scotland",
+        "numericOdds": 1900
+      }
+    },
+    {
+      "timestamp": "2026-06-19T22:39:27.494Z",
+      "fighter1": {
+        "name": "Morocco",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Scotland",
+        "numericOdds": 1800
+      }
+    },
+    {
+      "timestamp": "2026-06-19T22:41:07.792Z",
+      "fighter1": {
+        "name": "Morocco",
+        "numericOdds": -550
+      },
+      "fighter2": {
+        "name": "Scotland",
+        "numericOdds": 2000
+      }
+    },
+    {
+      "timestamp": "2026-06-19T22:52:17.151Z",
+      "fighter1": {
+        "name": "Morocco",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Scotland",
+        "numericOdds": 1800
+      }
+    },
+    {
+      "timestamp": "2026-06-19T23:06:32.569Z",
+      "fighter1": {
+        "name": "Morocco",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Scotland",
+        "numericOdds": 1600
+      }
+    },
+    {
+      "timestamp": "2026-06-19T23:08:12.459Z",
+      "fighter1": {
+        "name": "Morocco",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "Scotland",
+        "numericOdds": 1600
+      }
+    },
+    {
+      "timestamp": "2026-06-19T23:09:57.709Z",
+      "fighter1": {
+        "name": "Morocco",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Scotland",
+        "numericOdds": 1800
+      }
+    },
+    {
+      "timestamp": "2026-06-19T23:10:44.928Z",
+      "fighter1": {
+        "name": "Morocco",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "Scotland",
+        "numericOdds": 1600
+      }
+    },
+    {
+      "timestamp": "2026-06-19T23:12:29.857Z",
+      "fighter1": {
+        "name": "Morocco",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "Scotland",
+        "numericOdds": 1800
+      }
+    },
+    {
+      "timestamp": "2026-06-19T23:15:54.459Z",
+      "fighter1": {
+        "name": "Morocco",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Scotland",
+        "numericOdds": 1800
+      }
+    },
+    {
+      "timestamp": "2026-06-19T23:17:34.228Z",
+      "fighter1": {
+        "name": "Morocco",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Scotland",
+        "numericOdds": 2200
+      }
+    },
+    {
+      "timestamp": "2026-06-19T23:21:46.270Z",
+      "fighter1": {
+        "name": "Morocco",
+        "numericOdds": -550
+      },
+      "fighter2": {
+        "name": "Scotland",
+        "numericOdds": 2500
+      }
+    },
+    {
+      "timestamp": "2026-06-19T23:31:37.116Z",
+      "fighter1": {
+        "name": "Morocco",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Scotland",
+        "numericOdds": 4000
+      }
+    },
+    {
+      "timestamp": "2026-06-19T23:41:09.214Z",
+      "fighter1": {
+        "name": "Morocco",
+        "numericOdds": -800
+      },
+      "fighter2": {
+        "name": "Scotland",
+        "numericOdds": 5000
+      }
+    },
+    {
+      "timestamp": "2026-06-19T23:47:58.152Z",
+      "fighter1": {
+        "name": "Morocco",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Scotland",
+        "numericOdds": 5000
+      }
+    },
+    {
+      "timestamp": "2026-06-19T23:48:45.223Z",
+      "fighter1": {
+        "name": "Morocco",
+        "numericOdds": -800
+      },
+      "fighter2": {
+        "name": "Scotland",
+        "numericOdds": 6500
+      }
+    },
+    {
+      "timestamp": "2026-06-19T23:49:37.646Z",
+      "fighter1": {
+        "name": "Morocco",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Scotland",
+        "numericOdds": 6500
+      }
+    },
+    {
+      "timestamp": "2026-06-19T23:50:24.930Z",
+      "fighter1": {
+        "name": "Morocco",
+        "numericOdds": -800
+      },
+      "fighter2": {
+        "name": "Scotland",
+        "numericOdds": 6500
+      }
+    },
+    {
+      "timestamp": "2026-06-19T23:51:17.458Z",
+      "fighter1": {
+        "name": "Morocco",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Scotland",
+        "numericOdds": 6500
+      }
+    },
+    {
+      "timestamp": "2026-06-19T23:52:04.696Z",
+      "fighter1": {
+        "name": "Morocco",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Scotland",
+        "numericOdds": 6500
+      }
+    },
+    {
+      "timestamp": "2026-06-19T23:52:57.160Z",
+      "fighter1": {
+        "name": "Morocco",
+        "numericOdds": -1200
+      },
+      "fighter2": {
+        "name": "Scotland",
+        "numericOdds": 8000
+      }
+    },
+    {
+      "timestamp": "2026-06-19T23:53:49.487Z",
+      "fighter1": {
+        "name": "Morocco",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Scotland",
+        "numericOdds": 9000
+      }
+    },
+    {
+      "timestamp": "2026-06-19T23:55:29.288Z",
+      "fighter1": {
+        "name": "Morocco",
+        "numericOdds": -2500
+      },
+      "fighter2": {
+        "name": "Scotland",
+        "numericOdds": 8000
+      }
+    },
+    {
+      "timestamp": "2026-06-19T23:56:16.460Z",
+      "fighter1": {
+        "name": "Morocco",
+        "numericOdds": -3500
+      },
+      "fighter2": {
+        "name": "Scotland",
+        "numericOdds": 11000
+      }
+    },
+    {
+      "timestamp": "2026-06-19T23:57:08.776Z",
+      "fighter1": {
+        "name": "Morocco",
+        "numericOdds": -5000
+      },
+      "fighter2": {
+        "name": "Scotland",
+        "numericOdds": 14000
+      }
+    }
+  ]
+}
