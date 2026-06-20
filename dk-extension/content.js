@@ -192,6 +192,10 @@ if (href.startsWith('https://sportsbook.draftkings.com/') &&
   // Each trigger: { id, side, amount, condition: { type, targetOdds } }
   let watchTriggers = [];
   const firedTriggers = new Set(); // prevent double-fire per trigger id
+  // Restore fired IDs from storage — survives SW restarts so triggers don't re-fire
+  chrome.storage.local.get(['firedTriggerIds'], r => {
+    for (const id of (r.firedTriggerIds || [])) firedTriggers.add(id);
+  });
 
   chrome.runtime.onMessage.addListener(msg => {
     if (msg.type === 'WATCH_SIDES') {
@@ -240,6 +244,12 @@ if (href.startsWith('https://sportsbook.draftkings.com/') &&
 
       if (conditionMet) {
         firedTriggers.add(trigger.id);
+        // Persist to storage so SW restart can't cause double-fire
+        chrome.storage.local.get(['firedTriggerIds'], r => {
+          const ids = new Set(r.firedTriggerIds || []);
+          ids.add(trigger.id);
+          chrome.storage.local.set({ firedTriggerIds: [...ids].slice(-50) });
+        });
         send({ type: 'TRIGGER_MET', triggerId: trigger.id, side: trigger.side, amount: trigger.amount, currentOdds: outcome.american, ts: Date.now() });
       }
     }

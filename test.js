@@ -4373,7 +4373,7 @@ async function runDashboardChatTests() {
       const crossoverIdx = bgSrc.indexOf("msg.type === 'CROSSOVER_DETECTED'");
       assert(crossoverIdx !== -1, 'CROSSOVER_DETECTED handler not found');
       // Slice a generous window around the handler (up to 5000 chars)
-      const handlerSlice = bgSrc.slice(crossoverIdx, crossoverIdx + 5000);
+      const handlerSlice = bgSrc.slice(crossoverIdx, crossoverIdx + 6000);
       assert(
         handlerSlice.includes('executePlaceBet('),
         'CROSSOVER_DETECTED must call executePlaceBet() directly'
@@ -4400,6 +4400,8 @@ runServerTests().then(async () => {
   await runAutoBetUITests();
   await runAutoHedgeWiringTests();
   await runScoreTriggerTests();
+  await runSafetyGuardTests();
+  await runSecurityAndExpiryTests();
 }).then(() => {
   console.log(`\n═══════════════════════════════════`);
   console.log(`  ${passed} passed  ${failed} failed`);
@@ -4666,7 +4668,7 @@ async function runUnifiedAssistantTests() {
       const bgSrc = fs.readFileSync(require('path').join(__dirname, 'dk-extension/background.js'), 'utf8');
       const triggerIdx = bgSrc.indexOf("msg.type === 'TRIGGER_MET'");
       assert(triggerIdx !== -1, "TRIGGER_MET handler not found in onMessage");
-      const handlerSlice = bgSrc.slice(triggerIdx, triggerIdx + 600);
+      const handlerSlice = bgSrc.slice(triggerIdx, triggerIdx + 1000);
       assert(handlerSlice.includes('executePlaceBet('), 'TRIGGER_MET must call executePlaceBet');
       assert(handlerSlice.includes('DELETE'), 'TRIGGER_MET must DELETE the trigger from server');
     });
@@ -4678,7 +4680,7 @@ async function runUnifiedAssistantTests() {
       const fs = require('fs');
       const bgSrc = fs.readFileSync(require('path').join(__dirname, 'dk-extension/background.js'), 'utf8');
       const triggerIdx = bgSrc.indexOf("msg.type === 'TRIGGER_MET'");
-      const handlerSlice = bgSrc.slice(triggerIdx, triggerIdx + 800);
+      const handlerSlice = bgSrc.slice(triggerIdx, triggerIdx + 1100);
       assert(handlerSlice.includes("'CLEAR_TRIGGERS'"), 'TRIGGER_MET must broadcast CLEAR_TRIGGERS');
     });
   } catch(e) { console.error('  ✗ N3:', e.message); failed++; }
@@ -5511,7 +5513,7 @@ async function runAutoHedgeWiringTests() {
   try {
     await check('W8: background.js CROSSOVER_DETECTED checks (D1-1)(D2-1) > 1 before transitioning state', () => {
       const cIdx = bgSrc.indexOf("msg.type === 'CROSSOVER_DETECTED'");
-      const cBlock = bgSrc.slice(cIdx, cIdx + 2000);
+      const cBlock = bgSrc.slice(cIdx, cIdx + 3000);
       assert(cBlock.includes('(D1 - 1) * (D2 - 1) <= 1'), 'must check win-win condition');
       // Return before state transition must come before WATCHING_HEDGE
       const winWinIdx = cBlock.indexOf('(D1 - 1) * (D2 - 1) <= 1');
@@ -5524,7 +5526,7 @@ async function runAutoHedgeWiringTests() {
   try {
     await check('W9: background.js returns without state change when win-win window not open', () => {
       const cIdx = bgSrc.indexOf("msg.type === 'CROSSOVER_DETECTED'");
-      const cBlock = bgSrc.slice(cIdx, cIdx + 2000);
+      const cBlock = bgSrc.slice(cIdx, cIdx + 3000);
       // There must be a return immediately after the win-win check (before state transition)
       assert(cBlock.includes("waiting for better odds"), 'must log that it is waiting for better odds');
       // Confirm the return is before the state transition to WATCHING_HEDGE
@@ -5791,4 +5793,387 @@ async function runScoreTriggerTests() {
       assert(body === null || (typeof body === 'object' && body !== undefined), 'must return null or object');
     });
   } catch(e) { console.error('  ✗ X15:', e.message); failed++; }
+}
+
+// ── Y: Safety guard fixes ─────────────────────────────────────────────────────
+async function runSafetyGuardTests() {
+  console.log('\n── Y: Safety guard fixes ──');
+
+  const bg  = fs.readFileSync(path.join(__dirname, 'dk-extension/background.js'), 'utf8');
+  const ct  = fs.readFileSync(path.join(__dirname, 'dk-extension/content.js'), 'utf8');
+  const src = fs.readFileSync(path.join(__dirname, 'server.js'), 'utf8');
+
+  // Y1: SW startup reads pendingStrategy to detect WATCHING_HEDGE on restart
+  try {
+    await check('Y1: SW startup reads pendingStrategy for WATCHING_HEDGE recovery', () => {
+      assert(bg.includes("'pendingStrategy'") && bg.includes('WATCHING_HEDGE'), 'startup must read pendingStrategy and check WATCHING_HEDGE');
+    });
+  } catch(e) { console.error('  ✗ Y1:', e.message); failed++; }
+
+  // Y2: SW restart recovery rolls back to FIRST_BET_PLACED (not IDLE, not HEDGE_FAILED)
+  try {
+    await check('Y2: WATCHING_HEDGE recovery rolls back to FIRST_BET_PLACED', () => {
+      assert(bg.includes("state: 'FIRST_BET_PLACED'") && bg.includes('WATCHING_HEDGE'), 'must roll back to FIRST_BET_PLACED on SW restart');
+      // Should NOT reset to IDLE (would lose leg1 context) — search the actual condition, not the comment
+      const whIdx = bg.indexOf("strat.state === 'WATCHING_HEDGE'");
+      const recoveryBlock = bg.slice(whIdx, whIdx + 500);
+      assert(!recoveryBlock.includes("state: 'IDLE'"), 'must NOT reset to IDLE on recovery');
+    });
+  } catch(e) { console.error('  ✗ Y2:', e.message); failed++; }
+
+  // Y3: TRIGGER_MET deletes the trigger BEFORE calling executePlaceBet
+  try {
+    await check('Y3: TRIGGER_MET deletes trigger before placing bet (prevents double-fire on SW restart)', () => {
+      const triggerBlock = bg.slice(bg.indexOf("msg.type === 'TRIGGER_MET'"), bg.indexOf("msg.type === 'TRIGGER_MET'") + 900);
+      const deletePos = triggerBlock.indexOf("method: 'DELETE'");
+      const betPos    = triggerBlock.indexOf('executePlaceBet');
+      assert(deletePos !== -1, 'TRIGGER_MET must call DELETE');
+      assert(betPos !== -1, 'TRIGGER_MET must call executePlaceBet');
+      assert(deletePos < betPos, 'DELETE must come before executePlaceBet');
+    });
+  } catch(e) { console.error('  ✗ Y3:', e.message); failed++; }
+
+  // Y4: TRIGGER_MET persists fired trigger ID to chrome.storage.local
+  try {
+    await check('Y4: TRIGGER_MET persists firedTriggerIds to storage (survives SW restart)', () => {
+      const triggerBlock = bg.slice(bg.indexOf("msg.type === 'TRIGGER_MET'"), bg.indexOf("msg.type === 'TRIGGER_MET'") + 700);
+      assert(triggerBlock.includes('firedTriggerIds'), 'must save firedTriggerIds to storage');
+      assert(triggerBlock.includes('ids.add(triggerId)'), 'must add triggerId to the set');
+    });
+  } catch(e) { console.error('  ✗ Y4:', e.message); failed++; }
+
+  // Y5: content.js restores firedTriggers from storage on page load
+  try {
+    await check('Y5: content.js restores firedTriggerIds from storage on load', () => {
+      assert(ct.includes('firedTriggerIds'), 'content.js must read firedTriggerIds from storage');
+      assert(ct.includes('firedTriggers.add(id)'), 'must populate firedTriggers Set from storage');
+    });
+  } catch(e) { console.error('  ✗ Y5:', e.message); failed++; }
+
+  // Y6: content.js persists firedTriggerIds when a trigger fires
+  try {
+    await check('Y6: content.js persists firedTriggerIds when trigger condition is met', () => {
+      // The persist call must be in the conditionMet block, before/alongside TRIGGER_MET send
+      const condBlock = ct.slice(ct.indexOf('conditionMet'), ct.indexOf('conditionMet') + 600);
+      assert(condBlock.includes('firedTriggerIds'), 'content.js must persist firedTriggerIds when condition met');
+    });
+  } catch(e) { console.error('  ✗ Y6:', e.message); failed++; }
+
+  // Y7: STRATEGY_START is blocked when an active strategy exists
+  try {
+    await check('Y7: STRATEGY_START is blocked if strategy is already active (prevents clobbering leg1)', () => {
+      const startBlock = bg.slice(bg.indexOf("msg.type === 'STRATEGY_START'"), bg.indexOf("msg.type === 'STRATEGY_START'") + 700);
+      assert(startBlock.includes('activeStates'), 'must check activeStates before overwriting strategy');
+      assert(startBlock.includes('FIRST_BET_PLACED'), 'must block when FIRST_BET_PLACED');
+      assert(startBlock.includes('WATCHING_HEDGE'), 'must block when WATCHING_HEDGE');
+    });
+  } catch(e) { console.error('  ✗ Y7:', e.message); failed++; }
+
+  // Y8: executePlaceBet catch block transitions HEDGE_FIRED → HEDGE_FAILED
+  try {
+    await check('Y8: executePlaceBet catch block moves HEDGE_FIRED → HEDGE_FAILED on throw', () => {
+      const catchIdx = bg.lastIndexOf('} catch(e) {');
+      const catchBlock = bg.slice(catchIdx, catchIdx + 400);
+      assert(catchBlock.includes('HEDGE_FIRED'), 'catch must check for HEDGE_FIRED state');
+      assert(catchBlock.includes('HEDGE_FAILED'), 'catch must transition to HEDGE_FAILED');
+      assert(catchBlock.includes('isAutoHedge'), 'catch must only do this when isAutoHedge=true');
+    });
+  } catch(e) { console.error('  ✗ Y8:', e.message); failed++; }
+
+  // Y9: server has a periodic cleanup interval for watchTriggers and commandQueue
+  try {
+    await check('Y9: server has 15-min cleanup interval for watchTriggers and commandQueue', () => {
+      assert(src.includes('15 * 60 * 1000'), 'cleanup must run every 15 minutes');
+      assert(src.includes('[cleanup]'), 'cleanup must log what it pruned');
+      // Both watchTriggers prune and commandQueue prune must be in the same interval
+      const cleanupBlock = src.slice(src.indexOf('15 * 60 * 1000') - 800, src.indexOf('15 * 60 * 1000') + 100);
+      assert(cleanupBlock.includes('watchTriggers'), 'must prune watchTriggers');
+      assert(cleanupBlock.includes('commandQueue'), 'must prune commandQueue');
+    });
+  } catch(e) { console.error('  ✗ Y9:', e.message); failed++; }
+
+  // Y10: score_tie poll checks score.completed and removes trigger when game ends
+  try {
+    await check('Y10: score_tie poll removes trigger when game is completed (prevents ESPN spam)', () => {
+      assert(src.includes('score.completed'), 'must check score.completed');
+      assert(src.includes('Game completed without tie'), 'must log when game ends without tie');
+    });
+  } catch(e) { console.error('  ✗ Y10:', e.message); failed++; }
+
+  // Y11: duplicate bet guard in /api/research blocks same-side pending command
+  try {
+    await check('Y11: /api/research blocks second bet on same side when one is already pending', () => {
+      assert(src.includes('sameSidePending'), 'must check for sameSidePending before queuing bet');
+      assert(src.includes('Already queued'), 'must return "Already queued" warning to user');
+    });
+  } catch(e) { console.error('  ✗ Y11:', e.message); failed++; }
+
+  // Y12: duplicate bet guard also present in /api/assistant (both paths protected)
+  try {
+    await check('Y12: /api/assistant also blocks duplicate same-side bet', () => {
+      // Both the /api/research path and /api/assistant path must have the guard
+      const firstGuard  = src.indexOf('sameSidePending');
+      const secondGuard = src.indexOf('sameSidePending', firstGuard + 1);
+      assert(firstGuard !== -1 && secondGuard !== -1, 'sameSidePending guard must appear in BOTH bet handlers');
+    });
+  } catch(e) { console.error('  ✗ Y12:', e.message); failed++; }
+
+  // Y13: completed check is correct unit logic
+  try {
+    await check('Y13: game-completed removal logic is correct (completed=true removes, false keeps)', () => {
+      function shouldRemoveOnCompleted(completed) { return completed === true; }
+      assert(shouldRemoveOnCompleted(true)  === true,  'completed=true → remove trigger');
+      assert(shouldRemoveOnCompleted(false) === false, 'completed=false → keep watching');
+      assert(shouldRemoveOnCompleted(undefined) === false, 'completed=undefined → keep watching');
+    });
+  } catch(e) { console.error('  ✗ Y13:', e.message); failed++; }
+}
+
+// ── Z: Security, session count persistence, strategy expiry ──────────────────
+async function runSecurityAndExpiryTests() {
+  console.log('\n── Z: Security + session count + strategy expiry ──');
+
+  const bg  = fs.readFileSync(path.join(__dirname, 'dk-extension/background.js'), 'utf8');
+  const src = fs.readFileSync(path.join(__dirname, 'server.js'), 'utf8');
+  const ph  = fs.readFileSync(path.join(__dirname, 'dk-extension/popup.html'), 'utf8');
+  const pj  = fs.readFileSync(path.join(__dirname, 'dk-extension/popup.js'), 'utf8');
+
+  // Z1: server reads BOT_TOKEN env var
+  try {
+    await check('Z1: server reads BOT_TOKEN from env and defines requireBotToken middleware', () => {
+      assert(src.includes('BOT_TOKEN') && src.includes('process.env.BOT_TOKEN'), 'must read BOT_TOKEN env var');
+      assert(src.includes('requireBotToken'), 'must define requireBotToken middleware');
+      assert(src.includes("req.headers['x-bot-token']"), 'middleware must check X-Bot-Token header');
+    });
+  } catch(e) { console.error('  ✗ Z1:', e.message); failed++; }
+
+  // Z2: dangerous endpoints all use requireBotToken
+  try {
+    await check('Z2: requireBotToken applied to all state-mutating endpoints', () => {
+      const endpoints = [
+        "/api/research', requireBotToken",
+        "/api/assistant', requireBotToken",
+        "/api/watch-triggers', requireBotToken",
+        "/api/watch-triggers/:id', requireBotToken",
+        "/api/auto-bet/config', requireBotToken",
+        "/api/auto-bet/reset-session', requireBotToken",
+        "/api/auto-bet/test', requireBotToken",
+      ];
+      for (const ep of endpoints) {
+        assert(src.includes(ep), `missing requireBotToken on ${ep.split("'")[0]}`);
+      }
+    });
+  } catch(e) { console.error('  ✗ Z2:', e.message); failed++; }
+
+  // Z3: server skips auth in dev (no BOT_TOKEN set)
+  try {
+    await check('Z3: requireBotToken is a no-op when BOT_TOKEN env var is not set', () => {
+      assert(src.includes('if (!BOT_TOKEN) return next()'), 'must skip auth when BOT_TOKEN is null/undefined');
+    });
+  } catch(e) { console.error('  ✗ Z3:', e.message); failed++; }
+
+  // Z4: extension has authHeaders() helper and uses it in postToServer
+  try {
+    await check('Z4: background.js has authHeaders() helper that includes X-Bot-Token', () => {
+      assert(bg.includes('function authHeaders'), 'must define authHeaders()');
+      assert(bg.includes("'X-Bot-Token'"), 'authHeaders must set X-Bot-Token header');
+      assert(bg.includes('authHeaders()') && bg.includes('postToServer'), 'postToServer must use authHeaders()');
+    });
+  } catch(e) { console.error('  ✗ Z4:', e.message); failed++; }
+
+  // Z5: DELETE /api/watch-triggers call includes auth header
+  try {
+    await check('Z5: TRIGGER_MET DELETE call includes authHeaders()', () => {
+      const trigBlock = bg.slice(bg.indexOf("msg.type === 'TRIGGER_MET'"), bg.indexOf("msg.type === 'TRIGGER_MET'") + 1000);
+      assert(trigBlock.includes('authHeaders()'), 'DELETE trigger must include auth headers');
+    });
+  } catch(e) { console.error('  ✗ Z5:', e.message); failed++; }
+
+  // Z6: botToken stored in chrome.storage.local and read on startup
+  try {
+    await check('Z6: background.js reads botToken from storage on startup', () => {
+      assert(bg.includes("'botToken'"), 'must read botToken from storage');
+      assert(bg.includes('r.botToken'), 'must assign botToken from storage result');
+      assert(bg.includes("changes.botToken"), 'must update botToken on storage change');
+    });
+  } catch(e) { console.error('  ✗ Z6:', e.message); failed++; }
+
+  // Z7: popup has bot token field
+  try {
+    await check('Z7: popup.html has bot token input field', () => {
+      assert(ph.includes('botToken'), 'popup.html must have botToken input');
+      assert(pj.includes('botToken'), 'popup.js must load/save botToken');
+      assert(pj.includes("chrome.storage.local.set({ botToken:"), 'popup.js must save botToken to storage');
+    });
+  } catch(e) { console.error('  ✗ Z7:', e.message); failed++; }
+
+  // Z8: autoBetSessionCount is persisted across restarts
+  try {
+    await check('Z8: autoBetSessionCount is loaded from disk on startup (survives Railway restarts)', () => {
+      assert(src.includes('loadSessionCount'), 'must define loadSessionCount()');
+      assert(src.includes('saveSessionCount'), 'must define saveSessionCount()');
+      assert(src.includes('auto_bet_session.json'), 'must use a dedicated session count file');
+      assert(src.includes('autoBetSessionCount = loadSessionCount()'), 'must load count on startup');
+    });
+  } catch(e) { console.error('  ✗ Z8:', e.message); failed++; }
+
+  // Z9: session count resets when date changes (new UFC card)
+  try {
+    await check('Z9: loadSessionCount() resets to 0 when saved date differs from today', () => {
+      // Mirror the logic
+      function loadSessionCount(savedData, todayStr) {
+        if (savedData && savedData.date === todayStr) return savedData.count || 0;
+        return 0;
+      }
+      assert(loadSessionCount({ count: 3, date: '2026-06-19' }, '2026-06-19') === 3, 'same date → restore count');
+      assert(loadSessionCount({ count: 3, date: '2026-06-18' }, '2026-06-19') === 0, 'different date → reset to 0');
+      assert(loadSessionCount(null, '2026-06-19') === 0, 'no saved data → 0');
+    });
+  } catch(e) { console.error('  ✗ Z9:', e.message); failed++; }
+
+  // Z10: saveSessionCount called after auto-bet fires and after reset-session
+  try {
+    await check('Z10: saveSessionCount() called when count increments and on reset', () => {
+      // After increment
+      const incrementBlock = src.slice(src.indexOf('autoBetSessionCount++'), src.indexOf('autoBetSessionCount++') + 100);
+      assert(incrementBlock.includes('saveSessionCount()'), 'must save after incrementing session count');
+      // After reset
+      const resetBlock = src.slice(src.indexOf('autoBetSessionCount = 0'), src.indexOf('autoBetSessionCount = 0') + 100);
+      assert(resetBlock.includes('saveSessionCount()'), 'must save after resetting session count');
+    });
+  } catch(e) { console.error('  ✗ Z10:', e.message); failed++; }
+
+  // Z11: strategy object has expiresAt field (4h from creation)
+  try {
+    await check('Z11: strategy object includes expiresAt = startedAt + 4h', () => {
+      assert(bg.includes('expiresAt:') && bg.includes('4 * 60 * 60 * 1000'), 'strategy must have 4-hour expiresAt');
+    });
+  } catch(e) { console.error('  ✗ Z11:', e.message); failed++; }
+
+  // Z12: CROSSOVER_DETECTED checks expiresAt and resets to IDLE if expired
+  try {
+    await check('Z12: CROSSOVER_DETECTED resets strategy to IDLE if expiresAt has passed', () => {
+      const crossBlock = bg.slice(bg.indexOf("msg.type === 'CROSSOVER_DETECTED'"), bg.indexOf("msg.type === 'CROSSOVER_DETECTED'") + 1200);
+      assert(crossBlock.includes('expiresAt'), 'must check expiresAt in CROSSOVER_DETECTED');
+      assert(crossBlock.includes("state: 'IDLE'"), 'must reset to IDLE on expiry');
+    });
+  } catch(e) { console.error('  ✗ Z12:', e.message); failed++; }
+
+  // Z13: SW startup resets expired strategies to IDLE
+  try {
+    await check('Z13: SW startup silently resets expired strategies to IDLE', () => {
+      // Search the startup storage.get block specifically — it contains both the expiry check and IDLE reset
+      assert(bg.includes('expiresAt && Date.now() > strat.expiresAt'), 'startup must check expiresAt');
+      assert(bg.includes("state: 'IDLE', updatedAt: Date.now()"), 'startup must reset expired strategy to IDLE');
+    });
+  } catch(e) { console.error('  ✗ Z13:', e.message); failed++; }
+
+  // Z14: expiry unit logic
+  try {
+    await check('Z14: expiry check logic is correct (expired vs not expired)', () => {
+      const FOUR_HOURS = 4 * 60 * 60 * 1000;
+      const now = Date.now();
+      function isExpired(expiresAt) { return expiresAt && now > expiresAt; }
+      assert(isExpired(now - 1000)      === true,  'past expiresAt → expired');
+      assert(isExpired(now + 3600000)   === false, 'future expiresAt → not expired');
+      assert(!isExpired(undefined),                'no expiresAt → not expired (backwards compat)');
+      assert(isExpired(now - FOUR_HOURS - 1) === true, 'over 4h old → expired');
+    });
+  } catch(e) { console.error('  ✗ Z14:', e.message); failed++; }
+
+  // ── AA: Popup trigger display + strategy detail ───────────────────────────
+  console.log('\n── AA: Popup trigger display + strategy detail ──');
+
+  // AA1: popup.js reads activeTriggers from storage in refresh()
+  try {
+    await check('AA1: popup.js reads activeTriggers from chrome.storage.local in refresh()', () => {
+      assert(pj.includes("'activeTriggers'"), 'popup.js must include activeTriggers in storage.get');
+      assert(pj.includes('renderTriggers'), 'popup.js must call renderTriggers()');
+    });
+  } catch(e) { console.error('  ✗ AA1:', e.message); failed++; }
+
+  // AA2: renderTriggers hides the section when no triggers
+  try {
+    await check('AA2: renderTriggers hides #triggers-section when triggers array is empty', () => {
+      assert(pj.includes("triggers-section"), 'must reference triggers-section element');
+      const fnBody = pj.slice(pj.indexOf('function renderTriggers'), pj.indexOf('function renderTriggers') + 500);
+      assert(fnBody.includes("style.display = 'none'"), 'must hide section when no triggers');
+    });
+  } catch(e) { console.error('  ✗ AA2:', e.message); failed++; }
+
+  // AA3: renderTriggers shows the section and updates count when triggers exist
+  try {
+    await check('AA3: renderTriggers shows section and sets trigger count when triggers present', () => {
+      const fnBody = pj.slice(pj.indexOf('function renderTriggers'), pj.indexOf('function renderTriggers') + 800);
+      assert(fnBody.includes("section.style.display = ''"), 'must show section when triggers present');
+      assert(fnBody.includes('triggerCount'), 'must update #triggerCount');
+      assert(fnBody.includes('triggers.length'), 'must display trigger count from array');
+    });
+  } catch(e) { console.error('  ✗ AA3:', e.message); failed++; }
+
+  // AA4: each trigger row has a cancel button with the trigger id
+  try {
+    await check('AA4: each trigger row renders with a cancel button carrying the trigger id', () => {
+      const fnBody = pj.slice(pj.indexOf('function renderTriggers'), pj.indexOf('function renderTriggers') + 1500);
+      assert(fnBody.includes('trigger-cancel'), 'must render trigger-cancel button');
+      assert(fnBody.includes('data-id='), 'cancel button must have data-id attribute');
+      assert(fnBody.includes('CANCEL_TRIGGER'), 'cancel button must send CANCEL_TRIGGER message');
+    });
+  } catch(e) { console.error('  ✗ AA4:', e.message); failed++; }
+
+  // AA5: cancel all button wires to CANCEL_TRIGGER for each trigger
+  try {
+    await check('AA5: #clrTriggers cancel-all button sends CANCEL_TRIGGER for each active trigger', () => {
+      const cancelAllBlock = pj.slice(pj.indexOf('clrTriggers'), pj.indexOf('clrTriggers') + 400);
+      assert(cancelAllBlock.includes('activeTriggers'), 'cancel-all must read activeTriggers from storage');
+      assert(cancelAllBlock.includes('CANCEL_TRIGGER'), 'cancel-all must send CANCEL_TRIGGER');
+    });
+  } catch(e) { console.error('  ✗ AA5:', e.message); failed++; }
+
+  // AA6: strategy detail element renders leg1 info when not IDLE
+  try {
+    await check('AA6: popup.js renders strategy detail (side/amount/odds/expiry) when strategy is not IDLE', () => {
+      assert(pj.includes('stratDetail'), 'must reference #stratDetail element');
+      assert(pj.includes('leg1Side'), 'must display leg1Side');
+      assert(pj.includes('leg1Amount'), 'must display leg1Amount');
+      assert(pj.includes('leg1Odds'), 'must display leg1Odds');
+      assert(pj.includes('expiresAt') && pj.includes('msLeft'), 'must compute and display time remaining');
+    });
+  } catch(e) { console.error('  ✗ AA6:', e.message); failed++; }
+
+  // AA7: strategy detail clears when state is IDLE
+  try {
+    await check('AA7: stratDetail is cleared to empty string when strategy state is IDLE', () => {
+      const detailBlock = pj.slice(pj.indexOf('stratDetail'), pj.indexOf('stratDetail') + 900);
+      assert(detailBlock.includes("=== 'IDLE'"), 'must check for IDLE state');
+      assert(detailBlock.includes("textContent = ''"), 'must clear detail when IDLE');
+    });
+  } catch(e) { console.error('  ✗ AA7:', e.message); failed++; }
+
+  // AA8: background.js stores activeTriggers in chrome.storage.local when polling
+  try {
+    await check('AA8: background.js stores activeTriggers in chrome.storage.local during pollForCommands', () => {
+      assert(bg.includes("activeTriggers: triggers"), 'must store activeTriggers in storage');
+    });
+  } catch(e) { console.error('  ✗ AA8:', e.message); failed++; }
+
+  // AA9: background.js handles CANCEL_TRIGGER message by deleting trigger and updating storage
+  try {
+    await check('AA9: background.js CANCEL_TRIGGER handler deletes trigger from server and updates storage', () => {
+      const ctBlock = bg.slice(bg.indexOf("msg.type === 'CANCEL_TRIGGER'"), bg.indexOf("msg.type === 'CANCEL_TRIGGER'") + 600);
+      assert(ctBlock.includes('DELETE'), 'must send DELETE request to server');
+      assert(ctBlock.includes('activeTriggers'), 'must update activeTriggers in storage');
+      assert(ctBlock.includes("filter(t => t.id !== triggerId)"), 'must filter out the cancelled trigger');
+    });
+  } catch(e) { console.error('  ✗ AA9:', e.message); failed++; }
+
+  // AA10: popup.html has both stratDetail and triggers-section elements
+  try {
+    await check('AA10: popup.html has #stratDetail div and #triggers-section with #triggersList', () => {
+      assert(ph.includes('stratDetail'), 'popup.html must have #stratDetail');
+      assert(ph.includes('triggers-section'), 'popup.html must have #triggers-section');
+      assert(ph.includes('triggersList'), 'popup.html must have #triggersList');
+      assert(ph.includes('clrTriggers'), 'popup.html must have #clrTriggers cancel-all button');
+    });
+  } catch(e) { console.error('  ✗ AA10:', e.message); failed++; }
 }

@@ -3,6 +3,7 @@ const DEFAULT_URL = 'https://ufc-dashboard-production-e03d.up.railway.app';
 let betBotUrl = DEFAULT_URL;
 let dkUserId = null;
 let manualUserId = null;
+let botToken = null;
 let handlingLogin = false; // prevents both tabs racing to the login page
 
 function genDeviceId() {
@@ -11,8 +12,9 @@ function genDeviceId() {
 }
 
 // Load storage first — dkUserId must NEVER be null when we post
-chrome.storage.local.get(['betBotUrl', 'dkUserId', 'manualUserId', 'deviceId'], r => {
+chrome.storage.local.get(['betBotUrl', 'dkUserId', 'manualUserId', 'deviceId', 'pendingStrategy', 'botToken'], r => {
   betBotUrl = r.betBotUrl || DEFAULT_URL;
+  botToken   = r.botToken || null;
   manualUserId = r.manualUserId || null;
   let deviceId = r.deviceId;
   if (!deviceId) {
@@ -25,19 +27,45 @@ chrome.storage.local.get(['betBotUrl', 'dkUserId', 'manualUserId', 'deviceId'], 
   addLog(`userId ready: ${dkUserId}`);
   // Send heartbeat only AFTER userId is known — fixes startup race condition
   postToServer('/api/dk-heartbeat', { ts: Date.now() });
+
+  // Strategy recovery: SW killed while WATCHING_HEDGE means auto-hedge can no longer fire.
+  // Roll back to FIRST_BET_PLACED — if crossover is still live, content.js will re-detect it.
+  const strat = r.pendingStrategy;
+  if (strat && strat.expiresAt && Date.now() > strat.expiresAt) {
+    // Expired strategy — reset to IDLE silently so it doesn't interfere with next fight
+    chrome.storage.local.set({ pendingStrategy: { state: 'IDLE', updatedAt: Date.now() } });
+    addLog(`Strategy expired on startup — reset to IDLE`);
+  } else if (strat && strat.state === 'WATCHING_HEDGE') {
+    addLog(`⚠ SW restart in WATCHING_HEDGE — rolling back to FIRST_BET_PLACED to allow re-detect`);
+    const recovered = { ...strat, state: 'FIRST_BET_PLACED', updatedAt: Date.now() };
+    chrome.storage.local.set({ pendingStrategy: recovered });
+    chrome.runtime.sendMessage({ type: 'STRATEGY_UPDATE', strategy: recovered }).catch(() => {});
+    postToServer('/api/strategy-update', {
+      commandId: strat.commandId,
+      state: 'FIRST_BET_PLACED',
+      message: `⚠️ **SW restarted** mid-countdown — hedge was not placed. Re-watching for crossover. If the window has closed, cancel and hedge manually.`,
+    });
+  }
 });
 
 chrome.storage.onChanged.addListener(changes => {
-  if (changes.betBotUrl) betBotUrl = changes.betBotUrl.newValue;
+  if (changes.betBotUrl)  betBotUrl  = changes.betBotUrl.newValue;
+  if (changes.botToken)   botToken   = changes.botToken.newValue;
   if (changes.manualUserId) { manualUserId = changes.manualUserId.newValue; dkUserId = manualUserId; }
   else if (changes.dkUserId && !manualUserId) dkUserId = changes.dkUserId.newValue;
 });
+
+function authHeaders(extra = {}) {
+  const h = { 'Content-Type': 'application/json', ...extra };
+  if (botToken) h['X-Bot-Token'] = botToken;
+  return h;
+}
 
 function postToServer(path, body) {
   if (!betBotUrl) return;
   fetch(`${betBotUrl}${path}`, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: authHeaders(),
     body: JSON.stringify({ ...body, userId: dkUserId })
   }).catch(() => {});
 }
@@ -83,6 +111,8 @@ async function pollForCommands() {
     if (tr.ok) {
       const tbody = await tr.json();
       const triggers = tbody.triggers || [];
+      // Cache in storage so the popup can read active triggers without a network call
+      chrome.storage.local.set({ activeTriggers: triggers });
       // Broadcast to all DK sportsbook content tabs
       const tabs = await chrome.tabs.query({ url: 'https://sportsbook.draftkings.com/*' });
       for (const tab of tabs) {
@@ -248,6 +278,7 @@ function handleExecuteCommand(command) {
         trigger:           command.trigger || { type: 'crossover', targetOdds: null },
         leg1Confirmed:     false,
         startedAt:         Date.now(),
+        expiresAt:         Date.now() + 4 * 60 * 60 * 1000, // 4-hour strategy expiry
         updatedAt:         Date.now(),
         commandId:         command.id,
       };
@@ -511,7 +542,7 @@ async function executePlaceBet(side, amount, commandId, isAutoHedge, isRetry = f
       try {
         const resolveR = await fetch(`${betBotUrl}/api/resolve-bet-target`, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          headers: authHeaders(),
           body: JSON.stringify({
             side,
             nearbyLabels:   result.nearbyLabels   || [],
@@ -602,6 +633,18 @@ async function executePlaceBet(side, amount, commandId, isAutoHedge, isRetry = f
   } catch(e) {
     addLog(`BET_RESULT error: ${e.message}`);
     chrome.runtime.sendMessage({ type: 'BET_RESULT', ok: false, error: e.message }).catch(() => {});
+    // If we threw during the hedge, transition to HEDGE_FAILED so the strategy doesn't stick in HEDGE_FIRED
+    if (isAutoHedge) {
+      chrome.storage.local.get(['pendingStrategy'], r2 => {
+        const s = r2.pendingStrategy;
+        if (s?.state === 'HEDGE_FIRED') {
+          const failed = { ...s, state: 'HEDGE_FAILED', updatedAt: Date.now() };
+          chrome.storage.local.set({ pendingStrategy: failed });
+          chrome.runtime.sendMessage({ type: 'STRATEGY_UPDATE', strategy: failed }).catch(() => {});
+          addLog('HEDGE_FIRED → HEDGE_FAILED (executePlaceBet threw)');
+        }
+      });
+    }
   }
 }
 
@@ -679,6 +722,18 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
     // Popup sends this after user types "bet $X on Y, auto-hedge at Z"
     const { leg1Side, leg1Amount, trigger, gameId } = msg;
     (async () => {
+      // Block if a live strategy is already in progress — prevents clobbering leg1 data
+      const r = await chrome.storage.local.get(['pendingStrategy']);
+      const existing = r.pendingStrategy;
+      const activeStates = ['FIRST_BET_PENDING', 'FIRST_BET_PLACED', 'WATCHING_HEDGE', 'HEDGE_FIRED'];
+      if (existing && activeStates.includes(existing.state)) {
+        addLog(`STRATEGY_START blocked — existing strategy in state ${existing.state}`);
+        chrome.runtime.sendMessage({
+          type: 'STRATEGY_UPDATE', strategy: existing,
+          warning: `Cannot start a new strategy while in ${existing.state} — cancel first.`,
+        }).catch(() => {});
+        return;
+      }
       const strategy = {
         state: 'FIRST_BET_PENDING',
         leg1Side, leg1Amount, trigger, gameId: gameId || null,
@@ -711,6 +766,14 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
       // Only act in FIRST_BET_PLACED state
       if (strategy.state !== 'FIRST_BET_PLACED') {
         addLog(`CROSSOVER_DETECTED ignored — state is ${strategy.state}`);
+        return;
+      }
+      // Expire stale strategies (4h limit) — prevents crossover on wrong fight next card
+      if (strategy.expiresAt && Date.now() > strategy.expiresAt) {
+        addLog(`CROSSOVER_DETECTED ignored — strategy expired (started ${Math.round((Date.now() - strategy.startedAt) / 3600000)}h ago)`);
+        const expired = { ...strategy, state: 'IDLE', updatedAt: Date.now() };
+        await chrome.storage.local.set({ pendingStrategy: expired });
+        chrome.runtime.sendMessage({ type: 'STRATEGY_UPDATE', strategy: expired }).catch(() => {});
         return;
       }
 
@@ -807,12 +870,29 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
     return true;
   }
 
+  if (msg.type === 'CANCEL_TRIGGER') {
+    const { triggerId } = msg;
+    fetch(`${betBotUrl}/api/watch-triggers/${triggerId}`, { method: 'DELETE', headers: authHeaders() }).catch(() => {});
+    // Remove from cached list immediately so popup updates on next refresh
+    chrome.storage.local.get(['activeTriggers'], r => {
+      const updated = (r.activeTriggers || []).filter(t => t.id !== triggerId);
+      chrome.storage.local.set({ activeTriggers: updated });
+    });
+    return;
+  }
+
   if (msg.type === 'TRIGGER_MET') {
     const { triggerId, side, amount, currentOdds } = msg;
     addLog(`TRIGGER_MET: ${side} $${amount} @ ${currentOdds} [trigger ${triggerId}]`);
-    // Fire the bet and delete the trigger from the server
+    // DELETE first — prevents double-fire if SW restarts between the bet and the DELETE
+    fetch(`${betBotUrl}/api/watch-triggers/${triggerId}`, { method: 'DELETE', headers: authHeaders() }).catch(() => {});
+    // Persist the fired trigger ID so content.js stays blocked even after SW restart
+    chrome.storage.local.get(['firedTriggerIds'], r => {
+      const ids = new Set(r.firedTriggerIds || []);
+      ids.add(triggerId);
+      chrome.storage.local.set({ firedTriggerIds: [...ids].slice(-50) });
+    });
     executePlaceBet(side, amount, null, false);
-    fetch(`${betBotUrl}/api/watch-triggers/${triggerId}`, { method: 'DELETE' }).catch(() => {});
     // Clear trigger from all content tabs so it doesn't re-fire
     chrome.tabs.query({ url: 'https://sportsbook.draftkings.com/*' }).then(tabs => {
       tabs.forEach(t => chrome.tabs.sendMessage(t.id, { type: 'CLEAR_TRIGGERS' }).catch(() => {}));
@@ -846,7 +926,7 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
   addLog(`→ syncing: ${url.replace(/https?:\/\/[^/]+/, '').slice(0, 60)}`);
   fetch(`${betBotUrl}/api/dk-sync`, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: authHeaders(),
     body: JSON.stringify({ url, data, ts: Date.now(), userId: dkUserId })
   }).then(r => r.json()).then(res => {
     if (res.bets?.length) {

@@ -155,20 +155,41 @@ async function refresh() {
     ? (onMyBets ? 'My Bets ✓' : 'Open (go to mybets)')
     : 'Not found';
 
-  chrome.storage.local.get(['captures','lastSync','lastBetCount','debugLog','dkUserId','wsConnected','wsLastOpen','wsLastClose','pendingStrategy'], r => {
+  chrome.storage.local.get(['captures','lastSync','lastBetCount','debugLog','dkUserId','wsConnected','wsLastOpen','wsLastClose','pendingStrategy','activeTriggers'], r => {
     if (r.dkUserId) {
       const cur = document.getElementById('tabText').textContent;
       if (!cur.includes('·')) document.getElementById('tabText').textContent = cur + ` · ${r.dkUserId}`;
     }
 
-    // Strategy state badge
+    // Strategy state badge + detail line
     const strat = r.pendingStrategy || { state: 'IDLE' };
     const stratEl = document.getElementById('stratState');
+    const detailEl = document.getElementById('stratDetail');
     if (stratEl) {
       const colors = { IDLE:'#333', FIRST_BET_PENDING:'#e8b84b', FIRST_BET_PLACED:'#74c0fc', WATCHING_HEDGE:'#e8b84b', HEDGE_FIRED:'#ff6b6b', BOTH_PLACED:'#69db7c', HEDGE_FAILED:'#ff6b6b' };
       stratEl.textContent = strat.state;
       stratEl.style.color = colors[strat.state] || '#333';
     }
+    if (detailEl) {
+      if (!strat.state || strat.state === 'IDLE') {
+        detailEl.textContent = '';
+      } else {
+        const parts = [];
+        if (strat.leg1Side)   parts.push(strat.leg1Side);
+        if (strat.leg1Amount) parts.push(`$${strat.leg1Amount}`);
+        if (strat.leg1Odds)   parts.push(`@ ${strat.leg1Odds}`);
+        if (strat.hedgeAmount) parts.push(`→ hedge $${strat.hedgeAmount}`);
+        if (strat.expiresAt) {
+          const msLeft = Math.max(0, strat.expiresAt - Date.now());
+          const h = Math.floor(msLeft / 3600000), m = Math.floor((msLeft % 3600000) / 60000);
+          parts.push(`(${h}h ${m}m left)`);
+        }
+        detailEl.textContent = parts.join(' · ');
+      }
+    }
+
+    // Active triggers list
+    renderTriggers(r.activeTriggers || []);
 
     const wsConnected = r.wsConnected;
     setDot('wsDot', wsConnected === true ? 'green' : wsConnected === false ? 'red' : 'yellow');
@@ -206,6 +227,44 @@ function renderCaptures(captures) {
   }).join('');
 }
 
+function renderTriggers(triggers) {
+  const section = document.getElementById('triggers-section');
+  const list = document.getElementById('triggersList');
+  const count = document.getElementById('triggerCount');
+  if (!section || !list) return;
+  if (!triggers.length) { section.style.display = 'none'; return; }
+  section.style.display = '';
+  count.textContent = `(${triggers.length})`;
+  list.innerHTML = triggers.map(t => {
+    const side = t.side || '?';
+    const amt  = t.amount ? `$${t.amount}` : '';
+    const odds = t.targetOdds ? `@ ${t.targetOdds > 0 ? '+' : ''}${t.targetOdds}` : '';
+    const type = t.type === 'score_tie' ? '🔄 score tie' : '📈 odds';
+    const desc = [type, side, amt, odds].filter(Boolean).join(' ');
+    const msLeft = t.expiresAt ? Math.max(0, t.expiresAt - Date.now()) : null;
+    const timeLeft = msLeft != null ? `${Math.floor(msLeft/3600000)}h ${Math.floor((msLeft%3600000)/60000)}m` : '';
+    return `<div class="trigger-row">
+      <span class="trigger-desc" title="${desc}">${desc}</span>
+      <span class="trigger-time">${timeLeft}</span>
+      <button class="trigger-cancel" data-id="${t.id}">✕</button>
+    </div>`;
+  }).join('');
+  list.querySelectorAll('.trigger-cancel').forEach(btn => {
+    btn.addEventListener('click', () => {
+      chrome.runtime.sendMessage({ type: 'CANCEL_TRIGGER', triggerId: btn.dataset.id });
+    });
+  });
+}
+
+// Cancel-all triggers
+document.getElementById('clrTriggers').addEventListener('click', () => {
+  chrome.storage.local.get(['activeTriggers'], r => {
+    for (const t of (r.activeTriggers || [])) {
+      chrome.runtime.sendMessage({ type: 'CANCEL_TRIGGER', triggerId: t.id });
+    }
+  });
+});
+
 // Username + credentials setup
 chrome.storage.local.get(['dkUserId'], r => { if (r.dkUserId) document.getElementById('userInput').value = r.dkUserId; });
 document.getElementById('saveUser').addEventListener('click', () => {
@@ -213,6 +272,18 @@ document.getElementById('saveUser').addEventListener('click', () => {
   if (!val) return;
   chrome.storage.local.set({ dkUserId: val });
   const btn = document.getElementById('saveUser');
+  btn.textContent = 'Saved ✓'; btn.className = 'saved';
+  setTimeout(() => { btn.textContent = 'Set'; btn.className = ''; }, 2000);
+});
+
+chrome.storage.local.get(['botToken'], r => {
+  if (r.botToken) document.getElementById('botToken').value = r.botToken;
+});
+document.getElementById('saveToken').addEventListener('click', () => {
+  const val = document.getElementById('botToken').value.trim();
+  if (!val) return;
+  chrome.storage.local.set({ botToken: val });
+  const btn = document.getElementById('saveToken');
   btn.textContent = 'Saved ✓'; btn.className = 'saved';
   setTimeout(() => { btn.textContent = 'Set'; btn.className = ''; }, 2000);
 });

@@ -15,6 +15,15 @@ let HISTORICAL_DIR = path.join(__dirname, 'historical_data');
 let API_CACHE_DIR  = path.join(__dirname, 'historical_data', 'api_cache');
 
 const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+const BOT_TOKEN = process.env.BOT_TOKEN || null;
+
+// Middleware: require X-Bot-Token header on state-mutating endpoints.
+// Skipped in dev (no BOT_TOKEN env var set). Set BOT_TOKEN on Railway.
+function requireBotToken(req, res, next) {
+  if (!BOT_TOKEN) return next();
+  if (req.headers['x-bot-token'] !== BOT_TOKEN) return res.status(401).json({ error: 'Unauthorized' });
+  next();
+}
 const TOKEN_WARN = parseInt(process.env.ANTHROPIC_TOKEN_WARN_THRESHOLD || '500000');
 const nodemailer = require('nodemailer');
 
@@ -136,7 +145,28 @@ function saveFiredFights() {
 }
 
 const autoBetFiredFights = loadFiredFights();
-let autoBetSessionCount = 0;
+
+// Session count persisted across Railway restarts — resets when the date changes (next UFC card)
+const AUTO_BET_SESSION_FILE = path.join(DATA_ROOT_DIR, 'auto_bet_session.json');
+function loadSessionCount() {
+  try {
+    if (fs.existsSync(AUTO_BET_SESSION_FILE)) {
+      const d = JSON.parse(fs.readFileSync(AUTO_BET_SESSION_FILE, 'utf8'));
+      if (d.date === new Date().toISOString().slice(0, 10)) return d.count || 0;
+    }
+  } catch {}
+  return 0;
+}
+function saveSessionCount() {
+  try {
+    fs.writeFileSync(AUTO_BET_SESSION_FILE, JSON.stringify({
+      count: autoBetSessionCount,
+      date: new Date().toISOString().slice(0, 10),
+    }));
+  } catch {}
+}
+
+let autoBetSessionCount = loadSessionCount();
 const autoBetLog = []; // last 20 auto-bet events (fired + skipped with reason)
 
 function autoBetLogEvent(event) {
@@ -229,6 +259,7 @@ function checkAutoBet(fightId, fighter1, fighter2, firstOdds, commenceTimeISO) {
   autoBetFiredFights.add(fightId);
   autoBetSessionCount++;
   saveFiredFights();
+  saveSessionCount();
 
   const labels = { even: 'near-even', slight: 'slight fav', heavy: 'heavy fav', huge: 'dominant' };
   const bracketLabel = labels[bracket] || bracket;
@@ -1120,6 +1151,12 @@ setInterval(async () => {
       const s1 = parseInt(score.score1, 10);
       const s2 = parseInt(score.score2, 10);
       if (isNaN(s1) || isNaN(s2)) continue;
+      // Game ended without a tie — remove trigger so it stops polling ESPN
+      if (score.completed) {
+        watchTriggers = watchTriggers.filter(t => t.id !== trigger.id);
+        console.log(`[score_tie] Game completed without tie — removing trigger [${trigger.id}]`);
+        continue;
+      }
       if (s1 !== s2) continue;         // not tied
       if (s1 + s2 === 0) continue;    // 0-0 at game start — not a real tie yet
 
@@ -1137,6 +1174,28 @@ setInterval(async () => {
     } catch (_) { /* ignore per-trigger errors */ }
   }
 }, 5000);
+
+// ── Periodic cleanup — every 15 min, independent of extension state ───────────
+// Prevents unbounded growth of watchTriggers (expired) and commandQueue (done/failed).
+// Without this, completed soccer games keep polling ESPN and old commands pile up.
+setInterval(() => {
+  const now = Date.now();
+  const tBefore = watchTriggers.length;
+  watchTriggers = watchTriggers.filter(t => t.expiresAt > now);
+  if (watchTriggers.length < tBefore)
+    console.log(`[cleanup] Pruned ${tBefore - watchTriggers.length} expired watch triggers`);
+
+  const cutoff = now - 24 * 60 * 60 * 1000;
+  const qBefore = commandQueue.length;
+  commandQueue = commandQueue.filter(c =>
+    c.status === 'pending' || c.status === 'picked_up' ||
+    (c.completedAt && c.completedAt > cutoff)
+  );
+  if (commandQueue.length < qBefore) {
+    console.log(`[cleanup] Pruned ${qBefore - commandQueue.length} old command queue entries`);
+    saveCommandQueue();
+  }
+}, 15 * 60 * 1000);
 
 app.get('/api/sport/:key', async (req, res) => {
   try {
@@ -1180,7 +1239,7 @@ function updateOddsCredits(headers) {
 }
 
 // AI research endpoint — Ish can ask anything
-app.post('/api/research', async (req, res) => {
+app.post('/api/research', requireBotToken, async (req, res) => {
   const { question } = req.body;
   if (!question) return res.status(400).json({ error: 'question required' });
 
@@ -1201,6 +1260,18 @@ app.post('/api/research', async (req, res) => {
       } catch {}
 
       if (intent.intent === 'place_first_bet' && intent.side && intent.amount) {
+        // Guard: block if same side already queued (prevents auto-bet + chat bet double-exposure)
+        const sameSidePending = commandQueue.find(c =>
+          c.type === 'place_bet' &&
+          (c.side || '').toLowerCase() === (intent.side || '').toLowerCase() &&
+          (c.status === 'pending' || c.status === 'picked_up')
+        );
+        if (sameSidePending) {
+          return res.json({
+            answer: `⚠️ **Already queued** — there's already a pending bet on **${intent.side}**. Wait for it to execute first, or type "cancel" to clear it.`,
+            usage: { thisQuery: 0, sessionTotal: totalTokensUsed, sessionQueries: totalQueries, estimatedCostUSD: 0 },
+          });
+        }
         const cmd = makeCommand('place_bet', intent);
         commandQueue.push(cmd);
         saveCommandQueue();
@@ -2026,7 +2097,7 @@ app.get('/api/watch-triggers', (req, res) => {
   res.json({ triggers: watchTriggers });
 });
 
-app.post('/api/watch-triggers', (req, res) => {
+app.post('/api/watch-triggers', requireBotToken, (req, res) => {
   const { side, amount, condition, description, userId } = req.body || {};
   if (!side || !amount || !condition) return res.status(400).json({ ok: false, error: 'side, amount, condition required' });
   const trigger = {
@@ -2042,7 +2113,7 @@ app.post('/api/watch-triggers', (req, res) => {
   res.json({ ok: true, trigger });
 });
 
-app.delete('/api/watch-triggers/:id', (req, res) => {
+app.delete('/api/watch-triggers/:id', requireBotToken, (req, res) => {
   const before = watchTriggers.length;
   watchTriggers = watchTriggers.filter(t => t.id !== req.params.id);
   console.log(`[watch-trigger] Deleted ${req.params.id} (removed=${before - watchTriggers.length})`);
@@ -2060,7 +2131,7 @@ app.get('/api/auto-bet/config', (req, res) => {
   });
 });
 
-app.post('/api/auto-bet/config', (req, res) => {
+app.post('/api/auto-bet/config', requireBotToken, (req, res) => {
   const body = req.body || {};
   const bools   = ['enabled', 'requireExtension', 'autoHedge'];
   const numbers = ['amount', 'maxPerSession', 'maxFightAgeSecs', 'minOddsGapPct'];
@@ -2076,10 +2147,11 @@ app.post('/api/auto-bet/config', (req, res) => {
   res.json({ ok: true, config: autoBetConfig });
 });
 
-app.post('/api/auto-bet/reset-session', (req, res) => {
+app.post('/api/auto-bet/reset-session', requireBotToken, (req, res) => {
   autoBetSessionCount = 0;
   autoBetFiredFights.clear();
   saveFiredFights();
+  saveSessionCount();
   autoBetLog.length = 0;
   console.log('[auto-bet] Session reset');
   res.json({ ok: true });
@@ -2088,7 +2160,7 @@ app.post('/api/auto-bet/reset-session', (req, res) => {
 // POST /api/auto-bet/test — dry-run checkAutoBet with custom fight data
 // Simulates a new fight detection without needing a real live game.
 // Pass dryRun=true (default) to see what would happen without actually queuing a command.
-app.post('/api/auto-bet/test', (req, res) => {
+app.post('/api/auto-bet/test', requireBotToken, (req, res) => {
   const {
     fighter1    = 'Test Dry Fighter A',
     fighter2    = 'Test Dry Fighter B',
@@ -2215,7 +2287,7 @@ CONTEXT USAGE:
 - For watch_trigger: if amount is missing, set intent=clarify and ask for it
 - For score_tie: DO NOT clarify just because you're not sure about monitoring — set intent=watch_trigger and fire the trigger. The system handles real-time score monitoring automatically.`;
 
-app.post('/api/assistant', async (req, res) => {
+app.post('/api/assistant', requireBotToken, async (req, res) => {
   const { message, userId = 'default', currentOdds } = req.body || {};
   if (!message) return res.status(400).json({ error: 'message required' });
 
@@ -2269,6 +2341,17 @@ app.post('/api/assistant', async (req, res) => {
         const q = !intent.side ? 'Which side do you want to bet on?' : `How much do you want to bet on ${intent.side}?`;
         addChatTurn(userId, 'assistant', q);
         return res.json({ type: 'clarify', answer: q });
+      }
+      // Guard: block if same side already queued (prevents double-exposure when auto-bet fired)
+      const sameSidePending = commandQueue.find(c =>
+        c.type === 'place_bet' &&
+        (c.side || '').toLowerCase() === (intent.side || '').toLowerCase() &&
+        (c.status === 'pending' || c.status === 'picked_up')
+      );
+      if (sameSidePending) {
+        const answer = `⚠️ **Already queued** — there's already a pending bet on **${intent.side}**. Wait for it to execute, or type "cancel" to clear it.`;
+        addChatTurn(userId, 'assistant', answer);
+        return res.json({ type: 'clarify', answer });
       }
       const cmd = makeCommand('place_bet', intent);
       commandQueue.push(cmd); saveCommandQueue();
