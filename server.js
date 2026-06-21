@@ -1521,6 +1521,20 @@ app.get('/monitor', (req, res) => {
     .poll-dot{width:8px;height:8px;border-radius:50%}
     .idle{color:#333;font-size:0.85rem;margin-top:8px}
     .ts{font-size:0.65rem;color:#333;margin-top:16px}
+    .file-browser{margin-top:16px;background:#111;border:1px solid #1a1a1a;border-radius:8px;padding:12px 16px}
+    .file-browser-label{font-size:0.65rem;color:#444;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+    .file-list{display:flex;flex-direction:column;gap:4px;max-height:260px;overflow-y:auto}
+    .file-row{display:flex;justify-content:space-between;align-items:center;padding:6px 8px;border-radius:4px;cursor:pointer;border:1px solid transparent}
+    .file-row:hover{background:#1a1a1a;border-color:#2a2a2a}
+    .file-row.active{background:#0d1f0d;border-color:#69db7c44}
+    .file-name{font-size:0.75rem;color:#ccc;font-family:monospace}
+    .file-pts{font-size:0.7rem;color:#444}
+    .file-detail{margin-top:10px;background:#080808;border:1px solid #1a1a1a;border-radius:6px;padding:10px;display:none}
+    .file-detail.open{display:block}
+    .file-detail-head{font-size:0.75rem;color:#e8b84b;margin-bottom:6px;display:flex;justify-content:space-between;align-items:center}
+    .file-json{font-size:0.68rem;color:#888;font-family:monospace;white-space:pre;overflow-x:auto;max-height:320px;overflow-y:auto;line-height:1.5}
+    .file-search{background:#0a0a0a;border:1px solid #222;border-radius:4px;color:#ccc;font-size:0.75rem;padding:5px 8px;width:100%;margin-bottom:8px;outline:none}
+    .file-search:focus{border-color:#444}
   </style>
 </head>
 <body>
@@ -1533,6 +1547,19 @@ app.get('/monitor', (req, res) => {
     <div class="poll-dots" id="pollDots"></div>
   </div>
   <div class="ts" id="ts"></div>
+
+  <div class="file-browser">
+    <div class="file-browser-label">Stored Fight Files (most recent first)</div>
+    <input class="file-search" id="fileSearch" placeholder="Search by fighter name…" oninput="filterFiles()"/>
+    <div class="file-list" id="fileList">Loading…</div>
+    <div class="file-detail" id="fileDetail">
+      <div class="file-detail-head">
+        <span id="fileDetailName"></span>
+        <span id="fileDetailMeta" style="color:#555"></span>
+      </div>
+      <pre class="file-json" id="fileDetailJson"></pre>
+    </div>
+  </div>
 
 <script>
 const charts = {};
@@ -1666,6 +1693,72 @@ async function refresh() {
   setTimeout(refresh, 2000);
 }
 refresh();
+
+// ── File browser ──────────────────────────────────────────────────────────
+let allFiles = [], selectedId = null;
+
+async function loadFiles() {
+  try {
+    const data = await fetch('/api/recordings').then(r => r.json());
+    allFiles = (data.fights || []).sort((a, b) => (b.date || '').localeCompare(a.date || '') || (b.dataPoints || 0) - (a.dataPoints || 0));
+    renderFiles();
+  } catch(e) {
+    document.getElementById('fileList').textContent = 'Error loading files';
+  }
+}
+
+function filterFiles() {
+  const q = document.getElementById('fileSearch').value.toLowerCase();
+  const filtered = q ? allFiles.filter(f => f.id.toLowerCase().includes(q) || (f.fighter1||'').toLowerCase().includes(q) || (f.fighter2||'').toLowerCase().includes(q)) : allFiles;
+  renderFiles(filtered);
+}
+
+function renderFiles(files) {
+  const list = files || allFiles;
+  const el = document.getElementById('fileList');
+  if (!list.length) { el.innerHTML = '<div style="color:#333;font-size:0.8rem">No files found</div>'; return; }
+  el.innerHTML = list.map(f =>
+    '<div class="file-row' + (f.id === selectedId ? ' active' : '') + '" onclick="selectFile(\'' + f.id.replace(/'/g, "\\'") + '\')">' +
+    '<span class="file-name">' + f.id + '.json</span>' +
+    '<span class="file-pts">' + (f.dataPoints || 0) + ' pts</span>' +
+    '</div>'
+  ).join('');
+}
+
+async function selectFile(id) {
+  selectedId = id;
+  renderFiles();
+  const detailEl = document.getElementById('fileDetail');
+  const nameEl = document.getElementById('fileDetailName');
+  const metaEl = document.getElementById('fileDetailMeta');
+  const jsonEl = document.getElementById('fileDetailJson');
+  detailEl.className = 'file-detail open';
+  nameEl.textContent = id + '.json';
+  jsonEl.textContent = 'Loading…';
+  metaEl.textContent = '';
+  try {
+    const data = await fetch('/api/fight-history/' + encodeURIComponent(id)).then(r => r.json());
+    const h = data.oddsHistory || [];
+    metaEl.textContent = h.length + ' pts · ' + (data.startTime ? new Date(data.startTime).toLocaleString() : '');
+    // Show summary + first/last 3 data points so you can verify without scrolling 1000 lines
+    const preview = {
+      fightId: data.fightId,
+      fightTitle: data.fightTitle,
+      sport: data.sport,
+      startTime: data.startTime,
+      endTime: data.endTime,
+      dataPoints: data.dataPoints,
+      oddsHistory: h.length <= 6
+        ? h
+        : [ ...h.slice(0, 3), { '...': h.length - 6 + ' more points omitted' }, ...h.slice(-3) ],
+    };
+    jsonEl.textContent = JSON.stringify(preview, null, 2);
+  } catch(e) {
+    jsonEl.textContent = 'Error: ' + e.message;
+  }
+}
+
+loadFiles();
 </script>
 </body>
 </html>`);
