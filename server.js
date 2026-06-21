@@ -1719,7 +1719,7 @@ function renderFiles(files) {
   const el = document.getElementById('fileList');
   if (!list.length) { el.innerHTML = '<div style="color:#333;font-size:0.8rem">No files found</div>'; return; }
   el.innerHTML = list.map(f =>
-    '<div class="file-row' + (f.id === selectedId ? ' active' : '') + '" onclick="selectFile(\'' + f.id.replace(/'/g, "\\'") + '\')">' +
+    '<div class="file-row' + (f.id === selectedId ? ' active' : '') + '" data-id="' + f.id + '" onclick="selectFile(this.dataset.id)">' +
     '<span class="file-name">' + f.id + '.json</span>' +
     '<span class="file-pts">' + (f.dataPoints || 0) + ' pts</span>' +
     '</div>'
