@@ -1659,7 +1659,8 @@ async function refresh() {
           if (ptsEl) ptsEl.textContent = f.dataPoints + ' pts · last odds ' + (ago != null ? ago + 's ago' : '—');
         }
         if (f.oddsHistory && f.oddsHistory.length > 1) {
-          updateChart(f.id, canvasId, f.fighter1, f.fighter2, f.oddsHistory);
+          try { updateChart(f.id, canvasId, f.fighter1, f.fighter2, f.oddsHistory); }
+          catch(ce) { console.warn('Chart error:', ce.message); }
         }
       });
     }
@@ -1700,7 +1701,7 @@ let allFiles = [], selectedId = null;
 async function loadFiles() {
   try {
     const data = await fetch('/api/recordings').then(r => r.json());
-    allFiles = (data.fights || []).sort((a, b) => (b.date || '').localeCompare(a.date || '') || (b.dataPoints || 0) - (a.dataPoints || 0));
+    allFiles = (Array.isArray(data) ? data : (data.fights || [])).sort((a, b) => (b.date || '').localeCompare(a.date || '') || (b.dataPoints || 0) - (a.dataPoints || 0));
     renderFiles();
   } catch(e) {
     document.getElementById('fileList').textContent = 'Error loading files';
