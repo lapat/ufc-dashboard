@@ -859,8 +859,21 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
   }
 
   if (msg.type === 'ODDS_UPDATE') {
-    // Forward to popup for display — no state machine logic here
     chrome.runtime.sendMessage({ type: 'ODDS_UPDATE', outcomes: msg.outcomes, ts: msg.ts }).catch(() => {});
+    if (betBotUrl && msg.outcomes && msg.outcomes.length >= 2 && msg.sport) {
+      const [o1, o2] = msg.outcomes;
+      fetch(`${betBotUrl}/api/dk-odds-push`, {
+        method: 'POST',
+        headers: authHeaders(),
+        body: JSON.stringify({
+          sport: msg.sport,
+          fighter1: o1.side,
+          fighter2: o2.side,
+          numericOdds1: o1.numericOdds,
+          numericOdds2: o2.numericOdds,
+        }),
+      }).catch(() => {});
+    }
     return;
   }
 

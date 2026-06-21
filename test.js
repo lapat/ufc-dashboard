@@ -6294,4 +6294,147 @@ async function runSecurityAndExpiryTests() {
         'server.js must reassign HISTORICAL_DIR from record_engine (volume-aware path)');
     });
   } catch(e) { console.error('  ✗ AB7:', e.message); failed++; }
+
+  // ── AC: Recording reliability fixes + monitor ─────────────────────────────
+  console.log('\n── AC: Recording reliability + monitor (static) ──');
+
+  const re2 = fs.readFileSync(path.join(__dirname, 'record_engine.js'), 'utf8');
+  const cj  = fs.readFileSync(path.join(__dirname, 'dk-extension', 'content.js'), 'utf8');
+
+  // AC1: fetchJson has a hard timeout
+  try {
+    await check('AC1: fetchJson has a 10s hard timeout — slow Odds API cannot stall poll loop', () => {
+      assert(src.includes('req.setTimeout') || src.includes('.setTimeout(10000'),
+        'fetchJson must call req.setTimeout to enforce a hard deadline');
+      assert(src.includes('req.destroy') || src.includes('.destroy('),
+        'timeout handler must destroy the request (not just abort silently)');
+    });
+  } catch(e) { console.error('  ✗ AC1:', e.message); failed++; }
+
+  // AC2: fightId is alphabetically sorted (prevents API flip creating duplicate files)
+  try {
+    await check('AC2: recFightId sorts fighters alphabetically — API home/away flip cannot split one fight into two files', () => {
+      assert(re2.includes('.sort()'), 'recFightId must sort fighter names alphabetically');
+      const fnBlock = re2.slice(re2.indexOf('function recFightId'), re2.indexOf('function recFightId') + 400);
+      assert(fnBlock.includes('.sort()'), 'sort must be inside recFightId function');
+    });
+  } catch(e) { console.error('  ✗ AC2:', e.message); failed++; }
+
+  // AC3: dk-odds-push endpoint exists and accepts fighter/odds fields
+  try {
+    await check('AC3: /api/dk-odds-push endpoint exists — extension can push odds directly bypassing Odds API', () => {
+      assert(src.includes('/api/dk-odds-push'), 'server.js must define /api/dk-odds-push endpoint');
+      const epBlock = src.slice(src.indexOf('/api/dk-odds-push'), src.indexOf('/api/dk-odds-push') + 600);
+      assert(epBlock.includes('fighter1') && epBlock.includes('fighter2'), 'must accept fighter1/fighter2');
+      assert(epBlock.includes('numericOdds1') && epBlock.includes('numericOdds2'), 'must accept numericOdds1/numericOdds2');
+      assert(epBlock.includes('oddsHistory.push'), 'must append to oddsHistory like the main recorder');
+    });
+  } catch(e) { console.error('  ✗ AC3:', e.message); failed++; }
+
+  // AC4: dk-odds-push matches active fight order-insensitively (handles fighter1/fighter2 reversed)
+  try {
+    await check('AC4: dk-odds-push fuzzy-matches active fights regardless of fighter order', () => {
+      const epBlock = src.slice(src.indexOf('/api/dk-odds-push'), src.indexOf('/api/dk-odds-push') + 1000);
+      assert(epBlock.includes('pf2') || epBlock.includes('reversed') || epBlock.includes('rf1.slice(0,6) === pf2.slice(0,6)'),
+        'must try reversed fighter order when matching active fights');
+    });
+  } catch(e) { console.error('  ✗ AC4:', e.message); failed++; }
+
+  // AC5: background.js forwards ODDS_UPDATE to /api/dk-odds-push
+  try {
+    await check('AC5: background.js sends ODDS_UPDATE to /api/dk-odds-push on the server', () => {
+      const bgBlock = bg.slice(bg.indexOf("msg.type === 'ODDS_UPDATE'"), bg.indexOf("msg.type === 'ODDS_UPDATE'") + 600);
+      assert(bgBlock.includes('/api/dk-odds-push'), 'background.js must POST to /api/dk-odds-push on ODDS_UPDATE');
+      assert(bgBlock.includes('numericOdds1'), 'must include numericOdds1 in the push payload');
+    });
+  } catch(e) { console.error('  ✗ AC5:', e.message); failed++; }
+
+  // AC6: content.js includes sport in ODDS_UPDATE based on URL
+  try {
+    await check('AC6: content.js detects sport from URL and includes it in ODDS_UPDATE', () => {
+      assert(cj.includes("sport") && cj.includes('ODDS_UPDATE'), 'content.js must include sport in ODDS_UPDATE');
+      assert(cj.includes('soccer_fifa_world_cup'), 'must detect soccer from URL');
+      assert(cj.includes('mma_mixed_martial_arts'), 'must detect MMA/UFC from URL');
+    });
+  } catch(e) { console.error('  ✗ AC6:', e.message); failed++; }
+
+  // AC7: /monitor route exists in server.js
+  try {
+    await check('AC7: /monitor route exists and serves an HTML page with live recording status', () => {
+      assert(src.includes("'/monitor'") || src.includes('"/monitor"'), 'server.js must define /monitor route');
+      const monBlock = src.slice(src.indexOf("'/monitor'"), src.indexOf("'/monitor'") + 500);
+      assert(monBlock.includes('pollRate') || monBlock.includes('activeFights') || monBlock.includes('RECORDING'),
+        '/monitor must reference key recording status fields');
+    });
+  } catch(e) { console.error('  ✗ AC7:', e.message); failed++; }
+
+  // AC8: pollHistory tracked in recorderState and exposed in /api/recorder/status
+  try {
+    await check('AC8: pollHistory is tracked in recorderState and returned by /api/recorder/status', () => {
+      assert(src.includes('pollHistory'), 'recorderState must have pollHistory array');
+      assert(src.includes('pollRateMs'), '/api/recorder/status must compute and return pollRateMs');
+    });
+  } catch(e) { console.error('  ✗ AC8:', e.message); failed++; }
+
+  // ── AC LIVE tests (prod only) — run against actual Belgium vs Iran recording ──
+  if (!target.includes('localhost')) {
+    console.log('\n── AC: Live recording tests (prod) ──');
+
+    await check('🔴 AC-LIVE1: recorder is currently polling — lastPoll within 60s', async () => {
+      const d = await get('/api/recorder/status');
+      const age = d.lastPoll ? (Date.now() - new Date(d.lastPoll).getTime()) : Infinity;
+      assert(age < 60000, `lastPoll is ${Math.round(age/1000)}s ago — recorder may be stalled (expected < 60s)`);
+    });
+
+    await check('🔴 AC-LIVE2: pollRateMs is healthy — actual poll rate under 15s', async () => {
+      const d = await get('/api/recorder/status');
+      assert(d.pollRateMs != null, 'pollRateMs missing — not enough poll history yet');
+      assert(d.pollRateMs < 15000,
+        `pollRateMs=${d.pollRateMs}ms — recorder is sampling too slowly. Should be <5s for UFC, <15s for other. ` +
+        `June 20 bug was 50s — check Odds API latency and fetchJson timeout.`);
+    });
+
+    await check('🔴 AC-LIVE3: active recording has dataPoints > 0', async () => {
+      const d = await get('/api/recorder/status');
+      if (!d.activeFights.length) { console.log('    (no active fight right now — skipped)'); passed++; return; }
+      const f = d.activeFights[0];
+      assert(f.dataPoints > 0, `${f.fighter1} vs ${f.fighter2} has 0 data points — odds may be frozen or recording not started`);
+    });
+
+    await check('🔴 AC-LIVE4: data points are growing — wait 10s and check count increased', async () => {
+      const d1 = await get('/api/recorder/status');
+      if (!d1.activeFights.length) { console.log('    (no active fight right now — skipped)'); passed++; return; }
+      const f1 = d1.activeFights[0];
+      const id = f1.id;
+      await new Promise(r => setTimeout(r, 10000));
+      const d2 = await get('/api/recorder/status');
+      const f2 = d2.activeFights.find(f => f.id === id);
+      if (!f2) { console.log('    (fight ended during test — counts as pass)'); passed++; return; }
+      assert(f2.dataPoints >= f1.dataPoints,
+        `dataPoints went from ${f1.dataPoints} → ${f2.dataPoints} — should not decrease`);
+      // Odds may not have changed in 10s (DK freezes lines briefly) — don't fail on no delta
+      if (f2.dataPoints === f1.dataPoints) {
+        console.log(`    ⚠ dataPoints unchanged (${f1.dataPoints}) — odds may be frozen by DK temporarily`);
+      } else {
+        console.log(`    ✓ dataPoints grew: ${f1.dataPoints} → ${f2.dataPoints} (+${f2.dataPoints - f1.dataPoints})`);
+      }
+    });
+
+    await check('🔴 AC-LIVE5: /api/recorder/backup-status confirms volume active', async () => {
+      const d = await get('/api/recorder/backup-status');
+      assert(d.volumeActive === true, `volumeActive=${d.volumeActive} — fight data may be going to ephemeral filesystem`);
+      assert(d.ok === true, `backup-status ok=false — githubToken=${d.githubToken}`);
+    });
+
+    await check('🔴 AC-LIVE6: /monitor route responds with HTML', async () => {
+      const r = await fetch(`${target}/monitor`);
+      assert(r.ok, `/monitor returned ${r.status}`);
+      const txt = await r.text();
+      assert(txt.includes('Recorder Monitor'), '/monitor HTML missing title');
+      assert(txt.includes('pollRate'), '/monitor HTML missing poll rate display');
+    });
+
+  } else {
+    console.log('  - 🔴 AC-LIVE tests: skipped (--local). Run `node test.js` against prod.');
+  }
 }

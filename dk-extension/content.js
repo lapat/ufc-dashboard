@@ -223,8 +223,16 @@ if (href.startsWith('https://sportsbook.draftkings.com/') &&
     const outcomes = scanOddsFromPage();
     if (outcomes.length === 0) return;
 
+    // Detect sport from URL for server-side recording
+    const sport = href.includes('/soccer') ? 'soccer_fifa_world_cup'
+      : href.includes('/mma') || href.includes('/ufc') ? 'mma_mixed_martial_arts'
+      : href.includes('/basketball') ? 'basketball_nba'
+      : href.includes('/hockey') || href.includes('/nhl') ? 'icehockey_nhl'
+      : href.includes('/football') || href.includes('/nfl') ? 'americanfootball_nfl'
+      : href.includes('/baseball') || href.includes('/mlb') ? 'baseball_mlb'
+      : 'mma_mixed_martial_arts';
     // Always report current odds so background + popup can display them
-    send({ type: 'ODDS_UPDATE', outcomes, ts: Date.now() });
+    send({ type: 'ODDS_UPDATE', outcomes, sport, ts: Date.now() });
 
     // ── Watch trigger condition check ──────────────────────────────────────
     for (const trigger of watchTriggers) {

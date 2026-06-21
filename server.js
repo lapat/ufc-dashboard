@@ -349,7 +349,7 @@ app.use('/api/watch-triggers', (req, res, next) => {
 
 function fetchJson(url) {
   return new Promise((resolve, reject) => {
-    https.get(url, res => {
+    const req = https.get(url, res => {
       let d = '';
       res.on('data', c => d += c);
       res.on('end', () => {
@@ -357,6 +357,8 @@ function fetchJson(url) {
         catch (e) { reject(e); }
       });
     }).on('error', reject);
+    // 10s hard timeout — prevents slow Odds API from stalling the poll loop
+    req.setTimeout(10000, () => req.destroy(new Error('fetchJson timeout')));
   });
 }
 
@@ -1424,11 +1426,22 @@ app.get('/api/recorder/status', (req, res) => {
     dataPoints: r.oddsHistory.length,
     lastOdds: r.lastOdds,
   }));
+  // Compute actual poll rate from history (median gap between last polls)
+  const ph = recorderState.pollHistory;
+  let pollRateMs = null;
+  if (ph.length >= 2) {
+    const gaps = [];
+    for (let i = 1; i < ph.length; i++) gaps.push(ph[i] - ph[i-1]);
+    gaps.sort((a,b) => a-b);
+    pollRateMs = gaps[Math.floor(gaps.length / 2)]; // median gap
+  }
   res.json({
     recording: active.length > 0,
     activeFights: active,
     totalSaved: recorderState.totalSaved,
     lastPoll: recorderState.lastPoll,
+    pollRateMs,
+    pollHistory: ph.slice(-10),
     watching: ['UFC/MMA (always)', ...(() => { const w=clientWatching; if(!w||Date.now()-w.ts>=120000) return []; return [w.team1?`${w.team1} vs ${w.team2}`:SPORT_META[w.sport]?.label||w.sport]; })()],
   });
 });
@@ -1442,6 +1455,173 @@ app.get('/api/recorder/backup-status', (req, res) => {
     historicalDir: HISTORICAL_DIR,
     ok: !!(process.env.GITHUB_TOKEN && process.env.DATA_DIR),
   });
+});
+
+// Extension pushes live DK DOM odds directly — bypasses Odds API latency
+// 1-second granularity when Ish (or Louis) has a DK tab open
+app.post('/api/dk-odds-push', (req, res) => {
+  const {sport='mma_mixed_martial_arts',fighter1,fighter2,numericOdds1,numericOdds2}=req.body||{};
+  if(!fighter1||!fighter2||!numericOdds1||!numericOdds2)return res.status(400).json({error:'missing fields'});
+  const {id,record}=findOrCreateFight(sport,fighter1,fighter2);
+  const odds={timestamp:new Date().toISOString(),fighter1:{name:fighter1,numericOdds:+numericOdds1},fighter2:{name:fighter2,numericOdds:+numericOdds2},source:'extension'};
+  const L=record.lastOdds;
+  if(!L||L.fighter1.numericOdds!==+numericOdds1)record.oddsHistory.push(odds),record.lastOdds=odds,persistState(recorderState.activeFights);
+  res.json({ok:true,id,dataPoints:record.oddsHistory.length});
+});
+
+function findOrCreateFight(sport, fighter1, fighter2) {
+  const pf1 = fighter1.toLowerCase().replace(/[^a-z0-9]/g, '');
+  const pf2 = fighter2.toLowerCase().replace(/[^a-z0-9]/g, '');
+  for (const [id, record] of recorderState.activeFights) {
+    const rf1 = (record.meta.fighter1 || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+    const rf2 = (record.meta.fighter2 || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+    const match = (rf1.slice(0,6) === pf1.slice(0,6) && rf2.slice(0,6) === pf2.slice(0,6)) ||
+                  (rf1.slice(0,6) === pf2.slice(0,6) && rf2.slice(0,6) === pf1.slice(0,6));
+    if (match) return { id, record };
+  }
+  const [a, b] = [fighter1, fighter2].map(n => n.toLowerCase().replace(/[^a-z0-9]/g, '')).sort();
+  const date = new Date().toISOString().slice(0, 10);
+  const id = sport === 'mma_mixed_martial_arts' ? `${a}_vs_${b}_${date}` : `${sport.split('_')[0]}__${a}_vs_${b}_${date}`;
+  const record = { meta: { sport, label: SPORT_META[sport]?.label || sport, fighter1, fighter2, startTime: new Date().toISOString(), source: 'extension' }, oddsHistory: [], lastOdds: null };
+  recorderState.activeFights.set(id, record);
+  persistState(recorderState.activeFights);
+  console.log(`[dk-push] New recording started from extension: ${id}`);
+  return { id, record };
+}
+
+// Monitor page — displays pollRate, activeFights, and RECORDING status in real-time
+app.get('/monitor', (req, res) => {
+  res.send(`<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Recorder Monitor — activeFights / pollRate / RECORDING</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:#060606;color:#ccc;font-family:'Helvetica Neue',sans-serif;font-size:14px;padding:16px}
+    h1{color:#e8b84b;font-size:1rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px}
+    .status{font-size:2rem;font-weight:700;margin-bottom:12px}
+    .status.ok{color:#69db7c}.status.warn{color:#e8b84b}.status.dead{color:#ff6b6b}
+    .fight{background:#111;border:1px solid #1a1a1a;border-radius:8px;padding:12px 16px;margin-bottom:10px}
+    .fight-name{font-size:1rem;font-weight:700;color:#fff;margin-bottom:4px}
+    .fight-meta{font-size:0.75rem;color:#555;margin-bottom:8px}
+    .odds{display:flex;gap:20px;font-size:0.85rem;font-weight:600}
+    .f1{color:#e8b84b}.f2{color:#74c0fc}
+    .pts{font-size:0.7rem;color:#444;margin-top:6px}
+    .poll-bar{margin-top:16px;background:#111;border:1px solid #1a1a1a;border-radius:8px;padding:12px 16px}
+    .poll-label{font-size:0.65rem;color:#444;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+    .poll-rate{font-size:1.5rem;font-weight:700}
+    .poll-rate.good{color:#69db7c}.poll-rate.warn{color:#e8b84b}.poll-rate.bad{color:#ff6b6b}
+    .poll-dots{display:flex;gap:4px;margin-top:8px;flex-wrap:wrap}
+    .poll-dot{width:8px;height:8px;border-radius:50%}
+    .idle{color:#333;font-size:0.85rem;margin-top:8px}
+    .ts{font-size:0.65rem;color:#333;margin-top:16px}
+    .live-test{background:#0a1a0a;border:1px solid #69db7c33;border-radius:8px;padding:12px 16px;margin-bottom:12px}
+    .live-test-label{font-size:0.65rem;color:#69db7c;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+    .live-test-val{font-size:0.9rem;color:#69db7c;font-weight:600}
+    .live-test-fail{color:#ff6b6b}
+  </style>
+</head>
+<body>
+  <h1>⚡ Recorder Monitor</h1>
+  <div class="status" id="bigStatus">Loading…</div>
+  <div id="liveTest"></div>
+  <div id="fights"></div>
+  <div class="poll-bar">
+    <div class="poll-label">Actual Poll Rate (median last 10 polls)</div>
+    <div class="poll-rate" id="pollRate">—</div>
+    <div class="poll-dots" id="pollDots"></div>
+  </div>
+  <div class="ts" id="ts"></div>
+
+<script>
+let prevPoints = {};
+let pointDelta = {};
+let firstLoad = true;
+
+async function refresh() {
+  try {
+    const d = await fetch('/api/recorder/status').then(r => r.json());
+    const now = Date.now();
+
+    // Big status
+    const lastPollAge = d.lastPoll ? (now - new Date(d.lastPoll).getTime()) : Infinity;
+    const bigEl = document.getElementById('bigStatus');
+    if (!d.lastPoll || lastPollAge > 120000) {
+      bigEl.textContent = '🔴 RECORDER STALLED'; bigEl.className = 'status dead';
+    } else if (d.recording) {
+      bigEl.textContent = '🔴 RECORDING'; bigEl.className = 'status ok';
+    } else {
+      bigEl.textContent = '⚪ IDLE'; bigEl.className = 'status warn';
+    }
+
+    // Live test box
+    const ltEl = document.getElementById('liveTest');
+    if (d.activeFights.length > 0) {
+      const f = d.activeFights[0];
+      const prev = prevPoints[f.id] || 0;
+      const delta = f.dataPoints - prev;
+      if (!firstLoad) pointDelta[f.id] = (pointDelta[f.id] || 0) + delta;
+      prevPoints[f.id] = f.dataPoints;
+      const growing = (pointDelta[f.id] || 0) > 0;
+      ltEl.innerHTML = '<div class="live-test"><div class="live-test-label">🧪 Live Test — ' + f.fighter1 + ' vs ' + f.fighter2 + '</div>' +
+        '<div class="live-test-val' + (growing ? '' : ' live-test-fail') + '">' +
+        f.dataPoints + ' data points · ' + (growing ? '+' + pointDelta[f.id] + ' new since page load ✓' : 'no new points yet — watching…') +
+        '</div></div>';
+    } else {
+      ltEl.innerHTML = '<div class="live-test"><div class="live-test-label">🧪 Live Test</div><div class="live-test-val live-test-fail">No active recording</div></div>';
+    }
+    firstLoad = false;
+
+    // Fights
+    document.getElementById('fights').innerHTML = d.activeFights.length
+      ? d.activeFights.map(f => {
+          const ago = f.lastOdds ? Math.round((now - new Date(f.lastOdds.timestamp).getTime())/1000) : null;
+          const f1o = f.lastOdds?.fighter1?.numericOdds; const f2o = f.lastOdds?.fighter2?.numericOdds;
+          const fmt = o => o > 0 ? '+'+o : ''+o;
+          return '<div class="fight">' +
+            '<div class="fight-name">' + f.fighter1 + ' vs ' + f.fighter2 + '</div>' +
+            '<div class="fight-meta">' + f.sport + ' · started ' + new Date(f.startTime).toLocaleTimeString() + '</div>' +
+            '<div class="odds"><span class="f1">' + f.fighter1 + ' ' + (f1o != null ? fmt(f1o) : '—') + '</span>' +
+            '<span class="f2">' + f.fighter2 + ' ' + (f2o != null ? fmt(f2o) : '—') + '</span></div>' +
+            '<div class="pts">' + f.dataPoints + ' pts · last odds ' + (ago != null ? ago + 's ago' : '—') + '</div>' +
+          '</div>';
+        }).join('')
+      : '<div class="idle">No active recordings</div>';
+
+    // Poll rate
+    const rateEl = document.getElementById('pollRate');
+    const dotsEl = document.getElementById('pollDots');
+    if (d.pollRateMs != null) {
+      const s = (d.pollRateMs / 1000).toFixed(1);
+      rateEl.textContent = s + 's';
+      rateEl.className = 'poll-rate ' + (d.pollRateMs < 5000 ? 'good' : d.pollRateMs < 30000 ? 'warn' : 'bad');
+    } else {
+      rateEl.textContent = '—'; rateEl.className = 'poll-rate warn';
+    }
+    if (d.pollHistory && d.pollHistory.length > 1) {
+      const dots = [];
+      for (let i = 1; i < d.pollHistory.length; i++) {
+        const gap = d.pollHistory[i] - d.pollHistory[i-1];
+        const color = gap < 5000 ? '#69db7c' : gap < 30000 ? '#e8b84b' : '#ff6b6b';
+        dots.push('<div class="poll-dot" style="background:' + color + '" title="' + (gap/1000).toFixed(1) + 's"></div>');
+      }
+      dotsEl.innerHTML = dots.join('');
+    }
+
+    document.getElementById('ts').textContent = 'Last poll: ' + (d.lastPoll ? new Date(d.lastPoll).toLocaleTimeString() : '—') +
+      ' · Last API response: ' + (lastPollAge < 9999000 ? Math.round(lastPollAge/1000) + 's ago' : 'unknown');
+  } catch(e) {
+    document.getElementById('bigStatus').textContent = '🔴 SERVER ERROR';
+    document.getElementById('bigStatus').className = 'status dead';
+  }
+  setTimeout(refresh, 2000);
+}
+refresh();
+</script>
+</body>
+</html>`);
 });
 
 // Stop a specific active recording (save what we have and remove it)
@@ -1567,6 +1747,7 @@ const recorderState = {
   activeFights:    loadPersistedState(), // reloads in-flight fights after crash/restart
   totalSaved:      0,
   lastPoll:        null,
+  pollHistory:     [], // last 20 poll timestamps — used by /monitor to show real poll rate
   failCounts:      {},   // sportKey → consecutive API failure count
   sessionFights:   [],   // fights saved this event night (for summary email)
   summaryTimer:    null, // fires end-of-event summary email after quiet period
@@ -1760,6 +1941,8 @@ async function recPollSport(sportKey, meta, watchedGame) {
 
 async function recPoll() {
   recorderState.lastPoll = new Date().toISOString();
+  recorderState.pollHistory.push(Date.now());
+  if (recorderState.pollHistory.length > 20) recorderState.pollHistory.shift();
 
   // Always poll UFC + World Cup (and any other ALWAYS_POLL sports)
   let alwaysLive = 0;

@@ -51,8 +51,10 @@ function migrateToVolume() {
 // Other sports: `sport__fighter1_vs_fighter2_YYYY-MM-DD` in sport subfolder
 
 function recFightId(sportKey, fight) {
-  const a    = (fight.home_team || '').toLowerCase().replace(/[^a-z0-9]/g, '');
-  const b    = (fight.away_team || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+  // Sort alphabetically so API home/away flips don't create duplicate files
+  const [a, b] = [fight.home_team || '', fight.away_team || '']
+    .map(n => n.toLowerCase().replace(/[^a-z0-9]/g, ''))
+    .sort();
   const date = (fight.commence_time || '').slice(0, 10);
   if (sportKey === 'mma_mixed_martial_arts') {
     return `${a}_vs_${b}_${date}`;
