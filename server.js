@@ -1418,16 +1418,28 @@ app.get('/health', (req, res) => {
 
 app.get('/api/recorder/status', (req, res) => {
   const includeHistory = req.query.history === '1';
-  const active = [...recorderState.activeFights.entries()].map(([id, r]) => ({
-    id,
-    sport: r.meta.label,
-    fighter1: r.meta.fighter1,
-    fighter2: r.meta.fighter2,
-    startTime: r.meta.startTime,
-    dataPoints: r.oddsHistory.length,
-    lastOdds: r.lastOdds,
-    ...(includeHistory ? { oddsHistory: r.oddsHistory } : {}),
-  }));
+  // Normalize odds slots: extension may push fighters in reversed DOM order.
+  // If lastOdds.fighter1.name doesn't match meta.fighter1, swap both lastOdds and oddsHistory slots.
+  const active = [...recorderState.activeFights.entries()].map(([id, r]) => {
+    const lo = r.lastOdds;
+    const reversed = lo && lo.fighter1 && lo.fighter1.name !== r.meta.fighter1;
+    const normLast = !lo ? null : reversed
+      ? { ...lo, fighter1: lo.fighter2, fighter2: lo.fighter1 }
+      : lo;
+    const normHistory = includeHistory
+      ? (reversed ? r.oddsHistory.map(e => ({ ...e, fighter1: e.fighter2, fighter2: e.fighter1 })) : r.oddsHistory)
+      : undefined;
+    return {
+      id,
+      sport: r.meta.label,
+      fighter1: r.meta.fighter1,
+      fighter2: r.meta.fighter2,
+      startTime: r.meta.startTime,
+      dataPoints: r.oddsHistory.length,
+      lastOdds: normLast,
+      ...(includeHistory ? { oddsHistory: normHistory } : {}),
+    };
+  });
   // Compute actual poll rate from history (median gap between last polls)
   const ph = recorderState.pollHistory;
   let pollRateMs = null;
