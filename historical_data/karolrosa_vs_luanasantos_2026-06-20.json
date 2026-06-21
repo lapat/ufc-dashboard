@@ -1,0 +1,70 @@
+{
+  "fightId": "karolrosa_vs_luanasantos_2026-06-20",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "Karol Rosa vs Luana Santos",
+  "startTime": "2026-06-20T21:53:05.655Z",
+  "endTime": "2026-06-20T22:12:25.570Z",
+  "dataPoints": 4,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-06-20T21:53:05.655Z",
+      "fighter1": {
+        "name": "Karol Rosa",
+        "numericOdds": 1500
+      },
+      "fighter2": {
+        "name": "Luana Santos",
+        "numericOdds": -4000
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:54:00.890Z",
+      "fighter1": {
+        "name": "Karol Rosa",
+        "numericOdds": 2200
+      },
+      "fighter2": {
+        "name": "Luana Santos",
+        "numericOdds": -10000
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:54:52.891Z",
+      "fighter1": {
+        "name": "Karol Rosa",
+        "numericOdds": 3000
+      },
+      "fighter2": {
+        "name": "Luana Santos",
+        "numericOdds": -20000
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:55:44.624Z",
+      "fighter1": {
+        "name": "Karol Rosa",
+        "numericOdds": 4000
+      },
+      "fighter2": {
+        "name": "Luana Santos",
+        "numericOdds": -100000
+      }
+    }
+  ],
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Luana Santos",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-20T22:12:25.886Z",
+    "openingF1Odds": 1500,
+    "openingF2Odds": -4000,
+    "closingF1Odds": 4000,
+    "closingF2Odds": -100000,
+    "lineMovementF1": 2500,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
+}

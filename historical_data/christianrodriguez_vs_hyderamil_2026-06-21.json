@@ -1,0 +1,37 @@
+{
+  "fightId": "christianrodriguez_vs_hyderamil_2026-06-21",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "Christian Rodriguez vs Hyder Amil",
+  "startTime": "2026-06-21T01:15:00.485Z",
+  "endTime": "2026-06-21T01:26:58.014Z",
+  "dataPoints": 1,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-06-21T01:15:00.484Z",
+      "fighter1": {
+        "name": "Christian Rodriguez",
+        "numericOdds": -720
+      },
+      "fighter2": {
+        "name": "Hyder Amil",
+        "numericOdds": 450
+      }
+    }
+  ],
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Christian Rodriguez",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-21T01:26:58.441Z",
+    "openingF1Odds": -720,
+    "openingF2Odds": 450,
+    "closingF1Odds": -720,
+    "closingF2Odds": 450,
+    "lineMovementF1": 0,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
+}

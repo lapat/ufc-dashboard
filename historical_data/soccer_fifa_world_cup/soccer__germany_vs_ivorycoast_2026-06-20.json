@@ -1,0 +1,813 @@
+{
+  "fightId": "soccer__germany_vs_ivorycoast_2026-06-20",
+  "sport": "soccer_fifa_world_cup",
+  "fightTitle": "Germany vs Ivory Coast",
+  "startTime": "2026-06-20T20:00:09.757Z",
+  "endTime": "2026-06-20T22:10:02.663Z",
+  "dataPoints": 73,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-06-20T20:00:09.756Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": -215
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 550
+      }
+    },
+    {
+      "timestamp": "2026-06-20T20:01:02.307Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": -220
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 550
+      }
+    },
+    {
+      "timestamp": "2026-06-20T20:01:54.774Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": -200
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-06-20T20:05:03.991Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": -185
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 450
+      }
+    },
+    {
+      "timestamp": "2026-06-20T20:07:04.748Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": -200
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-06-20T20:08:40.244Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": -185
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 450
+      }
+    },
+    {
+      "timestamp": "2026-06-20T20:11:57.175Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": -200
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-06-20T20:14:24.239Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": -185
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 450
+      }
+    },
+    {
+      "timestamp": "2026-06-20T20:15:16.676Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": -170
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 450
+      }
+    },
+    {
+      "timestamp": "2026-06-20T20:15:58.546Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-06-20T20:17:43.383Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 425
+      }
+    },
+    {
+      "timestamp": "2026-06-20T20:21:44.389Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 425
+      }
+    },
+    {
+      "timestamp": "2026-06-20T20:22:37.012Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": -150
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 425
+      }
+    },
+    {
+      "timestamp": "2026-06-20T20:23:19.128Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": -170
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-06-20T20:24:11.372Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 425
+      }
+    },
+    {
+      "timestamp": "2026-06-20T20:25:03.864Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 450
+      }
+    },
+    {
+      "timestamp": "2026-06-20T20:29:15.558Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 475
+      }
+    },
+    {
+      "timestamp": "2026-06-20T20:30:08.077Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 155
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-06-20T20:30:44.784Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 175
+      }
+    },
+    {
+      "timestamp": "2026-06-20T20:32:18.923Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 145
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2026-06-20T20:33:11.227Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 165
+      }
+    },
+    {
+      "timestamp": "2026-06-20T20:35:43.251Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 145
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2026-06-20T20:36:30.322Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 165
+      }
+    },
+    {
+      "timestamp": "2026-06-20T20:37:12.777Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 175
+      }
+    },
+    {
+      "timestamp": "2026-06-20T20:38:58.055Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 160
+      }
+    },
+    {
+      "timestamp": "2026-06-20T20:39:50.626Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 165
+      }
+    },
+    {
+      "timestamp": "2026-06-20T20:41:40.572Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 155
+      }
+    },
+    {
+      "timestamp": "2026-06-20T20:42:33.003Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 175
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 160
+      }
+    },
+    {
+      "timestamp": "2026-06-20T20:44:18.228Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 190
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 150
+      }
+    },
+    {
+      "timestamp": "2026-06-20T20:46:02.749Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 140
+      }
+    },
+    {
+      "timestamp": "2026-06-20T20:47:00.613Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 190
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 150
+      }
+    },
+    {
+      "timestamp": "2026-06-20T20:48:40.361Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 140
+      }
+    },
+    {
+      "timestamp": "2026-06-20T20:49:32.795Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 215
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 135
+      }
+    },
+    {
+      "timestamp": "2026-06-20T20:51:22.621Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-06-20T20:53:49.242Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-06-20T20:56:26.282Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 215
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 135
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:09:38.679Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 140
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:10:27.723Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 210
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 135
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:12:08.390Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:12:59.911Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 235
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 125
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:14:39.276Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 115
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:15:33.855Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 290
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 105
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:16:22.283Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 115
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:17:10.982Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 285
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 115
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:18:54.096Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 380
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": -115
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:19:42.745Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 330
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": -105
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:20:33.960Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 370
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": -115
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:24:47.812Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 400
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": -120
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:25:36.375Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 425
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": -125
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:28:07.380Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 475
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": -130
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:29:50.997Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": -130
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:30:42.002Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 475
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": -125
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:31:29.972Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 120
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:33:13.562Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:34:05.564Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:34:54.271Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 600
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:35:45.722Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 550
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:38:18.798Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 550
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:41:38.154Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 600
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:42:29.565Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 170
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 650
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:44:13.159Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 190
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 700
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:45:04.532Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 190
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 650
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:46:44.644Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 205
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 700
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:48:28.068Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 265
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 750
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:49:19.501Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 285
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 800
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:50:11.279Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 800
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:51:02.975Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 900
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:51:51.490Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 360
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 1000
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:52:43.100Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 400
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 1000
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:53:38.334Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 450
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 1100
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:54:26.831Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 550
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 1200
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:55:18.840Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": 650
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 1400
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:57:54.067Z",
+      "fighter1": {
+        "name": "Germany",
+        "numericOdds": -10000
+      },
+      "fighter2": {
+        "name": "Ivory Coast",
+        "numericOdds": 17000
+      }
+    }
+  ]
+}

@@ -1,0 +1,769 @@
+{
+  "fightId": "soccer__ecuador_vs_curaao_2026-06-21",
+  "sport": "soccer_fifa_world_cup",
+  "fightTitle": "Ecuador vs Curaçao",
+  "startTime": "2026-06-21T00:00:01.859Z",
+  "endTime": "2026-06-21T02:09:22.975Z",
+  "dataPoints": 69,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-06-21T00:00:01.858Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1500
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -650
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:00:27.763Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1400
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:01:16.027Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1900
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:02:08.012Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1700
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:06:22.861Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1800
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:07:14.271Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1900
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -575
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:08:57.767Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 2000
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -600
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:09:46.127Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1700
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:10:37.465Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1900
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -575
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:12:20.096Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1600
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -550
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:13:11.538Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1400
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -500
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:14:02.693Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1200
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -500
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:14:54.141Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1400
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -500
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:16:36.353Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1600
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -550
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:18:19.273Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1400
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -500
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:21:36.125Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1200
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -500
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:23:19.398Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1200
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -450
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:25:51.500Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1200
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -400
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:27:31.554Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1100
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -390
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:28:20.346Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1100
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -350
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:30:03.344Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1200
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -350
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:31:43.632Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1400
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -390
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:37:33.547Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1600
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -400
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:41:45.094Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1400
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -390
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:42:33.311Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1600
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -400
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:44:13.654Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1400
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -340
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:46:45.320Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1600
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -400
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:47:33.600Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1500
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -380
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:49:13.034Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1300
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -320
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:50:04.839Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1100
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:53:24.800Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1300
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -310
+      }
+    },
+    {
+      "timestamp": "2026-06-21T01:02:37.498Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1100
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -285
+      }
+    },
+    {
+      "timestamp": "2026-06-21T01:06:45.348Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1000
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -230
+      }
+    },
+    {
+      "timestamp": "2026-06-21T01:09:18.621Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1000
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -225
+      }
+    },
+    {
+      "timestamp": "2026-06-21T01:12:38.786Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1200
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -220
+      }
+    },
+    {
+      "timestamp": "2026-06-21T01:13:26.037Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1300
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -225
+      }
+    },
+    {
+      "timestamp": "2026-06-21T01:15:06.969Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1200
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -220
+      }
+    },
+    {
+      "timestamp": "2026-06-21T01:15:58.478Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1200
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -200
+      }
+    },
+    {
+      "timestamp": "2026-06-21T01:18:29.995Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1200
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -185
+      }
+    },
+    {
+      "timestamp": "2026-06-21T01:19:21.310Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1300
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -185
+      }
+    },
+    {
+      "timestamp": "2026-06-21T01:20:57.866Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1100
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -175
+      }
+    },
+    {
+      "timestamp": "2026-06-21T01:22:40.251Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1000
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -170
+      }
+    },
+    {
+      "timestamp": "2026-06-21T01:23:31.621Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 950
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -155
+      }
+    },
+    {
+      "timestamp": "2026-06-21T01:25:12.073Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1200
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -155
+      }
+    },
+    {
+      "timestamp": "2026-06-21T01:27:39.956Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1200
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -145
+      }
+    },
+    {
+      "timestamp": "2026-06-21T01:29:20.148Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1500
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -155
+      }
+    },
+    {
+      "timestamp": "2026-06-21T01:31:00.113Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1600
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -145
+      }
+    },
+    {
+      "timestamp": "2026-06-21T01:31:52.758Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1800
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -145
+      }
+    },
+    {
+      "timestamp": "2026-06-21T01:33:32.537Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1600
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -130
+      }
+    },
+    {
+      "timestamp": "2026-06-21T01:35:12.421Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 2200
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -140
+      }
+    },
+    {
+      "timestamp": "2026-06-21T01:36:04.953Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 2200
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -130
+      }
+    },
+    {
+      "timestamp": "2026-06-21T01:36:52.143Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 2200
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -120
+      }
+    },
+    {
+      "timestamp": "2026-06-21T01:37:44.712Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 2200
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": -110
+      }
+    },
+    {
+      "timestamp": "2026-06-21T01:39:24.197Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1600
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": 100
+      }
+    },
+    {
+      "timestamp": "2026-06-21T01:40:58.772Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1400
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": 110
+      }
+    },
+    {
+      "timestamp": "2026-06-21T01:41:51.142Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1600
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": 110
+      }
+    },
+    {
+      "timestamp": "2026-06-21T01:42:38.418Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1700
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": 120
+      }
+    },
+    {
+      "timestamp": "2026-06-21T01:43:36.348Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1700
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": 125
+      }
+    },
+    {
+      "timestamp": "2026-06-21T01:44:18.191Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1800
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-06-21T01:45:10.027Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1600
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": 135
+      }
+    },
+    {
+      "timestamp": "2026-06-21T01:45:58.491Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1600
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": 150
+      }
+    },
+    {
+      "timestamp": "2026-06-21T01:46:50.123Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1400
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": 150
+      }
+    },
+    {
+      "timestamp": "2026-06-21T01:47:38.598Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1400
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": 165
+      }
+    },
+    {
+      "timestamp": "2026-06-21T01:48:30.435Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1700
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": 150
+      }
+    },
+    {
+      "timestamp": "2026-06-21T01:49:18.434Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 1800
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": 160
+      }
+    },
+    {
+      "timestamp": "2026-06-21T01:50:58.416Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 2800
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": 300
+      }
+    },
+    {
+      "timestamp": "2026-06-21T01:51:50.416Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 3000
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": 340
+      }
+    },
+    {
+      "timestamp": "2026-06-21T01:52:44.163Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 4000
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": 450
+      }
+    },
+    {
+      "timestamp": "2026-06-21T01:54:23.885Z",
+      "fighter1": {
+        "name": "Curaçao",
+        "numericOdds": 6500
+      },
+      "fighter2": {
+        "name": "Ecuador",
+        "numericOdds": 900
+      }
+    }
+  ]
+}

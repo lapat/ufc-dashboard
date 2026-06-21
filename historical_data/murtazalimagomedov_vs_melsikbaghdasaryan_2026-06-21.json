@@ -1,0 +1,70 @@
+{
+  "fightId": "murtazalimagomedov_vs_melsikbaghdasaryan_2026-06-21",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "Murtazali Magomedov vs Melsik Baghdasaryan",
+  "startTime": "2026-06-21T00:45:01.993Z",
+  "endTime": "2026-06-21T00:59:48.708Z",
+  "dataPoints": 4,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-06-21T00:45:01.993Z",
+      "fighter1": {
+        "name": "Melsik Baghdasaryan",
+        "numericOdds": 380
+      },
+      "fighter2": {
+        "name": "Murtazali Magomedov",
+        "numericOdds": -500
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:48:47.128Z",
+      "fighter1": {
+        "name": "Melsik Baghdasaryan",
+        "numericOdds": 350
+      },
+      "fighter2": {
+        "name": "Murtazali Magomedov",
+        "numericOdds": -520
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:50:27.482Z",
+      "fighter1": {
+        "name": "Melsik Baghdasaryan",
+        "numericOdds": 400
+      },
+      "fighter2": {
+        "name": "Murtazali Magomedov",
+        "numericOdds": -620
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:52:58.942Z",
+      "fighter1": {
+        "name": "Melsik Baghdasaryan",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Murtazali Magomedov",
+        "numericOdds": -425
+      }
+    }
+  ],
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Murtazali Magomedov",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-21T00:59:49.254Z",
+    "openingF1Odds": 380,
+    "openingF2Odds": -500,
+    "closingF1Odds": 300,
+    "closingF2Odds": -425,
+    "lineMovementF1": -80,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "fightId": "ioncutelaba_vs_navajostirling_2026-06-21",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "Ion Cutelaba vs Navajo Stirling",
+  "startTime": "2026-06-21T01:45:00.278Z",
+  "endTime": "2026-06-21T01:52:38.857Z",
+  "dataPoints": 1,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-06-21T01:45:00.277Z",
+      "fighter1": {
+        "name": "Ion Cutelaba",
+        "numericOdds": 154
+      },
+      "fighter2": {
+        "name": "Navajo Stirling",
+        "numericOdds": -200
+      }
+    }
+  ],
+  "outcome": {
+    "winner": "fighter2",
+    "winnerName": "Navajo Stirling",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-21T01:52:39.273Z",
+    "openingF1Odds": 154,
+    "openingF2Odds": -200,
+    "closingF1Odds": 154,
+    "closingF2Odds": -200,
+    "lineMovementF1": 0,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
+}

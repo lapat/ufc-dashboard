@@ -1,0 +1,362 @@
+{
+  "fightId": "soccer__netherlands_vs_sweden_2026-06-20",
+  "sport": "soccer_fifa_world_cup",
+  "fightTitle": "Netherlands vs Sweden",
+  "startTime": "2026-06-20T17:00:07.897Z",
+  "endTime": "2026-06-20T18:38:14.635Z",
+  "dataPoints": 32,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-06-20T17:00:07.897Z",
+      "fighter1": {
+        "name": "Netherlands",
+        "numericOdds": -140
+      },
+      "fighter2": {
+        "name": "Sweden",
+        "numericOdds": 380
+      }
+    },
+    {
+      "timestamp": "2026-06-20T17:00:23.553Z",
+      "fighter1": {
+        "name": "Netherlands",
+        "numericOdds": -145
+      },
+      "fighter2": {
+        "name": "Sweden",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-06-20T17:03:00.484Z",
+      "fighter1": {
+        "name": "Netherlands",
+        "numericOdds": -140
+      },
+      "fighter2": {
+        "name": "Sweden",
+        "numericOdds": 360
+      }
+    },
+    {
+      "timestamp": "2026-06-20T17:03:42.593Z",
+      "fighter1": {
+        "name": "Netherlands",
+        "numericOdds": -140
+      },
+      "fighter2": {
+        "name": "Sweden",
+        "numericOdds": 370
+      }
+    },
+    {
+      "timestamp": "2026-06-20T17:04:34.912Z",
+      "fighter1": {
+        "name": "Netherlands",
+        "numericOdds": -165
+      },
+      "fighter2": {
+        "name": "Sweden",
+        "numericOdds": 425
+      }
+    },
+    {
+      "timestamp": "2026-06-20T17:05:27.115Z",
+      "fighter1": {
+        "name": "Netherlands",
+        "numericOdds": -525
+      },
+      "fighter2": {
+        "name": "Sweden",
+        "numericOdds": 1100
+      }
+    },
+    {
+      "timestamp": "2026-06-20T17:06:19.658Z",
+      "fighter1": {
+        "name": "Netherlands",
+        "numericOdds": -425
+      },
+      "fighter2": {
+        "name": "Sweden",
+        "numericOdds": 900
+      }
+    },
+    {
+      "timestamp": "2026-06-20T17:07:07.117Z",
+      "fighter1": {
+        "name": "Netherlands",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "Sweden",
+        "numericOdds": 950
+      }
+    },
+    {
+      "timestamp": "2026-06-20T17:10:37.721Z",
+      "fighter1": {
+        "name": "Netherlands",
+        "numericOdds": -425
+      },
+      "fighter2": {
+        "name": "Sweden",
+        "numericOdds": 1000
+      }
+    },
+    {
+      "timestamp": "2026-06-20T17:12:22.412Z",
+      "fighter1": {
+        "name": "Netherlands",
+        "numericOdds": -425
+      },
+      "fighter2": {
+        "name": "Sweden",
+        "numericOdds": 1100
+      }
+    },
+    {
+      "timestamp": "2026-06-20T17:13:14.745Z",
+      "fighter1": {
+        "name": "Netherlands",
+        "numericOdds": -425
+      },
+      "fighter2": {
+        "name": "Sweden",
+        "numericOdds": 1000
+      }
+    },
+    {
+      "timestamp": "2026-06-20T17:13:56.724Z",
+      "fighter1": {
+        "name": "Netherlands",
+        "numericOdds": -425
+      },
+      "fighter2": {
+        "name": "Sweden",
+        "numericOdds": 1100
+      }
+    },
+    {
+      "timestamp": "2026-06-20T17:17:26.150Z",
+      "fighter1": {
+        "name": "Netherlands",
+        "numericOdds": -1400
+      },
+      "fighter2": {
+        "name": "Sweden",
+        "numericOdds": 2500
+      }
+    },
+    {
+      "timestamp": "2026-06-20T17:18:18.635Z",
+      "fighter1": {
+        "name": "Netherlands",
+        "numericOdds": -1200
+      },
+      "fighter2": {
+        "name": "Sweden",
+        "numericOdds": 2500
+      }
+    },
+    {
+      "timestamp": "2026-06-20T17:19:12.007Z",
+      "fighter1": {
+        "name": "Netherlands",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Sweden",
+        "numericOdds": 3500
+      }
+    },
+    {
+      "timestamp": "2026-06-20T17:21:01.814Z",
+      "fighter1": {
+        "name": "Netherlands",
+        "numericOdds": -1400
+      },
+      "fighter2": {
+        "name": "Sweden",
+        "numericOdds": 3000
+      }
+    },
+    {
+      "timestamp": "2026-06-20T17:21:54.031Z",
+      "fighter1": {
+        "name": "Netherlands",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Sweden",
+        "numericOdds": 4000
+      }
+    },
+    {
+      "timestamp": "2026-06-20T17:22:46.384Z",
+      "fighter1": {
+        "name": "Netherlands",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Sweden",
+        "numericOdds": 3500
+      }
+    },
+    {
+      "timestamp": "2026-06-20T17:23:28.131Z",
+      "fighter1": {
+        "name": "Netherlands",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Sweden",
+        "numericOdds": 4000
+      }
+    },
+    {
+      "timestamp": "2026-06-20T17:26:58.083Z",
+      "fighter1": {
+        "name": "Netherlands",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Sweden",
+        "numericOdds": 3500
+      }
+    },
+    {
+      "timestamp": "2026-06-20T17:27:50.248Z",
+      "fighter1": {
+        "name": "Netherlands",
+        "numericOdds": -2500
+      },
+      "fighter2": {
+        "name": "Sweden",
+        "numericOdds": 4500
+      }
+    },
+    {
+      "timestamp": "2026-06-20T17:35:32.135Z",
+      "fighter1": {
+        "name": "Netherlands",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Sweden",
+        "numericOdds": 3500
+      }
+    },
+    {
+      "timestamp": "2026-06-20T17:36:24.621Z",
+      "fighter1": {
+        "name": "Netherlands",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Sweden",
+        "numericOdds": 4000
+      }
+    },
+    {
+      "timestamp": "2026-06-20T17:38:56.617Z",
+      "fighter1": {
+        "name": "Netherlands",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Sweden",
+        "numericOdds": 3500
+      }
+    },
+    {
+      "timestamp": "2026-06-20T17:39:49.138Z",
+      "fighter1": {
+        "name": "Netherlands",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Sweden",
+        "numericOdds": 4500
+      }
+    },
+    {
+      "timestamp": "2026-06-20T17:43:13.311Z",
+      "fighter1": {
+        "name": "Netherlands",
+        "numericOdds": -2000
+      },
+      "fighter2": {
+        "name": "Sweden",
+        "numericOdds": 4500
+      }
+    },
+    {
+      "timestamp": "2026-06-20T17:44:00.388Z",
+      "fighter1": {
+        "name": "Netherlands",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Sweden",
+        "numericOdds": 4000
+      }
+    },
+    {
+      "timestamp": "2026-06-20T17:44:53.540Z",
+      "fighter1": {
+        "name": "Netherlands",
+        "numericOdds": -1600
+      },
+      "fighter2": {
+        "name": "Sweden",
+        "numericOdds": 4000
+      }
+    },
+    {
+      "timestamp": "2026-06-20T17:45:45.960Z",
+      "fighter1": {
+        "name": "Netherlands",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Sweden",
+        "numericOdds": 4000
+      }
+    },
+    {
+      "timestamp": "2026-06-20T17:52:35.369Z",
+      "fighter1": {
+        "name": "Netherlands",
+        "numericOdds": -1400
+      },
+      "fighter2": {
+        "name": "Sweden",
+        "numericOdds": 3500
+      }
+    },
+    {
+      "timestamp": "2026-06-20T18:05:17.267Z",
+      "fighter1": {
+        "name": "Netherlands",
+        "numericOdds": -1800
+      },
+      "fighter2": {
+        "name": "Sweden",
+        "numericOdds": 4000
+      }
+    },
+    {
+      "timestamp": "2026-06-20T18:09:34.403Z",
+      "fighter1": {
+        "name": "Netherlands",
+        "numericOdds": -20000
+      },
+      "fighter2": {
+        "name": "Sweden",
+        "numericOdds": 4000
+      }
+    }
+  ]
+}

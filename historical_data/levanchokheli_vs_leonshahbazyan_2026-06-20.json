@@ -1,0 +1,37 @@
+{
+  "fightId": "levanchokheli_vs_leonshahbazyan_2026-06-20",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "Levan Chokheli vs Leon Shahbazyan",
+  "startTime": "2026-06-20T22:18:37.130Z",
+  "endTime": "2026-06-20T22:23:30.948Z",
+  "dataPoints": 1,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-06-20T22:18:37.128Z",
+      "fighter1": {
+        "name": "Leon Shahbazyan",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Levan Chokheli",
+        "numericOdds": -298
+      }
+    }
+  ],
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Levan Chokheli",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-20T22:23:31.299Z",
+    "openingF1Odds": 220,
+    "openingF2Odds": -298,
+    "closingF1Odds": 220,
+    "closingF2Odds": -298,
+    "lineMovementF1": 0,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
+}

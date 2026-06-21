@@ -1,0 +1,125 @@
+{
+  "fightId": "mitchraposo_vs_allannascimento_2026-06-20",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "Mitch Raposo vs Allan Nascimento",
+  "startTime": "2026-06-20T23:00:10.292Z",
+  "endTime": "2026-06-20T23:22:18.428Z",
+  "dataPoints": 9,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-06-20T23:00:10.291Z",
+      "fighter1": {
+        "name": "Allan Nascimento",
+        "numericOdds": 550
+      },
+      "fighter2": {
+        "name": "Mitch Raposo",
+        "numericOdds": -920
+      }
+    },
+    {
+      "timestamp": "2026-06-20T23:00:16.651Z",
+      "fighter1": {
+        "name": "Allan Nascimento",
+        "numericOdds": 650
+      },
+      "fighter2": {
+        "name": "Mitch Raposo",
+        "numericOdds": -1150
+      }
+    },
+    {
+      "timestamp": "2026-06-20T23:01:01.990Z",
+      "fighter1": {
+        "name": "Allan Nascimento",
+        "numericOdds": 1100
+      },
+      "fighter2": {
+        "name": "Mitch Raposo",
+        "numericOdds": -2500
+      }
+    },
+    {
+      "timestamp": "2026-06-20T23:01:50.489Z",
+      "fighter1": {
+        "name": "Allan Nascimento",
+        "numericOdds": 1300
+      },
+      "fighter2": {
+        "name": "Mitch Raposo",
+        "numericOdds": -3200
+      }
+    },
+    {
+      "timestamp": "2026-06-20T23:03:30.173Z",
+      "fighter1": {
+        "name": "Allan Nascimento",
+        "numericOdds": 750
+      },
+      "fighter2": {
+        "name": "Mitch Raposo",
+        "numericOdds": -1450
+      }
+    },
+    {
+      "timestamp": "2026-06-20T23:05:04.948Z",
+      "fighter1": {
+        "name": "Allan Nascimento",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Mitch Raposo",
+        "numericOdds": -345
+      }
+    },
+    {
+      "timestamp": "2026-06-20T23:05:54.082Z",
+      "fighter1": {
+        "name": "Allan Nascimento",
+        "numericOdds": 470
+      },
+      "fighter2": {
+        "name": "Mitch Raposo",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-06-20T23:06:42.912Z",
+      "fighter1": {
+        "name": "Allan Nascimento",
+        "numericOdds": 750
+      },
+      "fighter2": {
+        "name": "Mitch Raposo",
+        "numericOdds": -1450
+      }
+    },
+    {
+      "timestamp": "2026-06-20T23:07:31.742Z",
+      "fighter1": {
+        "name": "Allan Nascimento",
+        "numericOdds": 575
+      },
+      "fighter2": {
+        "name": "Mitch Raposo",
+        "numericOdds": -950
+      }
+    }
+  ],
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Mitch Raposo",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-20T23:22:18.734Z",
+    "openingF1Odds": 550,
+    "openingF2Odds": -920,
+    "closingF1Odds": 575,
+    "closingF2Odds": -950,
+    "lineMovementF1": 25,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "fightId": "shanecollins_vs_otaritanzilovi_2026-06-20",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "Shane Collins vs Otari Tanzilovi",
+  "startTime": "2026-06-20T21:22:26.675Z",
+  "endTime": "2026-06-20T21:45:14.127Z",
+  "dataPoints": 10,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-06-20T21:22:26.673Z",
+      "fighter1": {
+        "name": "Otari Tanzilovi",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Shane Collins",
+        "numericOdds": -500
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:22:39.524Z",
+      "fighter1": {
+        "name": "Otari Tanzilovi",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Shane Collins",
+        "numericOdds": -810
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:23:30.720Z",
+      "fighter1": {
+        "name": "Otari Tanzilovi",
+        "numericOdds": 470
+      },
+      "fighter2": {
+        "name": "Shane Collins",
+        "numericOdds": -750
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:25:10.342Z",
+      "fighter1": {
+        "name": "Otari Tanzilovi",
+        "numericOdds": 700
+      },
+      "fighter2": {
+        "name": "Shane Collins",
+        "numericOdds": -1300
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:26:05.436Z",
+      "fighter1": {
+        "name": "Otari Tanzilovi",
+        "numericOdds": 850
+      },
+      "fighter2": {
+        "name": "Shane Collins",
+        "numericOdds": -1750
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:26:50.397Z",
+      "fighter1": {
+        "name": "Otari Tanzilovi",
+        "numericOdds": 800
+      },
+      "fighter2": {
+        "name": "Shane Collins",
+        "numericOdds": -1600
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:27:41.716Z",
+      "fighter1": {
+        "name": "Otari Tanzilovi",
+        "numericOdds": 1000
+      },
+      "fighter2": {
+        "name": "Shane Collins",
+        "numericOdds": -2100
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:28:33.049Z",
+      "fighter1": {
+        "name": "Otari Tanzilovi",
+        "numericOdds": 1600
+      },
+      "fighter2": {
+        "name": "Shane Collins",
+        "numericOdds": -4800
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:29:24.820Z",
+      "fighter1": {
+        "name": "Otari Tanzilovi",
+        "numericOdds": 1800
+      },
+      "fighter2": {
+        "name": "Shane Collins",
+        "numericOdds": -6500
+      }
+    },
+    {
+      "timestamp": "2026-06-20T21:30:13.232Z",
+      "fighter1": {
+        "name": "Otari Tanzilovi",
+        "numericOdds": 2200
+      },
+      "fighter2": {
+        "name": "Shane Collins",
+        "numericOdds": -10000
+      }
+    }
+  ],
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Shane Collins",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-20T21:45:14.432Z",
+    "openingF1Odds": 340,
+    "openingF2Odds": -500,
+    "closingF1Odds": 2200,
+    "closingF2Odds": -10000,
+    "lineMovementF1": 1860,
+    "crossoverOccurred": false,
+    "crossoverMinute": null
+  }
+}

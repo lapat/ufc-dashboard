@@ -1,0 +1,76 @@
+{
+  "fightId": "gastonbolanos_vs_michaelaswell_2026-06-20",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "Gaston Bolanos vs Michael Aswell",
+  "startTime": "2026-06-20T22:33:32.233Z",
+  "endTime": "2026-06-20T22:55:50.350Z",
+  "dataPoints": 6,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-06-20T22:33:32.233Z",
+      "fighter1": {
+        "name": "Gaston Bolanos",
+        "numericOdds": -445
+      },
+      "fighter2": {
+        "name": "Michael Aswell",
+        "numericOdds": 310
+      }
+    },
+    {
+      "timestamp": "2026-06-20T22:34:21.241Z",
+      "fighter1": {
+        "name": "Gaston Bolanos",
+        "numericOdds": -220
+      },
+      "fighter2": {
+        "name": "Michael Aswell",
+        "numericOdds": 170
+      }
+    },
+    {
+      "timestamp": "2026-06-20T22:35:09.777Z",
+      "fighter1": {
+        "name": "Gaston Bolanos",
+        "numericOdds": -130
+      },
+      "fighter2": {
+        "name": "Michael Aswell",
+        "numericOdds": 100
+      }
+    },
+    {
+      "timestamp": "2026-06-20T22:36:46.622Z",
+      "fighter1": {
+        "name": "Gaston Bolanos",
+        "numericOdds": 114
+      },
+      "fighter2": {
+        "name": "Michael Aswell",
+        "numericOdds": -145
+      }
+    },
+    {
+      "timestamp": "2026-06-20T22:37:36.694Z",
+      "fighter1": {
+        "name": "Gaston Bolanos",
+        "numericOdds": 200
+      },
+      "fighter2": {
+        "name": "Michael Aswell",
+        "numericOdds": -270
+      }
+    },
+    {
+      "timestamp": "2026-06-20T22:38:25.280Z",
+      "fighter1": {
+        "name": "Gaston Bolanos",
+        "numericOdds": -115
+      },
+      "fighter2": {
+        "name": "Michael Aswell",
+        "numericOdds": -115
+      }
+    }
+  ]
+}

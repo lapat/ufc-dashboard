@@ -1,0 +1,202 @@
+{
+  "fightId": "viniciusoliveira_vs_andrefili_2026-06-21",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "Vinicius Oliveira vs Andre Fili",
+  "startTime": "2026-06-21T00:15:00.477Z",
+  "endTime": "2026-06-21T00:46:54.868Z",
+  "dataPoints": 16,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-06-21T00:15:00.477Z",
+      "fighter1": {
+        "name": "Andre Fili",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Vinicius Oliveira",
+        "numericOdds": -278
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:15:03.666Z",
+      "fighter1": {
+        "name": "Andre Fili",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Vinicius Oliveira",
+        "numericOdds": -298
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:15:54.849Z",
+      "fighter1": {
+        "name": "Andre Fili",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Vinicius Oliveira",
+        "numericOdds": -278
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:20:18.467Z",
+      "fighter1": {
+        "name": "Andre Fili",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Vinicius Oliveira",
+        "numericOdds": -298
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:21:10.148Z",
+      "fighter1": {
+        "name": "Andre Fili",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Vinicius Oliveira",
+        "numericOdds": -330
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:22:01.666Z",
+      "fighter1": {
+        "name": "Andre Fili",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Vinicius Oliveira",
+        "numericOdds": -425
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:23:45.393Z",
+      "fighter1": {
+        "name": "Andre Fili",
+        "numericOdds": 325
+      },
+      "fighter2": {
+        "name": "Vinicius Oliveira",
+        "numericOdds": -475
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:24:36.935Z",
+      "fighter1": {
+        "name": "Andre Fili",
+        "numericOdds": -154
+      },
+      "fighter2": {
+        "name": "Vinicius Oliveira",
+        "numericOdds": 120
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:25:25.526Z",
+      "fighter1": {
+        "name": "Andre Fili",
+        "numericOdds": -270
+      },
+      "fighter2": {
+        "name": "Vinicius Oliveira",
+        "numericOdds": 200
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:27:05.728Z",
+      "fighter1": {
+        "name": "Andre Fili",
+        "numericOdds": -166
+      },
+      "fighter2": {
+        "name": "Vinicius Oliveira",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:27:57.446Z",
+      "fighter1": {
+        "name": "Andre Fili",
+        "numericOdds": 135
+      },
+      "fighter2": {
+        "name": "Vinicius Oliveira",
+        "numericOdds": -175
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:28:45.962Z",
+      "fighter1": {
+        "name": "Andre Fili",
+        "numericOdds": 154
+      },
+      "fighter2": {
+        "name": "Vinicius Oliveira",
+        "numericOdds": -200
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:29:34.325Z",
+      "fighter1": {
+        "name": "Andre Fili",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Vinicius Oliveira",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:30:26.056Z",
+      "fighter1": {
+        "name": "Andre Fili",
+        "numericOdds": 380
+      },
+      "fighter2": {
+        "name": "Vinicius Oliveira",
+        "numericOdds": -580
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:31:14.761Z",
+      "fighter1": {
+        "name": "Andre Fili",
+        "numericOdds": 420
+      },
+      "fighter2": {
+        "name": "Vinicius Oliveira",
+        "numericOdds": -660
+      }
+    },
+    {
+      "timestamp": "2026-06-21T00:32:06.093Z",
+      "fighter1": {
+        "name": "Andre Fili",
+        "numericOdds": 450
+      },
+      "fighter2": {
+        "name": "Vinicius Oliveira",
+        "numericOdds": -720
+      }
+    }
+  ],
+  "outcome": {
+    "winner": "fighter1",
+    "winnerName": "Vinicius Oliveira",
+    "method": "Final",
+    "round": null,
+    "time": null,
+    "source": "espn",
+    "enrichedAt": "2026-06-21T00:46:55.707Z",
+    "openingF1Odds": 225,
+    "openingF2Odds": -278,
+    "closingF1Odds": 450,
+    "closingF2Odds": -720,
+    "lineMovementF1": 225,
+    "crossoverOccurred": true,
+    "crossoverMinute": 10
+  }
+}
