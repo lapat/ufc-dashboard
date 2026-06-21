@@ -204,7 +204,7 @@ comm -23 <(ls historical_data/*.json | xargs -I{} basename {} | grep -vE "^(dk_|
 ### Pre-deploy test commands — run BOTH before every push
 
 ```bash
-# 1. Static code guarantees (no server needed) — 448 must pass, 0 fail
+# 1. Static code guarantees (no server needed) — 456 must pass, 0 fail
 node test.js --local
 
 # 2. Live server deploy gate — hits Railway, verifies volume + backup are active
@@ -224,6 +224,108 @@ node test.js
 |-----|-------|---------|
 | `DATA_DIR` | `/data` | Routes all fight file writes to the persistent volume |
 | `GITHUB_TOKEN` | (token) | Auto-commits completed fights to `lapat/ufc-dashboard` |
+
+---
+
+## Test Suite — Complete Map (`test.js`, 456 tests)
+
+**Single file:** `test.js` in the project root.  
+**Run:** `node test.js --local` (all 456, no prod server needed) | `node test.js` (456 + prod-only gates).
+
+### Three test types — know the difference
+
+| Type | How it works | What it proves |
+|------|-------------|----------------|
+| **Runtime unit** | Calls real JS functions directly (no server) | Logic is correct at execution time |
+| **Server HTTP** | Sends real HTTP requests to `target` URL | Endpoint exists and returns correct shape |
+| **Static/structural** | Greps source file text for string patterns | Code was written; does NOT prove it runs |
+
+**`node test.js --local`** hits `localhost:3000` for server tests — you must have `node server.js` running locally, OR skip those (they fail gracefully with connection refused). The pure unit tests and static tests run regardless.
+
+**`node test.js`** hits Railway prod. The 🔴 DEPLOY GATE and 🔴 AC-LIVE tests only run in this mode.
+
+### Section map (54 sections, 456 tests)
+
+#### Pure runtime unit tests — these actually execute logic
+| Section | Count | What it covers |
+|---------|-------|----------------|
+| Unit Tests | 25 | Odds parsing (unicode minus), bet parsing, connection health FSM, game-switch bet clearing, bet dedup, P&L calculation, settlement detection, odds delta display, DK banner states |
+| Record Engine (Unit) | 6 | `require('./record_engine')` directly: export completeness, `pushFightToGitHub` no-throw without token, `migrateToVolume` no-op and copy-to-volume behavior, World Cup live window, soccer 3-outcome odds extraction |
+| Bet Chat: parseBetCmd | 8 | Chat command parsing: amounts, sides, hedge triggers, clarify cases |
+| Bet Coverage: gamification | 8+5 | `applyCoverage` P&L math, parlay exclusion, multi-user isolation |
+| Bet Placement: DOM | 4 | Button text patterns DraftKings uses (selector strings) |
+| Bet Placement: guard | 8 | Pre-click guard logic: balance check, min bet, slip empty |
+| Bet Placement: sport outcomes | 4 | 2-outcome vs 3-outcome market detection |
+| AI Agent: Hedge Math | 8+5 | `americanToDecimal`, `calculateHedge`, equal-profit formula, break-even minimum, vig impact |
+| AI Agent: Trigger Conditions | 5 | `positive`, `negative`, `odds_threshold` condition logic |
+| AI Agent: Strategy State Machine | 6 | State transitions: IDLE→FIRST_BET_PLACED→WATCHING→BOTH_PLACED, expiry, SW-restart resume |
+| AI Agent: Triple Verify | 6 | All 7 pre-hedge checks: game identity, slippage, suspension, profitability, slip empty, balance, leg1 confirmed |
+| AI Agent: NL Intent Parsing | 8 | Intent → structured JSON: `bet`, `strategy`, `cancel`, `status`, `clarify` |
+| AI Agent: Error Recovery | 5 | 15-scenario error modes: bet not in MyBets, odds moved, network timeout, laptop close |
+| A. NL Intent Parser | 15 | `parseChatResponse` function mirrored from server.js — all 8 example pairs + edge cases |
+| B. Odds watcher math | 20 | `americanToImplied`, crossover detection, `oddsTargetMet` for both positive and negative odds |
+| C. Strategy state machine | 17 | State machine transitions, expiry cleanup, storage persistence |
+| C. tripleVerify gate | 20 | Full 7-check gate with all failure modes |
+| D. STOP countdown | 6 | 3-second cancel window, STOP keyword parsing |
+| E. Idempotency key | 8 | SHA256 key generation, 30s dedup window, duplicate bet blocking |
+| F. Soccer draw exposure | 10 | Draw warning trigger, 3-outcome detection, warning suppression for non-soccer |
+| G. Dashboard chat queue | 20 | Command lifecycle: created→picked_up→completed/failed, 30s stale cleanup |
+| H. Mybets command-poll | 15 | Background.js polls pending commands from My Bets tab, SW self-message fix |
+| M. Watch trigger logic | 3 | `positive`, `negative`, `odds_threshold` condition evaluation |
+| Q. Bracket classification | 6 | Straight bet vs parlay vs parlay-leg detection |
+
+#### Server HTTP tests — need a live server at `target`
+| Section | Count | What it covers |
+|---------|-------|----------------|
+| Health | 1 | `GET /health` returns `status` field |
+| Sports APIs | 3 | `GET /api/sports` shape, `GET /api/fights` shape, `/api/fights?sport=` filter |
+| DK Sync | 8 | `POST /api/dk-sync`, bet storage, `GET /api/dk-bets`, user isolation, P&L endpoint |
+| Recorder | 3 | `/api/recorder/status` fields, `/api/recorder/stop/:id`, session fight list |
+| Library | 1 | `GET /library` returns HTML |
+| DK Auth | 17 | Login, session, token refresh, `/api/session-count`, multi-session heartbeat |
+| Pages | 2 | `GET /` returns HTML, `GET /library` returns HTML |
+| New Features (Server) | 10 | `/api/live-score`, `/api/live-crossovers`, live score edge cases |
+| Bet Coverage (Server) | 5 | `/api/bet-coverage` P&L with real DK sync data |
+| Recording (Server) | 6 | `/api/recorder/status` fields + 🔴 4 DEPLOY GATE tests (prod only) |
+| Bet Placement (Server) | 8 | `/api/live-crossovers`, `/api/bet-coverage`, command queue endpoints |
+| K. /api/assistant | 7 | Intent classification endpoint: `bet`, `strategy`, `cancel`, `status`, `clarify` |
+| L. Watch trigger CRUD | 4 | `POST /api/watch-triggers`, `GET`, `DELETE` |
+| P. Auto-bet config CRUD | 5 | `GET/POST /api/auto-bet/config` |
+| R. Auto-bet guard logic | 8 | `checkAutoBet` — bracket detection, auto-bet-off guard, dry-run flag |
+| S. Safety integration | 5 | Auto-bet disabled by default, no accidental bet during normal chat |
+| U. Auto-bet dry-run | 5 | `/api/auto-bet/test` — returns would-bet result without placing |
+| W. Auto-hedge wiring | 15 | End-to-end: place leg1 → detect crossover → verify → place hedge |
+| X. Score-tie trigger | 15 | Score-tie detection, trigger fire, dedup, multi-sport |
+
+#### Static / structural tests — grep source files for code patterns
+| Section | Count | What it proves (and what it DOESN'T) |
+|---------|-------|--------------------------------------|
+| AB. Volume persistence | 7 | `DATA_DIR` used in paths, `persistState` called on every update, `pushFightToGitHub` in `recSave`, volume path override at boot — **does NOT prove files actually write to `/data`** |
+| AC. Recording reliability | 8 | `fetchJson` 10s timeout exists, `recFightId` sorts alphabetically, `/api/dk-odds-push` endpoint exists with `oddsHistory.push`, fuzzy match tries reversed order, `background.js` sends `numericOdds1`, `content.js` detects sport from URL, `/monitor` route exists, `pollHistory` in recorderState — **does NOT prove any of this runs correctly** |
+| N. background.js checks | 3 | ODDS_UPDATE forwarded to popup, auto-bet disabled flag present, credential storage in `chrome.storage.local` only |
+| O. content.js checks | 5 | `scanOddsFromPage` present, `findSideNameNear` present, crossover detection logic, trigger condition check |
+| T. Structural checks | 7 | `recorderState` shape, poll loop boot, GITHUB_TOKEN guard, `pushFightToGitHub` call |
+| AA. Popup trigger display | 10 | `renderTriggers()` function exists in popup.js, trigger cancel wiring, strategy detail render, `#triggersList` element |
+| V. Auto-bet UI redesign | 10 | `auto-bet-panel` class, config fields, toggle switch present |
+| Y. Safety guard fixes | 13 | Auth header helpers, auto-bet-off guard, bet slip check, credential security |
+| Z. Security/session/expiry | 14 | Token storage, session heartbeat, strategy 4h expiry, CROSSOVER_DETECTED checks expiry |
+
+#### Prod-only tests (run with `node test.js`, skipped with `--local`)
+| Section | Count | What it checks |
+|---------|-------|----------------|
+| 🔴 DEPLOY GATE (in Recording) | 4 | `volumeActive=true`, `historicalDir=/data/historical_data`, `ok=true`, `dataDir=/data` |
+| 🔴 AC-LIVE (in AC section) | 6 | `lastPoll` within 60s, `pollRateMs < 15000`, active recording has dataPoints > 0, data points growing over 10s, `pollHistory` length ≥ 2, `/monitor` responds with HTML |
+
+### Known gaps in test coverage
+
+These are real behaviors with NO runtime verification:
+
+1. **`fetchJson` timeout** — AC1 only checks the string `req.setTimeout(10000` exists in source. No test actually fires a slow HTTP call and confirms it rejects after 10 seconds.
+2. **Alphabetical fightId dedup** — AC2 only checks alphabetical sort exists in `recFightId`. No test sends two polls with flipped fighter names and confirms one file is produced, not two.
+3. **Extension odds push end-to-end** — AC3/AC4 are static checks. No test POSTs to `/api/dk-odds-push` and confirms a data point appears in `oddsHistory`.
+4. **GitHub backup actually fires** — `pushFightToGitHub` call is verified structurally (AB6), but no test confirms it produces a commit in the repo.
+5. **Volume write path** — AB tests verify `DATA_DIR` is used in code paths. No test confirms a file written during a fight ends up at `/data/historical_data/` on the Railway filesystem.
+6. **Monitor page data** — AC7 checks the route exists. No test confirms the page actually shows live `activeFights` data.
 
 ---
 
