@@ -1417,6 +1417,7 @@ app.get('/health', (req, res) => {
 });
 
 app.get('/api/recorder/status', (req, res) => {
+  const includeHistory = req.query.history === '1';
   const active = [...recorderState.activeFights.entries()].map(([id, r]) => ({
     id,
     sport: r.meta.label,
@@ -1425,6 +1426,7 @@ app.get('/api/recorder/status', (req, res) => {
     startTime: r.meta.startTime,
     dataPoints: r.oddsHistory.length,
     lastOdds: r.lastOdds,
+    ...(includeHistory ? { oddsHistory: r.oddsHistory } : {}),
   }));
   // Compute actual poll rate from history (median gap between last polls)
   const ph = recorderState.pollHistory;
@@ -1497,6 +1499,7 @@ app.get('/monitor', (req, res) => {
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Recorder Monitor — activeFights / pollRate / RECORDING</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
     body{background:#060606;color:#ccc;font-family:'Helvetica Neue',sans-serif;font-size:14px;padding:16px}
@@ -1505,10 +1508,11 @@ app.get('/monitor', (req, res) => {
     .status.ok{color:#69db7c}.status.warn{color:#e8b84b}.status.dead{color:#ff6b6b}
     .fight{background:#111;border:1px solid #1a1a1a;border-radius:8px;padding:12px 16px;margin-bottom:10px}
     .fight-name{font-size:1rem;font-weight:700;color:#fff;margin-bottom:4px}
-    .fight-meta{font-size:0.75rem;color:#555;margin-bottom:8px}
-    .odds{display:flex;gap:20px;font-size:0.85rem;font-weight:600}
+    .fight-meta{font-size:0.75rem;color:#555;margin-bottom:6px}
+    .odds{display:flex;gap:20px;font-size:0.85rem;font-weight:600;margin-bottom:6px}
     .f1{color:#e8b84b}.f2{color:#74c0fc}
-    .pts{font-size:0.7rem;color:#444;margin-top:6px}
+    .pts{font-size:0.7rem;color:#444;margin-bottom:10px}
+    .chart-wrap{height:160px;position:relative}
     .poll-bar{margin-top:16px;background:#111;border:1px solid #1a1a1a;border-radius:8px;padding:12px 16px}
     .poll-label{font-size:0.65rem;color:#444;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
     .poll-rate{font-size:1.5rem;font-weight:700}
@@ -1517,16 +1521,11 @@ app.get('/monitor', (req, res) => {
     .poll-dot{width:8px;height:8px;border-radius:50%}
     .idle{color:#333;font-size:0.85rem;margin-top:8px}
     .ts{font-size:0.65rem;color:#333;margin-top:16px}
-    .live-test{background:#0a1a0a;border:1px solid #69db7c33;border-radius:8px;padding:12px 16px;margin-bottom:12px}
-    .live-test-label{font-size:0.65rem;color:#69db7c;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
-    .live-test-val{font-size:0.9rem;color:#69db7c;font-weight:600}
-    .live-test-fail{color:#ff6b6b}
   </style>
 </head>
 <body>
   <h1>⚡ Recorder Monitor</h1>
   <div class="status" id="bigStatus">Loading…</div>
-  <div id="liveTest"></div>
   <div id="fights"></div>
   <div class="poll-bar">
     <div class="poll-label">Actual Poll Rate (median last 10 polls)</div>
@@ -1536,13 +1535,51 @@ app.get('/monitor', (req, res) => {
   <div class="ts" id="ts"></div>
 
 <script>
-let prevPoints = {};
-let pointDelta = {};
-let firstLoad = true;
+const charts = {};
+
+function fmt(o) { return o > 0 ? '+' + o : '' + o; }
+
+function getOrCreateChart(id, canvasId, f1name, f2name) {
+  if (charts[id]) return charts[id];
+  const ctx = document.getElementById(canvasId).getContext('2d');
+  charts[id] = new Chart(ctx, {
+    type: 'line',
+    data: { labels: [], datasets: [
+      { label: f1name, data: [], borderColor: '#e8b84b', backgroundColor: 'transparent', borderWidth: 2, pointRadius: 0, tension: 0.3 },
+      { label: f2name, data: [], borderColor: '#74c0fc', backgroundColor: 'transparent', borderWidth: 2, pointRadius: 0, tension: 0.3 },
+    ]},
+    options: {
+      responsive: true, maintainAspectRatio: false, animation: false,
+      scales: {
+        x: { ticks: { color: '#333', font: { size: 9 }, maxTicksLimit: 6 }, grid: { color: '#1a1a1a' }, border: { color: '#222' } },
+        y: { ticks: { color: '#444', font: { size: 9 }, callback: v => v > 0 ? '+' + v : '' + v }, grid: { color: '#1a1a1a' }, border: { color: '#222' } },
+      },
+      plugins: { legend: { display: true, labels: { color: '#888', font: { size: 10 }, boxWidth: 12 } }, tooltip: { callbacks: { label: c => c.dataset.label + ': ' + (c.raw > 0 ? '+' : '') + c.raw } } },
+    },
+  });
+  return charts[id];
+}
+
+function updateChart(id, canvasId, f1name, f2name, history) {
+  const chart = getOrCreateChart(id, canvasId, f1name, f2name);
+  chart.data.labels = history.map(pt => new Date(pt.timestamp).toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' }));
+  chart.data.datasets[0].label = f1name;
+  chart.data.datasets[0].data = history.map(pt => pt.fighter1.numericOdds);
+  chart.data.datasets[1].label = f2name;
+  chart.data.datasets[1].data = history.map(pt => pt.fighter2.numericOdds);
+  chart.update('none');
+}
+
+// Destroy charts for fights that are no longer active
+function pruneCharts(activeIds) {
+  for (const id of Object.keys(charts)) {
+    if (!activeIds.has(id)) { charts[id].destroy(); delete charts[id]; }
+  }
+}
 
 async function refresh() {
   try {
-    const d = await fetch('/api/recorder/status').then(r => r.json());
+    const d = await fetch('/api/recorder/status?history=1').then(r => r.json());
     const now = Date.now();
 
     // Big status
@@ -1556,39 +1593,49 @@ async function refresh() {
       bigEl.textContent = '⚪ IDLE'; bigEl.className = 'status warn';
     }
 
-    // Live test box
-    const ltEl = document.getElementById('liveTest');
-    if (d.activeFights.length > 0) {
-      const f = d.activeFights[0];
-      const prev = prevPoints[f.id] || 0;
-      const delta = f.dataPoints - prev;
-      if (!firstLoad) pointDelta[f.id] = (pointDelta[f.id] || 0) + delta;
-      prevPoints[f.id] = f.dataPoints;
-      const growing = (pointDelta[f.id] || 0) > 0;
-      ltEl.innerHTML = '<div class="live-test"><div class="live-test-label">🧪 Live Test — ' + f.fighter1 + ' vs ' + f.fighter2 + '</div>' +
-        '<div class="live-test-val' + (growing ? '' : ' live-test-fail') + '">' +
-        f.dataPoints + ' data points · ' + (growing ? '+' + pointDelta[f.id] + ' new since page load ✓' : 'no new points yet — watching…') +
-        '</div></div>';
-    } else {
-      ltEl.innerHTML = '<div class="live-test"><div class="live-test-label">🧪 Live Test</div><div class="live-test-val live-test-fail">No active recording</div></div>';
-    }
-    firstLoad = false;
+    // Fights + graphs
+    const fightsEl = document.getElementById('fights');
+    const activeIds = new Set(d.activeFights.map(f => f.id));
+    pruneCharts(activeIds);
 
-    // Fights
-    document.getElementById('fights').innerHTML = d.activeFights.length
-      ? d.activeFights.map(f => {
-          const ago = f.lastOdds ? Math.round((now - new Date(f.lastOdds.timestamp).getTime())/1000) : null;
-          const f1o = f.lastOdds?.fighter1?.numericOdds; const f2o = f.lastOdds?.fighter2?.numericOdds;
-          const fmt = o => o > 0 ? '+'+o : ''+o;
-          return '<div class="fight">' +
+    if (d.activeFights.length === 0) {
+      fightsEl.innerHTML = '<div class="idle">No active recordings</div>';
+    } else {
+      d.activeFights.forEach(f => {
+        const canvasId = 'chart-' + f.id.replace(/[^a-z0-9]/g, '-');
+        let el = document.getElementById('fight-' + canvasId);
+        if (!el) {
+          el = document.createElement('div');
+          el.id = 'fight-' + canvasId;
+          el.className = 'fight';
+          const ago = f.lastOdds ? Math.round((now - new Date(f.lastOdds.timestamp).getTime()) / 1000) : null;
+          const f1o = f.lastOdds?.fighter1?.numericOdds;
+          const f2o = f.lastOdds?.fighter2?.numericOdds;
+          el.innerHTML =
             '<div class="fight-name">' + f.fighter1 + ' vs ' + f.fighter2 + '</div>' +
             '<div class="fight-meta">' + f.sport + ' · started ' + new Date(f.startTime).toLocaleTimeString() + '</div>' +
-            '<div class="odds"><span class="f1">' + f.fighter1 + ' ' + (f1o != null ? fmt(f1o) : '—') + '</span>' +
-            '<span class="f2">' + f.fighter2 + ' ' + (f2o != null ? fmt(f2o) : '—') + '</span></div>' +
-            '<div class="pts">' + f.dataPoints + ' pts · last odds ' + (ago != null ? ago + 's ago' : '—') + '</div>' +
-          '</div>';
-        }).join('')
-      : '<div class="idle">No active recordings</div>';
+            '<div class="odds"><span class="f1">' + f.fighter1 + ' <span id="o1-' + canvasId + '">' + (f1o != null ? fmt(f1o) : '—') + '</span></span>' +
+            '<span class="f2">' + f.fighter2 + ' <span id="o2-' + canvasId + '">' + (f2o != null ? fmt(f2o) : '—') + '</span></span></div>' +
+            '<div class="pts" id="pts-' + canvasId + '">' + f.dataPoints + ' pts · last odds ' + (ago != null ? ago + 's ago' : '—') + '</div>' +
+            '<div class="chart-wrap"><canvas id="' + canvasId + '"></canvas></div>';
+          fightsEl.appendChild(el);
+        } else {
+          // Update live stats without rebuilding DOM
+          const ago = f.lastOdds ? Math.round((now - new Date(f.lastOdds.timestamp).getTime()) / 1000) : null;
+          const f1o = f.lastOdds?.fighter1?.numericOdds;
+          const f2o = f.lastOdds?.fighter2?.numericOdds;
+          const o1el = document.getElementById('o1-' + canvasId);
+          const o2el = document.getElementById('o2-' + canvasId);
+          const ptsEl = document.getElementById('pts-' + canvasId);
+          if (o1el) o1el.textContent = f1o != null ? fmt(f1o) : '—';
+          if (o2el) o2el.textContent = f2o != null ? fmt(f2o) : '—';
+          if (ptsEl) ptsEl.textContent = f.dataPoints + ' pts · last odds ' + (ago != null ? ago + 's ago' : '—');
+        }
+        if (f.oddsHistory && f.oddsHistory.length > 1) {
+          updateChart(f.id, canvasId, f.fighter1, f.fighter2, f.oddsHistory);
+        }
+      });
+    }
 
     // Poll rate
     const rateEl = document.getElementById('pollRate');
@@ -1603,16 +1650,16 @@ async function refresh() {
     if (d.pollHistory && d.pollHistory.length > 1) {
       const dots = [];
       for (let i = 1; i < d.pollHistory.length; i++) {
-        const gap = d.pollHistory[i] - d.pollHistory[i-1];
+        const gap = d.pollHistory[i] - d.pollHistory[i - 1];
         const color = gap < 5000 ? '#69db7c' : gap < 30000 ? '#e8b84b' : '#ff6b6b';
-        dots.push('<div class="poll-dot" style="background:' + color + '" title="' + (gap/1000).toFixed(1) + 's"></div>');
+        dots.push('<div class="poll-dot" style="background:' + color + '" title="' + (gap / 1000).toFixed(1) + 's"></div>');
       }
       dotsEl.innerHTML = dots.join('');
     }
 
     document.getElementById('ts').textContent = 'Last poll: ' + (d.lastPoll ? new Date(d.lastPoll).toLocaleTimeString() : '—') +
-      ' · Last API response: ' + (lastPollAge < 9999000 ? Math.round(lastPollAge/1000) + 's ago' : 'unknown');
-  } catch(e) {
+      ' · ' + (lastPollAge < 9999000 ? Math.round(lastPollAge / 1000) + 's ago' : 'unknown');
+  } catch (e) {
     document.getElementById('bigStatus').textContent = '🔴 SERVER ERROR';
     document.getElementById('bigStatus').className = 'status dead';
   }
