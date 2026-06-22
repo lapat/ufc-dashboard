@@ -233,6 +233,9 @@
     .pos-lbl{font-size:0.75rem;color:#444;text-transform:uppercase;letter-spacing:1px;margin-bottom:3px}
     .pos-val{font-size:1.25rem;font-weight:700}
     .pv-green{color:#69db7c}.pv-red{color:#ff6b6b}.pv-gray{color:#333}
+    .pos-ret{font-size:0.65rem;color:#888;margin-top:2px}
+    .bet-profit{font-size:0.7rem;color:#69db7c;margin-left:4px}
+    .bet-ret{font-size:0.65rem;color:#555;margin-left:2px}
     .tracker-status{padding:10px 14px;border-radius:5px;text-align:center;font-size:0.9rem;font-weight:700;letter-spacing:1px;margin-bottom:7px}
     .s-winwin{background:#0d2a0d;border:1px solid #69db7c44;color:#69db7c;animation:pg 2s infinite}
     .s-hedge{background:#1a1500;border:1px solid #e8b84b44;color:#e8b84b}
@@ -757,9 +760,9 @@
     <div class="bet-list" id="bet-list"><div class="bet-empty">No bets locked in yet.</div></div>
     <div class="pos-divider"></div>
     <div class="pos-grid" id="pos-grid" style="display:none">
-      <div class="pos-card pc-zero" id="pos-f1"><div class="pos-lbl" id="pos-f1-lbl">Side 1 wins</div><div class="pos-val pv-gray" id="pos-f1-val">—</div></div>
-      <div class="pos-card pc-zero" id="pos-f2"><div class="pos-lbl" id="pos-f2-lbl">Side 2 wins</div><div class="pos-val pv-gray" id="pos-f2-val">—</div></div>
-      <div class="pos-card pc-zero" id="pos-draw" style="display:none"><div class="pos-lbl" id="pos-draw-lbl">Draw</div><div class="pos-val pv-gray" id="pos-draw-val">—</div></div>
+      <div class="pos-card pc-zero" id="pos-f1"><div class="pos-lbl" id="pos-f1-lbl">Side 1 wins</div><div class="pos-val pv-gray" id="pos-f1-val">—</div><div class="pos-ret" id="pos-f1-ret"></div></div>
+      <div class="pos-card pc-zero" id="pos-f2"><div class="pos-lbl" id="pos-f2-lbl">Side 2 wins</div><div class="pos-val pv-gray" id="pos-f2-val">—</div><div class="pos-ret" id="pos-f2-ret"></div></div>
+      <div class="pos-card pc-zero" id="pos-draw" style="display:none"><div class="pos-lbl" id="pos-draw-lbl">Draw</div><div class="pos-val pv-gray" id="pos-draw-val">—</div><div class="pos-ret" id="pos-draw-ret"></div></div>
     </div>
     <div class="tracker-status s-empty" id="tracker-status">Lock in a bet to track your position</div>
     <div id="dk-diag" style="display:none;font-size:0.68rem;color:#555;text-align:center;padding:6px 0;letter-spacing:.3px"></div>
@@ -1262,6 +1265,11 @@ function renderTracker(){
   const clvs = tracker.bets.map(getBetCLV);
   const validClvs = clvs.filter(v=>v!==null);
   const avgClv = validClvs.length ? validClvs.reduce((a,b)=>a+b,0)/validClvs.length : null;
+  function betReturnHtml(b){
+    const profit=b.stake*(b.decimal-1);
+    const ret=b.stake*b.decimal;
+    return `<span class="bet-profit">+${fmtM(profit)}</span><span class="bet-ret">→ ${fmtM(ret)}</span>`;
+  }
 
   // Tracker header with avg CLV
   const hdr = document.querySelector('.tracker-title');
@@ -1281,6 +1289,7 @@ function renderTracker(){
       <span class="bet-fighter">${b.side==='f1'?tracker.f1Name:b.side==='draw'?'Draw':tracker.f2Name}</span>
       <span class="bet-stake">$${b.stake.toFixed(2)}</span>
       <span class="bet-odds-lbl">${fmtO(b.odds)}</span>
+      ${betReturnHtml(b)}
       ${clvHtml}
       <button class="bet-del" data-id="${b.id}">✕</button>
     </div>`;
@@ -1305,12 +1314,15 @@ function renderTracker(){
     const rightNet=leftIsF1?n2:n1;
     const leftCount=leftIsF1?f1count:f2count;
     const rightCount=leftIsF1?f2count:f1count;
+    const totalStaked=tracker.bets.reduce((s,b)=>s+b.stake,0);
     const setCard=(id,valId,lblId,name,net,count,label)=>{
       document.getElementById(id).className='pos-card '+(net>0?'pc-win':net<0?'pc-loss':'pc-zero');
       const badge=count?` <span style="font-size:10px;opacity:0.6">(${count} bet${count>1?'s':''})</span>`:'';
       document.getElementById(lblId).innerHTML=`${name}${label||' wins'}${badge}`;
       const el=document.getElementById(valId); el.textContent=fmtM(net);
       el.className='pos-val '+(net>0?'pv-green':net<0?'pv-red':'pv-gray');
+      const retEl=document.getElementById(id+'-ret');
+      if(retEl) retEl.textContent=net>0?'→ '+fmtM(net+totalStaked)+' back':'';
     };
     setCard('pos-f1','pos-f1-val','pos-f1-lbl',leftName,leftNet,leftCount);
     setCard('pos-f2','pos-f2-val','pos-f2-lbl',rightName,rightNet,rightCount);

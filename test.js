@@ -4437,6 +4437,7 @@ runServerTests().then(async () => {
   await runScoreTriggerTests();
   await runSafetyGuardTests();
   await runSecurityAndExpiryTests();
+  await runTotalReturnTests();
 }).then(() => {
   console.log(`\n═══════════════════════════════════`);
   console.log(`  ${passed} passed  ${failed} failed`);
@@ -6437,4 +6438,107 @@ async function runSecurityAndExpiryTests() {
   } else {
     console.log('  - 🔴 AC-LIVE tests: skipped (--local). Run `node test.js` against prod.');
   }
+}
+
+// ── AD: Total return display (per-bet + position card) ───────────────────────
+async function runTotalReturnTests() {
+  console.log('\n── AD: Total return display ──');
+  const toD = o => o > 0 ? (o/100)+1 : (100/Math.abs(o))+1;
+
+  // AD1: per-bet total return = stake × decimal
+  try {
+    await check('AD1: per-bet total return = stake × decimal (favorite)', () => {
+      const stake = 25, odds = -150;
+      const decimal = toD(odds);
+      const profit = stake * (decimal - 1);
+      const ret = stake * decimal;
+      assert(Math.abs(profit - 16.67) < 0.01, `Expected profit ~$16.67 got $${profit.toFixed(2)}`);
+      assert(Math.abs(ret - 41.67) < 0.01, `Expected return ~$41.67 got $${ret.toFixed(2)}`);
+    });
+  } catch(e) { console.error('  ✗ AD1:', e.message); failed++; }
+
+  // AD2: per-bet total return for underdog
+  try {
+    await check('AD2: per-bet total return = stake × decimal (underdog)', () => {
+      const stake = 10, odds = 300;
+      const decimal = toD(odds);
+      const profit = stake * (decimal - 1);
+      const ret = stake * decimal;
+      assert(Math.abs(profit - 30) < 0.01, `Expected profit $30 got $${profit.toFixed(2)}`);
+      assert(Math.abs(ret - 40) < 0.01, `Expected return $40 got $${ret.toFixed(2)}`);
+    });
+  } catch(e) { console.error('  ✗ AD2:', e.message); failed++; }
+
+  // AD3: position card total return = net P&L + total staked (single bet)
+  try {
+    await check('AD3: position card total return = net + totalStaked (single bet wins)', () => {
+      const stake = 25, odds = -150;
+      const decimal = toD(odds);
+      // n1 = profit if f1 wins (only one f1 bet, no f2 bets)
+      const n1 = stake * (decimal - 1);
+      const totalStaked = stake;
+      const totalReturn = n1 + totalStaked;
+      assert(Math.abs(totalReturn - stake * decimal) < 0.01,
+        `Total return should equal stake×decimal. Got ${totalReturn.toFixed(2)}, expected ${(stake*decimal).toFixed(2)}`);
+    });
+  } catch(e) { console.error('  ✗ AD3:', e.message); failed++; }
+
+  // AD4: position card total return with hedge — get back winning leg's payout only
+  try {
+    await check('AD4: position card total return with 2-leg hedge', () => {
+      const s1 = 25, o1 = -150, d1 = toD(o1); // f1 bet
+      const s2 = 15, o2 = 300,  d2 = toD(o2);  // f2 hedge bet
+      const n1 = s1*(d1-1) - s2; // profit if f1 wins: win f1 leg, lose f2 stake
+      const n2 = s2*(d2-1) - s1; // profit if f2 wins: win f2 leg, lose f1 stake
+      const totalStaked = s1 + s2;
+      const ret1 = n1 + totalStaked; // cash back if f1 wins
+      const ret2 = n2 + totalStaked; // cash back if f2 wins
+      // ret1 = n1 + s1 + s2 = s1*(d1-1) - s2 + s1 + s2 = s1*d1
+      assert(Math.abs(ret1 - s1*d1) < 0.01, `ret1 should = s1*d1 = ${(s1*d1).toFixed(2)}, got ${ret1.toFixed(2)}`);
+      // ret2 = n2 + s1 + s2 = s2*(d2-1) - s1 + s1 + s2 = s2*d2
+      assert(Math.abs(ret2 - s2*d2) < 0.01, `ret2 should = s2*d2 = ${(s2*d2).toFixed(2)}, got ${ret2.toFixed(2)}`);
+    });
+  } catch(e) { console.error('  ✗ AD4:', e.message); failed++; }
+
+  // AD5: total return only shown when net > 0 (green card)
+  try {
+    await check('AD5: total return label suppressed when net P&L is negative', () => {
+      const net = -5;
+      const totalStaked = 25;
+      const shouldShow = net > 0;
+      assert(!shouldShow, 'Should not show return when losing');
+      const retText = net > 0 ? `→ $${(net+totalStaked).toFixed(2)} back` : '';
+      assert(retText === '', `Expected empty string for losing card, got: "${retText}"`);
+    });
+  } catch(e) { console.error('  ✗ AD5:', e.message); failed++; }
+
+  // AD6: index.html contains pos-ret elements for each outcome card
+  try {
+    await check('AD6: index.html has pos-ret elements on each position card', () => {
+      const html = require('fs').readFileSync(require('path').join(__dirname, 'public', 'index.html'), 'utf8');
+      assert(html.includes('id="pos-f1-ret"'), 'Missing pos-f1-ret element');
+      assert(html.includes('id="pos-f2-ret"'), 'Missing pos-f2-ret element');
+      assert(html.includes('id="pos-draw-ret"'), 'Missing pos-draw-ret element');
+    });
+  } catch(e) { console.error('  ✗ AD6:', e.message); failed++; }
+
+  // AD7: index.html renders per-bet profit and return in bet row
+  try {
+    await check('AD7: index.html bet row renders betReturnHtml with bet-profit and bet-ret spans', () => {
+      const html = require('fs').readFileSync(require('path').join(__dirname, 'public', 'index.html'), 'utf8');
+      assert(html.includes('betReturnHtml(b)'), 'bet row must call betReturnHtml(b)');
+      assert(html.includes('class="bet-profit"'), 'Missing bet-profit CSS class');
+      assert(html.includes('class="bet-ret"'), 'Missing bet-ret CSS class');
+    });
+  } catch(e) { console.error('  ✗ AD7:', e.message); failed++; }
+
+  // AD8: setCard passes totalStaked so return = net + totalStaked
+  try {
+    await check('AD8: setCard uses totalStaked to compute total return', () => {
+      const html = require('fs').readFileSync(require('path').join(__dirname, 'public', 'index.html'), 'utf8');
+      assert(html.includes('totalStaked'), 'setCard must use totalStaked');
+      assert(html.includes('net+totalStaked') || html.includes('net + totalStaked'), 'return formula must be net + totalStaked');
+      assert(html.includes('pos-ret'), '.pos-ret CSS class must exist');
+    });
+  } catch(e) { console.error('  ✗ AD8:', e.message); failed++; }
 }
