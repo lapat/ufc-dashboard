@@ -860,8 +860,9 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
 
   if (msg.type === 'ODDS_UPDATE') {
     chrome.runtime.sendMessage({ type: 'ODDS_UPDATE', outcomes: msg.outcomes, ts: msg.ts }).catch(() => {});
-    if (betBotUrl && msg.outcomes && msg.outcomes.length >= 2 && msg.sport) {
-      const [o1, o2] = msg.outcomes;
+    const teams = (msg.outcomes || []).filter(o => o.side && !/^(draw|x)$/i.test(o.side.trim()));
+    if (betBotUrl && teams.length >= 2 && msg.sport) {
+      const [o1, o2] = teams;
       fetch(`${betBotUrl}/api/dk-odds-push`, {
         method: 'POST',
         headers: authHeaders(),
