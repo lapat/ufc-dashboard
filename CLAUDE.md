@@ -59,6 +59,31 @@ their own live-betting platform instead). This means:
 
 ---
 
+## ⚠️ MANDATORY: Visual Deployment Testing After Every UI Change
+
+After every code push that touches any UI feature, take a Playwright screenshot of the deployed site and visually confirm the feature looks correct before reporting the task done.
+
+**Playwright path:** `/Users/louislapat/.npm/_npx/bc46ece8a1067505/node_modules/playwright`
+
+```javascript
+const { chromium } = require('/Users/louislapat/.npm/_npx/bc46ece8a1067505/node_modules/playwright');
+const browser = await chromium.launch({ args: ['--no-sandbox'] });
+const page = await browser.newPage();
+await page.setViewportSize({ width: 1400, height: 900 });
+await page.goto('https://ufc-dashboard-production-e03d.up.railway.app/', { waitUntil: 'networkidle' });
+await page.waitForTimeout(2000);
+await page.screenshot({ path: '/tmp/deploy_verify.png' });
+await browser.close();
+```
+
+- After pushing, wait ~60s for Railway to redeploy, then screenshot
+- Read the screenshot with the Read tool and confirm the feature appears correctly
+- If the feature requires interaction (e.g. adding a bet, clicking a fight), script it in Playwright and screenshot the result
+- Do NOT report a UI task as done without a screenshot proving it works on the live deployment
+- Type checking and test suites verify code correctness, not visual correctness — always verify visually
+
+---
+
 ## ⚠️ CRITICAL: Historical Data Is Sacred — Never Destroy It
 
 `historical_data/*.json` files are the core asset of this project. They represent

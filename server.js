@@ -689,9 +689,17 @@ app.get('/api/recordings', (req, res) => {
       .filter(r => !r.fighter1.startsWith('Test ') && !r.fighter2.startsWith('Test ')) // drop test data
       .filter(r => r.dataPoints >= 5)                                  // drop thin files (no real fight data)
       .map(r => ({ ...r, id: normId(r.id), sport: normSport(r.sport) }));
-    // Deduplicate by id (root files take priority over sport-subdir duplicates)
-    const seen = new Set();
-    const deduped = clean.filter(r => { if (seen.has(r.id)) return false; seen.add(r.id); return true; });
+    // Deduplicate: same fighters (order-independent) + same date → keep highest dataPoints
+    const fightKey = r => {
+      const [a, b] = [r.fighter1, r.fighter2].map(n => n.toLowerCase().replace(/[^a-z0-9]/g, '')).sort();
+      return `${a}|${b}|${r.date}`;
+    };
+    const byKey = {};
+    for (const r of clean) {
+      const key = fightKey(r);
+      if (!byKey[key] || r.dataPoints > byKey[key].dataPoints) byKey[key] = r;
+    }
+    const deduped = Object.values(byKey);
     deduped.sort((a,b) => (b.date||'').localeCompare(a.date||'') || (b.startTime||'').localeCompare(a.startTime||''));
     res.json(deduped);
   } catch (e) { res.status(500).json({ error: e.message }); }
