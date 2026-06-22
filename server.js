@@ -1670,7 +1670,7 @@ async function refresh() {
             '<div class="fight-meta">' + f.sport + ' · started ' + new Date(f.startTime).toLocaleTimeString() + '</div>' +
             '<div class="odds"><span class="f1">' + f.fighter1 + ' <span id="o1-' + canvasId + '">' + (f1o != null ? fmt(f1o) : '—') + '</span></span>' +
             '<span class="f2">' + f.fighter2 + ' <span id="o2-' + canvasId + '">' + (f2o != null ? fmt(f2o) : '—') + '</span></span></div>' +
-            '<div class="pts" id="pts-' + canvasId + '">' + f.dataPoints + ' pts · last odds ' + (ago != null ? ago + 's ago' : '—') + '</div>' +
+            '<div class="pts" id="pts-' + canvasId + '">' + f.dataPoints + ' pts · ' + (ago == null ? '—' : ago < 30 ? 'moved ' + ago + 's ago' : 'stable ' + ago + 's (line frozen)') + '</div>' +
             '<div class="chart-wrap"><canvas id="' + canvasId + '"></canvas></div>';
           fightsEl.appendChild(el);
         } else {
@@ -1683,7 +1683,7 @@ async function refresh() {
           const ptsEl = document.getElementById('pts-' + canvasId);
           if (o1el) o1el.textContent = f1o != null ? fmt(f1o) : '—';
           if (o2el) o2el.textContent = f2o != null ? fmt(f2o) : '—';
-          if (ptsEl) ptsEl.textContent = f.dataPoints + ' pts · last odds ' + (ago != null ? ago + 's ago' : '—');
+          if (ptsEl) ptsEl.textContent = f.dataPoints + ' pts · ' + (ago == null ? '—' : ago < 30 ? 'moved ' + ago + 's ago' : 'stable ' + ago + 's (line frozen)');
         }
         if (f.oddsHistory && f.oddsHistory.length > 1) {
           try { updateChart(f.id, canvasId, f.fighter1, f.fighter2, f.oddsHistory); }
