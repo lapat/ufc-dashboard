@@ -702,21 +702,36 @@ app.get('/api/fight-history/:fightId', (req, res) => {
   try {
     const id = req.params.fightId;
 
-    const files = fs.readdirSync(HISTORICAL_DIR).filter(f => f.endsWith('.json'));
-    // 1. Exact filename match (canonical path — filename stem = fightId)
-    let match = files.find(f => f.replace('.json', '') === id);
-    // 2. Strip mma__/mma_ prefix (old recorder format) and retry exact match
-    if (!match) {
-      const stripped = id.replace(/^mma__?/, '');
-      match = files.find(f => f.replace('.json', '') === stripped);
+    // Collect all .json files from flat dir + one level of sport subfolders
+    function allJsonFiles(dir) {
+      if (!fs.existsSync(dir)) return [];
+      const results = [];
+      for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+        if (entry.isFile() && entry.name.endsWith('.json')) {
+          results.push({ name: entry.name, fullPath: path.join(dir, entry.name) });
+        } else if (entry.isDirectory()) {
+          const sub = path.join(dir, entry.name);
+          for (const f of fs.readdirSync(sub)) {
+            if (f.endsWith('.json')) results.push({ name: f, fullPath: path.join(sub, f) });
+          }
+        }
+      }
+      return results;
     }
-    // 3. Prefix match — fightId without date, e.g. "fighter_vs_fighter" → "fighter_vs_fighter_2026-04-05.json"
+
+    const files = allJsonFiles(HISTORICAL_DIR);
+    const stem = f => f.name.replace('.json', '');
+    // 1. Exact match
+    let match = files.find(f => stem(f) === id);
+    // 2. Strip mma__/mma_ prefix
+    if (!match) { const s = id.replace(/^mma__?/, ''); match = files.find(f => stem(f) === s); }
+    // 3. Prefix match (no date)
     if (!match) {
       const bare = id.replace(/^mma__?/, '');
-      match = files.find(f => f.startsWith(bare + '_') || f.startsWith(bare + '.') || f.startsWith(id + '_') || f.startsWith(id + '.'));
+      match = files.find(f => f.name.startsWith(bare + '_') || f.name.startsWith(id + '_'));
     }
     if (!match) return res.status(404).json({ error: 'Fight not found', id });
-    res.json(JSON.parse(fs.readFileSync(path.join(HISTORICAL_DIR, match))));
+    res.json(JSON.parse(fs.readFileSync(match.fullPath)));
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
@@ -1750,7 +1765,9 @@ async function selectFile(id) {
   jsonEl.textContent = 'Loading…';
   metaEl.textContent = '';
   try {
-    const data = await fetch('/api/fight-history/' + encodeURIComponent(id)).then(r => r.json());
+    const resp = await fetch('/api/fight-history/' + encodeURIComponent(id));
+    const data = await resp.json();
+    if (!resp.ok) { jsonEl.textContent = 'Error ' + resp.status + ': ' + (data.error || 'unknown'); return; }
     const h = data.oddsHistory || [];
     metaEl.textContent = h.length + ' pts · ' + (data.startTime ? new Date(data.startTime).toLocaleString() : '');
     // Show summary + first/last 3 data points so you can verify without scrolling 1000 lines
