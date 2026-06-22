@@ -326,6 +326,58 @@ These are real behaviors with NO runtime verification:
 4. **GitHub backup actually fires** — `pushFightToGitHub` call is verified structurally (AB6), but no test confirms it produces a commit in the repo.
 5. **Volume write path** — AB tests verify `DATA_DIR` is used in code paths. No test confirms a file written during a fight ends up at `/data/historical_data/` on the Railway filesystem.
 6. **Monitor page data** — AC7 checks the route exists. No test confirms the page actually shows live `activeFights` data.
+7. **Monitor file browser** — No test confirms clicking a file in the browser shows correct JSON. Three bugs were found and fixed in production:
+   - Template literal `\'` → `'` SyntaxError (killed entire page script)
+   - `/api/recordings` returns plain array but `data.fights || []` expected an object
+   - `/api/fight-history/:id` only searched flat `HISTORICAL_DIR`, missed sport subfolders
+8. **Odds label correctness** — No test confirms Uruguay -245 displays as Uruguay -245 (not +900). The extension may send fighters in reversed DOM order (Away first); normalization now happens in the status endpoint.
+
+---
+
+## /monitor Page — Architecture and Known Pitfalls
+
+**URL:** `https://ufc-dashboard-production-e03d.up.railway.app/monitor`
+
+The monitor is a single inline HTML page served from `server.js` at the `/monitor` GET route (~line 1494). It polls two endpoints every 2 seconds:
+
+- `GET /api/recorder/status?history=1` — live recording state, poll rate, full oddsHistory for charts
+- `GET /api/recordings` — list of completed fight files (for the file browser)
+- `GET /api/fight-history/:id` — full JSON for a selected fight file (on click)
+
+### Critical: template literal escaping in inline HTML
+
+The monitor HTML is a Node.js backtick template literal inside `res.send(...)`. Any `\'` inside the template becomes `'` in the rendered output — it does NOT produce a literal backslash. This caused a hard-to-find SyntaxError (the whole page script died silently):
+
+```javascript
+// BROKEN: \' in template literal renders as ', making two adjacent string literals
+'onclick="selectFile(\'' + f.id + '\')"'
+// → rendered: onclick="selectFile('' + f.id + '')"  ← SyntaxError
+
+// FIXED: use data-id attribute, no escaping needed
+'data-id="' + f.id + '" onclick="selectFile(this.dataset.id)"'
+```
+
+**Rule:** Never use `\'` inside the monitor's template literal. Use `data-*` attributes for any value that would need escaping in onclick strings.
+
+### Critical: /api/recordings returns a plain array, not an object
+
+```javascript
+// WRONG:
+allFiles = (data.fights || []).sort(...)  // data.fights is always undefined
+
+// CORRECT:
+allFiles = (Array.isArray(data) ? data : (data.fights || [])).sort(...)
+```
+
+### Critical: /api/fight-history/:id must search sport subfolders
+
+Non-MMA files are saved to `HISTORICAL_DIR/<sport>/<id>.json` (e.g. `soccer_fifa_world_cup/`). The endpoint must search one level of subdirectories, not just the flat root. If it only scans the root, all soccer/basketball/etc files return 404, and the monitor silently shows `{ "oddsHistory": [] }`.
+
+### Critical: Extension may push fighters in reversed DOM order
+
+DraftKings renders the Away team's odds button first in the DOM. The extension sends `o1 = outcomes[0]` which may be the Away team, not the Home team. This creates a mismatch between `record.meta.fighter1` (from the Odds API or first extension push) and `lastOdds.fighter1.name`.
+
+**Fix (in `/api/recorder/status`):** Before returning each fight's `lastOdds` and `oddsHistory`, check if `lastOdds.fighter1.name === record.meta.fighter1`. If not, swap the fighter1/fighter2 slots in the response. This normalizes display without touching storage.
 
 ---
 
