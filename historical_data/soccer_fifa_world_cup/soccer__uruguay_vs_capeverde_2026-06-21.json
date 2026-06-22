@@ -1,0 +1,846 @@
+{
+  "fightId": "soccer__uruguay_vs_capeverde_2026-06-21",
+  "sport": "soccer_fifa_world_cup",
+  "fightTitle": "Uruguay vs Cape Verde",
+  "startTime": "2026-06-21T22:04:55.855Z",
+  "endTime": "2026-06-22T00:10:01.679Z",
+  "dataPoints": 76,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-06-21T22:04:55.853Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 900
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": -270
+      }
+    },
+    {
+      "timestamp": "2026-06-21T22:05:01.096Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 800
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2026-06-21T22:05:43.696Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 900
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": -245
+      }
+    },
+    {
+      "timestamp": "2026-06-21T22:14:06.615Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 800
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": -225
+      }
+    },
+    {
+      "timestamp": "2026-06-21T22:16:22.811Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 900
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": -245
+      }
+    },
+    {
+      "timestamp": "2026-06-21T22:17:09.845Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 800
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": -225
+      }
+    },
+    {
+      "timestamp": "2026-06-21T22:20:13.105Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 700
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": -205
+      }
+    },
+    {
+      "timestamp": "2026-06-21T22:21:00.363Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 700
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": -200
+      }
+    },
+    {
+      "timestamp": "2026-06-21T22:21:47.614Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 190
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 140
+      }
+    },
+    {
+      "timestamp": "2026-06-21T22:22:29.586Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 240
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 110
+      }
+    },
+    {
+      "timestamp": "2026-06-21T22:23:16.671Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 250
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 110
+      }
+    },
+    {
+      "timestamp": "2026-06-21T22:25:01.380Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 260
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 115
+      }
+    },
+    {
+      "timestamp": "2026-06-21T22:25:43.245Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 120
+      }
+    },
+    {
+      "timestamp": "2026-06-21T22:27:17.635Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 245
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 110
+      }
+    },
+    {
+      "timestamp": "2026-06-21T22:32:38.106Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 120
+      }
+    },
+    {
+      "timestamp": "2026-06-21T22:34:54.323Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 125
+      }
+    },
+    {
+      "timestamp": "2026-06-21T22:38:40.557Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 175
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 160
+      }
+    },
+    {
+      "timestamp": "2026-06-21T22:40:09.838Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 175
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 175
+      }
+    },
+    {
+      "timestamp": "2026-06-21T22:40:56.778Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 175
+      }
+    },
+    {
+      "timestamp": "2026-06-21T22:43:18.298Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-06-21T22:44:00.266Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 200
+      }
+    },
+    {
+      "timestamp": "2026-06-21T22:44:47.333Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 600
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": -150
+      }
+    },
+    {
+      "timestamp": "2026-06-21T22:45:29.121Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 650
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": -160
+      }
+    },
+    {
+      "timestamp": "2026-06-21T22:47:03.832Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 700
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": -165
+      }
+    },
+    {
+      "timestamp": "2026-06-21T22:49:19.767Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 650
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": -160
+      }
+    },
+    {
+      "timestamp": "2026-06-21T22:50:07.109Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 650
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": -150
+      }
+    },
+    {
+      "timestamp": "2026-06-21T22:50:54.093Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 800
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": -155
+      }
+    },
+    {
+      "timestamp": "2026-06-21T22:51:41.243Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 3500
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": -1000
+      }
+    },
+    {
+      "timestamp": "2026-06-21T22:55:31.995Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 3000
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": -1000
+      }
+    },
+    {
+      "timestamp": "2026-06-21T22:57:53.167Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 3500
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": -1000
+      }
+    },
+    {
+      "timestamp": "2026-06-21T22:58:40.461Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 3000
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": -1000
+      }
+    },
+    {
+      "timestamp": "2026-06-21T23:03:54.771Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 4000
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": -1200
+      }
+    },
+    {
+      "timestamp": "2026-06-21T23:10:48.721Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 3500
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": -1000
+      }
+    },
+    {
+      "timestamp": "2026-06-21T23:11:30.880Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 3500
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": -1200
+      }
+    },
+    {
+      "timestamp": "2026-06-21T23:13:05.989Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 4000
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": -1200
+      }
+    },
+    {
+      "timestamp": "2026-06-21T23:19:07.867Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 5000
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": -1200
+      }
+    },
+    {
+      "timestamp": "2026-06-21T23:19:55.295Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 4000
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": -1200
+      }
+    },
+    {
+      "timestamp": "2026-06-21T23:23:45.601Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 5000
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": -1200
+      }
+    },
+    {
+      "timestamp": "2026-06-21T23:24:32.947Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 4000
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": -1000
+      }
+    },
+    {
+      "timestamp": "2026-06-21T23:25:20.196Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 5000
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": -1200
+      }
+    },
+    {
+      "timestamp": "2026-06-21T23:26:48.959Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 950
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": -110
+      }
+    },
+    {
+      "timestamp": "2026-06-21T23:28:23.108Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 1000
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": -110
+      }
+    },
+    {
+      "timestamp": "2026-06-21T23:29:57.434Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 900
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 100
+      }
+    },
+    {
+      "timestamp": "2026-06-21T23:32:13.819Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 900
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 110
+      }
+    },
+    {
+      "timestamp": "2026-06-21T23:33:48.145Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 900
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 105
+      }
+    },
+    {
+      "timestamp": "2026-06-21T23:34:35.451Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 1000
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 110
+      }
+    },
+    {
+      "timestamp": "2026-06-21T23:35:17.201Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 800
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 110
+      }
+    },
+    {
+      "timestamp": "2026-06-21T23:36:04.376Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 900
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 110
+      }
+    },
+    {
+      "timestamp": "2026-06-21T23:36:51.524Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 800
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 110
+      }
+    },
+    {
+      "timestamp": "2026-06-21T23:37:33.678Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 900
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 110
+      }
+    },
+    {
+      "timestamp": "2026-06-21T23:38:20.781Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 900
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 100
+      }
+    },
+    {
+      "timestamp": "2026-06-21T23:40:37.082Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 900
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 110
+      }
+    },
+    {
+      "timestamp": "2026-06-21T23:42:53.690Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 900
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 120
+      }
+    },
+    {
+      "timestamp": "2026-06-21T23:44:28.248Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 900
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 130
+      }
+    },
+    {
+      "timestamp": "2026-06-21T23:45:10.440Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 800
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 135
+      }
+    },
+    {
+      "timestamp": "2026-06-21T23:45:57.506Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 800
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 150
+      }
+    },
+    {
+      "timestamp": "2026-06-21T23:46:44.758Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 900
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 150
+      }
+    },
+    {
+      "timestamp": "2026-06-21T23:48:13.826Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 900
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 160
+      }
+    },
+    {
+      "timestamp": "2026-06-21T23:49:01.180Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 800
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 175
+      }
+    },
+    {
+      "timestamp": "2026-06-21T23:49:48.701Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 900
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 175
+      }
+    },
+    {
+      "timestamp": "2026-06-21T23:50:31.352Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 900
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-06-21T23:51:18.892Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 1000
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-06-21T23:52:00.989Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 1000
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 200
+      }
+    },
+    {
+      "timestamp": "2026-06-21T23:53:35.224Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 1100
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 220
+      }
+    },
+    {
+      "timestamp": "2026-06-21T23:54:17.287Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 1000
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 230
+      }
+    },
+    {
+      "timestamp": "2026-06-21T23:55:04.278Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 1200
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 200
+      }
+    },
+    {
+      "timestamp": "2026-06-21T23:55:51.413Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 1100
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 245
+      }
+    },
+    {
+      "timestamp": "2026-06-21T23:56:33.235Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 1400
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 255
+      }
+    },
+    {
+      "timestamp": "2026-06-21T23:57:20.634Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 1400
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 280
+      }
+    },
+    {
+      "timestamp": "2026-06-21T23:58:07.703Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 1400
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 340
+      }
+    },
+    {
+      "timestamp": "2026-06-21T23:58:49.485Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 1600
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 350
+      }
+    },
+    {
+      "timestamp": "2026-06-21T23:59:36.947Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 1800
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-06-22T00:00:24.304Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 1800
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-06-22T00:02:03.624Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 2500
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 700
+      }
+    },
+    {
+      "timestamp": "2026-06-22T00:02:50.873Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 3000
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 1000
+      }
+    },
+    {
+      "timestamp": "2026-06-22T00:03:38.225Z",
+      "fighter1": {
+        "name": "Cape Verde",
+        "numericOdds": 4000
+      },
+      "fighter2": {
+        "name": "Uruguay",
+        "numericOdds": 1600
+      }
+    }
+  ]
+}
