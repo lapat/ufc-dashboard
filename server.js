@@ -513,6 +513,64 @@ function saveDKBets() {
   } catch (_) {}
 }
 
+// ── P&L history ledger ────────────────────────────────────────────────────────
+// syncPnL() in the dashboard already computes today's P&L live from /api/dk-bets,
+// but nothing persists it — once a bet ages out of DK's own feed, that day's
+// result is gone. This ledger records each straight bet exactly once, the moment
+// it's first observed transitioning from Open to a terminal status, so /api/pnl-history
+// can report profit over a week/month/all-time, not just today.
+const PNL_LEDGER_FILE = path.join(__dirname, 'historical_data', 'pnl_ledger.json');
+let pnlLedger = [];
+try { pnlLedger = JSON.parse(fs.readFileSync(PNL_LEDGER_FILE, 'utf8')); } catch (_) {}
+const loggedPnLBetIds = new Set(pnlLedger.map(e => e.betId));
+
+function savePnLLedger() {
+  try { fs.writeFileSync(PNL_LEDGER_FILE, JSON.stringify(pnlLedger)); } catch (_) {}
+}
+
+// Mirrors betProfit() in public/index.html's syncPnL() exactly (see test.js
+// testPnLNullReturns — the Ish draw-bet-bug fix: DK sometimes sends returns=0/null
+// for a won bet, so fall back to potentialReturns rather than reporting a loss).
+function betProfit(b) {
+  const status = (b.status || '').toLowerCase();
+  const stake = parseFloat(b.stake || 0);
+  if (status === 'won') {
+    const rawRet = parseFloat(b.returns);
+    const payout = (rawRet > 0) ? rawRet : parseFloat(b.potentialReturns || 0);
+    return payout > stake ? payout - stake : payout;
+  }
+  if (status === 'lost') return -stake;
+  if (status === 'push') return 0;
+  return 0;
+}
+
+// Only logs a bet when DK's payload gives us an EXPLICIT terminal status
+// (Won/Lost/Push) for a bet that was previously Open (or previously unseen —
+// covers the case where the very first sync we ever see a bet in already
+// shows it settled). If a bet instead just silently disappears from a later
+// `initial.bets` snapshot with no status ever observed, it is deliberately
+// NOT logged — guessing win/loss without DK ever telling us would risk
+// recording a wrong dollar amount, which is worse than a missing data point.
+function recordPnLTransitions(uid, existingBets, newBets) {
+  const prevStatusById = new Map(existingBets.map(b => [b.betId, (b.status || '').toLowerCase()]));
+  let changed = false;
+  for (const b of newBets) {
+    if (b.isParlay || !b.betId || loggedPnLBetIds.has(b.betId)) continue;
+    const status = (b.status || '').toLowerCase();
+    if (status !== 'won' && status !== 'lost' && status !== 'push') continue;
+    const prevStatus = prevStatusById.get(b.betId);
+    if (prevStatus === status) continue; // already settled as this status last sync — not a new transition
+    pnlLedger.push({
+      betId: b.betId, userId: uid, selection: b.selection, market: b.market,
+      stake: b.stake, status: b.status, profit: betProfit(b),
+      placementDate: b.placementDate, settledAt: new Date().toISOString(),
+    });
+    loggedPnLBetIds.add(b.betId);
+    changed = true;
+  }
+  if (changed) savePnLLedger();
+}
+
 function parseDKBets(url, data, userId) {
   // DK's WS sends two distinct shapes: `initial.bets` is the FULL current open-bets
   // list (safe to fully replace stored state with — this is how settled/fake bets get
@@ -559,10 +617,11 @@ function parseDKBets(url, data, userId) {
   });
 
   const uid = userId || DEFAULT_USER;
+  const existing = dkBetsByUser.get(uid) || [];
+  recordPnLTransitions(uid, existing, bets);
   if (isFullSnapshot) {
     dkBetsByUser.set(uid, bets);
   } else {
-    const existing = dkBetsByUser.get(uid) || [];
     const byId = new Map(existing.map(b => [b.betId, b]));
     for (const b of bets) byId.set(b.betId, b);
     dkBetsByUser.set(uid, Array.from(byId.values()));
@@ -609,6 +668,31 @@ app.get('/api/bet-coverage', (req, res) => {
     covered,
     bets: openBets.map(b => ({ selection: b.selection, stake: b.stake, odds: b.odds, status: b.status }))
   });
+});
+
+// Persistent P&L over time — same math as the dashboard's today-only syncPnL(),
+// but reading from the ledger so it survives past today. range: 'week' | 'month' | 'all'.
+app.get('/api/pnl-history', (req, res) => {
+  const userId = req.query.user || DEFAULT_USER;
+  const range = req.query.range || 'week';
+  const now = Date.now();
+  const rangeMs = range === 'month' ? 30 * 24 * 60 * 60 * 1000
+    : range === 'all' ? Infinity
+    : 7 * 24 * 60 * 60 * 1000;
+
+  const entries = pnlLedger.filter(e =>
+    e.userId === userId && (now - new Date(e.settledAt).getTime()) <= rangeMs
+  );
+
+  const net = entries.reduce((s, e) => s + e.profit, 0);
+  const wagered = entries.reduce((s, e) => s + parseFloat(e.stake || 0), 0);
+  const wins = entries.filter(e => (e.status || '').toLowerCase() === 'won').length;
+  const losses = entries.filter(e => (e.status || '').toLowerCase() === 'lost').length;
+  const pushes = entries.filter(e => (e.status || '').toLowerCase() === 'push').length;
+  const decided = wins + losses; // pushes don't count toward win rate
+  const winRatePct = decided ? Math.round((wins / decided) * 1000) / 10 : null;
+
+  res.json({ userId, range, net, wagered, wins, losses, pushes, winRatePct, count: entries.length });
 });
 
 // Extension health tracking — logout tracked per-user so one user's heartbeat won't mask another's logout

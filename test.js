@@ -595,6 +595,86 @@ async function runServerTests() {
     assert(bets.length === 2, `expected 2 open bets across both games, got ${bets.length}`);
   });
 
+  // ── P&L history ledger ──────────────────────────────────────────────────────
+  await check('/api/pnl-history records a bet the moment it settles Won, with correct profit', async () => {
+    const userId = 'pnl-ledger-user-won';
+    await post('/api/dk-sync', {
+      url: 'wss://test', userId,
+      data: { result: { initial: { bets: [{
+        betId: 'pnl-won-1', receiptId: 'pnl-won-1', status: 'Unsettled', settlementStatus: 'Open',
+        stake: 100, potentialReturns: 190, placementDate: new Date().toISOString(), displayOdds: '+90',
+        selections: [{ selectionDisplayName: 'Team Won', marketDisplayName: 'Moneyline', displayOdds: '+90' }]
+      }] } } }, ts: Date.now()
+    });
+    await post('/api/dk-sync', {
+      url: 'wss://test', userId,
+      data: { result: { initial: { bets: [{
+        betId: 'pnl-won-1', receiptId: 'pnl-won-1', status: 'Won', settlementStatus: 'Won',
+        stake: 100, returns: 190, potentialReturns: 190, placementDate: new Date().toISOString(), displayOdds: '+90',
+        selections: [{ selectionDisplayName: 'Team Won', marketDisplayName: 'Moneyline', displayOdds: '+90' }]
+      }] } } }, ts: Date.now()
+    });
+    const h = await get(`/api/pnl-history?user=${userId}&range=all`);
+    assert(h.wins === 1 && h.losses === 0, `expected 1W 0L, got ${h.wins}W ${h.losses}L`);
+    assert(Math.abs(h.net - 90) < 0.01, `expected net +90, got ${h.net}`);
+  });
+
+  await check('/api/pnl-history does not double-count a bet re-synced while already settled', async () => {
+    const userId = 'pnl-ledger-user-resync';
+    const syncWon = () => post('/api/dk-sync', {
+      url: 'wss://test', userId,
+      data: { result: { initial: { bets: [{
+        betId: 'pnl-resync-1', receiptId: 'pnl-resync-1', status: 'Won', settlementStatus: 'Won',
+        stake: 50, returns: 95, potentialReturns: 95, placementDate: new Date().toISOString(), displayOdds: '+90',
+        selections: [{ selectionDisplayName: 'Team X', marketDisplayName: 'Moneyline', displayOdds: '+90' }]
+      }] } } }, ts: Date.now()
+    });
+    await syncWon(); await syncWon(); await syncWon();
+    const h = await get(`/api/pnl-history?user=${userId}&range=all`);
+    assert(h.count === 1, `expected exactly 1 ledger entry after 3 identical syncs, got ${h.count}`);
+    assert(Math.abs(h.net - 45) < 0.01, `expected net +45, got ${h.net}`);
+  });
+
+  await check('/api/pnl-history excludes parlays, matching syncPnL()\'s straight-bets-only scope', async () => {
+    const userId = 'pnl-ledger-user-parlay';
+    await post('/api/dk-sync', {
+      url: 'wss://test', userId,
+      data: { result: { initial: { bets: [{
+        betId: 'pnl-parlay-1', receiptId: 'pnl-parlay-1', status: 'Won', settlementStatus: 'Won',
+        stake: 20, returns: 200, potentialReturns: 200, placementDate: new Date().toISOString(),
+        selections: [
+          { selectionDisplayName: 'Leg A', marketDisplayName: 'Moneyline', displayOdds: '+150' },
+          { selectionDisplayName: 'Leg B', marketDisplayName: 'Moneyline', displayOdds: '+150' }
+        ]
+      }] } } }, ts: Date.now()
+    });
+    const h = await get(`/api/pnl-history?user=${userId}&range=all`);
+    assert(h.count === 0, `parlay must not appear in P&L ledger, got count=${h.count}`);
+  });
+
+  await check('/api/pnl-history never fabricates a result for a bet that disappears without an explicit settled status', async () => {
+    const userId = 'pnl-ledger-user-vanish';
+    await post('/api/dk-sync', {
+      url: 'wss://test', userId,
+      data: { result: { initial: { bets: [{
+        betId: 'pnl-vanish-1', receiptId: 'pnl-vanish-1', status: 'Unsettled', settlementStatus: 'Open',
+        stake: 40, potentialReturns: 76, placementDate: new Date().toISOString(),
+        selections: [{ selectionDisplayName: 'Team Y', marketDisplayName: 'Moneyline', displayOdds: '+90' }]
+      }] } } }, ts: Date.now()
+    });
+    // Next full snapshot simply omits the bet — DK never told us won or lost
+    await post('/api/dk-sync', {
+      url: 'wss://test', userId,
+      data: { result: { initial: { bets: [{
+        betId: 'pnl-vanish-unrelated', receiptId: 'pnl-vanish-unrelated', status: 'Unsettled', settlementStatus: 'Open',
+        stake: 5, potentialReturns: 9, placementDate: new Date().toISOString(),
+        selections: [{ selectionDisplayName: 'Team Z', marketDisplayName: 'Moneyline', displayOdds: '+80' }]
+      }] } } }, ts: Date.now()
+    });
+    const h = await get(`/api/pnl-history?user=${userId}&range=all`);
+    assert(h.count === 0, `a bet that vanished without an explicit terminal status must not be logged, got count=${h.count}`);
+  });
+
   // lastBetSync updated on any dk-sync call, not just when bets are parsed
   await check('POST /api/dk-sync updates lastBetSync even when 0 bets parsed', async () => {
     const before = await get('/api/dk-status');
