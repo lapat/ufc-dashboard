@@ -394,6 +394,10 @@
   <span id="pnl-wagered" style="color:#888">$0 wagered</span>
   <span class="pnl-sep">·</span>
   <span id="pnl-open" style="color:#888">0 open</span>
+  <span class="pnl-sep">·</span>
+  <span id="pnl-week" style="color:#888"></span>
+  <span class="pnl-sep">·</span>
+  <span id="pnl-month" style="color:#888"></span>
   <span style="margin-left:auto;display:flex;gap:10px;align-items:center">
     <button onclick="toggleBetLog()" style="background:none;border:none;color:#666;cursor:pointer;font-size:0.65rem;padding:0;letter-spacing:.3px" id="bet-log-btn">▾ bets</button>
     <button onclick="toggleSpyInput()" style="background:none;border:none;color:#556;cursor:pointer;font-size:0.65rem;padding:0;letter-spacing:.3px">spy</button>
@@ -2647,6 +2651,33 @@ function updatePnLStrip() {
   document.getElementById('pnl-open').textContent    = p.open+' open';
 }
 
+let _lastPnLHistoryFetch = 0;
+async function updatePnLHistory() {
+  if (!_dkMeParam) return;
+  // The ledger only changes when a bet settles — no need to hit this on every
+  // 2s syncPnL() poll like the "today" counter does.
+  if (Date.now() - _lastPnLHistoryFetch < 60000) return;
+  _lastPnLHistoryFetch = Date.now();
+  try {
+    const [week, month] = await Promise.all([
+      fetch(`/api/pnl-history?user=${encodeURIComponent(_dkMeParam)}&range=week`).then(r => r.json()),
+      fetch(`/api/pnl-history?user=${encodeURIComponent(_dkMeParam)}&range=month`).then(r => r.json()),
+    ]);
+    renderPnLHistorySpan('pnl-week', 'wk', week);
+    renderPnLHistorySpan('pnl-month', 'mo', month);
+  } catch (_) {}
+}
+
+function renderPnLHistorySpan(elId, label, h) {
+  const el = document.getElementById(elId);
+  if (!el || !h || !h.count) { if (el) el.textContent = ''; return; }
+  const sign = h.net > 0.01 ? '+' : h.net < -0.01 ? '-' : '';
+  const color = h.net > 0.01 ? '#7ccd32' : h.net < -0.01 ? '#e74c3c' : '#888';
+  const rate = h.winRatePct != null ? ` (${h.winRatePct}%)` : '';
+  el.style.color = color;
+  el.textContent = `${label}: ${sign}$${Math.abs(h.net).toFixed(2)}${rate}`;
+}
+
 function showSettleToast(selection, status, profit) {
   const el = document.getElementById('settle-toast');
   const isWin = status === 'Won', isPush = status === 'Push';
@@ -2694,6 +2725,7 @@ async function syncPnL() {
 
     _sessionPnL = { net, wagered, wins, losses, pushes, open: open.length };
     updatePnLStrip();
+    updatePnLHistory();
     updateSparkline();
     renderBetLog(todayAll, 'bet-log-tbody');
     document.getElementById('bet-log-count').textContent = `${todayAll.length} bet${todayAll.length!==1?'s':''}`;
