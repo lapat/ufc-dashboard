@@ -33,68 +33,40 @@
     .user-row button{background:#1a1a00;border:1px solid #e8b84b44;border-radius:4px;color:#e8b84b;font-size:0.65rem;padding:5px 10px;cursor:pointer;white-space:nowrap}
     .user-row button:hover{background:#2a2a00}
     .user-row button.saved{background:#0a1a0a;border-color:#69db7c44;color:#69db7c}
-    /* Strategy status chat log */
-    #chat-log{background:#050505;border:1px solid #1a1a1a;border-radius:6px;padding:8px;min-height:40px;max-height:120px;overflow-y:auto;margin-bottom:8px;font-size:0.65rem}
-    .cm{padding:3px 0;border-bottom:1px solid #0d0d0d;display:flex;gap:6px;align-items:flex-start}
-    .cm-who{flex-shrink:0;font-size:0.58rem;font-weight:700;min-width:32px}
-    .cm-who.you{color:#e8b84b}.cm-who.bot{color:#74c0fc}.cm-who.ok{color:#69db7c}.cm-who.err{color:#ff6b6b}
-    .cm-text{color:#888;line-height:1.4}
-    .cm-text b{color:#ddd}
-    /* STOP countdown button */
-    #stopBtn{display:none;background:#3a0000;border:1px solid #ff6b6b88;border-radius:4px;color:#ff6b6b;font-size:0.72rem;padding:5px 12px;cursor:pointer;font-weight:700;white-space:nowrap;animation:pulse 0.8s infinite alternate}
-    #stopBtn:hover{background:#5a0000}
-    @keyframes pulse{from{border-color:#ff6b6b44}to{border-color:#ff6b6b}}
-    /* Strategy state badge */
-    #strategyRow{display:flex;align-items:center;gap:8px;margin-bottom:2px;font-size:0.62rem}
-    #stratLabel{color:#444;text-transform:uppercase;letter-spacing:1px}
-    #stratState{color:#333;font-weight:700;font-size:0.68rem}
-    #stratDetail{font-size:0.6rem;color:#555;margin-bottom:8px;min-height:0;line-height:1.5}
-    /* Active triggers */
-    #triggers-section{margin-bottom:10px}
-    .trigger-row{display:flex;align-items:center;gap:6px;padding:4px 0;border-bottom:1px solid #111}
-    .trigger-desc{flex:1;font-size:0.62rem;color:#666;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-    .trigger-time{font-size:0.58rem;color:#444;flex-shrink:0}
-    .trigger-cancel{background:none;border:1px solid #2a2a2a;border-radius:3px;color:#555;font-size:0.6rem;padding:2px 6px;cursor:pointer;flex-shrink:0}
-    .trigger-cancel:hover{border-color:#ff6b6b66;color:#ff6b6b}
+    #capture-panel{background:#111;border:1px solid #1a1a1a;border-radius:6px;padding:10px 12px;margin-bottom:12px}
+    #capture-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px}
+    #capture-hdr-label{font-size:0.6rem;color:#444;text-transform:uppercase;letter-spacing:1px}
+    #capture-live-badge{font-size:0.6rem;font-weight:700;padding:1px 6px;border-radius:8px;background:#1a1a1a;color:#555}
+    #capture-live-badge.live{background:#0a1a0a;color:#69db7c}
+    #capture-live-badge.manual{background:#1a1400;color:#e8b84b}
+    #capture-fight{font-size:0.78rem;font-weight:600;color:#ddd;margin-bottom:2px}
+    #capture-odds{font-size:0.68rem;color:#666;margin-bottom:8px}
+    #fightStartedBtn{width:100%;background:#1a1400;border:1px solid #e8b84b44;border-radius:4px;color:#e8b84b;font-size:0.7rem;padding:6px;cursor:pointer;font-weight:600}
+    #fightStartedBtn:hover{background:#2a2200}
+    #manualLiveRow{display:none;margin-top:6px;font-size:0.62rem;color:#69db7c;text-align:center}
   </style>
 </head>
 <body>
   <h1>⚡ Bet Bot DK Sync <span style="color:#333;font-size:0.65rem;font-weight:400;letter-spacing:0">v3.0</span></h1>
 
-  <!-- Strategy status log — shows hedge countdowns, confirmations, errors -->
-  <div class="section" style="margin-bottom:6px">Strategy Status</div>
-  <div id="chat-log">
-    <div class="cm"><span class="cm-who bot">BOT</span><span class="cm-text">Type bet commands in the dashboard chat → they execute here automatically</span></div>
-  </div>
-
-  <!-- Strategy state + STOP button -->
-  <div id="strategyRow">
-    <span id="stratLabel">Strategy:</span>
-    <span id="stratState">IDLE</span>
-    <button id="stopBtn">STOP</button>
-  </div>
-  <div id="stratDetail"></div>
-
-  <!-- Active watch triggers -->
-  <div id="triggers-section" style="display:none">
-    <div class="section" style="margin-top:2px;margin-bottom:4px">
-      Active Triggers <span id="triggerCount" style="color:#555"></span>
-      <span class="clr" id="clrTriggers">cancel all</span>
+  <!-- Live capture status -->
+  <div id="capture-panel">
+    <div id="capture-hdr">
+      <span id="capture-hdr-label">Watching</span>
+      <span id="capture-live-badge">—</span>
     </div>
-    <div id="triggersList"></div>
+    <div id="capture-fight">No fight page open</div>
+    <div id="capture-odds"></div>
+    <button id="fightStartedBtn" title="Force capture on even if the LIVE badge isn't detected">🥊 Fight Started — capture now</button>
+    <div id="manualLiveRow">
+      Forcing capture <span id="manualLiveCountdown"></span> · <span class="clr" id="cancelManualLive">cancel</span>
+    </div>
   </div>
 
   <!-- Manual username -->
   <div class="user-row">
     <input id="userInput" placeholder="Your username (e.g. louis, ish)" spellcheck="false"/>
     <button id="saveUser">Set</button>
-  </div>
-
-  <!-- Bot token (shared secret for server auth) -->
-  <div class="section" style="margin-top:4px">Server Token</div>
-  <div class="user-row">
-    <input id="botToken" type="password" placeholder="Bot token (from Railway env)" autocomplete="off"/>
-    <button id="saveToken">Set</button>
   </div>
 
   <!-- Auto-login credentials -->

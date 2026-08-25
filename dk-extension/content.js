@@ -184,41 +184,36 @@ if (href.startsWith('https://sportsbook.draftkings.com/') &&
       .filter(Boolean);
   }
 
-  // watchedSides is set by background.js via WATCH_SIDES message when a strategy starts
-  let watchedSides = null;
-  let lastCrossover = null; // true/false — only fire on CHANGE to avoid spam
+  // ── Live-fight detection — is Ish actually looking at an in-progress fight? ──
+  // MMA moneylines look identical whether the fight is live or still pre-fight
+  // (no spread/points to tell them apart), so odds alone can't distinguish the two.
+  // DraftKings marks in-progress events with a short "LIVE" badge and/or a running
+  // round indicator ("Round 2", "Rd 2") near the odds — look for either.
+  // NOTE: verify this against a real live DK page next event. If DK's badge markup
+  // has changed, this will silently return false and ext captures won't fire —
+  // check the console log below (`[BetBot] live badge scan`) to confirm.
+  function findLiveBadge() {
+    const candidates = [...document.querySelectorAll('span, div, p, em, b')];
+    return candidates.find(el =>
+      el.childElementCount === 0 &&
+      (() => {
+        const t = el.textContent.trim();
+        if (!t || t.length > 12) return false;
+        return /^live$/i.test(t) || /^(rd|round)\s*\d/i.test(t);
+      })()
+    ) || null;
+  }
 
-  // watchTriggers: conditional bets set by /api/assistant ("bet when USA goes plus money")
-  // Each trigger: { id, side, amount, condition: { type, targetOdds } }
-  let watchTriggers = [];
-  const firedTriggers = new Set(); // prevent double-fire per trigger id
-  // Restore fired IDs from storage — survives SW restarts so triggers don't re-fire
-  chrome.storage.local.get(['firedTriggerIds'], r => {
-    for (const id of (r.firedTriggerIds || [])) firedTriggers.add(id);
+  // Manual "Fight Started" override — set from the popup when Ish clicks the button.
+  // Forces live=true for 30 minutes regardless of findLiveBadge(), as a backstop for
+  // when DK's badge markup doesn't match what findLiveBadge() looks for.
+  let _manualLiveUntil = 0;
+  chrome.storage.local.get(['manualLiveUntil'], r => { _manualLiveUntil = r.manualLiveUntil || 0; });
+  chrome.storage.onChanged.addListener(changes => {
+    if (changes.manualLiveUntil) _manualLiveUntil = changes.manualLiveUntil.newValue || 0;
   });
 
-  chrome.runtime.onMessage.addListener(msg => {
-    if (msg.type === 'WATCH_SIDES') {
-      watchedSides = { leg1Side: msg.leg1Side, leg2Side: msg.leg2Side };
-      lastCrossover = null; // reset on new strategy
-    }
-    if (msg.type === 'STOP_WATCHING') {
-      watchedSides = null;
-      lastCrossover = null;
-    }
-    if (msg.type === 'SET_WATCH_TRIGGERS') {
-      watchTriggers = msg.triggers || [];
-      // Clear fired-set for triggers that no longer exist
-      for (const id of firedTriggers) {
-        if (!watchTriggers.find(t => t.id === id)) firedTriggers.delete(id);
-      }
-    }
-    if (msg.type === 'CLEAR_TRIGGERS') {
-      watchTriggers = [];
-      firedTriggers.clear();
-    }
-  });
-
+  let _lastLiveLogTs = 0;
   setInterval(() => {
     const outcomes = scanOddsFromPage();
     if (outcomes.length === 0) return;
@@ -231,69 +226,18 @@ if (href.startsWith('https://sportsbook.draftkings.com/') &&
       : href.includes('/football') || href.includes('/nfl') ? 'americanfootball_nfl'
       : href.includes('/baseball') || href.includes('/mlb') ? 'baseball_mlb'
       : 'mma_mixed_martial_arts';
+
+    const liveBadge = findLiveBadge();
+    const manualLive = Date.now() < _manualLiveUntil;
+    const live = !!liveBadge || manualLive;
+    // Log once every 30s (not every 1s) so this is checkable in the console without spam
+    if (Date.now() - _lastLiveLogTs > 30000) {
+      _lastLiveLogTs = Date.now();
+      const why = liveBadge ? `badge FOUND ("${liveBadge.textContent.trim()}")` : manualLive ? 'manual override active' : 'not found';
+      console.log(`[BetBot] live check: ${why} — ext capture ${live ? 'will' : 'will NOT'} fire`);
+    }
+
     // Always report current odds so background + popup can display them
-    send({ type: 'ODDS_UPDATE', outcomes, sport, ts: Date.now() });
-
-    // ── Watch trigger condition check ──────────────────────────────────────
-    for (const trigger of watchTriggers) {
-      if (firedTriggers.has(trigger.id)) continue;
-      const sL = s => (s || '').toLowerCase();
-      const outcome = outcomes.find(o => sL(o.side) === sL(trigger.side));
-      if (!outcome) continue;
-
-      const { type, targetOdds } = trigger.condition;
-      let conditionMet = false;
-      if (type === 'positive')       conditionMet = outcome.american > 0;
-      else if (type === 'negative')  conditionMet = outcome.american < 0;
-      else if (type === 'odds_threshold' && targetOdds != null) {
-        // Fire when odds >= targetOdds (both sides: +200 >= +150, or -110 >= -150)
-        conditionMet = outcome.american >= targetOdds;
-      }
-
-      if (conditionMet) {
-        firedTriggers.add(trigger.id);
-        // Persist to storage so SW restart can't cause double-fire
-        chrome.storage.local.get(['firedTriggerIds'], r => {
-          const ids = new Set(r.firedTriggerIds || []);
-          ids.add(trigger.id);
-          chrome.storage.local.set({ firedTriggerIds: [...ids].slice(-50) });
-        });
-        send({ type: 'TRIGGER_MET', triggerId: trigger.id, side: trigger.side, amount: trigger.amount, currentOdds: outcome.american, ts: Date.now() });
-      }
-    }
-
-    // ── Crossover check only when a strategy is active ─────────────────────
-    if (!watchedSides) return;
-    const sL = s => (s || '').toLowerCase();
-    const leg1 = outcomes.find(o => sL(o.side) === sL(watchedSides.leg1Side));
-    const leg2 = outcomes.find(o => sL(o.side) === sL(watchedSides.leg2Side));
-    if (!leg1 || !leg2) return;
-
-    // Crossover = hedge side's implied prob has reached/passed the original side's implied prob
-    const crossed = leg2.implied >= leg1.implied;
-    if (crossed !== lastCrossover) {
-      lastCrossover = crossed;
-      if (crossed) {
-        send({ type: 'CROSSOVER_DETECTED', leg1, leg2, ts: Date.now() });
-      }
-    }
+    send({ type: 'ODDS_UPDATE', outcomes, sport, live, ts: Date.now() });
   }, 1000);
-}
-
-// ── Keepalive port — prevents MV3 service worker from dying after 30s idle ───
-// Chrome kills SW after 30s with no activity. An open port from a content script
-// resets the idle timer, keeping the SW alive as long as this DK tab is open.
-// The SW handles command polling itself (no CORS restrictions in SW context).
-if (href.startsWith('https://sportsbook.draftkings.com/')) {
-  try {
-    const port = chrome.runtime.connect({ name: 'keepalive' });
-    // Ping every 25s to stay under the 30s kill threshold
-    const pingTimer = setInterval(() => {
-      try { port.postMessage({ ping: true }); } catch (_) { clearInterval(pingTimer); }
-    }, 25000);
-    port.onDisconnect.addListener(() => clearInterval(pingTimer));
-    console.log('[BetBot] keepalive port connected — SW will stay alive');
-  } catch (e) {
-    console.warn('[BetBot] keepalive port failed:', e.message);
-  }
 }

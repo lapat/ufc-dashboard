@@ -564,6 +564,37 @@ async function runServerTests() {
     assert(matching.length === 1, `Expected 1 entry after 3 syncs of same bet, got ${matching.length}`);
   });
 
+  // Root cause of "bet on game A, then bet on game B — only game B counted" bug:
+  // an `update.bets` delta (just the newly placed bet) used to fully replace stored
+  // state instead of merging, wiping out the first bet.
+  await check('A bet placed on one game is not wiped out by an update.bets delta for a different game', async () => {
+    const userId = 'two-games-user';
+    // Bet 1 arrives as a full snapshot (e.g. initial WS subscribe) — Soccer Game A
+    await post('/api/dk-sync', {
+      url: 'wss://test', userId,
+      data: { result: { initial: { bets: [{
+        betId: 'soccer-game-a-bet', receiptId: 'soccer-game-a-bet',
+        status: 'Unsettled', settlementStatus: 'Open',
+        stake: 20, potentialReturns: 38, placementDate: new Date().toISOString(), displayOdds: '+90',
+        selections: [{ selectionDisplayName: 'Brazil', marketDisplayName: 'Moneyline', displayOdds: '+90' }]
+      }] } } }, ts: Date.now()
+    });
+    // Bet 2 arrives as an incremental update delta — Soccer Game B (a different match)
+    await post('/api/dk-sync', {
+      url: 'wss://test', userId,
+      data: { result: { update: { bets: [{
+        betId: 'soccer-game-b-bet', receiptId: 'soccer-game-b-bet',
+        status: 'Unsettled', settlementStatus: 'Open',
+        stake: 15, potentialReturns: 24, placementDate: new Date().toISOString(), displayOdds: '+60',
+        selections: [{ selectionDisplayName: 'Argentina', marketDisplayName: 'Moneyline', displayOdds: '+60' }]
+      }] } } }, ts: Date.now()
+    });
+    const bets = await get(`/api/dk-bets?user=${userId}`);
+    assert(bets.some(b => b.betId === 'soccer-game-a-bet'), 'Game A bet should still be present after Game B update delta');
+    assert(bets.some(b => b.betId === 'soccer-game-b-bet'), 'Game B bet should be present');
+    assert(bets.length === 2, `expected 2 open bets across both games, got ${bets.length}`);
+  });
+
   // lastBetSync updated on any dk-sync call, not just when bets are parsed
   await check('POST /api/dk-sync updates lastBetSync even when 0 bets parsed', async () => {
     const before = await get('/api/dk-status');
@@ -6257,22 +6288,20 @@ async function runSecurityAndExpiryTests() {
   } catch(e) { console.error('  ✗ AB4:', e.message); failed++; }
 
   // AB5: recording state is persisted on every data point (not just on fight end)
+  // Scoped to recPollSport (the Odds-API-sourced main recorder) specifically — the
+  // extension's independent ext-capture stream (findOrCreateExtCapture/dk-odds-push)
+  // intentionally does NOT persist to STATE_FILE (see comment there), so a whole-file
+  // first-match search is no longer a valid proxy for "the main recorder persists".
   try {
     await check('AB5: persistState() is called on every odds update — not just on fight end', () => {
       assert(re.includes('persistState') || src.includes('persistState'), 'must define persistState()');
-      // persistState and oddsHistory.push must appear close together
-      const pushIdx = src.indexOf('oddsHistory.push');
-      if (pushIdx !== -1) {
-        const nearbyBlock = src.slice(pushIdx, pushIdx + 200);
-        assert(nearbyBlock.includes('persistState'), 'persistState must be called right after each oddsHistory.push');
-      } else {
-        // If push is in record_engine, check there
-        const rePushIdx = re.indexOf('oddsHistory.push');
-        if (rePushIdx !== -1) {
-          const nearbyBlock = re.slice(rePushIdx, rePushIdx + 200);
-          assert(nearbyBlock.includes('persistState'), 'persistState must be called right after each oddsHistory.push in record_engine');
-        }
-      }
+      const fnIdx = src.indexOf('async function recPollSport');
+      assert(fnIdx !== -1, 'server.js must define function recPollSport');
+      const fnBlock = src.slice(fnIdx, fnIdx + 3500);
+      const pushIdx = fnBlock.indexOf('oddsHistory.push');
+      assert(pushIdx !== -1, 'recPollSport must push to oddsHistory');
+      const nearbyBlock = fnBlock.slice(pushIdx, pushIdx + 200);
+      assert(nearbyBlock.includes('persistState'), 'persistState must be called right after each oddsHistory.push in recPollSport');
     });
   } catch(e) { console.error('  ✗ AB5:', e.message); failed++; }
 
@@ -6333,9 +6362,14 @@ async function runSecurityAndExpiryTests() {
   } catch(e) { console.error('  ✗ AC3:', e.message); failed++; }
 
   // AC4: dk-odds-push matches active fight order-insensitively (handles fighter1/fighter2 reversed)
+  // The fuzzy-match now lives in findOrCreateExtCapture (the extension's independent
+  // capture path, separate from the Odds-API recorder's activeFights) — search that
+  // function directly rather than assuming it's within N bytes of the route string.
   try {
     await check('AC4: dk-odds-push fuzzy-matches active fights regardless of fighter order', () => {
-      const epBlock = src.slice(src.indexOf('/api/dk-odds-push'), src.indexOf('/api/dk-odds-push') + 1000);
+      const fnIdx = src.indexOf('function findOrCreateExtCapture');
+      assert(fnIdx !== -1, 'server.js must define function findOrCreateExtCapture');
+      const epBlock = src.slice(fnIdx, fnIdx + 1000);
       assert(epBlock.includes('pf2') || epBlock.includes('reversed') || epBlock.includes('rf1.slice(0,6) === pf2.slice(0,6)'),
         'must try reversed fighter order when matching active fights');
     });
@@ -6344,7 +6378,7 @@ async function runSecurityAndExpiryTests() {
   // AC5: background.js forwards ODDS_UPDATE to /api/dk-odds-push
   try {
     await check('AC5: background.js sends ODDS_UPDATE to /api/dk-odds-push on the server', () => {
-      const bgBlock = bg.slice(bg.indexOf("msg.type === 'ODDS_UPDATE'"), bg.indexOf("msg.type === 'ODDS_UPDATE'") + 600);
+      const bgBlock = bg.slice(bg.indexOf("msg.type === 'ODDS_UPDATE'"), bg.indexOf("msg.type === 'ODDS_UPDATE'") + 1500);
       assert(bgBlock.includes('/api/dk-odds-push'), 'background.js must POST to /api/dk-odds-push on ODDS_UPDATE');
       assert(bgBlock.includes('numericOdds1'), 'must include numericOdds1 in the push payload');
     });

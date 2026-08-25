@@ -15,15 +15,6 @@ let HISTORICAL_DIR = path.join(__dirname, 'historical_data');
 let API_CACHE_DIR  = path.join(__dirname, 'historical_data', 'api_cache');
 
 const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
-const BOT_TOKEN = process.env.BOT_TOKEN || null;
-
-// Middleware: require X-Bot-Token header on state-mutating endpoints.
-// Skipped in dev (no BOT_TOKEN env var set). Set BOT_TOKEN on Railway.
-function requireBotToken(req, res, next) {
-  if (!BOT_TOKEN) return next();
-  if (req.headers['x-bot-token'] !== BOT_TOKEN) return res.status(401).json({ error: 'Unauthorized' });
-  next();
-}
 const TOKEN_WARN = parseInt(process.env.ANTHROPIC_TOKEN_WARN_THRESHOLD || '500000');
 const nodemailer = require('nodemailer');
 
@@ -48,302 +39,8 @@ let _cachedSummaryJson = null;
 let _oddsApiCreditsUsed = null;
 let _oddsApiCreditsRemaining = null;
 
-// ── Dashboard bet command queue ───────────────────────────────────────────────
-// Commands typed in the dashboard chat are queued here; the Chrome extension
-// polls /api/pending-commands every 5s and executes them on DraftKings.
-const DATA_ROOT_DIR = process.env.DATA_DIR || __dirname;
-const COMMAND_QUEUE_FILE = path.join(DATA_ROOT_DIR, 'command_queue.json');
-
-function loadCommandQueue() {
-  try {
-    if (fs.existsSync(COMMAND_QUEUE_FILE)) return JSON.parse(fs.readFileSync(COMMAND_QUEUE_FILE, 'utf8'));
-  } catch {}
-  return [];
-}
-function saveCommandQueue() {
-  try { fs.writeFileSync(COMMAND_QUEUE_FILE, JSON.stringify(commandQueue, null, 2)); } catch {}
-}
-function makeCommand(type, intent) {
-  return {
-    id: Date.now().toString(36) + Math.random().toString(36).slice(2, 7),
-    type,
-    side:    intent.side   || null,
-    amount:  intent.amount || null,
-    trigger: intent.trigger || { type: 'crossover', targetOdds: null },
-    status:  'pending',
-    createdAt: Date.now(),
-    expiresAt: Date.now() + 120000,
-    result: null,
-    strategyHistory: [],
-  };
-}
-let commandQueue = loadCommandQueue();
-
-// ── Watch triggers ─────────────────────────────────────────────────────────────
-// Conditional bets: "bet $20 on USA as soon as their odds go plus"
-// Extension polls /api/watch-triggers every 5s, checks DOM odds against condition,
-// fires executePlaceBet when met, then DELETEs the trigger.
-let watchTriggers = [];
-
-// ── Auto-bet system ────────────────────────────────────────────────────────────
-// Automatically places a first bet when a new live fight matches a configured
-// odds bracket. Hedge still fires via the existing crossover trigger.
-//
-// Failure modes addressed:
-//   fight_too_old       — recorder started mid-fight; opening odds no longer valid
-//   test_fight          — /api/recorder/test pollutes the session
-//   dedup               — firedFights Set prevents double-fire per fight
-//   rate_limit          — maxPerSession caps total auto-bets per night
-//   no_extension        — block if no DK tab is alive (bet would expire unused)
-//   invalid_odds        — NaN or missing odds from Odds API
-//   odds_too_close      — implied prob diff < 5% means fav/dog is ambiguous
-//   existing_coverage   — user already has an open bet on this side
-//   bracket_mismatch    — only fire on user-targeted brackets
-
-const AUTO_BET_CONFIG_FILE = path.join(DATA_ROOT_DIR, 'auto_bet_config.json');
-const AUTO_BET_FIRED_FILE  = path.join(DATA_ROOT_DIR, 'auto_bet_fired.json');
-
-const DEFAULT_AUTO_BET_CONFIG = {
-  enabled:           false,
-  amount:            5,          // dollars per first bet
-  brackets:          ['slight'], // 'even' | 'slight' | 'heavy' | 'huge'
-  side:              'dog',      // 'dog' (underdog) | 'fav' (favorite)
-  maxPerSession:     3,          // hard cap on auto-bets this server session
-  requireExtension:  true,       // block if no DK extension heartbeat in last 5 min
-  maxFightAgeSecs:   300,        // skip if fight started > N seconds ago (missed opening)
-  minOddsGapPct:     5,          // skip if |imp1 - imp2| < N% (odds too close to call)
-  autoHedge:         true,       // include crossover trigger on the queued command
-};
-
-function loadAutoBetConfig() {
-  try {
-    if (fs.existsSync(AUTO_BET_CONFIG_FILE))
-      return { ...DEFAULT_AUTO_BET_CONFIG, ...JSON.parse(fs.readFileSync(AUTO_BET_CONFIG_FILE, 'utf8')) };
-  } catch {}
-  return { ...DEFAULT_AUTO_BET_CONFIG };
-}
-function saveAutoBetConfig() {
-  try { fs.writeFileSync(AUTO_BET_CONFIG_FILE, JSON.stringify(autoBetConfig, null, 2)); } catch {}
-}
-
-let autoBetConfig = loadAutoBetConfig();
-
-// firedFights persisted across restarts so the same fight never gets two auto-bets
-// even if server restarts mid-fight. Pruned to last 100 entries.
-function loadFiredFights() {
-  try {
-    if (fs.existsSync(AUTO_BET_FIRED_FILE))
-      return new Set(JSON.parse(fs.readFileSync(AUTO_BET_FIRED_FILE, 'utf8')));
-  } catch {}
-  return new Set();
-}
-function saveFiredFights() {
-  try {
-    const arr = [...autoBetFiredFights].slice(-100);
-    fs.writeFileSync(AUTO_BET_FIRED_FILE, JSON.stringify(arr));
-  } catch {}
-}
-
-const autoBetFiredFights = loadFiredFights();
-
-// Session count persisted across Railway restarts — resets when the date changes (next UFC card)
-const AUTO_BET_SESSION_FILE = path.join(DATA_ROOT_DIR, 'auto_bet_session.json');
-function loadSessionCount() {
-  try {
-    if (fs.existsSync(AUTO_BET_SESSION_FILE)) {
-      const d = JSON.parse(fs.readFileSync(AUTO_BET_SESSION_FILE, 'utf8'));
-      if (d.date === new Date().toISOString().slice(0, 10)) return d.count || 0;
-    }
-  } catch {}
-  return 0;
-}
-function saveSessionCount() {
-  try {
-    fs.writeFileSync(AUTO_BET_SESSION_FILE, JSON.stringify({
-      count: autoBetSessionCount,
-      date: new Date().toISOString().slice(0, 10),
-    }));
-  } catch {}
-}
-
-let autoBetSessionCount = loadSessionCount();
-const autoBetLog = []; // last 20 auto-bet events (fired + skipped with reason)
-
-function autoBetLogEvent(event) {
-  autoBetLog.unshift({ ...event, ts: Date.now() });
-  if (autoBetLog.length > 20) autoBetLog.length = 20;
-}
-
-// Returns { fired: true, cmd, side, bracket } | { skipped: true, reason }
-function checkAutoBet(fightId, fighter1, fighter2, firstOdds, commenceTimeISO) {
-  const cfg = autoBetConfig;
-
-  // Guard: disabled
-  if (!cfg.enabled) return { skipped: true, reason: 'disabled' };
-
-  // Guard: test fight
-  if (/^test /i.test(fighter1) || /^test /i.test(fighter2))
-    return { skipped: true, reason: 'test_fight' };
-
-  // Guard: already fired for this fight (persistent dedup)
-  if (autoBetFiredFights.has(fightId))
-    return { skipped: true, reason: 'already_fired' };
-
-  // Guard: session rate limit
-  if (autoBetSessionCount >= cfg.maxPerSession)
-    return { skipped: true, reason: `rate_limit (${autoBetSessionCount}/${cfg.maxPerSession})` };
-
-  // Guard: fight too old (missed the opening)
-  if (commenceTimeISO) {
-    const liveForSecs = (Date.now() - new Date(commenceTimeISO).getTime()) / 1000;
-    if (liveForSecs > cfg.maxFightAgeSecs)
-      return { skipped: true, reason: `fight_too_old (${Math.round(liveForSecs)}s)` };
-  }
-
-  // Guard: extension connectivity
-  if (cfg.requireExtension) {
-    const now = Date.now();
-    const hasLiveExt = Object.values(dkHeartbeat.users || {}).some(ts => now - ts < 300000);
-    if (!hasLiveExt)
-      return { skipped: true, reason: 'no_extension_connected' };
-  }
-
-  // Guard: invalid odds
-  const f1Odds = firstOdds?.fighter1?.numericOdds;
-  const f2Odds = firstOdds?.fighter2?.numericOdds;
-  if (typeof f1Odds !== 'number' || typeof f2Odds !== 'number' || isNaN(f1Odds) || isNaN(f2Odds))
-    return { skipped: true, reason: 'invalid_odds' };
-
-  // Guard: odds too close (fav/dog ambiguous)
-  const d1 = toDecimal(f1Odds), d2 = toDecimal(f2Odds);
-  const imp1 = 1 / d1, imp2 = 1 / d2;
-  const gapPct = Math.abs(imp1 - imp2) * 100;
-  if (gapPct < cfg.minOddsGapPct)
-    return { skipped: true, reason: `odds_too_close (gap=${gapPct.toFixed(1)}%)` };
-
-  // Guard: bracket not targeted
-  const bracket = classifyOddsBracket(f1Odds, f2Odds);
-  if (!cfg.brackets.includes(bracket))
-    return { skipped: true, reason: `bracket_not_targeted (${bracket})` };
-
-  // Determine side — dog = higher decimal = more positive american
-  const favFighter = d1 <= d2 ? fighter1 : fighter2;
-  const favOdds    = d1 <= d2 ? f1Odds   : f2Odds;
-  const dogFighter = d1 <= d2 ? fighter2 : fighter1;
-  const dogOdds    = d1 <= d2 ? f2Odds   : f1Odds;
-  const side             = cfg.side === 'dog' ? dogFighter : favFighter;
-  const leg2Side         = cfg.side === 'dog' ? favFighter : dogFighter;
-  const leg1OddsAmerican = cfg.side === 'dog' ? dogOdds    : favOdds;
-
-  // Guard: already have open bet on this side (prevents double exposure)
-  const existingBets = getAllBets(true);
-  const alreadyCovered = existingBets.some(b =>
-    b.selection && b.selection.toLowerCase().includes(side.toLowerCase().split(' ')[0])
-  );
-  if (alreadyCovered)
-    return { skipped: true, reason: `existing_bet_on_${side}` };
-
-  // All guards passed — queue the command
-  const intent = {
-    side,
-    amount: cfg.amount,
-    leg2Side,
-    leg1OddsAmerican,
-    fighter1,
-    fighter2,
-    trigger: cfg.autoHedge ? { type: 'crossover', targetOdds: null } : { type: null, targetOdds: null },
-  };
-  const cmd = makeCommand('place_bet', intent);
-  commandQueue.push(cmd);
-  saveCommandQueue();
-  autoBetFiredFights.add(fightId);
-  autoBetSessionCount++;
-  saveFiredFights();
-  saveSessionCount();
-
-  const labels = { even: 'near-even', slight: 'slight fav', heavy: 'heavy fav', huge: 'dominant' };
-  const bracketLabel = labels[bracket] || bracket;
-  const oddsStr = `${fighter1} ${f1Odds > 0 ? '+' : ''}${f1Odds} / ${fighter2} ${f2Odds > 0 ? '+' : ''}${f2Odds}`;
-  console.log(`[auto-bet] FIRED: $${cfg.amount} on ${side} (${bracketLabel}) [${fightId}] session=${autoBetSessionCount}/${cfg.maxPerSession}`);
-
-  autoBetLogEvent({ type: 'fired', fightId, fighter1, fighter2, side, amount: cfg.amount, bracket, odds: oddsStr, cmdId: cmd.id });
-
-  sendAlert(
-    `🤖 AUTO-BET: $${cfg.amount} on ${side} — ${fighter1} vs ${fighter2}`,
-    `Auto-first-bet triggered.\n\nFight: ${fighter1} vs ${fighter2}\nSide: ${side} (${cfg.side})\nAmount: $${cfg.amount}\nBracket: ${bracketLabel}\nOdds: ${oddsStr}\nAuto-hedge: ${cfg.autoHedge ? 'YES — will hedge at crossover' : 'no'}\n\nExtension will execute on DraftKings within 5 seconds.\n\nhttps://ufc-dashboard-production-e03d.up.railway.app`
-  );
-
-  return { fired: true, cmd, side, bracket, bracketLabel };
-}
-
-// ── Chat history — per-user rolling context for /api/assistant ─────────────────
-const chatHistory = new Map(); // userId → [{role, content}]
-const CHAT_HIST_MAX = 10;
-
-function getChatHistory(userId) { return chatHistory.get(userId) || []; }
-function addChatTurn(userId, role, content) {
-  const hist = chatHistory.get(userId) || [];
-  hist.push({ role, content: content.slice(0, 500) });
-  if (hist.length > CHAT_HIST_MAX) hist.splice(0, hist.length - CHAT_HIST_MAX);
-  chatHistory.set(userId, hist);
-}
-
 app.use(express.static('public'));
 app.use(express.json());
-
-// CORS — allow extension content scripts (running inside DK pages) to fetch command endpoints.
-// Chrome MV3 content scripts are subject to CORS even with host_permissions declared; the server
-// must respond with Access-Control-Allow-Origin so the response is readable by content.js.
-// This does NOT expose any sensitive data — command endpoints contain only bet instructions
-// that the authenticated user typed into the dashboard themselves.
-app.use('/api/pending-commands', (req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Methods', 'GET, OPTIONS');
-  if (req.method === 'OPTIONS') return res.sendStatus(204);
-  next();
-});
-app.use('/api/command-result', (req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Methods', 'POST, OPTIONS');
-  res.header('Access-Control-Allow-Headers', 'Content-Type');
-  if (req.method === 'OPTIONS') return res.sendStatus(204);
-  next();
-});
-app.use('/api/strategy-update', (req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Methods', 'POST, OPTIONS');
-  res.header('Access-Control-Allow-Headers', 'Content-Type');
-  if (req.method === 'OPTIONS') return res.sendStatus(204);
-  next();
-});
-app.use('/api/resolve-bet-target', (req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Methods', 'POST, OPTIONS');
-  res.header('Access-Control-Allow-Headers', 'Content-Type');
-  if (req.method === 'OPTIONS') return res.sendStatus(204);
-  next();
-});
-app.use('/api/auto-bet', (req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-  res.header('Access-Control-Allow-Headers', 'Content-Type');
-  if (req.method === 'OPTIONS') return res.sendStatus(204);
-  next();
-});
-app.use('/api/assistant', (req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Methods', 'POST, OPTIONS');
-  res.header('Access-Control-Allow-Headers', 'Content-Type');
-  if (req.method === 'OPTIONS') return res.sendStatus(204);
-  next();
-});
-app.use('/api/watch-triggers', (req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Methods', 'GET, POST, DELETE, OPTIONS');
-  res.header('Access-Control-Allow-Headers', 'Content-Type');
-  if (req.method === 'OPTIONS') return res.sendStatus(204);
-  next();
-});
 
 // ── Helpers ────────────────────────────────────────────────────────────────
 
@@ -459,57 +156,6 @@ function findFighterHistory(name, limit = 3) {
     .sort((a, b) => (b.date || '').localeCompare(a.date || ''))
     .slice(0, limit);
 }
-
-const systemPrompt = `You are an expert MMA live betting research assistant. You work with Ish, a professional live MMA bettor who specializes in crossover opportunities during live UFC fights.
-
-## YOUR TWO DATA SOURCES — understand the difference, it matters
-
-### 1. OUR RECORDED DATA (the good stuff)
-Live DraftKings odds captured every 3 seconds during actual UFC fights, Dec 2025 onward.
-This is Ish's own recorded dataset — second-by-second odds movement, full crossover detection, win-win windows.
-When Ish says "look at our data" or "what do we have" he means THIS.
-You can answer precise questions: exact crossover count, what odds were when it crossed, whether win-win was achievable.
-The local fight list is passed to you in every message as HISTORICAL FIGHT DATA.
-
-### 2. PRE-FIGHT ODDS (limited, external)
-Snapshot odds fetched from external sources for fights we didn't record live.
-Only useful for: pre-fight lines, general context, opponent records.
-Cannot answer: did a crossover happen, live odds movement, win-win windows.
-When Ish asks about a fight not in our recorded data, this is all we have.
-
-## COMMUNICATION RULES
-- When answering from recorded data: just answer directly with the numbers
-- When answering from pre-fight/external data only: say "we don't have live data from that fight" once, then give what you know
-- When Ish says "our data" / "what we have" — he means the recorded fights. Be explicit: "In our data..." or "From the X fights we've recorded..."
-- NEVER mention APIs, credits, endpoints, or technical infrastructure
-- Be concise — numbers first, explanation after if needed
-
-## CORE CONCEPTS
-
-**Crossover**: During a live fight, a fighter's odds flip from underdog (+) to favorite (-). Momentum shifted — book adjusted.
-
-**Win-Win Crossover**: The core opportunity:
-- Bet 1: placed live when Fighter A is at plus money
-- Crossover happens — Fighter A becomes favorite
-- Bet 2: placed on Fighter B now at plus money
-- Guaranteed profit condition: (D1-1)(D2-1) > 1
-
-**Stake math**:
-- Optimal Bet 2 per $100 Bet 1: sqrt((D1-1)/(D2-1)) × 100
-- Safe range: S1/(D2-1) to S1×(D1-1)
-
-**Dataset stats**: 262 fights. 110/262 (42%) had crossovers. 59 confirmed win-win moments.
-
-## WHEN TO FETCH HISTORICAL DATA
-If Ish asks about a fighter with no local data, silently emit (on its own line, nothing else):
-LOOKUP_NEEDED: [fighter name] [approximate fight dates as YYYY-MM-DD]
-
-List up to 3 dates. The system fetches and retries automatically. Never tell Ish this is happening.
-
-## HOW TO ANSWER
-- Short, direct, specific numbers
-- Tables only when comparing multiple fights
-- No explanations of your process or data sources`;
 
 // ── Routes ─────────────────────────────────────────────────────────────────
 
@@ -868,6 +514,13 @@ function saveDKBets() {
 }
 
 function parseDKBets(url, data, userId) {
+  // DK's WS sends two distinct shapes: `initial.bets` is the FULL current open-bets
+  // list (safe to fully replace stored state with — this is how settled/fake bets get
+  // cleared). `update.bets` is an INCREMENTAL delta (e.g. just the bet you just placed) —
+  // replacing wholesale on an update wipes out every other open bet the user already had
+  // (e.g. betting on two different soccer games in a row: the second bet's `update` delta
+  // used to erase the first bet entirely). Only merge on update; still full-replace on initial.
+  const isFullSnapshot = !!data?.result?.initial?.bets;
   const rawBets =
     data?.result?.initial?.bets ||
     data?.result?.update?.bets ||
@@ -905,7 +558,15 @@ function parseDKBets(url, data, userId) {
     };
   });
 
-  dkBetsByUser.set(userId || DEFAULT_USER, bets);
+  const uid = userId || DEFAULT_USER;
+  if (isFullSnapshot) {
+    dkBetsByUser.set(uid, bets);
+  } else {
+    const existing = dkBetsByUser.get(uid) || [];
+    const byId = new Map(existing.map(b => [b.betId, b]));
+    for (const b of bets) byId.set(b.betId, b);
+    dkBetsByUser.set(uid, Array.from(byId.values()));
+  }
   saveDKBets();
   return bets;
 }
@@ -1157,71 +818,6 @@ app.get('/api/live-score', async (req, res) => {
   res.json(await fetchLiveScore(team1, team2, sport));
 });
 
-// ── Score-tie trigger polling — server-side, every 5s ─────────────────────────
-// For each active score_tie trigger, poll ESPN. When scores are equal and both
-// teams have scored (avoids 0-0 game-start false fire), queue the bet command.
-// The trigger is removed after firing (one-shot).
-setInterval(async () => {
-  const tieTriggers = watchTriggers.filter(t =>
-    t.condition?.type === 'score_tie' && t.expiresAt > Date.now()
-  );
-  if (!tieTriggers.length) return;
-
-  for (const trigger of tieTriggers) {
-    try {
-      const { team1, team2, sport } = trigger.condition;
-      const score = await fetchLiveScore(team1, team2, sport || 'soccer');
-      if (!score) continue;
-
-      const s1 = parseInt(score.score1, 10);
-      const s2 = parseInt(score.score2, 10);
-      if (isNaN(s1) || isNaN(s2)) continue;
-      // Game ended without a tie — remove trigger so it stops polling ESPN
-      if (score.completed) {
-        watchTriggers = watchTriggers.filter(t => t.id !== trigger.id);
-        console.log(`[score_tie] Game completed without tie — removing trigger [${trigger.id}]`);
-        continue;
-      }
-      if (s1 !== s2) continue;         // not tied
-      if (s1 + s2 === 0) continue;    // 0-0 at game start — not a real tie yet
-
-      // Score is tied (and at least one team has scored) — fire
-      const scoreStr = `${s1}-${s2}`;
-      console.log(`[score_tie] FIRED: ${team1} ${scoreStr} ${team2} → $${trigger.amount} on ${trigger.side} [${score.period || '?'}']`);
-      const cmd = makeCommand('place_bet', { side: trigger.side, amount: trigger.amount, trigger: null });
-      commandQueue.push(cmd);
-      saveCommandQueue();
-      watchTriggers = watchTriggers.filter(t => t.id !== trigger.id); // one-shot
-      sendAlert(
-        `⚽ SCORE TIE TRIGGER FIRED: ${team1} ${scoreStr} ${team2}`,
-        `Score became tied at ${scoreStr} (${score.period || 'unknown period'}).\nPlacing $${trigger.amount} on ${trigger.side} to win.\n\nExtension will execute within 5 seconds.`
-      );
-    } catch (_) { /* ignore per-trigger errors */ }
-  }
-}, 5000);
-
-// ── Periodic cleanup — every 15 min, independent of extension state ───────────
-// Prevents unbounded growth of watchTriggers (expired) and commandQueue (done/failed).
-// Without this, completed soccer games keep polling ESPN and old commands pile up.
-setInterval(() => {
-  const now = Date.now();
-  const tBefore = watchTriggers.length;
-  watchTriggers = watchTriggers.filter(t => t.expiresAt > now);
-  if (watchTriggers.length < tBefore)
-    console.log(`[cleanup] Pruned ${tBefore - watchTriggers.length} expired watch triggers`);
-
-  const cutoff = now - 24 * 60 * 60 * 1000;
-  const qBefore = commandQueue.length;
-  commandQueue = commandQueue.filter(c =>
-    c.status === 'pending' || c.status === 'picked_up' ||
-    (c.completedAt && c.completedAt > cutoff)
-  );
-  if (commandQueue.length < qBefore) {
-    console.log(`[cleanup] Pruned ${qBefore - commandQueue.length} old command queue entries`);
-    saveCommandQueue();
-  }
-}, 15 * 60 * 1000);
-
 app.get('/api/sport/:key', async (req, res) => {
   try {
     const url = `${BASE_URL}/sports/${req.params.key}/odds/?apiKey=${ODDS_API_KEY}&regions=us&markets=h2h&bookmakers=draftkings&oddsFormat=american`;
@@ -1231,195 +827,10 @@ app.get('/api/sport/:key', async (req, res) => {
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
-// Fetch historical odds from The Odds API for a specific past date (costs 10 credits each)
-async function fetchHistoricalOdds(dateISO) {
-  // Check disk cache first — free, no API credits
-  const cacheFile = path.join(API_CACHE_DIR, `${dateISO}.json`);
-  if (fs.existsSync(cacheFile)) {
-    console.log(`Historical cache hit: ${dateISO}`);
-    return JSON.parse(fs.readFileSync(cacheFile, 'utf8'));
-  }
-  const url = `${BASE_URL}/historical/sports/mma_mixed_martial_arts/odds/?apiKey=${ODDS_API_KEY}&date=${dateISO}&regions=us&markets=h2h&bookmakers=draftkings&oddsFormat=american`;
-  const { data, headers } = await fetchJson(url);
-  updateOddsCredits(headers);
-  console.log(`Historical API (10 credits) — used: ${_oddsApiCreditsUsed} | remaining: ${_oddsApiCreditsRemaining}`);
-  if (!Array.isArray(data?.data)) return [];
-  const results = data.data.filter(f => f.bookmakers?.length > 0).map(f => {
-    const outcomes = f.bookmakers[0].markets[0]?.outcomes || [];
-    return {
-      fight: `${f.home_team} vs ${f.away_team}`,
-      date: f.commence_time.slice(0, 10),
-      odds: outcomes.reduce((acc, o) => { acc[o.name] = o.price; return acc; }, {}),
-      source: 'historical_api',
-    };
-  });
-  // Save to disk so we never pay for this date again
-  if (results.length > 0) fs.writeFileSync(cacheFile, JSON.stringify(results, null, 2));
-  return results;
-}
-
 function updateOddsCredits(headers) {
   if (headers['x-requests-used']) _oddsApiCreditsUsed = parseInt(headers['x-requests-used']);
   if (headers['x-requests-remaining']) _oddsApiCreditsRemaining = parseInt(headers['x-requests-remaining']);
 }
-
-// AI research endpoint — Ish can ask anything
-app.post('/api/research', requireBotToken, async (req, res) => {
-  const { question } = req.body;
-  if (!question) return res.status(400).json({ error: 'question required' });
-
-  try {
-    // ── Bet command detection — intercept before research flow ────────────────
-    // Keywords that strongly suggest a bet command rather than a research question
-    const looksLikeBet = /\b(bet|wager|place|hedge\s+me|hedge\s+out|put\s+\$?\d+|cancel\s+(the\s+)?(bet|hedge|strategy)|stop\s+the\s+(bet|hedge))\b/i.test(question);
-    if (looksLikeBet) {
-      let intent = { intent: 'unknown' };
-      try {
-        const r = await anthropic.messages.create({
-          model:      'claude-haiku-4-5-20251001',
-          max_tokens: 256,
-          system:     CHAT_SYSTEM(null),
-          messages:   [{ role: 'user', content: question.slice(0, 500) }],
-        });
-        intent = parseChatResponse(r.content[0]?.text?.trim() || '');
-      } catch {}
-
-      if (intent.intent === 'place_first_bet' && intent.side && intent.amount) {
-        // Guard: block if same side already queued (prevents auto-bet + chat bet double-exposure)
-        const sameSidePending = commandQueue.find(c =>
-          c.type === 'place_bet' &&
-          (c.side || '').toLowerCase() === (intent.side || '').toLowerCase() &&
-          (c.status === 'pending' || c.status === 'picked_up')
-        );
-        if (sameSidePending) {
-          return res.json({
-            answer: `⚠️ **Already queued** — there's already a pending bet on **${intent.side}**. Wait for it to execute first, or type "cancel" to clear it.`,
-            usage: { thisQuery: 0, sessionTotal: totalTokensUsed, sessionQueries: totalQueries, estimatedCostUSD: 0 },
-          });
-        }
-        const cmd = makeCommand('place_bet', intent);
-        commandQueue.push(cmd);
-        saveCommandQueue();
-        const triggerStr = intent.trigger?.type === 'crossover'
-          ? ' — **auto-hedging at crossover** 🔄'
-          : intent.trigger?.type === 'odds_target'
-          ? ` — auto-hedge when line hits **${intent.trigger.targetOdds}**`
-          : '';
-        return res.json({
-          answer: `**Bet queued** ✅\n\nPlacing **$${intent.amount}** on **${intent.side}**${triggerStr}.\n\nYour extension will execute this on DraftKings now — I'll update you here when it's confirmed.`,
-          betCommand: cmd,
-          usage: { thisQuery: 0, sessionTotal: totalTokensUsed, sessionQueries: totalQueries, estimatedCostUSD: 0 },
-        });
-      }
-
-      if (intent.intent === 'cancel') {
-        const cmd = makeCommand('cancel', intent);
-        commandQueue.push(cmd);
-        saveCommandQueue();
-        return res.json({
-          answer: `**Cancelling strategy** 🛑\n\nStop signal sent to your extension — the watching will stop and no hedge will fire.`,
-          betCommand: cmd,
-          usage: { thisQuery: 0, sessionTotal: totalTokensUsed, sessionQueries: totalQueries, estimatedCostUSD: 0 },
-        });
-      }
-      // intent was query/unknown — fall through to normal research
-    }
-
-    // Pull live upcoming odds
-    let liveOdds = [];
-    try {
-      const url = `${BASE_URL}/sports/mma_mixed_martial_arts/odds/?apiKey=${ODDS_API_KEY}&regions=us&markets=h2h&bookmakers=draftkings&oddsFormat=american`;
-      const { data, headers } = await fetchJson(url);
-      updateOddsCredits(headers);
-      liveOdds = (Array.isArray(data) ? data : []).filter(f => f.bookmakers?.length > 0).map(f => {
-        const outcomes = f.bookmakers[0].markets[0]?.outcomes || [];
-        return {
-          fight: `${f.home_team} vs ${f.away_team}`,
-          date: f.commence_time.slice(0, 10),
-          odds: outcomes.reduce((acc, o) => { acc[o.name] = o.price; return acc; }, {}),
-        };
-      });
-    } catch {}
-
-    const historicalSummaryJson = getCachedSummary();
-    totalQueries++;
-
-    const buildMessages = (extraData) => [{
-      role: 'user',
-      content: `HISTORICAL FIGHT DATA (local, Dec 2025–May 2026):
-${historicalSummaryJson}
-
-CURRENT DRAFTKINGS ODDS (upcoming fights):
-${JSON.stringify(liveOdds, null, 1)}
-${extraData ? `\nADDITIONAL HISTORICAL API DATA (pre-fight odds from The Odds API):\n${JSON.stringify(extraData, null, 1)}` : ''}
-
-Question: ${question}`,
-    }];
-
-    // Pass 1
-    const pass1 = await anthropic.messages.create({
-      model: 'claude-sonnet-4-6',
-      max_tokens: 1500,
-      system: systemPrompt,
-      messages: buildMessages(null),
-    });
-    const pass1Text = pass1.content[0].text;
-    let used = pass1.usage.input_tokens + pass1.usage.output_tokens;
-
-    // Check if Claude wants historical API lookups
-    const lookupMatch = pass1Text.match(/LOOKUP_NEEDED:\s*(.+)/i);
-    let finalAnswer = pass1Text;
-
-    if (lookupMatch) {
-      // Parse dates from the LOOKUP_NEEDED line: "Fighter Name YYYY-MM-DD YYYY-MM-DD ..."
-      const parts = lookupMatch[1].trim().split(/\s+/);
-      const dates = parts.filter(p => /^\d{4}-\d{2}-\d{2}$/.test(p)).slice(0, 3);
-      console.log(`Historical lookup requested for dates: ${dates.join(', ')}`);
-
-      const extraData = [];
-      for (const d of dates) {
-        try {
-          const results = await fetchHistoricalOdds(d);
-          extraData.push(...results);
-        } catch (e) {
-          console.error(`Historical API error for ${d}:`, e.message);
-        }
-      }
-
-      // Always run pass 2 — with enriched data if found, or empty so Claude answers from knowledge
-      const pass2 = await anthropic.messages.create({
-        model: 'claude-sonnet-4-6',
-        max_tokens: 1500,
-        system: systemPrompt,
-        messages: buildMessages(extraData.length > 0 ? extraData : null),
-      });
-      finalAnswer = pass2.content[0].text;
-      used += pass2.usage.input_tokens + pass2.usage.output_tokens;
-    }
-
-    totalTokensUsed += used;
-    console.log(`Research query — tokens: ${used} | session total: ${totalTokensUsed}`);
-    if (totalTokensUsed > TOKEN_WARN) {
-      console.warn(`WARNING: Anthropic token usage (${totalTokensUsed}) exceeded threshold (${TOKEN_WARN})`);
-    }
-
-    res.json({
-      answer: finalAnswer,
-      usage: {
-        thisQuery: used,
-        sessionTotal: totalTokensUsed,
-        sessionQueries: totalQueries,
-        estimatedCostUSD: +(totalTokensUsed / 1_000_000 * 3).toFixed(3),
-      },
-      oddsApi: {
-        creditsUsed: _oddsApiCreditsUsed,
-        creditsRemaining: _oddsApiCreditsRemaining,
-      },
-    });
-  } catch (e) {
-    res.status(500).json({ error: e.message });
-  }
-});
 
 app.get('/api/usage', (req, res) => {
   res.json({
@@ -1494,22 +905,16 @@ app.get('/api/recorder/backup-status', (req, res) => {
   });
 });
 
-// Extension pushes live DK DOM odds directly — bypasses Odds API latency
-// 1-second granularity when Ish (or Louis) has a DK tab open
-app.post('/api/dk-odds-push', (req, res) => {
-  const {sport='mma_mixed_martial_arts',fighter1,fighter2,numericOdds1,numericOdds2}=req.body||{};
-  if(!fighter1||!fighter2||!numericOdds1||!numericOdds2)return res.status(400).json({error:'missing fields'});
-  const {id,record}=findOrCreateFight(sport,fighter1,fighter2);
-  const odds={timestamp:new Date().toISOString(),fighter1:{name:fighter1,numericOdds:+numericOdds1},fighter2:{name:fighter2,numericOdds:+numericOdds2},source:'extension'};
-  const L=record.lastOdds;
-  if(!L||L.fighter1.numericOdds!==+numericOdds1)record.oddsHistory.push(odds),record.lastOdds=odds,persistState(recorderState.activeFights);
-  res.json({ok:true,id,dataPoints:record.oddsHistory.length});
-});
+// Extension pushes live DK DOM odds directly off the page Ish has open — completely
+// independent of the Odds API recorder above. Written to its own "<id>_ext.json" file
+// so the two sources never overwrite each other and can be diffed after the fact to see
+// which one actually captures more of the fight's live odds movement.
+const EXT_CAPTURE_IDLE_MS = 5 * 60 * 1000; // no push for 5 min → assume Ish closed/left the tab, save + close out
 
-function findOrCreateFight(sport, fighter1, fighter2) {
+function findOrCreateExtCapture(sport, fighter1, fighter2) {
   const pf1 = fighter1.toLowerCase().replace(/[^a-z0-9]/g, '');
   const pf2 = fighter2.toLowerCase().replace(/[^a-z0-9]/g, '');
-  for (const [id, record] of recorderState.activeFights) {
+  for (const [id, record] of recorderState.extCaptures) {
     const rf1 = (record.meta.fighter1 || '').toLowerCase().replace(/[^a-z0-9]/g, '');
     const rf2 = (record.meta.fighter2 || '').toLowerCase().replace(/[^a-z0-9]/g, '');
     const match = (rf1.slice(0,6) === pf1.slice(0,6) && rf2.slice(0,6) === pf2.slice(0,6)) ||
@@ -1519,12 +924,48 @@ function findOrCreateFight(sport, fighter1, fighter2) {
   const [a, b] = [fighter1, fighter2].map(n => n.toLowerCase().replace(/[^a-z0-9]/g, '')).sort();
   const date = new Date().toISOString().slice(0, 10);
   const id = sport === 'mma_mixed_martial_arts' ? `${a}_vs_${b}_${date}` : `${sport.split('_')[0]}__${a}_vs_${b}_${date}`;
-  const record = { meta: { sport, label: SPORT_META[sport]?.label || sport, fighter1, fighter2, startTime: new Date().toISOString(), source: 'extension' }, oddsHistory: [], lastOdds: null };
-  recorderState.activeFights.set(id, record);
-  persistState(recorderState.activeFights);
-  console.log(`[dk-push] New recording started from extension: ${id}`);
+  const record = { meta: { sport, label: SPORT_META[sport]?.label || sport, fighter1, fighter2, startTime: new Date().toISOString(), source: 'extension' }, oddsHistory: [], lastOdds: null, lastPushTs: Date.now() };
+  recorderState.extCaptures.set(id, record);
+  console.log(`[ext-capture] New DOM capture started: ${id}`);
   return { id, record };
 }
+
+function extFilePath(sport, id) {
+  return recFilePath(sport, id).replace(/\.json$/, '_ext.json');
+}
+
+function saveExtCapture(id) {
+  const record = recorderState.extCaptures.get(id);
+  recorderState.extCaptures.delete(id);
+  if (!record) return;
+  const result = recSaveRecord(id, record, { filePath: extFilePath(record.meta.sport, id) });
+  if (!result.saved) {
+    console.error(`[ext-capture] SAVE FAILED for ${id}: ${result.reason}`);
+    return;
+  }
+  console.log(`[ext-capture] Saved: ${id} (${result.dataPoints} pts) → ${result.filePath}`);
+  pushFightToGitHub(result.filePath);
+}
+
+// Sweep for idle ext captures every minute — independent of the Odds API recorder's
+// own live/dead detection, since the whole point is to not depend on that.
+setInterval(() => {
+  const now = Date.now();
+  for (const [id, record] of recorderState.extCaptures) {
+    if (now - record.lastPushTs > EXT_CAPTURE_IDLE_MS) saveExtCapture(id);
+  }
+}, 60000);
+
+app.post('/api/dk-odds-push', (req, res) => {
+  const {sport='mma_mixed_martial_arts',fighter1,fighter2,numericOdds1,numericOdds2}=req.body||{};
+  if(!fighter1||!fighter2||!numericOdds1||!numericOdds2)return res.status(400).json({error:'missing fields'});
+  const {id,record}=findOrCreateExtCapture(sport,fighter1,fighter2);
+  const odds={timestamp:new Date().toISOString(),fighter1:{name:fighter1,numericOdds:+numericOdds1},fighter2:{name:fighter2,numericOdds:+numericOdds2},source:'extension'};
+  const L=record.lastOdds;
+  if(!L||L.fighter1.numericOdds!==+numericOdds1)record.oddsHistory.push(odds),record.lastOdds=odds;
+  record.lastPushTs=Date.now();
+  res.json({ok:true,id,dataPoints:record.oddsHistory.length});
+});
 
 // Monitor page — displays pollRate, activeFights, and RECORDING status in real-time
 app.get('/monitor', (req, res) => {
@@ -1923,6 +1364,7 @@ migrateToVolume();
 
 const recorderState = {
   activeFights:    loadPersistedState(), // reloads in-flight fights after crash/restart
+  extCaptures:     new Map(), // DOM-scraped odds from the extension — separate from activeFights, not persisted
   totalSaved:      0,
   lastPoll:        null,
   pollHistory:     [], // last 20 poll timestamps — used by /monitor to show real poll rate
@@ -2049,16 +1491,6 @@ async function recPollSport(sportKey, meta, watchedGame) {
           `🔴 BET BOT: Recording ${fight.home_team} vs ${fight.away_team} [${meta.label}]`,
           `Live game detected.\n\n${fight.home_team} vs ${fight.away_team}\n${meta.label} · Started: ${new Date().toLocaleString()}\n\nhttps://ufc-dashboard-production-e03d.up.railway.app`
         );
-
-        // Auto-bet check — fires when opening odds profile matches config
-        const abResult = checkAutoBet(id, fight.home_team, fight.away_team, odds, fight.commence_time);
-        if (abResult.fired) {
-          console.log(`[auto-bet] Queued cmd ${abResult.cmd.id} — $${autoBetConfig.amount} on ${abResult.side} (${abResult.bracketLabel})`);
-          autoBetLogEvent({ type: 'fired', fightId: id, fighter1: fight.home_team, fighter2: fight.away_team, side: abResult.side, bracket: abResult.bracket });
-        } else if (abResult.reason !== 'disabled') {
-          console.log(`[auto-bet] Skipped ${id}: ${abResult.reason}`);
-          autoBetLogEvent({ type: 'skipped', fightId: id, fighter1: fight.home_team, fighter2: fight.away_team, reason: abResult.reason });
-        }
       }
 
       const record = recorderState.activeFights.get(id);
@@ -2265,655 +1697,6 @@ function pingHealthcheck() {
   if (!HEALTHCHECK_URL) return;
   https.get(HEALTHCHECK_URL, () => {}).on('error', e => console.error('[healthcheck] ping failed:', e.message));
 }
-
-// ── POST /api/chat — NL intent parser (Claude Haiku) ─────────────────────────
-// Parses natural language betting commands into structured JSON.
-// Used by the extension popup chat UI.
-//
-// Request:  { message: string, gameContext?: { sides: [...], odds: {...} } }
-// Response: { intent, side, amount, trigger, confidence, raw, error? }
-
-const CHAT_SYSTEM = (gameContext) => `You are a sports betting assistant. Parse the user's message into structured JSON.
-
-GAME CONTEXT: ${gameContext ? JSON.stringify(gameContext) : 'No active game selected'}
-
-Respond with ONLY a JSON object — no explanation, no markdown:
-{
-  "intent": "place_first_bet" | "set_hedge_trigger" | "cancel" | "query" | "unknown",
-  "side": "<team/player name as shown on DraftKings, or null>",
-  "amount": <dollars as number, or null>,
-  "trigger": { "type": "crossover" | "odds_target" | null, "targetOdds": <american odds or null> },
-  "confidence": <0.0–1.0>
-}
-
-EXAMPLES:
-"bet $10 on Canada, auto-hedge at crossover"
-→ {"intent":"place_first_bet","side":"Canada","amount":10,"trigger":{"type":"crossover","targetOdds":null},"confidence":0.97}
-
-"put $50 on the favorite and hedge automatically"
-→ {"intent":"place_first_bet","side":null,"amount":50,"trigger":{"type":"crossover","targetOdds":null},"confidence":0.85}
-
-"bet 25 on Hamad and hedge when Qatar hits +200"
-→ {"intent":"place_first_bet","side":"Hamad Medjedovic","amount":25,"trigger":{"type":"odds_target","targetOdds":200},"confidence":0.95}
-
-"cancel" or "stop"
-→ {"intent":"cancel","side":null,"amount":null,"trigger":{"type":null,"targetOdds":null},"confidence":0.99}
-
-"what's the line?" or "who's favored?"
-→ {"intent":"query","side":null,"amount":null,"trigger":{"type":null,"targetOdds":null},"confidence":0.92}
-
-RULES:
-- Amounts: "$1.50" → 1.50, "a penny" → 0.01, "50 cents" → 0.50, "1k" → 1000
-- crossover = when underdog implied probability ≥ favorite implied probability
-- If user says "favorite" or "dog/underdog" and gameContext has sides+odds, infer the side name
-- side must match the name as it appears on DraftKings exactly if possible`;
-
-function parseChatResponse(raw) {
-  const jsonMatch = raw.match(/\{[\s\S]*\}/);
-  const src = jsonMatch ? jsonMatch[0] : raw;
-  const parsed = JSON.parse(src);
-  // Normalise fields
-  return {
-    intent:     parsed.intent     || 'unknown',
-    side:       parsed.side       || null,
-    amount:     typeof parsed.amount === 'number' ? parsed.amount : null,
-    trigger:    parsed.trigger    || { type: null, targetOdds: null },
-    confidence: typeof parsed.confidence === 'number' ? Math.min(1, Math.max(0, parsed.confidence)) : 0,
-  };
-}
-
-app.post('/api/chat', async (req, res) => {
-  const { message, gameContext } = req.body || {};
-  if (!message || typeof message !== 'string') {
-    return res.status(400).json({ error: 'message (string) required' });
-  }
-
-  try {
-    const response = await anthropic.messages.create({
-      model: 'claude-haiku-4-5-20251001',
-      max_tokens: 256,
-      system: CHAT_SYSTEM(gameContext || null),
-      messages: [{ role: 'user', content: message.slice(0, 500) }]
-    });
-
-    const raw = response.content[0]?.text?.trim() || '';
-    let parsed;
-    try {
-      parsed = parseChatResponse(raw);
-    } catch {
-      return res.json({ intent: 'unknown', side: null, amount: null, trigger: { type: null, targetOdds: null }, confidence: 0, raw, error: 'parse_failed' });
-    }
-
-    res.json({ ...parsed, raw });
-  } catch (e) {
-    console.error('[api/chat]', e.message);
-    res.status(500).json({ error: e.message });
-  }
-});
-
-// ── POST /api/resolve-bet-target — AI name matching when DOM search fails ─────
-// Called by the extension when Strategy A/B/C all fail to find the bet button.
-// Sends the visible page options to Haiku; returns the best match + confidence.
-// Only fires on failure — zero overhead on the happy path.
-//
-// Request:  { side: string, nearbyLabels: string[], allButtonTexts: string[] }
-// Response: { ok: true,  resolvedSide: string, confidence: number }
-//         | { ok: false, ambiguous: true, options: string[], reason: string }
-//         | { ok: false, error: string }
-
-const RESOLVE_SYSTEM = `You are a DraftKings sportsbook bet-target resolver. The extension tried to find a bet button for a team/player name and failed. Given the visible page options, identify the correct match.
-
-Respond with ONLY valid JSON — no markdown, no explanation:
-{
-  "match": "<exact string from visibleOptions, or null if no confident match>",
-  "confidence": <0.0–1.0>,
-  "reason": "<one short sentence>"
-}
-
-RULES:
-- match must be the exact string from visibleOptions as provided, or null
-- confidence ≥ 0.85 = safe to auto-retry; below that = surface error to user
-- If two or more options are plausible, set confidence < 0.60 and match = null
-- Common resolutions: US→USA, UK→England, Korea→South Korea, Iran→IR Iran
-- Odds values like "-165" or "+330" are NEVER a valid match
-- Navigation text (More, Home, Live, SGP) is NEVER a valid match`;
-
-app.post('/api/resolve-bet-target', async (req, res) => {
-  const { side, nearbyLabels = [], allButtonTexts = [] } = req.body || {};
-  if (!side) return res.status(400).json({ ok: false, error: 'side required' });
-
-  // Deduplicate and clean option candidates; filter out obvious non-names
-  const candidates = [...new Set([...nearbyLabels, ...allButtonTexts])]
-    .filter(t =>
-      t && t.length >= 2 && t.length <= 50 &&
-      !/^[+-]\d+$/.test(t) &&        // not odds value
-      !/^\$[\d,.]+/.test(t) &&        // not money
-      !/^\d+(\.\d+)?%?$/.test(t) &&  // not pure number
-      !['More', 'Home', 'Live', 'SGP', 'Opt In', 'Today', 'Tomorrow', 'Show DK Social',
-        'MONEYLINE', 'TIE NO BET', 'TOTAL GOALS', 'SPREAD', 'FUTURES', 'Matches',
-        'Players', 'Groups', 'Countries', 'Quick Hits', 'Match Props'].includes(t)
-    )
-    .slice(0, 80);
-
-  if (candidates.length === 0) {
-    return res.json({ ok: false, error: 'No candidates extracted from page — make sure the game is visible' });
-  }
-
-  try {
-    const response = await anthropic.messages.create({
-      model: 'claude-haiku-4-5-20251001',
-      max_tokens: 120,
-      system: RESOLVE_SYSTEM,
-      messages: [{
-        role: 'user',
-        content: `User wants to bet on: "${side}"
-
-Visible options on the DraftKings page:
-${candidates.map((o, i) => `${i + 1}. ${o}`).join('\n')}
-
-Which option best matches "${side}"?`
-      }]
-    });
-
-    const raw = response.content[0]?.text?.trim() || '';
-    let parsed;
-    try {
-      const jsonMatch = raw.match(/\{[\s\S]*\}/);
-      parsed = JSON.parse(jsonMatch ? jsonMatch[0] : raw);
-    } catch {
-      return res.json({ ok: false, error: `Haiku parse failed: ${raw.slice(0, 100)}` });
-    }
-
-    const { match, confidence = 0, reason = '' } = parsed;
-
-    // Safety: match must be in the candidate list
-    if (match && !candidates.includes(match)) {
-      // Try case-insensitive fallback
-      const caseMatch = candidates.find(c => c.toLowerCase() === match.toLowerCase());
-      if (!caseMatch) {
-        return res.json({ ok: false, error: `AI returned "${match}" which is not in the visible options` });
-      }
-      return res.json({ ok: true, resolvedSide: caseMatch, confidence, reason });
-    }
-
-    if (!match || confidence < 0.85) {
-      // Ambiguous or low-confidence — surface best candidates to user
-      const topOptions = candidates.slice(0, 10);
-      return res.json({ ok: false, ambiguous: true, options: topOptions, confidence, reason });
-    }
-
-    console.log(`[resolve-bet-target] "${side}" → "${match}" (${Math.round(confidence * 100)}%): ${reason}`);
-    return res.json({ ok: true, resolvedSide: match, confidence, reason });
-  } catch (e) {
-    console.error('[resolve-bet-target]', e.message);
-    return res.status(500).json({ ok: false, error: e.message });
-  }
-});
-
-// ── Watch trigger CRUD ────────────────────────────────────────────────────────
-
-app.get('/api/watch-triggers', (req, res) => {
-  const now = Date.now();
-  watchTriggers = watchTriggers.filter(t => t.expiresAt > now);
-  res.json({ triggers: watchTriggers });
-});
-
-app.post('/api/watch-triggers', requireBotToken, (req, res) => {
-  const { side, amount, condition, description, userId } = req.body || {};
-  if (!side || !amount || !condition) return res.status(400).json({ ok: false, error: 'side, amount, condition required' });
-  const trigger = {
-    id: Date.now().toString(36) + Math.random().toString(36).slice(2, 6),
-    userId: userId || 'default',
-    side, amount, condition,
-    description: description || `Bet $${amount} on ${side}`,
-    createdAt: Date.now(),
-    expiresAt: Date.now() + 4 * 60 * 60 * 1000,
-  };
-  watchTriggers.push(trigger);
-  console.log(`[watch-trigger] Created: ${trigger.description} [${trigger.id}]`);
-  res.json({ ok: true, trigger });
-});
-
-app.delete('/api/watch-triggers/:id', requireBotToken, (req, res) => {
-  const before = watchTriggers.length;
-  watchTriggers = watchTriggers.filter(t => t.id !== req.params.id);
-  console.log(`[watch-trigger] Deleted ${req.params.id} (removed=${before - watchTriggers.length})`);
-  res.json({ ok: true, removed: before - watchTriggers.length });
-});
-
-// ── Auto-bet API ──────────────────────────────────────────────────────────────
-
-app.get('/api/auto-bet/config', (req, res) => {
-  res.json({
-    config: autoBetConfig,
-    sessionCount: autoBetSessionCount,
-    firedFights: [...autoBetFiredFights].slice(-20),
-    recentLog: autoBetLog.slice(0, 10),
-  });
-});
-
-app.post('/api/auto-bet/config', requireBotToken, (req, res) => {
-  const body = req.body || {};
-  const bools   = ['enabled', 'requireExtension', 'autoHedge'];
-  const numbers = ['amount', 'maxPerSession', 'maxFightAgeSecs', 'minOddsGapPct'];
-  for (const k of bools)   if (typeof body[k] === 'boolean') autoBetConfig[k] = body[k];
-  for (const k of numbers) if (typeof body[k] === 'number' && body[k] >= 0) autoBetConfig[k] = body[k];
-  if (Array.isArray(body.brackets)) {
-    const valid = ['even', 'slight', 'heavy', 'huge'];
-    autoBetConfig.brackets = body.brackets.filter(b => valid.includes(b));
-  }
-  if (['dog', 'fav'].includes(body.side)) autoBetConfig.side = body.side;
-  saveAutoBetConfig();
-  console.log('[auto-bet] Config updated:', JSON.stringify(autoBetConfig));
-  res.json({ ok: true, config: autoBetConfig });
-});
-
-app.post('/api/auto-bet/reset-session', requireBotToken, (req, res) => {
-  autoBetSessionCount = 0;
-  autoBetFiredFights.clear();
-  saveFiredFights();
-  saveSessionCount();
-  autoBetLog.length = 0;
-  console.log('[auto-bet] Session reset');
-  res.json({ ok: true });
-});
-
-// POST /api/auto-bet/test — dry-run checkAutoBet with custom fight data
-// Simulates a new fight detection without needing a real live game.
-// Pass dryRun=true (default) to see what would happen without actually queuing a command.
-app.post('/api/auto-bet/test', requireBotToken, (req, res) => {
-  const {
-    fighter1    = 'Test Dry Fighter A',
-    fighter2    = 'Test Dry Fighter B',
-    f1Odds      = -150,
-    f2Odds      = 130,
-    commenceTime = new Date(Date.now() - 30 * 1000).toISOString(), // 30s ago
-    dryRun      = true,
-  } = req.body || {};
-
-  const fakeOdds = {
-    fighter1: { name: fighter1, numericOdds: f1Odds },
-    fighter2: { name: fighter2, numericOdds: f2Odds },
-  };
-  const fakeId = `dryrun_${Date.now()}`;
-
-  // Temporarily disable test_fight filter for this endpoint
-  const origF1 = fighter1, origF2 = fighter2;
-  // Use non-"Test " names so guard doesn't block (endpoint is explicitly for testing)
-  const safeF1 = fighter1.replace(/^test /i, 'DryRun ');
-  const safeF2 = fighter2.replace(/^test /i, 'DryRun ');
-
-  if (dryRun) {
-    // Evaluate all guards without mutating state — report what would happen
-    const cfg = autoBetConfig;
-    const report = [];
-
-    report.push({ guard: 'enabled',          pass: cfg.enabled,            value: cfg.enabled });
-    report.push({ guard: 'test_fight',        pass: true,                   value: 'bypassed for /test endpoint' });
-    report.push({ guard: 'already_fired',     pass: !autoBetFiredFights.has(fakeId), value: `firedFights.size=${autoBetFiredFights.size}` });
-    report.push({ guard: 'rate_limit',        pass: autoBetSessionCount < cfg.maxPerSession, value: `${autoBetSessionCount}/${cfg.maxPerSession}` });
-
-    const liveForSecs = (Date.now() - new Date(commenceTime).getTime()) / 1000;
-    report.push({ guard: 'fight_too_old',     pass: liveForSecs <= cfg.maxFightAgeSecs, value: `${Math.round(liveForSecs)}s old, limit=${cfg.maxFightAgeSecs}s` });
-
-    const now = Date.now();
-    const hasExt = Object.values(dkHeartbeat.users || {}).some(ts => now - ts < 300000);
-    report.push({ guard: 'no_extension',      pass: !cfg.requireExtension || hasExt, value: hasExt ? 'connected' : 'not connected' });
-
-    const oddsOk = typeof f1Odds === 'number' && typeof f2Odds === 'number' && !isNaN(f1Odds) && !isNaN(f2Odds);
-    report.push({ guard: 'invalid_odds',      pass: oddsOk, value: `${f1Odds} / ${f2Odds}` });
-
-    const d1 = toDecimal(f1Odds), d2 = toDecimal(f2Odds);
-    const gapPct = Math.abs(1/d1 - 1/d2) * 100;
-    report.push({ guard: 'odds_too_close',    pass: gapPct >= cfg.minOddsGapPct, value: `gap=${gapPct.toFixed(1)}%, min=${cfg.minOddsGapPct}%` });
-
-    const bracket = classifyOddsBracket(f1Odds, f2Odds);
-    report.push({ guard: 'bracket_mismatch',  pass: cfg.brackets.includes(bracket), value: `bracket=${bracket}, targets=${cfg.brackets.join(',')}` });
-
-    const favF = d1 <= d2 ? safeF1 : safeF2;
-    const dogF = d1 <= d2 ? safeF2 : safeF1;
-    const side = cfg.side === 'dog' ? dogF : favF;
-    const openBets = getAllBets(true);
-    const alreadyCovered = openBets.some(b => b.selection?.toLowerCase().includes(side.toLowerCase().split(' ')[0]));
-    report.push({ guard: 'existing_coverage', pass: !alreadyCovered, value: alreadyCovered ? `already bet on ${side}` : 'clear' });
-
-    const allPass = report.every(g => g.pass);
-    return res.json({
-      dryRun: true,
-      wouldFire: allPass,
-      side: allPass ? side : null,
-      bracket,
-      bracketLabel: { even:'near-even', slight:'slight fav', heavy:'heavy fav', huge:'dominant' }[bracket],
-      guards: report,
-      config: cfg,
-    });
-  }
-
-  // Live run — actually fire (use safe names to bypass test_fight guard)
-  const result = checkAutoBet(fakeId, safeF1, safeF2, fakeOdds, commenceTime);
-  res.json({ dryRun: false, fakeId, result });
-});
-
-// ── Unified assistant endpoint ─────────────────────────────────────────────────
-// Routes all dashboard chat through a single Haiku classifier, then to the right
-// handler: place_bet → command queue, watch_trigger → trigger store,
-// cancel → clear both, status → context summary, research → Sonnet pipeline,
-// clarify → surface question.
-
-const ASSISTANT_SYSTEM = (ctx) => `You are an intelligent sports betting assistant embedded in a live DraftKings betting app. Parse the user's message into structured JSON.
-
-CURRENT CONTEXT:
-${JSON.stringify(ctx, null, 1)}
-
-Respond with ONLY a JSON object — no explanation, no markdown:
-{
-  "intent": "place_bet" | "watch_trigger" | "cancel" | "status" | "research" | "clarify",
-  "side": "<team/player name to bet on, or null>",
-  "amount": <dollars as number or null>,
-  "trigger": {
-    "type": "crossover" | "positive" | "negative" | "odds_threshold" | "score_tie" | null,
-    "targetOdds": <american odds number or null>,
-    "team1": "<first team name for score_tie, else null>",
-    "team2": "<second team name for score_tie, else null>",
-    "sport": "<sport name for score_tie e.g. 'soccer', else null>"
-  },
-  "confidence": <0.0–1.0>,
-  "clarifyQuestion": "<question to ask user if intent=clarify, else null>"
-}
-
-INTENT RULES:
-- place_bet: user wants to bet RIGHT NOW — side + amount, no waiting condition
-- watch_trigger: user wants to bet WHEN something happens ("as soon as", "when odds go", "if they hit", "wait until", "when score is tied", "if they equalize", "when the game is level")
-- cancel: stop strategy, cancel watching, stop auto-hedge
-- status: asking what's currently happening, current odds, open bets — informational
-- research: historical data, fight analysis, crossover stats, strategy questions — needs deep research
-- clarify: ONLY when truly ambiguous (missing side or amount) — do NOT clarify if intent is clear
-
-TRIGGER CONDITION TYPES (use for watch_trigger):
-- "positive": fire when side's american odds > 0 ("goes plus money", "goes into plus territory")
-- "negative": fire when side's american odds < 0 ("becomes favorite")
-- "odds_threshold": fire when side's odds reach/exceed targetOdds (e.g., ">= +150")
-- "crossover": fire at crossover (implied prob swap between two sides)
-- "score_tie": fire when the live game score becomes tied/equal
-  WHEN TO USE: "if game is tied", "when they tie it", "if score is level", "when [team] equalizes", "if it goes to a tie", "monitor the score, if [team] ties"
-  → set trigger.team1 and trigger.team2 to the teams playing (extract from user message or context)
-  → set trigger.sport to the sport (usually "soccer" for international team names; "nfl"/"nba"/"nhl" if clear)
-  → side = the team the user wants to BET ON when the tie happens
-
-AMOUNT PARSING: "$1.50" → 1.50, "a penny" → 0.01, "50 cents" → 0.50, "1k" → 1000
-
-CONTEXT USAGE:
-- "another bet on X" / "also bet X" → use same amount as last bet in recentChat
-- "the favorite/underdog" and context has odds → resolve the name
-- For watch_trigger: if amount is missing, set intent=clarify and ask for it
-- For score_tie: DO NOT clarify just because you're not sure about monitoring — set intent=watch_trigger and fire the trigger. The system handles real-time score monitoring automatically.`;
-
-app.post('/api/assistant', requireBotToken, async (req, res) => {
-  const { message, userId = 'default', currentOdds } = req.body || {};
-  if (!message) return res.status(400).json({ error: 'message required' });
-
-  const openBets = getAllBets(true);
-  const activeTriggers = watchTriggers.filter(t => t.expiresAt > Date.now());
-  const activeCmds = commandQueue.filter(c =>
-    c.status === 'pending' || c.status === 'picked_up' ||
-    (c.status === 'done' && c.result?.bothPlaced === false)
-  );
-  const history = getChatHistory(userId);
-
-  const ctx = {
-    openBets: openBets.slice(0, 5).map(b => ({ selection: b.selection, odds: b.odds, stake: b.stake })),
-    activeStrategy: activeCmds.length > 0 ? { side: activeCmds[0].side, amount: activeCmds[0].amount, state: activeCmds[0].strategyState || activeCmds[0].status } : null,
-    watchTriggers: activeTriggers.slice(0, 5).map(t => ({ id: t.id, description: t.description })),
-    currentOdds: currentOdds || null,
-    recentChat: history.slice(-4),
-  };
-
-  addChatTurn(userId, 'user', message);
-
-  try {
-    const classifyR = await anthropic.messages.create({
-      model: 'claude-haiku-4-5-20251001',
-      max_tokens: 300,
-      system: ASSISTANT_SYSTEM(ctx),
-      messages: [{ role: 'user', content: message.slice(0, 600) }],
-    });
-
-    let parsed;
-    try {
-      const raw = classifyR.content[0]?.text?.trim() || '';
-      const jsonMatch = raw.match(/\{[\s\S]*\}/);
-      parsed = JSON.parse(jsonMatch ? jsonMatch[0] : raw);
-    } catch {
-      parsed = { intent: 'research', confidence: 0.5 };
-    }
-
-    const intent = {
-      intent:          parsed.intent || 'research',
-      side:            parsed.side   || null,
-      amount:          typeof parsed.amount === 'number' ? parsed.amount : null,
-      trigger:         parsed.trigger || { type: null, targetOdds: null },
-      confidence:      typeof parsed.confidence === 'number' ? parsed.confidence : 0.5,
-      clarifyQuestion: parsed.clarifyQuestion || null,
-    };
-
-    // ── place_bet ─────────────────────────────────────────────────────────
-    if (intent.intent === 'place_bet') {
-      if (!intent.side || !intent.amount) {
-        const q = !intent.side ? 'Which side do you want to bet on?' : `How much do you want to bet on ${intent.side}?`;
-        addChatTurn(userId, 'assistant', q);
-        return res.json({ type: 'clarify', answer: q });
-      }
-      // Guard: block if same side already queued (prevents double-exposure when auto-bet fired)
-      const sameSidePending = commandQueue.find(c =>
-        c.type === 'place_bet' &&
-        (c.side || '').toLowerCase() === (intent.side || '').toLowerCase() &&
-        (c.status === 'pending' || c.status === 'picked_up')
-      );
-      if (sameSidePending) {
-        const answer = `⚠️ **Already queued** — there's already a pending bet on **${intent.side}**. Wait for it to execute, or type "cancel" to clear it.`;
-        addChatTurn(userId, 'assistant', answer);
-        return res.json({ type: 'clarify', answer });
-      }
-      const cmd = makeCommand('place_bet', intent);
-      commandQueue.push(cmd); saveCommandQueue();
-      const triggerStr = intent.trigger?.type === 'crossover'
-        ? ' — **auto-hedging at crossover** 🔄'
-        : intent.trigger?.type === 'odds_target'
-        ? ` — auto-hedge when line hits **${intent.trigger.targetOdds}**` : '';
-      const answer = `**Bet queued** ✅\n\nPlacing **$${intent.amount}** on **${intent.side}**${triggerStr}.\n\nYour extension will execute this on DraftKings now.`;
-      addChatTurn(userId, 'assistant', answer);
-      return res.json({ type: 'bet', answer, betCommand: cmd, usage: { thisQuery: 0, sessionTotal: totalTokensUsed, sessionQueries: totalQueries, estimatedCostUSD: 0 } });
-    }
-
-    // ── watch_trigger ─────────────────────────────────────────────────────
-    if (intent.intent === 'watch_trigger') {
-      if (!intent.side || !intent.amount) {
-        const q = !intent.side ? 'Which side do you want to watch and bet on?' : `How much do you want to bet on ${intent.side} when the trigger fires?`;
-        addChatTurn(userId, 'assistant', q);
-        return res.json({ type: 'clarify', answer: q });
-      }
-      const condType = intent.trigger?.type || 'positive';
-      const isScoreTie = condType === 'score_tie';
-      const condition = isScoreTie
-        ? {
-            type: 'score_tie',
-            team1: intent.trigger?.team1 || intent.side || '',
-            team2: intent.trigger?.team2 || '',
-            sport: intent.trigger?.sport || 'soccer',
-          }
-        : { type: condType, targetOdds: intent.trigger?.targetOdds || null };
-
-      const descSuffix = isScoreTie
-        ? `score becomes tied (${condition.team1} vs ${condition.team2})`
-        : condType === 'positive' ? 'odds go plus money'
-        : condType === 'negative' ? 'odds go negative'
-        : `odds reach ${intent.trigger?.targetOdds}`;
-
-      const trigger = {
-        id: Date.now().toString(36) + Math.random().toString(36).slice(2, 6),
-        userId,
-        side: intent.side,
-        amount: intent.amount,
-        condition,
-        description: `Bet $${intent.amount} on ${intent.side} when ${descSuffix}`,
-        createdAt: Date.now(),
-        expiresAt: Date.now() + 4 * 60 * 60 * 1000,
-      };
-      watchTriggers.push(trigger);
-
-      let answer;
-      if (isScoreTie) {
-        const t1 = condition.team1, t2 = condition.team2;
-        answer = `**Score trigger set** ⚽\n\nMonitoring the live ${condition.sport} score via ESPN. The moment ${t1 && t2 ? `${t1} vs ${t2}` : 'the game'} becomes tied, I'll place **$${intent.amount}** on **${intent.side}** to win instantly.\n\nServer checks score every 5 seconds — no DK tab required.`;
-      } else {
-        const condDesc = condType === 'positive' ? 'go into plus money'
-          : condType === 'negative' ? 'become a favorite'
-          : `hit ${intent.trigger?.targetOdds}`;
-        answer = `**Watching** 👁️\n\nI'll bet **$${intent.amount}** on **${intent.side}** as soon as their odds ${condDesc}.\n\nThe extension checks every second — it fires the bet instantly when the condition is met.`;
-      }
-      addChatTurn(userId, 'assistant', answer);
-      return res.json({ type: 'watch_trigger', answer, trigger });
-    }
-
-    // ── cancel ────────────────────────────────────────────────────────────
-    if (intent.intent === 'cancel') {
-      let cancelledCmds = 0;
-      commandQueue.forEach(c => {
-        if (c.status === 'pending' || c.status === 'picked_up') { c.status = 'cancelled'; cancelledCmds++; }
-      });
-      saveCommandQueue();
-      const before = watchTriggers.length;
-      watchTriggers = watchTriggers.filter(t => t.userId !== userId && t.userId !== 'default');
-      const cancelledTriggers = before - watchTriggers.length;
-      const answer = `**Cancelled** 🛑\n\nStopped ${cancelledCmds} pending bet${cancelledCmds !== 1 ? 's' : ''} and ${cancelledTriggers} watch trigger${cancelledTriggers !== 1 ? 's' : ''}.`;
-      addChatTurn(userId, 'assistant', answer);
-      return res.json({ type: 'cancel', answer });
-    }
-
-    // ── status ────────────────────────────────────────────────────────────
-    if (intent.intent === 'status') {
-      const lines = [];
-      if (openBets.length) lines.push(`**Open bets:** ${openBets.map(b => `${b.selection} ${b.odds} ($${b.stake})`).join(', ')}`);
-      if (activeTriggers.length) lines.push(`**Watching:** ${activeTriggers.map(t => t.description).join('; ')}`);
-      if (activeCmds.length) lines.push(`**Active strategy:** ${activeCmds[0].side} $${activeCmds[0].amount} (${activeCmds[0].strategyState || activeCmds[0].status})`);
-      if (!lines.length) lines.push('No active bets, triggers, or strategies.');
-      const answer = lines.join('\n\n');
-      addChatTurn(userId, 'assistant', answer);
-      return res.json({ type: 'status', answer });
-    }
-
-    // ── clarify ───────────────────────────────────────────────────────────
-    if (intent.intent === 'clarify') {
-      const q = intent.clarifyQuestion || "Could you be more specific? What side and amount did you have in mind?";
-      addChatTurn(userId, 'assistant', q);
-      return res.json({ type: 'clarify', answer: q });
-    }
-
-    // ── research (default) — 2-pass Sonnet pipeline ───────────────────────
-    let liveOdds = [];
-    try {
-      const url = `${BASE_URL}/sports/mma_mixed_martial_arts/odds/?apiKey=${ODDS_API_KEY}&regions=us&markets=h2h&bookmakers=draftkings&oddsFormat=american`;
-      const { data, headers } = await fetchJson(url);
-      updateOddsCredits(headers);
-      liveOdds = (Array.isArray(data) ? data : []).filter(f => f.bookmakers?.length > 0).map(f => {
-        const outcomes = f.bookmakers[0].markets[0]?.outcomes || [];
-        return { fight: `${f.home_team} vs ${f.away_team}`, date: f.commence_time.slice(0, 10), odds: outcomes.reduce((acc, o) => { acc[o.name] = o.price; return acc; }, {}) };
-      });
-    } catch {}
-
-    const historicalSummaryJson = getCachedSummary();
-    totalQueries++;
-    const buildResearchMsgs = (extraData) => [{
-      role: 'user',
-      content: `HISTORICAL FIGHT DATA (local, Dec 2025–May 2026):\n${historicalSummaryJson}\n\nCURRENT DRAFTKINGS ODDS:\n${JSON.stringify(liveOdds, null, 1)}\n${extraData ? `\nADDITIONAL HISTORICAL API DATA:\n${JSON.stringify(extraData, null, 1)}` : ''}\n\nQuestion: ${message}`,
-    }];
-
-    const pass1 = await anthropic.messages.create({ model: 'claude-sonnet-4-6', max_tokens: 1500, system: systemPrompt, messages: buildResearchMsgs(null) });
-    const pass1Text = pass1.content[0].text;
-    let usedTokens = pass1.usage.input_tokens + pass1.usage.output_tokens;
-    let finalAnswer = pass1Text;
-
-    const lookupMatch = pass1Text.match(/LOOKUP_NEEDED:\s*(.+)/i);
-    if (lookupMatch) {
-      const dates = lookupMatch[1].trim().split(/\s+/).filter(p => /^\d{4}-\d{2}-\d{2}$/.test(p)).slice(0, 3);
-      const extraData = [];
-      for (const d of dates) { try { extraData.push(...await fetchHistoricalOdds(d)); } catch {} }
-      const pass2 = await anthropic.messages.create({ model: 'claude-sonnet-4-6', max_tokens: 1500, system: systemPrompt, messages: buildResearchMsgs(extraData.length > 0 ? extraData : null) });
-      finalAnswer = pass2.content[0].text;
-      usedTokens += pass2.usage.input_tokens + pass2.usage.output_tokens;
-    }
-
-    totalTokensUsed += usedTokens;
-    if (totalTokensUsed > TOKEN_WARN) console.warn(`WARNING: Anthropic token usage (${totalTokensUsed}) exceeded threshold (${TOKEN_WARN})`);
-    addChatTurn(userId, 'assistant', finalAnswer.slice(0, 500));
-    return res.json({
-      type: 'research',
-      answer: finalAnswer,
-      usage: { thisQuery: usedTokens, sessionTotal: totalTokensUsed, sessionQueries: totalQueries, estimatedCostUSD: +(totalTokensUsed / 1_000_000 * 3).toFixed(3) },
-    });
-
-  } catch (e) {
-    console.error('[api/assistant]', e.message);
-    res.status(500).json({ error: e.message });
-  }
-});
-
-// ── Command queue endpoints ───────────────────────────────────────────────────
-
-// Extension polls this every 5s to pick up dashboard bet commands
-app.get('/api/pending-commands', (req, res) => {
-  const now = Date.now();
-  // Purge expired commands
-  commandQueue = commandQueue.filter(c => c.status !== 'pending' || c.expiresAt > now);
-  // Recycle stuck picked_up commands: if extension fetched the command but CORS blocked
-  // the response (or SW died mid-execution), the command stays picked_up forever.
-  // Reset to pending after 30s so the next poll retries it.
-  commandQueue.forEach(c => {
-    if (c.status === 'picked_up' && c.pickedUpAt && (now - c.pickedUpAt) > 30000) {
-      c.status = 'pending';
-      delete c.pickedUpAt;
-    }
-  });
-  const pending = commandQueue.find(c => c.status === 'pending');
-  if (pending) {
-    pending.status    = 'picked_up';
-    pending.pickedUpAt = now;
-    saveCommandQueue();
-  }
-  res.json({ command: pending || null });
-});
-
-// Extension posts bet result back so dashboard can show confirmation
-app.post('/api/command-result', (req, res) => {
-  const { commandId, result } = req.body || {};
-  const cmd = commandQueue.find(c => c.id === commandId);
-  if (cmd) {
-    cmd.status      = result?.ok ? 'done' : 'failed';
-    cmd.result      = result;
-    cmd.completedAt = Date.now();
-    saveCommandQueue();
-  }
-  res.json({ ok: true });
-});
-
-// Dashboard polls this to get live status of a queued command
-app.get('/api/command-status/:id', (req, res) => {
-  const cmd = commandQueue.find(c => c.id === req.params.id);
-  res.json(cmd || { status: 'not_found' });
-});
-
-// Extension posts strategy state-machine updates so dashboard shows live progress
-app.post('/api/strategy-update', (req, res) => {
-  const { commandId, state, message } = req.body || {};
-  const cmd = commandQueue.find(c => c.id === commandId);
-  if (cmd) {
-    cmd.strategyState   = state;
-    cmd.strategyMessage = message;
-    cmd.strategyHistory.push({ state, message, ts: Date.now() });
-    saveCommandQueue();
-  }
-  res.json({ ok: true });
-});
 
 app.listen(PORT, () => {
   console.log(`Bet Bot running at http://localhost:${PORT}`);

@@ -1,5 +1,120 @@
 # UFC Dashboard — Project Rules
 
+## ⭐ THE FEATURES ISH ACTUALLY USES — these always have to work (2026-08-25)
+
+Ish's own priority list. Everything else in this doc is secondary to keeping these correct:
+
+1. **Tracking and logging all live odds** — the core recorder (see "THE CORE PURPOSE OF THIS PROJECT" below). This is the top priority.
+2. **DK bet tracking/sync** — the extension pulls Ish's real open bets off DraftKings (`/api/dk-sync` → `dkBetsByUser` → `/api/dk-bets`). He relies on this being accurate.
+3. **Hedge math** — Ish hedges a lot. The odds-crossover live detection (`pollLiveCrossovers`, `/api/live-crossovers`, the `tracker-status` "HEDGE MOMENT / HEDGE NOW" banner) and the hedge stake/profit math are load-bearing. Do not confuse this with the removed AI auto-hedge chat agent below — this is the manual hedge-math display Ish actually watches and uses.
+4. **Bet counting + P&L** — `/api/bet-coverage`, the position tracker, total-return display. Ish said this "is a very good counter" — keep it working as-is, don't rearchitect it without reason.
+
+### Removed 2026-08-25: the "brain" recommendation panel (verdict / crossover-probability / value-edge)
+
+`#brain-panel` in `public/index.html` (verdict BET/LEAN/PASS, book-vs-history odds comparison + "value/edge" tag, dog ROI, crossover-probability sub-panel, reasoning trail, sequence hold/reversal — backed by `reasoning.js` and `GET /api/edge`) was a pre-fight prediction/advice feature. **Ish doesn't use it and it wasn't working** — disabled by making `runBrainAnalysis()` a no-op early-return in `public/index.html`, so the panel (which defaults to `display:none`) is never shown and `/api/edge` is never called. The backend code (`reasoning.js`, `/api/edge`) was left in place (dead but harmless) rather than deleted, in case it's revisited later — do not re-enable it without Ish asking for it back.
+
+### The AI auto-hedge NL chat agent spec — was NEVER actually built into the UI
+
+The "AI Betting Agent — Autonomous Hedge System Spec" section further down this doc (chat like *"Bet Canada $25, hedge Qatar if line flips"*, triple-verify, watch-triggers, auto-bet) reads like a shipped feature but isn't one. As of 2026-08-25: `public/index.html` has no chat box, no FAB button, no auto-bet panel — none of it exists client-side. `node test.js --local` confirms this: every test for `/api/assistant`, `/api/watch-triggers`, `/api/auto-bet/*`, `executePlaceBet`, `CROSSOVER_DETECTED`, popup trigger UI, etc. (~100+ tests across sections I/J/K/L/N/O/P/R/S/T/V/W/X/Y/Z/AA) fails or 404s. Treat that whole spec section as a design doc for work that was never finished, not as documentation of working functionality — don't assume any of it runs, and don't burn time debugging "why isn't the AI hedge chat working" — it was never wired up. Ish did not ask for this to be built (2026-08-25) — leave it as unimplemented unless he asks for it.
+
+### Bug fixed 2026-08-25: bet on a second (different) game silently erased the first bet
+
+**Root cause:** DK's WebSocket sends two distinct message shapes to `/api/dk-sync` — `result.initial.bets` is a FULL snapshot of all currently-open bets (safe to fully replace stored state with — this is how settled/fake bets correctly get cleared out). `result.update.bets` is an INCREMENTAL delta (e.g. just the bet that was just placed). `parseDKBets()` in `server.js` treated both identically and fully replaced `dkBetsByUser` on every sync — so placing a second bet (e.g. a different soccer game, or a UFC bet) that arrived as an `update` delta silently wiped out every other bet the user already had open. This is very likely also the cause of "a UFC bet didn't get counted."
+
+**Fix:** `parseDKBets()` now only does a full replace when `data.result.initial.bets` is present; an `update`-only payload is merged into the existing per-user bet map by `betId` instead. Regression test: `test.js` → "A bet placed on one game is not wiped out by an update.bets delta for a different game" (DK Sync section). Verified with `node test.js --local` — passes, plus every pre-existing dedup/resync test in that section still passes.
+
+---
+
+## ⚠️ PRIORITY #1: Recording enough live data points — known issue, in progress (2026-07-13)
+
+**Recording live fight odds is the single most important thing this project does.** Everything
+else (dashboard UI, position tracker, bet sync) is secondary. If the recorder isn't capturing
+enough of a fight's live odds movement, the project is failing at its core purpose.
+
+### What was observed
+
+Checking `/monitor` on 2026-07-13 showed several July 12 UFC fights with only 6–16 data points
+each (`nikitakrylov_vs_robertwhittaker`: 9 pts, `kinggreen_vs_terrancemckinney`: 6 pts,
+`corysandhagen_vs_mariobautista`: 14 pts) — far below the 200–1000+ expected for a full fight
+(see "What a good fight file looks like" below). This was flagged as a priority-one bug.
+
+### What was investigated and found
+
+1. **The main Odds-API recorder's poll-scheduling logic (`recPoll`/`recPollSport` in `server.js`)
+   looks correct** — once a UFC fight is detected live, the poll interval correctly drops to
+   `UFC_POLL_MS` (3000ms, not the 1s this doc previously — incorrectly — claimed elsewhere).
+   No bug found here. `recPollSport`'s try/catch means a failed Odds API call can't crash the
+   loop, and `recPoll` itself has no code path that throws, so it shouldn't silently die either.
+   **Still worth hardening**: there's no `process.on('unhandledRejection', ...)` anywhere in
+   `server.js` — if a future change introduces a throw inside `recPoll` (outside
+   `recPollSport`'s own try/catch), the `setTimeout(recPoll, delay)` line would never execute
+   and the recorder would go silently dead until the next Railway restart. Nothing currently
+   guards against that class of bug. Consider adding a global handler that logs and
+   re-schedules `recPoll` if this ever happens.
+2. **No deploy/push landed during the July 12 card window** (checked git log) — ruling out
+   deploy-triggered Railway restarts as the cause of that specific gap.
+3. **A real, confirmed bug WAS found and fixed**: the DK extension's supplemental odds-push
+   channel (`/api/dk-odds-push`, meant to add DOM-sourced granularity beyond the Odds API poll)
+   had been **completely broken since it was added**. `content.js`'s `scanOddsFromPage()`
+   produces odds under the field name `american`, but `dk-extension/background.js`'s
+   `ODDS_UPDATE` handler read `o1.numericOdds` / `o2.numericOdds` — a field that never existed.
+   Every push therefore sent `numericOdds1: undefined, numericOdds2: undefined`, which
+   `JSON.stringify` drops entirely, so the server's `/api/dk-odds-push` always rejected it with
+   `400 missing fields`. This exactly matches the test suite's own documented gap ("AC3/AC4 are
+   static checks... no test POSTs to `/api/dk-odds-push` and confirms a data point appears").
+   **Fixed 2026-07-13** — background.js now reads `.american`.
+4. **Most likely remaining explanation for sparse data**: the Odds API's live feed itself may
+   simply not reflect DK's true in-fight line movement with much granularity — this project has
+   already documented elsewhere that the Odds API's *historical* endpoint has no live in-play
+   data at all; it's plausible the *live* endpoint used by the recorder is similarly coarse.
+   This can't be confirmed without a side-by-side comparison, which is what the new ext-capture
+   feature below is for.
+
+### The fix: an independent extension-based capture, for comparison
+
+The DK extension already scans the live page's DOM every 1 second (`content.js`,
+`scanOddsFromPage`) — this reads odds directly off what Ish sees on screen, completely
+bypassing the Odds API. As of 2026-07-13 this is wired up as a **fully separate recording
+stream**, so the two sources can be diffed after a fight to see which one actually captures
+more of the real movement:
+
+- `findOrCreateExtCapture()` / `saveExtCapture()` in `server.js` maintain their own
+  `recorderState.extCaptures` map — entirely separate from `recorderState.activeFights` (the
+  Odds-API recorder's map). They are **never merged**.
+- Ext captures save to **`<fightId>_ext.json`** (same directory/naming as the normal file, just
+  suffixed) — e.g. `nikitakrylov_vs_robertwhittaker_2026-07-12.json` (Odds API) vs
+  `nikitakrylov_vs_robertwhittaker_2026-07-12_ext.json` (extension DOM capture). Never
+  overwrites the canonical file.
+- Not persisted to `recording_state.json` (unlike the main recorder) — an ext capture lost to a
+  mid-fight restart is an acceptable tradeoff for a comparison-only stream; don't wire this into
+  the crash-recovery path without reconsidering that tradeoff.
+- Saved after 5 minutes of no new push (`EXT_CAPTURE_IDLE_MS`), independent of whatever the
+  Odds-API recorder thinks the fight's live status is — the whole point is to not depend on
+  the same signal being investigated.
+- **Only fires while `content.js` detects a "LIVE" badge / round indicator on the page**
+  (`findLiveBadge()`) — MMA moneylines look identical pre-fight and live (no spread to tell
+  them apart), so without this gate we'd record Ish idly browsing a pre-fight page as if it
+  were a live recording. **This heuristic is unverified against a real live DK page** — check
+  the browser console for `[BetBot] live badge scan` (logged every 30s) next event. If it says
+  "not found" while a fight is clearly live, DK's badge markup has changed and `findLiveBadge()`
+  in `content.js` needs updating.
+- **Manual override backstop, added 2026-07-13**: since the badge heuristic is unverified, the
+  extension popup shows a "🥊 Fight Started — capture now" button. Clicking it sets
+  `manualLiveUntil` (30 min from click) in `chrome.storage.local`; `content.js` treats `live`
+  as true whenever `Date.now() < manualLiveUntil`, regardless of `findLiveBadge()`. Use this if
+  the console log says "not found" during a fight that's clearly live. The popup also now shows
+  "Watching: Fighter A vs Fighter B" with current odds and a LIVE/not-live badge, sourced from
+  `chrome.storage.local.lastSeenFight` (written by `background.js` on every `ODDS_UPDATE`,
+  regardless of live status, so Ish can see what the extension is looking at even pre-fight).
+
+**Next event: compare the two files.** After the next card, look for pairs of
+`<fightId>.json` / `<fightId>_ext.json` and compare `dataPoints` and the actual odds
+timestamps/values. If the ext file consistently has more/finer data, the Odds API is the
+bottleneck (consider making the extension the primary source). If they're similar, the sparse
+data really is just how infrequently DK moves the live moneyline.
+
+---
+
 ## ⚠️ THE CORE PURPOSE OF THIS PROJECT
 
 **This project records LIVE in-fight DraftKings odds every second during UFC fights.**
@@ -19,7 +134,7 @@ historical backfill. It is the live DraftKings line as it moves round by round.
 
 **The live endpoint:** `GET /v4/sports/mma_mixed_martial_arts/odds/?regions=us&markets=h2h&bookmakers=draftkings`
 - Returns all upcoming AND in-progress UFC fights with current DraftKings odds
-- Polled every 1 second during active fights, every 5 minutes when idle
+- Polled every 3 seconds during active fights (`UFC_POLL_MS`), every 5 minutes when idle
 - When a fight's `commence_time` is in the past and within 3 hours, it's treated as "live"
 - DraftKings keeps h2h odds live throughout the fight as the action unfolds
 
