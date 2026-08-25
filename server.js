@@ -351,6 +351,68 @@ app.get('/api/recordings', (req, res) => {
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
+// Compares the canonical Odds-API recording against the extension's independent DOM
+// capture for the same fight (see CLAUDE.md "PRIORITY #1" — this is the tool that lets
+// Ish/us actually answer "which source captures more of the real live odds movement"
+// instead of manually diffing <id>.json vs <id>_ext.json by hand after every card.
+app.get('/api/ext-capture-comparison', (req, res) => {
+  try {
+    function scan(dir, sportLabel) {
+      if (!fs.existsSync(dir)) return [];
+      return fs.readdirSync(dir, { withFileTypes: true })
+        .filter(e => e.isFile() && e.name.endsWith('.json'))
+        .map(e => ({ name: e.name, fullPath: path.join(dir, e.name), sport: sportLabel }));
+    }
+    let files = scan(HISTORICAL_DIR, 'UFC/MMA');
+    const subdirs = fs.readdirSync(HISTORICAL_DIR, { withFileTypes: true })
+      .filter(e => e.isDirectory() && e.name !== 'api_cache');
+    for (const d of subdirs) files = files.concat(scan(path.join(HISTORICAL_DIR, d.name), d.name));
+
+    // Group by base id (strip the _ext suffix so a pair collapses to one key)
+    const byBaseId = new Map();
+    for (const f of files) {
+      const isExt = f.name.endsWith('_ext.json');
+      const baseId = f.name.replace(/(_ext)?\.json$/, '');
+      if (!byBaseId.has(baseId)) byBaseId.set(baseId, { baseId, sport: f.sport, odds: null, ext: null });
+      const entry = byBaseId.get(baseId);
+      if (isExt) entry.ext = f.fullPath; else entry.odds = f.fullPath;
+    }
+
+    const readSummary = filePath => {
+      try {
+        const d = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+        const h = d.oddsHistory || [];
+        return {
+          dataPoints: d.dataPoints || h.length,
+          startTime: d.startTime || h[0]?.timestamp || null,
+          endTime: d.endTime || h[h.length - 1]?.timestamp || null,
+        };
+      } catch { return null; }
+    };
+
+    const comparisons = [];
+    for (const { baseId, sport, odds, ext } of byBaseId.values()) {
+      if (!odds || !ext) continue; // only interested in pairs — nothing to compare otherwise
+      const oddsApi = readSummary(odds);
+      const extCap = readSummary(ext);
+      if (!oddsApi || !extCap) continue;
+      comparisons.push({
+        id: baseId,
+        sport,
+        oddsApi: { dataPoints: oddsApi.dataPoints, startTime: oddsApi.startTime, endTime: oddsApi.endTime },
+        ext: { dataPoints: extCap.dataPoints, startTime: extCap.startTime, endTime: extCap.endTime },
+        richerSource: extCap.dataPoints > oddsApi.dataPoints ? 'ext'
+          : oddsApi.dataPoints > extCap.dataPoints ? 'oddsApi' : 'tie',
+        dataPointGapPct: oddsApi.dataPoints
+          ? Math.round(((extCap.dataPoints - oddsApi.dataPoints) / oddsApi.dataPoints) * 1000) / 10
+          : null,
+      });
+    }
+    comparisons.sort((a, b) => (b.oddsApi.startTime || '').localeCompare(a.oddsApi.startTime || ''));
+    res.json({ pairsFound: comparisons.length, comparisons });
+  } catch (e) { res.status(500).json({ error: e.message }); }
+});
+
 // Full odds history for a specific fight (for graphing)
 app.get('/api/fight-history/:fightId', (req, res) => {
   try {

@@ -675,6 +675,41 @@ async function runServerTests() {
     assert(h.count === 0, `a bet that vanished without an explicit terminal status must not be logged, got count=${h.count}`);
   });
 
+  // ── Ext-capture vs Odds-API comparison (see CLAUDE.md PRIORITY #1) ──────────
+  await check('/api/ext-capture-comparison pairs a fight file with its _ext twin and reports the richer source', async () => {
+    const baseId = 'test_ext_compare_fixture_2026-08-25';
+    const oddsFile = path.join(__dirname, 'historical_data', `${baseId}.json`);
+    const extFile  = path.join(__dirname, 'historical_data', `${baseId}_ext.json`);
+    const mkHistory = n => Array.from({ length: n }, (_, i) => ({
+      timestamp: new Date(Date.now() + i * 1000).toISOString(),
+      fighter1: { name: 'A', numericOdds: -150 }, fighter2: { name: 'B', numericOdds: 130 },
+    }));
+    try {
+      fs.writeFileSync(oddsFile, JSON.stringify({ startTime: '2026-08-25T00:00:00Z', dataPoints: 10, oddsHistory: mkHistory(10) }));
+      fs.writeFileSync(extFile,  JSON.stringify({ startTime: '2026-08-25T00:00:00Z', dataPoints: 25, oddsHistory: mkHistory(25) }));
+      const r = await get('/api/ext-capture-comparison');
+      const pair = r.comparisons.find(c => c.id === baseId);
+      assert(pair, 'expected the test fixture pair to appear in the comparison');
+      assert(pair.oddsApi.dataPoints === 10, `expected oddsApi dataPoints=10, got ${pair.oddsApi.dataPoints}`);
+      assert(pair.ext.dataPoints === 25, `expected ext dataPoints=25, got ${pair.ext.dataPoints}`);
+      assert(pair.richerSource === 'ext', `expected ext to be the richer source, got ${pair.richerSource}`);
+    } finally {
+      try { fs.unlinkSync(oddsFile); } catch {}
+      try { fs.unlinkSync(extFile); } catch {}
+    }
+  });
+
+  await check('/api/ext-capture-comparison skips files with no matching pair', async () => {
+    const soloFile = path.join(__dirname, 'historical_data', 'test_ext_compare_solo_2026-08-25.json');
+    try {
+      fs.writeFileSync(soloFile, JSON.stringify({ startTime: '2026-08-25T00:00:00Z', dataPoints: 5, oddsHistory: [] }));
+      const r = await get('/api/ext-capture-comparison');
+      assert(!r.comparisons.some(c => c.id === 'test_ext_compare_solo_2026-08-25'), 'a file with no _ext twin should not appear as a comparison pair');
+    } finally {
+      try { fs.unlinkSync(soloFile); } catch {}
+    }
+  });
+
   // lastBetSync updated on any dk-sync call, not just when bets are parsed
   await check('POST /api/dk-sync updates lastBetSync even when 0 bets parsed', async () => {
     const before = await get('/api/dk-status');
