@@ -1,0 +1,758 @@
+{
+  "fightId": "soccer__england_vs_ghana_2026-06-23",
+  "sport": "soccer_fifa_world_cup",
+  "fightTitle": "England vs Ghana",
+  "startTime": "2026-06-23T20:00:13.155Z",
+  "endTime": "2026-06-23T22:32:32.107Z",
+  "dataPoints": 68,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-06-23T20:00:13.155Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": -550
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1500
+      }
+    },
+    {
+      "timestamp": "2026-06-23T20:00:59.954Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": -550
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1400
+      }
+    },
+    {
+      "timestamp": "2026-06-23T20:01:52.118Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": -550
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1600
+      }
+    },
+    {
+      "timestamp": "2026-06-23T20:04:17.771Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": -500
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1600
+      }
+    },
+    {
+      "timestamp": "2026-06-23T20:09:14.600Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1600
+      }
+    },
+    {
+      "timestamp": "2026-06-23T20:14:03.258Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1400
+      }
+    },
+    {
+      "timestamp": "2026-06-23T20:14:55.253Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1600
+      }
+    },
+    {
+      "timestamp": "2026-06-23T20:18:07.804Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": -390
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1400
+      }
+    },
+    {
+      "timestamp": "2026-06-23T20:18:59.850Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1600
+      }
+    },
+    {
+      "timestamp": "2026-06-23T20:21:26.283Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": -400
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1600
+      }
+    },
+    {
+      "timestamp": "2026-06-23T20:22:13.934Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1800
+      }
+    },
+    {
+      "timestamp": "2026-06-23T20:24:40.554Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": -450
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 2000
+      }
+    },
+    {
+      "timestamp": "2026-06-23T20:29:32.970Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": -390
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 2000
+      }
+    },
+    {
+      "timestamp": "2026-06-23T20:31:58.763Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": -390
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 2200
+      }
+    },
+    {
+      "timestamp": "2026-06-23T20:32:46.737Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": -380
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 2200
+      }
+    },
+    {
+      "timestamp": "2026-06-23T20:36:01.281Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 2200
+      }
+    },
+    {
+      "timestamp": "2026-06-23T20:38:28.465Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": -320
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 2200
+      }
+    },
+    {
+      "timestamp": "2026-06-23T20:40:02.500Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": -310
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 2500
+      }
+    },
+    {
+      "timestamp": "2026-06-23T20:42:28.810Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": -295
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 2200
+      }
+    },
+    {
+      "timestamp": "2026-06-23T20:43:21.217Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": -280
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 2200
+      }
+    },
+    {
+      "timestamp": "2026-06-23T20:45:00.056Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": -245
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1600
+      }
+    },
+    {
+      "timestamp": "2026-06-23T20:46:33.673Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": -245
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1400
+      }
+    },
+    {
+      "timestamp": "2026-06-23T20:48:08.329Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1400
+      }
+    },
+    {
+      "timestamp": "2026-06-23T20:48:55.430Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": -220
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1400
+      }
+    },
+    {
+      "timestamp": "2026-06-23T20:51:21.370Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": -200
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1200
+      }
+    },
+    {
+      "timestamp": "2026-06-23T20:55:26.693Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": -200
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1100
+      }
+    },
+    {
+      "timestamp": "2026-06-23T21:00:18.269Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": -205
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1200
+      }
+    },
+    {
+      "timestamp": "2026-06-23T21:03:36.480Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": -210
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1300
+      }
+    },
+    {
+      "timestamp": "2026-06-23T21:09:21.285Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1300
+      }
+    },
+    {
+      "timestamp": "2026-06-23T21:10:08.173Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": -210
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1300
+      }
+    },
+    {
+      "timestamp": "2026-06-23T21:15:00.703Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": -190
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1300
+      }
+    },
+    {
+      "timestamp": "2026-06-23T21:16:39.525Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": -180
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1300
+      }
+    },
+    {
+      "timestamp": "2026-06-23T21:19:05.997Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": -170
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1300
+      }
+    },
+    {
+      "timestamp": "2026-06-23T21:19:53.800Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": -165
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1300
+      }
+    },
+    {
+      "timestamp": "2026-06-23T21:20:40.722Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1300
+      }
+    },
+    {
+      "timestamp": "2026-06-23T21:23:58.518Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": -140
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1300
+      }
+    },
+    {
+      "timestamp": "2026-06-23T21:25:32.046Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": -130
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1300
+      }
+    },
+    {
+      "timestamp": "2026-06-23T21:27:11.500Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": -130
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1400
+      }
+    },
+    {
+      "timestamp": "2026-06-23T21:28:04.037Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": -125
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1400
+      }
+    },
+    {
+      "timestamp": "2026-06-23T21:29:37.880Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": -115
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1400
+      }
+    },
+    {
+      "timestamp": "2026-06-23T21:30:30.103Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": -115
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1700
+      }
+    },
+    {
+      "timestamp": "2026-06-23T21:31:16.826Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": -115
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1900
+      }
+    },
+    {
+      "timestamp": "2026-06-23T21:32:55.715Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": -105
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 2000
+      }
+    },
+    {
+      "timestamp": "2026-06-23T21:34:29.782Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1800
+      }
+    },
+    {
+      "timestamp": "2026-06-23T21:37:48.028Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": 105
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1800
+      }
+    },
+    {
+      "timestamp": "2026-06-23T21:39:27.178Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": 110
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 2500
+      }
+    },
+    {
+      "timestamp": "2026-06-23T21:40:14.306Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": 105
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1900
+      }
+    },
+    {
+      "timestamp": "2026-06-23T21:41:53.216Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": 115
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1900
+      }
+    },
+    {
+      "timestamp": "2026-06-23T21:43:26.861Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": 120
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1900
+      }
+    },
+    {
+      "timestamp": "2026-06-23T21:44:18.689Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1800
+      }
+    },
+    {
+      "timestamp": "2026-06-23T21:45:15.879Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": 135
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1600
+      }
+    },
+    {
+      "timestamp": "2026-06-23T21:45:57.514Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1600
+      }
+    },
+    {
+      "timestamp": "2026-06-23T21:46:49.386Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": 150
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1400
+      }
+    },
+    {
+      "timestamp": "2026-06-23T21:47:36.274Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1400
+      }
+    },
+    {
+      "timestamp": "2026-06-23T21:48:23.297Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": 175
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1400
+      }
+    },
+    {
+      "timestamp": "2026-06-23T21:49:10.445Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": 190
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1400
+      }
+    },
+    {
+      "timestamp": "2026-06-23T21:50:02.625Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": 200
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1600
+      }
+    },
+    {
+      "timestamp": "2026-06-23T21:50:49.422Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": 225
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1600
+      }
+    },
+    {
+      "timestamp": "2026-06-23T21:52:28.423Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": 245
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1800
+      }
+    },
+    {
+      "timestamp": "2026-06-23T21:53:20.807Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": 275
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 1800
+      }
+    },
+    {
+      "timestamp": "2026-06-23T21:54:11.402Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": 360
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 2200
+      }
+    },
+    {
+      "timestamp": "2026-06-23T21:55:03.774Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": 400
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 2200
+      }
+    },
+    {
+      "timestamp": "2026-06-23T21:55:52.253Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": 450
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 2500
+      }
+    },
+    {
+      "timestamp": "2026-06-23T21:56:39.043Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 2200
+      }
+    },
+    {
+      "timestamp": "2026-06-23T21:57:31.390Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": 550
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 2200
+      }
+    },
+    {
+      "timestamp": "2026-06-23T21:58:18.665Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": 750
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 2800
+      }
+    },
+    {
+      "timestamp": "2026-06-23T21:59:11.528Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": 900
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 3000
+      }
+    },
+    {
+      "timestamp": "2026-06-23T21:59:58.915Z",
+      "fighter1": {
+        "name": "England",
+        "numericOdds": 1500
+      },
+      "fighter2": {
+        "name": "Ghana",
+        "numericOdds": 4500
+      }
+    }
+  ]
+}
