@@ -1157,6 +1157,14 @@ app.get('/monitor', (req, res) => {
     .file-json{font-size:0.68rem;color:#888;font-family:monospace;white-space:pre;overflow-x:auto;max-height:320px;overflow-y:auto;line-height:1.5}
     .file-search{background:#0a0a0a;border:1px solid #222;border-radius:4px;color:#ccc;font-size:0.75rem;padding:5px 8px;width:100%;margin-bottom:8px;outline:none}
     .file-search:focus{border-color:#444}
+    .compare-row{display:flex;justify-content:space-between;align-items:center;padding:6px 8px;border-radius:4px;font-size:0.75rem;border:1px solid transparent}
+    .compare-row:hover{background:#1a1a1a;border-color:#2a2a2a}
+    .compare-id{color:#ccc;font-family:monospace}
+    .compare-nums{color:#555}
+    .compare-badge{font-size:0.65rem;padding:2px 7px;border-radius:3px;font-weight:700;margin-left:8px}
+    .compare-badge.ext{background:#0d2200;color:#7ccd32}
+    .compare-badge.oddsApi{background:#1a1500;color:#e8b84b}
+    .compare-badge.tie{background:#141414;color:#666}
   </style>
 </head>
 <body>
@@ -1181,6 +1189,11 @@ app.get('/monitor', (req, res) => {
       </div>
       <pre class="file-json" id="fileDetailJson"></pre>
     </div>
+  </div>
+
+  <div class="file-browser">
+    <div class="file-browser-label">Ext-Capture vs Odds-API — data-point comparison (PRIORITY #1)</div>
+    <div class="file-list" id="compareList">Loading…</div>
   </div>
 
 <script>
@@ -1383,7 +1396,30 @@ async function selectFile(id) {
   }
 }
 
+async function loadExtCompare() {
+  const el = document.getElementById('compareList');
+  try {
+    const r = await (await fetch('/api/ext-capture-comparison')).json();
+    if (!r.comparisons || !r.comparisons.length) {
+      el.innerHTML = '<div style="color:#333;font-size:0.8rem">No fight has both an Odds-API recording and an extension capture yet — nothing to compare.</div>';
+      return;
+    }
+    el.innerHTML = r.comparisons.map(function(c) {
+      var badgeLabel = c.richerSource === 'ext' ? 'EXT RICHER' : c.richerSource === 'oddsApi' ? 'ODDS API RICHER' : 'TIE';
+      var gap = c.dataPointGapPct != null ? (c.dataPointGapPct > 0 ? '+' : '') + c.dataPointGapPct + '%' : '';
+      return '<div class="compare-row">' +
+        '<span class="compare-id">' + c.id + '</span>' +
+        '<span class="compare-nums">odds-api: ' + c.oddsApi.dataPoints + ' pts · ext: ' + c.ext.dataPoints + ' pts ' + gap +
+        '<span class="compare-badge ' + c.richerSource + '">' + badgeLabel + '</span></span>' +
+        '</div>';
+    }).join('');
+  } catch (e) {
+    el.innerHTML = '<div style="color:#ff6b6b;font-size:0.8rem">Error loading comparison: ' + e.message + '</div>';
+  }
+}
+
 loadFiles();
+loadExtCompare();
 </script>
 </body>
 </html>`);
