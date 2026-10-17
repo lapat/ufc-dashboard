@@ -529,6 +529,50 @@ function saveDKCaptures() {
   try { fs.writeFileSync(DK_CAPTURES_FILE, JSON.stringify(dkCaptures.slice(0, 200))); } catch (_) {}
 }
 
+// DK's bet-placement flow (wager/v1/getPurchases, placeBets) identifies each selection only by
+// id (e.g. "0ML86744453_1"). The outcome name lives in sportscontent payloads as
+// { id, label, marketId }. Learn id → label from every payload we see so purchase bets get names.
+const dkSelectionLabels = new Map();
+function learnSelectionLabels(node, depth = 0) {
+  if (!node || typeof node !== 'object' || depth > 12) return;
+  if (Array.isArray(node)) { for (const x of node) learnSelectionLabels(x, depth + 1); return; }
+  if (typeof node.id === 'string' && typeof node.label === 'string' && node.marketId) {
+    dkSelectionLabels.set(node.id, node.label);
+  }
+  for (const v of Object.values(node)) if (v && typeof v === 'object') learnSelectionLabels(v, depth + 1);
+}
+for (const c of dkCaptures) learnSelectionLabels(c.data);
+
+// getPurchases/placeBets shape: purchases[].bets[] with betId/status/stake/potentialReturns.
+// Flatten into the same per-bet shape the WS parser produces so these bets are stored
+// instead of silently dropped (they were: parseDKBets only knew the WS shapes).
+function flattenPurchases(purchases) {
+  const out = [];
+  for (const p of purchases) {
+    for (const b of p.bets || []) {
+      const sels = b.selectionsMapped?.length ? b.selectionsMapped : (p.selections || []);
+      out.push({
+        betId: b.betId,
+        status: b.status,
+        type: b.type,
+        stake: b.stake,
+        potentialReturns: b.potentialReturns,
+        displayOdds: b.displayOdds,
+        placementDate: p.creationDate,
+        selections: sels.map(s => {
+          const full = (p.selections || []).find(ps => ps.id === s.id) || s;
+          return {
+            selectionDisplayName: dkSelectionLabels.get(s.id) || '',
+            marketDisplayName: '',
+            displayOdds: full.displayOdds || '',
+          };
+        }),
+      });
+    }
+  }
+  return out;
+}
+
 app.post('/api/dk-sync', (req, res) => {
   const { url, data, ts, userId } = req.body;
   if (!url || !data) return res.status(400).json({ error: 'missing fields' });
@@ -536,6 +580,7 @@ app.post('/api/dk-sync', (req, res) => {
   dkCaptures.unshift({ url, data, ts, userId });
   if (dkCaptures.length > 200) dkCaptures.length = 200;
   saveDKCaptures();
+  learnSelectionLabels(data);
 
   const bets = parseDKBets(url, data, userId);
   dkHeartbeat.lastBetSync = Date.now(); // any WS activity = extension is alive on mybets
@@ -641,10 +686,12 @@ function parseDKBets(url, data, userId) {
   // (e.g. betting on two different soccer games in a row: the second bet's `update` delta
   // used to erase the first bet entirely). Only merge on update; still full-replace on initial.
   const isFullSnapshot = !!data?.result?.initial?.bets;
+  // purchases (getPurchases/placeBets) are per-purchase, not a full snapshot → merge by betId
   const rawBets =
     data?.result?.initial?.bets ||
     data?.result?.update?.bets ||
     data?.bets || data?.Bets || data?.entries || data?.wagers ||
+    (Array.isArray(data?.purchases) ? flattenPurchases(data.purchases) : null) ||
     (Array.isArray(data?.data) ? data.data : []);
 
   if (!Array.isArray(rawBets) || !rawBets.length) return [];

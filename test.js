@@ -595,6 +595,36 @@ async function runServerTests() {
     assert(bets.length === 2, `expected 2 open bets across both games, got ${bets.length}`);
   });
 
+  // Root cause of "ish placed a bet but bet bot never showed it" (2026-10-17): DK's bet-placement
+  // flow returns bets as data.purchases[].bets[] (selection by id only), which parseDKBets ignored.
+  await check('A getPurchases payload is stored as a bet, named via the sportscontent outcome label', async () => {
+    const userId = 'purchase-flow-user';
+    const selId = 'TESTML90001_1';
+    await post('/api/dk-sync', {
+      url: 'https://sportsbook-nash.draftkings.com/test/sportscontent',
+      userId,
+      data: { outcomes: [{ id: selId, marketId: 'TESTMKT90001', label: 'Test Fighter Name' }] },
+      ts: Date.now()
+    });
+    const d = await post('/api/dk-sync', {
+      url: 'https://gaming-us-ny.draftkings.com/api/wager/v1/getPurchases?PurchaseIds=x',
+      userId,
+      data: { purchases: [{
+        selections: [{ id: selId, displayOdds: '+105', status: 'Active' }],
+        selectionsForYourBet: [], id: 'purchase-test-90001', creationDate: new Date().toISOString(), status: 'Open',
+        bets: [{ type: 'Single', stake: 80, displayOdds: '+105', potentialReturns: 164, status: 'Open',
+          betId: 'purchase-bet-test-90001', selectionsMapped: [{ id: selId }], numberOfBets: 1 }]
+      }] },
+      ts: Date.now()
+    });
+    assert(d.bets.length === 1, `purchase should parse to 1 bet, got ${d.bets.length}`);
+    const bets = await get(`/api/dk-bets?user=${userId}`);
+    const bet = bets.find(b => b.betId === 'purchase-bet-test-90001');
+    assert(bet, 'purchase bet should be stored and returned by /api/dk-bets');
+    assert(bet.selection === 'Test Fighter Name', `selection should resolve to outcome label, got "${bet.selection}"`);
+    assert(bet.stake === 80 && bet.odds === '+105', 'stake/odds should carry over from purchase');
+  });
+
   // ── P&L history ledger ──────────────────────────────────────────────────────
   await check('/api/pnl-history records a bet the moment it settles Won, with correct profit', async () => {
     const userId = 'pnl-ledger-user-won';
