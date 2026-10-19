@@ -533,7 +533,11 @@ app.get('/api/sports', async (req, res) => {
 });
 
 // ── DraftKings extension sync ─────────────────────────────────────────────
-const DK_CAPTURES_FILE = path.join(__dirname, 'historical_data', 'dk_captures.json');
+// DK state lives on the persistent volume (DATA_DIR), NOT in the app folder. Railway wipes the app
+// folder on every deploy, which erased Ish's bets and the P&L ledger (2026-10-19).
+const DK_STATE_DIR = path.join(process.env.DATA_DIR || __dirname, 'dk_state');
+if (!fs.existsSync(DK_STATE_DIR)) fs.mkdirSync(DK_STATE_DIR, { recursive: true });
+const DK_CAPTURES_FILE = path.join(DK_STATE_DIR, 'dk_captures.json');
 let dkCaptures = [];
 try { dkCaptures = JSON.parse(fs.readFileSync(DK_CAPTURES_FILE, 'utf8')); } catch (_) {}
 
@@ -615,7 +619,7 @@ app.delete('/api/dk-captures', requireAdmin, (req, res) => {
 
 const dkBetsByUser = new Map(); // userId → bets[]
 const DEFAULT_USER = 'default';
-const DK_BETS_FILE = path.join(__dirname, 'historical_data', 'dk_bets_by_user.json');
+const DK_BETS_FILE = path.join(DK_STATE_DIR, 'dk_bets_by_user.json');
 
 // Load persisted bets so server restarts don't lose all state
 try {
@@ -638,7 +642,7 @@ function saveDKBets() {
 // result is gone. This ledger records each straight bet exactly once, the moment
 // it's first observed transitioning from Open to a terminal status, so /api/pnl-history
 // can report profit over a week/month/all-time, not just today.
-const PNL_LEDGER_FILE = path.join(__dirname, 'historical_data', 'pnl_ledger.json');
+const PNL_LEDGER_FILE = path.join(DK_STATE_DIR, 'pnl_ledger.json');
 let pnlLedger = [];
 try { pnlLedger = JSON.parse(fs.readFileSync(PNL_LEDGER_FILE, 'utf8')); } catch (_) {}
 const loggedPnLBetIds = new Set(pnlLedger.map(e => e.betId));
