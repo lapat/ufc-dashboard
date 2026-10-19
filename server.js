@@ -190,8 +190,24 @@ app.get('/status', (req, res) => { res.sendFile(path.join(__dirname, 'public', '
 // Patterns page
 app.get('/patterns', (req, res) => { res.sendFile(path.join(__dirname, 'public', 'patterns.html')); });
 
+// Settled bets (from the P&L ledger) that belong to a fight: the selection is one of the fighters,
+// and the bet was placed from an hour before the fight started until 10 min after it ended.
+function betsOnFight(fightTitle, startTime, endTime, user) {
+  const names = (fightTitle || '').split(/ vs /i).map(n => n.trim().toLowerCase()).filter(Boolean);
+  if (!names.length || !startTime) return [];
+  const from = new Date(startTime).getTime() - 60 * 60 * 1000;
+  const to = (endTime ? new Date(endTime).getTime() : Date.now()) + 10 * 60 * 1000;
+  return pnlLedger.filter(e => {
+    if (e.userId !== user || !e.selection || !e.placementDate) return false;
+    if (!names.includes(e.selection.trim().toLowerCase())) return false;
+    const t = Date.parse(e.placementDate);
+    return t >= from && t <= to;
+  });
+}
+
 // Round-by-round pattern analysis across all recorded fights
 app.get('/api/patterns', (req, res) => {
+  const user = req.query.user || 'ish';
   try {
     const files = fs.readdirSync(HISTORICAL_DIR).filter(f => f.endsWith('.json'));
     const rows = [];
@@ -233,6 +249,14 @@ app.get('/api/patterns', (req, res) => {
           q3Fav: getFav(q3), q3Dog: getDog(q3),
           closeFav: getFav(close), closeDog: getDog(close),
           duration: h.length,
+          bets: (() => {
+            const b = betsOnFight(d.fightTitle, d.startTime, d.endTime, user);
+            return {
+              count: b.length,
+              wagered: b.reduce((t, e) => t + (parseFloat(e.stake) || 0), 0),
+              net: b.reduce((t, e) => t + (e.profit || 0), 0),
+            };
+          })(),
         });
       } catch {}
     }
@@ -255,6 +279,13 @@ app.get('/api/patterns', (req, res) => {
         crossoverPct: Math.round(g.filter(r=>r.crossovers>0).length / g.length * 100),
         favDriftedByMid: Math.round(g.filter(r=>toDecimal(r.midFav)>toDecimal(r.openFav)).length/g.length*100),
         dogImprovedByMid: Math.round(g.filter(r=>toDecimal(r.midDog)<toDecimal(r.openDog)).length/g.length*100),
+        bets: {
+          user,
+          fightsWithBets: g.filter(r => r.bets.count > 0).length,
+          count: g.reduce((t, r) => t + r.bets.count, 0),
+          wagered: Math.round(g.reduce((t, r) => t + r.bets.wagered, 0) * 100) / 100,
+          net: Math.round(g.reduce((t, r) => t + r.bets.net, 0) * 100) / 100,
+        },
         avgOdds: {
           open:  { fav: avg(g.map(r=>r.openFav)),  dog: avg(g.map(r=>r.openDog))  },
           q1:    { fav: avg(g.map(r=>r.q1Fav)),    dog: avg(g.map(r=>r.q1Dog))    },

@@ -1,5 +1,25 @@
 # UFC Dashboard — Architecture Review and Plan
 
+## PRIORITY PLAN: why so few data points, and confirming the extension captures fights (2026-10-19)
+
+**Question:** a 15-minute fight sampled every 3 seconds should give about 300 points. Most files have 5 to 100.
+
+**What is actually happening (verified):**
+1. The recorder polls every 3 seconds during a live UFC fight (`UFC_POLL_MS = 3000`), but it only saves a point when the odds change. Points = number of odds changes, not number of polls. Most polls return the same odds, so most produce nothing.
+2. The upstream feed does not refresh every 3 seconds. The Odds API `last_update` stayed at the same timestamp for over a minute while polled every 3 seconds (2026-10-19 23:18–23:19). So even a perfect poller only sees what the feed publishes. Whether live fights refresh faster is still unmeasured; that needs a live card.
+3. The extension DOM capture (`ext` files) is the only source that could give finer, DraftKings-side data. It has pushed **0 odds updates** since the last deploy (`/api/recorder/status` `extPushes: 0`). Its live gate depends on a "LIVE" badge that has never been verified against a live DraftKings page. So the extension is **not yet confirmed** to capture fights.
+
+**Plan, in order:**
+- **P0 — confirm the extension captures a live fight (next UFC card, Saturday).** Watch `/status`: `extPushes` should climb during the fight, and `lastExtPush` should stay recent. If it stays at 0, the badge gate is wrong. Fix the gate (the manual "capture now" override is the backstop) before anything else.
+- **P0 — record every poll, not only changes.** Store one sample per poll while a fight is live, each with a `changed` flag. That yields about 300 points per 15 minutes and keeps the change-only view as a derived field. Decision needed: this increases file size by roughly 10–20x for live fights. It is a few MB per card, which is fine.
+- **P1 — measure feed freshness during a live fight.** Log the Odds API `last_update` on every poll (already fetched, not stored). This shows whether odds refresh every 3 seconds or every minute during a fight, so we know whether 3-second polling is the right rate.
+- **P1 — use the extension as the fine-grained source if it works.** If the DOM refreshes faster than the feed, make `ext` captures the primary timeline and keep the Odds API as the cross-check.
+- **P2 — verify the ext-capture pipeline end to end locally** with fake pushes (the file save after 5 min idle, the comparison endpoint).
+
+**Done this session that affects the plan:** the grace period and resume (no more overwritten fragments), `pollStats` per recording (present/absent/changes), the `/status` page (extension counters, backups, data quality), and the Ish P&L join in `/api/patterns` (tested end to end: a settled bet matched to its fight and counted in the heavy-favourite bucket).
+
+
+
 Reviewed 2026-10-19. Each finding is marked **verified** (checked against live data or code) or **open** (suspected, not yet confirmed).
 
 ---

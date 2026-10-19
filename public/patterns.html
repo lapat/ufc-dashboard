@@ -98,6 +98,7 @@ async function load(){
         <div class="bstat"><div class="bstat-label">Crossover Rate</div><div class="bstat-val xover-pct">${b.crossoverPct}%</div></div>
         <div class="bstat"><div class="bstat-label">Fav Drifted by Midpoint</div><div class="bstat-val">${b.favDriftedByMid}%</div></div>
         <div class="bstat"><div class="bstat-label">Dog Improved by Midpoint</div><div class="bstat-val">${b.dogImprovedByMid}%</div></div>
+        <div class="bstat"><div class="bstat-label">Ish Settled Bets</div><div class="bstat-val">${b.bets.count ? `${b.bets.count} bets · ${b.bets.net>=0?'+':'−'}$${Math.abs(b.bets.net).toFixed(2)}` : 'none matched yet'}</div></div>
       </div>
       <table class="odds-table">
         <thead><tr>
