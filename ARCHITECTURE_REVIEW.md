@@ -85,6 +85,13 @@ Plan: require an `ADMIN_TOKEN` header on all of the above. This needs a Railway 
 
 ---
 
+### Railway location (reference)
+
+- Railway project: `agile-insight` (workspace "Louis Lapat's Projects")
+- Service: `ufc-dashboard` (service id `c7e3fb51-78de-4306-81ff-798fec8885e5`)
+- Environment: `production` (environment id `921a5c54-4aca-4fbf-a506-f67700a28c84`)
+- Set `GITHUB_TOKEN` on this service's production environment.
+
 ## 2. Target architecture
 
 1. **Recorder as its own process**, separate from the web server, so a web deploy can't stop a live recording. This is the biggest single reliability gain.
