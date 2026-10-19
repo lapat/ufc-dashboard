@@ -1,0 +1,43 @@
+{
+  "fightId": "luishernandez_vs_sedriquesdumas_2026-09-27",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "Luis Hernandez vs Sedriques Dumas",
+  "startTime": "2026-09-27T01:07:07.477Z",
+  "endTime": "2026-09-27T01:24:18.865Z",
+  "dataPoints": 3,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-09-27T01:07:07.477Z",
+      "fighter1": {
+        "name": "Luis Hernandez",
+        "numericOdds": -230
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "numericOdds": 190
+      }
+    },
+    {
+      "timestamp": "2026-09-27T01:10:39.904Z",
+      "fighter1": {
+        "name": "Luis Hernandez",
+        "numericOdds": -238
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-09-27T01:11:28.320Z",
+      "fighter1": {
+        "name": "Luis Hernandez",
+        "numericOdds": -445
+      },
+      "fighter2": {
+        "name": "Sedriques Dumas",
+        "numericOdds": 310
+      }
+    }
+  ]
+}
