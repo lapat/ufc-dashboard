@@ -1,0 +1,32 @@
+{
+  "fightId": "danielrodriguez_vs_urosmedic_2026-08-01",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "Uros Medic vs Daniel Rodriguez",
+  "startTime": "2026-08-01T19:20:03.394Z",
+  "endTime": "2026-08-01T19:33:43.177Z",
+  "dataPoints": 2,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-08-01T19:20:03.394Z",
+      "fighter1": {
+        "name": "Daniel Rodriguez",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Uros Medic",
+        "numericOdds": -380
+      }
+    },
+    {
+      "timestamp": "2026-08-01T19:25:29.242Z",
+      "fighter1": {
+        "name": "Daniel Rodriguez",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Uros Medic",
+        "numericOdds": -395
+      }
+    }
+  ]
+}
