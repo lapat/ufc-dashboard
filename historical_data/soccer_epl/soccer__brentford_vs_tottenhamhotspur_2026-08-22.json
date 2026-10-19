@@ -1,0 +1,21 @@
+{
+  "fightId": "soccer__brentford_vs_tottenhamhotspur_2026-08-22",
+  "sport": "soccer_epl",
+  "fightTitle": "Brentford vs Tottenham Hotspur",
+  "startTime": "2026-08-22T17:56:44.959Z",
+  "endTime": "2026-08-22T18:05:13.194Z",
+  "dataPoints": 1,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-08-22T17:56:44.959Z",
+      "fighter1": {
+        "name": "Brentford",
+        "numericOdds": -20000
+      },
+      "fighter2": {
+        "name": "Tottenham Hotspur",
+        "numericOdds": 4000
+      }
+    }
+  ]
+}
