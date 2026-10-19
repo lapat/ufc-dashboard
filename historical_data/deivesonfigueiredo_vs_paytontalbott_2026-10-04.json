@@ -1,0 +1,32 @@
+{
+  "fightId": "deivesonfigueiredo_vs_paytontalbott_2026-10-04",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "Deiveson Figueiredo vs Payton Talbott",
+  "startTime": "2026-10-04T01:55:10.205Z",
+  "endTime": "2026-10-04T02:11:16.091Z",
+  "dataPoints": 2,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-10-04T01:55:10.205Z",
+      "fighter1": {
+        "name": "Deiveson Figueiredo",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "Payton Talbott",
+        "numericOdds": -700
+      }
+    },
+    {
+      "timestamp": "2026-10-04T01:56:14.386Z",
+      "fighter1": {
+        "name": "Deiveson Figueiredo",
+        "numericOdds": 850
+      },
+      "fighter2": {
+        "name": "Payton Talbott",
+        "numericOdds": -1750
+      }
+    }
+  ]
+}
