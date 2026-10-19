@@ -1,0 +1,32 @@
+{
+  "fightId": "brucewhitehead_vs_jacobesmith_2026-10-03",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "Jacobe Smith vs Bruce Whitehead",
+  "startTime": "2026-10-03T21:20:02.892Z",
+  "endTime": "2026-10-03T21:33:26.757Z",
+  "dataPoints": 2,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-10-03T21:20:02.891Z",
+      "fighter1": {
+        "name": "Bruce Whitehead",
+        "numericOdds": 800
+      },
+      "fighter2": {
+        "name": "Jacobe Smith",
+        "numericOdds": -1350
+      }
+    },
+    {
+      "timestamp": "2026-10-03T21:20:09.383Z",
+      "fighter1": {
+        "name": "Bruce Whitehead",
+        "numericOdds": 750
+      },
+      "fighter2": {
+        "name": "Jacobe Smith",
+        "numericOdds": -1450
+      }
+    }
+  ]
+}
