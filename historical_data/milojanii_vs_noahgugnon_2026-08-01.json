@@ -1,0 +1,32 @@
+{
+  "fightId": "milojanii_vs_noahgugnon_2026-08-01",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "Miloš Janičić vs Noah Gugnon",
+  "startTime": "2026-08-01T17:15:07.376Z",
+  "endTime": "2026-08-01T17:31:02.028Z",
+  "dataPoints": 2,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-08-01T17:15:07.376Z",
+      "fighter1": {
+        "name": "Miloš Janičić",
+        "numericOdds": -125
+      },
+      "fighter2": {
+        "name": "Noah Gugnon",
+        "numericOdds": 105
+      }
+    },
+    {
+      "timestamp": "2026-08-01T17:15:20.236Z",
+      "fighter1": {
+        "name": "Miloš Janičić",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Noah Gugnon",
+        "numericOdds": -166
+      }
+    }
+  ]
+}
