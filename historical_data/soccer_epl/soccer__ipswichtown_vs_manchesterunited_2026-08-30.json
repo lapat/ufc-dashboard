@@ -1,0 +1,54 @@
+{
+  "fightId": "soccer__ipswichtown_vs_manchesterunited_2026-08-30",
+  "sport": "soccer_epl",
+  "fightTitle": "Manchester United vs Ipswich Town",
+  "startTime": "2026-08-30T16:44:49.257Z",
+  "endTime": "2026-08-30T17:08:21.615Z",
+  "dataPoints": 4,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-08-30T16:44:49.257Z",
+      "fighter1": {
+        "name": "Ipswich Town",
+        "numericOdds": 700
+      },
+      "fighter2": {
+        "name": "Manchester United",
+        "numericOdds": -150
+      }
+    },
+    {
+      "timestamp": "2026-08-30T16:46:30.806Z",
+      "fighter1": {
+        "name": "Ipswich Town",
+        "numericOdds": 700
+      },
+      "fighter2": {
+        "name": "Manchester United",
+        "numericOdds": -145
+      }
+    },
+    {
+      "timestamp": "2026-08-30T16:47:29.623Z",
+      "fighter1": {
+        "name": "Ipswich Town",
+        "numericOdds": 3000
+      },
+      "fighter2": {
+        "name": "Manchester United",
+        "numericOdds": -800
+      }
+    },
+    {
+      "timestamp": "2026-08-30T16:49:27.497Z",
+      "fighter1": {
+        "name": "Ipswich Town",
+        "numericOdds": 5500
+      },
+      "fighter2": {
+        "name": "Manchester United",
+        "numericOdds": -6000
+      }
+    }
+  ]
+}
