@@ -298,14 +298,16 @@ async function reconcileBackups() {
   };
 }
 
-// Checks the token against GitHub for real (not just that the env var exists).
+// Checks that the token can WRITE to the repo, not just read it. A read-only token passes a
+// read check and then every backup fails with HTTP 403 (this is what happened on Railway, 2026-10-19).
 async function checkGitHubAccess() {
   const token = process.env.GITHUB_TOKEN;
   if (!token) return { ok: false, reason: 'GITHUB_TOKEN not set' };
   try {
-    const r = await ghRequestStatus('GET', `/repos/${GITHUB_REPO}/branches/${encodeURIComponent(BACKUP_BRANCH)}`, null, token);
-    if (r.status === 200) return { ok: true, branch: BACKUP_BRANCH };
-    return { ok: false, reason: `HTTP ${r.status} ${r.json?.message || ''}`.trim() };
+    const r = await ghRequestStatus('GET', `/repos/${GITHUB_REPO}`, null, token);
+    if (r.status !== 200) return { ok: false, reason: `HTTP ${r.status} ${r.json?.message || ''}`.trim() };
+    if (!r.json?.permissions?.push) return { ok: false, reason: 'token has no write (push) access to ' + GITHUB_REPO };
+    return { ok: true, branch: BACKUP_BRANCH, canWrite: true };
   } catch (e) {
     return { ok: false, reason: e.message };
   }
