@@ -1,0 +1,549 @@
+{
+  "fightId": "soccer__croatia_vs_panama_2026-06-23",
+  "sport": "soccer_fifa_world_cup",
+  "fightTitle": "Panama vs Croatia",
+  "startTime": "2026-06-23T23:09:42.400Z",
+  "endTime": "2026-06-24T01:07:35.289Z",
+  "dataPoints": 49,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-06-23T23:09:42.400Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -225
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 650
+      }
+    },
+    {
+      "timestamp": "2026-06-23T23:11:01.123Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -200
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 600
+      }
+    },
+    {
+      "timestamp": "2026-06-23T23:15:51.034Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -185
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 550
+      }
+    },
+    {
+      "timestamp": "2026-06-23T23:16:38.891Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -200
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 600
+      }
+    },
+    {
+      "timestamp": "2026-06-23T23:17:26.080Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -185
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 550
+      }
+    },
+    {
+      "timestamp": "2026-06-23T23:19:53.039Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -175
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 550
+      }
+    },
+    {
+      "timestamp": "2026-06-23T23:23:07.506Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -175
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 600
+      }
+    },
+    {
+      "timestamp": "2026-06-23T23:23:54.756Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -175
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 550
+      }
+    },
+    {
+      "timestamp": "2026-06-23T23:26:17.514Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-06-23T23:27:04.786Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 550
+      }
+    },
+    {
+      "timestamp": "2026-06-23T23:27:57.237Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -160
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-06-23T23:28:44.803Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -150
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 475
+      }
+    },
+    {
+      "timestamp": "2026-06-23T23:33:33.582Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -155
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 550
+      }
+    },
+    {
+      "timestamp": "2026-06-23T23:34:21.064Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -145
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 550
+      }
+    },
+    {
+      "timestamp": "2026-06-23T23:36:48.220Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -150
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 550
+      }
+    },
+    {
+      "timestamp": "2026-06-23T23:40:03.115Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -135
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 550
+      }
+    },
+    {
+      "timestamp": "2026-06-23T23:41:37.756Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -135
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-06-23T23:42:25.271Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -125
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 475
+      }
+    },
+    {
+      "timestamp": "2026-06-23T23:45:35.466Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -115
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 475
+      }
+    },
+    {
+      "timestamp": "2026-06-23T23:48:45.356Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -110
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 475
+      }
+    },
+    {
+      "timestamp": "2026-06-23T23:49:38.090Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -110
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-06-23T23:56:50.401Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -120
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 550
+      }
+    },
+    {
+      "timestamp": "2026-06-23T23:58:24.992Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -120
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-06-24T00:04:07.196Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -125
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-06-24T00:05:41.876Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -120
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 475
+      }
+    },
+    {
+      "timestamp": "2026-06-24T00:06:34.529Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -120
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-06-24T00:07:22.073Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -115
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-06-24T00:08:09.455Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -110
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 475
+      }
+    },
+    {
+      "timestamp": "2026-06-24T00:08:57.132Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -110
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-06-24T00:10:37.108Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -110
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 550
+      }
+    },
+    {
+      "timestamp": "2026-06-24T00:11:19.509Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -110
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-06-24T00:12:07.109Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-06-24T00:12:59.800Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -105
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 600
+      }
+    },
+    {
+      "timestamp": "2026-06-24T00:13:42.117Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -575
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 2000
+      }
+    },
+    {
+      "timestamp": "2026-06-24T00:14:34.862Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -525
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 2000
+      }
+    },
+    {
+      "timestamp": "2026-06-24T00:18:37.354Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -475
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 2200
+      }
+    },
+    {
+      "timestamp": "2026-06-24T00:21:00.437Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -475
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 2000
+      }
+    },
+    {
+      "timestamp": "2026-06-24T00:22:40.261Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -550
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 2200
+      }
+    },
+    {
+      "timestamp": "2026-06-24T00:25:08.502Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -600
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 2500
+      }
+    },
+    {
+      "timestamp": "2026-06-24T00:35:41.618Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -600
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 3000
+      }
+    },
+    {
+      "timestamp": "2026-06-24T00:37:21.457Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 3000
+      }
+    },
+    {
+      "timestamp": "2026-06-24T00:38:08.646Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -700
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 4000
+      }
+    },
+    {
+      "timestamp": "2026-06-24T00:40:35.746Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -900
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 5000
+      }
+    },
+    {
+      "timestamp": "2026-06-24T00:42:58.045Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -1000
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 5000
+      }
+    },
+    {
+      "timestamp": "2026-06-24T00:46:13.452Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -1200
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 7000
+      }
+    },
+    {
+      "timestamp": "2026-06-24T00:47:48.302Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -1200
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 6500
+      }
+    },
+    {
+      "timestamp": "2026-06-24T00:49:28.500Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -1600
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 7500
+      }
+    },
+    {
+      "timestamp": "2026-06-24T00:50:15.614Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -2500
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 8000
+      }
+    },
+    {
+      "timestamp": "2026-06-24T00:52:42.661Z",
+      "fighter1": {
+        "name": "Croatia",
+        "numericOdds": -8000
+      },
+      "fighter2": {
+        "name": "Panama",
+        "numericOdds": 13000
+      }
+    }
+  ]
+}
