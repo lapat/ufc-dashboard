@@ -1,0 +1,21 @@
+{
+  "fightId": "cristianprez_vs_kylenelson_2026-10-18",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "Kyle Nelson vs Cristian Pérez",
+  "startTime": "2026-10-18T01:45:08.910Z",
+  "endTime": "2026-10-18T01:45:47.812Z",
+  "dataPoints": 1,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-10-18T01:45:08.910Z",
+      "fighter1": {
+        "name": "Cristian Pérez",
+        "numericOdds": -360
+      },
+      "fighter2": {
+        "name": "Kyle Nelson",
+        "numericOdds": 260
+      }
+    }
+  ]
+}
