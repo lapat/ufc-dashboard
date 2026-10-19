@@ -1,0 +1,32 @@
+{
+  "fightId": "alvinhines_vs_rjharris_2026-07-18",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "RJ Harris vs Alvin Hines",
+  "startTime": "2026-07-18T21:35:03.303Z",
+  "endTime": "2026-07-18T21:50:08.175Z",
+  "dataPoints": 2,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-07-18T21:35:03.303Z",
+      "fighter1": {
+        "name": "Alvin Hines",
+        "numericOdds": -115
+      },
+      "fighter2": {
+        "name": "RJ Harris",
+        "numericOdds": -115
+      }
+    },
+    {
+      "timestamp": "2026-07-18T21:35:16.505Z",
+      "fighter1": {
+        "name": "Alvin Hines",
+        "numericOdds": 220
+      },
+      "fighter2": {
+        "name": "RJ Harris",
+        "numericOdds": -298
+      }
+    }
+  ]
+}
