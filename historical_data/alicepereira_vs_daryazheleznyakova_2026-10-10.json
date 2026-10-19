@@ -1,0 +1,54 @@
+{
+  "fightId": "alicepereira_vs_daryazheleznyakova_2026-10-10",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "Darya Zheleznyakova vs Alice Pereira",
+  "startTime": "2026-10-10T21:43:19.391Z",
+  "endTime": "2026-10-10T22:02:42.232Z",
+  "dataPoints": 4,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-10-10T21:43:19.391Z",
+      "fighter1": {
+        "name": "Alice Pereira",
+        "numericOdds": -395
+      },
+      "fighter2": {
+        "name": "Darya Zheleznyakova",
+        "numericOdds": 280
+      }
+    },
+    {
+      "timestamp": "2026-10-10T21:43:35.623Z",
+      "fighter1": {
+        "name": "Alice Pereira",
+        "numericOdds": -810
+      },
+      "fighter2": {
+        "name": "Darya Zheleznyakova",
+        "numericOdds": 500
+      }
+    },
+    {
+      "timestamp": "2026-10-10T21:45:16.078Z",
+      "fighter1": {
+        "name": "Alice Pereira",
+        "numericOdds": -1150
+      },
+      "fighter2": {
+        "name": "Darya Zheleznyakova",
+        "numericOdds": 650
+      }
+    },
+    {
+      "timestamp": "2026-10-10T21:47:42.389Z",
+      "fighter1": {
+        "name": "Alice Pereira",
+        "numericOdds": -2500
+      },
+      "fighter2": {
+        "name": "Darya Zheleznyakova",
+        "numericOdds": 1100
+      }
+    }
+  ]
+}
