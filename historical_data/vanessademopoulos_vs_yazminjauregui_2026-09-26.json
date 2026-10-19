@@ -1,0 +1,32 @@
+{
+  "fightId": "vanessademopoulos_vs_yazminjauregui_2026-09-26",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "Yazmin Jauregui vs Vanessa Demopoulos",
+  "startTime": "2026-09-26T21:10:14.911Z",
+  "endTime": "2026-09-26T21:29:40.096Z",
+  "dataPoints": 2,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-09-26T21:10:14.911Z",
+      "fighter1": {
+        "name": "Vanessa Demopoulos",
+        "numericOdds": 600
+      },
+      "fighter2": {
+        "name": "Yazmin Jauregui",
+        "numericOdds": -900
+      }
+    },
+    {
+      "timestamp": "2026-09-26T21:12:57.054Z",
+      "fighter1": {
+        "name": "Vanessa Demopoulos",
+        "numericOdds": 650
+      },
+      "fighter2": {
+        "name": "Yazmin Jauregui",
+        "numericOdds": -1150
+      }
+    }
+  ]
+}
