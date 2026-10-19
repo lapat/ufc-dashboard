@@ -1,0 +1,43 @@
+{
+  "fightId": "losenekeita_vs_muhammadjonnaimov_2026-09-05",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "Muhammadjon Naimov vs Losene Keita",
+  "startTime": "2026-09-05T19:15:00.078Z",
+  "endTime": "2026-09-05T19:34:56.953Z",
+  "dataPoints": 3,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-09-05T19:15:00.078Z",
+      "fighter1": {
+        "name": "Losene Keita",
+        "numericOdds": -395
+      },
+      "fighter2": {
+        "name": "Muhammadjon Naimov",
+        "numericOdds": 310
+      }
+    },
+    {
+      "timestamp": "2026-09-05T19:20:47.726Z",
+      "fighter1": {
+        "name": "Losene Keita",
+        "numericOdds": -620
+      },
+      "fighter2": {
+        "name": "Muhammadjon Naimov",
+        "numericOdds": 400
+      }
+    },
+    {
+      "timestamp": "2026-09-05T19:21:46.173Z",
+      "fighter1": {
+        "name": "Losene Keita",
+        "numericOdds": -6500
+      },
+      "fighter2": {
+        "name": "Muhammadjon Naimov",
+        "numericOdds": 1800
+      }
+    }
+  ]
+}
