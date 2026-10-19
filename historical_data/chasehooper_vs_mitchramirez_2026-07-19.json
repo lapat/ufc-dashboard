@@ -1,0 +1,54 @@
+{
+  "fightId": "chasehooper_vs_mitchramirez_2026-07-19",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "Chase Hooper vs Mitch Ramirez",
+  "startTime": "2026-07-19T01:33:37.382Z",
+  "endTime": "2026-07-19T01:53:15.403Z",
+  "dataPoints": 4,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-07-19T01:33:37.382Z",
+      "fighter1": {
+        "name": "Chase Hooper",
+        "numericOdds": -345
+      },
+      "fighter2": {
+        "name": "Mitch Ramirez",
+        "numericOdds": 250
+      }
+    },
+    {
+      "timestamp": "2026-07-19T01:34:19.285Z",
+      "fighter1": {
+        "name": "Chase Hooper",
+        "numericOdds": -445
+      },
+      "fighter2": {
+        "name": "Mitch Ramirez",
+        "numericOdds": 310
+      }
+    },
+    {
+      "timestamp": "2026-07-19T01:35:07.998Z",
+      "fighter1": {
+        "name": "Chase Hooper",
+        "numericOdds": -950
+      },
+      "fighter2": {
+        "name": "Mitch Ramirez",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-07-19T01:35:56.350Z",
+      "fighter1": {
+        "name": "Chase Hooper",
+        "numericOdds": -1950
+      },
+      "fighter2": {
+        "name": "Mitch Ramirez",
+        "numericOdds": 950
+      }
+    }
+  ]
+}
