@@ -1759,12 +1759,14 @@ async function runRecordingTests() {
 
   await check('GET /api/recorder/backup-status returns config shape', async () => {
     const d = await get('/api/recorder/backup-status');
-    assert('githubToken' in d, 'missing githubToken field');
+    // 2026-10-19: github is a real GitHub access check (was a bare env-var check that reported ok while pushes failed)
+    assert('github' in d, 'missing github field');
     assert('volumeActive' in d, 'missing volumeActive field');
     assert('dataDir' in d, 'missing dataDir field');
     assert('historicalDir' in d, 'missing historicalDir field');
     assert('ok' in d, 'missing ok field');
-    assert(typeof d.githubToken === 'boolean', 'githubToken must be boolean');
+    assert('stats' in d && 'pending' in d.stats, 'missing backup stats.pending');
+    assert(typeof d.github.ok === 'boolean', 'github.ok must be boolean');
     assert(typeof d.volumeActive === 'boolean', 'volumeActive must be boolean');
   });
 

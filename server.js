@@ -1088,14 +1088,25 @@ app.get('/api/recorder/status', (req, res) => {
 });
 
 // Verify backup config — call this to confirm GitHub + volume are wired up
-app.get('/api/recorder/backup-status', (req, res) => {
+app.get('/api/recorder/backup-status', async (req, res) => {
+  // Real checks, not just "env var is set": token is verified against GitHub, and the
+  // backup queue must be empty. Previously this reported ok:true while every push failed.
+  const github = await checkGitHubAccess();
+  const volumeActive = !!(process.env.DATA_DIR && process.env.DATA_DIR !== __dirname);
   res.json({
-    githubToken:  !!process.env.GITHUB_TOKEN,
-    dataDir:      process.env.DATA_DIR || null,
-    volumeActive: !!(process.env.DATA_DIR && process.env.DATA_DIR !== __dirname),
+    github,
+    dataDir:       process.env.DATA_DIR || null,
+    volumeActive,
     historicalDir: HISTORICAL_DIR,
-    ok: !!(process.env.GITHUB_TOKEN && process.env.DATA_DIR),
+    stats:         backupStats,
+    ok: !!(github.ok && volumeActive && backupStats.pending === 0),
   });
+});
+
+// Manually triggers a volume-vs-GitHub reconcile (safe: never overwrites a remote file).
+app.post('/api/recorder/backup-reconcile', async (req, res) => {
+  try { res.json(await reconcileBackups()); }
+  catch (e) { res.status(500).json({ error: e.message }); }
 });
 
 // Extension pushes live DK DOM odds directly off the page Ish has open — completely
@@ -1581,6 +1592,7 @@ const {
   recSaveRecord, pushFightToGitHub, autoEnrich,
   loadPersistedState, persistState,
   migrateToVolume, HISTORICAL_DIR: REC_HISTORICAL_DIR,
+  reconcileBackups, checkGitHubAccess, backupStats,
 } = require('./record_engine');
 
 // Use the volume-aware path from record_engine everywhere in this file
@@ -1929,6 +1941,14 @@ function pingHealthcheck() {
 
 app.listen(PORT, () => {
   console.log(`Bet Bot running at http://localhost:${PORT}`);
+
+  // Backup reconcile: once shortly after boot, then every 30 min. Catches anything whose
+  // push failed, including fights recorded while GitHub was down.
+  const runReconcile = () => reconcileBackups()
+    .then(r => console.log('[backup] reconcile:', JSON.stringify(r)))
+    .catch(e => console.error('[backup] reconcile failed:', e.message));
+  setTimeout(runReconcile, 60 * 1000).unref();
+  setInterval(runReconcile, 30 * 60 * 1000).unref();
 
   // Validate critical env vars at startup — loud errors so Railway logs catch them immediately
   if (!process.env.GITHUB_TOKEN) {

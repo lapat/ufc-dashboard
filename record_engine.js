@@ -103,7 +103,7 @@ function recSaveRecord(id, record, opts = {}) {
     return { saved: false, reason: 'empty' };
   }
   try {
-    const filePath = opts.filePath || recFilePath(record.meta.sport, id);
+    let filePath = opts.filePath || recFilePath(record.meta.sport, id);
     const payload  = {
       fightId:    id,
       sport:      record.meta.sport,
@@ -113,7 +113,20 @@ function recSaveRecord(id, record, opts = {}) {
       dataPoints: record.oddsHistory.length,
       oddsHistory: record.oddsHistory,
     };
-    fs.writeFileSync(filePath, JSON.stringify(payload, null, 2));
+    // Never shrink an existing recording. If a file with this id already has at least as many
+    // points, write this one beside it instead of replacing it. Both get backed up.
+    if (fs.existsSync(filePath)) {
+      let existingPoints = -1;
+      try { existingPoints = Number(JSON.parse(fs.readFileSync(filePath, 'utf8')).dataPoints) || 0; } catch (_) {}
+      if (existingPoints >= payload.dataPoints) {
+        filePath = filePath.replace(/\.json$/, `.partial-${Date.now()}.json`);
+        console.warn(`[record] ${id}: existing file has ${existingPoints} pts >= ${payload.dataPoints}; saved alongside as ${path.basename(filePath)}`);
+      }
+    }
+    // Atomic write: a crash mid-write can never leave a truncated fight file behind.
+    const tmp = `${filePath}.tmp-${process.pid}`;
+    fs.writeFileSync(tmp, JSON.stringify(payload, null, 2));
+    fs.renameSync(tmp, filePath);
     return { saved: true, filePath, dataPoints: record.oddsHistory.length };
   } catch (e) {
     return { saved: false, reason: e.message };
@@ -121,40 +134,34 @@ function recSaveRecord(id, record, opts = {}) {
 }
 
 // ── GitHub backup ─────────────────────────────────────────────────────────────
-// Pushes a fight file to GitHub via Contents API after every save.
-// Fire-and-forget — errors are logged but never throw.
-// Requires GITHUB_TOKEN env var and GITHUB_REPO=owner/repo (defaults to lapat/ufc-dashboard).
+// Every saved fight is mirrored to GitHub so the data survives a volume loss.
+// Rewritten 2026-10-19: the old fire-and-forget push silently dropped 209 recordings
+// because ghRequest() never checked HTTP status (a rejected PUT was logged as "Backed up").
+//  - Backups go to BACKUP_BRANCH (default 'data-backup'), NOT master. Every push to
+//    master redeploys Railway, and a redeploy restarts the recorder mid-card.
+//  - Every non-2xx response is treated as a failure, queued, and retried.
+//  - reconcileBackups() diffs the volume against the remote tree and pushes what is missing.
+//  - Never overwrites a file that already exists on the backup branch.
+//  - backupStats is exposed on /api/recorder/backup-status so failures are visible.
 
-async function pushFightToGitHub(filePath) {
-  const token = process.env.GITHUB_TOKEN;
-  if (!token) { console.warn('[github] GITHUB_TOKEN not set — skipping backup'); return; }
+const BACKUP_BRANCH = process.env.GITHUB_BACKUP_BRANCH || 'data-backup';
+const GITHUB_REPO   = process.env.GITHUB_REPO || 'lapat/ufc-dashboard';
+const RETRY_MS      = 5 * 60 * 1000;
 
-  const repo    = process.env.GITHUB_REPO || 'lapat/ufc-dashboard';
-  // Compute path relative to repo root (e.g. historical_data/fight.json)
-  const repoRelPath = filePath.replace(/^.*?(historical_data\/)/, 'historical_data/');
-  const apiPath = `/repos/${repo}/contents/${repoRelPath}`;
+const backupStats = {
+  pushed: 0, skippedExisting: 0, failed: 0, pending: 0,
+  lastOkAt: null, lastError: null, lastReconcile: null,
+};
+const backupQueue = new Map(); // repoPath -> localPath, awaiting retry
+let backupRetryTimer = null;
 
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const b64     = Buffer.from(content).toString('base64');
-
-    // GET to find existing SHA (needed for update, null for new file)
-    const existing = await ghRequest('GET', apiPath, null, token);
-    const sha      = existing?.sha || null;
-
-    const body = {
-      message: `[auto] record ${path.basename(filePath)}`,
-      content: b64,
-      ...(sha ? { sha } : {}),
-    };
-    await ghRequest('PUT', apiPath, body, token);
-    console.log(`[github] Backed up ${path.basename(filePath)}`);
-  } catch (e) {
-    console.error(`[github] Backup failed for ${path.basename(filePath)}: ${e.message}`);
-  }
+// Repo-relative path for a file under DATA_ROOT, e.g. "historical_data/x.json".
+function toRepoPath(filePath) {
+  const rel = path.relative(DATA_ROOT, filePath).split(path.sep).join('/');
+  return rel.startsWith('historical_data/') && rel.endsWith('.json') ? rel : null;
 }
 
-function ghRequest(method, apiPath, body, token) {
+function ghRequestStatus(method, apiPath, body, token) {
   return new Promise((resolve, reject) => {
     const payload = body ? JSON.stringify(body) : null;
     const req = https.request({
@@ -171,14 +178,137 @@ function ghRequest(method, apiPath, body, token) {
       let data = '';
       res.on('data', c => data += c);
       res.on('end', () => {
-        try { resolve(JSON.parse(data)); }
-        catch (_) { resolve(null); }
+        let json = null;
+        try { json = JSON.parse(data); } catch (_) {}
+        resolve({ status: res.statusCode, json });
       });
     });
+    req.setTimeout(30000, () => req.destroy(new Error('GitHub request timed out')));
     req.on('error', reject);
     if (payload) req.write(payload);
     req.end();
   });
+}
+
+// Uploads one file if the path does not exist on the backup branch. Throws on any failure.
+// Returns 'pushed' | 'exists'.
+async function backupOne(repoPath, localPath, token) {
+  const apiPath = `/repos/${GITHUB_REPO}/contents/${repoPath}`;
+  const probe = await ghRequestStatus('GET', `${apiPath}?ref=${encodeURIComponent(BACKUP_BRANCH)}`, null, token);
+  if (probe.status === 200) { backupStats.skippedExisting++; return 'exists'; }
+  if (probe.status !== 404) {
+    throw new Error(`GET ${repoPath} -> HTTP ${probe.status} ${probe.json?.message || ''}`.trim());
+  }
+  const b64 = fs.readFileSync(localPath).toString('base64');
+  const put = await ghRequestStatus('PUT', apiPath, {
+    message: `[backup] ${path.basename(localPath)}`,
+    content: b64,
+    branch:  BACKUP_BRANCH,
+  }, token);
+  if (put.status !== 201 && put.status !== 200) {
+    throw new Error(`PUT ${repoPath} -> HTTP ${put.status} ${put.json?.message || ''}`.trim());
+  }
+  backupStats.pushed++;
+  backupStats.lastOkAt = new Date().toISOString();
+  return 'pushed';
+}
+
+function scheduleRetry() {
+  if (backupRetryTimer || backupQueue.size === 0) return;
+  backupRetryTimer = setTimeout(async () => {
+    backupRetryTimer = null;
+    const token = process.env.GITHUB_TOKEN;
+    if (!token) return;
+    for (const [repoPath, localPath] of [...backupQueue]) {
+      try {
+        await backupOne(repoPath, localPath, token);
+        backupQueue.delete(repoPath);
+      } catch (e) {
+        backupStats.failed++;
+        backupStats.lastError = `${repoPath}: ${e.message}`;
+      }
+    }
+    backupStats.pending = backupQueue.size;
+    scheduleRetry();
+  }, RETRY_MS);
+  backupRetryTimer.unref();
+}
+
+// Fire-and-forget from recorder call sites. Failures are queued, never dropped.
+async function pushFightToGitHub(filePath) {
+  const token = process.env.GITHUB_TOKEN;
+  if (!token) { console.warn('[github] GITHUB_TOKEN not set — skipping backup'); return; }
+  const repoPath = toRepoPath(filePath);
+  if (!repoPath) { console.error(`[github] refusing to back up outside historical_data: ${filePath}`); return; }
+  try {
+    await backupOne(repoPath, filePath, token);
+  } catch (e) {
+    backupStats.failed++;
+    backupStats.lastError = `${repoPath}: ${e.message}`;
+    console.error(`[github] Backup failed for ${path.basename(filePath)}: ${e.message}`);
+    backupQueue.set(repoPath, filePath);
+    backupStats.pending = backupQueue.size;
+    scheduleRetry();
+  }
+}
+
+// Every fight file on the volume (UFC root + sport subfolders), excluding the DK
+// bet/capture state and benchmark files, which are not fight recordings.
+function listLocalFightFiles() {
+  const out = [];
+  const walk = dir => {
+    if (!fs.existsSync(dir)) return;
+    for (const ent of fs.readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, ent.name);
+      if (ent.isDirectory()) walk(full);
+      else if (ent.name.endsWith('.json') && !/^(dk_|bench|fighter)/.test(ent.name)) {
+        const repoPath = toRepoPath(full);
+        if (repoPath) out.push({ repoPath, localPath: full });
+      }
+    }
+  };
+  walk(HISTORICAL_DIR);
+  return out;
+}
+
+// Compares the volume with the backup branch and pushes anything missing.
+// Safe to run repeatedly: existing remote files are never touched.
+async function reconcileBackups() {
+  const token = process.env.GITHUB_TOKEN;
+  const at = new Date().toISOString();
+  if (!token) return backupStats.lastReconcile = { at, error: 'GITHUB_TOKEN not set' };
+  const tree = await ghRequestStatus('GET', `/repos/${GITHUB_REPO}/git/trees/${encodeURIComponent(BACKUP_BRANCH)}?recursive=1`, null, token);
+  if (tree.status !== 200) {
+    return backupStats.lastReconcile = { at, error: `tree HTTP ${tree.status} ${tree.json?.message || ''}`.trim() };
+  }
+  const remote = new Set((tree.json.tree || []).filter(t => t.type === 'blob').map(t => t.path));
+  const local = listLocalFightFiles();
+  const missing = local.filter(f => !remote.has(f.repoPath));
+  let pushed = 0, failed = 0;
+  // Sequential on purpose: parallel Contents-API commits to one branch can collide (409).
+  for (const f of missing) {
+    try { await backupOne(f.repoPath, f.localPath, token); pushed++; }
+    catch (e) { failed++; backupQueue.set(f.repoPath, f.localPath); backupStats.lastError = e.message; }
+  }
+  backupStats.pending = backupQueue.size;
+  if (backupQueue.size) scheduleRetry();
+  return backupStats.lastReconcile = {
+    at, branch: BACKUP_BRANCH, localFiles: local.length, remoteFiles: remote.size,
+    missing: missing.length, pushed, failed, truncated: !!tree.json.truncated,
+  };
+}
+
+// Checks the token against GitHub for real (not just that the env var exists).
+async function checkGitHubAccess() {
+  const token = process.env.GITHUB_TOKEN;
+  if (!token) return { ok: false, reason: 'GITHUB_TOKEN not set' };
+  try {
+    const r = await ghRequestStatus('GET', `/repos/${GITHUB_REPO}/branches/${encodeURIComponent(BACKUP_BRANCH)}`, null, token);
+    if (r.status === 200) return { ok: true, branch: BACKUP_BRANCH };
+    return { ok: false, reason: `HTTP ${r.status} ${r.json?.message || ''}`.trim() };
+  } catch (e) {
+    return { ok: false, reason: e.message };
+  }
 }
 
 // ── Auto-enrichment ───────────────────────────────────────────────────────────
@@ -236,6 +366,11 @@ module.exports = {
   recExtractOdds,
   recSaveRecord,
   pushFightToGitHub,
+  reconcileBackups,
+  checkGitHubAccess,
+  backupStats,
+  listLocalFightFiles,
+  toRepoPath,
   autoEnrich,
   loadPersistedState,
   persistState,
