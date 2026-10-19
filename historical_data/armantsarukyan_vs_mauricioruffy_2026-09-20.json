@@ -1,0 +1,43 @@
+{
+  "fightId": "armantsarukyan_vs_mauricioruffy_2026-09-20",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "Arman Tsarukyan vs Mauricio Ruffy",
+  "startTime": "2026-09-20T02:59:07.479Z",
+  "endTime": "2026-09-20T03:17:45.520Z",
+  "dataPoints": 3,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-09-20T02:59:07.478Z",
+      "fighter1": {
+        "name": "Arman Tsarukyan",
+        "numericOdds": -278
+      },
+      "fighter2": {
+        "name": "Mauricio Ruffy",
+        "numericOdds": 225
+      }
+    },
+    {
+      "timestamp": "2026-09-20T03:00:19.140Z",
+      "fighter1": {
+        "name": "Arman Tsarukyan",
+        "numericOdds": -270
+      },
+      "fighter2": {
+        "name": "Mauricio Ruffy",
+        "numericOdds": 200
+      }
+    },
+    {
+      "timestamp": "2026-09-20T03:02:44.336Z",
+      "fighter1": {
+        "name": "Arman Tsarukyan",
+        "numericOdds": -298
+      },
+      "fighter2": {
+        "name": "Mauricio Ruffy",
+        "numericOdds": 220
+      }
+    }
+  ]
+}
