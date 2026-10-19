@@ -1,0 +1,43 @@
+{
+  "fightId": "allenfryejr_vs_rjharris_2026-10-10",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "RJ Harris vs Allen Frye Jr.",
+  "startTime": "2026-10-10T22:04:42.851Z",
+  "endTime": "2026-10-10T22:21:22.117Z",
+  "dataPoints": 3,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-10-10T22:04:42.851Z",
+      "fighter1": {
+        "name": "Allen Frye Jr.",
+        "numericOdds": 550
+      },
+      "fighter2": {
+        "name": "RJ Harris",
+        "numericOdds": -920
+      }
+    },
+    {
+      "timestamp": "2026-10-10T22:04:59.418Z",
+      "fighter1": {
+        "name": "Allen Frye Jr.",
+        "numericOdds": 500
+      },
+      "fighter2": {
+        "name": "RJ Harris",
+        "numericOdds": -810
+      }
+    },
+    {
+      "timestamp": "2026-10-10T22:05:48.088Z",
+      "fighter1": {
+        "name": "Allen Frye Jr.",
+        "numericOdds": -105
+      },
+      "fighter2": {
+        "name": "RJ Harris",
+        "numericOdds": -125
+      }
+    }
+  ]
+}
