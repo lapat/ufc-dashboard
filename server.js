@@ -1089,7 +1089,7 @@ app.get('/health', (req, res) => {
   const staleSec = lastPoll ? Math.floor((Date.now() - lastPoll) / 1000) : null;
   const stale = staleSec === null || staleSec > 600; // >10 min = unhealthy
   if (stale) return res.status(503).json({ status: 'unhealthy', staleSec, lastPoll: recorderState.lastPoll });
-  res.json({ status: 'ok', build: BUILD_TAG, node: process.version, dkStateDir: DK_STATE_DIR, staleSec, recording: recorderState.activeFights.size > 0, lastPoll: recorderState.lastPoll });
+  res.json({ status: 'ok', build: BUILD_TAG, node: process.version, athleteDb: require('./athlete_db').counts(), dkStateDir: DK_STATE_DIR, staleSec, recording: recorderState.activeFights.size > 0, lastPoll: recorderState.lastPoll });
 });
 
 app.get('/api/recorder/status', (req, res) => {
