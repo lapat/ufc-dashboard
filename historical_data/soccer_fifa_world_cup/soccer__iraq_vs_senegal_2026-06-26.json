@@ -1,0 +1,21 @@
+{
+  "fightId": "soccer__iraq_vs_senegal_2026-06-26",
+  "sport": "soccer_fifa_world_cup",
+  "fightTitle": "Senegal vs Iraq",
+  "startTime": "2026-06-26T20:17:13.635Z",
+  "endTime": "2026-06-26T20:38:09.558Z",
+  "dataPoints": 1,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-06-26T20:17:13.635Z",
+      "fighter1": {
+        "name": "Iraq",
+        "numericOdds": 6000
+      },
+      "fighter2": {
+        "name": "Senegal",
+        "numericOdds": -6000
+      }
+    }
+  ]
+}
