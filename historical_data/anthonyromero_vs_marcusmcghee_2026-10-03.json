@@ -1,0 +1,21 @@
+{
+  "fightId": "anthonyromero_vs_marcusmcghee_2026-10-03",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "Marcus McGhee vs Anthony Romero",
+  "startTime": "2026-10-03T22:45:04.193Z",
+  "endTime": "2026-10-03T22:51:59.630Z",
+  "dataPoints": 1,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-10-03T22:45:04.193Z",
+      "fighter1": {
+        "name": "Anthony Romero",
+        "numericOdds": 400
+      },
+      "fighter2": {
+        "name": "Marcus McGhee",
+        "numericOdds": -620
+      }
+    }
+  ]
+}
