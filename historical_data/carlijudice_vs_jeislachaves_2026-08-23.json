@@ -1,0 +1,32 @@
+{
+  "fightId": "carlijudice_vs_jeislachaves_2026-08-23",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "Carli Judice vs Jeisla Chaves",
+  "startTime": "2026-08-23T00:39:17.864Z",
+  "endTime": "2026-08-23T00:55:02.436Z",
+  "dataPoints": 2,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-08-23T00:39:17.864Z",
+      "fighter1": {
+        "name": "Carli Judice",
+        "numericOdds": -720
+      },
+      "fighter2": {
+        "name": "Jeisla Chaves",
+        "numericOdds": 450
+      }
+    },
+    {
+      "timestamp": "2026-08-23T00:40:03.186Z",
+      "fighter1": {
+        "name": "Carli Judice",
+        "numericOdds": -810
+      },
+      "fighter2": {
+        "name": "Jeisla Chaves",
+        "numericOdds": 500
+      }
+    }
+  ]
+}
