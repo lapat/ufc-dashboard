@@ -1,0 +1,32 @@
+{
+  "fightId": "soccer__everton_vs_manchesterunited_2026-09-06",
+  "sport": "soccer_epl",
+  "fightTitle": "Everton vs Manchester United",
+  "startTime": "2026-09-06T14:33:12.778Z",
+  "endTime": "2026-09-06T14:35:21.221Z",
+  "dataPoints": 2,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-09-06T14:33:12.778Z",
+      "fighter1": {
+        "name": "Everton",
+        "numericOdds": 2000
+      },
+      "fighter2": {
+        "name": "Manchester United",
+        "numericOdds": -390
+      }
+    },
+    {
+      "timestamp": "2026-09-06T14:35:05.276Z",
+      "fighter1": {
+        "name": "Everton",
+        "numericOdds": 2200
+      },
+      "fighter2": {
+        "name": "Manchester United",
+        "numericOdds": -450
+      }
+    }
+  ]
+}
