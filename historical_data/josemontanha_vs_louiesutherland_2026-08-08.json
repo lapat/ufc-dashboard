@@ -1,0 +1,43 @@
+{
+  "fightId": "josemontanha_vs_louiesutherland_2026-08-08",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "Louie Sutherland vs Jose Montanha",
+  "startTime": "2026-08-08T22:48:46.054Z",
+  "endTime": "2026-08-08T23:05:56.274Z",
+  "dataPoints": 3,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-08-08T22:48:46.053Z",
+      "fighter1": {
+        "name": "Jose Montanha",
+        "numericOdds": 185
+      },
+      "fighter2": {
+        "name": "Louie Sutherland",
+        "numericOdds": -245
+      }
+    },
+    {
+      "timestamp": "2026-08-08T22:50:16.912Z",
+      "fighter1": {
+        "name": "Jose Montanha",
+        "numericOdds": 140
+      },
+      "fighter2": {
+        "name": "Louie Sutherland",
+        "numericOdds": -180
+      }
+    },
+    {
+      "timestamp": "2026-08-08T22:50:59.019Z",
+      "fighter1": {
+        "name": "Jose Montanha",
+        "numericOdds": -115
+      },
+      "fighter2": {
+        "name": "Louie Sutherland",
+        "numericOdds": -115
+      }
+    }
+  ]
+}
