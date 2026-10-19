@@ -1,0 +1,21 @@
+{
+  "fightId": "soccer__everton_vs_tottenhamhotspur_2026-09-12",
+  "sport": "soccer_epl",
+  "fightTitle": "Tottenham Hotspur vs Everton",
+  "startTime": "2026-09-12T17:51:26.979Z",
+  "endTime": "2026-09-12T17:56:20.479Z",
+  "dataPoints": 1,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-09-12T17:51:26.979Z",
+      "fighter1": {
+        "name": "Everton",
+        "numericOdds": 400
+      },
+      "fighter2": {
+        "name": "Tottenham Hotspur",
+        "numericOdds": 175
+      }
+    }
+  ]
+}
