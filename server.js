@@ -1185,6 +1185,26 @@ app.post('/api/admin/quarantine-non-ufc', requireAdmin, (req, res) => {
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
+app.get('/api/admin/fighter-images', requireAdmin, (req, res) => res.json(fighterImages.status()));
+
+// Queues every UFC fighter found in our fight files (or the names given) for the photo + athlete-page job.
+// Runs one request every 15 seconds. Safe to call again: fighters already done are skipped.
+app.post('/api/admin/fighter-backfill', requireAdmin, (req, res) => {
+  try {
+    let names = Array.isArray(req.body?.names) ? req.body.names : null;
+    if (!names) {
+      names = new Set();
+      for (const f of fs.readdirSync(HISTORICAL_DIR).filter(f => f.endsWith('.json') && f.includes('_vs_'))) {
+        const d = JSON.parse(fs.readFileSync(path.join(HISTORICAL_DIR, f), 'utf8'));
+        for (const n of (d.fightTitle || '').split(/ vs /i)) if (n.trim()) names.add(n.trim());
+      }
+      names = [...names];
+    }
+    fighterImages.requestFighterImages(names);
+    res.json({ ok: true, queued: names.length, status: fighterImages.status() });
+  } catch (e) { res.status(500).json({ error: e.message }); }
+});
+
 // Manually triggers a volume-vs-GitHub reconcile (safe: never overwrites a remote file).
 app.post('/api/recorder/backup-reconcile', requireAdmin, async (req, res) => {
   try { res.json(await reconcileBackups()); }
@@ -1824,6 +1844,7 @@ async function recPollSport(sportKey, meta, watchedGame) {
         persistState(recorderState.activeFights);
         // Cancel any pending summary — more fights are still happening
         if (recorderState.summaryTimer) { clearTimeout(recorderState.summaryTimer); recorderState.summaryTimer = null; }
+        if (!resumed) requireFighterPhotos([fight.home_team, fight.away_team]);
         if (!resumed) sendAlert(
           `🔴 BET BOT: Recording ${fight.home_team} vs ${fight.away_team} [${meta.label}]`,
           `Live game detected.\n\n${fight.home_team} vs ${fight.away_team}\n${meta.label} · Started: ${new Date().toLocaleString()}\n\nhttps://ufc-dashboard-production-e03d.up.railway.app`
@@ -1941,6 +1962,8 @@ async function recPoll() {
 
 // ── Live crossover detection ──────────────────────────────────────────────────
 const { analyzeCrossoverTrajectory, crossoverAlertText } = require('./crossover_detector');
+const fighterImages = require('./fighter_images');
+const requireFighterPhotos = names => fighterImages.requestFighterImages(names);
 
 app.get('/api/live-crossovers', (req, res) => {
   const results = [];
