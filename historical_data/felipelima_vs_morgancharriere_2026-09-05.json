@@ -1,0 +1,32 @@
+{
+  "fightId": "felipelima_vs_morgancharriere_2026-09-05",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "Felipe Lima vs Morgan Charriere",
+  "startTime": "2026-09-05T19:00:08.494Z",
+  "endTime": "2026-09-05T19:03:50.279Z",
+  "dataPoints": 2,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-09-05T19:00:08.494Z",
+      "fighter1": {
+        "name": "Felipe Lima",
+        "numericOdds": -20000
+      },
+      "fighter2": {
+        "name": "Morgan Charriere",
+        "numericOdds": 3000
+      }
+    },
+    {
+      "timestamp": "2026-09-05T19:00:15.062Z",
+      "fighter1": {
+        "name": "Felipe Lima",
+        "numericOdds": -100000
+      },
+      "fighter2": {
+        "name": "Morgan Charriere",
+        "numericOdds": 4000
+      }
+    }
+  ]
+}
