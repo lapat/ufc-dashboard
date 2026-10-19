@@ -1,0 +1,54 @@
+{
+  "fightId": "matheuscamilo_vs_nazimsadykhov_2026-06-27",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "Nazim Sadykhov vs Matheus Camilo",
+  "startTime": "2026-06-27T17:45:10.946Z",
+  "endTime": "2026-06-27T18:01:16.956Z",
+  "dataPoints": 4,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-06-27T17:45:10.945Z",
+      "fighter1": {
+        "name": "Matheus Camilo",
+        "numericOdds": 160
+      },
+      "fighter2": {
+        "name": "Nazim Sadykhov",
+        "numericOdds": -192
+      }
+    },
+    {
+      "timestamp": "2026-06-27T17:48:34.603Z",
+      "fighter1": {
+        "name": "Matheus Camilo",
+        "numericOdds": 154
+      },
+      "fighter2": {
+        "name": "Nazim Sadykhov",
+        "numericOdds": -200
+      }
+    },
+    {
+      "timestamp": "2026-06-27T17:49:22.935Z",
+      "fighter1": {
+        "name": "Matheus Camilo",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Nazim Sadykhov",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-06-27T17:50:14.439Z",
+      "fighter1": {
+        "name": "Matheus Camilo",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Nazim Sadykhov",
+        "numericOdds": -500
+      }
+    }
+  ]
+}
