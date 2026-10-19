@@ -23,7 +23,6 @@ const BASE_URL = process.env.ODDS_BASE_URL || 'https://api.the-odds-api.com/v4';
 // HISTORICAL_DIR is set by record_engine (respects DATA_DIR env var for Railway volume).
 // Defined here as a placeholder — overwritten after record_engine is imported below.
 let HISTORICAL_DIR = path.join(__dirname, 'historical_data');
-let API_CACHE_DIR  = path.join(__dirname, 'historical_data', 'api_cache');
 
 const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 const TOKEN_WARN = parseInt(process.env.ANTHROPIC_TOKEN_WARN_THRESHOLD || '500000');
@@ -209,7 +208,7 @@ function betsOnFight(fightTitle, startTime, endTime, user) {
 app.get('/api/patterns', (req, res) => {
   const user = req.query.user || 'ish';
   try {
-    const files = fs.readdirSync(HISTORICAL_DIR).filter(f => f.endsWith('.json'));
+    const files = fs.readdirSync(HISTORICAL_DIR).filter(f => f.endsWith('.json') && f.includes('_vs_'));
     const rows = [];
 
     for (const file of files) {
@@ -323,7 +322,8 @@ app.get('/api/recordings', (req, res) => {
   try {
     const all = [];
     // MMA fights (root of historical_data)
-    const mmaFiles = fs.readdirSync(HISTORICAL_DIR).filter(f => f.endsWith('.json'));
+    // historical_data holds UFC fight recordings only. Fight files are named <fighter>_vs_<fighter>_<date>.json
+    const mmaFiles = fs.readdirSync(HISTORICAL_DIR).filter(f => f.endsWith('.json') && f.includes('_vs_'));
     for (const f of mmaFiles) {
       try {
         const d = JSON.parse(fs.readFileSync(path.join(HISTORICAL_DIR, f)));
@@ -1157,6 +1157,34 @@ app.get('/api/recorder/backup-status', async (req, res) => {
   });
 });
 
+// Moves every non-UFC sport folder out of the library into quarantine_non_ufc/ on the volume.
+// Nothing is deleted. A folder is skipped if its destination already exists.
+const KEEP_HISTORICAL_DIRS = new Set(['api_cache', 'mma_mixed_martial_arts']);
+app.post('/api/admin/quarantine-non-ufc', requireAdmin, (req, res) => {
+  try {
+    const qdir = path.join(path.dirname(HISTORICAL_DIR), 'quarantine_non_ufc');
+    if (!fs.existsSync(qdir)) fs.mkdirSync(qdir, { recursive: true });
+    const moved = [], skipped = [];
+    // Root files that are not fight recordings (no "_vs_" in the name) also leave historical_data.
+    for (const ent of fs.readdirSync(HISTORICAL_DIR, { withFileTypes: true })) {
+      if (ent.isDirectory() || !ent.name.endsWith('.json') || ent.name.includes('_vs_')) continue;
+      const dest = path.join(qdir, ent.name);
+      if (fs.existsSync(dest)) { skipped.push({ file: ent.name, reason: 'destination exists' }); continue; }
+      fs.renameSync(path.join(HISTORICAL_DIR, ent.name), dest);
+      moved.push({ file: ent.name });
+    }
+    for (const ent of fs.readdirSync(HISTORICAL_DIR, { withFileTypes: true })) {
+      if (!ent.isDirectory() || KEEP_HISTORICAL_DIRS.has(ent.name)) continue;
+      const dest = path.join(qdir, ent.name);
+      const files = fs.readdirSync(path.join(HISTORICAL_DIR, ent.name)).length;
+      if (fs.existsSync(dest)) { skipped.push({ folder: ent.name, reason: 'destination exists' }); continue; }
+      fs.renameSync(path.join(HISTORICAL_DIR, ent.name), dest);
+      moved.push({ folder: ent.name, files });
+    }
+    res.json({ ok: true, quarantineDir: qdir, moved, skipped });
+  } catch (e) { res.status(500).json({ error: e.message }); }
+});
+
 // Manually triggers a volume-vs-GitHub reconcile (safe: never overwrites a remote file).
 app.post('/api/recorder/backup-reconcile', requireAdmin, async (req, res) => {
   try { res.json(await reconcileBackups()); }
@@ -1220,11 +1248,16 @@ app.post('/api/dk-odds-push', (req, res) => {
   recorderState.extPushes++;
   recorderState.lastExtPush=Date.now();
   const {id,record}=findOrCreateExtCapture(sport,fighter1,fighter2);
-  const odds={timestamp:new Date().toISOString(),fighter1:{name:fighter1,numericOdds:+numericOdds1},fighter2:{name:fighter2,numericOdds:+numericOdds2},source:'extension'};
+  // ALWAYS record every extension push, live or not. The live flag is kept on each point; the
+  // extension sends it, so pre-fight pages are labelled rather than dropped.
+  const live = req.body.live !== false;
+  const odds={timestamp:new Date().toISOString(),fighter1:{name:fighter1,numericOdds:+numericOdds1},fighter2:{name:fighter2,numericOdds:+numericOdds2},source:'extension',live};
   const L=record.lastOdds;
-  if(!L||L.fighter1.numericOdds!==+numericOdds1)record.oddsHistory.push(odds),record.lastOdds=odds;
+  const changed=!L||L.fighter1.numericOdds!==+numericOdds1||L.fighter2.numericOdds!==+numericOdds2;
+  (record.samples=record.samples||[]).push({t:odds.timestamp,f1:+numericOdds1,f2:+numericOdds2,c:changed?1:0,live:live?1:0});
+  if(changed)record.oddsHistory.push(odds),record.lastOdds=odds;
   record.lastPushTs=Date.now();
-  res.json({ok:true,id,dataPoints:record.oddsHistory.length});
+  res.json({ok:true,id,dataPoints:record.oddsHistory.length,samples:record.samples.length,live});
 });
 
 // Monitor page — displays pollRate, activeFights, and RECORDING status in real-time
@@ -1581,13 +1614,15 @@ const SPORT_META = {
 };
 
 // Sports that are always polled (regardless of what the client browser is watching)
-const ALWAYS_POLL = ['mma_mixed_martial_arts', 'soccer_fifa_world_cup'];
+// UFC only. historical_data is for UFC fight recordings only; no other sport is recorded or stored.
+const ALWAYS_POLL = ['mma_mixed_martial_arts'];
 
 // Client heartbeat — single slot, last watched game wins
 // If no ping for 2 min, recording stops
 let clientWatching = null; // { ts, sport, team1, team2 }
 app.post('/api/recorder/watch', (req, res) => {
   const { sport, team1, team2 } = req.body;
+  if (sport && sport !== 'mma_mixed_martial_arts') { clientWatching = null; return res.json({ ok: true, ignored: 'UFC only' }); }
   if (sport && sport !== 'mma_mixed_martial_arts' && sport !== 'soccer') {
     const changed = clientWatching && (clientWatching.team1 !== team1 || clientWatching.team2 !== team2);
     clientWatching = { ts: Date.now(), sport, team1, team2 };
@@ -1614,8 +1649,6 @@ const {
 
 // Use the volume-aware path from record_engine everywhere in this file
 HISTORICAL_DIR = REC_HISTORICAL_DIR;
-API_CACHE_DIR  = path.join(REC_HISTORICAL_DIR, 'api_cache');
-if (!fs.existsSync(API_CACHE_DIR)) fs.mkdirSync(API_CACHE_DIR, { recursive: true });
 
 // One-time volume migration (no-op if DATA_DIR not set)
 migrateToVolume();
@@ -1644,9 +1677,9 @@ const RECORDER_GRACE_MS = Number(process.env.RECORDER_GRACE_MS) || 3 * 60 * 1000
 function readPriorRecording(sportKey, id) {
   try {
     const f = JSON.parse(fs.readFileSync(recFilePath(sportKey, id), 'utf8'));
-    return { oddsHistory: Array.isArray(f.oddsHistory) ? f.oddsHistory : [], startTime: f.startTime || null };
+    return { oddsHistory: Array.isArray(f.oddsHistory) ? f.oddsHistory : [], samples: Array.isArray(f.samples) ? f.samples : [], startTime: f.startTime || null };
   } catch (_) {
-    return { oddsHistory: [], startTime: null };
+    return { oddsHistory: [], samples: [], startTime: null };
   }
 }
 
@@ -1733,12 +1766,35 @@ function recSave(id) {
   scheduleSummaryEmail();
 }
 
+// ALWAYS keep the raw Odds API response for every poll, whatever the live status. We pay per
+// request, so nothing returned by the API is thrown away. One JSON line per poll per sport.
+const POLL_LOG_DIR = path.join(process.env.DATA_DIR || __dirname, 'poll_log');
+function appendPollLog(sportKey, fights) {
+  try {
+    if (!fs.existsSync(POLL_LOG_DIR)) fs.mkdirSync(POLL_LOG_DIR, { recursive: true });
+    const now = new Date();
+    const line = JSON.stringify({
+      t: now.toISOString(),
+      sport: sportKey,
+      fights: fights.map(f => ({
+        id: f.id, home: f.home_team, away: f.away_team, commence: f.commence_time,
+        last_update: f.bookmakers?.[0]?.last_update || null,
+        h2h: (f.bookmakers?.[0]?.markets?.find(m => m.key === 'h2h')?.outcomes || []).map(o => [o.name, o.price]),
+      })),
+    });
+    fs.appendFileSync(path.join(POLL_LOG_DIR, `${now.toISOString().slice(0, 10)}_${sportKey}.jsonl`), line + '\n');
+  } catch (e) {
+    console.error('[poll-log] write failed:', e.message);
+  }
+}
+
 async function recPollSport(sportKey, meta, watchedGame) {
   try {
     const url = `${BASE_URL}/sports/${sportKey}/odds/?apiKey=${ODDS_API_KEY}&regions=us&markets=h2h&bookmakers=draftkings&oddsFormat=american`;
     const { data, headers } = await fetchJson(url);
     updateOddsCredits(headers);
     const fights = Array.isArray(data) ? data : [];
+    appendPollLog(sportKey, fights); // every poll, always
     const currentIds = new Set();
 
     for (const fight of fights) {
@@ -1761,6 +1817,7 @@ async function recPollSport(sportKey, meta, watchedGame) {
         recorderState.activeFights.set(id, {
           meta: { sport: sportKey, label: meta.label, fighter1: fight.home_team, fighter2: fight.away_team, startTime: prior.startTime || new Date().toISOString() },
           oddsHistory: prior.oddsHistory,
+          samples: prior.samples,
           lastOdds: prior.oddsHistory[prior.oddsHistory.length - 1] || null,
           stats: { present: 0, absent: 0, changes: 0, resumes: resumed ? 1 : 0 },
         });
@@ -1777,7 +1834,11 @@ async function recPollSport(sportKey, meta, watchedGame) {
       record.missingSince = null;
       if (record.stats) record.stats.present++;
       const last = record.lastOdds;
-      if (!last || last.fighter1.numericOdds !== odds.fighter1.numericOdds || last.fighter2.numericOdds !== odds.fighter2.numericOdds) {
+      const changed = !last || last.fighter1.numericOdds !== odds.fighter1.numericOdds || last.fighter2.numericOdds !== odds.fighter2.numericOdds;
+      // One sample per poll (about 300 per 15 min at 3s). oddsHistory below stays change-only,
+      // because crossover and pattern analysis assume consecutive points differ.
+      (record.samples = record.samples || []).push({ t: odds.timestamp, f1: odds.fighter1.numericOdds, f2: odds.fighter2.numericOdds, c: changed ? 1 : 0 });
+      if (changed) {
         record.oddsHistory.push(odds);
         record.lastOdds = odds;
         if (record.stats) record.stats.changes++;

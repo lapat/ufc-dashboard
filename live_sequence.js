@@ -15,7 +15,7 @@ const DATA_DIR = path.join(__dirname, 'historical_data');
 
 function loadFightsWithHistory() {
   const files = fs.readdirSync(DATA_DIR)
-    .filter(f => f.endsWith('.json') && !f.startsWith('dk_') && !f.startsWith('crossover'));
+    .filter(f => f.endsWith('.json') && f.includes('_vs_') && !f.startsWith('dk_') && !f.startsWith('crossover'));
 
   const fights = [];
   for (const f of files) {

@@ -142,7 +142,7 @@ async function main() {
   console.log(`\n📊 DERIVER${DRY_RUN ? ' (DRY RUN)' : ''}\n`);
 
   const allFiles = fs.readdirSync(DATA_DIR)
-    .filter(f => f.endsWith('.json') && !f.startsWith('dk_') && !f.startsWith('crossover'));
+    .filter(f => f.endsWith('.json') && f.includes('_vs_') && !f.startsWith('dk_') && !f.startsWith('crossover'));
 
   const files = SINGLE ? allFiles.filter(f => f === SINGLE) : allFiles;
 

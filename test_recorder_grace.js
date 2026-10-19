@@ -94,7 +94,9 @@ const resumes = () => logLines.filter(l => l.includes('REC RESUME') && l.include
     assert.ok(f.dataPoints >= 6, `expected >= 6 points, got ${f.dataPoints}`);
     assert.strictEqual(f.oddsHistory.length, f.dataPoints);
     assert.ok(f.pollStats && f.pollStats.present > 0 && f.pollStats.absent > 0, 'pollStats missing: ' + JSON.stringify(f.pollStats));
-    assert.strictEqual(f.startTime, f.startTime, 'startTime present');
+    assert.ok(Array.isArray(f.samples) && f.samples.length >= f.pollStats.present, `samples (${f.samples && f.samples.length}) must include every poll (present=${f.pollStats.present})`);
+    assert.ok(f.samples.length >= f.dataPoints, 'samples must be at least as many as change points');
+    assert.strictEqual(f.samplePoints, f.samples.length, 'samplePoints must match samples');
     global.savedPoints = f.dataPoints;
   });
 
@@ -105,6 +107,47 @@ const resumes = () => logLines.filter(l => l.includes('REC RESUME') && l.include
     assert.ok(resumes() >= 1, 'expected a RESUME log line');
     const f = JSON.parse(fs.readFileSync(fileFor(), 'utf8'));
     assert.ok(f.dataPoints >= global.savedPoints, `file shrank: ${global.savedPoints} -> ${f.dataPoints}`);
+  });
+
+  await check('every Odds API poll is kept in the raw poll log, whatever the live status', async () => {
+    const dir = path.join(DATA_DIR, 'poll_log');
+    const files = fs.readdirSync(dir).filter(f => f.endsWith('_mma_mixed_martial_arts.jsonl'));
+    assert.ok(files.length >= 1, 'no poll log written');
+    const lines = fs.readFileSync(path.join(dir, files[0]), 'utf8').trim().split('\n').map(l => JSON.parse(l));
+    const polls = lines.length;
+    assert.ok(polls >= global.savedPoints, `poll log (${polls}) should have at least as many polls as points saved`);
+    assert.ok(lines.some(l => l.fights.some(f => f.home === 'Fighter Alpha')), 'poll log must include the fight');
+  });
+
+  await check('an extension push is recorded even when the fight is not marked live', async () => {
+    const r = await fetch(`http://localhost:${SERVER_PORT}/api/dk-odds-push`, {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ sport: 'mma_mixed_martial_arts', fighter1: 'Pre Fight A', fighter2: 'Pre Fight B', numericOdds1: -130, numericOdds2: 110, live: false }),
+    });
+    const d = await r.json();
+    assert.ok(r.ok && d.ok, 'push rejected: ' + JSON.stringify(d));
+    assert.strictEqual(d.live, false, 'live flag must be kept');
+    assert.ok(d.samples >= 1, 'sample must be recorded');
+  });
+
+  await check('every Odds API poll is kept in the raw poll log, whatever the live status', async () => {
+    const dir = path.join(DATA_DIR, 'poll_log');
+    const files = fs.readdirSync(dir).filter(f => f.endsWith('_mma_mixed_martial_arts.jsonl'));
+    assert.ok(files.length >= 1, 'no poll log written');
+    const lines = fs.readFileSync(path.join(dir, files[0]), 'utf8').trim().split('\n').map(l => JSON.parse(l));
+    assert.ok(lines.length >= global.savedPoints, `poll log (${lines.length}) should cover at least the saved points`);
+    assert.ok(lines.some(l => l.fights.some(f => f.home === 'Fighter Alpha')), 'poll log must include the fight');
+  });
+
+  await check('an extension push is recorded even when the fight is not marked live', async () => {
+    const r = await fetch(`http://localhost:${SERVER_PORT}/api/dk-odds-push`, {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ sport: 'mma_mixed_martial_arts', fighter1: 'Pre Fight A', fighter2: 'Pre Fight B', numericOdds1: -130, numericOdds2: 110, live: false }),
+    });
+    const d = await r.json();
+    assert.ok(r.ok && d.ok, 'push rejected: ' + JSON.stringify(d));
+    assert.strictEqual(d.live, false, 'live flag must be kept');
+    assert.ok(d.samples >= 1, 'sample must be recorded');
   });
 
   console.log(`\n${passed} passed`);

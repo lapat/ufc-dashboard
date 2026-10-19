@@ -1,5 +1,7 @@
 const DEFAULT_URL = 'https://ufc-dashboard-production-e03d.up.railway.app';
 
+const PUSH_INTERVAL_MS = 3000; // odds are pushed to the server every 3 seconds, live or not
+let lastPushMs = 0;
 let betBotUrl = DEFAULT_URL;
 let dkUserId = null;
 let manualUserId = null;
@@ -219,13 +221,12 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
         },
       });
     }
-    // Only push to the server when content.js confirmed this is an in-progress fight
-    // (a "LIVE" badge/round-indicator was found on the page, or the manual override
-    // is active) — see findLiveBadge() in content.js. Without this gate we'd record
-    // pre-fight browsing as if it were a live recording, which defeats the point of
-    // the ext-capture comparison.
-    if (!msg.live) return;
+    // ALWAYS push, live or not: the extension is the more accurate source, so every odds page we
+    // see is recorded, labelled with live true/false. Throttled to one push every 3 seconds.
+    const nowMs = Date.now();
+    if (nowMs - lastPushMs < PUSH_INTERVAL_MS) return;
     if (betBotUrl && teams.length >= 2 && msg.sport) {
+      lastPushMs = nowMs;
       const [o1, o2] = teams;
       // NOTE: scanOddsFromPage() in content.js produces `.american`, not `.numericOdds`.
       // A prior version of this file read `.numericOdds` here, which is always undefined —
@@ -239,6 +240,7 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
           fighter2: o2.side,
           numericOdds1: o1.american,
           numericOdds2: o2.american,
+          live: !!msg.live,
         }),
       }).catch(() => {});
     }

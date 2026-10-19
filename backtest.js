@@ -19,7 +19,7 @@ const fs   = require('fs');
 const path = require('path');
 
 const DATA_DIR      = path.join(__dirname, 'historical_data');
-const BASELINE_FILE = path.join(DATA_DIR, 'benchmark_baseline.json');
+const BASELINE_FILE = path.join(__dirname, 'analysis', 'benchmark_baseline.json');
 const VERBOSE       = process.argv.includes('--verbose');
 const SAVE_BASELINE = process.argv.includes('--save-baseline');
 const CHECK_MODE    = process.argv.includes('--check');
@@ -117,7 +117,7 @@ function computeEdge(similar, f1CurrentOdds) {
 
 function loadFights() {
   const files = fs.readdirSync(DATA_DIR)
-    .filter(f => f.endsWith('.json') && !f.startsWith('dk_') && !f.startsWith('crossover'));
+    .filter(f => f.endsWith('.json') && f.includes('_vs_') && !f.startsWith('dk_') && !f.startsWith('crossover'));
   const fights = [];
   for (const f of files) {
     try {

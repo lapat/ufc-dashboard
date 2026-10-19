@@ -12,7 +12,7 @@ const path = require('path');
 const DATA_DIR = path.join(__dirname, 'historical_data');
 
 const files = fs.readdirSync(DATA_DIR)
-  .filter(f => f.endsWith('.json') && !f.startsWith('dk_'));
+  .filter(f => f.endsWith('.json') && f.includes('_vs_') && !f.startsWith('dk_'));
 
 const bySlug = {};
 for (const f of files) {

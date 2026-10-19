@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // fighter_stats.js — Scrapes ufc.com athlete pages for fighter career stats.
-// Outputs: historical_data/fighter_profiles.json
+// Outputs: analysis/fighter_profiles.json
 //
 // Run once to populate:  node fighter_stats.js
 // Incremental update:    node fighter_stats.js --new-only
@@ -15,7 +15,7 @@ const fs   = require('fs');
 const path = require('path');
 
 const DATA_DIR    = path.join(__dirname, 'historical_data');
-const CACHE_FILE  = path.join(DATA_DIR, 'fighter_profiles.json');
+const CACHE_FILE  = path.join(__dirname, 'analysis', 'fighter_profiles.json');
 const DRY_RUN     = process.argv.includes('--dry-run');
 const NEW_ONLY    = process.argv.includes('--new-only');
 const SINGLE      = process.argv.find(a => a.startsWith('--fighter='))?.split('=').slice(1).join('=')
@@ -27,7 +27,7 @@ const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
 
 function extractAllFighters() {
   const files = fs.readdirSync(DATA_DIR)
-    .filter(f => f.endsWith('.json') && !f.startsWith('dk_') && !f.startsWith('crossover') && !f.startsWith('fighter'));
+    .filter(f => f.endsWith('.json') && f.includes('_vs_') && !f.startsWith('dk_') && !f.startsWith('crossover') && !f.startsWith('fighter'));
   const nameSet = new Set();
   for (const f of files) {
     try {

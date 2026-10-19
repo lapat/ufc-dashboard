@@ -98,7 +98,7 @@ function analyzeFight(filePath) {
 }
 
 function run() {
-  const files = fs.readdirSync(DATA_DIR).filter(f => f.endsWith('.json'));
+  const files = fs.readdirSync(DATA_DIR).filter(f => f.endsWith('.json') && f.includes('_vs_'));
   const results = [];
   for (const file of files) {
     try {
