@@ -1,0 +1,32 @@
+{
+  "fightId": "benoitsaintdenis_vs_paddypimblett_2026-07-12",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "Paddy Pimblett vs Benoit Saint-Denis",
+  "startTime": "2026-07-12T03:10:01.177Z",
+  "endTime": "2026-07-12T03:24:48.262Z",
+  "dataPoints": 2,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-07-12T03:10:01.176Z",
+      "fighter1": {
+        "name": "Benoit Saint-Denis",
+        "numericOdds": -130
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": 110
+      }
+    },
+    {
+      "timestamp": "2026-07-12T03:10:26.910Z",
+      "fighter1": {
+        "name": "Benoit Saint-Denis",
+        "numericOdds": -135
+      },
+      "fighter2": {
+        "name": "Paddy Pimblett",
+        "numericOdds": 105
+      }
+    }
+  ]
+}
