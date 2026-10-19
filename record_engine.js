@@ -298,16 +298,18 @@ async function reconcileBackups() {
   };
 }
 
-// Checks that the token can WRITE to the repo, not just read it. A read-only token passes a
-// read check and then every backup fails with HTTP 403 (this is what happened on Railway, 2026-10-19).
+// Checks that the token can WRITE to the repo. A PUT with no content is rejected before any file
+// is created: a token without write access gets 403, a token with write access gets 422
+// ("content wasn't supplied"). The repo-level permissions flag is NOT reliable for fine-grained
+// tokens (it said push:true while every real write returned 403, 2026-10-19).
 async function checkGitHubAccess() {
   const token = process.env.GITHUB_TOKEN;
   if (!token) return { ok: false, reason: 'GITHUB_TOKEN not set' };
   try {
-    const r = await ghRequestStatus('GET', `/repos/${GITHUB_REPO}`, null, token);
-    if (r.status !== 200) return { ok: false, reason: `HTTP ${r.status} ${r.json?.message || ''}`.trim() };
-    if (!r.json?.permissions?.push) return { ok: false, reason: 'token has no write (push) access to ' + GITHUB_REPO };
-    return { ok: true, branch: BACKUP_BRANCH, canWrite: true };
+    const r = await ghRequestStatus('PUT', `/repos/${GITHUB_REPO}/contents/historical_data/.write-probe.json`, { branch: BACKUP_BRANCH, message: 'probe' }, token);
+    if (r.status === 422) return { ok: true, branch: BACKUP_BRANCH, canWrite: true };
+    if (r.status === 403) return { ok: false, reason: `no write access: HTTP 403 ${r.json?.message || ''}`.trim() };
+    return { ok: false, reason: `HTTP ${r.status} ${r.json?.message || ''}`.trim() };
   } catch (e) {
     return { ok: false, reason: e.message };
   }
