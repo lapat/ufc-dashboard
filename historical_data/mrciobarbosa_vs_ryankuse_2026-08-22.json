@@ -1,0 +1,54 @@
+{
+  "fightId": "mrciobarbosa_vs_ryankuse_2026-08-22",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "Márcio Barbosa vs Ryan Kuse",
+  "startTime": "2026-08-22T22:22:01.509Z",
+  "endTime": "2026-08-22T22:39:29.175Z",
+  "dataPoints": 4,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-08-22T22:22:01.509Z",
+      "fighter1": {
+        "name": "Márcio Barbosa",
+        "numericOdds": -850
+      },
+      "fighter2": {
+        "name": "Ryan Kuse",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-08-22T22:22:50.418Z",
+      "fighter1": {
+        "name": "Márcio Barbosa",
+        "numericOdds": -920
+      },
+      "fighter2": {
+        "name": "Ryan Kuse",
+        "numericOdds": 550
+      }
+    },
+    {
+      "timestamp": "2026-08-22T22:23:38.963Z",
+      "fighter1": {
+        "name": "Márcio Barbosa",
+        "numericOdds": -950
+      },
+      "fighter2": {
+        "name": "Ryan Kuse",
+        "numericOdds": 575
+      }
+    },
+    {
+      "timestamp": "2026-08-22T22:24:27.796Z",
+      "fighter1": {
+        "name": "Márcio Barbosa",
+        "numericOdds": -1150
+      },
+      "fighter2": {
+        "name": "Ryan Kuse",
+        "numericOdds": 650
+      }
+    }
+  ]
+}
