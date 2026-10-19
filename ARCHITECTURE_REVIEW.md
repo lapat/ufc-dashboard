@@ -78,6 +78,14 @@ Plan: require an `ADMIN_TOKEN` header on all of the above. This needs a Railway 
 
 - `/health` only reports the age of the last poll. Nothing alerts when backups fail, when the recorder stalls mid-card, or when a file is rejected.
 
+### 1.10b Bet and P&L data were wiped on every deploy  (verified, fixed in code)
+
+- The DK bet list, raw captures, and P&L ledger were written to the app folder, not the volume. Railway wipes the app folder on every deploy.
+- Result: each deploy erased Ish's bet list (including settled bets) and the P&L history. The 2026-10-19 check showed zero bets for `ish` after deploys.
+- The P&L ledger's history was not recoverable from this machine. The local copy only held test entries.
+- Fix: DK state now lives in `DATA_DIR/dk_state` on the volume. Verified: a bet survives a restart.
+- Recovery: the extension re-syncs open bets when My Bets is reopened. Settled-bet P&L before 2026-10-19 is lost.
+
 ### 1.11 What is fine
 
 - No secrets are committed. The search of tracked files found none.
