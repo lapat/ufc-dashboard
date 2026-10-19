@@ -1,0 +1,32 @@
+{
+  "fightId": "ozzydiaz_vs_ryangandra_2026-09-19",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "Ozzy Diaz vs Ryan Gandra",
+  "startTime": "2026-09-19T23:15:03.238Z",
+  "endTime": "2026-09-19T23:29:49.304Z",
+  "dataPoints": 2,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-09-19T23:15:03.238Z",
+      "fighter1": {
+        "name": "Ozzy Diaz",
+        "numericOdds": 410
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -550
+      }
+    },
+    {
+      "timestamp": "2026-09-19T23:16:39.628Z",
+      "fighter1": {
+        "name": "Ozzy Diaz",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Ryan Gandra",
+        "numericOdds": -425
+      }
+    }
+  ]
+}
