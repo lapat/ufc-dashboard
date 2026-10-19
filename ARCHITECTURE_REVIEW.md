@@ -1,0 +1,152 @@
+# UFC Dashboard — Architecture Review and Plan
+
+Reviewed 2026-10-19. Each finding is marked **verified** (checked against live data or code) or **open** (suspected, not yet confirmed).
+
+---
+
+## 1. What was found
+
+### 1.1 Data loss risk: fight recordings were not backed up  (verified, fixed in code)
+
+- 209 recordings existed on the Railway volume but not in git/GitHub: 145 UFC, 64 soccer and other sports. All were from June through October 2026.
+- No automatic backup commit (`[auto] record` / `Auto-save fight`) exists on any branch. The per-save push has effectively never landed.
+- Cause, in order of importance:
+  1. `ghRequest()` resolved on any HTTP response and never checked the status code. A rejected write was logged as "Backed up".
+  2. The push was fire-and-forget: no retry, no queue, no later check.
+  3. `/api/recorder/backup-status` reported `ok: true` whenever the env var was set, so the health gate was green while backups failed.
+- Fix (commit `f8ce77b`): status checks, a retry queue, a reconcile against the backup branch (on boot and every 30 min), and a token check against GitHub.
+
+### 1.2 Backups committed to `master` would redeploy the server  (verified, fixed in code)
+
+- Railway redeploys on every push to `master`, and a redeploy restarts the recorder. A backup commit landing during a card would interrupt the recording.
+- Fix: backups now go to a `data-backup` branch (overridable with `GITHUB_BACKUP_BRANCH`).
+
+### 1.3 Possible overwrite of existing recordings  (verified, fixed in code)
+
+- `recSaveRecord()` replaced any existing file with the same fight id, even when the new file had fewer data points.
+- Fix: a file is never replaced by a smaller recording. The smaller one is saved beside it as `<id>.partial-<ts>.json`. Writes are atomic (tmp file, then rename).
+
+### 1.4 Destructive and write endpoints have no authentication  (verified, open)
+
+The public Railway URL accepts these without any credentials:
+
+| Endpoint | Risk |
+|---|---|
+| `POST /api/dk-mock` | Writes a fake bet into a user's bet list, which feeds the bet tracker |
+| `DELETE /api/dk-captures` | Deletes the raw DraftKings capture log |
+| `POST /api/recorder/stop-all`, `POST /api/recorder/stop/:id` | Stops live recordings |
+| `POST /api/recorder/test` | Creates a test fight, and sends a completion email |
+| `POST /api/recorder/backup-reconcile` (new) | Starts a GitHub reconcile. Harmless, but still unauthenticated |
+
+Plan: require an `ADMIN_TOKEN` header on all of the above. This needs a Railway environment variable, which the available CLI token can't set, so it's a decision for you (see §4).
+
+### 1.5 A test fight is committed as real data  (verified, open)
+
+- `historical_data/mma_mixed_martial_arts/mma__testfighter_vs_testopponent_2026-06-12.json` is a fake recording from the test endpoint.
+- Plan: move it to `historical_data/_test/`. It is not deleted, because the project rules forbid removing fight files. This is a git move, so it needs your go-ahead.
+
+### 1.6 Recordings are sparse, and the check for it is broken  (verified, open)
+
+- UFC recordings: median 101 data points, and 205 of 411 have fewer than 100. The project notes expect 200–1000 for a full fight.
+- Recent fights (September–October) show 5–28 points, with gaps of 2–5 minutes while the odds are moving.
+- The extension-vs-Odds-API comparison (`/api/ext-capture-comparison`) finds **0 pairs**. The check that would tell "the recorder is missing ticks" apart from "DraftKings didn't move the line" is not producing any output.
+- Some files are junk: one is labelled "Monitoring Stopped" with 2 points. Others end with near-finish odds like −100000 / +4000, which look like suspended-market values.
+- Plan: log per-fight poll stats (polls, changes, errors, longest gap), fix the ext-capture pipeline, and add a data-quality flag to the file metadata.
+
+### 1.7 Tests describe features that were removed  (verified, open)
+
+- `node test.js --local` has 349 passing and 123 failing. Most failures test the removed AI auto-bet, chat, and watch-trigger features.
+- About half the suite greps source text (static checks). Those pass whether or not the code runs.
+- Plan: delete the tests for removed features, and replace static greps with runtime tests where possible.
+
+### 1.8 Code structure  (verified, open)
+
+- `server.js` is about 1,950 lines and mixes routes, the recorder, DraftKings sync, and scheduling.
+- `recorder.js` is dead code (nothing requires it), and it contains a second, unused GitHub push path.
+- `public/index.html` is about 150 KB of inline HTML, CSS and JavaScript in one file.
+- Two copies of the DraftKings extension exist: `fights/dk-extension` and `ufc-dashboard/dk-extension`. They have diverged, and the project notes point to a Desktop path that doesn't exist on this machine.
+
+### 1.9 Storage design  (verified, open)
+
+- Recordings are JSON files on a volume, mirrored to git. Bets are a JSON map. The P&L ledger is a JSON array.
+- Everything is read whole into memory, and every save rewrites the whole file.
+- Git holds more than 500 data files, so every data commit to `master` is also a code deploy. The `data-backup` branch fixes this for backups.
+
+### 1.10 Monitoring  (verified, open)
+
+- `/health` only reports the age of the last poll. Nothing alerts when backups fail, when the recorder stalls mid-card, or when a file is rejected.
+
+### 1.11 What is fine
+
+- No secrets are committed. The search of tracked files found none.
+- The reconcile never overwrites a file that already exists remotely, and volume migration only copies missing files.
+
+---
+
+## 2. Target architecture
+
+1. **Recorder as its own process**, separate from the web server, so a web deploy can't stop a live recording. This is the biggest single reliability gain.
+2. **A small database** (SQLite on the volume, or Postgres if the host allows) for recordings, bets, and captures. JSON stays as the export format so existing files keep working.
+3. **Backups as a job, not a side effect.** A backup table records each file's hash and remote status. A worker syncs it, and an alert fires after N failures.
+4. **Auth on write routes**, with a single `ADMIN_TOKEN` for admin actions and the extension's own token for `dk-sync`.
+5. **Split the monolith**: routes, recorder, DraftKings sync, odds sources, and UI modules.
+6. **Tests that run the code**: a fixture-based test per parser, a recorder test driven by replayed odds, and no grep tests for behaviour.
+
+---
+
+## 3. Plan
+
+### Phase 1: stop data loss (mostly done)
+- [x] Backup status checks, retry queue, reconcile (`f8ce77b`)
+- [x] Backups to `data-backup`, not `master`
+- [x] No-overwrite guard and atomic writes
+- [x] Back up the 209 unbacked recordings (`c130c95`, on `ish-version`)
+- [ ] Verify the live reconcile covers every volume file (after deploy)
+- [ ] Alert when the backup queue has items for more than 30 minutes
+- [ ] Decide on the `master` vs `data-backup` question (§4)
+
+### Phase 2: security (days)
+- [ ] `ADMIN_TOKEN` on the write routes in §1.4
+- [ ] Remove `dk-mock` from production, or gate it behind the token
+- [ ] Move the test fight file out of the real data (§1.5)
+
+### Phase 3: recording quality (1–2 weeks)
+- [ ] Per-fight poll statistics saved with each recording
+- [ ] Fix the ext-capture pipeline so the comparison endpoint produces pairs
+- [ ] Data-quality flags: too few points, long gaps, suspended-market odds
+- [ ] Pull the recorder into its own process
+
+### Phase 4: structure (2–4 weeks)
+- [ ] Move recordings and bets into SQLite, with JSON export
+- [ ] Split `server.js` into route modules
+- [ ] Delete `recorder.js` and tests for removed features
+- [ ] Consolidate the extension into one copy
+
+### Phase 5: UI and features
+See the UI plan below. Each item gets its own test with real data, plus a mobile check.
+
+---
+
+## 4. Decisions needed from Louis
+
+1. **Admin token.** Set `ADMIN_TOKEN` on Railway, or confirm you want the write routes left open.
+2. **Test fight file.** OK to move it to `historical_data/_test/`?
+3. **Backup branch.** Keep `data-backup` as the backup target (recommended), or back up to `master` and accept a redeploy on each backup?
+4. **Recorder process.** Split it into its own Railway service? This is more setup but removes the main cause of mid-card interruptions.
+
+---
+
+## 5. UI and feature plan (not yet started)
+
+Current state: one 150 KB page. Ish uses it mainly for live odds, bet coverage, and P&L.
+
+| Area | Problem | Improvement |
+|---|---|---|
+| Live view | Hedge math and the odds chart are hard to read together | One panel: odds chart, hedge line, and P&L for the live fight |
+| Bets | Only open bets are shown | Settled history, per-fight P&L, filter by user |
+| Recordings | No way to see data quality at a glance | Library list with point count, longest gap, and a warning badge |
+| Health | Health is a single green/red state | A status page showing recorder, backup queue, and DraftKings sync, with the last error for each |
+| Mobile | Not checked at phone width | Check every page at 390 px before shipping |
+| Features | The auto-bet and chat features were removed but still show in docs | Remove stale docs and tests so the project describes what it actually does |
+
+Each change follows the project rules: test the live URL, check the page at mobile width, and screenshot the result.
