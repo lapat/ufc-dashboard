@@ -1,0 +1,32 @@
+{
+  "fightId": "gigachikadze_vs_joandersonbrito_2026-09-19",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "Giga Chikadze vs Joanderson Brito",
+  "startTime": "2026-09-19T21:45:11.071Z",
+  "endTime": "2026-09-19T22:01:27.397Z",
+  "dataPoints": 2,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-09-19T21:45:11.070Z",
+      "fighter1": {
+        "name": "Giga Chikadze",
+        "numericOdds": 340
+      },
+      "fighter2": {
+        "name": "Joanderson Brito",
+        "numericOdds": -440
+      }
+    },
+    {
+      "timestamp": "2026-09-19T21:46:28.602Z",
+      "fighter1": {
+        "name": "Giga Chikadze",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Joanderson Brito",
+        "numericOdds": -425
+      }
+    }
+  ]
+}
