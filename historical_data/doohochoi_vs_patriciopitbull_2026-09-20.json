@@ -1,0 +1,54 @@
+{
+  "fightId": "doohochoi_vs_patriciopitbull_2026-09-20",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "Patricio Pitbull vs Dooho Choi",
+  "startTime": "2026-09-20T02:31:32.157Z",
+  "endTime": "2026-09-20T02:49:44.376Z",
+  "dataPoints": 4,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-09-20T02:31:32.156Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "numericOdds": -270
+      },
+      "fighter2": {
+        "name": "Patricio Pitbull",
+        "numericOdds": 200
+      }
+    },
+    {
+      "timestamp": "2026-09-20T02:33:18.278Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "numericOdds": -238
+      },
+      "fighter2": {
+        "name": "Patricio Pitbull",
+        "numericOdds": 180
+      }
+    },
+    {
+      "timestamp": "2026-09-20T02:34:00.172Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "numericOdds": -154
+      },
+      "fighter2": {
+        "name": "Patricio Pitbull",
+        "numericOdds": 120
+      }
+    },
+    {
+      "timestamp": "2026-09-20T02:34:45.122Z",
+      "fighter1": {
+        "name": "Dooho Choi",
+        "numericOdds": 100
+      },
+      "fighter2": {
+        "name": "Patricio Pitbull",
+        "numericOdds": -130
+      }
+    }
+  ]
+}
