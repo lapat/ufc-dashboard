@@ -112,6 +112,7 @@ function recSaveRecord(id, record, opts = {}) {
       endTime:    new Date().toISOString(),
       dataPoints: record.oddsHistory.length,
       oddsHistory: record.oddsHistory,
+      pollStats:   record.stats || null,
     };
     // Never shrink an existing recording. If a file with this id already has at least as many
     // points, write this one beside it instead of replacing it. Both get backed up.

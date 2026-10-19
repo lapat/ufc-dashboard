@@ -2244,7 +2244,9 @@ document.getElementById('rec-test-btn').addEventListener('click', async ()=>{
   const btn=document.getElementById('rec-test-btn');
   btn.textContent='testing...'; btn.disabled=true;
   try{
-    const d=await fetch('/api/recorder/test',{method:'POST'}).then(r=>r.json());
+    const r=await fetch('/api/recorder/test',{method:'POST'});
+    if(!r.ok) throw new Error('admin only: HTTP '+r.status);
+    const d=await r.json();
     btn.textContent='✓ test fired';
     btn.style.color='#69db7c';
     const emailNote = d.emailConfigured ? ' + email sent' : ' (no email — set GMAIL_USER + GMAIL_APP_PASSWORD)';

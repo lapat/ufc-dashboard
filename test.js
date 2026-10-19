@@ -31,6 +31,16 @@ async function get(path) {
   return r.json();
 }
 
+const ADMIN_TOKEN = process.env.ADMIN_TOKEN || 'test-admin-token'; // must match the server's ADMIN_TOKEN
+async function postAdmin(path, body) {
+  const r = await fetch(`${target}${path}`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'X-Admin-Token': ADMIN_TOKEN },
+    body: JSON.stringify(body)
+  });
+  assert(r.ok, `HTTP ${r.status}`);
+  return r.json();
+}
 async function post(path, body) {
   const r = await fetch(`${target}${path}`, {
     method: 'POST',
@@ -220,7 +230,7 @@ async function runServerTests() {
 
   // Mock DK injection (from fetch/XHR path)
   await check('POST /api/dk-mock (requires fighter)', async () => {
-    const d = await post('/api/dk-mock', { fighter: 'Diego Lopes', odds: '-148', stake: 0.76 });
+    const d = await postAdmin('/api/dk-mock', { fighter: 'Diego Lopes', odds: '-148', stake: 0.76 });
     assert(d.ok, 'not ok');
     assert(d.bet.selection === 'Diego Lopes', 'wrong fighter');
     assert(d.bet.status === 'Open', `status should be Open, got ${d.bet.status}`);
@@ -1705,7 +1715,7 @@ async function runCoverageServerTests() {
     // Seed a bet via /api/dk-mock
     await fetch(`${LOCAL}/api/dk-mock`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json', 'X-Admin-Token': ADMIN_TOKEN },
       body: JSON.stringify({ fighter: 'Canada', odds: '-1600', stake: 0.01, userId: 'cov-live-test' })
     });
     const d = await fetch(`${LOCAL}/api/bet-coverage?user=cov-live-test`).then(r => r.json());
@@ -1871,7 +1881,7 @@ async function runBetPlacementServerTests() {
     const uid = `placement-test-${Date.now()}`;
     await fetch(`${target}/api/dk-mock`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json', 'X-Admin-Token': ADMIN_TOKEN },
       body: JSON.stringify({ fighter: 'Draw', odds: '+350', stake: 0.01, userId: uid })
     });
     const d = await fetch(`${target}/api/bet-coverage?user=${uid}`).then(r => r.json());
@@ -1884,7 +1894,7 @@ async function runBetPlacementServerTests() {
     const uid = `case-test-${Date.now()}`;
     await fetch(`${target}/api/dk-mock`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json', 'X-Admin-Token': ADMIN_TOKEN },
       body: JSON.stringify({ fighter: 'Canada', odds: '-350', stake: 0.01, userId: uid })
     });
     const d = await fetch(`${target}/api/bet-coverage?user=${uid}`).then(r => r.json());
@@ -1898,12 +1908,12 @@ async function runBetPlacementServerTests() {
     const uid = `two-bet-test-${Date.now()}`;
     await fetch(`${target}/api/dk-mock`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json', 'X-Admin-Token': ADMIN_TOKEN },
       body: JSON.stringify({ fighter: 'Canada', odds: '-350', stake: 0.01, userId: uid })
     });
     await fetch(`${target}/api/dk-mock`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json', 'X-Admin-Token': ADMIN_TOKEN },
       body: JSON.stringify({ fighter: 'Qatar', odds: '+200', stake: 0.01, userId: uid })
     });
     const d = await fetch(`${target}/api/bet-coverage?user=${uid}`).then(r => r.json());
@@ -6501,7 +6511,7 @@ async function runSecurityAndExpiryTests() {
   try {
     await check('AC3: /api/dk-odds-push endpoint exists — extension can push odds directly bypassing Odds API', () => {
       assert(src.includes('/api/dk-odds-push'), 'server.js must define /api/dk-odds-push endpoint');
-      const epBlock = src.slice(src.indexOf('/api/dk-odds-push'), src.indexOf('/api/dk-odds-push') + 600);
+      const epBlock = src.slice(src.indexOf('/api/dk-odds-push'), src.indexOf('/api/dk-odds-push') + 1200); // widened 2026-10-19: endpoint grew (counters)
       assert(epBlock.includes('fighter1') && epBlock.includes('fighter2'), 'must accept fighter1/fighter2');
       assert(epBlock.includes('numericOdds1') && epBlock.includes('numericOdds2'), 'must accept numericOdds1/numericOdds2');
       assert(epBlock.includes('oddsHistory.push'), 'must append to oddsHistory like the main recorder');

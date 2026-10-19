@@ -7,8 +7,17 @@ const Anthropic = require('@anthropic-ai/sdk');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+// Admin gate for destructive or costly write routes. Fails CLOSED: if ADMIN_TOKEN is not set,
+// these routes refuse everything. Send the token in the X-Admin-Token header.
+const ADMIN_TOKEN = process.env.ADMIN_TOKEN || '';
+function requireAdmin(req, res, next) {
+  if (!ADMIN_TOKEN) return res.status(503).json({ error: 'ADMIN_TOKEN is not configured on the server; admin routes are disabled' });
+  if (req.get('x-admin-token') !== ADMIN_TOKEN) return res.status(401).json({ error: 'unauthorized' });
+  next();
+}
 const ODDS_API_KEY = process.env.ODDS_API_KEY;
-const BASE_URL = 'https://api.the-odds-api.com/v4';
+const BASE_URL = process.env.ODDS_BASE_URL || 'https://api.the-odds-api.com/v4'; // override only for tests
 // HISTORICAL_DIR is set by record_engine (respects DATA_DIR env var for Railway volume).
 // Defined here as a placeholder — overwritten after record_engine is imported below.
 let HISTORICAL_DIR = path.join(__dirname, 'historical_data');
@@ -46,7 +55,9 @@ app.use(express.json());
 
 function fetchJson(url) {
   return new Promise((resolve, reject) => {
-    const req = https.get(url, res => {
+    // http:// is only used when ODDS_BASE_URL points at a local test server
+    const client = url.startsWith('http://') ? require('http') : https;
+    const req = client.get(url, res => {
       let d = '';
       res.on('data', c => d += c);
       res.on('end', () => {
@@ -172,6 +183,7 @@ app.get('/api/ufc', async (req, res) => {
 
 // Library page
 app.get('/library', (req, res) => { res.sendFile(path.join(__dirname, 'public', 'library.html')); });
+app.get('/status', (req, res) => { res.sendFile(path.join(__dirname, 'public', 'status.html')); });
 
 // Patterns page
 app.get('/patterns', (req, res) => { res.sendFile(path.join(__dirname, 'public', 'patterns.html')); });
@@ -595,7 +607,7 @@ app.get('/api/dk-captures', (req, res) => {
   res.json(dkCaptures);
 });
 
-app.delete('/api/dk-captures', (req, res) => {
+app.delete('/api/dk-captures', requireAdmin, (req, res) => {
   dkCaptures = [];
   saveDKCaptures();
   res.json({ ok: true });
@@ -845,7 +857,7 @@ app.get('/api/dk-status', (req, res) => {
   });
 });
 
-app.post('/api/dk-mock', (req, res) => {
+app.post('/api/dk-mock', requireAdmin, (req, res) => {
   const { fighter, odds, stake, userId } = req.body;
   if (!fighter) return res.status(400).json({ error: 'fighter required' });
   const targetUser = userId || DEFAULT_USER;
@@ -1080,6 +1092,11 @@ app.get('/api/recorder/status', (req, res) => {
     recording: active.length > 0,
     activeFights: active,
     totalSaved: recorderState.totalSaved,
+    apiErrors: recorderState.apiErrors,
+    extPushes: recorderState.extPushes,
+    lastExtPush: recorderState.lastExtPush,
+    graceMs: RECORDER_GRACE_MS,
+    lastDelayMs: recorderState.lastDelayMs,
     lastPoll: recorderState.lastPoll,
     pollRateMs,
     pollHistory: ph.slice(-10),
@@ -1104,7 +1121,7 @@ app.get('/api/recorder/backup-status', async (req, res) => {
 });
 
 // Manually triggers a volume-vs-GitHub reconcile (safe: never overwrites a remote file).
-app.post('/api/recorder/backup-reconcile', async (req, res) => {
+app.post('/api/recorder/backup-reconcile', requireAdmin, async (req, res) => {
   try { res.json(await reconcileBackups()); }
   catch (e) { res.status(500).json({ error: e.message }); }
 });
@@ -1163,6 +1180,8 @@ setInterval(() => {
 app.post('/api/dk-odds-push', (req, res) => {
   const {sport='mma_mixed_martial_arts',fighter1,fighter2,numericOdds1,numericOdds2}=req.body||{};
   if(!fighter1||!fighter2||!numericOdds1||!numericOdds2)return res.status(400).json({error:'missing fields'});
+  recorderState.extPushes++;
+  recorderState.lastExtPush=Date.now();
   const {id,record}=findOrCreateExtCapture(sport,fighter1,fighter2);
   const odds={timestamp:new Date().toISOString(),fighter1:{name:fighter1,numericOdds:+numericOdds1},fighter2:{name:fighter2,numericOdds:+numericOdds2},source:'extension'};
   const L=record.lastOdds;
@@ -1506,7 +1525,7 @@ app.post('/api/recorder/stop-all', (req, res) => {
 });
 
 // Test endpoint — simulates a full UFC fight recording cycle to verify pipeline
-app.post('/api/recorder/test', async (req, res) => {
+app.post('/api/recorder/test', requireAdmin, async (req, res) => {
   const testId = `mma__testfighter_vs_testopponent_${new Date().toISOString().slice(0,10)}`;
   const f1 = 'Test Fighter A', f2 = 'Test Fighter B';
 
@@ -1552,7 +1571,7 @@ const UFC_POLL_MS      = 3000;
 const OTHER_POLL_MS    = 5000;    // 5s while browser is open watching
 const PREWARM_MS       = 15000;   // 15s when a fight starts within 10 min
 const PREWARM_SLOW_MS  = 60000;   // 60s when a fight starts within 60 min
-const IDLE_POLL_MS     = 300000;  // 5 min when nothing is coming soon
+const IDLE_POLL_MS     = Number(process.env.IDLE_POLL_MS) || 300000; // 5 min when nothing is coming soon (env override for tests)
 
 const SPORT_META = {
   'mma_mixed_martial_arts': { label: 'UFC/MMA',    window: 3 * 60 * 60 * 1000 },
@@ -1612,7 +1631,26 @@ const recorderState = {
   failCounts:      {},   // sportKey → consecutive API failure count
   sessionFights:   [],   // fights saved this event night (for summary email)
   summaryTimer:    null, // fires end-of-event summary email after quiet period
+  apiErrors:       0,    // total Odds API poll failures since boot
+  extPushes:       0,    // extension odds pushes received (ext-capture cross-check)
+  lastExtPush:     null,
+  lastDelayMs:     null, // delay chosen for the most recent poll (drives the grace period)
 };
+
+// A fight must be missing from the feed for this long before its recording is ended.
+// Odds API / DraftKings drop a live market for a moment between rounds; ending on the first
+// empty poll split recordings into fragments, and each restart overwrote the earlier one.
+const RECORDER_GRACE_MS = Number(process.env.RECORDER_GRACE_MS) || 3 * 60 * 1000;
+
+// Continue a recording from its saved file, if one exists, instead of starting empty.
+function readPriorRecording(sportKey, id) {
+  try {
+    const f = JSON.parse(fs.readFileSync(recFilePath(sportKey, id), 'utf8'));
+    return { oddsHistory: Array.isArray(f.oddsHistory) ? f.oddsHistory : [], startTime: f.startTime || null };
+  } catch (_) {
+    return { oddsHistory: [], startTime: null };
+  }
+}
 
 // Threshold before emailing about repeated API failures
 const FAIL_ALERT_THRESHOLD = 5;
@@ -1719,26 +1757,32 @@ async function recPollSport(sportKey, meta, watchedGame) {
       currentIds.add(id);
 
       if (!recorderState.activeFights.has(id)) {
-        console.log(`REC START [${meta.label}] ${fight.home_team} vs ${fight.away_team}`);
+        const prior = readPriorRecording(sportKey, id);
+        const resumed = prior.oddsHistory.length > 0;
+        console.log(`REC ${resumed ? 'RESUME' : 'START'} [${meta.label}] ${fight.home_team} vs ${fight.away_team}${resumed ? ` (continuing ${prior.oddsHistory.length} pts)` : ''}`);
         recorderState.activeFights.set(id, {
-          meta: { sport: sportKey, label: meta.label, fighter1: fight.home_team, fighter2: fight.away_team, startTime: new Date().toISOString() },
-          oddsHistory: [],
-          lastOdds: null,
+          meta: { sport: sportKey, label: meta.label, fighter1: fight.home_team, fighter2: fight.away_team, startTime: prior.startTime || new Date().toISOString() },
+          oddsHistory: prior.oddsHistory,
+          lastOdds: prior.oddsHistory[prior.oddsHistory.length - 1] || null,
+          stats: { present: 0, absent: 0, changes: 0, resumes: resumed ? 1 : 0 },
         });
         persistState(recorderState.activeFights);
         // Cancel any pending summary — more fights are still happening
         if (recorderState.summaryTimer) { clearTimeout(recorderState.summaryTimer); recorderState.summaryTimer = null; }
-        sendAlert(
+        if (!resumed) sendAlert(
           `🔴 BET BOT: Recording ${fight.home_team} vs ${fight.away_team} [${meta.label}]`,
           `Live game detected.\n\n${fight.home_team} vs ${fight.away_team}\n${meta.label} · Started: ${new Date().toLocaleString()}\n\nhttps://ufc-dashboard-production-e03d.up.railway.app`
         );
       }
 
       const record = recorderState.activeFights.get(id);
+      record.missingSince = null;
+      if (record.stats) record.stats.present++;
       const last = record.lastOdds;
       if (!last || last.fighter1.numericOdds !== odds.fighter1.numericOdds || last.fighter2.numericOdds !== odds.fighter2.numericOdds) {
         record.oddsHistory.push(odds);
         record.lastOdds = odds;
+        if (record.stats) record.stats.changes++;
         persistState(recorderState.activeFights); // persist every new odds point
 
         // Live crossover detection — update state after every new odds point
@@ -1755,8 +1799,13 @@ async function recPollSport(sportKey, meta, watchedGame) {
       }
     }
 
+    const nowMs = Date.now();
     for (const [id, record] of recorderState.activeFights) {
-      if (record.meta.sport === sportKey && !currentIds.has(id)) {
+      if (record.meta.sport !== sportKey || currentIds.has(id)) continue;
+      record.missingSince = record.missingSince || nowMs;
+      if (record.stats) record.stats.absent++;
+      const grace = Math.max(RECORDER_GRACE_MS, 3 * (recorderState.lastDelayMs || 0));
+      if (nowMs - record.missingSince >= grace) {
         recSave(id);
         recorderState.activeFights.delete(id);
         persistState(recorderState.activeFights);
@@ -1777,6 +1826,7 @@ async function recPollSport(sportKey, meta, watchedGame) {
     }
     return { live: currentIds.size, soonestMs };
   } catch (e) {
+    recorderState.apiErrors++;
     const fails = (recorderState.failCounts[sportKey] || 0) + 1;
     recorderState.failCounts[sportKey] = fails;
     console.error(`[recorder] [${meta.label}] error #${fails}:`, e.message);
@@ -1826,6 +1876,7 @@ async function recPoll() {
   if (soonestMs !== null && soonestMs < 60 * 60 * 1000) {
     console.log(`[recorder] Next fight in ${Math.round(soonestMs / 60000)}min — polling every ${delay / 1000}s`);
   }
+  recorderState.lastDelayMs = delay;
   setTimeout(recPoll, delay);
 }
 

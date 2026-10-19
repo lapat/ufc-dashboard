@@ -116,14 +116,19 @@ Plan: require an `ADMIN_TOKEN` header on all of the above. This needs a Railway 
 - [ ] Decide on the `master` vs `data-backup` question (§4)
 
 ### Phase 2: security (days)
-- [ ] `ADMIN_TOKEN` on the write routes in §1.4
-- [ ] Remove `dk-mock` from production, or gate it behind the token
-- [ ] Move the test fight file out of the real data (§1.5)
+- [x] `ADMIN_TOKEN` on `dk-mock`, `dk-captures` DELETE, `backup-reconcile`, `recorder/test` (fails closed; set on Railway 2026-10-19)
+- [x] `dk-mock` gated behind the token (not called by any page or the extension)
+- [x] Test fight file moved out of real data to `test_fixtures/` (git rename)
+- [ ] Still open: `recorder/stop`, `stop-all`, `watch`, and `dk-odds-push` are unauthenticated. Dashboard and library pages call the stop and watch routes, so they need a token-in-page design first.
 
-### Phase 3: recording quality (1–2 weeks)
-- [ ] Per-fight poll statistics saved with each recording
-- [ ] Fix the ext-capture pipeline so the comparison endpoint produces pairs
-- [ ] Data-quality flags: too few points, long gaps, suspended-market odds
+### Phase 3: recording quality
+- [x] Grace period: a fight ends only after 3 min missing from the feed (was: first empty poll)
+- [x] Resume: a returning fight continues its saved timeline instead of overwriting it (root cause of split, overwritten recordings, see local log: `King Green vs Terrance Mckinney` started twice, second overwrote first)
+- [x] Per-fight poll stats saved with each recording (`pollStats`: present, absent, changes, resumes)
+- [x] Status page `/status` with recorder, backup, data-quality, and extension counters
+- [ ] Verify on the next UFC card: pollStats show whether gaps are feed misses or real flat odds
+- [ ] Fix the ext-capture pipeline (0 pushes recorded; the live-badge gate is still unverified against DraftKings)
+- [ ] Data-quality flags in the library (thin, junk, long gap)
 - [ ] Pull the recorder into its own process
 
 ### Phase 4: structure (2–4 weeks)
