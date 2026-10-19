@@ -728,3 +728,25 @@ See `── AI Agent: Hedge Math ──`, `── AI Agent: Strategy Logic ─�
 - [ ] Server: `GET /api/chat/status` for current strategy state
 - [ ] Idempotency key before every bet placement
 - [ ] Soccer 3-outcome draw exposure warning
+
+---
+
+## DK bet sync: purchase-flow bets (fixed 2026-10-17)
+
+**Symptom:** Ish placed bets that never appeared in Bet Bot (`/api/dk-bets`). The extension was capturing the traffic fine.
+
+**Root cause:** DK's bet-placement flow (`/api/wager/v1/getPurchases`, `placeBets`) returns bets as `data.purchases[].bets[]`, with each selection identified only by id (e.g. `0ML86744453_1`). `parseDKBets()` only understood the WebSocket shapes (`result.initial.bets` / `result.update.bets`), so these bets were silently dropped.
+
+**Fix (commit 690cc5f):**
+- `flattenPurchases()` maps purchases into the same per-bet shape as the WS parser.
+- `learnSelectionLabels()` builds a selection id → outcome label map from `{id, label, marketId}` objects in any payload (seeded from stored captures at boot), so purchase bets get a name for `bet-coverage` matching.
+- Purchase payloads merge by `betId` (they are per-purchase, not full snapshots).
+- Regression test: `test.js` → "A getPurchases payload is stored as a bet, named via the sportscontent outcome label".
+
+**Verified:** replayed the real captured payload into the live server; `/api/dk-bets?user=ish` returns the $80 Cody Chovancek +105 bet.
+
+**Not yet verified:** a brand-new bet placed from scratch. Check the next real bet lands in `/api/dk-bets?user=ish`.
+
+**Open:** bets from Oct 11 still show Open. Not yet confirmed whether DK stopped sending WS bet updates, which would leave settled bets uncleared.
+
+**Deploy note:** Railway deploys from `master`. This fix was fast-forwarded to `master` and `ish-version` on 2026-10-17.
