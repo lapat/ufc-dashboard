@@ -15,6 +15,8 @@ Reviewed 2026-10-19. Each finding is marked **verified** (checked against live d
   2. The push was fire-and-forget: no retry, no queue, no later check.
   3. `/api/recorder/backup-status` reported `ok: true` whenever the env var was set, so the health gate was green while backups failed.
 - Fix (commit `f8ce77b`): status checks, a retry queue, a reconcile against the backup branch (on boot and every 30 min), and a token check against GitHub.
+- **Root cause of the failures, confirmed live (2026-10-19):** the `GITHUB_TOKEN` on Railway can read the repo but gets `HTTP 403 Resource not accessible by personal access token` on every write. The original code could never have succeeded. The first token check only tested read access, so it passed.
+- Fix: the health check now tests write permission (`permissions.push`). It will report `ok: false` until the token is replaced.
 
 ### 1.2 Backups committed to `master` would redeploy the server  (verified, fixed in code)
 
@@ -101,7 +103,8 @@ Plan: require an `ADMIN_TOKEN` header on all of the above. This needs a Railway 
 - [x] Backups to `data-backup`, not `master`
 - [x] No-overwrite guard and atomic writes
 - [x] Back up the 209 unbacked recordings (`c130c95`, on `ish-version`)
-- [ ] Verify the live reconcile covers every volume file (after deploy)
+- [ ] **Replace the Railway `GITHUB_TOKEN` with one that has Contents: read and write on `lapat/ufc-dashboard`** (blocking; nothing backs up until this is done)
+- [ ] Verify the live reconcile covers every volume file (after the token is replaced)
 - [ ] Alert when the backup queue has items for more than 30 minutes
 - [ ] Decide on the `master` vs `data-backup` question (§4)
 
