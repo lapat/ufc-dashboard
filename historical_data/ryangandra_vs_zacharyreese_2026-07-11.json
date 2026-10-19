@@ -1,0 +1,21 @@
+{
+  "fightId": "ryangandra_vs_zacharyreese_2026-07-11",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "Ryan Gandra vs Zachary Reese",
+  "startTime": "2026-07-11T21:30:01.793Z",
+  "endTime": "2026-07-11T21:39:00.298Z",
+  "dataPoints": 1,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-07-11T21:30:01.793Z",
+      "fighter1": {
+        "name": "Ryan Gandra",
+        "numericOdds": -140
+      },
+      "fighter2": {
+        "name": "Zachary Reese",
+        "numericOdds": 110
+      }
+    }
+  ]
+}
