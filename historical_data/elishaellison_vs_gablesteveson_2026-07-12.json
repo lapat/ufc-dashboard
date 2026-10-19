@@ -1,0 +1,43 @@
+{
+  "fightId": "elishaellison_vs_gablesteveson_2026-07-12",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "Gable Steveson vs Elisha Ellison",
+  "startTime": "2026-07-12T00:10:16.745Z",
+  "endTime": "2026-07-12T00:27:42.130Z",
+  "dataPoints": 3,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-07-12T00:10:16.745Z",
+      "fighter1": {
+        "name": "Elisha Ellison",
+        "numericOdds": 650
+      },
+      "fighter2": {
+        "name": "Gable Steveson",
+        "numericOdds": -1150
+      }
+    },
+    {
+      "timestamp": "2026-07-12T00:10:58.773Z",
+      "fighter1": {
+        "name": "Elisha Ellison",
+        "numericOdds": 950
+      },
+      "fighter2": {
+        "name": "Gable Steveson",
+        "numericOdds": -1950
+      }
+    },
+    {
+      "timestamp": "2026-07-12T00:12:41.582Z",
+      "fighter1": {
+        "name": "Elisha Ellison",
+        "numericOdds": 900
+      },
+      "fighter2": {
+        "name": "Gable Steveson",
+        "numericOdds": -1850
+      }
+    }
+  ]
+}
