@@ -1,0 +1,21 @@
+{
+  "fightId": "aleksandarrakic_vs_marcintybura_2026-08-01",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "Marcin Tybura vs Aleksandar Rakic",
+  "startTime": "2026-08-01T18:45:00.218Z",
+  "endTime": "2026-08-01T18:48:44.278Z",
+  "dataPoints": 1,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-08-01T18:45:00.218Z",
+      "fighter1": {
+        "name": "Aleksandar Rakic",
+        "numericOdds": -15000
+      },
+      "fighter2": {
+        "name": "Marcin Tybura",
+        "numericOdds": 2500
+      }
+    }
+  ]
+}
