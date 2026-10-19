@@ -1,0 +1,21 @@
+{
+  "fightId": "conormcgregor_vs_maxholloway_2026-07-12",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "Max Holloway vs Conor McGregor",
+  "startTime": "2026-07-12T03:45:14.204Z",
+  "endTime": "2026-07-12T03:55:30.903Z",
+  "dataPoints": 1,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-07-12T03:45:14.204Z",
+      "fighter1": {
+        "name": "Conor McGregor",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Max Holloway",
+        "numericOdds": -395
+      }
+    }
+  ]
+}
