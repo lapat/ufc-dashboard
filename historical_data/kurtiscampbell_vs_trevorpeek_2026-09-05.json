@@ -1,0 +1,21 @@
+{
+  "fightId": "kurtiscampbell_vs_trevorpeek_2026-09-05",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "Trevor Peek vs Kurtis Campbell",
+  "startTime": "2026-09-05T20:00:10.118Z",
+  "endTime": "2026-09-05T20:14:50.411Z",
+  "dataPoints": 1,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-09-05T20:00:10.118Z",
+      "fighter1": {
+        "name": "Kurtis Campbell",
+        "numericOdds": -100000
+      },
+      "fighter2": {
+        "name": "Trevor Peek",
+        "numericOdds": 4000
+      }
+    }
+  ]
+}
