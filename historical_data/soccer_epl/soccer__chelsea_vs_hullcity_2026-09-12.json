@@ -1,0 +1,21 @@
+{
+  "fightId": "soccer__chelsea_vs_hullcity_2026-09-12",
+  "sport": "soccer_epl",
+  "fightTitle": "Chelsea vs Hull City",
+  "startTime": "2026-09-12T16:03:26.987Z",
+  "endTime": "2026-09-12T16:08:42.348Z",
+  "dataPoints": 1,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-09-12T16:03:26.987Z",
+      "fighter1": {
+        "name": "Chelsea",
+        "numericOdds": 700
+      },
+      "fighter2": {
+        "name": "Hull City",
+        "numericOdds": 3000
+      }
+    }
+  ]
+}
