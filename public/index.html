@@ -17,6 +17,7 @@
     #topbar-status{margin-left:auto;font-size:0.78rem;color:#444;white-space:nowrap}
     /* status cluster */
     #status-cluster{display:flex;align-items:center;gap:0;background:#0d0d0d;border:1px solid #1a1a1a;border-radius:8px;padding:0}
+    @media (max-width:600px){#status-cluster{flex-wrap:wrap;max-width:100%;justify-content:center;row-gap:2px}}
     .sc-item{display:flex;align-items:center;gap:7px;font-size:0.72rem;white-space:nowrap;padding:6px 14px;border-right:1px solid #1a1a1a}
     .sc-item:last-child{border-right:none}
     .sc-name{color:#333;letter-spacing:.5px;text-transform:uppercase;font-size:0.68rem}
@@ -289,13 +290,6 @@
     .bl-pnl-pos{color:#69db7c;font-weight:700}
     .bl-pnl-neg{color:#ff6b6b;font-weight:700}
     .bl-pnl-open{color:#666}
-    /* ── spy mode ── */
-    #spy-input-row{display:none;background:#07070f;border-bottom:1px solid #1a1a30;padding:6px 24px;align-items:center;gap:8px}
-    #spy-banner{display:none;background:#07070f;border-bottom:1px solid #1a1a30;padding:5px 24px;font-size:0.7rem;color:#6a9fd8;align-items:center;gap:8px}
-    #spy-log{display:none;background:#07070d;border-bottom:1px solid #1a1a28}
-    #spy-log .bl-sel{color:#aac4e0}
-    #spy-log .bl-time,#spy-log .bl-odds,#spy-log .bl-stake{color:#7a9ab8}
-    #spy-log .bl-th{color:#4a6a88}
     /* ── CLV alert ── */
     #clv-alert{display:none;background:#0e0900;border-bottom:1px solid #2a1e00;padding:6px 24px;font-size:0.72rem;color:#c9a02a;letter-spacing:.15px}
     /* live crossover banner */
@@ -344,7 +338,6 @@
       #topbar h1{font-size:1.2rem;letter-spacing:1px}
       #rec-status{font-size:1.1rem}
       #rec-dot{width:10px;height:10px}
-      #rec-test-btn{display:none}
       #topbar-status{display:none}
       #sport-strip{padding:12px 16px 0;gap:8px}
       .sport-pill{font-size:1.15rem;padding:13px 22px;border-radius:20px}
@@ -400,7 +393,6 @@
   <span id="pnl-month" style="color:#888"></span>
   <span style="margin-left:auto;display:flex;gap:10px;align-items:center">
     <button onclick="toggleBetLog()" style="background:none;border:none;color:#666;cursor:pointer;font-size:0.65rem;padding:0;letter-spacing:.3px" id="bet-log-btn">▾ bets</button>
-    <button onclick="toggleSpyInput()" style="background:none;border:none;color:#556;cursor:pointer;font-size:0.65rem;padding:0;letter-spacing:.3px">spy</button>
   </span>
 </div>
 <div id="settle-toast"></div>
@@ -420,29 +412,6 @@
   </table>
 </div>
 
-<!-- Spy mode input row -->
-<div id="spy-input-row">
-  <span style="font-size:0.62rem;color:#6688aa;text-transform:uppercase;letter-spacing:.5px">Watch user:</span>
-  <input id="spy-input" placeholder="username (e.g. ish)" style="background:#0a0a1a;border:1px solid #1a1a3a;border-radius:4px;color:#74c0fc;font-size:0.7rem;padding:4px 8px;outline:none;width:150px"/>
-  <button onclick="applySpyUser()" style="background:#0a0a1a;border:1px solid #74c0fc44;border-radius:4px;color:#74c0fc;font-size:0.65rem;padding:4px 10px;cursor:pointer">Watch</button>
-  <button onclick="clearSpy()" style="background:none;border:none;color:#252525;font-size:0.65rem;cursor:pointer;padding:0">clear</button>
-</div>
-
-<!-- Spy banner + log -->
-<div id="spy-banner">
-  <span style="color:#5b8fc2">Watching</span>
-<strong id="spy-name" style="color:#74c0fc"></strong>
-  <span id="spy-summary" style="color:#7aaad0;margin-left:4px"></span>
-</div>
-<div id="spy-log">
-  <table style="width:100%;border-collapse:collapse;font-size:0.7rem">
-    <thead><tr>
-      <th class="bl-th">Time</th><th class="bl-th">Selection</th><th class="bl-th">Odds</th>
-      <th class="bl-th">Stake</th><th class="bl-th">Status</th><th class="bl-th" style="text-align:right;padding-right:24px">P&amp;L</th>
-    </tr></thead>
-    <tbody id="spy-log-tbody"></tbody>
-  </table>
-</div>
 
 <!-- CLV / line move alert -->
 <div id="clv-alert"></div>
@@ -496,8 +465,8 @@
   <!-- hidden legacy elements kept for JS compat -->
   <div id="rec-status" style="display:none"><div id="rec-dot" class="idle"></div><span id="rec-label">—</span></div>
   <div id="dk-ext-status" style="display:none"><div id="dk-ext-dot"></div><span id="dk-ext-label"></span></div>
-  <button id="rec-test-btn" title="Test the recording pipeline" style="font-size:0.75rem;padding:4px 9px;background:#141414;border:1px solid #1e1e1e;color:#444;border-radius:5px;cursor:pointer;white-space:nowrap">test rec</button>
   <a href="/library" style="font-size:0.75rem;padding:4px 9px;border:1px solid #1e1e1e;border-radius:5px;color:#444;white-space:nowrap;text-decoration:none">Library</a>
+  <a href="/patterns" style="font-size:0.75rem;padding:4px 9px;border:1px solid #1e1e1e;border-radius:5px;color:#444;white-space:nowrap;text-decoration:none">Patterns</a>
   <div id="topbar-status" style="margin-left:auto;font-size:0.78rem;color:#444;white-space:nowrap">Loading...</div>
   <span style="font-size:0.6rem;color:#333;white-space:nowrap;letter-spacing:.5px" title="Dashboard build">v2026-06-13.18</span>
 </div>
@@ -1990,7 +1959,7 @@ function renderGameList(){
 }
 
 // ── Bet coverage gamification ───────────────────────────────────────────────
-// Polls /api/bet-coverage for the active spy user (or the logged-in user)
+// Polls /api/bet-coverage
 // and lights up outcome dots on each game card. When all outcomes covered → LOCKED.
 
 function applyCoverage(covered) {
@@ -2020,9 +1989,7 @@ function applyCoverage(covered) {
 
 async function pollCoverage() {
   try {
-    const user = (typeof _spyUser !== 'undefined' && _spyUser) ? _spyUser : '';
-    const url = '/api/bet-coverage' + (user ? `?user=${encodeURIComponent(user)}` : '');
-    const d = await fetch(url).then(r => r.json());
+    const d = await fetch('/api/bet-coverage').then(r => r.json());
     if (Array.isArray(d.covered)) applyCoverage(d.covered);
   } catch(_) {}
 }
@@ -2240,23 +2207,6 @@ legendBtn.addEventListener('click', e => { e.stopPropagation(); legendPopup.clas
 legendPopup.addEventListener('click', e => e.stopPropagation());
 document.addEventListener('click', () => legendPopup.classList.remove('open'));
 
-document.getElementById('rec-test-btn').addEventListener('click', async ()=>{
-  const btn=document.getElementById('rec-test-btn');
-  btn.textContent='testing...'; btn.disabled=true;
-  try{
-    const r=await fetch('/api/recorder/test',{method:'POST'});
-    if(!r.ok) throw new Error('admin only: HTTP '+r.status);
-    const d=await r.json();
-    btn.textContent='✓ test fired';
-    btn.style.color='#69db7c';
-    const emailNote = d.emailConfigured ? ' + email sent' : ' (no email — set GMAIL_USER + GMAIL_APP_PASSWORD)';
-    console.log('Recorder test:', d.message + emailNote);
-    setTimeout(()=>{ btn.textContent='test rec'; btn.style.color=''; btn.disabled=false; },12000);
-  }catch(e){
-    btn.textContent='failed'; btn.style.color='#e74c3c';
-    setTimeout(()=>{ btn.textContent='test rec'; btn.style.color=''; btn.disabled=false; },3000);
-  }
-});
 
 // Heartbeat — tells server to keep recording the current non-UFC sport
 let _heartbeatTimer=null;
@@ -2285,7 +2235,6 @@ let _sessionPnL = { net:0, wagered:0, wins:0, losses:0, pushes:0, open:0 };
 let _prevBetStatuses = new Map();
 let _pnlHistory = [];
 let _liveScoreTimer = null;
-let _spyUser = new URLSearchParams(location.search).get('spy') || localStorage.getItem('spyUser') || '';
 function applyDashUser(uid) {
   _dkMeParam = uid;
   const pill = document.getElementById('user-pill');
@@ -2522,90 +2471,6 @@ function checkCLVAlert(o1, o2) {
   }
 }
 
-// ── Spy Mode ─────────────────────────────────────────────────────────────────
-// Init spy mode (_spyUser declared early to avoid TDZ)
-if (_spyUser) { updateSpyBanner(); syncSpyBets(); }
-
-function toggleSpyInput() {
-  const row    = document.getElementById('spy-input-row');
-  const banner = document.getElementById('spy-banner');
-  const log    = document.getElementById('spy-log');
-  const rowOpen = row.style.display === 'flex';
-
-  if (_spyUser) {
-    // Toggle: if input row is showing, collapse to banner; otherwise show input row to allow clear/change
-    if (rowOpen) {
-      row.style.display    = 'none';
-      banner.style.display = 'flex';
-      log.style.display    = 'block';
-    } else {
-      row.style.display    = 'flex';
-      banner.style.display = 'none';
-      log.style.display    = 'none';
-      const inp = document.getElementById('spy-input');
-      if (inp) { inp.value = _spyUser; inp.focus(); }
-    }
-    return;
-  }
-  // No spy user — toggle the input row
-  row.style.display = rowOpen ? 'none' : 'flex';
-  if (!rowOpen) {
-    const inp = document.getElementById('spy-input');
-    if (inp) { inp.value = ''; inp.focus(); }
-  }
-}
-
-function applySpyUser() {
-  const val = (document.getElementById('spy-input')?.value || '').trim().toLowerCase();
-  _spyUser = val;
-  if (_spyUser) localStorage.setItem('spyUser', _spyUser);
-  else localStorage.removeItem('spyUser');
-  document.getElementById('spy-input-row').style.display = 'none';
-  updateSpyBanner();
-  syncSpyBets();
-}
-
-function clearSpy() {
-  _spyUser = '';
-  localStorage.removeItem('spyUser');
-  if (document.getElementById('spy-input')) document.getElementById('spy-input').value = '';
-  document.getElementById('spy-input-row').style.display = 'none';
-  updateSpyBanner();
-}
-
-function updateSpyBanner() {
-  const banner = document.getElementById('spy-banner');
-  const log    = document.getElementById('spy-log');
-  if (_spyUser) {
-    document.getElementById('spy-name').textContent = _spyUser;
-    banner.style.display = 'flex';
-    log.style.display    = 'block';
-  } else {
-    banner.style.display = 'none';
-    log.style.display    = 'none';
-    const tbody = document.getElementById('spy-log-tbody');
-    if (tbody) tbody.innerHTML = '';
-  }
-}
-
-async function syncSpyBets() {
-  if (!_spyUser) return;
-  try {
-    const today = new Date().toISOString().slice(0, 10);
-    const all = await (await fetch(`/api/dk-bets?user=${encodeURIComponent(_spyUser)}&all=1`)).json();
-    const straight = all.filter(b => !b.isParlay && b.placementDate && b.placementDate.slice(0,10) === today);
-    renderBetLog(straight, 'spy-log-tbody');
-    const open    = straight.filter(b => (b.status||'').toLowerCase() === 'open').length;
-    const settled = straight.filter(b => (b.status||'').toLowerCase() !== 'open');
-    const wins    = settled.filter(b => (b.status||'').toLowerCase() === 'won').length;
-    const losses  = settled.filter(b => (b.status||'').toLowerCase() === 'lost').length;
-    const net     = settled.reduce((s,b) => s + betProfit(b), 0);
-    const netStr  = net > 0.01 ? `+$${net.toFixed(2)}` : net < -0.01 ? `-$${Math.abs(net).toFixed(2)}` : '$0';
-    const rec     = [wins?wins+'W':'', losses?losses+'L':''].filter(Boolean).join(' ') || '—';
-    document.getElementById('spy-summary').textContent = `${rec} · ${netStr} · ${open} open`;
-  } catch(e) { console.warn('[spy]', e.message); }
-}
-
 // ── Live Score ───────────────────────────────────────────────────────────────
 async function fetchLiveScore() {
   if (!selectedGame) return;
@@ -2731,7 +2596,6 @@ async function syncPnL() {
     updateSparkline();
     renderBetLog(todayAll, 'bet-log-tbody');
     document.getElementById('bet-log-count').textContent = `${todayAll.length} bet${todayAll.length!==1?'s':''}`;
-    syncSpyBets(); // refresh spy panel on same cadence
   } catch(_) {}
 }
 

@@ -1375,36 +1375,6 @@ function testSparklineColor() {
   assert(getColor(0.001) === '#333',    'near-zero rounds to grey');
 }
 
-function testSpyModeSeparation() {
-  // Spy user bets must NOT affect own P&L state
-  const today = new Date().toISOString().slice(0, 10);
-
-  // Own bets (user=louis)
-  const ownBets = [
-    { betId:'l1', userId:'louis', isParlay:false, placementDate:today+'T10:00Z', status:'Won',  stake:'100', returns:'190' },
-  ];
-
-  // Spy bets (user=ish) — different userId entirely
-  const spyBets = [
-    { betId:'i1', userId:'ish',   isParlay:false, placementDate:today+'T10:00Z', status:'Won',  stake:'50',  returns:'125' },
-    { betId:'i2', userId:'ish',   isParlay:false, placementDate:today+'T11:00Z', status:'Lost', stake:'30',  returns:'0'   },
-  ];
-
-  // Own P&L only uses ownBets — spyBets must not bleed in
-  const ownNet = ownBets.filter(b=>b.status!=='Open').reduce((s,b)=>s+betProfitFn(b),0);
-  assert(Math.abs(ownNet - 90) < 0.01, `own net should be +90, got ${ownNet}`);
-
-  // Spy summary is computed from spyBets separately
-  const spySettled = spyBets.filter(b=>b.status!=='Open');
-  const spyNet  = spySettled.reduce((s,b)=>s+betProfitFn(b),0);
-  const spyWins = spySettled.filter(b=>(b.status||'').toLowerCase()==='won').length;
-  const spyLoss = spySettled.filter(b=>(b.status||'').toLowerCase()==='lost').length;
-  assert(Math.abs(spyNet - 45) < 0.01, `spy net should be +45 (75-30), got ${spyNet}`);
-  assert(spyWins === 1 && spyLoss === 1, `spy 1W 1L, got ${spyWins}W ${spyLoss}L`);
-
-  // No cross-contamination: ownBets contain no ish bets
-  assert(!ownBets.some(b => b.userId === 'ish'), 'ish bets must not appear in own list');
-}
 
 function testLiveScoreFuzzyMatch() {
   // Mirrors fuzzy matching logic in server.js /api/live-score
@@ -1951,7 +1921,6 @@ try { testBetLogSort(); console.log('  ✓ bet log sort: newest bet appears firs
 try { testCLVAlert(); console.log('  ✓ CLV alert: triggers on >15pt adverse move, silent on favorable/small/no-bet'); passed++; } catch(e) { console.error('  ✗ CLV alert:', e.message); failed++; }
 try { testSparklineAccumulation(); console.log('  ✓ sparkline: accumulates up to 40 pts, SVG x/y in bounds'); passed++; } catch(e) { console.error('  ✗ sparkline:', e.message); failed++; }
 try { testSparklineColor(); console.log('  ✓ sparkline color: green/red/grey by latest net'); passed++; } catch(e) { console.error('  ✗ sparkline color:', e.message); failed++; }
-try { testSpyModeSeparation(); console.log('  ✓ spy mode: spy bets isolated from own P&L, separate net calc'); passed++; } catch(e) { console.error('  ✗ spy mode separation:', e.message); failed++; }
 try { testLiveScoreFuzzyMatch(); console.log('  ✓ live score fuzzy match: exact/substring/case-insensitive match, false negatives'); passed++; } catch(e) { console.error('  ✗ live score fuzzy match:', e.message); failed++; }
 
 console.log('\n── Record Engine (Unit) ──');
@@ -5127,9 +5096,6 @@ async function runAutoBetTests() {
           method: 'POST', headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ enabled: false }),
         });
-        // Trigger a test fight via recorder/test (checkAutoBet is also called there)
-        // We verify indirectly: recentLog should NOT have a 'fired' event
-        await fetch('http://localhost:3000/api/recorder/test', { method: 'POST' });
         await new Promise(r => setTimeout(r, 500));
         const cfgR = await fetch('http://localhost:3000/api/auto-bet/config');
         const cfg = await cfgR.json();
