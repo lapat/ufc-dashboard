@@ -6,6 +6,8 @@ const path = require('path');
 const Anthropic = require('@anthropic-ai/sdk');
 
 const app = express();
+// Bump on every deploy so a live check can tell builds apart.
+const BUILD_TAG = '2026-10-19-dk-state-volume';
 const PORT = process.env.PORT || 3000;
 
 // Admin gate for destructive or costly write routes. Fails CLOSED: if ADMIN_TOKEN is not set,
@@ -1056,7 +1058,7 @@ app.get('/health', (req, res) => {
   const staleSec = lastPoll ? Math.floor((Date.now() - lastPoll) / 1000) : null;
   const stale = staleSec === null || staleSec > 600; // >10 min = unhealthy
   if (stale) return res.status(503).json({ status: 'unhealthy', staleSec, lastPoll: recorderState.lastPoll });
-  res.json({ status: 'ok', staleSec, recording: recorderState.activeFights.size > 0, lastPoll: recorderState.lastPoll });
+  res.json({ status: 'ok', build: BUILD_TAG, dkStateDir: DK_STATE_DIR, staleSec, recording: recorderState.activeFights.size > 0, lastPoll: recorderState.lastPoll });
 });
 
 app.get('/api/recorder/status', (req, res) => {
