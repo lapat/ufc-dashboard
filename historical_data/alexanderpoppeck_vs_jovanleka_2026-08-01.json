@@ -1,0 +1,32 @@
+{
+  "fightId": "alexanderpoppeck_vs_jovanleka_2026-08-01",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "Jovan Leka vs Alexander Poppeck",
+  "startTime": "2026-08-01T14:29:51.861Z",
+  "endTime": "2026-08-01T14:43:14.323Z",
+  "dataPoints": 2,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-08-01T14:29:51.861Z",
+      "fighter1": {
+        "name": "Alexander Poppeck",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Jovan Leka",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-08-01T14:31:19.497Z",
+      "fighter1": {
+        "name": "Alexander Poppeck",
+        "numericOdds": 270
+      },
+      "fighter2": {
+        "name": "Jovan Leka",
+        "numericOdds": -375
+      }
+    }
+  ]
+}
