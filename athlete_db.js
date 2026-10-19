@@ -7,14 +7,22 @@
 // Raw HTML is kept in DATA_DIR/athlete_pages/ so the full page is always available.
 const fs = require('fs');
 const path = require('path');
-const { DatabaseSync } = require('node:sqlite');
 
 const DATA_ROOT = process.env.DATA_DIR || __dirname;
 const PAGES_DIR = path.join(DATA_ROOT, 'athlete_pages');
 if (!fs.existsSync(PAGES_DIR)) fs.mkdirSync(PAGES_DIR, { recursive: true });
 
-const db = new DatabaseSync(path.join(DATA_ROOT, 'ufc_db.sqlite'));
-db.exec(`
+// node:sqlite needs Node 22+. If it is missing the server must still start, so the database is
+// simply disabled (and the error logged) instead of crashing the process.
+let db = null;
+try {
+  const { DatabaseSync } = require('node:sqlite');
+  db = new DatabaseSync(path.join(DATA_ROOT, 'ufc_db.sqlite'));
+} catch (e) {
+  console.error('[athlete-db] disabled — needs Node 22+ (node:sqlite):', e.message);
+}
+const requireDb = () => { if (!db) throw new Error('athlete database unavailable (needs Node 22+)'); return db; };
+if (db) db.exec(`
   CREATE TABLE IF NOT EXISTS athlete_snapshots (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     slug TEXT NOT NULL, name TEXT, fetched_at TEXT NOT NULL,
@@ -58,6 +66,7 @@ function parseAthlete(html) {
 
 // Saves one fetch as a new snapshot. Returns the snapshot id.
 function saveAthleteSnapshot({ slug, html, sourceUrl }) {
+  requireDb();
   const fetchedAt = new Date().toISOString();
   const file = `${slug}__${fetchedAt.replace(/[:.]/g, '-')}.html`;
   fs.writeFileSync(path.join(PAGES_DIR, file), html);
@@ -80,10 +89,11 @@ function saveAthleteSnapshot({ slug, html, sourceUrl }) {
 }
 
 function latestSnapshot(slug) {
-  return db.prepare('SELECT * FROM athlete_snapshots WHERE slug = ? ORDER BY fetched_at DESC LIMIT 1').get(slug) || null;
+  return requireDb().prepare('SELECT * FROM athlete_snapshots WHERE slug = ? ORDER BY fetched_at DESC LIMIT 1').get(slug) || null;
 }
 
 function snapshotDetail(id) {
+  requireDb();
   return {
     bio: db.prepare('SELECT key, value FROM athlete_bio WHERE snapshot_id = ?').all(id),
     stats: db.prepare('SELECT section, label, suffix, value FROM athlete_stats WHERE snapshot_id = ? ORDER BY ord').all(id),
@@ -91,6 +101,7 @@ function snapshotDetail(id) {
 }
 
 function counts() {
+  if (!db) return { athletes: 0, snapshots: 0, statRows: 0, enabled: false };
   return {
     athletes: db.prepare('SELECT COUNT(DISTINCT slug) AS n FROM athlete_snapshots').get().n,
     snapshots: db.prepare('SELECT COUNT(*) AS n FROM athlete_snapshots').get().n,
@@ -98,4 +109,4 @@ function counts() {
   };
 }
 
-module.exports = { saveAthleteSnapshot, latestSnapshot, snapshotDetail, parseAthlete, counts, db };
+module.exports = { saveAthleteSnapshot, latestSnapshot, snapshotDetail, parseAthlete, counts, get db() { return db; } };
