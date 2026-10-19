@@ -1,0 +1,54 @@
+{
+  "fightId": "giannivazquez_vs_milesjohns_2026-08-08",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "Miles Johns vs Gianni Vazquez",
+  "startTime": "2026-08-08T22:05:02.330Z",
+  "endTime": "2026-08-08T22:18:25.540Z",
+  "dataPoints": 4,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-08-08T22:05:02.330Z",
+      "fighter1": {
+        "name": "Gianni Vazquez",
+        "numericOdds": 190
+      },
+      "fighter2": {
+        "name": "Miles Johns",
+        "numericOdds": -250
+      }
+    },
+    {
+      "timestamp": "2026-08-08T22:05:15.193Z",
+      "fighter1": {
+        "name": "Gianni Vazquez",
+        "numericOdds": 175
+      },
+      "fighter2": {
+        "name": "Miles Johns",
+        "numericOdds": -230
+      }
+    },
+    {
+      "timestamp": "2026-08-08T22:06:03.519Z",
+      "fighter1": {
+        "name": "Gianni Vazquez",
+        "numericOdds": 280
+      },
+      "fighter2": {
+        "name": "Miles Johns",
+        "numericOdds": -395
+      }
+    },
+    {
+      "timestamp": "2026-08-08T22:06:45.361Z",
+      "fighter1": {
+        "name": "Gianni Vazquez",
+        "numericOdds": 300
+      },
+      "fighter2": {
+        "name": "Miles Johns",
+        "numericOdds": -425
+      }
+    }
+  ]
+}
