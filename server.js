@@ -1274,6 +1274,8 @@ app.post('/api/dk-odds-push', (req, res) => {
   if(!fighter1||!fighter2||!numericOdds1||!numericOdds2)return res.status(400).json({error:'missing fields'});
   recorderState.extPushes++;
   recorderState.lastExtPush=Date.now();
+  // Counted above so we can prove the extension is delivering, but NEVER stored unless it is UFC.
+  if (sport !== 'mma_mixed_martial_arts') return res.json({ ok: true, received: true, sport, stored: false, reason: 'UFC only' });
   const {id,record}=findOrCreateExtCapture(sport,fighter1,fighter2);
   // ALWAYS record every extension push, live or not. The live flag is kept on each point; the
   // extension sends it, so pre-fight pages are labelled rather than dropped.
