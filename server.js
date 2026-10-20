@@ -1084,12 +1084,12 @@ app.get('/api/usage', (req, res) => {
 });
 
 // Health check — Railway restarts service if this returns non-200
-app.get('/health', (req, res) => {
+app.get('/health', async (req, res) => {
   const lastPoll = recorderState.lastPoll ? new Date(recorderState.lastPoll) : null;
   const staleSec = lastPoll ? Math.floor((Date.now() - lastPoll) / 1000) : null;
   const stale = staleSec === null || staleSec > 600; // >10 min = unhealthy
   if (stale) return res.status(503).json({ status: 'unhealthy', staleSec, lastPoll: recorderState.lastPoll });
-  res.json({ status: 'ok', build: BUILD_TAG, node: process.version, athleteDb: require('./athlete_db').counts(), dkStateDir: DK_STATE_DIR, staleSec, recording: recorderState.activeFights.size > 0, lastPoll: recorderState.lastPoll });
+  res.json({ status: 'ok', build: BUILD_TAG, node: process.version, athleteDb: await require('./athlete_db').counts(), dkStateDir: DK_STATE_DIR, staleSec, recording: recorderState.activeFights.size > 0, lastPoll: recorderState.lastPoll });
 });
 
 app.get('/api/recorder/status', (req, res) => {

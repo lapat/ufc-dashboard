@@ -67,7 +67,7 @@ async function fetchOne(name) {
   catch (e) { index[slug] = { status: 'error', error: e.message, checkedAt: new Date().toISOString() }; saveIndex(); return; }
   if (page.status !== 200) { index[slug] = { status: 'miss', http: page.status, checkedAt: new Date().toISOString() }; saveIndex(); return; }
   // Keep the whole page: every fetch becomes a new snapshot in the athlete database (never overwritten).
-  try { athleteDb.saveAthleteSnapshot({ slug, html: page.body, sourceUrl: `https://www.ufc.com/athlete/${slug}` }); }
+  try { await athleteDb.saveAthleteSnapshot({ slug, html: page.body, sourceUrl: `https://www.ufc.com/athlete/${slug}` }); }
   catch (e) { console.error('[athlete-db]', slug, e.message); }
 
   // Photo: try the best size first, then fall back. Skips generic GIF placeholders.

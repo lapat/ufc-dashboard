@@ -2,27 +2,22 @@
 // athlete_db.js — stores every UFC.com athlete page we fetch, for personal use.
 // Each fetch is a new SNAPSHOT: nothing is overwritten. Tables:
 //   athlete_snapshots  one row per fetch (slug, time, name, source URL, full HTML file)
-//   athlete_bio        bio fields (Status, Height, Reach, Weight, Age, ...) for a snapshot
+//   athlete_bio        bio fields (Status, Height, Reach, Weight, ...) for a snapshot
 //   athlete_stats      stat blocks (Sig. Str. Landed Per Min, Takedown Avg, By Position, ...)
+// The database is SQLite run through sql.js (WebAssembly), so it needs no native build and
+// works on any Node version. The file ufc_db.sqlite is rewritten after every save.
 // Raw HTML is kept in DATA_DIR/athlete_pages/ so the full page is always available.
 const fs = require('fs');
 const path = require('path');
 
 const DATA_ROOT = process.env.DATA_DIR || __dirname;
 const PAGES_DIR = path.join(DATA_ROOT, 'athlete_pages');
+const DB_FILE = path.join(DATA_ROOT, 'ufc_db.sqlite');
 if (!fs.existsSync(PAGES_DIR)) fs.mkdirSync(PAGES_DIR, { recursive: true });
 
-// node:sqlite needs Node 22+. If it is missing the server must still start, so the database is
-// simply disabled (and the error logged) instead of crashing the process.
 let db = null;
-try {
-  const { DatabaseSync } = require('node:sqlite');
-  db = new DatabaseSync(path.join(DATA_ROOT, 'ufc_db.sqlite'));
-} catch (e) {
-  console.error('[athlete-db] disabled — needs Node 22+ (node:sqlite):', e.message);
-}
-const requireDb = () => { if (!db) throw new Error('athlete database unavailable (needs Node 22+)'); return db; };
-if (db) db.exec(`
+let initPromise = null;
+const SCHEMA = `
   CREATE TABLE IF NOT EXISTS athlete_snapshots (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     slug TEXT NOT NULL, name TEXT, fetched_at TEXT NOT NULL,
@@ -35,7 +30,37 @@ if (db) db.exec(`
     snapshot_id INTEGER NOT NULL, section TEXT, label TEXT, suffix TEXT, value TEXT, ord INTEGER
   );
   CREATE INDEX IF NOT EXISTS idx_snap_slug ON athlete_snapshots(slug, fetched_at);
-`);
+`;
+
+// Loads (or creates) the database. Safe to call many times; disabled with a logged error if it fails.
+function init() {
+  if (!initPromise) {
+    initPromise = require('sql.js')().then(SQL => {
+      db = fs.existsSync(DB_FILE) ? new SQL.Database(fs.readFileSync(DB_FILE)) : new SQL.Database();
+      db.run(SCHEMA);
+      persist();
+      return true;
+    }).catch(e => {
+      console.error('[athlete-db] disabled:', e.message);
+      return false;
+    });
+  }
+  return initPromise;
+}
+
+function persist() {
+  if (db) fs.writeFileSync(DB_FILE, Buffer.from(db.export()));
+}
+
+function all(sql, params = []) {
+  const stmt = db.prepare(sql);
+  try {
+    stmt.bind(params);
+    const rows = [];
+    while (stmt.step()) rows.push(stmt.getAsObject());
+    return rows;
+  } finally { stmt.free(); }
+}
 
 const clean = s => String(s || '').replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&').replace(/&#39;/g, "'").replace(/\s+/g, ' ').trim();
 
@@ -64,49 +89,51 @@ function parseAthlete(html) {
   return { name, bio, stats };
 }
 
-// Saves one fetch as a new snapshot. Returns the snapshot id.
-function saveAthleteSnapshot({ slug, html, sourceUrl }) {
-  requireDb();
+// Saves one fetch as a new snapshot. Returns the snapshot id. Throws if the database is unavailable.
+async function saveAthleteSnapshot({ slug, html, sourceUrl }) {
+  if (!(await init())) throw new Error('athlete database unavailable');
   const fetchedAt = new Date().toISOString();
   const file = `${slug}__${fetchedAt.replace(/[:.]/g, '-')}.html`;
   fs.writeFileSync(path.join(PAGES_DIR, file), html);
   const { name, bio, stats } = parseAthlete(html);
-  db.exec('BEGIN');
+  db.run('BEGIN');
   try {
-    const r = db.prepare(`INSERT INTO athlete_snapshots (slug, name, fetched_at, source_url, html_file, html_bytes) VALUES (?,?,?,?,?,?)`)
-      .run(slug, name || null, fetchedAt, sourceUrl, file, Buffer.byteLength(html));
-    const id = Number(r.lastInsertRowid);
-    const insBio = db.prepare('INSERT INTO athlete_bio (snapshot_id, key, value) VALUES (?,?,?)');
-    for (const b of bio) insBio.run(id, b.key, b.value);
-    const insStat = db.prepare('INSERT INTO athlete_stats (snapshot_id, section, label, suffix, value, ord) VALUES (?,?,?,?,?,?)');
-    for (const s of stats) insStat.run(id, s.section, s.label, s.suffix, s.value, s.ord);
-    db.exec('COMMIT');
+    db.run('INSERT INTO athlete_snapshots (slug, name, fetched_at, source_url, html_file, html_bytes) VALUES (?,?,?,?,?,?)',
+      [slug, name || null, fetchedAt, sourceUrl, file, Buffer.byteLength(html)]);
+    const id = all('SELECT last_insert_rowid() AS id')[0].id;
+    for (const b of bio) db.run('INSERT INTO athlete_bio (snapshot_id, key, value) VALUES (?,?,?)', [id, b.key, b.value]);
+    for (const s of stats) db.run('INSERT INTO athlete_stats (snapshot_id, section, label, suffix, value, ord) VALUES (?,?,?,?,?,?)',
+      [id, s.section, s.label, s.suffix, s.value, s.ord]);
+    db.run('COMMIT');
+    persist();
     return id;
   } catch (e) {
-    db.exec('ROLLBACK');
+    db.run('ROLLBACK');
     throw e;
   }
 }
 
-function latestSnapshot(slug) {
-  return requireDb().prepare('SELECT * FROM athlete_snapshots WHERE slug = ? ORDER BY fetched_at DESC LIMIT 1').get(slug) || null;
+async function latestSnapshot(slug) {
+  if (!(await init())) return null;
+  return all('SELECT * FROM athlete_snapshots WHERE slug = ? ORDER BY fetched_at DESC LIMIT 1', [slug])[0] || null;
 }
 
-function snapshotDetail(id) {
-  requireDb();
+async function snapshotDetail(id) {
+  if (!(await init())) return null;
   return {
-    bio: db.prepare('SELECT key, value FROM athlete_bio WHERE snapshot_id = ?').all(id),
-    stats: db.prepare('SELECT section, label, suffix, value FROM athlete_stats WHERE snapshot_id = ? ORDER BY ord').all(id),
+    bio: all('SELECT key, value FROM athlete_bio WHERE snapshot_id = ?', [id]),
+    stats: all('SELECT section, label, suffix, value FROM athlete_stats WHERE snapshot_id = ? ORDER BY ord', [id]),
   };
 }
 
-function counts() {
-  if (!db) return { athletes: 0, snapshots: 0, statRows: 0, enabled: false };
+async function counts() {
+  if (!(await init())) return { enabled: false, athletes: 0, snapshots: 0, statRows: 0 };
   return {
-    athletes: db.prepare('SELECT COUNT(DISTINCT slug) AS n FROM athlete_snapshots').get().n,
-    snapshots: db.prepare('SELECT COUNT(*) AS n FROM athlete_snapshots').get().n,
-    statRows: db.prepare('SELECT COUNT(*) AS n FROM athlete_stats').get().n,
+    enabled: true,
+    athletes: all('SELECT COUNT(DISTINCT slug) AS n FROM athlete_snapshots')[0].n,
+    snapshots: all('SELECT COUNT(*) AS n FROM athlete_snapshots')[0].n,
+    statRows: all('SELECT COUNT(*) AS n FROM athlete_stats')[0].n,
   };
 }
 
-module.exports = { saveAthleteSnapshot, latestSnapshot, snapshotDetail, parseAthlete, counts, get db() { return db; } };
+module.exports = { init, saveAthleteSnapshot, latestSnapshot, snapshotDetail, parseAthlete, counts };
