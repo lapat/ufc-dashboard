@@ -1,5 +1,27 @@
 # UFC Dashboard — Architecture Review and Plan
 
+## EXTENSION CAPTURE PLAN (2026-10-20)
+
+**Goal:** every odds change on the DraftKings page reaches the server every 2 seconds, whatever the live status, and any gap is visible and explained.
+
+**Findings**
+- Pushes were arriving only in bursts. Last minute before the plan: 0 pushes for 35 seconds, then bursts of about 5 per 15 seconds.
+- Two silent drops in the extension: no odds on screen (the scanner returned without logging), and fewer than two team names found (the background dropped the push without logging).
+- Ish's browser was running version 1.8, which sent odds only during a LIVE badge. Fixed by reloading version 3.1.
+- The push interval was 3 seconds, not the 2 seconds wanted.
+
+**Steps**
+1. Done: push interval 2 s (`background.js`).
+2. Done: scan health every 30 s (scans, with odds, no odds, missing names, pushes ok/failed) logged in the extension and stored as `lastScanStats`.
+3. Done: push failures logged, not ignored.
+4. Done: server reports `pushesLastMinute` and `maxGapSecondsLast10Min` on `/api/recorder/status`.
+5. Done: `test_extension_scan.js` runs the shipped scanner in a real browser against a DraftKings-style page (4/4 pass).
+6. Next: Ish reloads version 3.2. Test on any live game, not only UFC: `pushesLastMinute` should be about 30 while odds are on screen, and the 30-second scan logs should show "had odds" near every scan.
+7. Next: if `noOdds` dominates, the page is not showing the odds (view or scroll problem), and the fix is on the page side (e.g. scroll the game into view), not the interval.
+8. Next: if `noTwoTeams` dominates, the team-name lookup needs the DraftKings markup, which we can read from the logged HTML.
+
+**Not doing:** lowering the interval below 2 s. The page does not change faster than that, and the Odds API does not update faster than its own feed.
+
 ## PRIORITY PLAN: why so few data points, and confirming the extension captures fights (2026-10-19)
 
 **Question:** a 15-minute fight sampled every 3 seconds should give about 300 points. Most files have 5 to 100.
