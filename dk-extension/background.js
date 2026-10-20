@@ -1,6 +1,8 @@
 const DEFAULT_URL = 'https://ufc-dashboard-production-e03d.up.railway.app';
 
-const PUSH_INTERVAL_MS = 3000; // odds are pushed to the server every 3 seconds, live or not
+const PUSH_INTERVAL_MS = 2000; // odds are pushed to the server every 2 seconds, live or not
+let pushedCount = 0;
+let pushFailCount = 0;
 let lastPushMs = 0;
 let betBotUrl = DEFAULT_URL;
 let dkUserId = null;
@@ -137,6 +139,14 @@ function tryExtractUserId(url, data) {
 }
 
 chrome.runtime.onMessage.addListener((msg, sender) => {
+  if (msg.type === 'SCAN_STATS') {
+    const st = msg.stats || {};
+    const line = `scan 30s: ${st.scans} scans, ${st.withOdds} had odds, ${st.noOdds} no odds on screen, ${st.noTwoTeams} missing team names, pushes ok ${pushedCount} / failed ${pushFailCount}`;
+    addLog(line);
+    chrome.storage.local.set({ lastScanStats: { ...st, href: msg.href, ts: msg.ts, pushedTotal: pushedCount, pushFailTotal: pushFailCount } });
+    return;
+  }
+
   if (msg.type === 'DK_WS_STATUS') {
     if (msg.connected) {
       chrome.storage.local.set({ wsConnected: true, wsLastOpen: msg.ts });
@@ -242,7 +252,8 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
           numericOdds2: o2.american,
           live: !!msg.live,
         }),
-      }).catch(() => {});
+      }).then(r => { if (r.ok) pushedCount++; else { pushFailCount++; addLog(`✗ odds push HTTP ${r.status}`); } })
+        .catch(e => { pushFailCount++; addLog(`✗ odds push failed: ${e.message}`); });
     }
     return;
   }

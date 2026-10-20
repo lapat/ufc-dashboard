@@ -214,9 +214,15 @@ if (href.startsWith('https://sportsbook.draftkings.com/') &&
   });
 
   let _lastLiveLogTs = 0;
+  // Scan health, reported to the background every 30 s so silent drops show up in the logs.
+  const scanStats = { scans: 0, withOdds: 0, noOdds: 0, noTwoTeams: 0, sent: 0 };
   setInterval(() => {
+    scanStats.scans++;
     const outcomes = scanOddsFromPage();
-    if (outcomes.length === 0) return;
+    if (outcomes.length === 0) { scanStats.noOdds++; return; }
+    scanStats.withOdds++;
+    if (outcomes.filter(o => o.side).length < 2) scanStats.noTwoTeams++;
+    scanStats.sent++;
 
     // Detect sport from URL for server-side recording
     const sport = href.includes('/soccer') ? 'soccer_fifa_world_cup'
@@ -240,4 +246,8 @@ if (href.startsWith('https://sportsbook.draftkings.com/') &&
     // Always report current odds so background + popup can display them
     send({ type: 'ODDS_UPDATE', outcomes, sport, live, ts: Date.now() });
   }, 1000);
+  setInterval(() => {
+    chrome.runtime.sendMessage({ type: 'SCAN_STATS', href, stats: { ...scanStats }, ts: Date.now() }).catch(() => {});
+    for (const k of Object.keys(scanStats)) scanStats[k] = 0;
+  }, 30000);
 }
