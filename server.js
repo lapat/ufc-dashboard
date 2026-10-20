@@ -1185,6 +1185,13 @@ app.post('/api/admin/quarantine-non-ufc', requireAdmin, (req, res) => {
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
+// Serves a cached fighter photo by name (404 when we have none, so the page hides the image).
+app.get('/api/fighter-photo', (req, res) => {
+  const file = fighterImages.imageFileFor(String(req.query.name || ''));
+  if (!file) return res.status(404).end();
+  res.sendFile(file);
+});
+
 app.get('/api/admin/fighter-images', requireAdmin, (req, res) => res.json(fighterImages.status()));
 
 // Queues every UFC fighter found in our fight files (or the names given) for the photo + athlete-page job.

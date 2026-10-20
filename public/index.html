@@ -121,6 +121,7 @@
     .section-label{font-size:0.75rem;color:#3a3a3a;text-transform:uppercase;letter-spacing:2px;margin:14px 0 6px}
     .game-card{background:#141414;border:1px solid #1e1e1e;border-radius:6px;padding:11px 15px;margin-bottom:5px;cursor:pointer;transition:border-color .2s,background .2s}
     .game-card:hover{border-color:#333;background:#161616}
+    .fp{width:26px;height:26px;border-radius:50%;object-fit:cover;vertical-align:middle;margin-right:6px;background:#1a1a1a}
     .game-card.live-card{border-color:#e8b84b33;background:#181400}
     .game-ev{font-size:0.75rem;color:#3a3a3a;text-transform:uppercase;letter-spacing:1px;margin-bottom:7px}
     .game-card.live-card .game-ev{color:#e8b84b88}
@@ -1936,11 +1937,11 @@ function renderGameList(){
     el.innerHTML=`
       <div class="game-ev">${liveFlag?'● LIVE — ':''}${game.sport_title||activeSportTitle}</div>
       <div class="matchup">
-        <div class="fn">${a.name}</div>
+        <div class="fn"><img class="fp" src="/api/fighter-photo?name=${encodeURIComponent(a.name)}" alt="" loading="lazy" onerror="this.remove()">${a.name}</div>
         <div class="op ${odsCls(a.price)}">${fmtO(a.price)}</div>
         <div class="vs">VS</div>
         <div class="op ${odsCls(b.price)}">${fmtO(b.price)}</div>
-        <div class="fn r">${b.name}</div>
+        <div class="fn r"><img class="fp" src="/api/fighter-photo?name=${encodeURIComponent(b.name)}" alt="" loading="lazy" onerror="this.remove()">${b.name}</div>
       </div>
       <div class="game-time">${new Date(game.commence_time).toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})}</div>
       <div class="cov-row">${out.map(o=>`
