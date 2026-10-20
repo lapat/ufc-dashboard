@@ -231,7 +231,7 @@ if (href.startsWith('https://sportsbook.draftkings.com/') &&
       : href.includes('/hockey') || href.includes('/nhl') ? 'icehockey_nhl'
       : href.includes('/football') || href.includes('/nfl') ? 'americanfootball_nfl'
       : href.includes('/baseball') || href.includes('/mlb') ? 'baseball_mlb'
-      : 'mma_mixed_martial_arts';
+      : 'unknown'; // NOT UFC: an unrecognised page must never be recorded as a fight
 
     const liveBadge = findLiveBadge();
     const manualLive = Date.now() < _manualLiveUntil;

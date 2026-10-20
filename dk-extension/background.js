@@ -235,7 +235,7 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
     // see is recorded, labelled with live true/false. Throttled to one push every 3 seconds.
     const nowMs = Date.now();
     if (nowMs - lastPushMs < PUSH_INTERVAL_MS) return;
-    if (betBotUrl && teams.length >= 2 && msg.sport) {
+    if (betBotUrl && teams.length >= 2 && msg.sport && msg.sport === 'mma_mixed_martial_arts') {
       lastPushMs = nowMs;
       const [o1, o2] = teams;
       // NOTE: scanOddsFromPage() in content.js produces `.american`, not `.numericOdds`.

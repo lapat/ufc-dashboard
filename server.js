@@ -1161,6 +1161,22 @@ app.get('/api/recorder/backup-status', async (req, res) => {
 // Moves every non-UFC sport folder out of the library into quarantine_non_ufc/ on the volume.
 // Nothing is deleted. A folder is skipped if its destination already exists.
 const KEEP_HISTORICAL_DIRS = new Set(['api_cache', 'mma_mixed_martial_arts']);
+// Moves ONE recording out of the library into quarantine_non_ufc/ (nothing deleted).
+app.post('/api/admin/quarantine-recording', requireAdmin, (req, res) => {
+  try {
+    const id = String(req.body?.id || '');
+    if (!id || /[\/\\]/.test(id)) return res.status(400).json({ error: 'bad id' });
+    const src = path.join(HISTORICAL_DIR, `${id}.json`);
+    if (!fs.existsSync(src)) return res.status(404).json({ error: 'not found' });
+    const qdir = path.join(path.dirname(HISTORICAL_DIR), 'quarantine_non_ufc');
+    if (!fs.existsSync(qdir)) fs.mkdirSync(qdir, { recursive: true });
+    const dest = path.join(qdir, `${id}.json`);
+    if (fs.existsSync(dest)) return res.status(409).json({ error: 'destination exists' });
+    fs.renameSync(src, dest);
+    res.json({ ok: true, moved: id, to: dest });
+  } catch (e) { res.status(500).json({ error: e.message }); }
+});
+
 app.post('/api/admin/quarantine-non-ufc', requireAdmin, (req, res) => {
   try {
     const qdir = path.join(path.dirname(HISTORICAL_DIR), 'quarantine_non_ufc');

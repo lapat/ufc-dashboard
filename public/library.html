@@ -87,7 +87,8 @@
     .prog-bg{background:#1a1a1a;border-radius:2px;height:3px}
     .prog-fill{height:3px;border-radius:2px;background:#e8b84b;transition:width .1s}
     .prog-lbl{font-size:0.68rem;color:#2a2a2a;margin-top:3px}
-  </style>
+    .fp{width:40px;height:40px;border-radius:50%;object-fit:cover;vertical-align:middle;margin-right:8px;background:#1a1a1a;border:1px solid #2a2a2a}
+</style>
 </head>
 <body>
 
@@ -328,7 +329,7 @@ async function openSim(id, f1, f2, date, xovers, clickedRow){
   clickedRow.after(simTr);
 
   // Reset UI
-  spEl('sp-name').textContent=`${f1} vs ${f2}`;
+  spEl('sp-name').innerHTML=`${fpImg(f1)}${escHtml(f1)} <span style="color:#333">vs</span> ${fpImg(f2)}${escHtml(f2)}`;
   spEl('sp-date').textContent=fmtDate(date);
   spEl('sp-xovers').textContent=xovers>0?`⚡ ${xovers} crossover${xovers!==1?'s':''}` :'';
   spEl('sp-f1-name').textContent=f1;
@@ -405,6 +406,8 @@ function sortedRecs(recs){
   return r.sort((a,b)=>(b.date||'').localeCompare(a.date||'')||(b.startTime||'').localeCompare(a.startTime||''));
 }
 
+const fpImg = name => `<img class="fp" src="/api/fighter-photo?name=${encodeURIComponent(name)}" alt="" loading="lazy" onerror="this.remove()">`;
+const escHtml = t => String(t).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function renderTable(){
   const q=searchQuery.toLowerCase();
   let rows=allRecs.filter(r=>{
@@ -420,7 +423,7 @@ function renderTable(){
   tbody.innerHTML=rows.map(r=>`
     <tr class="rec-row${r.id===selectedRowId?' selected':''}" data-id="${r.id}" data-f1="${encodeURIComponent(r.fighter1)}" data-f2="${encodeURIComponent(r.fighter2)}" data-date="${r.date||''}" data-xovers="${r.crossovers}">
       <td><span class="sport-badge ${sportBadgeClass(r.sport)}">${r.sport}</span></td>
-      <td class="fighters-cell">${r.fighter1} <span style="color:#333">vs</span> ${r.fighter2}</td>
+      <td class="fighters-cell">${fpImg(r.fighter1)}${escHtml(r.fighter1)} <span style="color:#333">vs</span> ${fpImg(r.fighter2)}${escHtml(r.fighter2)}</td>
       <td class="date-cell">${fmtDate(r.date)}</td>
       <td class="pts-cell">${r.dataPoints < 20 ? `<span style="color:#e67e22;font-weight:600" title="Low data — crossover count unreliable">⚠ ${r.dataPoints}</span>` : r.dataPoints.toLocaleString()}</td>
       <td class="xover-cell">${r.crossovers>0?`<span class="xover-badge">⚡ ${r.crossovers}</span>`:'<span class="xover-zero">—</span>'}</td>

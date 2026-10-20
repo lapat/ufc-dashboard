@@ -1,5 +1,15 @@
 # UFC Dashboard — Project Rules
 
+## HARD RULE: NO NON-UFC FILES IN THE RECORDINGS (2026-10-20)
+
+- The recordings (library, `historical_data/`, the `/api/recordings` list) contain UFC fights only.
+- No NFL, soccer, tennis, boxing, or any other sport. Not even a stray extension capture.
+- A page the extension cannot identify is `unknown` and is never recorded as UFC.
+- Non-UFC data that exists is moved to `quarantine_non_ufc/` on the volume. Nothing is deleted.
+- Every fighter in a recording should have a photo (`/api/fighter-photo`). Missing ones are tracked, not ignored.
+- Incident: the "WAS Commanders" NFL odds were saved as a UFC recording (2026-10-20) because the extension defaulted unknown pages to UFC.
+
+
 ## ⭐ THE FEATURES ISH ACTUALLY USES — these always have to work (2026-08-25)
 
 Ish's own priority list. Everything else in this doc is secondary to keeping these correct:
