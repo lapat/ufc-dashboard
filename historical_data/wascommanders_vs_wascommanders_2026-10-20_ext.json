@@ -1,0 +1,1433 @@
+{
+  "fightId": "wascommanders_vs_wascommanders_2026-10-20",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "WAS Commanders vs WAS Commanders",
+  "startTime": "2026-10-20T02:15:24.322Z",
+  "endTime": "2026-10-20T02:51:48.186Z",
+  "dataPoints": 51,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-10-20T02:15:24.322Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -119
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -121
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:15:35.313Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -118
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -117
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:15:42.334Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -117
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -116
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:15:46.340Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -115
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -114
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:15:50.319Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -115
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -108
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:15:56.937Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -115
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -107
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:16:00.336Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -116
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -106
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:16:04.321Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -117
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -105
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:16:14.322Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -116
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -130
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:16:23.357Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -116
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -127
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:16:27.314Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -122
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -104
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:16:37.339Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -123
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -102
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:17:07.385Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": 103
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -110
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:17:29.407Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": 103
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -121
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:17:32.325Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": 107
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -121
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:17:53.315Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -112
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -118
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:18:08.326Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -111
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -110
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:18:14.333Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -111
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -121
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:18:35.354Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -122
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -115
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:18:57.317Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -131
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -110
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:19:30.318Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -131
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -118
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:19:34.326Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -127
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -111
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:19:44.806Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -125
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -121
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:19:48.231Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -123
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -121
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:20:05.324Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -125
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -118
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:20:10.392Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -126
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -117
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:20:15.325Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -126
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -116
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:20:53.366Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -108
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -116
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:21:57.323Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -108
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -117
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:22:57.344Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -117
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -122
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:23:57.368Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -120
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -129
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:24:57.375Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -121
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -121
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:26:57.327Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -113
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -125
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:27:57.324Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -129
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -104
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:28:57.325Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -141
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -104
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:29:57.321Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -149
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -125
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:30:57.331Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -105
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -125
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:31:57.337Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -131
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -121
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:32:57.360Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -105
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -113
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:34:57.431Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -106
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -113
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:35:57.363Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -104
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -116
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:36:57.338Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": 101
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -114
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:37:57.329Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -139
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -117
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:38:57.339Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -117
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -107
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:39:57.353Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -113
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -111
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:40:57.335Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -115
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -105
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:41:57.425Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -114
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": 102
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:42:57.333Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -125
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -125
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:43:57.412Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -114
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -101
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:44:57.334Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -111
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": -105
+      },
+      "source": "extension",
+      "live": false
+    },
+    {
+      "timestamp": "2026-10-20T02:45:57.342Z",
+      "fighter1": {
+        "name": "WAS Commanders",
+        "numericOdds": -121
+      },
+      "fighter2": {
+        "name": "WAS Commanders",
+        "numericOdds": 100
+      },
+      "source": "extension",
+      "live": false
+    }
+  ],
+  "pollStats": null,
+  "samples": [
+    {
+      "t": "2026-10-20T02:15:24.322Z",
+      "f1": -119,
+      "f2": -121,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:15:28.341Z",
+      "f1": -119,
+      "f2": -121,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:15:31.963Z",
+      "f1": -119,
+      "f2": -121,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:15:35.313Z",
+      "f1": -118,
+      "f2": -117,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:15:39.322Z",
+      "f1": -118,
+      "f2": -117,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:15:42.334Z",
+      "f1": -117,
+      "f2": -116,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:15:46.340Z",
+      "f1": -115,
+      "f2": -114,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:15:50.319Z",
+      "f1": -115,
+      "f2": -108,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:15:53.323Z",
+      "f1": -115,
+      "f2": -108,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:15:56.937Z",
+      "f1": -115,
+      "f2": -107,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:16:00.336Z",
+      "f1": -116,
+      "f2": -106,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:16:04.321Z",
+      "f1": -117,
+      "f2": -105,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:16:08.321Z",
+      "f1": -117,
+      "f2": -105,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:16:11.324Z",
+      "f1": -117,
+      "f2": -105,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:16:14.322Z",
+      "f1": -116,
+      "f2": -130,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:16:17.325Z",
+      "f1": -116,
+      "f2": -130,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:16:20.323Z",
+      "f1": -116,
+      "f2": -130,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:16:23.357Z",
+      "f1": -116,
+      "f2": -127,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:16:27.314Z",
+      "f1": -122,
+      "f2": -104,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:16:30.331Z",
+      "f1": -122,
+      "f2": -104,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:16:34.359Z",
+      "f1": -122,
+      "f2": -104,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:16:37.339Z",
+      "f1": -123,
+      "f2": -102,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:16:41.324Z",
+      "f1": -123,
+      "f2": -102,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:16:45.368Z",
+      "f1": -123,
+      "f2": -102,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:16:49.335Z",
+      "f1": -123,
+      "f2": -102,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:16:53.323Z",
+      "f1": -123,
+      "f2": -102,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:16:57.331Z",
+      "f1": -123,
+      "f2": -102,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:17:00.324Z",
+      "f1": -123,
+      "f2": -102,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:17:04.322Z",
+      "f1": -123,
+      "f2": -102,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:17:07.385Z",
+      "f1": 103,
+      "f2": -110,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:17:11.325Z",
+      "f1": 103,
+      "f2": -110,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:17:15.314Z",
+      "f1": 103,
+      "f2": -110,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:17:18.400Z",
+      "f1": 103,
+      "f2": -110,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:17:21.321Z",
+      "f1": 103,
+      "f2": -110,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:17:25.325Z",
+      "f1": 103,
+      "f2": -110,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:17:29.407Z",
+      "f1": 103,
+      "f2": -121,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:17:32.325Z",
+      "f1": 107,
+      "f2": -121,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:17:36.322Z",
+      "f1": 107,
+      "f2": -121,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:17:39.363Z",
+      "f1": 107,
+      "f2": -121,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:17:43.336Z",
+      "f1": 107,
+      "f2": -121,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:17:49.327Z",
+      "f1": 107,
+      "f2": -121,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:17:53.315Z",
+      "f1": -112,
+      "f2": -118,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:17:57.325Z",
+      "f1": -112,
+      "f2": -118,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:18:02.321Z",
+      "f1": -112,
+      "f2": -118,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:18:08.326Z",
+      "f1": -111,
+      "f2": -110,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:18:14.333Z",
+      "f1": -111,
+      "f2": -121,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:18:19.734Z",
+      "f1": -111,
+      "f2": -121,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:18:25.323Z",
+      "f1": -111,
+      "f2": -121,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:18:30.324Z",
+      "f1": -111,
+      "f2": -121,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:18:35.354Z",
+      "f1": -122,
+      "f2": -115,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:18:39.706Z",
+      "f1": -122,
+      "f2": -115,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:18:43.054Z",
+      "f1": -122,
+      "f2": -115,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:18:46.208Z",
+      "f1": -122,
+      "f2": -115,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:18:51.333Z",
+      "f1": -122,
+      "f2": -115,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:18:57.317Z",
+      "f1": -131,
+      "f2": -110,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:19:01.323Z",
+      "f1": -131,
+      "f2": -110,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:19:04.334Z",
+      "f1": -131,
+      "f2": -110,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:19:09.737Z",
+      "f1": -131,
+      "f2": -110,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:19:13.334Z",
+      "f1": -131,
+      "f2": -110,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:19:16.666Z",
+      "f1": -131,
+      "f2": -110,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:19:20.324Z",
+      "f1": -131,
+      "f2": -110,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:19:25.322Z",
+      "f1": -131,
+      "f2": -110,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:19:30.318Z",
+      "f1": -131,
+      "f2": -118,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:19:34.326Z",
+      "f1": -127,
+      "f2": -111,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:19:38.374Z",
+      "f1": -127,
+      "f2": -111,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:19:41.340Z",
+      "f1": -127,
+      "f2": -111,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:19:44.806Z",
+      "f1": -125,
+      "f2": -121,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:19:48.231Z",
+      "f1": -123,
+      "f2": -121,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:19:51.328Z",
+      "f1": -123,
+      "f2": -121,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:19:54.433Z",
+      "f1": -123,
+      "f2": -121,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:19:58.314Z",
+      "f1": -123,
+      "f2": -121,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:20:05.324Z",
+      "f1": -125,
+      "f2": -118,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:20:10.392Z",
+      "f1": -126,
+      "f2": -117,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:20:15.325Z",
+      "f1": -126,
+      "f2": -116,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:20:19.345Z",
+      "f1": -126,
+      "f2": -116,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:20:26.325Z",
+      "f1": -126,
+      "f2": -116,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:20:31.011Z",
+      "f1": -126,
+      "f2": -116,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:20:35.347Z",
+      "f1": -126,
+      "f2": -116,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:20:40.829Z",
+      "f1": -126,
+      "f2": -116,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:20:44.347Z",
+      "f1": -126,
+      "f2": -116,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:20:50.346Z",
+      "f1": -126,
+      "f2": -116,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:20:53.366Z",
+      "f1": -108,
+      "f2": -116,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:21:57.323Z",
+      "f1": -108,
+      "f2": -117,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:22:57.344Z",
+      "f1": -117,
+      "f2": -122,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:23:57.368Z",
+      "f1": -120,
+      "f2": -129,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:24:57.375Z",
+      "f1": -121,
+      "f2": -121,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:25:57.422Z",
+      "f1": -121,
+      "f2": -121,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:26:57.327Z",
+      "f1": -113,
+      "f2": -125,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:27:57.324Z",
+      "f1": -129,
+      "f2": -104,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:28:57.325Z",
+      "f1": -141,
+      "f2": -104,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:29:57.321Z",
+      "f1": -149,
+      "f2": -125,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:30:57.331Z",
+      "f1": -105,
+      "f2": -125,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:31:57.337Z",
+      "f1": -131,
+      "f2": -121,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:32:57.360Z",
+      "f1": -105,
+      "f2": -113,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:33:57.339Z",
+      "f1": -105,
+      "f2": -113,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:34:57.431Z",
+      "f1": -106,
+      "f2": -113,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:35:57.363Z",
+      "f1": -104,
+      "f2": -116,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:36:57.338Z",
+      "f1": 101,
+      "f2": -114,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:37:57.329Z",
+      "f1": -139,
+      "f2": -117,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:38:57.339Z",
+      "f1": -117,
+      "f2": -107,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:39:57.353Z",
+      "f1": -113,
+      "f2": -111,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:40:57.335Z",
+      "f1": -115,
+      "f2": -105,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:41:57.425Z",
+      "f1": -114,
+      "f2": 102,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:42:57.333Z",
+      "f1": -125,
+      "f2": -125,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:43:57.412Z",
+      "f1": -114,
+      "f2": -101,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:44:57.334Z",
+      "f1": -111,
+      "f2": -105,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:45:57.342Z",
+      "f1": -121,
+      "f2": 100,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-20T02:46:01.320Z",
+      "f1": -121,
+      "f2": 100,
+      "c": 0,
+      "live": 0
+    }
+  ],
+  "samplePoints": 108
+}
