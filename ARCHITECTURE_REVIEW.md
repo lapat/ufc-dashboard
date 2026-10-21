@@ -1,5 +1,27 @@
 # UFC Dashboard — Architecture Review and Plan
 
+## FIGHTER PHOTOS AND ROSTER PLAN (2026-10-21)
+
+**Why Losene Keita (and others) had no photo**
+1. The photo lookup took the first large image on the athlete page. On many pages that is event artwork, not the fighter. Keita's page had event art first, so the wrong picture was saved.
+2. The shared-image check then rejected that picture (it was shared with other fighters' event art), so the fighter was marked "shared" and retried with the same wrong answer.
+3. The job only queued fighters from our recordings, so UFC fighters who have not fought in a recording were never tried at all.
+4. Misses are retried only after 30 days, so one bad answer stayed in place for a month.
+5. An earlier fallback (the social-share image) was a generic picture shared across unrelated fighters. Removed.
+
+**Fixes in this round**
+- Done: the fighter's own photo is the athlete page's `hero-profile__image`. Its file name must contain the fighter's surname, otherwise it is rejected.
+- Done: event artwork is never used.
+- Done: audit route removes saved photos whose file name lacks the surname, and marks them for refetch.
+
+**Roster (every UFC fighter)**
+- The event pages list every fighter on the card as a relative athlete link (`athlete/<slug>`). Our first search only looked for absolute links, which is why it missed fighters.
+- Plan: (a) list all events from `/events?page=N` (past and upcoming), (b) read each event page for athlete slugs, (c) union into one roster, (d) fetch each athlete page once: photo, bio, stats, full HTML into the athlete database.
+- Scale: several thousand fighters at 15 seconds each is many hours of crawling. Run in the background, upcoming events first, then the last two years, then older.
+- Fallback for fighters with no hero photo on UFC.com: record them as "no photo", and look at a licensed source (Wikimedia Commons) before anything else.
+
+**Not doing:** the athlete search page (`/athletes/all`), which robots.txt disallows.
+
 ## EXTENSION CAPTURE PLAN (2026-10-20)
 
 **Goal:** every odds change on the DraftKings page reaches the server every 2 seconds, whatever the live status, and any gap is visible and explained.

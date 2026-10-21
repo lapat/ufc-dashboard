@@ -1213,7 +1213,8 @@ app.get('/api/admin/fighter-images', requireAdmin, (req, res) => res.json(fighte
 // Removes cached photos shared by more than one fighter (generic images) and marks those fighters for refetch.
 app.post('/api/admin/fighter-photos-audit', requireAdmin, (req, res) => {
   const groups = fighterImages.auditSharedPhotos();
-  res.json({ ok: true, sharedGroups: groups.length, fightersAffected: groups.reduce((n, g) => n + g.length, 0), groups });
+  const wrongSource = fighterImages.auditWrongSourcePhotos();
+  res.json({ ok: true, sharedGroups: groups.length, fightersAffected: groups.reduce((n, g) => n + g.length, 0), wrongSourceRemoved: wrongSource.length, wrongSource });
 });
 
 // Queues every UFC fighter found in our fight files (or the names given) for the photo + athlete-page job.

@@ -71,13 +71,19 @@ async function fetchOne(name) {
   catch (e) { console.error('[athlete-db]', slug, e.message); }
 
   // Photo: try the best size first, then fall back. Skips generic GIF placeholders.
+  // The fighter's own photo is the hero image on the athlete page (class hero-profile__image).
+  // Never fall back to event artwork: the first large image on the page is often an event banner.
   const candidates = [
-    /src="(https:\/\/[^"]*\/card_advance_small_280x356\/[^"]+?\.(?:jpg|jpeg|png))/i,
-    /src="(https:\/\/[^"]*\/athlete_bio_full_body\/[^"]+?\.(?:jpg|jpeg|png))/i,
-    /src="(https:\/\/[^"]*\/event_results_athlete_headshot\/[^"]+?\.(?:jpg|jpeg|png))/i,
+    /<img[^>]*class="hero-profile__image"[^>]*src="(https:\/\/[^"]+?\.(?:jpg|jpeg|png))/i,
+    /<img[^>]*src="(https:\/\/[^"]+?\.(?:jpg|jpeg|png))[^"]*"[^>]*class="hero-profile__image"/i,
+    /<img[^>]*src="(https:\/\/[^"]*\/athlete_bio_full_body\/[^"]+?\.(?:jpg|jpeg|png))/i,
   ];
   let m = null;
-  for (const re of candidates) { const hit = page.body.match(re); if (hit) { m = hit; break; } }
+  const surname = String(name).trim().split(/\s+/).pop().toUpperCase().replace(/[^A-Z]/g, '');
+  for (const re of candidates) {
+    const hit = page.body.match(re);
+    if (hit && (!surname || hit[1].toUpperCase().replace(/[^A-Z]/g, '').includes(surname))) { m = hit; break; }
+  }
   if (!m) { index[slug] = { status: 'miss', reason: 'no photo on page', checkedAt: new Date().toISOString() }; saveIndex(); return; }
 
   await pause();
@@ -154,4 +160,21 @@ function auditSharedPhotos() {
   return groups;
 }
 
-module.exports = { auditSharedPhotos, slugify, requestFighterImages, imageFileFor, status, index: () => index };
+// Removes saved photos whose file name does not contain the fighter's surname (event artwork, not the
+// fighter) and marks those fighters for refetch with the corrected lookup.
+function auditWrongSourcePhotos() {
+  const removed = [];
+  for (const [slug, e] of Object.entries(index)) {
+    if (e.status !== 'found' || !e.file) continue;
+    const surname = slug.split('-').pop().toUpperCase().replace(/[^A-Z]/g, '');
+    const srcName = String(e.source || '').split('/').pop().toUpperCase().replace(/[^A-Z]/g, '');
+    if (surname && srcName.includes(surname)) continue;
+    try { fs.unlinkSync(path.join(IMG_DIR, e.file)); } catch (_) {}
+    index[slug] = { status: 'wrong-source', source: e.source, checkedAt: new Date().toISOString() };
+    removed.push(slug);
+  }
+  saveIndex();
+  return removed;
+}
+
+module.exports = { auditSharedPhotos, auditWrongSourcePhotos, slugify, requestFighterImages, imageFileFor, status, index: () => index };
