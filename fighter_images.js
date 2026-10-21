@@ -75,7 +75,6 @@ async function fetchOne(name) {
     /src="(https:\/\/[^"]*\/card_advance_small_280x356\/[^"]+?\.(?:jpg|jpeg|png))/i,
     /src="(https:\/\/[^"]*\/athlete_bio_full_body\/[^"]+?\.(?:jpg|jpeg|png))/i,
     /src="(https:\/\/[^"]*\/event_results_athlete_headshot\/[^"]+?\.(?:jpg|jpeg|png))/i,
-    /og:image" content="(https:\/\/[^"]+?\.(?:jpg|jpeg|png))/i,
   ];
   let m = null;
   for (const re of candidates) { const hit = page.body.match(re); if (hit) { m = hit; break; } }
@@ -87,8 +86,15 @@ async function fetchOne(name) {
     if (img.status !== 200 || img.body.length < 1000) throw new Error(`image HTTP ${img.status}`);
     const ext = path.extname(new URL(m[1]).pathname).toLowerCase() || '.jpg';
     const file = `${slug}${ext}`;
+    const md5 = require('crypto').createHash('md5').update(img.body).digest('hex');
+    const clash = Object.entries(index).find(([k, v]) => k !== slug && v.md5 === md5 && v.status === 'found');
+    if (clash) {
+      index[slug] = { status: 'shared', md5, sharedWith: clash[0], source: m[1], checkedAt: new Date().toISOString() };
+      saveIndex();
+      return;
+    }
     fs.writeFileSync(path.join(IMG_DIR, file), img.body);
-    index[slug] = { status: 'found', file, source: m[1], checkedAt: new Date().toISOString() };
+    index[slug] = { status: 'found', file, md5, source: m[1], checkedAt: new Date().toISOString() };
   } catch (e) {
     index[slug] = { status: 'error', error: e.message, checkedAt: new Date().toISOString() };
   }
@@ -125,4 +131,27 @@ function status() {
   return { counts, queued: queue.length, running, imageDir: IMG_DIR };
 }
 
-module.exports = { slugify, requestFighterImages, imageFileFor, status, index: () => index };
+// Finds cached photos that more than one fighter has (a generic image), deletes them, and marks the
+// fighters so they are fetched again. Returns the groups it found.
+function auditSharedPhotos() {
+  const byHash = {};
+  for (const [slug, e] of Object.entries(index)) {
+    if (e.status !== 'found' || !e.file || !fs.existsSync(path.join(IMG_DIR, e.file))) continue;
+    const md5 = require('crypto').createHash('md5').update(fs.readFileSync(path.join(IMG_DIR, e.file))).digest('hex');
+    e.md5 = md5;
+    (byHash[md5] = byHash[md5] || []).push(slug);
+  }
+  const groups = [];
+  for (const [md5, slugs] of Object.entries(byHash)) {
+    if (slugs.length < 2) continue;
+    groups.push(slugs);
+    for (const slug of slugs) {
+      try { fs.unlinkSync(path.join(IMG_DIR, index[slug].file)); } catch (_) {}
+      index[slug] = { status: 'shared', md5, sharedWith: slugs.filter(x => x !== slug), checkedAt: new Date().toISOString() };
+    }
+  }
+  saveIndex();
+  return groups;
+}
+
+module.exports = { auditSharedPhotos, slugify, requestFighterImages, imageFileFor, status, index: () => index };

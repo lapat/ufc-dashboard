@@ -1210,6 +1210,11 @@ app.get('/api/fighter-photo', (req, res) => {
 });
 
 app.get('/api/admin/fighter-images', requireAdmin, (req, res) => res.json(fighterImages.status()));
+// Removes cached photos shared by more than one fighter (generic images) and marks those fighters for refetch.
+app.post('/api/admin/fighter-photos-audit', requireAdmin, (req, res) => {
+  const groups = fighterImages.auditSharedPhotos();
+  res.json({ ok: true, sharedGroups: groups.length, fightersAffected: groups.reduce((n, g) => n + g.length, 0), groups });
+});
 
 // Queues every UFC fighter found in our fight files (or the names given) for the photo + athlete-page job.
 // Runs one request every 15 seconds. Safe to call again: fighters already done are skipped.
