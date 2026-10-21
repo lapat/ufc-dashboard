@@ -23,11 +23,13 @@ const save = () => { state.updatedAt = new Date().toISOString(); try { fs.writeF
 
 const uniq = arr => [...new Set(arr)];
 // Retries a request up to 4 times with a growing pause (timeouts happen on UFC.com). Never throws.
+let current = null; // what the crawler is doing right now, shown on roster-status
 async function getRetry(url, binary = false) {
   let lastErr = null;
   for (let attempt = 1; attempt <= 4; attempt++) {
-    try { return await fi.politeGet(url, binary); }
-    catch (e) { lastErr = e; await new Promise(r => setTimeout(r, 30000 * attempt)); }
+    current = { url, attempt, since: new Date().toISOString() };
+    try { const r = await fi.politeGet(url, binary); current = { ...current, lastHttp: r.status, done: new Date().toISOString() }; return r; }
+    catch (e) { lastErr = e; current = { ...current, lastErr: e.message, failedAt: new Date().toISOString() }; await new Promise(r => setTimeout(r, 30000 * attempt)); }
   }
   return { status: 0, body: '', error: lastErr ? lastErr.message : 'unknown' };
 }
@@ -106,6 +108,8 @@ function status() {
     lastError: state.lastError,
     startedAt: state.startedAt,
     updatedAt: state.updatedAt,
+    current,
+    pagesDoneCount: Object.keys(state.pagesDone).length,
   };
 }
 
