@@ -22,6 +22,15 @@ try { state = { ...state, ...JSON.parse(fs.readFileSync(STATE_FILE, 'utf8')), ru
 const save = () => { state.updatedAt = new Date().toISOString(); try { fs.writeFileSync(STATE_FILE, JSON.stringify(state, null, 1)); } catch (_) {} };
 
 const uniq = arr => [...new Set(arr)];
+// Retries a request up to 4 times with a growing pause (timeouts happen on UFC.com). Never throws.
+async function getRetry(url, binary = false) {
+  let lastErr = null;
+  for (let attempt = 1; attempt <= 4; attempt++) {
+    try { return await fi.politeGet(url, binary); }
+    catch (e) { lastErr = e; await new Promise(r => setTimeout(r, 30000 * attempt)); }
+  }
+  return { status: 0, body: '', error: lastErr ? lastErr.message : 'unknown' };
+}
 const eventLinks = html => uniq([...html.matchAll(/href="[^"]*\/event\/([a-z0-9-]+)(?:#[^"]*)?"/g)].map(m => m[1]));
 const athleteLinks = html => uniq([...html.matchAll(/href="[^"]*\/athlete\/([a-z0-9-]+)"/g)].map(m => m[1])).filter(s => s && s !== 'all');
 const nameFromSlug = slug => slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
@@ -31,8 +40,8 @@ async function fetchAthlete(slug) {
   const latest = await athleteDb.latestSnapshot(slug);
   const fresh = latest && Date.now() - new Date(latest.fetched_at).getTime() < REFRESH_MS;
   if (fresh && rec.status === 'done') return;
-  const r = await fi.politeGet(`https://www.ufc.com/athlete/${slug}`, false);
-  if (r.status !== 200) { rec.status = 'miss'; rec.http = r.status; rec.checkedAt = new Date().toISOString(); return; }
+  const r = await getRetry(`https://www.ufc.com/athlete/${slug}`);
+  if (r.status !== 200) { rec.status = r.status === 404 ? 'miss' : 'retry'; rec.http = r.status; rec.checkedAt = new Date().toISOString(); return; }
   await athleteDb.saveAthleteSnapshot({ slug, html: r.body, sourceUrl: `https://www.ufc.com/athlete/${slug}` });
   await fi.photoFromPage(slug, nameFromSlug(slug), r.body);
   rec.status = 'done';
@@ -46,8 +55,8 @@ async function run() {
     // 1. every page of the events list
     for (let page = 0; page < 5000 && !state.eventsDone; page++) {
       if (state.pagesDone[page]) continue;
-      const r = await fi.politeGet(`https://www.ufc.com/events?page=${page}`, false);
-      if (r.status !== 200) { state.lastError = `events page ${page}: HTTP ${r.status}`; break; }
+      const r = await getRetry(`https://www.ufc.com/events?page=${page}`);
+      if (r.status !== 200) { state.lastError = `events page ${page}: HTTP ${r.status} ${r.error || ''}`.trim(); save(); break; }
       const slugs = eventLinks(r.body);
       if (!slugs.length) { state.eventsDone = true; break; }
       for (const s of slugs) state.events[s] = state.events[s] || { page, done: false };
@@ -57,8 +66,8 @@ async function run() {
     // 2. every event: its fighters, and each fighter's data
     for (const [evSlug, ev] of Object.entries(state.events)) {
       if (ev.done) continue;
-      const r = await fi.politeGet(`https://www.ufc.com/event/${evSlug}`, false);
-      if (r.status !== 200) { ev.error = `HTTP ${r.status}`; save(); continue; }
+      const r = await getRetry(`https://www.ufc.com/event/${evSlug}`);
+      if (r.status !== 200) { ev.error = `HTTP ${r.status} ${r.error || ''}`.trim(); save(); continue; }
       const athletes = athleteLinks(r.body);
       ev.athletes = athletes.length;
       for (const a of athletes) {
