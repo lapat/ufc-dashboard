@@ -1304,9 +1304,11 @@ function updateFightUI(f1Name,f2Name,o1,o2,live,sport,switchGames){
   gameList.style.display='none';
 
   // Fighter photo (when we have one) followed by the name. Hidden automatically when there is none.
-  const nameWithPhoto=(name)=>`<img class="fp fp-lg" src="/api/fighter-photo?name=${encodeURIComponent(name)}" alt="" onerror="this.remove()">${String(name).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}`;
-  document.getElementById('nw-f1').innerHTML=nameWithPhoto(f1Name);
-  document.getElementById('nw-f2').innerHTML=nameWithPhoto(f2Name);
+  const esc=(name)=>String(name).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const photo=(name)=>`<img class="fp fp-lg" src="/api/fighter-photo?name=${encodeURIComponent(name)}" alt="" onerror="this.remove()">`;
+  // Left name: photo before. Right name (right-aligned): photo after, so both photos sit on the outside edge.
+  document.getElementById('nw-f1').innerHTML=photo(f1Name)+esc(f1Name);
+  document.getElementById('nw-f2').innerHTML=esc(f2Name)+photo(f2Name);
   updateNowWatchingOdds(o1,o2);
 
   const dot=document.getElementById('nw-live-dot');
