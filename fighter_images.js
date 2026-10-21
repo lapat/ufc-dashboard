@@ -54,22 +54,7 @@ async function pause() {
   lastRequestAt = Date.now();
 }
 
-async function fetchOne(name) {
-  const slug = slugify(name);
-  if (!slug) return;
-  const entry = index[slug];
-  if (entry && entry.status === 'found' && fs.existsSync(path.join(IMG_DIR, entry.file))) return;
-  if (entry && entry.status === 'miss' && Date.now() - new Date(entry.checkedAt).getTime() < RETRY_MISS_MS) return;
-
-  await pause();
-  let page;
-  try { page = await get(`https://www.ufc.com/athlete/${slug}`, false); }
-  catch (e) { index[slug] = { status: 'error', error: e.message, checkedAt: new Date().toISOString() }; saveIndex(); return; }
-  if (page.status !== 200) { index[slug] = { status: 'miss', http: page.status, checkedAt: new Date().toISOString() }; saveIndex(); return; }
-  // Keep the whole page: every fetch becomes a new snapshot in the athlete database (never overwritten).
-  try { await athleteDb.saveAthleteSnapshot({ slug, html: page.body, sourceUrl: `https://www.ufc.com/athlete/${slug}` }); }
-  catch (e) { console.error('[athlete-db]', slug, e.message); }
-
+async function photoFromPage(slug, name, body) {
   // Photo: try the best size first, then fall back. Skips generic GIF placeholders.
   // The fighter's own photo is the hero image on the athlete page (class hero-profile__image).
   // Never fall back to event artwork: the first large image on the page is often an event banner.
@@ -81,7 +66,7 @@ async function fetchOne(name) {
   let m = null;
   const surname = String(name).trim().split(/\s+/).pop().toUpperCase().replace(/[^A-Z]/g, '');
   for (const re of candidates) {
-    const hit = page.body.match(re);
+    const hit = body.match(re);
     if (hit && (!surname || hit[1].toUpperCase().replace(/[^A-Z]/g, '').includes(surname))) { m = hit; break; }
   }
   if (!m) { index[slug] = { status: 'miss', reason: 'no photo on page', checkedAt: new Date().toISOString() }; saveIndex(); return; }
@@ -105,6 +90,25 @@ async function fetchOne(name) {
     index[slug] = { status: 'error', error: e.message, checkedAt: new Date().toISOString() };
   }
   saveIndex();
+}
+
+async function fetchOne(name) {
+  const slug = slugify(name);
+  if (!slug) return;
+  const entry = index[slug];
+  if (entry && entry.status === 'found' && fs.existsSync(path.join(IMG_DIR, entry.file))) return;
+  if (entry && entry.status === 'miss' && Date.now() - new Date(entry.checkedAt).getTime() < RETRY_MISS_MS) return;
+
+  await pause();
+  let page;
+  try { page = await get(`https://www.ufc.com/athlete/${slug}`, false); }
+  catch (e) { index[slug] = { status: 'error', error: e.message, checkedAt: new Date().toISOString() }; saveIndex(); return; }
+  if (page.status !== 200) { index[slug] = { status: 'miss', http: page.status, checkedAt: new Date().toISOString() }; saveIndex(); return; }
+  // Keep the whole page: every fetch becomes a new snapshot in the athlete database (never overwritten).
+  try { await athleteDb.saveAthleteSnapshot({ slug, html: page.body, sourceUrl: `https://www.ufc.com/athlete/${slug}` }); }
+  catch (e) { console.error('[athlete-db]', slug, e.message); }
+
+  return photoFromPage(slug, name, page.body);
 }
 
 async function drain() {
@@ -177,4 +181,4 @@ function auditWrongSourcePhotos() {
   return removed;
 }
 
-module.exports = { auditSharedPhotos, auditWrongSourcePhotos, slugify, requestFighterImages, imageFileFor, status, index: () => index };
+module.exports = { politeGet: async (url, binary) => { await pause(); return get(url, binary); }, photoFromPage, auditSharedPhotos, auditWrongSourcePhotos, slugify, requestFighterImages, imageFileFor, status, index: () => index };

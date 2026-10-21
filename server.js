@@ -1210,6 +1210,15 @@ app.get('/api/fighter-photo', (req, res) => {
 });
 
 app.get('/api/admin/fighter-images', requireAdmin, (req, res) => res.json(fighterImages.status()));
+// Full UFC roster crawl: every event, every fighter, each fighter's page into the database + photo.
+// Runs in the background, one request every 15 s. Returns at once; poll roster-status.
+const roster = require('./roster');
+app.post('/api/admin/roster-start', requireAdmin, (req, res) => {
+  if (roster.status().running) return res.json({ ok: true, alreadyRunning: true, ...roster.status() });
+  roster.run().catch(e => console.error('[roster]', e.message));
+  res.json({ ok: true, started: true, ...roster.status() });
+});
+app.get('/api/admin/roster-status', requireAdmin, (req, res) => res.json(roster.status()));
 // Removes cached photos shared by more than one fighter (generic images) and marks those fighters for refetch.
 app.post('/api/admin/fighter-photos-audit', requireAdmin, (req, res) => {
   const groups = fighterImages.auditSharedPhotos();

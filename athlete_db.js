@@ -29,6 +29,13 @@ const SCHEMA = `
   CREATE TABLE IF NOT EXISTS athlete_stats (
     snapshot_id INTEGER NOT NULL, section TEXT, label TEXT, suffix TEXT, value TEXT, ord INTEGER
   );
+  CREATE TABLE IF NOT EXISTS athlete_targets (
+    snapshot_id INTEGER NOT NULL, target TEXT, pct TEXT, count TEXT
+  );
+  CREATE TABLE IF NOT EXISTS athlete_fights (
+    snapshot_id INTEGER NOT NULL, status TEXT, date TEXT, opponent TEXT, result TEXT,
+    method TEXT, round TEXT, time TEXT, event_url TEXT, ord INTEGER
+  );
   CREATE INDEX IF NOT EXISTS idx_snap_slug ON athlete_snapshots(slug, fetched_at);
 `;
 
@@ -86,7 +93,44 @@ function parseAthlete(html) {
     let g;
     while ((g = groupRe.exec(m[2]))) stats.push({ section: title, label: clean(g[1]), suffix: null, value: clean(g[2]), ord: ord++ });
   }
-  return { name, bio, stats };
+  // Hero block: record "18-2-0 (W-L-D)", division, rank, status, nickname, and finish counts ("9 Wins by Knockout").
+  const heroI = html.indexOf('hero-profile__info');
+  const hero = heroI >= 0 ? clean(html.slice(heroI, heroI + 6000)) : '';
+  const rec = hero.match(/(\d+)-(\d+)-(\d+)\s*\(W-L-D\)/);
+  if (rec) bio.push({ key: 'Record (W-L-D)', value: `${rec[1]}-${rec[2]}-${rec[3]}` });
+  const finRe = /(\d+)\s+(Wins by [A-Za-z ]+|First Round Finishes|Finishes)/g;
+  let f;
+  while ((f = finRe.exec(hero))) bio.push({ key: f[2].trim(), value: f[1] });
+  const nick = clean((html.match(/&quot;([^&]+)&quot;/) || [])[1] || '');
+  if (nick) bio.push({ key: 'Nickname', value: nick });
+
+  // Sig. Str. by target: each target block is percentage, count, label (Head / Body / Leg).
+  const targets = [];
+  const bodyI = html.indexOf('c-stat-body__diagram');
+  if (bodyI >= 0) {
+    const bodyText = clean(html.slice(bodyI, bodyI + 20000));
+    const tRe = /(\d+%)\s+(\d+)\s+(Head|Body|Leg|Clinch|Ground|Distance)/g;
+    let t;
+    while ((t = tRe.exec(bodyText))) targets.push({ target: t[3], pct: t[1], count: t[2] });
+  }
+
+  // Fight history: past results (c-card-event--athlete-results) and upcoming (c-card-event--athlete-fight).
+  const fights = [];
+  const fRe = /<div class="c-card-event--athlete-(results|fight)__fight-container"([\s\S]*?)(?=<div class="c-card-event--athlete-(?:results|fight)__fight-container"|<\/section>|$)/g;
+  let fm, fOrd = 0;
+  while ((fm = fRe.exec(html))) {
+    const block = fm[2];
+    const txt = clean(block);
+    const date = (txt.match(/([A-Z][a-z]{2}\. \d{1,2}, \d{4})/) || [])[1] || null;
+    const val = label => (txt.match(new RegExp(label + ' (.+?)(?= (?:Round|Time|Method|Decision|Submission|KO|TKO|Round|Time|Method) |$)')) || [])[1] || null;
+    const names = (txt.match(/([A-Za-z\-\' .]+?) vs ([A-Za-z\-\' .]+?)(?= [A-Z][a-z]{2}\. |$| Round| Time| Method)/) || []);
+    const result = /class="[^"]*\bwin\b/.test(block) ? 'win' : /class="[^"]*\bloss\b/.test(block) ? 'loss' : /class="[^"]*\bdraw\b/.test(block) ? 'draw' : null;
+    const eventUrl = (block.match(/href="([^"]*\/event\/[^"]*)"/) || [])[1] || null;
+    fights.push({ status: fm[1] === 'fight' ? 'upcoming' : 'past', date, opponent: names[2] ? names[2].trim() : null,
+      athlete: name, result, method: val('Method'), round: val('Round'), time: val('Time'),
+      eventUrl, ord: fOrd++ });
+  }
+  return { name, bio, stats, targets, fights };
 }
 
 // Saves one fetch as a new snapshot. Returns the snapshot id. Throws if the database is unavailable.
@@ -95,7 +139,7 @@ async function saveAthleteSnapshot({ slug, html, sourceUrl }) {
   const fetchedAt = new Date().toISOString();
   const file = `${slug}__${fetchedAt.replace(/[:.]/g, '-')}.html`;
   fs.writeFileSync(path.join(PAGES_DIR, file), html);
-  const { name, bio, stats } = parseAthlete(html);
+  const { name, bio, stats, targets, fights } = parseAthlete(html);
   db.run('BEGIN');
   try {
     db.run('INSERT INTO athlete_snapshots (slug, name, fetched_at, source_url, html_file, html_bytes) VALUES (?,?,?,?,?,?)',
@@ -104,6 +148,9 @@ async function saveAthleteSnapshot({ slug, html, sourceUrl }) {
     for (const b of bio) db.run('INSERT INTO athlete_bio (snapshot_id, key, value) VALUES (?,?,?)', [id, b.key, b.value]);
     for (const s of stats) db.run('INSERT INTO athlete_stats (snapshot_id, section, label, suffix, value, ord) VALUES (?,?,?,?,?,?)',
       [id, s.section, s.label, s.suffix, s.value, s.ord]);
+    for (const t of targets) db.run('INSERT INTO athlete_targets (snapshot_id, target, pct, count) VALUES (?,?,?,?)', [id, t.target, t.pct, t.count]);
+    for (const f of fights) db.run('INSERT INTO athlete_fights (snapshot_id, status, date, opponent, result, method, round, time, event_url, ord) VALUES (?,?,?,?,?,?,?,?,?,?)',
+      [id, f.status, f.date, f.opponent, f.result, f.method, f.round, f.time, f.eventUrl, f.ord]);
     db.run('COMMIT');
     persist();
     return id;
