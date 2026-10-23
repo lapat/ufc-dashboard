@@ -87,7 +87,9 @@
     .prog-bg{background:#1a1a1a;border-radius:2px;height:3px}
     .prog-fill{height:3px;border-radius:2px;background:#e8b84b;transition:width .1s}
     .prog-lbl{font-size:0.68rem;color:#2a2a2a;margin-top:3px}
-    .fp{width:40px;height:40px;border-radius:50%;object-fit:cover;vertical-align:middle;margin-right:8px;background:#1a1a1a;border:1px solid #2a2a2a}
+    .fp{width:40px;height:40px;border-radius:50%;object-fit:cover;object-position:top center;vertical-align:middle;margin-right:8px;background:#15171c;border:1px solid #282c35;box-shadow:0 2px 4px rgba(0,0,0,0.4);flex-shrink:0;display:inline-block}
+    body, button, input, select{font-feature-settings:"tnum" 1;-webkit-font-smoothing:antialiased}
+    .pts-cell, .date-cell, .xover-cell, .odds, .cur-odds, .time{font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
@@ -136,6 +138,8 @@
 </div>
 
 <script>
+const _svgInit=(name,sz=40)=>{const p=String(name||'').trim().split(/\s+/);const init=p.length>1?(p[0][0]+p[p.length-1][0]).toUpperCase():(p[0]?p[0].slice(0,2).toUpperCase():'??');const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="${sz}" height="${sz}" viewBox="0 0 ${sz} ${sz}"><rect width="100%" height="100%" fill="#181a20"/><text x="50%" y="54%" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-weight="700" font-size="${Math.round(sz*0.38)}" fill="#7e889b" dominant-baseline="middle" text-anchor="middle">${init}</text></svg>`;return `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;};
+window.fpError=function(img,sz=40){img.onerror=null;const n=decodeURIComponent(img.dataset.fn||'');img.src=_svgInit(n,sz);};
 Chart.register(window['chartjs-plugin-annotation']);
 
 let allRecs=[], activeSportFilter='all', searchQuery='', sortMode='date';
@@ -406,7 +410,7 @@ function sortedRecs(recs){
   return r.sort((a,b)=>(b.date||'').localeCompare(a.date||'')||(b.startTime||'').localeCompare(a.startTime||''));
 }
 
-const fpImg = name => `<img class="fp" src="/api/fighter-photo?name=${encodeURIComponent(name)}" alt="" loading="lazy" onerror="this.remove()">`;
+const fpImg = (name,sz=40) => `<img class="fp" data-fn="${encodeURIComponent(name)}" src="/api/fighter-photo?name=${encodeURIComponent(name)}" alt="" loading="lazy" onerror="fpError(this,${sz})">`;
 const escHtml = t => String(t).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function renderTable(){
   const q=searchQuery.toLowerCase();
