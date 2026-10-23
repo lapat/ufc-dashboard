@@ -121,8 +121,12 @@
     .section-label{font-size:0.75rem;color:#3a3a3a;text-transform:uppercase;letter-spacing:2px;margin:14px 0 6px}
     .game-card{background:#141414;border:1px solid #1e1e1e;border-radius:6px;padding:11px 15px;margin-bottom:5px;cursor:pointer;transition:border-color .2s,background .2s}
     .game-card:hover{border-color:#333;background:#161616}
-    .fp{width:40px;height:40px;border-radius:50%;object-fit:cover;vertical-align:middle;margin-right:8px;background:#1a1a1a;border:1px solid #2a2a2a}
-    .fp.fp-lg{width:64px;height:64px;margin-right:10px}
+    .fp{width:40px;height:40px;border-radius:50%;object-fit:cover;object-position:top center;vertical-align:middle;margin-right:8px;background:#15171c;border:1px solid #282c35;box-shadow:0 2px 5px rgba(0,0,0,0.4);flex-shrink:0;display:inline-block}
+    .fp.fp-lg{width:64px;height:64px;margin-right:12px;border:2px solid #363c48}
+    .fp.fp-r{margin-right:0;margin-left:8px}
+    .fp.fp-lg.fp-r{margin-right:0;margin-left:12px}
+    body, button, input, select{font-feature-settings:"tnum" 1;-webkit-font-smoothing:antialiased}
+    .op,.cur-odds,.pnl-val,.pnl-num,.nw-score-num,.stat-val,.rec-num,.odds,.game-time{font-variant-numeric:tabular-nums}
     .game-card.live-card{border-color:#e8b84b33;background:#181400}
     .game-ev{font-size:0.75rem;color:#3a3a3a;text-transform:uppercase;letter-spacing:1px;margin-bottom:7px}
     .game-card.live-card .game-ev{color:#e8b84b88}
@@ -294,12 +298,14 @@
     .bl-pnl-open{color:#666}
     /* ── CLV alert ── */
     #clv-alert{display:none;background:#0e0900;border-bottom:1px solid #2a1e00;padding:6px 24px;font-size:0.72rem;color:#c9a02a;letter-spacing:.15px}
-    /* live crossover banner */
-    #xover-live-banner{border-bottom:3px solid #ff3b3b;padding:10px 24px;font-size:0.9rem;font-weight:700;letter-spacing:.4px;display:flex;align-items:center;gap:10px;justify-content:space-between}
-    #xover-live-banner.crossed{background:#1a0000;color:#ff5555}
+    /* live crossover banner (high contrast & pulse) */
+    #xover-live-banner{border-bottom:3px solid #ff3b3b;padding:12px 24px;font-size:0.92rem;font-weight:700;letter-spacing:.3px;display:flex;align-items:center;gap:12px;justify-content:space-between;box-shadow:0 4px 18px rgba(0,0,0,0.45);transition:all .2s ease}
+    #xover-live-banner.crossed{background:#1a0000;color:#ff5555;border-bottom-color:#ff1744;animation:xoverPulse 2.2s infinite ease-in-out}
     #xover-live-banner.imminent{background:#180800;color:#ff9a3c;border-bottom-color:#ff7700}
     #xover-live-banner.approaching{background:#0f0f00;color:#e8d44b;border-bottom-color:#b8a800}
-    #xover-live-banner .xb-dismiss{font-size:0.75rem;opacity:.6;cursor:pointer;flex-shrink:0}
+    @keyframes xoverPulse{0%,100%{box-shadow:inset 0 0 10px rgba(255,59,59,0.25),0 4px 18px rgba(255,23,68,0.3)}50%{box-shadow:inset 0 0 25px rgba(255,59,59,0.55),0 6px 26px rgba(255,23,68,0.65)}}
+    #xover-live-banner .xb-dismiss{font-size:0.78rem;opacity:.75;cursor:pointer;flex-shrink:0;padding:4px 10px;border-radius:4px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);transition:all .15s ease}
+    #xover-live-banner .xb-dismiss:hover{opacity:1;background:rgba(255,255,255,0.2)}
     /* ── live score ── */
     #nw-score{display:none;align-items:center;justify-content:center;gap:10px;padding:6px 0 2px}
     .nw-score-num{font-size:1.5rem;font-weight:700;color:#e8b84b;min-width:28px;text-align:center}
@@ -717,6 +723,8 @@
 
 
 <script>
+const _svgInit=(name,sz=40)=>{const p=String(name||'').trim().split(/\s+/);const init=p.length>1?(p[0][0]+p[p.length-1][0]).toUpperCase():(p[0]?p[0].slice(0,2).toUpperCase():'??');const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="${sz}" height="${sz}" viewBox="0 0 ${sz} ${sz}"><rect width="100%" height="100%" fill="#181a20"/><text x="50%" y="54%" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-weight="700" font-size="${Math.round(sz*0.38)}" fill="#7e889b" dominant-baseline="middle" text-anchor="middle">${init}</text></svg>`;return `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;};
+window.fpError=function(img,sz=40){img.onerror=null;const n=decodeURIComponent(img.dataset.fn||'');img.src=_svgInit(n,sz);};
 // ═══════════════════════════════════════════
 // HELPERS
 // ═══════════════════════════════════════════
@@ -1305,7 +1313,8 @@ function updateFightUI(f1Name,f2Name,o1,o2,live,sport,switchGames){
 
   // Fighter photo (when we have one) followed by the name. Hidden automatically when there is none.
   const esc=(name)=>String(name).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const photo=(name)=>`<img class="fp fp-lg" src="/api/fighter-photo?name=${encodeURIComponent(name)}" alt="" onerror="this.remove()">`;
+  const _svgInit=(name,sz)=>{const p=String(name||'').trim().split(/\s+/);const init=p.length>1?(p[0][0]+p[p.length-1][0]).toUpperCase():(p[0]?p[0].slice(0,2).toUpperCase():'??');const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="${sz}" height="${sz}" viewBox="0 0 ${sz} ${sz}"><rect width="100%" height="100%" fill="#181a20"/><text x="50%" y="54%" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-weight="700" font-size="${Math.round(sz*0.38)}" fill="#7e889b" dominant-baseline="middle" text-anchor="middle">${init}</text></svg>`;return `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;};
+  const photo=(name,cls='')=>`<img class="fp fp-lg ${cls}" src="/api/fighter-photo?name=${encodeURIComponent(name)}" alt="" onerror="this.onerror=null;this.src='${_svgInit(name,64)}'">`;
   // Left name: photo before. Right name (right-aligned): photo after, so both photos sit on the outside edge.
   document.getElementById('nw-f1').innerHTML=photo(f1Name)+esc(f1Name);
   document.getElementById('nw-f2').innerHTML=esc(f2Name)+photo(f2Name);
@@ -1942,11 +1951,11 @@ function renderGameList(){
     el.innerHTML=`
       <div class="game-ev">${liveFlag?'● LIVE — ':''}${game.sport_title||activeSportTitle}</div>
       <div class="matchup">
-        <div class="fn"><img class="fp" src="/api/fighter-photo?name=${encodeURIComponent(a.name)}" alt="" loading="lazy" onerror="this.remove()">${a.name}</div>
+        <div class="fn"><img class="fp" src="/api/fighter-photo?name=${encodeURIComponent(a.name)}" alt="" loading="lazy" onerror="this.onerror=null;this.src=_svgInit('${a.name}',40)">${a.name}</div>
         <div class="op ${odsCls(a.price)}">${fmtO(a.price)}</div>
         <div class="vs">VS</div>
         <div class="op ${odsCls(b.price)}">${fmtO(b.price)}</div>
-        <div class="fn r"><img class="fp" src="/api/fighter-photo?name=${encodeURIComponent(b.name)}" alt="" loading="lazy" onerror="this.remove()">${b.name}</div>
+        <div class="fn r">${b.name}<img class="fp fp-r" src="/api/fighter-photo?name=${encodeURIComponent(b.name)}" alt="" loading="lazy" onerror="this.onerror=null;this.src=_svgInit('${b.name}',40)"></div>
       </div>
       <div class="game-time">${new Date(game.commence_time).toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})}</div>
       <div class="cov-row">${out.map(o=>`
@@ -2630,6 +2639,16 @@ tracker.setFight = function(...args) {
 };
 
 
+
+// Instant wake-up when user returns to tab
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "visible") {
+    if (typeof pollLiveCrossovers === "function") pollLiveCrossovers();
+    if (typeof syncDKBets === "function") syncDKBets();
+    if (typeof pollRecorder === "function") pollRecorder();
+    if (typeof syncPnL === "function") syncPnL();
+  }
+});
 </script>
 </body>
 </html>

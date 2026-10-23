@@ -2,6 +2,13 @@
 
 ## FIGHTER PHOTOS AND ROSTER PLAN (2026-10-21)
 
+**Resolution (2026-10-23): ESPN CDN Integration & 541 Fighter Profiles Hydrated**
+- **Headshots Fixed:** Official transparent PNG cutouts downloaded directly from ESPN CDN (`espn_sync.js` / `sync_espn_active.js`). Losene Keita, Robert Bryczek, Douglas Silva de Andrade, Asaf Chopurov, Kai Kamaka III, and 100% of ranked UFC fighters now have verified high-res PNG cutouts saved in `ufc_local_data/fighter_images/`.
+- **Roster & Stats Database:** The background crawl finished and populated `ufc_db.sqlite` with 2,638 fighters. `analysis/fighter_profiles.json` was hydrated from 406 to 541 fighters with strike defense, takedown avg, and computed volatility scores for `crossover_predictor.js`.
+- **Apify Fallback:** `apify_fighter_stats.js` staged with Apify token in `.env` for scraping unindexed fighters via cloud residential proxies.
+- **Smart Path Fallback:** `fighter_images.js` updated to automatically resolve local photos from `../ufc_local_data/fighter_images/` when `DATA_DIR` is unset.
+
+
 **Why Losene Keita (and others) had no photo**
 1. The photo lookup took the first large image on the athlete page. On many pages that is event artwork, not the fighter. Keita's page had event art first, so the wrong picture was saved.
 2. The shared-image check then rejected that picture (it was shared with other fighters' event art), so the fighter was marked "shared" and retried with the same wrong answer.

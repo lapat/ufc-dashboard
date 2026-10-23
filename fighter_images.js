@@ -10,7 +10,7 @@ const path = require('path');
 const https = require('https');
 const athleteDb = require('./athlete_db');
 
-const DATA_ROOT = process.env.DATA_DIR || __dirname;
+const DATA_ROOT = process.env.DATA_DIR || (fs.existsSync(path.join(__dirname, '..', 'ufc_local_data')) ? path.join(__dirname, '..', 'ufc_local_data') : __dirname);
 const IMG_DIR = path.join(DATA_ROOT, 'fighter_images');
 const INDEX_FILE = path.join(IMG_DIR, 'index.json');
 const CRAWL_DELAY_MS = 15000;
