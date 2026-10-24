@@ -1,0 +1,41 @@
+{
+  "fightId": "8h_vs_itsnothinglikeagoodufceventletsgetthesesubs_2026-10-24",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "It's nothing like a good UFC Event! Let's get these subs vs 8h",
+  "startTime": "2026-10-24T14:33:41.491Z",
+  "endTime": "2026-10-24T14:40:24.893Z",
+  "dataPoints": 1,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-10-24T14:33:41.491Z",
+      "fighter1": {
+        "name": "It's nothing like a good UFC Event! Let's get these subs",
+        "numericOdds": 254622
+      },
+      "fighter2": {
+        "name": "8h",
+        "numericOdds": 384864
+      },
+      "source": "extension",
+      "live": true
+    }
+  ],
+  "pollStats": null,
+  "samples": [
+    {
+      "t": "2026-10-24T14:33:41.491Z",
+      "f1": 254622,
+      "f2": 384864,
+      "c": 1,
+      "live": 1
+    },
+    {
+      "t": "2026-10-24T14:34:27.483Z",
+      "f1": 254622,
+      "f2": 384864,
+      "c": 0,
+      "live": 0
+    }
+  ],
+  "samplePoints": 2
+}
