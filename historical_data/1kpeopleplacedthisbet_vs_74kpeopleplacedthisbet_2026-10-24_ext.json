@@ -1,0 +1,83 @@
+{
+  "fightId": "1kpeopleplacedthisbet_vs_74kpeopleplacedthisbet_2026-10-24",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "7.4k People Placed This Bet vs 1k People Placed This Bet",
+  "startTime": "2026-10-24T18:12:13.982Z",
+  "endTime": "2026-10-24T18:18:25.005Z",
+  "dataPoints": 1,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-10-24T18:12:13.982Z",
+      "fighter1": {
+        "name": "7.4k People Placed This Bet",
+        "numericOdds": 2276
+      },
+      "fighter2": {
+        "name": "1k People Placed This Bet",
+        "numericOdds": 560
+      },
+      "source": "extension",
+      "live": false
+    }
+  ],
+  "pollStats": null,
+  "samples": [
+    {
+      "t": "2026-10-24T18:12:13.982Z",
+      "f1": 2276,
+      "f2": 560,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-24T18:12:16.046Z",
+      "f1": 2276,
+      "f2": 560,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-24T18:12:18.989Z",
+      "f1": 2276,
+      "f2": 560,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-24T18:12:21.974Z",
+      "f1": 2276,
+      "f2": 560,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-24T18:12:23.982Z",
+      "f1": 2276,
+      "f2": 560,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-24T18:12:26.972Z",
+      "f1": 2276,
+      "f2": 560,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-24T18:12:29.857Z",
+      "f1": 2276,
+      "f2": 560,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-24T18:12:31.875Z",
+      "f1": 2276,
+      "f2": 560,
+      "c": 0,
+      "live": 0
+    }
+  ],
+  "samplePoints": 8
+}
