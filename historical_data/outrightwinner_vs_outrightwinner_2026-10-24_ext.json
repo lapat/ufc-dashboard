@@ -1,0 +1,48 @@
+{
+  "fightId": "outrightwinner_vs_outrightwinner_2026-10-24",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "Outright Winner vs Outright Winner",
+  "startTime": "2026-10-24T14:34:19.514Z",
+  "endTime": "2026-10-24T14:39:24.907Z",
+  "dataPoints": 1,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-10-24T14:34:19.514Z",
+      "fighter1": {
+        "name": "Outright Winner",
+        "numericOdds": 640
+      },
+      "fighter2": {
+        "name": "Outright Winner",
+        "numericOdds": 100
+      },
+      "source": "extension",
+      "live": false
+    }
+  ],
+  "pollStats": null,
+  "samples": [
+    {
+      "t": "2026-10-24T14:34:19.514Z",
+      "f1": 640,
+      "f2": 100,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-24T14:34:21.531Z",
+      "f1": 640,
+      "f2": 100,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-24T14:34:24.517Z",
+      "f1": 640,
+      "f2": 100,
+      "c": 0,
+      "live": 0
+    }
+  ],
+  "samplePoints": 3
+}
