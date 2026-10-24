@@ -1,0 +1,34 @@
+{
+  "fightId": "423peopleplacedthisbet_vs_4kpeopleplacedthisbet_2026-10-24",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "4k People Placed This Bet vs 423 People Placed This Bet",
+  "startTime": "2026-10-24T15:14:56.941Z",
+  "endTime": "2026-10-24T15:20:24.904Z",
+  "dataPoints": 1,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-10-24T15:14:56.941Z",
+      "fighter1": {
+        "name": "4k People Placed This Bet",
+        "numericOdds": 2329
+      },
+      "fighter2": {
+        "name": "423 People Placed This Bet",
+        "numericOdds": 521
+      },
+      "source": "extension",
+      "live": false
+    }
+  ],
+  "pollStats": null,
+  "samples": [
+    {
+      "t": "2026-10-24T15:14:56.941Z",
+      "f1": 2329,
+      "f2": 521,
+      "c": 1,
+      "live": 0
+    }
+  ],
+  "samplePoints": 1
+}
