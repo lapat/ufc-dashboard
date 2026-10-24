@@ -1,0 +1,55 @@
+{
+  "fightId": "petryan_vs_petryan_2026-10-24",
+  "sport": "mma_mixed_martial_arts",
+  "fightTitle": "Petr Yan vs Petr Yan",
+  "startTime": "2026-10-24T14:33:44.500Z",
+  "endTime": "2026-10-24T14:39:24.901Z",
+  "dataPoints": 1,
+  "oddsHistory": [
+    {
+      "timestamp": "2026-10-24T14:33:44.500Z",
+      "fighter1": {
+        "name": "Petr Yan",
+        "numericOdds": 130
+      },
+      "fighter2": {
+        "name": "Petr Yan",
+        "numericOdds": -345
+      },
+      "source": "extension",
+      "live": false
+    }
+  ],
+  "pollStats": null,
+  "samples": [
+    {
+      "t": "2026-10-24T14:33:44.500Z",
+      "f1": 130,
+      "f2": -345,
+      "c": 1,
+      "live": 0
+    },
+    {
+      "t": "2026-10-24T14:33:47.495Z",
+      "f1": 130,
+      "f2": -345,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-24T14:33:49.499Z",
+      "f1": 130,
+      "f2": -345,
+      "c": 0,
+      "live": 0
+    },
+    {
+      "t": "2026-10-24T14:33:52.493Z",
+      "f1": 130,
+      "f2": -345,
+      "c": 0,
+      "live": 0
+    }
+  ],
+  "samplePoints": 4
+}
