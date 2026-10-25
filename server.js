@@ -50,7 +50,8 @@ let _oddsApiCreditsUsed = null;
 let _oddsApiCreditsRemaining = null;
 
 app.use(express.static('public'));
-app.use(express.json());
+app.use(express.json({ limit: '50mb' }));
+app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 
 // ── Helpers ────────────────────────────────────────────────────────────────
 
@@ -502,6 +503,72 @@ app.get('/api/fighter/:name', (req, res) => {
   catch (e) { res.status(500).json({ error: e.message }); }
 });
 
+// ── Fighter career stats & volatility capsule ──────────────────────────────
+const { loadFighterProfiles, fightVolatilityScore } = require('./fighter_stats');
+const { predictCrossover } = require('./crossover_predictor');
+
+let _fighterProfilesCache = null;
+function getFighterProfiles() {
+  if (!_fighterProfilesCache) {
+    try { _fighterProfilesCache = loadFighterProfiles(); }
+    catch (_) { _fighterProfilesCache = {}; }
+  }
+  return _fighterProfilesCache;
+}
+
+function normFighter(s) {
+  return (s || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+}
+
+function lookupFighter(name, profiles) {
+  if (!name || !profiles) return null;
+  if (profiles[name]) return profiles[name];
+  const q = normFighter(name);
+  return Object.values(profiles).find(p => normFighter(p.name) === q) || null;
+}
+
+app.get('/api/fighter-stats', (req, res) => {
+  try {
+    const { f1, f2, name, o1, o2 } = req.query;
+    const profiles = getFighterProfiles();
+
+    if (name) {
+      const p = lookupFighter(name, profiles);
+      return res.json({ profile: p ? { name: p.name, stats: p.stats, volatility: p.volatility } : null });
+    }
+
+    if (f1 || f2) {
+      const p1 = lookupFighter(f1, profiles);
+      const p2 = lookupFighter(f2, profiles);
+      const fightVol = fightVolatilityScore(f1, f2, profiles);
+
+      let crossover = null;
+      if (o1 != null && o2 != null && o1 !== '' && o2 !== '') {
+        try {
+          crossover = predictCrossover({
+            f1OpeningOdds: o1,
+            f2OpeningOdds: o2,
+            f1Name: f1,
+            f2Name: f2,
+            profiles
+          });
+        } catch (_) {}
+      }
+
+      return res.json({
+        f1: p1 ? { name: p1.name, stats: p1.stats, volatility: p1.volatility } : null,
+        f2: p2 ? { name: p2.name, stats: p2.stats, volatility: p2.volatility } : null,
+        fightVolatility: fightVol,
+        crossover
+      });
+    }
+
+    res.status(400).json({ error: 'Missing f1/f2 or name parameters' });
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+});
+
 // Backfill: load past odds for a game already in progress
 app.get('/api/backfill', async (req, res) => {
   const { sport, team1, team2 } = req.query;
@@ -585,12 +652,28 @@ const dkSelectionLabels = new Map();
 function learnSelectionLabels(node, depth = 0) {
   if (!node || typeof node !== 'object' || depth > 12) return;
   if (Array.isArray(node)) { for (const x of node) learnSelectionLabels(x, depth + 1); return; }
-  if (typeof node.id === 'string' && typeof node.label === 'string' && node.marketId) {
-    dkSelectionLabels.set(node.id, node.label);
+  const id = node.id || node.selectionId;
+  const label = node.betSlipLine || node.selectionDisplayName || node.label || (typeof node.name === 'string' && node.id ? node.name : null);
+  if (typeof id === 'string' && typeof label === 'string' && label.trim()) {
+    dkSelectionLabels.set(id, label.trim());
   }
   for (const v of Object.values(node)) if (v && typeof v === 'object') learnSelectionLabels(v, depth + 1);
 }
+
+function backfillMissingSelectionLabels() {
+  let updated = false;
+  for (const [uid, bets] of dkBetsByUser) {
+    for (const b of bets) {
+      if ((!b.selection || b.selection === '') && b.selectionId && dkSelectionLabels.has(b.selectionId)) {
+        b.selection = dkSelectionLabels.get(b.selectionId);
+        updated = true;
+      }
+    }
+  }
+  if (updated) saveDKBets();
+}
 for (const c of dkCaptures) learnSelectionLabels(c.data);
+setTimeout(backfillMissingSelectionLabels, 1000);
 
 // getPurchases/placeBets shape: purchases[].bets[] with betId/status/stake/potentialReturns.
 // Flatten into the same per-bet shape the WS parser produces so these bets are stored
@@ -600,20 +683,26 @@ function flattenPurchases(purchases) {
   for (const p of purchases) {
     for (const b of p.bets || []) {
       const sels = b.selectionsMapped?.length ? b.selectionsMapped : (p.selections || []);
+      const primarySelId = sels[0]?.id;
+      const full = (p.selections || []).find(ps => ps.id === primarySelId) || sels[0] || {};
+      const displayOdds = b.displayOdds || full.displayOdds || '';
       out.push({
-        betId: b.betId,
-        status: b.status,
+        betId: b.receiptId || b.betId || p.id || p.waitingBetId,
+        status: b.settlementStatus || b.status || p.status,
         type: b.type,
         stake: b.stake,
         potentialReturns: b.potentialReturns,
-        displayOdds: b.displayOdds,
-        placementDate: p.creationDate,
+        displayOdds: typeof displayOdds === 'object' ? (displayOdds.american || '') : displayOdds,
+        placementDate: p.creationDate || b.statusUpdateTime || new Date().toISOString(),
+        selectionId: primarySelId,
         selections: sels.map(s => {
-          const full = (p.selections || []).find(ps => ps.id === s.id) || s;
+          const sFull = (p.selections || []).find(ps => ps.id === s.id) || s;
+          const sOdds = sFull.displayOdds || '';
           return {
+            id: s.id,
             selectionDisplayName: dkSelectionLabels.get(s.id) || '',
             marketDisplayName: '',
-            displayOdds: full.displayOdds || '',
+            displayOdds: typeof sOdds === 'object' ? (sOdds.american || '') : sOdds,
           };
         }),
       });
@@ -623,21 +712,27 @@ function flattenPurchases(purchases) {
 }
 
 app.post('/api/dk-sync', (req, res) => {
-  const { url, data, ts, userId } = req.body;
-  if (!url || !data) return res.status(400).json({ error: 'missing fields' });
+  try {
+    const { url, data, ts, userId } = req.body || {};
+    if (!url || !data) return res.status(400).json({ error: 'missing fields' });
 
-  dkCaptures.unshift({ url, data, ts, userId });
-  if (dkCaptures.length > 200) dkCaptures.length = 200;
-  saveDKCaptures();
-  learnSelectionLabels(data);
+    dkCaptures.unshift({ url, data, ts, userId });
+    if (dkCaptures.length > 200) dkCaptures.length = 200;
+    saveDKCaptures();
+    learnSelectionLabels(data);
+    backfillMissingSelectionLabels();
 
-  const bets = parseDKBets(url, data, userId);
-  dkHeartbeat.lastBetSync = Date.now(); // any WS activity = extension is alive on mybets
-  if (bets.length) {
-    console.log(`[DK sync] ${bets.length} bets from ${userId || 'unknown'} via ${url}`);
+    const bets = parseDKBets(url, data, userId);
+    dkHeartbeat.lastBetSync = Date.now(); // any WS activity = extension is alive on mybets
+    if (bets.length) {
+      console.log(`[DK sync] ${bets.length} bets from ${userId || 'unknown'} via ${url}`);
+    }
+
+    res.json({ received: true, url, bets });
+  } catch (err) {
+    console.error('[DK sync] Error processing sync:', err);
+    res.status(500).json({ received: false, error: err.message, bets: [] });
   }
-
-  res.json({ received: true, url, bets });
 });
 
 app.get('/api/dk-captures', (req, res) => {
@@ -736,17 +831,23 @@ function parseDKBets(url, data, userId) {
   // used to erase the first bet entirely). Only merge on update; still full-replace on initial.
   const isFullSnapshot = !!data?.result?.initial?.bets;
   // purchases (getPurchases/placeBets) are per-purchase, not a full snapshot → merge by betId
+  const isPurchasePayload = Array.isArray(data?.purchases) ||
+    (Array.isArray(data?.bets) && (data?.selections || data?.creationDate || data?.waitingBetId || url?.includes('placeBets') || url?.includes('calculateBets')));
+  const purchasesList = Array.isArray(data?.purchases) ? data.purchases : (isPurchasePayload ? [data] : null);
+
   const rawBets =
     data?.result?.initial?.bets ||
     data?.result?.update?.bets ||
+    (purchasesList ? flattenPurchases(purchasesList) : null) ||
     data?.bets || data?.Bets || data?.entries || data?.wagers ||
-    (Array.isArray(data?.purchases) ? flattenPurchases(data.purchases) : null) ||
     (Array.isArray(data?.data) ? data.data : []);
 
   if (!Array.isArray(rawBets) || !rawBets.length) return [];
 
   const bets = rawBets.map(b => {
     const sel = b.selections?.[0] || {};
+    const primarySelId = b.selectionId || sel.id || sel.selectionId || b.selectionsMapped?.[0]?.id;
+    const resolvedSelection = sel.selectionDisplayName || (primarySelId ? dkSelectionLabels.get(primarySelId) : '') || '';
     const numLegs = b.selections?.length || 1;
     // Detect parlays: DK sends type/wagerType fields, or multiple selections, or explicit parlay flags
     const rawType = (b.betType || b.wagerType || b.type || '').toLowerCase();
@@ -762,13 +863,14 @@ function parseDKBets(url, data, userId) {
       userId: userId || DEFAULT_USER,
       status: b.settlementStatus || b.status,
       rawStatus: b.status,
-      selection: sel.selectionDisplayName || '',
+      selection: resolvedSelection,
+      selectionId: primarySelId,
       market: sel.marketDisplayName || '',
-      odds: (sel.displayOdds || b.displayOdds || '').replace('−', '-').replace('−', '-'),
+      odds: (sel.displayOdds || b.displayOdds || '').replace(/−/g, '-'),
       stake: b.stake,
       potentialReturns: b.potentialReturns,
       returns: b.returns,
-      placementDate: b.placementDate,
+      placementDate: b.placementDate || new Date().toISOString(),
       isParlay,
       numLegs,
     };

@@ -1,5 +1,17 @@
 # UFC Dashboard — System Architecture & Core Mandate
 
+## ⚡ THE CORE 3-STEP ALGORITHM (HOW LIVEBETBOT WORKS)
+1. **Capture bets from the live bets page using the extension:**
+   - The user keeps a DraftKings **My Bets** tab open (https://sportsbook.draftkings.com/mybets).
+   - The extension captures all open bets and in-play placements in real time via WebSocket and fetch interception, streaming them to /api/dk-sync.
+2. **Capture odds from the odds page using the extension (ALWAYS 2 TABS OPEN):**
+   - The user keeps a DraftKings **Fight/Event Odds** tab open (e.g. https://sportsbook.draftkings.com/event/...).
+   - The extension automatically scans the live DOM moneylines every 1 second and pushes odds to /api/dk-odds-push every 2 seconds (fully automatic, zero button pressing required).
+   - **Crucial Rule:** The user will ALWAYS have **two DraftKings tabs open** simultaneously: Tab 1 for My Bets, and Tab 2 for Live Odds.
+3. **Show this on the website (LiveBetBot.com):**
+   - The website correlates the user's real open bets against the moving odds in real time, calculating P&L, position coverage, and live hedge crossover targets.
+   - **Backup Recorder:** The Odds API also runs continuously 24/7 as an always-on recorder backup capturing all live UFC fights.
+
 ## 🎯 CORE SYSTEM MANDATE (THE TWO NON-NEGOTIABLE FEATURES)
 This application exists strictly to execute two primary features:
 1. **Track bets in DraftKings via the extension:**

@@ -264,7 +264,7 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
   const data = msg.data;
 
   const extractedId = tryExtractUserId(url, data);
-  if (extractedId && extractedId !== dkUserId) {
+  if (extractedId && !manualUserId && extractedId !== dkUserId) {
     dkUserId = extractedId;
     chrome.storage.local.set({ dkUserId: extractedId });
     addLog(`User identified: ${extractedId}`);
@@ -286,7 +286,18 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
     method: 'POST',
     headers: authHeaders(),
     body: JSON.stringify({ url, data, ts: Date.now(), userId: dkUserId })
-  }).then(r => r.json()).then(res => {
+  }).then(async r => {
+    if (!r.ok) {
+      const txt = await r.text().catch(() => '');
+      addLog(`✗ server HTTP ${r.status}`);
+      return null;
+    }
+    return r.json().catch(err => {
+      addLog(`✗ server invalid json`);
+      return null;
+    });
+  }).then(res => {
+    if (!res) return;
     if (res.bets?.length) {
       chrome.storage.local.set({ lastSync: Date.now(), lastBetCount: res.bets.length });
       addLog(`✓ server parsed ${res.bets.length} bets`);

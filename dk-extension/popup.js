@@ -106,11 +106,14 @@ function renderCaptures(captures) {
 }
 
 // Username setup
-chrome.storage.local.get(['dkUserId'], r => { if (r.dkUserId) document.getElementById('userInput').value = r.dkUserId; });
+chrome.storage.local.get(['dkUserId', 'manualUserId'], r => {
+  const u = r.manualUserId || r.dkUserId;
+  if (u) document.getElementById('userInput').value = u;
+});
 document.getElementById('saveUser').addEventListener('click', () => {
   const val = document.getElementById('userInput').value.trim();
   if (!val) return;
-  chrome.storage.local.set({ dkUserId: val });
+  chrome.storage.local.set({ dkUserId: val, manualUserId: val });
   const btn = document.getElementById('saveUser');
   btn.textContent = 'Saved ✓'; btn.className = 'saved';
   setTimeout(() => { btn.textContent = 'Set'; btn.className = ''; }, 2000);
