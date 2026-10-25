@@ -442,7 +442,7 @@
       document.getElementById('f2-img').style.display = 'block';
 
       if (o1 && o2) checkVelocity(o1, o2);
-      loadVolatility(f1, f2); pollLiveFightStats(f1, f2);
+      loadVolatility(f1, f2); startLiveStatsPolling(f1, f2);
     }
 
     function checkVelocity(o1, o2) {
@@ -466,6 +466,13 @@
     }
 
     let _lastVolFight = '';
+    let _liveStatsTimer = null;
+    function startLiveStatsPolling(f1, f2) {
+      if (_liveStatsTimer) clearInterval(_liveStatsTimer);
+      pollLiveFightStats(f1, f2);
+      _liveStatsTimer = setInterval(() => pollLiveFightStats(f1, f2), 3000);
+    }
+
     async function pollLiveFightStats(f1, f2) {
       if (!f1 || !f2) return;
       try {

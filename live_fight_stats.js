@@ -17,8 +17,19 @@ function getJson(url) {
   });
 }
 
+// Robust Unicode Accent & Diacritic Normalization
 function norm(s) {
-  return (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+  return (s || "")
+    .replace(/[łŁ]/g, "l")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]/g, "");
+}
+
+function lastName(s) {
+  const parts = (s || "").trim().split(/\s+/);
+  return norm(parts[parts.length - 1]);
 }
 
 let _scoreboardCache = null;
@@ -45,33 +56,60 @@ async function fetchLiveFightStats(f1Name, f2Name) {
   const sb = await getScoreboard();
   if (!sb || !sb.events || !sb.events.length) return null;
 
-  const ev = sb.events[0];
   const n1 = norm(f1Name);
   const n2 = norm(f2Name);
+  const ln1 = lastName(f1Name);
+  const ln2 = lastName(f2Name);
 
-  const comp = (ev.competitions || []).find(c => {
-    const athletes = (c.competitors || []).map(x => norm(x.athlete?.displayName || x.athlete?.fullName || ""));
-    const has1 = athletes.some(a => a.includes(n1) || n1.includes(a));
-    const has2 = athletes.some(a => a.includes(n2) || n2.includes(a));
-    return has1 && has2;
-  });
+  let targetComp = null;
+  let targetEv = null;
 
-  if (!comp) return null;
+  // Search across all cards/events in scoreboard
+  for (const ev of sb.events) {
+    for (const c of (ev.competitions || [])) {
+      const athletes = (c.competitors || []).map(x => ({
+        full: norm(x.athlete?.displayName || x.athlete?.fullName || ""),
+        last: lastName(x.athlete?.displayName || x.athlete?.fullName || ""),
+        raw: x
+      }));
+
+      // Match 1: Full name substring match
+      const has1 = athletes.some(a => a.full.includes(n1) || n1.includes(a.full));
+      const has2 = athletes.some(a => a.full.includes(n2) || n2.includes(a.full));
+      if (has1 && has2) {
+        targetComp = c;
+        targetEv = ev;
+        break;
+      }
+
+      // Match 2: Last name match fallback
+      const hasL1 = athletes.some(a => a.last === ln1 || (ln1.length >= 4 && a.last.includes(ln1)));
+      const hasL2 = athletes.some(a => a.last === ln2 || (ln2.length >= 4 && a.last.includes(ln2)));
+      if (hasL1 && hasL2) {
+        targetComp = c;
+        targetEv = ev;
+        break;
+      }
+    }
+    if (targetComp) break;
+  }
+
+  if (!targetComp || !targetEv) return null;
 
   const result = {
     available: true,
-    fightTitle: (comp.competitors || []).map(x => x.athlete?.displayName).join(" vs "),
-    round: comp.status?.period || 1,
-    clock: comp.status?.displayClock || "0:00",
-    status: comp.status?.type?.detail || comp.status?.type?.description || "In Progress",
+    fightTitle: (targetComp.competitors || []).map(x => x.athlete?.displayName).join(" vs "),
+    round: targetComp.status?.period || 1,
+    clock: targetComp.status?.displayClock || "0:00",
+    status: targetComp.status?.type?.detail || targetComp.status?.type?.description || "In Progress",
     f1: null,
     f2: null
   };
 
-  const comps = comp.competitors || [];
+  const comps = targetComp.competitors || [];
   for (let i = 0; i < comps.length; i++) {
     const athleteComp = comps[i];
-    const statsUrl = "https://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/events/" + ev.id + "/competitions/" + comp.id + "/competitors/" + athleteComp.id + "/statistics?lang=en&region=us";
+    const statsUrl = "https://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/events/" + targetEv.id + "/competitions/" + targetComp.id + "/competitors/" + athleteComp.id + "/statistics?lang=en&region=us";
     
     let rawStats = [];
     try {
@@ -93,7 +131,9 @@ async function fetchLiveFightStats(f1Name, f2Name) {
       controlTime: statMap.timeInControl || "0:00"
     };
 
-    if (norm(fObj.name).includes(n1) || n1.includes(norm(fObj.name))) {
+    const athleteNorm = norm(fObj.name);
+    const athleteLast = lastName(fObj.name);
+    if (athleteNorm.includes(n1) || n1.includes(athleteNorm) || athleteLast === ln1) {
       result.f1 = fObj;
     } else {
       result.f2 = fObj;
@@ -103,4 +143,4 @@ async function fetchLiveFightStats(f1Name, f2Name) {
   return result;
 }
 
-module.exports = { fetchLiveFightStats };
+module.exports = { fetchLiveFightStats, norm, lastName };

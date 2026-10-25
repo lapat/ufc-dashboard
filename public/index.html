@@ -1366,6 +1366,29 @@ function updateNowWatchingOdds(o1,o2,drawOdds){
   }
 }
 
+let _classicLiveStatsTimer = null;
+function startClassicLiveStats(f1, f2) {
+  if (_classicLiveStatsTimer) clearInterval(_classicLiveStatsTimer);
+  const poll = () => {
+    fetch('/api/live-fight-stats?f1=' + encodeURIComponent(f1) + '&f2=' + encodeURIComponent(f2))
+      .then(r => r.json())
+      .then(ls => {
+        const row = document.getElementById('nw-live-stats');
+        if (ls && ls.available && ls.f1 && ls.f2) {
+          row.style.display = 'flex';
+          document.getElementById('nw-sig-f1').textContent = ls.f1.sigStrikesLanded;
+          document.getElementById('nw-sig-f2').textContent = ls.f2.sigStrikesLanded;
+          document.getElementById('nw-td-f1').textContent = ls.f1.takedownsLanded;
+          document.getElementById('nw-td-f2').textContent = ls.f2.takedownsLanded;
+          document.getElementById('nw-ctrl-f1').textContent = ls.f1.controlTime || '0:00';
+          document.getElementById('nw-ctrl-f2').textContent = ls.f2.controlTime || '0:00';
+        }
+      }).catch(() => {});
+  };
+  poll();
+  _classicLiveStatsTimer = setInterval(poll, 3000);
+}
+
 function updateFightUI(f1Name,f2Name,o1,o2,live,sport,switchGames){
   // Fetch and populate Gas Tank & Finisher capsule
   fetch('/api/fighter-stats?f1=' + encodeURIComponent(f1Name) + '&f2=' + encodeURIComponent(f2Name))
@@ -1380,21 +1403,7 @@ function updateFightUI(f1Name,f2Name,o1,o2,live,sport,switchGames){
         document.getElementById('nw-vol-capsule').textContent = 'Vol: ' + (stats.fightVolatility != null ? stats.fightVolatility : '70');
         document.getElementById('nw-f2-capsule').innerHTML = '<strong>' + f2Name + ':</strong> ' + f2Fin + ' · ' + f2Gas;
         document.getElementById('nw-capsule').style.display = 'flex';
-        // Poll live in-fight strikes and takedowns
-        fetch('/api/live-fight-stats?f1=' + encodeURIComponent(f1Name) + '&f2=' + encodeURIComponent(f2Name))
-          .then(r => r.json())
-          .then(ls => {
-            const row = document.getElementById('nw-live-stats');
-            if (ls && ls.available && ls.f1 && ls.f2) {
-              row.style.display = 'flex';
-              document.getElementById('nw-sig-f1').textContent = ls.f1.sigStrikesLanded;
-              document.getElementById('nw-sig-f2').textContent = ls.f2.sigStrikesLanded;
-              document.getElementById('nw-td-f1').textContent = ls.f1.takedownsLanded;
-              document.getElementById('nw-td-f2').textContent = ls.f2.takedownsLanded;
-              document.getElementById('nw-ctrl-f1').textContent = ls.f1.controlTime || '0:00';
-              document.getElementById('nw-ctrl-f2').textContent = ls.f2.controlTime || '0:00';
-            }
-          }).catch(() => {});
+        startClassicLiveStats(f1Name, f2Name);
       }
     }).catch(() => {});
   const nw=document.getElementById('now-watching');
@@ -1433,7 +1442,7 @@ document.getElementById('nw-switch').addEventListener('change',function(){
 });
 
 document.getElementById('nw-dismiss').addEventListener('click',()=>{
-  document.getElementById('now-watching').style.display='none';
+  if (_classicLiveStatsTimer) clearInterval(_classicLiveStatsTimer); document.getElementById('now-watching').style.display='none';
   document.getElementById('brain-panel').style.display='none';
   document.getElementById('game-list').style.display='block';
   document.getElementById('graph-fight-lbl').textContent='no game selected';
@@ -1938,7 +1947,7 @@ function selectSport(key, label) {
   renderTracker();
   document.getElementById('brain-panel').style.display='none';
   if(selectedGame){
-    document.getElementById('now-watching').style.display='none';
+    if (_classicLiveStatsTimer) clearInterval(_classicLiveStatsTimer); document.getElementById('now-watching').style.display='none';
     document.getElementById('game-list').style.display='block';
     document.getElementById('graph-fight-lbl').textContent='no game selected';
     document.getElementById('graph-empty').style.display='block';
