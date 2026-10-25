@@ -6698,4 +6698,84 @@ async function runTotalReturnTests() {
       assert(html.includes('pos-ret'), '.pos-ret CSS class must exist');
     });
   } catch(e) { console.error('  ✗ AD8:', e.message); failed++; }
+
+  // ── AE. Dense 1-Second Fight Capture Verification (Hundreds/Thousands of Data Points) ──
+  try {
+    await check('AE1: Extension PUSH_INTERVAL_MS is exactly 1000ms (1 second)', () => {
+      const bg = require('fs').readFileSync(require('path').join(__dirname, 'dk-extension', 'background.js'), 'utf8');
+      assert(bg.includes('const PUSH_INTERVAL_MS = 1000;'), 'PUSH_INTERVAL_MS must be 1000ms');
+    });
+  } catch(e) { console.error('  ✗ AE1:', e.message); failed++; }
+
+  try {
+    await check('AE2: content.js recognizes UFC on /event/ pages via DOM context', () => {
+      const cj = require('fs').readFileSync(require('path').join(__dirname, 'dk-extension', 'content.js'), 'utf8');
+      assert(cj.includes('isUfcContext'), 'content.js must check isUfcContext');
+      assert(cj.includes('/(round|rd)\s*\d/i') || cj.includes('round'), 'content.js must check round indicators');
+    });
+  } catch(e) { console.error('  ✗ AE2:', e.message); failed++; }
+
+  try {
+    await check('AE3: content.js findSideNameNear ignores social badges (1.7k people placed this bet)', () => {
+      const cj = require('fs').readFileSync(require('path').join(__dirname, 'dk-extension', 'content.js'), 'utf8');
+      assert(cj.includes('JUNK_NAME_REGEX'), 'content.js must define JUNK_NAME_REGEX');
+    });
+  } catch(e) { console.error('  ✗ AE3:', e.message); failed++; }
+
+  try {
+    await check('AE4: server.js appends every single 1-second sample to oddsHistory', () => {
+      const serverSrc = require('fs').readFileSync(require('path').join(__dirname, 'server.js'), 'utf8');
+      const idx = serverSrc.indexOf("app.post('/api/dk-odds-push'");
+      const pushBlock = serverSrc.slice(idx, idx + 2000);
+      assert(!pushBlock.includes('if(changed)record.oddsHistory.push'), 'Must NOT gate oddsHistory.push on changed flag');
+      assert(pushBlock.includes('record.oddsHistory.push(odds);'), 'Must push every sample into oddsHistory');
+    });
+  } catch(e) { console.error('  ✗ AE4:', e.message); failed++; }
+
+  try {
+    await check('AE5: 10-minute fight simulation captures exactly 600 data points in oddsHistory', () => {
+      const fakeRecord = {
+        meta: { sport: 'mma_mixed_martial_arts', fighter1: 'Colby Thicknesse', fighter2: 'Asaf Chopurov', startTime: new Date().toISOString(), source: 'extension' },
+        oddsHistory: []
+      };
+      for (let sec = 0; sec < 600; sec++) {
+        fakeRecord.oddsHistory.push({
+          timestamp: new Date().toISOString(),
+          fighter1: { name: 'Colby Thicknesse', numericOdds: -140 },
+          fighter2: { name: 'Asaf Chopurov', numericOdds: 115 },
+          source: 'extension',
+          live: true
+        });
+      }
+      assert.strictEqual(fakeRecord.oddsHistory.length, 600, 'Must have 600 points for 10 minutes');
+    });
+  } catch(e) { console.error('  ✗ AE5:', e.message); failed++; }
+
+  try {
+    await check('AE6: recSaveRecord persists all 600 data points to file', () => {
+      const { recSaveRecord } = require('./record_engine');
+      const fakeRecord = {
+        meta: { sport: 'mma_mixed_martial_arts', fighter1: 'Colby Thicknesse', fighter2: 'Asaf Chopurov', startTime: new Date().toISOString(), source: 'extension' },
+        oddsHistory: []
+      };
+      for (let sec = 0; sec < 600; sec++) {
+        fakeRecord.oddsHistory.push({
+          timestamp: new Date().toISOString(),
+          fighter1: { name: 'Colby Thicknesse', numericOdds: -140 },
+          fighter2: { name: 'Asaf Chopurov', numericOdds: 115 },
+          source: 'extension',
+          live: true
+        });
+      }
+      const tmpFile = '/tmp/test_ae6_fight_ext.json';
+      const saveRes = recSaveRecord('test_ae6_fight', fakeRecord, { filePath: tmpFile });
+      assert(saveRes.saved, 'Save must succeed');
+      assert.strictEqual(saveRes.dataPoints, 600, 'Must report 600 dataPoints');
+      const json = JSON.parse(require('fs').readFileSync(tmpFile, 'utf8'));
+      assert.strictEqual(json.dataPoints, 600, 'Saved JSON must have dataPoints: 600');
+      assert.strictEqual(json.oddsHistory.length, 600, 'Saved JSON must have 600 oddsHistory entries');
+      require('fs').unlinkSync(tmpFile);
+    });
+  } catch(e) { console.error('  ✗ AE6:', e.message); failed++; }
 }
+
