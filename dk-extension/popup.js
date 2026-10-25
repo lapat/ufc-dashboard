@@ -139,6 +139,11 @@ document.getElementById('clrLog').addEventListener('click', () => {
   chrome.storage.local.set({ debugLog: [], captures: [], wsConnected: null, wsLastOpen: null, wsLastClose: null });
 });
 
+document.getElementById('btnLaunchTabs')?.addEventListener('click', () => {
+  chrome.tabs.create({ url: 'https://sportsbook.draftkings.com/mybets' });
+  chrome.tabs.create({ url: 'https://sportsbook.draftkings.com/leagues/mma/ufc' });
+});
+
 document.getElementById('fightStartedBtn').addEventListener('click', () => {
   chrome.runtime.sendMessage({ type: 'SET_MANUAL_LIVE' });
   refresh();
