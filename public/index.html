@@ -948,6 +948,13 @@ let oddsLocked = false;
 // ── Web Audio Chime Synthesis for Classic Dashboard ─────────────────────────
 let _classicSoundEnabled = localStorage.getItem('hudSound') !== 'false';
 let _classicAudioCtx = null;
+// Auto-unlock Classic AudioContext on first click/tap
+document.addEventListener('pointerdown', () => {
+  try {
+    if (!_classicAudioCtx) _classicAudioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    if (_classicAudioCtx.state === 'suspended') _classicAudioCtx.resume();
+  } catch (_) {}
+}, { once: true });
 let _lastClassicCanWinWin = false;
 
 function updateClassicSoundUI() {

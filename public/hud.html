@@ -332,6 +332,24 @@
     let _currentSuggestion = null;
     let _oddsVelocityBuffer = [];
     let _audioCtx = null;
+    // Auto-unlock AudioContext on first tap/click anywhere (iOS Safari & Chrome gesture policy)
+    document.addEventListener('pointerdown', () => {
+      try {
+        if (!_audioCtx) _audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        if (_audioCtx.state === 'suspended') _audioCtx.resume();
+      } catch (_) {}
+    }, { once: true });
+
+    // Screen Wake Lock: Keep phone / tablet screen awake during fight night
+    async function requestWakeLock() {
+      if ('wakeLock' in navigator) {
+        try { await navigator.wakeLock.request('screen'); } catch (_) {}
+      }
+    }
+    requestWakeLock();
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible') requestWakeLock();
+    });
 
     document.getElementById('lbl-user').textContent = _user;
     updateSoundUI();
