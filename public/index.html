@@ -1143,8 +1143,8 @@ function renderTracker(){
     if(s2&&s2.canWinWin){
       statusEl.className='tracker-status s-winwin'; statusEl.textContent='⚖️ HEDGE NOW — guaranteed profit available at current odds';
       if(!_lastClassicCanWinWin){ playClassicChime(); _lastClassicCanWinWin = true; }
-    } else { _lastClassicCanWinWin = false; }
-    else if(s2&&s2.threshOdds!==null){
+    } else if(s2&&s2.threshOdds!==null){
+      _lastClassicCanWinWin = false;
       const thresh=s2.threshOdds>0?`+${s2.threshOdds}`:s2.threshOdds;
       statusEl.className='tracker-status s-hedge'; statusEl.innerHTML=`👁 WATCHING — win-win opens when <strong>${s2.name}</strong> hits <strong>${thresh}</strong>`;
     } else { statusEl.className='tracker-status s-hedge'; statusEl.textContent='⚖️ HEDGE MOMENT — add a bet to lock in profit'; }

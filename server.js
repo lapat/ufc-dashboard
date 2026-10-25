@@ -848,7 +848,21 @@ function parseDKBets(url, data, userId) {
   const bets = rawBets.map(b => {
     const sel = b.selections?.[0] || {};
     const primarySelId = b.selectionId || sel.id || sel.selectionId || b.selectionsMapped?.[0]?.id;
-    const resolvedSelection = sel.selectionDisplayName || (primarySelId ? dkSelectionLabels.get(primarySelId) : '') || '';
+    let resolvedSelection = sel.selectionDisplayName || (primarySelId ? dkSelectionLabels.get(primarySelId) : '') || '';
+
+    // Smart Fallback: If label not yet in dkSelectionLabels, check active fights by odds & sport
+    if (!resolvedSelection) {
+      const rawOdds = (sel.displayOdds || b.displayOdds || '').replace(/[^0-9+-]/g, '');
+      const oddsNum = parseInt(rawOdds);
+      if (!isNaN(oddsNum) && recorderState && recorderState.extCaptures) {
+        for (const [id, rec] of recorderState.extCaptures) {
+          if (rec.lastOdds) {
+            if (rec.lastOdds.fighter1?.numericOdds === oddsNum) { resolvedSelection = rec.lastOdds.fighter1.name; break; }
+            if (rec.lastOdds.fighter2?.numericOdds === oddsNum) { resolvedSelection = rec.lastOdds.fighter2.name; break; }
+          }
+        }
+      }
+    }
     const numLegs = b.selections?.length || 1;
     // Detect parlays: DK sends type/wagerType fields, or multiple selections, or explicit parlay flags
     const rawType = (b.betType || b.wagerType || b.type || '').toLowerCase();
