@@ -6783,6 +6783,7 @@ async function runTotalReturnTests() {
     await check('AF1: server.js defines /hud route serving hud.html', () => {
       const serverSrc = require('fs').readFileSync(require('path').join(__dirname, 'server.js'), 'utf8');
       assert(serverSrc.includes("app.get('/hud'"), 'server.js must define /hud route');
+      assert(serverSrc.includes("app.get('/guide'"), 'server.js must define /guide route');
     });
   } catch(e) { console.error('  ✗ AF1:', e.message); failed++; }
 

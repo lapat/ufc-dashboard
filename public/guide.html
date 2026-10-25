@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bet Bot Guide — Fight HUD & Hedge Chime</title>
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --card-bg: #121212;
+      --card-border: #1e1e1e;
+      --gold: #e8b84b;
+      --green: #69db7c;
+      --red: #ff6b6b;
+      --blue: #74c0fc;
+      --text: #ddd;
+      --muted: #888;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+      padding: 16px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    a { color: var(--gold); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    
+    /* Header */
+    #guide-hdr {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--card-border);
+      margin-bottom: 20px;
+    }
+    .logo { font-size: 1.05rem; font-weight: 800; color: #fff; text-transform: uppercase; letter-spacing: 1px; }
+    .logo span { color: var(--gold); }
+    .nav-links { display: flex; gap: 8px; }
+    .nav-btn {
+      background: #181818;
+      border: 1px solid #2a2a2a;
+      color: #aaa;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.15s ease;
+    }
+    .nav-btn:hover { background: #222; color: #fff; border-color: #444; text-decoration: none; }
+    .nav-btn.primary { background: #1a1608; border-color: #e8b84b55; color: var(--gold); }
+
+    /* Sections */
+    .section-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 18px 20px;
+      margin-bottom: 16px;
+    }
+    h2 { font-size: 1rem; font-weight: 800; color: #fff; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+    h3 { font-size: 0.88rem; font-weight: 700; color: var(--gold); margin: 12px 0 6px 0; }
+    p { margin-bottom: 10px; color: #ccc; }
+    ul { margin-left: 20px; margin-bottom: 12px; }
+    li { margin-bottom: 6px; color: #bbb; }
+    li strong { color: #fff; }
+
+    /* Badges & Callouts */
+    .badge {
+      display: inline-block;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .badge.green { background: #0b1a0d; color: var(--green); border: 1px solid #2b542c; }
+    .badge.gold { background: #1a1608; color: var(--gold); border: 1px solid #544415; }
+    .badge.red { background: #4a0808; color: var(--red); border: 1px solid #ff6b6b; }
+    
+    .callout {
+      background: #0d0d0d;
+      border-left: 3px solid var(--gold);
+      padding: 10px 14px;
+      border-radius: 0 6px 6px 0;
+      margin: 10px 0;
+      font-size: 0.85rem;
+    }
+    .callout.green { border-color: var(--green); background: #071308; }
+    .callout.red { border-color: var(--red); background: #1a0808; }
+
+    /* Interactive Demo Box */
+    .demo-box {
+      background: #0c0c0c;
+      border: 1px solid #222;
+      border-radius: 6px;
+      padding: 12px 14px;
+      margin: 12px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .btn-test-sound {
+      background: #1a2818;
+      border: 1px solid #2b542c;
+      color: var(--green);
+      padding: 8px 14px;
+      border-radius: 5px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+      transition: all 0.15s ease;
+    }
+    .btn-test-sound:hover { background: #223820; border-color: #3d7a3e; }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div id="guide-hdr">
+    <div class="logo">Bet<span>Bot</span> Guide</div>
+    <div class="nav-links">
+      <a href="/hud" class="nav-btn primary">🔳 Open Fight HUD</a>
+      <a href="/" class="nav-btn">⚡ Classic Dashboard</a>
+    </div>
+  </div>
+
+  <!-- Section 1: The 2-Tab Setup -->
+  <div class="section-card">
+    <h2><span class="badge gold">Rule #1</span> The Two-Tab DraftKings Setup</h2>
+    <p>For Bet Bot to track your bets and capture 1-second odds in real time, you must keep <strong>two DraftKings tabs open</strong> in Google Chrome simultaneously:</p>
+    <ul>
+      <li><strong>Tab 1 — My Bets:</strong> Keep open to <a href="https://sportsbook.draftkings.com/mybets" target="_blank">https://sportsbook.draftkings.com/mybets</a>.<br>
+      <em>Why:</em> DraftKings streams your active open bets and settled returns over this tab's WebSocket. The extension auto-refreshes it every 20 seconds so it never goes idle.</li>
+      <li><strong>Tab 2 — Live Fight Odds:</strong> Keep open to the specific fight page you are watching (e.g. <code>sportsbook.draftkings.com/event/...</code>).<br>
+      <em>Why:</em> The extension automatically scans the live moneyline odds on this screen every 1 second and pushes them to the server.</li>
+    </ul>
+    <div class="callout green">
+      ✓ <strong>Zero Button Pressing Required:</strong> Odds and bets are captured 100% automatically. You do not need to click "Capture Now".
+    </div>
+  </div>
+
+  <!-- Section 2: Fight Night HUD vs Classic -->
+  <div class="section-card">
+    <h2><span class="badge green">Dual-Mode</span> Fight Night HUD vs. Classic Dashboard</h2>
+    <p>LiveBetBot has two distinct viewing modes depending on your screen setup:</p>
+    <ul>
+      <li><strong>The Fight Night HUD (<code>/hud</code>):</strong> Designed to fit in a narrow browser window docked right next to your fight video stream. It shows only the active fight, giant net dollar amounts (<code>+20</code> vs <code>-10</code>), hedge instructions, and zero clutter.</li>
+      <li><strong>The Classic Dashboard (<code>/</code>):</strong> The full desktop command center with historical library archives, game lists, and full position cards.</li>
+    </ul>
+    <p>Both modes run in mathematical lockstep off the exact same backend engine. You can switch between them with one click at any time.</p>
+  </div>
+
+  <!-- Section 3: The Hedge Chime -->
+  <div class="section-card">
+    <h2><span class="badge green">Audio Alert</span> The Hedge Chime (Win-Win Moments)</h2>
+    <p>When you are watching high-stakes UFC action on TV, you cannot stare at LiveBetBot numbers every second. That is why we added <strong>The Hedge Chime</strong>:</p>
+    <ul>
+      <li><strong>What it is:</strong> A subtle, crisp two-tone chime (587 Hz D5 ➔ 880 Hz A5) synthesized directly through your browser speakers.</li>
+      <li><strong>When it triggers:</strong> It sounds <strong>only</strong> when a guaranteed <em>Win-Win Hedge Moment</em> opens up (when betting on the other side will lock in positive green profit no matter who wins).</li>
+      <li><strong>How to use it:</strong> Keep your eyes on the television fight. When you hear the chime, glance down at your screen—guaranteed profit is live.</li>
+    </ul>
+
+    <div class="demo-box">
+      <div>
+        <strong style="color:#fff;font-size:0.85rem">Test the Hedge Chime Sound:</strong>
+        <div style="color:#888;font-size:0.75rem">Click to hear what the chime sounds like right now</div>
+      </div>
+      <button class="btn-test-sound" onclick="playChimeDemo()">▶️ Play Chime</button>
+    </div>
+
+    <div class="callout">
+      🔇 <strong>Mute Control:</strong> If you ever want total silence during a round, simply click the <code>[🔊 Chime: ON / OFF]</code> button in the topbar. It remembers your setting.
+    </div>
+  </div>
+
+  <!-- Section 4: Stream Lag Shield -->
+  <div class="section-card">
+    <h2><span class="badge red">Safety Shield</span> The Stream-Lag / Ghost-Punch Warning</h2>
+    <p>Television broadcasts (ESPN+, Fight Pass, pay-per-view) are typically <strong>15 to 30 seconds behind reality</strong>.</p>
+    <p>DraftKings' sports radar operates with zero latency. When a sudden knockdown or submission occurs inside the cage, DraftKings slashes odds or suspends the market <em>before you see it on TV</em>.</p>
+    <div class="callout red">
+      ⚠️ <strong>When this banner flashes:</strong><br>
+      <code>⚠️ VIOLENT LINE MOVE (STREAM LAG) — HOLD BETS</code><br>
+      <strong>Do NOT place a bet.</strong> The line moved over 60 points in under 3 seconds. An event already happened in the Octagon that your TV stream has not shown yet. Wait 15 seconds for your broadcast to catch up.
+    </div>
+  </div>
+
+  <!-- Section 5: 1-Click Bet Slip Pre-Fill -->
+  <div class="section-card">
+    <h2><span class="badge gold">Speed</span> 1-Click Bet Slip Pre-Fill</h2>
+    <p>During live round breaks, hedge opportunities can vanish in 15 seconds. Manually typing stakes on DraftKings takes too long.</p>
+    <ul>
+      <li>When a hedge opportunity is live, a gold button appears on LiveBetBot:<br>
+      <strong><code>⚡ 1-Click Pre-fill on DraftKings (5 on Chopurov)</code></strong></li>
+      <li>Clicking this button tells the extension to switch to your DraftKings odds tab, click the fighter's button to open the betslip, and pre-fill the exact calculated dollar stake.</li>
+      <li><strong>Human Safety First:</strong> The extension <strong>never</strong> clicks "Place Bet" automatically. It outlines the button in glowing green so you can verify the numbers and click it yourself with full confirmation.</li>
+    </ul>
+  </div>
+
+  <!-- Section 6: Fighter Gas Tanks -->
+  <div class="section-card">
+    <h2><span class="badge green">Analytics</span> Volatility & Fighter Gas Tanks</h2>
+    <p>The HUD displays four critical metrics for the active matchup:</p>
+    <ul>
+      <li><strong>Vol Score:</strong> Career volatility rating (how prone this matchup is to wild live odds swings). High score = high hedge potential.</li>
+      <li><strong>Pace (SLpM):</strong> Significant strikes landed per minute. Fighters over 5.5 SLpM push extreme volume.</li>
+      <li><strong>TakeDown:</strong> Average takedowns landed per 15 minutes.</li>
+      <li><strong>Gas Tank:</strong> Automatically tags explosive fighters who fade in rounds 2 and 3 (e.g. <em>"Fast Starter / Fades"</em>), signaling when the live line is likely to reverse.</li>
+    </ul>
+  </div>
+
+  <script>
+    let _audioCtx = null;
+    function playChimeDemo() {
+      try {
+        if (!_audioCtx) _audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        if (_audioCtx.state === 'suspended') _audioCtx.resume();
+        const now = _audioCtx.currentTime;
+        
+        const osc1 = _audioCtx.createOscillator();
+        const gain1 = _audioCtx.createGain();
+        osc1.type = 'sine'; osc1.frequency.setValueAtTime(587.33, now);
+        gain1.gain.setValueAtTime(0, now); gain1.gain.linearRampToValueAtTime(0.2, now + 0.03);
+        gain1.gain.exponentialRampToValueAtTime(0.001, now + 0.4);
+        osc1.connect(gain1); gain1.connect(_audioCtx.destination);
+        osc1.start(now); osc1.stop(now + 0.45);
+
+        const osc2 = _audioCtx.createOscillator();
+        const gain2 = _audioCtx.createGain();
+        osc2.type = 'sine'; osc2.frequency.setValueAtTime(880.00, now + 0.12);
+        gain2.gain.setValueAtTime(0, now + 0.12); gain2.gain.linearRampToValueAtTime(0.25, now + 0.15);
+        gain2.gain.exponentialRampToValueAtTime(0.001, now + 0.65);
+        osc2.connect(gain2); gain2.connect(_audioCtx.destination);
+        osc2.start(now + 0.12); osc2.stop(now + 0.7);
+      } catch (e) {
+        console.warn('Audio demo failed:', e);
+      }
+    }
+  </script>
+</body>
+</html>
