@@ -1417,20 +1417,28 @@ function extPushStats() {
 app.post('/api/dk-odds-push', (req, res) => {
   const {sport='mma_mixed_martial_arts',fighter1,fighter2,numericOdds1,numericOdds2}=req.body||{};
   if(!fighter1||!fighter2||!numericOdds1||!numericOdds2)return res.status(400).json({error:'missing fields'});
+
+  // Reject non-fighter junk labels (e.g. "1.7k people placed this bet")
+  const JUNK = /placed this bet|same game parlay|cash out|popular|boost|sgp|live|round|\d+\.?\d*k?\s*people/i;
+  if (JUNK.test(fighter1) || JUNK.test(fighter2) || fighter1.trim().length < 3 || fighter2.trim().length < 3) {
+    return res.status(400).json({ error: 'invalid fighter name' });
+  }
+
   recorderState.extPushes++;
   recorderState.lastExtPush=Date.now();
   extPushTimes.push(recorderState.lastExtPush); if (extPushTimes.length > 2000) extPushTimes.splice(0, extPushTimes.length - 2000);
-  // Counted above so we can prove the extension is delivering, but NEVER stored unless it is UFC.
   if (sport !== 'mma_mixed_martial_arts') return res.json({ ok: true, received: true, sport, stored: false, reason: 'UFC only' });
   const {id,record}=findOrCreateExtCapture(sport,fighter1,fighter2);
-  // ALWAYS record every extension push, live or not. The live flag is kept on each point; the
-  // extension sends it, so pre-fight pages are labelled rather than dropped.
+
   const live = req.body.live !== false;
   const odds={timestamp:new Date().toISOString(),fighter1:{name:fighter1,numericOdds:+numericOdds1},fighter2:{name:fighter2,numericOdds:+numericOdds2},source:'extension',live};
   const L=record.lastOdds;
   const changed=!L||L.fighter1.numericOdds!==+numericOdds1||L.fighter2.numericOdds!==+numericOdds2;
   (record.samples=record.samples||[]).push({t:odds.timestamp,f1:+numericOdds1,f2:+numericOdds2,c:changed?1:0,live:live?1:0});
-  if(changed)record.oddsHistory.push(odds),record.lastOdds=odds;
+
+  // Dense 1-second recording: capture every single second into oddsHistory
+  record.oddsHistory.push(odds);
+  record.lastOdds=odds;
   record.lastPushTs=Date.now();
   res.json({ok:true,id,dataPoints:record.oddsHistory.length,samples:record.samples.length,live});
 });

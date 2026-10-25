@@ -140,8 +140,18 @@ if (href.startsWith('https://sportsbook.draftkings.com/') &&
     return isNaN(n) ? null : n;
   }
 
+  // Junk text on DK cards that is definitely NOT a fighter name
+  const JUNK_NAME_REGEX = /placed this bet|same game parlay|cash out|popular|boost|sgp|live|round|\d+\.?\d*k?\s*people/i;
+
   // Walk the DOM to find the player/team name nearest to an odds button
   function findSideNameNear(btn) {
+    // 1. Try finding nearest outcome label cell
+    const outcomeLabel = btn.closest('.sportsbook-outcome-cell, [class*="outcome-cell"]')?.querySelector('.sportsbook-outcome-cell__label, [class*="outcome-cell__label"]');
+    if (outcomeLabel && outcomeLabel.textContent.trim()) {
+      const t = outcomeLabel.textContent.trim();
+      if (!JUNK_NAME_REGEX.test(t)) return t;
+    }
+    // 2. Fall back to ancestor search with junk filtering
     let ancestor = btn.parentElement;
     for (let i = 0; i < 8 && ancestor; i++) {
       const nameEl = [...ancestor.querySelectorAll('*')].find(el =>
@@ -149,6 +159,7 @@ if (href.startsWith('https://sportsbook.draftkings.com/') &&
         el.textContent.trim().length > 1 &&
         !/^[+−\-]\d+(\.\d+)?$/.test(el.textContent.trim()) &&
         !/^\d+$/.test(el.textContent.trim()) &&
+        !JUNK_NAME_REGEX.test(el.textContent.trim()) &&
         el.closest('button, [role="button"]') === null
       );
       if (nameEl) return nameEl.textContent.trim();
@@ -224,14 +235,23 @@ if (href.startsWith('https://sportsbook.draftkings.com/') &&
     if (outcomes.filter(o => o.side).length < 2) scanStats.noTwoTeams++;
     scanStats.sent++;
 
-    // Detect sport from URL for server-side recording
+    // Detect sport from URL or page context for server-side recording
+    const bodyText = document.body?.innerText || '';
+    const pageTitle = document.title || '';
+    const isUfcContext = href.includes('/mma') || href.includes('/ufc') ||
+      (href.includes('/event/') && (
+        /mma|ufc/i.test(pageTitle) ||
+        /(round|rd)\s*\d/i.test(bodyText) ||
+        /mma|ufc/i.test(bodyText.slice(0, 3000))
+      ));
+
     const sport = href.includes('/soccer') ? 'soccer_fifa_world_cup'
-      : href.includes('/mma') || href.includes('/ufc') ? 'mma_mixed_martial_arts'
+      : isUfcContext ? 'mma_mixed_martial_arts'
       : href.includes('/basketball') ? 'basketball_nba'
       : href.includes('/hockey') || href.includes('/nhl') ? 'icehockey_nhl'
       : href.includes('/football') || href.includes('/nfl') ? 'americanfootball_nfl'
       : href.includes('/baseball') || href.includes('/mlb') ? 'baseball_mlb'
-      : 'unknown'; // NOT UFC: an unrecognised page must never be recorded as a fight
+      : 'unknown';
 
     const liveBadge = findLiveBadge();
     const manualLive = Date.now() < _manualLiveUntil;

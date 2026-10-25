@@ -1,6 +1,6 @@
 const DEFAULT_URL = 'https://ufc-dashboard-production-e03d.up.railway.app';
 
-const PUSH_INTERVAL_MS = 2000; // odds are pushed to the server every 2 seconds, live or not
+const PUSH_INTERVAL_MS = 1000; // odds are pushed to the server every 2 seconds, live or not
 let pushedCount = 0;
 let pushFailCount = 0;
 let lastPushMs = 0;
