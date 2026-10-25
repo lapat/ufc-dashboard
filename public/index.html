@@ -507,6 +507,12 @@
       <div class="nw-odds dog" id="nw-o2">—</div>
       <div class="nw-name r" id="nw-f2">—</div>
     </div>
+    <!-- Fighter Gas Tank & Finisher Capsule -->
+    <div id="nw-capsule" style="display:none;justify-content:space-between;align-items:center;background:#0d0d0d;border:1px solid #1f1f1f;border-radius:6px;padding:8px 14px;margin-top:10px;font-size:0.75rem;">
+      <div id="nw-f1-capsule" style="color:#e8b84b"></div>
+      <div id="nw-vol-capsule" style="color:#888;font-weight:700"></div>
+      <div id="nw-f2-capsule" style="color:#74c0fc;text-align:right"></div>
+    </div>
     <div id="nw-score">
       <span class="nw-score-num" id="nw-score-1">0</span>
       <span class="nw-score-dash">—</span>
@@ -1355,6 +1361,21 @@ function updateNowWatchingOdds(o1,o2,drawOdds){
 }
 
 function updateFightUI(f1Name,f2Name,o1,o2,live,sport,switchGames){
+  // Fetch and populate Gas Tank & Finisher capsule
+  fetch('/api/fighter-stats?f1=' + encodeURIComponent(f1Name) + '&f2=' + encodeURIComponent(f2Name))
+    .then(r => r.json())
+    .then(stats => {
+      if (stats && !stats.error) {
+        const f1Fin = stats.f1?.finisher?.badge || 'Balanced';
+        const f1Gas = stats.f1?.gasTank?.badge || 'Steady';
+        const f2Fin = stats.f2?.finisher?.badge || 'Balanced';
+        const f2Gas = stats.f2?.gasTank?.badge || 'Steady';
+        document.getElementById('nw-f1-capsule').innerHTML = '<strong>' + f1Name + ':</strong> ' + f1Fin + ' · ' + f1Gas;
+        document.getElementById('nw-vol-capsule').textContent = 'Vol: ' + (stats.fightVolatility != null ? stats.fightVolatility : '70');
+        document.getElementById('nw-f2-capsule').innerHTML = '<strong>' + f2Name + ':</strong> ' + f2Fin + ' · ' + f2Gas;
+        document.getElementById('nw-capsule').style.display = 'flex';
+      }
+    }).catch(() => {});
   const nw=document.getElementById('now-watching');
   const gameList=document.getElementById('game-list');
   nw.style.display='block';

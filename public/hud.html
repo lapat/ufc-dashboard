@@ -227,11 +227,16 @@
         </div>
       </div>
     </div>
-    <div id="hud-volatility">
-      <span class="stat-badge">Vol Score: <strong id="stat-vol">—</strong></span>
-      <span class="stat-badge">Pace: <strong id="stat-slpm">—</strong></span>
-      <span class="stat-badge">TakeDown: <strong id="stat-td">—</strong></span>
-      <span class="stat-badge">Gas Tank: <strong id="stat-gas">Normal</strong></span>
+    <div id="hud-volatility" style="display:flex;flex-direction:column;gap:4px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;">
+        <span class="stat-badge">Matchup Volatility: <strong id="stat-vol">—</strong></span>
+        <span id="hud-pace-badge" style="font-size:0.7rem;color:#888;"></span>
+      </div>
+      <div style="display:flex;justify-content:space-between;gap:8px;font-size:0.7rem;margin-top:2px;">
+        <span id="hud-f1-badge" style="color:var(--gold);"></span>
+        <span id="hud-f2-badge" style="color:var(--blue);text-align:right;"></span>
+      </div>
+      <div id="hud-vol-detail" style="font-size:0.65rem;color:#666;text-align:center;margin-top:2px;"></div>
     </div>
   </div>
 
@@ -446,11 +451,19 @@
       try {
         const stats = await fetch('/api/fighter-stats?f1=' + encodeURIComponent(f1) + '&f2=' + encodeURIComponent(f2)).then(r => r.json());
         if (stats && !stats.error) {
-          document.getElementById('stat-vol').textContent = stats.volatilityScore || '70';
-          document.getElementById('stat-slpm').textContent = (stats.fighter1?.slpm || '4.2') + ' SLpM';
-          document.getElementById('stat-td').textContent = (stats.fighter1?.tdAvg || '1.8') + ' TD';
-          const pace = (stats.fighter1?.slpm || 0) > 5.5 ? 'Fast Starter / Fades' : 'Steady Pacing';
-          document.getElementById('stat-gas').textContent = pace;
+          document.getElementById('stat-vol').textContent = (stats.fightVolatility != null ? stats.fightVolatility : '70') + '/100';
+          const f1Finisher = stats.f1?.finisher?.badge || 'Balanced';
+          const f1Gas = stats.f1?.gasTank?.badge || 'Steady Pace';
+          const f2Finisher = stats.f2?.finisher?.badge || 'Balanced';
+          const f2Gas = stats.f2?.gasTank?.badge || 'Steady Pace';
+
+          document.getElementById('hud-f1-badge').innerHTML = '<strong>' + f1 + ':</strong> ' + f1Finisher + ' · ' + f1Gas;
+          document.getElementById('hud-f2-badge').innerHTML = '<strong>' + f2 + ':</strong> ' + f2Finisher + ' · ' + f2Gas;
+          
+          const details = [];
+          if (stats.f1?.gasTank?.detail) details.push(f1 + ': ' + stats.f1.gasTank.detail);
+          if (stats.f2?.gasTank?.detail) details.push(f2 + ': ' + stats.f2.gasTank.detail);
+          document.getElementById('hud-vol-detail').textContent = details.join(' | ');
         }
       } catch (_) {}
     }

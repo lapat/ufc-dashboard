@@ -6819,6 +6819,22 @@ async function runTotalReturnTests() {
       assert(cj.includes("msg.type === 'EXECUTE_PREFILL'"), 'content.js must handle EXECUTE_PREFILL');
     });
   } catch(e) { console.error('  ✗ AF4:', e.message); failed++; }
+  try {
+    await check('AF5: computeGasTankRating and computeFirstRoundFinisher return valid badges and details', () => {
+      const { computeGasTankRating, computeFirstRoundFinisher } = require('./fighter_stats');
+      const explosiveStats = { slpm: 7.2, sapm: 4.8, kdAvg: 1.2, subAvg: 0.5, strDef: 45, tdAvg: 1.0 };
+      const cardioStats = { slpm: 4.1, sapm: 2.1, kdAvg: 0.1, subAvg: 0.2, strDef: 65, tdAvg: 0.8 };
+
+      const expGas = computeGasTankRating(explosiveStats);
+      assert(expGas && expGas.risk === 'high', 'Explosive high-damage stats must be flagged as high gas tank risk');
+      const expFin = computeFirstRoundFinisher(explosiveStats);
+      assert(expFin && expFin.isFinisher === true, 'High knockdown stats must be flagged as 1st-round finisher');
+
+      const carGas = computeGasTankRating(cardioStats);
+      assert(carGas && carGas.risk === 'low', 'High-defense low-damage stats must be flagged as elite cardio');
+    });
+  } catch(e) { console.error('  ✗ AF5:', e.message); failed++; }
+
 }
 
 

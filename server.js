@@ -506,7 +506,7 @@ app.get('/api/fighter/:name', (req, res) => {
 });
 
 // ── Fighter career stats & volatility capsule ──────────────────────────────
-const { loadFighterProfiles, fightVolatilityScore } = require('./fighter_stats');
+const { loadFighterProfiles, fightVolatilityScore, computeGasTankRating, computeFirstRoundFinisher } = require('./fighter_stats');
 const { predictCrossover } = require('./crossover_predictor');
 
 let _fighterProfilesCache = null;
@@ -558,8 +558,20 @@ app.get('/api/fighter-stats', (req, res) => {
       }
 
       return res.json({
-        f1: p1 ? { name: p1.name, stats: p1.stats, volatility: p1.volatility } : null,
-        f2: p2 ? { name: p2.name, stats: p2.stats, volatility: p2.volatility } : null,
+        f1: p1 ? {
+          name: p1.name,
+          stats: p1.stats,
+          volatility: p1.volatility,
+          gasTank: computeGasTankRating(p1.stats),
+          finisher: computeFirstRoundFinisher(p1.stats)
+        } : null,
+        f2: p2 ? {
+          name: p2.name,
+          stats: p2.stats,
+          volatility: p2.volatility,
+          gasTank: computeGasTankRating(p2.stats),
+          finisher: computeFirstRoundFinisher(p2.stats)
+        } : null,
         fightVolatility: fightVol,
         crossover
       });

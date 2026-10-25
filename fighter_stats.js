@@ -226,7 +226,76 @@ function fightVolatilityScore(f1Name, f2Name, profiles) {
   return Math.round(0.35 * Math.min(v1, v2) + 0.65 * Math.max(v1, v2));
 }
 
-module.exports = { loadFighterProfiles, getFighterVolatility, fightVolatilityScore, computeVolatility, extractAllFighters };
+// -- Gas Tank & Finish Potential Analytics -----------------------------------
+
+function computeGasTankRating(stats) {
+  if (!stats) return null;
+  const slpm = stats.slpm || 0;
+  const sapm = stats.sapm || 0;
+  const tdAvg = stats.tdAvg || 0;
+  const strDef = stats.strDef || 50;
+
+  if (slpm >= 5.5 && sapm >= 3.8) {
+    return {
+      risk: "high",
+      badge: "Warning: Gas Tank Risk",
+      pace: "High Burn Rate",
+      detail: "High pace (" + slpm + " SLpM) & absorbs (" + sapm + " SApM) - Fades Rd 2/3"
+    };
+  }
+  if (strDef >= 60 && sapm <= 2.8) {
+    return {
+      risk: "low",
+      badge: "Elite Cardio",
+      pace: "Cardio Machine",
+      detail: "High defense (" + strDef + "%), low damage - Strong Rd 3 Pace"
+    };
+  }
+  if (tdAvg >= 4.0) {
+    return {
+      risk: "medium",
+      badge: "Takedown Heavy",
+      pace: "Grappling Burn",
+      detail: "Heavy wrestling (" + tdAvg + " TD/15m) - High energy drain"
+    };
+  }
+  return {
+    risk: "normal",
+    badge: "Steady Pacing",
+    pace: "Moderate Output",
+    detail: "Balanced output across rounds"
+  };
+}
+
+function computeFirstRoundFinisher(stats) {
+  if (!stats) return null;
+  const kdAvg = stats.kdAvg || 0;
+  const subAvg = stats.subAvg || 0;
+  const slpm = stats.slpm || 0;
+
+  if (kdAvg >= 0.7 || subAvg >= 1.5 || (slpm >= 6.0 && kdAvg >= 0.4)) {
+    const danger = kdAvg >= 0.7 ? (kdAvg + " KD/15m") : (subAvg + " Sub/15m");
+    return {
+      isFinisher: true,
+      badge: "1st-Round Finisher",
+      detail: "High early danger (" + danger + ") - Target Rd 1 finish"
+    };
+  }
+  if (kdAvg === 0 && subAvg === 0 && slpm <= 4.0) {
+    return {
+      isFinisher: false,
+      badge: "Distance Fighter",
+      detail: "Low finish rate - high decision probability"
+    };
+  }
+  return {
+    isFinisher: false,
+    badge: "Balanced Threat",
+    detail: "Evenly distributed finish danger"
+  };
+}
+
+module.exports = { loadFighterProfiles, getFighterVolatility, fightVolatilityScore, computeVolatility, computeGasTankRating, computeFirstRoundFinisher, extractAllFighters };
 
 // ── Main (scraper CLI) ────────────────────────────────────────────────────────
 
