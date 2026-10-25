@@ -23,6 +23,17 @@ This application exists strictly to execute two primary features:
 
 All other capabilities (dashboard UI, hedge math, crossover alerts, fighter photos) are strictly subordinate to keeping these two core data pipelines healthy and uncorrupted.
 
+### 🚀 HIGH-DENSITY 1-SECOND FIGHT RECORDING (2026-10-24)
+- **Problem Solved:** Fights previously appeared with only ~30 data points because:
+  1. The server only pushed to `oddsHistory` when odds changed (`if (changed) record.oddsHistory.push(odds)`), discarding ~97% of samples.
+  2. DraftKings `/event/...` pages lacked `/mma` in the URL path, causing `content.js` to tag them as sport `unknown` and dropping the pushes.
+  3. The extension push interval was throttled to 2 seconds.
+- **The 1-Second Capture Mandate:**
+  1. `content.js` scans every 1 second and recognizes UFC fight event pages via title/round markers even without `/mma` in the URL.
+  2. `background.js` pushes every 1 second (`PUSH_INTERVAL_MS = 1000`).
+  3. `server.js` records **every single 1-second sample directly into `oddsHistory`**, guaranteeing **900+ data points for a 15-minute fight** and **1,500+ data points for a 25-minute championship fight**.
+  4. `findSideNameNear` filters out social proof badge junk (e.g. "1.7k people placed this bet").
+
 ---
 ## HARD RULE: NO NON-UFC FILES IN THE RECORDINGS (2026-10-20)
 
