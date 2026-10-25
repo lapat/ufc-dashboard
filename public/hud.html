@@ -188,6 +188,18 @@
     .bets-table td { padding: 6px 6px; border-bottom: 1px solid #181818; }
     .bets-table tr:last-child td { border-bottom: none; }
     .empty-state { text-align: center; color: #555; padding: 16px; font-size: 0.8rem; }
+    @media (max-width: 480px) {
+      body { padding: 8px; }
+      #hud-hdr { flex-wrap: wrap; gap: 8px; }
+      .hud-hdr-actions { flex-wrap: wrap; width: 100%; justify-content: flex-start; gap: 4px; }
+      .fighter-photo { width: 36px; height: 36px; }
+      .fighter-name { font-size: 0.82rem; }
+      .fighter-odds { font-size: 1rem; }
+      .pos-card-net { font-size: 1.35rem; }
+      .pos-card { padding: 8px 10px; }
+      .btn-prefill { width: 100%; justify-content: center; }
+      #hud-live-stats { padding: 10px; }
+    }
   </style>
 </head>
 <body>
