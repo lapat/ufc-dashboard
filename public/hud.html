@@ -249,6 +249,9 @@
         <span id="hud-f2-badge" style="color:var(--blue);text-align:right;"></span>
       </div>
       <div id="hud-vol-detail" style="font-size:0.65rem;color:#666;text-align:center;margin-top:2px;"></div>
+      <div id="hud-sharp-row" style="font-size:0.68rem;color:var(--gold);text-align:center;border-top:1px solid #181818;padding-top:4px;margin-top:2px;display:none;">
+        <span id="hud-sharp-badge" style="font-weight:700;"></span>: <span id="hud-sharp-detail" style="color:#aaa;"></span>
+      </div>
       <div id="hud-prop-matrix" style="display:flex;justify-content:space-between;gap:8px;font-size:0.68rem;border-top:1px solid #181818;padding-top:4px;margin-top:2px;">
         <span id="hud-f1-props" style="color:#aaa;"></span>
         <span id="hud-f2-props" style="color:#aaa;text-align:right;"></span>
@@ -549,6 +552,20 @@
           };
           document.getElementById('hud-f1-props').innerHTML = formatProps(stats.f1, f1);
           document.getElementById('hud-f2-props').innerHTML = formatProps(stats.f2, f2);
+
+          // Fetch Pinnacle Sharp Consensus comparison
+          fetch('/api/sharp-consensus?f1=' + encodeURIComponent(f1) + '&f2=' + encodeURIComponent(f2))
+            .then(r => r.json())
+            .then(sc => {
+              const row = document.getElementById('hud-sharp-row');
+              if (sc && sc.hasSharpData) {
+                row.style.display = 'block';
+                document.getElementById('hud-sharp-badge').textContent = sc.badge;
+                document.getElementById('hud-sharp-detail').textContent = sc.detail;
+              } else {
+                row.style.display = 'none';
+              }
+            }).catch(() => {});
         }
       } catch (_) {}
     }

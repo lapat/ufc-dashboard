@@ -522,6 +522,7 @@ app.get('/api/fighter/:name', (req, res) => {
 // ── Fighter career stats & volatility capsule ──────────────────────────────
 const { loadFighterProfiles, fightVolatilityScore, computeGasTankRating, computeFirstRoundFinisher } = require('./fighter_stats');
 const { fetchLiveFightStats } = require('./live_fight_stats');
+const { getSharpComparison } = require('./sharp_consensus');
 const { predictCrossover } = require('./crossover_predictor');
 
 let _fighterProfilesCache = null;
@@ -545,6 +546,20 @@ function lookupFighter(name, profiles) {
 }
 
 // Live in-fight strikes, takedowns, and control time
+// Sharp Book Consensus (Pinnacle vs DraftKings)
+app.get('/api/sharp-consensus', async (req, res) => {
+  try {
+    const { f1, f2, o1, o2 } = req.query;
+    if (!f1 || !f2) return res.status(400).json({ error: "Missing f1 or f2 parameters" });
+    const num1 = o1 ? parseInt(o1) : null;
+    const num2 = o2 ? parseInt(o2) : null;
+    const comp = await getSharpComparison(f1, f2, isNaN(num1) ? null : num1, isNaN(num2) ? null : num2);
+    res.json(comp);
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+});
+
 app.get('/api/live-fight-stats', async (req, res) => {
   try {
     const { f1, f2 } = req.query;

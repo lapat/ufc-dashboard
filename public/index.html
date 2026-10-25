@@ -516,6 +516,9 @@
         <span id="nw-f1-prop"></span>
         <span id="nw-f2-prop" style="text-align:right;"></span>
       </div>
+      <div id="nw-sharp-row" style="font-size:0.68rem;color:var(--gold);width:100%;margin-top:3px;border-top:1px solid #181818;padding-top:3px;display:none;">
+        <span id="nw-sharp-badge" style="font-weight:700;"></span> — <span id="nw-sharp-detail" style="color:#aaa;"></span>
+      </div>
     </div>
     <!-- Live In-Fight Strikes and Takedowns -->
     <div id="nw-live-stats" style="display:none;background:#070707;border:1px solid #1a1a1a;border-radius:6px;padding:8px 12px;margin-top:8px;font-size:0.72rem;color:#ccc;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;">
@@ -1417,6 +1420,20 @@ function updateFightUI(f1Name,f2Name,o1,o2,live,sport,switchGames){
         };
         document.getElementById('nw-f1-prop').textContent = fmtMethod(stats.f1, f1Name);
         document.getElementById('nw-f2-prop').textContent = fmtMethod(stats.f2, f2Name);
+
+        // Fetch Sharp Consensus
+        fetch('/api/sharp-consensus?f1=' + encodeURIComponent(f1Name) + '&f2=' + encodeURIComponent(f2Name))
+          .then(r => r.json())
+          .then(sc => {
+            const row = document.getElementById('nw-sharp-row');
+            if (sc && sc.hasSharpData) {
+              row.style.display = 'block';
+              document.getElementById('nw-sharp-badge').textContent = sc.badge;
+              document.getElementById('nw-sharp-detail').textContent = sc.detail;
+            } else {
+              row.style.display = 'none';
+            }
+          }).catch(() => {});
         startClassicLiveStats(f1Name, f2Name);
       }
     }).catch(() => {});
