@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Bet Bot — DK Sync",
+  "name": "Bet Bot \u2014 DK Sync",
   "version": "3.3",
   "description": "Syncs your DraftKings bets to Bet Bot in real time",
   "icons": {
@@ -41,6 +41,18 @@
       ],
       "js": [
         "content.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": false
+    },
+    {
+      "matches": [
+        "https://*.livebetbot.com/*",
+        "https://livebetbot.com/*",
+        "http://localhost:3000/*"
+      ],
+      "js": [
+        "bridge.js"
       ],
       "run_at": "document_start",
       "all_frames": false

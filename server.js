@@ -184,6 +184,7 @@ app.get('/api/ufc', async (req, res) => {
 });
 
 // Library page
+app.get('/hud', (req, res) => { res.sendFile(path.join(__dirname, 'public', 'hud.html')); });
 app.get('/library', (req, res) => { res.sendFile(path.join(__dirname, 'public', 'library.html')); });
 app.get('/status', (req, res) => { res.sendFile(path.join(__dirname, 'public', 'status.html')); });
 

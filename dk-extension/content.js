@@ -271,3 +271,46 @@ if (href.startsWith('https://sportsbook.draftkings.com/') &&
     for (const k of Object.keys(scanStats)) scanStats[k] = 0;
   }, 30000);
 }
+
+// ── 1-Click Bet Slip Pre-fill Execution ─────────────────────────────────────
+chrome.runtime.onMessage.addListener(msg => {
+  if (msg.type === 'EXECUTE_PREFILL') {
+    executePrefillOnDraftKings(msg.fighter, msg.stake, msg.odds);
+  }
+});
+
+function executePrefillOnDraftKings(fighterName, stake, odds) {
+  if (!fighterName) return;
+  const nTarget = (fighterName || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+  const outcomes = scanOddsFromPage();
+  const match = outcomes.find(o => {
+    const nSide = (o.side || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+    return nSide.includes(nTarget) || nTarget.includes(nSide);
+  });
+  if (match && match.btn) {
+    match.btn.click();
+    setTimeout(() => {
+      const inputs = [...document.querySelectorAll('input')];
+      const stakeInput = inputs.find(i =>
+        i.classList.contains('sportsbook-wager-input') ||
+        /stake|wager|amount/i.test(i.getAttribute('aria-label') || '') ||
+        /stake|wager/i.test(i.name || '') ||
+        /0\.00|\/bin/bash/i.test(i.placeholder || '')
+      );
+      if (stakeInput) {
+        stakeInput.focus();
+        const setter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set;
+        setter.call(stakeInput, String(stake));
+        stakeInput.dispatchEvent(new Event('input', { bubbles: true }));
+        stakeInput.dispatchEvent(new Event('change', { bubbles: true }));
+        const placeBtn = [...document.querySelectorAll('button')].find(b =>
+          /place bet|place wager/i.test(b.textContent || '')
+        );
+        if (placeBtn) {
+          placeBtn.style.outline = '3px solid #69db7c';
+          placeBtn.focus();
+        }
+      }
+    }, 400);
+  }
+}

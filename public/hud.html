@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fight Night HUD — LiveBetBot</title>
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --card-bg: #121212;
+      --card-border: #1e1e1e;
+      --gold: #e8b84b;
+      --green: #69db7c;
+      --red: #ff6b6b;
+      --blue: #74c0fc;
+      --text: #ddd;
+      --muted: #777;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.4;
+      padding: 12px;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .tnum { font-variant-numeric: tabular-nums; }
+    #hud-hdr {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--card-border);
+      margin-bottom: 12px;
+      gap: 8px;
+    }
+    .hud-title-wrap { display: flex; align-items: center; gap: 8px; }
+    .live-dot {
+      width: 10px; height: 10px; border-radius: 50%; background: var(--red);
+      animation: pulse-red 1.5s infinite;
+    }
+    @keyframes pulse-red {
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.7); }
+      70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(255, 107, 107, 0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 107, 107, 0); }
+    }
+    .hud-logo { font-size: 0.9rem; font-weight: 800; color: #fff; letter-spacing: 1px; text-transform: uppercase; }
+    .hud-logo span { color: var(--gold); }
+    .hud-hdr-actions { display: flex; align-items: center; gap: 6px; }
+    .btn-hud-action {
+      background: #181818;
+      border: 1px solid #2a2a2a;
+      color: #aaa;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.15s ease;
+    }
+    .btn-hud-action:hover { background: #222; color: #fff; border-color: #444; }
+    .btn-hud-action.active { background: #1a2818; color: var(--green); border-color: #2b542c; }
+    #hud-lag-banner {
+      display: none;
+      background: #4a0808;
+      border: 1px solid var(--red);
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 12px;
+      animation: pulse-lag 1s infinite alternate;
+    }
+    @keyframes pulse-lag { from { opacity: 0.85; } to { opacity: 1; filter: brightness(1.2); } }
+    #hud-matchup {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 12px 14px;
+      margin-bottom: 12px;
+    }
+    .matchup-grid {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 10px;
+    }
+    .fighter-side { display: flex; align-items: center; gap: 10px; }
+    .fighter-side.right { flex-direction: row-reverse; text-align: right; }
+    .fighter-photo {
+      width: 44px; height: 44px; border-radius: 50%; object-fit: cover;
+      background: #222; border: 1px solid #333; flex-shrink: 0;
+    }
+    .fighter-info { overflow: hidden; }
+    .fighter-name { font-size: 0.95rem; font-weight: 700; color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .fighter-odds { font-size: 1.15rem; font-weight: 800; color: var(--gold); }
+    .matchup-center { text-align: center; }
+    .matchup-vs { font-size: 0.7rem; font-weight: 700; color: var(--muted); text-transform: uppercase; }
+    .fight-clock { font-size: 0.72rem; color: #888; margin-top: 2px; }
+    #hud-volatility {
+      display: flex;
+      justify-content: space-around;
+      background: #0d0d0d;
+      border-radius: 6px;
+      padding: 6px 10px;
+      margin-top: 10px;
+      font-size: 0.72rem;
+      color: #999;
+    }
+    .stat-badge strong { color: #fff; }
+    #hud-position {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .pos-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 12px 14px;
+      text-align: center;
+      position: relative;
+    }
+    .pos-card-name { font-size: 0.78rem; color: #888; text-transform: uppercase; font-weight: 600; margin-bottom: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .pos-card-net { font-size: 1.8rem; font-weight: 900; line-height: 1.1; margin-bottom: 4px; }
+    .pos-card-net.green { color: var(--green); }
+    .pos-card-net.red { color: var(--red); }
+    .pos-card-net.gray { color: #555; }
+    .pos-card-bets { font-size: 0.72rem; color: #777; }
+    #hud-hedge {
+      border-radius: 8px;
+      padding: 14px;
+      margin-bottom: 12px;
+      border: 1px solid #222;
+      background: var(--card-bg);
+      text-align: center;
+      transition: all 0.2s ease;
+    }
+    #hud-hedge.winwin {
+      background: #0b1a0d;
+      border-color: #2b542c;
+      box-shadow: 0 0 15px rgba(105, 219, 124, 0.15);
+    }
+    #hud-hedge.watching {
+      background: #1a1608;
+      border-color: #544415;
+    }
+    .hedge-status-title { font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+    #hud-hedge.winwin .hedge-status-title { color: var(--green); }
+    #hud-hedge.watching .hedge-status-title { color: var(--gold); }
+    .hedge-detail { font-size: 0.92rem; color: #ccc; margin-bottom: 10px; }
+    .hedge-detail strong { color: #fff; }
+    .btn-prefill {
+      background: #e8b84b;
+      color: #000;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+    }
+    .btn-prefill:hover { background: #ffd066; transform: scale(1.02); }
+    .btn-prefill:active { transform: scale(0.98); }
+    #hud-bets-panel {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 12px;
+    }
+    .panel-hdr { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 8px; display: flex; justify-content: space-between; }
+    .bets-table { width: 100%; border-collapse: collapse; font-size: 0.78rem; }
+    .bets-table th { text-align: left; padding: 4px 6px; color: #555; border-bottom: 1px solid #1a1a1a; font-weight: 600; }
+    .bets-table td { padding: 6px 6px; border-bottom: 1px solid #181818; }
+    .bets-table tr:last-child td { border-bottom: none; }
+    .empty-state { text-align: center; color: #555; padding: 16px; font-size: 0.8rem; }
+  </style>
+</head>
+<body>
+  <div id="hud-hdr">
+    <div class="hud-title-wrap">
+      <div class="live-dot"></div>
+      <div class="hud-logo">Bet<span>Bot</span> HUD</div>
+    </div>
+    <div class="hud-hdr-actions">
+      <button id="btn-sound" class="btn-hud-action active" onclick="toggleSound()">🔊 Chime: ON</button>
+      <button id="btn-user" class="btn-hud-action" onclick="promptUser()">👤 <span id="lbl-user">ish</span></button>
+      <a href="/" class="btn-hud-action" title="Switch back to Classic Dashboard">⚡ Classic</a>
+    </div>
+  </div>
+
+  <div id="hud-lag-banner">⚠️ VIOLENT LINE MOVE (STREAM LAG) — HOLD BETS</div>
+
+  <div id="hud-matchup">
+    <div class="matchup-grid">
+      <div class="fighter-side left">
+        <img id="f1-img" class="fighter-photo" src="" alt="" onerror="this.style.display='none'"/>
+        <div class="fighter-info">
+          <div id="f1-name" class="fighter-name">Fighter 1</div>
+          <div id="f1-odds" class="fighter-odds tnum">—</div>
+        </div>
+      </div>
+      <div class="matchup-center">
+        <div class="matchup-vs">VS</div>
+        <div id="hud-clock" class="fight-clock tnum">LIVE</div>
+      </div>
+      <div class="fighter-side right">
+        <img id="f2-img" class="fighter-photo" src="" alt="" onerror="this.style.display='none'"/>
+        <div class="fighter-info">
+          <div id="f2-name" class="fighter-name">Fighter 2</div>
+          <div id="f2-odds" class="fighter-odds tnum">—</div>
+        </div>
+      </div>
+    </div>
+    <div id="hud-volatility">
+      <span class="stat-badge">Vol Score: <strong id="stat-vol">—</strong></span>
+      <span class="stat-badge">Pace: <strong id="stat-slpm">—</strong></span>
+      <span class="stat-badge">TakeDown: <strong id="stat-td">—</strong></span>
+      <span class="stat-badge">Gas Tank: <strong id="stat-gas">Normal</strong></span>
+    </div>
+  </div>
+
+  <div id="hud-position">
+    <div class="pos-card" id="card-f1">
+      <div class="pos-card-name" id="pos-lbl-f1">FIGHTER 1</div>
+      <div class="pos-card-net tnum gray" id="pos-val-f1">/bin/bash.00</div>
+      <div class="pos-card-bets" id="pos-bets-f1">0 open bets</div>
+    </div>
+    <div class="pos-card" id="card-f2">
+      <div class="pos-card-name" id="pos-lbl-f2">FIGHTER 2</div>
+      <div class="pos-card-net tnum gray" id="pos-val-f2">/bin/bash.00</div>
+      <div class="pos-card-bets" id="pos-bets-f2">0 open bets</div>
+    </div>
+  </div>
+
+  <div id="hud-hedge">
+    <div class="hedge-status-title" id="hedge-title">POSITION STATUS</div>
+    <div class="hedge-detail" id="hedge-detail">Place a bet on DraftKings to start tracking live position</div>
+    <div id="prefill-wrap" style="display:none; margin-top:10px;">
+      <button class="btn-prefill" id="btn-prefill" onclick="executePrefill()">
+        ⚡ 1-Click Pre-fill on DraftKings
+      </button>
+    </div>
+  </div>
+
+  <div id="hud-bets-panel">
+    <div class="panel-hdr">
+      <span>Live Bets (<span id="bets-count">0</span>)</span>
+      <span id="tab-status" style="color:#69db7c">2 Tabs Active ✓</span>
+    </div>
+    <table class="bets-table" id="bets-table">
+      <thead>
+        <tr>
+          <th>Selection</th>
+          <th>Odds</th>
+          <th>Stake</th>
+          <th>Payout</th>
+        </tr>
+      </thead>
+      <tbody id="bets-tbody">
+        <tr><td colspan="4" class="empty-state">No open bets on this fight</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    let _user = localStorage.getItem('dashUserId') || 'ish';
+    let _soundEnabled = localStorage.getItem('hudSound') !== 'false';
+    let _activeFight = null;
+    let _lastCanWinWin = false;
+    let _currentSuggestion = null;
+    let _oddsVelocityBuffer = [];
+    let _audioCtx = null;
+
+    document.getElementById('lbl-user').textContent = _user;
+    updateSoundUI();
+
+    function updateSoundUI() {
+      const btn = document.getElementById('btn-sound');
+      if (_soundEnabled) {
+        btn.textContent = '🔊 Chime: ON';
+        btn.className = 'btn-hud-action active';
+      } else {
+        btn.textContent = '🔇 Chime: OFF';
+        btn.className = 'btn-hud-action';
+      }
+    }
+
+    function toggleSound() {
+      _soundEnabled = !_soundEnabled;
+      localStorage.setItem('hudSound', _soundEnabled ? 'true' : 'false');
+      updateSoundUI();
+      if (_soundEnabled) playChime();
+    }
+
+    function promptUser() {
+      const u = prompt('Enter DraftKings username:', _user);
+      if (u && u.trim()) {
+        _user = u.trim().toLowerCase();
+        localStorage.setItem('dashUserId', _user);
+        document.getElementById('lbl-user').textContent = _user;
+        fetchData();
+      }
+    }
+
+    function playChime() {
+      if (!_soundEnabled) return;
+      try {
+        if (!_audioCtx) _audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        if (_audioCtx.state === 'suspended') _audioCtx.resume();
+        const now = _audioCtx.currentTime;
+        const osc1 = _audioCtx.createOscillator();
+        const gain1 = _audioCtx.createGain();
+        osc1.type = 'sine';
+        osc1.frequency.setValueAtTime(587.33, now);
+        gain1.gain.setValueAtTime(0, now);
+        gain1.gain.linearRampToValueAtTime(0.2, now + 0.03);
+        gain1.gain.exponentialRampToValueAtTime(0.001, now + 0.4);
+        osc1.connect(gain1);
+        gain1.connect(_audioCtx.destination);
+        osc1.start(now);
+        osc1.stop(now + 0.45);
+
+        const osc2 = _audioCtx.createOscillator();
+        const gain2 = _audioCtx.createGain();
+        osc2.type = 'sine';
+        osc2.frequency.setValueAtTime(880.00, now + 0.12);
+        gain2.gain.setValueAtTime(0, now + 0.12);
+        gain2.gain.linearRampToValueAtTime(0.25, now + 0.15);
+        gain2.gain.exponentialRampToValueAtTime(0.001, now + 0.65);
+        osc2.connect(gain2);
+        gain2.connect(_audioCtx.destination);
+        osc2.start(now + 0.12);
+        osc2.stop(now + 0.7);
+      } catch (e) {
+        console.warn('Audio chime failed:', e);
+      }
+    }
+
+    const toD = a => a > 0 ? (a/100)+1 : (100/Math.abs(a))+1;
+    const fmtM = n => (n < 0 ? '-$' : '+$') + Math.abs(n).toFixed(2);
+    const fmtO = n => (n > 0 ? '+' : '') + n;
+    const norm = s => (s||'').toLowerCase().replace(/[^a-z0-9]/g, '');
+
+    function executePrefill() {
+      if (!_currentSuggestion) return;
+      const s = _currentSuggestion;
+      const payload = {
+        type: 'PREFILL_BETSLIP',
+        fighter: s.name,
+        stake: Math.round(s.optS),
+        odds: s.odds
+      };
+      window.postMessage(payload, '*');
+      const btn = document.getElementById('btn-prefill');
+      btn.textContent = '✓ Sent to DraftKings!';
+      setTimeout(() => {
+        btn.textContent = '⚡ 1-Click Pre-fill on DraftKings';
+      }, 2500);
+    }
+
+    async function fetchData() {
+      try {
+        const [recStatus, dkBets, fights] = await Promise.all([
+          fetch('/api/recorder/status').then(r => r.json()).catch(() => null),
+          fetch('/api/dk-bets?user=' + encodeURIComponent(_user)).then(r => r.json()).catch(() => []),
+          fetch('/api/fights').then(r => r.json()).catch(() => [])
+        ]);
+
+        let active = null;
+        if (recStatus && recStatus.activeFights && recStatus.activeFights.length > 0) {
+          active = recStatus.activeFights[0];
+        } else if (fights && fights.length > 0) {
+          active = fights[0];
+        }
+        _activeFight = active;
+
+        renderMatchup(active);
+        renderPosition(active, dkBets);
+      } catch (e) {
+        console.error('Fetch error:', e);
+      }
+    }
+
+    function renderMatchup(fight) {
+      if (!fight) return;
+      const f1 = fight.fighter1?.name || fight.fighter1 || 'Fighter 1';
+      const f2 = fight.fighter2?.name || fight.fighter2 || 'Fighter 2';
+      const o1 = fight.lastOdds?.fighter1?.numericOdds || fight.fighter1?.numericOdds || null;
+      const o2 = fight.lastOdds?.fighter2?.numericOdds || fight.fighter2?.numericOdds || null;
+
+      document.getElementById('f1-name').textContent = f1;
+      document.getElementById('f2-name').textContent = f2;
+      document.getElementById('f1-odds').textContent = o1 ? fmtO(o1) : '—';
+      document.getElementById('f2-odds').textContent = o2 ? fmtO(o2) : '—';
+
+      document.getElementById('f1-img').src = '/api/fighter-photo?name=' + encodeURIComponent(f1);
+      document.getElementById('f2-img').src = '/api/fighter-photo?name=' + encodeURIComponent(f2);
+      document.getElementById('f1-img').style.display = 'block';
+      document.getElementById('f2-img').style.display = 'block';
+
+      if (o1 && o2) checkVelocity(o1, o2);
+      loadVolatility(f1, f2);
+    }
+
+    function checkVelocity(o1, o2) {
+      const now = Date.now();
+      _oddsVelocityBuffer.push({ ts: now, o1, o2 });
+      while (_oddsVelocityBuffer.length > 0 && now - _oddsVelocityBuffer[0].ts > 4000) {
+        _oddsVelocityBuffer.shift();
+      }
+      if (_oddsVelocityBuffer.length >= 2) {
+        const first = _oddsVelocityBuffer[0];
+        const delta1 = Math.abs(o1 - first.o1);
+        const delta2 = Math.abs(o2 - first.o2);
+        const banner = document.getElementById('hud-lag-banner');
+        if (delta1 >= 60 || delta2 >= 60) {
+          banner.textContent = '⚠️ VIOLENT LINE MOVE (' + Math.max(delta1, delta2) + ' pts in 3s) — HOLD BETS (STREAM IS BEHIND)';
+          banner.style.display = 'block';
+        } else {
+          banner.style.display = 'none';
+        }
+      }
+    }
+
+    let _lastVolFight = '';
+    async function loadVolatility(f1, f2) {
+      const key = f1 + '__' + f2;
+      if (_lastVolFight === key) return;
+      _lastVolFight = key;
+      try {
+        const stats = await fetch('/api/fighter-stats?f1=' + encodeURIComponent(f1) + '&f2=' + encodeURIComponent(f2)).then(r => r.json());
+        if (stats && !stats.error) {
+          document.getElementById('stat-vol').textContent = stats.volatilityScore || '70';
+          document.getElementById('stat-slpm').textContent = (stats.fighter1?.slpm || '4.2') + ' SLpM';
+          document.getElementById('stat-td').textContent = (stats.fighter1?.tdAvg || '1.8') + ' TD';
+          const pace = (stats.fighter1?.slpm || 0) > 5.5 ? 'Fast Starter / Fades' : 'Steady Pacing';
+          document.getElementById('stat-gas').textContent = pace;
+        }
+      } catch (_) {}
+    }
+
+    function renderPosition(fight, bets) {
+      if (!fight) return;
+      const f1 = fight.fighter1?.name || fight.fighter1 || 'Fighter 1';
+      const f2 = fight.fighter2?.name || fight.fighter2 || 'Fighter 2';
+      const o1 = fight.lastOdds?.fighter1?.numericOdds || fight.fighter1?.numericOdds || null;
+      const o2 = fight.lastOdds?.fighter2?.numericOdds || fight.fighter2?.numericOdds || null;
+
+      document.getElementById('pos-lbl-f1').textContent = f1;
+      document.getElementById('pos-lbl-f2').textContent = f2;
+
+      const nf1 = norm(f1);
+      const nf2 = norm(f2);
+      const matchingBets = (bets || []).filter(b => {
+        const sel = norm(b.selection);
+        return sel.includes(nf1) || nf1.includes(sel) || sel.includes(nf2) || nf2.includes(sel);
+      });
+
+      document.getElementById('bets-count').textContent = matchingBets.length;
+      const tbody = document.getElementById('bets-tbody');
+      if (matchingBets.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="4" class="empty-state">No open bets on this fight</td></tr>';
+      } else {
+        tbody.innerHTML = matchingBets.map(b => '<tr><td style="font-weight:700;color:#fff">' + b.selection + '</td><td class="tnum" style="color:var(--gold)">' + fmtO(b.odds) + '</td><td class="tnum">$' + b.stake + '</td><td class="tnum" style="color:var(--green)">$' + (b.potentialReturns||0).toFixed(2) + '</td></tr>').join('');
+      }
+
+      let n1 = 0, n2 = 0;
+      let count1 = 0, count2 = 0;
+      for (const b of matchingBets) {
+        const sel = norm(b.selection);
+        const dec = toD(b.odds);
+        if (sel.includes(nf1) || nf1.includes(sel)) {
+          n1 += b.stake * (dec - 1);
+          n2 -= b.stake;
+          count1++;
+        } else if (sel.includes(nf2) || nf2.includes(sel)) {
+          n2 += b.stake * (dec - 1);
+          n1 -= b.stake;
+          count2++;
+        }
+      }
+
+      const val1 = document.getElementById('pos-val-f1');
+      const val2 = document.getElementById('pos-val-f2');
+      val1.textContent = fmtM(n1);
+      val2.textContent = fmtM(n2);
+      val1.className = 'pos-card-net tnum ' + (n1 > 0 ? 'green' : n1 < 0 ? 'red' : 'gray');
+      val2.className = 'pos-card-net tnum ' + (n2 > 0 ? 'green' : n2 < 0 ? 'red' : 'gray');
+      document.getElementById('pos-bets-f1').textContent = count1 + ' open bet' + (count1 !== 1 ? 's' : '');
+      document.getElementById('pos-bets-f2').textContent = count2 + ' open bet' + (count2 !== 1 ? 's' : '');
+
+      const hedgeBox = document.getElementById('hud-hedge');
+      const hedgeTitle = document.getElementById('hedge-title');
+      const hedgeDetail = document.getElementById('hedge-detail');
+      const prefillWrap = document.getElementById('prefill-wrap');
+
+      if (matchingBets.length === 0 || !o1 || !o2) {
+        hedgeBox.className = '';
+        hedgeTitle.textContent = 'POSITION STATUS';
+        hedgeDetail.textContent = 'Place a bet on DraftKings to start tracking live position';
+        prefillWrap.style.display = 'none';
+        _currentSuggestion = null;
+        return;
+      }
+
+      if (n1 > 0 && n2 > 0) {
+        hedgeBox.className = 'winwin';
+        hedgeTitle.textContent = '🔒 LOCKED — WIN EITHER WAY';
+        hedgeDetail.innerHTML = 'Guaranteed profit secured: <strong>' + fmtM(Math.min(n1, n2)) + '</strong> to <strong>' + fmtM(Math.max(n1, n2)) + '</strong>';
+        prefillWrap.style.display = 'none';
+        _currentSuggestion = null;
+        return;
+      }
+
+      const worstSide = n1 < n2 ? 'f1' : 'f2';
+      const worstName = worstSide === 'f1' ? f1 : f2;
+      const worstOdds = worstSide === 'f1' ? o1 : o2;
+      const worstN = worstSide === 'f1' ? n1 : n2;
+      const otherN = worstSide === 'f1' ? n2 : n1;
+
+      const D = toD(worstOdds);
+      const diff = otherN - worstN;
+      const optS = diff / D;
+      const afterWorst = worstN + optS * (D - 1);
+      const afterOther = otherN - optS;
+      const canWinWin = afterWorst > 0 && afterOther > 0;
+
+      _currentSuggestion = {
+        name: worstName,
+        side: worstSide,
+        odds: worstOdds,
+        optS: optS,
+        profitAfter: Math.min(afterWorst, afterOther)
+      };
+
+      if (canWinWin) {
+        hedgeBox.className = 'winwin';
+        hedgeTitle.textContent = '🔔 HEDGE NOW — GUARANTEED WIN-WIN OPEN';
+        hedgeDetail.innerHTML = 'Bet <strong>$' + Math.round(optS) + '</strong> on <strong>' + worstName + '</strong> at <strong>' + fmtO(worstOdds) + '</strong> for <strong style="color:var(--green)">' + fmtM(Math.min(afterWorst, afterOther)) + ' profit</strong> either way';
+        document.getElementById('btn-prefill').textContent = '⚡ 1-Click Pre-fill on DraftKings ($' + Math.round(optS) + ' on ' + worstName + ')';
+        prefillWrap.style.display = 'block';
+
+        if (!_lastCanWinWin) playChime();
+        _lastCanWinWin = true;
+      } else {
+        _lastCanWinWin = false;
+        hedgeBox.className = 'watching';
+        hedgeTitle.textContent = '👁 WATCHING FOR CROSSOVER';
+        const neededD = otherN > 0 && Math.abs(worstN) > 0 ? (otherN + Math.abs(worstN)) / otherN : 2.5;
+        const threshOdds = neededD >= 2 ? Math.round((neededD - 1) * 100) : Math.round(-100 / (neededD - 1));
+        hedgeDetail.innerHTML = 'Win-win opens when <strong>' + worstName + '</strong> reaches <strong>' + fmtO(threshOdds) + '</strong> or better';
+        prefillWrap.style.display = 'none';
+      }
+    }
+
+    fetchData();
+    setInterval(fetchData, 1000);
+  </script>
+</body>
+</html>

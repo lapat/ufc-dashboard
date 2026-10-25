@@ -475,10 +475,13 @@
   <div id="dk-ext-status" style="display:none"><div id="dk-ext-dot"></div><span id="dk-ext-label"></span></div>
   <a href="/library" style="font-size:0.75rem;padding:4px 9px;border:1px solid #1e1e1e;border-radius:5px;color:#444;white-space:nowrap;text-decoration:none">Library</a>
   <a href="/patterns" style="font-size:0.75rem;padding:4px 9px;border:1px solid #1e1e1e;border-radius:5px;color:#444;white-space:nowrap;text-decoration:none">Patterns</a>
+  <a href="/hud" id="hud-nav-btn" style="font-size:0.75rem;padding:4px 9px;border:1px solid #e8b84b55;background:#1a1608;border-radius:5px;color:#e8b84b;white-space:nowrap;text-decoration:none;font-weight:700">🔳 Fight HUD</a>
+  <button id="btn-sound-classic" onclick="toggleClassicSound()" style="font-size:0.75rem;padding:4px 9px;border:1px solid #1e1e1e;background:#141414;border-radius:5px;color:#aaa;white-space:nowrap;cursor:pointer">🔊 Chime: ON</button>
   <div id="topbar-status" style="margin-left:auto;font-size:0.78rem;color:#444;white-space:nowrap">Loading...</div>
   <span style="font-size:0.6rem;color:#333;white-space:nowrap;letter-spacing:.5px" title="Dashboard build">v2026-06-13.18</span>
 </div>
 
+<div id="classic-lag-banner" style="display:none;background:#4a0808;border:1px solid #ff6b6b;color:#fff;text-align:center;padding:8px 12px;font-size:0.8rem;font-weight:700;margin-bottom:8px">⚠️ VIOLENT LINE MOVE (STREAM LAG) — HOLD BETS</div>
 <div id="sport-strip"><span id="sport-loading" style="color:#333;font-size:.7rem;padding:12px 0">Loading sports...</span></div>
 
 <div id="main">
@@ -922,6 +925,47 @@ if(tracker.bets.length>0) renderTracker();
 let currentBetSide = '';
 let oddsLocked = false;
 
+// ── Web Audio Chime Synthesis for Classic Dashboard ─────────────────────────
+let _classicSoundEnabled = localStorage.getItem('hudSound') !== 'false';
+let _classicAudioCtx = null;
+let _lastClassicCanWinWin = false;
+
+function updateClassicSoundUI() {
+  const btn = document.getElementById('btn-sound-classic');
+  if (btn) btn.textContent = _classicSoundEnabled ? '🔊 Chime: ON' : '🔇 Chime: OFF';
+}
+function toggleClassicSound() {
+  _classicSoundEnabled = !_classicSoundEnabled;
+  localStorage.setItem('hudSound', _classicSoundEnabled ? 'true' : 'false');
+  updateClassicSoundUI();
+  if (_classicSoundEnabled) playClassicChime();
+}
+function playClassicChime() {
+  if (!_classicSoundEnabled) return;
+  try {
+    if (!_classicAudioCtx) _classicAudioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    if (_classicAudioCtx.state === 'suspended') _classicAudioCtx.resume();
+    const now = _classicAudioCtx.currentTime;
+    const osc1 = _classicAudioCtx.createOscillator();
+    const gain1 = _classicAudioCtx.createGain();
+    osc1.type = 'sine'; osc1.frequency.setValueAtTime(587.33, now);
+    gain1.gain.setValueAtTime(0, now); gain1.gain.linearRampToValueAtTime(0.2, now + 0.03);
+    gain1.gain.exponentialRampToValueAtTime(0.001, now + 0.4);
+    osc1.connect(gain1); gain1.connect(_classicAudioCtx.destination);
+    osc1.start(now); osc1.stop(now + 0.45);
+
+    const osc2 = _classicAudioCtx.createOscillator();
+    const gain2 = _classicAudioCtx.createGain();
+    osc2.type = 'sine'; osc2.frequency.setValueAtTime(880.00, now + 0.12);
+    gain2.gain.setValueAtTime(0, now + 0.12); gain2.gain.linearRampToValueAtTime(0.25, now + 0.15);
+    gain2.gain.exponentialRampToValueAtTime(0.001, now + 0.65);
+    osc2.connect(gain2); gain2.connect(_classicAudioCtx.destination);
+    osc2.start(now + 0.12); osc2.stop(now + 0.7);
+  } catch (_) {}
+}
+updateClassicSoundUI();
+
+
 function setBetSide(side){
   currentBetSide = side;
   oddsLocked = false;
@@ -1096,7 +1140,10 @@ function renderTracker(){
   else if(winWin){ statusEl.className='tracker-status s-winwin'; statusEl.textContent='🔔 PROFIT MOMENT — WIN EITHER WAY'; }
   else if(hedge){
     const s2=tracker.suggestion();
-    if(s2&&s2.canWinWin){ statusEl.className='tracker-status s-winwin'; statusEl.textContent='⚖️ HEDGE NOW — guaranteed profit available at current odds'; }
+    if(s2&&s2.canWinWin){
+      statusEl.className='tracker-status s-winwin'; statusEl.textContent='⚖️ HEDGE NOW — guaranteed profit available at current odds';
+      if(!_lastClassicCanWinWin){ playClassicChime(); _lastClassicCanWinWin = true; }
+    } else { _lastClassicCanWinWin = false; }
     else if(s2&&s2.threshOdds!==null){
       const thresh=s2.threshOdds>0?`+${s2.threshOdds}`:s2.threshOdds;
       statusEl.className='tracker-status s-hedge'; statusEl.innerHTML=`👁 WATCHING — win-win opens when <strong>${s2.name}</strong> hits <strong>${thresh}</strong>`;
@@ -1136,6 +1183,7 @@ function quickHedge(){
   oddsLocked=true;
   document.querySelectorAll('.preset-btn').forEach(b=>b.classList.remove('active-preset'));
   document.getElementById('add-bet-btn').focus();
+  try { window.postMessage({ type: 'PREFILL_BETSLIP', fighter: s.name, stake: Math.round(s.optS), odds: s.odds }, '*'); } catch (_) {}
 }
 document.getElementById('tracker-sugg').addEventListener('click',e=>{
   if(e.target.classList.contains('quick-hedge-btn')) quickHedge();

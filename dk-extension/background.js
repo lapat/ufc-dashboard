@@ -210,6 +210,23 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
     return;
   }
 
+  if (msg.type === 'PREFILL_BETSLIP') {
+    chrome.tabs.query({ url: 'https://*.draftkings.com/*' }, tabs => {
+      if (!tabs || !tabs.length) return;
+      const targetTab = tabs.find(t => !t.url.includes('/mybets')) || tabs[0];
+      if (targetTab && targetTab.id) {
+        chrome.tabs.update(targetTab.id, { active: true });
+        chrome.tabs.sendMessage(targetTab.id, {
+          type: 'EXECUTE_PREFILL',
+          fighter: msg.fighter,
+          stake: msg.stake,
+          odds: msg.odds
+        });
+      }
+    });
+    return;
+  }
+
   if (msg.type === 'CLEAR_MANUAL_LIVE') {
     chrome.storage.local.set({ manualLiveUntil: 0 });
     addLog('Manual live override cleared');

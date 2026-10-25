@@ -6777,5 +6777,47 @@ async function runTotalReturnTests() {
       require('fs').unlinkSync(tmpFile);
     });
   } catch(e) { console.error('  ✗ AE6:', e.message); failed++; }
+
+  // ── AF. Dual-Mode Fight HUD, Web Audio Chime & 1-Click Bet Slip Pre-Fill ──
+  try {
+    await check('AF1: server.js defines /hud route serving hud.html', () => {
+      const serverSrc = require('fs').readFileSync(require('path').join(__dirname, 'server.js'), 'utf8');
+      assert(serverSrc.includes("app.get('/hud'"), 'server.js must define /hud route');
+    });
+  } catch(e) { console.error('  ✗ AF1:', e.message); failed++; }
+
+  try {
+    await check('AF2: hud.html contains matchup, position cards, hedge action, and lag banner', () => {
+      const hudHtml = require('fs').readFileSync(require('path').join(__dirname, 'public', 'hud.html'), 'utf8');
+      assert(hudHtml.includes('id="hud-matchup"'), 'Missing hud-matchup');
+      assert(hudHtml.includes('id="hud-position"'), 'Missing hud-position');
+      assert(hudHtml.includes('id="hud-hedge"'), 'Missing hud-hedge');
+      assert(hudHtml.includes('id="hud-lag-banner"'), 'Missing hud-lag-banner');
+      assert(hudHtml.includes('btn-prefill'), 'Missing btn-prefill');
+      assert(hudHtml.includes('playChime'), 'Missing playChime');
+    });
+  } catch(e) { console.error('  ✗ AF2:', e.message); failed++; }
+
+  try {
+    await check('AF3: index.html has Fight HUD nav button, chime toggle, and lag banner', () => {
+      const indexHtml = require('fs').readFileSync(require('path').join(__dirname, 'public', 'index.html'), 'utf8');
+      assert(indexHtml.includes('href="/hud"'), 'Missing link to /hud in index.html');
+      assert(indexHtml.includes('btn-sound-classic'), 'Missing btn-sound-classic in index.html');
+      assert(indexHtml.includes('classic-lag-banner'), 'Missing classic-lag-banner in index.html');
+    });
+  } catch(e) { console.error('  ✗ AF3:', e.message); failed++; }
+
+  try {
+    await check('AF4: Extension registers bridge.js and has PREFILL_BETSLIP and EXECUTE_PREFILL handlers', () => {
+      const manifest = JSON.parse(require('fs').readFileSync(require('path').join(__dirname, 'dk-extension', 'manifest.json'), 'utf8'));
+      const hasBridge = manifest.content_scripts.some(s => s.js && s.js.includes('bridge.js'));
+      assert(hasBridge, 'manifest.json must register bridge.js');
+      const bg = require('fs').readFileSync(require('path').join(__dirname, 'dk-extension', 'background.js'), 'utf8');
+      assert(bg.includes("msg.type === 'PREFILL_BETSLIP'"), 'background.js must handle PREFILL_BETSLIP');
+      const cj = require('fs').readFileSync(require('path').join(__dirname, 'dk-extension', 'content.js'), 'utf8');
+      assert(cj.includes("msg.type === 'EXECUTE_PREFILL'"), 'content.js must handle EXECUTE_PREFILL');
+    });
+  } catch(e) { console.error('  ✗ AF4:', e.message); failed++; }
 }
+
 
