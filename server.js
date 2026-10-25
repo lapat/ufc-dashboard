@@ -189,6 +189,14 @@ app.get('/guide', (req, res) => { res.sendFile(path.join(__dirname, 'public', 'g
 app.get('/library', (req, res) => { res.sendFile(path.join(__dirname, 'public', 'library.html')); });
 app.get('/status', (req, res) => { res.sendFile(path.join(__dirname, 'public', 'status.html')); });
 
+// Direct extension download (zero-permission, no Google Drive auth needed)
+app.get('/download/bet-bot-dk-sync.zip', (req, res) => {
+  res.download(path.join(__dirname, 'dk-extension-v3.3.zip'), 'bet-bot-dk-sync-v3.3.zip');
+});
+app.get('/extension', (req, res) => {
+  res.download(path.join(__dirname, 'dk-extension-v3.3.zip'), 'bet-bot-dk-sync-v3.3.zip');
+});
+
 // Patterns page
 app.get('/patterns', (req, res) => { res.sendFile(path.join(__dirname, 'public', 'patterns.html')); });
 
