@@ -191,10 +191,16 @@ app.get('/status', (req, res) => { res.sendFile(path.join(__dirname, 'public', '
 
 // Direct extension download (zero-permission, no Google Drive auth needed)
 app.get('/download/bet-bot-dk-sync.zip', (req, res) => {
-  res.download(path.join(__dirname, 'dk-extension-v3.3.zip'), 'bet-bot-dk-sync-v3.3.zip');
+  const zipPath = path.join(__dirname, 'dk-extension-v3.3.zip');
+  if (!fs.existsSync(zipPath)) {
+    try {
+      require('child_process').execSync('zip -r dk-extension-v3.3.zip dk-extension -x "*.DS_Store"', { cwd: __dirname });
+    } catch (_) {}
+  }
+  res.download(zipPath, 'bet-bot-dk-sync-v3.3.zip');
 });
 app.get('/extension', (req, res) => {
-  res.download(path.join(__dirname, 'dk-extension-v3.3.zip'), 'bet-bot-dk-sync-v3.3.zip');
+  res.redirect('/download/bet-bot-dk-sync.zip');
 });
 
 // Patterns page
