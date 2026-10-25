@@ -512,6 +512,10 @@
       <div id="nw-f1-capsule" style="color:#e8b84b"></div>
       <div id="nw-vol-capsule" style="color:#888;font-weight:700"></div>
       <div id="nw-f2-capsule" style="color:#74c0fc;text-align:right"></div>
+      <div id="nw-prop-row" style="font-size:0.68rem;color:#888;display:flex;justify-content:space-between;width:100%;margin-top:4px;border-top:1px solid #181818;padding-top:3px;">
+        <span id="nw-f1-prop"></span>
+        <span id="nw-f2-prop" style="text-align:right;"></span>
+      </div>
     </div>
     <!-- Live In-Fight Strikes and Takedowns -->
     <div id="nw-live-stats" style="display:none;background:#070707;border:1px solid #1a1a1a;border-radius:6px;padding:8px 12px;margin-top:8px;font-size:0.72rem;color:#ccc;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;">
@@ -1403,6 +1407,16 @@ function updateFightUI(f1Name,f2Name,o1,o2,live,sport,switchGames){
         document.getElementById('nw-vol-capsule').textContent = 'Vol: ' + (stats.fightVolatility != null ? stats.fightVolatility : '70');
         document.getElementById('nw-f2-capsule').innerHTML = '<strong>' + f2Name + ':</strong> ' + f2Fin + ' · ' + f2Gas;
         document.getElementById('nw-capsule').style.display = 'flex';
+        const fmtMethod = (p, name) => {
+          if (!p || !p.winMethods) return '';
+          const m = p.winMethods;
+          const ko = m['KO/TKO'] ? (m['KO/TKO'].split(' ')[1] || m['KO/TKO']) : '—';
+          const dec = m['DEC'] ? (m['DEC'].split(' ')[1] || m['DEC']) : '—';
+          const sub = m['SUB'] ? (m['SUB'].split(' ')[1] || m['SUB']) : '—';
+          return name + ': ' + ko + ' KO · ' + dec + ' Dec · ' + sub + ' Sub';
+        };
+        document.getElementById('nw-f1-prop').textContent = fmtMethod(stats.f1, f1Name);
+        document.getElementById('nw-f2-prop').textContent = fmtMethod(stats.f2, f2Name);
         startClassicLiveStats(f1Name, f2Name);
       }
     }).catch(() => {});

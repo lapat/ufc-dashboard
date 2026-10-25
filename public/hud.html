@@ -249,6 +249,10 @@
         <span id="hud-f2-badge" style="color:var(--blue);text-align:right;"></span>
       </div>
       <div id="hud-vol-detail" style="font-size:0.65rem;color:#666;text-align:center;margin-top:2px;"></div>
+      <div id="hud-prop-matrix" style="display:flex;justify-content:space-between;gap:8px;font-size:0.68rem;border-top:1px solid #181818;padding-top:4px;margin-top:2px;">
+        <span id="hud-f1-props" style="color:#aaa;"></span>
+        <span id="hud-f2-props" style="color:#aaa;text-align:right;"></span>
+      </div>
     </div>
   </div>
 
@@ -498,6 +502,15 @@
           document.getElementById('live-ctrl-f1').textContent = stats.f1.controlTime || '0:00';
           document.getElementById('live-ctrl-f2').textContent = stats.f2.controlTime || '0:00';
           document.getElementById('live-tot-strikes').textContent = stats.f1.totalStrikesLanded + ' vs ' + stats.f2.totalStrikesLanded;
+          // Live Knockdown Alert Banner
+          const kd1 = stats.f1.knockdowns || 0;
+          const kd2 = stats.f2.knockdowns || 0;
+          if (kd1 > 0 || kd2 > 0) {
+            const banner = document.getElementById('hud-lag-banner');
+            banner.textContent = '💥 KNOCKDOWN RECORDED (' + (kd1 > 0 ? f1 : f2) + ' DROPPED OPPONENT) — HOLD BETS';
+            banner.style.display = 'block';
+            banner.style.background = '#8a0808';
+          }
         }
       } catch (_) {}
     }
@@ -522,6 +535,20 @@
           if (stats.f1?.gasTank?.detail) details.push(f1 + ': ' + stats.f1.gasTank.detail);
           if (stats.f2?.gasTank?.detail) details.push(f2 + ': ' + stats.f2.gasTank.detail);
           document.getElementById('hud-vol-detail').textContent = details.join(' | ');
+          // Method of Victory & Striking Heatmap
+          const formatProps = (p, name) => {
+            if (!p) return '';
+            const m = p.winMethods || {};
+            const pos = p.sigPositions || {};
+            const ko = m['KO/TKO'] ? m['KO/TKO'].split(' ')[1] || m['KO/TKO'] : '—';
+            const dec = m['DEC'] ? m['DEC'].split(' ')[1] || m['DEC'] : '—';
+            const sub = m['SUB'] ? m['SUB'].split(' ')[1] || m['SUB'] : '—';
+            const gnd = pos['Ground'] ? pos['Ground'].split(' ')[1] || pos['Ground'] : '';
+            const gndTag = gnd && parseInt(gnd.replace(/[^0-9]/g,'')) >= 18 ? ' 🩸G&P' : '';
+            return '<strong>' + name + ':</strong> ' + ko + ' KO · ' + dec + ' Dec · ' + sub + ' Sub' + gndTag;
+          };
+          document.getElementById('hud-f1-props').innerHTML = formatProps(stats.f1, f1);
+          document.getElementById('hud-f2-props').innerHTML = formatProps(stats.f2, f2);
         }
       } catch (_) {}
     }

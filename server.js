@@ -590,6 +590,8 @@ app.get('/api/fighter-stats', (req, res) => {
           name: p1.name,
           stats: p1.stats,
           volatility: p1.volatility,
+          winMethods: p1.winMethods || null,
+          sigPositions: p1.sigPositions || null,
           gasTank: computeGasTankRating(p1.stats),
           finisher: computeFirstRoundFinisher(p1.stats)
         } : null,
@@ -597,6 +599,8 @@ app.get('/api/fighter-stats', (req, res) => {
           name: p2.name,
           stats: p2.stats,
           volatility: p2.volatility,
+          winMethods: p2.winMethods || null,
+          sigPositions: p2.sigPositions || null,
           gasTank: computeGasTankRating(p2.stats),
           finisher: computeFirstRoundFinisher(p2.stats)
         } : null,
