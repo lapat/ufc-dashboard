@@ -169,7 +169,20 @@ if (href.startsWith('https://sportsbook.draftkings.com/') &&
   }
 
   function scanOddsFromPage() {
-    return [...document.querySelectorAll('button, [role="button"]')]
+    // Auto-Lock on Multi-Fight Card Pages:
+    // If on /leagues/mma/ufc, automatically isolate the LIVE in-progress bout container
+    let rootEl = document;
+    const isLeagueCardPage = window.location.href.includes('/leagues/mma') || window.location.href.includes('/sports/mma');
+    if (isLeagueCardPage) {
+      const liveBadge = findLiveBadge();
+      if (liveBadge) {
+        const liveContainer = liveBadge.closest('.sportsbook-event-accordion__children, .sportsbook-table, [class*="event-card"], [class*="event-cell"], tr, [role="row"]')
+          || liveBadge.parentElement?.parentElement?.parentElement;
+        if (liveContainer) rootEl = liveContainer;
+      }
+    }
+
+    return [...rootEl.querySelectorAll('button, [role="button"]')]
       .flatMap(btn => {
         // Try full button text first (flat odds-only button)
         const full = btn.textContent.trim();
@@ -295,7 +308,7 @@ function executePrefillOnDraftKings(fighterName, stake, odds) {
         i.classList.contains('sportsbook-wager-input') ||
         /stake|wager|amount/i.test(i.getAttribute('aria-label') || '') ||
         /stake|wager/i.test(i.name || '') ||
-        /0\.00|\/bin/bash/i.test(i.placeholder || '')
+        /0\.00|$0/i.test(i.placeholder || '')
       );
       if (stakeInput) {
         stakeInput.focus();

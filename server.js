@@ -2183,16 +2183,8 @@ async function recPoll() {
     if (r.soonestMs !== null && (soonestMs === null || r.soonestMs < soonestMs)) soonestMs = r.soonestMs;
   }
 
-  // Also poll the one sport the browser is watching (if heartbeat < 2 min old)
-  const now = Date.now();
-  const watching = clientWatching && (now - clientWatching.ts < 120000) ? clientWatching : null;
-  let otherLive = 0;
-  if (watching && !ALWAYS_POLL.includes(watching.sport)) {
-    const r = await recPollSport(watching.sport, SPORT_META[watching.sport] || { label: watching.sport, window: 4*60*60*1000 }, watching);
-    otherLive = r.live;
-    if (r.soonestMs !== null && (soonestMs === null || r.soonestMs < soonestMs)) soonestMs = r.soonestMs;
-  }
-  const totalLive = alwaysLive + otherLive;
+  // Pure UFC focus: only live UFC fights are recorded. Zero non-MMA polling.
+  const totalLive = alwaysLive;
 
   // Smart delay: pre-warm before scheduled fights so we never miss the first punch
   const ufcLive = recorderState.activeFights.size > 0 &&
