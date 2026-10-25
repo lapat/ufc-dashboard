@@ -240,6 +240,28 @@
     </div>
   </div>
 
+  <!-- Live In-Fight Stats -->
+  <div id="hud-live-stats" style="display:none;background:#111;border:1px solid #1f1f1f;border-radius:8px;padding:12px;margin-bottom:12px;">
+    <div style="font-size:0.7rem;color:var(--gold);text-transform:uppercase;font-weight:700;margin-bottom:8px;display:flex;justify-content:space-between;">
+      <span>🥊 Live In-Fight Stats (ESPN Core Feed)</span>
+      <span id="live-round-clock" style="color:#fff;"></span>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:0.75rem;">
+      <div style="background:#0a0a0a;padding:8px 10px;border-radius:6px;border:1px solid #1a1a1a;">
+        <div style="color:#888;margin-bottom:3px;font-size:0.68rem;text-transform:uppercase;">Significant Strikes:</div>
+        <div style="font-size:1.1rem;font-weight:900;color:#fff;" id="live-sig-strikes">— vs —</div>
+      </div>
+      <div style="background:#0a0a0a;padding:8px 10px;border-radius:6px;border:1px solid #1a1a1a;">
+        <div style="color:#888;margin-bottom:3px;font-size:0.68rem;text-transform:uppercase;">Takedowns Landed:</div>
+        <div style="font-size:1.1rem;font-weight:900;color:#fff;" id="live-takedowns">— vs —</div>
+      </div>
+    </div>
+    <div style="font-size:0.7rem;color:#777;margin-top:8px;display:flex;justify-content:space-between;border-top:1px solid #181818;padding-top:6px;">
+      <span>Control Time: <strong style="color:#bbb" id="live-ctrl-f1">0:00</strong> vs <strong style="color:#bbb" id="live-ctrl-f2">0:00</strong></span>
+      <span>Total Strikes: <strong style="color:#bbb" id="live-tot-strikes">— vs —</strong></span>
+    </div>
+  </div>
+
   <div id="hud-position">
     <div class="pos-card" id="card-f1">
       <div class="pos-card-name" id="pos-lbl-f1">FIGHTER 1</div>
@@ -420,7 +442,7 @@
       document.getElementById('f2-img').style.display = 'block';
 
       if (o1 && o2) checkVelocity(o1, o2);
-      loadVolatility(f1, f2);
+      loadVolatility(f1, f2); pollLiveFightStats(f1, f2);
     }
 
     function checkVelocity(o1, o2) {
@@ -444,6 +466,23 @@
     }
 
     let _lastVolFight = '';
+    async function pollLiveFightStats(f1, f2) {
+      if (!f1 || !f2) return;
+      try {
+        const stats = await fetch('/api/live-fight-stats?f1=' + encodeURIComponent(f1) + '&f2=' + encodeURIComponent(f2)).then(r => r.json());
+        const card = document.getElementById('hud-live-stats');
+        if (stats && stats.available && stats.f1 && stats.f2) {
+          card.style.display = 'block';
+          document.getElementById('live-round-clock').textContent = 'Rd ' + (stats.round || 1) + ' · ' + (stats.clock || '0:00');
+          document.getElementById('live-sig-strikes').textContent = stats.f1.sigStrikesLanded + ' (' + f1 + ') vs ' + stats.f2.sigStrikesLanded + ' (' + f2 + ')';
+          document.getElementById('live-takedowns').textContent = stats.f1.takedownsLanded + ' vs ' + stats.f2.takedownsLanded;
+          document.getElementById('live-ctrl-f1').textContent = stats.f1.controlTime || '0:00';
+          document.getElementById('live-ctrl-f2').textContent = stats.f2.controlTime || '0:00';
+          document.getElementById('live-tot-strikes').textContent = stats.f1.totalStrikesLanded + ' vs ' + stats.f2.totalStrikesLanded;
+        }
+      } catch (_) {}
+    }
+
     async function loadVolatility(f1, f2) {
       const key = f1 + '__' + f2;
       if (_lastVolFight === key) return;

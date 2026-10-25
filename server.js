@@ -507,6 +507,7 @@ app.get('/api/fighter/:name', (req, res) => {
 
 // ── Fighter career stats & volatility capsule ──────────────────────────────
 const { loadFighterProfiles, fightVolatilityScore, computeGasTankRating, computeFirstRoundFinisher } = require('./fighter_stats');
+const { fetchLiveFightStats } = require('./live_fight_stats');
 const { predictCrossover } = require('./crossover_predictor');
 
 let _fighterProfilesCache = null;
@@ -528,6 +529,19 @@ function lookupFighter(name, profiles) {
   const q = normFighter(name);
   return Object.values(profiles).find(p => normFighter(p.name) === q) || null;
 }
+
+// Live in-fight strikes, takedowns, and control time
+app.get('/api/live-fight-stats', async (req, res) => {
+  try {
+    const { f1, f2 } = req.query;
+    if (!f1 || !f2) return res.status(400).json({ error: "Missing f1 or f2 parameters" });
+    const stats = await fetchLiveFightStats(f1, f2);
+    if (!stats) return res.json({ available: false });
+    res.json(stats);
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+});
 
 app.get('/api/fighter-stats', (req, res) => {
   try {

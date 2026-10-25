@@ -513,6 +513,12 @@
       <div id="nw-vol-capsule" style="color:#888;font-weight:700"></div>
       <div id="nw-f2-capsule" style="color:#74c0fc;text-align:right"></div>
     </div>
+    <!-- Live In-Fight Strikes and Takedowns -->
+    <div id="nw-live-stats" style="display:none;background:#070707;border:1px solid #1a1a1a;border-radius:6px;padding:8px 12px;margin-top:8px;font-size:0.72rem;color:#ccc;display:flex;justify-content:space-between;align-items:center;">
+      <span>🥊 <strong>Sig Strikes:</strong> <strong style="color:var(--gold)" id="nw-sig-f1">0</strong> vs <strong style="color:#74c0fc" id="nw-sig-f2">0</strong></span>
+      <span>🤼 <strong>Takedowns:</strong> <strong style="color:var(--gold)" id="nw-td-f1">0</strong> vs <strong style="color:#74c0fc" id="nw-td-f2">0</strong></span>
+      <span>⏱ <strong>Control:</strong> <span id="nw-ctrl-f1">0:00</span> vs <span id="nw-ctrl-f2">0:00</span></span>
+    </div>
     <div id="nw-score">
       <span class="nw-score-num" id="nw-score-1">0</span>
       <span class="nw-score-dash">—</span>
@@ -1374,6 +1380,21 @@ function updateFightUI(f1Name,f2Name,o1,o2,live,sport,switchGames){
         document.getElementById('nw-vol-capsule').textContent = 'Vol: ' + (stats.fightVolatility != null ? stats.fightVolatility : '70');
         document.getElementById('nw-f2-capsule').innerHTML = '<strong>' + f2Name + ':</strong> ' + f2Fin + ' · ' + f2Gas;
         document.getElementById('nw-capsule').style.display = 'flex';
+        // Poll live in-fight strikes and takedowns
+        fetch('/api/live-fight-stats?f1=' + encodeURIComponent(f1Name) + '&f2=' + encodeURIComponent(f2Name))
+          .then(r => r.json())
+          .then(ls => {
+            const row = document.getElementById('nw-live-stats');
+            if (ls && ls.available && ls.f1 && ls.f2) {
+              row.style.display = 'flex';
+              document.getElementById('nw-sig-f1').textContent = ls.f1.sigStrikesLanded;
+              document.getElementById('nw-sig-f2').textContent = ls.f2.sigStrikesLanded;
+              document.getElementById('nw-td-f1').textContent = ls.f1.takedownsLanded;
+              document.getElementById('nw-td-f2').textContent = ls.f2.takedownsLanded;
+              document.getElementById('nw-ctrl-f1').textContent = ls.f1.controlTime || '0:00';
+              document.getElementById('nw-ctrl-f2').textContent = ls.f2.controlTime || '0:00';
+            }
+          }).catch(() => {});
       }
     }).catch(() => {});
   const nw=document.getElementById('now-watching');

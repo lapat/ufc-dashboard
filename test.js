@@ -6747,7 +6747,7 @@ async function runTotalReturnTests() {
           live: true
         });
       }
-      assert.strictEqual(fakeRecord.oddsHistory.length, 600, 'Must have 600 points for 10 minutes');
+      assert(fakeRecord.oddsHistory.length === 600, 'Must have 600 points for 10 minutes');
     });
   } catch(e) { console.error('  ✗ AE5:', e.message); failed++; }
 
@@ -6770,10 +6770,10 @@ async function runTotalReturnTests() {
       const tmpFile = '/tmp/test_ae6_fight_ext.json';
       const saveRes = recSaveRecord('test_ae6_fight', fakeRecord, { filePath: tmpFile });
       assert(saveRes.saved, 'Save must succeed');
-      assert.strictEqual(saveRes.dataPoints, 600, 'Must report 600 dataPoints');
+      assert(saveRes.dataPoints === 600, 'Must report 600 dataPoints');
       const json = JSON.parse(require('fs').readFileSync(tmpFile, 'utf8'));
-      assert.strictEqual(json.dataPoints, 600, 'Saved JSON must have dataPoints: 600');
-      assert.strictEqual(json.oddsHistory.length, 600, 'Saved JSON must have 600 oddsHistory entries');
+      assert(json.dataPoints === 600, 'Saved JSON must have dataPoints: 600');
+      assert(json.oddsHistory.length === 600, 'Saved JSON must have 600 oddsHistory entries');
       require('fs').unlinkSync(tmpFile);
     });
   } catch(e) { console.error('  ✗ AE6:', e.message); failed++; }
@@ -6834,6 +6834,16 @@ async function runTotalReturnTests() {
       assert(carGas && carGas.risk === 'low', 'High-defense low-damage stats must be flagged as elite cardio');
     });
   } catch(e) { console.error('  ✗ AF5:', e.message); failed++; }
+  try {
+    await check('AF6: fetchLiveFightStats extracts real-time strikes, takedowns, and control time', async () => {
+      const { fetchLiveFightStats } = require('./live_fight_stats');
+      const stats = await fetchLiveFightStats('Merab Dvalishvili', 'Petr Yan');
+      assert(stats && stats.available === true, 'Stats must be available');
+      assert(stats.f1 && typeof stats.f1.sigStrikesLanded === 'number', 'f1 sigStrikesLanded must be a number');
+      assert(stats.f2 && typeof stats.f2.takedownsLanded === 'number', 'f2 takedownsLanded must be a number');
+    });
+  } catch(e) { console.error('  ✗ AF6:', e.message); failed++; }
+
 
 }
 
