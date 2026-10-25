@@ -115,6 +115,8 @@ function recSaveRecord(id, record, opts = {}) {
       pollStats:   record.stats || null,
       samples:     record.samples || [],
       samplePoints: (record.samples || []).length,
+      finalStats:  record.finalStats || null,
+      sharpConsensus: record.sharpConsensus || null,
     };
     // Never shrink an existing recording. If a file with this id already has at least as many
     // points, write this one beside it instead of replacing it. Both get backed up.

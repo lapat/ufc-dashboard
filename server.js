@@ -1456,10 +1456,21 @@ function extFilePath(sport, id) {
   return recFilePath(sport, id).replace(/\.json$/, '_ext.json');
 }
 
-function saveExtCapture(id) {
+async function saveExtCapture(id) {
   const record = recorderState.extCaptures.get(id);
   recorderState.extCaptures.delete(id);
   if (!record) return;
+
+  // Enrich with final strikes/takedowns and Pinnacle sharp consensus before saving
+  try {
+    const [finalStats, sharp] = await Promise.all([
+      fetchLiveFightStats(record.meta.fighter1, record.meta.fighter2).catch(() => null),
+      getSharpComparison(record.meta.fighter1, record.meta.fighter2).catch(() => null)
+    ]);
+    if (finalStats && finalStats.available) record.finalStats = finalStats;
+    if (sharp && sharp.hasSharpData) record.sharpConsensus = sharp;
+  } catch (_) {}
+
   const result = recSaveRecord(id, record, { filePath: extFilePath(record.meta.sport, id) });
   if (!result.saved) {
     console.error(`[ext-capture] SAVE FAILED for ${id}: ${result.reason}`);
