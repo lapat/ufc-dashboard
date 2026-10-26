@@ -535,14 +535,29 @@ function getFighterProfiles() {
 }
 
 function normFighter(s) {
-  return (s || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+  return (s || '')
+    .replace(/[łŁ]/g, 'l')
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]/g, '');
 }
 
 function lookupFighter(name, profiles) {
   if (!name || !profiles) return null;
   if (profiles[name]) return profiles[name];
   const q = normFighter(name);
-  return Object.values(profiles).find(p => normFighter(p.name) === q) || null;
+  const exact = Object.values(profiles).find(p => normFighter(p.name) === q);
+  if (exact) return exact;
+
+  // Fallback: match by last name
+  const parts = name.trim().split(/\s+/);
+  const lName = normFighter(parts[parts.length - 1]);
+  if (lName.length >= 4) {
+    const lastMatch = Object.values(profiles).find(p => normFighter(p.name).endsWith(lName));
+    if (lastMatch) return lastMatch;
+  }
+  return null;
 }
 
 // Live in-fight strikes, takedowns, and control time
