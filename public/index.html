@@ -1421,11 +1421,15 @@ function updateFightUI(f1Name,f2Name,o1,o2,live,sport,switchGames){
         document.getElementById('nw-f2-capsule').innerHTML = '<strong>' + f2Name + ':</strong> ' + f2Fin + ' · ' + f2Gas;
         document.getElementById('nw-capsule').style.display = 'flex';
         const fmtMethod = (p, name) => {
-          if (!p || !p.winMethods) return '';
-          const m = p.winMethods;
-          const ko = m['KO/TKO'] ? (m['KO/TKO'].split(' ')[1] || m['KO/TKO']) : '—';
-          const dec = m['DEC'] ? (m['DEC'].split(' ')[1] || m['DEC']) : '—';
-          const sub = m['SUB'] ? (m['SUB'].split(' ')[1] || m['SUB']) : '—';
+          if (!p) return '';
+          const m = p.winMethods || {};
+          if (!m['KO/TKO'] && !m['DEC'] && !m['SUB']) {
+            const rec = p.bio?.record ? (' (' + p.bio.record + ')') : '';
+            return name + ': 🌱 Octagon Debut' + rec;
+          }
+          const ko = m['KO/TKO'] ? (m['KO/TKO'].split(' ')[1] || m['KO/TKO']) : '0%';
+          const dec = m['DEC'] ? (m['DEC'].split(' ')[1] || m['DEC']) : '0%';
+          const sub = m['SUB'] ? (m['SUB'].split(' ')[1] || m['SUB']) : '0%';
           return name + ': ' + ko + ' KO · ' + dec + ' Dec · ' + sub + ' Sub';
         };
         document.getElementById('nw-f1-prop').textContent = fmtMethod(stats.f1, f1Name);

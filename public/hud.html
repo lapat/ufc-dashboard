@@ -607,10 +607,14 @@
             if (!p) return '';
             const m = p.winMethods || {};
             const pos = p.sigPositions || {};
-            const ko = m['KO/TKO'] ? m['KO/TKO'].split(' ')[1] || m['KO/TKO'] : '—';
-            const dec = m['DEC'] ? m['DEC'].split(' ')[1] || m['DEC'] : '—';
-            const sub = m['SUB'] ? m['SUB'].split(' ')[1] || m['SUB'] : '—';
-            const gnd = pos['Ground'] ? pos['Ground'].split(' ')[1] || pos['Ground'] : '';
+            if (!m['KO/TKO'] && !m['DEC'] && !m['SUB']) {
+              const rec = p.bio?.record ? (' (' + p.bio.record + ')') : '';
+              return '<strong>' + name + ':</strong> 🌱 Octagon Debut' + rec;
+            }
+            const ko = m['KO/TKO'] ? (m['KO/TKO'].split(' ')[1] || m['KO/TKO']) : '0%';
+            const dec = m['DEC'] ? (m['DEC'].split(' ')[1] || m['DEC']) : '0%';
+            const sub = m['SUB'] ? (m['SUB'].split(' ')[1] || m['SUB']) : '0%';
+            const gnd = pos['Ground'] ? (pos['Ground'].split(' ')[1] || pos['Ground']) : '';
             const gndTag = gnd && parseInt(gnd.replace(/[^0-9]/g,'')) >= 18 ? ' 🩸G&P' : '';
             return '<strong>' + name + ':</strong> ' + ko + ' KO · ' + dec + ' Dec · ' + sub + ' Sub' + gndTag;
           };

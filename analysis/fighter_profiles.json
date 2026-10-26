@@ -46,7 +46,24 @@
     },
     "volatility": 61,
     "cachedAt": "2026-10-23T19:41:44.321Z",
-    "source": "ufc_db.sqlite"
+    "source": "ufc_db.sqlite",
+    "winMethods": {
+      "KO/TKO": "4 (40%)",
+      "DEC": "1 (10%)",
+      "SUB": "5 (50%)"
+    },
+    "sigPositions": {
+      "Standing": "13 (37%)",
+      "Clinch": "1 (3%)",
+      "Ground": "21 (60%)"
+    },
+    "bio": {
+      "age": 25,
+      "height": 74.0,
+      "reach": 78.0,
+      "style": "MMA",
+      "record": "10-0-0"
+    }
   },
   "Adam Fugitt": {
     "name": "Adam Fugitt",
@@ -1448,7 +1465,24 @@
     },
     "volatility": 86,
     "cachedAt": "2026-10-23T19:41:44.322Z",
-    "source": "ufc_db.sqlite"
+    "source": "ufc_db.sqlite",
+    "winMethods": {
+      "KO/TKO": "6 (35%)",
+      "DEC": "0 (0%)",
+      "SUB": "11 (65%)"
+    },
+    "sigPositions": {
+      "Standing": "245 (51%)",
+      "Clinch": "87 (18%)",
+      "Ground": "152 (31%)"
+    },
+    "bio": {
+      "age": 30,
+      "height": 71.0,
+      "reach": 73.0,
+      "style": "MMA",
+      "record": "17-4-0"
+    }
   },
   "Billy Elekana": {
     "name": "Billy Elekana",
@@ -1629,7 +1663,24 @@
     },
     "volatility": 67,
     "cachedAt": "2026-10-23T19:41:44.322Z",
-    "source": "ufc_db.sqlite"
+    "source": "ufc_db.sqlite",
+    "winMethods": {
+      "KO/TKO": "6 (86%)",
+      "DEC": "0 (0%)",
+      "SUB": "1 (14%)"
+    },
+    "sigPositions": {
+      "Standing": "97 (71%)",
+      "Clinch": "29 (21%)",
+      "Ground": "11 (8%)"
+    },
+    "bio": {
+      "age": 32,
+      "height": 77.0,
+      "reach": 79.5,
+      "style": "Wrestler",
+      "record": "7-1-0"
+    }
   },
   "Brandon Moreno": {
     "name": "Brandon Moreno",
@@ -2174,7 +2225,24 @@
       "url": "https://www.ufc.com/athlete/casey-oneill"
     },
     "volatility": 80,
-    "cachedAt": "2026-06-14T13:04:10.012Z"
+    "cachedAt": "2026-06-14T13:04:10.012Z",
+    "winMethods": {
+      "KO/TKO": "4 (33%)",
+      "DEC": "5 (42%)",
+      "SUB": "3 (25%)"
+    },
+    "sigPositions": {
+      "Standing": "551 (81%)",
+      "Clinch": "31 (5%)",
+      "Ground": "96 (14%)"
+    },
+    "bio": {
+      "age": 29,
+      "height": 66.0,
+      "reach": 69.0,
+      "style": "MMA",
+      "record": "12-2-0"
+    }
   },
   "Cesar Almeida": {
     "name": "Cesar Almeida",
@@ -2850,7 +2918,24 @@
     },
     "volatility": 63,
     "cachedAt": "2026-10-23T19:41:44.323Z",
-    "source": "ufc_db.sqlite"
+    "source": "ufc_db.sqlite",
+    "winMethods": {
+      "KO/TKO": "10 (53%)",
+      "DEC": "6 (32%)",
+      "SUB": "3 (16%)"
+    },
+    "sigPositions": {
+      "Standing": "159 (91%)",
+      "Clinch": "9 (5%)",
+      "Ground": "7 (4%)"
+    },
+    "bio": {
+      "age": 30,
+      "height": 68.0,
+      "reach": 70.0,
+      "style": "Jiu-Jitsu",
+      "record": "19-5-0"
+    }
   },
   "Cub Swanson": {
     "name": "Cub Swanson",
@@ -4054,7 +4139,24 @@
     },
     "volatility": 85,
     "cachedAt": "2026-10-23T19:41:44.323Z",
-    "source": "ufc_db.sqlite"
+    "source": "ufc_db.sqlite",
+    "winMethods": {
+      "KO/TKO": "2 (33%)",
+      "DEC": "4 (67%)",
+      "SUB": "0 (0%)"
+    },
+    "sigPositions": {
+      "Standing": "409 (84%)",
+      "Clinch": "68 (14%)",
+      "Ground": "8 (2%)"
+    },
+    "bio": {
+      "age": 28,
+      "height": 69.0,
+      "reach": 71.0,
+      "style": "MMA",
+      "record": "6-2-2"
+    }
   },
   "Eryk Anders": {
     "name": "Eryk Anders",
@@ -4169,7 +4271,24 @@
     },
     "volatility": 37,
     "cachedAt": "2026-10-23T19:41:44.323Z",
-    "source": "ufc_db.sqlite"
+    "source": "ufc_db.sqlite",
+    "winMethods": {
+      "KO/TKO": "7 (39%)",
+      "DEC": "7 (39%)",
+      "SUB": "4 (22%)"
+    },
+    "sigPositions": {
+      "Standing": "278 (70%)",
+      "Clinch": "49 (12%)",
+      "Ground": "69 (17%)"
+    },
+    "bio": {
+      "age": 29,
+      "height": 73.0,
+      "reach": 75.0,
+      "style": "Kickboxer",
+      "record": "18-6-0"
+    }
   },
   "Fatima Kline": {
     "name": "Fatima Kline",
@@ -5670,7 +5789,24 @@
     },
     "volatility": 81,
     "cachedAt": "2026-10-23T19:41:44.324Z",
-    "source": "ufc_db.sqlite"
+    "source": "ufc_db.sqlite",
+    "winMethods": {
+      "KO/TKO": "3 (27%)",
+      "DEC": "3 (27%)",
+      "SUB": "5 (45%)"
+    },
+    "sigPositions": {
+      "Standing": "99 (77%)",
+      "Clinch": "17 (13%)",
+      "Ground": "13 (10%)"
+    },
+    "bio": {
+      "age": 27,
+      "height": 71.0,
+      "reach": 72.0,
+      "style": "Freestyle",
+      "record": "11-2-0"
+    }
   },
   "Jean Silva": {
     "name": "Jean Silva",
@@ -5868,7 +6004,24 @@
     },
     "volatility": 85,
     "cachedAt": "2026-10-23T19:41:44.325Z",
-    "source": "ufc_db.sqlite"
+    "source": "ufc_db.sqlite",
+    "winMethods": {
+      "KO/TKO": "28 (88%)",
+      "DEC": "1 (3%)",
+      "SUB": "3 (9%)"
+    },
+    "sigPositions": {
+      "Standing": "402 (78%)",
+      "Clinch": "39 (8%)",
+      "Ground": "77 (15%)"
+    },
+    "bio": {
+      "age": 34,
+      "height": 75.0,
+      "reach": 80.0,
+      "style": "Karate",
+      "record": "32-6-1"
+    }
   },
   "Joanderson Brito": {
     "name": "Joanderson Brito",
@@ -5983,7 +6136,24 @@
     },
     "volatility": 86,
     "cachedAt": "2026-10-23T19:41:44.325Z",
-    "source": "ufc_db.sqlite"
+    "source": "ufc_db.sqlite",
+    "winMethods": {
+      "KO/TKO": "5 (22%)",
+      "DEC": "1 (4%)",
+      "SUB": "17 (74%)"
+    },
+    "sigPositions": {
+      "Standing": "358 (78%)",
+      "Clinch": "46 (10%)",
+      "Ground": "54 (12%)"
+    },
+    "bio": {
+      "age": 33,
+      "height": 74.0,
+      "reach": 77.0,
+      "style": "Striker",
+      "record": "23-5-0"
+    }
   },
   "John Castaneda": {
     "name": "John Castaneda",
@@ -6743,7 +6913,24 @@
     },
     "volatility": 86,
     "cachedAt": "2026-10-23T19:41:44.326Z",
-    "source": "ufc_db.sqlite"
+    "source": "ufc_db.sqlite",
+    "winMethods": {
+      "KO/TKO": "3 (17%)",
+      "DEC": "14 (78%)",
+      "SUB": "1 (6%)"
+    },
+    "sigPositions": {
+      "Standing": "366 (85%)",
+      "Clinch": "53 (12%)",
+      "Ground": "12 (3%)"
+    },
+    "bio": {
+      "age": 31,
+      "height": 67.0,
+      "reach": 69.0,
+      "style": "Boxing",
+      "record": "18-9-1"
+    }
   },
   "Karine Silva": {
     "name": "Karine Silva",
@@ -7568,7 +7755,24 @@
     },
     "volatility": 67,
     "cachedAt": "2026-10-23T19:41:44.326Z",
-    "source": "ufc_db.sqlite"
+    "source": "ufc_db.sqlite",
+    "winMethods": {
+      "KO/TKO": "4 (40%)",
+      "DEC": "5 (50%)",
+      "SUB": "1 (10%)"
+    },
+    "sigPositions": {
+      "Standing": "270 (81%)",
+      "Clinch": "25 (8%)",
+      "Ground": "38 (11%)"
+    },
+    "bio": {
+      "age": 27,
+      "height": 66.0,
+      "reach": 67.0,
+      "style": "Kickboxer",
+      "record": "10-2-0"
+    }
   },
   "Loopy Godinez": {
     "name": "Loopy Godinez",
@@ -8030,7 +8234,24 @@
     },
     "volatility": 75,
     "cachedAt": "2026-10-23T19:41:44.327Z",
-    "source": "ufc_db.sqlite"
+    "source": "ufc_db.sqlite",
+    "winMethods": {
+      "KO/TKO": "7 (78%)",
+      "DEC": "0 (0%)",
+      "SUB": "2 (22%)"
+    },
+    "sigPositions": {
+      "Standing": "89 (49%)",
+      "Clinch": "25 (14%)",
+      "Ground": "69 (38%)"
+    },
+    "bio": {
+      "age": 28,
+      "height": 74.0,
+      "reach": 79.5,
+      "style": "Freestyle",
+      "record": "9-2-1"
+    }
   },
   "Mantas Kondratavicius": {
     "name": "Mantas Kondratavicius",
@@ -8046,7 +8267,24 @@
     },
     "volatility": 47,
     "cachedAt": "2026-10-23T19:41:44.327Z",
-    "source": "ufc_db.sqlite"
+    "source": "ufc_db.sqlite",
+    "winMethods": {
+      "KO/TKO": "6 (67%)",
+      "DEC": "1 (11%)",
+      "SUB": "2 (22%)"
+    },
+    "sigPositions": {
+      "Standing": "44 (55%)",
+      "Clinch": "18 (23%)",
+      "Ground": "18 (23%)"
+    },
+    "bio": {
+      "age": 27,
+      "height": 74.0,
+      "reach": 75.5,
+      "style": "MMA",
+      "record": "9-1-0"
+    }
   },
   "Marcin Tybura": {
     "name": "Marcin Tybura",
@@ -8458,7 +8696,24 @@
     },
     "volatility": 73,
     "cachedAt": "2026-10-23T19:41:44.327Z",
-    "source": "ufc_db.sqlite"
+    "source": "ufc_db.sqlite",
+    "winMethods": {
+      "KO/TKO": "10 (48%)",
+      "DEC": "4 (19%)",
+      "SUB": "7 (33%)"
+    },
+    "sigPositions": {
+      "Standing": "403 (71%)",
+      "Clinch": "27 (5%)",
+      "Ground": "140 (25%)"
+    },
+    "bio": {
+      "age": 33,
+      "height": 67.0,
+      "reach": 66.0,
+      "style": "Brazilian Jiu-Jitsu",
+      "record": "21-5-0"
+    }
   },
   "Matt Schnell": {
     "name": "Matt Schnell",
@@ -8771,7 +9026,24 @@
     },
     "volatility": 87,
     "cachedAt": "2026-10-23T19:41:44.328Z",
-    "source": "ufc_db.sqlite"
+    "source": "ufc_db.sqlite",
+    "winMethods": {
+      "KO/TKO": "6 (50%)",
+      "DEC": "6 (50%)",
+      "SUB": "0 (0%)"
+    },
+    "sigPositions": {
+      "Standing": "496 (92%)",
+      "Clinch": "30 (6%)",
+      "Ground": "13 (2%)"
+    },
+    "bio": {
+      "age": 25,
+      "height": 68.0,
+      "reach": 69.0,
+      "style": null,
+      "record": "12-5-0"
+    }
   },
   "Michael Chiesa": {
     "name": "Michael Chiesa",
@@ -9630,7 +9902,24 @@
       "url": "https://www.ufc.com/athlete/ode-osbourne"
     },
     "volatility": 62,
-    "cachedAt": "2026-06-14T13:05:17.465Z"
+    "cachedAt": "2026-06-14T13:05:17.465Z",
+    "winMethods": {
+      "KO/TKO": "6 (46%)",
+      "DEC": "3 (23%)",
+      "SUB": "4 (31%)"
+    },
+    "sigPositions": {
+      "Standing": "271 (83%)",
+      "Clinch": "16 (5%)",
+      "Ground": "40 (12%)"
+    },
+    "bio": {
+      "age": 34,
+      "height": 67.0,
+      "reach": 73.0,
+      "style": "Striker",
+      "record": "13-9-0"
+    }
   },
   "Ollie Schmid": {
     "name": "Ollie Schmid",
@@ -11066,7 +11355,24 @@
       "url": "https://www.ufc.com/athlete/sean-omalley"
     },
     "volatility": 61,
-    "cachedAt": "2026-06-14T13:05:30.061Z"
+    "cachedAt": "2026-06-14T13:05:30.061Z",
+    "winMethods": {
+      "KO/TKO": "13 (65%)",
+      "DEC": "6 (30%)",
+      "SUB": "1 (5%)"
+    },
+    "sigPositions": {
+      "Standing": "1099 (95%)",
+      "Clinch": "22 (2%)",
+      "Ground": "37 (3%)"
+    },
+    "bio": {
+      "age": 31,
+      "height": 71.0,
+      "reach": 72.0,
+      "style": null,
+      "record": "20-3-0"
+    }
   },
   "Sean Strickland": {
     "name": "Sean Strickland",
@@ -11478,7 +11784,24 @@
     },
     "volatility": 41,
     "cachedAt": "2026-10-23T19:41:44.330Z",
-    "source": "ufc_db.sqlite"
+    "source": "ufc_db.sqlite",
+    "winMethods": {
+      "KO/TKO": "13 (65%)",
+      "DEC": "6 (30%)",
+      "SUB": "1 (5%)"
+    },
+    "sigPositions": {
+      "Standing": "460 (82%)",
+      "Clinch": "41 (7%)",
+      "Ground": "59 (11%)"
+    },
+    "bio": {
+      "age": 30,
+      "height": 68.0,
+      "reach": 72.0,
+      "style": "Striker",
+      "record": "20-7-0"
+    }
   },
   "Sumudaerji": {
     "name": "Sumudaerji",
@@ -11857,7 +12180,24 @@
     },
     "volatility": 84,
     "cachedAt": "2026-10-23T19:41:44.330Z",
-    "source": "ufc_db.sqlite"
+    "source": "ufc_db.sqlite",
+    "winMethods": {
+      "KO/TKO": "4 (21%)",
+      "DEC": "7 (37%)",
+      "SUB": "8 (42%)"
+    },
+    "sigPositions": {
+      "Standing": "344 (73%)",
+      "Clinch": "28 (6%)",
+      "Ground": "97 (21%)"
+    },
+    "bio": {
+      "age": 31,
+      "height": 69.0,
+      "reach": 70.5,
+      "style": "MMA",
+      "record": "19-10-0"
+    }
   },
   "Thomas Gantt": {
     "name": "Thomas Gantt",
@@ -12682,7 +13022,24 @@
     },
     "volatility": 85,
     "cachedAt": "2026-10-23T19:41:44.330Z",
-    "source": "ufc_db.sqlite"
+    "source": "ufc_db.sqlite",
+    "winMethods": {
+      "KO/TKO": "4 (50%)",
+      "DEC": "1 (13%)",
+      "SUB": "3 (38%)"
+    },
+    "sigPositions": {
+      "Standing": "10 (100%)",
+      "Clinch": "0 (0%)",
+      "Ground": "0 (0%)"
+    },
+    "bio": {
+      "age": 26,
+      "height": 74.0,
+      "reach": null,
+      "style": "Judo",
+      "record": "8-2-0"
+    }
   },
   "Yousri Belgaroui": {
     "name": "Yousri Belgaroui",
@@ -13424,7 +13781,24 @@
     },
     "volatility": 65,
     "cachedAt": "2026-10-23T19:41:44.322Z",
-    "source": "ufc_db.sqlite"
+    "source": "ufc_db.sqlite",
+    "winMethods": {
+      "KO/TKO": "5 (25%)",
+      "DEC": "8 (40%)",
+      "SUB": "7 (35%)"
+    },
+    "sigPositions": {
+      "Standing": "703 (79%)",
+      "Clinch": "58 (7%)",
+      "Ground": "131 (15%)"
+    },
+    "bio": {
+      "age": 41,
+      "height": 69.0,
+      "reach": 74.0,
+      "style": "MMA",
+      "record": "20-7-0"
+    }
   },
   "Carol Foro": {
     "name": "Carol Foro",
@@ -13506,7 +13880,24 @@
     },
     "volatility": 79,
     "cachedAt": "2026-10-23T19:41:33.389Z",
-    "source": "ufc_db.sqlite"
+    "source": "ufc_db.sqlite",
+    "winMethods": {
+      "KO/TKO": "2 (25%)",
+      "DEC": "3 (38%)",
+      "SUB": "3 (38%)"
+    },
+    "sigPositions": {
+      "Standing": "123 (59%)",
+      "Clinch": "50 (24%)",
+      "Ground": "34 (16%)"
+    },
+    "bio": {
+      "age": 35,
+      "height": 68.5,
+      "reach": 68.0,
+      "style": "MMA",
+      "record": "8-4-0"
+    }
   },
   "Christian Rodriguez": {
     "name": "Christian Rodriguez",
@@ -13852,7 +14243,24 @@
     },
     "volatility": 80,
     "cachedAt": "2026-10-23T19:41:44.323Z",
-    "source": "ufc_db.sqlite"
+    "source": "ufc_db.sqlite",
+    "winMethods": {
+      "KO/TKO": "8 (62%)",
+      "DEC": "1 (8%)",
+      "SUB": "4 (31%)"
+    },
+    "sigPositions": {
+      "Standing": "192 (48%)",
+      "Clinch": "137 (34%)",
+      "Ground": "72 (18%)"
+    },
+    "bio": {
+      "age": 32,
+      "height": 73.0,
+      "reach": 74.0,
+      "style": "MMA",
+      "record": "13-7-0"
+    }
   },
   "Dustin Jacoby": {
     "name": "Dustin Jacoby",
@@ -14346,7 +14754,24 @@
     },
     "volatility": 65,
     "cachedAt": "2026-10-23T19:41:44.324Z",
-    "source": "ufc_db.sqlite"
+    "source": "ufc_db.sqlite",
+    "winMethods": {
+      "KO/TKO": "3 (20%)",
+      "DEC": "12 (80%)",
+      "SUB": "0 (0%)"
+    },
+    "sigPositions": {
+      "Standing": "787 (80%)",
+      "Clinch": "119 (12%)",
+      "Ground": "79 (8%)"
+    },
+    "bio": {
+      "age": 33,
+      "height": 65.0,
+      "reach": 67.5,
+      "style": "Striker",
+      "record": "15-8-0"
+    }
   },
   "Jack Jenkins": {
     "name": "Jack Jenkins",
@@ -14774,7 +15199,24 @@
     },
     "volatility": 76,
     "cachedAt": "2026-10-23T19:41:44.325Z",
-    "source": "ufc_db.sqlite"
+    "source": "ufc_db.sqlite",
+    "winMethods": {
+      "KO/TKO": "4 (44%)",
+      "DEC": "4 (44%)",
+      "SUB": "1 (11%)"
+    },
+    "sigPositions": {
+      "Standing": "79 (95%)",
+      "Clinch": "3 (4%)",
+      "Ground": "1 (1%)"
+    },
+    "bio": {
+      "age": 32,
+      "height": 67.0,
+      "reach": 71.5,
+      "style": "Freestyle",
+      "record": "9-2-0"
+    }
   },
   "Joseph Morales": {
     "name": "Joseph Morales",
@@ -15021,7 +15463,24 @@
     },
     "volatility": 64,
     "cachedAt": "2026-10-23T19:41:44.326Z",
-    "source": "ufc_db.sqlite"
+    "source": "ufc_db.sqlite",
+    "winMethods": {
+      "KO/TKO": "9 (38%)",
+      "DEC": "7 (29%)",
+      "SUB": "8 (33%)"
+    },
+    "sigPositions": {
+      "Standing": "503 (81%)",
+      "Clinch": "63 (10%)",
+      "Ground": "56 (9%)"
+    },
+    "bio": {
+      "age": 31,
+      "height": 67.0,
+      "reach": 72.5,
+      "style": "Boxing",
+      "record": "24-6-1"
+    }
   },
   "Lance Gibson": {
     "name": "Lance Gibson",
@@ -15037,7 +15496,24 @@
     },
     "volatility": 69,
     "cachedAt": "2026-10-23T19:41:44.326Z",
-    "source": "ufc_db.sqlite"
+    "source": "ufc_db.sqlite",
+    "winMethods": {
+      "KO/TKO": "5 (50%)",
+      "DEC": "2 (20%)",
+      "SUB": "3 (30%)"
+    },
+    "sigPositions": {
+      "Standing": "34 (79%)",
+      "Clinch": "9 (21%)",
+      "Ground": "0 (0%)"
+    },
+    "bio": {
+      "age": 31,
+      "height": 69.0,
+      "reach": 72.0,
+      "style": null,
+      "record": "10-2-0"
+    }
   },
   "Lawrence Lui": {
     "name": "Lawrence Lui",
@@ -15152,7 +15628,24 @@
     },
     "volatility": 89,
     "cachedAt": "2026-10-23T19:41:44.326Z",
-    "source": "ufc_db.sqlite"
+    "source": "ufc_db.sqlite",
+    "winMethods": {
+      "KO/TKO": "5 (100%)",
+      "DEC": "0 (0%)",
+      "SUB": "0 (0%)"
+    },
+    "sigPositions": {
+      "Standing": "43 (80%)",
+      "Clinch": "4 (7%)",
+      "Ground": "7 (13%)"
+    },
+    "bio": {
+      "age": 29,
+      "height": 72.0,
+      "reach": 76.5,
+      "style": "Striker",
+      "record": "5-2-0"
+    }
   },
   "Liu Ce": {
     "name": "Liu Ce",
@@ -15993,7 +16486,24 @@
     },
     "volatility": 55,
     "cachedAt": "2026-10-23T19:41:44.328Z",
-    "source": "ufc_db.sqlite"
+    "source": "ufc_db.sqlite",
+    "winMethods": {
+      "KO/TKO": "7 (70%)",
+      "DEC": "1 (10%)",
+      "SUB": "2 (20%)"
+    },
+    "sigPositions": {
+      "Standing": "52 (87%)",
+      "Clinch": "4 (7%)",
+      "Ground": "4 (7%)"
+    },
+    "bio": {
+      "age": 30,
+      "height": 74.0,
+      "reach": null,
+      "style": "Striker",
+      "record": "10-0-0"
+    }
   },
   "Murtazali Magomedov": {
     "name": "Murtazali Magomedov",
@@ -16405,7 +16915,24 @@
     },
     "volatility": 56,
     "cachedAt": "2026-10-23T19:41:44.329Z",
-    "source": "ufc_db.sqlite"
+    "source": "ufc_db.sqlite",
+    "winMethods": {
+      "KO/TKO": "3 (23%)",
+      "DEC": "4 (31%)",
+      "SUB": "6 (46%)"
+    },
+    "sigPositions": {
+      "Standing": "165 (72%)",
+      "Clinch": "18 (8%)",
+      "Ground": "45 (20%)"
+    },
+    "bio": {
+      "age": 22,
+      "height": 69.0,
+      "reach": 67.0,
+      "style": "Freestyle",
+      "record": "13-1-0"
+    }
   },
   "Regina Tarin": {
     "name": "Regina Tarin",
@@ -16619,7 +17146,24 @@
     },
     "volatility": 29,
     "cachedAt": "2026-10-23T19:41:44.329Z",
-    "source": "ufc_db.sqlite"
+    "source": "ufc_db.sqlite",
+    "winMethods": {
+      "KO/TKO": "18 (82%)",
+      "DEC": "3 (14%)",
+      "SUB": "1 (5%)"
+    },
+    "sigPositions": {
+      "Standing": "78 (83%)",
+      "Clinch": "0 (0%)",
+      "Ground": "16 (17%)"
+    },
+    "bio": {
+      "age": 31,
+      "height": 70.5,
+      "reach": 73.0,
+      "style": "MMA",
+      "record": "22-4-0"
+    }
   },
   "Santiago Ponzinibbio": {
     "name": "Santiago Ponzinibbio",
@@ -16866,7 +17410,24 @@
     },
     "volatility": 33,
     "cachedAt": "2026-10-23T19:41:44.330Z",
-    "source": "ufc_db.sqlite"
+    "source": "ufc_db.sqlite",
+    "winMethods": {
+      "KO/TKO": "3 (19%)",
+      "DEC": "8 (50%)",
+      "SUB": "5 (31%)"
+    },
+    "sigPositions": {
+      "Standing": "155 (87%)",
+      "Clinch": "16 (9%)",
+      "Ground": "8 (4%)"
+    },
+    "bio": {
+      "age": 30,
+      "height": 66.0,
+      "reach": 65.0,
+      "style": "MMA",
+      "record": "17-4-0"
+    }
   },
   "Tahir Abdullayev": {
     "name": "Tahir Abdullayev",
@@ -17047,7 +17608,24 @@
     },
     "volatility": 61,
     "cachedAt": "2026-10-23T19:41:44.330Z",
-    "source": "ufc_db.sqlite"
+    "source": "ufc_db.sqlite",
+    "winMethods": {
+      "KO/TKO": "9 (53%)",
+      "DEC": "7 (41%)",
+      "SUB": "1 (6%)"
+    },
+    "sigPositions": {
+      "Standing": "720 (87%)",
+      "Clinch": "34 (4%)",
+      "Ground": "76 (9%)"
+    },
+    "bio": {
+      "age": 35,
+      "height": 76.0,
+      "reach": 78.0,
+      "style": "Striker",
+      "record": "17-4-0"
+    }
   },
   "Yadier DelValle": {
     "name": "Yadier DelValle",
@@ -17063,7 +17641,24 @@
     },
     "volatility": 66,
     "cachedAt": "2026-10-23T19:41:44.330Z",
-    "source": "ufc_db.sqlite"
+    "source": "ufc_db.sqlite",
+    "winMethods": {
+      "KO/TKO": "3 (27%)",
+      "DEC": "4 (36%)",
+      "SUB": "4 (36%)"
+    },
+    "sigPositions": {
+      "Standing": "73 (48%)",
+      "Clinch": "51 (33%)",
+      "Ground": "29 (19%)"
+    },
+    "bio": {
+      "age": 30,
+      "height": 69.0,
+      "reach": 69.0,
+      "style": "MMA",
+      "record": "11-1-0"
+    }
   },
   "Yizha": {
     "name": "Yizha",
