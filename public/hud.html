@@ -249,6 +249,9 @@
         <span id="hud-f2-badge" style="color:var(--blue);text-align:right;"></span>
       </div>
       <div id="hud-vol-detail" style="font-size:0.65rem;color:#666;text-align:center;margin-top:2px;"></div>
+      <div id="hud-physical-row" style="font-size:0.68rem;color:#888;text-align:center;border-top:1px solid #181818;padding-top:4px;margin-top:2px;display:none;">
+        <span id="hud-physical-detail"></span>
+      </div>
       <div id="hud-sharp-row" style="font-size:0.68rem;color:var(--gold);text-align:center;border-top:1px solid #181818;padding-top:4px;margin-top:2px;display:none;">
         <span id="hud-sharp-badge" style="font-weight:700;"></span>: <span id="hud-sharp-detail" style="color:#aaa;"></span>
       </div>
@@ -278,6 +281,18 @@
     <div style="font-size:0.7rem;color:#777;margin-top:8px;display:flex;justify-content:space-between;border-top:1px solid #181818;padding-top:6px;">
       <span>Control Time: <strong style="color:#bbb" id="live-ctrl-f1">0:00</strong> vs <strong style="color:#bbb" id="live-ctrl-f2">0:00</strong></span>
       <span>Total Strikes: <strong style="color:#bbb" id="live-tot-strikes">— vs —</strong></span>
+    </div>
+    <!-- Live Momentum & Scorecard Predictor -->
+    <div style="margin-top:10px;border-top:1px solid #181818;padding-top:8px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.68rem;color:#aaa;margin-bottom:4px;">
+        <span>Momentum: <strong id="live-mom-f1" style="color:var(--gold)">50%</strong></span>
+        <span id="live-scorecard" style="color:var(--green);font-weight:700">⚖️ Scorecard: Tied</span>
+        <span><strong id="live-mom-f2" style="color:#74c0fc">50%</strong></span>
+      </div>
+      <div style="width:100%;height:6px;background:#1a1a1a;border-radius:3px;overflow:hidden;display:flex;">
+        <div id="bar-mom-f1" style="width:50%;background:var(--gold);transition:width 0.4s ease;"></div>
+        <div id="bar-mom-f2" style="width:50%;background:#74c0fc;transition:width 0.4s ease;"></div>
+      </div>
     </div>
   </div>
 
@@ -523,6 +538,31 @@
           document.getElementById('live-ctrl-f1').textContent = stats.f1.controlTime || '0:00';
           document.getElementById('live-ctrl-f2').textContent = stats.f2.controlTime || '0:00';
           document.getElementById('live-tot-strikes').textContent = stats.f1.totalStrikesLanded + ' vs ' + stats.f2.totalStrikesLanded;
+          // Momentum & Scorecard Predictor
+          if (stats.momentum) {
+            document.getElementById('live-mom-f1').textContent = stats.momentum.f1Pct + '%';
+            document.getElementById('live-mom-f2').textContent = stats.momentum.f2Pct + '%';
+            document.getElementById('bar-mom-f1').style.width = stats.momentum.f1Pct + '%';
+            document.getElementById('bar-mom-f2').style.width = stats.momentum.f2Pct + '%';
+          }
+          if (stats.scorecardEstimate) {
+            document.getElementById('live-scorecard').textContent = '⚖️ ' + stats.scorecardEstimate;
+          }
+
+          // Damage Taken Glow Indicator
+          const diff = (stats.f1.sigStrikesLanded || 0) - (stats.f2.sigStrikesLanded || 0);
+          const img1 = document.getElementById('f1-img');
+          const img2 = document.getElementById('f2-img');
+          if (diff >= 20) {
+            img2.style.boxShadow = '0 0 10px #ff444499'; img2.style.borderColor = '#ff4444';
+            img1.style.boxShadow = 'none'; img1.style.borderColor = '#222';
+          } else if (diff <= -20) {
+            img1.style.boxShadow = '0 0 10px #ff444499'; img1.style.borderColor = '#ff4444';
+            img2.style.boxShadow = 'none'; img2.style.borderColor = '#222';
+          } else {
+            img1.style.boxShadow = img2.style.boxShadow = 'none';
+            img1.style.borderColor = img2.style.borderColor = '#222';
+          }
           // Live Knockdown Alert Banner
           const kd1 = stats.f1.knockdowns || 0;
           const kd2 = stats.f2.knockdowns || 0;
@@ -556,6 +596,12 @@
           if (stats.f1?.gasTank?.detail) details.push(f1 + ': ' + stats.f1.gasTank.detail);
           if (stats.f2?.gasTank?.detail) details.push(f2 + ': ' + stats.f2.gasTank.detail);
           document.getElementById('hud-vol-detail').textContent = details.join(' | ');
+          // Physical Edge Matrix (Reach / Age Cliff / Style)
+          if (stats.physicalEdge && stats.physicalEdge.summary) {
+            const pRow = document.getElementById('hud-physical-row');
+            pRow.style.display = 'block';
+            document.getElementById('hud-physical-detail').textContent = stats.physicalEdge.summary;
+          }
           // Method of Victory & Striking Heatmap
           const formatProps = (p, name) => {
             if (!p) return '';

@@ -520,7 +520,7 @@ app.get('/api/fighter/:name', (req, res) => {
 });
 
 // ── Fighter career stats & volatility capsule ──────────────────────────────
-const { loadFighterProfiles, fightVolatilityScore, computeGasTankRating, computeFirstRoundFinisher } = require('./fighter_stats');
+const { loadFighterProfiles, fightVolatilityScore, computeGasTankRating, computeFirstRoundFinisher, computePhysicalEdge } = require('./fighter_stats');
 const { fetchLiveFightStats } = require('./live_fight_stats');
 const { getSharpComparison } = require('./sharp_consensus');
 const { predictCrossover } = require('./crossover_predictor');
@@ -600,10 +600,12 @@ app.get('/api/fighter-stats', (req, res) => {
         } catch (_) {}
       }
 
+      const physicalEdge = computePhysicalEdge(p1, p2);
       return res.json({
         f1: p1 ? {
           name: p1.name,
           stats: p1.stats,
+          bio: p1.bio || null,
           volatility: p1.volatility,
           winMethods: p1.winMethods || null,
           sigPositions: p1.sigPositions || null,
@@ -613,6 +615,7 @@ app.get('/api/fighter-stats', (req, res) => {
         f2: p2 ? {
           name: p2.name,
           stats: p2.stats,
+          bio: p2.bio || null,
           volatility: p2.volatility,
           winMethods: p2.winMethods || null,
           sigPositions: p2.sigPositions || null,
@@ -620,6 +623,7 @@ app.get('/api/fighter-stats', (req, res) => {
           finisher: computeFirstRoundFinisher(p2.stats)
         } : null,
         fightVolatility: fightVol,
+        physicalEdge,
         crossover
       });
     }

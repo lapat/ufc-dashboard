@@ -140,6 +140,31 @@ async function fetchLiveFightStats(f1Name, f2Name) {
     }
   }
 
+  // Calculate live momentum and judges scorecard estimate
+  if (result.f1 && result.f2) {
+    function parseCtrlSec(c) {
+      if (!c) return 0;
+      const parts = c.split(':').map(Number);
+      return (parts[0] || 0) * 60 + (parts[1] || 0);
+    }
+    const c1 = parseCtrlSec(result.f1.controlTime);
+    const c2 = parseCtrlSec(result.f2.controlTime);
+    const s1 = (result.f1.sigStrikesLanded * 1.0) + (result.f1.takedownsLanded * 5.0) + (c1 * 0.05) + (result.f1.knockdowns * 12.0);
+    const s2 = (result.f2.sigStrikesLanded * 1.0) + (result.f2.takedownsLanded * 5.0) + (c2 * 0.05) + (result.f2.knockdowns * 12.0);
+    const total = s1 + s2;
+    const f1Pct = total > 0 ? Math.round((s1 / total) * 100) : 50;
+    const f2Pct = 100 - f1Pct;
+
+    let estimate = 'Dead Heat (Projected Split)';
+    if (f1Pct - f2Pct > 15) estimate = result.f1.name + ' Dominant (Projected 30-27)';
+    else if (f1Pct - f2Pct > 4) estimate = result.f1.name + ' Ahead (Projected 29-28)';
+    else if (f2Pct - f1Pct > 15) estimate = result.f2.name + ' Dominant (Projected 30-27)';
+    else if (f2Pct - f1Pct > 4) estimate = result.f2.name + ' Ahead (Projected 29-28)';
+
+    result.momentum = { f1Pct, f2Pct };
+    result.scorecardEstimate = estimate;
+  }
+
   return result;
 }
 

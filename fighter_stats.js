@@ -295,7 +295,42 @@ function computeFirstRoundFinisher(stats) {
   };
 }
 
-module.exports = { loadFighterProfiles, getFighterVolatility, fightVolatilityScore, computeVolatility, computeGasTankRating, computeFirstRoundFinisher, extractAllFighters };
+function computePhysicalEdge(p1, p2) {
+  if (!p1 || !p2) return null;
+  const b1 = p1.bio || {};
+  const b2 = p2.bio || {};
+
+  const edges = {
+    f1: [],
+    f2: [],
+    reachDiff: null,
+    ageDiff: null,
+    summary: 'Physical Parity'
+  };
+
+  if (b1.reach && b2.reach) {
+    const diff = Math.round((b1.reach - b2.reach) * 10) / 10;
+    edges.reachDiff = diff;
+    if (diff >= 2.5) edges.f1.push('📏 +' + diff + '" Reach');
+    else if (diff <= -2.5) edges.f2.push('📏 +' + Math.abs(diff) + '" Reach');
+  }
+
+  if (b1.age && b2.age) {
+    edges.ageDiff = b1.age - b2.age;
+    if (b1.age >= 35) edges.f1.push('⚠️ Age Cliff (' + b1.age + ')');
+    if (b2.age >= 35) edges.f2.push('⚠️ Age Cliff (' + b2.age + ')');
+  }
+
+  if (edges.f1.length || edges.f2.length) {
+    const f1Str = edges.f1.length ? (p1.name + ': ' + edges.f1.join(', ')) : '';
+    const f2Str = edges.f2.length ? (p2.name + ': ' + edges.f2.join(', ')) : '';
+    edges.summary = [f1Str, f2Str].filter(Boolean).join(' | ');
+  }
+
+  return edges;
+}
+
+module.exports = { loadFighterProfiles, getFighterVolatility, fightVolatilityScore, computeVolatility, computeGasTankRating, computeFirstRoundFinisher, computePhysicalEdge, extractAllFighters };
 
 // ── Main (scraper CLI) ────────────────────────────────────────────────────────
 
