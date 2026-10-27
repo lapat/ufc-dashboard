@@ -22,7 +22,8 @@ const mockPayload = {
     multiCatalyst: { rate: 62.5, sample: 24, label: "Multi-Catalyst Stack (2+ Risk Triggers)" },
     reachAdvantage: { rate: 48.3, sample: 60, label: "Underdog Reach Advantage (>= +3.0\")" },
     ageCliff: { rate: 47.6, sample: 63, label: "Favorite Age Cliff (Age >= 35)" },
-    grapplerSuppression: { rate: 34.8, sample: 46, label: "Grappler Suppression (Fav TD Avg >= 2.5 vs Dog Bad TD Def)" }
+    grapplerSuppression: { rate: 34.8, sample: 46, label: "Grappler Suppression (Fav TD Avg >= 2.5 vs Dog Bad TD Def)" },
+    shortNotice: { winRate: 32.0, lossRate: 68.0, sub7WinRate: 28.0, label: "Short-Notice Replacement (<14 Days)" }
   },
   timing: {
     round1: 57,
@@ -44,6 +45,8 @@ test("Catalysts include verified edge multipliers", () => {
   assert.strictEqual(mockPayload.catalysts.dogHighDef.rate, 61.5);
   assert.strictEqual(mockPayload.catalysts.multiCatalyst.rate, 62.5);
   assert.strictEqual(mockPayload.catalysts.grapplerSuppression.rate, 34.8);
+  assert.strictEqual(mockPayload.catalysts.shortNotice.winRate, 32.0);
+  assert.strictEqual(mockPayload.catalysts.shortNotice.lossRate, 68.0);
 });
 
 test("Hall of fame entries have required link and odds fields", () => {

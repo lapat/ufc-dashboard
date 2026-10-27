@@ -295,6 +295,30 @@ function computeFirstRoundFinisher(stats) {
   };
 }
 
+
+function checkShortNotice(fighterName) {
+  try {
+    const regPath = path.join(__dirname, "analysis", "short_notice_registry.json");
+    if (!fs.existsSync(regPath)) return null;
+    const reg = JSON.parse(fs.readFileSync(regPath, "utf8"));
+    const normTarget = (fighterName || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]/g, "");
+    for (const [name, info] of Object.entries(reg.replacements || {})) {
+      const n = name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]/g, "");
+      if (n === normTarget) {
+        return {
+          isShortNotice: true,
+          daysNotice: info.daysNotice,
+          opponent: info.opponent,
+          notes: info.notes,
+          badge: "⚠️ Short Notice (" + info.daysNotice + "d)",
+          strategy: "High Round 2 cardio fade risk (68% loss rate)"
+        };
+      }
+    }
+  } catch (_) {}
+  return null;
+}
+
 function computePhysicalEdge(p1, p2) {
   if (!p1 || !p2) return null;
   const b1 = p1.bio || {};
@@ -321,6 +345,11 @@ function computePhysicalEdge(p1, p2) {
     if (b2.age >= 35) edges.f2.push('⚠️ Age Cliff (' + b2.age + ')');
   }
 
+  const sn1 = checkShortNotice(p1?.name);
+  const sn2 = checkShortNotice(p2?.name);
+  if (sn1) edges.f1.push(sn1.badge);
+  if (sn2) edges.f2.push(sn2.badge);
+
   if (edges.f1.length || edges.f2.length) {
     const f1Str = edges.f1.length ? (p1.name + ': ' + edges.f1.join(', ')) : '';
     const f2Str = edges.f2.length ? (p2.name + ': ' + edges.f2.join(', ')) : '';
@@ -330,7 +359,7 @@ function computePhysicalEdge(p1, p2) {
   return edges;
 }
 
-module.exports = { loadFighterProfiles, getFighterVolatility, fightVolatilityScore, computeVolatility, computeGasTankRating, computeFirstRoundFinisher, computePhysicalEdge, extractAllFighters };
+module.exports = { loadFighterProfiles, getFighterVolatility, fightVolatilityScore, computeVolatility, computeGasTankRating, computeFirstRoundFinisher, computePhysicalEdge, checkShortNotice, extractAllFighters };
 
 // ── Main (scraper CLI) ────────────────────────────────────────────────────────
 
