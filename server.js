@@ -206,6 +206,14 @@ app.get('/extension', (req, res) => {
 // Patterns page
 app.get('/patterns', (req, res) => { res.sendFile(path.join(__dirname, 'public', 'patterns.html')); });
 
+// Film Room & Fight Tape (Last 3 fights for Ish)
+const { getUpcomingFilmRoomCard } = require('./tape_engine');
+app.get('/api/film-room', (req, res) => {
+  try { res.json(getUpcomingFilmRoomCard()); }
+  catch (e) { res.status(500).json({ error: e.message }); }
+});
+app.get('/tape', (req, res) => { res.sendFile(path.join(__dirname, 'public', 'tape.html')); });
+
 // Settled bets (from the P&L ledger) that belong to a fight: the selection is one of the fighters,
 // and the bet was placed from an hour before the fight started until 10 min after it ended.
 function betsOnFight(fightTitle, startTime, endTime, user) {

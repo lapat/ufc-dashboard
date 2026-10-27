@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Bet Bot — The Film Room (Automated Fight Tape)</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:#0a0a0a;color:#ccc;font-feature-settings:"tnum" 1;font-family:"SF Mono",monospace;font-size:13px;line-height:1.5}
+    a{color:inherit;text-decoration:none}
+    #topbar{display:flex;align-items:center;background:#111;border-bottom:1px solid #1e1e1e;padding:0 24px;gap:16px;position:sticky;top:0;z-index:50}
+    #topbar h1{color:#e8b84b;font-size:0.9rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:13px 0;white-space:nowrap}
+    .nav-link{font-size:0.65rem;color:#555;padding:4px 8px;border-radius:3px;border:1px solid #222;transition:all .15s}
+    .nav-link:hover{color:#888;border-color:#333}
+    .nav-active{font-size:0.65rem;color:#e8b84b;padding:4px 8px;border:1px solid #3a2a0a;border-radius:3px;background:#e8b84b0d}
+    #main{max-width:1150px;margin:0 auto;padding:24px 16px}
+    .section-title{font-size:0.65rem;color:#e8b84b;text-transform:uppercase;letter-spacing:2px;margin:20px 0 12px;display:flex;align-items:center;gap:8px}
+    .section-title::after{content:"";flex:1;height:1px;background:#1c1c1c}
+    .carousel-wrap{overflow-x:auto;padding-bottom:8px;margin-bottom:20px;scrollbar-width:thin}
+    .bout-carousel{display:flex;gap:8px;white-space:nowrap}
+    .bout-pill{background:#111;border:1px solid #222;border-radius:6px;padding:8px 14px;cursor:pointer;font-size:0.75rem;color:#aaa;transition:all .15s;display:flex;align-items:center;gap:6px}
+    .bout-pill:hover{border-color:#444;color:#eee;background:#141414}
+    .bout-pill.active{border-color:#e8b84b;color:#e8b84b;background:#1a150b;font-weight:700}
+    .theater-box{background:#111;border:1px solid #1f1f1f;border-radius:8px;overflow:hidden;margin-bottom:24px}
+    .theater-header{padding:12px 16px;background:#141414;border-bottom:1px solid #222;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+    .th-title{font-size:0.8rem;font-weight:700;color:#eee}
+    .th-links{display:flex;gap:8px}
+    .th-btn{font-size:0.65rem;padding:4px 10px;border-radius:4px;border:1px solid #333;background:#181818;color:#ccc;transition:all .15s}
+    .th-btn:hover{border-color:#e8b84b;color:#e8b84b}
+    .th-btn.gold{background:#e8b84b1a;border-color:#e8b84b55;color:#e8b84b;font-weight:700}
+    .video-container{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:#050505}
+    .video-container iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+    .theater-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;height:340px;color:#444;font-size:0.8rem;gap:10px}
+    .matchup-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px}
+    @media(max-width:768px){.matchup-grid{grid-template-columns:1fr}}
+    .fighter-col{background:#111;border:1px solid #1c1c1c;border-radius:8px;padding:16px}
+    .f-header{display:flex;justify-content:space-between;align-items:baseline;padding-bottom:10px;margin-bottom:12px;border-bottom:1px solid #1a1a1a}
+    .f-name{font-size:1.1rem;font-weight:800;color:#eee}
+    .f-corner{font-size:0.65rem;text-transform:uppercase;letter-spacing:1px;padding:2px 6px;border-radius:3px}
+    .corner-red{color:#ff6b6b;background:#ff6b6b15;border:1px solid #ff6b6b33}
+    .corner-blue{color:#74c0fc;background:#74c0fc15;border:1px solid #74c0fc33}
+    .bouts-list{display:flex;flex-direction:column;gap:10px}
+    .bout-card{background:#161616;border:1px solid #242424;border-radius:6px;padding:12px 14px;transition:all .15s}
+    .bout-card:hover{border-color:#3a3a3a;background:#191919}
+    .bc-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+    .bc-opp{font-size:0.85rem;font-weight:700;color:#ddd}
+    .bc-badge{font-size:0.65rem;font-weight:800;padding:2px 6px;border-radius:3px}
+    .bc-badge.win{color:#69db7c;background:#69db7c15;border:1px solid #69db7c33}
+    .bc-badge.loss{color:#ff6b6b;background:#ff6b6b15;border:1px solid #ff6b6b33}
+    .bc-badge.dec{color:#e8b84b;background:#e8b84b15;border:1px solid #e8b84b33}
+    .bc-meta{font-size:0.68rem;color:#777;margin-bottom:10px}
+    .bc-actions{display:flex;gap:6px;flex-wrap:wrap}
+    .bc-btn{font-size:0.62rem;padding:4px 8px;border-radius:3px;border:1px solid #303030;background:#1a1a1a;color:#aaa;cursor:pointer;transition:all .15s}
+    .bc-btn:hover{border-color:#e8b84b;color:#e8b84b;background:#201c13}
+    .bc-btn.play{background:#e8b84b1a;border-color:#e8b84b44;color:#e8b84b;font-weight:700}
+    .notes-box{background:#111;border:1px solid #1c1c1c;border-radius:8px;padding:16px}
+    .notes-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
+    .notes-area{width:100%;height:90px;background:#080808;border:1px solid #222;border-radius:4px;color:#ddd;padding:10px;font-family:inherit;font-size:0.75rem;resize:vertical}
+    .notes-area:focus{outline:none;border-color:#e8b84b}
+    .notes-saved{font-size:0.65rem;color:#69db7c;display:none}
+    #loading{color:#444;padding:40px 0;text-align:center}
+  </style>
+</head>
+<body>
+<div id="topbar">
+  <h1>⚡ Bet Bot</h1>
+  <a href="/" class="nav-link">← Live</a>
+  <a href="/library" class="nav-link">Library</a>
+  <a href="/patterns" class="nav-link">Patterns</a>
+  <span class="nav-active">Tape</span>
+</div>
+<div id="main">
+  <div id="loading">Loading upcoming fight card tape queue...</div>
+  <div id="content" style="display:none">
+    <div class="section-title">Upcoming Fight Card Tape Queue</div>
+    <div class="carousel-wrap"><div class="bout-carousel" id="carousel"></div></div>
+    <div class="theater-box">
+      <div class="theater-header">
+        <span class="th-title" id="th-label">▶ Select a fight tape below to load in player</span>
+        <div class="th-links" id="th-ext-links" style="display:none">
+          <a href="#" target="_blank" class="th-btn gold" id="th-fp">🥋 Watch on Fight Pass</a>
+          <a href="#" target="_blank" class="th-btn" id="th-espn">📺 ESPN+ Stream</a>
+          <a href="#" target="_blank" class="th-btn" id="th-yt">YouTube Page &rarr;</a>
+        </div>
+      </div>
+      <div class="video-container" id="video-wrap">
+        <div class="theater-empty" id="empty-state">
+          <span>🥋 High-Definition Fight Replay Theater</span>
+          <span style="font-size:0.7rem;color:#555">Click "[▶ Load in Theater]" on any past bout below to start watching</span>
+        </div>
+        <iframe id="video-frame" style="display:none" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+      </div>
+    </div>
+    <div class="section-title" id="matchup-header">Head-to-Head Fight Tape (Last 3 Bouts Each)</div>
+    <div class="matchup-grid">
+      <div class="fighter-col" id="col-f1">
+        <div class="f-header"><span class="f-name" id="f1-name">—</span><span class="f-corner corner-red">Red Corner</span></div>
+        <div class="bouts-list" id="f1-bouts"></div>
+      </div>
+      <div class="fighter-col" id="col-f2">
+        <div class="f-header"><span class="f-name" id="f2-name">—</span><span class="f-corner corner-blue">Blue Corner</span></div>
+        <div class="bouts-list" id="f2-bouts"></div>
+      </div>
+    </div>
+    <div class="notes-box">
+      <div class="notes-header">
+        <span style="font-size:0.75rem;font-weight:700;color:#eee">Ish's Scouting Tendencies & Notes for this Matchup</span>
+        <span class="notes-saved" id="notes-status">✓ Saved locally</span>
+      </div>
+      <textarea class="notes-area" id="notes-input" placeholder="Record fighter fatigue points, leg kick vulnerabilities, takedown defense holes, or coaching corner instructions... (Auto-saves to browser)"></textarea>
+    </div>
+  </div>
+</div>
+<script>
+let _cardData = null;
+let _selectedBoutIdx = 0;
+async function loadFilmRoom() {
+  try {
+    const res = await fetch("/api/film-room");
+    _cardData = await res.json();
+    document.getElementById("loading").style.display = "none";
+    document.getElementById("content").style.display = "block";
+    renderCarousel();
+    selectBout(0);
+  } catch (err) {
+    document.getElementById("loading").textContent = "Failed to load film room data: " + err.message;
+  }
+}
+function renderCarousel() {
+  const container = document.getElementById("carousel");
+  container.innerHTML = "";
+  _cardData.card.forEach((bout, idx) => {
+    const pill = document.createElement("button");
+    pill.className = "bout-pill" + (idx === _selectedBoutIdx ? " active" : "");
+    pill.innerHTML = "<span>🥊</span> <span>" + bout.fighter1.name + " vs " + bout.fighter2.name + "</span>";
+    pill.onclick = () => selectBout(idx);
+    container.appendChild(pill);
+  });
+}
+function selectBout(idx) {
+  _selectedBoutIdx = idx;
+  const bout = _cardData.card[idx];
+  if (!bout) return;
+  document.querySelectorAll(".bout-pill").forEach((el, i) => {
+    el.className = "bout-pill" + (i === idx ? " active" : "");
+  });
+  document.getElementById("f1-name").textContent = bout.fighter1.name;
+  document.getElementById("f2-name").textContent = bout.fighter2.name;
+  document.getElementById("matchup-header").textContent = "Head-to-Head: " + bout.fighter1.name + " vs " + bout.fighter2.name;
+  renderBoutsList("f1-bouts", bout.fighter1.name, bout.fighter1.tape);
+  renderBoutsList("f2-bouts", bout.fighter2.name, bout.fighter2.tape);
+  const savedNotes = localStorage.getItem("betbot_tape_notes_" + bout.boutId) || "";
+  const notesEl = document.getElementById("notes-input");
+  notesEl.value = savedNotes;
+  notesEl.oninput = () => {
+    localStorage.setItem("betbot_tape_notes_" + bout.boutId, notesEl.value);
+    const st = document.getElementById("notes-status");
+    st.style.display = "inline";
+    setTimeout(() => { st.style.display = "none"; }, 1500);
+  };
+}
+function renderBoutsList(elemId, fighterName, tape) {
+  const container = document.getElementById(elemId);
+  container.innerHTML = "";
+  if (!tape || tape.length === 0) {
+    container.innerHTML = "<div style=\"font-size:0.7rem;color:#555\">No past UFC bouts found.</div>";
+    return;
+  }
+  tape.forEach((b, i) => {
+    const card = document.createElement("div");
+    card.className = "bout-card";
+    const resClass = (b.result || "").toLowerCase();
+    const topHtml = "<div class=\"bc-top\"><span class=\"bc-opp\">" + (b.matchup || b.opponent) + "</span><span class=\"bc-badge " + resClass + "\">" + (b.result || "DEC") + "</span></div>";
+    const metaHtml = "<div class=\"bc-meta\">" + b.date + " · Round " + b.round + " (" + b.time + ") · " + b.method + "</div>";
+    const btnPlay = document.createElement("button");
+    btnPlay.className = "bc-btn play";
+    btnPlay.textContent = "▶ Load in Theater";
+    btnPlay.onclick = () => playInTheater(fighterName, b.matchup, b.links.youtubeEmbed, b.links.fightPass, b.links.espn, b.links.youtube);
+    const btnFp = document.createElement("a");
+    btnFp.className = "bc-btn";
+    btnFp.target = "_blank";
+    btnFp.href = b.links.fightPass;
+    btnFp.textContent = "🥋 Fight Pass";
+    const btnEspn = document.createElement("a");
+    btnEspn.className = "bc-btn";
+    btnEspn.target = "_blank";
+    btnEspn.href = b.links.espn;
+    btnEspn.textContent = "📺 ESPN+";
+    const btnYt = document.createElement("a");
+    btnYt.className = "bc-btn";
+    btnYt.target = "_blank";
+    btnYt.href = b.links.youtube;
+    btnYt.textContent = "YouTube →";
+    const actions = document.createElement("div");
+    actions.className = "bc-actions";
+    actions.appendChild(btnPlay);
+    actions.appendChild(btnFp);
+    actions.appendChild(btnEspn);
+    actions.appendChild(btnYt);
+    card.innerHTML = topHtml + metaHtml;
+    card.appendChild(actions);
+    container.appendChild(card);
+  });
+}
+function playInTheater(fighter, matchup, embedUrl, fpUrl, espnUrl, ytUrl) {
+  document.getElementById("th-label").textContent = "▶ " + matchup;
+  const ext = document.getElementById("th-ext-links");
+  ext.style.display = "flex";
+  document.getElementById("th-fp").href = fpUrl;
+  document.getElementById("th-espn").href = espnUrl;
+  document.getElementById("th-yt").href = ytUrl;
+  const frame = document.getElementById("video-frame");
+  const empty = document.getElementById("empty-state");
+  empty.style.display = "none";
+  frame.style.display = "block";
+  frame.src = embedUrl;
+  document.querySelector(".theater-box").scrollIntoView({ behavior: "smooth", block: "start" });
+}
+loadFilmRoom();
+</script>
+</body>
+</html>
