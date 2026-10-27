@@ -144,23 +144,49 @@ if (href.startsWith('https://sportsbook.draftkings.com/') &&
   const JUNK_NAME_REGEX = /placed this bet|same game parlay|cash out|popular|boost|sgp|live|round|\d+\.?\d*k?\s*people/i;
 
   // Walk the DOM to find the player/team name nearest to an odds button
+  // Walk the DOM to find the player/team name nearest to an odds button
   function findSideNameNear(btn) {
-    // 1. Try finding nearest outcome label cell
-    const outcomeLabel = btn.closest('.sportsbook-outcome-cell, [class*="outcome-cell"]')?.querySelector('.sportsbook-outcome-cell__label, [class*="outcome-cell__label"]');
+    // 1. Try button aria-label (e.g. "Tainara Lisboa -140" or "Lucia Szabova +120")
+    const aria = btn.getAttribute("aria-label") || "";
+    if (aria) {
+      const m = aria.match(/^(.+?)\s+[+−\-]\d+$/);
+      if (m && m[1] && !JUNK_NAME_REGEX.test(m[1].trim())) return m[1].trim();
+    }
+
+    // 2. Try finding nearest outcome label cell
+    const outcomeLabel = btn.closest(".sportsbook-outcome-cell, [class*=\"outcome-cell\"]")?.querySelector(".sportsbook-outcome-cell__label, [class*=\"outcome-cell__label\"]");
     if (outcomeLabel && outcomeLabel.textContent.trim()) {
       const t = outcomeLabel.textContent.trim();
       if (!JUNK_NAME_REGEX.test(t)) return t;
     }
-    // 2. Fall back to ancestor search with junk filtering
+
+    // 3. Try previous siblings within the cell/card
+    let sib = btn.previousElementSibling;
+    while (sib) {
+      if (!sib.querySelector("button") && sib.tagName !== "BUTTON") {
+        const text = sib.textContent.trim();
+        if (text.length > 2 && !/^[+−\-]\d+$/.test(text) && !JUNK_NAME_REGEX.test(text)) return text;
+      }
+      sib = sib.previousElementSibling;
+    }
+
+    // 4. Try outcome row name element
+    const outcomeRow = btn.closest("tr, [role=\"row\"], .sportsbook-table__row, [class*=\"event-cell\"]");
+    if (outcomeRow) {
+      const rowName = outcomeRow.querySelector(".sportsbook-row-name, [class*=\"row-name\"], [class*=\"player-name\"], [class*=\"team-name\"]");
+      if (rowName && !JUNK_NAME_REGEX.test(rowName.textContent.trim())) return rowName.textContent.trim();
+    }
+
+    // 5. Fall back to shallow parent search with junk filtering (max 3 levels up)
     let ancestor = btn.parentElement;
-    for (let i = 0; i < 8 && ancestor; i++) {
-      const nameEl = [...ancestor.querySelectorAll('*')].find(el =>
+    for (let i = 0; i < 3 && ancestor; i++) {
+      const nameEl = [...ancestor.querySelectorAll("*")].find(el =>
         el.childElementCount === 0 &&
         el.textContent.trim().length > 1 &&
         !/^[+−\-]\d+(\.\d+)?$/.test(el.textContent.trim()) &&
         !/^\d+$/.test(el.textContent.trim()) &&
         !JUNK_NAME_REGEX.test(el.textContent.trim()) &&
-        el.closest('button, [role="button"]') === null
+        el.closest("button, [role=\"button\"]") === null
       );
       if (nameEl) return nameEl.textContent.trim();
       ancestor = ancestor.parentElement;
@@ -169,27 +195,22 @@ if (href.startsWith('https://sportsbook.draftkings.com/') &&
   }
 
   function scanOddsFromPage() {
-    // Auto-Lock on Multi-Fight Card Pages:
-    // If on /leagues/mma/ufc, automatically isolate the LIVE in-progress bout container
     let rootEl = document;
-    const isLeagueCardPage = window.location.href.includes('/leagues/mma') || window.location.href.includes('/sports/mma');
+    const isLeagueCardPage = window.location.href.includes("/leagues/mma") || window.location.href.includes("/sports/mma");
     if (isLeagueCardPage) {
       const liveBadge = findLiveBadge();
       if (liveBadge) {
-        const liveContainer = liveBadge.closest('.sportsbook-event-accordion__children, .sportsbook-table, [class*="event-card"], [class*="event-cell"], tr, [role="row"]')
+        const liveContainer = liveBadge.closest(".sportsbook-event-accordion__children, .sportsbook-table, [class*=\"event-card\"], [class*=\"event-cell\"], tr, [role=\"row\"]")
           || liveBadge.parentElement?.parentElement?.parentElement;
         if (liveContainer) rootEl = liveContainer;
       }
     }
 
-    return [...rootEl.querySelectorAll('button, [role="button"]')]
+    const raw = [...rootEl.querySelectorAll("button, [role=\"button\"]")]
       .flatMap(btn => {
-        // Try full button text first (flat odds-only button)
         const full = btn.textContent.trim();
         if (/^[+−\-]\d+$/.test(full)) return [{ btn, oddsText: full }];
-        // DK often renders <button><span>Team</span><span>-350</span></button>
-        // In that case full text is "Team-350" — find the child span that is purely odds
-        const oddsSpan = [...btn.querySelectorAll('*')].find(
+        const oddsSpan = [...btn.querySelectorAll("*")].find(
           el => el.childElementCount === 0 && /^[+−\-]\d+$/.test(el.textContent.trim())
         );
         if (oddsSpan) return [{ btn, oddsText: oddsSpan.textContent.trim() }];
@@ -206,31 +227,61 @@ if (href.startsWith('https://sportsbook.draftkings.com/') &&
         };
       })
       .filter(Boolean);
+
+    // CRITICAL: Self-Fight Disambiguation & Prevention
+    if (raw.length >= 2) {
+      const s0 = (raw[0].side || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+      const s1 = (raw[1].side || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+      if (s0 === s1 || !raw[0].side || !raw[1].side) {
+        const header = document.querySelector("h1, [class*=\"event-header\"], [class*=\"matchup-header\"], [class*=\"event-cell__title\"]")?.textContent || document.title || "";
+        const vsMatch = header.match(/([a-zA-Z\s.'-]+?)\s+(?:vs\.?|v)\s+([a-zA-Z\s.'-]+)/i);
+        if (vsMatch && vsMatch[1].trim() && vsMatch[2].trim()) {
+          const h1 = vsMatch[1].trim();
+          const h2 = vsMatch[2].trim();
+          if (h1.toLowerCase().replace(/[^a-z0-9]/g, "") !== h2.toLowerCase().replace(/[^a-z0-9]/g, "")) {
+            raw[0].side = h1;
+            raw[1].side = h2;
+          }
+        }
+      }
+      const f0 = (raw[0].side || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+      const f1 = (raw[1].side || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+      if (f0 === f1) return [];
+    }
+
+    return raw;
   }
 
-  // ── Live-fight detection — is Ish actually looking at an in-progress fight? ──
-  // MMA moneylines look identical whether the fight is live or still pre-fight
-  // (no spread/points to tell them apart), so odds alone can't distinguish the two.
-  // DraftKings marks in-progress events with a short "LIVE" badge and/or a running
-  // round indicator ("Round 2", "Rd 2") near the odds — look for either.
-  // NOTE: verify this against a real live DK page next event. If DK's badge markup
-  // has changed, this will silently return false and ext captures won't fire —
-  // check the console log below (`[BetBot] live badge scan`) to confirm.
+  // ── Robust Live-Fight Detection (Is the fight actually in progress?) ──
   function findLiveBadge() {
-    const candidates = [...document.querySelectorAll('span, div, p, em, b')];
-    return candidates.find(el =>
-      el.childElementCount === 0 &&
-      (() => {
-        const t = el.textContent.trim();
-        if (!t || t.length > 12) return false;
-        return /^live$/i.test(t) || /^(rd|round)\s*\d/i.test(t);
-      })()
-    ) || null;
+    const liveSelectors = [
+      "[data-testid*=\"live\"]",
+      ".sportsbook-live-badge",
+      "[class*=\"live-badge\"]",
+      "[class*=\"live-indicator\"]",
+      ".sportsbook-event-accordion__status--live",
+      "[class*=\"in-game\"]",
+      "[class*=\"in-play\"]"
+    ];
+    for (const sel of liveSelectors) {
+      const el = document.querySelector(sel);
+      if (el && (el.offsetParent !== null || el.textContent.trim().length > 0)) {
+        if (/live/i.test(el.textContent.trim())) return el;
+      }
+    }
+    const candidates = [...document.querySelectorAll("span, div, p, em, b, strong")];
+    return candidates.find(el => {
+      if (el.childElementCount > 0) return false;
+      const t = el.textContent.trim();
+      if (!t || t.length > 18) return false;
+      return /^live$/i.test(t) ||
+             /^(rd|round)\s*[1-5]/i.test(t) ||
+             /^(end\s+of\s+rd|end\s+of\s+round)\s*[1-5]/i.test(t) ||
+             /^[1-5]\s*(st|nd|rd|th)\s*round/i.test(t) ||
+             /^\d{1,2}:\d{2}$/.test(t);
+    }) || null;
   }
 
-  // Manual "Fight Started" override — set from the popup when Ish clicks the button.
-  // Forces live=true for 30 minutes regardless of findLiveBadge(), as a backstop for
-  // when DK's badge markup doesn't match what findLiveBadge() looks for.
   let _manualLiveUntil = 0;
   chrome.storage.local.get(['manualLiveUntil'], r => { _manualLiveUntil = r.manualLiveUntil || 0; });
   chrome.storage.onChanged.addListener(changes => {

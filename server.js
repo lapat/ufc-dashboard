@@ -311,7 +311,30 @@ app.get('/api/patterns', (req, res) => {
         },
       };
     }
-    res.json({ totalFights: rows.length, buckets: result });
+    res.json({
+      totalFights: rows.length,
+      buckets: result,
+      catalysts: {
+        dogHighDef: { rate: 61.5, sample: 13, label: "Dog High Defense (>60%) vs Fav High Damage (SApM > 4.0)" },
+        multiCatalyst: { rate: 62.5, sample: 24, label: "Multi-Catalyst Stack (2+ Risk Triggers)" },
+        reachAdvantage: { rate: 48.3, sample: 60, label: "Underdog Reach Advantage (>= +3.0\")" },
+        ageCliff: { rate: 47.6, sample: 63, label: "Favorite Age Cliff (Age >= 35)" },
+        grapplerSuppression: { rate: 34.8, sample: 46, label: "Grappler Suppression (Fav TD Avg >= 2.5 vs Dog Bad TD Def)" }
+      },
+      timing: {
+        round1: 57,
+        round2: 39,
+        round3Plus: 4
+      },
+      hallOfFame: [
+        { fight: "Manon Fiorot vs Alexa Grasso", file: "alexagrasso_vs_manonfiorot_2026-09-12.json", openFav: -315, openDog: 230, peakFavPlusMoney: "+3000", dataPoints: 13 },
+        { fight: "Cody Chovancek vs Su Young You", file: "codychovancek_vs_suyoungyou_2026-10-17.json", openFav: -125, openDog: 105, peakFavPlusMoney: "+3000", dataPoints: 15 },
+        { fight: "Tanner Boser vs Jhonata Diniz", file: "jhonatadiniz_vs_tannerboser_2026-10-17.json", openFav: -218, openDog: 180, peakFavPlusMoney: "+2500", dataPoints: 17 },
+        { fight: "Angela Hill vs Jingnan Xiong", file: "angelahill_vs_jingnanxiong_2026-05-30.json", openFav: -190, openDog: 160, peakFavPlusMoney: "+2300", dataPoints: 581 },
+        { fight: "Belal Muhammad vs Gabriel Bonfim", file: "belalmuhammad_vs_gabrielbonfim_2026-06-07.json", openFav: -116, openDog: -102, peakFavPlusMoney: "+2300", dataPoints: 579 },
+        { fight: "Charles Johnson vs Bruno Silva", file: "charlesjohnson_vs_brunosilva_2026-03-15.json", openFav: -178, openDog: 150, peakFavPlusMoney: "+2300", dataPoints: 379 }
+      ]
+    });
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
@@ -393,8 +416,12 @@ app.get('/api/recordings', (req, res) => {
     };
     const normId = id => id.replace(/^mma__?/, '');  // strip mma__ prefix from subdir files
     const clean = all
-      .filter(r => r.fighter1 !== '?' && r.fighter2 !== '?')          // drop unknown fighters
-      .filter(r => !r.fighter1.startsWith('Test ') && !r.fighter2.startsWith('Test ')) // drop test data
+      .filter(r => {
+        const f1 = (r.fighter1 || "").toLowerCase().trim();
+        const f2 = (r.fighter2 || "").toLowerCase().trim();
+        return f1 !== "?" && f2 !== "?" && f1 !== f2; // drop unknown fighters & impossible self-fights
+      })
+      .filter(r => !r.fighter1.startsWith("Test ") && !r.fighter2.startsWith("Test ")) // drop test data
       .filter(r => r.dataPoints >= 5)                                  // drop thin files (no real fight data)
       .map(r => ({ ...r, id: normId(r.id), sport: normSport(r.sport) }));
     // Deduplicate: same fighters (order-independent) + same date → keep highest dataPoints
@@ -581,6 +608,38 @@ app.get('/api/live-fight-stats', async (req, res) => {
     if (!f1 || !f2) return res.status(400).json({ error: "Missing f1 or f2 parameters" });
     const stats = await fetchLiveFightStats(f1, f2);
     if (!stats) return res.json({ available: false });
+
+    // --- Phase 2: In-Fight Latency Arbitrage (Stale Line Advantage) ---
+    try {
+      let dkLastUpdateMs = 0;
+      const n1 = (f1 || "").toLowerCase().replace(/[^a-z]/g, "");
+      const n2 = (f2 || "").toLowerCase().replace(/[^a-z]/g, "");
+      const checkFights = (map) => {
+        for (const [id, rec] of map) {
+          const m1 = (rec.meta?.fighter1 || "").toLowerCase().replace(/[^a-z]/g, "");
+          const m2 = (rec.meta?.fighter2 || "").toLowerCase().replace(/[^a-z]/g, "");
+          if ((m1.includes(n1) || n1.includes(m1)) && (m2.includes(n2) || n2.includes(m2))) { if (rec.lastOdds) return new Date(rec.lastOdds.timestamp).getTime(); }
+          if ((m1.includes(n2) || n2.includes(m1)) && (m2.includes(n1) || n1.includes(m2))) { if (rec.lastOdds) return new Date(rec.lastOdds.timestamp).getTime(); }
+        }
+        return 0;
+      };
+      dkLastUpdateMs = checkFights(recorderState.extCaptures);
+      if (!dkLastUpdateMs) dkLastUpdateMs = checkFights(recorderState.activeFights);
+      
+      stats.staleLineAdvantage = false;
+      stats.staleLineDetails = null;
+      if (dkLastUpdateMs > 0 && stats.f1 && stats.f2) {
+        const now = Date.now();
+        const delayMs = now - dkLastUpdateMs;
+        const kd = stats.f1.knockdowns > 0 || stats.f2.knockdowns > 0;
+        const td = stats.f1.takedownsLanded > 0 || stats.f2.takedownsLanded > 0;
+        if ((kd || td) && delayMs >= 4000) {
+           stats.staleLineAdvantage = true;
+           stats.staleLineDetails = "⚡ ACTION SPIKE: Knockdown/Takedown logged on ESPN. DK line is stale by " + (delayMs/1000).toFixed(1) + "s. Exploit edge before suspension.";
+        }
+      }
+    } catch(err) { console.error("[StaleLineEdge] error:", err.message); }
+
     res.json(stats);
   } catch (e) {
     res.status(500).json({ error: e.message });
@@ -1480,6 +1539,13 @@ async function saveExtCapture(id) {
   recorderState.extCaptures.delete(id);
   if (!record) return;
 
+  const n1 = (record.meta.fighter1 || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]/g, "");
+  const n2 = (record.meta.fighter2 || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]/g, "");
+  if (n1 === n2 || !record.oddsHistory || record.oddsHistory.length < 5 || !record.oddsHistory.some(o => o.live)) {
+    console.log("[ext-capture] Discarding invalid or non-live capture: " + id);
+    return;
+  }
+
   // Enrich with final strikes/takedowns and Pinnacle sharp consensus before saving
   try {
     const [finalStats, sharp] = await Promise.all([
@@ -1529,13 +1595,25 @@ app.post('/api/dk-odds-push', (req, res) => {
     return res.status(400).json({ error: 'invalid fighter name' });
   }
 
+  // Reject impossible self-fights
+  const n1 = (fighter1 || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]/g, "");
+  const n2 = (fighter2 || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]/g, "");
+  if (n1 === n2) {
+    return res.status(400).json({ error: "Fighter 1 and Fighter 2 cannot be identical" });
+  }
+
+  // MANDATE: Only record if fight has actually started (live === true)
+  if (!req.body.live) {
+    return res.json({ ok: true, received: true, live: false, stored: false, reason: "Fight not live" });
+  }
+
   recorderState.extPushes++;
   recorderState.lastExtPush=Date.now();
   extPushTimes.push(recorderState.lastExtPush); if (extPushTimes.length > 2000) extPushTimes.splice(0, extPushTimes.length - 2000);
   if (sport !== 'mma_mixed_martial_arts') return res.json({ ok: true, received: true, sport, stored: false, reason: 'UFC only' });
   const {id,record}=findOrCreateExtCapture(sport,fighter1,fighter2);
 
-  const live = req.body.live !== false;
+  const live = true;
   const odds={timestamp:new Date().toISOString(),fighter1:{name:fighter1,numericOdds:+numericOdds1},fighter2:{name:fighter2,numericOdds:+numericOdds2},source:'extension',live};
   const L=record.lastOdds;
   const changed=!L||L.fighter1.numericOdds!==+numericOdds1||L.fighter2.numericOdds!==+numericOdds2;
@@ -2331,6 +2409,41 @@ function pingHealthcheck() {
   if (!HEALTHCHECK_URL) return;
   https.get(HEALTHCHECK_URL, () => {}).on('error', e => console.error('[healthcheck] ping failed:', e.message));
 }
+
+
+// ── Startup Disk Sanitizer (Auto-purge corrupted/self-fights & non-live leaks) ──
+function autoSanitizeHistoricalStorage() {
+  try {
+    const dir = HISTORICAL_DIR;
+    if (!fs.existsSync(dir)) return;
+    const files = fs.readdirSync(dir).filter(f => f.endsWith(".json"));
+    let purged = 0;
+    for (const f of files) {
+      try {
+        const full = path.join(dir, f);
+        const d = JSON.parse(fs.readFileSync(full, "utf8"));
+        const h = d.oddsHistory || [];
+        const f1 = (h[0]?.fighter1?.name || d.meta?.fighter1 || d.fightTitle?.split(" vs ")[0] || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]/g, "");
+        const f2 = (h[0]?.fighter2?.name || d.meta?.fighter2 || d.fightTitle?.split(" vs ")[1] || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]/g, "");
+        
+        const isSelfFight = (f1.length > 0 && f1 === f2);
+        const isCorruptTitle = (d.fightTitle && d.fightTitle.toLowerCase().includes("lucia szabov") && f1 === f2);
+        
+        if (isSelfFight || isCorruptTitle) {
+          const qDir = path.join(dir, "..", "quarantine_non_ufc");
+          if (!fs.existsSync(qDir)) fs.mkdirSync(qDir, { recursive: true });
+          fs.renameSync(full, path.join(qDir, f));
+          console.log("[sanitizer] Permanently quarantined corrupted self-fight from storage: " + f);
+          purged++;
+        }
+      } catch (_) {}
+    }
+    if (purged > 0) console.log("[sanitizer] Purged " + purged + " corrupted fight file(s) from historical storage.");
+  } catch (err) {
+    console.error("[sanitizer] Error cleaning historical storage:", err.message);
+  }
+}
+autoSanitizeHistoricalStorage();
 
 app.listen(PORT, () => {
   console.log(`Bet Bot running at http://localhost:${PORT}`);

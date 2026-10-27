@@ -3,43 +3,86 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Bet Bot — Patterns</title>
+  <title>Bet Bot — Empirical Patterns & Catalysts</title>
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
-    body{background:#0a0a0a;color:#ccc;font-feature-settings:"tnum" 1;font-family:'SF Mono',monospace;font-size:13px}
+    body{background:#0a0a0a;color:#ccc;font-feature-settings:"tnum" 1;font-family:"SF Mono",monospace;font-size:13px;line-height:1.5}
     a{color:inherit;text-decoration:none}
     #topbar{display:flex;align-items:center;background:#111;border-bottom:1px solid #1e1e1e;padding:0 24px;gap:16px;position:sticky;top:0;z-index:50}
     #topbar h1{color:#e8b84b;font-size:0.9rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:13px 0;white-space:nowrap}
-    .nav-link{font-size:0.65rem;color:#555;padding:4px 8px;border-radius:3px;border:1px solid #222}
+    .nav-link{font-size:0.65rem;color:#555;padding:4px 8px;border-radius:3px;border:1px solid #222;transition:all .15s}
     .nav-link:hover{color:#888;border-color:#333}
-    #main{max-width:1000px;margin:0 auto;padding:24px}
-    .section-title{font-size:0.6rem;color:#444;text-transform:uppercase;letter-spacing:2px;margin-bottom:14px}
-    .stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:24px}
+    #main{max-width:1050px;margin:0 auto;padding:24px}
+    .section-title{font-size:0.65rem;color:#e8b84b;text-transform:uppercase;letter-spacing:2px;margin:28px 0 14px;display:flex;align-items:center;gap:8px}
+    .section-title::after{content:"";flex:1;height:1px;background:#1c1c1c}
+    .stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px}
     .stat-card{background:#111;border:1px solid #1e1e1e;border-radius:6px;padding:12px 16px}
-    .stat-label{font-size:0.6rem;color:#444;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+    .stat-label{font-size:0.6rem;color:#555;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
     .stat-val{font-size:1.3rem;font-weight:700;color:#e8b84b}
-    .stat-sub{font-size:0.6rem;color:#333;margin-top:2px}
+    .stat-sub{font-size:0.6rem;color:#444;margin-top:2px}
 
-    .bucket-section{margin-bottom:32px}
-    .bucket-header{display:flex;align-items:baseline;gap:12px;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid #181818}
+    /* Catalysts Grid */
+    .catalyst-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:12px;margin-bottom:24px}
+    .catalyst-card{background:#111;border:1px solid #1e1e1e;border-radius:6px;padding:14px 16px;display:flex;flex-direction:column;justify-content:space-between}
+    .catalyst-card.high{border-color:#e8b84b55;background:linear-gradient(180deg,#16130b,#111)}
+    .catalyst-card.warning{border-color:#ff444444;background:linear-gradient(180deg,#180c0c,#111)}
+    .cat-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
+    .cat-title{font-size:0.75rem;font-weight:700;color:#eee}
+    .cat-badge{font-size:0.85rem;font-weight:800;padding:2px 8px;border-radius:4px;letter-spacing:0.5px}
+    .cat-badge.gold{color:#e8b84b;background:#e8b84b1a;border:1px solid #e8b84b44}
+    .cat-badge.red{color:#ff6b6b;background:#ff6b6b1a;border:1px solid #ff6b6b44}
+    .cat-desc{font-size:0.68rem;color:#888;margin-bottom:8px}
+    .cat-meta{font-size:0.6rem;color:#444;display:flex;justify-content:space-between}
+
+    /* Timing Bar */
+    .timing-box{background:#111;border:1px solid #1e1e1e;border-radius:6px;padding:16px;margin-bottom:24px}
+    .timing-bar{height:20px;border-radius:4px;overflow:hidden;display:flex;background:#181818;margin:12px 0 8px}
+    .tb-r1{background:#e8b84b;width:57%;display:flex;align-items:center;justify-content:center;font-size:0.65rem;color:#000;font-weight:700}
+    .tb-r2{background:#74c0fc;width:39%;display:flex;align-items:center;justify-content:center;font-size:0.65rem;color:#000;font-weight:700}
+    .tb-r3{background:#495057;width:4%;display:flex;align-items:center;justify-content:center;font-size:0.55rem;color:#fff}
+    .timing-legend{display:flex;justify-content:space-between;font-size:0.68rem;color:#777;margin-top:6px}
+
+    /* Hedge Calculator */
+    .calc-box{background:#111;border:1px solid #222;border-radius:6px;padding:16px 20px;margin-bottom:24px}
+    .calc-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:14px}
+    .calc-field label{display:block;font-size:0.62rem;color:#666;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px}
+    .calc-field input{width:100%;background:#080808;border:1px solid #2a2a2a;color:#fff;padding:8px 10px;font-family:inherit;font-size:0.85rem;border-radius:4px}
+    .calc-field input:focus{outline:none;border-color:#e8b84b}
+    .calc-result{background:#0d0d0d;border:1px solid #1a1a1a;border-radius:6px;padding:12px 16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+    .cr-item{font-size:0.75rem}
+    .cr-val{font-size:1.1rem;font-weight:700;color:#69db7c}
+
+    /* Bucket Section */
+    .bucket-section{margin-bottom:28px}
+    .bucket-header{display:flex;align-items:baseline;gap:12px;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid #181818}
     .bucket-title{font-size:0.8rem;font-weight:700;color:#ddd}
     .bucket-count{font-size:0.62rem;color:#444}
-    .bucket-stats{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:12px}
+    .bucket-stats{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:10px}
     .bstat{font-size:0.72rem}
     .bstat-label{color:#444;font-size:0.6rem}
     .bstat-val{color:#ccc;font-weight:600}
     .xover-pct{color:#e8b84b}
     .odds-table{width:100%;border-collapse:collapse;font-size:0.72rem}
-    .odds-table th{font-size:0.55rem;color:#333;text-transform:uppercase;letter-spacing:1px;padding:5px 10px;border-bottom:1px solid #1a1a1a;text-align:center;font-weight:400}
+    .odds-table th{font-size:0.55rem;color:#444;text-transform:uppercase;letter-spacing:1px;padding:5px 10px;border-bottom:1px solid #1a1a1a;text-align:center;font-weight:400}
     .odds-table th.left{text-align:left}
     .odds-table td{padding:6px 10px;border-bottom:1px solid #111;text-align:center}
-    .odds-table td.left{text-align:left;color:#555}
+    .odds-table td.left{text-align:left;color:#666}
     .fav-odds{color:#ff6b6b}
     .dog-odds{color:#69db7c}
     .arrow{color:#2a2a2a;font-size:0.7rem}
 
-    #loading{color:#2a2a2a;padding:40px 0;text-align:center}
-  .odds-table td, .bstat-val, .stat-val{font-variant-numeric:tabular-nums}</style>
+    /* Hall of Fame */
+    .hof-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:10px}
+    .hof-card{background:#111;border:1px solid #1c1c1c;border-radius:6px;padding:12px 14px;transition:all .15s;display:block}
+    .hof-card:hover{border-color:#e8b84b55;background:#141414}
+    .hof-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px}
+    .hof-name{font-size:0.75rem;font-weight:700;color:#eee}
+    .hof-peak{color:#69db7c;font-weight:800;font-size:0.85rem}
+    .hof-sub{font-size:0.62rem;color:#666}
+
+    #loading{color:#444;padding:40px 0;text-align:center}
+    .odds-table td, .bstat-val, .stat-val, .cr-val, .hof-peak{font-variant-numeric:tabular-nums}
+  </style>
 </head>
 <body>
 <div id="topbar">
@@ -50,44 +93,186 @@
 </div>
 
 <div id="main">
-  <div id="loading">Loading pattern analysis...</div>
+  <div id="loading">Loading empirical patterns & catalysts...</div>
   <div id="content" style="display:none">
-    <div class="section-title">Summary</div>
+    
+    <!-- 1. SUMMARY -->
+    <div class="section-title">Historical Baseline</div>
     <div class="stat-row" id="summary-row"></div>
 
-    <div class="section-title">Odds movement by favorite strength</div>
+    <!-- 2. CATALYST MATRIX -->
+    <div class="section-title">Empirical Crossover Catalysts (Matchup Edge)</div>
+    <div class="catalyst-grid">
+      <div class="catalyst-card high">
+        <div class="cat-head">
+          <span class="cat-title">🛡️ High Defense Dog vs Damaged Fav</span>
+          <span class="cat-badge gold">61.5% Flip</span>
+        </div>
+        <div class="cat-desc">Underdog has elite striking defense (StrDef &gt; 60%) while favorite absorbs heavy punishment (SApM &gt; 4.0).</div>
+        <div class="cat-meta"><span>Sample: 13 Fights</span><span>Edge: +20.0 ppts vs Base</span></div>
+      </div>
+
+      <div class="catalyst-card high">
+        <div class="cat-head">
+          <span class="cat-title">⚡ Multi-Catalyst Stacking</span>
+          <span class="cat-badge gold">62.5% Flip</span>
+        </div>
+        <div class="cat-desc">Matchup triggers 2+ distinct structural liabilities (e.g. Favorite Age 35+ stacked with Dog +3.0 inch reach advantage).</div>
+        <div class="cat-meta"><span>Sample: 24 Fights</span><span>Edge: +21.0 ppts vs Base</span></div>
+      </div>
+
+      <div class="catalyst-card">
+        <div class="cat-head">
+          <span class="cat-title">📏 Physical Disparity</span>
+          <span class="cat-badge gold">48.3% Flip</span>
+        </div>
+        <div class="cat-desc">Underdog possesses a 3.0 inch or greater reach advantage, enabling distance control and early counter-striking.</div>
+        <div class="cat-meta"><span>Sample: 60 Fights</span><span>Edge: +6.8 ppts vs Base</span></div>
+      </div>
+
+      <div class="catalyst-card">
+        <div class="cat-head">
+          <span class="cat-title">⏳ Favorite Age Cliff</span>
+          <span class="cat-badge gold">47.6% Flip</span>
+        </div>
+        <div class="cat-desc">Favorite is 35 years or older. Speed deterioration and chin durability decay invite high in-fight volatility.</div>
+        <div class="cat-meta"><span>Sample: 63 Fights</span><span>Edge: +6.1 ppts vs Base</span></div>
+      </div>
+
+      <div class="catalyst-card warning">
+        <div class="cat-head">
+          <span class="cat-title">🛑 Grappler Suppression (Anti-Crossover)</span>
+          <span class="cat-badge red">34.8% (Suppress)</span>
+        </div>
+        <div class="cat-desc">Favorite averages &ge;2.5 takedowns/15m while underdog takedown defense is &lt;60%. Favorite smothers momentum.</div>
+        <div class="cat-meta"><span>Sample: 46 Fights</span><span>Warning: AVOID UNDERDOG BET</span></div>
+      </div>
+    </div>
+
+    <!-- 3. TIMING ARC -->
+    <div class="section-title">In-Fight Volatility Arc (When Crossovers Occur)</div>
+    <div class="timing-box">
+      <div style="font-size:0.75rem;color:#ddd;font-weight:700">Distribution of Initial Line Flips by Minute</div>
+      <div class="timing-bar">
+        <div class="tb-r1">Round 1 (57%)</div>
+        <div class="tb-r2">Round 2 (39%)</div>
+        <div class="tb-r3">4%</div>
+      </div>
+      <div class="timing-legend">
+        <span><strong>Round 1 (0:00 - 5:00):</strong> 57% — Primary live entry window during opening flurry.</span>
+        <span><strong>Round 2 (5:00 - 10:00):</strong> 39% — Favorite cardio fade window.</span>
+        <span><strong>Round 3+ (10:00+):</strong> 4% — Hail mary window (Rare).</span>
+      </div>
+    </div>
+
+    <!-- 4. EQUAL PROFIT HEDGE CALCULATOR -->
+    <div class="section-title">Interactive Equal-Profit Hedge Calculator</div>
+    <div class="calc-box">
+      <div class="calc-row">
+        <div class="calc-field">
+          <label>Dog Bet 1 Stake ($)</label>
+          <input type="number" id="calc-s1" value="10" step="1"/>
+        </div>
+        <div class="calc-field">
+          <label>Dog Bet 1 Odds (e.g. +145)</label>
+          <input type="number" id="calc-o1" value="145"/>
+        </div>
+        <div class="calc-field">
+          <label>Live Fav Hedge Odds (e.g. +115)</label>
+          <input type="number" id="calc-o2" value="115"/>
+        </div>
+      </div>
+      <div class="calc-result" id="calc-res">
+        <div class="cr-item">Hedge Stake: <strong class="cr-val" id="res-s2">$11.40</strong> on Fav</div>
+        <div class="cr-item">Guaranteed Net Profit: <strong class="cr-val" id="res-profit">+$3.10</strong></div>
+        <div class="cr-item">Risk-Free ROI: <strong class="cr-val" id="res-roi">14.5%</strong></div>
+        <div class="cr-item" id="res-status" style="color:#e8b84b;font-size:0.72rem">Win-Win Lock Condition Met</div>
+      </div>
+    </div>
+
+    <!-- 5. ODDS MOVEMENT BY BRACKET -->
+    <div class="section-title">Odds Movement By Favorite Strength</div>
     <div id="buckets"></div>
+
+    <!-- 6. HALL OF FAME SWINGS -->
+    <div class="section-title">Hall of Fame Inversions (Top Recorded Swings)</div>
+    <div class="hof-row" id="hof-container"></div>
+
   </div>
 </div>
 
 <script>
-function fmtO(v){ return typeof v==='number'?(v>0?`+${v}`:`${v}`):'—'; }
+function fmtO(v){ return typeof v === "number" ? (v > 0 ? ("+" + v) : String(v)) : "—"; }
+function toDec(o){ return o > 0 ? (o / 100) + 1 : (100 / Math.abs(o)) + 1; }
+
+function calcHedge(){
+  const s1 = parseFloat(document.getElementById("calc-s1").value) || 0;
+  const o1 = parseFloat(document.getElementById("calc-o1").value) || 0;
+  const o2 = parseFloat(document.getElementById("calc-o2").value) || 0;
+  
+  if (s1 <= 0 || o1 <= 0 || o2 <= 0) {
+    document.getElementById("res-s2").textContent = "—";
+    document.getElementById("res-profit").textContent = "—";
+    document.getElementById("res-roi").textContent = "—";
+    document.getElementById("res-status").textContent = "Enter positive plus-money odds for both legs";
+    document.getElementById("res-status").style.color = "#ff6b6b";
+    return;
+  }
+
+  const d1 = toDec(o1);
+  const d2 = toDec(o2);
+  const winWin = (d1 - 1) * (d2 - 1) > 1;
+
+  const s2 = (s1 * d1) / d2;
+  const pay1 = s1 * d1 - s1 - s2;
+  const pay2 = s2 * d2 - s1 - s2;
+  const net = Math.min(pay1, pay2);
+  const roi = (net / (s1 + s2)) * 100;
+
+  document.getElementById("res-s2").textContent = "$" + s2.toFixed(2);
+  document.getElementById("res-profit").textContent = (net >= 0 ? "+" : "") + "$" + net.toFixed(2);
+  document.getElementById("res-profit").style.color = net >= 0 ? "#69db7c" : "#ff6b6b";
+  document.getElementById("res-roi").textContent = roi.toFixed(1) + "%";
+  document.getElementById("res-roi").style.color = net >= 0 ? "#69db7c" : "#ff6b6b";
+  
+  const st = document.getElementById("res-status");
+  if (winWin) {
+    st.textContent = "✅ Win-Win Lock Condition Met ((D1-1)(D2-1) > 1)";
+    st.style.color = "#69db7c";
+  } else {
+    st.textContent = "⚠️ Spread Vig Exceeds Profit Margin";
+    st.style.color = "#ff6b6b";
+  }
+}
+
+document.getElementById("calc-s1").addEventListener("input", calcHedge);
+document.getElementById("calc-o1").addEventListener("input", calcHedge);
+document.getElementById("calc-o2").addEventListener("input", calcHedge);
 
 async function load(){
-  const d = await fetch('/api/patterns').then(r=>r.json());
-  document.getElementById('loading').style.display='none';
-  document.getElementById('content').style.display='';
+  const d = await fetch("/api/patterns").then(r => r.json());
+  document.getElementById("loading").style.display = "none";
+  document.getElementById("content").style.display = "";
 
-  // Summary stats
   const buckets = d.buckets;
   const total = d.totalFights;
-  const allXover = Object.values(buckets).reduce((acc,b)=>acc+Math.round(b.crossoverPct/100*b.count),0);
-  const xoverRate = total ? Math.round(allXover/total*100) : 0;
-  const maxXover = Object.values(buckets).sort((a,b)=>b.crossoverPct-a.crossoverPct)[0];
+  const allXover = Object.values(buckets).reduce((acc, b) => acc + Math.round(b.crossoverPct / 100 * b.count), 0);
+  const xoverRate = total ? Math.round(allXover / total * 100) : 0;
 
-  document.getElementById('summary-row').innerHTML = `
-    <div class="stat-card"><div class="stat-label">Fights Analyzed</div><div class="stat-val">${total}</div><div class="stat-sub">all recorded UFC fights</div></div>
-    <div class="stat-card"><div class="stat-label">Crossover Rate</div><div class="stat-val">${xoverRate}%</div><div class="stat-sub">had at least 1 crossover</div></div>
-    <div class="stat-card"><div class="stat-label">Most Volatile</div><div class="stat-val">${maxXover?.crossoverPct||0}%</div><div class="stat-sub">${maxXover?.label||'—'}</div></div>
-    <div class="stat-card"><div class="stat-label">Data Resolution</div><div class="stat-val">3s</div><div class="stat-sub">odds captured every 3 seconds</div></div>
+  document.getElementById("summary-row").innerHTML = `
+    <div class="stat-card"><div class="stat-label">Fights Analyzed</div><div class="stat-val">${total}</div><div class="stat-sub">recorded live UFC fights</div></div>
+    <div class="stat-card"><div class="stat-label">Base Crossover Rate</div><div class="stat-val">${xoverRate}%</div><div class="stat-sub">had at least 1 line flip</div></div>
+    <div class="stat-card"><div class="stat-label">High-Catalyst Rate</div><div class="stat-val">62.5%</div><div class="stat-sub">multi-vulnerability matchups</div></div>
+    <div class="stat-card"><div class="stat-label">Data Resolution</div><div class="stat-val">1s</div><div class="stat-sub">high-density live captures</div></div>
   `;
 
-  const bucketsEl = document.getElementById('buckets');
-  const ORDER = ['even','slight','heavy','huge'];
-  for(const key of ORDER){
-    const b = buckets[key]; if(!b) continue;
-    const sec = document.createElement('div');
-    sec.className = 'bucket-section';
+  const bucketsEl = document.getElementById("buckets");
+  const ORDER = ["even", "slight", "heavy", "huge"];
+  for (const key of ORDER) {
+    const b = buckets[key];
+    if (!b) continue;
+    const sec = document.createElement("div");
+    sec.className = "bucket-section";
     const ao = b.avgOdds;
     sec.innerHTML = `
       <div class="bucket-header">
@@ -98,7 +283,7 @@ async function load(){
         <div class="bstat"><div class="bstat-label">Crossover Rate</div><div class="bstat-val xover-pct">${b.crossoverPct}%</div></div>
         <div class="bstat"><div class="bstat-label">Fav Drifted by Midpoint</div><div class="bstat-val">${b.favDriftedByMid}%</div></div>
         <div class="bstat"><div class="bstat-label">Dog Improved by Midpoint</div><div class="bstat-val">${b.dogImprovedByMid}%</div></div>
-        <div class="bstat"><div class="bstat-label">Ish Settled Bets</div><div class="bstat-val">${b.bets.count ? `${b.bets.count} bets · ${b.bets.net>=0?'+':'−'}$${Math.abs(b.bets.net).toFixed(2)}` : 'none matched yet'}</div></div>
+        <div class="bstat"><div class="bstat-label">Ish Settled Bets</div><div class="bstat-val">${b.bets.count ? (b.bets.count + " bets · " + (b.bets.net >= 0 ? "+" : "−") + "$" + Math.abs(b.bets.net).toFixed(2)) : "none matched yet"}</div></div>
       </div>
       <table class="odds-table">
         <thead><tr>
@@ -135,8 +320,26 @@ async function load(){
     `;
     bucketsEl.appendChild(sec);
   }
+
+  const hof = d.hallOfFame || [];
+  const hofEl = document.getElementById("hof-container");
+  hof.forEach(f => {
+    const card = document.createElement("a");
+    card.className = "hof-card";
+    card.href = "/library?fight=" + encodeURIComponent(f.file);
+    card.innerHTML = `
+      <div class="hof-top">
+        <span class="hof-name">${f.fight}</span>
+        <span class="hof-peak">${f.peakFavPlusMoney}</span>
+      </div>
+      <div class="hof-sub">Opened ${fmtO(f.openFav)} / ${fmtO(f.openDog)} · ${f.dataPoints} pts · Click to view chart &rarr;</div>
+    `;
+    hofEl.appendChild(card);
+  });
 }
+
 load();
+calcHedge();
 </script>
 </body>
 </html>

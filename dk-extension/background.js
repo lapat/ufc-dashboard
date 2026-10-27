@@ -248,16 +248,18 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
         },
       });
     }
-    // ALWAYS push, live or not: the extension is the more accurate source, so every odds page we
-    // see is recorded, labelled with live true/false. Throttled to one push every 3 seconds.
+    // MANDATE: Only push to live recording server when the fight has ACTUALLY started (live === true)
+    // Pre-fight browsing must NEVER generate recordings.
+    if (!msg.live) return;
+
     const nowMs = Date.now();
     if (nowMs - lastPushMs < PUSH_INTERVAL_MS) return;
     if (betBotUrl && teams.length >= 2 && msg.sport && msg.sport === 'mma_mixed_martial_arts') {
-      lastPushMs = nowMs;
       const [o1, o2] = teams;
-      // NOTE: scanOddsFromPage() in content.js produces `.american`, not `.numericOdds`.
-      // A prior version of this file read `.numericOdds` here, which is always undefined —
-      // every push silently failed server-side with 400 "missing fields". Fixed 2026-07-13.
+      // Refuse to push if both fighter names resolved identically
+      if (o1.side.trim().toLowerCase() === o2.side.trim().toLowerCase()) return;
+
+      lastPushMs = nowMs;
       fetch(`${betBotUrl}/api/dk-odds-push`, {
         method: 'POST',
         headers: authHeaders(),
@@ -267,7 +269,7 @@ chrome.runtime.onMessage.addListener((msg, sender) => {
           fighter2: o2.side,
           numericOdds1: o1.american,
           numericOdds2: o2.american,
-          live: !!msg.live,
+          live: true,
         }),
       }).then(r => { if (r.ok) pushedCount++; else { pushFailCount++; addLog(`✗ odds push HTTP ${r.status}`); } })
         .catch(e => { pushFailCount++; addLog(`✗ odds push failed: ${e.message}`); });

@@ -1399,6 +1399,21 @@ function startClassicLiveStats(f1, f2) {
           document.getElementById('nw-td-f2').textContent = ls.f2.takedownsLanded;
           document.getElementById('nw-ctrl-f1').textContent = ls.f1.controlTime || '0:00';
           document.getElementById('nw-ctrl-f2').textContent = ls.f2.controlTime || '0:00';
+          
+          let alertBanner = document.getElementById("stale-line-alert");
+          if (!alertBanner) {
+            alertBanner = document.createElement("div");
+            alertBanner.id = "stale-line-alert";
+            alertBanner.style.cssText = "display:none;background:#2a0000;border:1px solid #ff1744;color:#ff5555;padding:8px 12px;margin-top:10px;border-radius:6px;font-size:0.8rem;font-weight:bold;text-align:center;animation:xoverPulse 2s infinite;";
+            row.parentNode.insertBefore(alertBanner, row.nextSibling);
+          }
+          
+          if (ls.staleLineAdvantage && ls.staleLineDetails) {
+            alertBanner.textContent = ls.staleLineDetails;
+            alertBanner.style.display = "block";
+          } else {
+            alertBanner.style.display = "none";
+          }
         }
       }).catch(() => {});
   };
