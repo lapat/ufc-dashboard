@@ -69,8 +69,32 @@ function parseLastBoutsFromHtml(html, fighterName) {
   return results;
 }
 
+const TAPE_CACHE_FILE = path.join(__dirname, "analysis", "fighter_tape_cache.json");
+let _tapeCache = null;
+function loadTapeCache() {
+  if (!_tapeCache && fs.existsSync(TAPE_CACHE_FILE)) {
+    try { _tapeCache = JSON.parse(fs.readFileSync(TAPE_CACHE_FILE, "utf8")); }
+    catch (_) {}
+  }
+  return _tapeCache || {};
+}
+
 function getFighterTape(fighterName) {
   const slug = toSlug(fighterName);
+  const cache = loadTapeCache();
+  if (cache[slug] && cache[slug].bouts && cache[slug].bouts.length > 0) {
+    return cache[slug].bouts;
+  }
+  // Try matching by name in cache
+  const normTarget = (fighterName || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]/g, "");
+  for (const s of Object.keys(cache)) {
+    const entry = cache[s];
+    const n = (entry.name || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]/g, "");
+    if (n === normTarget && entry.bouts && entry.bouts.length > 0) {
+      return entry.bouts;
+    }
+  }
+
   if (fs.existsSync(ATHLETE_PAGES_DIR)) {
     const files = fs.readdirSync(ATHLETE_PAGES_DIR).filter(f => f.startsWith(slug + "__"));
     if (files.length > 0) {
