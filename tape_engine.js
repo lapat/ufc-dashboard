@@ -181,9 +181,31 @@ function getUpcomingFilmRoomCard() {
   };
 }
 
+
+const _embedCache = {};
+
+function resolveYoutubeVideoId(query) {
+  if (_embedCache[query]) return Promise.resolve(_embedCache[query]);
+  return new Promise((resolve) => {
+    const https = require("https");
+    const url = "https://www.youtube.com/results?search_query=" + encodeURIComponent(query);
+    https.get(url, { headers: { "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" } }, res => {
+      let d = "";
+      res.on("data", c => d += c);
+      res.on("end", () => {
+        const match = d.match(/"videoId":"([a-zA-Z0-9_-]{11})"/);
+        const videoId = match ? match[1] : null;
+        if (videoId) _embedCache[query] = videoId;
+        resolve(videoId);
+      });
+    }).on("error", () => resolve(null));
+  });
+}
+
 module.exports = {
   toSlug,
   parseLastBoutsFromHtml,
   getFighterTape,
-  getUpcomingFilmRoomCard
+  getUpcomingFilmRoomCard,
+  resolveYoutubeVideoId
 };

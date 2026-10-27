@@ -31,6 +31,8 @@
     .video-container{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:#050505}
     .video-container iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
     .theater-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;height:340px;color:#444;font-size:0.8rem;gap:10px}
+    .theater-footer{padding:8px 16px;background:#0d0d0d;border-top:1px solid #1a1a1a;font-size:0.68rem;color:#666;display:flex;justify-content:space-between;align-items:center}
+    .theater-footer a{color:#e8b84b;text-decoration:underline}
     .matchup-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px}
     @media(max-width:768px){.matchup-grid{grid-template-columns:1fr}}
     .fighter-col{background:#111;border:1px solid #1c1c1c;border-radius:8px;padding:16px}
@@ -89,6 +91,10 @@
           <span style="font-size:0.7rem;color:#555">Click "[▶ Load in Theater]" on any past bout below to start watching</span>
         </div>
         <iframe id="video-frame" style="display:none" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+      </div>
+      <div class="theater-footer" id="th-footer" style="display:none">
+        <span>If embedded playback is restricted on this browser:</span>
+        <span><a href="#" id="th-yt-direct" target="_blank">Open Full Screen on YouTube ↗</a> · <a href="#" id="th-fp-direct" target="_blank">UFC Fight Pass Master Tape 🥋</a></span>
       </div>
     </div>
     <div class="section-title" id="matchup-header">Head-to-Head Fight Tape (Last 3 Bouts Each)</div>
@@ -175,7 +181,7 @@ function renderBoutsList(elemId, fighterName, tape) {
     const btnPlay = document.createElement("button");
     btnPlay.className = "bc-btn play";
     btnPlay.textContent = "▶ Load in Theater";
-    btnPlay.onclick = () => playInTheater(fighterName, b.matchup, b.links.youtubeEmbed, b.links.fightPass, b.links.espn, b.links.youtube);
+    btnPlay.onclick = () => playInTheater(fighterName, b.matchup, b.videoId, b.links.fightPass, b.links.espn, b.links.youtube);
     const btnFp = document.createElement("a");
     btnFp.className = "bc-btn";
     btnFp.target = "_blank";
@@ -202,18 +208,40 @@ function renderBoutsList(elemId, fighterName, tape) {
     container.appendChild(card);
   });
 }
-function playInTheater(fighter, matchup, embedUrl, fpUrl, espnUrl, ytUrl) {
+async function playInTheater(fighter, matchup, videoId, fpUrl, espnUrl, ytUrl) {
   document.getElementById("th-label").textContent = "▶ " + matchup;
   const ext = document.getElementById("th-ext-links");
   ext.style.display = "flex";
   document.getElementById("th-fp").href = fpUrl;
   document.getElementById("th-espn").href = espnUrl;
   document.getElementById("th-yt").href = ytUrl;
+  document.getElementById("th-footer").style.display = "flex";
+  document.getElementById("th-yt-direct").href = ytUrl;
+  document.getElementById("th-fp-direct").href = fpUrl;
   const frame = document.getElementById("video-frame");
   const empty = document.getElementById("empty-state");
   empty.style.display = "none";
   frame.style.display = "block";
-  frame.src = embedUrl;
+  if (videoId) {
+    frame.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
+  } else {
+    document.getElementById("th-label").textContent = "▶ Resolving fight tape for " + matchup + "...";
+    try {
+      const res = await fetch("/api/tape-embed?q=" + encodeURIComponent("UFC full fight " + matchup));
+      const data = await res.json();
+      if (data.available && data.videoId) {
+        document.getElementById("th-label").textContent = "▶ " + matchup;
+        frame.src = data.embedUrl;
+        document.getElementById("th-yt").href = data.watchUrl;
+        document.getElementById("th-yt-direct").href = data.watchUrl;
+      } else {
+        document.getElementById("th-label").textContent = "▶ " + matchup + " (Opening direct stream)";
+        window.open(ytUrl, "_blank");
+      }
+    } catch (e) {
+      window.open(ytUrl, "_blank");
+    }
+  }
   document.querySelector(".theater-box").scrollIntoView({ behavior: "smooth", block: "start" });
 }
 loadFilmRoom();

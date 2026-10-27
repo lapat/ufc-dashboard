@@ -11,7 +11,8 @@ const testFiles = [
   "tests/2_test_stale_line_edge.js",
   "tests/3_test_patterns_endpoint.js",
   "tests/4_test_live_and_self_fight_prevention.js",
-  "tests/5_test_tape_engine.js"
+  "tests/5_test_tape_engine.js",
+  "tests/6_test_tape_player.js"
 ];
 
 console.log("====================================================");

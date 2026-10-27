@@ -207,10 +207,24 @@ app.get('/extension', (req, res) => {
 app.get('/patterns', (req, res) => { res.sendFile(path.join(__dirname, 'public', 'patterns.html')); });
 
 // Film Room & Fight Tape (Last 3 fights for Ish)
-const { getUpcomingFilmRoomCard } = require('./tape_engine');
+const { getUpcomingFilmRoomCard, resolveYoutubeVideoId } = require('./tape_engine');
 app.get('/api/film-room', (req, res) => {
   try { res.json(getUpcomingFilmRoomCard()); }
   catch (e) { res.status(500).json({ error: e.message }); }
+});
+app.get('/api/tape-embed', async (req, res) => {
+  try {
+    const q = req.query.q;
+    if (!q) return res.status(400).json({ error: "missing q parameter" });
+    const videoId = await resolveYoutubeVideoId(q);
+    if (!videoId) return res.json({ available: false });
+    res.json({
+      available: true,
+      videoId,
+      embedUrl: "https://www.youtube.com/embed/" + videoId + "?autoplay=1",
+      watchUrl: "https://www.youtube.com/watch?v=" + videoId
+    });
+  } catch (e) { res.status(500).json({ error: e.message }); }
 });
 app.get('/tape', (req, res) => { res.sendFile(path.join(__dirname, 'public', 'tape.html')); });
 
