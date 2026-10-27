@@ -24,7 +24,7 @@ function parseLastBoutsFromHtml(html, fighterName) {
   const results = [];
   const articleRe = /<article class="c-card-event--athlete-results">([\s\S]*?)<\/article>/g;
   let m;
-  while ((m = articleRe.exec(html)) && results.length < 3) {
+  while ((m = articleRe.exec(html)) && results.length < 1) {
     const block = m[1];
     const isWin = /class="[^"]*\bred-image\s+win\b/.test(block) || /class="[^"]*plaque\s+win\b/.test(block);
     const isLoss = /class="[^"]*\bblue-image\s+loss\b/.test(block) || /class="[^"]*plaque\s+loss\b/.test(block);
@@ -59,10 +59,10 @@ function parseLastBoutsFromHtml(html, fighterName) {
       time: time || "5:00",
       method: method || "Decision",
       links: {
+        paramount: "https://www.paramountplus.com/search/?q=" + encodeURIComponent(searchTitle),
         fightPass: "https://ufcfightpass.com/search?query=" + encodeURIComponent(searchTitle),
         espn: "https://www.espn.com/watch/search/ufc%20" + encodeURIComponent(searchTitle),
-        youtube: "https://www.youtube.com/results?search_query=UFC+full+fight+" + encodeURIComponent(searchTitle),
-        youtubeEmbed: "https://www.youtube-nocookie.com/embed?listType=search&list=UFC+full+fight+" + encodeURIComponent(searchTitle)
+        youtube: "https://www.youtube.com/results?search_query=UFC+full+fight+" + encodeURIComponent(searchTitle)
       }
     });
   }
@@ -83,7 +83,13 @@ function getFighterTape(fighterName) {
   const slug = toSlug(fighterName);
   const cache = loadTapeCache();
   if (cache[slug] && cache[slug].bouts && cache[slug].bouts.length > 0) {
-    return cache[slug].bouts;
+    const list = cache[slug].bouts.slice(0, 1);
+    list.forEach(b => {
+      if (!b.links.paramount) {
+        b.links.paramount = "https://www.paramountplus.com/search/?q=" + encodeURIComponent(b.matchup || fighterName);
+      }
+    });
+    return list;
   }
   // Try matching by name in cache
   const normTarget = (fighterName || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]/g, "");
@@ -91,7 +97,7 @@ function getFighterTape(fighterName) {
     const entry = cache[s];
     const n = (entry.name || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]/g, "");
     if (n === normTarget && entry.bouts && entry.bouts.length > 0) {
-      return entry.bouts;
+      return entry.bouts.slice(0, 1);
     }
   }
 
@@ -116,10 +122,10 @@ function getFighterTape(fighterName) {
       time: "5:00",
       method: "Full Fight Tape",
       links: {
+        paramount: "https://www.paramountplus.com/search/?q=" + encodeURIComponent(fighterName),
         fightPass: "https://ufcfightpass.com/search?query=" + encodeURIComponent(fighterName),
         espn: "https://www.espn.com/watch/search/ufc%20" + encodeURIComponent(fighterName),
-        youtube: "https://www.youtube.com/results?search_query=UFC+full+fight+" + encodeURIComponent(fighterName),
-        youtubeEmbed: "https://www.youtube-nocookie.com/embed?listType=search&list=UFC+full+fight+" + encodeURIComponent(fighterName)
+        youtube: "https://www.youtube.com/results?search_query=UFC+full+fight+" + encodeURIComponent(fighterName)
       }
     }
   ];

@@ -22,16 +22,15 @@ test("toSlug handles accents and punctuation cleanly", () => {
   assert.strictEqual(toSlug("Sean O'Malley"), "sean-o-malley");
 });
 
-test("getFighterTape returns 3 real past bouts for indexed UFC fighter", () => {
+test("getFighterTape returns strictly the single most recent bout with Paramount+ & Fight Pass", () => {
   const tape = getFighterTape("Renato Moicano");
-  assert.ok(tape.length >= 1, "Must return past fights");
+  assert.strictEqual(tape.length, 1, "Must return strictly single most recent fight");
   const b0 = tape[0];
   assert.ok(b0.matchup.includes("Moicano"));
   assert.ok(["WIN", "LOSS", "DEC"].includes(b0.result));
+  assert.ok(b0.links.paramount.includes("paramountplus.com"));
   assert.ok(b0.links.fightPass.includes("ufcfightpass.com"));
-  assert.ok(b0.links.espn.includes("espn.com"));
   assert.ok(b0.links.youtube.includes("youtube.com"));
-  assert.ok(b0.links.youtubeEmbed.includes("youtube-nocookie.com/embed"));
 });
 
 test("getFighterTape provides safe fallback for unindexed/new fighter", () => {

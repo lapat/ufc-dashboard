@@ -77,13 +77,16 @@ Win-Win condition guaranteed when: (D1 - 1) * (D2 - 1) > 1.
 
 ## 🎬 4. The Film Room & Video Architecture (/tape)
 
-* **The Problem:** Ish watches the last 3 fights for every fighter on the upcoming card (~72 fights per card).
-* **Video Platform Reality:**
-  * **UFC Fight Pass:** Contains 100% of UFC/PRIDE/WEC fights unedited with corner audio. Deep links via https://ufcfightpass.com/search?query=...
-  * **ESPN+:** Official US broadcast archive. Deep links via https://www.espn.com/watch/search/ufc%20...
-  * **YouTube:** Official free fight drops and extended finish highlights.
-  * *Important YouTube Rule:* YouTube deprecated listType=search in November 2020 (causes "Video unavailable"). **The Film Room strictly embeds verified 11-character YouTube video IDs** via /api/tape-embed.
-* **Zero Dead Ends:** Every bout provides 1-click launchers for **[▶ Load in Theater]**, **[🥋 Fight Pass Master Tape]**, **[📺 ESPN+]**, and **[YouTube ↗]**.
+* **Ish's Exact Tape Study Routine (CRITICAL CANON):**
+  * **Single Last Fight Only:** Ish studies strictly the **single most recent fight (the last fight)** for each fighter, not 3 fights.
+  * **Primary Platform (Paramount+):** Ish watches recent UFC/MMA main broadcasts on **Paramount+**.
+  * **Secondary Platform (UFC Fight Pass):** Ish uses **UFC Fight Pass** specifically for **Dana White's Contender Series (DWCS)** fights or any fight **before 2026**.
+  * **UI Hierarchy:** The **Head-to-Head Matchup is at the TOP** of the page (showing both fighters and their single last bout). Clicking "Load in Theater" loads the video theater **BELOW** the matchup.
+* **Video Platform Deep Links & Streaming:**
+  * **Paramount+:** Deep query launcher for current/recent events: https://www.paramountplus.com/search/?q=...
+  * **UFC Fight Pass:** Unedited full fight replay with corner audio (DWCS & pre-2026): https://ufcfightpass.com/search?query=...
+  * **YouTube:** Full fight tape & official releases.
+* **Zero Dead Ends:** Every bout provides verified 1-click launchers for **[▶ Watch Full Fight Tape]**, **[📺 Watch on Paramount+]**, **[🥋 UFC Fight Pass]**, and **[📺 ESPN+]**.
 
 ---
 

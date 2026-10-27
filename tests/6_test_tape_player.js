@@ -19,6 +19,7 @@ console.log("\n── Film Room Theater Stage UI Tests ──");
 test("public/tape.html has high-res theater stage with 1-click launchers", () => {
   const html = fs.readFileSync("public/tape.html", "utf8");
   assert.ok(html.includes("id=\"stage-title\""), "Must have stage title");
+  assert.ok(html.includes("id=\"btn-paramount-watch\""), "Must have Paramount+ launcher");
   assert.ok(html.includes("id=\"btn-yt-watch\""), "Must have direct YouTube launcher");
   assert.ok(html.includes("id=\"btn-fp-watch\""), "Must have direct Fight Pass launcher");
   assert.ok(html.includes("id=\"btn-espn-watch\""), "Must have direct ESPN+ launcher");
