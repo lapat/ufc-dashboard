@@ -139,6 +139,34 @@ function tryExtractUserId(url, data) {
 }
 
 chrome.runtime.onMessage.addListener((msg, sender) => {
+  if (msg.type === 'LAUNCH_PARAMOUNT') {
+    const targetUrl = msg.url || ('https://www.paramountplus.com/search/?q=' + encodeURIComponent(msg.query || ''));
+    chrome.tabs.query({ url: '*://*.paramountplus.com/*' }, (tabs) => {
+      if (tabs && tabs.length > 0) {
+        chrome.tabs.update(tabs[0].id, { url: targetUrl, active: true });
+        addLog('Navigated existing Paramount+ tab to fight: ' + msg.query);
+      } else {
+        chrome.tabs.create({ url: targetUrl });
+        addLog('Opened new Paramount+ tab to fight: ' + msg.query);
+      }
+    });
+    return;
+  }
+
+  if (msg.type === 'LAUNCH_FIGHTPASS') {
+    const targetUrl = msg.url || ('https://ufcfightpass.com/search?query=' + encodeURIComponent(msg.query || ''));
+    chrome.tabs.query({ url: '*://*.ufcfightpass.com/*' }, (tabs) => {
+      if (tabs && tabs.length > 0) {
+        chrome.tabs.update(tabs[0].id, { url: targetUrl, active: true });
+        addLog('Navigated existing Fight Pass tab to fight: ' + msg.query);
+      } else {
+        chrome.tabs.create({ url: targetUrl });
+        addLog('Opened new Fight Pass tab to fight: ' + msg.query);
+      }
+    });
+    return;
+  }
+
   if (msg.type === 'SCAN_STATS') {
     const st = msg.stats || {};
     const line = `scan 30s: ${st.scans} scans, ${st.withOdds} had odds, ${st.noOdds} no odds on screen, ${st.noTwoTeams} missing team names, pushes ok ${pushedCount} / failed ${pushFailCount}`;

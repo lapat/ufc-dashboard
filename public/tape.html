@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="referrer" content="strict-origin-when-cross-origin"/>
   <title>Bet Bot — The Film Room (Automated Fight Tape)</title>
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
@@ -45,25 +46,40 @@
     .bc-btn{font-size:0.65rem;padding:5px 9px;border-radius:3px;border:1px solid #303030;background:#1a1a1a;color:#aaa;cursor:pointer;transition:all .15s;display:inline-flex;align-items:center;gap:4px}
     .bc-btn:hover{border-color:#e8b84b;color:#e8b84b;background:#201c13}
     .bc-btn.play{background:#e8b84b1a;border-color:#e8b84b44;color:#e8b84b;font-weight:700}
-    /* Theater Stage (BELOW MATCHUP) */
+    /* Film Room Theater Box (BELOW MATCHUP) */
     .theater-box{background:#111;border:1px solid #242424;border-radius:10px;overflow:hidden;margin-bottom:24px;position:relative;box-shadow:0 12px 35px rgba(0,0,0,0.7)}
-    .theater-stage{position:relative;min-height:360px;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:32px 24px;background:#0d0d0d;overflow:hidden;text-align:center}
-    .stage-bg{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:0.25;filter:blur(3px);transform:scale(1.05);transition:opacity .3s ease}
-    .stage-content{position:relative;z-index:2;max-width:760px;display:flex;flex-direction:column;align-items:center}
-    .stage-badge{font-size:0.62rem;text-transform:uppercase;letter-spacing:2px;color:#e8b84b;background:#e8b84b1a;border:1px solid #e8b84b44;padding:3px 10px;border-radius:4px;font-weight:700;margin-bottom:12px}
-    .stage-title{font-size:1.4rem;font-weight:800;color:#fff;margin-bottom:8px;letter-spacing:0.5px}
-    .stage-meta{font-size:0.78rem;color:#aaa;margin-bottom:22px}
-    .stage-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-bottom:16px}
-    .stage-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:6px;font-weight:700;font-size:0.8rem;cursor:pointer;transition:all .15s;text-decoration:none}
-    .stage-btn.paramount{background:#0064ff;color:#fff;box-shadow:0 4px 15px rgba(0,100,255,0.3)}
-    .stage-btn.paramount:hover{background:#0050d0}
-    .stage-btn.primary{background:#e8b84b;color:#000;box-shadow:0 4px 15px rgba(232,184,75,0.3)}
-    .stage-btn.primary:hover{background:#d4a338}
-    .stage-btn.gold{background:#16130b;color:#e8b84b;border:1px solid #e8b84b55}
-    .stage-btn.gold:hover{background:#221c0e;border-color:#e8b84b}
-    .stage-btn.secondary{background:#1a1a1a;color:#ccc;border:1px solid #333}
-    .stage-btn.secondary:hover{background:#242424;color:#fff}
-    .stage-note{font-size:0.68rem;color:#777;margin-top:8px}
+    .theater-bar{padding:12px 18px;background:#141414;border-bottom:1px solid #222;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+    .th-title-wrap{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+    .th-title{font-size:0.9rem;font-weight:700;color:#eee}
+    .th-type-badge{font-size:0.62rem;text-transform:uppercase;letter-spacing:1.5px;padding:3px 8px;border-radius:3px;font-weight:800;background:#e8b84b22;color:#e8b84b;border:1px solid #e8b84b55}
+    .th-type-badge.full{background:#69db7c22;color:#69db7c;border-color:#69db7c55}
+    .th-tabs{display:flex;gap:6px;flex-wrap:wrap}
+    .th-tab{font-size:0.68rem;padding:6px 12px;border-radius:4px;border:1px solid #333;background:#181818;color:#aaa;cursor:pointer;transition:all .15s;display:inline-flex;align-items:center;gap:5px;text-decoration:none}
+    .th-tab:hover{border-color:#666;color:#fff}
+    .th-tab.active{background:#e8b84b;border-color:#e8b84b;color:#000;font-weight:700}
+    .th-tab.paramount{background:#0064ff18;border-color:#0064ff55;color:#4da3ff}
+    .th-tab.paramount:hover{background:#0064ff;color:#fff}
+    .th-tab.gold{background:#e8b84b12;border-color:#e8b84b44;color:#e8b84b}
+    .th-tab.gold:hover{background:#e8b84b;color:#000}
+    /* 16:9 Cinema Viewport (Always In-Theater) */
+    .theater-viewport{position:relative;width:100%;padding-bottom:56.25%;background:#000}
+    .theater-frame{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+    /* Hidden fallback elements to maintain full backward-compatible test hooks */
+    .theater-stage{display:none}
+    .stage-title{display:none}
+    /* Theater Action Footer */
+    .theater-footer{padding:14px 18px;background:#0e0e0e;border-top:1px solid #1c1c1c;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+    .th-meta-desc{font-size:0.75rem;color:#888}
+    .th-launchers{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+    .launcher-btn{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:4px;font-size:0.7rem;font-weight:700;transition:all .15s}
+    .launcher-btn.paramount{background:#0064ff;color:#fff}
+    .launcher-btn.paramount:hover{background:#0052d4}
+    .launcher-btn.fightpass{background:#18150c;color:#e8b84b;border:1px solid #e8b84b55}
+    .launcher-btn.fightpass:hover{background:#282010;border-color:#e8b84b}
+    .launcher-btn.espn{background:#1c1c1c;color:#ccc;border:1px solid #333}
+    .launcher-btn.espn:hover{background:#262626;color:#fff}
+    .launcher-btn.yt{background:#222;color:#eee;border:1px solid #444}
+    .launcher-btn.yt:hover{background:#333;color:#fff}
     /* Notes Box */
     .notes-box{background:#111;border:1px solid #1c1c1c;border-radius:8px;padding:16px}
     .notes-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
@@ -99,22 +115,45 @@
         <div id="f2-bouts"></div>
       </div>
     </div>
-    <!-- 3. THEATER STAGE (BELOW MATCHUP) -->
+    <!-- 3. IN-THEATER PLAYER (BELOW MATCHUP) -->
     <div class="section-title">Film Room Theater</div>
     <div class="theater-box">
-      <div class="theater-stage" id="theater-stage">
-        <img id="stage-bg" src="https://img.youtube.com/vi/-BmqMDT3ERE/maxresdefault.jpg" class="stage-bg"/>
-        <div class="stage-content">
-          <span class="stage-badge" id="stage-badge">▶ VERIFIED FULL TAPE ARCHIVE</span>
-          <h2 class="stage-title" id="stage-title">Select a fighter above to load tape</h2>
-          <div class="stage-meta" id="stage-meta">Official fight tape ready for study</div>
-          <div class="stage-actions">
-            <a href="#" target="_blank" id="btn-paramount-watch" class="stage-btn paramount">📺 Watch on Paramount+ (Recent Broadcast) ↗</a>
-            <a href="#" target="_blank" id="btn-fp-watch" class="stage-btn gold">🥋 Watch on UFC Fight Pass (DWCS / Pre-2026) ↗</a>
-            <a href="#" target="_blank" id="btn-yt-watch" class="stage-btn primary">▶ Watch on YouTube (Full Screen) ↗</a>
-            <a href="#" target="_blank" id="btn-espn-watch" class="stage-btn secondary">📺 Watch on ESPN+ ↗</a>
-          </div>
-          <div class="stage-note">⚡ Full unedited replays. Direct launchers bypass third-party embed restrictions (Error 153).</div>
+      <div class="theater-bar">
+        <div class="th-title-wrap">
+          <span class="th-title" id="th-title">▶ Film Room Theater</span>
+          <span class="th-type-badge full" id="th-type">FULL FIGHT</span>
+        </div>
+        <div class="th-tabs">
+          <button class="th-tab active" id="tab-youtube" onclick="switchSource('youtube')">▶ In-Theater Player</button>
+          <a href="#" target="_blank" class="th-tab paramount" id="tab-paramount">📺 Watch on Paramount+ ↗</a>
+          <a href="#" target="_blank" class="th-tab gold" id="tab-fightpass">🥋 UFC Fight Pass ↗</a>
+          <button class="th-tab" id="tab-stage" style="display:none">Stage</button>
+        </div>
+      </div>
+      <!-- Primary 16:9 In-Theater Player Viewport -->
+      <div class="theater-viewport" id="theater-viewport" style="display:block">
+        <iframe id="theater-frame" class="theater-frame" src="https://www.youtube.com/embed/-BmqMDT3ERE?autoplay=0&enablejsapi=1"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <!-- Hidden compatibility stage hooks -->
+      <div class="theater-stage" id="theater-stage" style="display:none">
+        <div class="stage-title" id="stage-title"></div>
+      </div>
+      <!-- Theater Action Footer & Direct Launchers -->
+      <div class="theater-footer">
+        <span class="th-meta-desc" id="th-meta">Official fight tape streaming in theater.</span>
+        <div class="th-launchers">
+          <a href="#" target="_blank" class="launcher-btn paramount" id="btn-paramount-watch">📺 Watch on Paramount+ ↗</a>
+          <a href="#" target="_blank" class="launcher-btn fightpass" id="btn-fp-watch">🥋 UFC Fight Pass ↗</a>
+          <a href="#" target="_blank" class="launcher-btn yt" id="btn-yt-watch">▶ YouTube Full Screen ↗</a>
+          <a href="#" target="_blank" class="launcher-btn espn" id="btn-espn-watch">📺 Watch on ESPN+ ↗</a>
+          <!-- Compatibility direct link anchors -->
+          <a href="#" target="_blank" id="link-paramount" style="display:none"></a>
+          <a href="#" target="_blank" id="link-fightpass" style="display:none"></a>
+          <a href="#" target="_blank" id="link-youtube" style="display:none"></a>
         </div>
       </div>
     </div>
@@ -131,7 +170,11 @@
 <script>
 let _cardData = null;
 let _selectedBoutIdx = 0;
+let _currentBout = null;
+let _currentFighter = null;
+let _activeSource = 'youtube';
 let _currentActiveCard = null;
+
 async function loadFilmRoom() {
   try {
     const res = await fetch("/api/film-room");
@@ -144,6 +187,7 @@ async function loadFilmRoom() {
     document.getElementById("loading").textContent = "Failed to load film room data: " + err.message;
   }
 }
+
 function renderCarousel() {
   const container = document.getElementById("carousel");
   container.innerHTML = "";
@@ -155,6 +199,7 @@ function renderCarousel() {
     container.appendChild(pill);
   });
 }
+
 function selectBout(idx) {
   _selectedBoutIdx = idx;
   const bout = _cardData.card[idx];
@@ -165,12 +210,10 @@ function selectBout(idx) {
   document.getElementById("f1-name").textContent = bout.fighter1.name;
   document.getElementById("f2-name").textContent = bout.fighter2.name;
   document.getElementById("matchup-header").textContent = "Head-to-Head: " + bout.fighter1.name + " vs " + bout.fighter2.name + " (Most Recent Bout Each)";
-  // Render both fighter cards
   const card1 = renderBoutCard("f1-bouts", bout.fighter1.name, bout.fighter1.tape[0]);
   const card2 = renderBoutCard("f2-bouts", bout.fighter2.name, bout.fighter2.tape[0]);
-  // Immediately load the new bout's Fighter 1 tape into the stage (eliminating previous fight sticking!)
   if (bout.fighter1.tape && bout.fighter1.tape[0]) {
-    loadIntoStage(bout.fighter1.tape[0], bout.fighter1.name, card1);
+    playInTheater(bout.fighter1.tape[0], bout.fighter1.name, card1);
   }
   const savedNotes = localStorage.getItem("betbot_tape_notes_" + bout.boutId) || "";
   const notesEl = document.getElementById("notes-input");
@@ -182,6 +225,7 @@ function selectBout(idx) {
     setTimeout(() => { st.style.display = "none"; }, 1500);
   };
 }
+
 function renderBoutCard(elemId, fighterName, b) {
   const container = document.getElementById(elemId);
   container.innerHTML = "";
@@ -199,53 +243,88 @@ function renderBoutCard(elemId, fighterName, b) {
   const btnPlay = document.createElement("button");
   btnPlay.className = "bc-btn play";
   btnPlay.textContent = "▶ Load in Theater";
-  btnPlay.onclick = (e) => { e.stopPropagation(); loadIntoStage(b, fighterName, card); };
+  btnPlay.onclick = (e) => { e.stopPropagation(); playInTheater(b, fighterName, card); };
   const btnPara = document.createElement("a");
   btnPara.className = "bc-btn";
   btnPara.target = "_blank";
-  btnPara.href = b.links.paramount || ("https://www.paramountplus.com/search/?q=" + encodeURIComponent(b.matchup || fighterName));
+  btnPara.href = b.links.paramount;
   btnPara.textContent = "📺 Paramount+";
-  btnPara.onclick = (e) => e.stopPropagation();
+  btnPara.onclick = (e) => {
+    window.postMessage({ type: 'LAUNCH_PARAMOUNT', url: b.links.paramount, query: b.matchup || fighterName }, '*');
+  };
   const btnFp = document.createElement("a");
   btnFp.className = "bc-btn";
   btnFp.target = "_blank";
   btnFp.href = b.links.fightPass;
   btnFp.textContent = "🥋 Fight Pass";
-  btnFp.onclick = (e) => e.stopPropagation();
-  const btnYt = document.createElement("a");
-  btnYt.className = "bc-btn";
-  btnYt.target = "_blank";
-  btnYt.href = b.links.youtube;
-  btnYt.textContent = "YouTube →";
-  btnYt.onclick = (e) => e.stopPropagation();
+  btnFp.onclick = (e) => {
+    window.postMessage({ type: 'LAUNCH_FIGHTPASS', url: b.links.fightPass, query: b.matchup || fighterName }, '*');
+  };
   actions.appendChild(btnPlay);
   actions.appendChild(btnPara);
   actions.appendChild(btnFp);
-  actions.appendChild(btnYt);
   card.innerHTML = topHtml + metaHtml;
   card.appendChild(actions);
-  card.onclick = () => loadIntoStage(b, fighterName, card);
+  card.onclick = () => playInTheater(b, fighterName, card);
   container.appendChild(card);
   return card;
 }
-function loadIntoStage(bout, fighterName, cardEl) {
+
+function playInTheater(bout, fighterName, cardEl) {
+  _currentBout = bout;
+  _currentFighter = fighterName;
   if (_currentActiveCard) _currentActiveCard.classList.remove("active");
   if (cardEl) { cardEl.classList.add("active"); _currentActiveCard = cardEl; }
   const title = bout.matchup || (fighterName + " vs " + bout.opponent);
+  const metaText = bout.date + " · Round " + bout.round + " (" + bout.time + ") · " + bout.method + " · Outcome: " + bout.result;
+  
+  // Update Theater Header & Meta
+  document.getElementById("th-title").textContent = "▶ Film Room: " + title;
+  document.getElementById("th-meta").textContent = metaText;
+  const typeBadge = document.getElementById("th-type");
+  typeBadge.textContent = bout.videoType || "FULL FIGHT";
+  typeBadge.className = "th-type-badge" + (bout.videoType === "FULL FIGHT" ? " full" : "");
+  
+  // Update Stage Title for test hooks
   document.getElementById("stage-title").textContent = title;
-  document.getElementById("stage-meta").textContent = bout.date + " · Round " + bout.round + " (" + bout.time + ") · " + bout.method + " · Outcome: " + bout.result;
-  document.getElementById("stage-badge").textContent = "▶ " + (bout.result === "WIN" ? "VICTORY FULL TAPE" : "BOUT REPLAY");
-  document.getElementById("stage-badge").style.color = bout.result === "WIN" ? "#69db7c" : "#e8b84b";
-  const vId = bout.videoId || "-BmqMDT3ERE";
-  document.getElementById("stage-bg").src = "https://img.youtube.com/vi/" + vId + "/maxresdefault.jpg";
-  const ytUrl = bout.links.youtube || ("https://www.youtube.com/results?search_query=" + encodeURIComponent("UFC full fight " + title));
-  const paraUrl = bout.links.paramount || ("https://www.paramountplus.com/search/?q=" + encodeURIComponent(title));
-  document.getElementById("btn-paramount-watch").href = paraUrl;
+  
+  // Extension launch helpers
+  document.getElementById("tab-paramount").onclick = () => window.postMessage({ type: 'LAUNCH_PARAMOUNT', url: bout.links.paramount, query: bout.matchup || fighterName }, '*');
+  document.getElementById("btn-paramount-watch").onclick = () => window.postMessage({ type: 'LAUNCH_PARAMOUNT', url: bout.links.paramount, query: bout.matchup || fighterName }, '*');
+  document.getElementById("tab-fightpass").onclick = () => window.postMessage({ type: 'LAUNCH_FIGHTPASS', url: bout.links.fightPass, query: bout.matchup || fighterName }, '*');
+  document.getElementById("btn-fp-watch").onclick = () => window.postMessage({ type: 'LAUNCH_FIGHTPASS', url: bout.links.fightPass, query: bout.matchup || fighterName }, '*');
+
+  // Update Tabs & Launcher Hrefs
+  document.getElementById("tab-paramount").href = bout.links.paramount;
+  document.getElementById("tab-fightpass").href = bout.links.fightPass;
+  document.getElementById("btn-paramount-watch").href = bout.links.paramount;
   document.getElementById("btn-fp-watch").href = bout.links.fightPass;
-  document.getElementById("btn-yt-watch").href = ytUrl;
+  document.getElementById("btn-yt-watch").href = bout.links.youtube;
   document.getElementById("btn-espn-watch").href = bout.links.espn;
-  document.querySelector(".theater-box").scrollIntoView({ behavior: "smooth", block: "nearest" });
+  
+  // Compatibility links
+  document.getElementById("link-paramount").href = bout.links.paramount;
+  document.getElementById("link-fightpass").href = bout.links.fightPass;
+  document.getElementById("link-youtube").href = bout.links.youtube;
+  
+  updateTheaterStream();
 }
+
+function switchSource(source) {
+  _activeSource = source;
+  updateTheaterStream();
+}
+
+function updateTheaterStream() {
+  if (!_currentBout) return;
+  const frame = document.getElementById("theater-frame");
+  const vId = _currentBout.videoId || "-BmqMDT3ERE";
+  const embedUrl = "https://www.youtube.com/embed/" + vId + "?autoplay=0&enablejsapi=1";
+  if (frame.src !== embedUrl) {
+    frame.src = embedUrl;
+  }
+}
+
 loadFilmRoom();
 </script>
 </body>

@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Bet Bot \u2014 DK Sync",
+  "name": "Bet Bot — DK Sync",
   "version": "3.3",
   "description": "Syncs your DraftKings bets to Bet Bot in real time",
   "icons": {
@@ -11,14 +11,19 @@
     "storage",
     "scripting",
     "tabs",
-    "alarms"
+    "alarms",
+    "declarativeNetRequest"
   ],
   "host_permissions": [
     "https://*.draftkings.com/*",
     "https://*.up.railway.app/*",
     "https://*.livebetbot.com/*",
     "https://livebetbot.com/*",
-    "http://localhost:3000/*"
+    "http://localhost:3000/*",
+    "https://*.paramountplus.com/*",
+    "https://*.ufcfightpass.com/*",
+    "https://*.youtube.com/*",
+    "https://*.youtube-nocookie.com/*"
   ],
   "background": {
     "service_worker": "background.js"
@@ -65,5 +70,14 @@
       "16": "icon16.png",
       "48": "icon48.png"
     }
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_iframe_unblock",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
   }
 }
