@@ -12,7 +12,8 @@ const testFiles = [
   "tests/3_test_patterns_endpoint.js",
   "tests/4_test_live_and_self_fight_prevention.js",
   "tests/5_test_tape_engine.js",
-  "tests/6_test_tape_player.js"
+  "tests/6_test_tape_player.js",
+  "tests/7_test_provenance_audit.js"
 ];
 
 console.log("====================================================");
