@@ -90,15 +90,20 @@
     .fp{width:40px;height:40px;border-radius:50%;object-fit:cover;object-position:top center;vertical-align:middle;margin-right:8px;background:#15171c;border:1px solid #282c35;box-shadow:0 2px 4px rgba(0,0,0,0.4);flex-shrink:0;display:inline-block}
     body, button, input, select{font-feature-settings:"tnum" 1;-webkit-font-smoothing:antialiased}
     .pts-cell, .date-cell, .xover-cell, .odds, .cur-odds, .time{font-variant-numeric:tabular-nums}
-</style>
+
+    .nav-active{font-size:0.65rem;color:#e8b84b;padding:4px 8px;border:1px solid #3a2a0a;border-radius:3px;background:#e8b84b0d;font-weight:700}
+
+  </style>
 </head>
 <body>
 
 <div id="topbar">
   <h1>⚡ Bet Bot</h1>
   <a href="/" class="nav-link">← Live</a>
-  <span style="font-size:0.65rem;color:#e8b84b;padding:4px 8px;border:1px solid #3a2a0a;border-radius:3px">Recordings</span>
+  <span class="nav-active">Library</span>
   <a href="/patterns" class="nav-link">Patterns</a>
+  <a href="/tape" class="nav-link">Tape</a>
+  <a href="/audit" class="nav-link">Audit</a>
 </div>
 
 <div id="main">

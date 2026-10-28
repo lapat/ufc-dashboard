@@ -295,13 +295,17 @@ function getUpcomingFilmRoomCard() {
   if (upcomingBouts.length === 0) {
     upcomingBouts = [
       { home: "Renato Moicano", away: "Tom Nolan", commence: "2026-11-01T02:15:00Z" },
-      { home: "Randy Brown", away: "Jacobe Smith", commence: "2026-10-31T23:59:00Z" },
       { home: "Ode Osbourne", away: "Cody Durden", commence: "2026-11-01T01:15:00Z" },
+      { home: "Yana Santos", away: "Luana Santos", commence: "2026-11-01T00:45:00Z" },
+      { home: "Jean-Paul Lebosnoyani", away: "Farman Hasanov", commence: "2026-11-01T00:15:00Z" },
+      { home: "Francis Marshall", away: "Dakota Hope", commence: "2026-10-31T23:40:00Z" },
+      { home: "Rodrigo Sezinando", away: "Theodor Berggren", commence: "2026-10-31T23:15:00Z" },
       { home: "Julian Erosa", away: "Jeongyoung Lee", commence: "2026-10-31T22:50:00Z" },
       { home: "Zachary Reese", away: "Mickey Gall", commence: "2026-10-31T22:25:00Z" },
-      { home: "Yana Santos", away: "Luana Santos", commence: "2026-11-01T00:45:00Z" },
+      { home: "Nick Klein", away: "Joseph Kropschot", commence: "2026-10-31T22:00:00Z" },
       { home: "Talita Alencar", away: "Piera Rodriguez", commence: "2026-10-31T21:35:00Z" },
-      { home: "Tainara Lisboa", away: "Lucia Szabova", commence: "2026-10-31T21:00:00Z" }
+      { home: "Tainara Lisboa", away: "Lucia Szabova", commence: "2026-10-31T21:00:00Z" },
+      { home: "Randy Brown", away: "Jacobe Smith", commence: "2026-10-31T13:45:00Z" }
     ];
   }
 
