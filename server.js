@@ -405,6 +405,7 @@ app.get('/api/patterns', (req, res) => {
         round3Plus: 4
       },
       hallOfFame: [
+        { fight: "Dominick Reyes vs Johnny Walker", file: "dominickreyes_vs_johnnywalker_2026-04-12.json", openFav: -178, openDog: 150, peakFavPlusMoney: "+108", dataPoints: 738, crossovers: 6 },
         { fight: "Manon Fiorot vs Alexa Grasso", file: "alexagrasso_vs_manonfiorot_2026-09-12.json", openFav: -315, openDog: 230, peakFavPlusMoney: "+3000", dataPoints: 13 },
         { fight: "Cody Chovancek vs Su Young You", file: "codychovancek_vs_suyoungyou_2026-10-17.json", openFav: -125, openDog: 105, peakFavPlusMoney: "+3000", dataPoints: 15 },
         { fight: "Tanner Boser vs Jhonata Diniz", file: "jhonatadiniz_vs_tannerboser_2026-10-17.json", openFav: -218, openDog: 180, peakFavPlusMoney: "+2500", dataPoints: 17 },

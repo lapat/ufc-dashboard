@@ -421,7 +421,7 @@ function renderTable(){
   const q=searchQuery.toLowerCase();
   let rows=allRecs.filter(r=>{
     if(activeSportFilter!=='all' && !r.sport.toUpperCase().includes(activeSportFilter.toUpperCase())) return false;
-    if(q && !r.fighter1.toLowerCase().includes(q) && !r.fighter2.toLowerCase().includes(q)) return false;
+    if(q && !r.fighter1.toLowerCase().includes(q) && !r.fighter2.toLowerCase().includes(q) && !r.id.toLowerCase().includes(q) && !r.date.includes(q)) return false;
     return true;
   });
   rows=sortedRecs(rows);
