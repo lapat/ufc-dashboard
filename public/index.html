@@ -379,6 +379,17 @@
       #bt-stake,#bt-odds{min-width:100px}
       .pos-grid{grid-template-columns:1fr 1fr}
     }
+  
+    /* ── Live Momentum & Damage Glow Additions ── */
+    @keyframes damagePulse {
+      0%, 100% { box-shadow: 0 0 4px rgba(255, 23, 68, 0.2); border-color: #ff1744; }
+      50% { box-shadow: 0 0 12px rgba(255, 23, 68, 0.6); border-color: #ff5252; }
+    }
+    .damage-glow {
+      animation: damagePulse 1.5s infinite !important;
+      border: 1px solid #ff1744 !important;
+    }
+
   </style>
 </head>
 <body>
@@ -523,12 +534,26 @@
         <span id="nw-physical-detail"></span>
       </div>
     </div>
+
     <!-- Live In-Fight Strikes and Takedowns -->
     <div id="nw-live-stats" style="display:none;background:#070707;border:1px solid #1a1a1a;border-radius:6px;padding:8px 12px;margin-top:8px;font-size:0.72rem;color:#ccc;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;">
       <span>🥊 <strong>Sig Strikes:</strong> <strong style="color:var(--gold)" id="nw-sig-f1">0</strong> vs <strong style="color:#74c0fc" id="nw-sig-f2">0</strong></span>
       <span>🤼 <strong>Takedowns:</strong> <strong style="color:var(--gold)" id="nw-td-f1">0</strong> vs <strong style="color:#74c0fc" id="nw-td-f2">0</strong></span>
       <span>⏱ <strong>Control:</strong> <span id="nw-ctrl-f1">0:00</span> vs <span id="nw-ctrl-f2">0:00</span></span>
     </div>
+    <!-- Live Momentum Bar & Judges Scorecard Predictor -->
+    <div id="nw-momentum-container" style="display:none;margin-top:6px;background:#070707;border:1px solid #1a1a1a;border-radius:6px;padding:8px 12px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.68rem;margin-bottom:5px;">
+        <span style="color:var(--gold);font-weight:700;">Momentum: <span id="nw-mom-f1">50</span>%</span>
+        <span id="nw-scorecard-badge" style="background:#1c1800;border:1px solid #e8b84b;color:#e8b84b;padding:2px 8px;border-radius:4px;font-weight:700;text-transform:uppercase;font-size:0.62rem;letter-spacing:0.5px;">Dead Heat</span>
+        <span style="color:#74c0fc;font-weight:700;"><span id="nw-mom-f2">50</span>%</span>
+      </div>
+      <div style="height:6px;background:#141414;border-radius:3px;overflow:hidden;display:flex;">
+        <div id="nw-mom-bar-f1" style="width:50%;background:var(--gold);transition:width 0.4s ease;"></div>
+        <div id="nw-mom-bar-f2" style="width:50%;background:#74c0fc;transition:width 0.4s ease;"></div>
+      </div>
+    </div>
+
     <div id="nw-score">
       <span class="nw-score-num" id="nw-score-1">0</span>
       <span class="nw-score-dash">—</span>
@@ -1383,10 +1408,22 @@ function updateNowWatchingOdds(o1,o2,drawOdds){
   }
 }
 
+
+let _screenWakeLock = null;
+async function requestScreenWakeLock() {
+  try {
+    if ('wakeLock' in navigator && !_screenWakeLock) {
+      _screenWakeLock = await navigator.wakeLock.request('screen');
+      _screenWakeLock.addEventListener('release', () => { _screenWakeLock = null; });
+    }
+  } catch (_) {}
+}
+
 let _classicLiveStatsTimer = null;
 function startClassicLiveStats(f1, f2) {
   if (_classicLiveStatsTimer) clearInterval(_classicLiveStatsTimer);
   const poll = () => {
+    requestScreenWakeLock();
     fetch('/api/live-fight-stats?f1=' + encodeURIComponent(f1) + '&f2=' + encodeURIComponent(f2))
       .then(r => r.json())
       .then(ls => {
@@ -1398,7 +1435,31 @@ function startClassicLiveStats(f1, f2) {
           document.getElementById('nw-td-f1').textContent = ls.f1.takedownsLanded;
           document.getElementById('nw-td-f2').textContent = ls.f2.takedownsLanded;
           document.getElementById('nw-ctrl-f1').textContent = ls.f1.controlTime || '0:00';
+          
           document.getElementById('nw-ctrl-f2').textContent = ls.f2.controlTime || '0:00';
+          
+          // Surface Live Momentum Bar & Judges Scorecard Predictor
+          const momContainer = document.getElementById('nw-momentum-container');
+          if (ls.momentum) {
+            momContainer.style.display = 'block';
+            document.getElementById('nw-mom-f1').textContent = ls.momentum.f1Pct;
+            document.getElementById('nw-mom-f2').textContent = ls.momentum.f2Pct;
+            document.getElementById('nw-mom-bar-f1').style.width = ls.momentum.f1Pct + '%';
+            document.getElementById('nw-mom-bar-f2').style.width = ls.momentum.f2Pct + '%';
+          }
+          if (ls.scorecardEstimate) {
+            document.getElementById('nw-scorecard-badge').textContent = ls.scorecardEstimate;
+          }
+
+          // Damage Glow & Knockdown Alert
+          const hasKnockdown = (ls.f1.knockdowns > 0) || (ls.f2.knockdowns > 0);
+          const heavyDamage = (ls.f1.sigStrikesLanded >= 35) || (ls.f2.sigStrikesLanded >= 35);
+          if (hasKnockdown || heavyDamage) {
+            row.classList.add('damage-glow');
+          } else {
+            row.classList.remove('damage-glow');
+          }
+
           
           let alertBanner = document.getElementById("stale-line-alert");
           if (!alertBanner) {
