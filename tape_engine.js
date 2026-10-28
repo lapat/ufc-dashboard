@@ -12,6 +12,16 @@ const ATHLETE_PAGES_DIR = path.join(__dirname, "..", "ufc_local_data", "athlete_
 const POLL_LOG_DIR = path.join(__dirname, "poll_log");
 const YT_CACHE_FILE = path.join(__dirname, "analysis", "youtube_tape_cache.json");
 const TAPE_CACHE_FILE = path.join(__dirname, "analysis", "fighter_tape_cache.json");
+const PARAMOUNT_CACHE_FILE = path.join(__dirname, "analysis", "paramount_tape_cache.json");
+let _paramountCache = null;
+function loadParamountCache() {
+  if (!_paramountCache && fs.existsSync(PARAMOUNT_CACHE_FILE)) {
+    try { _paramountCache = JSON.parse(fs.readFileSync(PARAMOUNT_CACHE_FILE, "utf8")); }
+    catch (_) {}
+  }
+  return _paramountCache || {};
+}
+
 
 function toSlug(name) {
   return (name || "")
@@ -63,6 +73,17 @@ function isUfcFighter(name) {
 }
 
 function getExactParamountUrl(matchup, fighterName) {
+  const pCache = loadParamountCache();
+  const s = toSlug(fighterName);
+  if (pCache[s] && pCache[s].url) {
+    return pCache[s].url;
+  }
+  const sMatch = toSlug(matchup);
+  for (const k of Object.keys(pCache)) {
+    if (sMatch.includes(k) && pCache[k].url) {
+      return pCache[k].url;
+    }
+  }
   const m = ((matchup || "") + " " + (fighterName || "")).toLowerCase();
   if (m.includes("volkanovski") && m.includes("evloev")) {
     return "https://www.paramountplus.com/shows/video/ALVE01M4GF29YWED1VZWHSY9FARRTV/";

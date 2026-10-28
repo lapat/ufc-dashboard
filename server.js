@@ -231,6 +231,37 @@ app.get('/tape', (req, res) => { res.sendFile(path.join(__dirname, 'public', 'ta
 
 // Audit & Data Provenance (100% verifiable source trail for Ish)
 app.get('/audit', (req, res) => { res.sendFile(path.join(__dirname, 'public', 'audit.html')); });
+
+// Dynamic Paramount+ Exact Video Resolver
+app.get('/api/paramount-resolve', async (req, res) => {
+  try {
+    const q = req.query.q;
+    if (!q) return res.status(400).json({ error: "Missing q parameter" });
+    const https = require("https");
+    const url = "https://www.paramountplus.com/search/vod-lookup/?term=" + encodeURIComponent(q) + "&offset=0&limit=5";
+    https.get(url, { headers: { "User-Agent": "Mozilla/5.0" } }, r => {
+      let d = ""; r.on("data", c => d += c);
+      r.on("end", () => {
+        try {
+          const j = JSON.parse(d);
+          const data = j.result?.data || [];
+          if (data.length > 0) {
+            const best = data[0];
+            return res.json({
+              available: true,
+              contentId: best.contentId,
+              title: best.title,
+              url: "https://www.paramountplus.com" + best.href,
+              duration: best.durationAndSeries
+            });
+          }
+          res.json({ available: false });
+        } catch(e) { res.status(500).json({ error: e.message }); }
+      });
+    }).on("error", err => res.status(500).json({ error: err.message }));
+  } catch(e) { res.status(500).json({ error: e.message }); }
+});
+
 app.get('/api/audit', (req, res) => {
   try { res.json(getAuditData()); }
   catch (e) { res.status(500).json({ error: e.message }); }
