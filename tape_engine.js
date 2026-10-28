@@ -180,9 +180,31 @@ function enrichBoutWithVideo(bout, slug, fighterName) {
     bout.videoTitle = bout.matchup || (fighterName + " UFC Fight");
     bout.videoType = "FULL FIGHT";
   }
-  if (!bout.links.paramount) {
-    bout.links.paramount = getExactParamountUrl(bout.matchup, fighterName);
+
+  // ── Pre-2026 Broadcast Cutoff Mandate ──
+  // Paramount+ acquired exclusive US rights starting Jan 1, 2026.
+  // Any fight before 2026 (2025, 2024, or older) is legally and physically exclusive to UFC Fight Pass.
+  const yearMatch = (bout.date || "").match(/\b(20\d{2})\b/);
+  const year = yearMatch ? parseInt(yearMatch[1], 10) : 2026;
+
+  if (year < 2026) {
+    bout.primaryPlatform = "fightpass";
+    bout.platformNotice = "Pre-2026 Archive: Exclusive to UFC Fight Pass";
+    bout.links.paramount = null;
+  } else {
+    bout.primaryPlatform = "paramount";
+    bout.platformNotice = "2026 Paramount+ Official Broadcast";
+    if (!bout.links.paramount) {
+      bout.links.paramount = getExactParamountUrl(bout.matchup, fighterName);
+    }
   }
+
+  // Ensure fightPass search query is always cleanly encoded
+  if (!bout.links.fightPass) {
+    const q = bout.matchup || (fighterName + " vs " + (bout.opponent || ""));
+    bout.links.fightPass = "https://ufcfightpass.com/search?query=" + encodeURIComponent(q);
+  }
+
   return bout;
 }
 

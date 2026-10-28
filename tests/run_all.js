@@ -13,7 +13,8 @@ const testFiles = [
   "tests/4_test_live_and_self_fight_prevention.js",
   "tests/5_test_tape_engine.js",
   "tests/6_test_tape_player.js",
-  "tests/7_test_provenance_audit.js"
+  "tests/7_test_provenance_audit.js",
+  "tests/8_test_every_fight_tape_and_pre2026_rule.js"
 ];
 
 console.log("====================================================");
