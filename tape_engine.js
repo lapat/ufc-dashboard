@@ -12,6 +12,25 @@ const ATHLETE_PAGES_DIR = path.join(__dirname, "..", "ufc_local_data", "athlete_
 const POLL_LOG_DIR = path.join(__dirname, "poll_log");
 const YT_CACHE_FILE = path.join(__dirname, "analysis", "youtube_tape_cache.json");
 const TAPE_CACHE_FILE = path.join(__dirname, "analysis", "fighter_tape_cache.json");
+const FIGHTPASS_CACHE_FILE = path.join(__dirname, "analysis", "fightpass_tape_cache.json");
+let _fightpassCache = null;
+function loadFightpassCache() {
+  if (!_fightpassCache && fs.existsSync(FIGHTPASS_CACHE_FILE)) {
+    try { _fightpassCache = JSON.parse(fs.readFileSync(FIGHTPASS_CACHE_FILE, "utf8")); }
+    catch (_) {}
+  }
+  return _fightpassCache || {};
+}
+
+function getExactFightpassUrl(matchup, fighterName) {
+  const fpCache = loadFightpassCache();
+  const s = toSlug(fighterName);
+  if (fpCache[s] && fpCache[s].url) {
+    return fpCache[s].url;
+  }
+  return "https://ufcfightpass.com/search?query=" + encodeURIComponent(fighterName);
+}
+
 const PARAMOUNT_CACHE_FILE = path.join(__dirname, "analysis", "paramount_tape_cache.json");
 let _paramountCache = null;
 function loadParamountCache() {
@@ -207,10 +226,12 @@ function enrichBoutWithVideo(bout, slug, fighterName) {
     }
   }
 
-  // Ensure fightPass search query is always cleanly encoded
-  if (!bout.links.fightPass) {
-    const q = bout.matchup || (fighterName + " vs " + (bout.opponent || ""));
-    bout.links.fightPass = "https://ufcfightpass.com/search?query=" + encodeURIComponent(q);
+  // Use exact direct Fight Pass video link if available in cache, else clean search
+  const exactFp = getExactFightpassUrl(bout.matchup, fighterName);
+  if (exactFp) {
+    bout.links.fightPass = exactFp;
+  } else if (!bout.links.fightPass) {
+    bout.links.fightPass = "https://ufcfightpass.com/search?query=" + encodeURIComponent(fighterName);
   }
 
   return bout;

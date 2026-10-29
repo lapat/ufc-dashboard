@@ -67,7 +67,7 @@ test("Tainara Lisboa explicitly verified: zero dead Paramount clicks, clean Figh
   
   assert.strictEqual(t.primaryPlatform, "fightpass", "Lisboa must be Fight Pass primary");
   assert.strictEqual(t.links.paramount, null, "Lisboa Paramount link must be null");
-  assert.strictEqual(t.links.fightPass, "https://ufcfightpass.com/search?query=Tainara%20Lisboa", "Lisboa Fight Pass query must be clean full name");
+  assert.strictEqual(t.links.fightPass, "https://ufcfightpass.com/video/801878", "Lisboa Fight Pass link must be exact direct video URL");
   assert.strictEqual(t.videoId, "Q7xlRcTmsRo", "Lisboa YouTube must be official ESPN MMA debut");
   assert.strictEqual(t.opponent, "Melissa Croden", "Opponent must be full name Melissa Croden");
 });
