@@ -295,17 +295,57 @@ function playInTheater(bout, fighterName, cardEl) {
   // Update Stage Title for test hooks
   document.getElementById("stage-title").textContent = title;
   
-  // Extension launch helpers
-  document.getElementById("tab-paramount").onclick = () => window.postMessage({ type: 'LAUNCH_PARAMOUNT', url: bout.links.paramount, query: bout.matchup || fighterName }, '*');
-  document.getElementById("btn-paramount-watch").onclick = () => window.postMessage({ type: 'LAUNCH_PARAMOUNT', url: bout.links.paramount, query: bout.matchup || fighterName }, '*');
-  document.getElementById("tab-fightpass").onclick = () => window.postMessage({ type: 'LAUNCH_FIGHTPASS', url: bout.links.fightPass, query: bout.matchup || fighterName }, '*');
-  document.getElementById("btn-fp-watch").onclick = () => window.postMessage({ type: 'LAUNCH_FIGHTPASS', url: bout.links.fightPass, query: bout.matchup || fighterName }, '*');
+  const isPre2026 = bout.primaryPlatform === "fightpass" || !bout.links.paramount;
+  const tabPara = document.getElementById("tab-paramount");
+  const btnParaWatch = document.getElementById("btn-paramount-watch");
+  const tabFp = document.getElementById("tab-fightpass");
+  const btnFpWatch = document.getElementById("btn-fp-watch");
 
-  // Update Tabs & Launcher Hrefs
-  document.getElementById("tab-paramount").href = bout.links.paramount;
-  document.getElementById("tab-fightpass").href = bout.links.fightPass;
-  document.getElementById("btn-paramount-watch").href = bout.links.paramount;
-  document.getElementById("btn-fp-watch").href = bout.links.fightPass;
+  // Dynamic Theater Platform Routing: NEVER show a dead Paramount+ button for pre-2026 bouts
+  if (isPre2026) {
+    tabPara.style.display = "none";
+    btnParaWatch.style.display = "none";
+    tabPara.href = "";
+    btnParaWatch.href = "";
+    tabFp.style.display = "inline-flex";
+    tabFp.className = "th-tab gold active-stream";
+    tabFp.textContent = "🥋 UFC Fight Pass (Exclusive) ↗";
+    btnFpWatch.style.display = "inline-flex";
+    btnFpWatch.className = "launcher-btn fightpass play gold";
+    btnFpWatch.textContent = "🥋 Watch on UFC Fight Pass ↗";
+  } else {
+    tabPara.style.display = "inline-flex";
+    btnParaWatch.style.display = "inline-flex";
+    tabPara.className = "th-tab paramount";
+    tabPara.textContent = "📺 Watch on Paramount+ ↗";
+    tabPara.href = bout.links.paramount;
+    btnParaWatch.className = "launcher-btn paramount";
+    btnParaWatch.textContent = "📺 Watch on Paramount+ ↗";
+    btnParaWatch.href = bout.links.paramount;
+    tabFp.style.display = "inline-flex";
+    tabFp.className = "th-tab gold";
+    tabFp.textContent = "🥋 UFC Fight Pass ↗";
+    btnFpWatch.style.display = "inline-flex";
+    btnFpWatch.className = "launcher-btn fightpass";
+    btnFpWatch.textContent = "🥋 UFC Fight Pass ↗";
+  }
+
+  // Extension launch helpers
+  tabPara.onclick = (e) => {
+    if (!isPre2026 && bout.links.paramount) {
+      window.postMessage({ type: 'LAUNCH_PARAMOUNT', url: bout.links.paramount, query: bout.matchup || fighterName }, '*');
+    }
+  };
+  btnParaWatch.onclick = (e) => {
+    if (!isPre2026 && bout.links.paramount) {
+      window.postMessage({ type: 'LAUNCH_PARAMOUNT', url: bout.links.paramount, query: bout.matchup || fighterName }, '*');
+    }
+  };
+  tabFp.onclick = () => window.postMessage({ type: 'LAUNCH_FIGHTPASS', url: bout.links.fightPass, query: fighterName }, '*');
+  btnFpWatch.onclick = () => window.postMessage({ type: 'LAUNCH_FIGHTPASS', url: bout.links.fightPass, query: fighterName }, '*');
+
+  tabFp.href = bout.links.fightPass;
+  btnFpWatch.href = bout.links.fightPass;
   document.getElementById("btn-yt-watch").href = bout.links.youtube;
   document.getElementById("btn-espn-watch").href = bout.links.espn;
   
