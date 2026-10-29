@@ -48,7 +48,7 @@ test("every 2026+ fighter on the card has a direct ALVE video URL (Zero Missing 
         const hasDirect = t.links && t.links.paramount && t.links.paramount.includes("ALVE");
         
         // Joseph Kropschot is an unindexed regional fighter making his debut, so we allow fallback
-        if (!hasCached && !hasDirect && f.name !== "Joseph Kropschot") {
+        if (!hasCached && !hasDirect) {
           missing.push(f.name);
         }
       }

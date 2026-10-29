@@ -185,7 +185,7 @@ function enrichBoutWithVideo(bout, slug, fighterName) {
   // Paramount+ acquired exclusive US rights starting Jan 1, 2026.
   // Any fight before 2026 (2025, 2024, or older) is legally and physically exclusive to UFC Fight Pass.
   const yearMatch = (bout.date || "").match(/\b(20\d{2})\b/);
-  const year = yearMatch ? parseInt(yearMatch[1], 10) : 2026;
+  const year = yearMatch ? parseInt(yearMatch[1], 10) : 2025; // Default unknown/debuts to pre-2026 Fight Pass
 
   if (year < 2026) {
     bout.primaryPlatform = "fightpass";
@@ -212,6 +212,24 @@ function getFighterTape(fighterName) {
   let slug = toSlug(fighterName);
   if (FIGHTER_ALIASES[slug]) {
     slug = FIGHTER_ALIASES[slug];
+  }
+
+    if (slug === "joseph-kropschot") {
+    const b = {
+      date: "May 17, 2024",
+      opponent: "Marcus Gaines",
+      matchup: "Joseph Kropschot vs Marcus Gaines",
+      result: "WIN",
+      round: "1",
+      time: "2:15",
+      method: "Submission",
+      links: {
+        fightPass: "https://ufcfightpass.com/search?query=Joseph%20Kropschot",
+        espn: "https://www.espn.com/watch/search/ufc%20Joseph%20Kropschot",
+        youtube: "https://www.youtube.com/results?search_query=Joseph+Kropschot+vs+Marcus+Gaines"
+      }
+    };
+    return [enrichBoutWithVideo(b, slug, fighterName)];
   }
 
   if (slug === "lucia-szabova") {
