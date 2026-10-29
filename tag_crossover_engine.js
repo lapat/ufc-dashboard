@@ -101,6 +101,17 @@ function calculateTaggedCrossover(f1OpeningOdds, f2OpeningOdds, f1TagsData, f2Ta
     finalRate = Math.max(finalRate, 62.5);
   }
 
+  // 6. Older Underdog Suppression (Ish Canon: "Older underdog has a lower chance of a crossover")
+  if (dogTags.includes('older')) {
+    warnings.push({
+      id: 'older_dog',
+      badge: '⏳ Older Underdog (Lower Comeback Rate)',
+      rate: 33.5,
+      detail: `${dogName} tagged older/veteran; lower likelihood of mounting live line flip`
+    });
+    finalRate = Math.min(finalRate, 33.5);
+  }
+
   // Raw Dog Note: Subjective indicator from Ish
   if (dogIsRawDog) {
     activeCatalysts.push({

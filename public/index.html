@@ -1710,25 +1710,33 @@ function updateFightUI(f1Name,f2Name,o1,o2,live,sport,switchGames){
     .then(r => r.json())
     .then(stats => {
       if (stats && !stats.error) {
-        const f1Fin = stats.f1?.finisher?.badge || 'Balanced';
+        // Use Ish's tags as primary stylistic badge when available
+        const getStyleBadge = (fighterObj) => {
+          const tList = fighterObj?.tags?.tags || [];
+          if (tList.length > 0) {
+            return tList.map(id => TAG_DEFS.find(d => d.id === id)?.short || id).slice(0, 2).join(' · ');
+          }
+          return fighterObj?.finisher?.badge || 'Balanced';
+        };
+        const f1Style = getStyleBadge(stats.f1);
+        const f2Style = getStyleBadge(stats.f2);
         const f1Gas = stats.f1?.gasTank?.badge || 'Steady';
-        const f2Fin = stats.f2?.finisher?.badge || 'Balanced';
         const f2Gas = stats.f2?.gasTank?.badge || 'Steady';
-        document.getElementById('nw-f1-capsule').innerHTML = '<strong>' + f1Name + ':</strong> ' + f1Fin + ' · ' + f1Gas;
+        document.getElementById('nw-f1-capsule').innerHTML = '<strong>' + f1Name + ':</strong> ' + f1Style + ' · ' + f1Gas;
         document.getElementById('nw-vol-capsule').textContent = 'Vol: ' + (stats.fightVolatility != null ? stats.fightVolatility : '70');
-        document.getElementById('nw-f2-capsule').innerHTML = '<strong>' + f2Name + ':</strong> ' + f2Fin + ' · ' + f2Gas;
+        document.getElementById('nw-f2-capsule').innerHTML = '<strong>' + f2Name + ':</strong> ' + f2Style + ' · ' + f2Gas;
         document.getElementById('nw-capsule').style.display = 'flex';
         const fmtMethod = (p, name) => {
-          if (!p) return '';
+          if (!p) return name + ': —';
           const m = p.winMethods || {};
-          if (!m['KO/TKO'] && !m['DEC'] && !m['SUB']) {
-            const rec = p.bio?.record ? (' (' + p.bio.record + ')') : '';
-            return name + ': 🌱 Octagon Debut' + rec;
-          }
           const ko = m['KO/TKO'] ? (m['KO/TKO'].split(' ')[1] || m['KO/TKO']) : '0%';
           const dec = m['DEC'] ? (m['DEC'].split(' ')[1] || m['DEC']) : '0%';
           const sub = m['SUB'] ? (m['SUB'].split(' ')[1] || m['SUB']) : '0%';
-          return name + ': ' + ko + ' KO · ' + dec + ' Dec · ' + sub + ' Sub';
+          const s = p.stats;
+          const slpmStr = (s && s.slpm != null) ? (' · ' + (s.slpm > 10 ? s.slpm.toFixed(0) : s.slpm.toFixed(1)) + ' SLpM') : '';
+          const tdDefVal = (s && s.tdDef != null) ? (s.tdDef > 1 ? Math.round(s.tdDef) : Math.round(s.tdDef * 100)) : null;
+          const tdDefStr = tdDefVal != null ? (' · ' + tdDefVal + '% TD Def') : '';
+          return name + ': ' + ko + ' KO · ' + dec + ' Dec · ' + sub + ' Sub' + slpmStr + tdDefStr;
         };
         document.getElementById('nw-f1-prop').textContent = fmtMethod(stats.f1, f1Name);
         document.getElementById('nw-f2-prop').textContent = fmtMethod(stats.f2, f2Name);

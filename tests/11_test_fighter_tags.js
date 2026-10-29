@@ -138,6 +138,13 @@ test('Grappler Suppression Trap suppresses crossover probability to 34.8%', () =
   assert.ok(res.advice.includes('Crossover Suppressed'));
 });
 
+test('Older Underdog suppresses crossover probability to 33.5% (Ish Canon)', () => {
+  // F1 (-180 Fav) no tags, F2 (+150 Dog) has older
+  const res = calculateTaggedCrossover(-180, 150, { tags: [] }, { tags: ['older'] });
+  assert.strictEqual(res.taggedCrossoverPct, 33.5);
+  assert.ok(res.warnings.some(w => w.includes('Older Underdog')));
+});
+
 test('Raw Dog status on underdog is captured and surfaces in catalyst badges', () => {
   const res = calculateTaggedCrossover(-150, 130, { tags: [] }, { tags: [], isRawDog: true }, 'Fav', 'Dog');
   assert.strictEqual(res.dogIsRawDog, true);

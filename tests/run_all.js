@@ -17,7 +17,8 @@ const testFiles = [
   "tests/8_test_every_fight_tape_and_pre2026_rule.js",
   "tests/9_test_paramount_coverage.js",
   "tests/10_test_every_button_click.js",
-  "tests/11_test_fighter_tags.js"
+  "tests/11_test_fighter_tags.js",
+  "tests/12_test_tag_api_integration.js"
 ];
 
 console.log("====================================================");

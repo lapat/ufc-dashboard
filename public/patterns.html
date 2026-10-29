@@ -105,6 +105,34 @@
       <a href="/audit" style="font-size:0.7rem;color:#e8b84b;font-weight:700;border:1px solid #e8b84b44;background:#e8b84b15;padding:6px 12px;border-radius:4px;text-decoration:none;">Inspect Fight-by-Fight Audit Trail →</a>
     </div>
 
+    <!-- ISH TAG ENGINE & HISTORICAL RERUN CARD -->
+    <div style="background:#111;border:1px solid #332a15;border-radius:6px;padding:14px 18px;margin-bottom:18px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:8px;">
+        <div>
+          <span style="color:#e8b84b;font-weight:700;font-size:0.85rem;">🎯 Ish's Stylistic Tagging & Crossover Engine</span>
+          <span style="font-size:0.65rem;color:#888;margin-left:8px;">(Live In-Fight Overrides & Historical Re-Run)</span>
+        </div>
+        <button id="btn-rerun-tag-analysis" style="background:#e8b84b;border:none;color:#000;padding:4px 10px;border-radius:4px;font-weight:700;font-size:0.68rem;cursor:pointer;">↻ Re-run Tag Backtest</button>
+      </div>
+      <p style="font-size:0.72rem;color:#aaa;margin-bottom:10px;">
+        Instead of rigid algorithmic heuristics, Ish tags fighters directly in the Live HUD (e.g. <em>Takedown Defense, Striking Power, Heavy Wrestler, Age Cliff, or 🐕 Raw Dog</em>). These tags override automated assumptions and compute dynamic line-flip probabilities during live bouts.
+      </p>
+      <div id="ish-tag-stats-row" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px;font-size:0.72rem;">
+        <div style="background:#161616;padding:8px 10px;border-radius:4px;border:1px solid #222;">
+          <div style="color:#666;font-size:0.6rem;text-transform:uppercase;">Tagged Fights in History</div>
+          <div id="ish-tagged-count" style="color:#e8b84b;font-weight:700;font-size:1.1rem;">Loading...</div>
+        </div>
+        <div style="background:#161616;padding:8px 10px;border-radius:4px;border:1px solid #222;">
+          <div style="color:#666;font-size:0.6rem;text-transform:uppercase;">Crossover Rate (Tagged)</div>
+          <div id="ish-tagged-rate" style="color:#69db7c;font-weight:700;font-size:1.1rem;">Loading...</div>
+        </div>
+        <div style="background:#161616;padding:8px 10px;border-radius:4px;border:1px solid #222;">
+          <div style="color:#666;font-size:0.6rem;text-transform:uppercase;">Historical Base Rate</div>
+          <div id="ish-base-rate" style="color:#bbb;font-weight:700;font-size:1.1rem;">41.5%</div>
+        </div>
+      </div>
+    </div>
+
     <!-- 1. SUMMARY -->
     <div class="section-title">Historical Baseline</div>
     <div class="stat-row" id="summary-row"></div>
@@ -356,7 +384,29 @@ async function load(){
   });
 }
 
+async function loadTagBacktestData() {
+  try {
+    const res = await fetch('/api/rerun-tag-analysis');
+    const data = await res.json();
+    if (data && !data.error) {
+      document.getElementById('ish-tagged-count').textContent = `${data.taggedFightsCount} fights`;
+      document.getElementById('ish-tagged-rate').textContent = data.taggedCrossoverRate != null ? `${data.taggedCrossoverRate}%` : '—';
+      document.getElementById('ish-base-rate').textContent = `${data.overallCrossoverRate}% (${data.totalAnalyzed} fights)`;
+    }
+  } catch (_) {}
+}
+
+const rerunBtn = document.getElementById('btn-rerun-tag-analysis');
+if (rerunBtn) {
+  rerunBtn.onclick = async () => {
+    rerunBtn.textContent = 'Running...';
+    await loadTagBacktestData();
+    rerunBtn.textContent = '↻ Re-run Tag Backtest';
+  };
+}
+
 load();
+loadTagBacktestData();
 calcHedge();
 </script>
 </body>

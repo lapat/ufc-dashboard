@@ -49,7 +49,7 @@ let _cachedSummaryJson = null;
 let _oddsApiCreditsUsed = null;
 let _oddsApiCreditsRemaining = null;
 
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 
@@ -2583,35 +2583,43 @@ function autoSanitizeHistoricalStorage() {
 }
 autoSanitizeHistoricalStorage();
 
-app.listen(PORT, () => {
-  console.log(`Bet Bot running at http://localhost:${PORT}`);
+function startServer() {
+  return app.listen(PORT, () => {
+    console.log(`Bet Bot running at http://localhost:${PORT}`);
 
-  // Backup reconcile: once shortly after boot, then every 30 min. Catches anything whose
-  // push failed, including fights recorded while GitHub was down.
-  const runReconcile = () => reconcileBackups()
-    .then(r => console.log('[backup] reconcile:', JSON.stringify(r)))
-    .catch(e => console.error('[backup] reconcile failed:', e.message));
-  setTimeout(runReconcile, 60 * 1000).unref();
-  setInterval(runReconcile, 30 * 60 * 1000).unref();
+    // Backup reconcile: once shortly after boot, then every 30 min. Catches anything whose
+    // push failed, including fights recorded while GitHub was down.
+    const runReconcile = () => reconcileBackups()
+      .then(r => console.log('[backup] reconcile:', JSON.stringify(r)))
+      .catch(e => console.error('[backup] reconcile failed:', e.message));
+    setTimeout(runReconcile, 60 * 1000).unref();
+    setInterval(runReconcile, 30 * 60 * 1000).unref();
 
-  // Validate critical env vars at startup — loud errors so Railway logs catch them immediately
-  if (!process.env.GITHUB_TOKEN) {
-    console.error('🚨 CRITICAL: GITHUB_TOKEN not set — fight files will NOT be backed up to GitHub!');
-    sendAlert('🚨 BET BOT: GITHUB_TOKEN missing', 'Fight recordings will save to disk but will NOT be backed up to GitHub. Set GITHUB_TOKEN in Railway Variables immediately.\n\nhttps://ufc-dashboard-production-e03d.up.railway.app');
-  } else {
-    console.log('[startup] GITHUB_TOKEN ✓');
-  }
-  if (!process.env.DATA_DIR) {
-    console.warn('[startup] DATA_DIR not set — using ephemeral filesystem. Set DATA_DIR=/data for Railway volume.');
-  } else {
-    console.log(`[startup] DATA_DIR=${process.env.DATA_DIR} ✓`);
-  }
+    // Validate critical env vars at startup — loud errors so Railway logs catch them immediately
+    if (!process.env.GITHUB_TOKEN) {
+      console.error('🚨 CRITICAL: GITHUB_TOKEN not set — fight files will NOT be backed up to GitHub!');
+      sendAlert('🚨 BET BOT: GITHUB_TOKEN missing', 'Fight recordings will save to disk but will NOT be backed up to GitHub. Set GITHUB_TOKEN in Railway Variables immediately.\n\nhttps://ufc-dashboard-production-e03d.up.railway.app');
+    } else {
+      console.log('[startup] GITHUB_TOKEN ✓');
+    }
+    if (!process.env.DATA_DIR) {
+      console.warn('[startup] DATA_DIR not set — using ephemeral filesystem. Set DATA_DIR=/data for Railway volume.');
+    } else {
+      console.log(`[startup] DATA_DIR=${process.env.DATA_DIR} ✓`);
+    }
 
-  recPoll();
-  console.log('Recorder started — UFC always-on, other sports when browser is watching');
-  scheduleHeartbeat();
-  if (HEALTHCHECK_URL) {
-    pingHealthcheck();
-    setInterval(pingHealthcheck, 5 * 60 * 1000);
-  }
-});
+    recPoll();
+    console.log('Recorder started — UFC always-on, other sports when browser is watching');
+    scheduleHeartbeat();
+    if (HEALTHCHECK_URL) {
+      pingHealthcheck();
+      setInterval(pingHealthcheck, 5 * 60 * 1000);
+    }
+  });
+}
+
+if (require.main === module) {
+  startServer();
+}
+
+module.exports = app;
