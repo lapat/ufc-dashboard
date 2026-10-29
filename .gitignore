@@ -6,3 +6,12 @@ historical_data/dk_captures.json
 historical_data/pnl_ledger.json
 screenshots/
 recording_state.json
+historical_data/fighter_tags.json
+*.bak
+.DS_Store
+.solo-agent-local-run/
+*.zip
+auto_bet_*.json
+command_queue.json
+poll_log/
+ufc_db.sqlite

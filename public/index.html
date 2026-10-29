@@ -526,6 +526,39 @@
       <div class="nw-odds dog" id="nw-o2">—</div>
       <div class="nw-name r" id="nw-f2">—</div>
     </div>
+    <!-- Interactive In-Fight Tagging Panel (Ish Style Override) -->
+    <div id="nw-tag-panels" style="display:none;margin-top:10px;background:#090909;border:1px solid #1c1c1c;border-radius:6px;padding:8px 12px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;font-size:0.68rem;color:#888;">
+        <span>🎯 <strong style="color:#e8b84b">Ish's Style Tagger</strong> (1-Click Override):</span>
+        <button id="nw-manage-tags-btn" style="background:#1a1a1a;border:1px solid #333;color:#bbb;border-radius:4px;padding:2px 8px;font-size:0.62rem;cursor:pointer;">Manage / Notes</button>
+      </div>
+      <div style="display:flex;justify-content:space-between;gap:12px;align-items:flex-start;">
+        <!-- Fighter 1 Tags -->
+        <div id="nw-f1-tag-panel" style="flex:1;">
+          <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;">
+            <span style="font-weight:700;color:#e8b84b;font-size:0.75rem;" id="nw-f1-tag-label">F1</span>
+            <button class="rawdog-toggle-btn" id="nw-f1-rawdog-btn" style="background:#181818;border:1px solid #333;color:#888;border-radius:4px;padding:1px 6px;font-size:0.62rem;font-weight:700;cursor:pointer;">🐕 Raw Dog</button>
+          </div>
+          <div id="nw-f1-quick-tags" style="display:flex;flex-wrap:wrap;gap:4px;"></div>
+        </div>
+        <!-- Center Divider -->
+        <div style="flex:0 0 1px;background:#222;align-self:stretch;"></div>
+        <!-- Fighter 2 Tags -->
+        <div id="nw-f2-tag-panel" style="flex:1;">
+          <div style="display:flex;align-items:center;justify-content:flex-end;gap:6px;margin-bottom:4px;">
+            <button class="rawdog-toggle-btn" id="nw-f2-rawdog-btn" style="background:#181818;border:1px solid #333;color:#888;border-radius:4px;padding:1px 6px;font-size:0.62rem;font-weight:700;cursor:pointer;">🐕 Raw Dog</button>
+            <span style="font-weight:700;color:#74c0fc;font-size:0.75rem;" id="nw-f2-tag-label">F2</span>
+          </div>
+          <div id="nw-f2-quick-tags" style="display:flex;flex-wrap:wrap;gap:4px;justify-content:flex-end;"></div>
+        </div>
+      </div>
+      <!-- Dynamic Crossover & Strategy Advice Banner -->
+      <div id="nw-tag-advice-banner" style="display:none;margin-top:8px;padding:6px 10px;background:#141207;border:1px solid #e8b84b55;border-radius:5px;font-size:0.7rem;color:#e8b84b;">
+        <div id="nw-tag-advice-text" style="font-weight:600;"></div>
+        <div id="nw-tag-catalysts-text" style="font-size:0.62rem;color:#aaa;margin-top:2px;"></div>
+      </div>
+    </div>
+    
     <!-- Fighter Gas Tank & Finisher Capsule -->
     <div id="nw-capsule" style="display:none;justify-content:space-between;align-items:center;background:#0d0d0d;border:1px solid #1f1f1f;border-radius:6px;padding:8px 14px;margin-top:10px;font-size:0.75rem;flex-wrap:wrap;gap:6px;">
       <div id="nw-f1-capsule" style="color:#e8b84b"></div>
@@ -781,7 +814,187 @@
 </div>
 
 
+<!-- Tag Editor Modal -->
+<div id="tag-editor-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);z-index:9999;align-items:center;justify-content:center;">
+  <div style="background:#111;border:1px solid #333;border-radius:8px;padding:20px;width:90%;max-width:500px;">
+    <h3 style="color:#e8b84b;margin-bottom:15px;font-size:1rem;">Edit Fighter Tags</h3>
+    <div style="display:flex;gap:15px;">
+      <div style="flex:1;">
+        <h4 id="te-f1-name" style="color:#fff;margin-bottom:8px;font-size:0.85rem;">Fighter 1</h4>
+        <button id="te-f1-rawdog" class="tag-btn rawdog" style="width:100%;margin-bottom:8px;border:1px solid #444;background:#1a1a1a;color:#ccc;padding:6px;border-radius:4px;cursor:pointer;text-align:left;">🐕 Raw Dog</button>
+        <div id="te-f1-tags-container" style="display:flex;flex-direction:column;gap:4px;"></div>
+      </div>
+      <div style="flex:1;">
+        <h4 id="te-f2-name" style="color:#fff;margin-bottom:8px;font-size:0.85rem;">Fighter 2</h4>
+        <button id="te-f2-rawdog" class="tag-btn rawdog" style="width:100%;margin-bottom:8px;border:1px solid #444;background:#1a1a1a;color:#ccc;padding:6px;border-radius:4px;cursor:pointer;text-align:left;">🐕 Raw Dog</button>
+        <div id="te-f2-tags-container" style="display:flex;flex-direction:column;gap:4px;"></div>
+      </div>
+    </div>
+    <div style="margin-top:20px;display:flex;justify-content:flex-end;gap:10px;">
+      <button id="te-cancel" style="padding:8px 16px;background:#333;border:none;color:#fff;border-radius:4px;cursor:pointer;">Cancel</button>
+      <button id="te-save" style="padding:8px 16px;background:#e8b84b;border:none;color:#000;font-weight:bold;border-radius:4px;cursor:pointer;">Save Tags</button>
+    </div>
+  </div>
+</div>
+
 <script>
+const TAG_DEFS = [
+  { id: 'heavy_wrestler',   label: '🤼 Heavy Wrestler',   short: '🤼 Wrestler' },
+  { id: 'takedown_defense', label: '🛡️ Takedown Defense', short: '🛡️ TD Def' },
+  { id: 'striking_power',   label: '💥 Striking Power',   short: '💥 Power' },
+  { id: 'efficient_striker',label: '🥊 Efficient Striker', short: '🥊 Striker' },
+  { id: 'older',            label: '⏳ Age Cliff (35+)',  short: '⏳ Older' },
+  { id: 'size_advantage',   label: '📏 Size Advantage',   short: '📏 Size' },
+  { id: 'sub_threat',       label: '🥋 Sub Threat',       short: '🥋 Sub' },
+  { id: 'cardio_machine',   label: '🔋 Cardio Machine',   short: '🔋 Cardio' },
+  { id: 'gas_tank_risk',    label: '⚠️ Gas Tank Risk',    short: '⚠️ Gas Tank' }
+];
+
+let _allFighterTagsCache = {};
+async function loadAllTagsCache() {
+  try {
+    const res = await fetch('/api/fighter-tags/all');
+    const data = await res.json();
+    if (data && data.tags) {
+      _allFighterTagsCache = data.tags;
+      if (typeof renderGameList === 'function' && currentGames.length) renderGameList();
+    }
+  } catch (_) {}
+}
+loadAllTagsCache();
+
+async function toggleFighterTag(name, tagId) {
+  if (!name || name === '—') return;
+  try {
+    const res = await fetch('/api/fighter-tags/toggle', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, tagId })
+    });
+    const data = await res.json();
+    if (data && data.updated) {
+      await loadAllTagsCache();
+      refreshActiveFight();
+    }
+  } catch (err) {
+    console.error('Failed toggle tag:', err);
+  }
+}
+
+async function toggleFighterRawDog(name) {
+  if (!name || name === '—') return;
+  try {
+    const res = await fetch('/api/fighter-tags/rawdog', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name })
+    });
+    const data = await res.json();
+    if (data && data.updated) {
+      await loadAllTagsCache();
+      refreshActiveFight();
+    }
+  } catch (err) {
+    console.error('Failed toggle rawdog:', err);
+  }
+}
+
+function refreshActiveFight() {
+  const f1 = document.getElementById('nw-f1')?.textContent;
+  const f2 = document.getElementById('nw-f2')?.textContent;
+  const o1 = tracker.f1Odds;
+  const o2 = tracker.f2Odds;
+  if (f1 && f2 && f1 !== '—' && f2 !== '—') {
+    updateFightUI(f1, f2, o1, o2, true, activeSport, false);
+  }
+}
+
+let _currentTagsF1 = { name: '', tags: [], isRawDog: false };
+let _currentTagsF2 = { name: '', tags: [], isRawDog: false };
+
+function openTagEditor(f1Name, f2Name) {
+  _currentTagsF1.name = f1Name;
+  _currentTagsF2.name = f2Name;
+  
+  document.getElementById('te-f1-name').textContent = f1Name;
+  document.getElementById('te-f2-name').textContent = f2Name;
+  
+  Promise.all([
+    fetch('/api/fighter-tags?name=' + encodeURIComponent(f1Name)).then(r => r.json()),
+    fetch('/api/fighter-tags?name=' + encodeURIComponent(f2Name)).then(r => r.json())
+  ]).then(([t1, t2]) => {
+    _currentTagsF1.tags = t1.tags || [];
+    _currentTagsF1.isRawDog = !!t1.isRawDog;
+    _currentTagsF2.tags = t2.tags || [];
+    _currentTagsF2.isRawDog = !!t2.isRawDog;
+    renderTagEditor();
+    document.getElementById('tag-editor-modal').style.display = 'flex';
+  });
+}
+
+function renderTagEditor() {
+  const renderList = (containerId, currentTagsObj) => {
+    const c = document.getElementById(containerId);
+    c.innerHTML = TAG_DEFS.map(d => {
+      const active = currentTagsObj.tags.includes(d.id);
+      return `<button class="tag-btn" data-id="${d.id}" style="width:100%;text-align:left;padding:6px;border-radius:4px;border:1px solid ${active ? '#e8b84b' : '#333'};background:${active ? '#2a220a' : '#111'};color:${active ? '#e8b84b' : '#aaa'};cursor:pointer;">${d.label}</button>`;
+    }).join('');
+    
+    c.querySelectorAll('.tag-btn').forEach(btn => {
+      btn.onclick = () => {
+        const id = btn.dataset.id;
+        if (currentTagsObj.tags.includes(id)) {
+          currentTagsObj.tags = currentTagsObj.tags.filter(t => t !== id);
+        } else {
+          currentTagsObj.tags.push(id);
+        }
+        renderTagEditor();
+      };
+    });
+  };
+  
+  renderList('te-f1-tags-container', _currentTagsF1);
+  renderList('te-f2-tags-container', _currentTagsF2);
+  
+  const f1DogBtn = document.getElementById('te-f1-rawdog');
+  f1DogBtn.style.background = _currentTagsF1.isRawDog ? '#e8b84b' : '#1a1a1a';
+  f1DogBtn.style.color = _currentTagsF1.isRawDog ? '#000' : '#ccc';
+  f1DogBtn.onclick = () => { _currentTagsF1.isRawDog = !_currentTagsF1.isRawDog; renderTagEditor(); };
+  
+  const f2DogBtn = document.getElementById('te-f2-rawdog');
+  f2DogBtn.style.background = _currentTagsF2.isRawDog ? '#e8b84b' : '#1a1a1a';
+  f2DogBtn.style.color = _currentTagsF2.isRawDog ? '#000' : '#ccc';
+  f2DogBtn.onclick = () => { _currentTagsF2.isRawDog = !_currentTagsF2.isRawDog; renderTagEditor(); };
+}
+
+document.getElementById('te-cancel').onclick = () => document.getElementById('tag-editor-modal').style.display = 'none';
+document.getElementById('te-save').onclick = () => {
+  const p1 = fetch('/api/fighter-tags', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name: _currentTagsF1.name, tagsData: { tags: _currentTagsF1.tags, isRawDog: _currentTagsF1.isRawDog } })
+  });
+  const p2 = fetch('/api/fighter-tags', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name: _currentTagsF2.name, tagsData: { tags: _currentTagsF2.tags, isRawDog: _currentTagsF2.isRawDog } })
+  });
+  
+  Promise.all([p1, p2]).then(() => {
+    document.getElementById('tag-editor-modal').style.display = 'none';
+    loadAllTagsCache().then(refreshActiveFight);
+  });
+};
+
+const manageBtn = document.getElementById('nw-manage-tags-btn');
+if (manageBtn) {
+  manageBtn.onclick = () => {
+    const f1 = document.getElementById('nw-f1')?.textContent;
+    const f2 = document.getElementById('nw-f2')?.textContent;
+    if (f1 && f2 && f1 !== '—' && f2 !== '—') openTagEditor(f1, f2);
+  };
+}
+
 const _svgInit=(name,sz=40)=>{const p=String(name||'').trim().split(/\s+/);const init=p.length>1?(p[0][0]+p[p.length-1][0]).toUpperCase():(p[0]?p[0].slice(0,2).toUpperCase():'??');const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="${sz}" height="${sz}" viewBox="0 0 ${sz} ${sz}"><rect width="100%" height="100%" fill="#181a20"/><text x="50%" y="54%" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-weight="700" font-size="${Math.round(sz*0.38)}" fill="#7e889b" dominant-baseline="middle" text-anchor="middle">${init}</text></svg>`;return `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;};
 window.fpError=function(img,sz=40){img.onerror=null;const n=decodeURIComponent(img.dataset.fn||'');img.src=_svgInit(n,sz);};
 // ═══════════════════════════════════════════
@@ -1491,8 +1704,9 @@ function startClassicLiveStats(f1, f2) {
 }
 
 function updateFightUI(f1Name,f2Name,o1,o2,live,sport,switchGames){
-  // Fetch and populate Gas Tank & Finisher capsule
-  fetch('/api/fighter-stats?f1=' + encodeURIComponent(f1Name) + '&f2=' + encodeURIComponent(f2Name))
+  const oddsQuery = (o1 != null && o2 != null && o1 !== '' && o2 !== '') ? ('&o1=' + encodeURIComponent(o1) + '&o2=' + encodeURIComponent(o2)) : '';
+  // Fetch and populate Gas Tank & Finisher capsule + Tags & Dynamic Crossover
+  fetch('/api/fighter-stats?f1=' + encodeURIComponent(f1Name) + '&f2=' + encodeURIComponent(f2Name) + oddsQuery)
     .then(r => r.json())
     .then(stats => {
       if (stats && !stats.error) {
@@ -1518,6 +1732,75 @@ function updateFightUI(f1Name,f2Name,o1,o2,live,sport,switchGames){
         };
         document.getElementById('nw-f1-prop').textContent = fmtMethod(stats.f1, f1Name);
         document.getElementById('nw-f2-prop').textContent = fmtMethod(stats.f2, f2Name);
+        
+        // Interactive Tag Panels (Ish Style Override)
+        const tagPanels = document.getElementById('nw-tag-panels');
+        if (tagPanels) {
+          tagPanels.style.display = 'block';
+          document.getElementById('nw-f1-tag-label').textContent = f1Name;
+          document.getElementById('nw-f2-tag-label').textContent = f2Name;
+
+          const f1Tags = stats.f1?.tags?.tags || [];
+          const f2Tags = stats.f2?.tags?.tags || [];
+          const isRawDogF1 = !!stats.f1?.tags?.isRawDog;
+          const isRawDogF2 = !!stats.f2?.tags?.isRawDog;
+
+          // Raw Dog buttons
+          const f1DogBtn = document.getElementById('nw-f1-rawdog-btn');
+          if (f1DogBtn) {
+            f1DogBtn.style.background = isRawDogF1 ? '#e8b84b' : '#181818';
+            f1DogBtn.style.color = isRawDogF1 ? '#000' : '#888';
+            f1DogBtn.style.borderColor = isRawDogF1 ? '#e8b84b' : '#333';
+            f1DogBtn.onclick = (e) => { e.stopPropagation(); toggleFighterRawDog(f1Name); };
+          }
+
+          const f2DogBtn = document.getElementById('nw-f2-rawdog-btn');
+          if (f2DogBtn) {
+            f2DogBtn.style.background = isRawDogF2 ? '#e8b84b' : '#181818';
+            f2DogBtn.style.color = isRawDogF2 ? '#000' : '#888';
+            f2DogBtn.style.borderColor = isRawDogF2 ? '#e8b84b' : '#333';
+            f2DogBtn.onclick = (e) => { e.stopPropagation(); toggleFighterRawDog(f2Name); };
+          }
+
+          // Render quick-tag buttons
+          const renderQuickPills = (containerId, currentTags, fighterName, activeColor) => {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+            container.innerHTML = TAG_DEFS.map(t => {
+              const active = currentTags.includes(t.id);
+              return `<button class="qtag-pill" data-tag="${t.id}" style="padding:2px 6px;font-size:0.62rem;border-radius:4px;border:1px solid ${active ? activeColor : '#222'};background:${active ? activeColor : '#121212'};color:${active ? '#000' : '#888'};cursor:pointer;font-weight:${active ? '700' : '500'};">${t.short}</button>`;
+            }).join('');
+            container.querySelectorAll('.qtag-pill').forEach(btn => {
+              btn.onclick = (e) => {
+                e.stopPropagation();
+                toggleFighterTag(fighterName, btn.dataset.tag);
+              };
+            });
+          };
+
+          renderQuickPills('nw-f1-quick-tags', f1Tags, f1Name, '#e8b84b');
+          renderQuickPills('nw-f2-quick-tags', f2Tags, f2Name, '#74c0fc');
+
+          // Advice & Catalyst Banner
+          const adviceBanner = document.getElementById('nw-tag-advice-banner');
+          if (adviceBanner && stats.taggedCrossover && (stats.taggedCrossover.hasTags || stats.taggedCrossover.catalysts.length || stats.taggedCrossover.warnings.length)) {
+            adviceBanner.style.display = 'block';
+            document.getElementById('nw-tag-advice-text').innerHTML = `⚡ <strong>Tagged Line-Flip Edge: ${stats.taggedCrossover.taggedCrossoverPct}%</strong> (${stats.taggedCrossover.delta >= 0 ? '+' : ''}${stats.taggedCrossover.delta}% vs base) · <em>Dog Win: ${stats.taggedCrossover.expectedDogWinPct}%</em><br>${stats.taggedCrossover.advice}`;
+            const cats = stats.taggedCrossover.catalysts.concat(stats.taggedCrossover.warnings);
+            document.getElementById('nw-tag-catalysts-text').textContent = cats.length ? ('Active Drivers: ' + cats.join(' · ')) : 'Baseline Stylistic Pace';
+          } else if (adviceBanner) {
+            adviceBanner.style.display = 'none';
+          }
+        }
+        
+        if (stats.taggedCrossover) {
+          document.getElementById('nw-vol-capsule').innerHTML = `<span style="color:#e8b84b">⚡ X-Over: ${stats.taggedCrossover.taggedCrossoverPct}%</span><br><span style="font-size:0.6rem;color:#aaa">${stats.taggedCrossover.catalysts.join(' · ')}</span>`;
+        } else if (stats.crossover) {
+          document.getElementById('nw-vol-capsule').innerHTML = `Base X-Over: ${stats.crossover.crossoverProbPct}%`;
+        } else {
+          document.getElementById('nw-vol-capsule').textContent = 'Vol: ' + (stats.fightVolatility != null ? stats.fightVolatility : '70');
+        }
+
         if (stats.physicalEdge && stats.physicalEdge.summary) {
           const pRow = document.getElementById('nw-physical-row');
           pRow.style.display = 'block';
@@ -2178,6 +2461,13 @@ function renderGameList(){
     const hasDraw=out.length===3;
     const drawOut=hasDraw?out.find(o=>/draw/i.test(o.name)):null;
     const awayOut=hasDraw?out.find(o=>!(/draw/i.test(o.name))&&o.name!==a.name):b;
+
+    const normK = s => (s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
+    const tA = _allFighterTagsCache[normK(a.name)];
+    const tB = _allFighterTagsCache[normK(b.name)];
+    const tagBadgeA = tA ? (tA.isRawDog ? ' <span title="Ish Raw Dog Pick" style="color:#e8b84b;font-weight:700;font-size:0.75rem;">🐕</span>' : '') + (tA.tags?.length ? ` <span style="font-size:0.58rem;color:#aaa;background:#1a1a1a;border:1px solid #333;padding:1px 4px;border-radius:3px;">${tA.tags.length}🏷️</span>` : '') : '';
+    const tagBadgeB = tB ? (tB.isRawDog ? ' <span title="Ish Raw Dog Pick" style="color:#e8b84b;font-weight:700;font-size:0.75rem;">🐕</span>' : '') + (tB.tags?.length ? ` <span style="font-size:0.58rem;color:#aaa;background:#1a1a1a;border:1px solid #333;padding:1px 4px;border-radius:3px;">${tB.tags.length}🏷️</span>` : '') : '';
+
     const el=document.createElement('div');
     el.className='game-card'+(liveFlag?' live-card':'');
     el.dataset.gameId=game.id;
@@ -2185,11 +2475,11 @@ function renderGameList(){
     el.innerHTML=`
       <div class="game-ev">${liveFlag?'● LIVE — ':''}${game.sport_title||activeSportTitle}</div>
       <div class="matchup">
-        <div class="fn"><img class="fp" src="/api/fighter-photo?name=${encodeURIComponent(a.name)}" alt="" loading="lazy" onerror="this.onerror=null;this.src=_svgInit('${a.name}',40)">${a.name}</div>
+        <div class="fn"><img class="fp" src="/api/fighter-photo?name=${encodeURIComponent(a.name)}" alt="" loading="lazy" onerror="this.onerror=null;this.src=_svgInit('${a.name}',40)">${a.name}${tagBadgeA}</div>
         <div class="op ${odsCls(a.price)}">${fmtO(a.price)}</div>
         <div class="vs">VS</div>
         <div class="op ${odsCls(b.price)}">${fmtO(b.price)}</div>
-        <div class="fn r">${b.name}<img class="fp fp-r" src="/api/fighter-photo?name=${encodeURIComponent(b.name)}" alt="" loading="lazy" onerror="this.onerror=null;this.src=_svgInit('${b.name}',40)"></div>
+        <div class="fn r">${tagBadgeB}${b.name}<img class="fp fp-r" src="/api/fighter-photo?name=${encodeURIComponent(b.name)}" alt="" loading="lazy" onerror="this.onerror=null;this.src=_svgInit('${b.name}',40)"></div>
       </div>
       <div class="game-time">${new Date(game.commence_time).toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})}</div>
       <div class="cov-row">${out.map(o=>`

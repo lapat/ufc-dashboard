@@ -630,6 +630,9 @@ const { loadFighterProfiles, fightVolatilityScore, computeGasTankRating, compute
 const { fetchLiveFightStats } = require('./live_fight_stats');
 const { getSharpComparison } = require('./sharp_consensus');
 const { predictCrossover } = require('./crossover_predictor');
+const { getTags, setTags, toggleTag, toggleRawDog, getAllTags, TAG_CATALOG } = require('./fighter_tag_engine');
+const { calculateTaggedCrossover } = require('./tag_crossover_engine');
+const { runTagBacktest } = require('./analysis/rerun_tag_backtest');
 
 let _fighterProfilesCache = null;
 function getFighterProfiles() {
@@ -741,6 +744,10 @@ app.get('/api/fighter-stats', (req, res) => {
       const fightVol = fightVolatilityScore(f1, f2, profiles);
 
       let crossover = null;
+      let taggedCrossover = null;
+      const f1Tags = getTags(f1);
+      const f2Tags = getTags(f2);
+      
       if (o1 != null && o2 != null && o1 !== '' && o2 !== '') {
         try {
           crossover = predictCrossover({
@@ -750,6 +757,10 @@ app.get('/api/fighter-stats', (req, res) => {
             f2Name: f2,
             profiles
           });
+          
+          if (f1Tags.tags.length > 0 || f2Tags.tags.length > 0) {
+            taggedCrossover = calculateTaggedCrossover(o1, o2, f1Tags, f2Tags);
+          }
         } catch (_) {}
       }
 
@@ -763,8 +774,9 @@ app.get('/api/fighter-stats', (req, res) => {
           winMethods: p1.winMethods || null,
           sigPositions: p1.sigPositions || null,
           gasTank: computeGasTankRating(p1.stats),
-          finisher: computeFirstRoundFinisher(p1.stats)
-        } : null,
+          finisher: computeFirstRoundFinisher(p1.stats),
+          tags: f1Tags
+        } : { tags: f1Tags },
         f2: p2 ? {
           name: p2.name,
           stats: p2.stats,
@@ -773,15 +785,62 @@ app.get('/api/fighter-stats', (req, res) => {
           winMethods: p2.winMethods || null,
           sigPositions: p2.sigPositions || null,
           gasTank: computeGasTankRating(p2.stats),
-          finisher: computeFirstRoundFinisher(p2.stats)
-        } : null,
+          finisher: computeFirstRoundFinisher(p2.stats),
+          tags: f2Tags
+        } : { tags: f2Tags },
         fightVolatility: fightVol,
         physicalEdge,
-        crossover
+        crossover,
+        taggedCrossover
       });
     }
 
     res.status(400).json({ error: 'Missing f1/f2 or name parameters' });
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+});
+
+app.get('/api/fighter-tags', (req, res) => {
+  const { name } = req.query;
+  if (!name) return res.status(400).json({ error: 'Missing name' });
+  res.json(getTags(name));
+});
+
+app.get('/api/fighter-tags/all', (req, res) => {
+  try {
+    const tags = getAllTags();
+    res.json({ tags, catalog: TAG_CATALOG });
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+});
+
+app.post('/api/fighter-tags', (req, res) => {
+  const { name, tagsData } = req.body;
+  if (!name || !tagsData) return res.status(400).json({ error: 'Missing name or tagsData' });
+  const updated = setTags(name, tagsData);
+  res.json({ success: true, updated });
+});
+
+app.post('/api/fighter-tags/toggle', (req, res) => {
+  const { name, tagId } = req.body;
+  if (!name || !tagId) return res.status(400).json({ error: 'Missing name or tagId' });
+  const updated = toggleTag(name, tagId);
+  res.json({ success: true, updated });
+});
+
+app.post('/api/fighter-tags/rawdog', (req, res) => {
+  const { name } = req.body;
+  if (!name) return res.status(400).json({ error: 'Missing name' });
+  const updated = toggleRawDog(name);
+  res.json({ success: true, updated });
+});
+
+app.get('/api/rerun-tag-analysis', (req, res) => {
+  try {
+    const results = runTagBacktest();
+    res.json(results);
   } catch (e) {
     res.status(500).json({ error: e.message });
   }
