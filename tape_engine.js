@@ -124,12 +124,20 @@ function parseLastBoutsFromHtml(html, fighterName) {
     let matchup = "";
     let opponentName = "";
     if (headline) {
-      const links = headline[1].match(/<a[^>]*>([^<]+)<\/a>/g) || [];
-      const parts = links.map(l => l.replace(/<\/?a[^>]*>/g, "").trim());
-      if (parts.length >= 2) {
-        matchup = parts[0] + " vs " + parts[1];
+      const athleteMatches = [...headline[1].matchAll(/href="https:\/\/www\.ufc\.com\/athlete\/([^"]+)"[^>]*>([^<]+)<\/a>/g)];
+      if (athleteMatches.length >= 2) {
+        const fullNames = athleteMatches.map(m => m[1].split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '));
         const fNameParts = (fighterName || "").toLowerCase().split(" ");
-        opponentName = fNameParts.some(p => parts[0].toLowerCase().includes(p)) ? parts[1] : parts[0];
+        opponentName = fNameParts.some(p => fullNames[0].toLowerCase().includes(p)) ? fullNames[1] : fullNames[0];
+        matchup = fighterName + " vs " + opponentName;
+      } else {
+        const links = headline[1].match(/<a[^>]*>([^<]+)<\/a>/g) || [];
+        const parts = links.map(l => l.replace(/<\/?a[^>]*>/g, "").trim());
+        if (parts.length >= 2) {
+          matchup = parts[0] + " vs " + parts[1];
+          const fNameParts = (fighterName || "").toLowerCase().split(" ");
+          opponentName = fNameParts.some(p => parts[0].toLowerCase().includes(p)) ? parts[1] : parts[0];
+        }
       }
     }
 
@@ -150,7 +158,7 @@ function parseLastBoutsFromHtml(html, fighterName) {
       method: method || "Decision",
       links: {
         paramount: getExactParamountUrl(searchTitle, fighterName),
-        fightPass: "https://ufcfightpass.com/search?query=" + encodeURIComponent(searchTitle),
+        fightPass: "https://ufcfightpass.com/search?query=" + encodeURIComponent(fighterName),
         espn: "https://www.espn.com/watch/search/ufc%20" + encodeURIComponent(searchTitle),
         youtube: "https://www.youtube.com/results?search_query=UFC+full+fight+" + encodeURIComponent(searchTitle)
       }

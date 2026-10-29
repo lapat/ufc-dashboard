@@ -246,25 +246,27 @@ function renderBoutCard(elemId, fighterName, b) {
   btnPlay.textContent = "▶ Load in Theater";
   btnPlay.onclick = (e) => { e.stopPropagation(); playInTheater(b, fighterName, card); };
   const isPre2026 = b.primaryPlatform === "fightpass" || !b.links.paramount;
-  const btnPara = document.createElement("a");
-  btnPara.className = "bc-btn" + (isPre2026 ? " secondary disabled" : " paramount");
-  btnPara.target = "_blank";
-  btnPara.href = b.links.paramount || "https://ufcfightpass.com/search?query=" + encodeURIComponent(b.matchup || fighterName);
-  btnPara.textContent = isPre2026 ? "📺 P+ (Pre-2026 on FP)" : "📺 Paramount+";
-  btnPara.onclick = (e) => {
-    if (!isPre2026) {
-      window.postMessage({ type: 'LAUNCH_PARAMOUNT', url: b.links.paramount, query: b.matchup || fighterName }, '*');
-    }
-  };
-
   const btnFp = document.createElement("a");
   btnFp.className = "bc-btn" + (isPre2026 ? " play gold" : "");
   btnFp.target = "_blank";
   btnFp.href = b.links.fightPass;
-  btnFp.textContent = isPre2026 ? "🥋 Fight Pass (Exclusive) ↗" : "🥋 Fight Pass";
+  btnFp.textContent = isPre2026 ? "🥋 Watch on UFC Fight Pass ↗" : "🥋 Fight Pass";
   btnFp.onclick = (e) => {
-    window.postMessage({ type: 'LAUNCH_FIGHTPASS', url: b.links.fightPass, query: b.matchup || fighterName }, '*');
+    window.postMessage({ type: 'LAUNCH_FIGHTPASS', url: b.links.fightPass, query: fighterName }, '*');
   };
+
+  const btnPara = document.createElement("a");
+  if (!isPre2026) {
+    btnPara.className = "bc-btn paramount";
+    btnPara.target = "_blank";
+    btnPara.href = b.links.paramount;
+    btnPara.textContent = "📺 Watch on Paramount+ ↗";
+    btnPara.onclick = (e) => {
+      window.postMessage({ type: 'LAUNCH_PARAMOUNT', url: b.links.paramount, query: b.matchup || fighterName }, '*');
+    };
+  } else {
+    btnPara.style.display = "none"; // Hide Paramount+ button for pre-2026 bouts so zero dead buttons exist
+  }
   actions.appendChild(btnPlay);
   actions.appendChild(btnPara);
   actions.appendChild(btnFp);
