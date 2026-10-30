@@ -2802,10 +2802,14 @@ function startDKSync() {
   syncDKBets();
 }
 
+let _shownDkUsernameWarning = false;
 async function syncDKBets() {
   if (!tracker.f1Name) return;
   if (!_dkMeParam) {
-    showDKToast('⚠ Set your username in the ? menu to see your DK bets');
+    if (!_shownDkUsernameWarning) {
+      showDKToast('⚠ Set your username in the ? menu to see your DK bets');
+      _shownDkUsernameWarning = true;
+    }
     return;
   }
   try {
@@ -3130,13 +3134,19 @@ function showDKToast(msg) {
   if (!t) {
     t = document.createElement('div');
     t.id = 'dk-toast';
-    t.style.cssText = 'position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#1a1a2e;border:1px solid #74c0fc;color:#74c0fc;padding:10px 18px;border-radius:8px;font-size:0.85rem;z-index:9999;transition:opacity 0.4s';
+    t.style.cssText = 'position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#1a1a2e;border:1px solid #74c0fc;color:#74c0fc;padding:10px 18px;border-radius:8px;font-size:0.85rem;z-index:9999;transition:opacity 0.4s;cursor:pointer;';
+    t.title = 'Click to set DK username';
+    t.onclick = () => document.getElementById('user-pill')?.click();
     document.body.appendChild(t);
   }
   t.textContent = msg;
+  t.style.display = 'block';
   t.style.opacity = '1';
   clearTimeout(t._timer);
-  t._timer = setTimeout(() => { t.style.opacity = '0'; }, 3000);
+  t._timer = setTimeout(() => {
+    t.style.opacity = '0';
+    setTimeout(() => { if (t) t.style.display = 'none'; }, 400);
+  }, 4000);
 }
 
 // Start DK sync when a game is selected
