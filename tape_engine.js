@@ -41,6 +41,31 @@ function loadParamountCache() {
   return _paramountCache || {};
 }
 
+const ESPN_PROFILE_CACHE_FILE = path.join(__dirname, "analysis", "espn_fighter_profile_cache.json");
+let _espnProfileCache = null;
+function loadEspnProfileCache() {
+  if (!_espnProfileCache && fs.existsSync(ESPN_PROFILE_CACHE_FILE)) {
+    try { _espnProfileCache = JSON.parse(fs.readFileSync(ESPN_PROFILE_CACHE_FILE, "utf8")); }
+    catch (_) {}
+  }
+  return _espnProfileCache || {};
+}
+
+function getExactEspnProfileUrl(fighterName) {
+  const cache = loadEspnProfileCache();
+  const s = toSlug(fighterName);
+  if (cache[s]) return cache[s];
+
+  const normTarget = (fighterName || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]/g, "");
+  for (const k of Object.keys(cache)) {
+    const n = k.replace(/[^a-z0-9]/g, "");
+    if (n === normTarget || normTarget.includes(n) || n.includes(normTarget)) {
+      return cache[k];
+    }
+  }
+  return "https://www.espn.com/mma/fighter/_/name/" + s;
+}
+
 
 function toSlug(name) {
   return (name || "")
@@ -232,6 +257,11 @@ function enrichBoutWithVideo(bout, slug, fighterName) {
     bout.links.fightPass = exactFp;
   } else if (!bout.links.fightPass) {
     bout.links.fightPass = "https://ufcfightpass.com/search?query=" + encodeURIComponent(fighterName);
+  }
+
+  // Exact ESPN fighter profile page link
+  if (!bout.links.espnProfile) {
+    bout.links.espnProfile = getExactEspnProfileUrl(fighterName);
   }
 
   return bout;

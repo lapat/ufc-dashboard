@@ -25,6 +25,8 @@ test("public/tape.html contains dynamic theater button routing logic", () => {
   assert.ok(tapeHtml.includes('const isPre2026 = bout.primaryPlatform === "fightpass" || !bout.links.paramount;'), "Must check isPre2026 in playInTheater");
   assert.ok(tapeHtml.includes('tabPara.style.display = "none"'), "Must hide tab-paramount when isPre2026");
   assert.ok(tapeHtml.includes('btnParaWatch.style.display = "none"'), "Must hide btn-paramount-watch when isPre2026");
+  assert.ok(tapeHtml.includes('btn-espn-profile'), "Must have direct ESPN fighter profile launcher in theater");
+  assert.ok(tapeHtml.includes('bc-btn espn-profile'), "Must have direct ESPN fighter profile button on bout cards");
 });
 
 test("simulated button audit across all 24 fighters: zero dead Paramount buttons for pre-2026 fights", () => {
@@ -35,6 +37,9 @@ test("simulated button audit across all 24 fighters: zero dead Paramount buttons
     for (const f of [bout.fighter1, bout.fighter2]) {
       const t = f.tape[0];
       const isPre2026 = t.primaryPlatform === "fightpass" || !t.links.paramount;
+
+      // Must have verified ESPN profile link
+      assert.ok(t.links.espnProfile && t.links.espnProfile.includes("espn.com/mma/fighter"), `${f.name} must have direct ESPN fighter profile link`);
 
       if (isPre2026) {
         pre2026Fighters++;

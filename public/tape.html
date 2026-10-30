@@ -76,8 +76,12 @@
     .launcher-btn.paramount:hover{background:#0052d4}
     .launcher-btn.fightpass{background:#18150c;color:#e8b84b;border:1px solid #e8b84b55}
     .launcher-btn.fightpass:hover{background:#282010;border-color:#e8b84b}
-    .launcher-btn.espn{background:#1c1c1c;color:#ccc;border:1px solid #333}
+    .launcher-btn.espn{background:#181818;color:#ccc;border:1px solid #333}
     .launcher-btn.espn:hover{background:#262626;color:#fff}
+    .launcher-btn.espn-profile{background:#2b0c0c;color:#ff6b6b;border:1px solid #cc0000;font-weight:700}
+    .launcher-btn.espn-profile:hover{background:#cc0000;color:#fff}
+    .bc-btn.espn-profile{background:#220808;border-color:#b30000;color:#ff6666}
+    .bc-btn.espn-profile:hover{background:#b30000;border-color:#ff3333;color:#fff}
     .launcher-btn.yt{background:#222;color:#eee;border:1px solid #444}
     .launcher-btn.yt:hover{background:#333;color:#fff}
     /* Notes Box */
@@ -150,6 +154,7 @@
           <a href="#" target="_blank" class="launcher-btn paramount" id="btn-paramount-watch">📺 Watch on Paramount+ ↗</a>
           <a href="#" target="_blank" class="launcher-btn fightpass" id="btn-fp-watch">🥋 UFC Fight Pass ↗</a>
           <a href="#" target="_blank" class="launcher-btn yt" id="btn-yt-watch">▶ YouTube Full Screen ↗</a>
+          <a href="#" target="_blank" class="launcher-btn espn-profile" id="btn-espn-profile">🔴 ESPN Fighter Profile ↗</a>
           <a href="#" target="_blank" class="launcher-btn espn" id="btn-espn-watch">📺 Watch on ESPN+ ↗</a>
           <!-- Compatibility direct link anchors -->
           <a href="#" target="_blank" id="link-paramount" style="display:none"></a>
@@ -267,9 +272,17 @@ function renderBoutCard(elemId, fighterName, b) {
   } else {
     btnPara.style.display = "none"; // Hide Paramount+ button for pre-2026 bouts so zero dead buttons exist
   }
+  const btnEspnProfile = document.createElement("a");
+  btnEspnProfile.className = "bc-btn espn-profile";
+  btnEspnProfile.target = "_blank";
+  btnEspnProfile.href = b.links.espnProfile || ("https://www.espn.com/mma/fighter/_/name/" + (fighterName || "").toLowerCase().replace(/[^a-z0-9]+/g, "-"));
+  btnEspnProfile.textContent = "🔴 ESPN Profile ↗";
+  btnEspnProfile.onclick = (e) => e.stopPropagation();
+
   actions.appendChild(btnPlay);
   actions.appendChild(btnPara);
   actions.appendChild(btnFp);
+  actions.appendChild(btnEspnProfile);
   card.innerHTML = topHtml + metaHtml;
   card.appendChild(actions);
   card.onclick = () => playInTheater(b, fighterName, card);
@@ -348,6 +361,10 @@ function playInTheater(bout, fighterName, cardEl) {
   btnFpWatch.href = bout.links.fightPass;
   document.getElementById("btn-yt-watch").href = bout.links.youtube;
   document.getElementById("btn-espn-watch").href = bout.links.espn;
+  const espnProfEl = document.getElementById("btn-espn-profile");
+  if (espnProfEl) {
+    espnProfEl.href = bout.links.espnProfile || ("https://www.espn.com/mma/fighter/_/name/" + (fighterName || "").toLowerCase().replace(/[^a-z0-9]+/g, "-"));
+  }
   
   // Compatibility links
   document.getElementById("link-paramount").href = bout.links.paramount;

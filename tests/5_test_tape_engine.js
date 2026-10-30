@@ -31,6 +31,7 @@ test("getFighterTape returns strictly the single most recent bout with Paramount
   assert.ok(b0.links.paramount.includes("paramountplus.com"));
   assert.ok(b0.links.fightPass.includes("ufcfightpass.com"));
   assert.ok(b0.links.youtube.includes("youtube.com"));
+  assert.ok(b0.links.espnProfile && b0.links.espnProfile.includes("espn.com/mma/fighter"), "Must have direct ESPN fighter profile link");
 });
 
 test("getFighterTape provides safe fallback for unindexed/new fighter", () => {
@@ -38,6 +39,7 @@ test("getFighterTape provides safe fallback for unindexed/new fighter", () => {
   assert.strictEqual(tape.length, 1);
   assert.ok(tape[0].links.fightPass.includes("Unindexed%20Newcomer"));
   assert.ok(tape[0].links.youtube.includes("Unindexed%20Newcomer"));
+  assert.ok(tape[0].links.espnProfile && tape[0].links.espnProfile.includes("espn.com/mma/fighter"), "Fallback must have ESPN profile link");
 });
 
 test("getUpcomingFilmRoomCard returns structured upcoming card with bouts", () => {
