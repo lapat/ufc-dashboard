@@ -3170,6 +3170,36 @@ document.addEventListener("visibilitychange", () => {
     if (typeof syncPnL === "function") syncPnL();
   }
 });
+
+// Rapid Live-Tagging Hotkeys
+document.addEventListener("keydown", (e) => {
+  // Ignore if typing in an input
+  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+
+  const f1 = document.getElementById('nw-f1')?.textContent;
+  const f2 = document.getElementById('nw-f2')?.textContent;
+  if (!f1 || !f2 || f1 === '—' || f2 === '—') return;
+
+  const k = e.key;
+  // Lowercase for F1, Uppercase (Shift) for F2
+  const fighter = (k === k.toLowerCase()) ? f1 : f2;
+  const keyLower = k.toLowerCase();
+
+  const hotkeyMap = {
+    'r': () => toggleFighterRawDog(fighter),
+    'w': () => toggleFighterTag(fighter, 'heavy_wrestler'),
+    'd': () => toggleFighterTag(fighter, 'takedown_defense'),
+    'p': () => toggleFighterTag(fighter, 'striking_power'),
+    's': () => toggleFighterTag(fighter, 'efficient_striker'),
+    'c': () => toggleFighterTag(fighter, 'cardio_machine'),
+    'b': () => toggleFighterTag(fighter, 'gas_tank_risk')
+  };
+
+  if (hotkeyMap[keyLower]) {
+    e.preventDefault();
+    hotkeyMap[keyLower]();
+  }
+});
 </script>
 </body>
 </html>

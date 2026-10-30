@@ -843,7 +843,7 @@ app.post('/api/fighter-tags/rawdog', (req, res) => {
 
 app.get('/api/rerun-tag-analysis', (req, res) => {
   try {
-    const results = runTagBacktest();
+    const results = runTagBacktest(req.query.tag || null);
     res.json(results);
   } catch (e) {
     res.status(500).json({ error: e.message });

@@ -14,7 +14,7 @@ const { calculateTaggedCrossover, BASE_CROSSOVER_RATE } = require('../tag_crosso
 
 const HIST_DIR = process.env.DATA_DIR || path.join(__dirname, '..', 'historical_data');
 
-function runTagBacktest() {
+function runTagBacktest(tagFilter = null) {
   if (!fs.existsSync(HIST_DIR)) {
     return { error: 'historical_data directory not found', totalFights: 0 };
   }
@@ -68,8 +68,21 @@ function runTagBacktest() {
       const t1 = tags[k1];
       const t2 = tags[k2];
 
-      const hasIshTags = (t1 && (t1.tags?.length > 0 || t1.isRawDog)) ||
-                         (t2 && (t2.tags?.length > 0 || t2.isRawDog));
+      const f1Tags = t1?.tags || [];
+      const f2Tags = t2?.tags || [];
+      const f1RawDog = !!t1?.isRawDog;
+      const f2RawDog = !!t2?.isRawDog;
+      
+      let hasIshTags = false;
+      if (tagFilter) {
+        if (tagFilter === 'raw_dog') {
+          hasIshTags = f1RawDog || f2RawDog;
+        } else {
+          hasIshTags = f1Tags.includes(tagFilter) || f2Tags.includes(tagFilter);
+        }
+      } else {
+        hasIshTags = f1Tags.length > 0 || f2Tags.length > 0 || f1RawDog || f2RawDog;
+      }
 
       if (hasIshTags) {
         taggedFightsCount++;
