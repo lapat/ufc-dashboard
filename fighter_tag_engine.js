@@ -25,8 +25,8 @@ const TAG_CATALOG = [
   { id: 'older',            label: 'Age Cliff (35+)',   icon: '⏳', desc: 'Reaction & chin vulnerability' },
   { id: 'size_advantage',   label: 'Size Advantage',    icon: '📏', desc: 'Height, reach, or physical frame leverage' },
   { id: 'sub_threat',       label: 'Sub Threat',        icon: '🥋', desc: 'Dangerous ground submission finisher' },
-  { id: 'cardio_machine',   label: 'Cardio Machine',    icon: '🔋', desc: 'Relentless 15-to-25 minute pace' },
-  { id: 'gas_tank_risk',    label: 'Gas Tank Risk',     icon: '⚠️', desc: 'High Round 2/3 fade probability' }
+  { id: 'cardio_machine',   label: 'Cardio Machine (Endless)', icon: '🔋', desc: 'Relentless 15-to-25 minute pace / elite gas tank' },
+  { id: 'gas_tank_risk',    label: 'Gas Tank Risk (Fades)',     icon: '⚠️', desc: 'High Round 2/3 fade probability / gasses out early' }
 ];
 
 // Seed data from Ish's phone call
