@@ -583,16 +583,38 @@
       try {
         const stats = await fetch('/api/fighter-stats?f1=' + encodeURIComponent(f1) + '&f2=' + encodeURIComponent(f2)).then(r => r.json());
         if (stats && !stats.error) {
-          document.getElementById('stat-vol').textContent = (stats.fightVolatility != null ? stats.fightVolatility : '70') + '/100';
-          const f1Finisher = stats.f1?.finisher?.badge || 'Balanced';
+          const getStyleBadge = (fighterObj) => {
+            const tList = fighterObj?.tags?.tags || [];
+            if (tList.length > 0) {
+              const tagLabels = {
+                'heavy_wrestler': '🤼 Wrestler', 'takedown_defense': '🛡️ TD Def', 'striking_power': '💥 Power',
+                'efficient_striker': '🥊 Striker', 'older': '⏳ Older', 'size_advantage': '📏 Size',
+                'sub_threat': '🥋 Sub', 'cardio_machine': '🔋 Cardio', 'gas_tank_risk': '⚠️ Bad Tank'
+              };
+              return tList.map(id => tagLabels[id] || id).slice(0, 2).join(' · ');
+            }
+            return fighterObj?.finisher?.badge || 'Balanced';
+          };
+          const f1Dog = stats.f1?.tags?.isRawDog ? ' <span style="color:#e8b84b;font-weight:700;">🐕 Raw Dog</span>' : '';
+          const f2Dog = stats.f2?.tags?.isRawDog ? ' <span style="color:#e8b84b;font-weight:700;">🐕 Raw Dog</span>' : '';
+          const f1Style = getStyleBadge(stats.f1);
+          const f2Style = getStyleBadge(stats.f2);
           const f1Gas = stats.f1?.gasTank?.badge || 'Steady Pace';
-          const f2Finisher = stats.f2?.finisher?.badge || 'Balanced';
           const f2Gas = stats.f2?.gasTank?.badge || 'Steady Pace';
 
-          document.getElementById('hud-f1-badge').innerHTML = '<strong>' + f1 + ':</strong> ' + f1Finisher + ' · ' + f1Gas;
-          document.getElementById('hud-f2-badge').innerHTML = '<strong>' + f2 + ':</strong> ' + f2Finisher + ' · ' + f2Gas;
+          if (stats.taggedCrossover) {
+            document.getElementById('stat-vol').innerHTML = `⚡ ${stats.taggedCrossover.taggedCrossoverPct}% X-Over`;
+          } else {
+            document.getElementById('stat-vol').textContent = (stats.fightVolatility != null ? stats.fightVolatility : '70') + '/100';
+          }
+
+          document.getElementById('hud-f1-badge').innerHTML = '<strong>' + f1 + ':</strong> ' + f1Style + ' · ' + f1Gas + f1Dog;
+          document.getElementById('hud-f2-badge').innerHTML = f2Dog + ' ' + '<strong>' + f2 + ':</strong> ' + f2Style + ' · ' + f2Gas;
           
           const details = [];
+          if (stats.taggedCrossover && stats.taggedCrossover.catalysts.length) {
+            details.push('Drivers: ' + stats.taggedCrossover.catalysts.join(' · '));
+          }
           if (stats.f1?.gasTank?.detail) details.push(f1 + ': ' + stats.f1.gasTank.detail);
           if (stats.f2?.gasTank?.detail) details.push(f2 + ': ' + stats.f2.gasTank.detail);
           document.getElementById('hud-vol-detail').textContent = details.join(' | ');

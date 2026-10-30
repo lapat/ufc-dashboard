@@ -180,9 +180,19 @@ let _currentBout = null;
 let _currentFighter = null;
 let _activeSource = 'youtube';
 let _currentActiveCard = null;
+let _tapeTagsCache = {};
+
+async function loadTapeTags() {
+  try {
+    const res = await fetch("/api/fighter-tags/all");
+    const d = await res.json();
+    if (d && d.tags) _tapeTagsCache = d.tags;
+  } catch (_) {}
+}
 
 async function loadFilmRoom() {
   try {
+    await loadTapeTags();
     const res = await fetch("/api/film-room");
     _cardData = await res.json();
     document.getElementById("loading").style.display = "none";
@@ -213,8 +223,16 @@ function selectBout(idx) {
   document.querySelectorAll(".bout-pill").forEach((el, i) => {
     el.className = "bout-pill" + (i === idx ? " active" : "");
   });
-  document.getElementById("f1-name").textContent = bout.fighter1.name;
-  document.getElementById("f2-name").textContent = bout.fighter2.name;
+  const normK = s => (s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
+  const tagBadge = (name) => {
+    const t = _tapeTagsCache[normK(name)];
+    if (!t) return '';
+    const dog = t.isRawDog ? ' <span style="color:#e8b84b;font-size:0.85rem;" title="Ish Raw Dog Pick">🐕</span>' : '';
+    const tagList = t.tags && t.tags.length ? ` <span style="font-size:0.6rem;color:#aaa;background:#1a1a1a;border:1px solid #333;padding:1px 4px;border-radius:3px;">${t.tags.length}🏷️</span>` : '';
+    return dog + tagList;
+  };
+  document.getElementById("f1-name").innerHTML = bout.fighter1.name + tagBadge(bout.fighter1.name);
+  document.getElementById("f2-name").innerHTML = bout.fighter2.name + tagBadge(bout.fighter2.name);
   document.getElementById("matchup-header").textContent = "Head-to-Head: " + bout.fighter1.name + " vs " + bout.fighter2.name + " (Most Recent Bout Each)";
   const card1 = renderBoutCard("f1-bouts", bout.fighter1.name, bout.fighter1.tape[0]);
   const card2 = renderBoutCard("f2-bouts", bout.fighter2.name, bout.fighter2.tape[0]);
