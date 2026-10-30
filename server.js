@@ -1599,11 +1599,16 @@ app.post('/api/admin/quarantine-non-ufc', requireAdmin, (req, res) => {
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
-// Serves a cached fighter photo by name (404 when we have none, so the page hides the image).
+// Serves a cached fighter photo by name (redirects to ESPN CDN if not cached locally).
 app.get('/api/fighter-photo', (req, res) => {
-  const file = fighterImages.imageFileFor(String(req.query.name || ''));
-  if (!file) return res.status(404).end();
-  res.sendFile(file);
+  const name = String(req.query.name || '');
+  const file = fighterImages.imageFileFor(name);
+  if (file) return res.sendFile(file);
+
+  const remote = fighterImages.getRemotePhotoUrl ? fighterImages.getRemotePhotoUrl(name) : null;
+  if (remote) return res.redirect(remote);
+
+  res.status(404).end();
 });
 
 app.get('/api/admin/fighter-images', requireAdmin, (req, res) => res.json(fighterImages.status()));

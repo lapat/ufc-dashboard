@@ -135,6 +135,21 @@ const FIGHTER_IMAGE_ALIASES = {
   'lucia-szabova': 'lucia-szabova'
 };
 
+const ESPN_ATHLETE_IDS = {
+  'lucia-szabova': '5130185',
+  'jeongyeong-lee': '4925331',
+  'jeongyoung-lee': '4925331'
+};
+
+function getRemotePhotoUrl(name) {
+  let s = slugify(name);
+  if (FIGHTER_IMAGE_ALIASES[s]) s = FIGHTER_IMAGE_ALIASES[s];
+  if (ESPN_ATHLETE_IDS[s]) {
+    return `https://a.espncdn.com/i/headshots/mma/players/full/${ESPN_ATHLETE_IDS[s]}.png`;
+  }
+  return null;
+}
+
 function imageFileFor(name) {
   let s = slugify(name);
   if (FIGHTER_IMAGE_ALIASES[s]) s = FIGHTER_IMAGE_ALIASES[s];
@@ -200,4 +215,4 @@ function auditWrongSourcePhotos() {
   return removed;
 }
 
-module.exports = { politeGet: async (url, binary) => { await pause(); return get(url, binary); }, photoFromPage, auditSharedPhotos, auditWrongSourcePhotos, slugify, requestFighterImages, imageFileFor, status, index: () => index };
+module.exports = { politeGet: async (url, binary) => { await pause(); return get(url, binary); }, photoFromPage, auditSharedPhotos, auditWrongSourcePhotos, slugify, requestFighterImages, imageFileFor, getRemotePhotoUrl, status, index: () => index };
