@@ -758,8 +758,8 @@ app.get('/api/fighter-stats', (req, res) => {
             profiles
           });
           
-          if (f1Tags.tags.length > 0 || f2Tags.tags.length > 0) {
-            taggedCrossover = calculateTaggedCrossover(o1, o2, f1Tags, f2Tags);
+          if (f1Tags.tags.length > 0 || f2Tags.tags.length > 0 || f1Tags.isRawDog || f2Tags.isRawDog) {
+            taggedCrossover = calculateTaggedCrossover(o1, o2, f1Tags, f2Tags, f1, f2);
           }
         } catch (_) {}
       }
