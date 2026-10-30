@@ -183,6 +183,10 @@ app.get('/api/ufc', async (req, res) => {
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
+app.get('/favicon.ico', (req, res) => {
+  res.type('image/svg+xml').send('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">⚡</text></svg>');
+});
+
 // Library page
 app.get('/hud', (req, res) => { res.sendFile(path.join(__dirname, 'public', 'hud.html')); });
 app.get('/guide', (req, res) => { res.sendFile(path.join(__dirname, 'public', 'guide.html')); });

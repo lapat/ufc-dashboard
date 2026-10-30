@@ -130,9 +130,28 @@ function requestFighterImages(names) {
   drain();
 }
 
+const FIGHTER_IMAGE_ALIASES = {
+  'jeongyoung-lee': 'jeongyeong-lee',
+  'lucia-szabova': 'lucia-szabova'
+};
+
 function imageFileFor(name) {
-  const e = index[slugify(name)];
-  return e && e.status === 'found' && fs.existsSync(path.join(IMG_DIR, e.file)) ? path.join(IMG_DIR, e.file) : null;
+  let s = slugify(name);
+  if (FIGHTER_IMAGE_ALIASES[s]) s = FIGHTER_IMAGE_ALIASES[s];
+
+  const e = index[s];
+  if (e && e.status === 'found' && fs.existsSync(path.join(IMG_DIR, e.file))) {
+    return path.join(IMG_DIR, e.file);
+  }
+
+  for (const ext of ['.png', '.jpg', '.jpeg']) {
+    const f = s + ext;
+    if (fs.existsSync(path.join(IMG_DIR, f))) {
+      return path.join(IMG_DIR, f);
+    }
+  }
+
+  return null;
 }
 
 function status() {
