@@ -21,7 +21,8 @@ const testFiles = [
   "tests/12_test_tag_api_integration.js",
   "tests/13_test_high_density_recording.js",
   "tests/14_test_auto_snipe_latency_arbitrage.js",
-  "tests/15_test_extension_subsystems_and_dom.js"
+  "tests/15_test_extension_subsystems_and_dom.js",
+  "tests/16_test_high_roi_expansions.js"
 ];
 
 console.log("====================================================");

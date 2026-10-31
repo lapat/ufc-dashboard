@@ -13,6 +13,15 @@
 
 const BASE_CROSSOVER_RATE = 41.5;
 
+function getTierBaseline(favOdds) {
+  const absFav = Math.abs(favOdds);
+  if (absFav <= 129) return { tier: 'pick_em', rate: 67.0 };
+  if (absFav <= 199) return { tier: 'slight_fav', rate: 52.0 };
+  if (absFav <= 299) return { tier: 'moderate_fav', rate: 43.0 };
+  if (absFav <= 499) return { tier: 'heavy_fav', rate: 12.0 };
+  return { tier: 'extreme_fav', rate: 5.0 };
+}
+
 /**
  * calculateTaggedCrossover(f1OpeningOdds, f2OpeningOdds, f1TagsData, f2TagsData, f1Name, f2Name)
  */
@@ -34,82 +43,94 @@ function calculateTaggedCrossover(f1OpeningOdds, f2OpeningOdds, f1TagsData, f2Ta
   const favIsRawDog = f1IsFav ? !!f1TagsData?.isRawDog : !!f2TagsData?.isRawDog;
   const dogIsRawDog = f1IsFav ? !!f2TagsData?.isRawDog : !!f1TagsData?.isRawDog;
 
+  const tierInfo = getTierBaseline(favOdds);
+  const isTight = tierInfo.tier === 'pick_em';
+  const isExtreme = tierInfo.tier === 'heavy_fav' || tierInfo.tier === 'extreme_fav';
+
   let activeCatalysts = [];
   let warnings = [];
   let catalystCount = 0;
-  let finalRate = BASE_CROSSOVER_RATE;
+  let finalRate = isTight ? tierInfo.rate : BASE_CROSSOVER_RATE;
+  const hasAnyTags = favTags.length > 0 || dogTags.length > 0 || favIsRawDog || dogIsRawDog;
+  if (!hasAnyTags) finalRate = BASE_CROSSOVER_RATE;
 
-  // 1. Dog High Defense vs Fav Power/Damage (Empirical: 61.5%)
+  // 1. Dog High Defense vs Fav Power/Damage (Empirical: 61.5% on moderate favs, +20 ppts on pick'em)
   const dogHasDefense = dogTags.includes('takedown_defense') || dogTags.includes('efficient_striker');
   const favHasPower = favTags.includes('striking_power') || favTags.includes('gas_tank_risk');
   if (dogHasDefense && favHasPower) {
+    const rate = isTight ? Math.min(92.0, finalRate + 20.0) : isExtreme ? finalRate + 20.0 : 61.5;
     activeCatalysts.push({
       id: 'defense_vs_power',
       badge: '🛡️ Dog Defense vs Fav Power',
-      rate: 61.5,
+      rate,
       detail: `${dogName} defense buffers against ${favName}'s power early`
     });
     catalystCount++;
-    finalRate = Math.max(finalRate, 61.5);
+    finalRate = isTight ? (finalRate + 20.0) : isExtreme ? (finalRate + 20.0) : Math.max(finalRate, 61.5);
   }
 
-  // 2. Favorite Age Cliff (Empirical: 47.6%)
+  // 2. Favorite Age Cliff (Empirical: 47.6% on moderate favs, +6.1 ppts on pick'em)
   if (favTags.includes('older')) {
+    const rate = isTight ? Math.min(90.0, finalRate + 6.1) : isExtreme ? finalRate + 6.1 : 47.6;
     activeCatalysts.push({
       id: 'age_cliff',
       badge: '⏳ Fav Age Cliff',
-      rate: 47.6,
+      rate,
       detail: `${favName} tagged with age cliff/slowdown vulnerability`
     });
     catalystCount++;
-    finalRate = Math.max(finalRate, 47.6);
+    finalRate = isTight ? (finalRate + 6.1) : isExtreme ? (finalRate + 6.1) : Math.max(finalRate, 47.6);
   }
 
-  // 3. Underdog Size Advantage (Empirical: 48.3%)
+  // 3. Underdog Size Advantage (Empirical: 48.3% on moderate favs, +6.8 ppts on pick'em)
   if (dogTags.includes('size_advantage')) {
+    const rate = isTight ? Math.min(90.0, finalRate + 6.8) : isExtreme ? finalRate + 6.8 : 48.3;
     activeCatalysts.push({
       id: 'size_advantage',
       badge: '📏 Dog Size Advantage',
-      rate: 48.3,
+      rate,
       detail: `${dogName} frame/reach creates persistent live range leverage`
     });
     catalystCount++;
-    finalRate = Math.max(finalRate, 48.3);
+    finalRate = isTight ? (finalRate + 6.8) : isExtreme ? (finalRate + 6.8) : Math.max(finalRate, 48.3);
   }
 
-  // 4. Grappler Suppression Trap (Anti-Predictor: 34.8%)
+  // 4. Grappler Suppression Trap (Anti-Predictor: 34.8% on moderate favs, -6.7 ppts on pick'em)
   const favIsWrestler = favTags.includes('heavy_wrestler');
   const dogLacksTdDef = !dogTags.includes('takedown_defense');
   if (favIsWrestler && dogLacksTdDef) {
+    const rate = isTight ? Math.max(15.0, finalRate - 6.7) : 34.8;
     warnings.push({
       id: 'grappler_suppression',
       badge: '🛑 Grappler Suppression Trap',
-      rate: 34.8,
+      rate,
       detail: `${favName} heavy wrestling smothers live dog rally`
     });
-    finalRate = Math.min(finalRate, 34.8);
+    finalRate = isTight ? (finalRate - 6.7) : Math.min(finalRate, 34.8);
   }
 
-  // 5. Multi-Catalyst Stacking (Empirical: 62.5%)
+  // 5. Multi-Catalyst Stacking (Empirical: 62.5% on moderate favs, +21 ppts on pick'em)
   if (catalystCount >= 2) {
+    const rate = isTight ? Math.min(95.0, tierInfo.rate + 21.0) : isExtreme ? tierInfo.rate + 21.0 : 62.5;
     activeCatalysts.unshift({
       id: 'multi_stack',
       badge: '⚡ Multi-Catalyst Stack',
-      rate: 62.5,
+      rate,
       detail: `${catalystCount} empirical catalysts active on favorite`
     });
-    finalRate = Math.max(finalRate, 62.5);
+    finalRate = isTight ? Math.min(95.0, tierInfo.rate + 21.0) : isExtreme ? tierInfo.rate + 21.0 : Math.max(finalRate, 62.5);
   }
 
-  // 6. Older Underdog Suppression (Ish Canon: "Older underdog has a lower chance of a crossover")
+  // 6. Older Underdog Suppression (Ish Canon: -8.0 ppts on pick'em, 33.5% on moderate favs)
   if (dogTags.includes('older')) {
+    const rate = isTight ? Math.max(15.0, finalRate - 8.0) : 33.5;
     warnings.push({
       id: 'older_dog',
       badge: '⏳ Older Underdog (Lower Comeback Rate)',
-      rate: 33.5,
+      rate,
       detail: `${dogName} tagged older/veteran; lower likelihood of mounting live line flip`
     });
-    finalRate = Math.min(finalRate, 33.5);
+    finalRate = isTight ? (finalRate - 8.0) : Math.min(finalRate, 33.5);
   }
 
   // Raw Dog Note: Subjective indicator from Ish

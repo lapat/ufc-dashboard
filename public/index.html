@@ -537,6 +537,52 @@
         <div id="nw-tag-catalysts-text" style="font-size:0.62rem;color:#aaa;margin-top:2px;"></div>
       </div>
     </div>
+
+    <!-- Inline Equal-Profit Hedge Calculator (Win-Win Lock) -->
+    <div id="nw-hedge-calc" style="display:none;margin-top:10px;background:#0d0e14;border:1px solid #232734;border-radius:6px;padding:8px 12px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;cursor:pointer;" id="nw-hedge-calc-toggle">
+        <span style="font-size:0.72rem;font-weight:700;color:#69db7c;display:flex;align-items:center;gap:6px;">
+          ⚖️ <strong>Equal-Profit Hedge Calculator</strong> <span style="font-size:0.6rem;color:#888;">(Guaranteed Equal Dollar Lock)</span>
+        </span>
+        <span id="nw-hedge-calc-arrow" style="font-size:0.65rem;color:#666;">▾</span>
+      </div>
+      <div id="nw-hedge-calc-body" style="display:none;margin-top:8px;border-top:1px solid #1a1d26;padding-top:8px;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:0.7rem;">
+          <!-- Bet 1 Side -->
+          <div style="background:#13151f;padding:6px 8px;border-radius:4px;border:1px solid #202433;">
+            <div style="color:#e8b84b;font-weight:700;margin-bottom:4px;" id="hc-f1-label">Bet 1 (Original)</div>
+            <div style="display:flex;gap:6px;align-items:center;margin-bottom:4px;">
+              <span style="color:#888;font-size:0.62rem;">Stake: $</span>
+              <input type="number" id="hc-s1" value="50" style="width:55px;background:#090a0f;border:1px solid #2e3446;color:#fff;border-radius:3px;padding:2px 4px;font-size:0.68rem;outline:none;"/>
+            </div>
+            <div style="display:flex;gap:6px;align-items:center;">
+              <span style="color:#888;font-size:0.62rem;">Odds:</span>
+              <input type="text" id="hc-o1" placeholder="+150" style="width:55px;background:#090a0f;border:1px solid #2e3446;color:#fff;border-radius:3px;padding:2px 4px;font-size:0.68rem;outline:none;"/>
+            </div>
+          </div>
+          <!-- Bet 2 Side -->
+          <div style="background:#13151f;padding:6px 8px;border-radius:4px;border:1px solid #202433;">
+            <div style="color:#74c0fc;font-weight:700;margin-bottom:4px;" id="hc-f2-label">Bet 2 (Live Hedge)</div>
+            <div style="display:flex;gap:6px;align-items:center;margin-bottom:4px;">
+              <span style="color:#888;font-size:0.62rem;">Live Odds:</span>
+              <input type="text" id="hc-o2" placeholder="+120" style="width:55px;background:#090a0f;border:1px solid #2e3446;color:#fff;border-radius:3px;padding:2px 4px;font-size:0.68rem;outline:none;"/>
+            </div>
+            <div style="margin-top:4px;font-size:0.62rem;color:#aaa;" id="hc-s2-display">
+              Optimal Stake: <strong>$0.00</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hedge Profit Output & 1-Click Pre-fill -->
+        <div id="hc-profit-output" style="margin-top:8px;padding:6px 8px;background:#0c1a10;border:1px solid #224a27;border-radius:4px;display:flex;justify-content:space-between;align-items:center;font-size:0.7rem;">
+          <div>
+            <span style="color:#69db7c;font-weight:700;" id="hc-profit-text">Guaranteed Profit: +$0.00</span>
+            <div style="font-size:0.58rem;color:#8a998c;" id="hc-proof-text">Formula: S₂ = (S₁ × D₁) / D₂</div>
+          </div>
+          <button id="hc-btn-prefill" style="background:#69db7c;color:#000;border:none;border-radius:4px;padding:4px 10px;font-weight:800;font-size:0.65rem;cursor:pointer;">⚡ Pre-fill on DK</button>
+        </div>
+      </div>
+    </div>
     
     <!-- Fighter Gas Tank & Finisher Capsule -->
     <div id="nw-capsule" style="display:none;justify-content:space-between;align-items:center;background:#0d0d0d;border:1px solid #1f1f1f;border-radius:6px;padding:8px 14px;margin-top:10px;font-size:0.75rem;flex-wrap:wrap;gap:6px;">
@@ -1672,8 +1718,16 @@ function startClassicLiveStats(f1, f2) {
           if (ls.staleLineAdvantage && ls.staleLineDetails) {
             let html = ls.staleLineDetails;
             if (ls.staleSpikedFighter) {
+              const currentUnit = parseInt(localStorage.getItem('betUnit') || '50', 10);
               const sf = ls.staleSpikedFighter.replace(/'/g, "\\'");
-              html += `<div style="margin-top:6px;"><button style="background:#ff1744;color:#fff;border:none;border-radius:4px;padding:6px 12px;font-weight:bold;cursor:pointer;font-size:0.85rem;" onclick="window.postMessage({ type: 'PREFILL_BETSLIP', fighter: '${sf}', stake: 50, odds: (document.getElementById('nw-f1').textContent.includes('${sf}') ? tracker.f1Odds : tracker.f2Odds) }, '*')">⚡ AUTO-SNIPE ${ls.staleSpikedFighter} ($50)</button></div>`;
+              html += `<div style="margin-top:8px;display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap;">
+                <button id="btn-auto-snipe" style="background:#ff1744;color:#fff;border:none;border-radius:4px;padding:6px 14px;font-weight:800;cursor:pointer;font-size:0.85rem;box-shadow:0 0 10px rgba(255,23,68,0.5);" onclick="executeAutoSnipe('${sf}')">⚡ AUTO-SNIPE ${ls.staleSpikedFighter} ($${currentUnit})</button>
+                <div style="display:inline-flex;gap:3px;align-items:center;background:#181818;padding:2px 5px;border-radius:4px;border:1px solid #333;">
+                  <span style="font-size:0.65rem;color:#888;">Unit:</span>
+                  ${[25, 50, 100, 250].map(u => `<button class="unit-pill-btn" style="background:${currentUnit===u?'#e8b84b':'#222'};color:${currentUnit===u?'#000':'#aaa'};border:none;border-radius:3px;padding:2px 5px;font-size:0.62rem;font-weight:700;cursor:pointer;" onclick="setSnipeUnit(${u}, '${sf}')">$${u}</button>`).join('')}
+                </div>
+              </div>`;
+              playSnipeRadarAudio(ls.staleSpikedFighter);
             }
             alertBanner.innerHTML = html;
             alertBanner.style.display = "block";
@@ -1686,6 +1740,120 @@ function startClassicLiveStats(f1, f2) {
   poll();
   _classicLiveStatsTimer = setInterval(poll, 3000);
 }
+
+window.setSnipeUnit = function(u, fighterName) {
+  localStorage.setItem('betUnit', u);
+  const btn = document.getElementById('btn-auto-snipe');
+  if (btn) btn.textContent = `⚡ AUTO-SNIPE ${fighterName} ($${u})`;
+  document.querySelectorAll('.unit-pill-btn').forEach(b => {
+    const isThis = b.textContent === `$${u}`;
+    b.style.background = isThis ? '#e8b84b' : '#222';
+    b.style.color = isThis ? '#000' : '#aaa';
+  });
+};
+
+window.executeAutoSnipe = function(fighterName) {
+  const unit = parseInt(localStorage.getItem('betUnit') || '50', 10);
+  const sf = fighterName || '';
+  const o1 = tracker.f1Odds;
+  const o2 = tracker.f2Odds;
+  const targetOdds = document.getElementById('nw-f1').textContent.includes(sf) ? o1 : o2;
+  window.postMessage({ type: 'PREFILL_BETSLIP', fighter: sf, stake: unit, odds: targetOdds }, '*');
+};
+
+let _lastRadarPingFighter = '';
+let _lastRadarPingTs = 0;
+function playSnipeRadarAudio(spikedFighter) {
+  const now = Date.now();
+  if (_lastRadarPingFighter === spikedFighter && (now - _lastRadarPingTs) < 12000) return;
+  _lastRadarPingFighter = spikedFighter;
+  _lastRadarPingTs = now;
+
+  try {
+    const ctx = new (window.AudioContext || window.webkitAudioContext)();
+    if (ctx.state === 'suspended') ctx.resume();
+    const t = ctx.currentTime;
+    
+    const osc1 = ctx.createOscillator();
+    const gain1 = ctx.createGain();
+    osc1.type = 'sine'; osc1.frequency.setValueAtTime(880, t);
+    gain1.gain.setValueAtTime(0, t);
+    gain1.gain.linearRampToValueAtTime(0.25, t + 0.02);
+    gain1.gain.exponentialRampToValueAtTime(0.001, t + 0.12);
+    osc1.connect(gain1); gain1.connect(ctx.destination);
+    osc1.start(t); osc1.stop(t + 0.13);
+
+    const osc2 = ctx.createOscillator();
+    const gain2 = ctx.createGain();
+    osc2.type = 'sine'; osc2.frequency.setValueAtTime(1046.5, t + 0.14);
+    gain2.gain.setValueAtTime(0, t + 0.14);
+    gain2.gain.linearRampToValueAtTime(0.3, t + 0.16);
+    gain2.gain.exponentialRampToValueAtTime(0.001, t + 0.28);
+    osc2.connect(gain2); gain2.connect(ctx.destination);
+    osc2.start(t + 0.14); osc2.stop(t + 0.30);
+  } catch (_) {}
+}
+
+function parseOddsToDecimal(americanStr) {
+  if (!americanStr) return 0;
+  const clean = String(americanStr).trim().replace('+', '');
+  const n = parseFloat(clean);
+  if (isNaN(n) || n === 0) return 0;
+  return n > 0 ? (n / 100) + 1 : (100 / Math.abs(n)) + 1;
+}
+
+let _hedgeTargetFighter = '';
+let _lastCalculatedS2 = 0;
+function calcInlineHedge() {
+  const s1 = parseFloat(document.getElementById('hc-s1')?.value) || 0;
+  const o1 = document.getElementById('hc-o1')?.value;
+  const o2 = document.getElementById('hc-o2')?.value;
+  const d1 = parseOddsToDecimal(o1);
+  const d2 = parseOddsToDecimal(o2);
+
+  if (s1 > 0 && d1 > 1 && d2 > 1) {
+    const s2 = (s1 * d1) / d2;
+    _lastCalculatedS2 = Math.round(s2);
+    const profit1 = (s1 * d1) - s1 - s2;
+    const isWinWin = profit1 > 0;
+    
+    const dispEl = document.getElementById('hc-s2-display');
+    if (dispEl) dispEl.innerHTML = `Optimal Stake: <strong style="color:#fff;">$${s2.toFixed(2)}</strong>`;
+    
+    const profitEl = document.getElementById('hc-profit-output');
+    const profitText = document.getElementById('hc-profit-text');
+    if (profitEl && profitText) {
+      profitEl.style.background = isWinWin ? '#0c1a10' : '#1e1414';
+      profitEl.style.borderColor = isWinWin ? '#224a27' : '#442222';
+      profitText.innerHTML = isWinWin
+        ? `Guaranteed Profit: <strong style="color:#69db7c;">+$${profit1.toFixed(2)}</strong> (Equal on both!)`
+        : `Hedge Return: $${profit1.toFixed(2)} (No Win-Win yet)`;
+    }
+  }
+}
+
+// Toggle drawer
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.getElementById('nw-hedge-calc-toggle');
+  const body = document.getElementById('nw-hedge-calc-body');
+  const arrow = document.getElementById('nw-hedge-calc-arrow');
+  if (toggle && body) {
+    toggle.onclick = () => {
+      const open = body.style.display === 'block';
+      body.style.display = open ? 'none' : 'block';
+      if (arrow) arrow.textContent = open ? '▾' : '▴';
+    };
+  }
+  ['hc-s1', 'hc-o1', 'hc-o2'].forEach(id => {
+    document.getElementById(id)?.addEventListener('input', calcInlineHedge);
+  });
+  document.getElementById('hc-btn-prefill')?.addEventListener('click', () => {
+    const o2 = document.getElementById('hc-o2')?.value;
+    if (_hedgeTargetFighter && _lastCalculatedS2 > 0) {
+      window.postMessage({ type: 'PREFILL_BETSLIP', fighter: _hedgeTargetFighter, stake: _lastCalculatedS2, odds: o2 }, '*');
+    }
+  });
+});
 
 function updateFightUI(f1Name,f2Name,o1,o2,live,sport,switchGames){
   const oddsQuery = (o1 != null && o2 != null && o1 !== '' && o2 !== '') ? ('&o1=' + encodeURIComponent(o1) + '&o2=' + encodeURIComponent(o2)) : '';
@@ -1782,6 +1950,22 @@ function updateFightUI(f1Name,f2Name,o1,o2,live,sport,switchGames){
             document.getElementById('nw-tag-catalysts-text').textContent = cats.length ? ('Active Drivers: ' + cats.join(' · ')) : 'Baseline Stylistic Pace';
           } else if (adviceBanner) {
             adviceBanner.style.display = 'none';
+          }
+
+          // Populate Inline Hedge Calculator
+          const hedgeCalc = document.getElementById('nw-hedge-calc');
+          if (hedgeCalc) {
+            hedgeCalc.style.display = 'block';
+            const f1Lbl = document.getElementById('hc-f1-label');
+            const f2Lbl = document.getElementById('hc-f2-label');
+            if (f1Lbl) f1Lbl.textContent = 'Bet 1 (' + f1Name + ')';
+            if (f2Lbl) f2Lbl.textContent = 'Bet 2 (' + f2Name + ')';
+            _hedgeTargetFighter = f2Name;
+            const hcO1 = document.getElementById('hc-o1');
+            const hcO2 = document.getElementById('hc-o2');
+            if (hcO1 && !hcO1.value) hcO1.value = o1 || '+150';
+            if (hcO2 && o2) hcO2.value = o2;
+            calcInlineHedge();
           }
         }
         
