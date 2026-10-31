@@ -2,118 +2,196 @@
 <html>
 <head>
   <meta charset="UTF-8"/>
+  <title>BetBot DK Sync</title>
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
-    body{background:#0a0a0a;color:#ddd;font-family:'Helvetica Neue',sans-serif;font-size:13px;width:340px;padding:14px}
-    h1{color:#e8b84b;font-size:0.85rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
-    .status-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:12px}
-    .stat{background:#111;border:1px solid #1a1a1a;border-radius:6px;padding:8px 10px}
-    .stat-label{font-size:0.58rem;color:#444;text-transform:uppercase;letter-spacing:1px;margin-bottom:3px}
-    .stat-val{font-size:0.75rem;font-weight:600}
-    .dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:5px;background:#333}
+    body{background:#0a0a0a;color:#ddd;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,sans-serif;font-size:12px;width:360px;padding:12px;user-select:none}
+    
+    /* Header & Health Pill */
+    .header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+    h1{color:#e8b84b;font-size:0.85rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;display:flex;align-items:center;gap:6px}
+    .version{color:#69db7c;font-size:0.62rem;font-weight:700;letter-spacing:0}
+    #health-pill{display:inline-flex;align-items:center;gap:5px;font-size:0.62rem;font-weight:700;padding:2px 8px;border-radius:12px;background:#181818;color:#888;border:1px solid #282828}
+    #health-pill.ready{background:#0d2412;color:#69db7c;border-color:#69db7c55}
+    #health-pill.warn{background:#2a2008;color:#e8b84b;border-color:#e8b84b55}
+    #health-pill.idle{background:#161616;color:#888;border-color:#333}
+
+    /* Primary Action */
+    #btnLaunchTabs{width:100%;background:linear-gradient(180deg,#241c08,#151206);border:1px solid #e8b84b88;color:#e8b84b;padding:8px 10px;border-radius:6px;font-size:0.75rem;font-weight:700;cursor:pointer;margin-bottom:10px;display:flex;align-items:center;justify-content:center;gap:6px;transition:all .15s}
+    #btnLaunchTabs:hover{background:#2f240a;border-color:#e8b84b}
+
+    /* Matchup & In-Extension Tagger */
+    #capture-panel{background:#0e0e0e;border:1px solid #1c1c1c;border-radius:6px;padding:10px;margin-bottom:10px}
+    #capture-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px}
+    #capture-hdr-label{font-size:0.58rem;color:#666;text-transform:uppercase;letter-spacing:1px;font-weight:700}
+    #capture-live-badge{font-size:0.58rem;font-weight:700;padding:1px 6px;border-radius:4px;background:#181818;color:#555}
+    #capture-live-badge.live{background:#0a2410;color:#69db7c;border:1px solid #69db7c44}
+    #capture-live-badge.manual{background:#2b1d06;color:#e8b84b;border:1px solid #e8b84b44}
+    
+    #capture-fight{font-size:0.8rem;font-weight:700;color:#fff;margin-bottom:2px}
+    #capture-odds{font-size:0.7rem;color:#e8b84b;margin-bottom:8px;font-weight:600}
+
+    /* Tagger inside Extension */
+    #ext-tagger-wrap{display:none;margin-top:8px;border-top:1px solid #1c1c1c;padding-top:8px}
+    .ext-tag-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    .ext-fighter-col{display:flex;flex-direction:column;gap:4px}
+    .ext-f-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:2px}
+    .ext-f-name{font-size:0.68rem;font-weight:700;color:#ddd;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:95px}
+    .ext-dog-btn{background:#181818;border:1px solid #333;color:#888;border-radius:3px;padding:1px 5px;font-size:0.58rem;font-weight:700;cursor:pointer}
+    .ext-dog-btn.active{background:#e8b84b;color:#000;border-color:#e8b84b}
+    .ext-pills{display:flex;flex-wrap:wrap;gap:3px}
+    .ext-pill{background:#141414;border:1px solid #282828;color:#777;border-radius:3px;padding:2px 5px;font-size:0.58rem;cursor:pointer}
+    .ext-pill.active{background:#e8b84b22;border-color:#e8b84b;color:#e8b84b;font-weight:700}
+    
+    /* Strategy & Crossover Banner in Popup */
+    #ext-advice-box{display:none;margin-top:8px;padding:6px 8px;background:#141208;border:1px solid #e8b84b44;border-radius:4px;font-size:0.65rem;color:#e8b84b}
+    #ext-advice-title{font-weight:700;margin-bottom:2px}
+    #ext-advice-desc{font-size:0.6rem;color:#aaa}
+
+    #fightStartedBtn{width:100%;margin-top:6px;background:#18150a;border:1px solid #e8b84b33;border-radius:4px;color:#aaa;font-size:0.65rem;padding:4px;cursor:pointer}
+    #fightStartedBtn:hover{color:#e8b84b;border-color:#e8b84b88}
+    #manualLiveRow{display:none;margin-top:4px;font-size:0.6rem;color:#69db7c;text-align:center}
+
+    /* Launchers */
+    .launcher-row{display:flex;gap:6px;margin-bottom:10px}
+    .launcher-row a{flex:1;text-decoration:none;padding:6px;border-radius:4px;text-align:center;font-size:0.68rem;font-weight:700;transition:all .15s}
+    .launcher-hud{background:#261f0a;border:1px solid #e8b84b88;color:#e8b84b}
+    .launcher-hud:hover{background:#33290d}
+    .launcher-sub{background:#161616;border:1px solid #282828;color:#aaa}
+    .launcher-sub:hover{background:#222;color:#fff}
+
+    /* Collapsible Diagnostics & Settings Drawer */
+    .drawer-toggle{width:100%;background:#0d0d0d;border:1px solid #1a1a1a;color:#777;padding:5px 8px;border-radius:4px;font-size:0.62rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+    .drawer-toggle:hover{color:#ccc;border-color:#2a2a2a}
+    #drawer-body{display:none;margin-top:6px;background:#0d0d0d;border:1px solid #1a1a1a;border-radius:4px;padding:8px}
+
+    .user-row{display:flex;gap:5px;align-items:center;margin-bottom:8px}
+    .user-row input{flex:1;background:#111;border:1px solid #2a2a2a;border-radius:3px;color:#ddd;font-size:0.68rem;padding:4px 6px;outline:none}
+    .user-row input:focus{border-color:#e8b84b}
+    .user-row button{background:#1a1a00;border:1px solid #e8b84b44;border-radius:3px;color:#e8b84b;font-size:0.62rem;padding:4px 8px;cursor:pointer}
+    .user-row button.saved{background:#0a1a0a;border-color:#69db7c44;color:#69db7c}
+
+    .status-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-bottom:8px}
+    .stat{background:#121212;border:1px solid #1c1c1c;border-radius:4px;padding:5px 7px}
+    .stat-label{font-size:0.55rem;color:#555;text-transform:uppercase;letter-spacing:0.5px}
+    .stat-val{font-size:0.68rem;font-weight:600;margin-top:1px}
+    
+    .dot{display:inline-block;width:6px;height:6px;border-radius:50%;margin-right:4px;background:#333}
     .dot.green{background:#69db7c}
     .dot.red{background:#ff6b6b}
     .dot.yellow{background:#e8b84b}
-    .section{font-size:0.6rem;color:#444;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px;margin-top:10px;display:flex;justify-content:space-between;align-items:center}
-    .clr{font-size:0.6rem;color:#333;cursor:pointer;text-decoration:underline}
+
+    .sec-hdr{display:flex;justify-content:space-between;align-items:center;font-size:0.58rem;color:#555;text-transform:uppercase;margin:6px 0 3px}
+    .clr{color:#555;cursor:pointer;text-decoration:underline}
     .clr:hover{color:#e8b84b}
-    .log-entry{font-size:0.62rem;color:#555;padding:3px 0;border-bottom:1px solid #111;display:flex;gap:6px}
-    .log-ts{color:#333;flex-shrink:0;font-size:0.58rem}
+    #debugLog{max-height:80px;overflow-y:auto;font-family:monospace;font-size:0.58rem;color:#555}
+    .log-entry{padding:2px 0;display:flex;gap:5px}
+    .log-ts{color:#444}
     .log-msg.bets{color:#69db7c}
     .log-msg.err{color:#ff6b6b}
-    .log-msg.ws{color:#74c0fc}
-    .capture{background:#111;border:1px solid #1a1a1a;border-radius:4px;padding:6px 8px;margin-bottom:4px;font-size:0.62rem;color:#555;word-break:break-all}
-    .capture.bets{border-color:#69db7c33}
-    .capture .url{color:#e8b84b88;margin-bottom:2px}
-    .capture .preview.bets{color:#69db7c}
-    #empty{color:#252525;font-size:0.7rem;padding:8px 0}
-    .user-row{display:flex;gap:6px;align-items:center;margin-bottom:6px}
-    .user-row input{flex:1;background:#111;border:1px solid #333;border-radius:4px;color:#ddd;font-size:0.7rem;padding:5px 8px;outline:none}
-    .user-row input:focus{border-color:#e8b84b}
-    .user-row button{background:#1a1a00;border:1px solid #e8b84b44;border-radius:4px;color:#e8b84b;font-size:0.65rem;padding:5px 10px;cursor:pointer;white-space:nowrap}
-    .user-row button:hover{background:#2a2a00}
-    .user-row button.saved{background:#0a1a0a;border-color:#69db7c44;color:#69db7c}
-    #capture-panel{background:#111;border:1px solid #1a1a1a;border-radius:6px;padding:10px 12px;margin-bottom:12px}
-    #capture-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px}
-    #capture-hdr-label{font-size:0.6rem;color:#444;text-transform:uppercase;letter-spacing:1px}
-    #capture-live-badge{font-size:0.6rem;font-weight:700;padding:1px 6px;border-radius:8px;background:#1a1a1a;color:#555}
-    #capture-live-badge.live{background:#0a1a0a;color:#69db7c}
-    #capture-live-badge.manual{background:#1a1400;color:#e8b84b}
-    #capture-fight{font-size:0.78rem;font-weight:600;color:#ddd;margin-bottom:2px}
-    #capture-odds{font-size:0.68rem;color:#666;margin-bottom:8px}
-    #fightStartedBtn{width:100%;background:#1a1400;border:1px solid #e8b84b44;border-radius:4px;color:#e8b84b;font-size:0.7rem;padding:6px;cursor:pointer;font-weight:600}
-    #fightStartedBtn:hover{background:#2a2200}
-    #manualLiveRow{display:none;margin-top:6px;font-size:0.62rem;color:#69db7c;text-align:center}
   </style>
 </head>
 <body>
-  <h1>⚡ Bet Bot DK Sync <span style="color:#69db7c;font-size:0.65rem;font-weight:700;letter-spacing:0">v3.3</span></h1>
-  <div style="font-size:0.62rem;color:#888;margin-bottom:10px">Auto-capture active • Keep 2 DK tabs open: <strong>My Bets</strong> + <strong>Odds</strong></div>
+  <!-- Header & Live Health -->
+  <div class="header">
+    <h1>⚡ Bet Bot <span class="version">v3.4</span></h1>
+    <div id="health-pill" class="idle">Checking…</div>
+  </div>
 
-  <button id="btnLaunchTabs" style="width:100%;background:#1a1608;border:1px solid #e8b84b88;color:#e8b84b;padding:8px;border-radius:5px;font-size:0.75rem;font-weight:700;cursor:pointer;margin-bottom:12px;display:flex;align-items:center;justify-content:center;gap:6px;">🚀 Open 2 Fight Night Tabs (My Bets + UFC)</button>
-  <!-- Live capture status -->
+  <!-- Primary Action -->
+  <button id="btnLaunchTabs">🚀 Open 2 Fight Night Tabs (My Bets + UFC)</button>
+
+  <!-- Matchup & In-Extension Tagger -->
   <div id="capture-panel">
     <div id="capture-hdr">
-      <span id="capture-hdr-label">Watching</span>
+      <span id="capture-hdr-label">On-Screen Matchup</span>
       <span id="capture-live-badge">—</span>
     </div>
     <div id="capture-fight">No fight page open</div>
     <div id="capture-odds"></div>
-    <button id="fightStartedBtn" title="Automatic 2-second capture is active; click only if you need manual force">🥊 Manual Live Override (Auto is Active)</button>
+    
+    <!-- Inline Tagger -->
+    <div id="ext-tagger-wrap">
+      <div class="ext-tag-grid">
+        <!-- Fighter 1 -->
+        <div class="ext-fighter-col">
+          <div class="ext-f-hdr">
+            <span class="ext-f-name" id="ext-f1-name">F1</span>
+            <button class="ext-dog-btn" id="ext-f1-dog">🐕 Raw Dog</button>
+          </div>
+          <div class="ext-pills" id="ext-f1-pills"></div>
+        </div>
+        <!-- Fighter 2 -->
+        <div class="ext-fighter-col">
+          <div class="ext-f-hdr">
+            <span class="ext-f-name" id="ext-f2-name">F2</span>
+            <button class="ext-dog-btn" id="ext-f2-dog">🐕 Raw Dog</button>
+          </div>
+          <div class="ext-pills" id="ext-f2-pills"></div>
+        </div>
+      </div>
+
+      <!-- Advice Box -->
+      <div id="ext-advice-box">
+        <div id="ext-advice-title">⚡ Line-Flip Edge: --</div>
+        <div id="ext-advice-desc"></div>
+      </div>
+    </div>
+
+    <!-- Fallback Force Live -->
+    <button id="fightStartedBtn">🥊 Force Live Capture (If DK Badge Missing)</button>
     <div id="manualLiveRow">
-      Forcing capture <span id="manualLiveCountdown"></span> · <span class="clr" id="cancelManualLive">cancel</span>
+      Forcing live <span id="manualLiveCountdown"></span> · <span class="clr" id="cancelManualLive">cancel</span>
     </div>
   </div>
 
-  <!-- Manual username -->
-  <div class="user-row">
-    <input id="userInput" placeholder="Your username (e.g. louis, ish)" spellcheck="false"/>
-    <button id="saveUser">Set</button>
+  <!-- Quick Launchers -->
+  <div class="launcher-row">
+    <a href="https://www.livebetbot.com/hud" target="_blank" class="launcher-hud">🔲 Open Fight HUD</a>
+    <a href="https://www.livebetbot.com/" target="_blank" class="launcher-sub">⚡ Classic</a>
+    <a href="https://www.livebetbot.com/guide" target="_blank" class="launcher-sub">📖 Guide</a>
   </div>
 
-  <!-- Auto-login credentials -->
-  <div class="section" style="margin-top:4px">Auto-Login</div>
-  <div class="user-row">
-    <input id="dkEmail" type="email" placeholder="DK email" spellcheck="false" autocomplete="off"/>
-  </div>
-  <div class="user-row">
-    <input id="dkPassword" type="password" placeholder="DK password" autocomplete="off"/>
-    <button id="saveCreds">Save</button>
-  </div>
-  <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
-    <input type="checkbox" id="dkAutoLogin" style="accent-color:#e8b84b;width:13px;height:13px"/>
-    <label for="dkAutoLogin" style="font-size:0.65rem;color:#888;cursor:pointer">Auto-login when logged out</label>
-  </div>
+  <!-- Collapsible Diagnostics & Settings Drawer -->
+  <button class="drawer-toggle" id="btnToggleDrawer">
+    <span>⚙️ Diagnostics & Settings</span>
+    <span id="drawerArrow">▾</span>
+  </button>
+  
+  <div id="drawer-body">
+    <!-- Username -->
+    <div class="user-row">
+      <input id="userInput" placeholder="Your username (e.g. louislapat, ish)" spellcheck="false"/>
+      <button id="saveUser">Set</button>
+    </div>
 
-  <div style="display:flex;gap:6px;margin-bottom:10px;">
-    <a href="https://www.livebetbot.com/hud" target="_blank" style="flex:1;background:#1a1608;border:1px solid #e8b84b55;color:#e8b84b;text-decoration:none;padding:6px;border-radius:4px;text-align:center;font-size:0.68rem;font-weight:700;">🔳 Open Fight HUD</a>
-    <a href="https://www.livebetbot.com/" target="_blank" style="flex:1;background:#181818;border:1px solid #2a2a2a;color:#aaa;text-decoration:none;padding:6px;border-radius:4px;text-align:center;font-size:0.68rem;font-weight:600;">⚡ Classic</a>
-    <a href="https://www.livebetbot.com/guide" target="_blank" style="flex:0.8;background:#181818;border:1px solid #2a2a2a;color:#888;text-decoration:none;padding:6px;border-radius:4px;text-align:center;font-size:0.68rem;font-weight:600;">📖 Guide</a>
-  </div>
-  <div class="status-grid">
-    <div class="stat">
-      <div class="stat-label">DK Tab</div>
-      <div class="stat-val"><span class="dot" id="tabDot"></span><span id="tabText">checking…</span></div>
+    <!-- Status Grid -->
+    <div class="status-grid">
+      <div class="stat">
+        <div class="stat-label">DK Tab</div>
+        <div class="stat-val"><span class="dot" id="tabDot"></span><span id="tabText">checking…</span></div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">WebSocket</div>
+        <div class="stat-val"><span class="dot" id="wsDot"></span><span id="wsText">checking…</span></div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">Last Bets Sync</div>
+        <div class="stat-val" id="syncAge">—</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">Bets Synced</div>
+        <div class="stat-val" id="betCount">—</div>
+      </div>
     </div>
-    <div class="stat">
-      <div class="stat-label">WS Connection</div>
-      <div class="stat-val"><span class="dot" id="wsDot"></span><span id="wsText">checking…</span></div>
-    </div>
-    <div class="stat">
-      <div class="stat-label">Last Bets Sync</div>
-      <div class="stat-val" id="syncAge">—</div>
-    </div>
-    <div class="stat">
-      <div class="stat-label">Bets Synced</div>
-      <div class="stat-val" id="betCount">—</div>
-    </div>
-  </div>
 
-  <div class="section">Debug Log <span class="clr" id="clrLog">clear</span></div>
-  <div id="debugLog"></div>
-
-  <div class="section">Recent Captures</div>
-  <div id="captures"><div id="empty">Go to DraftKings mybets — data will appear here</div></div>
+    <!-- Raw Debug Log -->
+    <div class="sec-hdr">
+      <span>Event Log</span>
+      <span class="clr" id="clrLog">clear</span>
+    </div>
+    <div id="debugLog"></div>
+  </div>
 
   <script src="popup.js"></script>
 </body>
