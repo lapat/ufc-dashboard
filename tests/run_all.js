@@ -19,7 +19,8 @@ const testFiles = [
   "tests/10_test_every_button_click.js",
   "tests/11_test_fighter_tags.js",
   "tests/12_test_tag_api_integration.js",
-  "tests/13_test_high_density_recording.js"
+  "tests/13_test_high_density_recording.js",
+  "tests/14_test_auto_snipe_latency_arbitrage.js"
 ];
 
 console.log("====================================================");
