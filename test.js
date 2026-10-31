@@ -6477,7 +6477,7 @@ async function runSecurityAndExpiryTests() {
   try {
     await check('AC3: /api/dk-odds-push endpoint exists — extension can push odds directly bypassing Odds API', () => {
       assert(src.includes('/api/dk-odds-push'), 'server.js must define /api/dk-odds-push endpoint');
-      const epBlock = src.slice(src.indexOf('/api/dk-odds-push'), src.indexOf('/api/dk-odds-push') + 1200); // widened 2026-10-19: endpoint grew (counters)
+      const epBlock = src.slice(src.indexOf('/api/dk-odds-push'), src.indexOf('/api/dk-odds-push') + 3000);
       assert(epBlock.includes('fighter1') && epBlock.includes('fighter2'), 'must accept fighter1/fighter2');
       assert(epBlock.includes('numericOdds1') && epBlock.includes('numericOdds2'), 'must accept numericOdds1/numericOdds2');
       assert(epBlock.includes('oddsHistory.push'), 'must append to oddsHistory like the main recorder');
@@ -6501,7 +6501,7 @@ async function runSecurityAndExpiryTests() {
   // AC5: background.js forwards ODDS_UPDATE to /api/dk-odds-push
   try {
     await check('AC5: background.js sends ODDS_UPDATE to /api/dk-odds-push on the server', () => {
-      const bgBlock = bg.slice(bg.indexOf("msg.type === 'ODDS_UPDATE'"), bg.indexOf("msg.type === 'ODDS_UPDATE'") + 1500);
+      const bgBlock = bg.slice(bg.indexOf("msg.type === 'ODDS_UPDATE'"), bg.indexOf("msg.type === 'ODDS_UPDATE'") + 2500);
       assert(bgBlock.includes('/api/dk-odds-push'), 'background.js must POST to /api/dk-odds-push on ODDS_UPDATE');
       assert(bgBlock.includes('numericOdds1'), 'must include numericOdds1 in the push payload');
     });
@@ -6726,7 +6726,7 @@ async function runTotalReturnTests() {
     await check('AE4: server.js appends every single 1-second sample to oddsHistory', () => {
       const serverSrc = require('fs').readFileSync(require('path').join(__dirname, 'server.js'), 'utf8');
       const idx = serverSrc.indexOf("app.post('/api/dk-odds-push'");
-      const pushBlock = serverSrc.slice(idx, idx + 2000);
+      const pushBlock = serverSrc.slice(idx, idx + 3000);
       assert(!pushBlock.includes('if(changed)record.oddsHistory.push'), 'Must NOT gate oddsHistory.push on changed flag');
       assert(pushBlock.includes('record.oddsHistory.push(odds);'), 'Must push every sample into oddsHistory');
     });

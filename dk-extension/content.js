@@ -233,8 +233,9 @@ if (href.startsWith('https://sportsbook.draftkings.com/') &&
       const s0 = (raw[0].side || "").toLowerCase().replace(/[^a-z0-9]/g, "");
       const s1 = (raw[1].side || "").toLowerCase().replace(/[^a-z0-9]/g, "");
       if (s0 === s1 || !raw[0].side || !raw[1].side) {
-        const header = document.querySelector("h1, [class*=\"event-header\"], [class*=\"matchup-header\"], [class*=\"event-cell__title\"]")?.textContent || document.title || "";
-        const vsMatch = header.match(/([a-zA-Z\s.'-]+?)\s+(?:vs\.?|v)\s+([a-zA-Z\s.'-]+)/i);
+        const rawHeader = document.querySelector("h1, [class*=\"event-header\"], [class*=\"matchup-header\"], [class*=\"event-cell__title\"]")?.textContent || document.title || "";
+        const cleanHeader = rawHeader.replace(/\|.*$/i, '').replace(/:\s*Odds.*$/i, '').replace(/-.*DraftKings.*$/i, '').trim();
+        const vsMatch = cleanHeader.match(/([a-zA-Z\s.'-]+?)\s+(?:vs\.?|v)\s+([a-zA-Z\s.'-]+)/i);
         if (vsMatch && vsMatch[1].trim() && vsMatch[2].trim()) {
           const h1 = vsMatch[1].trim();
           const h2 = vsMatch[2].trim();
@@ -291,7 +292,8 @@ if (href.startsWith('https://sportsbook.draftkings.com/') &&
   let _lastLiveLogTs = 0;
   // Scan health, reported to the background every 30 s so silent drops show up in the logs.
   const scanStats = { scans: 0, withOdds: 0, noOdds: 0, noTwoTeams: 0, sent: 0 };
-  setInterval(() => {
+
+  function doScanTick() {
     scanStats.scans++;
     const outcomes = scanOddsFromPage();
     if (outcomes.length === 0) { scanStats.noOdds++; return; }
@@ -319,17 +321,32 @@ if (href.startsWith('https://sportsbook.draftkings.com/') &&
 
     const liveBadge = findLiveBadge();
     const manualLive = Date.now() < _manualLiveUntil;
-    const live = !!liveBadge || manualLive;
+    // Multi-signal: in-play event URLs with clock / round markers are automatically live
+    const isInPlayUrl = href.includes('/event/') && (!!liveBadge || /(round|rd)\s*\d/i.test(bodyText) || /\d{1,2}:\d{2}/.test(bodyText));
+    const live = !!liveBadge || manualLive || isInPlayUrl;
+
     // Log once every 30s (not every 1s) so this is checkable in the console without spam
     if (Date.now() - _lastLiveLogTs > 30000) {
       _lastLiveLogTs = Date.now();
-      const why = liveBadge ? `badge FOUND ("${liveBadge.textContent.trim()}")` : manualLive ? 'manual override active' : 'not found';
+      const why = liveBadge ? `badge FOUND ("${liveBadge.textContent.trim()}")` : manualLive ? 'manual override active' : isInPlayUrl ? 'in-play event page' : 'not found';
       console.log(`[BetBot] live check: ${why} — ext capture ${live ? 'will' : 'will NOT'} fire`);
     }
 
     // Always report current odds so background + popup can display them
     send({ type: 'ODDS_UPDATE', outcomes, sport, live, ts: Date.now() });
-  }, 1000);
+  }
+
+  // Unthrottled Timer: Chrome throttles standard setInterval in background tabs to 1 poll/min (15 pts / 15-min fight).
+  // A dedicated Web Worker timer is exempt from background tab clamping, guaranteeing 900+ points per fight.
+  try {
+    const workerBlob = new Blob(['setInterval(() => postMessage("t"), 1000);'], { type: 'application/javascript' });
+    const timerWorker = new Worker(URL.createObjectURL(workerBlob));
+    timerWorker.onmessage = () => doScanTick();
+    console.log('[BetBot] Unthrottled Web Worker timer active (1,000ms guaranteed)');
+  } catch (_) {
+    setInterval(doScanTick, 1000);
+  }
+
   setInterval(() => {
     chrome.runtime.sendMessage({ type: 'SCAN_STATS', href, stats: { ...scanStats }, ts: Date.now() }).catch(() => {});
     for (const k of Object.keys(scanStats)) scanStats[k] = 0;

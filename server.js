@@ -2349,25 +2349,23 @@ async function recPollSport(sportKey, meta, watchedGame) {
       if (record.stats) record.stats.present++;
       const last = record.lastOdds;
       const changed = !last || last.fighter1.numericOdds !== odds.fighter1.numericOdds || last.fighter2.numericOdds !== odds.fighter2.numericOdds;
-      // One sample per poll (about 300 per 15 min at 3s). oddsHistory below stays change-only,
-      // because crossover and pattern analysis assume consecutive points differ.
       (record.samples = record.samples || []).push({ t: odds.timestamp, f1: odds.fighter1.numericOdds, f2: odds.fighter2.numericOdds, c: changed ? 1 : 0 });
-      if (changed) {
-        record.oddsHistory.push(odds);
-        record.lastOdds = odds;
-        if (record.stats) record.stats.changes++;
-        persistState(recorderState.activeFights); // persist every new odds point
 
-        // Live crossover detection — update state after every new odds point
-        if (record.oddsHistory.length >= 2) {
-          const prevState = record.crossoverState;
-          record.crossoverState = analyzeCrossoverTrajectory(record.oddsHistory);
+      // High-density continuous recording: capture every live poll (300+ pts per 15-min fight)
+      record.oddsHistory.push(odds);
+      record.lastOdds = odds;
+      if (changed && record.stats) record.stats.changes++;
+      persistState(recorderState.activeFights); // persist every new odds point
 
-          // Track first crossover per fight (used in summary, no email — UI shows it live)
-          const state = record.crossoverState;
-          if (state && state.status === 'crossed' && !record.crossoverAlerted) {
-            record.crossoverAlerted = true;
-          }
+      // Live crossover detection — update state after every new odds point
+      if (record.oddsHistory.length >= 2) {
+        const prevState = record.crossoverState;
+        record.crossoverState = analyzeCrossoverTrajectory(record.oddsHistory);
+
+        // Track first crossover per fight (used in summary, no email — UI shows it live)
+        const state = record.crossoverState;
+        if (state && state.status === 'crossed' && !record.crossoverAlerted) {
+          record.crossoverAlerted = true;
         }
       }
     }
