@@ -94,12 +94,15 @@ async function renderCapturePanel(fight, manualLiveUntil) {
   const taggerWrap = document.getElementById('ext-tagger-wrap');
   const manualActive = Date.now() < manualLiveUntil;
 
+  const idleMsg = document.getElementById('capture-idle-msg');
+
   // Stale snapshot check (15s)
   const fresh = fight && (Date.now() - fight.ts) < 15000;
 
   if (!fresh) {
     nameEl.textContent = 'No fight page open';
-    oddsEl.textContent = 'Navigate to a UFC event on DraftKings';
+    oddsEl.textContent = '';
+    if (idleMsg) idleMsg.style.display = 'block';
     badge.textContent = '—';
     badge.className = '';
     taggerWrap.style.display = 'none';
@@ -107,6 +110,7 @@ async function renderCapturePanel(fight, manualLiveUntil) {
     return;
   }
 
+  if (idleMsg) idleMsg.style.display = 'none';
   const f1 = fight.fighter1;
   const f2 = fight.fighter2;
   nameEl.textContent = `${f1} vs ${f2}`;
@@ -243,6 +247,24 @@ document.getElementById('saveUser').addEventListener('click', () => {
   btn.textContent = 'Saved ✓'; btn.className = 'saved';
   setTimeout(() => { btn.textContent = 'Set'; btn.className = ''; }, 2000);
 });
+
+// Credentials setup (preserved inside settings drawer)
+chrome.storage.local.get(['dkEmail','dkPassword','dkAutoLogin'], r => {
+  if (r.dkEmail && document.getElementById('dkEmail')) document.getElementById('dkEmail').value = r.dkEmail;
+  if (r.dkPassword && document.getElementById('dkPassword')) document.getElementById('dkPassword').value = r.dkPassword;
+  if (document.getElementById('dkAutoLogin')) document.getElementById('dkAutoLogin').checked = !!r.dkAutoLogin;
+});
+document.getElementById('saveCreds')?.addEventListener('click', () => {
+  const email = document.getElementById('dkEmail')?.value.trim();
+  const pass = document.getElementById('dkPassword')?.value;
+  const auto = document.getElementById('dkAutoLogin')?.checked;
+  if (!email || !pass) return;
+  chrome.storage.local.set({ dkEmail: email, dkPassword: pass, dkAutoLogin: auto });
+  const btn = document.getElementById('saveCreds');
+  btn.textContent = 'Saved ✓'; btn.className = 'saved';
+  setTimeout(() => { btn.textContent = 'Save'; btn.className = ''; }, 2000);
+});
+document.getElementById('dkAutoLogin')?.addEventListener('change', e => chrome.storage.local.set({ dkAutoLogin: e.target.checked }));
 
 document.getElementById('clrLog').addEventListener('click', () => {
   chrome.storage.local.set({ debugLog: [], captures: [], wsConnected: null, wsLastOpen: null, wsLastClose: null });
