@@ -196,7 +196,7 @@ async function fetchAndRenderTags(f1, f2, o1, o2) {
     };
 
     renderPills('ext-f1-pills', f1Tags, f1);
-    renderPills('ext-pills' in window ? 'ext-pills' : 'ext-f2-pills', f2Tags, f2);
+    renderPills('ext-f2-pills', f2Tags, f2);
 
     // Render Dynamic Crossover Advice Box
     const adviceBox = document.getElementById('ext-advice-box');
