@@ -223,6 +223,23 @@ function renderLog(log) {
   }).join('');
 }
 
+// Quick Guide Drawer Toggle
+const btnHowItWorks = document.getElementById('btnHowItWorks');
+const guideDrawer = document.getElementById('how-it-works-drawer');
+const btnCloseGuide = document.getElementById('btnCloseGuide');
+
+if (btnHowItWorks && guideDrawer) {
+  btnHowItWorks.addEventListener('click', () => {
+    const isShowing = guideDrawer.style.display === 'block';
+    guideDrawer.style.display = isShowing ? 'none' : 'block';
+  });
+}
+if (btnCloseGuide && guideDrawer) {
+  btnCloseGuide.addEventListener('click', () => {
+    guideDrawer.style.display = 'none';
+  });
+}
+
 // Diagnostics Accordion Toggle
 const drawerToggle = document.getElementById('btnToggleDrawer');
 const drawerBody = document.getElementById('drawer-body');

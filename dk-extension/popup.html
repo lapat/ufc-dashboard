@@ -275,7 +275,37 @@
   <!-- Header & Live Health -->
   <div class="header">
     <h1>⚡ Bet Bot <span class="version">v3.4</span></h1>
-    <div id="health-pill" class="idle"><span class="pulse-dot"></span> Checking…</div>
+    <div style="display:flex;align-items:center;gap:6px;">
+      <button id="btnHowItWorks" style="background:#141724;border:1px solid #293046;color:#74c0fc;padding:2px 8px;border-radius:12px;font-size:0.62rem;font-weight:700;cursor:pointer;transition:all .15s;">? How It Works</button>
+      <div id="health-pill" class="idle"><span class="pulse-dot"></span> Checking…</div>
+    </div>
+  </div>
+
+  <!-- 30-Second Quick Guide Drawer -->
+  <div id="how-it-works-drawer" style="display:none;background:#0d111a;border:1px solid #74c0fc55;border-radius:6px;padding:10px 12px;margin-bottom:12px;box-shadow:0 4px 15px rgba(0,0,0,0.6);">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+      <span style="color:#74c0fc;font-weight:800;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.5px;">📖 30-Second Fight Night Guide</span>
+      <button id="btnCloseGuide" style="background:none;border:none;color:#888;font-size:1rem;cursor:pointer;line-height:1;padding:0 2px;">×</button>
+    </div>
+    
+    <div style="display:flex;flex-direction:column;gap:8px;font-size:0.67rem;color:#ccc;">
+      <div style="display:flex;gap:8px;align-items:flex-start;">
+        <span style="background:#261d06;color:#e8b84b;font-weight:800;padding:2px 6px;border-radius:3px;font-size:0.62rem;flex-shrink:0;">STEP 1</span>
+        <div><strong>Click "Open 2 Fight Night Tabs" below.</strong><br><span style="color:#888;">Tab 1 tracks your bets; Tab 2 streams live odds.</span></div>
+      </div>
+      <div style="display:flex;gap:8px;align-items:flex-start;">
+        <span style="background:#0a2410;color:#69db7c;font-weight:800;padding:2px 6px;border-radius:3px;font-size:0.62rem;flex-shrink:0;">STEP 2</span>
+        <div><strong>Watch for the Green Light in top corner.</strong><br><span style="color:#888;"><code>🟢 2 Tabs Ready</code> = 1-second capture is 100% automatic.</span></div>
+      </div>
+      <div style="display:flex;gap:8px;align-items:flex-start;">
+        <span style="background:#261010;color:#ff8787;font-weight:800;padding:2px 6px;border-radius:3px;font-size:0.62rem;flex-shrink:0;">STEP 3</span>
+        <div><strong>Tag Fighters & Exploit Line Flips!</strong><br><span style="color:#888;">Tap <code>[🐕 Raw Dog]</code> on gut picks. Tap <code>[🤼 Wrestler]</code> or <code>[⚠️ Bad Tank]</code> to recalculate live line-movement odds instantly.</span></div>
+      </div>
+    </div>
+
+    <div style="margin-top:8px;padding-top:6px;border-top:1px solid #1c2233;text-align:right;">
+      <a href="https://www.livebetbot.com/guide" target="_blank" style="color:#74c0fc;font-size:0.65rem;font-weight:700;text-decoration:none;">Open Full Fighter Playbook ↗</a>
+    </div>
   </div>
 
   <!-- Primary Action -->

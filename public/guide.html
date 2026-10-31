@@ -149,10 +149,10 @@
     </ul>
     <div style="background:#0f150f;border:1px solid #2b542c;border-radius:6px;padding:12px 14px;margin:12px 0;display:flex;justify-content:space-between;align-items:center;">
       <div>
-        <strong style="color:#fff;font-size:0.85rem;">Get the Latest Extension (v3.3):</strong>
-        <div style="color:#888;font-size:0.75rem;">Direct download (no Google Drive login required)</div>
+        <strong style="color:#fff;font-size:0.85rem;">Get the Latest Extension (v3.4):</strong>
+        <div style="color:#888;font-size:0.75rem;">Direct download with unthrottled Web Worker 1-second capture</div>
       </div>
-      <a href="/download/bet-bot-dk-sync.zip" class="btn-test-sound" style="text-decoration:none;">⬇️ Download v3.3 (.zip)</a>
+      <a href="/download/bet-bot-dk-sync.zip" class="btn-test-sound" style="text-decoration:none;">⬇️ Download v3.4 (.zip)</a>
     </div>
 
     <div class="callout green">
@@ -160,7 +160,48 @@
     </div>
   </div>
 
-  <!-- Section 2: Fight Night HUD vs Classic -->
+  <!-- Section 2: Ish's Fighter Playbook -->
+  <div class="section-card">
+    <h2><span class="badge gold">Playbook</span> Ish's Stylistic Tagging & The "Raw Dog" Rule</h2>
+    <p>Automated algorithms often mistake fighter identity (e.g. labeling a knockout striker as a wrestler). BetBot empowers Ish to assign real stylistic ground-truth with 1 click directly in the Live HUD or Chrome Extension:</p>
+    
+    <h3>The 8 Core Stylistic Tags:</h3>
+    <ul>
+      <li><strong>🤼 Heavy Wrestler:</strong> Relentless takedowns and top-control pressure (<em>Khabib, Merab, Talita Alencar</em>). When a favorite is a heavy wrestler and the dog lacks defense, the system flags a <strong>🛑 Grappler Suppression Trap (34.8% flip rate — avoid dog)</strong>.</li>
+      <li><strong>🛡️ Takedown Defense:</strong> Elite sprawl and anti-grappling (<em>Aldo, Whittaker</em>). Combines with striking to neutralize wrestlers.</li>
+      <li><strong>💥 Striking Power:</strong> 1-punch fight-ending power and high knockout rate (<em>Pereira, Piera Rodriguez</em>).</li>
+      <li><strong>🥊 Efficient Striker:</strong> High-volume technical kickboxing on the feet (<em>Holloway, Strickland</em>).</li>
+      <li><strong>⏳ Age Cliff (35+):</strong> Veteran reaction time and durability slowdown. When a favorite is 35+, crossover probability jumps to <strong>47.6%</strong>. But when an underdog is older, comeback probability is capped at <strong>33.5%</strong>.</li>
+      <li><strong>📏 Size Advantage:</strong> Distinct height or 3+ inch reach advantage. Elevates underdog comeback odds to <strong>48.3%</strong>.</li>
+      <li><strong>🔋 Cardio Machine:</strong> Relentless 15-to-25 minute engine. Pushes pace into championship rounds without slowing down.</li>
+      <li><strong>⚠️ Bad Tank (Gas Tank Risk):</strong> High burn-rate starter who gasses out in Round 2. <strong>39% of all moneyline flips happen in Round 2</strong> when a favorite with a bad tank empties their reserves.</li>
+    </ul>
+
+    <h3>The 🐕 "Raw Dog" Marker:</h3>
+    <p>A dedicated, purely subjective tag for Ish's gut-feel picks. It requires <strong>zero</strong> statistical validation and sticks to that fighter <strong>permanently across future cards</strong>. When that fighter is an underdog, BetBot emits an active <code>🐕 Ish Raw Dog Pick</code> catalyst badge.</p>
+
+    <div class="callout green">
+      ⚡ <strong>Fight Night Hotkeys:</strong> Press <code>r</code> for Raw Dog, <code>w</code> for Wrestler, <code>p</code> for Power, <code>s</code> for Striker, <code>c</code> for Cardio, or <code>b</code> for Bad Tank for instant tagging without using the mouse!
+    </div>
+  </div>
+
+  <!-- Section 3: Latency Arbitrage & Auto-Snipe -->
+  <div class="section-card">
+    <h2><span class="badge red">Live Edge</span> Stale-Line Latency Arbitrage & 1-Click "Auto-Snipe"</h2>
+    <p>Television broadcasts are 15 to 30 seconds behind reality, but <strong>ESPN's live Octagon statistics feed operates in real time</strong>. DraftKings odds traders experience a 3-to-8 second latency window before suspending lines after major cage action.</p>
+    <ul>
+      <li><strong>The Latency Radar:</strong> When an action spike (Knockdown or Takedown) is confirmed on ESPN and DraftKings odds are delayed by &gt; 4.0 seconds, a pulsing alert fires:</li>
+    </ul>
+    <div class="callout red" style="text-align:center;">
+      <code>⚡ ACTION SPIKE by Cody Durden! Knockdown logged on ESPN. DK line stale by 5.2s.</code><br>
+      <button style="margin-top:8px;background:#ff1744;color:#fff;border:none;border-radius:4px;padding:6px 14px;font-weight:bold;cursor:pointer;font-size:0.85rem;">⚡ AUTO-SNIPE Cody Durden ($50)</button>
+    </div>
+    <ul>
+      <li><strong>Sub-400ms Pre-fill:</strong> Tapping <code>⚡ AUTO-SNIPE</code> automatically switches to your DraftKings tab, clicks the fighter, fills the $50 stake, and highlights the "Place Bet" button in glowing green before DraftKings suspends the market.</li>
+    </ul>
+  </div>
+
+  <!-- Section 4: Fight Night HUD vs Classic -->
   <div class="section-card">
     <h2><span class="badge green">Dual-Mode</span> Fight Night HUD vs. Classic Dashboard</h2>
     <p>LiveBetBot has two distinct viewing modes depending on your screen setup:</p>
