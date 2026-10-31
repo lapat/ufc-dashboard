@@ -714,14 +714,21 @@ app.get('/api/live-fight-stats', async (req, res) => {
       
       stats.staleLineAdvantage = false;
       stats.staleLineDetails = null;
+      stats.staleSpikedFighter = null;
       if (dkLastUpdateMs > 0 && stats.f1 && stats.f2) {
         const now = Date.now();
         const delayMs = now - dkLastUpdateMs;
         const kd = stats.f1.knockdowns > 0 || stats.f2.knockdowns > 0;
         const td = stats.f1.takedownsLanded > 0 || stats.f2.takedownsLanded > 0;
+        
+        let spikedFighter = null;
+        if (stats.f1.knockdowns > 0 || stats.f1.takedownsLanded > 0) spikedFighter = f1;
+        else if (stats.f2.knockdowns > 0 || stats.f2.takedownsLanded > 0) spikedFighter = f2;
+
         if ((kd || td) && delayMs >= 4000) {
            stats.staleLineAdvantage = true;
-           stats.staleLineDetails = "⚡ ACTION SPIKE: Knockdown/Takedown logged on ESPN. DK line is stale by " + (delayMs/1000).toFixed(1) + "s. Exploit edge before suspension.";
+           stats.staleSpikedFighter = spikedFighter;
+           stats.staleLineDetails = `⚡ ACTION SPIKE${spikedFighter ? ' by ' + spikedFighter : ''}! Knockdown/Takedown logged on ESPN. DK line is stale by ${(delayMs/1000).toFixed(1)}s.`;
         }
       }
     } catch(err) { console.error("[StaleLineEdge] error:", err.message); }

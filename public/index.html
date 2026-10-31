@@ -1670,7 +1670,12 @@ function startClassicLiveStats(f1, f2) {
           }
           
           if (ls.staleLineAdvantage && ls.staleLineDetails) {
-            alertBanner.textContent = ls.staleLineDetails;
+            let html = ls.staleLineDetails;
+            if (ls.staleSpikedFighter) {
+              const sf = ls.staleSpikedFighter.replace(/'/g, "\\'");
+              html += `<div style="margin-top:6px;"><button style="background:#ff1744;color:#fff;border:none;border-radius:4px;padding:6px 12px;font-weight:bold;cursor:pointer;font-size:0.85rem;" onclick="window.postMessage({ type: 'PREFILL_BETSLIP', fighter: '${sf}', stake: 50, odds: (document.getElementById('nw-f1').textContent.includes('${sf}') ? tracker.f1Odds : tracker.f2Odds) }, '*')">⚡ AUTO-SNIPE ${ls.staleSpikedFighter} ($50)</button></div>`;
+            }
+            alertBanner.innerHTML = html;
             alertBanner.style.display = "block";
           } else {
             alertBanner.style.display = "none";
