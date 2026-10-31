@@ -240,7 +240,118 @@ function calculateTaggedCrossover(f1OpeningOdds, f2OpeningOdds, f1TagsData, f2Ta
   };
 }
 
+/**
+ * computeLiveCrossoverProbability(opts)
+ * Dynamically adjusts pre-fight crossover probability based on live in-fight conditions
+ */
+function computeLiveCrossoverProbability(opts = {}) {
+  const {
+    p0 = BASE_CROSSOVER_RATE,
+    openOddsDog = 200,
+    curOddsDog = null,
+    elapsedMin = 0,
+    momPptsPerMin = 0,
+    dogActionShare = 0.50,
+    dogKnockdowns = 0,
+    favKnockdowns = 0,
+    favHasBadTank = false,
+    dogHasCardio = false
+  } = opts;
+
+  function toImplied(o) {
+    if (o == null || isNaN(o)) return null;
+    const n = parseFloat(o);
+    if (n > 0) return 100 / (n + 100);
+    return Math.abs(n) / (Math.abs(n) + 100);
+  }
+
+  const openDogP = toImplied(openOddsDog) || 0.35;
+  const curDogP  = curOddsDog != null ? (toImplied(curOddsDog) || openDogP) : openDogP;
+
+  // 1. Line has already crossed 50%
+  if (curDogP >= 0.50) {
+    return {
+      liveCrossoverPct: 100,
+      status: 'CROSSED',
+      advice: '🔥 LINE FLIPPED: Underdog is now the live favorite! Hedge or ride position.',
+      timeDecayFactor: 1.0,
+      proximityPct: 100,
+      phase: 'crossed'
+    };
+  }
+
+  // 2. Pure Time-Decay Survival Curve T(t) based on 398 empirical backtests (57% R1, 39% R2, 4% R3)
+  const t = Math.max(0, Math.min(15, parseFloat(elapsedMin) || 0));
+  let timeDecay;
+  let phase;
+  if (t <= 5.0) {
+    timeDecay = 1.0 - 0.57 * (t / 5.0);
+    phase = 'Round 1 (Prime Window)';
+  } else if (t <= 10.0) {
+    timeDecay = 0.43 - 0.39 * ((t - 5.0) / 5.0);
+    phase = 'Round 2 (Cardio Fade Window)';
+  } else {
+    timeDecay = 0.04 * Math.max(0, 1.0 - ((t - 10.0) / 5.0));
+    phase = 'Round 3+ (Late Window - Do Not Chase)';
+  }
+
+  // 3. Proximity Metric: how much of the gap to 50% has the dog closed?
+  const gapTotal = 0.50 - openDogP;
+  const gapClosed = Math.max(0, curDogP - openDogP);
+  const proximity = gapTotal > 0 ? (gapClosed / gapTotal) : 0;
+
+  // 4. Odds Velocity Multiplier
+  const velocityBonus = (parseFloat(momPptsPerMin) || 0) * 0.03;
+
+  // 5. Physical In-Cage Modifier (ESPN Stats)
+  let cageMod = 0;
+  if (dogKnockdowns > 0) cageMod += 0.45;
+  if (favKnockdowns > 0) cageMod -= 0.50;
+  if (dogActionShare > 0.60) cageMod += (dogActionShare - 0.50) * 0.8;
+  if (dogActionShare < 0.40) cageMod -= (0.50 - dogActionShare) * 0.8;
+
+  // 6. Gas Tank Modifier in Round 2 & 3
+  let cardioMod = 0;
+  if (t >= 4.0) {
+    if (favHasBadTank && dogHasCardio) cardioMod += 0.35;
+    if (!favHasBadTank && !dogHasCardio) cardioMod -= 0.15;
+  }
+
+  // Unified Multiplier over time baseline
+  const progressMultiplier = 1.0 + (1.8 * proximity) + velocityBonus + cageMod + cardioMod;
+  
+  // Blend time-decay baseline with current progress
+  let liveProb = (p0 * timeDecay * progressMultiplier);
+  
+  // Floor & Ceiling: can never be less than current implied dog probability
+  const currentImpliedPct = Math.round(curDogP * 100);
+  liveProb = Math.max(currentImpliedPct, Math.min(95, liveProb));
+  liveProb = Math.round(liveProb * 10) / 10;
+
+  let liveAdvice = '';
+  if (t > 10.0 && liveProb < 35.0) {
+    liveAdvice = `🛑 Late Stalemate (${liveProb}%). Only 4% of flips happen in R3; do not chase live dog.`;
+  } else if (liveProb >= 75.0) {
+    liveAdvice = `🔥 Crossover Imminent (${liveProb}%). Dog closing line fast — prepare equal-profit hedge.`;
+  } else if (liveProb >= 50.0) {
+    liveAdvice = `⚡ Elevated Live Momentum (${liveProb}%). Dog out-working favorite; watch for Round 2 line flip.`;
+  } else {
+    liveAdvice = `⚖️ In-Play Monitoring (${liveProb}%). Time decay active (${Math.round(timeDecay * 100)}% potential remaining).`;
+  }
+
+  return {
+    liveCrossoverPct: liveProb,
+    preFightBaselinePct: p0,
+    timeDecayFactor: Math.round(timeDecay * 100) / 100,
+    proximityPct: Math.round(proximity * 100),
+    phase,
+    advice: liveAdvice,
+    currentDogImpliedPct: currentImpliedPct
+  };
+}
+
 module.exports = {
   BASE_CROSSOVER_RATE,
-  calculateTaggedCrossover
+  calculateTaggedCrossover,
+  computeLiveCrossoverProbability
 };

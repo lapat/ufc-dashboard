@@ -1677,7 +1677,10 @@ function startClassicLiveStats(f1, f2) {
   if (_classicLiveStatsTimer) clearInterval(_classicLiveStatsTimer);
   const poll = () => {
     requestScreenWakeLock();
-    fetch('/api/live-fight-stats?f1=' + encodeURIComponent(f1) + '&f2=' + encodeURIComponent(f2))
+    const oQuery = (tracker.f1Odds != null && tracker.f2Odds != null)
+      ? `&o1=${encodeURIComponent(tracker.f1Odds)}&o2=${encodeURIComponent(tracker.f2Odds)}`
+      : '';
+    fetch('/api/live-fight-stats?f1=' + encodeURIComponent(f1) + '&f2=' + encodeURIComponent(f2) + oQuery)
       .then(r => r.json())
       .then(ls => {
         const row = document.getElementById('nw-live-stats');
@@ -1706,6 +1709,17 @@ function startClassicLiveStats(f1, f2) {
           }
           if (ls.scorecardEstimate) {
             document.getElementById('nw-scorecard-badge').textContent = ls.scorecardEstimate;
+          }
+
+          // Dynamic In-Fight Crossover Recalculation
+          if (ls.liveCrossover) {
+            const lc = ls.liveCrossover;
+            const banner = document.getElementById('nw-tag-advice-banner');
+            const textEl = document.getElementById('nw-tag-advice-text');
+            if (banner && textEl) {
+              banner.style.display = 'block';
+              textEl.innerHTML = `⚡ <strong>Live In-Fight Crossover: ${lc.liveCrossoverPct}%</strong> <span style="font-size:0.6rem;color:#888;">(${lc.phase} · Gap Closed: ${lc.proximityPct}%)</span><br>${lc.advice}`;
+            }
           }
 
           // Damage Glow & Knockdown Alert

@@ -22,7 +22,8 @@ const testFiles = [
   "tests/13_test_high_density_recording.js",
   "tests/14_test_auto_snipe_latency_arbitrage.js",
   "tests/15_test_extension_subsystems_and_dom.js",
-  "tests/16_test_high_roi_expansions.js"
+  "tests/16_test_high_roi_expansions.js",
+  "tests/17_test_live_crossover_engine.js"
 ];
 
 console.log("====================================================");

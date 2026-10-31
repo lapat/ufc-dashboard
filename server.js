@@ -635,7 +635,7 @@ const { fetchLiveFightStats } = require('./live_fight_stats');
 const { getSharpComparison } = require('./sharp_consensus');
 const { predictCrossover } = require('./crossover_predictor');
 const { getTags, setTags, toggleTag, toggleRawDog, getAllTags, TAG_CATALOG } = require('./fighter_tag_engine');
-const { calculateTaggedCrossover } = require('./tag_crossover_engine');
+const { calculateTaggedCrossover, computeLiveCrossoverProbability } = require('./tag_crossover_engine');
 const { runTagBacktest } = require('./analysis/rerun_tag_backtest');
 
 let _fighterProfilesCache = null;
@@ -732,6 +732,46 @@ app.get('/api/live-fight-stats', async (req, res) => {
         }
       }
     } catch(err) { console.error("[StaleLineEdge] error:", err.message); }
+
+    // --- Phase 3: Dynamic In-Fight Crossover Recalculation ---
+    try {
+      const f1Tags = getTags(f1);
+      const f2Tags = getTags(f2);
+      const o1 = req.query.o1 ? parseFloat(req.query.o1) : null;
+      const o2 = req.query.o2 ? parseFloat(req.query.o2) : null;
+      const preFight = (o1 != null && o2 != null)
+        ? calculateTaggedCrossover(o1, o2, f1Tags, f2Tags, f1, f2)
+        : null;
+      const p0 = preFight ? preFight.taggedCrossoverPct : 41.5;
+
+      let elapsedMin = 0;
+      const roundNum = parseInt(stats.round || 1, 10);
+      if (stats.clock && stats.clock.includes(':')) {
+        const [m, s] = stats.clock.split(':').map(Number);
+        const roundSecondsElapsed = Math.max(0, 300 - ((m * 60) + (isNaN(s) ? 0 : s)));
+        elapsedMin = Math.round((((roundNum - 1) * 5) + (roundSecondsElapsed / 60)) * 10) / 10;
+      }
+
+      const dogActionShare = stats.momentum ? (preFight && preFight.dogName === f1 ? (stats.momentum.f1Pct / 100) : (stats.momentum.f2Pct / 100)) : 0.50;
+      const dogKD = preFight && preFight.dogName === f1 ? (stats.f1?.knockdowns || 0) : (stats.f2?.knockdowns || 0);
+      const favKD = preFight && preFight.dogName === f1 ? (stats.f2?.knockdowns || 0) : (stats.f1?.knockdowns || 0);
+      const favTagsList = preFight && preFight.favName === f1 ? (f1Tags?.tags || []) : (f2Tags?.tags || []);
+      const dogTagsList = preFight && preFight.dogName === f1 ? (f1Tags?.tags || []) : (f2Tags?.tags || []);
+
+      stats.liveCrossover = computeLiveCrossoverProbability({
+        p0,
+        openOddsDog: preFight ? preFight.dogOdds : (o2 || 200),
+        curOddsDog: preFight ? preFight.dogOdds : (o2 || 200),
+        elapsedMin,
+        dogActionShare,
+        dogKnockdowns: dogKD,
+        favKnockdowns: favKD,
+        favHasBadTank: favTagsList.includes('gas_tank_risk'),
+        dogHasCardio: dogTagsList.includes('cardio_machine')
+      });
+    } catch (err) {
+      console.error("[LiveCrossover] calculation error:", err.message);
+    }
 
     res.json(stats);
   } catch (e) {
