@@ -79,7 +79,7 @@ function test(name, fn) {
       assert.strictEqual(res.status, 200);
       assert.ok(res.json.tags);
       assert.ok(Array.isArray(res.json.catalog));
-      assert.strictEqual(res.json.catalog.length, 9);
+      assert.strictEqual(res.json.catalog.length, 12);
     });
 
     await test('POST /api/fighter-tags/toggle toggles a tag atomically', async () => {

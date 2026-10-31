@@ -145,10 +145,30 @@ test('Older Underdog suppresses crossover probability to 33.5% (Ish Canon)', () 
   assert.ok(res.warnings.some(w => w.includes('Older Underdog')));
 });
 
-test('Raw Dog status on underdog is captured and surfaces in catalyst badges', () => {
+test('Raw Dawg status on underdog is captured and surfaces in catalyst badges', () => {
   const res = calculateTaggedCrossover(-150, 130, { tags: [] }, { tags: [], isRawDog: true }, 'Fav', 'Dog');
   assert.strictEqual(res.dogIsRawDog, true);
-  assert.ok(res.catalysts.some(c => c.includes('Raw Dog Pick')));
+  assert.ok(res.catalysts.some(c => c.includes('Raw Dawg Pick')));
+});
+
+test("F'ing Loser tag elevates crossover on favorite and suppresses on underdog", () => {
+  // Fav is F'ing Loser -> elevates to 60%+
+  const res1 = calculateTaggedCrossover(-200, 165, { tags: ['fing_loser'] }, { tags: [] }, 'ChokerFav', 'Dog');
+  assert.strictEqual(res1.taggedCrossoverPct, 60.0);
+  assert.ok(res1.catalysts.some(c => c.includes("F'ing Loser")));
+
+  // Dog is F'ing Loser -> suppresses comeback
+  const res2 = calculateTaggedCrossover(-200, 165, { tags: [] }, { tags: ['fing_loser'] }, 'Fav', 'QuitterDog');
+  assert.ok(res2.taggedCrossoverPct < 41.5);
+  assert.ok(res2.warnings.some(w => w.includes("F'ing Loser")));
+});
+
+test('First Round Finisher and Loopy Striker tags compute catalysts', () => {
+  const res1 = calculateTaggedCrossover(-200, 165, { tags: ['first_round_finisher'] }, { tags: [] }, 'R1Fav', 'Dog');
+  assert.ok(res1.catalysts.some(c => c.includes('R1 Finisher')));
+
+  const res2 = calculateTaggedCrossover(-200, 165, { tags: ['loopy'] }, { tags: [] }, 'LoopyFav', 'Dog');
+  assert.ok(res2.catalysts.some(c => c.includes('Loopy Striker')));
 });
 
 console.log('── 5. Historical Backtest & Rerun Analysis ──');

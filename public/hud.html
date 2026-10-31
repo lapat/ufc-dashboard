@@ -589,14 +589,15 @@
               const tagLabels = {
                 'heavy_wrestler': '🤼 Wrestler', 'takedown_defense': '🛡️ TD Def', 'striking_power': '💥 Power',
                 'efficient_striker': '🥊 Striker', 'older': '⏳ Older', 'size_advantage': '📏 Size',
-                'sub_threat': '🥋 Sub', 'cardio_machine': '🔋 Cardio', 'gas_tank_risk': '⚠️ Bad Tank'
+                'sub_threat': '🥋 Sub', 'cardio_machine': '🔋 Cardio', 'gas_tank_risk': '⚠️ Bad Tank',
+                'fing_loser': "🤦 F'ing Loser", 'first_round_finisher': '⚡ R1 Finisher', 'loopy': '🌪️ Loopy'
               };
               return tList.map(id => tagLabels[id] || id).slice(0, 2).join(' · ');
             }
             return fighterObj?.finisher?.badge || 'Balanced';
           };
-          const f1Dog = stats.f1?.tags?.isRawDog ? ' <span style="color:#e8b84b;font-weight:700;">🐕 Raw Dog</span>' : '';
-          const f2Dog = stats.f2?.tags?.isRawDog ? ' <span style="color:#e8b84b;font-weight:700;">🐕 Raw Dog</span>' : '';
+          const f1Dog = stats.f1?.tags?.isRawDog ? ' <span style="color:#e8b84b;font-weight:700;">🐕 Raw Dawg</span>' : '';
+          const f2Dog = stats.f2?.tags?.isRawDog ? ' <span style="color:#e8b84b;font-weight:700;">🐕 Raw Dawg</span>' : '';
           const f1Style = getStyleBadge(stats.f1);
           const f2Style = getStyleBadge(stats.f2);
           const f1Gas = stats.f1?.gasTank?.badge || 'Steady Pace';
@@ -826,7 +827,10 @@
         'p': () => toggleFighterTag(fighter, 'striking_power'),
         's': () => toggleFighterTag(fighter, 'efficient_striker'),
         'c': () => toggleFighterTag(fighter, 'cardio_machine'),
-        'b': () => toggleFighterTag(fighter, 'gas_tank_risk')
+        'b': () => toggleFighterTag(fighter, 'gas_tank_risk'),
+        'f': () => toggleFighterTag(fighter, 'fing_loser'),
+        '1': () => toggleFighterTag(fighter, 'first_round_finisher'),
+        'l': () => toggleFighterTag(fighter, 'loopy')
       };
 
       if (hotkeyMap[keyLower]) {

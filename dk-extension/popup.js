@@ -1,14 +1,18 @@
 'use strict';
 
 const TAG_CATALOG = [
-  { id: 'heavy_wrestler',   short: '🤼 Wrestler' },
-  { id: 'takedown_defense', short: '🛡️ TD Def' },
-  { id: 'striking_power',   short: '💥 Power' },
-  { id: 'efficient_striker',short: '🥊 Striker' },
-  { id: 'older',            short: '⏳ Older' },
-  { id: 'size_advantage',   short: '📏 Size' },
-  { id: 'cardio_machine',   short: '🔋 Cardio' },
-  { id: 'gas_tank_risk',    short: '⚠️ Bad Tank' }
+  { id: 'heavy_wrestler',       short: '🤼 Wrestler' },
+  { id: 'takedown_defense',     short: '🛡️ TD Def' },
+  { id: 'striking_power',       short: '💥 Power' },
+  { id: 'efficient_striker',    short: '🥊 Striker' },
+  { id: 'older',                short: '⏳ Older' },
+  { id: 'size_advantage',       short: '📏 Size' },
+  { id: 'sub_threat',           short: '🥋 Sub' },
+  { id: 'cardio_machine',       short: '🔋 Cardio' },
+  { id: 'gas_tank_risk',        short: '⚠️ Bad Tank' },
+  { id: 'fing_loser',           short: "🤦 F'ing Loser" },
+  { id: 'first_round_finisher', short: '⚡ R1 Finisher' },
+  { id: 'loopy',                short: '🌪️ Loopy' }
 ];
 
 let _activeFightKey = '';

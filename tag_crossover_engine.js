@@ -133,13 +133,69 @@ function calculateTaggedCrossover(f1OpeningOdds, f2OpeningOdds, f1TagsData, f2Ta
     finalRate = isTight ? (finalRate - 8.0) : Math.min(finalRate, 33.5);
   }
 
-  // Raw Dog Note: Subjective indicator from Ish
+  // 7. F'ing Loser (High Choke Factor)
+  if (favTags.includes('fing_loser')) {
+    const rate = isTight ? Math.min(95.0, finalRate + 15.0) : Math.max(finalRate, 60.0);
+    activeCatalysts.push({
+      id: 'fav_fing_loser',
+      badge: "🤦 Fav is an F'ing Loser (Choke Risk)",
+      rate,
+      detail: `${favName} notoriously blows leads and chokes under pressure`
+    });
+    catalystCount++;
+    finalRate = isTight ? (finalRate + 15.0) : Math.max(finalRate, 60.0);
+  } else if (dogTags.includes('fing_loser')) {
+    const rate = Math.max(15.0, finalRate - 10.0);
+    warnings.push({
+      id: 'dog_fing_loser',
+      badge: "🤦 Dog is an F'ing Loser (Fold Risk)",
+      rate,
+      detail: `${dogName} folds when things get difficult; low comeback expectancy`
+    });
+    finalRate = Math.max(15.0, finalRate - 10.0);
+  }
+
+  // 8. First Round Finisher
+  if (favTags.includes('first_round_finisher')) {
+    activeCatalysts.push({
+      id: 'fav_r1_finisher',
+      badge: '⚡ Fav R1 Finisher (Cardio Dump Risk if Extended)',
+      rate: Math.min(95.0, finalRate + 6.0),
+      detail: `${favName} high burn-rate early; vulnerable to Round 2 line flip if dog survives`
+    });
+    catalystCount++;
+    finalRate = Math.min(95.0, finalRate + 6.0);
+  } else if (dogTags.includes('first_round_finisher')) {
+    activeCatalysts.push({
+      id: 'dog_r1_finisher',
+      badge: '⚡ Dog R1 Finisher (Early Danger Spike)',
+      rate: Math.min(95.0, finalRate + 8.0),
+      detail: `${dogName} explosive early puncher; elevated Round 1 crossover hazard`
+    });
+    catalystCount++;
+    finalRate = Math.min(95.0, finalRate + 8.0);
+  }
+
+  // 9. Loopy Striker (Chaos / High Volatility)
+  if (favTags.includes('loopy') || dogTags.includes('loopy')) {
+    const loopyFighter = favTags.includes('loopy') ? favName : dogName;
+    activeCatalysts.push({
+      id: 'loopy_striker',
+      badge: '🌪️ Loopy Striker (Chaos / High Volatility)',
+      rate: Math.min(95.0, finalRate + 7.5),
+      detail: `${loopyFighter} throws wide, looping punches; creates chaotic high-variance exchanges`
+    });
+    catalystCount++;
+    finalRate = Math.min(95.0, finalRate + 7.5);
+  }
+
+  // Raw Dawg Note: Subjective indicator from Ish
   if (dogIsRawDog) {
     activeCatalysts.push({
       id: 'raw_dog',
-      badge: '🐕 Ish Raw Dog Pick',
+      badge: '🐕 Ish Raw Dawg Pick',
       rate: finalRate,
-      detail: `${dogName} marked as a certified Raw Dog by Ish`
+      detail: `${dogName} marked as a certified Raw Dawg by Ish`
     });
   }
 

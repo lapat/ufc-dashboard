@@ -516,7 +516,7 @@
         <div id="nw-f1-tag-panel" style="flex:1;">
           <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;">
             <span style="font-weight:700;color:#e8b84b;font-size:0.75rem;" id="nw-f1-tag-label">F1</span>
-            <button class="rawdog-toggle-btn" id="nw-f1-rawdog-btn" style="background:#181818;border:1px solid #333;color:#888;border-radius:4px;padding:1px 6px;font-size:0.62rem;font-weight:700;cursor:pointer;">🐕 Raw Dog</button>
+            <button class="rawdog-toggle-btn" id="nw-f1-rawdog-btn" style="background:#181818;border:1px solid #333;color:#888;border-radius:4px;padding:1px 6px;font-size:0.62rem;font-weight:700;cursor:pointer;">🐕 Raw Dawg</button>
           </div>
           <div id="nw-f1-quick-tags" style="display:flex;flex-wrap:wrap;gap:4px;"></div>
         </div>
@@ -525,7 +525,7 @@
         <!-- Fighter 2 Tags -->
         <div id="nw-f2-tag-panel" style="flex:1;">
           <div style="display:flex;align-items:center;justify-content:flex-end;gap:6px;margin-bottom:4px;">
-            <button class="rawdog-toggle-btn" id="nw-f2-rawdog-btn" style="background:#181818;border:1px solid #333;color:#888;border-radius:4px;padding:1px 6px;font-size:0.62rem;font-weight:700;cursor:pointer;">🐕 Raw Dog</button>
+            <button class="rawdog-toggle-btn" id="nw-f2-rawdog-btn" style="background:#181818;border:1px solid #333;color:#888;border-radius:4px;padding:1px 6px;font-size:0.62rem;font-weight:700;cursor:pointer;">🐕 Raw Dawg</button>
             <span style="font-weight:700;color:#74c0fc;font-size:0.75rem;" id="nw-f2-tag-label">F2</span>
           </div>
           <div id="nw-f2-quick-tags" style="display:flex;flex-wrap:wrap;gap:4px;justify-content:flex-end;"></div>
@@ -608,15 +608,19 @@
       <span>⏱ <strong>Control:</strong> <span id="nw-ctrl-f1">0:00</span> vs <span id="nw-ctrl-f2">0:00</span></span>
     </div>
     <!-- Live Momentum Bar & Judges Scorecard Predictor -->
-    <div id="nw-momentum-container" style="display:none;margin-top:6px;background:#070707;border:1px solid #1a1a1a;border-radius:6px;padding:8px 12px;">
-      <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.68rem;margin-bottom:5px;">
-        <span style="color:var(--gold);font-weight:700;">Momentum: <span id="nw-mom-f1">50</span>%</span>
-        <span id="nw-scorecard-badge" style="background:#1c1800;border:1px solid #e8b84b;color:#e8b84b;padding:2px 8px;border-radius:4px;font-weight:700;text-transform:uppercase;font-size:0.62rem;letter-spacing:0.5px;">Dead Heat</span>
-        <span style="color:#74c0fc;font-weight:700;"><span id="nw-mom-f2">50</span>%</span>
+    <div id="nw-momentum-container" style="display:none;margin-top:6px;background:#090b10;border:1px solid #1c202d;border-radius:6px;padding:8px 12px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.7rem;margin-bottom:4px;">
+        <span style="color:var(--gold);font-weight:700;"><strong id="nw-mom-f1-name">F1</strong>: <span id="nw-mom-f1">50</span>%</span>
+        <span id="nw-scorecard-badge" style="background:#1c1800;border:1px solid #e8b84b;color:#e8b84b;padding:2px 8px;border-radius:4px;font-weight:700;font-size:0.62rem;letter-spacing:0.5px;">Dead Heat (Even Fight)</span>
+        <span style="color:#74c0fc;font-weight:700;"><strong id="nw-mom-f2-name">F2</strong>: <span id="nw-mom-f2">50</span>%</span>
       </div>
-      <div style="height:6px;background:#141414;border-radius:3px;overflow:hidden;display:flex;">
+      <div style="height:8px;background:#141414;border-radius:4px;overflow:hidden;display:flex;">
         <div id="nw-mom-bar-f1" style="width:50%;background:var(--gold);transition:width 0.4s ease;"></div>
         <div id="nw-mom-bar-f2" style="width:50%;background:#74c0fc;transition:width 0.4s ease;"></div>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:0.58rem;color:#7e8494;margin-top:3px;">
+        <span>Higher % = Landing more strikes & takedowns (Winning)</span>
+        <span>Judges' Scorecard Share</span>
       </div>
     </div>
 
@@ -846,12 +850,12 @@
     <div style="display:flex;gap:15px;">
       <div style="flex:1;">
         <h4 id="te-f1-name" style="color:#fff;margin-bottom:8px;font-size:0.85rem;">Fighter 1</h4>
-        <button id="te-f1-rawdog" class="tag-btn rawdog" style="width:100%;margin-bottom:8px;border:1px solid #444;background:#1a1a1a;color:#ccc;padding:6px;border-radius:4px;cursor:pointer;text-align:left;">🐕 Raw Dog</button>
+        <button id="te-f1-rawdog" class="tag-btn rawdog" style="width:100%;margin-bottom:8px;border:1px solid #444;background:#1a1a1a;color:#ccc;padding:6px;border-radius:4px;cursor:pointer;text-align:left;">🐕 Raw Dawg</button>
         <div id="te-f1-tags-container" style="display:flex;flex-direction:column;gap:4px;"></div>
       </div>
       <div style="flex:1;">
         <h4 id="te-f2-name" style="color:#fff;margin-bottom:8px;font-size:0.85rem;">Fighter 2</h4>
-        <button id="te-f2-rawdog" class="tag-btn rawdog" style="width:100%;margin-bottom:8px;border:1px solid #444;background:#1a1a1a;color:#ccc;padding:6px;border-radius:4px;cursor:pointer;text-align:left;">🐕 Raw Dog</button>
+        <button id="te-f2-rawdog" class="tag-btn rawdog" style="width:100%;margin-bottom:8px;border:1px solid #444;background:#1a1a1a;color:#ccc;padding:6px;border-radius:4px;cursor:pointer;text-align:left;">🐕 Raw Dawg</button>
         <div id="te-f2-tags-container" style="display:flex;flex-direction:column;gap:4px;"></div>
       </div>
     </div>
@@ -864,15 +868,18 @@
 
 <script>
 const TAG_DEFS = [
-  { id: 'heavy_wrestler',   label: '🤼 Heavy Wrestler',   short: '🤼 Wrestler' },
-  { id: 'takedown_defense', label: '🛡️ Takedown Defense', short: '🛡️ TD Def' },
-  { id: 'striking_power',   label: '💥 Striking Power',   short: '💥 Power' },
-  { id: 'efficient_striker',label: '🥊 Efficient Striker', short: '🥊 Striker' },
-  { id: 'older',            label: '⏳ Age Cliff (35+)',  short: '⏳ Older' },
-  { id: 'size_advantage',   label: '📏 Size Advantage',   short: '📏 Size' },
-  { id: 'sub_threat',       label: '🥋 Sub Threat',       short: '🥋 Sub' },
-  { id: 'cardio_machine',   label: '🔋 Cardio Machine (Endless)', short: '🔋 Cardio' },
-  { id: 'gas_tank_risk',    label: '⚠️ Gas Tank Risk (Fades)',    short: '⚠️ Bad Tank' }
+  { id: 'heavy_wrestler',       label: '🤼 Heavy Wrestler',           short: '🤼 Wrestler' },
+  { id: 'takedown_defense',     label: '🛡️ Takedown Defense',         short: '🛡️ TD Def' },
+  { id: 'striking_power',       label: '💥 Striking Power',           short: '💥 Power' },
+  { id: 'efficient_striker',    label: '🥊 Efficient Striker',        short: '🥊 Striker' },
+  { id: 'older',                label: '⏳ Age Cliff (35+)',          short: '⏳ Older' },
+  { id: 'size_advantage',       label: '📏 Size Advantage',           short: '📏 Size' },
+  { id: 'sub_threat',           label: '🥋 Sub Threat',               short: '🥋 Sub' },
+  { id: 'cardio_machine',       label: '🔋 Cardio Machine (Endless)', short: '🔋 Cardio' },
+  { id: 'gas_tank_risk',        label: '⚠️ Gas Tank Risk (Fades)',    short: '⚠️ Bad Tank' },
+  { id: 'fing_loser',           label: "🤦 F'ing Loser",              short: "🤦 F'ing Loser" },
+  { id: 'first_round_finisher', label: '⚡ First Round Finisher',     short: '⚡ R1 Finisher' },
+  { id: 'loopy',                label: '🌪️ Loopy Striker',           short: '🌪️ Loopy' }
 ];
 
 let _allFighterTagsCache = {};
@@ -1688,6 +1695,10 @@ function startClassicLiveStats(f1, f2) {
           const momContainer = document.getElementById('nw-momentum-container');
           if (ls.momentum) {
             momContainer.style.display = 'block';
+            const f1NameEl = document.getElementById('nw-mom-f1-name');
+            const f2NameEl = document.getElementById('nw-mom-f2-name');
+            if (f1NameEl) f1NameEl.textContent = f1;
+            if (f2NameEl) f2NameEl.textContent = f2;
             document.getElementById('nw-mom-f1').textContent = ls.momentum.f1Pct;
             document.getElementById('nw-mom-f2').textContent = ls.momentum.f2Pct;
             document.getElementById('nw-mom-bar-f1').style.width = ls.momentum.f1Pct + '%';
@@ -3386,7 +3397,10 @@ document.addEventListener("keydown", (e) => {
     'p': () => toggleFighterTag(fighter, 'striking_power'),
     's': () => toggleFighterTag(fighter, 'efficient_striker'),
     'c': () => toggleFighterTag(fighter, 'cardio_machine'),
-    'b': () => toggleFighterTag(fighter, 'gas_tank_risk')
+    'b': () => toggleFighterTag(fighter, 'gas_tank_risk'),
+    'f': () => toggleFighterTag(fighter, 'fing_loser'),
+    '1': () => toggleFighterTag(fighter, 'first_round_finisher'),
+    'l': () => toggleFighterTag(fighter, 'loopy')
   };
 
   if (hotkeyMap[keyLower]) {

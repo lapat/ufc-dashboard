@@ -18,15 +18,18 @@ const VOL_FILE = path.join(DATA_DIR, 'fighter_tags.json');
 
 // Supported Catalog of Stylistic Tags
 const TAG_CATALOG = [
-  { id: 'heavy_wrestler',   label: 'Heavy Wrestler',    icon: '🤼', desc: 'Heavy takedown & top-control pressure' },
-  { id: 'takedown_defense', label: 'Takedown Defense',  icon: '🛡️', desc: 'Elite sprawl & anti-grappling' },
-  { id: 'striking_power',   label: 'Striking Power',    icon: '💥', desc: 'High KO danger / 1-punch fight ending power' },
-  { id: 'efficient_striker',label: 'Efficient Striker', icon: '🥊', desc: 'Technical striking volume & output' },
-  { id: 'older',            label: 'Age Cliff (35+)',   icon: '⏳', desc: 'Reaction & chin vulnerability' },
-  { id: 'size_advantage',   label: 'Size Advantage',    icon: '📏', desc: 'Height, reach, or physical frame leverage' },
-  { id: 'sub_threat',       label: 'Sub Threat',        icon: '🥋', desc: 'Dangerous ground submission finisher' },
-  { id: 'cardio_machine',   label: 'Cardio Machine (Endless)', icon: '🔋', desc: 'Relentless 15-to-25 minute pace / elite gas tank' },
-  { id: 'gas_tank_risk',    label: 'Gas Tank Risk (Fades)',     icon: '⚠️', desc: 'High Round 2/3 fade probability / gasses out early' }
+  { id: 'heavy_wrestler',       label: 'Heavy Wrestler',           icon: '🤼', desc: 'Heavy takedown & top-control pressure' },
+  { id: 'takedown_defense',     label: 'Takedown Defense',         icon: '🛡️', desc: 'Elite sprawl & anti-grappling' },
+  { id: 'striking_power',       label: 'Striking Power',           icon: '💥', desc: 'High KO danger / 1-punch fight ending power' },
+  { id: 'efficient_striker',    label: 'Efficient Striker',        icon: '🥊', desc: 'Technical striking volume & output' },
+  { id: 'older',                label: 'Age Cliff (35+)',          icon: '⏳', desc: 'Reaction & chin vulnerability' },
+  { id: 'size_advantage',       label: 'Size Advantage',           icon: '📏', desc: 'Height, reach, or physical frame leverage' },
+  { id: 'sub_threat',           label: 'Sub Threat',               icon: '🥋', desc: 'Dangerous ground submission finisher' },
+  { id: 'cardio_machine',       label: 'Cardio Machine (Endless)', icon: '🔋', desc: 'Relentless 15-to-25 minute pace / elite gas tank' },
+  { id: 'gas_tank_risk',        label: 'Gas Tank Risk (Fades)',    icon: '⚠️', desc: 'High Round 2/3 fade probability / gasses out early' },
+  { id: 'fing_loser',           label: "F'ing Loser",             icon: '🤦', desc: 'Finds ways to choke or fold under pressure' },
+  { id: 'first_round_finisher', label: 'First Round Finisher',    icon: '⚡', desc: 'Explosive early starter / high R1 finish rate' },
+  { id: 'loopy',                label: 'Loopy Striker',           icon: '🌪️', desc: 'Wild, looping hooks / unorthodox and erratic' }
 ];
 
 // Seed data from Ish's phone call
