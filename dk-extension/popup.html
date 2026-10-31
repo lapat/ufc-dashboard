@@ -308,6 +308,20 @@
     </div>
   </div>
 
+  <!-- User Account Card (Synced with LiveBetBot) -->
+  <div id="user-sync-card" style="background:#11131c;border:1px solid #1f2332;border-radius:6px;padding:7px 10px;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center;">
+    <div style="display:flex;align-items:center;gap:6px;font-size:0.7rem;">
+      <span style="color:#74c0fc;">👤</span>
+      <span style="color:#888;">Account:</span>
+      <strong id="displayUser" style="color:#e8b84b;">checking…</strong>
+    </div>
+    <div style="display:flex;gap:4px;">
+      <input id="userInput" placeholder="username" spellcheck="false" style="display:none;width:95px;background:#0d0e14;border:1px solid #2e3446;border-radius:3px;color:#fff;font-size:0.65rem;padding:2px 6px;outline:none;"/>
+      <button id="btnEditUser" style="background:#191d29;border:1px solid #293046;border-radius:3px;color:#aaa;font-size:0.62rem;padding:2px 8px;cursor:pointer;">Change</button>
+      <button id="saveUser" style="display:none;background:#241d06;border:1px solid #e8b84b55;border-radius:3px;color:#e8b84b;font-size:0.62rem;padding:2px 8px;cursor:pointer;font-weight:700;">Save</button>
+    </div>
+  </div>
+
   <!-- Primary Action -->
   <button id="btnLaunchTabs">🚀 Open 2 Fight Night Tabs (My Bets + UFC)</button>
 

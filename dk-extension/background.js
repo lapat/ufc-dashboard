@@ -138,7 +138,24 @@ function tryExtractUserId(url, data) {
   return null;
 }
 
-chrome.runtime.onMessage.addListener((msg, sender) => {
+chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
+  if (msg.type === 'SYNC_USER_ID' && msg.userId) {
+    const clean = String(msg.userId).trim().toLowerCase();
+    manualUserId = clean;
+    dkUserId = clean;
+    chrome.storage.local.set({ manualUserId: clean, dkUserId: clean });
+    addLog(`User synced from dashboard: ${clean}`);
+    return;
+  }
+
+  if (msg.type === 'GET_USER_ID') {
+    const effective = manualUserId || dkUserId;
+    if (typeof sendResponse === 'function') {
+      sendResponse({ userId: effective });
+    }
+    return true;
+  }
+
   if (msg.type === 'LAUNCH_PARAMOUNT') {
     const targetUrl = msg.url || ('https://www.paramountplus.com/search/?q=' + encodeURIComponent(msg.query || ''));
     chrome.tabs.query({ url: '*://*.paramountplus.com/*' }, (tabs) => {

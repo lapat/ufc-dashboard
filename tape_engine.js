@@ -371,9 +371,9 @@ function getUpcomingFilmRoomCard() {
         const lines = fs.readFileSync(latest, "utf8").trim().split("\n");
         const lastLine = JSON.parse(lines[lines.length - 1]);
         const now = Date.now();
-        // Strict UFC filter: only bouts where at least one fighter is recognized in UFC profiles or tape cache
+        // Strict UFC filter: only bouts from current event night (within 3h of commence) or upcoming
         const ufcFights = lastLine.fights.filter(f => {
-          return new Date(f.commence).getTime() > now && (isUfcFighter(f.home) || isUfcFighter(f.away));
+          return new Date(f.commence).getTime() > (now - 3 * 60 * 60 * 1000) && (isUfcFighter(f.home) || isUfcFighter(f.away));
         });
 
         if (ufcFights.length > 0) {

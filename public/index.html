@@ -2785,6 +2785,9 @@ applyDashUser(_dkMeParam);
 updatePnLStrip(); // show immediately if user is set, don't wait for first sync
 setInterval(syncPnL, 8000);
 setTimeout(syncPnL, 2000);
+// Handshake with extension bridge: adopt extension username if dashboard is empty
+setTimeout(() => window.postMessage({ type: 'DASH_HANDSHAKE_REQUEST' }, '*'), 400);
+
 // Clicking the pill uses a simple prompt — no popup overlap issues
 document.getElementById('user-pill').addEventListener('click', e => {
   e.stopPropagation();
@@ -2795,6 +2798,8 @@ document.getElementById('user-pill').addEventListener('click', e => {
   if (!clean) return;
   localStorage.setItem('dashUserId', clean);
   applyDashUser(clean);
+  // Auto-sync with Chrome extension
+  window.postMessage({ type: 'DASH_USER_CHANGED', userId: clean }, '*');
   tracker.clearDkBets();
   _lastDKBetIds = new Set();
   syncDKBets();

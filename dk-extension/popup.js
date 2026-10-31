@@ -251,19 +251,52 @@ drawerToggle.addEventListener('click', () => {
   drawerArrow.textContent = isOpen ? '▾' : '▴';
 });
 
-// Username setup
+// Username setup & Account Card
+function updateDisplayUser(u) {
+  const disp = document.getElementById('displayUser');
+  if (!disp) return;
+  if (u && !u.startsWith('dev-')) {
+    disp.textContent = u;
+    disp.style.color = '#e8b84b';
+  } else {
+    disp.textContent = 'Not Set';
+    disp.style.color = '#ff6b6b';
+  }
+}
+
 chrome.storage.local.get(['dkUserId', 'manualUserId'], r => {
   const u = r.manualUserId || r.dkUserId;
-  if (u) document.getElementById('userInput').value = u;
+  if (u) {
+    const input = document.getElementById('userInput');
+    if (input) input.value = u;
+    updateDisplayUser(u);
+  } else {
+    updateDisplayUser(null);
+  }
 });
-document.getElementById('saveUser').addEventListener('click', () => {
-  const val = document.getElementById('userInput').value.trim();
-  if (!val) return;
-  chrome.storage.local.set({ dkUserId: val, manualUserId: val });
-  const btn = document.getElementById('saveUser');
-  btn.textContent = 'Saved ✓'; btn.className = 'saved';
-  setTimeout(() => { btn.textContent = 'Set'; btn.className = ''; }, 2000);
-});
+
+const btnEditUser = document.getElementById('btnEditUser');
+const saveUserBtn = document.getElementById('saveUser');
+const userInputEl = document.getElementById('userInput');
+
+if (btnEditUser && saveUserBtn && userInputEl) {
+  btnEditUser.addEventListener('click', () => {
+    userInputEl.style.display = 'inline-block';
+    saveUserBtn.style.display = 'inline-block';
+    btnEditUser.style.display = 'none';
+    userInputEl.focus();
+  });
+
+  saveUserBtn.addEventListener('click', () => {
+    const val = userInputEl.value.trim().toLowerCase();
+    if (!val) return;
+    chrome.storage.local.set({ dkUserId: val, manualUserId: val });
+    updateDisplayUser(val);
+    userInputEl.style.display = 'none';
+    saveUserBtn.style.display = 'none';
+    btnEditUser.style.display = 'inline-block';
+  });
+}
 
 // Credentials setup (preserved inside settings drawer)
 chrome.storage.local.get(['dkEmail','dkPassword','dkAutoLogin'], r => {
